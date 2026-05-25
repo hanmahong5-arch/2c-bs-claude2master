@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { PROMPTS } from "@/lib/prompts";
 import { TUTORIALS } from "@/lib/tutorials";
+import { SKILLS } from "@/lib/skills";
 
 const BASE = "https://claude2master.com";
 const now = new Date();
@@ -43,6 +44,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: t.pinned ? 0.8 : 0.7,
+    })),
+    ...SKILLS.map((s) => ({
+      url: `${BASE}/skills/${s.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     })),
   ];
 }

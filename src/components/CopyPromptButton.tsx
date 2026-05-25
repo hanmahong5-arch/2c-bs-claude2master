@@ -3,7 +3,15 @@
 import { useState } from "react";
 import { Copy, Check } from "lucide-react";
 
-export default function CopyPromptButton({ text }: { text: string }) {
+export default function CopyPromptButton({
+  text,
+  label = "复制",
+  variant = "primary",
+}: {
+  text: string;
+  label?: string;
+  variant?: "primary" | "secondary";
+}) {
   const [copied, setCopied] = useState(false);
 
   async function onCopy() {
@@ -16,15 +24,18 @@ export default function CopyPromptButton({ text }: { text: string }) {
     }
   }
 
+  const cls =
+    variant === "secondary" ? "btn btn-secondary text-sm" : "btn btn-primary";
+
   return (
     <button
       onClick={onCopy}
-      className="btn btn-primary"
+      className={cls}
       type="button"
-      aria-label={copied ? "已复制" : "复制 prompt"}
+      aria-label={copied ? "已复制" : label}
     >
       {copied ? <Check size={14} /> : <Copy size={14} />}
-      {copied ? "已复制" : "复制 prompt"}
+      {copied ? "已复制" : label}
     </button>
   );
 }

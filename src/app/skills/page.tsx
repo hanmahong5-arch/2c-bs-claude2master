@@ -1,38 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Package, Download } from "lucide-react";
+import { SKILLS, SKILL_CATEGORIES } from "@/lib/skills";
 
 export const metadata: Metadata = {
   title: "Skills 商店",
   description:
-    "Claude Code Skills 中文商店 — 写作、代码、数据、设计、运维。一键安装命令复制。",
+    "Claude Code Skills 中文索引 — Anthropic 官方 + Lurus 出品 + 社区精选。一键看安装命令、来源、触发条件。",
 };
 
-const CATEGORIES = ["全部", "写作", "代码", "数据", "设计", "运维"];
+const CATEGORIES = ["全部", ...SKILL_CATEGORIES];
 
-const SKILLS = [
-  {
-    slug: "frontend-design",
-    category: "设计",
-    title: "frontend-design",
-    desc: "前端视觉升级 — 调研标杆 + 高品质图标 / 动效 / 排版 / 设计系统。",
-    source: "Lurus 出品",
-  },
-  {
-    slug: "code-review",
-    category: "代码",
-    title: "code-review",
-    desc: "Review 当前 diff 找正确性 bug — 低/中/高 effort 三档。",
-    source: "Anthropic",
-  },
-  {
-    slug: "verify",
-    category: "代码",
-    title: "verify",
-    desc: "跑应用 + 观察行为，验证代码改动是否真起作用。",
-    source: "Anthropic",
-  },
-];
+const SOURCE_BADGE: Record<string, string> = {
+  Anthropic: "Anthropic 官方",
+  "Lurus 出品": "Lurus 出品",
+  "Lurus 编辑部": "Lurus demo",
+};
 
 export default function SkillsPage() {
   return (
@@ -43,16 +26,14 @@ export default function SkillsPage() {
           Claude 能力即插即用。
         </h1>
         <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl">
-          Skills 是 2025-12 起 Anthropic 的新标准 — 把领域知识打包成可挂载的模块。本站汇集官方 + Lurus 出品 + 社区精选，中文索引一键安装。
+          Skills 是 2025-12 起 Anthropic 的新标准 — 把领域知识打包成可挂载的模块。
+          本站汇集官方 + Lurus 出品 + 社区精选，中文索引一键查看安装命令。
         </p>
       </header>
 
       <div className="flex flex-wrap gap-2 mb-8 pb-6 border-b border-[var(--color-border)]">
         {CATEGORIES.map((c, i) => (
-          <button
-            key={c}
-            className={i === 0 ? "pill" : "pill-outline pill"}
-          >
+          <button key={c} className={i === 0 ? "pill" : "pill-outline pill"}>
             {c}
           </button>
         ))}
@@ -71,11 +52,12 @@ export default function SkillsPage() {
                 className="text-[var(--c2m-accent)]"
                 strokeWidth={1.5}
                 style={{
-                  filter:
-                    "drop-shadow(0 0 8px rgba(124, 92, 255, 0.35))",
+                  filter: "drop-shadow(0 0 8px rgba(124, 92, 255, 0.35))",
                 }}
               />
-              <span className="pill-outline pill text-[10px]">{s.source}</span>
+              <span className="pill-outline pill text-[10px]">
+                {SOURCE_BADGE[s.source] ?? s.source}
+              </span>
             </div>
             <p className="eyebrow mb-2">{s.category}</p>
             <h3 className="font-mono text-base mb-2 text-[var(--lt-ink)]">
@@ -93,7 +75,13 @@ export default function SkillsPage() {
       </div>
 
       <p className="mt-12 text-sm text-[var(--color-text-muted)] text-center">
-        Skills 商店持续上新 · 当前 3 / 50+ 条目录
+        当前 {SKILLS.length} 条目录 · 欢迎{" "}
+        <a
+          href="mailto:hello@lurus.cn"
+          className="text-[var(--c2m-accent-deep)] hover:underline"
+        >
+          投稿 / 报错
+        </a>
       </p>
     </div>
   );

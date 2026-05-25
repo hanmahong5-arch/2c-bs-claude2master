@@ -53,7 +53,7 @@ export default async function PromptDetail({
       </p>
 
       <div className="flex flex-wrap gap-3 mb-10">
-        <CopyPromptButton text={p.body} />
+        <CopyPromptButton text={p.body} label="复制 prompt" />
         <Link href={`/chat?prompt=${p.slug}`} className="btn btn-secondary">
           <Play size={14} />
           在 Chat 里跑
