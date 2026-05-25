@@ -9,9 +9,9 @@ import { MODEL_LABEL, getPrompt, type ModelKey } from "@/lib/prompts";
 type Msg = { role: "user" | "assistant"; content: string };
 
 const MODELS: { key: ModelKey; label: string; tag: string }[] = [
-  { key: "haiku", label: MODEL_LABEL.haiku, tag: "快 · 便宜" },
+  { key: "haiku", label: MODEL_LABEL.haiku, tag: "简短问答" },
   { key: "sonnet", label: MODEL_LABEL.sonnet, tag: "日常默认" },
-  { key: "opus", label: MODEL_LABEL.opus, tag: "重活专用" },
+  { key: "opus", label: MODEL_LABEL.opus, tag: "长篇思考" },
 ];
 
 const TRIAL_LIMIT = 3;
@@ -154,8 +154,7 @@ export default function ChatRoom() {
           和 Claude 直接聊。
         </h1>
         <p className="text-sm md:text-base text-[var(--color-text-secondary)]">
-          免登录 {TRIAL_LIMIT} 次试用，覆盖 Haiku / Sonnet / Opus 全系。
-          额度用完
+          免登录 {TRIAL_LIMIT} 次试用。额度用完
           <Link
             href="https://newapi.lurus.cn"
             target="_blank"
@@ -167,6 +166,17 @@ export default function ChatRoom() {
           解锁。
         </p>
       </header>
+
+      <div className="mb-5 px-4 py-3 rounded-lg border border-[var(--lt-warn)] bg-[rgba(184,130,31,0.06)] flex items-start gap-2 text-sm text-[var(--lt-warn)]">
+        <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />
+        <div className="flex-1 text-[var(--color-text-secondary)]">
+          <span className="font-semibold text-[var(--lt-warn)]">
+            Anthropic Claude channel 接入中
+          </span>
+          {" — "}
+          newapi.lurus.cn 暂未接 Anthropic 上游，3 档临时全映射 DeepSeek V3.2。Claude 接通后立即切换。
+        </div>
+      </div>
 
       <div className="flex flex-wrap items-center gap-2 mb-4 pb-4 border-b border-[var(--color-border)]">
         {MODELS.map((m) => (

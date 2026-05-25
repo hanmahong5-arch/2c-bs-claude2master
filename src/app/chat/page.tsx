@@ -4,7 +4,8 @@ import ChatRoom from "@/components/ChatRoom";
 
 export const metadata: Metadata = {
   title: "在线 Chat",
-  description: "免登录 3 次试用 Claude — Sonnet 4.6 / Opus 4.7 / Haiku 4.5。",
+  description:
+    "免登录 3 次试用 — Anthropic Claude channel 接入中，临时上 DeepSeek V3.2 备选。",
 };
 
 function Fallback() {

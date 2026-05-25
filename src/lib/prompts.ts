@@ -1,15 +1,17 @@
 export type ModelKey = "haiku" | "sonnet" | "opus";
 
+// 注：Anthropic Claude channel 接入 newapi 进行中（2026-05-25）
+// 临时全档映射到 DeepSeek V3.2，体验仍可用，UI banner 已标注
 export const MODEL_LABEL: Record<ModelKey, string> = {
-  haiku: "Haiku 4.5",
-  sonnet: "Sonnet 4.6",
-  opus: "Opus 4.7",
+  haiku: "DeepSeek 简短",
+  sonnet: "DeepSeek 日常",
+  opus: "DeepSeek 长思考",
 };
 
 export const MODEL_ID: Record<ModelKey, string> = {
-  haiku: "claude-haiku-4-5-20251001",
-  sonnet: "claude-sonnet-4-6",
-  opus: "claude-opus-4-7",
+  haiku: "deepseek-v3-2-251201",
+  sonnet: "deepseek-v3-2-251201",
+  opus: "deepseek-v3-2-251201",
 };
 
 export type PromptCategory =
