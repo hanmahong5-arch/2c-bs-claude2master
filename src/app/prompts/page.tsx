@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Copy } from "lucide-react";
+import {
+  PROMPTS,
+  PROMPT_CATEGORIES,
+  MODEL_LABEL,
+} from "@/lib/prompts";
 
 export const metadata: Metadata = {
   title: "Prompt 库",
@@ -8,40 +13,7 @@ export const metadata: Metadata = {
     "按场景分类的高质量 Claude 中文提示词 — 写作、编程、翻译、学习、营销、数据分析。点击即复制。",
 };
 
-const CATEGORIES = [
-  "全部",
-  "写作",
-  "编程",
-  "翻译",
-  "学习",
-  "营销",
-  "数据分析",
-  "角色扮演",
-];
-
-const SEED = [
-  {
-    slug: "react-perf-doctor",
-    category: "编程",
-    model: "Sonnet 4.5",
-    title: "React 性能诊断师",
-    desc: "粘贴你的组件代码，让 Claude 找出 re-render 与内存泄漏的根因。",
-  },
-  {
-    slug: "long-form-outline",
-    category: "写作",
-    model: "Opus 4.7",
-    title: "长文大纲生成器",
-    desc: "给定主题与受众，输出三段式提纲 + 关键论据 + 反方观点。",
-  },
-  {
-    slug: "tech-translate",
-    category: "翻译",
-    model: "Haiku 4.5",
-    title: "中英技术文档对译",
-    desc: "保留代码块、链接、术语一致性的双向技术翻译。",
-  },
-];
+const CATEGORIES = ["全部", ...PROMPT_CATEGORIES];
 
 export default function PromptsPage() {
   return (
@@ -58,24 +30,21 @@ export default function PromptsPage() {
 
       <div className="flex flex-wrap gap-2 mb-8 pb-6 border-b border-[var(--color-border)]">
         {CATEGORIES.map((c, i) => (
-          <button
-            key={c}
-            className={i === 0 ? "pill" : "pill-outline pill"}
-          >
+          <button key={c} className={i === 0 ? "pill" : "pill-outline pill"}>
             {c}
           </button>
         ))}
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {SEED.map((p) => (
+        {PROMPTS.map((p) => (
           <Link
             key={p.slug}
             href={`/prompts/${p.slug}`}
             className="card card-prompt group block"
           >
             <p className="eyebrow mb-3">
-              {p.category} · {p.model}
+              {p.category} · {MODEL_LABEL[p.modelKey]}
             </p>
             <h3 className="text-lg font-semibold mb-2 text-[var(--lt-ink)]">
               {p.title}
@@ -95,7 +64,7 @@ export default function PromptsPage() {
       </div>
 
       <p className="mt-12 text-sm text-[var(--color-text-muted)] text-center">
-        更多 prompt 持续上线中 · 当前 3 / 50 条种子
+        当前 {PROMPTS.length} 条种子 · 更多 prompt 持续上线中
       </p>
     </div>
   );

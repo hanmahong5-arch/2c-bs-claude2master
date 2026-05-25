@@ -1,9 +1,14 @@
 import type { MetadataRoute } from "next";
+import { PROMPTS } from "@/lib/prompts";
 
 const BASE = "https://claude2master.com";
 const now = new Date();
 
-const STATIC_ROUTES: { path: string; priority: number; changeFreq: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
+const STATIC_ROUTES: {
+  path: string;
+  priority: number;
+  changeFreq: MetadataRoute.Sitemap[number]["changeFrequency"];
+}[] = [
   { path: "/", priority: 1.0, changeFreq: "weekly" },
   { path: "/prompts", priority: 0.9, changeFreq: "daily" },
   { path: "/chat", priority: 0.9, changeFreq: "weekly" },
@@ -18,7 +23,6 @@ const STATIC_ROUTES: { path: string; priority: number; changeFreq: MetadataRoute
   { path: "/legal/beian", priority: 0.3, changeFreq: "yearly" },
 ];
 
-const SEED_PROMPTS = ["react-perf-doctor", "long-form-outline", "tech-translate"];
 const SEED_TUTORIALS = [
   "claude-code-setup",
   "model-selection",
@@ -36,8 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: r.changeFreq,
       priority: r.priority,
     })),
-    ...SEED_PROMPTS.map((slug) => ({
-      url: `${BASE}/prompts/${slug}`,
+    ...PROMPTS.map((p) => ({
+      url: `${BASE}/prompts/${p.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.7,
