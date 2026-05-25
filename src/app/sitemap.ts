@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { PROMPTS } from "@/lib/prompts";
+import { TUTORIALS } from "@/lib/tutorials";
 
 const BASE = "https://claude2master.com";
 const now = new Date();
@@ -23,15 +24,6 @@ const STATIC_ROUTES: {
   { path: "/legal/beian", priority: 0.3, changeFreq: "yearly" },
 ];
 
-const SEED_TUTORIALS = [
-  "claude-code-setup",
-  "model-selection",
-  "skills-intro",
-  "hooks-pre-commit",
-  "mcp-intro",
-  "forge-workflow",
-];
-
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...STATIC_ROUTES.map((r) => ({
@@ -46,11 +38,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
-    ...SEED_TUTORIALS.map((slug) => ({
-      url: `${BASE}/tutorials/${slug}`,
+    ...TUTORIALS.map((t) => ({
+      url: `${BASE}/tutorials/${t.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
-      priority: 0.7,
+      priority: t.pinned ? 0.8 : 0.7,
     })),
   ];
 }

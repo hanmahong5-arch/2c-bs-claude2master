@@ -333,3 +333,126 @@ body {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* ── Tutorial markdown body ── */
+.tutorial-md {
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+.tutorial-md > * + * {
+  margin-top: 1rem;
+}
+.tutorial-md h2 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.625rem;
+  color: var(--lt-ink);
+  letter-spacing: -0.02em;
+  margin-top: 2.25rem;
+  margin-bottom: 0.5rem;
+  scroll-margin-top: 5rem;
+}
+.tutorial-md h3 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--lt-ink);
+  margin-top: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+.tutorial-md p {
+  color: var(--color-text-secondary);
+}
+.tutorial-md strong {
+  color: var(--lt-ink);
+  font-weight: 600;
+}
+.tutorial-md a {
+  color: var(--c2m-accent-deep);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(124, 92, 255, 0.35);
+  transition: text-decoration-color 0.2s ease;
+}
+.tutorial-md a:hover {
+  text-decoration-color: var(--c2m-accent);
+}
+.tutorial-md ul,
+.tutorial-md ol {
+  padding-left: 1.5rem;
+}
+.tutorial-md ul {
+  list-style-type: disc;
+}
+.tutorial-md ol {
+  list-style-type: decimal;
+}
+.tutorial-md li {
+  margin-top: 0.375rem;
+  padding-left: 0.25rem;
+}
+.tutorial-md li::marker {
+  color: var(--c2m-accent);
+}
+.tutorial-md code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  padding: 0.125rem 0.4rem;
+  border-radius: 5px;
+  background: var(--c2m-accent-soft);
+  color: var(--c2m-accent-deep);
+  white-space: nowrap;
+}
+.tutorial-md pre {
+  background: #1B1924;
+  color: #E2DEF0;
+  border: 1px solid #2A2638;
+  border-radius: 12px;
+  font: 13px/1.7 var(--font-mono);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.tutorial-md pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+.tutorial-md blockquote {
+  border-left: 3px solid var(--c2m-accent);
+  background: var(--color-surface);
+  margin: 1.25rem 0;
+  padding: 0.875rem 1.125rem;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+.tutorial-md table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  margin: 1.25rem 0;
+}
+.tutorial-md th,
+.tutorial-md td {
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+.tutorial-md th {
+  background: var(--color-surface);
+  font-weight: 600;
+  color: var(--lt-ink);
+}
+.tutorial-md hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}

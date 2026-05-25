@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock } from "lucide-react";
+import { TUTORIALS, TUTORIAL_CATEGORIES } from "@/lib/tutorials";
 
 export const metadata: Metadata = {
   title: "Claude Code 教程",
@@ -8,59 +9,7 @@ export const metadata: Metadata = {
     "中文系统化 Claude Code 教程：入门、配置、Skills、Hooks、MCP、工作流、进阶。",
 };
 
-const CATEGORIES = ["全部", "入门", "配置", "Skills", "Hooks", "MCP", "工作流"];
-
-const TUTORIALS = [
-  {
-    slug: "claude-code-setup",
-    category: "入门",
-    title: "Claude Code 国内零障碍接入",
-    desc: "一行 env 让 Claude Code 走 newapi 走 Claude — 不翻墙、不要美卡。",
-    read: "5 分钟",
-    date: "2026-05-25",
-    pinned: true,
-  },
-  {
-    slug: "model-selection",
-    category: "配置",
-    title: "Sonnet 4.5 vs Opus 4.7：选型与价格",
-    desc: "什么任务该用哪个模型？把每月账单砍掉一半的实战指南。",
-    read: "8 分钟",
-    date: "2026-05-25",
-  },
-  {
-    slug: "skills-intro",
-    category: "Skills",
-    title: "Skills 是什么、怎么写、怎么用",
-    desc: "2025-12 新标准的来龙去脉 + 一个能跑的 hello-world skill。",
-    read: "12 分钟",
-    date: "2026-05-25",
-  },
-  {
-    slug: "hooks-pre-commit",
-    category: "Hooks",
-    title: "Hooks 实战：每次提交前自动检查",
-    desc: "用 pre-commit hook 让 Claude 强制跑 lint / typecheck，告别 CI 红。",
-    read: "6 分钟",
-    date: "2026-05-25",
-  },
-  {
-    slug: "mcp-intro",
-    category: "MCP",
-    title: "MCP 入门：让 Claude 调你的工具",
-    desc: "Model Context Protocol 从 0 到 1 — stdio 一个最小 server。",
-    read: "10 分钟",
-    date: "2026-05-25",
-  },
-  {
-    slug: "forge-workflow",
-    category: "工作流",
-    title: "用 Forge 把 Claude 工作流图形化",
-    desc: "可视化拖拉，把 prompt 组合成 agent 链 — 不写代码也能搭。",
-    read: "15 分钟",
-    date: "2026-05-25",
-  },
-];
+const CATEGORIES = ["全部", ...TUTORIAL_CATEGORIES];
 
 export default function TutorialsPage() {
   return (
@@ -77,10 +26,7 @@ export default function TutorialsPage() {
 
       <div className="flex flex-wrap gap-2 mb-10 pb-6 border-b border-[var(--color-border)]">
         {CATEGORIES.map((c, i) => (
-          <button
-            key={c}
-            className={i === 0 ? "pill" : "pill-outline pill"}
-          >
+          <button key={c} className={i === 0 ? "pill" : "pill-outline pill"}>
             {c}
           </button>
         ))}
