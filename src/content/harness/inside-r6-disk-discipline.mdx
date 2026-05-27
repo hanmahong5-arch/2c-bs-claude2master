@@ -1,0 +1,126 @@
+---
+slug: inside-r6-disk-discipline
+title: "Inside c2m — R6 STAGE 服务器的磁盘纪律"
+desc: "295G SSD 挂在 /data, 根盘只 30G — 这条 HARD RULE 是怎么从一次 R5 节点失联 5 天的事故里逼出来的。"
+publishedAt: "2026-05-26"
+authored: editor
+read: "7 分钟"
+tags: ["inside-c2m", "ops", "infrastructure", "disk"]
+verified: tested
+references: ["lurus MEMORY.md / server-landing-policy", "实际事故 2026-05-07~05-12"]
+---
+
+## 一句话规则
+
+R6 (`43.226.38.244`, Tailscale `100.122.83.20`) 上 **任何写入都必须落 `/data`，根盘只留系统**。docker volume / PVC hostPath / PG data / 备份 / 日志 / k3s `/var/lib/rancher` / 应用上传文件 — 全要走 `/data/<service>/`。
+
+写到 `/`, `/root`, `/home`, `/opt`, `/srv`, `/var/lib/<service>` (未软链) 一律违规。
+
+## 为什么是 HARD RULE 不是 best practice
+
+事故时间线（c2m 编辑部内部记录）：
+
+```
+2026-05-07  R5 (office-debian-2, 8c/8G) 跑 matrix-synapse + plane 副业
+            根盘 90% 触发 SWAP，OOM killer 开始砍进程
+2026-05-07  ssh 100% packet loss，远程不可达
+2026-05-08  尝试 IPMI 重启失败 (网卡也挂了)
+2026-05-12  现场介入才恢复，期间所有 R5 服务全停 (matrix/plane 5 天不可访问)
+            NATS streams 之前部分跑在 R5 → 强制迁回 R1
+2026-05-14  xianyu 整个 archive (与主业脱节 + 节点不可恢复)
+```
+
+教训不是"R5 配置差"。R5 是 8c/8G 完全够 matrix + plane 两个服务的。真因是**docker volume 默认落根盘**：matrix-synapse 的 media + plane 的 PG data 几个月堆下来 5G + 3G，加 docker overlay2 缓存，根盘从 30% 涨到 90% 没人发现。SWAP 一开始走得很激进，到 90% 时 IO 等待飙升，sshd 自己也响应不过来，外部完全看不到。
+
+如果当时强制规定"docker volume 必须落 `/data`"，根盘永远 < 40%，OOM 概率近 0。
+
+## R6 是怎么落地这条规则的
+
+R6 (`43.226.38.244`, 32c/32G/300G) 拿到手后第一步不是装服务，是把磁盘布局规划成：
+
+```
+/dev/sda1  →  /data   (295G SSD, 主存储)
+/          →  18G (用 35%)
+```
+
+然后所有装的东西按统一目录：
+
+```
+/data/
+├── zhongtie-oa/supabase/       ← Supabase self-hosted (13 container)
+│   ├── docker-compose.yml
+│   ├── .env                    ← 含 VAULT_ENC_KEY (32 bytes 强制)
+│   └── volumes/                ← PG / storage / functions data
+├── docker/                     ← Docker root (必须改, 否则默认在 /var)
+├── kova-test/templates/
+├── kova-registry/              ← :5000 测试 registry
+├── lurus-stage/                ← K3s NodePort 反代源
+└── <new-service>/              ← 新服务模板
+```
+
+**docker root 必须搬**：装 docker 时不显式配 `data-root`，默认会去 `/var/lib/docker` — 这就是 R5 事故的导火索。R6 装完 docker 第一步：
+
+```bash
+# /etc/docker/daemon.json
+{
+  "data-root": "/data/docker"
+}
+
+systemctl restart docker
+docker info | grep "Docker Root Dir"   # 必须看到 /data/docker
+```
+
+**K3s 同理**：`/var/lib/rancher` 默认在根盘，pod log + image cache 几周内能干掉 5-10G。装 K3s 加 `--data-dir=/data/k3s`。
+
+## 检查协议（每周一次，10 秒）
+
+```bash
+ssh root@100.122.83.20 'df -h / /data && docker info | grep "Docker Root Dir"'
+```
+
+预期输出：
+
+```
+Filesystem      Size  Used Avail Use%
+/dev/vda1        30G   11G   18G  37%   /
+/dev/sda1       295G   12G  267G   4%   /data
+
+Docker Root Dir: /data/docker
+```
+
+`/` Use% 持续涨 → 立刻找谁在违规写根盘。常见嫌疑：
+
+- 新装的服务 docker-compose.yml 用了 named volume 默认路径
+- 应用上传文件目录没显式指定，落到 `/root/<service>/uploads/`
+- 临时 tarball / debug log 忘了清
+
+## PVC / Pod 怎么遵守
+
+K3s 用 local-path-provisioner 时，默认 storage class 把 PVC 落到 `/var/lib/rancher/k3s/storage/`。在 R6 上这是 `/`，不行。
+
+修法：装 K3s 时 `--data-dir=/data/k3s` 一劳永逸；如果忘了装，单独建一个 storage class 指向 `/data/`：
+
+```yaml
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: local-path-data
+provisioner: rancher.io/local-path
+parameters:
+  nodePath: /data/k3s-storage
+volumeBindingMode: WaitForFirstConsumer
+```
+
+新服务的 PVC 显式 `storageClassName: local-path-data`，老服务慢慢迁。
+
+## 与 R1 (PROD) 的区别
+
+R1 也是磁盘有限，但作为 PROD 已经被 Supabase + lurus-platform + newapi + zhongtie-oa prod 占满，**没有这样规整的 /data 分区**。新服务一律不上 R1（lurus CLAUDE.md 硬规则）。R6 是从空机器开始建立纪律的红线。
+
+## 总结：3 条可抄
+
+1. **新机器 bootstrap 第一步是规划磁盘布局**，不是装服务。一旦服务装上、数据进去再迁移代价是 10×。
+2. **docker / k3s 这类系统级 daemon 的 data-root 显式配置**，默认值都在根盘是行业事实但每次都得手动避开。
+3. **`df -h` 进周检脚本**，根盘 use% 70% 就告警。OOM 链反应是不可逆事故。
+
+下篇 Inside 拆 Tailscale + ICP 双重网络隔离的踩坑（公网 22 关闭 / 显式 `ssh root@` / 三丰云 ICP 拦截非 cn 域名）。

@@ -1,0 +1,144 @@
+---
+slug: agent-tool-internals
+title: "Claude Code AgentTool 内部解剖 — Fork / Memory / Resume 三件套"
+desc: "Subagent 不是 ChatGPT 多窗口：它是一个共享 prompt cache、持久化 memory、可断点续跑的进程模型。从源码理解它为什么这么设计。"
+publishedAt: "2026-05-26"
+authored: "hybrid"
+model: "claude-haiku-4-5"
+read: "9 分钟"
+tags: ["agent-harness", "subagent", "prompt-cache", "memory"]
+references: ["claude-code 2.1.88 unminified (private study)"]
+---
+
+## 为什么读这个
+
+Subagent 在 Claude Code 里看起来像 "Claude 又开了一个窗口" — 一句话 spawn，一个报告收尾。抽象做得很到位，但藏住了三个非平凡问题：
+
+1. **怎么让子任务和父对话共享 prompt cache？** 不共享，每次 spawn 几万 token 重算，agent 用着就崩。
+2. **怎么让记忆跨 session 持久化又不污染主仓库？** 写文件好说 — 但写到哪、什么时候同步、scope 怎么隔离？
+3. **进程被中断后怎么续跑？** transcript 在磁盘、agent 状态在内存 — 怎么把内存重建出来？
+
+Anthropic 在 `src/tools/AgentTool/` 里给了完整答案。本文按设计意图 — 不按文件 — 把三件套讲清楚。
+
+## 一、Fork：共享上下文又不破坏 cache
+
+普通 subagent 通过 `subagent_type` 选预定义类型（Explore / Plan / 自定义）起一段新对话。**Fork 不一样** — 调用方省略 `subagent_type`，子 agent 直接继承父的全部对话 + 系统 prompt + 工具池。
+
+设计起点：**parent 已经把上下文加载好了，重新算一遍既浪费 token 又会让 cache 命中率掉到 0**。
+
+```
+parent context [history + assistant(tool_use_1, tool_use_2)]
+        │
+        ├──> fork child A: directive "audit auth/"
+        ├──> fork child B: directive "audit billing/"
+        └──> fork child C: directive "audit tasks/"
+
+每个 child 看到的 messages：
+  [...history,                              ← 字节一致
+   assistant(tool_use_1, tool_use_2),       ← 字节一致
+   user(
+     tool_result(tool_use_1, "Fork started — processing in background"),  ← 占位文案一致
+     tool_result(tool_use_2, "Fork started — processing in background"),  ← 占位文案一致
+     text(<fork-boilerplate>... directive_X)  ← 唯一差异点
+   )]
+```
+
+代码里有几个克制的细节：
+
+- **Tool pool 等价**：fork child 用 `tools: ['*']` + `useExactTools`，承诺工具定义和父一致。少一个字段差异就让 cache 失效。
+- **System prompt 不重新渲染**：fork 走 `override.systemPrompt`，传父"已渲染的字节"。即使重新调一次同名函数也可能因 feature flag 冷热缓存差异产生几个字节漂移，cache 就 miss。
+- **递归 fork 防御**：fork child 工具池里还保留 AgentTool（保 cache）。靠在历史 message 里 grep 一个固定的 boilerplate XML tag 来识别"自己已经是 fork 了"，拒绝再 fork。
+- **Worktree 注入提示**：fork child 跑在隔离 git worktree 时附加一段说明，告诉它"上下文里的路径是父的 cwd，自己要翻译到 worktree 根；可能需要重读文件；修改不会污染父"。
+- **child 行为守则强约束**：子进程的首条 user message 是一长串"STOP. READ THIS FIRST"，明确要求子进程不要再 fork、不要 editorialize、报告必须以 `Scope:` 开头、< 500 词。等于把"子进程的人格"硬编码进 directive。
+
+**设计 lesson**：cache-friendly 的 prefix 共享，不是"把前面那段拷过来"那么简单。任何字节差异（占位符文案、工具 schema、系统 prompt 渲染顺序）都让 cache 失效。把"差异"压到唯一一个字段（per-child directive）是核心招。
+
+## 二、Memory：三档 scope + 快照同步
+
+Agent 跨 session 的记忆分三档：
+
+| Scope | 路径 | 入 VCS | 用途 |
+|---|---|---|---|
+| user | `~/.claude/agent-memory/<type>/` | 否 | 跨项目的通用学习 |
+| project | `.claude/agent-memory/<type>/` | 是 | 团队共享、随项目走 |
+| local | `.claude/agent-memory-local/<type>/` | 否 | 项目内、本机私有 |
+
+每一档都映射到 `MEMORY.md` 入口文件（这套约定和 c2m 用的 auto-memory 同源）。
+
+snapshot 机制把"团队公认的 memory baseline"和"我本地的当前 memory"解耦：
+
+```
+.claude/agent-memory-snapshots/<type>/
+  ├── snapshot.json          ← { updatedAt: "..." }
+  └── <md files>             ← 团队 commit 的版本
+
+.claude/agent-memory-local/<type>/
+  ├── .snapshot-synced.json  ← { syncedFrom: "..." }
+  └── <md files>             ← 我本地正在用的版本
+
+启动时做一次比较：
+  snapshot 不存在            → action: none
+  snapshot 有 + local 没 md  → action: initialize（首次拷贝）
+  snapshot.updatedAt 比 syncedFrom 新 → action: prompt-update
+  其它                        → action: none
+```
+
+非平凡设计：
+
+- **路径规范化是安全边界**：`isAgentMemoryPath` 用 `path.normalize` 处理输入，防止靠 `..` 段绕开 scope 边界写到任意位置。看起来是工具函数，实际是 sandbox 的最后一道。
+- **冒号在 Windows 上非法**：plugin 命名空间型 agent type 像 `my-plugin:my-agent`，目录名要把 `:` 替换成 `-`，否则 Windows 直接拒写。
+- **远程 mount 支持**：`CLAUDE_CODE_REMOTE_MEMORY_DIR` env 一开，local scope 也能写到远程挂载点 — 用 project canonical git root 做命名空间，避免不同 repo 互相覆盖。
+- **同步状态独立存**：`.snapshot-synced.json` 只记"我上次同步到哪个时间戳"，不和 snapshot 内容混在一起。这样判断"要不要拉新版"只是一次时间戳比较，零字节对比。
+- **fire-and-forget mkdir**：memory 加载在 React 渲染的同步路径里，没办法 await。靠"agent 起码要一个 API round-trip 才会真写文件"这个 timing 兜底。再不行 FileWriteTool 自己也会 mkdir 父目录。
+
+**设计 lesson**：memory 不是简单"持久化字典"。真正要解决的是 scope 隔离 + VCS 兼容性 + 同步语义 + 路径安全 + 跨平台 + 远端挂载 — 六维想清楚，再考虑文件格式。
+
+## 三、Resume：从磁盘把进程"复活"
+
+Async agent 跑到一半被关掉（用户 Ctrl+C / 进程崩 / 机器重启），要怎么续跑？`resumeAgentBackground` 是答案。
+
+```
+resume(agentId)
+  │
+  ├── 读 transcript + metadata（并行）
+  │
+  ├── 三段过滤 messages：
+  │     · filterUnresolvedToolUses        ← 上次没收到 result 的 tool_use
+  │     · filterOrphanedThinkingOnly      ← 只剩 thinking 没正文的 assistant
+  │     · filterWhitespaceOnlyAssistant   ← 全空白的 assistant
+  │
+  ├── worktree 还在吗？
+  │     是 → utimes(now, now)  防 stale-cleanup
+  │     否 → fallback parent cwd（不让 chdir crash）
+  │
+  ├── 原 agent 类型分支：
+  │     fork           → 重建 parent system prompt + useExactTools=true
+  │     其他           → wrapWithCwd 里 recomputed
+  │
+  └── runAgent + registerAsyncAgent
+```
+
+读完源码最值得抄的几条：
+
+- **三段过滤是关键卫生**：上次崩溃可能留下半截 `tool_use` 没收到 `tool_result`、只剩 thinking 没文本的 assistant、空白 assistant — 重新喂给 API 会直接报 schema 错。先把这些"半成品"剔掉再续跑。
+- **worktree 失效要兜底**：用户可能在 agent 跑的时候手动 `git worktree remove`。stat 一下，没了 fallback parent cwd，不让 chdir 在续跑时直接 crash。
+- **续跑要主动 bump mtime**：项目里有 "stale worktree 自动清理" 的 worker。刚续跑就被清理掉就是事故。`utimes(path, now, now)` 一行解决。
+- **不重新走 permission gate**：原本 spawn 时已经过 `filterDeniedAgents`，续跑跳过 — 避免"中途用户改了 deny 规则就续不上了"。
+- **fork 续跑特殊路径**：必须重建父的 system prompt。优先用 `toolUseContext.renderedSystemPrompt`；没有就用当前主线状态重建 — 这里有个隐患：如果中间用户切了 agent definition，重建的 prompt 和原来不完全一样，cache 会 miss 一次。代码里没强检测，是"尽力而为"的设计取舍。
+- **transcript 已含 fork context**：resume 时 `forkContextMessages: undefined`，否则产生重复 tool_use ID 把 API 玩坏。
+
+**设计 lesson**：续跑不是"从上次停的地方继续"，而是"从磁盘和环境的当前快照重新出发"。环境会变（worktree 没了、permission 改了、agent 定义升级了），代码要老老实实地处理每一种漂移。
+
+## 总结：三件套的共性设计准则
+
+回过头看 fork / memory / resume，能抽出三条 c2m 编辑部觉得最值得偷的设计准则：
+
+1. **任何"上下文复用"都要落到字节一致**。Prompt cache、tool schema、placeholder 文案 — 差一个字节，几万 token 的 cache 就废了。
+2. **跨平台、跨 scope、跨 VCS 的细节都不便宜**。`:` → `-`、path normalize、远端挂载命名空间、snapshot 同步时间戳分离 — 这些"小"问题加起来决定一个 agent 系统是 toy 还是 production。
+3. **状态恢复要假设环境会漂移**。Worktree 可能没了、agent 定义可能改了、permission 可能换了。续跑代码每一步都做兜底，不依赖"环境和上次一样"。
+
+下篇 harness 拆 **BashTool 的 5 层安全沙箱**（permission + sandbox + sed AST + path normalize + destructive intent），同源参考材料、同套写法。
+
+---
+
+> 本文基于公开行为 + 社区流传的 Claude Code 2.1.88 unminified 源码逆向分析，与 Anthropic 无关。任何技术结论以你自己在本地复现为准。

@@ -1,0 +1,131 @@
+---
+slug: inside-tailscale-icp-deadlock
+title: "Inside c2m — Tailscale + ICP 双重隔离的踩坑"
+desc: "国内 IDC 部署非 .cn 域名要绕 ICP 拦截, Tailscale 关公网 22 又得显式 ssh root@ — 两层网络规则叠起来怎么不被锁死。"
+publishedAt: "2026-05-26"
+authored: editor
+read: "8 分钟"
+tags: ["inside-c2m", "ops", "infrastructure", "network", "icp", "tailscale"]
+verified: tested
+references: ["lurus MEMORY.md / cn-idc-icp skill", "实测三丰云 R6 (43.226.38.244)"]
+---
+
+## 两个独立的"网络墙"叠在一起
+
+R6 在三丰云（CN IDC）上跑，对外要服务客户、对内要让 ops 能登录。挡在中间有两堵不相关的墙：
+
+1. **ICP 备案墙**（三丰云）：访问任何非 `.cn` TLD 的域名，HTTP 路径会被 307 重定向到 `icp.pppf.com.cn`，TLS 直接 RST。
+2. **Tailscale + SSH 墙**（自己加的）：公网 22 端口关掉，只允许 Tailscale 100.x 私网 IP 走 SSH。
+
+这俩单独都正常。叠在一起会出现"明明能 ping 通服务器，但 ssh 一直卡 / 浏览器看不到站点"的迷惑现象。本文把诊断流程讲清楚。
+
+## ICP 墙的精确边界
+
+三丰云的 ICP 拦截**不**是单纯的 HTTP/HTTPS 中间人。规则（编辑部实测）：
+
+| 流量类型 | 是否拦截 |
+|---|---|
+| HTTP 80 + `Host:` 是非 `.cn` 域名 | 307 → `http://icp.pppf.com.cn/sfy?domain=...` |
+| HTTPS 443 + SNI 非 `.cn` | TLS connection RST (从 IDC 出口) |
+| HTTPS 443 + SNI `.cn` 但未备案 | 一般也 RST |
+| HTTPS 443 + SNI 已备案 `.cn` | 通 |
+| 任何非 80/443 端口（22 / 8080 / 30880 etc.） | **不拦截**（这是关键） |
+| 直接 IP 访问（无 Host header / 无 SNI） | 不拦截（但浏览器一般给不出无 SNI 请求） |
+
+所以 **`claude2master.com` 这种 `.com` 域名不可能解析到三丰云 IP**。c2m 一开始就规划好走 Vercel（同 dsnb.help 模式），不上 CN IDC。
+
+但 R6 上跑的 lurus 内部服务（`identity.lurus.cn` / `auth.lurus.cn` / `lucrum.lurus.cn`）是 `.cn` 域名，已备案，所以这些走 R6 的 443 不被拦。
+
+## Tailscale 墙的具体配置
+
+R6 自己加的规则（非三丰云强制）：
+
+```bash
+# /etc/ssh/sshd_config
+ListenAddress 100.122.83.20      # 只在 Tailscale 接口监听
+Port 22
+
+# iptables（防 sshd 配置漂移）
+iptables -A INPUT -p tcp --dport 22 ! -i tailscale0 -j DROP
+```
+
+这样的好处：暴力扫描者从公网完全看不到 sshd，被攻击面缩到 Tailscale 网络内部。
+
+但代价是：
+
+- **必须先登 Tailscale**：本地机器开 Tailscale client，连上 lurus tailnet，才能看到 `100.122.83.20`。
+- **必须显式 `ssh root@`**：sshd 收到的连接，默认会按本地用户名做 lookup（比如本地是 `xiaohan`，sshd 找 `xiaohan@R6` 这个 user）。R6 上没有 `xiaohan`，直接 `failed to look up local user "xiaohan"` 报错断开。
+
+正确连法：
+
+```bash
+ssh root@100.122.83.20
+# 而不是 ssh 100.122.83.20 (会用本地用户名)
+```
+
+这一条没写明白的话，第二天 cron 全部 fail（脚本默认 `ssh <host>` 不带用户名）。
+
+## 两墙叠起来的真实事故
+
+事故场景：c2m 编辑部要给客户 demo R6 上的 `identity.lurus.cn`，结果发现：
+
+1. 客户浏览器打不开 — 误以为 ICP 拦截
+2. 自己浏览器能打开 — 因为开了梯子代理
+3. `ping identity.lurus.cn` — 通的
+4. `curl https://identity.lurus.cn` — 报 SSL handshake fail
+5. ssh 上 R6 看 nginx log — 完全没日志（请求根本没到 nginx）
+
+排查 1 小时才发现：
+
+- DNS 解析正确（指向 `43.226.38.244`）
+- 三丰云出口对入站流量也做 SNI 检测：客户家宽带 → 三丰云 IP → 三丰云检测 SNI 是 `identity.lurus.cn`（`.cn` 已备案）→ 应该放行
+- 但备案信息延迟同步，三丰云的拦截规则缓存了旧状态，把 `.cn` 当未备案处理
+- 走梯子的请求 IP 不一样、路由也不一样，反而没被检测到
+
+最终修法：联系三丰云客服强制刷新备案状态。**学习**：CN IDC 上跑 `.cn` 域名也要至少给备案审核 + 三丰云缓存 24-48h 时间。
+
+## 完整的 R6 SSH + 浏览器联调 cheatsheet
+
+ssh：
+
+```bash
+# 1. 本地 Tailscale 必须 up
+tailscale status | grep R6   # 看到 100.122.83.20 才行
+
+# 2. 必须 root@
+ssh root@100.122.83.20
+
+# 3. 跑命令
+df -h / /data
+docker ps
+kubectl get pods -A
+```
+
+浏览器联调（看 R6 上服务）：
+
+```bash
+# 方法 A: 走域名 (必须 .cn 已备案)
+# 直接打开 https://identity.lurus.cn
+# DNS 已指 R6 → 三丰云检 SNI → 已备案放行 → R6 nginx → 反代到 K3s NodePort
+
+# 方法 B: 走 Tailscale 私网 (调试用)
+# 浏览器代理设 SOCKS5 → 127.0.0.1:1055 (Tailscale 装 socks5 出口)
+# 直接打开 http://100.122.83.20:30880/  → K3s NodePort 暴露
+```
+
+如果方法 A 卡：
+- 检查 DNS 解析（`dig +short identity.lurus.cn`）
+- 检查三丰云备案状态（用别的 `.cn` 已备案域名对照测试）
+- 检查 R6 nginx 是否在 listen 443
+
+如果方法 B 卡：
+- 检查 Tailscale ACL 是否允许 lurus 这台 device 出 socks5
+- 检查 K3s svc nodePort 是否在监听
+
+## 总结：3 条可抄
+
+1. **CN IDC 上跑非 `.cn` 域名**：放弃，走 Vercel / CloudFlare 等海外 CDN。c2m / dsnb 都是这条路。
+2. **Tailscale 关公网 22**：值得做，但 cron 脚本必须显式 `ssh root@<tailscale-ip>`，不能依赖默认用户名。
+3. **`.cn` 域名上 CN IDC 也别假设备案立即生效**：提前 48h 上线 demo，避免临时被拦尴尬。
+
+下篇 Inside 拆 GHCR 国内镜像加速链路（R1 → `ghcr.io` 8KB/s → `ghcr.linkos.org` 4.6MB/s）的踩坑。

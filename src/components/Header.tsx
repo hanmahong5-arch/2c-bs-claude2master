@@ -6,10 +6,11 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const NAV = [
-  { href: "/prompts", label: "Prompt 库" },
+  { href: "/changelog", label: "Changelog" },
+  { href: "/harness", label: "Harness" },
   { href: "/chat", label: "Chat" },
   { href: "/tutorials", label: "教程" },
-  { href: "/skills", label: "Skills" },
+  { href: "/prompts", label: "Prompt 库" },
   { href: "/api-keys", label: "API key" },
 ];
 

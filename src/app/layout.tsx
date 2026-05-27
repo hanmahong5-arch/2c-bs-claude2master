@@ -40,6 +40,16 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    types: {
+      "application/rss+xml": [
+        { url: "/feed.xml", title: "claude2master · 全站" },
+        { url: "/feed/changelog", title: "claude2master · Changelog" },
+        { url: "/feed/digest", title: "claude2master · Weekly Digest" },
+        { url: "/feed/harness", title: "claude2master · Harness" },
+      ],
+    },
+  },
 };
 
 export default function RootLayout({

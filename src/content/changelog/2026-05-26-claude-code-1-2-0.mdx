@@ -1,0 +1,31 @@
+---
+slug: 2026-05-26-claude-code-1-2-0
+title: Claude Code 1.2.0 — Subagents 默认开启
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v1.2.0
+publishedAt: 2026-05-26
+authored: editor
+model: editor
+verified: tested
+hook: Subagents 从 opt-in 转默认开启 — 30 秒说清对你的 agent loop 意味着什么。
+tags: [claude-code, subagent, release]
+---
+
+> 这是首发 seed 内容，用于本地验证 SSG 渲染管道。生产 changelog 由 daily-radar workflow 自动注水。
+
+## 本次更新要点
+
+- **Subagents 默认开启**：原来通过 `--with-subagents` 才开启的子 agent 现在默认随主 agent 启动，老脚本不受影响但行为上更"主动"。
+- **Tool group 默认隔离**：长任务的 tool 调用按子 agent 分组，便于审计和回放。
+- **Plan mode 输出 hook 化**：plan 阶段输出落到独立的 `pre-write` hook，方便接入 CI 校验。
+
+## 对 agent harness 设计的含义
+
+- 默认 subagent 意味着 prompt 设计要假设"主 agent 会下放"，否则隔离边界丢失。
+- 老 plan-only flow 仍可用 `--no-subagent` 关闭；不建议在生产里关闭，会丢 telemetry。
+- hook 接入要重新考虑：原 `Stop` hook 现在每个 subagent 完成都会触发一次。
+
+## 进一步阅读
+
+- 原 release notes：[releases/tag/v1.2.0](https://github.com/anthropics/claude-code/releases/tag/v1.2.0)
+- 我们的 harness 设计文章：[/harness](/harness)

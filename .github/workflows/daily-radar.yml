@@ -1,0 +1,90 @@
+name: Daily Radar
+
+# Plan §3 — 全自动层
+# 每天 09:30 CN (01:30 UTC) 抓 anthropics/claude-code + openai/codex 新 release
+# LLM 中文摘要 → 写 src/content/changelog/*.mdx → bot commit 直推 main
+# Vercel auto-build (~30s) → /changelog 列表 / RSS feed / sitemap 更新
+#
+# Path filter: 只动 src/content/changelog/ + scripts/radar/state.json
+# 失败告警: WECHATWORK_WEBHOOK_URL (复用 lurus daily-audit)
+# 当日无新 release → exit 0, 不 commit, 不触发 Vercel build
+
+on:
+  schedule:
+    - cron: '30 1 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/radar/**'
+      - '.github/workflows/daily-radar.yml'
+
+jobs:
+  radar:
+    name: Fetch + summarize + commit
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Fetch new releases
+        id: fetch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          out=$(bash scripts/radar/fetch-releases.sh)
+          count=$(printf '%s' "$out" | grep -c . || true)
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          # 多行字符串通过文件传递, 避免 GITHUB_OUTPUT 转义问题
+          printf '%s\n' "$out" > radar-new-releases.jsonl
+          echo "---- fetched $count release(s) ----"
+          cat radar-new-releases.jsonl
+
+      - name: Summarize via newapi
+        if: steps.fetch.outputs.count != '0'
+        env:
+          NEWAPI_TRIAL_TOKEN: ${{ secrets.NEWAPI_TRIAL_TOKEN }}
+          NEWAPI_BASE_URL: https://newapi.lurus.cn
+          RADAR_MODEL_ID: deepseek-v3-2-251201
+        run: |
+          set -euo pipefail
+          if [ -z "${NEWAPI_TRIAL_TOKEN}" ]; then
+            echo "::error::NEWAPI_TRIAL_TOKEN secret not set"
+            exit 1
+          fi
+          bun run scripts/radar/summarize.ts < radar-new-releases.jsonl
+
+      - name: Commit + push
+        if: steps.fetch.outputs.count != '0'
+        run: |
+          set -euo pipefail
+          git config user.name "c2m-radar-bot"
+          git config user.email "radar-bot@claude2master.com"
+          # Path filter (再次防御): 只 add 这两个路径
+          git add src/content/changelog/ scripts/radar/state.json
+          if git diff --staged --quiet; then
+            echo "no diff staged, skipping commit"
+            exit 0
+          fi
+          count="${{ steps.fetch.outputs.count }}"
+          git commit -m "chore(radar): auto-summarize ${count} new release(s)" \
+                     -m "$(date -u +%Y-%m-%d) daily run · model deepseek-v3-2-251201"
+          git push
+
+      - name: Notify wechatwork on failure
+        if: failure() && env.WECHATWORK_WEBHOOK_URL != ''
+        env:
+          WECHATWORK_WEBHOOK_URL: ${{ secrets.WECHATWORK_WEBHOOK_URL }}
+        run: |
+          content="⚠️ **c2m daily-radar FAILED** ($(date -u +%Y-%m-%d))\n\nrun: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          payload=$(jq -nc --arg c "$content" '{msgtype: "markdown", markdown: {content: $c}}')
+          curl -sf -X POST -H 'Content-Type: application/json' -d "$payload" "$WECHATWORK_WEBHOOK_URL" || echo "wechatwork push failed"

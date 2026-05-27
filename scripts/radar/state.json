@@ -1,0 +1,7 @@
+{
+  "lastSeen": {
+    "anthropics/claude-code": "",
+    "openai/codex": ""
+  },
+  "_note": "Tracked by scripts/radar/fetch-releases.sh; updated atomically with each new changelog MDX commit."
+}
