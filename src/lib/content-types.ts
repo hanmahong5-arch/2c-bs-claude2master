@@ -14,6 +14,8 @@ export interface ContentItemBase {
 
 export type Verified = "tested" | "pending";
 
+export type ChangelogKind = "changelog" | "practice";
+
 export interface ChangelogItem extends ContentItemBase {
   channel: "changelog";
   source: string;
@@ -21,6 +23,8 @@ export interface ChangelogItem extends ContentItemBase {
   hook: string;
   model?: string;
   verified?: Verified;
+  insight?: string;
+  kind?: ChangelogKind;
 }
 
 export interface DigestItem extends ContentItemBase {
@@ -62,5 +66,19 @@ export const AUTHORED_LABEL: Record<Authored, string> = {
 export const VERIFIED_LABEL: Record<Verified, string> = {
   tested: "已实测",
   pending: "待验证",
+};
+
+export const KIND_LABEL: Record<
+  ChangelogKind,
+  { label: string; className: string }
+> = {
+  changelog: {
+    label: "Release",
+    className: "bg-[var(--c2m-accent-soft)] text-[var(--c2m-accent-deep)]",
+  },
+  practice: {
+    label: "实践",
+    className: "bg-[rgba(31,122,79,0.12)] text-[var(--lt-ok)]",
+  },
 };
 

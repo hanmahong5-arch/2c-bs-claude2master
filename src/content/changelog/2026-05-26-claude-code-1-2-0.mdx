@@ -7,7 +7,9 @@ publishedAt: 2026-05-26
 authored: editor
 model: editor
 verified: tested
+kind: changelog
 hook: Subagents 从 opt-in 转默认开启 — 30 秒说清对你的 agent loop 意味着什么。
+insight: "升级值得做但要先审 Stop hook：默认 subagent 让每个子任务结束都触发一次，原来按主 agent 一次设计的 CI hook 会重复执行。现有 prompt 要假设主 agent 会下放工作，否则隔离边界丢失。国内走 newapi.lurus.cn 行为一致，不需要额外配置改动。"
 tags: [claude-code, subagent, release]
 ---
 

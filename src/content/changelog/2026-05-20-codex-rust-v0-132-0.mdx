@@ -1,0 +1,22 @@
+---
+slug: 2026-05-20-codex-rust-v0-132-0
+title: "codex rust-v0.132.0 — Python SDK 新增原生认证与简化文本工作流，提升自动化执行与 TUI 启"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.132.0
+publishedAt: 2026-05-20
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "Python SDK 新增原生认证与简化文本工作流，提升自动化执行与 TUI 启动速度"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新值得关注。Python SDK 新增的原生认证机制（如 API 密钥登录）应与代理服务兼容，无需修改现有代理配置。自动化执行新增的 `--output-schema` 参数能强制 JSON 输出，这有助于维持远程执行时的数据结构一致性，提升自动化流程的可靠性。TUI 的启动加速优化也能改善代理环境下的交互体验。"
+tags: [python-sdk, authentication, tui-optimization, automation]
+---
+
+- **Python SDK 支持原生认证与简化文本 API**：新增 API 密钥登录、ChatGPT 浏览器/设备码流程，以及更易用的纯文本输入和 `TurnResult` 返回。这意味着 agent harness 可以更安全、更便捷地集成身份验证，并简化纯文本交互的数据处理。
+- **自动化执行支持结构化输出与远程执行器认证统一**：`codex exec resume` 新增 `--output-schema` 以保持会话上下文并强制 JSON 输出，远程执行器注册改用标准 Codex 认证。这使得自动化流程在恢复时能维持结构一致性，并减少认证管理的复杂性。
+- **TUI 启动加速与多会话可靠性提升**：终端能力探测改为批处理以加快启动，修复了多会话中 MCP 调用标记和回复路由问题。这改善了 agent harness 的交互响应速度和跨会话操作的稳定性。
+
+---
+
+> 原文 release：[openai/codex rust-v0.132.0](https://github.com/openai/codex/releases/tag/rust-v0.132.0)

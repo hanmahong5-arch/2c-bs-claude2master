@@ -1,0 +1,22 @@
+---
+slug: 2026-05-22-claude-code-2-1-149
+title: "claude-code v2.1.149 — 新增用量分类统计，强化安全沙盒，修复多项界面与工具稳定性问题"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.149
+publishedAt: 2026-05-22
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增用量分类统计，强化安全沙盒，修复多项界面与工具稳定性问题"
+insight: "对于使用 newapi.lurus.cn 代理的国内用户，本次更新值得关注。安全沙盒的多项漏洞修复直接提升了代码执行环境的安全性，这是核心升级点。现有用户无需修改 prompt 或 hook 配置，但建议升级以获取更安全的运行环境。新增的用量分类统计功能对于管理资源消耗也有帮助，但代理服务本身不受影响。"
+tags: [security-fixes, ui-improvements, usage-analytics, bug-fixes]
+---
+
+- **新增 `/usage` 用量分类统计**：清晰展示技能、子代理、插件及 MCP 服务器的成本驱动，便于资源管理与优化。
+- **修复多项安全沙盒漏洞**：包括 PowerShell 权限绕过、git worktrees 沙盒白名单过宽、变量追踪失效等问题，提升了代码执行环境的安全性。
+- **优化界面交互与修复工具缺陷**：`/diff` 视图支持键盘滚动、Markdown 渲染任务列表、修复思维指示器状态、参数提示显示等多项问题，提升了用户体验与工具可靠性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.149](https://github.com/anthropics/claude-code/releases/tag/v2.1.149)

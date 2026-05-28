@@ -1,0 +1,22 @@
+---
+slug: 2026-05-28-claude-code-docs-best-practices
+title: "Best practices for Claude Code - Claude  — 掌握 Claude Code 核心约束与高效工作流，避免无效迭代"
+source: claude-code-docs
+sourceUrl: https://code.claude.com/docs/en/best-practices
+publishedAt: 2026-05-28
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: practice
+hook: "掌握 Claude Code 核心约束与高效工作流，避免无效迭代"
+insight: "对于使用 newapi.lurus.cn 代理的国内用户，现有 prompt 配置需要针对性调整。摘要强调的“提供具体上下文”和“分阶段进行”是核心，这意味着你的提示词必须精确指向代码库中的具体文件，并为复杂任务设计分步执行的流程。直接套用通用提示将导致无效迭代，必须根据这些最佳实践重构你的工作流，以充分利用代理服务并减少纠正次数。"
+tags: [verification, planning, context-management, prompt-design]
+---
+
+- **提供可验证的检查点**：让 Claude 运行测试、构建或截图对比，形成自主闭环，而非依赖人工检查。这意味着设计提示时需包含明确的通过/失败标准。
+- **探索、规划、编码分阶段进行**：使用计划模式先调研再实施，避免解决错误问题。这要求为复杂任务设计分步执行的提示流程。
+- **提供具体上下文**：在提示中引用特定文件、约束和现有模式，减少纠正次数。这表明提示设计应精确指向代码库中的具体资源。
+
+---
+
+> 原文：[Best practices for Claude Code - Claude Code Docs](https://code.claude.com/docs/en/best-practices)

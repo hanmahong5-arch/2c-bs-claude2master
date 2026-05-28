@@ -1,0 +1,22 @@
+---
+slug: 2026-05-21-claude-code-2-1-147
+title: "claude-code v2.1.147 — 背景会话持久化与代码审查升级，提升代理开发稳定性和协作效率"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.147
+publishedAt: 2026-05-21
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "背景会话持久化与代码审查升级，提升代理开发稳定性和协作效率"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次升级值得关注。固定会话空闲存活特性直接提升了代理任务的稳定性，尤其适合需要长期运行的场景。而 `/code-review` 命令的增强，特别是支持向 GitHub PR 发布评论，显著强化了协作流程中的代码审查能力。多项底层修复也减少了开发中的意外错误。因此，现有用户值得升级以获取更稳定的代理开发体验和更专业的代码审查工具。"
+tags: [background-sessions, code-review, bug-fixes, powershell]
+---
+
+- **固定背景会话现在保持空闲存活**：固定会话（`Ctrl+T`）在空闲时不再被终止，更新时原地重启，内存压力下最后被释放。这意味着为长期运行的代理任务提供了更可靠的执行环境。
+- **`/simplify` 重命名为 `/code-review` 并增强**：该命令现在专注于报告正确性错误，并可选择审查力度（如`/code-review high`），支持通过 `--comment` 将结果发布为 GitHub PR 评论。这标志着工具从通用清理转向了更专业的代码质量保障。
+- **多项修复提升健壮性与用户体验**：包括修复企业登录限制、`&` 符号在命令输出中的转义问题、未知斜杠命令的静默失败、PowerShell 工具的多项输出和匹配问题，以及各种界面布局和粘贴文本的显示问题。这些修复共同减少了代理开发流程中的摩擦和意外错误。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.147](https://github.com/anthropics/claude-code/releases/tag/v2.1.147)

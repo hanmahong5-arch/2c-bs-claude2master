@@ -1,0 +1,22 @@
+---
+slug: 2026-05-27-claude-code-2-1-152
+title: "claude-code v2.1.152 — 代码审查自动修复、技能工具控制、会话钩子增强，提升开发效率与定制性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.152
+publishedAt: 2026-05-27
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "代码审查自动修复、技能工具控制、会话钩子增强，提升开发效率与定制性"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新不受影响，因为代理服务本身不涉及这些功能层面的改动。现有用户值得升级，特别是经常使用代码审查和技能工具控制的开发者。升级后，原有的 `/simplify` 命令将自动应用审查建议，能更主动地优化代码。同时，技能配置中新增的 `disallowed-tools` 参数需要手动调整，以更精细地控制工具链权限。此外，新增的 `MessageDisplay` 钩子事件允许用户自定义助手消息的显示，提升了交互控制的灵活性。"
+tags: [code-review, skills-management, session-hooks, ui-fixes]
+---
+
+- **`/code-review --fix` 自动应用审查建议**：将代码复用、简化和效率建议直接应用到工作树，`/simplify` 命令现在调用此功能，意味着 Agent 可以更主动地执行代码优化。
+- **技能可设置 `disallowed-tools` 前端参数**：在技能激活时移除特定工具，为 Agent 工具链提供了更精细的权限控制。
+- **新增 `MessageDisplay` 钩子事件**：允许在显示助手消息时转换或隐藏文本，增强了 Agent 输出的可定制性和交互控制。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.152](https://github.com/anthropics/claude-code/releases/tag/v2.1.152)

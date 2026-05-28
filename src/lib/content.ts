@@ -99,6 +99,13 @@ export async function getChangelog(): Promise<ChangelogItem[]> {
         : asString(data.verified) === "pending"
           ? "pending"
           : undefined,
+    insight: data.insight ? asString(data.insight) : undefined,
+    kind:
+      asString(data.kind) === "practice"
+        ? "practice"
+        : asString(data.kind) === "changelog"
+          ? "changelog"
+          : undefined,
   }));
   return items.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
 }

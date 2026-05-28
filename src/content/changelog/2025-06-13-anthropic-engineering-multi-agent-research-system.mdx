@@ -1,0 +1,22 @@
+---
+slug: 2025-06-13-anthropic-engineering-multi-agent-research-system
+title: "How we built our multi-agent research sy — Anthropic 揭秘多智能体研究系统架构，90% 性能提升来自并行化与高效令"
+source: anthropic-engineering
+sourceUrl: https://www.anthropic.com/engineering/multi-agent-research-system
+publishedAt: 2025-06-13
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: practice
+hook: "Anthropic 揭秘多智能体研究系统架构，90% 性能提升来自并行化与高效令牌使用"
+insight: "对于使用 newapi.lurus.cn 代理访问 Claude 的国内用户，Anthropic 的架构揭示直接影响代理配置策略。摘要明确指出，95%的性能差异可由令牌用量、工具调用次数和模型选择解释，其中令牌用量单独解释80%的差异。这意味着在配置代理或设计 prompt 时，必须将令牌预算作为核心约束，精心设计提示来引导行为、限制工具使用，以避免因协调不善产生问题。现有配置应据此审查优化，而非盲目升级。"
+tags: [multi-agent-systems, prompt-engineering, system-architecture, token-efficiency]
+---
+
+- **并行子代理压缩信息**：主代理创建并行子代理探索不同方面，各自拥有独立上下文窗口，最后汇总关键信息。这意味着智能体编排设计需支持动态任务分解与并行执行。
+- **令牌用量决定性能**：分析显示，95%的性能差异可由令牌用量、工具调用次数和模型选择解释，其中令牌用量单独解释80%的差异。这提示在构建多智能体系统时，需将令牌预算作为核心设计约束。
+- **提示工程应对协调复杂性**：早期系统曾因协调不善产生问题（如创建过多子代理）。通过精心设计提示（如让代理像人类研究者一样思考、设定明确目标、限制工具使用）来引导行为，是改善系统可靠性的主要手段。
+
+---
+
+> 原文：[How we built our multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system)

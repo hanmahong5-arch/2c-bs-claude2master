@@ -1,0 +1,22 @@
+---
+slug: 2026-05-18-codex-rust-v0-131-0
+title: "codex rust-v0.131.0 — TUI 增强、插件工作流升级、远程控制与 Python SDK 重构，提升开发体"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.131.0
+publishedAt: 2026-05-18
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "TUI 增强、插件工作流升级、远程控制与 Python SDK 重构，提升开发体验与系统可靠性。"
+insight: "对于使用 Lurus 代理 newapi.lurus.cn 的国内开发者，本次更新主要涉及 TUI、插件和远程工作流的核心功能增强，不涉及 API 接口或通信协议的变更。因此，现有代理配置不受影响，可以正常使用。但如果你深度集成了其 TUI 或插件系统，可能需要根据新的数据驱动命令和钩子机制，相应调整你的 prompt 或工作流配置，以充分利用其增强的实时反馈与协作能力。"
+tags: [tui-enhancement, plugin-workflow, remote-control, python-sdk]
+---
+
+- **TUI 新增数据驱动的服务层命令、混合令牌用量显示和响应式 Markdown 表格**，使界面信息更丰富，操作更直观，意味着 agent harness 需更注重实时状态反馈与交互设计。
+- **插件工作流支持市场 CLI 命令、版本感知共享和默认启用的钩子**，强化了插件的分发与管理流程，意味着 agent harness 需内置更完善的插件生命周期与协作机制。
+- **远程工作流新增守护进程管理的远程控制、运行时启用/禁用 API 和注册表支持的环境**，提升了远程操作的灵活性与可控性，意味着 agent harness 需支持动态环境配置与远程资源管理。
+
+---
+
+> 原文 release：[openai/codex rust-v0.131.0](https://github.com/openai/codex/releases/tag/rust-v0.131.0)

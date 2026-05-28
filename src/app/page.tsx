@@ -9,6 +9,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Hero from "@/components/Hero";
+import FeaturedRelease from "@/components/FeaturedRelease";
+import RadarSection from "@/components/RadarSection";
 
 const PERSONAS = [
   {
@@ -78,10 +80,12 @@ const FEATURES = [
 
 const TRUST_ROW = ["newapi", "forge", "lutu", "lucrum", "tally"];
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <Hero />
+
+      <FeaturedRelease />
 
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="text-center mb-12">
@@ -118,6 +122,10 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <div className="section-divider max-w-6xl mx-auto" />
+
+      <RadarSection />
 
       <div className="section-divider max-w-6xl mx-auto" />
 

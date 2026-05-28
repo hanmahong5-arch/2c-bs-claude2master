@@ -1,0 +1,23 @@
+---
+slug: 2026-05-08-codex-rust-v0-130-0
+title: "codex rust-v0.130.0 — 插件管理增强、无头远程控制入口、线程分页与配置热更新，提升开发与部署效率。"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.130.0
+publishedAt: 2026-05-08
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "插件管理增强、无头远程控制入口、线程分页与配置热更新，提升开发与部署效率。"
+insight: "对于使用 Lurus 代理的国内开发者，本次更新值得关注。新增的 `codex remote-control` 入口点简化了无头服务器的部署，这可能会影响通过 newapi.lurus.cn 代理进行自动化集成的流程，建议检查相关部署脚本是否需要适配。同时，配置热更新功能意味着在应用服务器运行时调整参数无需重启，提升了维护灵活性，现有相关配置可以保持不变。"
+tags: [plugin-management, remote-control, thread-pagination, config-hot-reload]
+---
+
+- **插件详情显示捆绑钩子，分享时暴露链接元数据与可发现性控制**：插件系统更透明，便于团队协作与安全审计。
+- **新增 `codex remote-control` 作为启动无头、可远程控制应用服务器的简化入口点**：简化了自动化部署和CI/CD集成流程。
+- **应用服务器客户端可对大型线程进行分页，支持未加载、摘要或完整回合视图**：提升了处理长对话和复杂任务时的性能和用户体验。
+- **实时应用服务器线程现在无需重启即可获取配置更改**：实现了配置的动态更新，提高了系统的可维护性和灵活性。
+
+---
+
+> 原文 release：[openai/codex rust-v0.130.0](https://github.com/openai/codex/releases/tag/rust-v0.130.0)

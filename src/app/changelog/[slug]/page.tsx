@@ -5,7 +5,12 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getChangelog, getChangelogBySlug } from "@/lib/content";
-import { AUTHORED_LABEL, VERIFIED_LABEL } from "@/lib/content-types";
+import {
+  AUTHORED_LABEL,
+  KIND_LABEL,
+  VERIFIED_LABEL,
+  type ChangelogKind,
+} from "@/lib/content-types";
 import { changelogJsonLd } from "@/lib/jsonld";
 import ShareButtons from "@/components/ShareButtons";
 import TrackedLink from "@/components/TrackedLink";
@@ -24,12 +29,16 @@ export async function generateMetadata({
   const item = await getChangelogBySlug(slug);
   if (!item) return { title: "Changelog 未找到" };
   const ogImage = `/og/${item.slug}`;
+  const description =
+    item.hook.length >= 80 || !item.insight
+      ? item.hook
+      : `${item.hook} ${item.insight}`.slice(0, 200);
   return {
     title: item.title,
-    description: item.hook,
+    description,
     openGraph: {
       title: item.title,
-      description: item.hook,
+      description,
       type: "article",
       publishedTime: item.publishedAt,
       images: [ogImage],
@@ -37,7 +46,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: item.title,
-      description: item.hook,
+      description,
       images: [ogImage],
     },
     alternates: {
@@ -74,6 +83,16 @@ export default async function ChangelogDetail({
       </Link>
 
       <div className="flex items-center gap-2 mb-3 flex-wrap">
+        {(() => {
+          const k: ChangelogKind =
+            item.kind === "practice" ? "practice" : "changelog";
+          const meta = KIND_LABEL[k];
+          return (
+            <span className={`pill text-[10px] ${meta.className}`}>
+              {meta.label}
+            </span>
+          );
+        })()}
         <span className="pill text-[10px]">{item.source}</span>
         <span className="pill-outline pill text-[10px]">
           {AUTHORED_LABEL[item.authored]}
@@ -141,6 +160,13 @@ export default async function ChangelogDetail({
       <div className="tutorial-md">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.body}</ReactMarkdown>
       </div>
+
+      {item.insight && (
+        <aside className="insight">
+          <p className="eyebrow mb-2">Lurus 视角</p>
+          <p>{item.insight}</p>
+        </aside>
+      )}
 
       <ShareButtons
         url={pageUrl}

@@ -1,0 +1,22 @@
+---
+slug: 2026-05-21-claude-code-2-1-146
+title: "claude-code v2.1.146 — 代码审查功能增强，Windows 工具链修复，提升多代理会话稳定性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.146
+publishedAt: 2026-05-21
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "代码审查功能增强，Windows 工具链修复，提升多代理会话稳定性"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要修复了后台任务和多代理会话的稳定性问题，这直接提升了复杂工作流的可靠性。虽然核心代理地址不受影响，但如果你在 Windows 上使用 PowerShell 或 MCP 工具链，强烈建议升级以修复已知问题。现有用户的 prompt 配置需要检查：原 `/simplify` 指令已重命名为 `/code-review`，并新增了审查力度参数，相关自动化脚本或工作流需相应调整。"
+tags: [code-review, windows-fixes, mcp-pagination, multi-agent]
+---
+
+- **重命名 `/simplify` 为 `/code-review` 并支持指定审查力度**：为代码审查任务提供了更明确的意图和可配置的粒度。
+- **修复 Windows PowerShell 及 MCP 分页等多项工具链问题**：提升了在 Windows 环境及与 MCP 服务器交互时的可靠性与用户体验。
+- **修复多代理会话中模型设置未转发等后台任务问题**：确保了复杂会话（如多代理、后台任务）中配置的一致性和权限管理的正确性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.146](https://github.com/anthropics/claude-code/releases/tag/v2.1.146)

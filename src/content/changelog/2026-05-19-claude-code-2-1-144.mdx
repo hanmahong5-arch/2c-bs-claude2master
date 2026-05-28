@@ -1,0 +1,22 @@
+---
+slug: 2026-05-19-claude-code-2-1-144
+title: "claude-code v2.1.144 — 大幅优化后台会话体验，修复多个关键崩溃与显示问题，提升稳定性与可用性。"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.144
+publishedAt: 2026-05-19
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "大幅优化后台会话体验，修复多个关键崩溃与显示问题，提升稳定性与可用性。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新值得关注。后台会话管理增强和多项关键崩溃修复直接提升了代理连接的稳定性和后台任务的可管理性，能有效减少因网络超时或显示问题导致的意外中断。现有用户无需修改 prompt 或 hook 配置，但建议升级以获得更稳定的使用体验。"
+tags: [background-sessions, bug-fixes, cli-enhancement, stability]
+---
+
+- **后台会话管理增强**：`/resume` 支持后台会话，并显示运行时长。这意味着后台运行的智能体现在可以像交互式会话一样被轻松管理和监控。
+- **会话与模型设置隔离**：`/model` 命令的更改仅影响当前会话，需按 `d` 键设置默认模型。这确保了不同会话间的模型配置不会相互干扰，设计更清晰。
+- **修复多项关键错误**：包括网络超时、终端显示损坏、文件读取崩溃、MCP工具列表分页等。这些修复显著提升了工具链在各种边缘情况下的鲁棒性和用户体验。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.144](https://github.com/anthropics/claude-code/releases/tag/v2.1.144)

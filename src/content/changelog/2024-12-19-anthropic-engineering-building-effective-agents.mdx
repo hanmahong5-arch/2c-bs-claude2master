@@ -1,0 +1,24 @@
+---
+slug: 2024-12-19-anthropic-engineering-building-effective-agents
+title: "Building Effective AI Agents — Anthropic 从数十个团队实践中总结出构建有效 AI 代理的简单、可组合模"
+source: anthropic-engineering
+sourceUrl: https://www.anthropic.com/engineering/building-effective-agents
+publishedAt: 2024-12-19
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: practice
+hook: "Anthropic 从数十个团队实践中总结出构建有效 AI 代理的简单、可组合模式。"
+insight: "对于国内使用 newapi.lurus.cn 代理访问 Claude 的用户，本文建议具有直接指导意义。文章强调应直接从 LLM API 开始实现核心模式，避免过度依赖复杂框架。这意味着现有用户无需急于升级或修改底层代理配置，但应审视自己的 prompt 工程是否遵循了“从简单开始”的原则，确保对核心交互保持直接控制，避免因引入不必要的抽象层而增加调试难度。"
+tags: [ai-agents, llm-engineering, workflow-patterns, prompt-design]
+---
+
+文章基于 Anthropic 与客户合作的经验，提炼出构建有效 AI 代理的核心模式与实用建议。
+
+*   **区分工作流与代理**：工作流通过预定义代码路径编排 LLM 和工具，适合定义明确、需要可预测性的任务；代理则让 LLM 动态指导自身流程和工具使用，适合需要灵活性和模型驱动决策的场景。这意味着设计系统时，应根据任务对确定性与灵活性的需求，选择合适的基础架构。
+*   **从简单开始，谨慎使用框架**：建议开发者首先直接使用 LLM API 实现模式，许多模式只需几行代码。使用框架时需理解底层代码，避免因抽象层而难以调试或引入不必要的复杂性。这对提示工程意味着保持对核心交互的可见性和控制力至关重要。
+*   **掌握核心构建模块与工作流模式**：基础构建模块是具备检索、工具、记忆等增强能力的 LLM。关键工作流模式包括：将任务分解为顺序步骤的**提示链**；对输入分类并导向专门后续任务的**路由**；通过分块或投票实现并行处理的**并行化**；以及由中央 LLM 动态分解和委派任务的**协调器-工作者**模式。这些模式为设计复杂的代理系统提供了可组合的积木。
+
+---
+
+> 原文：[Building Effective AI Agents](https://www.anthropic.com/engineering/building-effective-agents)

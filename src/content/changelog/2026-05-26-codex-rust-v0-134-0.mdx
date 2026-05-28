@@ -1,0 +1,22 @@
+---
+slug: 2026-05-26-codex-rust-v0-134-0
+title: "codex rust-v0.134.0 — 新增本地对话历史搜索、统一配置管理、MCP 服务器环境隔离，提升开发体验与系统可"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.134.0
+publishedAt: 2026-05-26
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增本地对话历史搜索、统一配置管理、MCP 服务器环境隔离，提升开发体验与系统可靠性。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新直接影响配置管理。由于 `--profile` 成为核心配置选择器，所有旧配置必须进行迁移才能继续使用。这意味着用户需要立即检查并更新自己的配置文件，否则代理服务可能因配置不兼容而中断。虽然新增的本地搜索和环境隔离功能提升了体验，但当前首要任务是完成配置迁移以确保代理连接稳定。"
+tags: [local-search, profile-management, mcp-environments, tool-schemas]
+---
+
+- **新增本地对话历史搜索**：支持不区分大小写的内容匹配和结果预览，便于快速回顾上下文，意味着 agent harness 需内置高效的本地数据检索能力。
+- **统一配置管理**：`--profile` 成为 CLI、TUI 和沙盒流程的主要配置选择器，旧配置需迁移，表明 agent harness 应提供清晰的配置升级路径。
+- **MCP 服务器环境隔离**：支持按服务器设置环境目标和 OAuth 选项，用于可流式传输的 HTTP 服务器，要求 agent harness 能灵活管理多环境下的工具集成。
+
+---
+
+> 原文 release：[openai/codex rust-v0.134.0](https://github.com/openai/codex/releases/tag/rust-v0.134.0)

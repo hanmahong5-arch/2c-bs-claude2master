@@ -1,0 +1,22 @@
+---
+slug: 2026-05-19-claude-code-2-1-145
+title: "claude-code v2.1.145 — 新增 JSON 输出与 OTEL 追踪增强，便于脚本集成与调试 Agent 调用"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.145
+publishedAt: 2026-05-19
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增 JSON 输出与 OTEL 追踪增强，便于脚本集成与调试 Agent 调用链"
+insight: "对于使用 newapi.lurus.cn 代理的国内用户，本次更新不影响代理连接，但值得升级以获取调试便利。新增的 JSON 输出格式便于集成 tmux-resurrect 等工具，而 OTEL 追踪的增强能显著提升多 Agent 调用链的调试效率，尤其适合正在开发复杂 Agent 系统的用户。现有 prompt 或 hook 配置无需修改，可直接升级版本。"
+tags: [cli-enhancement, observability, github-integration, bug-fixes]
+---
+
+- **新增 `claude agents --json` 命令**：以 JSON 格式列出活跃 Claude 会话，便于与 tmux-resurrect、状态栏等工具集成。
+- **为 `claude_code.tool` OTEL spans 添加 `agent_id` 与 `parent_agent_id` 属性**：修复追踪父子关系，使后台子 Agent 的 spans 正确嵌套在调度 Agent 的工具 span 下，提升分布式调试能力。
+- **状态行 JSON 输入现包含检测到的 GitHub 仓库与 PR 信息**：为外部状态显示工具提供更丰富的上下文数据。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.145](https://github.com/anthropics/claude-code/releases/tag/v2.1.145)

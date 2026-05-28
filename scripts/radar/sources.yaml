@@ -1,0 +1,25 @@
+# sources.yaml — 最佳实践追踪源
+#
+# kind:
+#   sitemap — 拉 url 指向的 sitemap.xml, 取 <loc> 前缀匹配 urlPrefix 的链
+#   url     — urls 列表逐个 fetch (适合无 sitemap 的单页 blog post)
+# pollDays — fetch-practices.ts 至少隔 N 天才再次 poll 该源 (节省外网 + GH Actions 时间)
+
+sources:
+  - label: anthropic-engineering
+    kind: sitemap
+    url: https://www.anthropic.com/sitemap.xml
+    urlPrefix: https://www.anthropic.com/engineering/
+    pollDays: 1
+
+  - label: claude-code-docs
+    kind: sitemap
+    url: https://docs.claude.com/sitemap.xml
+    urlPrefix: https://docs.claude.com/en/docs/claude-code/
+    pollDays: 7
+
+  - label: openai-codex-blog
+    kind: url
+    urls:
+      - https://openai.com/index/introducing-codex/
+    pollDays: 7

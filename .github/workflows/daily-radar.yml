@@ -42,15 +42,37 @@ jobs:
         run: |
           set -euo pipefail
           out=$(bash scripts/radar/fetch-releases.sh)
-          count=$(printf '%s' "$out" | grep -c . || true)
-          echo "count=$count" >> "$GITHUB_OUTPUT"
+          rc=$(printf '%s' "$out" | grep -c . || true)
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
           # 多行字符串通过文件传递, 避免 GITHUB_OUTPUT 转义问题
           printf '%s\n' "$out" > radar-new-releases.jsonl
-          echo "---- fetched $count release(s) ----"
+          echo "---- fetched $rc release(s) ----"
           cat radar-new-releases.jsonl
 
+      - name: Fetch new practices (Anthropic Engineering / Claude Code docs / Codex blog)
+        id: practices
+        run: |
+          set -euo pipefail
+          # 失败不阻塞 release 路径 (practices 是补充, 不是主路径)
+          bun run scripts/radar/fetch-practices.ts > radar-new-practices.jsonl || true
+          pc=$(grep -c . radar-new-practices.jsonl 2>/dev/null || echo 0)
+          echo "pc=$pc" >> "$GITHUB_OUTPUT"
+          echo "---- fetched $pc practice(s) ----"
+          cat radar-new-practices.jsonl 2>/dev/null || true
+
+      - name: Combine inputs
+        id: combine
+        run: |
+          set -euo pipefail
+          : > radar-input.jsonl
+          [ -s radar-new-releases.jsonl ] && cat radar-new-releases.jsonl >> radar-input.jsonl || true
+          [ -s radar-new-practices.jsonl ] && cat radar-new-practices.jsonl >> radar-input.jsonl || true
+          count=$(grep -c . radar-input.jsonl 2>/dev/null || echo 0)
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          echo "---- $count input line(s) combined ----"
+
       - name: Summarize via newapi
-        if: steps.fetch.outputs.count != '0'
+        if: steps.combine.outputs.count != '0'
         env:
           NEWAPI_TRIAL_TOKEN: ${{ secrets.NEWAPI_TRIAL_TOKEN }}
           NEWAPI_BASE_URL: https://newapi.lurus.cn
@@ -61,10 +83,10 @@ jobs:
             echo "::error::NEWAPI_TRIAL_TOKEN secret not set"
             exit 1
           fi
-          bun run scripts/radar/summarize.ts < radar-new-releases.jsonl
+          bun run scripts/radar/summarize.ts < radar-input.jsonl
 
       - name: Commit + push
-        if: steps.fetch.outputs.count != '0'
+        if: steps.combine.outputs.count != '0'
         run: |
           set -euo pipefail
           git config user.name "c2m-radar-bot"
@@ -75,8 +97,8 @@ jobs:
             echo "no diff staged, skipping commit"
             exit 0
           fi
-          count="${{ steps.fetch.outputs.count }}"
-          git commit -m "chore(radar): auto-summarize ${count} new release(s)" \
+          count="${{ steps.combine.outputs.count }}"
+          git commit -m "chore(radar): auto-summarize ${count} new item(s)" \
                      -m "$(date -u +%Y-%m-%d) daily run · model deepseek-v3-2-251201"
           git push
 

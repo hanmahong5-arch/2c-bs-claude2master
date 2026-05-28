@@ -1,0 +1,22 @@
+---
+slug: 2026-05-28-anthropic-engineering-swe-bench-sonnet
+title: "Claude SWE-Bench Performance — Claude 3.5 Sonnet 在真实软件工程基准测试中达到 49% 成功率"
+source: anthropic-engineering
+sourceUrl: https://www.anthropic.com/engineering/swe-bench-sonnet
+publishedAt: 2026-05-28
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: practice
+hook: "Claude 3.5 Sonnet 在真实软件工程基准测试中达到 49% 成功率，其背后的智能体设计思路值得借鉴。"
+insight: "对于使用 Lurus 平台调用 Claude 3.5 Sonnet 的国内开发者，现有 prompt 配置值得参考优化。摘要强调应提供建议性步骤框架而非强制指令，并信任模型的自主判断。这意味着如果你现有的 prompt 设计得过于死板，限制了模型的解决路径，那么应当进行修改，转向提供更灵活、清晰的指导性框架，以充分发挥模型在复杂任务（如代码调试）中的潜力。这不会影响通过 newapi.lurus.cn 代理的正常使用。"
+tags: [agent-design, tool-use, code-generation, benchmark]
+---
+
+- **将控制权交给模型，保持脚手架最小化**：智能体仅提供提示词、Bash 工具和编辑工具，让模型自主决定问题解决路径，而非硬编码特定工作流。这意味着设计智能体时应信任模型的判断力，避免过度约束。
+- **在工具描述中嵌入详细使用说明与边界条件**：例如在 Bash 工具描述中明确说明无网络访问、如何避免大量输出、如何运行后台命令。这提示我们，工具接口的描述质量与 API 设计本身同等重要，需预判模型的误解点。
+- **提示词提供建议性步骤而非强制指令**：提示词建议“探索仓库”、“创建复现脚本”、“编辑源码”等步骤，但模型可自由决定执行顺序与方式。这表明为复杂任务设计提示时，提供清晰、灵活的指导框架比规定死板的步骤更有效。
+
+---
+
+> 原文：[Claude SWE-Bench Performance](https://www.anthropic.com/engineering/swe-bench-sonnet)

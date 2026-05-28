@@ -1,0 +1,26 @@
+---
+slug: 2026-05-28-claude-opus-4-8
+title: "Claude Opus 4.8 — 编码、诚实度、1M 上下文全面升级,价格不变"
+source: anthropic
+sourceUrl: https://www.anthropic.com/news/claude-opus-4-8
+publishedAt: 2026-05-28
+authored: editor
+verified: pending
+kind: changelog
+hook: "Anthropic 旗舰升级:SWE-bench Verified 88.6%、fast mode 提速 2.5×、默认 1M 上下文,定价不变。"
+insight: "对走 newapi.lurus.cn 的国内用户,这是一次平滑升级 — 模型 ID 仍是 claude-opus-4-8,代理连接与计费方式不变,现有 prompt / hook 不需为升级专门改。值得做的是:把吃长上下文的任务切到 1M 变体,并复核你的验收流程 —— 官方称 4.8 漏放代码缺陷的概率约为 4.7 的四分之一,意味着可以更信任它的自检,但基准数字仍以官方口径为准,建议本地实测后再标「已验证」。"
+tags: [opus, coding, honesty, long-context]
+---
+
+![Claude Opus 4.8 与 Opus 4.7 / GPT-5.5 / Gemini 3.1 Pro 基准对比](/radar/opus-4-8-benchmarks.png)
+
+- **编码与推理基准全面抬升**:官方数据 SWE-bench Verified 88.6%(4.7 为 87.6%)、更难的 SWE-bench Pro 69.2%(64.3%)、Terminal-Bench 2.1 74.6%(66.1%);终端编码一项仍落后 GPT-5.5(78.2%)。对 harness 设计的含义:agentic coding 任务的成功率边际还在涨,值得把更复杂的多步改造交给单次会话完成。
+- **诚实度是这次的主轴**:Anthropic 称 4.8 漏放自己写出的代码缺陷的概率约为 4.7 的 1/4,更倾向主动标注不确定、少做无依据断言。含义:可以把「跑完即声明完成」的旧习惯收一收,让模型自检后再交付,review 负担下降。
+- **默认 1M 上下文 + 更快的 fast mode**:Claude API / Bedrock / Vertex 默认 1M token 上下文(128k 最大输出),模型 ID `claude-opus-4-8`,长上下文变体 `claude-opus-4-8[1m]`;可选 fast mode 约 2.5× 速度、$10/$50 每百万 token,比上代 fast mode 便宜约 3 倍。
+- **配套能力**:Claude Code 新增 dynamic workflows(单会话编排数百并行子代理、做代码库级迁移,研究预览);Messages API 支持把 system 条目放进 messages 数组以在任务中途更新指令;Claude.ai / Cowork 新增 effort 控制。定价不变:$5 / $25 每百万 input / output token。
+
+![对齐评估:misaligned behavior 评分越低越好,Opus 4.8 较 Opus 4.7 明显下降,接近 Mythos Preview](/radar/opus-4-8-alignment.png)
+
+---
+
+> 原文:[Introducing Claude Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8) · 基准为 Anthropic 官方与媒体报道口径,未在本地复现,故标「待验证」。

@@ -1,0 +1,22 @@
+---
+slug: 2026-05-21-codex-rust-v0-133-0
+title: "codex rust-v0.133.0 — 目标追踪默认开启，权限配置增强，插件管理更透明"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.133.0
+publishedAt: 2026-05-21
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "目标追踪默认开启，权限配置增强，插件管理更透明"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要影响后端权限与插件管理机制，代理服务本身不受影响。现有用户无需升级客户端，但建议检查并调整权限配置文件，以适配新的列表API与运行时刷新功能，确保安全策略能动态生效。现有prompt无需修改，因为目标追踪的增强是后端默认行为，对用户透明。"
+tags: [goals, permissions, plugins, extensibility]
+---
+
+- **目标系统默认启用并持久化存储**：目标现在默认开启，拥有专用存储，并能跨活动回合追踪进度。这意味着智能体可以更可靠地处理多步骤任务。
+- **权限配置文件支持列表API与运行时刷新**：权限配置增加了列表API、继承和托管`requirements.toml`支持，并能在运行时刷新。这为构建细粒度、动态调整的安全策略提供了核心支持。
+- **插件发现支持市场感知与远程集合**：插件列表输出可感知市场，显示已安装版本和远程集合。这简化了插件生态系统的集成与审计。
+
+---
+
+> 原文 release：[openai/codex rust-v0.133.0](https://github.com/openai/codex/releases/tag/rust-v0.133.0)
