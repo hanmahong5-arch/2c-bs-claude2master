@@ -12,7 +12,7 @@ export default async function FeaturedRelease() {
   if (!item) return null;
 
   return (
-    <section className="max-w-6xl mx-auto px-6 pt-4 pb-16">
+    <div className="mb-12 md:mb-16">
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center rounded-2xl border border-[var(--color-border)] bg-[var(--c2m-accent-soft)] p-6 md:p-10">
         <div className="flex flex-col">
           <p className="eyebrow mb-3 inline-flex items-center gap-1.5">
@@ -64,6 +64,6 @@ export default async function FeaturedRelease() {
           </p>
         </Link>
       </div>
-    </section>
+    </div>
   );
 }

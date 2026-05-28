@@ -9,7 +9,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Hero from "@/components/Hero";
-import FeaturedRelease from "@/components/FeaturedRelease";
 import RadarSection from "@/components/RadarSection";
 
 const PERSONAS = [
@@ -84,8 +83,6 @@ export default async function Home() {
   return (
     <>
       <Hero />
-
-      <FeaturedRelease />
 
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="text-center mb-12">

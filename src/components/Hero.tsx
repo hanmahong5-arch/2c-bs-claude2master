@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import HeroChatDemo from "./HeroChatDemo";
+import FeaturedRelease from "./FeaturedRelease";
 
 export default function Hero() {
   return (
@@ -39,6 +40,8 @@ export default function Hero() {
             </Link>
           </div>
         </div>
+
+        <FeaturedRelease />
 
         <HeroChatDemo />
       </div>

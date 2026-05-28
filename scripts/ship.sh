@@ -11,7 +11,8 @@
 #   3. Stage tracked changes + untracked files (excluding .env* / credentials*)
 #   4. Print staged diff stat
 #   5. Commit with the given message + Co-Authored-By trailer
-#   6. Push to origin (Vercel auto-deploys ~30s after)
+#   6. Push to origin
+#   7. bunx vercel --prod --yes  (Git 自动部署没接, 必须显式 deploy 才真正上线)
 #
 # Bash-only. Runs in Windows Git Bash (MSYS2) too.
 
@@ -92,5 +93,10 @@ echo
 echo "── pushing ──"
 git push
 
+# 7. Deploy — Git 自动部署未接到此项目, push 不会触发构建, 必须显式 deploy 才上线。
 echo
-echo "✓ Pushed. Vercel auto-deploy ~30s. Check: bunx vercel ls --prod | head -5"
+echo "── vercel --prod ──"
+bunx vercel --prod --yes
+
+echo
+echo "✓ Pushed + deployed to production. Verify: curl -sI https://claude2master.com | head -1"
