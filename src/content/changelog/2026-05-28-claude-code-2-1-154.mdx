@@ -1,6 +1,6 @@
 ---
 slug: 2026-05-28-claude-code-2-1-154
-title: "claude-code v2.1.154 — Claude Code 引入动态工作流，可协调数百个智能体处理复杂任务，并优化多"
+title: "claude-code v2.1.154 — Opus 4.8 默认高推理强度，引入动态工作流，可协调数百个智能体处理复杂任务"
 source: anthropics/claude-code
 sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.154
 publishedAt: 2026-05-28
@@ -8,14 +8,14 @@ authored: llm
 model: deepseek-v3-2-251201
 verified: pending
 kind: changelog
-hook: "Claude Code 引入动态工作流，可协调数百个智能体处理复杂任务，并优化多项核心功能。"
-insight: "对于使用 newapi.lurus.cn 代理访问 Claude Code 的国内用户，本次更新影响有限。核心的动态工作流功能是 Claude 平台侧的能力升级，代理服务本身不涉及智能体编排逻辑，因此代理连接和基础功能应不受影响。现有用户的 prompt 或 hook 配置也无需专门为此版本改动，除非你需要利用新的后台工作流指令来创建复杂项目。"
-tags: [dynamic-workflows, model-update, agent-orchestration, cli-enhancement]
+hook: "Opus 4.8 默认高推理强度，引入动态工作流，可协调数百个智能体处理复杂任务。"
+insight: "对于使用 newapi.lurus.cn 代理的国内用户，本次更新影响有限。核心升级是 Opus 4.8 模型默认启用了高推理强度，这属于模型侧行为，代理服务本身无需改动。用户现有的 prompt 和 hook 配置可以保持不变，因为默认的 `/effort xhigh` 是自动生效的。是否值得升级取决于你是否需要处理需要协调大量智能体的复杂动态工作流，这是本次引入的主要新能力。"
+tags: [opus-4-8, dynamic-workflows, effort-parameter, code-review]
 ---
 
-- **Opus 4.8 默认高推理强度**：为困难任务预设 `/effort xhigh`，意味着智能体在复杂推理上默认投入更多计算资源。
-- **新增动态工作流功能**：用户可指令 Claude 创建后台工作流，协调数十至数百个智能体，这标志着智能体编排能力从单任务扩展到复杂项目级。
-- **多项指令与体验优化**：`/simplify` 改为仅做代码清理评审；`/effort` 标签更名；`claude agents` 支持后台会话命令；修复了包括后台会话管理、渲染、路径解析在内的多个问题，提升了智能体系统的稳定性和用户体验。
+- **Opus 4.8 默认高推理强度**：为最困难的任务默认启用 `/effort xhigh`，意味着智能体在执行复杂指令时会投入更多计算资源。
+- **引入动态工作流**：Claude 可创建并协调数十至数百个后台智能体，允许用户处理更大、更复杂的项目，通过 `/workflows` 查看运行状态。
+- **简化代码审查流程**：`/simplify` 命令现在只运行清理审查（重用、简化、效率、高度），并应用修复，而非完整的错误审查，优化了日常代码优化流程。
 
 ---
 

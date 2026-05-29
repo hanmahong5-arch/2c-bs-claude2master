@@ -1,6 +1,6 @@
 ---
 slug: 2026-05-28-claude-code-2-1-153
-title: "claude-code v2.1.153 — 新增跳过 Git LFS 下载选项，优化后台代理权限与更新流程，修复多项内存与界"
+title: "claude-code v2.1.153 — 新增跳过 Git LFS 下载选项，优化代理自动补全与状态显示，修复多项内存和会"
 source: anthropics/claude-code
 sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.153
 publishedAt: 2026-05-28
@@ -8,14 +8,14 @@ authored: llm
 model: deepseek-v3-2-251201
 verified: pending
 kind: changelog
-hook: "新增跳过 Git LFS 下载选项，优化后台代理权限与更新流程，修复多项内存与界面问题。"
-insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新不受影响，因为核心代理逻辑未变。现有用户值得升级，特别是遇到 Git 仓库克隆缓慢或 Windows 更新失败问题的用户。升级后，在 Git 插件市场源配置中可启用 `skipLfs` 选项以跳过大型文件下载，同时 macOS 的后台代理权限将更规范且升级后保留，无需重新授权。"
-tags: [git-lfs, macos-permissions, memory-optimization, update-fixes]
+hook: "新增跳过 Git LFS 下载选项，优化代理自动补全与状态显示，修复多项内存和会话问题"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新值得关注。新增的 `skipLfs` 选项能有效减少克隆更新时的网络开销，这对代理环境下的下载速度有直接帮助。同时，代理调度输入自动补全的优化，让发现和使用原生命令及捆绑技能变得更方便，提升了日常操作效率。修复的内存问题则增强了代理长时间运行的稳定性，建议现有用户升级以获得这些改进。"
+tags: [git-lfs, memory-optimization, agent-autocomplete, bug-fixes]
 ---
 
-- 为 GitHub/Git 插件市场源添加 `skipLfs` 选项，克隆更新时可跳过 LFS 下载，减少大型文件传输时间。
-- macOS 后台代理现以“Claude Code”名称统一申请系统权限，且权限在升级后得以保留，提升安全性与用户体验。
-- 修复恢复会话时因存储会话过多导致内存占用数 GB 的问题，并修正 Windows 更新失败后的回滚机制，确保更新可靠性。
+- 为 GitHub/Git 插件市场源添加 `skipLfs` 选项，克隆更新时可跳过 LFS 下载，减少代理初始化时的网络开销。
+- 代理调度输入自动补全现在建议原生斜杠命令和捆绑技能，而不仅是项目技能，提升了代理工具发现的便捷性。
+- 修复了通过转录文件路径恢复会话时可能出现的多 GB 内存过度使用问题，增强了代理长时间运行的稳定性。
 
 ---
 
