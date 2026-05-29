@@ -3,10 +3,10 @@
 中国大陆 Claude 用户的中文工具入口。流量站 → 引流到 Lurus 已有产品（newapi / forge / lutu / Platform）。
 
 - Domain: `claude2master.com`（独立品牌站，与 dsnb.help 并行）
-- Repo: 待创建（建议 `hanmahong5-arch/2c-bs-claude2master`，public）
+- Repo: `hanmahong5-arch/2c-bs-claude2master`（public，已建并推送；origin 已配）
 - Hosting: **Vercel**（同 dsnb.help 模式）
 - DNS: 阿里云 `@` + `www` → `76.76.21.21`
-- Lifecycle: building → stage（待首次部署）
+- Lifecycle: **stage**（已上线 — claude2master.com 实测 200，2026-05-28）
 - Product Group: Web (P2)
 
 ## Owner 决策（2026-05-25）
