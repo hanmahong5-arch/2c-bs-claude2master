@@ -49,14 +49,19 @@ for repo in "${REPOS[@]}"; do
     continue
   fi
 
-  # 按发布时间倒序; 找出 tag_name > last_seen 的所有 release
-  # GitHub 默认按 created_at 倒序; 我们再按 published_at 排正序输出, 便于按时间 commit
+  # 只输出比 last_seen "更新" 的 release。
+  # 注意: 不能用 `tag_name != $seen` —— 那只排掉 last_seen 那一条, 其余 4 条(含已处理的旧版)
+  # 每次都重新 emit → 每天重复摘要 + churn commit。改为按时间倒序定位 last_seen 的位置,
+  # 只取它之前(更新)的那些。last_seen 不在本批(空 state / 断档 >5) → null → 全 emit(首跑/补齐)。
   echo "$resp" | jq -c --arg repo "$repo" --arg seen "$last_seen" '
     [ .[]
       | select(.draft == false)
       | select(.prerelease == false)
-      | select(.tag_name != $seen)
     ]
+    | sort_by(.published_at) | reverse
+    | . as $rels
+    | ([ $rels[].tag_name ] | index($seen)) as $i
+    | (if $i == null then $rels else ($rels | .[0:$i]) end)
     | sort_by(.published_at)
     | .[]
     | {
