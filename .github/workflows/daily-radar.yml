@@ -105,18 +105,22 @@ jobs:
                      -m "$(date -u +%Y-%m-%d) daily run · model deepseek-v3-2-251201"
           git push
 
-      # git push 不会触发 Vercel build (本项目无 git auto-deploy), 必须显式 POST Deploy Hook
-      - name: Trigger Vercel deploy
+      # 本项目 Vercel 未连 Git(故意如此, 见 vercel-no-git-autodeploy), git push 不触发构建。
+      # 故用 token 显式 deploy(等价 ship.sh 的 bunx vercel --prod)。Deploy Hook 不可用——
+      # 它需要 git-connected 项目。ORG/PROJECT ID 非机密(见 .vercel/project.json)。
+      - name: Deploy to Vercel
         if: steps.combine.outputs.count != '0'
         env:
-          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: team_ezkPZttKyP7sc6xDZYsXkXs6
+          VERCEL_PROJECT_ID: prj_dHEK2XIQ6Fh06StdAdn3ylTFLxg2
         run: |
           set -euo pipefail
-          if [ -z "${VERCEL_DEPLOY_HOOK:-}" ]; then
-            echo "::warning::VERCEL_DEPLOY_HOOK not set; content committed but site won't redeploy"
+          if [ -z "${VERCEL_TOKEN:-}" ]; then
+            echo "::warning::VERCEL_TOKEN not set; content committed but site won't redeploy"
             exit 0
           fi
-          curl -fsS -X POST "$VERCEL_DEPLOY_HOOK" >/dev/null && echo "vercel deploy triggered"
+          bunx vercel deploy --prod --yes --token="$VERCEL_TOKEN" && echo "vercel production deploy done"
 
       - name: Notify wechatwork on failure
         if: failure() && env.WECHATWORK_WEBHOOK_URL != ''
