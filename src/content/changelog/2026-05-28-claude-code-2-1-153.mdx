@@ -1,6 +1,6 @@
 ---
 slug: 2026-05-28-claude-code-2-1-153
-title: "claude-code v2.1.153 — 新增跳过 Git LFS 下载选项，优化代理自动补全与状态显示，修复多项内存和会"
+title: "claude-code v2.1.153 — 新增跳过 Git LFS 下载选项，优化代理自动补全与状态显示，修复多项内存、更"
 source: anthropics/claude-code
 sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.153
 publishedAt: 2026-05-28
@@ -8,14 +8,14 @@ authored: llm
 model: deepseek-v3-2-251201
 verified: pending
 kind: changelog
-hook: "新增跳过 Git LFS 下载选项，优化代理自动补全与状态显示，修复多项内存和会话问题"
-insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新值得关注。新增的 `skipLfs` 选项能有效减少克隆更新时的网络开销，这对代理环境下的下载速度有直接帮助。同时，代理调度输入自动补全的优化，让发现和使用原生命令及捆绑技能变得更方便，提升了日常操作效率。修复的内存问题则增强了代理长时间运行的稳定性，建议现有用户升级以获得这些改进。"
-tags: [git-lfs, memory-optimization, agent-autocomplete, bug-fixes]
+hook: "新增跳过 Git LFS 下载选项，优化代理自动补全与状态显示，修复多项内存、更新与权限问题。"
+insight: "对于国内用户，本次更新值得关注。新增的 `skipLfs` 选项能显著减少从 GitHub 等源克隆或更新时的网络传输时间，这对依赖代理的网络环境是利好。同时，代理调度输入的自动补全增强，能更高效地发现工具，提升了使用体验。虽然摘要未直接提及 newapi.lurus.cn 代理，但修复的‘自定义 API 网关的令牌混淆’问题，间接增强了使用自定义网关（包括代理）时的安全性。因此，建议现有用户升级以获取更好的稳定性和效率，现有配置一般无需改动。"
+tags: [git-lfs, autocomplete, bug-fixes, mcp-servers]
 ---
 
-- 为 GitHub/Git 插件市场源添加 `skipLfs` 选项，克隆更新时可跳过 LFS 下载，减少代理初始化时的网络开销。
-- 代理调度输入自动补全现在建议原生斜杠命令和捆绑技能，而不仅是项目技能，提升了代理工具发现的便捷性。
-- 修复了通过转录文件路径恢复会话时可能出现的多 GB 内存过度使用问题，增强了代理长时间运行的稳定性。
+- **新增 `skipLfs` 选项**：GitHub/Git 插件市场源在克隆和更新时可跳过 Git LFS 下载，减少大型文件传输时间。
+- **代理调度输入自动补全增强**：现在会建议原生斜杠命令和捆绑技能，而不仅仅是项目技能，提升工具发现效率。
+- **修复多项关键问题**：包括修复状态化 MCP 服务器的重连循环、自定义 API 网关的令牌混淆、子代理 MCP 服务器配置忽略，以及 Windows 更新失败后的可恢复性，增强了系统稳定性和安全性。
 
 ---
 

@@ -1,18 +1,22 @@
 ---
 slug: 2026-05-29-claude-code-2-1-156
-title: "claude-code v2.1.156 — 修复 Opus 4.8 下 thinking block 被改写触发 API 报错"
+title: "claude-code v2.1.156 — 修复 Opus 4.8 思维块被修改导致的 API 错误，确保推理流程稳定。"
 source: anthropics/claude-code
 sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.156
 publishedAt: 2026-05-29
-authored: editor
+authored: llm
+model: deepseek-v3-2-251201
 verified: pending
 kind: changelog
-hook: "一行 bugfix:Opus 4.8 的 thinking block 被改写会触发 API 报错,本版修掉。"
-insight: "走 newapi.lurus.cn 代理用 Opus 4.8 的国内用户里,凡是开了高推理强度(thinking / reasoning)后偶发 API 报错的,直接升到 2.1.156 即可,无需改 prompt 或 hook 配置。这是纯客户端侧的请求构造修复,代理服务不涉及,升级零风险。本版仅此一条变更,不急用可随下次例行升级带上。"
-tags: [opus, bugfix, thinking, api]
+hook: "修复 Opus 4.8 思维块被修改导致的 API 错误，确保推理流程稳定。"
+insight: "对于使用 newapi.lurus.cn 代理访问 Claude Opus 4.8 的国内用户，本次更新至关重要。它修复了因思维块被修改而引发的 API 错误，直接提升了推理流程的稳定性。这意味着，如果你的应用或工作流依赖 Opus 4.8 的思维链（Chain of Thought）输出，强烈建议尽快升级到 v2.1.156 版本，以避免因底层格式兼容性问题导致的服务中断。现有 prompt 配置本身无需修改，但升级后能确保其被更稳定地执行。"
+tags: [bug-fix, api-stability, model-compatibility, reasoning]
 ---
 
-- **修复 Opus 4.8 thinking block 改写问题**:此前在使用 Opus 4.8 时,thinking block 会被改写,导致 API 报错;本版修复。对依赖高推理强度的 agent harness 来说,这条直接消除了一类偶发的请求失败。
+- **修复了 Opus 4.8 中思维块被修改的问题**：此问题曾导致 API 调用出错。
+- **含义**：Agent harness 设计必须确保思维链（Chain of Thought）的原始完整性不被意外篡改，尤其是在与不同模型版本交互时。
+- **含义**：需要建立对模型输出格式（特别是结构化思维块）的版本兼容性检查和防护机制。
+- **含义**：错误处理应能区分 API 错误是源于内容修改还是其他原因，以进行精准修复。
 
 ---
 

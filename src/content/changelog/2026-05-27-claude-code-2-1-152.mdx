@@ -1,6 +1,6 @@
 ---
 slug: 2026-05-27-claude-code-2-1-152
-title: "claude-code v2.1.152 — 代码审查自动修复、技能禁用工具、会话启动钩子增强，提升开发效率与安全控制"
+title: "claude-code v2.1.152 — 代码审查自动修复、技能工具控制、会话钩子增强，提升开发自动化与定制能力"
 source: anthropics/claude-code
 sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.152
 publishedAt: 2026-05-27
@@ -8,14 +8,14 @@ authored: llm
 model: deepseek-v3-2-251201
 verified: pending
 kind: changelog
-hook: "代码审查自动修复、技能禁用工具、会话启动钩子增强，提升开发效率与安全控制"
-insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新没有直接影响。从功能角度看，现有用户值得升级，特别是依赖代码审查和技能管理的开发者。升级后，`/code-review --fix` 能自动应用优化建议，显著提升效率；`disallowed-tools` 设置则强化了安全控制，现有技能配置可能需要根据新的安全策略进行调整。`SessionStart` 钩子的增强使得技能重载和会话定制更加灵活，无需重启，优化了工作流。"
-tags: [code-review, skill-management, session-hooks, ui-fixes]
+hook: "代码审查自动修复、技能工具控制、会话钩子增强，提升开发自动化与定制能力"
+insight: "对于使用 Lurus 代理 newapi.lurus.cn 的国内开发者，本次更新值得关注。新增的 `SessionStart` 钩子能力允许在会话开始时设置标题和重载技能，这意味着之前可能需要重启或新会话才能生效的配置，现在可以即时应用，提升了自动化流程的定制效率。现有用户无需修改代理配置，但可以评估现有技能或自动化脚本，看是否需要利用此钩子来优化会话初始化过程。"
+tags: [code-review, skills-management, session-hooks, bug-fixes]
 ---
 
-- **`/code-review --fix` 自动应用审查建议**：将代码审查发现的复用、简化、效率建议直接应用到工作树，`/simplify` 命令现在调用此功能。这意味着 Agent 可以更主动地执行代码优化。
-- **技能可设置 `disallowed-tools` 前端禁止工具**：技能激活时可移除特定工具，增强了 Agent 在执行特定任务时的安全与资源控制。
-- **`SessionStart` 钩子支持重载技能和设置会话标题**：钩子可返回 `reloadSkills: true` 并设置 `sessionTitle`，使技能安装和会话定制无需重启，提升了 Agent 环境的动态配置能力。
+- **`/code-review --fix` 自动应用审查建议**：将代码复用、简化和效率建议直接应用到工作树，`/simplify` 命令现在调用此功能，意味着 Agent 能更主动地执行代码优化。
+- **技能可设置 `disallowed-tools` 前端元数据**：在技能激活时移除特定工具，为 Agent 工具链提供了更精细的权限控制。
+- **新增 `SessionStart` 钩子能力**：可设置会话标题、触发技能重载，使技能安装和会话定制能在同一会话中即时生效。
 
 ---
 

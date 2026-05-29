@@ -1,6 +1,6 @@
 ---
 slug: 2026-05-28-codex-rust-v0-135-0
-title: "codex rust-v0.135.0 — 诊断工具增强、Vim模式升级与Python SDK沙箱预设，提升开发体验与系统可"
+title: "codex rust-v0.135.0 — 诊断工具增强、Vim模式升级、Python SDK沙箱预设，提升开发者体验与系统"
 source: openai/codex
 sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.135.0
 publishedAt: 2026-05-28
@@ -8,14 +8,14 @@ authored: llm
 model: deepseek-v3-2-251201
 verified: pending
 kind: changelog
-hook: "诊断工具增强、Vim模式升级与Python SDK沙箱预设，提升开发体验与系统可观测性"
-insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新不涉及核心API变更，代理服务不受影响。现有用户无需升级或修改现有 prompt 配置。但如果你是重度 Vim 用户或需要利用 SDK 进行线程管理，可以考虑升级以获取更符合专业习惯的文本编辑体验和更易用的沙箱预设，这能提升开发效率。诊断工具的增强主要服务于系统维护和问题排查，普通用户感知不强。"
+hook: "诊断工具增强、Vim模式升级、Python SDK沙箱预设，提升开发者体验与系统可观测性。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要涉及本地工具链和SDK，代理服务本身不受影响。现有用户无需强制升级，但若深度依赖Vim模式或Python SDK进行开发，建议升级以获得更优的编辑体验和更简化的API集成。现有prompt或hook配置基本兼容，但Vim模式用户可考虑配置新的中断对话快捷键以提升操作效率。"
 tags: [diagnostics, vim-mode, python-sdk, tui-enhancement]
 ---
 
-- **`codex doctor` 诊断增强**：新增环境、Git、终端、服务器和线程清单诊断，便于支持案例排查。这意味着 Agent 系统需要内置更丰富的自检和状态报告机制。
-- **Vim 模式功能升级**：支持文本对象编辑、改进词尾/行尾行为，并可配置中断回合的快捷键。这表明 Agent 的交互界面需提供深度可定制且符合专业习惯的编辑体验。
-- **Python SDK 新增沙箱预设**：为线程和回合 API 提供了友好的 `Sandbox` 预设。这要求 Agent 的开发工具链应提供高层、易用的抽象来降低集成复杂度。
+- `codex doctor` 新增环境、Git、终端等详细诊断信息，便于支持团队快速定位问题。
+- Vim 模式支持文本对象编辑、改进词尾/行尾行为，并允许配置中断对话快捷键，提升编辑器集成体验。
+- Python SDK 新增 `Sandbox` 预设，简化线程与会话 API 的使用，降低集成复杂度。
 
 ---
 
