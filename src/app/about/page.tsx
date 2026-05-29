@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "关于",
@@ -44,6 +45,7 @@ const MATRIX = [
 export default function AboutPage() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <Reveal>
       <header className="mb-12">
         <p className="eyebrow mb-3">关于</p>
         <h1 className="font-display italic text-4xl md:text-5xl font-semibold mb-6 headline-tight">
@@ -62,22 +64,25 @@ export default function AboutPage() {
           </p>
         </div>
       </header>
+      </Reveal>
 
       <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-2 text-[var(--lt-ink)]">
-          Lurus 产品矩阵
-        </h2>
-        <p className="text-sm text-[var(--color-text-muted)] mb-6">
-          claude2master 是我们 Web 产品组的第三个独立品牌站。
-        </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <Reveal>
+          <h2 className="text-2xl font-semibold mb-2 text-[var(--lt-ink)]">
+            Lurus 产品矩阵
+          </h2>
+          <p className="text-sm text-[var(--color-text-muted)] mb-6">
+            claude2master 是我们 Web 产品组的第三个独立品牌站。
+          </p>
+        </Reveal>
+        <Stagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {MATRIX.map((m) => (
+            <StaggerItem key={m.name} className="h-full">
             <Link
-              key={m.name}
               href={m.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="card group flex flex-col"
+              className="card group flex flex-col h-full"
             >
               <div className="flex items-center justify-between mb-3">
                 <code className="font-mono text-sm text-[var(--lt-ink)] group-hover:text-[var(--c2m-accent-deep)] transition-colors">
@@ -92,10 +97,12 @@ export default function AboutPage() {
                 {m.desc}
               </p>
             </Link>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </section>
 
+      <Reveal>
       <section>
         <h2 className="text-2xl font-semibold mb-3 text-[var(--lt-ink)]">联系</h2>
         <p className="text-[var(--color-text-secondary)] leading-relaxed mb-2">
@@ -112,6 +119,7 @@ export default function AboutPage() {
           为 Anthropic PBC 的商标。
         </p>
       </section>
+      </Reveal>
     </div>
   );
 }

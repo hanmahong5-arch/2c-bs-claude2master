@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Calendar, Clock } from "lucide-react";
 import { getHarness } from "@/lib/content";
+import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Harness · Agent harness 设计文章",
@@ -16,20 +17,22 @@ export default async function HarnessPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-16 md:py-20">
-      <header className="mb-10">
-        <p className="eyebrow mb-3">Harness</p>
-        <h1 className="font-display italic text-4xl md:text-5xl font-semibold mb-4 headline-tight">
-          Agent harness 设计深度。
-        </h1>
-        <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl">
-          Scaffolding / context window / tool use / eval loop 的工程实践文章。编辑部撰写，不走 LLM 自动摘要。
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3 text-xs text-[var(--color-text-muted)]">
-          <Link href="/feed/harness" className="pill-outline pill hover:text-[var(--c2m-accent-deep)]">
-            RSS · harness only
-          </Link>
-        </div>
-      </header>
+      <Reveal>
+        <header className="mb-10">
+          <p className="eyebrow mb-3">Harness</p>
+          <h1 className="font-display italic text-4xl md:text-5xl font-semibold mb-4 headline-tight">
+            Agent harness 设计深度。
+          </h1>
+          <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl">
+            Scaffolding / context window / tool use / eval loop 的工程实践文章。编辑部撰写，不走 LLM 自动摘要。
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3 text-xs text-[var(--color-text-muted)]">
+            <Link href="/feed/harness" className="pill-outline pill hover:text-[var(--c2m-accent-deep)]">
+              RSS · harness only
+            </Link>
+          </div>
+        </header>
+      </Reveal>
 
       {items.length === 0 ? (
         <p className="text-sm text-[var(--color-text-muted)]">

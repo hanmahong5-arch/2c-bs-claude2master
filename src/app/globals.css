@@ -180,6 +180,25 @@ body {
   background: var(--c2m-accent);
 }
 
+/* Featured funnel card — accent-tinted, raised, draws the eye first */
+.card-featured {
+  background: linear-gradient(
+    160deg,
+    var(--c2m-accent-soft) 0%,
+    var(--color-surface) 55%
+  );
+  border-color: var(--c2m-accent-glow);
+}
+.card-featured:hover {
+  box-shadow: 0 12px 40px rgba(124, 92, 255, 0.16), 0 0 0 1px var(--c2m-accent);
+}
+
+/* Compact secondary card — lighter padding, lower visual weight */
+.card-compact {
+  padding: 1.125rem 1.25rem;
+  border-radius: 14px;
+}
+
 /* ── Pill / badge ── */
 .pill {
   display: inline-flex;

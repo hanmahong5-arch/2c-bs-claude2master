@@ -1,0 +1,19 @@
+---
+slug: 2026-05-29-claude-code-2-1-156
+title: "claude-code v2.1.156 — 修复 Opus 4.8 下 thinking block 被改写触发 API 报错"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.156
+publishedAt: 2026-05-29
+authored: editor
+verified: pending
+kind: changelog
+hook: "一行 bugfix:Opus 4.8 的 thinking block 被改写会触发 API 报错,本版修掉。"
+insight: "走 newapi.lurus.cn 代理用 Opus 4.8 的国内用户里,凡是开了高推理强度(thinking / reasoning)后偶发 API 报错的,直接升到 2.1.156 即可,无需改 prompt 或 hook 配置。这是纯客户端侧的请求构造修复,代理服务不涉及,升级零风险。本版仅此一条变更,不急用可随下次例行升级带上。"
+tags: [opus, bugfix, thinking, api]
+---
+
+- **修复 Opus 4.8 thinking block 改写问题**:此前在使用 Opus 4.8 时,thinking block 会被改写,导致 API 报错;本版修复。对依赖高推理强度的 agent harness 来说,这条直接消除了一类偶发的请求失败。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.156](https://github.com/anthropics/claude-code/releases/tag/v2.1.156)

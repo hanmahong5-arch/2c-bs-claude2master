@@ -10,6 +10,7 @@ import {
   type ChangelogItem,
   type ChangelogKind,
 } from "@/lib/content-types";
+import { Reveal } from "@/components/Reveal";
 
 type Filter = "all" | ChangelogKind;
 
@@ -33,6 +34,7 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <Reveal>
       <header className="mb-10">
         <p className="eyebrow mb-3">Changelog</p>
         <h1 className="font-display italic text-4xl md:text-5xl font-semibold mb-4 headline-tight">
@@ -78,6 +80,7 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
           })}
         </div>
       </header>
+      </Reveal>
 
       {filtered.length === 0 ? (
         <p className="text-sm text-[var(--color-text-muted)]">

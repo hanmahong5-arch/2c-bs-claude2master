@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Package, Download } from "lucide-react";
 import { SKILLS, SKILL_CATEGORIES } from "@/lib/skills";
+import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Skills 商店",
@@ -20,31 +21,33 @@ const SOURCE_BADGE: Record<string, string> = {
 export default function SkillsPage() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
-      <header className="mb-10">
-        <p className="eyebrow mb-3">Skills 商店</p>
-        <h1 className="font-display italic text-4xl md:text-5xl font-semibold mb-4 headline-tight">
-          Claude 能力即插即用。
-        </h1>
-        <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl">
-          Skills 是 2025-12 起 Anthropic 的新标准 — 把领域知识打包成可挂载的模块。
-          本站汇集官方 + Lurus 出品 + 社区精选，中文索引一键查看安装命令。
-        </p>
-      </header>
+      <Reveal>
+        <header className="mb-10">
+          <p className="eyebrow mb-3">Skills 商店</p>
+          <h1 className="font-display italic text-4xl md:text-5xl font-semibold mb-4 headline-tight">
+            Claude 能力即插即用。
+          </h1>
+          <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl">
+            Skills 是 2025-12 起 Anthropic 的新标准 — 把领域知识打包成可挂载的模块。
+            本站汇集官方 + Lurus 出品 + 社区精选，中文索引一键查看安装命令。
+          </p>
+        </header>
 
-      <div className="flex flex-wrap gap-2 mb-8 pb-6 border-b border-[var(--color-border)]">
-        {CATEGORIES.map((c, i) => (
-          <button key={c} className={i === 0 ? "pill" : "pill-outline pill"}>
-            {c}
-          </button>
-        ))}
-      </div>
+        <div className="flex flex-wrap gap-2 mb-8 pb-6 border-b border-[var(--color-border)]">
+          {CATEGORIES.map((c, i) => (
+            <button key={c} className={i === 0 ? "pill" : "pill-outline pill"}>
+              {c}
+            </button>
+          ))}
+        </div>
+      </Reveal>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <Stagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {SKILLS.map((s) => (
+          <StaggerItem key={s.slug} className="h-full">
           <Link
-            key={s.slug}
             href={`/skills/${s.slug}`}
-            className="card group flex flex-col"
+            className="card group flex flex-col h-full"
           >
             <div className="flex items-start justify-between mb-3">
               <Package
@@ -71,8 +74,9 @@ export default function SkillsPage() {
               安装 / 详情
             </span>
           </Link>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
 
       <p className="mt-12 text-sm text-[var(--color-text-muted)] text-center">
         当前 {SKILLS.length} 条目录 · 欢迎{" "}
