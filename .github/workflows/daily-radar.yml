@@ -3,11 +3,11 @@ name: Daily Radar
 # Plan §3 — 全自动层
 # 每天 09:30 CN (01:30 UTC) 抓 anthropics/claude-code + openai/codex 新 release
 # LLM 中文摘要 → 写 src/content/changelog/*.mdx → bot commit 直推 main
-# Vercel auto-build (~30s) → /changelog 列表 / RSS feed / sitemap 更新
+# → 显式 POST Vercel Deploy Hook 触发部署 (git push 不会自动 build, 见下 Trigger 步骤)
 #
 # Path filter: 只动 src/content/changelog/ + scripts/radar/state.json
 # 失败告警: WECHATWORK_WEBHOOK_URL (复用 lurus daily-audit)
-# 当日无新 release → exit 0, 不 commit, 不触发 Vercel build
+# 当日无新 release → exit 0, 不 commit, 不触发部署
 
 on:
   schedule:
@@ -55,7 +55,9 @@ jobs:
           set -euo pipefail
           # 失败不阻塞 release 路径 (practices 是补充, 不是主路径)
           bun run scripts/radar/fetch-practices.ts > radar-new-practices.jsonl || true
-          pc=$(grep -c . radar-new-practices.jsonl 2>/dev/null || echo 0)
+          # 注意: `grep -c` 空文件输出 "0" 但退出码 1; 若再 `|| echo 0` 会双计数成多行 "0\n0",
+          # 写进 $GITHUB_OUTPUT 触发 "Invalid format" 让步骤失败。用 `|| true` + 默认值兜底。
+          pc=$(grep -c . radar-new-practices.jsonl 2>/dev/null || true); pc=${pc:-0}
           echo "pc=$pc" >> "$GITHUB_OUTPUT"
           echo "---- fetched $pc practice(s) ----"
           cat radar-new-practices.jsonl 2>/dev/null || true
@@ -67,7 +69,8 @@ jobs:
           : > radar-input.jsonl
           [ -s radar-new-releases.jsonl ] && cat radar-new-releases.jsonl >> radar-input.jsonl || true
           [ -s radar-new-practices.jsonl ] && cat radar-new-practices.jsonl >> radar-input.jsonl || true
-          count=$(grep -c . radar-input.jsonl 2>/dev/null || echo 0)
+          # 同 practices 步骤: 避免 `grep -c` 空文件时 `|| echo 0` 双计数成多行破坏 $GITHUB_OUTPUT
+          count=$(grep -c . radar-input.jsonl 2>/dev/null || true); count=${count:-0}
           echo "count=$count" >> "$GITHUB_OUTPUT"
           echo "---- $count input line(s) combined ----"
 
@@ -101,6 +104,19 @@ jobs:
           git commit -m "chore(radar): auto-summarize ${count} new item(s)" \
                      -m "$(date -u +%Y-%m-%d) daily run · model deepseek-v3-2-251201"
           git push
+
+      # git push 不会触发 Vercel build (本项目无 git auto-deploy), 必须显式 POST Deploy Hook
+      - name: Trigger Vercel deploy
+        if: steps.combine.outputs.count != '0'
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          set -euo pipefail
+          if [ -z "${VERCEL_DEPLOY_HOOK:-}" ]; then
+            echo "::warning::VERCEL_DEPLOY_HOOK not set; content committed but site won't redeploy"
+            exit 0
+          fi
+          curl -fsS -X POST "$VERCEL_DEPLOY_HOOK" >/dev/null && echo "vercel deploy triggered"
 
       - name: Notify wechatwork on failure
         if: failure() && env.WECHATWORK_WEBHOOK_URL != ''

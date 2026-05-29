@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Hero from "@/components/Hero";
 import RadarSection from "@/components/RadarSection";
+import HarnessDeepDive from "@/components/HarnessDeepDive";
 import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
 
 // 漏斗核心:3 张大卡 —— 进站第一眼要"重要功能一目了然"。Chat 是转化主路径,高亮。
@@ -153,6 +154,10 @@ export default async function Home() {
       <div className="section-divider max-w-6xl mx-auto" />
 
       <RadarSection />
+
+      <div className="section-divider max-w-6xl mx-auto" />
+
+      <HarnessDeepDive />
 
       <div className="section-divider max-w-6xl mx-auto" />
 

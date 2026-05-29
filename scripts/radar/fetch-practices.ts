@@ -19,9 +19,9 @@
 import { promises as fs } from "fs";
 import path from "path";
 
-const SCRIPT_DIR = path.dirname(
-  new URL(import.meta.url).pathname.replace(/^\//, ""),
-);
+// Bun 原生, 跨平台: Win 给 C:/… / Linux 给 /home/runner/… 都是正确绝对目录。
+// (旧写法 new URL(import.meta.url).pathname.replace(/^\//,"") 在 Linux 会退化成相对路径 → ENOENT)
+const SCRIPT_DIR = import.meta.dir;
 const STATE_FILE = path.join(SCRIPT_DIR, "state.json");
 const SOURCES_FILE = path.join(SCRIPT_DIR, "sources.yaml");
 

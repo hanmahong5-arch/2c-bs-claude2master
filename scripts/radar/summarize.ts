@@ -17,7 +17,8 @@
 import { promises as fs } from "fs";
 import path from "path";
 
-const SCRIPT_DIR = path.dirname(new URL(import.meta.url).pathname.replace(/^\//, ""));
+// Bun 原生, 跨平台 (旧 URL.pathname 写法在 Linux CI 退化成相对路径 → ENOENT)
+const SCRIPT_DIR = import.meta.dir;
 const ROOT = path.resolve(SCRIPT_DIR, "..", "..");
 const CHANGELOG_DIR = path.join(ROOT, "src", "content", "changelog");
 const STATE_FILE = path.join(SCRIPT_DIR, "state.json");

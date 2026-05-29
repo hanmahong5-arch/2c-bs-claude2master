@@ -13,7 +13,11 @@ function resolveKind(c: ChangelogItem): ChangelogKind {
 
 export default async function RadarSection() {
   const [changelog, digest] = await Promise.all([getChangelog(), getDigest()]);
-  const latestRadar = changelog.slice(0, 4);
+  // 只取版本 release; 工程博客 (kind=practice) 与自营 harness 长文分流到 HarnessDeepDive,
+  // 避免高频发版把深度长文挤出前 4 条。
+  const latestRadar = changelog
+    .filter((c) => resolveKind(c) !== "practice")
+    .slice(0, 4);
   const latestDigest = digest[0];
 
   if (latestRadar.length === 0) {
