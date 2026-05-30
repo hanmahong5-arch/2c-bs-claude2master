@@ -1,0 +1,25 @@
+---
+slug: 2026-05-30-claude-code-2-1-158
+title: "claude-code v2.1.158 — Claude Code 在三大云平台启用自动模式，支持最新模型"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.158
+publishedAt: 2026-05-30
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "Claude Code 在三大云平台启用自动模式，支持最新模型"
+insight: "对于使用 Lurus 代理访问 Claude Code 的国内开发者，这次更新值得关注。自动模式扩展至三大云平台，意味着如果你通过 newapi.lurus.cn 代理使用 Bedrock、Vertex 或 Foundry 服务，将能获得统一的自动化体验，简化部署流程。由于功能通过环境变量手动启用，现有用户的 prompt 或 hook 配置无需立即修改，可按需设置 `CLAUDE_CODE_ENABLE_AUTO_MODE=1` 来激活。代理本身不受影响，但升级后能让你立即支持最新的 Opus 4.7 和 4.8 模型。"
+tags: [auto-mode, multi-cloud, model-support, feature-flag]
+---
+
+- **自动模式扩展至三大云平台**：Bedrock、Vertex 和 Foundry 现已支持自动模式。
+  - 含义：为多平台用户提供了统一的自动化体验，简化了跨云部署流程。
+- **支持 Opus 4.7 和 Opus 4.8 模型**：自动模式功能适用于这两个最新模型版本。
+  - 含义：确保用户能立即利用最新的模型能力，无需等待功能适配。
+- **通过环境变量手动启用**：需设置 `CLAUDE_CODE_ENABLE_AUTO_MODE=1` 来激活此功能。
+  - 含义：保留了用户的选择权，允许根据具体需求逐步采用新特性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.158](https://github.com/anthropics/claude-code/releases/tag/v2.1.158)
