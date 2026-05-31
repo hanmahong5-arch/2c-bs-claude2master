@@ -122,12 +122,12 @@ function deriveSlug(input: Input): string {
   return `${date}-${slugify(repo)}-${slugify(input.tag)}`;
 }
 
-async function callNewapi(
+// 单次调用; 失败抛错, status 字段供重试层判定是否可重试。
+async function callNewapiOnce(
   systemPrompt: string,
   userContent: string,
   maxTokens: number,
 ): Promise<string> {
-  if (!TOKEN) throw new Error("NEWAPI_TRIAL_TOKEN missing");
   const resp = await fetch(`${NEWAPI_BASE_URL}/v1/chat/completions`, {
     method: "POST",
     headers: {
@@ -148,7 +148,9 @@ async function callNewapi(
 
   if (!resp.ok) {
     const text = await resp.text();
-    throw new Error(`newapi ${resp.status}: ${text.slice(0, 300)}`);
+    const err = new Error(`newapi ${resp.status}: ${text.slice(0, 300)}`);
+    (err as { status?: number }).status = resp.status;
+    throw err;
   }
 
   const json = (await resp.json()) as {
@@ -157,6 +159,39 @@ async function callNewapi(
   const content = json.choices?.[0]?.message?.content ?? "";
   if (!content) throw new Error("LLM returned empty content");
   return content;
+}
+
+// 重试包装: newapi 网关在 fresh runner 上首次连接常被 socket-close(冷启动),
+// 后续复用连接即正常。对网络层错误(无 HTTP status)与 5xx 退避重试; 4xx(鉴权/配置)
+// 立即抛出(重试无意义)。仅加韧性, 不改输出格式。
+async function callNewapi(
+  systemPrompt: string,
+  userContent: string,
+  maxTokens: number,
+): Promise<string> {
+  if (!TOKEN) throw new Error("NEWAPI_TRIAL_TOKEN missing");
+  const MAX_ATTEMPTS = 3;
+  let lastErr: unknown;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      return await callNewapiOnce(systemPrompt, userContent, maxTokens);
+    } catch (err) {
+      lastErr = err;
+      const status = (err as { status?: number }).status;
+      const retryable = status === undefined || status >= 500;
+      if (retryable && attempt < MAX_ATTEMPTS) {
+        console.error(
+          `[radar] newapi attempt ${attempt}/${MAX_ATTEMPTS} failed (${
+            err instanceof Error ? err.message : String(err)
+          }); retrying`,
+        );
+        await new Promise((r) => setTimeout(r, attempt * 1500));
+        continue;
+      }
+      throw err;
+    }
+  }
+  throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
 }
 
 async function callLLM(input: Input): Promise<SummaryOutput> {
