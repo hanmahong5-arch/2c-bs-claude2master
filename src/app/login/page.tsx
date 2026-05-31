@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import TrackedLink from "@/components/TrackedLink";
+import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
 
 export const metadata: Metadata = {
   title: "登录",
   description: "用 Lurus 统一账号登录 claude2master — 手机号 / 微信 / 邮箱皆可。",
 };
+
+const NEWAPI_LOGIN = buildOutbound("newapi", OUTBOUND_CAMPAIGN.login);
 
 export default function LoginPage() {
   return (
@@ -21,14 +25,15 @@ export default function LoginPage() {
         <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-4">
           需要立即用 Claude？先去 newapi 注册个账户：
         </p>
-        <Link
-          href="https://newapi.lurus.cn"
-          target="_blank"
-          rel="noopener noreferrer"
+        <TrackedLink
+          href={NEWAPI_LOGIN}
+          external
+          event="cta_register_newapi"
+          data={{ from: "login" }}
           className="btn btn-primary w-full"
         >
           去 newapi 注册
-        </Link>
+        </TrackedLink>
       </div>
 
       <p className="text-sm text-[var(--color-text-muted)]">

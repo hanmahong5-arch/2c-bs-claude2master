@@ -1,6 +1,10 @@
 import { MODEL_ID, type ModelKey } from "@/lib/prompts";
+import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
 
 export const runtime = "edge";
+
+// 额度耗尽返回给前端的升级链接:带 chat-exhausted 归因(单一出站构造点)。
+const UPGRADE_URL = buildOutbound("newapi", OUTBOUND_CAMPAIGN.chatExhausted);
 
 type ChatMessage = { role: "user" | "assistant" | "system"; content: string };
 type ChatBody = { model: ModelKey; messages: ChatMessage[] };
@@ -46,7 +50,7 @@ export async function POST(req: Request) {
       "trial_exhausted",
       `免费 ${TRIAL_LIMIT} 次试用已用完。注册 newapi.lurus.cn 解锁完整额度。`,
       {
-        upgrade_url: "https://newapi.lurus.cn",
+        upgrade_url: UPGRADE_URL,
         trial_used: used,
         trial_limit: TRIAL_LIMIT,
       },

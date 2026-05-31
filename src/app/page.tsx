@@ -12,6 +12,7 @@ import Hero from "@/components/Hero";
 import RadarSection from "@/components/RadarSection";
 import HarnessDeepDive from "@/components/HarnessDeepDive";
 import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
+import TrackedLink from "@/components/TrackedLink";
 
 // 漏斗核心:3 张大卡 —— 进站第一眼要"重要功能一目了然"。Chat 是转化主路径,高亮。
 const PRIMARY = [
@@ -85,8 +86,10 @@ export default async function Home() {
         <Stagger className="grid md:grid-cols-3 gap-6 mb-6">
           {PRIMARY.map((p) => (
             <StaggerItem key={p.href} className="h-full">
-              <Link
+              <TrackedLink
                 href={p.href}
+                event="cta_home_card"
+                data={{ from: "home-card", target: p.href }}
                 className={`card group flex flex-col h-full ${
                   p.featured ? "card-featured" : ""
                 }`}
@@ -115,7 +118,7 @@ export default async function Home() {
                   {p.cta}
                   <ArrowRight size={15} />
                 </span>
-              </Link>
+              </TrackedLink>
             </StaggerItem>
           ))}
         </Stagger>

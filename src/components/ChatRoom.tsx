@@ -5,6 +5,14 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Send, AlertCircle, Sparkles, ExternalLink } from "lucide-react";
 import { MODEL_LABEL, getPrompt, type ModelKey } from "@/lib/prompts";
+import TrackedLink from "@/components/TrackedLink";
+import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
+
+// 漏斗最高意向出站 URL:chat 额度耗尽 → newapi 注册。带 chat-exhausted 归因。
+const NEWAPI_CHAT_EXHAUSTED = buildOutbound(
+  "newapi",
+  OUTBOUND_CAMPAIGN.chatExhausted,
+);
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -155,14 +163,15 @@ export default function ChatRoom() {
         </h1>
         <p className="text-sm md:text-base text-[var(--color-text-secondary)]">
           免登录 {TRIAL_LIMIT} 次试用。额度用完
-          <Link
-            href="https://newapi.lurus.cn"
-            target="_blank"
-            rel="noopener noreferrer"
+          <TrackedLink
+            href={NEWAPI_CHAT_EXHAUSTED}
+            external
+            event="cta_register_newapi"
+            data={{ from: "chat-header" }}
             className="text-[var(--c2m-accent-deep)] hover:underline mx-1"
           >
             去 newapi 注册
-          </Link>
+          </TrackedLink>
           解锁。
         </p>
       </header>
@@ -255,15 +264,16 @@ export default function ChatRoom() {
           <div className="flex-1">
             {err}
             {exhausted && (
-              <Link
-                href="https://newapi.lurus.cn"
-                target="_blank"
-                rel="noopener noreferrer"
+              <TrackedLink
+                href={NEWAPI_CHAT_EXHAUSTED}
+                external
+                event="cta_register_newapi"
+                data={{ from: "chat-exhausted" }}
                 className="inline-flex items-center gap-1 ml-2 underline"
               >
                 去注册
                 <ExternalLink size={12} />
-              </Link>
+              </TrackedLink>
             )}
           </div>
         </div>

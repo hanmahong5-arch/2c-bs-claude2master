@@ -1,10 +1,11 @@
 import Link from "next/link";
 import TrackedLink from "./TrackedLink";
+import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
 
 const PRODUCTS = [
   { href: "https://www.lurus.cn", label: "lurus.cn" },
-  { href: "https://newapi.lurus.cn", label: "newapi" },
-  { href: "https://forge.lurus.cn", label: "forge" },
+  { href: buildOutbound("newapi", OUTBOUND_CAMPAIGN.about), label: "newapi" },
+  { href: buildOutbound("forge", OUTBOUND_CAMPAIGN.about), label: "forge" },
   { href: "https://dsnb.help", label: "dsnb.help" },
 ];
 

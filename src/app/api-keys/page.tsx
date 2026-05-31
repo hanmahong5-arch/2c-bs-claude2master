@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Key, Wallet, Zap } from "lucide-react";
+import TrackedLink from "@/components/TrackedLink";
+import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
+
+// 单一出站构造点:api-keys 页注册入口,带 api-keys 归因。
+const NEWAPI_API_KEYS = buildOutbound("newapi", OUTBOUND_CAMPAIGN.apiKeys);
 
 export const metadata: Metadata = {
   title: "申请 API key",
@@ -68,15 +73,16 @@ export default function ApiKeysPage() {
           — 不翻墙、支付宝/微信付款、双协议兼容。
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <Link
-            href="https://newapi.lurus.cn"
-            target="_blank"
-            rel="noopener noreferrer"
+          <TrackedLink
+            href={NEWAPI_API_KEYS}
+            external
+            event="cta_register_newapi"
+            data={{ from: "api-keys" }}
             className="btn btn-cta-glow"
           >
             立即注册
             <ArrowRight size={16} />
-          </Link>
+          </TrackedLink>
           <Link
             href="/tutorials/claude-code-setup"
             className="btn btn-secondary"

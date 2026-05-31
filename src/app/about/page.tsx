@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
+import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
 
 export const metadata: Metadata = {
   title: "关于",
@@ -17,17 +18,17 @@ const MATRIX = [
   },
   {
     name: "newapi.lurus.cn",
-    href: "https://newapi.lurus.cn",
+    href: buildOutbound("newapi", OUTBOUND_CAMPAIGN.about),
     desc: "Lurus 自营 LLM 网关，30+ 模型、双协议兼容、人民币计费。",
   },
   {
     name: "hub.lurus.cn",
-    href: "https://hub.lurus.cn",
+    href: buildOutbound("hub", OUTBOUND_CAMPAIGN.about),
     desc: "newapi 之上的多租户 Hub 层，企业团队首选。",
   },
   {
     name: "forge.lurus.cn",
-    href: "https://forge.lurus.cn",
+    href: buildOutbound("forge", OUTBOUND_CAMPAIGN.about),
     desc: "Agent workbench — 可视化拖拉 prompt 流。",
   },
   {
