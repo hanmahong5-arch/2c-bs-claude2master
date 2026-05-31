@@ -6,7 +6,8 @@
     "cline/cline": "cli-v3.0.15",
     "block/goose": "v1.36.0",
     "sst/opencode": "v1.15.13",
-    "RooCodeInc/Roo-Code": "v3.54.0"
+    "RooCodeInc/Roo-Code": "v3.54.0",
+    "google-gemini/gemini-cli": "v0.44.1"
   },
   "practicesSeen": {
     "anthropic-engineering": [

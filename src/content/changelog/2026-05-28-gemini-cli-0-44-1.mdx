@@ -1,0 +1,22 @@
+---
+slug: 2026-05-28-gemini-cli-0-44-1
+title: "gemini-cli v0.44.1 — 紧急修复版本，解决发布分支合并冲突问题"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.44.1
+publishedAt: 2026-05-28
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "紧急修复版本，解决发布分支合并冲突问题"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新是纯后台的发布流程修复，不涉及任何面向用户的功能变更或API接口调整。因此，现有用户的配置、prompt和连接方式完全无需任何改动，代理服务的稳定性和可用性不会受到此次更新的影响。这只是一个确保项目自动化发布流程正确运行的内部维护操作。"
+tags: [bug-fix, release-management, automation, cherry-pick]
+---
+
+*   **修复发布分支合并冲突**：将特定提交（bd53951）cherry-pick 到 `release/v0.44.0-pr-27496` 分支以解决冲突。
+*   **含义**：这表明项目采用了严格的分支管理和自动化发布流程，对代理系统的版本控制和持续集成可靠性有较高要求。
+*   **含义**：修复动作由机器人账号（@gemini-cli-robot）执行，体现了高度自动化的运维模式，是构建稳定代理基础设施的关键实践。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.44.1](https://github.com/google-gemini/gemini-cli/releases/tag/v0.44.1)
