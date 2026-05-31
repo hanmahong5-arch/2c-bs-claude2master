@@ -1,0 +1,22 @@
+---
+slug: 2026-05-30-opencode-1-15-13
+title: "opencode v1.15.13 — 修复推理显示问题，新增会话元数据支持，提升配置加载逻辑"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.15.13
+publishedAt: 2026-05-30
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复推理显示问题，新增会话元数据支持，提升配置加载逻辑"
+insight: "对于使用 Lurus 代理的国内用户，本次更新值得关注。首先，修复了 Anthropic Opus 模型的推理显示问题，确保了 Agent 设计时能完整看到思考过程，这对依赖此类模型的用户是直接优化。其次，新增的会话元数据功能，使得通过 newapi.lurus.cn 调用 API/SDK 时，可以为会话附加自定义信息，便于在复杂工作流中传递状态，提升了代理的上下文管理能力。配置加载逻辑的改进则让多环境下的策略应用更稳定。总体而言，现有用户无需修改现有 prompt 或 hook 配置，但建议升级以获取更可靠的推理显示和更强的会话管理功能。"
+tags: [bugfix, metadata, config, reasoning]
+---
+
+- **修复 Anthropic Opus 4.7+ 推理显示**：网关现在保留总结性思考内容，而非返回空块，确保推理过程对 Agent 设计可见。
+- **新增会话元数据存储**：通过 API/SDK 可为会话存储自定义元数据，便于 Agent 在复杂工作流中携带上下文。
+- **改进配置加载顺序**：配置从打开位置向上加载，使目录级设置和供应商策略应用更可预测，利于多环境 Agent 管理。
+
+---
+
+> 原文 release：[sst/opencode v1.15.13](https://github.com/anomalyco/opencode/releases/tag/v1.15.13)

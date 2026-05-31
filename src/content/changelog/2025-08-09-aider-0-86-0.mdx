@@ -1,0 +1,22 @@
+---
+slug: 2025-08-09-aider-0-86-0
+title: "aider v0.86.0 — 新增 GPT"
+source: Aider-AI/aider
+sourceUrl: https://github.com/Aider-AI/aider/releases/tag/v0.86.0
+publishedAt: 2025-08-09
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增 GPT-5、Grok-4 等主流模型支持，并优化了历史记录与设置管理。"
+insight: "对于国内用户，本次更新不影响通过 newapi.lurus.cn 代理使用 GPT-4 等现有模型，因为代理层本身不涉及模型适配。但如果你计划在 Aider 中直接使用 GPT-5 或 Grok-4 等新模型，由于这些模型目前可能未在国内代理服务中正式上线，其实际可用性需要确认。现有用户的 prompt 和 hook 配置无需因本次更新而修改，除非你明确需要切换至这些新增模型。"
+tags: [model-support, command-optimization, bug-fixes, dependencies]
+---
+
+- **支持 GPT-5、Grok-4 和 Gemini 2.5 Flash Lite 等新模型**：扩展了模型生态，意味着 Agent Harness 需要设计更灵活的模型适配层。
+- **优化 `/clear` 和 `/undo` 命令的反馈与显示**：提升了交互清晰度，要求 Agent Harness 提供明确的状态确认与简洁的历史视图。
+- **修复模型设置更新与依赖兼容性问题**：确保了配置的实时生效和 SDK 兼容，强调 Agent Harness 需具备稳健的配置管理和向后兼容能力。
+
+---
+
+> 原文 release：[Aider-AI/aider v0.86.0](https://github.com/Aider-AI/aider/releases/tag/v0.86.0)

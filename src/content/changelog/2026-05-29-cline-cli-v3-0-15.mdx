@@ -1,0 +1,22 @@
+---
+slug: 2026-05-29-cline-cli-v3-0-15
+title: "cline cli-v3.0.15 — 新增 Cline Hub 网页监控、全局智能体规则、插件动态规则，提升多会话管理"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.15
+publishedAt: 2026-05-29
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增 Cline Hub 网页监控、全局智能体规则、插件动态规则，提升多会话管理能力。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次升级不受影响，因为核心变更集中在本地 CLI 与 Hub 的交互及规则管理层面，不涉及上游 API 端点或认证方式的改动。现有用户值得升级以获取更强的多会话监控与管理能力，但需注意：若你已配置了项目级智能体规则，现在全局规则可能引入优先级冲突，需要检查并调整现有配置以确保预期行为。"
+tags: [web-monitoring, global-rules, plugin-sandbox, session-management]
+---
+
+- **新增 Cline Hub 网页应用**：提供客户端监控、会话查看与驱动、助手输出流式传输及本地 Hub 重启功能，通过房间密钥控制本地、局域网和隧道访问。这意味着 Agent Harness 设计需支持集中式可视化监控与远程会话管理。
+- **支持全局 AGENTS 规则**：智能体规则现可应用于所有会话，而不仅是单个项目。这要求设计时考虑跨会话的规则优先级与冲突解决机制。
+- **插件可贡献静态或动态规则内容**：插件在沙箱中安装时能提供规则，增强了扩展性。设计需允许插件安全地注入规则，并处理动态内容的生命周期。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.15](https://github.com/cline/cline/releases/tag/cli-v3.0.15)

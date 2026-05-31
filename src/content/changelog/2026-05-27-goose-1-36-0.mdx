@@ -1,0 +1,22 @@
+---
+slug: 2026-05-27-goose-1-36-0
+title: "goose v1.36.0 — Goose 新增 TUI 界面、本地代码审查和代理自评估，提升开发体验与可控性"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.36.0
+publishedAt: 2026-05-27
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "Goose 新增 TUI 界面、本地代码审查和代理自评估，提升开发体验与可控性"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次升级影响可控。虽然新增的 TUI 界面和 Hooks 系统意味着 Agent 工具需要适配更丰富的交互模式和内置更细粒度的生命周期控制，但这些主要是开发层面的架构调整。由于代理服务本身不直接提供 CLI 工具，且统一的思维控制与新增云提供商主要影响后端配置，因此通过代理调用模型的现有工作流和 prompt 配置预计不会受到直接影响，用户无需立即修改。"
+tags: [tui, agent-control, multi-provider, developer-tools]
+---
+
+- **新增 TUI 命令与差异查看器**：为 CLI 提供文本用户界面，便于在终端内直接操作和审查代码变更，意味着 Agent 工具需要适配更丰富的交互模式。
+- **引入 `/goal` 自评估与 Hooks 系统**：代理在完成任务前可进行自我评估，并通过 Hooks 在工具调用前进行拦截与扩展，意味着 Agent 设计需内置更细粒度的生命周期控制与安全审查点。
+- **统一思维控制与新增多个云提供商**：所有模型提供商均采用一致的思维努力度控制，并集成 NEAR AI Cloud、Scaleway 等新服务，意味着 Agent 架构需支持可插拔的后端与统一的推理资源配置。
+
+---
+
+> 原文 release：[block/goose v1.36.0](https://github.com/aaif-goose/goose/releases/tag/v1.36.0)
