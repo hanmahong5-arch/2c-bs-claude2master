@@ -1,6 +1,6 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.158",
+    "anthropics/claude-code": "v2.1.159",
     "openai/codex": "rust-v0.135.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "cli-v3.0.15",
@@ -41,7 +41,7 @@
     "openai-codex-blog": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-05-31",
+    "anthropic-engineering": "2026-06-01",
     "claude-code-docs": "2026-05-28",
     "openai-codex-blog": "2026-05-28"
   },
