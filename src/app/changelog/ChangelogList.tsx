@@ -17,6 +17,7 @@ import {
   toolForSource,
   versionFromSourceUrl,
 } from "@/lib/tools";
+import { relativeAge } from "@/lib/date";
 import { Reveal } from "@/components/Reveal";
 
 // 筛选值: "all"(按工具分组) | "practice"(实践扁平) | 某 tool key(该工具扁平)
@@ -31,6 +32,7 @@ const TOOL_NAMES = TOOLS.map((t) => t.name).join("、");
 function ChangelogCard({ c }: { c: ChangelogItem }) {
   const k = resolveKind(c);
   const kindMeta = KIND_LABEL[k];
+  const age = relativeAge(c.publishedAt);
   return (
     <li>
       <Link
@@ -73,6 +75,14 @@ function ChangelogCard({ c }: { c: ChangelogItem }) {
           <span className="inline-flex items-center gap-1.5">
             <Calendar size={12} />
             {c.publishedAt}
+            {age && (
+              <span
+                className="text-[var(--color-text-muted)]"
+                suppressHydrationWarning
+              >
+                · {age}
+              </span>
+            )}
           </span>
           <span className="inline-flex items-center gap-1.5">
             <Github size={12} />

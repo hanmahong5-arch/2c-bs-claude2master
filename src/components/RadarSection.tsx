@@ -6,6 +6,7 @@ import {
   type ChangelogKind,
 } from "@/lib/content-types";
 import { TOOLS, toolForSource, versionFromSourceUrl } from "@/lib/tools";
+import { relativeAge } from "@/lib/date";
 
 function resolveKind(c: ChangelogItem): ChangelogKind {
   return c.kind === "practice" ? "practice" : "changelog";
@@ -52,6 +53,7 @@ export default async function RadarSection() {
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {latestRadar.map(({ tool, item: c }) => {
           const version = versionFromSourceUrl(c.sourceUrl);
+          const age = relativeAge(c.publishedAt);
           return (
             <Link
               key={tool.key}
@@ -78,6 +80,7 @@ export default async function RadarSection() {
                 <span className="inline-flex items-center gap-1">
                   <Calendar size={11} />
                   {c.publishedAt}
+                  {age && <span>· {age}</span>}
                 </span>
                 {c.verified !== "tested" && (
                   <span className="text-[var(--color-text-muted)]">
