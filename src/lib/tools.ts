@@ -51,3 +51,10 @@ export function versionFromSourceUrl(url: string): string | null {
   if (!m) return null;
   return decodeURIComponent(m[1]);
 }
+
+/** 工具清单文案 — 供 RSS / metadata / 订阅页复用, 消除散落的 "Claude Code / Codex" 硬编码。
+ *   "full"  → 枚举全部工具名(利 SEO/metadata)   "count" → "8 大 AI 编码工具"(列表过长处用) */
+export function toolListCopy(format: "full" | "count"): string {
+  if (format === "full") return TOOLS.map((t) => t.name).join("、");
+  return `${TOOLS.length} 大 AI 编码工具`;
+}

@@ -3,7 +3,7 @@
 import { Suspense, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { Calendar, Github } from "lucide-react";
+import { Calendar, Github, Rss } from "lucide-react";
 import {
   AUTHORED_LABEL,
   KIND_LABEL,
@@ -15,6 +15,7 @@ import {
   TOOLS,
   toolForKey,
   toolForSource,
+  toolListCopy,
   versionFromSourceUrl,
 } from "@/lib/tools";
 import { relativeAge } from "@/lib/date";
@@ -27,7 +28,7 @@ function resolveKind(c: ChangelogItem): ChangelogKind {
   return c.kind === "practice" ? "practice" : "changelog";
 }
 
-const TOOL_NAMES = TOOLS.map((t) => t.name).join("、");
+const TOOL_NAMES = toolListCopy("full");
 
 function ChangelogCard({ c }: { c: ChangelogItem }) {
   const k = resolveKind(c);
@@ -94,15 +95,18 @@ function ChangelogCard({ c }: { c: ChangelogItem }) {
   );
 }
 
-// 一个分组段: 段头 `● {name}  最新 {version}` + 该组卡片倒序。
+// 一个分组段: 段头 `● {name}  最新 {version}  [RSS]` + 该组卡片倒序。
+// feedKey 仅工具段传入 → 段头出现 per-tool RSS pill; 其他/实践段不传 → 不显示。
 function ToolSection({
   name,
   version,
   items,
+  feedKey,
 }: {
   name: string;
   version: string | null;
   items: ChangelogItem[];
+  feedKey?: string;
 }) {
   if (items.length === 0) return null;
   return (
@@ -116,6 +120,16 @@ function ToolSection({
           <span className="pill text-[10px] bg-[var(--c2m-accent-soft)] text-[var(--c2m-accent-deep)]">
             最新 {version}
           </span>
+        )}
+        {feedKey && (
+          <Link
+            href={`/feed/tool/${feedKey}`}
+            className="pill-outline pill text-[10px] inline-flex items-center gap-1 hover:text-[var(--c2m-accent-deep)]"
+            title={`${name} 的 RSS 订阅`}
+          >
+            <Rss size={10} />
+            RSS
+          </Link>
         )}
       </div>
       <ul className="space-y-4">
@@ -236,6 +250,7 @@ function ChangelogListInner({ items }: { items: ChangelogItem[] }) {
                 name={t.name}
                 version={versionOf(group)}
                 items={group}
+                feedKey={t.key}
               />
             );
           })}

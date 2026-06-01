@@ -1,3 +1,5 @@
+import { toolListCopy } from "./tools";
+
 export type ContentChannel = "changelog" | "digest" | "harness";
 
 export type Authored = "llm" | "editor" | "hybrid";
@@ -52,7 +54,7 @@ export const CHANNEL_LABEL: Record<ContentChannel, string> = {
 };
 
 export const CHANNEL_DESC: Record<ContentChannel, string> = {
-  changelog: "Claude Code / Codex 每日 release 中文摘要",
+  changelog: `${toolListCopy("count")} 每日 release 中文摘要`,
   digest: "Agentic 工具链一周热点回顾",
   harness: "Agent harness 设计深度文章",
 };

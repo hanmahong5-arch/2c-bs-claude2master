@@ -3,11 +3,11 @@ import Link from "next/link";
 import { Calendar, Clock } from "lucide-react";
 import { getDigest } from "@/lib/content";
 import { AUTHORED_LABEL } from "@/lib/content-types";
+import { toolListCopy } from "@/lib/tools";
 
 export const metadata: Metadata = {
   title: "Weekly · Agent tooling 周报",
-  description:
-    "每周一回顾 Claude Code / Codex / 行业动态，由编辑部与 LLM 协同撰写。",
+  description: `每周一回顾 ${toolListCopy("count")}与行业动态，由编辑部与 LLM 协同撰写。`,
 };
 
 export const dynamic = "force-static";
@@ -23,7 +23,7 @@ export default async function WeeklyPage() {
           一周 agent tooling 重点。
         </h1>
         <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl">
-          每周一 08:00 由 LLM 起草，编辑部 review 后合并。覆盖 Claude Code / Codex / agentic 行业动态。
+          每周一 08:00 由 LLM 起草，编辑部 review 后合并。覆盖 {toolListCopy("full")} 等 agentic 行业动态。
         </p>
         <div className="mt-6 flex flex-wrap gap-3 text-xs text-[var(--color-text-muted)]">
           <Link href="/feed/digest" className="pill-outline pill hover:text-[var(--c2m-accent-deep)]">

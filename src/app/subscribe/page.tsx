@@ -4,11 +4,11 @@ import { Calendar, FileText, Shield, Mail } from "lucide-react";
 import SubscribeForm from "./SubscribeForm";
 import DigestPreview from "./DigestPreview";
 import { getDigest } from "@/lib/content";
+import { toolListCopy } from "@/lib/tools";
 
 export const metadata: Metadata = {
   title: "订阅 Weekly Digest",
-  description:
-    "每周一一封邮件，把过去 7 天 Claude Code / Codex 的所有 release + 一篇 agent harness 设计观察打包送达。免费，随时退订。",
+  description: `每周一一封邮件，把过去 7 天 ${toolListCopy("count")} 的所有 release + 一篇 agent harness 设计观察打包送达。免费，随时退订。`,
   alternates: {
     canonical: "https://claude2master.com/subscribe",
   },
@@ -18,7 +18,7 @@ const BENEFITS = [
   {
     icon: Calendar,
     title: "每周一上午到信",
-    body: "覆盖过去 7 天 anthropics/claude-code + openai/codex 的所有 release，含中文摘要和原文链接。",
+    body: `覆盖过去 7 天 ${toolListCopy("full")} 等工具的所有 release，含中文摘要和原文链接。`,
   },
   {
     icon: FileText,

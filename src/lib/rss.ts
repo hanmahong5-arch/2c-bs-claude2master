@@ -1,4 +1,5 @@
 import type { ContentChannel, ContentItem } from "./content-types";
+import { toolListCopy } from "./tools";
 
 const BASE = "https://claude2master.com";
 
@@ -9,9 +10,8 @@ const CHANNEL_TITLE: Record<ContentChannel, string> = {
 };
 
 const CHANNEL_DESCRIPTION: Record<ContentChannel, string> = {
-  changelog:
-    "Anthropic claude-code / OpenAI codex 每日 release 中文摘要 — 由 daily-radar workflow 自动注水",
-  digest: "Agent tooling 每周一回顾，覆盖 Claude Code / Codex / 行业动态",
+  changelog: `${toolListCopy("count")}每日 release 中文摘要 — 由 daily-radar workflow 自动注水`,
+  digest: `Agent tooling 每周一回顾，覆盖${toolListCopy("count")}与行业动态`,
   harness: "Agent harness 设计深度文章 — scaffolding / context / tool use / eval loop",
 };
 
@@ -51,18 +51,22 @@ function itemPath(item: ContentItem): string {
 export interface FeedOptions {
   channel?: ContentChannel | "all";
   selfPath: string;
+  title?: string;
+  description?: string;
 }
 
 export function renderRss(items: ContentItem[], opts: FeedOptions): string {
   const channel = opts.channel ?? "all";
   const title =
-    channel === "all"
+    opts.title ??
+    (channel === "all"
       ? "claude2master · Agentic 中文雷达"
-      : CHANNEL_TITLE[channel];
+      : CHANNEL_TITLE[channel]);
   const description =
-    channel === "all"
-      ? "Claude Code / Codex / agent harness 行业动态中文站点"
-      : CHANNEL_DESCRIPTION[channel];
+    opts.description ??
+    (channel === "all"
+      ? `${toolListCopy("full")} 等 agent 工具 / harness 行业动态中文站点`
+      : CHANNEL_DESCRIPTION[channel]);
 
   const latest = items[0]?.publishedAt ?? new Date().toISOString();
 

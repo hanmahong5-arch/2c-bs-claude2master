@@ -69,3 +69,27 @@ export function harnessJsonLd(item: HarnessItem) {
     `/harness/${item.slug}`,
   );
 }
+
+/**
+ * 列表页 (/changelog) 的结构化数据: CollectionPage + ItemList。
+ * 详情页用 Article(编辑摘要), 列表页用 ItemList 帮 SEO 收录 8 工具雷达。
+ * cap 前 30 条避免膨胀。
+ */
+export function changelogListJsonLd(items: ChangelogItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "工具更新雷达",
+    url: `${SITE}/changelog`,
+    inLanguage: "zh-CN",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: items.slice(0, 30).map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE}/changelog/${c.slug}`,
+        name: c.title,
+      })),
+    },
+  };
+}
