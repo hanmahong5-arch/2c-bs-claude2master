@@ -12,6 +12,7 @@ const NAV = [
   { href: "/tutorials", label: "教程" },
   { href: "/prompts", label: "Prompt 库" },
   { href: "/api-keys", label: "API key" },
+  { href: "/subscribe", label: "订阅" },
 ];
 
 export default function Header() {

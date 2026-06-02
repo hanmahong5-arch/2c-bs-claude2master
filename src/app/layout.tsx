@@ -1,9 +1,42 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+
+// 自托管字体 (next/font/local) — 中国大陆访问不到 fonts.googleapis.com,
+// 改本地 woff2 后构建期内联、CDN 托管, CN 用户拿到真字体而非系统回落。
+// 仅含 latin 子集 (这三族本就无 CJK 字形, 中文走 --font-sans 的 PingFang/雅黑 系统回落)。
+const interTight = localFont({
+  src: [
+    { path: "../../public/fonts/inter-tight-latin-400-normal.woff2", weight: "400", style: "normal" },
+    { path: "../../public/fonts/inter-tight-latin-500-normal.woff2", weight: "500", style: "normal" },
+    { path: "../../public/fonts/inter-tight-latin-600-normal.woff2", weight: "600", style: "normal" },
+    { path: "../../public/fonts/inter-tight-latin-700-normal.woff2", weight: "700", style: "normal" },
+  ],
+  variable: "--font-inter-tight",
+  display: "swap",
+});
+const fraunces = localFont({
+  src: [
+    { path: "../../public/fonts/fraunces-latin-400-normal.woff2", weight: "400", style: "normal" },
+    { path: "../../public/fonts/fraunces-latin-600-normal.woff2", weight: "600", style: "normal" },
+    { path: "../../public/fonts/fraunces-latin-400-italic.woff2", weight: "400", style: "italic" },
+    { path: "../../public/fonts/fraunces-latin-600-italic.woff2", weight: "600", style: "italic" },
+  ],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+const jetbrainsMono = localFont({
+  src: [
+    { path: "../../public/fonts/jetbrains-mono-latin-400-normal.woff2", weight: "400", style: "normal" },
+    { path: "../../public/fonts/jetbrains-mono-latin-500-normal.woff2", weight: "500", style: "normal" },
+  ],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://claude2master.com"),
@@ -58,7 +91,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="zh-CN">
+    <html
+      lang="zh-CN"
+      className={`${interTight.variable} ${fraunces.variable} ${jetbrainsMono.variable}`}
+    >
       <body className="min-h-screen flex flex-col antialiased">
         <Header />
         <main className="flex-1">{children}</main>

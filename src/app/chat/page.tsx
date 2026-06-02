@@ -5,21 +5,21 @@ import ChatRoom from "@/components/ChatRoom";
 export const metadata: Metadata = {
   title: "在线 Chat",
   description:
-    "免登录 3 次试用 — Anthropic Claude channel 接入中，临时上 DeepSeek V3.2 备选。",
+    "免登录 3 次在线试用 — 当前由 DeepSeek V3.2 驱动，Anthropic Claude 接通后自动升级。",
   alternates: {
     canonical: "https://claude2master.com/chat",
   },
   openGraph: {
     title: "在线 Chat",
     description:
-      "免登录 3 次试用 — Anthropic Claude channel 接入中，临时上 DeepSeek V3.2 备选。",
+      "免登录 3 次在线试用 — 当前由 DeepSeek V3.2 驱动，Anthropic Claude 接通后自动升级。",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "在线 Chat",
     description:
-      "免登录 3 次试用 — Anthropic Claude channel 接入中，临时上 DeepSeek V3.2 备选。",
+      "免登录 3 次在线试用 — 当前由 DeepSeek V3.2 驱动，Anthropic Claude 接通后自动升级。",
   },
 };
 

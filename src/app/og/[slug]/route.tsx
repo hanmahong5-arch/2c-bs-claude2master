@@ -6,6 +6,8 @@ import { SEO_LANDINGS, getSeoLanding } from "@/lib/seo-landings";
 import { PROMPTS, getPrompt } from "@/lib/prompts";
 import { TUTORIALS, getTutorial } from "@/lib/tutorials";
 import { SKILLS, getSkill } from "@/lib/skills";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const runtime = "nodejs";
 export const dynamic = "force-static";
@@ -36,20 +38,15 @@ export async function generateStaticParams() {
   return Array.from(seen).map((slug) => ({ slug }));
 }
 
-let cachedFont: ArrayBuffer | null = null;
+let cachedFont: Buffer | null = null;
 
-const FONT_URL =
-  "https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-sc/files/noto-sans-sc-chinese-simplified-700-normal.woff";
-
-async function loadCJKFont(): Promise<ArrayBuffer> {
+// CJK 字体本地读取 (public/fonts) — 去掉对 jsDelivr 的外部依赖, 消除冷启动拉取延迟与不可控网络。
+// 注: next/og (Satori) 不支持 woff2, 故 OG 字体用 .woff。
+async function loadCJKFont(): Promise<Buffer> {
   if (cachedFont) return cachedFont;
-  const res = await fetch(FONT_URL);
-  if (!res.ok) {
-    throw new Error(
-      `og-font: fetch ${FONT_URL} failed with ${res.status}`,
-    );
-  }
-  cachedFont = await res.arrayBuffer();
+  cachedFont = await readFile(
+    join(process.cwd(), "public/fonts/noto-sans-sc-700.woff"),
+  );
   return cachedFont;
 }
 

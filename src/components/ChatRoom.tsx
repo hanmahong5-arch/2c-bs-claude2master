@@ -172,7 +172,7 @@ export default function ChatRoom() {
           >
             去 newapi 注册
           </TrackedLink>
-          解锁。
+          解锁更多额度。
         </p>
       </header>
 

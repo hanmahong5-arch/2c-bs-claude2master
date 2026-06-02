@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,600;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 html {
@@ -30,15 +29,16 @@ html {
   --color-border: var(--lt-rule);
   --color-text-primary: var(--lt-ink);
   --color-text-secondary: #3D3B33;
-  --color-text-muted: #7A7769;
+  /* 加深至 ~4.9:1 对比度 (on --lt-paper #F5F2E8), 达 WCAG AA 正文 4.5:1; 原 #7A7769 仅 ~3.5:1 */
+  --color-text-muted: #6B6960;
   --color-accent: var(--c2m-accent);
   --color-accent-deep: var(--c2m-accent-deep);
   --color-link: var(--c2m-accent-deep);
 
   /* ── Fonts ── */
-  --font-sans: 'Inter Tight', -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-mono: 'JetBrains Mono', 'Source Code Pro', Menlo, monospace;
+  --font-sans: var(--font-inter-tight), -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-mono: var(--font-jetbrains-mono), 'Source Code Pro', Menlo, monospace;
 }
 
 @theme inline {

@@ -55,7 +55,7 @@ const MATRIX = [
   {
     name: "lutu (APP)",
     href: "https://www.lurus.cn",
-    desc: "Lutu — 移动端 AI 助手（APK 发布中）。",
+    desc: "Lutu — 移动端 AI 助手，即将上线（暂看 Lurus 官网）。",
   },
 ];
 
