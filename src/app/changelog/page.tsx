@@ -4,9 +4,24 @@ import { changelogListJsonLd } from "@/lib/jsonld";
 import { toolListCopy } from "@/lib/tools";
 import ChangelogList from "./ChangelogList";
 
+const desc = `${toolListCopy("full")} 最新 release + Anthropic 工程博客的中文摘要。每日 09:30 自动更新，按工具分组。`;
+
 export const metadata: Metadata = {
   title: `工具更新雷达 · ${toolListCopy("count")}中文 changelog`,
-  description: `${toolListCopy("full")} 最新 release + Anthropic 工程博客的中文摘要。每日 09:30 自动更新，按工具分组。`,
+  description: desc,
+  alternates: {
+    canonical: "https://claude2master.com/changelog",
+  },
+  openGraph: {
+    title: `工具更新雷达 · ${toolListCopy("count")}中文 changelog`,
+    description: desc,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `工具更新雷达 · ${toolListCopy("count")}中文 changelog`,
+    description: desc,
+  },
 };
 
 export const dynamic = "force-static";

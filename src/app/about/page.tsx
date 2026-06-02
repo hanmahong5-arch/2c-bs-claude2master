@@ -3,11 +3,27 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
 import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "关于",
   description:
     "claude2master.com 由 Lurus 出品。我们做面向中文开发者的 AI 原生基础设施与工具。",
+  alternates: {
+    canonical: "https://claude2master.com/about",
+  },
+  openGraph: {
+    title: "关于 claude2master.com",
+    description:
+      "claude2master.com 由 Lurus 出品。我们做面向中文开发者的 AI 原生基础设施与工具。",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "关于 claude2master.com",
+    description:
+      "claude2master.com 由 Lurus 出品。我们做面向中文开发者的 AI 原生基础设施与工具。",
+  },
 };
 
 const MATRIX = [
@@ -79,10 +95,11 @@ export default function AboutPage() {
         <Stagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {MATRIX.map((m) => (
             <StaggerItem key={m.name} className="h-full">
-            <Link
+            <TrackedLink
               href={m.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              external
+              event="cta_product_matrix"
+              data={{ target: m.name, from: "about" }}
               className="card group flex flex-col h-full"
             >
               <div className="flex items-center justify-between mb-3">
@@ -97,7 +114,7 @@ export default function AboutPage() {
               <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                 {m.desc}
               </p>
-            </Link>
+            </TrackedLink>
             </StaggerItem>
           ))}
         </Stagger>

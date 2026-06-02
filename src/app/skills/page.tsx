@@ -8,6 +8,21 @@ export const metadata: Metadata = {
   title: "Skills 商店",
   description:
     "Claude Code Skills 中文索引 — Anthropic 官方 + Lurus 出品 + 社区精选。一键看安装命令、来源、触发条件。",
+  alternates: {
+    canonical: "https://claude2master.com/skills",
+  },
+  openGraph: {
+    title: "Skills 商店 — Claude Code 能力即插即用",
+    description:
+      "Claude Code Skills 中文索引 — Anthropic 官方 + Lurus 出品 + 社区精选。一键看安装命令、来源、触发条件。",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Skills 商店 — Claude Code 能力即插即用",
+    description:
+      "Claude Code Skills 中文索引 — Anthropic 官方 + Lurus 出品 + 社区精选。一键看安装命令、来源、触发条件。",
+  },
 };
 
 const CATEGORIES = ["全部", ...SKILL_CATEGORIES];

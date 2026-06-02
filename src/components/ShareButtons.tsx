@@ -49,7 +49,7 @@ export default function ShareButtons({
   return (
     <div className="flex items-center gap-2 flex-wrap mt-10 pt-6 border-t border-[var(--color-border)]">
       <span className="inline-flex items-center gap-1.5 text-xs text-[var(--color-text-muted)] mr-1">
-        <Share2 size={12} />
+        <Share2 size={12} aria-hidden="true" />
         分享：
       </span>
       <button
@@ -58,7 +58,7 @@ export default function ShareButtons({
         type="button"
         aria-label={copied ? "已复制链接" : "复制链接"}
       >
-        {copied ? <Check size={14} /> : <Copy size={14} />}
+        {copied ? <Check size={14} aria-hidden="true" /> : <Copy size={14} aria-hidden="true" />}
         {copied ? "已复制" : "复制链接"}
       </button>
       <a

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { SEO_LANDINGS, getSeoLanding } from "@/lib/seo-landings";
+import { zhLandingJsonLd } from "@/lib/jsonld";
 
 export const dynamic = "force-static";
 
@@ -51,32 +52,7 @@ export default async function ZhLandingPage({
   const landing = getSeoLanding(slug);
   if (!landing) notFound();
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: landing.title,
-    description: landing.desc,
-    datePublished: landing.updatedAt,
-    dateModified: landing.updatedAt,
-    image: `https://claude2master.com/og/${landing.slug}`,
-    author: {
-      "@type": "Organization",
-      name: "claude2master 编辑部",
-      url: "https://claude2master.com",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "claude2master",
-      url: "https://claude2master.com",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://claude2master.com/favicon.ico",
-      },
-    },
-    inLanguage: "zh-CN",
-    keywords: landing.keywords.join(", "),
-    mainEntityOfPage: `https://claude2master.com/zh/${landing.slug}`,
-  };
+  const jsonLd = zhLandingJsonLd(landing);
 
   return (
     <article className="max-w-3xl mx-auto px-6 py-12 md:py-16">

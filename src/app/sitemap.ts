@@ -54,7 +54,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...TUTORIALS.map((t) => ({
       url: `${BASE}/tutorials/${t.slug}`,
-      lastModified: now,
+      lastModified: new Date(t.date),
       changeFrequency: "monthly" as const,
       priority: t.pinned ? 0.8 : 0.7,
     })),

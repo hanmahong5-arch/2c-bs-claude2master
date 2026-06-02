@@ -5,7 +5,12 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { SKILLS, getSkill } from "@/lib/skills";
+import { skillJsonLd } from "@/lib/jsonld";
+import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
 import CopyPromptButton from "@/components/CopyPromptButton";
+import TrackedLink from "@/components/TrackedLink";
+
+const SITE = "https://claude2master.com";
 
 export function generateStaticParams() {
   return SKILLS.map((s) => ({ slug: s.slug }));
@@ -19,9 +24,25 @@ export async function generateMetadata({
   const { slug } = await params;
   const s = getSkill(slug);
   if (!s) return { title: "Skill 未找到" };
+  const ogImage = `/og/${slug}`;
   return {
     title: `${s.title} · Skill`,
     description: s.desc,
+    alternates: {
+      canonical: `${SITE}/skills/${slug}`,
+    },
+    openGraph: {
+      title: `${s.title} · Skill`,
+      description: s.desc,
+      type: "website",
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${s.title} · Skill`,
+      description: s.desc,
+      images: [ogImage],
+    },
   };
 }
 
@@ -34,8 +55,15 @@ export default async function SkillDetail({
   const s = getSkill(slug);
   if (!s) notFound();
 
+  const jsonLd = skillJsonLd(s);
+
   return (
     <article className="max-w-3xl mx-auto px-6 py-12 md:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <Link
         href="/skills"
         className="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-secondary)] hover:text-[var(--c2m-accent-deep)] mb-8"
@@ -98,7 +126,19 @@ export default async function SkillDetail({
         </div>
       )}
 
-      <div className="mt-10 pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center justify-between gap-3 text-xs text-[var(--color-text-muted)]">
+      <div className="mt-10 mb-4 flex items-center gap-4 flex-wrap">
+        <TrackedLink
+          external
+          href={buildOutbound("forge", OUTBOUND_CAMPAIGN.skillsPage)}
+          event="cta_open_forge"
+          data={{ from: "skill-detail", skill: slug }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--c2m-accent)] text-white text-sm font-medium hover:bg-[var(--c2m-accent-deep)] transition-colors"
+        >
+          在 Forge 里跑这个 skill →
+        </TrackedLink>
+      </div>
+
+      <div className="mt-6 pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center justify-between gap-3 text-xs text-[var(--color-text-muted)]">
         <div className="flex flex-wrap items-center gap-3">
           <span>来源：{s.source}</span>
           {s.sourceUrl && (

@@ -211,6 +211,9 @@ export default function ChatRoom() {
       <div
         ref={listRef}
         className="min-h-[280px] max-h-[55vh] overflow-y-auto mb-5 space-y-5"
+        role="log"
+        aria-live="polite"
+        aria-label="对话记录"
       >
         {msgs.length === 0 && (
           <div className="card flex items-start gap-3">

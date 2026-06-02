@@ -64,6 +64,8 @@ export default function Footer() {
               © {new Date().getFullYear()} Lurus ·{" "}
               <Link
                 href="https://www.lurus.cn"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-[var(--c2m-accent-deep)]"
               >
                 www.lurus.cn

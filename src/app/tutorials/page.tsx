@@ -8,6 +8,21 @@ export const metadata: Metadata = {
   title: "Claude Code 教程",
   description:
     "中文系统化 Claude Code 教程：入门、配置、Skills、Hooks、MCP、工作流、进阶。",
+  alternates: {
+    canonical: "https://claude2master.com/tutorials",
+  },
+  openGraph: {
+    type: "website",
+    title: "Claude Code 教程",
+    description:
+      "中文系统化 Claude Code 教程：入门、配置、Skills、Hooks、MCP、工作流、进阶。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Claude Code 教程",
+    description:
+      "中文系统化 Claude Code 教程：入门、配置、Skills、Hooks、MCP、工作流、进阶。",
+  },
 };
 
 const CATEGORIES = ["全部", ...TUTORIAL_CATEGORIES];

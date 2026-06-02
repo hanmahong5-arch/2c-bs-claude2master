@@ -61,7 +61,7 @@ function ChangelogCard({ c }: { c: ChangelogItem }) {
                   : "LLM 自动摘要，未做人工实测"
               }
             >
-              {c.verified === "tested" ? "✓ " : "⏳ "}
+              <span aria-hidden="true">{c.verified === "tested" ? "✓ " : "⏳ "}</span>
               {VERIFIED_LABEL[c.verified]}
             </span>
           )}

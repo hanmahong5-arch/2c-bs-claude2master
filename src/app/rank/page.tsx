@@ -10,6 +10,18 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://claude2master.com/rank",
   },
+  openGraph: {
+    type: "website",
+    title: "中文 AI 编程榜 v0 · Claude Code / Cursor / Cline / Aider",
+    description:
+      "5 道中文编程 spec × 4 个主流 AI coding 工具的横向参考评分。v0 静态版,标注每条评分依据。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "中文 AI 编程榜 v0 · Claude Code / Cursor / Cline / Aider",
+    description:
+      "5 道中文编程 spec × 4 个主流 AI coding 工具的横向参考评分。v0 静态版,标注每条评分依据。",
+  },
 };
 
 export const dynamic = "force-static";

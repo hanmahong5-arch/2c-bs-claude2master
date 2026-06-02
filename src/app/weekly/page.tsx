@@ -3,11 +3,27 @@ import Link from "next/link";
 import { Calendar, Clock } from "lucide-react";
 import { getDigest } from "@/lib/content";
 import { AUTHORED_LABEL } from "@/lib/content-types";
+import { digestListJsonLd } from "@/lib/jsonld";
 import { toolListCopy } from "@/lib/tools";
+
+const _DESCRIPTION = `每周一回顾 ${toolListCopy("count")}与行业动态，由编辑部与 LLM 协同撰写。`;
 
 export const metadata: Metadata = {
   title: "Weekly · Agent tooling 周报",
-  description: `每周一回顾 ${toolListCopy("count")}与行业动态，由编辑部与 LLM 协同撰写。`,
+  description: _DESCRIPTION,
+  alternates: {
+    canonical: "https://claude2master.com/weekly",
+  },
+  openGraph: {
+    title: "Weekly · Agent tooling 周报",
+    description: _DESCRIPTION,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Weekly · Agent tooling 周报",
+    description: _DESCRIPTION,
+  },
 };
 
 export const dynamic = "force-static";
@@ -16,6 +32,13 @@ export default async function WeeklyPage() {
   const items = await getDigest();
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(digestListJsonLd(items)),
+        }}
+      />
     <div className="max-w-5xl mx-auto px-6 py-16 md:py-20">
       <header className="mb-10">
         <p className="eyebrow mb-3">Weekly Digest</p>
@@ -71,5 +94,6 @@ export default async function WeeklyPage() {
         </ul>
       )}
     </div>
+    </>
   );
 }

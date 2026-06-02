@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/auth/", "/api/"],
+        disallow: ["/auth/", "/api/", "/og/"],
       },
     ],
     sitemap: "https://claude2master.com/sitemap.xml",

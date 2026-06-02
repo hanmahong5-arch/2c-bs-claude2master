@@ -21,11 +21,10 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <h1 className="headline-tight headline-balance text-[clamp(2.75rem,7vw,5rem)] font-semibold text-[var(--lt-ink)] mb-3">
-              <span className="font-display italic">Master Claude</span>
-            </h1>
-            <h1 className="headline-tight headline-balance text-[clamp(2.75rem,7vw,5rem)] font-semibold text-[var(--c2m-accent-deep)] mb-8">
-              like a craftsman.
+            <h1 className="headline-tight headline-balance text-[clamp(2.75rem,7vw,5rem)] font-semibold mb-8">
+              <span className="font-display italic text-[var(--lt-ink)]">Master Claude</span>
+              <br />
+              <span className="text-[var(--c2m-accent-deep)]">like a craftsman.</span>
             </h1>
           </Reveal>
 

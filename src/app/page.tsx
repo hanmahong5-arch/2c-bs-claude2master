@@ -66,6 +66,26 @@ const SECONDARY = [
 
 const TRUST_ROW = ["newapi", "forge", "lutu", "lucrum", "tally"];
 
+export const metadata = {
+  alternates: {
+    canonical: "https://claude2master.com/",
+  },
+  openGraph: {
+    title: "claude2master · 中国大陆用 Claude，从入门到精通",
+    description:
+      "Prompt 库 · 在线 Chat · Claude Code 教程 · Skills 商店 · API key 申请。",
+    type: "website",
+    images: ["/og/home"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "claude2master · 中国大陆用 Claude，从入门到精通",
+    description:
+      "Prompt 库 · 在线 Chat · Claude Code 教程 · Skills 商店 · API key 申请。",
+    images: ["/og/home"],
+  },
+};
+
 export default async function Home() {
   return (
     <>
@@ -101,7 +121,7 @@ export default async function Home() {
                       : "bg-[var(--c2m-accent-soft)] text-[var(--c2m-accent-deep)]"
                   }`}
                 >
-                  <p.icon size={24} strokeWidth={1.75} />
+                  <p.icon size={24} strokeWidth={1.75} aria-hidden="true" />
                 </span>
                 {p.featured && (
                   <p className="eyebrow mb-2 text-[var(--c2m-accent-deep)]">
@@ -116,7 +136,7 @@ export default async function Home() {
                 </p>
                 <span className="inline-flex items-center gap-1.5 text-sm text-[var(--c2m-accent-deep)] font-medium group-hover:gap-3 transition-all">
                   {p.cta}
-                  <ArrowRight size={15} />
+                  <ArrowRight size={15} aria-hidden="true" />
                 </span>
               </TrackedLink>
             </StaggerItem>
@@ -135,6 +155,7 @@ export default async function Home() {
                   size={20}
                   className="text-[var(--c2m-accent)] shrink-0 mt-0.5"
                   strokeWidth={1.5}
+                  aria-hidden="true"
                 />
                 <span className="min-w-0">
                   <span className="flex items-center gap-1 text-base font-semibold text-[var(--lt-ink)]">

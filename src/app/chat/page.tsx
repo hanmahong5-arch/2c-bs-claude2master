@@ -6,6 +6,21 @@ export const metadata: Metadata = {
   title: "在线 Chat",
   description:
     "免登录 3 次试用 — Anthropic Claude channel 接入中，临时上 DeepSeek V3.2 备选。",
+  alternates: {
+    canonical: "https://claude2master.com/chat",
+  },
+  openGraph: {
+    title: "在线 Chat",
+    description:
+      "免登录 3 次试用 — Anthropic Claude channel 接入中，临时上 DeepSeek V3.2 备选。",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "在线 Chat",
+    description:
+      "免登录 3 次试用 — Anthropic Claude channel 接入中，临时上 DeepSeek V3.2 备选。",
+  },
 };
 
 function Fallback() {

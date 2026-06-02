@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { promises as fs } from "fs";
 import path from "path";
 import type {
@@ -79,7 +80,7 @@ function asTags(v: unknown): string[] {
   return Array.isArray(v) ? v.map((x) => String(x)) : [];
 }
 
-export async function getChangelog(): Promise<ChangelogItem[]> {
+export const getChangelog = cache(async function getChangelog(): Promise<ChangelogItem[]> {
   const raw = await readChannelRaw("changelog");
   const items: ChangelogItem[] = raw.map(({ slug, data, body }) => ({
     channel: "changelog",
@@ -107,10 +108,12 @@ export async function getChangelog(): Promise<ChangelogItem[]> {
           ? "changelog"
           : undefined,
   }));
-  return items.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
-}
+  return items.sort((a, b) =>
+    a.publishedAt < b.publishedAt ? 1 : a.publishedAt > b.publishedAt ? -1 : 0,
+  );
+});
 
-export async function getDigest(): Promise<DigestItem[]> {
+export const getDigest = cache(async function getDigest(): Promise<DigestItem[]> {
   const raw = await readChannelRaw("digest");
   const items: DigestItem[] = raw.map(({ slug, data, body }) => ({
     channel: "digest",
@@ -123,14 +126,17 @@ export async function getDigest(): Promise<DigestItem[]> {
     hook: asString(data.hook),
     weekOf: asString(data.weekOf),
     model: data.model ? asString(data.model) : undefined,
-    readingMinutes: data.readingMinutes
-      ? Number(asString(data.readingMinutes))
-      : undefined,
+    readingMinutes:
+      data.readingMinutes != null
+        ? Number(asString(data.readingMinutes))
+        : undefined,
   }));
-  return items.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
-}
+  return items.sort((a, b) =>
+    a.publishedAt < b.publishedAt ? 1 : a.publishedAt > b.publishedAt ? -1 : 0,
+  );
+});
 
-export async function getHarness(): Promise<HarnessItem[]> {
+export const getHarness = cache(async function getHarness(): Promise<HarnessItem[]> {
   const raw = await readChannelRaw("harness");
   const items: HarnessItem[] = raw.map(({ slug, data, body }) => ({
     channel: "harness",
@@ -147,8 +153,10 @@ export async function getHarness(): Promise<HarnessItem[]> {
       ? data.references.map((x) => String(x)).filter(Boolean)
       : undefined,
   }));
-  return items.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
-}
+  return items.sort((a, b) =>
+    a.publishedAt < b.publishedAt ? 1 : a.publishedAt > b.publishedAt ? -1 : 0,
+  );
+});
 
 export async function getChangelogBySlug(
   slug: string,
@@ -174,6 +182,6 @@ export async function getHarnessBySlug(
 export async function getAllContent(): Promise<ContentItem[]> {
   const [c, d, h] = await Promise.all([getChangelog(), getDigest(), getHarness()]);
   return [...c, ...d, ...h].sort((a, b) =>
-    a.publishedAt < b.publishedAt ? 1 : -1,
+    a.publishedAt < b.publishedAt ? 1 : a.publishedAt > b.publishedAt ? -1 : 0,
   );
 }

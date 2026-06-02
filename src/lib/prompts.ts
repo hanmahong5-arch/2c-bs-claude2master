@@ -41,6 +41,8 @@ export interface Prompt {
   desc: string;
   body: string;
   source: string;
+  /** 许可: 仅收 MIT / CC0 / 自创 */
+  license: "MIT" | "CC0" | "CC-BY-4.0" | "original";
   tags?: string[];
 }
 
@@ -52,6 +54,7 @@ export const PROMPTS: Prompt[] = [
     title: "React 性能诊断师",
     desc: "粘贴你的组件代码，让 Claude 找出 re-render 与内存泄漏的根因。",
     source: "Lurus 编辑部",
+    license: "original",
     tags: ["React", "性能"],
     body: `你是一位资深的 React 性能工程师。我会给你一段组件代码，请按以下步骤诊断：
 
@@ -72,6 +75,7 @@ export const PROMPTS: Prompt[] = [
     title: "长文大纲生成器",
     desc: "给定主题与受众，输出三段式提纲 + 关键论据 + 反方观点。",
     source: "Lurus 编辑部",
+    license: "original",
     tags: ["长文", "结构"],
     body: `你是资深内容编辑。我会给你主题与目标受众，请输出：
 
@@ -91,6 +95,7 @@ export const PROMPTS: Prompt[] = [
     title: "中英技术文档对译",
     desc: "保留代码块、链接、术语一致性的双向技术翻译。",
     source: "Lurus 编辑部",
+    license: "original",
     tags: ["翻译", "文档"],
     body: `你是技术文档专业译员。规则：
 
@@ -111,6 +116,7 @@ export const PROMPTS: Prompt[] = [
     title: "Git diff 代码评审",
     desc: "粘贴 git diff 输出，按正确性 → 安全 → 性能 → 风格四档审。",
     source: "Lurus 编辑部",
+    license: "original",
     tags: ["Code Review", "Git"],
     body: `你是一位严谨的高级工程师在做 code review。我会粘贴一段 \`git diff\` 输出，请按以下顺序审查：
 
@@ -134,6 +140,7 @@ diff：
     title: "周报自动生成器",
     desc: "把一周的碎片记录组装成结构化周报（STAR + 量化指标）。",
     source: "Lurus 编辑部",
+    license: "original",
     tags: ["周报", "效率"],
     body: `你是一位帮我写周报的助理。我会丢给你一周内零散的 commit message / 会议笔记 / 待办勾选记录，请按以下结构整理：
 
@@ -154,6 +161,7 @@ diff：
     title: "费曼讲解员",
     desc: "用 12 岁少年能听懂的话讲透任何概念，再升级到专家版。",
     source: "Lurus 编辑部",
+    license: "original",
     tags: ["学习", "费曼"],
     body: `你是费曼式讲解员。我给你一个概念 / 论文 / 公式，请分三层讲：
 
@@ -177,6 +185,7 @@ diff：
     title: "小红书爆款笔记钩子",
     desc: "给产品 + 卖点，输出 3 种钩子开头 + 正文 + 5 个 hashtag。",
     source: "Lurus 编辑部",
+    license: "original",
     tags: ["小红书", "文案"],
     body: `你是熟悉小红书算法和女性向消费者心理的内容编辑。我会给你产品和卖点，请输出：
 
@@ -198,6 +207,7 @@ diff：
     title: "CSV 表格初步分析",
     desc: "上传或粘贴 CSV，自动出描述统计 + 异常检测 + 下一步建议。",
     source: "Lurus 编辑部",
+    license: "original",
     tags: ["数据分析", "CSV"],
     body: `你是一位数据分析师。我会粘贴一张 CSV 表格（或前 50 行 + schema 描述），请按以下顺序输出：
 
@@ -221,6 +231,7 @@ diff：
     title: "苏格拉底式辅导",
     desc: "不直接给答案，用问题引导我自己想通 — 适合做题卡壳。",
     source: "Lurus 编辑部",
+    license: "original",
     tags: ["学习", "苏格拉底"],
     body: `你是一位严格遵守苏格拉底教学法的老师。规则：
 
@@ -242,6 +253,7 @@ diff：
     title: "苛刻客户对话演练",
     desc: "扮演难搞的客户，做客服话术压力测试 — 一句话出招，等你接。",
     source: "Lurus 编辑部",
+    license: "original",
     tags: ["客服", "演练"],
     body: `你扮演一位非常难搞的客户。规则：
 

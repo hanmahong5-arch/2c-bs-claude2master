@@ -11,6 +11,21 @@ export const metadata: Metadata = {
   title: "申请 API key",
   description:
     "3 步拿到 Claude API key — 支付宝/微信充值、OpenAI 与 Anthropic 双协议兼容、人民币结算。",
+  alternates: {
+    canonical: "https://claude2master.com/api-keys",
+  },
+  openGraph: {
+    title: "申请 Claude API key — 不翻墙、人民币结算",
+    description:
+      "3 步拿到 Claude API key — 支付宝/微信充值、OpenAI 与 Anthropic 双协议兼容、人民币结算。",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "申请 Claude API key — 不翻墙、人民币结算",
+    description:
+      "3 步拿到 Claude API key — 支付宝/微信充值、OpenAI 与 Anthropic 双协议兼容、人民币结算。",
+  },
 };
 
 const STEPS = [
@@ -151,12 +166,15 @@ export default function ApiKeysPage() {
           多个子团队独立计费、用量隔离、统一审计 — 升级到{" "}
           <code className="font-mono">hub.lurus.cn</code>（多租户 API）。
         </p>
-        <Link
+        <TrackedLink
           href="mailto:hi@lurus.cn?subject=newhub%20%E5%9B%A2%E9%98%9F%E8%AF%A2%E4%BB%B7"
+          external
+          event="cta_contact_sales"
+          data={{ product: "newhub", from: "api-keys" }}
           className="btn btn-ghost text-sm"
         >
           联系销售 →
-        </Link>
+        </TrackedLink>
       </section>
     </div>
   );

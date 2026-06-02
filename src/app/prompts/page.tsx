@@ -7,6 +7,21 @@ export const metadata: Metadata = {
   title: "Prompt 库",
   description:
     "按场景分类的高质量 Claude 中文提示词 — 写作、编程、翻译、学习、营销、数据分析。点击即复制。",
+  alternates: {
+    canonical: "https://claude2master.com/prompts",
+  },
+  openGraph: {
+    type: "website",
+    title: "Prompt 库",
+    description:
+      "按场景分类的高质量 Claude 中文提示词 — 写作、编程、翻译、学习、营销、数据分析。点击即复制。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prompt 库",
+    description:
+      "按场景分类的高质量 Claude 中文提示词 — 写作、编程、翻译、学习、营销、数据分析。点击即复制。",
+  },
 };
 
 export default function PromptsPage() {

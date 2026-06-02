@@ -34,6 +34,8 @@ export const OUTBOUND_CAMPAIGN = {
   signup: "signup",
   /** 关于页产品矩阵 */
   about: "about",
+  /** skills 详情 → forge */
+  skillsPage: "skills-page",
 } as const;
 
 export type OutboundCampaign =

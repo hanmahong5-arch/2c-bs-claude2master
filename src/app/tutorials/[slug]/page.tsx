@@ -5,6 +5,11 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { TUTORIALS, getTutorial } from "@/lib/tutorials";
+import { tutorialJsonLd } from "@/lib/jsonld";
+import TrackedLink from "@/components/TrackedLink";
+import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
+
+const SITE = "https://claude2master.com";
 
 export function generateStaticParams() {
   return TUTORIALS.map((t) => ({ slug: t.slug }));
@@ -18,9 +23,26 @@ export async function generateMetadata({
   const { slug } = await params;
   const t = getTutorial(slug);
   if (!t) return { title: "教程未找到" };
+  const ogImage = `/og/${slug}`;
   return {
     title: t.title,
     description: t.desc,
+    alternates: {
+      canonical: `${SITE}/tutorials/${slug}`,
+    },
+    openGraph: {
+      title: t.title,
+      description: t.desc,
+      type: "article",
+      publishedTime: t.date,
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t.title,
+      description: t.desc,
+      images: [ogImage],
+    },
   };
 }
 
@@ -33,8 +55,15 @@ export default async function TutorialDetail({
   const t = getTutorial(slug);
   if (!t) notFound();
 
+  const jsonLd = tutorialJsonLd(t);
+
   return (
     <article className="max-w-3xl mx-auto px-6 py-12 md:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <Link
         href="/tutorials"
         className="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-secondary)] hover:text-[var(--c2m-accent-deep)] mb-8"
@@ -70,6 +99,18 @@ export default async function TutorialDetail({
       <div className="tutorial-md">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{t.body}</ReactMarkdown>
       </div>
+
+      <footer className="mt-12 pt-8 border-t border-[var(--color-border)]">
+        <TrackedLink
+          external
+          href={buildOutbound("newapi", OUTBOUND_CAMPAIGN.tutorial)}
+          event="cta_register_newapi"
+          data={{ from: "tutorial", slug }}
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--c2m-accent)] text-white text-sm font-medium hover:opacity-90 transition-opacity"
+        >
+          在 newapi.lurus.cn 注册，3 分钟跑通 →
+        </TrackedLink>
+      </footer>
     </article>
   );
 }

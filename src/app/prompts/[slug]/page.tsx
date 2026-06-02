@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, Play } from "lucide-react";
 import { notFound } from "next/navigation";
 import { PROMPTS, getPrompt, MODEL_LABEL } from "@/lib/prompts";
+import { promptJsonLd } from "@/lib/jsonld";
 import CopyPromptButton from "@/components/CopyPromptButton";
 
 export function generateStaticParams() {
@@ -17,9 +18,25 @@ export async function generateMetadata({
   const { slug } = await params;
   const p = getPrompt(slug);
   if (!p) return { title: "Prompt 未找到" };
+  const ogImage = `/og/${slug}`;
   return {
     title: p.title,
     description: p.desc,
+    alternates: {
+      canonical: `https://claude2master.com/prompts/${slug}`,
+    },
+    openGraph: {
+      title: p.title,
+      description: p.desc,
+      type: "article",
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: p.title,
+      description: p.desc,
+      images: [ogImage],
+    },
   };
 }
 
@@ -32,8 +49,15 @@ export default async function PromptDetail({
   const p = getPrompt(slug);
   if (!p) notFound();
 
+  const jsonLd = promptJsonLd(p);
+
   return (
     <article className="max-w-3xl mx-auto px-6 py-12 md:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <Link
         href="/prompts"
         className="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-secondary)] hover:text-[var(--c2m-accent-deep)] mb-8"
@@ -67,6 +91,9 @@ export default async function PromptDetail({
 
       <div className="mt-10 pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center justify-between gap-2 text-xs text-[var(--color-text-muted)]">
         <span>来源：{p.source}</span>
+        {p.license && (
+          <span className="pill-outline pill text-[10px]">{p.license}</span>
+        )}
         {p.tags && p.tags.length > 0 && (
           <div className="flex gap-1.5">
             {p.tags.map((t) => (

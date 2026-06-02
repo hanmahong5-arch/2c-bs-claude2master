@@ -111,7 +111,9 @@ export default async function ChangelogDetail({
                 : "LLM 自动摘要，未做人工实测"
             }
           >
-            {item.verified === "tested" ? "✓ " : "⏳ "}
+            <span aria-hidden="true">
+              {item.verified === "tested" ? "✓ " : "⏳ "}
+            </span>
             {VERIFIED_LABEL[item.verified]}
           </span>
         )}

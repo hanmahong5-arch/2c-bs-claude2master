@@ -6,7 +6,7 @@ export const runtime = "edge";
 // 额度耗尽返回给前端的升级链接:带 chat-exhausted 归因(单一出站构造点)。
 const UPGRADE_URL = buildOutbound("newapi", OUTBOUND_CAMPAIGN.chatExhausted);
 
-type ChatMessage = { role: "user" | "assistant" | "system"; content: string };
+type ChatMessage = { role: "user" | "assistant"; content: string };
 type ChatBody = { model: ModelKey; messages: ChatMessage[] };
 
 const NEWAPI_BASE =
@@ -19,6 +19,8 @@ const COOKIE_MAX_AGE = 86400;
 const MAX_MSG_LEN = 4000;
 const MAX_CTX_MSGS = 12;
 const MAX_TOKENS = 1024;
+// 上游响应超时(ms)。低于 Edge runtime 硬限, 保证能返回可读的 504 而非平台级超时。
+const UPSTREAM_TIMEOUT_MS = 20000;
 
 function readTrialUsed(cookie: string): number {
   const m = cookie.match(/c2m_trial=([0-9]+)/);
@@ -93,7 +95,12 @@ export async function POST(req: Request) {
         `单条消息超过 ${MAX_MSG_LEN} 字符。`,
       );
     }
-    if (m.role !== "user" && m.role !== "assistant" && m.role !== "system") {
+    // 不接受客户端注入 system role(防 prompt injection / 越权改模型行为)。
+    const role = m.role as string;
+    if (role === "system") {
+      return jsonError(400, "bad_role", "system 消息不可由客户端传入。");
+    }
+    if (role !== "user" && role !== "assistant") {
       return jsonError(400, "bad_role", "role 不合法。");
     }
   }
@@ -114,9 +121,14 @@ export async function POST(req: Request) {
         stream: true,
         max_tokens: MAX_TOKENS,
       }),
+      signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
     });
   } catch (e) {
-    return jsonError(502, "upstream_unreachable", `上游网关不可达: ${(e as Error).message}`);
+    const err = e as Error;
+    if (err.name === "TimeoutError" || err.name === "AbortError") {
+      return jsonError(504, "upstream_timeout", "上游网关响应超时，请稍后重试。");
+    }
+    return jsonError(502, "upstream_unreachable", `上游网关不可达: ${err.message}`);
   }
 
   if (!upstream.ok || !upstream.body) {
@@ -128,7 +140,7 @@ export async function POST(req: Request) {
   }
 
   const newUsed = used + 1;
-  const setCookie = `${COOKIE_NAME}=${newUsed}; Path=/; SameSite=Lax; Max-Age=${COOKIE_MAX_AGE}`;
+  const setCookie = `${COOKIE_NAME}=${newUsed}; Path=/; SameSite=Lax; Max-Age=${COOKIE_MAX_AGE}; HttpOnly; Secure`;
 
   return new Response(upstream.body, {
     status: 200,

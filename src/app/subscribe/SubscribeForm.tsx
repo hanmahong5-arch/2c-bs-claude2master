@@ -59,11 +59,16 @@ export default function SubscribeForm() {
     <div>
       <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-3">
         <div className="relative flex-1">
+          <label htmlFor="subscribe-email" className="sr-only">
+            邮箱
+          </label>
           <Mail
             size={16}
+            aria-hidden="true"
             className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)]"
           />
           <input
+            id="subscribe-email"
             type="email"
             required
             placeholder="your@email.com"
@@ -80,6 +85,7 @@ export default function SubscribeForm() {
         <button
           type="submit"
           disabled={disabled || email.trim().length === 0}
+          aria-busy={state === "loading"}
           className="btn btn-primary px-6 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {state === "loading" ? (
@@ -99,7 +105,11 @@ export default function SubscribeForm() {
       </form>
 
       {state === "subscribed" && (
-        <div className="mt-4 px-4 py-3 rounded-md border border-[var(--lt-ok)] bg-[var(--color-surface-elevated)] text-sm text-[var(--lt-ok)] flex items-start gap-2">
+        <div
+          role="status"
+          aria-live="polite"
+          className="mt-4 px-4 py-3 rounded-md border border-[var(--lt-ok)] bg-[var(--color-surface-elevated)] text-sm text-[var(--lt-ok)] flex items-start gap-2"
+        >
           <Check size={16} className="flex-shrink-0 mt-0.5" />
           <div>
             <strong>订阅成功。</strong>请到邮箱查收 Buttondown
@@ -109,13 +119,21 @@ export default function SubscribeForm() {
       )}
 
       {state === "already" && (
-        <div className="mt-4 px-4 py-3 rounded-md border border-[var(--color-border)] bg-[var(--color-surface-elevated)] text-sm text-[var(--color-text-secondary)]">
+        <div
+          role="status"
+          aria-live="polite"
+          className="mt-4 px-4 py-3 rounded-md border border-[var(--color-border)] bg-[var(--color-surface-elevated)] text-sm text-[var(--color-text-secondary)]"
+        >
           这个邮箱已经在订阅列表里了。如果你没收到周报，先检查垃圾箱；仍未收到欢迎在 GitHub 提 issue。
         </div>
       )}
 
       {state === "error" && (
-        <div className="mt-4 px-4 py-3 rounded-md border border-[var(--lt-err)] bg-[var(--color-surface-elevated)] text-sm text-[var(--lt-err)] flex items-start gap-2">
+        <div
+          role="alert"
+          aria-live="assertive"
+          className="mt-4 px-4 py-3 rounded-md border border-[var(--lt-err)] bg-[var(--color-surface-elevated)] text-sm text-[var(--lt-err)] flex items-start gap-2"
+        >
           <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />
           <div>
             <strong>提交失败：</strong>

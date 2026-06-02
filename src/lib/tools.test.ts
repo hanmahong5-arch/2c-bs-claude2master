@@ -5,6 +5,7 @@ import {
   TOOLS,
   toolForKey,
   toolForSource,
+  toolListCopy,
   versionFromSourceUrl,
 } from "./tools";
 
@@ -95,5 +96,25 @@ describe("TOOLS 注册表自洽", () => {
     for (const t of TOOLS) {
       expect(sh).toContain(`"${t.repo}"`);
     }
+  });
+});
+
+describe("toolListCopy", () => {
+  test('count → "${TOOLS.length} 大 AI 编码工具"', () => {
+    expect(toolListCopy("count")).toBe(`${TOOLS.length} 大 AI 编码工具`);
+  });
+
+  test("full → 包含每个工具名, 用顿号连接", () => {
+    const result = toolListCopy("full");
+    // 每个工具名都出现在结果中
+    for (const t of TOOLS) {
+      expect(result).toContain(t.name);
+    }
+    // 顿号分段数 === TOOLS.length
+    expect(result.split("、").length).toBe(TOOLS.length);
+  });
+
+  test("full → 不含 ASCII 逗号", () => {
+    expect(toolListCopy("full")).not.toContain(",");
   });
 });
