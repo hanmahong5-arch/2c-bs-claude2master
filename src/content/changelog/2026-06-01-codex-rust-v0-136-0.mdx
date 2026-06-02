@@ -1,0 +1,22 @@
+---
+slug: 2026-06-01-codex-rust-v0-136-0
+title: "codex rust-v0.136.0 — TUI 支持会话存档与链接保留，远程执行改用服务器令牌，提升安全与交互体验"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.136.0
+publishedAt: 2026-06-01
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "TUI 支持会话存档与链接保留，远程执行改用服务器令牌，提升安全与交互体验"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要影响远程执行功能。由于远程控制改用服务器令牌认证，原有的基于 ChatGPT 令牌的 websocket 连接方式将失效。这意味着现有的远程执行配置必须修改，以适配新的 CODEX_API_KEY 和短生命周期服务器令牌流程，否则相关功能将无法正常工作。TUI 的会话存档与链接保留等交互增强，则属于体验优化，不影响代理服务的核心连通性。"
+tags: [tui-enhancement, security, session-management, remote-execution]
+---
+
+- **TUI 支持会话存档**：可通过 `/archive` 或 CLI 命令存档/恢复会话，防止意外恢复或分叉。这意味着 agent harness 需要管理会话生命周期状态。
+- **远程控制改用服务器令牌**：远程执行注册支持 `CODEX_API_KEY`，websocket 连接使用短生命周期服务器令牌替代 ChatGPT 令牌。这降低了长期凭证风险，要求 harness 适配新的认证流程。
+- **TUI 增强内容交互**：Markdown 表格在拥挤时转为键值对记录，并保留 OSC 8 元数据使网页链接可点击。这表明 agent 输出需要适应更结构化的渲染以提升可读性。
+
+---
+
+> 原文 release：[openai/codex rust-v0.136.0](https://github.com/openai/codex/releases/tag/rust-v0.136.0)

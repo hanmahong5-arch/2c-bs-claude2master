@@ -1,0 +1,22 @@
+---
+slug: 2026-06-01-cline-3-86-2
+title: "cline v3.86.2 — 修复 VS Code 1.122+ 中文件提及与搜索功能，确保核心交互稳定。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v3.86.2
+publishedAt: 2026-06-01
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复 VS Code 1.122+ 中文件提及与搜索功能，确保核心交互稳定。"
+insight: "对于使用 VS Code 1.122+ 版本的国内用户，如果当前在 Cline 中遇到 `@` 文件提及或文件搜索失效的问题，那么本次升级是值得的，它直接修复了此核心交互功能。升级后，你的现有 prompt 或 hook 配置无需修改。该修复通过适配新的二进制布局实现，即使你通过 newapi.lurus.cn 代理使用，也不会受到影响，因为修复逻辑在客户端本地完成。"
+tags: [bug-fix, vscode-integration, file-search, compatibility]
+---
+
+- **修复文件提及与搜索**：解决了在 VS Code 1.122+ 版本中 `@` 文件提及和文件搜索失效的问题。
+- **适配新二进制布局**：通过优先解析新版 `@vscode/ripgrep-universal` 的跨平台二进制路径来实现修复。
+- **保持向后兼容**：在新路径解析失败时，仍会回退到旧的 ripgrep 路径，确保不同环境下的兼容性。
+
+---
+
+> 原文 release：[cline/cline v3.86.2](https://github.com/cline/cline/releases/tag/v3.86.2)

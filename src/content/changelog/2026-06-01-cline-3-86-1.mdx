@@ -1,0 +1,22 @@
+---
+slug: 2026-06-01-cline-3-86-1
+title: "cline v3.86.1 — 修复了在 VS Code Remote SSH 等环境下文件提及功能失效的问题"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v3.86.1
+publishedAt: 2026-06-01
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复了在 VS Code Remote SSH 等环境下文件提及功能失效的问题"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要修复了远程开发环境下的文件提及问题，不影响代理服务的核心连接与转发功能。现有用户如果经常在 VS Code Remote SSH 或类似受限环境下工作，值得升级以解决文件 @ 功能失效的痛点；否则无需紧急更新。现有 prompt 或 hook 配置无需修改，因为本次修复聚焦于底层文件搜索的容错机制，不涉及上层交互逻辑的改变。"
+tags: [bug-fix, vscode-integration, file-search, compatibility]
+---
+
+- **修复了 `@` 文件提及失败的问题**：当工作区索引或内置 ripgrep 二进制文件不可用时，现在会保持文件搜索回退机制。这意味着 agent harness 在受限或更新后的开发环境中应具备更强的文件定位能力。
+- **解决了特定环境兼容性问题**：特别针对 VS Code Remote SSH 和某些 VS Code 更新后的场景进行了修复。这表明 agent harness 需要更稳健地处理不同 IDE 和远程开发配置的差异。
+- **增强了文件搜索的容错性**：通过保持回退机制，确保核心功能在依赖缺失时仍能工作。这提醒 agent harness 设计应优先保证基础功能的可用性，即使在非理想环境下。
+
+---
+
+> 原文 release：[cline/cline v3.86.1](https://github.com/cline/cline/releases/tag/v3.86.1)

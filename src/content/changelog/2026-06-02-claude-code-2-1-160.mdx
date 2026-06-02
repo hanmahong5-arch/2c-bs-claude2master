@@ -1,0 +1,22 @@
+---
+slug: 2026-06-02-claude-code-2-1-160
+title: "claude-code v2.1.160 — 强化安全防护与修复关键缺陷，提升代理工具链的可靠性与用户体验"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.160
+publishedAt: 2026-06-02
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "强化安全防护与修复关键缺陷，提升代理工具链的可靠性与用户体验"
+insight: "对于使用 newapi.lurus.cn 代理的国内用户，本次更新主要强化了安全性和稳定性，不影响代理路径本身。现有用户值得升级，特别是经常使用代理工具链修改系统配置或进行跨平台开发的开发者，因为新增的安全提示和多项缺陷修复能显著提升使用可靠性。现有 prompt 或 hook 配置无需专门修改，升级即可获得改进。"
+tags: [security, bug-fixes, user-experience, cross-platform]
+---
+
+- **新增关键文件写入前的安全提示**：对 shell 启动文件及 git 配置目录的写入操作增加确认，防止意外命令执行。这意味着代理工具在修改系统或项目关键配置时，设计上更加注重安全边界。
+- **优化编辑前检查与历史恢复逻辑**：单文件 grep 命令现在满足编辑前检查，修复了会话恢复时丢失聊天历史并重新运行原始提示的问题。这表明工具链在简化操作流程和保证会话状态持久性方面进行了改进。
+- **修复多项平台特定与交互缺陷**：解决了 Windows/WSL 剪贴板、后台会话管理、UI 响应、链接解析及第三方提供商提示等多个问题。这体现了对跨平台稳定性和终端用户体验细节的持续打磨。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.160](https://github.com/anthropics/claude-code/releases/tag/v2.1.160)
