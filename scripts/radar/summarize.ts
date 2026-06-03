@@ -147,7 +147,13 @@ function deriveSlug(input: Input): string {
     return `${date}-${slugify(input.label)}-${slugify(pathTail || "post")}`;
   }
   if (isTrending(input)) {
-    return `${date}-trending-${slugify(input.repo)}`;
+    // 注: 不用 slugify —— 它为版本号剥掉开头的 "v"(v2.1.0→2.1.0), 会误伤 v 开头的仓库名
+    // (vercel/vue/vite ...)。repo slug 用不剥 v 的规整。
+    const repoSlug = input.repo
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    return `${date}-trending-${repoSlug}`;
   }
   const repo = input.repo.split("/")[1] ?? input.repo;
   return `${date}-${slugify(repo)}-${slugify(input.tag)}`;
