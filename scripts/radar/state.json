@@ -9,7 +9,13 @@
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.45.0"
   },
-  "trendingSeen": [],
+  "trendingSeen": [
+    "pewdiepie-archdaemon/odysseus",
+    "antirez/ds4",
+    "BigPizzaV3/CodexPlusPlus",
+    "nexu-io/html-anything",
+    "vercel-labs/zerolang"
+  ],
   "practicesSeen": {
     "anthropic-engineering": [
       "https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues",
