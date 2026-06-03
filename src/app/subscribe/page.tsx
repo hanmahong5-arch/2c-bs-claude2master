@@ -6,11 +6,23 @@ import DigestPreview from "./DigestPreview";
 import { getDigest } from "@/lib/content";
 import { toolListCopy } from "@/lib/tools";
 
+const subscribeDesc = `每周一一封邮件，把过去 7 天 ${toolListCopy("count")} 的所有 release + 一篇 agent harness 设计观察打包送达。免费，随时退订。`;
+
 export const metadata: Metadata = {
   title: "订阅 Weekly Digest",
-  description: `每周一一封邮件，把过去 7 天 ${toolListCopy("count")} 的所有 release + 一篇 agent harness 设计观察打包送达。免费，随时退订。`,
+  description: subscribeDesc,
   alternates: {
     canonical: "https://claude2master.com/subscribe",
+  },
+  openGraph: {
+    title: "订阅 Weekly Digest — claude2master",
+    description: subscribeDesc,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "订阅 Weekly Digest — claude2master",
+    description: subscribeDesc,
   },
 };
 

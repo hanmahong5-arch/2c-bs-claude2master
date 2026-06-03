@@ -69,7 +69,7 @@ export default function RankPage() {
           className="flex-shrink-0 mt-0.5 text-[var(--lt-warn)]"
         />
         <div className="text-[var(--color-text-secondary)]">
-          <strong className="text-[var(--lt-warn)]">v0 静态版,不是自动 benchmark。</strong>
+          <strong className="text-[var(--lt-ink)]">v0 静态版,不是自动 benchmark。</strong>
           评分来源:Aider polyglot leaderboard (公开) +
           CursorBench (Cursor 自报) + 编辑部主观估值 + 中文场景调整。
           自动跑分管道在 c2m 下一阶段路线图里。看到的差异不要当 ±2% 精度的事实。

@@ -48,7 +48,7 @@ export default function Header() {
           claude<span className="text-[var(--c2m-accent-deep)]">2</span>master
         </Link>
 
-        <nav className="hidden md:flex items-center gap-1">
+        <nav aria-label="主导航" className="hidden md:flex items-center gap-1">
           {NAV.map((item) => {
             const active =
               pathname === item.href || pathname.startsWith(item.href + "/");
@@ -76,6 +76,7 @@ export default function Header() {
 
         <button
           aria-label={open ? "关闭菜单" : "打开菜单"}
+          aria-expanded={open}
           className="md:hidden p-2 -mr-2 text-[var(--lt-ink)]"
           onClick={() => setOpen(!open)}
         >
@@ -84,16 +85,28 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="md:hidden border-t border-[var(--color-border)] bg-[var(--lt-paper)]">
-          {NAV.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="flex items-center px-6 h-14 border-l-2 border-transparent hover:border-[var(--c2m-accent)] hover:bg-[var(--lt-bg)] text-[var(--lt-ink)]"
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav
+          aria-label="移动导航"
+          className="md:hidden border-t border-[var(--color-border)] bg-[var(--lt-paper)]"
+        >
+          {NAV.map((item) => {
+            const active =
+              pathname === item.href || pathname.startsWith(item.href + "/");
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={active ? "page" : undefined}
+                className={`flex items-center px-6 h-14 border-l-2 hover:bg-[var(--lt-bg)] ${
+                  active
+                    ? "border-[var(--c2m-accent)] text-[var(--c2m-accent-deep)] bg-[var(--lt-bg)] font-medium"
+                    : "border-transparent text-[var(--lt-ink)] hover:border-[var(--c2m-accent)]"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
           <Link
             href="/login"
             className="flex items-center px-6 h-14 border-l-2 border-transparent text-[var(--c2m-accent-deep)] font-medium"

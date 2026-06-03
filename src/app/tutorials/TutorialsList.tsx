@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { Clock } from "lucide-react";
 import { type Tutorial, type TutorialCategory } from "@/lib/tutorials";
+import { useUrlFilter } from "@/lib/use-url-filter";
 
 export default function TutorialsList({
   tutorials,
@@ -12,7 +12,12 @@ export default function TutorialsList({
   tutorials: Tutorial[];
   categories: TutorialCategory[];
 }) {
-  const [active, setActive] = useState<"全部" | TutorialCategory>("全部");
+  // 分类筛选存进 URL ?cat= → 点进详情返回时保留分类与滚动位置(见 useUrlFilter)
+  const [active, selectCat] = useUrlFilter<"全部" | TutorialCategory>(
+    "cat",
+    (raw) => raw === "全部" || categories.includes(raw as TutorialCategory),
+    "全部",
+  );
 
   // 只显示有内容的分类，避免点进去空白
   const populated = categories.filter((c) =>
@@ -38,11 +43,11 @@ export default function TutorialsList({
             <button
               key={f.value}
               type="button"
-              onClick={() => setActive(f.value)}
+              onClick={() => selectCat(f.value)}
               aria-pressed={isActive}
               className={`pill text-xs cursor-pointer transition-colors ${
                 isActive
-                  ? "bg-[var(--c2m-accent)] text-white"
+                  ? "bg-[var(--c2m-accent-deep)] text-white"
                   : "pill-outline hover:text-[var(--c2m-accent-deep)]"
               }`}
             >
@@ -52,6 +57,11 @@ export default function TutorialsList({
         })}
       </div>
 
+      {filtered.length === 0 ? (
+        <p className="text-center py-16 text-sm text-[var(--color-text-muted)]">
+          这个分类还没有教程 — 编辑部正在补充。
+        </p>
+      ) : (
       <ul className="space-y-4">
         {filtered.map((t) => (
           <li key={t.slug}>
@@ -84,6 +94,7 @@ export default function TutorialsList({
           </li>
         ))}
       </ul>
+      )}
     </>
   );
 }

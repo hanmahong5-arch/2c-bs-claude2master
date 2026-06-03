@@ -7,6 +7,9 @@ import { SEO_LANDINGS } from "@/lib/seo-landings";
 
 const BASE = "https://claude2master.com";
 const now = new Date();
+// prompts/skills 无 per-item 日期字段; 用固定基线(项目上线日)而非 now, 避免每次 build
+// 都给搜索引擎误报"今天刚改", 浪费抓取预算并降低对 lastModified 信号的信任。
+const CONTENT_SEED_DATE = new Date("2026-05-25");
 
 const STATIC_ROUTES: {
   path: string;
@@ -48,7 +51,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...PROMPTS.map((p) => ({
       url: `${BASE}/prompts/${p.slug}`,
-      lastModified: now,
+      lastModified: CONTENT_SEED_DATE,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
@@ -60,7 +63,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...SKILLS.map((s) => ({
       url: `${BASE}/skills/${s.slug}`,
-      lastModified: now,
+      lastModified: CONTENT_SEED_DATE,
       changeFrequency: "monthly" as const,
       priority: 0.6,
     })),

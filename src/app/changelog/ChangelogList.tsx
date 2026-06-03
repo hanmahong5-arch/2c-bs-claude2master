@@ -1,7 +1,6 @@
 "use client";
 
-import { Suspense, useMemo } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useMemo } from "react";
 import Link from "next/link";
 import { Calendar, Github, Rss } from "lucide-react";
 import {
@@ -19,6 +18,7 @@ import {
   versionFromSourceUrl,
 } from "@/lib/tools";
 import { relativeAge } from "@/lib/date";
+import { useUrlFilter } from "@/lib/use-url-filter";
 import { Reveal } from "@/components/Reveal";
 
 // 筛选值: "all"(按工具分组) | "practice"(实践扁平) | 某 tool key(该工具扁平)
@@ -143,26 +143,19 @@ function ToolSection({
   );
 }
 
-function ChangelogListInner({ items }: { items: ChangelogItem[] }) {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const pathname = usePathname();
-  // 筛选值存进 URL query(?tool=)→ 点进详情页再返回时, 筛选与滚动位置都保留;
-  // 否则筛选只在 useState 里, 返回时按无 query 的 URL 重新初始化 → 跳回「全部」。
-  // 用 replace(非 push)避免每次切 tab 污染浏览历史;scroll:false 防止切 tab 跳顶。
-  const raw = searchParams.get("tool") ?? "all";
-  const filter: Filter =
-    raw === "all" || raw === "practice" || raw === "trending" || toolForKey(raw)
-      ? raw
-      : "all";
-
-  const selectFilter = (value: Filter) => {
-    const params = new URLSearchParams(searchParams.toString());
-    if (value === "all") params.delete("tool");
-    else params.set("tool", value);
-    const qs = params.toString();
-    router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
-  };
+export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
+  // 筛选值存进 URL query(?tool=)→ 点进详情页再返回时筛选与滚动位置都保留。
+  // 用 useUrlFilter(history.replaceState)而非 useSearchParams: 后者会让本页退出
+  // 静态预渲染、首屏 HTML 不含条目(伤 SEO)。本 hook 首屏渲染全部、挂载后再应用筛选。
+  const [filter, selectFilter] = useUrlFilter<Filter>(
+    "tool",
+    (raw) =>
+      raw === "all" ||
+      raw === "practice" ||
+      raw === "trending" ||
+      !!toolForKey(raw),
+    "all",
+  );
 
   // items 已按 publishedAt 倒序(getChangelog),组内顺序天然倒序。
   const { byKey, other, practices, trending } = useMemo(() => {
@@ -248,7 +241,7 @@ function ChangelogListInner({ items }: { items: ChangelogItem[] }) {
                   onClick={() => selectFilter(f.value)}
                   className={`pill text-xs cursor-pointer transition-colors ${
                     active
-                      ? "bg-[var(--c2m-accent)] text-white"
+                      ? "bg-[var(--c2m-accent-deep)] text-white"
                       : "pill-outline hover:text-[var(--c2m-accent-deep)]"
                   }`}
                   aria-pressed={active}
@@ -321,14 +314,5 @@ function ChangelogListInner({ items }: { items: ChangelogItem[] }) {
         })()
       )}
     </div>
-  );
-}
-
-export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
-  // useSearchParams 需 Suspense 边界(page.tsx force-static)。
-  return (
-    <Suspense fallback={null}>
-      <ChangelogListInner items={items} />
-    </Suspense>
   );
 }

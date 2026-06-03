@@ -315,7 +315,13 @@ ${summary.body}
 }
 
 function escapeYaml(s: string): string {
-  return s.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+  // YAML 双引号标量里的裸换行会被 content.ts 的逐行 parseFrontmatter 截断字段(甚至
+  // 含 "\n---" 时提前终止 frontmatter 致正文丢失)。LLM 输出的 hook/insight/title 可能含
+  // 换行 → 先折叠成空格(均为单行展示字段, 语义无损), 再转义反斜杠与引号。
+  return s
+    .replace(/[\r\n]+/g, " ")
+    .replace(/\\/g, "\\\\")
+    .replace(/"/g, '\\"');
 }
 
 function buildMdx(
@@ -449,10 +455,20 @@ async function loadState(): Promise<{
   lastSeen: Record<string, string>;
   raw: Record<string, unknown>;
 }> {
-  const raw = JSON.parse(await fs.readFile(STATE_FILE, "utf-8")) as Record<
-    string,
-    unknown
-  >;
+  let raw: Record<string, unknown>;
+  try {
+    raw = JSON.parse(await fs.readFile(STATE_FILE, "utf-8")) as Record<
+      string,
+      unknown
+    >;
+  } catch (e) {
+    // state.json 缺失或损坏(如上次写入被 SIGKILL 截断): 降级为空状态(全量 reseed),
+    // 而非让异常上抛使整条管线 exit 1 永久卡死, 需人工修复才能恢复。
+    console.error(
+      `[state] load failed (${(e as Error).message}); degrading to empty state (full reseed)`,
+    );
+    raw = {};
+  }
   return {
     lastSeen: (raw.lastSeen as Record<string, string>) ?? {},
     raw,
@@ -464,7 +480,11 @@ async function saveState(
   lastSeen: Record<string, string>,
 ): Promise<void> {
   raw.lastSeen = lastSeen;
-  await fs.writeFile(STATE_FILE, JSON.stringify(raw, null, 2) + "\n", "utf-8");
+  // 原子写: 先写临时文件再 rename(同一文件系统上 POSIX 保证原子), 避免进程被 SIGKILL
+  // 命中写入中途留下截断 JSON, 导致下次 loadState / fetch-releases.sh 解析失败卡死管线。
+  const tmp = `${STATE_FILE}.tmp`;
+  await fs.writeFile(tmp, JSON.stringify(raw, null, 2) + "\n", "utf-8");
+  await fs.rename(tmp, STATE_FILE);
 }
 
 async function processInput(

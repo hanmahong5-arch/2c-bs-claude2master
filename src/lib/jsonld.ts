@@ -74,18 +74,26 @@ export function harnessJsonLd(item: HarnessItem) {
   );
 }
 
-/** Prompt 详情页 CreativeWork 结构化数据。 */
+// Prompt 无 per-item 日期字段; 种子内容统一按项目上线日。用作 datePublished 的稳定基线,
+// 避免 SERP 新鲜度信号缺失。与 sitemap 的 CONTENT_SEED_DATE 保持一致。
+const PROMPT_SEED_DATE = "2026-05-25";
+
+/** Prompt 详情页 Article 结构化数据(/prompts 是 SEO 主战场, Article 可富结果, 优于 CreativeWork)。 */
 export function promptJsonLd(p: Prompt) {
   const base: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    name: p.title,
+    "@type": "Article",
+    headline: p.title,
     description: p.desc,
-    url: `${SITE}/prompts/${p.slug}`,
+    image: `${SITE}/og/${p.slug}`,
+    datePublished: PROMPT_SEED_DATE,
+    dateModified: PROMPT_SEED_DATE,
     author: AUTHOR,
+    publisher: PUBLISHER,
+    mainEntityOfPage: `${SITE}/prompts/${p.slug}`,
     inLanguage: "zh-CN",
   };
-  if (p.body) base.text = p.body;
+  if (p.body) base.articleBody = p.body;
   const keywords = [p.category, ...(p.tags ?? [])].filter(Boolean);
   if (keywords.length > 0) base.keywords = keywords.join(",");
   return base;

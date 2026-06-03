@@ -179,7 +179,7 @@ export default function ChatRoom() {
       <div className="mb-5 px-4 py-3 rounded-lg border border-[var(--lt-warn)] bg-[rgba(184,130,31,0.06)] flex items-start gap-2 text-sm text-[var(--lt-warn)]">
         <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />
         <div className="flex-1 text-[var(--color-text-secondary)]">
-          <span className="font-semibold text-[var(--lt-warn)]">
+          <span className="font-semibold text-[var(--lt-ink)]">
             Anthropic Claude channel 接入中
           </span>
           {" — "}
@@ -188,22 +188,25 @@ export default function ChatRoom() {
       </div>
 
       <div className="flex flex-wrap items-center gap-2 mb-4 pb-4 border-b border-[var(--color-border)]">
-        {MODELS.map((m) => (
-          <button
-            key={m.key}
-            onClick={() => setModel(m.key)}
-            className={
-              m.key === model
-                ? "pill"
-                : "pill pill-outline hover:border-[var(--c2m-accent)]"
-            }
-            type="button"
-          >
-            {m.label}
-            <span className="ml-1.5 text-[10px] opacity-70">{m.tag}</span>
-          </button>
-        ))}
-        <span className="ml-auto text-xs text-[var(--color-text-muted)]">
+        <div className="flex flex-wrap items-center gap-2 flex-1">
+          {MODELS.map((m) => (
+            <button
+              key={m.key}
+              onClick={() => setModel(m.key)}
+              className={
+                m.key === model
+                  ? "pill"
+                  : "pill pill-outline hover:border-[var(--c2m-accent)]"
+              }
+              aria-pressed={m.key === model}
+              type="button"
+            >
+              {m.label}
+              <span className="ml-1.5 text-[10px] opacity-70">{m.tag}</span>
+            </button>
+          ))}
+        </div>
+        <span className="text-xs text-[var(--color-text-muted)] whitespace-nowrap">
           剩余 {remaining} / {TRIAL_LIMIT} 次
         </span>
       </div>
@@ -213,6 +216,7 @@ export default function ChatRoom() {
         className="min-h-[280px] max-h-[55vh] overflow-y-auto mb-5 space-y-5"
         role="log"
         aria-live="polite"
+        aria-busy={loading}
         aria-label="对话记录"
       >
         {msgs.length === 0 && (
@@ -253,7 +257,7 @@ export default function ChatRoom() {
             } whitespace-pre-wrap`}
           >
             {m.content || (
-              <span className="cursor-blink" aria-label="正在生成">
+              <span className="cursor-blink" aria-hidden="true">
                 ▎
               </span>
             )}

@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { Package, Download } from "lucide-react";
 import { type Skill, type SkillCategory } from "@/lib/skills";
+import { useUrlFilter } from "@/lib/use-url-filter";
 import { Stagger, StaggerItem } from "@/components/Reveal";
 
 const SOURCE_BADGE: Record<string, string> = {
@@ -19,7 +19,12 @@ export default function SkillsList({
   skills: Skill[];
   categories: SkillCategory[];
 }) {
-  const [active, setActive] = useState<"全部" | SkillCategory>("全部");
+  // 分类筛选存进 URL ?cat= → 点进详情返回时保留分类与滚动位置(见 useUrlFilter)
+  const [active, selectCat] = useUrlFilter<"全部" | SkillCategory>(
+    "cat",
+    (raw) => raw === "全部" || categories.includes(raw as SkillCategory),
+    "全部",
+  );
 
   // 只显示有内容的分类，避免点进去空白
   const populated = categories.filter((c) =>
@@ -43,11 +48,11 @@ export default function SkillsList({
             <button
               key={f.value}
               type="button"
-              onClick={() => setActive(f.value)}
+              onClick={() => selectCat(f.value)}
               aria-pressed={isActive}
               className={`pill text-xs cursor-pointer transition-colors ${
                 isActive
-                  ? "bg-[var(--c2m-accent)] text-white"
+                  ? "bg-[var(--c2m-accent-deep)] text-white"
                   : "pill-outline hover:text-[var(--c2m-accent-deep)]"
               }`}
             >
@@ -57,6 +62,11 @@ export default function SkillsList({
         })}
       </div>
 
+      {filtered.length === 0 ? (
+        <p className="text-center py-16 text-sm text-[var(--color-text-muted)]">
+          这个分类还没有 skill — 编辑部正在补充。
+        </p>
+      ) : (
       <Stagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {filtered.map((s) => (
           <StaggerItem key={s.slug} className="h-full">
@@ -92,6 +102,7 @@ export default function SkillsList({
           </StaggerItem>
         ))}
       </Stagger>
+      )}
     </>
   );
 }

@@ -23,8 +23,15 @@ const MAX_TOKENS = 1024;
 const UPSTREAM_TIMEOUT_MS = 20000;
 
 function readTrialUsed(cookie: string): number {
-  const m = cookie.match(/c2m_trial=([0-9]+)/);
-  return m ? Number(m[1]) : 0;
+  // 精确按 key 解析, 不用子串正则: 否则伪造 `c2m_trial=0` 排在真值前即可绕过,
+  // 且 `x_c2m_trial=...` 这类前缀也会被误命中。(注: 这是弱客户端 gate, 此修仅堵显式绕过)
+  const val = cookie
+    .split(";")
+    .map((s) => s.trim())
+    .find((s) => s.startsWith(`${COOKIE_NAME}=`))
+    ?.slice(COOKIE_NAME.length + 1);
+  const n = val ? Number(val) : 0;
+  return Number.isFinite(n) && n >= 0 ? n : 0;
 }
 
 function jsonError(
