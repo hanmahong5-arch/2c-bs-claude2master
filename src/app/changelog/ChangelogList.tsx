@@ -27,6 +27,7 @@ type Filter = string;
 function resolveKind(c: ChangelogItem): ChangelogKind {
   if (c.kind === "practice") return "practice";
   if (c.kind === "trending") return "trending";
+  if (c.kind === "blogger") return "blogger";
   return "changelog";
 }
 
@@ -46,7 +47,9 @@ function ChangelogCard({ c }: { c: ChangelogItem }) {
           <span className={`pill text-[10px] ${kindMeta.className}`}>
             {kindMeta.label}
           </span>
-          <span className="pill text-[10px]">{c.source}</span>
+          <span className="pill text-[10px]">
+            {k === "blogger" ? (c.author ?? c.source) : c.source}
+          </span>
           <span className="pill-outline pill text-[10px]">
             {AUTHORED_LABEL[c.authored]}
           </span>
@@ -89,7 +92,7 @@ function ChangelogCard({ c }: { c: ChangelogItem }) {
           </span>
           <span className="inline-flex items-center gap-1.5">
             <Github size={12} />
-            {k === "practice" ? "原文" : "原文 release"}
+            {k === "practice" || k === "blogger" ? "原文" : "原文 release"}
           </span>
         </div>
       </Link>
@@ -153,37 +156,50 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
       raw === "all" ||
       raw === "practice" ||
       raw === "trending" ||
+      raw === "blogger" ||
       !!toolForKey(raw),
     "all",
   );
 
   // items 已按 publishedAt 倒序(getChangelog),组内顺序天然倒序。
-  const { byKey, other, practices, trending } = useMemo(() => {
-    const byKey = new Map<string, ChangelogItem[]>();
-    const other: ChangelogItem[] = [];
-    const practices: ChangelogItem[] = [];
-    const trending: ChangelogItem[] = [];
-    for (const c of items) {
-      const k = resolveKind(c);
-      if (k === "practice") {
-        practices.push(c);
-        continue;
+  const { byKey, other, practices, trending, bloggers, bloggersByAuthor } =
+    useMemo(() => {
+      const byKey = new Map<string, ChangelogItem[]>();
+      const other: ChangelogItem[] = [];
+      const practices: ChangelogItem[] = [];
+      const trending: ChangelogItem[] = [];
+      const bloggers: ChangelogItem[] = [];
+      // 「观点」段二级分组: author → 该博主条目 (保持 date-desc 插入序)
+      const bloggersByAuthor = new Map<string, ChangelogItem[]>();
+      for (const c of items) {
+        const k = resolveKind(c);
+        if (k === "practice") {
+          practices.push(c);
+          continue;
+        }
+        if (k === "trending") {
+          trending.push(c);
+          continue;
+        }
+        if (k === "blogger") {
+          bloggers.push(c);
+          const author = c.author ?? c.source;
+          const arr = bloggersByAuthor.get(author) ?? [];
+          arr.push(c);
+          bloggersByAuthor.set(author, arr);
+          continue;
+        }
+        const tool = toolForSource(c.source);
+        if (tool) {
+          const arr = byKey.get(tool.key) ?? [];
+          arr.push(c);
+          byKey.set(tool.key, arr);
+        } else {
+          other.push(c);
+        }
       }
-      if (k === "trending") {
-        trending.push(c);
-        continue;
-      }
-      const tool = toolForSource(c.source);
-      if (tool) {
-        const arr = byKey.get(tool.key) ?? [];
-        arr.push(c);
-        byKey.set(tool.key, arr);
-      } else {
-        other.push(c);
-      }
-    }
-    return { byKey, other, practices, trending };
-  }, [items]);
+      return { byKey, other, practices, trending, bloggers, bloggersByAuthor };
+    }, [items]);
 
   // pill 只显示有内容的工具,避免点进去空白。
   const toolFilters = TOOLS.filter((t) => (byKey.get(t.key)?.length ?? 0) > 0);
@@ -192,6 +208,9 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
     ...toolFilters.map((t) => ({ value: t.key, label: t.name })),
     ...(trending.length > 0
       ? [{ value: "trending", label: "🔥 热门" }]
+      : []),
+    ...(bloggers.length > 0
+      ? [{ value: "blogger", label: "💬 观点" }]
       : []),
     ...(practices.length > 0
       ? [{ value: "practice", label: "实践" }]
@@ -275,6 +294,24 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
           {trending.length > 0 && (
             <ToolSection name="🔥 热门项目" version={null} items={trending} />
           )}
+          {bloggers.length > 0 && (
+            <section className="mb-10">
+              <h2 className="text-lg font-semibold text-[var(--lt-ink)] inline-flex items-center gap-2 mb-4">
+                <span className="text-[var(--lt-info)]">●</span>
+                💬 观点
+              </h2>
+              <div className="pl-1">
+                {[...bloggersByAuthor.entries()].map(([author, group]) => (
+                  <ToolSection
+                    key={`blog-${author}`}
+                    name={author}
+                    version={null}
+                    items={group}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
           {other.length > 0 && (
             <ToolSection name="其他" version={null} items={other} />
           )}
@@ -291,6 +328,12 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
       ) : filter === "trending" ? (
         <ul className="space-y-4">
           {trending.map((c) => (
+            <ChangelogCard key={c.slug} c={c} />
+          ))}
+        </ul>
+      ) : filter === "blogger" ? (
+        <ul className="space-y-4">
+          {bloggers.map((c) => (
             <ChangelogCard key={c.slug} c={c} />
           ))}
         </ul>

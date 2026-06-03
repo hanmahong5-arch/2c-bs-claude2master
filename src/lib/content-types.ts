@@ -16,7 +16,7 @@ export interface ContentItemBase {
 
 export type Verified = "tested" | "pending";
 
-export type ChangelogKind = "changelog" | "practice" | "trending";
+export type ChangelogKind = "changelog" | "practice" | "trending" | "blogger";
 
 export interface ChangelogItem extends ContentItemBase {
   channel: "changelog";
@@ -27,6 +27,8 @@ export interface ChangelogItem extends ContentItemBase {
   verified?: Verified;
   insight?: string;
   kind?: ChangelogKind;
+  /** 博主条目署名 (kind: blogger); release/practice/trending 不设 */
+  author?: string;
 }
 
 export interface DigestItem extends ContentItemBase {
@@ -85,6 +87,10 @@ export const KIND_LABEL: Record<
   trending: {
     label: "🔥 热门",
     className: "bg-[rgba(184,130,31,0.14)] text-[var(--lt-warn)]",
+  },
+  blogger: {
+    label: "💬 观点",
+    className: "bg-[rgba(45,74,138,0.12)] text-[var(--lt-info)]",
   },
 };
 

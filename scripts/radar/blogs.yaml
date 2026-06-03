@@ -1,0 +1,32 @@
+# blogs.yaml — 头部博主每日内容追踪源 (radar「💬 观点」段)
+#
+# 每个源归一化为标准 feed-item, 后续 summarize / 渲染完全复用 release/practice 管线。
+#
+# type:
+#   rss        — 个人博客 / Substack / Medium / dev.to (有 RSS/Atom/JSON feed)。Phase 1 主力, 最稳, 无浏览器。
+#   lightpanda — JS 渲染、无 feed 的博客列表页。经 CDP (ws://127.0.0.1:9222) 连 Lightpanda 取列表 → 逐篇取正文。
+#   rsshub     — (Phase 2 占位, 未启用) X / 微信 / 知乎 / YouTube 桥成 RSS。需自托管 RSSHub + owner cookie。
+#
+# 字段:
+#   author       展示名 / 署名 (必填)
+#   handle       slug 用, kebab-case 稳定标识 (必填, 去重 key)
+#   type         rss | lightpanda (必填)
+#   url          rss: feed 地址; lightpanda: 文章列表页 (必填)
+#   pollDays     至少隔 N 天才再 poll 该源 (默认 1)
+#   itemSelector lightpanda 专用: 列表页文章链接的 CSS 选择器 (lightpanda 必填)
+#
+# ⚠️ 下面两条是 Phase 1 验证种子 (公开 AI 博客, 稳定 Atom feed)。
+#    owner 给真实博主名单后逐个探测 RSS, 替换/扩充此清单。
+
+blogs:
+  - author: Simon Willison
+    handle: simonwillison
+    type: rss
+    url: https://simonwillison.net/atom/everything/
+    pollDays: 1
+
+  - author: Lilian Weng
+    handle: lilianweng
+    type: rss
+    url: https://lilianweng.github.io/index.xml
+    pollDays: 1

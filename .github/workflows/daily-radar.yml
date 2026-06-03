@@ -75,6 +75,48 @@ jobs:
           echo "---- fetched $tc trending ----"
           cat radar-new-trending.jsonl 2>/dev/null || true
 
+      # 仅当 blogs.yaml 含 lightpanda 源时才起浏览器 — 避免每天空跑 docker 浪费 CI。
+      - name: Detect lightpanda sources
+        id: lp
+        run: |
+          set -euo pipefail
+          if grep -qE '^[[:space:]]*type:[[:space:]]*lightpanda([[:space:]]|$)' scripts/radar/blogs.yaml 2>/dev/null; then
+            echo "enabled=1" >> "$GITHUB_OUTPUT"
+            echo "---- lightpanda sources present ----"
+          else
+            echo "enabled=0" >> "$GITHUB_OUTPUT"
+            echo "---- no lightpanda sources; rss-only ----"
+          fi
+
+      - name: Start Lightpanda + install puppeteer-core
+        if: steps.lp.outputs.enabled == '1'
+        run: |
+          set -euo pipefail
+          docker run -d --name lightpanda -p 127.0.0.1:9222:9222 lightpanda/browser:nightly
+          bun add puppeteer-core
+          # 等 CDP 端口就绪 (Lightpanda 暴露 ws://127.0.0.1:9222)
+          for i in $(seq 1 20); do
+            if (echo > /dev/tcp/127.0.0.1/9222) 2>/dev/null; then echo "lightpanda CDP ready"; break; fi
+            sleep 1
+          done
+
+      - name: Fetch blogger content
+        id: blogs
+        env:
+          LIGHTPANDA_WS: ws://127.0.0.1:9222
+        run: |
+          set -euo pipefail
+          # 失败不阻塞主路径 (blogger 是补充, 同 practices/trending)
+          bun run scripts/radar/fetch-blogs.ts > radar-new-blogs.jsonl || true
+          bc=$(grep -c . radar-new-blogs.jsonl 2>/dev/null || true); bc=${bc:-0}
+          echo "bc=$bc" >> "$GITHUB_OUTPUT"
+          echo "---- fetched $bc blogger item(s) ----"
+          cat radar-new-blogs.jsonl 2>/dev/null || true
+
+      - name: Stop Lightpanda
+        if: always() && steps.lp.outputs.enabled == '1'
+        run: docker rm -f lightpanda 2>/dev/null || true
+
       - name: Combine inputs
         id: combine
         run: |
@@ -83,6 +125,7 @@ jobs:
           [ -s radar-new-releases.jsonl ] && cat radar-new-releases.jsonl >> radar-input.jsonl || true
           [ -s radar-new-practices.jsonl ] && cat radar-new-practices.jsonl >> radar-input.jsonl || true
           [ -s radar-new-trending.jsonl ] && cat radar-new-trending.jsonl >> radar-input.jsonl || true
+          [ -s radar-new-blogs.jsonl ] && cat radar-new-blogs.jsonl >> radar-input.jsonl || true
           # 同 practices 步骤: 避免 `grep -c` 空文件时 `|| echo 0` 双计数成多行破坏 $GITHUB_OUTPUT
           count=$(grep -c . radar-input.jsonl 2>/dev/null || true); count=${count:-0}
           echo "count=$count" >> "$GITHUB_OUTPUT"

@@ -71,6 +71,20 @@ const TRENDING_SYSTEM_PROMPT = `你是 claude2master.com 编辑助手。读用�
 - 不喊口号、不堆 emoji
 - 输出必须是合法 JSON，无任何前后说明文字`;
 
+const BLOGGER_SYSTEM_PROMPT = `你是 claude2master.com 编辑助手。读用户给的某位博主的一篇英文/中文博客原文（个人博客 / Substack / Medium 等），输出严格 JSON，字段如下：
+
+{
+  "hook": "30 字内中文钩子，回答这位博主这篇在讲什么、为什么值得读",
+  "body": "200–240 字内中文 markdown，3 个 bullet，每个一条文章里的具体观点/事实 + 一句它对 agent / 工具链 / 开发者的含义",
+  "tags": ["最多 4 个英文 kebab-case"]
+}
+
+强约束：
+- 只摘要，绝不转载或大段复制原文（聚合器口径：标题 + 中文摘要 + 原文链接 + 署名）
+- 文章里没写的观点不写、不引申、不脑补
+- 不喊口号、不堆 emoji
+- 输出必须是合法 JSON，无任何前后说明文字`;
+
 const INSIGHT_SYSTEM_PROMPT = `你是 claude2master.com 编辑助手，国内开发者视角。基于已有的中文摘要，写一段 80–150 字的「Lurus 视角」，硬约束：
 
 1. 必须给明确判断，覆盖下列至少一项（按相关度选）：
@@ -112,7 +126,17 @@ interface TrendingInput {
   published_at: string;
 }
 
-type Input = ReleaseInput | PracticeInput | TrendingInput;
+interface BloggerInput {
+  kind: "blogger";
+  author: string;
+  handle: string;
+  url: string;
+  title: string;
+  body: string;
+  published_at: string;
+}
+
+type Input = ReleaseInput | PracticeInput | TrendingInput | BloggerInput;
 
 function isPractice(x: Input): x is PracticeInput {
   return (x as PracticeInput).kind === "practice";
@@ -120,6 +144,10 @@ function isPractice(x: Input): x is PracticeInput {
 
 function isTrending(x: Input): x is TrendingInput {
   return (x as TrendingInput).kind === "trending";
+}
+
+function isBlogger(x: Input): x is BloggerInput {
+  return (x as BloggerInput).kind === "blogger";
 }
 
 interface SummaryOutput {
@@ -154,6 +182,21 @@ function deriveSlug(input: Input): string {
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-+|-+$/g, "");
     return `${date}-trending-${repoSlug}`;
+  }
+  if (isBlogger(input)) {
+    // handle 已是稳定 kebab 标识; title 取前几词避免 slug 过长 (同 trending 不剥 v)
+    const handleSlug = input.handle
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    const titleSlug = input.title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .split("-")
+      .slice(0, 8)
+      .join("-");
+    return `${date}-blog-${handleSlug}-${titleSlug || "post"}`;
   }
   const repo = input.repo.split("/")[1] ?? input.repo;
   return `${date}-${slugify(repo)}-${slugify(input.tag)}`;
@@ -236,7 +279,9 @@ async function callLLM(input: Input): Promise<SummaryOutput> {
     ? PRACTICE_SYSTEM_PROMPT
     : isTrending(input)
       ? TRENDING_SYSTEM_PROMPT
-      : RELEASE_SYSTEM_PROMPT;
+      : isBlogger(input)
+        ? BLOGGER_SYSTEM_PROMPT
+        : RELEASE_SYSTEM_PROMPT;
 
   let userContent: string;
   if (isPractice(input)) {
@@ -245,6 +290,13 @@ URL: ${input.url}
 Title: ${input.title}
 
 Article body (truncated to ~8KB):
+${input.body || "(empty)"}`;
+  } else if (isBlogger(input)) {
+    userContent = `Blogger: ${input.author}
+URL: ${input.url}
+Title: ${input.title}
+
+Post body (truncated to ~8KB):
 ${input.body || "(empty)"}`;
   } else if (isTrending(input)) {
     userContent = `Repository: ${input.repo}
@@ -281,11 +333,14 @@ async function callCommentary(
   input: Input,
   summary: SummaryOutput,
 ): Promise<string> {
+  // 注: blogger 不走 commentary (processInput 跳过), 此分支仅为类型收敛与防御兜底。
   const titleLine = isPractice(input)
     ? `${input.title} (${input.label})`
     : isTrending(input)
       ? `${input.name} (${input.repo})`
-      : `${input.repo} ${input.tag} — ${input.name}`;
+      : isBlogger(input)
+        ? `${input.title} (${input.author})`
+        : `${input.repo} ${input.tag} — ${input.name}`;
 
   const userContent = `输入摘要标题：${titleLine}
 
@@ -333,11 +388,48 @@ function buildMdx(
   const tagsArr = `[${summary.tags.map((t) => `${t.trim()}`).join(", ")}]`;
   // §4.1 守: verified 只允许写 "pending"; "tested" 由编辑手动改
   const verified = "pending" as const;
-  const kind: "changelog" | "practice" | "trending" = isPractice(input)
+  const kind: "changelog" | "practice" | "trending" | "blogger" = isPractice(
+    input,
+  )
     ? "practice"
     : isTrending(input)
       ? "trending"
-      : "changelog";
+      : isBlogger(input)
+        ? "blogger"
+        : "changelog";
+
+  if (isBlogger(input)) {
+    const titleCore = summary.hook.replace(/[—\-:].*$/, "").trim().slice(0, 40);
+    // 原文标题是最有 SEO 价值的 headline; 超 56 字时在词边界截断 (不切到单词中间)
+    const head =
+      input.title.length <= 56
+        ? input.title
+        : input.title.slice(0, 56).replace(/\s+\S*$/, "");
+    const title = `${head} — ${titleCore}`;
+    // source = author (详情页 source pill / RSS 复用); 另写 author 供「观点」段二级分组。
+    // 聚合器口径: 标题 + 中文摘要 + 原文链接 + 署名, 不转载全文。
+    return `---
+slug: ${slug}
+title: "${escapeYaml(title)}"
+source: "${escapeYaml(input.author)}"
+sourceUrl: ${input.url}
+publishedAt: ${input.published_at.slice(0, 10)}
+authored: llm
+model: ${MODEL_ID}
+verified: ${verified}
+kind: ${kind}
+author: "${escapeYaml(input.author)}"
+hook: "${escapeYaml(summary.hook)}"
+tags: ${tagsArr}
+---
+
+${summary.body}
+
+---
+
+> 原文：[${input.title}](${input.url}) · 作者 ${input.author}
+`;
+  }
 
   if (isPractice(input)) {
     const titleCore = summary.hook.replace(/[—\-:].*$/, "").trim().slice(0, 40);
@@ -492,8 +584,11 @@ async function processInput(
   opts: { dryRun: boolean },
 ): Promise<{ slug: string; path: string }> {
   const summary = await callLLM(input);
-  // trending 跳过 Lurus 视角(insight 面向"升级/配置", 不适配热门仓库发现)
-  const insight = isTrending(input) ? "" : await callCommentary(input, summary);
+  // trending / blogger 跳过 Lurus 视角(insight 面向"升级/配置", 不适配热门仓库 / 博主观点)
+  const insight =
+    isTrending(input) || isBlogger(input)
+      ? ""
+      : await callCommentary(input, summary);
   const slug = deriveSlug(input);
   const mdx = buildMdx(input, summary, insight, slug);
   const filePath = path.join(CHANGELOG_DIR, `${slug}.mdx`);
@@ -522,6 +617,7 @@ async function readStdinInputs(): Promise<Input[]> {
 function inputLabel(x: Input): string {
   if (isPractice(x)) return `${x.label}@${x.url}`;
   if (isTrending(x)) return `trending:${x.repo}`;
+  if (isBlogger(x)) return `blog:${x.handle}@${x.url}`;
   return `${x.repo}@${x.tag}`;
 }
 
@@ -552,13 +648,13 @@ async function main(): Promise<void> {
     try {
       await processInput(input, { dryRun });
       // release 沿用 lastSeen; practice 的 seen 由 fetch-practices.ts 写;
-      // trending 在此成功后追加 trendingSeen(去重已发布过的仓库)。
+      // blogger 的 seen 由 fetch-blogs.ts 写; trending 在此成功后追加 trendingSeen。
       if (state) {
         if (isTrending(input)) {
           const seen = (state.raw.trendingSeen as string[] | undefined) ?? [];
           if (!seen.includes(input.repo)) seen.push(input.repo);
           state.raw.trendingSeen = seen;
-        } else if (!isPractice(input)) {
+        } else if (!isPractice(input) && !isBlogger(input)) {
           state.lastSeen[input.repo] = input.tag;
         }
       }

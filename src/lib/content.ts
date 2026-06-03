@@ -108,7 +108,10 @@ export const getChangelog = cache(async function getChangelog(): Promise<Changel
           ? "changelog"
           : asString(data.kind) === "trending"
             ? "trending"
-            : undefined,
+            : asString(data.kind) === "blogger"
+              ? "blogger"
+              : undefined,
+    author: data.author ? asString(data.author) : undefined,
   }));
   return items.sort((a, b) =>
     a.publishedAt < b.publishedAt ? 1 : a.publishedAt > b.publishedAt ? -1 : 0,

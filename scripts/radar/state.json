@@ -62,5 +62,7 @@
     "claude-code-docs": "2026-05-28",
     "openai-codex-blog": "2026-05-28"
   },
-  "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts; updated atomically with each new changelog MDX commit."
+  "blogsSeen": {},
+  "blogsLastPolled": {},
+  "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }
