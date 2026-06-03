@@ -19,7 +19,12 @@
     "perplexityai/bumblebee",
     "AprilNEA/OpenLogi",
     "Helvesec/rmux",
-    "deeplethe/forkd"
+    "deeplethe/forkd",
+    "microsoft/coreutils",
+    "b-nnett/goose",
+    "alibaba/open-code-review",
+    "gi-dellav/zerostack",
+    "MatinSenPai/SenPaiScanner"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
