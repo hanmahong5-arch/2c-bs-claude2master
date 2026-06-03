@@ -1,0 +1,22 @@
+---
+slug: 2026-06-02-claude-code-2-1-161
+title: "claude-code v2.1.161 — 支持并行工具调用失败隔离，优化指标标签和终端渲染性能"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.161
+publishedAt: 2026-06-02
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "支持并行工具调用失败隔离，优化指标标签和终端渲染性能"
+insight: "对于使用 Lurus 代理的国内开发者，本次更新值得关注。并行工具调用失败隔离机制增强了 Agent 的稳定性，这意味着你现有的、依赖复杂工具链的 prompt 工作流将更可靠，单个工具失败不会导致整个批次任务中断。同时，优化后的进度显示（done/total）能让你在 Lurus 平台上更清晰地监控长时间运行任务的状态。这些是后端服务的增强，通过 newapi.lurus.cn 访问不受影响，也无需主动修改配置。"
+tags: [metrics, parallel-tools, ui-ux, bug-fixes]
+---
+
+- **OTEL_RESOURCE_ATTRIBUTES 值现作为指标标签**：允许按团队或仓库等自定义维度切分使用指标，便于监控粒度细化。
+- **并行工具调用中失败命令不再取消同批次其他调用**：每个工具独立返回结果，提升了 Agent 任务执行的鲁棒性和容错性。
+- **claude agents 行在任务分发时显示 done/total 进度**：peek 视图展示最长运行项目，优化了复杂工作流的进度监控体验。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.161](https://github.com/anthropics/claude-code/releases/tag/v2.1.161)

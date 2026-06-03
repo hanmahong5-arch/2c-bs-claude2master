@@ -1,0 +1,22 @@
+---
+slug: 2026-06-03-gemini-cli-0-45-0
+title: "gemini-cli v0.45.0 — 修复终端环境循环与上下文泄露，提升 agent 稳定性"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.45.0
+publishedAt: 2026-06-03
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复终端环境循环与上下文泄露，提升 agent 稳定性"
+insight: "对于使用 Lurus 代理的国内开发者，本次更新主要修复了底层稳定性问题，不影响 newapi.lurus.cn 代理服务的正常使用。现有用户无需修改 prompt 或 hook 配置，因为这些改动是框架内部的错误修复和性能优化，旨在提升 agent 在复杂环境下的运行可靠性，而非引入新功能或改变接口行为。"
+tags: [cli-fix, context-management, stability, tool-execution]
+---
+
+*   **修复 Termux 重载循环**：防止移动终端环境下的无限重启与重绘循环，意味着 agent 在非标准终端中也能稳定运行。
+*   **过滤内部会话上下文**：恢复会话时自动清理内部元数据，避免历史污染，保障 agent 上下文管理的纯净性。
+*   **强制工具顺序执行**：确保 `update_topic` 工具串行运行，防止并发冲突，这对依赖确定执行顺序的 agent 流程至关重要。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.45.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.45.0)

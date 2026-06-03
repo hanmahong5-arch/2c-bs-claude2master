@@ -1,13 +1,13 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.160",
+    "anthropics/claude-code": "v2.1.161",
     "openai/codex": "rust-v0.136.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "v3.86.2",
     "block/goose": "v1.36.0",
     "sst/opencode": "v1.15.13",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.44.1"
+    "google-gemini/gemini-cli": "v0.45.0"
   },
   "practicesSeen": {
     "anthropic-engineering": [
@@ -41,7 +41,7 @@
     "openai-codex-blog": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-02",
+    "anthropic-engineering": "2026-06-03",
     "claude-code-docs": "2026-05-28",
     "openai-codex-blog": "2026-05-28"
   },
