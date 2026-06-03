@@ -1,0 +1,22 @@
+---
+slug: 2026-06-03-cline-cli-v3-0-16
+title: "cline cli-v3.0.16 — 插件管理升级，支持官方插件库安装与技能分组，提升扩展性"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.16
+publishedAt: 2026-06-03
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "插件管理升级，支持官方插件库安装与技能分组，提升扩展性"
+insight: "对于国内用户，本次升级的核心价值在于官方插件库和技能分组功能。如果你正在使用复杂的多技能Agent，升级后能显著改善插件管理体验，值得升级。现有基于newapi.lurus.cn代理的配置不受影响，因为摘要仅提到对Anthropic类供应商支持自定义基础URL，并未涉及代理地址变更。现有prompt或hook配置无需修改，可直接平滑升级。"
+tags: [plugin-management, cli-update, agent-harness, vendor-configuration]
+---
+
+- **新增官方插件库**：可直接通过 slug 从 `github.com/cline/plugins` 集合安装插件，简化了 Agent 生态集成流程。
+- **插件技能分组**：插件现在可以捆绑技能，并在设置中分组显示，这优化了复杂 Agent 的功能管理界面。
+- **增强供应商配置**：为 Anthropic 类供应商支持自定义基础 URL，并修复了 OAuth 令牌迁移问题，提高了 Agent 部署的灵活性。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.16](https://github.com/cline/cline/releases/tag/cli-v3.0.16)

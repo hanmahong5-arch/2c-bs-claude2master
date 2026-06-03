@@ -1,0 +1,26 @@
+---
+slug: 2026-06-02-blog-simonwillison-datasette-agent-micropython-0-1a0
+title: "datasette-agent-micropython 0.1a0 — Simon Willison 分享如何用 WebAssembly 和 Micro"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/2/datasette-agent-micropython/
+publishedAt: 2026-06-02
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 分享如何用 WebAssembly 和 MicroPython 为 Datasette Agent 构建安全代码执行沙箱，并成功抵御 GPT-5.5 的逃逸攻击。"
+tags: [python, sandboxing, datasette, webassembly]
+---
+
+博主 Simon Willison 发布了 `datasette-agent-micropython` 的 0.1a0 版本，这是一个旨在让 Datasette Agent 安全生成和执行 Python 代码的实验性项目。
+
+*   **核心是 WebAssembly 沙箱**：项目利用 WebAssembly 运行时来隔离执行环境，这是实现代码安全执行的基础架构。
+*   **选用 MicroPython 作为解释器**：在沙箱内集成了轻量级的 MicroPython，而非完整的 CPython，这减少了攻击面并提升了安全性。
+*   **成功通过初步安全测试**：在早期测试中，即使是 GPT-5.5 也未能成功突破这个沙箱环境，证明了其初步设计的有效性。
+
+对于 Agent 和工具链开发者而言，这展示了一种将不受信任的代码生成（如 LLM 输出）安全地集成到应用中的可行技术路径。
+
+---
+
+> 原文：[datasette-agent-micropython 0.1a0](https://simonwillison.net/2026/Jun/2/datasette-agent-micropython/) · 作者 Simon Willison

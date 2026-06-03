@@ -1,0 +1,24 @@
+---
+slug: 2024-04-12-blog-lilianweng-diffusion-models-for-video-generation
+title: "Diffusion Models for Video Generation — Lilian Weng 详解扩散模型如何攻克视频生成难题，从图像到动态的跨越"
+source: "Lilian Weng"
+sourceUrl: https://lilianweng.github.io/posts/2024-04-12-diffusion-video/
+publishedAt: 2024-04-12
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Lilian Weng"
+hook: "Lilian Weng 详解扩散模型如何攻克视频生成难题，从图像到动态的跨越"
+tags: [diffusion-models, video-generation, generative-ai, deep-learning]
+---
+
+本文系统梳理了扩散模型从图像生成扩展到视频生成所面临的核心挑战与关键技术路径。
+
+*   **挑战在于时空一致性**：视频生成要求模型在时间维度上保持帧与帧之间的连贯性，这比单张图像生成需要编码更多的世界知识。这对 Agent 意味着，要处理动态序列任务，其底层模型必须具备更强的时空建模与推理能力。
+*   **数据是主要瓶颈**：高质量、高维度的视频数据，尤其是文本-视频配对数据，远比文本或图像数据稀缺且难以收集。这提示工具链开发者，高效的数据处理、合成与增强管道将是视频生成领域的关键基础设施。
+*   **架构需针对性设计**：为了建模时间维度，研究者们在 U-Net 等骨干网络中引入了时序注意力层、3D 卷积等模块。对于开发者而言，理解这些针对视频的模型变体是构建下一代动态内容生成应用的基础。
+
+---
+
+> 原文：[Diffusion Models for Video Generation](https://lilianweng.github.io/posts/2024-04-12-diffusion-video/) · 作者 Lilian Weng

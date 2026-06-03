@@ -1,0 +1,23 @@
+---
+slug: 2024-07-07-blog-lilianweng-extrinsic-hallucinations-in-llms
+title: "Extrinsic Hallucinations in LLMs — Lilian Weng 详解 LLM 外部幻觉，探讨如何让模型输出更真实可信。"
+source: "Lilian Weng"
+sourceUrl: https://lilianweng.github.io/posts/2024-07-07-hallucination/
+publishedAt: 2024-07-07
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Lilian Weng"
+hook: "Lilian Weng 详解 LLM 外部幻觉，探讨如何让模型输出更真实可信。"
+tags: [llm, hallucination, model-evaluation, factuality]
+---
+
+本文聚焦于 LLM 的“外部幻觉”，即模型输出与预训练数据中的世界知识不符。作者区分了上下文幻觉和外部幻觉，并重点讨论了后者。
+- **定义与分类**：作者将幻觉严格定义为模型输出未被上下文或世界知识所支持，并明确区分了两种类型。这提醒开发者在评估模型时，需要针对性地设计测试和缓解策略。
+- **核心挑战**：由于预训练数据集规模庞大，实时检索并验证每个生成内容是否与之冲突成本过高。这意味着确保事实性不能仅依赖事后检查，需要在模型内部或流程中构建验证机制。
+- **目标与原则**：避免幻觉的目标是让模型输出既**真实**，又能在不知道答案时**诚实承认**。这对构建可靠的 AI Agent 至关重要，因为一个总是“自信”但可能出错的模型在实际应用中风险极高。
+
+---
+
+> 原文：[Extrinsic Hallucinations in LLMs](https://lilianweng.github.io/posts/2024-07-07-hallucination/) · 作者 Lilian Weng

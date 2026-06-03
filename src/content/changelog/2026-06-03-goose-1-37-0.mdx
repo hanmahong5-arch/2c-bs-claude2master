@@ -1,0 +1,22 @@
+---
+slug: 2026-06-03-goose-1-37-0
+title: "goose v1.37.0 — 新增 xAI SuperGrok 等 8 个 AI 供应商，强化本地推理与钩子系"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.37.0
+publishedAt: 2026-06-03
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增 xAI SuperGrok 等 8 个 AI 供应商，强化本地推理与钩子系统，提升多代理协作能力。"
+insight: "对于国内用户，本次升级值得关注。新增的 Alibaba 等供应商意味着通过 newapi.lurus.cn 代理访问时，模型选择范围将直接扩大，能获得更多本地化选项。同时，引入的钩子系统是核心变化，现有涉及工具调用的 prompt 或工作流配置可能需要审查，以便集成新的‘调用前拒绝’等自定义逻辑来控制成本与风险。"
+tags: [multi-provider, hooks-system, local-inference, tui]
+---
+
+- **新增 xAI SuperGrok、Perplexity、Alibaba 等 8 个供应商**：扩展了模型选择范围，意味着 Agent Harness 需要设计更灵活的供应商抽象层。
+- **引入钩子系统与工具调用前拒绝钩子**：允许在关键操作点（如工具调用前）注入自定义逻辑，要求框架提供可扩展的事件拦截机制。
+- **增强本地推理与 TUI 功能**：包括 Linux Vulkan 支持、更严格的 GGUF 检测及 TUI 差异查看器，表明对边缘计算和开发者体验的重视。
+
+---
+
+> 原文 release：[block/goose v1.37.0](https://github.com/aaif-goose/goose/releases/tag/v1.37.0)
