@@ -58,6 +58,19 @@ const PRACTICE_SYSTEM_PROMPT = `你是 claude2master.com 编辑助手。读用�
 - 不复制原文长段，只摘要
 - 输出必须是合法 JSON，无任何前后说明文字`;
 
+const TRENDING_SYSTEM_PROMPT = `你是 claude2master.com 编辑助手。读用户给的 GitHub 仓库信息（近期新建 + 高星的热门项目），输出严格 JSON，字段如下：
+
+{
+  "hook": "30 字内中文钩子，这个项目是什么 / 为什么突然火",
+  "body": "180 字内中文 markdown，3 个 bullet：① 它是什么、解决什么问题 ② 为什么值得关注（场景 / star 速度 / 技术点）③ 对 agent / 工具链 / 后端开发者有无参考价值",
+  "tags": ["最多 4 个英文 kebab-case，含主语言如 rust / go"]
+}
+
+强约束：
+- 只基于给的仓库描述，不编造功能、不脑补未提到的能力
+- 不喊口号、不堆 emoji
+- 输出必须是合法 JSON，无任何前后说明文字`;
+
 const INSIGHT_SYSTEM_PROMPT = `你是 claude2master.com 编辑助手，国内开发者视角。基于已有的中文摘要，写一段 80–150 字的「Lurus 视角」，硬约束：
 
 1. 必须给明确判断，覆盖下列至少一项（按相关度选）：
@@ -88,10 +101,25 @@ interface PracticeInput {
   published_at: string;
 }
 
-type Input = ReleaseInput | PracticeInput;
+interface TrendingInput {
+  kind: "trending";
+  repo: string;
+  name: string;
+  description: string;
+  language: string;
+  stars: number;
+  html_url: string;
+  published_at: string;
+}
+
+type Input = ReleaseInput | PracticeInput | TrendingInput;
 
 function isPractice(x: Input): x is PracticeInput {
   return (x as PracticeInput).kind === "practice";
+}
+
+function isTrending(x: Input): x is TrendingInput {
+  return (x as TrendingInput).kind === "trending";
 }
 
 interface SummaryOutput {
@@ -117,6 +145,9 @@ function deriveSlug(input: Input): string {
       .split("/")
       .slice(-1)[0];
     return `${date}-${slugify(input.label)}-${slugify(pathTail || "post")}`;
+  }
+  if (isTrending(input)) {
+    return `${date}-trending-${slugify(input.repo)}`;
   }
   const repo = input.repo.split("/")[1] ?? input.repo;
   return `${date}-${slugify(repo)}-${slugify(input.tag)}`;
@@ -197,22 +228,35 @@ async function callNewapi(
 async function callLLM(input: Input): Promise<SummaryOutput> {
   const sysPrompt = isPractice(input)
     ? PRACTICE_SYSTEM_PROMPT
-    : RELEASE_SYSTEM_PROMPT;
+    : isTrending(input)
+      ? TRENDING_SYSTEM_PROMPT
+      : RELEASE_SYSTEM_PROMPT;
 
-  const userContent = isPractice(input)
-    ? `Source label: ${input.label}
+  let userContent: string;
+  if (isPractice(input)) {
+    userContent = `Source label: ${input.label}
 URL: ${input.url}
 Title: ${input.title}
 
 Article body (truncated to ~8KB):
-${input.body || "(empty)"}`
-    : `Repository: ${input.repo}
+${input.body || "(empty)"}`;
+  } else if (isTrending(input)) {
+    userContent = `Repository: ${input.repo}
+Language: ${input.language}
+Stars: ${input.stars}
+URL: ${input.html_url}
+
+Description:
+${input.description || "(no description)"}`;
+  } else {
+    userContent = `Repository: ${input.repo}
 Tag: ${input.tag}
 Title: ${input.name}
 URL: ${input.html_url}
 
 Release notes:
 ${input.body || "(no notes provided)"}`;
+  }
 
   const content = await callNewapi(sysPrompt, userContent, 800);
   let parsed: SummaryOutput;
@@ -233,7 +277,9 @@ async function callCommentary(
 ): Promise<string> {
   const titleLine = isPractice(input)
     ? `${input.title} (${input.label})`
-    : `${input.repo} ${input.tag} — ${input.name}`;
+    : isTrending(input)
+      ? `${input.name} (${input.repo})`
+      : `${input.repo} ${input.tag} — ${input.name}`;
 
   const userContent = `输入摘要标题：${titleLine}
 
@@ -275,9 +321,11 @@ function buildMdx(
   const tagsArr = `[${summary.tags.map((t) => `${t.trim()}`).join(", ")}]`;
   // §4.1 守: verified 只允许写 "pending"; "tested" 由编辑手动改
   const verified = "pending" as const;
-  const kind: "changelog" | "practice" = isPractice(input)
+  const kind: "changelog" | "practice" | "trending" = isPractice(input)
     ? "practice"
-    : "changelog";
+    : isTrending(input)
+      ? "trending"
+      : "changelog";
 
   if (isPractice(input)) {
     const titleCore = summary.hook.replace(/[—\-:].*$/, "").trim().slice(0, 40);
@@ -302,6 +350,32 @@ ${summary.body}
 ---
 
 > 原文：[${input.title}](${input.url})
+`;
+  }
+
+  if (isTrending(input)) {
+    const titleCore = summary.hook.replace(/[—\-:].*$/, "").trim().slice(0, 40);
+    const title = `${input.name} — ${titleCore}`;
+    // 注: trending 不写 insight(Lurus 视角面向"升级/配置", 不适配随机热门仓库)
+    return `---
+slug: ${slug}
+title: "${escapeYaml(title)}"
+source: ${input.repo}
+sourceUrl: ${input.html_url}
+publishedAt: ${input.published_at.slice(0, 10)}
+authored: llm
+model: ${MODEL_ID}
+verified: ${verified}
+kind: ${kind}
+hook: "${escapeYaml(summary.hook)}"
+tags: ${tagsArr}
+---
+
+${summary.body}
+
+---
+
+> 项目：[${input.repo}](${input.html_url}) · ⭐ ${input.stars} · ${input.language}
 `;
   }
 
@@ -392,7 +466,8 @@ async function processInput(
   opts: { dryRun: boolean },
 ): Promise<{ slug: string; path: string }> {
   const summary = await callLLM(input);
-  const insight = await callCommentary(input, summary);
+  // trending 跳过 Lurus 视角(insight 面向"升级/配置", 不适配热门仓库发现)
+  const insight = isTrending(input) ? "" : await callCommentary(input, summary);
   const slug = deriveSlug(input);
   const mdx = buildMdx(input, summary, insight, slug);
   const filePath = path.join(CHANGELOG_DIR, `${slug}.mdx`);
@@ -419,7 +494,9 @@ async function readStdinInputs(): Promise<Input[]> {
 }
 
 function inputLabel(x: Input): string {
-  return isPractice(x) ? `${x.label}@${x.url}` : `${x.repo}@${x.tag}`;
+  if (isPractice(x)) return `${x.label}@${x.url}`;
+  if (isTrending(x)) return `trending:${x.repo}`;
+  return `${x.repo}@${x.tag}`;
 }
 
 async function main(): Promise<void> {
@@ -448,9 +525,16 @@ async function main(): Promise<void> {
     const id = inputLabel(input);
     try {
       await processInput(input, { dryRun });
-      // release 类型沿用 lastSeen 旧路径; practice 的 seen 由 fetch-practices.ts 写
-      if (state && !isPractice(input)) {
-        state.lastSeen[input.repo] = input.tag;
+      // release 沿用 lastSeen; practice 的 seen 由 fetch-practices.ts 写;
+      // trending 在此成功后追加 trendingSeen(去重已发布过的仓库)。
+      if (state) {
+        if (isTrending(input)) {
+          const seen = (state.raw.trendingSeen as string[] | undefined) ?? [];
+          if (!seen.includes(input.repo)) seen.push(input.repo);
+          state.raw.trendingSeen = seen;
+        } else if (!isPractice(input)) {
+          state.lastSeen[input.repo] = input.tag;
+        }
       }
       okCount++;
     } catch (err) {

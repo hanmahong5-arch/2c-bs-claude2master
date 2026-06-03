@@ -16,7 +16,7 @@ export interface ContentItemBase {
 
 export type Verified = "tested" | "pending";
 
-export type ChangelogKind = "changelog" | "practice";
+export type ChangelogKind = "changelog" | "practice" | "trending";
 
 export interface ChangelogItem extends ContentItemBase {
   channel: "changelog";
@@ -81,6 +81,10 @@ export const KIND_LABEL: Record<
   practice: {
     label: "实践",
     className: "bg-[rgba(31,122,79,0.12)] text-[var(--lt-ok)]",
+  },
+  trending: {
+    label: "🔥 热门",
+    className: "bg-[rgba(184,130,31,0.14)] text-[var(--lt-warn)]",
   },
 };
 

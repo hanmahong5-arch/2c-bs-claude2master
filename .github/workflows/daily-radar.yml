@@ -62,6 +62,19 @@ jobs:
           echo "---- fetched $pc practice(s) ----"
           cat radar-new-practices.jsonl 2>/dev/null || true
 
+      - name: Fetch trending repos (GitHub Search API)
+        id: trending
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          # 失败不阻塞主路径 (trending 是补充, 同 practices)
+          bun run scripts/radar/fetch-trending.ts > radar-new-trending.jsonl || true
+          tc=$(grep -c . radar-new-trending.jsonl 2>/dev/null || true); tc=${tc:-0}
+          echo "tc=$tc" >> "$GITHUB_OUTPUT"
+          echo "---- fetched $tc trending ----"
+          cat radar-new-trending.jsonl 2>/dev/null || true
+
       - name: Combine inputs
         id: combine
         run: |
@@ -69,6 +82,7 @@ jobs:
           : > radar-input.jsonl
           [ -s radar-new-releases.jsonl ] && cat radar-new-releases.jsonl >> radar-input.jsonl || true
           [ -s radar-new-practices.jsonl ] && cat radar-new-practices.jsonl >> radar-input.jsonl || true
+          [ -s radar-new-trending.jsonl ] && cat radar-new-trending.jsonl >> radar-input.jsonl || true
           # 同 practices 步骤: 避免 `grep -c` 空文件时 `|| echo 0` 双计数成多行破坏 $GITHUB_OUTPUT
           count=$(grep -c . radar-input.jsonl 2>/dev/null || true); count=${count:-0}
           echo "count=$count" >> "$GITHUB_OUTPUT"

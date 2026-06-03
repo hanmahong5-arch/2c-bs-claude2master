@@ -25,7 +25,9 @@ import { Reveal } from "@/components/Reveal";
 type Filter = string;
 
 function resolveKind(c: ChangelogItem): ChangelogKind {
-  return c.kind === "practice" ? "practice" : "changelog";
+  if (c.kind === "practice") return "practice";
+  if (c.kind === "trending") return "trending";
+  return "changelog";
 }
 
 const TOOL_NAMES = toolListCopy("full");
@@ -149,13 +151,19 @@ function ChangelogListInner({ items }: { items: ChangelogItem[] }) {
   const [filter, setFilter] = useState<Filter>(initialFilter);
 
   // items 已按 publishedAt 倒序(getChangelog),组内顺序天然倒序。
-  const { byKey, other, practices } = useMemo(() => {
+  const { byKey, other, practices, trending } = useMemo(() => {
     const byKey = new Map<string, ChangelogItem[]>();
     const other: ChangelogItem[] = [];
     const practices: ChangelogItem[] = [];
+    const trending: ChangelogItem[] = [];
     for (const c of items) {
-      if (resolveKind(c) === "practice") {
+      const k = resolveKind(c);
+      if (k === "practice") {
         practices.push(c);
+        continue;
+      }
+      if (k === "trending") {
+        trending.push(c);
         continue;
       }
       const tool = toolForSource(c.source);
@@ -167,7 +175,7 @@ function ChangelogListInner({ items }: { items: ChangelogItem[] }) {
         other.push(c);
       }
     }
-    return { byKey, other, practices };
+    return { byKey, other, practices, trending };
   }, [items]);
 
   // pill 只显示有内容的工具,避免点进去空白。
@@ -175,6 +183,9 @@ function ChangelogListInner({ items }: { items: ChangelogItem[] }) {
   const filters: { value: Filter; label: string }[] = [
     { value: "all", label: "全部" },
     ...toolFilters.map((t) => ({ value: t.key, label: t.name })),
+    ...(trending.length > 0
+      ? [{ value: "trending", label: "🔥 热门" }]
+      : []),
     ...(practices.length > 0
       ? [{ value: "practice", label: "实践" }]
       : []),
@@ -196,7 +207,7 @@ function ChangelogListInner({ items }: { items: ChangelogItem[] }) {
           </h1>
           <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl">
             GitHub Actions 每天 09:30 抓取 {TOOL_NAMES}
-            {" "}的新 release + Anthropic 工程博客，自动产出中文摘要 + Lurus 视角。
+            {" "}的新 release + Anthropic 工程博客 + GitHub 热门新项目，自动产出中文摘要 + Lurus 视角。
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs text-[var(--color-text-muted)]">
             <Link
@@ -254,6 +265,9 @@ function ChangelogListInner({ items }: { items: ChangelogItem[] }) {
               />
             );
           })}
+          {trending.length > 0 && (
+            <ToolSection name="🔥 热门项目" version={null} items={trending} />
+          )}
           {other.length > 0 && (
             <ToolSection name="其他" version={null} items={other} />
           )}
@@ -264,6 +278,12 @@ function ChangelogListInner({ items }: { items: ChangelogItem[] }) {
       ) : filter === "practice" ? (
         <ul className="space-y-4">
           {practices.map((c) => (
+            <ChangelogCard key={c.slug} c={c} />
+          ))}
+        </ul>
+      ) : filter === "trending" ? (
+        <ul className="space-y-4">
+          {trending.map((c) => (
             <ChangelogCard key={c.slug} c={c} />
           ))}
         </ul>

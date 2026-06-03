@@ -9,6 +9,7 @@
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.45.0"
   },
+  "trendingSeen": [],
   "practicesSeen": {
     "anthropic-engineering": [
       "https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues",
