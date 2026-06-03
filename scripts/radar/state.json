@@ -14,7 +14,12 @@
     "antirez/ds4",
     "BigPizzaV3/CodexPlusPlus",
     "nexu-io/html-anything",
-    "vercel-labs/zerolang"
+    "vercel-labs/zerolang",
+    "microsoft/SkillOpt",
+    "perplexityai/bumblebee",
+    "AprilNEA/OpenLogi",
+    "Helvesec/rmux",
+    "deeplethe/forkd"
   ],
   "practicesSeen": {
     "anthropic-engineering": [

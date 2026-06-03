@@ -1,0 +1,21 @@
+---
+slug: 2026-06-03-trending-deeplethe-forkd
+title: "forkd — AI 代理微虚拟机快速分支工具，支持毫秒级创建隔离子进程"
+source: deeplethe/forkd
+sourceUrl: https://github.com/deeplethe/forkd
+publishedAt: 2026-06-03
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: trending
+hook: "AI 代理微虚拟机快速分支工具，支持毫秒级创建隔离子进程"
+tags: [rust, ai-agent, microvm, kvm]
+---
+
+① forkd 是一个基于 Rust 的库，实现了类似 `fork()` 的功能，但针对 AI 代理的微虚拟机（microVMs）。它解决了在 AI 代理场景中需要快速、大量创建隔离执行环境的问题。
+② 值得关注是因为其性能：能从预热父进程在约 100ms 内生成 100 个子进程，并能在大约 150ms 内分支（BRANCH）一个正在运行的虚拟机。它利用 KVM 实现硬件级隔离，并采用写时复制（CoW）快照技术。
+③ 对开发 AI 代理、需要安全沙箱或快速扩展后端工作负载的工具链开发者有直接参考价值，展示了如何高效管理轻量级虚拟机实例。
+
+---
+
+> 项目：[deeplethe/forkd](https://github.com/deeplethe/forkd) · ⭐ 1250 · Rust
