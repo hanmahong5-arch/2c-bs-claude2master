@@ -1,7 +1,7 @@
 "use client";
 
-import { Suspense, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { Suspense, useMemo } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Calendar, Github, Rss } from "lucide-react";
 import {
@@ -145,10 +145,24 @@ function ToolSection({
 
 function ChangelogListInner({ items }: { items: ChangelogItem[] }) {
   const searchParams = useSearchParams();
-  const toolParam = searchParams.get("tool");
-  const initialFilter: Filter =
-    toolParam && toolForKey(toolParam) ? toolParam : "all";
-  const [filter, setFilter] = useState<Filter>(initialFilter);
+  const router = useRouter();
+  const pathname = usePathname();
+  // 筛选值存进 URL query(?tool=)→ 点进详情页再返回时, 筛选与滚动位置都保留;
+  // 否则筛选只在 useState 里, 返回时按无 query 的 URL 重新初始化 → 跳回「全部」。
+  // 用 replace(非 push)避免每次切 tab 污染浏览历史;scroll:false 防止切 tab 跳顶。
+  const raw = searchParams.get("tool") ?? "all";
+  const filter: Filter =
+    raw === "all" || raw === "practice" || raw === "trending" || toolForKey(raw)
+      ? raw
+      : "all";
+
+  const selectFilter = (value: Filter) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (value === "all") params.delete("tool");
+    else params.set("tool", value);
+    const qs = params.toString();
+    router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+  };
 
   // items 已按 publishedAt 倒序(getChangelog),组内顺序天然倒序。
   const { byKey, other, practices, trending } = useMemo(() => {
@@ -231,7 +245,7 @@ function ChangelogListInner({ items }: { items: ChangelogItem[] }) {
                 <button
                   key={f.value}
                   type="button"
-                  onClick={() => setFilter(f.value)}
+                  onClick={() => selectFilter(f.value)}
                   className={`pill text-xs cursor-pointer transition-colors ${
                     active
                       ? "bg-[var(--c2m-accent)] text-white"
