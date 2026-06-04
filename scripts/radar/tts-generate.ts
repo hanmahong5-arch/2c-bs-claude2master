@@ -32,12 +32,15 @@ const MANIFEST = path.join(AUDIO_DIR, "manifest.json");
 const DEFAULT_LIMIT = 80;
 const ZH_VOICE = "zh-CN-XiaoxiaoNeural";
 const EN_VOICE = "en-US-AriaNeural";
+// 略放慢语速 → 中英混读断句更清晰 (edge-tts SSML rate)
+const RATE = "-8%";
 
 interface Item {
   slug: string;
   title: string;
   hook: string;
   publishedAt: string;
+  kind: string;
 }
 
 interface ManifestEntry {
@@ -81,6 +84,7 @@ async function loadItems(): Promise<Item[]> {
       title: field(fm, "title"),
       hook: field(fm, "hook"),
       publishedAt: field(fm, "publishedAt"),
+      kind: field(fm, "kind") || "changelog",
     });
   }
   // date-desc (与站点一致)
@@ -94,10 +98,40 @@ function englishPart(title: string): string {
   return title.split(/\s[—–]\s/)[0].trim();
 }
 
+// 朗读文本规整 → 改善断句: 折叠空白, 生硬分隔符(| · – —)换成顿停, 去首尾噪声。
+function cleanForTts(s: string): string {
+  return s
+    .replace(/\s+/g, " ")
+    .replace(/\s*[|·]\s*/g, "，")
+    .replace(/\s*[–—]\s*/g, "，")
+    .replace(/，{2,}/g, "，")
+    .trim();
+}
+
+function endZh(s: string): string {
+  return /[。！？.!?…]$/.test(s) ? s : s + "。";
+}
+
+function endEn(s: string): string {
+  return /[.!?]$/.test(s) ? s : s + ".";
+}
+
+// 只有真·英文长句(博主/实践标题)才值得用英文语音读;
+// release/trending 的"英文"是仓库名 + 版本号(codex rust-v0.137.0 / odysseus / 91),
+// 用英文 TTS 读出来是乱码式断词 → 不生成 en clip(双语模式这些条目只读中文)。
+function enProse(item: Item, enText: string): boolean {
+  if (item.kind !== "blogger" && item.kind !== "practice") return false;
+  if (!/[a-zA-Z]/.test(enText)) return false;
+  return enText.split(/\s+/).filter(Boolean).length >= 2;
+}
+
 // ── msedge-tts (动态 import, 运行时计算 specifier 规避 TS 静态解析 + Next bundle) ──
 interface EdgeTTS {
   setMetadata(voice: string, format: string): Promise<void>;
-  toStream(text: string): { audioStream: AsyncIterable<Uint8Array> };
+  toStream(
+    text: string,
+    options?: { rate?: string; pitch?: string },
+  ): { audioStream: AsyncIterable<Uint8Array> };
 }
 interface MsEdgeMod {
   MsEdgeTTS: new () => EdgeTTS;
@@ -123,7 +157,7 @@ async function synth(
 ): Promise<void> {
   const tts = new mod.MsEdgeTTS();
   await tts.setMetadata(voice, mod.OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
-  const { audioStream } = tts.toStream(text);
+  const { audioStream } = tts.toStream(text, { rate: RATE });
   const chunks: Uint8Array[] = [];
   for await (const c of audioStream) chunks.push(c);
   if (chunks.length === 0) throw new Error("empty audio stream");
@@ -169,15 +203,18 @@ async function main(): Promise<void> {
   for (const item of keep) {
     const zhPath = path.join(AUDIO_DIR, `${item.slug}.zh.mp3`);
     const enPath = path.join(AUDIO_DIR, `${item.slug}.en.mp3`);
-    const enText = englishPart(item.title);
+    const zhText = item.hook ? endZh(cleanForTts(item.hook)) : "";
+    const enRaw = englishPart(item.title);
+    const wantEn = enProse(item, enRaw);
+    const enText = wantEn ? endEn(cleanForTts(enRaw)) : "";
 
     // 中文: 读 hook
     let zhOk = await exists(zhPath);
-    if (!zhOk && item.hook) {
+    if (!zhOk && zhText) {
       attempted++;
       try {
         mod = mod ?? (await loadTts());
-        await synth(mod, ZH_VOICE, item.hook, zhPath);
+        await synth(mod, ZH_VOICE, zhText, zhPath);
         zhOk = true;
         made++;
       } catch (e) {
@@ -186,9 +223,9 @@ async function main(): Promise<void> {
       }
     }
 
-    // 英文: 读标题英文段 (太短/与中文同则跳过)
+    // 英文: 仅真·英文长句标题(博主/实践)才读; release/trending 跳过(避免仓库名乱读)
     let enOk = await exists(enPath);
-    if (!enOk && enText && /[a-zA-Z]/.test(enText)) {
+    if (!enOk && wantEn && enText) {
       attempted++;
       try {
         mod = mod ?? (await loadTts());
@@ -199,6 +236,11 @@ async function main(): Promise<void> {
         console.error(`[tts] FAIL en ${item.slug}: ${(e as Error).message}`);
         failed++;
       }
+    }
+    // 若已存在旧的"垃圾英文"clip 但此条不该有 en → 删除(regenerate 一致性)
+    if (!wantEn && enOk) {
+      await fs.rm(enPath).catch(() => {});
+      enOk = false;
     }
 
     if (zhOk || enOk) manifest.push({ slug: item.slug, zh: zhOk, en: enOk });
