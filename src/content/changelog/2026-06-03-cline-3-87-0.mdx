@@ -1,0 +1,22 @@
+---
+slug: 2026-06-03-cline-3-87-0
+title: "cline v3.87.0 — 新增 MiniMax M3 模型支持，并修复多个依赖安全漏洞。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v3.87.0
+publishedAt: 2026-06-03
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增 MiniMax M3 模型支持，并修复多个依赖安全漏洞。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新值得关注。虽然摘要未直接提及代理兼容性，但新增的 MiniMax M3 模型支持意味着代理后端可能需要同步更新以支持此新模型选项，否则相关功能可能无法正常调用。同时，多项安全依赖的修复显著提升了开发环境的安全性，建议用户及时升级至 v3.87.0 以获取更安全的模型调用体验。"
+tags: [model-support, security-fix, vscode-extension, dependency-update]
+---
+
+- **新增 MiniMax M3 模型支持**：为 Agent 提供了新的底层模型选择，增强了任务处理能力。
+- **更新 VS Code 扩展依赖**：修复了 `@xmldom/xmldom`、`basic-ftp` 等包的安全问题，提升了开发环境的安全性。
+- **解决直接/传递依赖漏洞**：通过更新多个依赖包，减少了潜在的安全风险，确保了系统的稳定运行。
+
+---
+
+> 原文 release：[cline/cline v3.87.0](https://github.com/cline/cline/releases/tag/v3.87.0)

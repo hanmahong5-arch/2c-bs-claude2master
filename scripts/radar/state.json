@@ -1,9 +1,9 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.161",
-    "openai/codex": "rust-v0.136.0",
+    "anthropics/claude-code": "v2.1.162",
+    "openai/codex": "rust-v0.137.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.16",
+    "cline/cline": "v3.87.0",
     "block/goose": "v1.37.0",
     "sst/opencode": "v1.15.13",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -28,7 +28,8 @@
     "nianzhibai/91",
     "chojs23/concord",
     "agent-substrate/substrate",
-    "usewhale/DeepSeek-Code-Whale"
+    "usewhale/DeepSeek-Code-Whale",
+    "vedika-io/xalen-ephemeris"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -62,9 +63,9 @@
     "openai-codex-blog": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-03",
-    "claude-code-docs": "2026-05-28",
-    "openai-codex-blog": "2026-05-28"
+    "anthropic-engineering": "2026-06-04",
+    "claude-code-docs": "2026-06-04",
+    "openai-codex-blog": "2026-06-04"
   },
   "blogsSeen": {
     "simonwillison": [

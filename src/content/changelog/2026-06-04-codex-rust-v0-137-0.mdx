@@ -1,0 +1,22 @@
+---
+slug: 2026-06-04-codex-rust-v0-137-0
+title: "codex rust-v0.137.0 — 多智能体运行时选择与插件管理增强，提升企业级部署与开发体验"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.137.0
+publishedAt: 2026-06-04
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "多智能体运行时选择与插件管理增强，提升企业级部署与开发体验"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新直接影响智能体编排系统的开发。由于引入了多智能体 V2 运行时选择与元数据管理，现有基于旧版运行时逻辑的 prompt 或 hook 配置可能需要调整，以支持新的细粒度环境管理和更简洁的元数据交互。同时，插件工作流增强要求工具集成框架适配 JSON 输出等结构化接口。企业级配置更新则不影响现有代理链路。"
+tags: [multi-agent, enterprise-config, plugin-management, tui-enhancement]
+---
+
+- **多智能体 V2 运行时选择与元数据**：每个线程保留运行时选择，并默认隐藏生成的智能体元数据。这意味着智能体编排系统需要支持更细粒度的运行时环境管理和更简洁的协作界面。
+- **企业级配置与信用额度管理**：支持云端管理的配置包（包括 EDU 工作区）并显示月度信用额度。这表明平台正在强化集中式、可审计的企业部署和资源管控能力。
+- **插件工作流与工具增强**：插件列表支持 JSON 输出，且托管网络/图像工具在更多代码模式中可用。这要求智能体工具集成框架提供结构化的插件发现接口和并行化执行能力。
+
+---
+
+> 原文 release：[openai/codex rust-v0.137.0](https://github.com/openai/codex/releases/tag/rust-v0.137.0)

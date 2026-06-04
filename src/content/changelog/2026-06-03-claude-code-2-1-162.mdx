@@ -1,0 +1,22 @@
+---
+slug: 2026-06-03-claude-code-2-1-162
+title: "claude-code v2.1.162 — 新增会话等待状态显示，修复多项权限与中断问题，提升启动稳定性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.162
+publishedAt: 2026-06-03
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增会话等待状态显示，修复多项权限与中断问题，提升启动稳定性"
+insight: "对于使用 Lurus 代理的国内开发者，本次更新值得关注。新增的 `waitingFor` 字段能直接帮助诊断通过 newapi.lurus.cn 代理运行的 Agent 为何被阻塞，提升了问题排查效率。同时，修复的权限规则和中断信号处理问题，强化了安全边界并确保了交互可控性，这意味着现有的 Agent 配置和 prompt 在代理环境下运行将更稳定、响应更及时，无需主动修改。"
+tags: [agents, permissions, bug-fixes, cli]
+---
+
+- `claude agents --json` 现在包含 `waitingFor` 字段，显示等待会话被阻塞的原因（如权限提示），这有助于开发者诊断 Agent 的阻塞状态。
+- 修复了 WebFetch 权限规则未应用于内置预批准域的问题，明确规则现在优先于自动允许，这强化了 Agent 工具调用的安全边界控制。
+- 修复了在流转 JSON/SDK 会话开始时发送中断信号被静默丢弃的问题，现在能正确中断并给予反馈，这确保了 Agent 交互的响应性和可控性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.162](https://github.com/anthropics/claude-code/releases/tag/v2.1.162)
