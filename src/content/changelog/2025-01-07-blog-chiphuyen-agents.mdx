@@ -1,0 +1,24 @@
+---
+slug: 2025-01-07-blog-chiphuyen-agents
+title: "Agents — Chip Huyen 系统梳理智能体核心概念：环境、工具与规划，为构建可靠 AI"
+source: "Chip Huyen"
+sourceUrl: https://huyenchip.com//2025/01/07/agents.html
+publishedAt: 2025-01-07
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Chip Huyen"
+hook: "Chip Huyen 系统梳理智能体核心概念：环境、工具与规划，为构建可靠 AI 助手提供清晰框架。"
+tags: [ai-agents, agent-framework, tool-use, planning]
+---
+
+本文从经典 AI 定义出发，系统阐述了智能体（Agent）的核心构成与运作原理。
+
+*   **智能体由环境与可执行动作定义**：其能力边界取决于所处的环境（如互联网、文件系统）和所能调用的工具集。这意味着开发者在设计智能体时，必须首先明确其任务边界并配备相应的工具。
+*   **工具扩展能力但也引入复杂性**：工具分为感知环境的“只读”工具和改变环境的“写入”工具。虽然更多工具能赋予智能体更强能力，但如何让模型有效理解并调用大量工具是一大工程挑战。
+*   **智能体依赖规划并存在复合错误风险**：智能体通过多步规划完成任务，但每一步的错误会累积，导致整体成功率急剧下降。这要求开发者必须使用更强大的模型并设计严谨的评估方法来应对高风险任务。
+
+---
+
+> 原文：[Agents](https://huyenchip.com//2025/01/07/agents.html) · 作者 Chip Huyen

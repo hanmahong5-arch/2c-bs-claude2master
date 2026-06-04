@@ -1,0 +1,24 @@
+---
+slug: 2026-02-12-blog-karpathy-microgpt
+title: "microgpt — Andrej Karpathy 用 200 行纯 Python 实现 GPT，揭"
+source: "Andrej Karpathy"
+sourceUrl: http://karpathy.github.io/2026/02/12/microgpt/
+publishedAt: 2026-02-12
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Andrej Karpathy"
+hook: "Andrej Karpathy 用 200 行纯 Python 实现 GPT，揭示大语言模型最简本质"
+tags: [llm, minimal-implementation, educational, python]
+---
+
+这篇博客是 Andrej Karpathy 对其艺术项目 `microgpt` 的指南。该项目将训练和推理一个类 GPT-2 模型所需的核心算法浓缩在 200 行、无依赖的单一 Python 文件中，旨在将 LLM 简化至其最纯粹的形态。
+
+*   **从数据集到文档流**：项目使用 32,000 个名字作为文档数据集，目标是让模型学习统计模式并生成类似的新文档。这意味着对于像 ChatGPT 这样的模型，用户的对话本质上就是一个特殊的“文档”，模型的回应只是基于统计的文档补全。
+*   **极简分词器与自动微分引擎**：分词器仅为每个唯一字符分配一个整数 ID，并引入一个特殊的 BOS（序列开始）标记。同时，博客展示了一个从零实现的 `Value` 类，用于手动计算梯度，这构成了神经网络训练的基础。
+*   **完整的训练与推理循环**：代码包含了 GPT 架构、Adam 优化器以及完整的训练和推理循环。通过这个最小化实现，模型最终能够生成听起来合理的新名字，例如“karia”或“alen”。
+
+---
+
+> 原文：[microgpt](http://karpathy.github.io/2026/02/12/microgpt/) · 作者 Andrej Karpathy

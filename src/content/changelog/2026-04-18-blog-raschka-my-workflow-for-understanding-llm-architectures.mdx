@@ -1,0 +1,24 @@
+---
+slug: 2026-04-18-blog-raschka-my-workflow-for-understanding-llm-architectures
+title: "My Workflow for Understanding LLM Architectures — Sebastian Raschka 分享他理解开源 LLM 架构的实用工作流，从"
+source: "Sebastian Raschka"
+sourceUrl: https://magazine.sebastianraschka.com/p/workflow-for-understanding-llms
+publishedAt: 2026-04-18
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Sebastian Raschka"
+hook: "Sebastian Raschka 分享他理解开源 LLM 架构的实用工作流，从技术报告到代码实操，适合想深入模型内部机制的开发者。"
+tags: [llm-architecture, workflow, open-source-models, code-inspection]
+---
+
+作者详细拆解了他研究开源大语言模型架构的步骤，核心在于利用公开资源进行手动探索。
+
+- **从技术报告入手，但依赖代码验证**：他发现如今许多论文（尤其是工业界开源模型）细节不足，因此转向 Hugging Face 的模型配置和参考实现来获取准确架构信息，因为“能运行的代码不会说谎”。这对开发者意味着，理解模型不能只读论文，必须动手查阅和运行代码。
+- **工作流适用于开源权重模型**：该方法主要针对权重公开的模型（如 Hugging Face 上的模型），对于 ChatGPT、Claude 等闭源模型则不适用。这提示工具链和 agent 开发者，开源生态的透明性是深入分析和定制的基础。
+- **强调手动过程以促进学习**：尽管部分步骤可自动化，但作者认为手动检查配置和代码是理解架构的最佳练习之一。对开发者而言，亲自动手能建立更直观的模型认知，优于完全依赖自动化工具。
+
+---
+
+> 原文：[My Workflow for Understanding LLM Architectures](https://magazine.sebastianraschka.com/p/workflow-for-understanding-llms) · 作者 Sebastian Raschka

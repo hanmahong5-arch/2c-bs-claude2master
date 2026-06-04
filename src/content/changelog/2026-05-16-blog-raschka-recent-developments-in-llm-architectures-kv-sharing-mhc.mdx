@@ -1,0 +1,24 @@
+---
+slug: 2026-05-16-blog-raschka-recent-developments-in-llm-architectures-kv-sharing-mhc
+title: "Recent Developments in LLM Architectures: KV Sharing, — Sebastian Raschka 详解近期开源大模型架构新趋势：KV共享、mH"
+source: "Sebastian Raschka"
+sourceUrl: https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures
+publishedAt: 2026-05-16
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Sebastian Raschka"
+hook: "Sebastian Raschka 详解近期开源大模型架构新趋势：KV共享、mHC与压缩注意力如何提升长上下文效率"
+tags: [llm-architecture, kv-cache, attention-mechanisms, model-efficiency]
+---
+
+本文系统梳理了2024年4-5月开源大模型在架构层面的关键创新，聚焦于解决长上下文场景下KV缓存膨胀、内存流量与注意力计算成本等核心瓶颈。
+
+*   **Gemma 4 采用跨层KV共享**：后续层直接复用前序层的键值（KV）状态，而非每层独立计算。这能将长上下文（如128K）的KV缓存内存占用减少约一半，**意味着在同等硬件下，Agent或推理工作流可以处理更长的历史对话或文档，降低部署成本**。
+*   **Laguna XS.2 引入分层注意力预算**：模型在不同层动态分配注意力计算资源。**这为工具链开发者提供了更精细的推理优化切入点，可通过感知层间计算差异来设计更高效的批处理或调度策略**。
+*   **DeepSeek V4 结合mHC与压缩注意力**：通过多头压缩（mHC）等机制减少注意力头的冗余计算。**这表明模型架构正从“堆参数”转向“提效率”，开发者需关注这些内置优化，而非仅追求参数量**。
+
+---
+
+> 原文：[Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention](https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures) · 作者 Sebastian Raschka

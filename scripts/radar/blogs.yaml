@@ -1,32 +1,109 @@
-# blogs.yaml — 头部博主每日内容追踪源 (radar「💬 观点」段)
+# blogs.yaml — 头部 AI 博主每日内容追踪源 (radar「💬 观点」段)
 #
 # 每个源归一化为标准 feed-item, 后续 summarize / 渲染完全复用 release/practice 管线。
+# 源清单经 2026-06-03 逐个探测真实 feed 后筛定 (有 RSS/Atom 走 rss; 无 feed 走 lightpanda)。
 #
 # type:
-#   rss        — 个人博客 / Substack / Medium / dev.to (有 RSS/Atom/JSON feed)。Phase 1 主力, 最稳, 无浏览器。
-#   lightpanda — JS 渲染、无 feed 的博客列表页。经 CDP (ws://127.0.0.1:9222) 连 Lightpanda 取列表 → 逐篇取正文。
-#   rsshub     — (Phase 2 占位, 未启用) X / 微信 / 知乎 / YouTube 桥成 RSS。需自托管 RSSHub + owner cookie。
+#   rss        — 个人博客 / Substack / Medium / 官方 blog (有 RSS/Atom/JSON feed)。主力, 最稳, 无浏览器。
+#   lightpanda — JS 渲染、无 feed 的页面。经 CDP (ws://127.0.0.1:9222) 连 Lightpanda 取列表 → 逐篇取正文。
+#   rsshub     — (Phase 2 占位, 未启用) X / 微信 / 知乎 桥成 RSS。需自托管 RSSHub + owner cookie。
 #
-# 字段:
-#   author       展示名 / 署名 (必填)
-#   handle       slug 用, kebab-case 稳定标识 (必填, 去重 key)
-#   type         rss | lightpanda (必填)
-#   url          rss: feed 地址; lightpanda: 文章列表页 (必填)
-#   pollDays     至少隔 N 天才再 poll 该源 (默认 1)
-#   itemSelector lightpanda 专用: 列表页文章链接的 CSS 选择器 (lightpanda 必填)
+# 字段: author(署名) / handle(slug 稳定标识, 去重 key) / type / url / pollDays / itemSelector(仅 lightpanda)
 #
-# ⚠️ 下面两条是 Phase 1 验证种子 (公开 AI 博客, 稳定 Atom feed)。
-#    owner 给真实博主名单后逐个探测 RSS, 替换/扩充此清单。
+# 注: Anthropic 工程博客 + Claude Code docs 已在「实践」段 (sources.yaml), 此处不重复;
+#     Anthropic「News」无公开 RSS (rss.xml 404) → 用 lightpanda 抓 newsroom (2026-06-03 实测可渲染)。
 
 blogs:
+  # ── 个人思想领袖: agent / LLM / coding 工程 (与本站受众最相关) ──
   - author: Simon Willison
     handle: simonwillison
     type: rss
     url: https://simonwillison.net/atom/everything/
     pollDays: 1
 
+  - author: Latent Space
+    handle: latentspace
+    type: rss
+    url: https://www.latent.space/feed
+    pollDays: 1
+
+  - author: Nathan Lambert
+    handle: interconnects
+    type: rss
+    url: https://www.interconnects.ai/feed
+    pollDays: 1
+
+  - author: Andrej Karpathy
+    handle: karpathy
+    type: rss
+    url: https://karpathy.github.io/feed.xml
+    pollDays: 3
+
+  - author: Sebastian Raschka
+    handle: raschka
+    type: rss
+    url: https://magazine.sebastianraschka.com/feed
+    pollDays: 3
+
+  - author: Eugene Yan
+    handle: eugeneyan
+    type: rss
+    url: https://eugeneyan.com/rss/
+    pollDays: 3
+
+  - author: Chip Huyen
+    handle: chiphuyen
+    type: rss
+    url: https://huyenchip.com/feed.xml
+    pollDays: 7
+
   - author: Lilian Weng
     handle: lilianweng
     type: rss
     url: https://lilianweng.github.io/index.xml
+    pollDays: 7
+
+  # ── AI 行业观察 / 政策评论 ──
+  - author: Ethan Mollick
+    handle: oneusefulthing
+    type: rss
+    url: https://www.oneusefulthing.org/feed
+    pollDays: 2
+
+  - author: Jack Clark
+    handle: importai
+    type: rss
+    url: https://importai.substack.com/feed
+    pollDays: 2
+
+  - author: Zvi Mowshowitz
+    handle: thezvi
+    type: rss
+    url: https://thezvi.substack.com/feed
+    pollDays: 2
+
+  # ── 官方 AI lab news / blog ──
+  - author: OpenAI
+    handle: openai-news
+    type: rss
+    url: https://openai.com/news/rss.xml
+    pollDays: 1
+
+  - author: Google DeepMind
+    handle: deepmind
+    type: rss
+    url: https://deepmind.google/blog/rss.xml
+    pollDays: 2
+
+  - author: Hugging Face
+    handle: hf-blog
+    type: rss
+    url: https://huggingface.co/blog/feed.xml
+    pollDays: 2
+
+  - author: Anthropic
+    handle: anthropic-news
+    type: lightpanda
+    url: https://www.anthropic.com/news
+    itemSelector: 'a[href*="/news/"]'
     pollDays: 1

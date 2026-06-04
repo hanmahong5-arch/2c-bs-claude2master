@@ -32,10 +32,16 @@ const BLOGS_FILE = path.join(SCRIPT_DIR, "blogs.yaml");
 const TODAY = new Date().toISOString().slice(0, 10);
 
 // 每个源单次最多发 N 条 (取 feed 最新 N → 去重)。防新订阅源首跑 backlog 刷屏。
-const MAX_ITEMS_PER_SOURCE = 5;
+// env RADAR_BLOG_MAX 可覆盖 (如首发 backfill 收紧到 2-3, 控制单批 LLM 摘要量)。
+const MAX_ITEMS_PER_SOURCE = Math.max(
+  1,
+  Number(process.env.RADAR_BLOG_MAX) || 5,
+);
 // 正文截到 8KB — summarize.ts 用 LLM 转中文摘要时不需要全文 (镜像 practices)
 const BODY_CAP = 8000;
 const LIGHTPANDA_WS = process.env.LIGHTPANDA_WS ?? "ws://127.0.0.1:9222";
+// 单页导航超时 — 重型 SPA (如 anthropic.com newsroom) 在 Lightpanda(beta) 下偏慢, 给 45s。
+const LIGHTPANDA_NAV_TIMEOUT = 45000;
 
 type BlogType = "rss" | "lightpanda" | "rsshub";
 
@@ -379,7 +385,7 @@ async function fetchViaLightpanda(
   try {
     const list = await browser.newPage();
     // Lightpanda 是 DOM-focused, 不等 networkidle (官方建议 domcontentloaded)
-    await list.goto(source.url, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await list.goto(source.url, { waitUntil: "domcontentloaded", timeout: LIGHTPANDA_NAV_TIMEOUT });
     const hrefs = await list.$$eval(source.itemSelector, (els) =>
       els
         .map((e) => (e as HTMLAnchorElement).href)
@@ -403,7 +409,7 @@ async function fetchViaLightpanda(
       }
       try {
         const page = await browser.newPage();
-        await page.goto(link, { waitUntil: "domcontentloaded", timeout: 30000 });
+        await page.goto(link, { waitUntil: "domcontentloaded", timeout: LIGHTPANDA_NAV_TIMEOUT });
         const data = await page.evaluate(() => {
           const meta = (p: string) =>
             document

@@ -80,11 +80,76 @@
       "https://lilianweng.github.io/posts/2024-07-07-hallucination/",
       "https://lilianweng.github.io/posts/2024-04-12-diffusion-video/",
       "https://lilianweng.github.io/posts/2024-02-05-human-data-quality/"
+    ],
+    "latentspace": [
+      "https://www.latent.space/p/axiom",
+      "https://www.latent.space/p/satya-2026"
+    ],
+    "interconnects": [
+      "https://www.interconnects.ai/p/farewell-ai2",
+      "https://www.interconnects.ai/p/open-and-closed-models-are-on-different"
+    ],
+    "karpathy": [
+      "http://karpathy.github.io/2026/02/12/microgpt/",
+      "http://karpathy.github.io/2022/03/14/lecun1989/"
+    ],
+    "raschka": [
+      "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+      "https://magazine.sebastianraschka.com/p/workflow-for-understanding-llms"
+    ],
+    "eugeneyan": [
+      "https://eugeneyan.com//writing/working-with-ai/",
+      "https://eugeneyan.com//writing/2025-review/"
+    ],
+    "chiphuyen": [
+      "https://huyenchip.com//2025/01/16/ai-engineering-pitfalls.html",
+      "https://huyenchip.com//2025/01/07/agents.html"
+    ],
+    "oneusefulthing": [
+      "https://www.oneusefulthing.org/p/choosing-to-stay-human",
+      "https://www.oneusefulthing.org/p/sign-of-the-future-gpt-55"
+    ],
+    "importai": [
+      "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
+      "https://importai.substack.com/p/import-ai-458-reckoning-with-the"
+    ],
+    "thezvi": [
+      "https://thezvi.substack.com/p/trump-signs-executive-order-for-ai",
+      "https://thezvi.substack.com/p/claude-opus-48-capabilities-and-reactions"
+    ],
+    "openai-news": [
+      "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
+      "https://openai.com/index/wasmer"
+    ],
+    "deepmind": [
+      "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
+      "https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/"
+    ],
+    "hf-blog": [
+      "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
+      "https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini"
+    ],
+    "anthropic-news": [
+      "https://www.anthropic.com/news/claude-opus-4-8",
+      "https://www.anthropic.com/news/claude-design-anthropic-labs"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-03",
-    "lilianweng": "2026-06-03"
+    "simonwillison": "2026-06-04",
+    "lilianweng": "2026-06-04",
+    "latentspace": "2026-06-04",
+    "interconnects": "2026-06-04",
+    "karpathy": "2026-06-04",
+    "raschka": "2026-06-04",
+    "eugeneyan": "2026-06-04",
+    "chiphuyen": "2026-06-04",
+    "oneusefulthing": "2026-06-04",
+    "importai": "2026-06-04",
+    "thezvi": "2026-06-04",
+    "openai-news": "2026-06-04",
+    "deepmind": "2026-06-04",
+    "hf-blog": "2026-06-04",
+    "anthropic-news": "2026-06-04"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }
