@@ -1,17 +1,12 @@
 {
   "items": [
     {
-      "slug": "2026-06-04-blog-anthropic-news-introducing-claude-design-by-anthropic-labs",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-04-blog-anthropic-news-introducing-claude-opus-4-8",
-      "zh": true,
-      "en": true
-    },
-    {
       "slug": "2026-06-04-codex-rust-v0-137-0",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-04-cline-cli-v3-0-17",
       "zh": true,
       "en": true
     },
@@ -21,82 +16,12 @@
       "en": true
     },
     {
-      "slug": "2026-06-03-blog-hf-blog-adding-mcp-tools-to-reachy-mini",
+      "slug": "2026-06-04-blog-anthropic-news-introducing-claude-opus-4-8",
       "zh": true,
       "en": true
     },
     {
-      "slug": "2026-06-03-blog-hf-blog-direct-preference-optimization-beyond-chatbots",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-blog-latentspace-satya-nadella-no-priors-x-latent-space-crossover",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-blog-latentspace-scaling-past-informal-ai-carina-hong-axiom-math",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-blog-openai-news-how-wasmer-used-codex-to-build-a-node",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-blog-openai-news-introducing-new-capabilities-to-gpt-rosalind",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-blog-simonwillison-uber-caps-usage-of-ai-tools-like-claude",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-blog-thezvi-trump-signs-executive-order-for-ai-testing-prior",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-claude-code-2-1-162",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-cline-3-87-0",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-cline-cli-v3-0-16",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-gemini-cli-0-45-0",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-goose-1-37-0",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-trending-agent-substrate-substrate",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-trending-alibaba-open-code-review",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-trending-antirez-ds4",
+      "slug": "2026-06-04-blog-anthropic-news-introducing-claude-design-by-anthropic-labs",
       "zh": true,
       "en": true
     },
@@ -106,32 +31,17 @@
       "en": true
     },
     {
-      "slug": "2026-06-03-trending-b-nnett-goose",
+      "slug": "2026-06-03-blog-simonwillison-uber-caps-usage-of-ai-tools-like-claude",
       "zh": true,
       "en": true
     },
     {
-      "slug": "2026-06-03-trending-bigpizzav3-codexplusplus",
+      "slug": "2026-06-03-trending-nianzhibai-91",
       "zh": true,
-      "en": true
+      "en": false
     },
     {
       "slug": "2026-06-03-trending-chojs23-concord",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-trending-deeplethe-forkd",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-trending-ercel-labs-zerolang",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-trending-gi-dellav-zerostack",
       "zh": true,
       "en": true
     },
@@ -146,27 +56,72 @@
       "en": true
     },
     {
-      "slug": "2026-06-03-trending-microsoft-coreutils",
+      "slug": "2026-06-03-trending-gi-dellav-zerostack",
       "zh": true,
       "en": true
     },
     {
-      "slug": "2026-06-03-trending-microsoft-skillopt",
+      "slug": "2026-06-03-blog-openai-news-introducing-new-capabilities-to-gpt-rosalind",
       "zh": true,
       "en": true
     },
     {
-      "slug": "2026-06-03-trending-nexu-io-html-anything",
+      "slug": "2026-06-03-blog-hf-blog-direct-preference-optimization-beyond-chatbots",
       "zh": true,
       "en": true
     },
     {
-      "slug": "2026-06-03-trending-nianzhibai-91",
+      "slug": "2026-06-03-gemini-cli-0-45-0",
       "zh": true,
-      "en": false
+      "en": true
     },
     {
-      "slug": "2026-06-03-trending-perplexityai-bumblebee",
+      "slug": "2026-06-03-cline-3-87-0",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-trending-b-nnett-goose",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-goose-1-37-0",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-blog-openai-news-how-wasmer-used-codex-to-build-a-node",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-claude-code-2-1-162",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-trending-alibaba-open-code-review",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-blog-thezvi-trump-signs-executive-order-for-ai-testing-prior",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-trending-agent-substrate-substrate",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-blog-latentspace-scaling-past-informal-ai-carina-hong-axiom-math",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-trending-deeplethe-forkd",
       "zh": true,
       "en": true
     },
@@ -176,17 +131,57 @@
       "en": true
     },
     {
+      "slug": "2026-06-03-blog-hf-blog-adding-mcp-tools-to-reachy-mini",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-trending-perplexityai-bumblebee",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-trending-microsoft-skillopt",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-trending-microsoft-coreutils",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-trending-bigpizzav3-codexplusplus",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-cline-cli-v3-0-16",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-blog-latentspace-satya-nadella-no-priors-x-latent-space-crossover",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-03-trending-antirez-ds4",
+      "zh": true,
+      "en": true
+    },
+    {
       "slug": "2026-06-03-trending-usewhale-deepseek-code-whale",
       "zh": true,
       "en": true
     },
     {
-      "slug": "2026-06-02-blog-interconnects-farewell-ai2",
+      "slug": "2026-06-03-trending-ercel-labs-zerolang",
       "zh": true,
       "en": true
     },
     {
-      "slug": "2026-06-02-blog-simonwillison-california-brown-pelican",
+      "slug": "2026-06-03-trending-nexu-io-html-anything",
       "zh": true,
       "en": true
     },
@@ -196,12 +191,17 @@
       "en": true
     },
     {
-      "slug": "2026-06-02-blog-simonwillison-micropython-wasm-0-1a1",
+      "slug": "2026-06-02-blog-simonwillison-microsoft-s-new-mai-models",
       "zh": true,
       "en": true
     },
     {
-      "slug": "2026-06-02-blog-simonwillison-microsoft-s-new-mai-models",
+      "slug": "2026-06-02-blog-simonwillison-california-brown-pelican",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-02-blog-simonwillison-micropython-wasm-0-1a1",
       "zh": true,
       "en": true
     },
@@ -221,6 +221,16 @@
       "en": true
     },
     {
+      "slug": "2026-06-02-blog-interconnects-farewell-ai2",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-01-cline-3-86-2",
+      "zh": true,
+      "en": true
+    },
+    {
       "slug": "2026-06-01-blog-importai-import-ai-459-ai-oversight-is-difficult-scaling",
       "zh": true,
       "en": true
@@ -236,11 +246,6 @@
       "en": true
     },
     {
-      "slug": "2026-06-01-cline-3-86-2",
-      "zh": true,
-      "en": true
-    },
-    {
       "slug": "2026-06-01-codex-rust-v0-136-0",
       "zh": true,
       "en": true
@@ -251,17 +256,12 @@
       "en": true
     },
     {
-      "slug": "2026-05-30-claude-code-2-1-158",
-      "zh": true,
-      "en": true
-    },
-    {
       "slug": "2026-05-30-opencode-1-15-13",
       "zh": true,
       "en": true
     },
     {
-      "slug": "2026-05-29-claude-code-2-1-156",
+      "slug": "2026-05-30-claude-code-2-1-158",
       "zh": true,
       "en": true
     },
@@ -271,17 +271,12 @@
       "en": true
     },
     {
-      "slug": "2026-05-28-anthropic-engineering-swe-bench-sonnet",
+      "slug": "2026-05-29-claude-code-2-1-156",
       "zh": true,
       "en": true
     },
     {
-      "slug": "2026-05-28-claude-code-2-1-153",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-05-28-claude-code-2-1-154",
+      "slug": "2026-05-28-gemini-cli-0-44-1",
       "zh": true,
       "en": true
     },
@@ -291,12 +286,12 @@
       "en": true
     },
     {
-      "slug": "2026-05-28-claude-code-docs-overview",
+      "slug": "2026-05-28-anthropic-engineering-swe-bench-sonnet",
       "zh": true,
       "en": true
     },
     {
-      "slug": "2026-05-28-claude-opus-4-8",
+      "slug": "2026-05-28-claude-code-2-1-154",
       "zh": true,
       "en": true
     },
@@ -306,7 +301,17 @@
       "en": true
     },
     {
-      "slug": "2026-05-28-gemini-cli-0-44-1",
+      "slug": "2026-05-28-claude-opus-4-8",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-05-28-claude-code-2-1-153",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-05-28-claude-code-docs-overview",
       "zh": true,
       "en": true
     },
@@ -317,6 +322,11 @@
     },
     {
       "slug": "2026-05-27-goose-1-36-0",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-05-26-codex-rust-v0-134-0",
       "zh": true,
       "en": true
     },
@@ -332,11 +342,6 @@
     },
     {
       "slug": "2026-05-26-claude-code-1-2-0",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-05-26-codex-rust-v0-134-0",
       "zh": true,
       "en": true
     },
@@ -376,12 +381,12 @@
       "en": true
     },
     {
-      "slug": "2026-05-19-claude-code-2-1-144",
+      "slug": "2026-05-19-claude-code-2-1-145",
       "zh": true,
       "en": true
     },
     {
-      "slug": "2026-05-19-claude-code-2-1-145",
+      "slug": "2026-05-19-claude-code-2-1-144",
       "zh": true,
       "en": true
     },
@@ -392,11 +397,6 @@
     },
     {
       "slug": "2026-05-18-codex-rust-v0-131-0",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-05-16-blog-raschka-recent-developments-in-llm-architectures-kv-sharing-mhc",
       "zh": true,
       "en": true
     }
