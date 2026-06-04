@@ -20,6 +20,7 @@ import {
 import { relativeAge } from "@/lib/date";
 import { useUrlFilter } from "@/lib/use-url-filter";
 import { Reveal } from "@/components/Reveal";
+import AudioBroadcast from "@/components/AudioBroadcast";
 
 // 筛选值: "all"(按工具分组) | "practice"(实践扁平) | 某 tool key(该工具扁平)
 type Filter = string;
@@ -248,6 +249,7 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
             >
               RSS · 全站
             </Link>
+            <AudioBroadcast items={items} />
           </div>
 
           <div className="mt-6 flex flex-wrap gap-2">

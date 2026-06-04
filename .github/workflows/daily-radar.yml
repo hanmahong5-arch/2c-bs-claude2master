@@ -145,14 +145,23 @@ jobs:
           fi
           bun run scripts/radar/summarize.ts < radar-input.jsonl
 
+      # 为新条目生成中文/英文播报音频 (edge-tts via msedge-tts, 运行时安装)。
+      # 失败不阻塞 (音频是补充, 同 practices/trending)。滚动保留最新 80 条。
+      - name: Generate broadcast audio (edge-tts)
+        if: steps.combine.outputs.count != '0'
+        run: |
+          set -euo pipefail
+          bun add msedge-tts
+          bun run scripts/radar/tts-generate.ts || true
+
       - name: Commit + push
         if: steps.combine.outputs.count != '0'
         run: |
           set -euo pipefail
           git config user.name "c2m-radar-bot"
           git config user.email "radar-bot@claude2master.com"
-          # Path filter (再次防御): 只 add 这两个路径
-          git add src/content/changelog/ scripts/radar/state.json
+          # Path filter (再次防御): 只 add 这些路径
+          git add src/content/changelog/ scripts/radar/state.json public/audio/
           if git diff --staged --quiet; then
             echo "no diff staged, skipping commit"
             exit 0
