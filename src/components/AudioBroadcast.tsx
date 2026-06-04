@@ -95,9 +95,11 @@ export default function AudioBroadcast({ items }: { items: ChangelogItem[] }) {
     if (!clip) return; // 越界(到末尾)由 onEnded 置 playing=false, 此处只需不换源
     a.src = clip.url;
     if (playing) a.play().catch(() => setPlaying(false));
-    // playing 故意不入依赖: 播放态切换由下方独立 effect 管, 避免重复 load
+    // open 入依赖: 播放条打开时 <audio> 才挂载, 此 effect 需在挂载后(open 变 true)跑一次设源;
+    // 否则 start() 把 clipIdx 设为既有的 0 → 引用不变 → effect 不触发 → 永远没 src。
+    // playing 故意不入依赖: 播放态切换由下方独立 effect 管, 避免重复 load。
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [clipIdx, clips]);
+  }, [clipIdx, clips, open]);
 
   // 播放/暂停
   useEffect(() => {
