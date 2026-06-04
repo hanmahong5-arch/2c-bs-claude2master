@@ -32,8 +32,15 @@ const MANIFEST = path.join(AUDIO_DIR, "manifest.json");
 const DEFAULT_LIMIT = 80;
 const ZH_VOICE = "zh-CN-XiaoxiaoNeural";
 const EN_VOICE = "en-US-AriaNeural";
-// 略放慢语速 → 中英混读断句更清晰 (edge-tts SSML rate)
-const RATE = "-8%";
+// 播报腔: 中文 hook 用利索的新闻播报语速(略快 + 略压低音高), 英文标题略快。
+// 不用负 rate —— 上一版 -8% 把中文神经音色拖成"有声书拖沓感", 是"太慢"反馈的头号元凶。
+// 注: edge-tts 免费端点仅放行 rate/pitch/volume 三轴; 情感(mstts:express-as)与 <break>
+// 被微软服务端永久屏蔽(2026-05-18 官方确认), 故"播报感"靠 pitch/语速间接做,
+// 真·情感需换商业 TTS 引擎(见 doc/process.md / memory 选型结论)。
+const ZH_RATE = "+6%";
+const ZH_PITCH = "-4%";
+const EN_RATE = "+3%";
+const EN_PITCH = "+0%";
 
 interface Item {
   slug: string;
@@ -102,9 +109,12 @@ function englishPart(title: string): string {
 function cleanForTts(s: string): string {
   return s
     .replace(/\s+/g, " ")
-    .replace(/\s*[|·]\s*/g, "，")
+    // 生硬分隔符 → 顿停, 让引擎在此自然换气 (改善断句)
+    .replace(/\s*[|·/]\s*/g, "，")
     .replace(/\s*[–—]\s*/g, "，")
+    .replace(/\s*[;；]\s*/g, "，")
     .replace(/，{2,}/g, "，")
+    .replace(/^，+|，+$/g, "")
     .trim();
 }
 
@@ -154,10 +164,12 @@ async function synth(
   voice: string,
   text: string,
   outPath: string,
+  rate: string,
+  pitch: string,
 ): Promise<void> {
   const tts = new mod.MsEdgeTTS();
   await tts.setMetadata(voice, mod.OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
-  const { audioStream } = tts.toStream(text, { rate: RATE });
+  const { audioStream } = tts.toStream(text, { rate, pitch });
   const chunks: Uint8Array[] = [];
   for await (const c of audioStream) chunks.push(c);
   if (chunks.length === 0) throw new Error("empty audio stream");
@@ -214,7 +226,7 @@ async function main(): Promise<void> {
       attempted++;
       try {
         mod = mod ?? (await loadTts());
-        await synth(mod, ZH_VOICE, zhText, zhPath);
+        await synth(mod, ZH_VOICE, zhText, zhPath, ZH_RATE, ZH_PITCH);
         zhOk = true;
         made++;
       } catch (e) {
@@ -229,7 +241,7 @@ async function main(): Promise<void> {
       attempted++;
       try {
         mod = mod ?? (await loadTts());
-        await synth(mod, EN_VOICE, enText, enPath);
+        await synth(mod, EN_VOICE, enText, enPath, EN_RATE, EN_PITCH);
         enOk = true;
         made++;
       } catch (e) {
