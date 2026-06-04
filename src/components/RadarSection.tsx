@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Calendar, ArrowRight, Radar } from "lucide-react";
 import { getChangelog, getDigest } from "@/lib/content";
 import {
+  KIND_LABEL,
   type ChangelogItem,
   type ChangelogKind,
 } from "@/lib/content-types";
@@ -30,8 +31,10 @@ export default async function RadarSection() {
       Boolean(x.item),
     );
   const latestDigest = digest[0];
+  // 今日观点: 最新 3 条博主条目 (changelog 已 publishedAt 倒序)
+  const bloggers = changelog.filter((c) => c.kind === "blogger").slice(0, 3);
 
-  if (latestRadar.length === 0) {
+  if (latestRadar.length === 0 && bloggers.length === 0) {
     return null;
   }
 
@@ -92,6 +95,49 @@ export default async function RadarSection() {
           );
         })}
       </div>
+
+      {bloggers.length > 0 && (
+        <div className="mt-14">
+          <div className="flex items-baseline justify-between mb-5">
+            <h3 className="font-display italic text-2xl md:text-3xl font-semibold text-[var(--lt-ink)] headline-tight">
+              今日观点。
+            </h3>
+            <Link
+              href="/changelog?tool=blogger"
+              className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--c2m-accent-deep)] inline-flex items-center gap-1"
+            >
+              全部观点
+              <ArrowRight size={13} />
+            </Link>
+          </div>
+          <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-5">
+            {bloggers.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/changelog/${c.slug}`}
+                className="card group flex flex-col gap-2"
+              >
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <span
+                    className={`pill text-[10px] ${KIND_LABEL.blogger.className}`}
+                  >
+                    {KIND_LABEL.blogger.label}
+                  </span>
+                  <span className="pill text-[10px]">
+                    {c.author ?? c.source}
+                  </span>
+                </div>
+                <h4 className="text-base font-semibold text-[var(--lt-ink)] group-hover:text-[var(--c2m-accent-deep)] transition-colors text-clamp-2">
+                  {c.title}
+                </h4>
+                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed text-clamp-2 flex-1">
+                  {c.hook}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
         {latestDigest && (

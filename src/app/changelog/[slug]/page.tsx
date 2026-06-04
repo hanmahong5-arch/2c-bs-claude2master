@@ -66,6 +66,13 @@ export default async function ChangelogDetail({
 
   const jsonLd = changelogJsonLd(item);
   const pageUrl = `https://claude2master.com/changelog/${item.slug}`;
+  // 原文链接文案随 kind 变化: release→"原文 release", 热门→"项目主页", 实践/观点→"原文"
+  const sourceLabel =
+    item.kind === "trending"
+      ? "项目主页"
+      : item.kind === "practice" || item.kind === "blogger"
+        ? "原文"
+        : "原文 release";
 
   return (
     <article className="max-w-3xl mx-auto px-6 py-12 md:py-16">
@@ -85,7 +92,13 @@ export default async function ChangelogDetail({
       <div className="flex items-center gap-2 mb-3 flex-wrap">
         {(() => {
           const k: ChangelogKind =
-            item.kind === "practice" ? "practice" : "changelog";
+            item.kind === "practice"
+              ? "practice"
+              : item.kind === "trending"
+                ? "trending"
+                : item.kind === "blogger"
+                  ? "blogger"
+                  : "changelog";
           const meta = KIND_LABEL[k];
           return (
             <span className={`pill text-[10px] ${meta.className}`}>
@@ -138,7 +151,7 @@ export default async function ChangelogDetail({
           className="inline-flex items-center gap-1.5 hover:text-[var(--c2m-accent-deep)]"
         >
           <ExternalLink size={12} />
-          原文 release
+          {sourceLabel}
         </TrackedLink>
       </div>
 
@@ -153,7 +166,7 @@ export default async function ChangelogDetail({
             data={{ slug: item.slug, target: "release-disclaimer", source: item.source }}
             className="text-[var(--c2m-accent-deep)] mx-1"
           >
-            原文 release
+            {sourceLabel}
           </TrackedLink>
           为准。发现错误请在 GitHub 提 issue。
         </div>
