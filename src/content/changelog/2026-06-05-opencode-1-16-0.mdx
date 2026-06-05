@@ -1,0 +1,22 @@
+---
+slug: 2026-06-05-opencode-1-16-0
+title: "opencode v1.16.0 — OpenCode v1.16.0 增强会话管理与模型支持，提升开发体验"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.16.0
+publishedAt: 2026-06-05
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "OpenCode v1.16.0 增强会话管理与模型支持，提升开发体验"
+insight: "对于国内用户，本次更新不影响通过 newapi.lurus.cn 代理使用 Claude 等模型，因为代理服务本身不涉及工作区或会话管理。但如果你正在使用 OpenCode 的 Agent 功能，并且需要它在包含未提交文件的真实开发环境中工作，那么升级到 v1.16.0 是值得的，因为它新增的托管工作区克隆功能能更好地保留开发现场。同时，新增的会话移动功能也为管理多个任务提供了便利。"
+tags: [session-management, model-support, workspace, performance]
+---
+
+- **新增托管工作区克隆**：保留脏文件和未跟踪文件，确保开发环境一致性，意味着 Agent 可以在更真实、未净化的代码库上下文中工作。
+- **新增会话在目录间移动**：支持将活动会话在不同工作区和目录间迁移，为 Agent 提供了更灵活的任务上下文切换能力。
+- **新增通过 AWS Bedrock 的 OpenAI 模型支持**：扩展了模型后端选项，使 Agent 可以利用企业级的云基础设施进行推理。
+
+---
+
+> 原文 release：[sst/opencode v1.16.0](https://github.com/anomalyco/opencode/releases/tag/v1.16.0)

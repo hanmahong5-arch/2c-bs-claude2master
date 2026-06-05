@@ -1,0 +1,25 @@
+---
+slug: 2026-06-04-cline-cli-v3-0-19
+title: "cline cli-v3.0.19 — 修复 CLI 自动更新机制，确保更新可靠且保留安装渠道"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.19
+publishedAt: 2026-06-04
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复 CLI 自动更新机制，确保更新可靠且保留安装渠道"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新修复了核心的自动更新机制，将命令从 `npm install` 改为更可靠的 `npm update`，并确保更新过程不会意外改变原有的发布渠道（如 nightly）。这意味着之前可能遇到的更新失败或渠道切换问题已得到解决，更新体验将更稳定。因此，现有用户值得升级，升级操作本身是安全的，不会影响代理配置或已有的渠道设置。"
+tags: [cli, auto-update, npm, bug-fix]
+---
+
+- 将 CLI 自动更新从 `npm install` 改为 `npm update`，提升更新成功率
+  - 对 agent harness 设计：更新逻辑应优先使用包管理器的标准更新命令，而非重新安装
+- 更新过程中保持原有的发布渠道（如 nightly）不变
+  - 对 agent harness 设计：渠道配置应作为持久化元数据，在系统操作中保持不变
+- 修复了之前版本中更新可能失败或意外切换渠道的问题
+  - 对 agent harness 设计：关键运维操作（如更新）需要明确边界和回滚策略，避免副作用
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.19](https://github.com/cline/cline/releases/tag/cli-v3.0.19)

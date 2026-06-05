@@ -1,0 +1,22 @@
+---
+slug: 2026-06-05-cline-cli-v3-0-20
+title: "cline cli-v3.0.20 — 插件包装器命名更透明，便于识别已安装插件来源"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.20
+publishedAt: 2026-06-05
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "插件包装器命名更透明，便于识别已安装插件来源"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新不影响代理服务本身，但值得关注。新版本将插件包装器命名从不透明哈希改为来源标识（如 npm 包名），这显著提升了插件管理的可读性和可追溯性。虽然代理路径不受影响，但如果你在开发或维护涉及多环境部署的 agent harness，现有基于哈希的插件配置可能需要相应调整，以利用新的可读标识来简化调试和依赖追踪。"
+tags: [cli, plugin-management, naming, developer-experience]
+---
+
+- 插件包装器现根据来源命名（如 npm 包名、Git 仓库、远程文件名等），而非不透明哈希值。
+- 这意味着在 agent harness 设计中，插件管理界面可直接展示可读标识，提升调试与维护效率。
+- 开发者能快速追溯插件来源，简化多环境部署时的依赖追踪。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.20](https://github.com/cline/cline/releases/tag/cli-v3.0.20)

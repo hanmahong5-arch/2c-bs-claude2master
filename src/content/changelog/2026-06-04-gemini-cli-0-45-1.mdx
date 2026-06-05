@@ -1,0 +1,25 @@
+---
+slug: 2026-06-04-gemini-cli-0-45-1
+title: "gemini-cli v0.45.1 — 紧急修复版本，确保 gemini"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.45.1
+publishedAt: 2026-06-04
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "紧急修复版本，确保 gemini-cli 稳定运行"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新是必要的安全补丁，强烈建议立即升级到 v0.45.1 版本。该版本修复了 v0.45.0 的稳定性问题，确保了 gemini-cli 的稳定运行。清晰的更新日志也便于用户追踪变更。由于是紧急修复，且涉及核心稳定分支，升级能避免潜在的运行中断风险，对代理服务的连续性无负面影响。"
+tags: [patch-release, bug-fix, versioning, changelog]
+---
+
+- **修复补丁**：将提交 665228e 拣选到发布分支，以修补 v0.45.0 版本。
+  - 对 Agent Harness 设计的含义：强调了维护稳定分支的重要性，任何修复都需及时回传到主要发布线。
+- **创建新版本**：基于修补后的代码创建了版本 v0.45.1。
+  - 对 Agent Harness 设计的含义：版本控制应支持快速迭代和修复，确保下游依赖能及时获取安全更新。
+- **更新日志**：完整记录了从 v0.45.0 到 v0.45.1 的所有变更。
+  - 对 Agent Harness 设计的含义：清晰的变更历史是可信系统的基础，便于审计和问题追踪。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.45.1](https://github.com/google-gemini/gemini-cli/releases/tag/v0.45.1)

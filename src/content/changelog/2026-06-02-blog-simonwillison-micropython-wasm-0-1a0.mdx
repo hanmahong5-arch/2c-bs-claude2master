@@ -1,0 +1,24 @@
+---
+slug: 2026-06-02-blog-simonwillison-micropython-wasm-0-1a0
+title: "micropython-wasm 0.1a0 — Simon Willison 发布 micropython"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/2/micropython-wasm-2/
+publishedAt: 2026-06-02
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 micropython-wasm 0.1a0，探索在 WebAssembly 中安全运行 Python 代码的新方法。"
+tags: [python, sandboxing, webassembly, wasm]
+---
+
+博主 Simon Willison 发布了 micropython-wasm 0.1a0，这是一个实验性的 Python 沙盒环境。
+
+*   **核心是一个定制的 MicroPython WASM 构建**：项目将 MicroPython 编译为 WebAssembly，并进行了轻量级定制。这意味着开发者可以在浏览器或服务器端的安全隔离环境中运行 Python 代码。
+*   **通过 wasmtime 包装器执行代码**：项目使用 wasmtime 运行时作为包装层来加载和执行这个 WASM 模块。这为在多种宿主环境中嵌入一个可控的 Python 解释器提供了标准化的接口。
+*   **专注于代码沙盒化实验**：作者明确将其定位为一次“沙盒化实验”，旨在探索安全执行不受信任代码的边界。这为需要运行用户提交代码的在线平台（如教育、代码评测）提供了新的技术原型。
+
+---
+
+> 原文：[micropython-wasm 0.1a0](https://simonwillison.net/2026/Jun/2/micropython-wasm-2/) · 作者 Simon Willison

@@ -1,13 +1,13 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.162",
+    "anthropics/claude-code": "v2.1.165",
     "openai/codex": "rust-v0.137.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.17",
+    "cline/cline": "cli-v3.0.20",
     "block/goose": "v1.37.0",
-    "sst/opencode": "v1.15.13",
+    "sst/opencode": "v1.16.0",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.45.0"
+    "google-gemini/gemini-cli": "v0.45.1"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -29,7 +29,9 @@
     "chojs23/concord",
     "agent-substrate/substrate",
     "usewhale/DeepSeek-Code-Whale",
-    "vedika-io/xalen-ephemeris"
+    "vedika-io/xalen-ephemeris",
+    "unicity-astrid/sdk-js",
+    "simplifaisoul/osiris"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -63,7 +65,7 @@
     "openai-codex-blog": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-04",
+    "anthropic-engineering": "2026-06-05",
     "claude-code-docs": "2026-06-04",
     "openai-codex-blog": "2026-06-04"
   },
@@ -73,7 +75,12 @@
       "https://simonwillison.net/2026/Jun/2/microsofts-new-models/",
       "https://simonwillison.net/2026/Jun/2/datasette-agent-micropython/",
       "https://simonwillison.net/2026/Jun/2/micropython-wasm/",
-      "https://simonwillison.net/2026/Jun/2/sighting-367841339/"
+      "https://simonwillison.net/2026/Jun/2/sighting-367841339/",
+      "https://simonwillison.net/2026/Jun/4/ai-enthusiasts-ai-skeptics/",
+      "https://simonwillison.net/2026/Jun/4/a-slightly-different-version/",
+      "https://simonwillison.net/2026/Jun/2/pasted-file-editor/",
+      "https://simonwillison.net/2026/Jun/2/micropython-wasm-2/",
+      "https://simonwillison.net/2026/Jun/1/hackers-simply-asked-meta-ai/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -84,11 +91,21 @@
     ],
     "latentspace": [
       "https://www.latent.space/p/axiom",
-      "https://www.latent.space/p/satya-2026"
+      "https://www.latent.space/p/satya-2026",
+      "https://www.latent.space/p/andon",
+      "https://www.latent.space/p/ainews-reve-2-and-ideogram-4-layouts",
+      "https://www.latent.space/p/ainews-microsoft-build-mai-thinking",
+      "https://www.latent.space/p/github",
+      "https://www.latent.space/p/ainews-nvidia-cosmos-3-nemotron-3"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
-      "https://www.interconnects.ai/p/open-and-closed-models-are-on-different"
+      "https://www.interconnects.ai/p/open-and-closed-models-are-on-different",
+      "https://www.interconnects.ai/p/some-ideas-for-what-comes-next-may",
+      "https://www.interconnects.ai/p/latest-open-artifacts-21-open-model",
+      "https://www.interconnects.ai/p/how-open-model-ecosystems-compound",
+      "https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs",
+      "https://www.interconnects.ai/p/the-distillation-panic"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -120,7 +137,12 @@
     ],
     "openai-news": [
       "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
-      "https://openai.com/index/wasmer"
+      "https://openai.com/index/wasmer",
+      "https://openai.com/index/endava-frontiers",
+      "https://openai.com/index/chatgpt-memory-dreaming",
+      "https://openai.com/index/biodefense-in-the-intelligence-age",
+      "https://openai.com/index/public-policy-agenda",
+      "https://openai.com/index/frontier-safety-blueprint"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -132,14 +154,19 @@
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
-      "https://www.anthropic.com/news/claude-design-anthropic-labs"
+      "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "https://www.anthropic.com/news/claude-is-a-space-to-think",
+      "https://www.anthropic.com/news/services-track-partner-hub",
+      "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
+      "https://www.anthropic.com/news/expanding-project-glasswing",
+      "https://www.anthropic.com/news/confidential-draft-s1-sec"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-04",
+    "simonwillison": "2026-06-05",
     "lilianweng": "2026-06-04",
-    "latentspace": "2026-06-04",
-    "interconnects": "2026-06-04",
+    "latentspace": "2026-06-05",
+    "interconnects": "2026-06-05",
     "karpathy": "2026-06-04",
     "raschka": "2026-06-04",
     "eugeneyan": "2026-06-04",
@@ -147,10 +174,10 @@
     "oneusefulthing": "2026-06-04",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-04",
+    "openai-news": "2026-06-05",
     "deepmind": "2026-06-04",
     "hf-blog": "2026-06-04",
-    "anthropic-news": "2026-06-04"
+    "anthropic-news": "2026-06-05"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }
