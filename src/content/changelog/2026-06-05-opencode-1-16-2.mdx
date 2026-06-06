@@ -1,0 +1,22 @@
+---
+slug: 2026-06-05-opencode-1-16-2
+title: "opencode v1.16.2 — 修复推理摘要兼容性，支持后台运行子代理，提升多服务器桌面体验"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.16.2
+publishedAt: 2026-06-05
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复推理摘要兼容性，支持后台运行子代理，提升多服务器桌面体验"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新直接影响代理工具链的兼容性检测逻辑。由于推理摘要功能现在会严格检查提供商能力，如果你的后端不支持 GPT-5 级别的请求，相关调用可能会被阻止，因此需要检查并确认你的代理配置与后端能力是否匹配。不过，子代理后台运行和多服务器独立状态这两个功能提升，对于管理复杂任务和多环境场景是有利的，无需额外修改配置即可受益。"
+tags: [bugfix, provider-support, background-tasks, desktop-ui]
+---
+
+- **推理摘要仅限支持的提供商运行**：避免在兼容后端上向 GPT-5 发送错误请求，意味着代理工具链需要更精确的提供商能力检测。
+- **子代理可发送至后台运行**：允许用户在代理工作时继续操作，这对设计长时间、多任务并行的代理工作流至关重要。
+- **桌面支持多服务器独立状态**：每个服务器拥有独立的首页状态和会话标签页，改善了多环境下的代理管理体验。
+
+---
+
+> 原文 release：[sst/opencode v1.16.2](https://github.com/anomalyco/opencode/releases/tag/v1.16.2)

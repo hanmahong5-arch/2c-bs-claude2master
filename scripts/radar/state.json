@@ -1,13 +1,13 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.165",
+    "anthropics/claude-code": "v2.1.167",
     "openai/codex": "rust-v0.137.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.20",
+    "cline/cline": "v3.88.0",
     "block/goose": "v1.37.0",
-    "sst/opencode": "v1.16.0",
+    "sst/opencode": "v1.16.2",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.45.1"
+    "google-gemini/gemini-cli": "v0.45.2"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -31,7 +31,8 @@
     "usewhale/DeepSeek-Code-Whale",
     "vedika-io/xalen-ephemeris",
     "unicity-astrid/sdk-js",
-    "simplifaisoul/osiris"
+    "simplifaisoul/osiris",
+    "tastyeffectco/sandboxes"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -65,7 +66,7 @@
     "openai-codex-blog": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-05",
+    "anthropic-engineering": "2026-06-06",
     "claude-code-docs": "2026-06-04",
     "openai-codex-blog": "2026-06-04"
   },
@@ -80,7 +81,12 @@
       "https://simonwillison.net/2026/Jun/4/a-slightly-different-version/",
       "https://simonwillison.net/2026/Jun/2/pasted-file-editor/",
       "https://simonwillison.net/2026/Jun/2/micropython-wasm-2/",
-      "https://simonwillison.net/2026/Jun/1/hackers-simply-asked-meta-ai/"
+      "https://simonwillison.net/2026/Jun/1/hackers-simply-asked-meta-ai/",
+      "https://simonwillison.net/2026/Jun/6/micropython-wasm/",
+      "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/",
+      "https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/",
+      "https://simonwillison.net/2026/Jun/5/andreas-kling/",
+      "https://simonwillison.net/2026/Jun/1/may-newsletter/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -96,7 +102,12 @@
       "https://www.latent.space/p/ainews-reve-2-and-ideogram-4-layouts",
       "https://www.latent.space/p/ainews-microsoft-build-mai-thinking",
       "https://www.latent.space/p/github",
-      "https://www.latent.space/p/ainews-nvidia-cosmos-3-nemotron-3"
+      "https://www.latent.space/p/ainews-nvidia-cosmos-3-nemotron-3",
+      "https://www.latent.space/p/ainews-not-much-happened-today-6b8",
+      "https://www.latent.space/p/bad-envs",
+      "https://www.latent.space/p/ainews-not-much-happened-today-7a8",
+      "https://www.latent.space/p/video-agents",
+      "https://www.latent.space/p/ainews-founders-and-forward-deployed"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -105,7 +116,12 @@
       "https://www.interconnects.ai/p/latest-open-artifacts-21-open-model",
       "https://www.interconnects.ai/p/how-open-model-ecosystems-compound",
       "https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs",
-      "https://www.interconnects.ai/p/the-distillation-panic"
+      "https://www.interconnects.ai/p/the-distillation-panic",
+      "https://www.interconnects.ai/p/reading-todays-open-closed-performance",
+      "https://www.interconnects.ai/p/my-bets-on-open-models-mid-2026",
+      "https://www.interconnects.ai/p/what-ive-been-building-atom-report",
+      "https://www.interconnects.ai/p/the-inevitable-need-for-an-open-model",
+      "https://www.interconnects.ai/p/claude-mythos-and-misguided-open"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -125,7 +141,12 @@
     ],
     "oneusefulthing": [
       "https://www.oneusefulthing.org/p/choosing-to-stay-human",
-      "https://www.oneusefulthing.org/p/sign-of-the-future-gpt-55"
+      "https://www.oneusefulthing.org/p/sign-of-the-future-gpt-55",
+      "https://www.oneusefulthing.org/p/co-existence-and-the-end-of-co-intelligence",
+      "https://www.oneusefulthing.org/p/claude-dispatch-and-the-power-of",
+      "https://www.oneusefulthing.org/p/the-shape-of-the-thing",
+      "https://www.oneusefulthing.org/p/a-guide-to-which-ai-to-use-in-the",
+      "https://www.oneusefulthing.org/p/management-as-ai-superpower"
     ],
     "importai": [
       "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
@@ -142,15 +163,30 @@
       "https://openai.com/index/chatgpt-memory-dreaming",
       "https://openai.com/index/biodefense-in-the-intelligence-age",
       "https://openai.com/index/public-policy-agenda",
-      "https://openai.com/index/frontier-safety-blueprint"
+      "https://openai.com/index/frontier-safety-blueprint",
+      "https://openai.com/index/travelers",
+      "https://openai.com/index/codex-for-every-role-tool-workflow",
+      "https://openai.com/index/advancing-youth-safety-and-opportunity-through-global-leadership",
+      "https://openai.com/index/codex-for-knowledge-work",
+      "https://openai.com/index/our-views-on-ai-policy-and-political-advocacy"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
-      "https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/"
+      "https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/",
+      "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view/",
+      "https://deepmind.google/blog/introducing-gemini-omni/",
+      "https://deepmind.google/blog/introducing-google-antigravity-2-0/",
+      "https://deepmind.google/blog/gemini-for-science-ai-experiments-and-tools-for-a-new-era-of-discovery/",
+      "https://deepmind.google/blog/making-it-easier-to-understand-how-content-was-created-and-edited/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
-      "https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini"
+      "https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini",
+      "https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim",
+      "https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety",
+      "https://huggingface.co/blog/ServiceNow-AI/eva-bench-data",
+      "https://huggingface.co/blog/hf-cli-for-agents",
+      "https://huggingface.co/blog/Hcompany/holo31"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -159,25 +195,26 @@
       "https://www.anthropic.com/news/services-track-partner-hub",
       "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
       "https://www.anthropic.com/news/expanding-project-glasswing",
-      "https://www.anthropic.com/news/confidential-draft-s1-sec"
+      "https://www.anthropic.com/news/confidential-draft-s1-sec",
+      "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-05",
+    "simonwillison": "2026-06-06",
     "lilianweng": "2026-06-04",
-    "latentspace": "2026-06-05",
-    "interconnects": "2026-06-05",
+    "latentspace": "2026-06-06",
+    "interconnects": "2026-06-06",
     "karpathy": "2026-06-04",
     "raschka": "2026-06-04",
     "eugeneyan": "2026-06-04",
     "chiphuyen": "2026-06-04",
-    "oneusefulthing": "2026-06-04",
+    "oneusefulthing": "2026-06-06",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-05",
-    "deepmind": "2026-06-04",
-    "hf-blog": "2026-06-04",
-    "anthropic-news": "2026-06-05"
+    "openai-news": "2026-06-06",
+    "deepmind": "2026-06-06",
+    "hf-blog": "2026-06-06",
+    "anthropic-news": "2026-06-06"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

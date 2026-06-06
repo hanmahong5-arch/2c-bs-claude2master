@@ -1,6 +1,41 @@
 {
   "items": [
     {
+      "slug": "2026-06-06-claude-code-2-1-166",
+      "zh": true,
+      "en": false
+    },
+    {
+      "slug": "2026-06-06-blog-anthropic-news-anthropic-co-founder-chris-olah-s-remarks-on",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-06-blog-latentspace-ainews-not-much-happened-today",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-06-trending-tastyeffectco-sandboxes",
+      "zh": true,
+      "en": false
+    },
+    {
+      "slug": "2026-06-06-claude-code-2-1-167",
+      "zh": true,
+      "en": false
+    },
+    {
+      "slug": "2026-06-06-blog-simonwillison-micropython-wasm-0-1a2",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-06-blog-simonwillison-running-python-code-in-a-sandbox-with-micropython",
+      "zh": true,
+      "en": true
+    },
+    {
       "slug": "2026-06-05-blog-anthropic-news-expanding-project-glasswing",
       "zh": true,
       "en": true
@@ -16,7 +51,27 @@
       "en": true
     },
     {
+      "slug": "2026-06-05-blog-simonwillison-openai-help-lockdown-mode",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-05-opencode-1-16-2",
+      "zh": true,
+      "en": false
+    },
+    {
+      "slug": "2026-06-05-blog-simonwillison-quoting-andreas-kling",
+      "zh": true,
+      "en": true
+    },
+    {
       "slug": "2026-06-05-blog-anthropic-news-what-we-learned-mapping-a-year-s-worth",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-05-blog-hf-blog-thousand-token-wood-shipping-a-multi-agent-economy",
       "zh": true,
       "en": true
     },
@@ -24,6 +79,11 @@
       "slug": "2026-06-05-cline-cli-v3-0-20",
       "zh": true,
       "en": false
+    },
+    {
+      "slug": "2026-06-05-blog-latentspace-ainews-not-much-happened-today",
+      "zh": true,
+      "en": true
     },
     {
       "slug": "2026-06-05-opencode-1-16-0",
@@ -41,14 +101,34 @@
       "en": true
     },
     {
+      "slug": "2026-06-05-gemini-cli-0-45-2",
+      "zh": true,
+      "en": false
+    },
+    {
+      "slug": "2026-06-05-cline-3-88-0",
+      "zh": true,
+      "en": false
+    },
+    {
       "slug": "2026-06-05-trending-unicity-astrid-sdk-js",
       "zh": true,
       "en": false
     },
     {
+      "slug": "2026-06-05-blog-latentspace-how-to-stop-shipping-low-quality-rl-environments",
+      "zh": true,
+      "en": true
+    },
+    {
       "slug": "2026-06-05-claude-code-2-1-165",
       "zh": true,
       "en": false
+    },
+    {
+      "slug": "2026-06-04-blog-hf-blog-designing-the-hf-cli-as-an-agent-optimized",
+      "zh": true,
+      "en": true
     },
     {
       "slug": "2026-06-04-blog-latentspace-reality-the-final-eval-lukas-petersson-and-axel",
@@ -69,6 +149,11 @@
       "slug": "2026-06-04-trending-vedika-io-xalen-ephemeris",
       "zh": true,
       "en": false
+    },
+    {
+      "slug": "2026-06-04-blog-hf-blog-nemotron-3-5-content-safety-customizable-multimodal-safety",
+      "zh": true,
+      "en": true
     },
     {
       "slug": "2026-06-04-blog-openai-news-how-endava-is-redesigning-software-delivery-around-ai",
@@ -94,6 +179,11 @@
       "slug": "2026-06-04-claude-code-2-1-163",
       "zh": true,
       "en": false
+    },
+    {
+      "slug": "2026-06-04-blog-oneusefulthing-co-existence-and-the-end-of-co-intelligence",
+      "zh": true,
+      "en": true
     },
     {
       "slug": "2026-06-04-blog-openai-news-biodefense-in-the-intelligence-age",
@@ -127,6 +217,11 @@
     },
     {
       "slug": "2026-06-04-blog-openai-news-dreaming-better-memory-for-a-more-helpful-chatgpt",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-04-blog-hf-blog-eva-bench-data-2-0-3-domains-121",
       "zh": true,
       "en": true
     },
@@ -304,101 +399,6 @@
       "slug": "2026-06-03-blog-latentspace-ainews-microsoft-build-mai-thinking-1-and-mai",
       "zh": true,
       "en": true
-    },
-    {
-      "slug": "2026-06-02-blog-simonwillison-pasted-file-editor",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-02-blog-simonwillison-datasette-agent-micropython-0-1a0",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-02-blog-simonwillison-microsoft-s-new-mai-models",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-02-blog-latentspace-ainews-nvidia-cosmos-3-nemotron-3-ultra-and",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-02-blog-simonwillison-california-brown-pelican",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-02-blog-simonwillison-micropython-wasm-0-1a1",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-02-blog-thezvi-claude-opus-4-8-capabilities-and-reactions",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-02-claude-code-2-1-160",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-02-claude-code-2-1-161",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-02-blog-simonwillison-micropython-wasm-0-1a0",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-02-blog-latentspace-github-s-plan-for-agents-kyle-daigle-github",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-02-blog-interconnects-farewell-ai2",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-01-blog-simonwillison-hackers-simply-asked-meta-ai-to-give-them",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-01-cline-3-86-2",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-01-blog-importai-import-ai-459-ai-oversight-is-difficult-scaling",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-01-blog-interconnects-open-and-closed-models-are-on-different-exponentials",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-01-cline-3-86-1",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-01-codex-rust-v0-136-0",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-05-31-claude-code-2-1-159",
-      "zh": true,
-      "en": false
     }
   ]
 }

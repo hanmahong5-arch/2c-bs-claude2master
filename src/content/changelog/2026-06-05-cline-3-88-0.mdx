@@ -1,0 +1,22 @@
+---
+slug: 2026-06-05-cline-3-88-0
+title: "cline v3.88.0 — 更新 Fireworks AI 模型并修复 MCP 服务器配置同步问题，提升模型"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v3.88.0
+publishedAt: 2026-06-05
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "更新 Fireworks AI 模型并修复 MCP 服务器配置同步问题，提升模型选择可靠性与配置稳定性。"
+insight: "对于国内用户，本次更新值得升级。新版本将默认模型更新为 Fireworks AI 的 Kimi K2.6，为 agent harness 提供了更前沿的选择。同时，它修复了 MCP 服务器配置同步的关键问题，解决了之前文件监视器可能误清空服务器列表的隐患，这直接提升了配置的稳定性和可靠性。这意味着现有的 prompt 或 hook 配置在升级后会更稳定，不易因配置同步问题而丢失。通过 newapi.lurus.cn 代理使用 Fireworks AI 模型的用户，可以正常获取此次模型更新。"
+tags: [model-update, mcp-fix, configuration, api-endpoint]
+---
+
+- **新增 Fireworks AI 最新无服务器模型**：默认模型更新为 Kimi K2.6，为 agent harness 提供更前沿的模型选择。
+- **修复 MCP 服务器增删流程**：解决文件监视器误清空服务器列表的问题，确保配置更改的持久性与同步可靠性。
+- **统一模型推荐源**：始终使用上游推荐的模型端点，移除功能标志限制，保证所有用户获取一致的模型更新。
+
+---
+
+> 原文 release：[cline/cline v3.88.0](https://github.com/cline/cline/releases/tag/v3.88.0)

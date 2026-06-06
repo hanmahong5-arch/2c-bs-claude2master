@@ -1,0 +1,27 @@
+---
+slug: 2026-06-05-blog-hf-blog-thousand-token-wood-shipping-a-multi-agent-economy
+title: "Thousand Token Wood: shipping a multi-agent economy on — Hugging Face 展示如何在 30 亿参数模型上构建多智能体经济系统，为"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim
+publishedAt: 2026-06-05
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 展示如何在 30 亿参数模型上构建多智能体经济系统，为资源受限场景提供实践范例。"
+tags: [multi-agent-systems, small-language-models, agent-economy, hackathon]
+---
+
+这篇博客分享了 Hugging Face 团队在小型黑客松中，利用仅 30 亿参数的 `Qwen2.5-3B-Instruct` 模型，成功构建并运行一个名为“千木币”的多智能体模拟经济系统的全过程。
+
+*   **核心架构**：系统设计了一个包含伐木工、木匠和商人三种角色的多智能体模拟环境，智能体之间通过结构化消息进行交互，并引入了“千木币”作为经济循环的货币。
+  *对开发者的含义：这证明了即使在小模型上，通过精心设计提示词和交互协议，也能实现复杂的、具备经济行为的智能体协作系统。*
+*   **技术实现**：项目采用 `LiteLLM` 进行模型调用管理，利用 `Pydantic` 实现智能体输出的结构化，并通过 `Arena` 工具进行可视化监控与评估。
+  *对工具链的含义：展示了一个轻量级、可复现的技术栈，为快速构建和评估多智能体应用提供了端到端的参考方案。*
+*   **评估与洞察**：团队通过分析智能体对话、交易日志和资源流动，验证了经济系统的稳定运行，并观察到模型在资源管理和简单规划上表现可靠，但在复杂谈判等场景存在局限。
+  *对 Agent 开发的含义：强调了评估与可观测性在多智能体系统中的关键作用，并为理解小模型的能力边界提供了具体数据。*
+
+---
+
+> 原文：[Thousand Token Wood: shipping a multi-agent economy on a 3B model](https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim) · 作者 Hugging Face

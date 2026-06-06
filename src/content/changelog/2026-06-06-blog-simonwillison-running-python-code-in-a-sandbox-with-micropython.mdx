@@ -1,0 +1,24 @@
+---
+slug: 2026-06-06-blog-simonwillison-running-python-code-in-a-sandbox-with-micropython
+title: "Running Python code in a sandbox with MicroPython and — Simon Willison 分享如何用 MicroPython 和 WASM "
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/
+publishedAt: 2026-06-06
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 分享如何用 MicroPython 和 WASM 构建安全、可控的 Python 代码沙箱，为插件和代理系统提供新思路。"
+tags: [python, webassembly, sandbox, micropython]
+---
+
+博主 Simon Willison 为了解决其开源项目（如 Datasette）中插件系统因拥有完全权限而带来的安全风险，探索并构建了一个基于 MicroPython 和 WebAssembly 的代码沙箱。
+
+*   **核心需求是安全隔离**：他希望插件代码能在受控环境中运行，无法随意访问文件、网络或消耗过量资源。这意味着**开发者可以为用户提供强大的扩展能力，同时将安全风险隔离在沙箱内**。
+*   **选择 WebAssembly 作为基础**：WASM 从设计之初就注重安全隔离，且经过近十年的浏览器环境考验。这表明**WASM 正成为服务端安全执行不可信代码的可靠技术选择**，而不仅仅是前端技术。
+*   **实现持久化会话与主机函数**：通过定制 MicroPython 的 WASM 构建，他实现了跨多次执行的变量保持，并能安全地向沙箱内代码暴露特定的主机功能。这为**构建复杂的、有状态的代理（Agent）或工具链提供了可行的底层执行环境**。
+
+---
+
+> 原文：[Running Python code in a sandbox with MicroPython and WASM](https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/) · 作者 Simon Willison

@@ -1,0 +1,24 @@
+---
+slug: 2026-06-04-blog-hf-blog-designing-the-hf-cli-as-an-agent-optimized
+title: "Designing the hf CLI as an agent-optimized way to work — Hugging Face 如何设计 CLI 工具，使其成为面向 AI 代理优化的"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/hf-cli-for-agents
+publishedAt: 2026-06-04
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 如何设计 CLI 工具，使其成为面向 AI 代理优化的 Hub 交互方式。"
+tags: [command-line-interface, ai-agents, developer-tools, api-design]
+---
+
+本文探讨了 Hugging Face 如何重新设计其命令行界面（CLI），使其更好地服务于 AI 代理（agents），而不仅仅是人类用户。
+
+*   **代理优先的设计哲学**：新的 `hf` CLI 将代理视为一等公民，其 API 输出格式（如 JSON）和错误处理都优先考虑机器的可解析性，而非人类可读性。这意味着工具链和自动化流程可以更可靠地与 Hub 集成。
+*   **结构化与可预测的输出**：CLI 命令提供稳定、结构化的输出（如 JSON），并包含明确的成功/失败状态码。这降低了代理在解析复杂自然语言输出时出错的风险，提高了自动化任务的可靠性。
+*   **简化的身份验证与范围控制**：工具引入了细粒度的访问令牌（scoped tokens），允许代理仅拥有执行特定任务所需的权限。这为开发者集成 Hub 功能到自己的代理或工具链中提供了更安全、更便捷的身份验证模型。
+
+---
+
+> 原文：[Designing the hf CLI as an agent-optimized way to work with the Hub](https://huggingface.co/blog/hf-cli-for-agents) · 作者 Hugging Face

@@ -1,0 +1,24 @@
+---
+slug: 2026-06-05-blog-simonwillison-openai-help-lockdown-mode
+title: "OpenAI Help: Lockdown Mode — OpenAI 推出 Lockdown Mode，通过限制网络请求来防止数据泄露攻"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/
+publishedAt: 2026-06-05
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "OpenAI 推出 Lockdown Mode，通过限制网络请求来防止数据泄露攻击，提升 AI 应用安全性。"
+tags: [security, ai, openai, prompt-injection]
+---
+
+OpenAI 正式推出 Lockdown Mode，旨在防止提示注入攻击的最后阶段——数据外泄。该模式通过限制出站网络请求，切断攻击者窃取敏感数据的途径，但不会阻止提示注入出现在处理内容中。
+
+- **锁定数据外泄途径**：Lockdown Mode 针对“致命三要素”中的外泄向量，采用确定性机制而非易受攻击的 AI 系统评估，从根源上阻断数据被盗风险。这意味着开发者在构建 AI 工具链时，可依赖更底层的安全防护来保障数据安全。
+- **默认设置存在风险**：Lockdown Mode 的存在暗示默认 ChatGPT 设置对顽固的数据外泄攻击防护不足，提醒 agent 开发者在处理敏感数据时需主动启用额外安全措施。
+- **攻击面未完全消除**：提示注入仍可能通过缓存网页内容或上传文件影响响应行为，表明安全需多层防御，开发者应结合内容过滤与网络限制来强化 AI 系统。
+
+---
+
+> 原文：[OpenAI Help: Lockdown Mode](https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/) · 作者 Simon Willison
