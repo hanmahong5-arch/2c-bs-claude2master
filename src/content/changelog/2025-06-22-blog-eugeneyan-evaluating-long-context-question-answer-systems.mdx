@@ -1,0 +1,24 @@
+---
+slug: 2025-06-22-blog-eugeneyan-evaluating-long-context-question-answer-systems
+title: "Evaluating Long-Context Question & Answer Systems — Eugene Yan 详解如何评估长上下文问答系统，涵盖指标、数据集构建与基准测"
+source: "Eugene Yan"
+sourceUrl: https://eugeneyan.com//writing/qa-evals/
+publishedAt: 2025-06-22
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Eugene Yan"
+hook: "Eugene Yan 详解如何评估长上下文问答系统，涵盖指标、数据集构建与基准测试"
+tags: [llm-evaluation, question-answering, benchmarking, long-context]
+---
+
+本文系统性地探讨了评估长上下文问答系统的关键要素。
+
+*   **评估指标的选择至关重要**：作者指出，除了传统的准确率，还应考虑基于检索的指标（如命中率）和基于生成的指标（如 ROUGE、BERTScore），以全面衡量系统在长文档中定位和生成答案的能力。这对开发者意味着需要根据任务目标组合使用多种指标，而非依赖单一标准。
+*   **构建高质量评估数据集的方法**：文章介绍了利用现有长文档数据集、通过众包或 LLM 生成问答对，以及构建对抗性样本（如插入干扰段落）来创建更健壮测试集的具体策略。这提示工具链设计者，评估的可靠性很大程度上取决于数据集的多样性和挑战性。
+*   **系统化评估方法论与基准测试回顾**：作者强调需要标准化的评估流程（如固定上下文长度、多次运行）并回顾了 HotpotQA、NarrativeQA 等现有基准的优缺点。对于 Agent 开发者而言，这意味着在对比不同模型或系统时，必须在公平、可控的实验设置下进行，并理解不同基准的侧重点。
+
+---
+
+> 原文：[Evaluating Long-Context Question & Answer Systems](https://eugeneyan.com//writing/qa-evals/) · 作者 Eugene Yan

@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "slug": "2026-06-07-cline-3-88-1",
+      "zh": true,
+      "en": false
+    },
+    {
+      "slug": "2026-06-07-trending-anthropics-defending-code-reference-harness",
+      "zh": true,
+      "en": false
+    },
+    {
       "slug": "2026-06-06-claude-code-2-1-166",
       "zh": true,
       "en": false
@@ -12,6 +22,11 @@
     },
     {
       "slug": "2026-06-06-blog-latentspace-ainews-not-much-happened-today",
+      "zh": true,
+      "en": true
+    },
+    {
+      "slug": "2026-06-06-blog-raschka-llm-research-papers-the-2026-list-january-to",
       "zh": true,
       "en": true
     },
@@ -34,6 +49,11 @@
       "slug": "2026-06-06-blog-simonwillison-running-python-code-in-a-sandbox-with-micropython",
       "zh": true,
       "en": true
+    },
+    {
+      "slug": "2026-06-06-claude-code-2-1-168",
+      "zh": true,
+      "en": false
     },
     {
       "slug": "2026-06-05-blog-anthropic-news-expanding-project-glasswing",
@@ -379,26 +399,6 @@
       "slug": "2026-06-03-trending-antirez-ds4",
       "zh": true,
       "en": false
-    },
-    {
-      "slug": "2026-06-03-trending-usewhale-deepseek-code-whale",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-03-trending-ercel-labs-zerolang",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-03-trending-nexu-io-html-anything",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-03-blog-latentspace-ainews-microsoft-build-mai-thinking-1-and-mai",
-      "zh": true,
-      "en": true
     }
   ]
 }

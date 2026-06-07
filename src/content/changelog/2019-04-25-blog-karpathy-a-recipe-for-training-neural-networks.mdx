@@ -1,0 +1,24 @@
+---
+slug: 2019-04-25-blog-karpathy-a-recipe-for-training-neural-networks
+title: "A Recipe for Training Neural Networks — Andrej Karpathy 分享神经网络训练的系统化避坑指南，从数据到模型逐"
+source: "Andrej Karpathy"
+sourceUrl: http://karpathy.github.io/2019/04/25/recipe/
+publishedAt: 2019-04-25
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Andrej Karpathy"
+hook: "Andrej Karpathy 分享神经网络训练的系统化避坑指南，从数据到模型逐步验证，避免无声失败。"
+tags: [neural-networks, training-recipe, machine-learning, debugging]
+---
+
+文章指出神经网络训练存在两大陷阱：一是其抽象存在漏洞，并非即插即用；二是训练失败往往是静默的，没有明确报错。为此，作者提出了一套循序渐进的训练“配方”。
+
+*   **陷阱一：神经网络是“有漏洞的抽象”**。框架的简洁 API 容易让人误以为训练是即插即用的，但一旦偏离标准任务（如 ImageNet 分类），就需要深入理解底层原理。这意味着开发者和研究者不能仅依赖高级接口，必须扎实掌握模型与优化器的工作原理。
+*   **陷阱二：神经网络训练会“静默失败”**。代码可能语法正确但逻辑错误（如数据增强时标签未同步翻转），导致模型性能悄然下降而非直接崩溃。这要求开发流程必须包含细致的假设验证和可视化检查，不能依赖快速试错。
+*   **核心配方：从数据开始，逐步建立信任**。作者强调训练前应花费数小时人工检查数据分布、寻找重复或损坏样本。随后，先用一个极简模型（如线性分类器）建立端到端的训练/评估框架，确保基础流程正确，再逐步增加复杂度。这为构建可靠的工具链和开发流程提供了系统化蓝图。
+
+---
+
+> 原文：[A Recipe for Training Neural Networks](http://karpathy.github.io/2019/04/25/recipe/) · 作者 Andrej Karpathy

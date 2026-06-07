@@ -1,9 +1,9 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.167",
+    "anthropics/claude-code": "v2.1.168",
     "openai/codex": "rust-v0.137.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v3.88.0",
+    "cline/cline": "v3.88.1",
     "block/goose": "v1.37.0",
     "sst/opencode": "v1.16.2",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -32,7 +32,8 @@
     "vedika-io/xalen-ephemeris",
     "unicity-astrid/sdk-js",
     "simplifaisoul/osiris",
-    "tastyeffectco/sandboxes"
+    "tastyeffectco/sandboxes",
+    "anthropics/defending-code-reference-harness"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -66,7 +67,7 @@
     "openai-codex-blog": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-06",
+    "anthropic-engineering": "2026-06-07",
     "claude-code-docs": "2026-06-04",
     "openai-codex-blog": "2026-06-04"
   },
@@ -107,7 +108,10 @@
       "https://www.latent.space/p/bad-envs",
       "https://www.latent.space/p/ainews-not-much-happened-today-7a8",
       "https://www.latent.space/p/video-agents",
-      "https://www.latent.space/p/ainews-founders-and-forward-deployed"
+      "https://www.latent.space/p/ainews-founders-and-forward-deployed",
+      "https://www.latent.space/p/ainews-anthropic-raises-965b-series",
+      "https://www.latent.space/p/cognition",
+      "https://www.latent.space/p/ainews-cognition-raises-1b-in-26b"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -121,19 +125,37 @@
       "https://www.interconnects.ai/p/my-bets-on-open-models-mid-2026",
       "https://www.interconnects.ai/p/what-ive-been-building-atom-report",
       "https://www.interconnects.ai/p/the-inevitable-need-for-an-open-model",
-      "https://www.interconnects.ai/p/claude-mythos-and-misguided-open"
+      "https://www.interconnects.ai/p/claude-mythos-and-misguided-open",
+      "https://www.interconnects.ai/p/gemma-4-and-what-makes-an-open-model",
+      "https://www.interconnects.ai/p/latest-open-artifacts-20-new-orgs",
+      "https://www.interconnects.ai/p/lossy-self-improvement"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
-      "http://karpathy.github.io/2022/03/14/lecun1989/"
+      "http://karpathy.github.io/2022/03/14/lecun1989/",
+      "http://karpathy.github.io/2021/06/21/blockchain/",
+      "http://karpathy.github.io/2021/03/27/forward-pass/",
+      "http://karpathy.github.io/2020/06/11/biohacking-lite/",
+      "http://karpathy.github.io/2019/04/25/recipe/",
+      "http://karpathy.github.io/2018/01/20/medium/"
     ],
     "raschka": [
       "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
-      "https://magazine.sebastianraschka.com/p/workflow-for-understanding-llms"
+      "https://magazine.sebastianraschka.com/p/workflow-for-understanding-llms",
+      "https://magazine.sebastianraschka.com/p/llm-research-papers-2026-part1",
+      "https://magazine.sebastianraschka.com/p/components-of-a-coding-agent",
+      "https://magazine.sebastianraschka.com/p/visual-attention-variants",
+      "https://magazine.sebastianraschka.com/p/a-dream-of-spring-for-open-weight",
+      "https://magazine.sebastianraschka.com/p/categories-of-inference-time-scaling"
     ],
     "eugeneyan": [
       "https://eugeneyan.com//writing/working-with-ai/",
-      "https://eugeneyan.com//writing/2025-review/"
+      "https://eugeneyan.com//writing/2025-review/",
+      "https://eugeneyan.com//writing/product-evals/",
+      "https://eugeneyan.com//writing/principal/",
+      "https://eugeneyan.com//writing/semantic-ids/",
+      "https://eugeneyan.com//writing/qa-evals/",
+      "https://eugeneyan.com//speaking/aie-2025/"
     ],
     "chiphuyen": [
       "https://huyenchip.com//2025/01/16/ai-engineering-pitfalls.html",
@@ -168,7 +190,10 @@
       "https://openai.com/index/codex-for-every-role-tool-workflow",
       "https://openai.com/index/advancing-youth-safety-and-opportunity-through-global-leadership",
       "https://openai.com/index/codex-for-knowledge-work",
-      "https://openai.com/index/our-views-on-ai-policy-and-political-advocacy"
+      "https://openai.com/index/our-views-on-ai-policy-and-political-advocacy",
+      "https://openai.com/index/stargate-michigan-data-center",
+      "https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws",
+      "https://openai.com/index/boston-childrens-hospital"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -200,21 +225,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-06",
+    "simonwillison": "2026-06-07",
     "lilianweng": "2026-06-04",
-    "latentspace": "2026-06-06",
-    "interconnects": "2026-06-06",
-    "karpathy": "2026-06-04",
-    "raschka": "2026-06-04",
-    "eugeneyan": "2026-06-04",
+    "latentspace": "2026-06-07",
+    "interconnects": "2026-06-07",
+    "karpathy": "2026-06-07",
+    "raschka": "2026-06-07",
+    "eugeneyan": "2026-06-07",
     "chiphuyen": "2026-06-04",
     "oneusefulthing": "2026-06-06",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-06",
+    "openai-news": "2026-06-07",
     "deepmind": "2026-06-06",
     "hf-blog": "2026-06-06",
-    "anthropic-news": "2026-06-06"
+    "anthropic-news": "2026-06-07"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

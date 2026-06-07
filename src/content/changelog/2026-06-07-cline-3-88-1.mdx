@@ -1,0 +1,22 @@
+---
+slug: 2026-06-07-cline-3-88-1
+title: "cline v3.88.1 — 为测试者新增调试面板，并修复首次运行引导加载问题。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v3.88.1
+publishedAt: 2026-06-07
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "为测试者新增调试面板，并修复首次运行引导加载问题。"
+insight: "对于国内用户，本次更新主要面向测试人员，普通用户无需立即升级。新增的调试面板仅对测试者开放，不影响现有 prompt 或 hook 配置。首次运行引导加载问题的修复提升了新用户的上手体验，但现有用户的功能使用不受影响。通过 newapi.lurus.cn 代理访问的用户可以正常升级，不会因本次更新产生额外配置变更或兼容性问题。"
+tags: [debug, first-run, vscode-extension, bug-fix]
+---
+
+- **新增调试面板**：在设置中为 Cline 测试人员添加了调试部分，便于问题诊断和反馈。
+- **修复引导加载**：将演练 Markdown 文件包含在 VS Code 扩展包中，确保首次运行时的引导步骤正确加载。
+- **提升用户体验**：通过修复引导加载问题，增强了新用户的上手体验和产品稳定性。
+
+---
+
+> 原文 release：[cline/cline v3.88.1](https://github.com/cline/cline/releases/tag/v3.88.1)

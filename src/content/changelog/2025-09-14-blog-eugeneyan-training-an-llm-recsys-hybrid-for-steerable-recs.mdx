@@ -1,0 +1,24 @@
+---
+slug: 2025-09-14-blog-eugeneyan-training-an-llm-recsys-hybrid-for-steerable-recs
+title: "Training an LLM-RecSys Hybrid for Steerable Recs with — 用语义ID训练LLM"
+source: "Eugene Yan"
+sourceUrl: https://eugeneyan.com//writing/semantic-ids/
+publishedAt: 2025-09-14
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Eugene Yan"
+hook: "用语义ID训练LLM-推荐系统混合模型，实现无需检索的可控推荐"
+tags: [llm-recsys, semantic-ids, recommendation-systems, language-models]
+---
+
+本文探讨了如何训练一个能同时理解自然语言和语义ID的LLM，使其无需依赖传统检索系统就能生成推荐。
+
+* **语义ID作为物品的紧凑表示**：将物品编码为简短、有序的字符串（如“A1B2”），使LLM能直接处理ID序列，无需额外工具。
+* **LLM学习ID与描述的映射**：模型通过训练理解语义ID对应的物品特征（如“科幻电影”），实现基于ID的推荐推理。
+* **混合模型支持自然语言引导**：用户可用自然语言（如“推荐轻松喜剧”）与模型交互，模型结合语义ID库生成个性化推荐。
+
+---
+
+> 原文：[Training an LLM-RecSys Hybrid for Steerable Recs with Semantic IDs](https://eugeneyan.com//writing/semantic-ids/) · 作者 Eugene Yan

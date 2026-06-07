@@ -1,0 +1,24 @@
+---
+slug: 2021-06-21-blog-karpathy-a-from-scratch-tour-of-bitcoin-in-python
+title: "A from-scratch tour of Bitcoin in Python — Andrej Karpathy 用纯 Python 从零实现比特币交易，揭示区块"
+source: "Andrej Karpathy"
+sourceUrl: http://karpathy.github.io/2021/06/21/blockchain/
+publishedAt: 2021-06-21
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Andrej Karpathy"
+hook: "Andrej Karpathy 用纯 Python 从零实现比特币交易，揭示区块链作为‘开源+状态’新范式的魅力。"
+tags: [bitcoin, blockchain, python, cryptography]
+---
+
+本文是 Andrej Karpathy 对 Bitcoin 核心机制的一次动手探索。他通过纯 Python 实现，从生成密钥到广播交易，完整揭示了比特币如何作为‘开源+状态’的新计算范式运作。
+
+*   **从椭圆曲线密码学生成密钥对**：文章详细展示了如何使用 secp256k1 曲线生成私钥和公钥，并实现了椭圆曲线点加法。这对 agent 开发者意味着，理解加密原语是构建安全去中心化应用的基础。
+*   **交易构建与数字签名**：Karpathy 逐步实现了交易的创建和 ECDSA 签名过程，阐明了比特币如何在没有中心机构的情况下验证所有权。这向工具链开发者表明，可靠的签名机制是信任机器得以运行的关键。
+*   **理解“价值表示”**：通过代码，他直观解释了比特币 UTXO 模型如何表示和转移价值，而非简单记账。这对所有开发者而言，是理解区块链如何扩展开源软件、引入共享状态这一核心创新的关键。
+
+---
+
+> 原文：[A from-scratch tour of Bitcoin in Python](http://karpathy.github.io/2021/06/21/blockchain/) · 作者 Andrej Karpathy
