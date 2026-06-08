@@ -1,6 +1,105 @@
 {
   "items": [
     {
+      "slug": "2026-06-08-blog-anthropic-news-an-update-on-our-election-safeguards",
+      "zh": true,
+      "en": true,
+      "title": "An update on our election safeguards — Anthropic 详解其 AI 模型 Claude 如何通过多重技术手段，在全",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-08-blog-anthropic-news-anthropic-appoints-kiyoung-choi-as-representative-director-of",
+      "zh": true,
+      "en": true,
+      "title": "Anthropic appoints KiYoung Choi as Representative — Anthropic 任命韩国区代表董事，揭示 Claude 在韩国的强劲增长与本",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-08-blog-anthropic-news-anthropic-opens-milan-office-to-support-italian-enterprise",
+      "zh": true,
+      "en": true,
+      "title": "Anthropic opens Milan office to support Italian — Anthropic 在米兰开设新办公室，支持意大利企业与开发者安全采用 Clau",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-08-blog-anthropic-news-anthropic-raises-65b-in-series-h-funding-at",
+      "zh": true,
+      "en": true,
+      "title": "Anthropic raises $65B in Series H funding at $965B — Anthropic 完成 650 亿美元 H 轮融资，估值近万亿，揭示 AI 企",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-08-blog-anthropic-news-widening-the-conversation-on-frontier-ai",
+      "zh": true,
+      "en": true,
+      "title": "Widening the conversation on frontier AI — Anthropic 如何通过与多元智慧传统对话，塑造 Claude 的道德品格与",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-08-trending-msitarzewski-brew-browser",
+      "zh": true,
+      "en": false,
+      "title": "brew-browser — 为 macOS 包管理器 Homebrew 提供原生 GUI 界面的 Rust ",
+      "kind": "trending",
+      "author": null,
+      "source": "msitarzewski/brew-browser",
+      "tool": null,
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-08-trending-tastyeffectco-sandboxd",
+      "zh": true,
+      "en": false,
+      "title": "sandboxd — Go 语言自托管开发沙盒，一键生成预览 URL，无需 Kubernetes",
+      "kind": "trending",
+      "author": null,
+      "source": "tastyeffectco/sandboxd",
+      "tool": null,
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-07-blog-hf-blog-amazing-digital-dentures-a-failed-project",
+      "zh": true,
+      "en": true,
+      "title": "Amazing Digital Dentures (a failed project) — Hugging Face 分享一个失败项目，揭示 AI 开发中常见陷阱与实用教训",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
+      "slug": "2026-06-07-blog-simonwillison-datasette-agent-edit-0-1a0",
+      "zh": true,
+      "en": true,
+      "title": "datasette-agent-edit 0.1a0 — Simon Willison 发布 Datasette Agent 文本编辑基础",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-07"
+    },
+    {
       "slug": "2026-06-07-cline-3-88-1",
       "zh": true,
       "en": false,
@@ -778,105 +877,6 @@
       "kind": "trending",
       "author": null,
       "source": "BigPizzaV3/CodexPlusPlus",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-chojs23-concord",
-      "zh": true,
-      "en": false,
-      "title": "concord — Rust 编写的 Discord 功能丰富 TUI 客户端，轻量高效",
-      "kind": "trending",
-      "author": null,
-      "source": "chojs23/concord",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-deeplethe-forkd",
-      "zh": true,
-      "en": false,
-      "title": "forkd — AI 代理微虚拟机快速分支工具，支持毫秒级创建隔离子进程",
-      "kind": "trending",
-      "author": null,
-      "source": "deeplethe/forkd",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-ercel-labs-zerolang",
-      "zh": true,
-      "en": false,
-      "title": "zerolang — Vercel 开源专为 AI Agent 设计的编程语言 ZeroLang",
-      "kind": "trending",
-      "author": null,
-      "source": "vercel-labs/zerolang",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-gi-dellav-zerostack",
-      "zh": true,
-      "en": false,
-      "title": "zerostack — Rust 编写的极简代码生成代理，专注内存与性能优化",
-      "kind": "trending",
-      "author": null,
-      "source": "gi-dellav/zerostack",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-helvesec-rmux",
-      "zh": true,
-      "en": false,
-      "title": "rmux — Rust 通用多路复用器，用代码驱动 CLI/TUI 应用",
-      "kind": "trending",
-      "author": null,
-      "source": "Helvesec/rmux",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-matinsenpai-senpaiscanner",
-      "zh": true,
-      "en": false,
-      "title": "SenPaiScanner — 轻量级 Cloudflare IP 扫描器，快速筛选可用节点",
-      "kind": "trending",
-      "author": null,
-      "source": "MatinSenPai/SenPaiScanner",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-microsoft-coreutils",
-      "zh": true,
-      "en": false,
-      "title": "coreutils — 微软开源 Windows 版 GNU Coreutils，提供原生安装包",
-      "kind": "trending",
-      "author": null,
-      "source": "microsoft/coreutils",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-microsoft-skillopt",
-      "zh": true,
-      "en": false,
-      "title": "SkillOpt — 微软开源文本空间优化器，为冻结LLM智能体训练可复用自然语言技能",
-      "kind": "trending",
-      "author": null,
-      "source": "microsoft/SkillOpt",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-nexu-io-html-anything",
-      "zh": true,
-      "en": false,
-      "title": "html-anything — AI 驱动的 HTML 编辑器，本地 AI 代理编写 HTML，用户直接发布",
-      "kind": "trending",
-      "author": null,
-      "source": "nexu-io/html-anything",
       "tool": null,
       "publishedAt": "2026-06-03"
     }
