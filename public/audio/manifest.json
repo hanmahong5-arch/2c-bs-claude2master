@@ -3,402 +3,882 @@
     {
       "slug": "2026-06-07-cline-3-88-1",
       "zh": true,
-      "en": false
+      "en": false,
+      "title": "cline v3.88.1 — 为测试者新增调试面板，并修复首次运行引导加载问题。",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-07"
     },
     {
       "slug": "2026-06-07-trending-anthropics-defending-code-reference-harness",
       "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-06-claude-code-2-1-166",
-      "zh": true,
-      "en": false
+      "en": false,
+      "title": "defending-code-reference-harness — Anthropic 开源威胁建模与代码扫描框架，提供自动化安全防护工具链",
+      "kind": "trending",
+      "author": null,
+      "source": "anthropics/defending-code-reference-harness",
+      "tool": null,
+      "publishedAt": "2026-06-07"
     },
     {
       "slug": "2026-06-06-blog-anthropic-news-anthropic-co-founder-chris-olah-s-remarks-on",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "Anthropic co-founder Chris Olah's remarks on Pope Leo — Anthropic 联合创始人阐述 AI 伦理三大挑战，呼吁全球跨领域对话与监督",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-06"
     },
     {
       "slug": "2026-06-06-blog-latentspace-ainews-not-much-happened-today",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "[AINews] not much happened today — Latent Space 梳理 AI 领域最新动态：从模型发布、智能体评估到基础",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-06"
     },
     {
       "slug": "2026-06-06-blog-raschka-llm-research-papers-the-2026-list-january-to",
       "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-06-trending-tastyeffectco-sandboxes",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-06-claude-code-2-1-167",
-      "zh": true,
-      "en": false
+      "en": true,
+      "title": "LLM Research Papers: The 2026 List (January to May) — Sebastian Raschka 分享其 2026 年前五个月精选的 LLM ",
+      "kind": "blogger",
+      "author": "Sebastian Raschka",
+      "source": "Sebastian Raschka",
+      "tool": null,
+      "publishedAt": "2026-06-06"
     },
     {
       "slug": "2026-06-06-blog-simonwillison-micropython-wasm-0-1a2",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "micropython-wasm 0.1a2 — Simon Willison 发布 micropython",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-06"
     },
     {
       "slug": "2026-06-06-blog-simonwillison-running-python-code-in-a-sandbox-with-micropython",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "Running Python code in a sandbox with MicroPython and — Simon Willison 分享如何用 MicroPython 和 WASM ",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-06"
+    },
+    {
+      "slug": "2026-06-06-claude-code-2-1-166",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.166 — 新增模型降级重试与跨会话权限隔离，提升代理系统稳定性与安全性",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-06"
+    },
+    {
+      "slug": "2026-06-06-claude-code-2-1-167",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.167 — 修复了已知错误并提升了系统可靠性，确保更稳定的开发体验。",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-06"
     },
     {
       "slug": "2026-06-06-claude-code-2-1-168",
       "zh": true,
-      "en": false
+      "en": false,
+      "title": "claude-code v2.1.168 — 修复关键错误并提升系统可靠性，确保代码助手稳定运行",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-06"
     },
     {
-      "slug": "2026-06-05-blog-anthropic-news-expanding-project-glasswing",
+      "slug": "2026-06-06-trending-tastyeffectco-sandboxes",
       "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-05-blog-anthropic-news-claude-is-a-space-to-think-anthropic",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-05-blog-anthropic-news-introducing-the-services-track-and-partner-hub-of",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-05-blog-simonwillison-openai-help-lockdown-mode",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-05-opencode-1-16-2",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-05-blog-simonwillison-quoting-andreas-kling",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-05-blog-anthropic-news-what-we-learned-mapping-a-year-s-worth",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-05-blog-hf-blog-thousand-token-wood-shipping-a-multi-agent-economy",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-05-cline-cli-v3-0-20",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-05-blog-latentspace-ainews-not-much-happened-today",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-05-opencode-1-16-0",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-05-trending-simplifaisoul-osiris",
-      "zh": true,
-      "en": false
+      "en": false,
+      "title": "sandboxes — 自托管开发沙盒，一键部署预览环境，无需 Kubernetes",
+      "kind": "trending",
+      "author": null,
+      "source": "tastyeffectco/sandboxes",
+      "tool": null,
+      "publishedAt": "2026-06-06"
     },
     {
       "slug": "2026-06-05-blog-anthropic-news-anthropic-confidentially-submits-draft-s-1-to-the",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "Anthropic confidentially submits draft S-1 to the SEC — Anthropic 秘密提交 IPO 草案，AI 巨头迈向公开市场关键一步",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-05"
     },
     {
-      "slug": "2026-06-05-gemini-cli-0-45-2",
+      "slug": "2026-06-05-blog-anthropic-news-claude-is-a-space-to-think-anthropic",
       "zh": true,
-      "en": false
+      "en": true,
+      "title": "Claude is a space to think | Anthropic — Anthropic 宣布 Claude 将永久保持无广告，以维护其作为深度思考与",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-05"
     },
     {
-      "slug": "2026-06-05-cline-3-88-0",
+      "slug": "2026-06-05-blog-anthropic-news-expanding-project-glasswing",
       "zh": true,
-      "en": false
+      "en": true,
+      "title": "Expanding Project Glasswing — Anthropic 扩大 Glasswing 项目，用 AI 模型为关键软件基础",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-05"
     },
     {
-      "slug": "2026-06-05-trending-unicity-astrid-sdk-js",
+      "slug": "2026-06-05-blog-anthropic-news-introducing-the-services-track-and-partner-hub-of",
       "zh": true,
-      "en": false
+      "en": true,
+      "title": "Introducing the Services Track and Partner Hub of the — Anthropic推出Claude合作伙伴网络服务分级与门户，为企业规模化部署A",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-05"
+    },
+    {
+      "slug": "2026-06-05-blog-anthropic-news-what-we-learned-mapping-a-year-s-worth",
+      "zh": true,
+      "en": true,
+      "title": "What we learned mapping a year’s worth of AI-enabled — Anthropic 分析一年内 AI 驱动的网络威胁，揭示攻击者如何用 AI 深",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-05"
+    },
+    {
+      "slug": "2026-06-05-blog-hf-blog-thousand-token-wood-shipping-a-multi-agent-economy",
+      "zh": true,
+      "en": true,
+      "title": "Thousand Token Wood: shipping a multi-agent economy on — Hugging Face 展示如何在 30 亿参数模型上构建多智能体经济系统，为",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-05"
+    },
+    {
+      "slug": "2026-06-05-blog-latentspace-ainews-not-much-happened-today",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] not much happened today — AI 领域看似平静的一天，实则暗流涌动：从 NVIDIA 的开放模型到 Anth",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-05"
     },
     {
       "slug": "2026-06-05-blog-latentspace-how-to-stop-shipping-low-quality-rl-environments",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "How to Stop Shipping Low-Quality RL Environments (with — RL 环境质量差如何毒害模型训练，从业者总结常见陷阱与修复方法",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-05"
+    },
+    {
+      "slug": "2026-06-05-blog-simonwillison-openai-help-lockdown-mode",
+      "zh": true,
+      "en": true,
+      "title": "OpenAI Help: Lockdown Mode — OpenAI 推出 Lockdown Mode，通过限制网络请求来防止数据泄露攻",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-05"
+    },
+    {
+      "slug": "2026-06-05-blog-simonwillison-quoting-andreas-kling",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Andreas Kling — Ladybird浏览器项目因AI生成代码泛滥，宣布不再接受公开PR，引发开源社区",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-05"
     },
     {
       "slug": "2026-06-05-claude-code-2-1-165",
       "zh": true,
-      "en": false
+      "en": false,
+      "title": "claude-code v2.1.165 — 修复关键错误并提升系统可靠性，确保代理测试流程更稳定。",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-05"
     },
     {
-      "slug": "2026-06-04-blog-hf-blog-designing-the-hf-cli-as-an-agent-optimized",
+      "slug": "2026-06-05-cline-3-88-0",
       "zh": true,
-      "en": true
+      "en": false,
+      "title": "cline v3.88.0 — 更新 Fireworks AI 模型并修复 MCP 服务器配置同步问题，提升模型",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-05"
     },
     {
-      "slug": "2026-06-04-blog-latentspace-reality-the-final-eval-lukas-petersson-and-axel",
+      "slug": "2026-06-05-cline-cli-v3-0-20",
       "zh": true,
-      "en": true
+      "en": false,
+      "title": "cline cli-v3.0.20 — 插件包装器命名更透明，便于识别已安装插件来源",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-05"
     },
     {
-      "slug": "2026-06-04-codex-rust-v0-137-0",
+      "slug": "2026-06-05-gemini-cli-0-45-2",
       "zh": true,
-      "en": false
+      "en": false,
+      "title": "gemini-cli v0.45.2 — 紧急修复版本，针对 v0.45.1 的关键补丁，确保稳定性。",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-06-05"
     },
     {
-      "slug": "2026-06-04-cline-cli-v3-0-17",
+      "slug": "2026-06-05-opencode-1-16-0",
       "zh": true,
-      "en": false
+      "en": false,
+      "title": "opencode v1.16.0 — OpenCode v1.16.0 增强会话管理与模型支持，提升开发体验",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-06-05"
     },
     {
-      "slug": "2026-06-04-trending-vedika-io-xalen-ephemeris",
+      "slug": "2026-06-05-opencode-1-16-2",
       "zh": true,
-      "en": false
+      "en": false,
+      "title": "opencode v1.16.2 — 修复推理摘要兼容性，支持后台运行子代理，提升多服务器桌面体验",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-06-05"
     },
     {
-      "slug": "2026-06-04-blog-hf-blog-nemotron-3-5-content-safety-customizable-multimodal-safety",
+      "slug": "2026-06-05-trending-simplifaisoul-osiris",
       "zh": true,
-      "en": true
+      "en": false,
+      "title": "osiris — 开源全球情报平台，实时 OSINT 仪表盘，提供 Palantir 的替代方案",
+      "kind": "trending",
+      "author": null,
+      "source": "simplifaisoul/osiris",
+      "tool": null,
+      "publishedAt": "2026-06-05"
     },
     {
-      "slug": "2026-06-04-blog-openai-news-how-endava-is-redesigning-software-delivery-around-ai",
+      "slug": "2026-06-05-trending-unicity-astrid-sdk-js",
       "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-04-blog-simonwillison-ai-enthusiasts-are-in-a-race-against-time",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-04-cline-cli-v3-0-18",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-04-gemini-cli-0-45-1",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-04-claude-code-2-1-163",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-04-blog-oneusefulthing-co-existence-and-the-end-of-co-intelligence",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-04-blog-openai-news-biodefense-in-the-intelligence-age",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-04-blog-anthropic-news-introducing-claude-opus-4-8",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-04-blog-simonwillison-quoting-emanuel-maiberg-404-media",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-04-blog-latentspace-ainews-reve-2-and-ideogram-4-layouts-in",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-04-cline-cli-v3-0-19",
-      "zh": true,
-      "en": false
+      "en": false,
+      "title": "sdk-js — Astrid OS 的 JavaScript/TypeScript SDK，用于",
+      "kind": "trending",
+      "author": null,
+      "source": "unicity-astrid/sdk-js",
+      "tool": null,
+      "publishedAt": "2026-06-05"
     },
     {
       "slug": "2026-06-04-blog-anthropic-news-introducing-claude-design-by-anthropic-labs",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "Introducing Claude Design by Anthropic Labs — Anthropic推出Claude Design，让AI协作完成专业视觉设计，大",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-04-blog-openai-news-dreaming-better-memory-for-a-more-helpful-chatgpt",
+      "slug": "2026-06-04-blog-anthropic-news-introducing-claude-opus-4-8",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "Introducing Claude Opus 4.8 — Anthropic 发布 Claude Opus 4.8，在推理、诚实度和代理任",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-04"
+    },
+    {
+      "slug": "2026-06-04-blog-hf-blog-designing-the-hf-cli-as-an-agent-optimized",
+      "zh": true,
+      "en": true,
+      "title": "Designing the hf CLI as an agent-optimized way to work — Hugging Face 如何设计 CLI 工具，使其成为面向 AI 代理优化的",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
       "slug": "2026-06-04-blog-hf-blog-eva-bench-data-2-0-3-domains-121",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "EVA-Bench Data 2.0: 3 Domains, 121 Tools, 213 Scenarios — Hugging Face 发布 EVA",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-trending-aprilnea-openlogi",
+      "slug": "2026-06-04-blog-hf-blog-nemotron-3-5-content-safety-customizable-multimodal-safety",
       "zh": true,
-      "en": false
+      "en": true,
+      "title": "Nemotron 3.5 Content Safety: Customizable Multimodal — NVIDIA 推出 Nemotron 3.5 内容安全模型，为企业 AI 提供可",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-blog-simonwillison-uber-caps-usage-of-ai-tools-like-claude",
+      "slug": "2026-06-04-blog-latentspace-ainews-reve-2-and-ideogram-4-layouts-in",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "[AINews] Reve 2 and Ideogram 4: Layouts in Imagegen — AI 图像生成迎来布局突破，Reve 2 与 Ideogram 4.0 同日发布",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-trending-nianzhibai-91",
+      "slug": "2026-06-04-blog-latentspace-reality-the-final-eval-lukas-petersson-and-axel",
       "zh": true,
-      "en": false
+      "en": true,
+      "title": "Reality: The Final Eval — Lukas Petersson and Axel — Andon Labs 用自动售货机等真实商业场景测试 AI 代理，揭示传统基准无",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-trending-chojs23-concord",
+      "slug": "2026-06-04-blog-oneusefulthing-co-existence-and-the-end-of-co-intelligence",
       "zh": true,
-      "en": false
+      "en": true,
+      "title": "Co-Existence and the End of Co-Intelligence — AI 从协作伙伴变为独立代理，人类如何与时而超越自己的 AI 共存？",
+      "kind": "blogger",
+      "author": "Ethan Mollick",
+      "source": "Ethan Mollick",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-trending-helvesec-rmux",
+      "slug": "2026-06-04-blog-openai-news-biodefense-in-the-intelligence-age",
       "zh": true,
-      "en": false
+      "en": true,
+      "title": "Biodefense in the Intelligence Age — OpenAI 提出 AI 增强生物防御的行动计划，探讨如何利用 AI 技术应对生",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-trending-matinsenpai-senpaiscanner",
+      "slug": "2026-06-04-blog-openai-news-dreaming-better-memory-for-a-more-helpful-chatgpt",
       "zh": true,
-      "en": false
+      "en": true,
+      "title": "Dreaming: Better memory for a more helpful ChatGPT — ChatGPT 推出记忆系统，能记住用户偏好，让对话更连贯、个性化。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-trending-gi-dellav-zerostack",
+      "slug": "2026-06-04-blog-openai-news-how-endava-is-redesigning-software-delivery-around-ai",
       "zh": true,
-      "en": false
+      "en": true,
+      "title": "How Endava is redesigning software delivery around AI — Endava 如何围绕 AI 智能体重构软件交付流程，实现自动化与效率提升",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-blog-openai-news-introducing-new-capabilities-to-gpt-rosalind",
+      "slug": "2026-06-04-blog-simonwillison-ai-enthusiasts-are-in-a-race-against-time",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "AI enthusiasts are in a race against time, AI skeptics — AI 狂热者与怀疑者间的现实鸿沟：为何双方都对，又都面临生存威胁？",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-blog-hf-blog-direct-preference-optimization-beyond-chatbots",
+      "slug": "2026-06-04-blog-simonwillison-quoting-emanuel-maiberg-404-media",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "Quoting Emanuel Maiberg, 404 Media — Google 内部 AI 备忘录风波：为何撤回‘人类在环’关键承诺？",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-gemini-cli-0-45-0",
+      "slug": "2026-06-04-claude-code-2-1-163",
       "zh": true,
-      "en": false
+      "en": false,
+      "title": "claude-code v2.1.163 — Claude Code 新增版本范围管控与插件列表命令，提升安全与可管理性",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-cline-3-87-0",
+      "slug": "2026-06-04-cline-cli-v3-0-17",
       "zh": true,
-      "en": false
+      "en": false,
+      "title": "cline cli-v3.0.17 — 修复 CLI 会话恢复、Hub 关闭竞争和运行时中止问题，提升稳定性",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-trending-b-nnett-goose",
+      "slug": "2026-06-04-cline-cli-v3-0-18",
       "zh": true,
-      "en": false
+      "en": false,
+      "title": "cline cli-v3.0.18 — 修复 Slack 线程回复与任务取消指示，同步 AI 模型目录并强制更新 SDK",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-goose-1-37-0",
+      "slug": "2026-06-04-cline-cli-v3-0-19",
       "zh": true,
-      "en": false
+      "en": false,
+      "title": "cline cli-v3.0.19 — 修复 CLI 自动更新机制，确保更新可靠且保留安装渠道",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-blog-openai-news-how-wasmer-used-codex-to-build-a-node",
+      "slug": "2026-06-04-codex-rust-v0-137-0",
       "zh": true,
-      "en": true
+      "en": false,
+      "title": "codex rust-v0.137.0 — 多智能体运行时选择与插件管理增强，提升企业级部署与开发体验",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-blog-openai-news-openai-public-policy-agenda",
+      "slug": "2026-06-04-gemini-cli-0-45-1",
       "zh": true,
-      "en": true
+      "en": false,
+      "title": "gemini-cli v0.45.1 — 紧急修复版本，确保 gemini",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-06-04"
     },
     {
-      "slug": "2026-06-03-blog-openai-news-a-blueprint-for-democratic-governance-of-frontier-ai",
+      "slug": "2026-06-04-trending-vedika-io-xalen-ephemeris",
       "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-claude-code-2-1-162",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-03-trending-alibaba-open-code-review",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-03-blog-thezvi-trump-signs-executive-order-for-ai-testing-prior",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-trending-agent-substrate-substrate",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-03-blog-latentspace-scaling-past-informal-ai-carina-hong-axiom-math",
-      "zh": true,
-      "en": true
-    },
-    {
-      "slug": "2026-06-03-trending-deeplethe-forkd",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-03-trending-pewdiepie-archdaemon-odysseus",
-      "zh": true,
-      "en": false
+      "en": false,
+      "title": "xalen-ephemeris — 纯 Rust 实现的多传统占星天文星历库",
+      "kind": "trending",
+      "author": null,
+      "source": "vedika-io/xalen-ephemeris",
+      "tool": null,
+      "publishedAt": "2026-06-04"
     },
     {
       "slug": "2026-06-03-blog-hf-blog-adding-mcp-tools-to-reachy-mini",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "Adding MCP Tools to Reachy Mini — Hugging Face 团队为 Reachy Mini 机器人添加 MCP 工",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-03"
     },
     {
-      "slug": "2026-06-03-trending-perplexityai-bumblebee",
+      "slug": "2026-06-03-blog-hf-blog-direct-preference-optimization-beyond-chatbots",
       "zh": true,
-      "en": false
+      "en": true,
+      "title": "Direct Preference Optimization Beyond Chatbots — DPO 技术如何超越聊天机器人，革新 AI 对齐与模型微调",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-03"
     },
     {
-      "slug": "2026-06-03-trending-microsoft-skillopt",
+      "slug": "2026-06-03-blog-latentspace-ainews-microsoft-build-mai-thinking-1-and-mai",
       "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-03-trending-microsoft-coreutils",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-03-trending-bigpizzav3-codexplusplus",
-      "zh": true,
-      "en": false
-    },
-    {
-      "slug": "2026-06-03-cline-cli-v3-0-16",
-      "zh": true,
-      "en": false
+      "en": true,
+      "title": "[AINews] Microsoft Build: MAI-Thinking-1 and MAI Family — 微软在Build大会上发布全新MAI模型家族，并罕见地公开了详细技术报告，展示了",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-03"
     },
     {
       "slug": "2026-06-03-blog-latentspace-satya-nadella-no-priors-x-latent-space-crossover",
       "zh": true,
-      "en": true
+      "en": true,
+      "title": "⚡️Satya Nadella: No Priors x Latent Space Crossover — 微软CEO萨提亚·纳德拉分享AI平台战略：企业如何利用微软生态创造超越平台自身的",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-blog-latentspace-scaling-past-informal-ai-carina-hong-axiom-math",
+      "zh": true,
+      "en": true,
+      "title": "🔬Scaling Past Informal AI - Carina Hong, Axiom Math — Axiom 创始人谈 AI 数学证明：从直觉到形式化验证，是通往 AGI 的必经",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-blog-openai-news-a-blueprint-for-democratic-governance-of-frontier-ai",
+      "zh": true,
+      "en": true,
+      "title": "A blueprint for democratic governance of frontier AI — OpenAI 提出美国前沿 AI 治理蓝图，为安全与国家安全建立联邦框架。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-blog-openai-news-how-wasmer-used-codex-to-build-a-node",
+      "zh": true,
+      "en": true,
+      "title": "How Wasmer used Codex to build a Node.js runtime for — Wasmer 利用 Codex 与 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-blog-openai-news-introducing-new-capabilities-to-gpt-rosalind",
+      "zh": true,
+      "en": true,
+      "title": "Introducing new capabilities to GPT-Rosalind — OpenAI 发布 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-blog-openai-news-openai-public-policy-agenda",
+      "zh": true,
+      "en": true,
+      "title": "OpenAI public policy agenda — OpenAI 发布公共政策议程，阐述如何确保 AI 安全发展并惠及社会，为行业监",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-blog-simonwillison-uber-caps-usage-of-ai-tools-like-claude",
+      "zh": true,
+      "en": true,
+      "title": "Uber Caps Usage of AI Tools Like Claude Code to Manage — Uber 为控制成本，对 Claude Code 等 AI 工具设月度使用上限，",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-blog-thezvi-trump-signs-executive-order-for-ai-testing-prior",
+      "zh": true,
+      "en": true,
+      "title": "Trump Signs Executive Order For AI Testing Prior To — 特朗普签署AI测试行政令，分析其从“否决”到“签署”的转变及对前沿模型的实际监管",
+      "kind": "blogger",
+      "author": "Zvi Mowshowitz",
+      "source": "Zvi Mowshowitz",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-claude-code-2-1-162",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.162 — 新增会话等待状态显示，修复多项权限与中断问题，提升启动稳定性",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-cline-3-87-0",
+      "zh": true,
+      "en": false,
+      "title": "cline v3.87.0 — 新增 MiniMax M3 模型支持，并修复多个依赖安全漏洞。",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-cline-cli-v3-0-16",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.16 — 插件管理升级，支持官方插件库安装与技能分组，提升扩展性",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-gemini-cli-0-45-0",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.45.0 — 修复终端环境循环与上下文泄露，提升 agent 稳定性",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-goose-1-37-0",
+      "zh": true,
+      "en": false,
+      "title": "goose v1.37.0 — 新增 xAI SuperGrok 等 8 个 AI 供应商，强化本地推理与钩子系",
+      "kind": "changelog",
+      "author": null,
+      "source": "block/goose",
+      "tool": "goose",
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-agent-substrate-substrate",
+      "zh": true,
+      "en": false,
+      "title": "substrate — Go 语言实现的 AI Agent 核心系统，为构建可扩展的智能体提供基础框架",
+      "kind": "trending",
+      "author": null,
+      "source": "agent-substrate/substrate",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-alibaba-open-code-review",
+      "zh": true,
+      "en": false,
+      "title": "open-code-review — 阿里开源的混合架构代码审查工具，结合确定性流水线与LLM智能体",
+      "kind": "trending",
+      "author": null,
+      "source": "alibaba/open-code-review",
+      "tool": null,
+      "publishedAt": "2026-06-03"
     },
     {
       "slug": "2026-06-03-trending-antirez-ds4",
       "zh": true,
-      "en": false
+      "en": false,
+      "title": "ds4 — Redis 作者发布 DeepSeek 4 Flash 本地推理引擎，支持 Me",
+      "kind": "trending",
+      "author": null,
+      "source": "antirez/ds4",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-aprilnea-openlogi",
+      "zh": true,
+      "en": false,
+      "title": "OpenLogi — Rust 编写的罗技鼠标驱动本地替代，无需账户和遥测",
+      "kind": "trending",
+      "author": null,
+      "source": "AprilNEA/OpenLogi",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-b-nnett-goose",
+      "zh": true,
+      "en": false,
+      "title": "goose — Rust 实现的 Swift 语言概念验证，探索跨语言编译可能性",
+      "kind": "trending",
+      "author": null,
+      "source": "b-nnett/goose",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-bigpizzav3-codexplusplus",
+      "zh": true,
+      "en": false,
+      "title": "CodexPlusPlus — CodexApp 增强工具，提升使用体验与舒适度",
+      "kind": "trending",
+      "author": null,
+      "source": "BigPizzaV3/CodexPlusPlus",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-chojs23-concord",
+      "zh": true,
+      "en": false,
+      "title": "concord — Rust 编写的 Discord 功能丰富 TUI 客户端，轻量高效",
+      "kind": "trending",
+      "author": null,
+      "source": "chojs23/concord",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-deeplethe-forkd",
+      "zh": true,
+      "en": false,
+      "title": "forkd — AI 代理微虚拟机快速分支工具，支持毫秒级创建隔离子进程",
+      "kind": "trending",
+      "author": null,
+      "source": "deeplethe/forkd",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-ercel-labs-zerolang",
+      "zh": true,
+      "en": false,
+      "title": "zerolang — Vercel 开源专为 AI Agent 设计的编程语言 ZeroLang",
+      "kind": "trending",
+      "author": null,
+      "source": "vercel-labs/zerolang",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-gi-dellav-zerostack",
+      "zh": true,
+      "en": false,
+      "title": "zerostack — Rust 编写的极简代码生成代理，专注内存与性能优化",
+      "kind": "trending",
+      "author": null,
+      "source": "gi-dellav/zerostack",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-helvesec-rmux",
+      "zh": true,
+      "en": false,
+      "title": "rmux — Rust 通用多路复用器，用代码驱动 CLI/TUI 应用",
+      "kind": "trending",
+      "author": null,
+      "source": "Helvesec/rmux",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-matinsenpai-senpaiscanner",
+      "zh": true,
+      "en": false,
+      "title": "SenPaiScanner — 轻量级 Cloudflare IP 扫描器，快速筛选可用节点",
+      "kind": "trending",
+      "author": null,
+      "source": "MatinSenPai/SenPaiScanner",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-microsoft-coreutils",
+      "zh": true,
+      "en": false,
+      "title": "coreutils — 微软开源 Windows 版 GNU Coreutils，提供原生安装包",
+      "kind": "trending",
+      "author": null,
+      "source": "microsoft/coreutils",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-microsoft-skillopt",
+      "zh": true,
+      "en": false,
+      "title": "SkillOpt — 微软开源文本空间优化器，为冻结LLM智能体训练可复用自然语言技能",
+      "kind": "trending",
+      "author": null,
+      "source": "microsoft/SkillOpt",
+      "tool": null,
+      "publishedAt": "2026-06-03"
+    },
+    {
+      "slug": "2026-06-03-trending-nexu-io-html-anything",
+      "zh": true,
+      "en": false,
+      "title": "html-anything — AI 驱动的 HTML 编辑器，本地 AI 代理编写 HTML，用户直接发布",
+      "kind": "trending",
+      "author": null,
+      "source": "nexu-io/html-anything",
+      "tool": null,
+      "publishedAt": "2026-06-03"
     }
   ]
 }
