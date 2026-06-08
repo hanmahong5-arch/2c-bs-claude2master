@@ -1,0 +1,27 @@
+---
+slug: 2026-06-07-blog-simonwillison-datasette-agent-edit-0-1a0
+title: "datasette-agent-edit 0.1a0 — Simon Willison 发布 Datasette Agent 文本编辑基础"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/7/datasette-agent-edit/
+publishedAt: 2026-06-07
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 Datasette Agent 文本编辑基础插件，为 AI 代理提供可靠的文件编辑工具链。"
+tags: [datasette, llm-tool-use, ai-agents, developer-tools]
+---
+
+Simon Willison 发布了 `datasette-agent-edit` 插件的首个 alpha 版本，旨在为 Datasette Agent 生态中的各类文本编辑任务（如协作 Markdown 编辑、更新 SQL 查询、编辑 SVG 文件）提供统一、可靠的基础工具。
+
+*   **借鉴成熟设计**：插件核心工具（查看、精确替换、插入）的设计灵感来源于 Claude 文本编辑器，这是一个经过验证的、能有效指导 AI 代理进行精确文本操作的范式。
+    *   *对开发者的含义*：这为构建需要 AI 参与编辑功能的插件提供了经过验证的底层模式，减少了重复设计和潜在错误。
+*   **提供核心编辑原语**：插件实现了 `view`（带行号查看）、`str_replace`（精确查找并替换，要求原字符串唯一）、`insert`（在指定行后插入）这三个基础工具函数。
+    *   *对工具链的含义*：将这些常用但易出错的编辑操作封装为稳定、可复用的组件，提升了整个 Agent 工具链的可靠性和一致性。
+*   **旨在代码复用**：创建此基础插件的主要目的是避免在每个需要文本编辑功能的 Datasette Agent 插件中重复实现这些通用模式。
+    *   *对生态的含义*：通过抽象和共享核心功能，降低了开发新编辑类插件的门槛，并促进了 Datasette Agent 生态系统内工具的一致性和互操作性。
+
+---
+
+> 原文：[datasette-agent-edit 0.1a0](https://simonwillison.net/2026/Jun/7/datasette-agent-edit/) · 作者 Simon Willison

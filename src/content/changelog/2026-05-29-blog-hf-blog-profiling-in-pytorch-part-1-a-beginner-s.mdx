@@ -1,0 +1,23 @@
+---
+slug: 2026-05-29-blog-hf-blog-profiling-in-pytorch-part-1-a-beginner-s
+title: "Profiling in PyTorch (Part 1): A Beginner's Guide to — PyTorch 性能分析入门指南，帮助开发者定位模型训练瓶颈"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/torch-profiler
+publishedAt: 2026-05-29
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "PyTorch 性能分析入门指南，帮助开发者定位模型训练瓶颈"
+tags: [pytorch, profiling, performance-optimization, deep-learning]
+---
+
+本文是 PyTorch 性能分析系列的第一部分，为初学者介绍了 `torch.profiler` 工具的核心用法。
+- **内置性能分析器**：`torch.profiler` 是 PyTorch 内置的官方工具，可替代旧版 `torch.autograd.profiler`，提供更丰富的性能数据。这意味着开发者无需依赖外部工具即可进行初步的性能诊断。
+- **关键性能指标**：工具可以记录 CPU/GPU 上的操作时间、内存消耗和内核调用，帮助识别计算密集型或内存瓶颈操作。这对优化训练循环和减少资源浪费至关重要。
+- **可视化与导出**：分析结果可以导出为 Chrome 跟踪格式，便于在浏览器中可视化时间线，或进一步处理。这为开发者提供了直观的性能剖析界面，简化了分析流程。
+
+---
+
+> 原文：[Profiling in PyTorch (Part 1): A Beginner's Guide to torch.profiler](https://huggingface.co/blog/torch-profiler) · 作者 Hugging Face

@@ -33,7 +33,9 @@
     "unicity-astrid/sdk-js",
     "simplifaisoul/osiris",
     "tastyeffectco/sandboxes",
-    "anthropics/defending-code-reference-harness"
+    "anthropics/defending-code-reference-harness",
+    "msitarzewski/brew-browser",
+    "tastyeffectco/sandboxd"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -67,7 +69,7 @@
     "openai-codex-blog": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-07",
+    "anthropic-engineering": "2026-06-08",
     "claude-code-docs": "2026-06-04",
     "openai-codex-blog": "2026-06-04"
   },
@@ -87,7 +89,8 @@
       "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/",
       "https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/",
       "https://simonwillison.net/2026/Jun/5/andreas-kling/",
-      "https://simonwillison.net/2026/Jun/1/may-newsletter/"
+      "https://simonwillison.net/2026/Jun/1/may-newsletter/",
+      "https://simonwillison.net/2026/Jun/7/datasette-agent-edit/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -168,7 +171,12 @@
       "https://www.oneusefulthing.org/p/claude-dispatch-and-the-power-of",
       "https://www.oneusefulthing.org/p/the-shape-of-the-thing",
       "https://www.oneusefulthing.org/p/a-guide-to-which-ai-to-use-in-the",
-      "https://www.oneusefulthing.org/p/management-as-ai-superpower"
+      "https://www.oneusefulthing.org/p/management-as-ai-superpower",
+      "https://www.oneusefulthing.org/p/claude-code-and-what-comes-next",
+      "https://www.oneusefulthing.org/p/the-shape-of-ai-jaggedness-bottlenecks",
+      "https://www.oneusefulthing.org/p/three-years-from-gpt-3-to-gemini",
+      "https://www.oneusefulthing.org/p/giving-your-ai-a-job-interview",
+      "https://www.oneusefulthing.org/p/an-opinionated-guide-to-using-ai"
     ],
     "importai": [
       "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
@@ -202,7 +210,12 @@
       "https://deepmind.google/blog/introducing-gemini-omni/",
       "https://deepmind.google/blog/introducing-google-antigravity-2-0/",
       "https://deepmind.google/blog/gemini-for-science-ai-experiments-and-tools-for-a-new-era-of-discovery/",
-      "https://deepmind.google/blog/making-it-easier-to-understand-how-content-was-created-and-edited/"
+      "https://deepmind.google/blog/making-it-easier-to-understand-how-content-was-created-and-edited/",
+      "https://deepmind.google/blog/strengthening-singapores-ai-future-a-new-national-partnership/",
+      "https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/",
+      "https://deepmind.google/blog/opening-new-paths-in-aging-research/",
+      "https://deepmind.google/blog/accelerating-discovery-of-liver-disease-mechanisms/",
+      "https://deepmind.google/blog/uniting-biological-toolkits-for-a-new-approach-to-als/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -211,7 +224,12 @@
       "https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety",
       "https://huggingface.co/blog/ServiceNow-AI/eva-bench-data",
       "https://huggingface.co/blog/hf-cli-for-agents",
-      "https://huggingface.co/blog/Hcompany/holo31"
+      "https://huggingface.co/blog/Hcompany/holo31",
+      "https://huggingface.co/blog/build-small-hackathon/amazingdigitaldentures",
+      "https://huggingface.co/blog/JetBrains/mellum2-launch",
+      "https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
+      "https://huggingface.co/blog/torch-profiler",
+      "https://huggingface.co/blog/local-reachy-mini-conversation"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -221,25 +239,30 @@
       "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
       "https://www.anthropic.com/news/expanding-project-glasswing",
       "https://www.anthropic.com/news/confidential-draft-s1-sec",
-      "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical"
+      "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical",
+      "https://www.anthropic.com/news/widening-conversation-ai",
+      "https://www.anthropic.com/news/election-safeguards-update",
+      "https://www.anthropic.com/news/series-h",
+      "https://www.anthropic.com/news/milan-office-opening",
+      "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-07",
+    "simonwillison": "2026-06-08",
     "lilianweng": "2026-06-04",
-    "latentspace": "2026-06-07",
-    "interconnects": "2026-06-07",
+    "latentspace": "2026-06-08",
+    "interconnects": "2026-06-08",
     "karpathy": "2026-06-07",
     "raschka": "2026-06-07",
     "eugeneyan": "2026-06-07",
     "chiphuyen": "2026-06-04",
-    "oneusefulthing": "2026-06-06",
+    "oneusefulthing": "2026-06-08",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-07",
-    "deepmind": "2026-06-06",
-    "hf-blog": "2026-06-06",
-    "anthropic-news": "2026-06-07"
+    "openai-news": "2026-06-08",
+    "deepmind": "2026-06-08",
+    "hf-blog": "2026-06-08",
+    "anthropic-news": "2026-06-08"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }
