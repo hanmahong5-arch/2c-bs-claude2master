@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { BroadcastButton } from "@/components/broadcast/BroadcastButton";
 
 const NAV = [
   { href: "/changelog", label: "Changelog" },
@@ -69,6 +70,7 @@ export default function Header() {
               </Link>
             );
           })}
+          <BroadcastButton />
           <Link href="/login" className="btn btn-ghost ml-2 text-sm">
             登录
           </Link>
@@ -107,6 +109,7 @@ export default function Header() {
               </Link>
             );
           })}
+          <BroadcastButton variant="drawer" onActivate={() => setOpen(false)} />
           <Link
             href="/login"
             className="flex items-center px-6 h-14 border-l-2 border-transparent text-[var(--c2m-accent-deep)] font-medium"

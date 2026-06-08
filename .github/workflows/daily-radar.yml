@@ -145,14 +145,10 @@ jobs:
           fi
           bun run scripts/radar/summarize.ts < radar-input.jsonl
 
-      # 为新条目生成中文/英文播报音频 (edge-tts via msedge-tts, 运行时安装)。
-      # 失败不阻塞 (音频是补充, 同 practices/trending)。滚动保留最新 80 条。
-      - name: Generate broadcast audio (edge-tts)
-        if: steps.combine.outputs.count != '0'
-        run: |
-          set -euo pipefail
-          bun add msedge-tts
-          bun run scripts/radar/tts-generate.ts || true
+      # 播报音频不再在 CI 生成: 改本地 cron (scripts/radar/local-audio-cron.sh) 用
+      # 自托管 CosyVoice2 出带情感的 mp3 (edge-tts 免费端点中文情感被微软永久屏蔽)。
+      # CI 只快速上线文章; 本机 RTX 4070 随后补音频再部署一次。
+      # tts-generate.ts (edge-tts) 保留为本地 cron 的 fallback。
 
       - name: Commit + push
         if: steps.combine.outputs.count != '0'
@@ -160,8 +156,8 @@ jobs:
           set -euo pipefail
           git config user.name "c2m-radar-bot"
           git config user.email "radar-bot@claude2master.com"
-          # Path filter (再次防御): 只 add 这些路径
-          git add src/content/changelog/ scripts/radar/state.json public/audio/
+          # Path filter (再次防御): 只 add 这些路径 (音频留本地 cron 补, 不在 CI 提交)
+          git add src/content/changelog/ scripts/radar/state.json
           if git diff --staged --quiet; then
             echo "no diff staged, skipping commit"
             exit 0

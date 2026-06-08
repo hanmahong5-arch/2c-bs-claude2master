@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { BroadcastProvider } from "@/components/broadcast/BroadcastProvider";
 import "./globals.css";
 
 // 自托管字体 (next/font/local) — 中国大陆访问不到 fonts.googleapis.com,
@@ -96,9 +97,12 @@ export default function RootLayout({
       className={`${interTight.variable} ${fraunces.variable} ${jetbrainsMono.variable}`}
     >
       <body className="min-h-screen flex flex-col antialiased">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {/* Provider 包 Header+main+Footer 使按钮能用 context; BroadcastBar + <audio> 由 Provider 在 children 外常驻渲染 → 切页不卸载、不停播 */}
+        <BroadcastProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </BroadcastProvider>
         <Analytics />
         <SpeedInsights />
       </body>

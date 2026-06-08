@@ -20,7 +20,8 @@ import {
 import { relativeAge } from "@/lib/date";
 import { useUrlFilter } from "@/lib/use-url-filter";
 import { Reveal } from "@/components/Reveal";
-import AudioBroadcast from "@/components/AudioBroadcast";
+import { Volume2 } from "lucide-react";
+import { useBroadcast } from "@/components/broadcast/useBroadcast";
 
 // 筛选值: "all"(按工具分组) | "practice"(实践扁平) | 某 tool key(该工具扁平)
 type Filter = string;
@@ -148,6 +149,9 @@ function ToolSection({
 }
 
 export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
+  // 🔊 播报 pill 走全局 BroadcastProvider(挂在 layout, 切页不停播), 本页不再持 <audio>。
+  const { toggle, open: broadcasting, hasAudio } = useBroadcast();
+
   // 筛选值存进 URL query(?tool=)→ 点进详情页再返回时筛选与滚动位置都保留。
   // 用 useUrlFilter(history.replaceState)而非 useSearchParams: 后者会让本页退出
   // 静态预渲染、首屏 HTML 不含条目(伤 SEO)。本 hook 首屏渲染全部、挂载后再应用筛选。
@@ -249,7 +253,22 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
             >
               RSS · 全站
             </Link>
-            <AudioBroadcast items={items} />
+            <button
+              type="button"
+              onClick={toggle}
+              disabled={!hasAudio}
+              aria-pressed={broadcasting}
+              className={`pill-outline pill inline-flex items-center gap-1.5 transition-colors ${
+                hasAudio
+                  ? "hover:text-[var(--c2m-accent-deep)] cursor-pointer"
+                  : "opacity-50 cursor-not-allowed"
+              } ${broadcasting ? "text-[var(--c2m-accent-deep)]" : ""}`}
+              title={hasAudio ? "串行播报新闻" : "音频生成中"}
+              aria-label="语音播报新闻"
+            >
+              <Volume2 size={12} />
+              {broadcasting ? "🔊 停止" : "🔊 播报"}
+            </button>
           </div>
 
           <div className="mt-6 flex flex-wrap gap-2">
