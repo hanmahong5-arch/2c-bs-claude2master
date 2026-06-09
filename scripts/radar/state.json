@@ -1,9 +1,9 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.168",
-    "openai/codex": "rust-v0.137.0",
+    "anthropics/claude-code": "v2.1.169",
+    "openai/codex": "rust-v0.138.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v3.88.1",
+    "cline/cline": "cli-v3.0.21",
     "block/goose": "v1.37.0",
     "sst/opencode": "v1.16.2",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -69,7 +69,7 @@
     "openai-codex-blog": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-08",
+    "anthropic-engineering": "2026-06-09",
     "claude-code-docs": "2026-06-04",
     "openai-codex-blog": "2026-06-04"
   },
@@ -90,7 +90,8 @@
       "https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/",
       "https://simonwillison.net/2026/Jun/5/andreas-kling/",
       "https://simonwillison.net/2026/Jun/1/may-newsletter/",
-      "https://simonwillison.net/2026/Jun/7/datasette-agent-edit/"
+      "https://simonwillison.net/2026/Jun/7/datasette-agent-edit/",
+      "https://simonwillison.net/2026/Jun/8/wwdc/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -201,7 +202,10 @@
       "https://openai.com/index/our-views-on-ai-policy-and-political-advocacy",
       "https://openai.com/index/stargate-michigan-data-center",
       "https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws",
-      "https://openai.com/index/boston-childrens-hospital"
+      "https://openai.com/index/boston-childrens-hospital",
+      "https://openai.com/index/openai-submits-confidential-s-1",
+      "https://openai.com/index/built-to-benefit-everyone-our-plan",
+      "https://openai.com/index/economic-research-exchange"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -244,14 +248,15 @@
       "https://www.anthropic.com/news/election-safeguards-update",
       "https://www.anthropic.com/news/series-h",
       "https://www.anthropic.com/news/milan-office-opening",
-      "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea"
+      "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea",
+      "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-08",
+    "simonwillison": "2026-06-09",
     "lilianweng": "2026-06-04",
-    "latentspace": "2026-06-08",
-    "interconnects": "2026-06-08",
+    "latentspace": "2026-06-09",
+    "interconnects": "2026-06-09",
     "karpathy": "2026-06-07",
     "raschka": "2026-06-07",
     "eugeneyan": "2026-06-07",
@@ -259,10 +264,10 @@
     "oneusefulthing": "2026-06-08",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-08",
+    "openai-news": "2026-06-09",
     "deepmind": "2026-06-08",
     "hf-blog": "2026-06-08",
-    "anthropic-news": "2026-06-08"
+    "anthropic-news": "2026-06-09"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

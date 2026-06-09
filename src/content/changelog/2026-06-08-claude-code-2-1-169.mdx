@@ -1,0 +1,22 @@
+---
+slug: 2026-06-08-claude-code-2-1-169
+title: "claude-code v2.1.169 — 新增安全模式与目录切换命令，修复多项启动、连接与界面卡顿问题"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.169
+publishedAt: 2026-06-08
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增安全模式与目录切换命令，修复多项启动、连接与界面卡顿问题"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新值得关注。它修复了企业MCP策略在重连时未强制执行的漏洞，这直接关系到代理环境下的安全合规性。虽然新增的 `/cd` 命令和 `--safe-mode` 标志对代理本身无直接影响，但修复的UI卡顿问题能提升整体使用体验。现有用户无需修改代理配置，但建议升级以获取更稳定的安全策略执行。"
+tags: [troubleshooting, session-management, bug-fixes, performance]
+---
+
+- 新增 `--safe-mode` 标志，用于禁用所有自定义配置以进行故障排查，意味着在复杂环境调试时能快速隔离问题源。
+- 新增 `/cd` 命令，允许在不中断会话提示缓存的情况下切换工作目录，这对需要在不同项目间保持上下文的 Agent 工作流设计至关重要。
+- 修复了企业 MCP 策略在重连等场景下未强制执行的漏洞，并解决了 macOS 上每轮对话初期的 UI 卡顿，提升了 Agent 平台的安全性与响应可靠性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.169](https://github.com/anthropics/claude-code/releases/tag/v2.1.169)

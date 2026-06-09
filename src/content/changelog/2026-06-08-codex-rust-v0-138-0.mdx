@@ -1,0 +1,22 @@
+---
+slug: 2026-06-08-codex-rust-v0-138-0
+title: "codex rust-v0.138.0 — 桌面集成更流畅，图像路径可引用，推理快捷键更灵活"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.138.0
+publishedAt: 2026-06-08
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "桌面集成更流畅，图像路径可引用，推理快捷键更灵活"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新基本不受影响，因为核心是桌面端和本地路径的集成优化。现有用户如果主要使用 CLI 或 Web 界面，无需立即升级；但如果你深度依赖桌面应用与 CLI 的协同工作流，升级能获得更流畅的无缝切换体验。现有的 prompt 或 hook 配置通常无需修改，除非你的 agent 设计需要主动处理跨进程上下文传递或精确解析本地图像文件路径，这属于高级集成需求。"
+tags: [desktop-integration, image-handling, reasoning-effort, plugin-automation]
+---
+
+- **桌面应用无缝切换**：CLI 线程可直接移交至 Codex Desktop（macOS/Windows），Windows 工作区启动直达桌面，无需手动确认。这意味着 agent harness 设计需支持跨进程的无缝上下文传递。
+- **图像路径暴露给模型**：本地图像附件和独立生成的图像保存路径现在可被模型读取，使后续编辑和文件引用更可靠。这要求 agent 在处理文件时能准确解析和传递系统路径元数据。
+- **推理努力选择更灵活**：TUI 为缺失 `Alt` 键的终端提供备用快捷键，模型定义的推理级别按广告顺序流动。这提示 agent 的交互层需适配不同终端环境并尊重模型的能力声明。
+
+---
+
+> 原文 release：[openai/codex rust-v0.138.0](https://github.com/openai/codex/releases/tag/rust-v0.138.0)

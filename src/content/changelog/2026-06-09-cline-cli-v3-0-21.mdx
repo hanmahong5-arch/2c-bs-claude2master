@@ -1,0 +1,22 @@
+---
+slug: 2026-06-09-cline-cli-v3-0-21
+title: "cline cli-v3.0.21 — 新增全局自动更新开关与 Vertex AI ADC 支持，提升 CLI 稳定性和"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.21
+publishedAt: 2026-06-09
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增全局自动更新开关与 Vertex AI ADC 支持，提升 CLI 稳定性和云集成能力"
+insight: "对于国内用户，本次更新值得关注。虽然新增的 Vertex AI ADC 凭证支持主要面向 Google Cloud 用户，但全局自动更新开关的加入，允许你在启动 CLI 时灵活控制更新行为，这有助于在代理工具链中构建更稳定的环境。修复的会话路由与消息处理问题，则直接提升了多会话场景下的可靠性。现有 prompt 或 hook 配置无需特意修改，国内通过 newapi.lurus.cn 代理的使用也不受影响，可按需决定是否升级以获取稳定性增强。"
+tags: [cli-update, vertex-ai, session-management, bug-fixes]
+---
+
+- **新增全局自动更新设置**：允许用户在 CLI 启动时控制自动更新，为 agent harness 设计提供了更灵活的环境配置管理。
+- **支持 Vertex AI ADC 凭证**：工具调用现支持 Vertex AI 应用默认凭证，简化了 agent 在 Google Cloud 上的身份验证集成。
+- **修复会话路由与消息重放问题**：改进了连接器线程会话路由和 Bedrock 空消息处理，增强了 agent 在多会话场景下的可靠性。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.21](https://github.com/cline/cline/releases/tag/cli-v3.0.21)
