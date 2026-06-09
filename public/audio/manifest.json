@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "slug": "2026-06-09-blog-anthropic-news-announcing-our-updated-responsible-scaling-policy",
+      "zh": true,
+      "en": true,
+      "title": "Announcing our updated Responsible Scaling Policy — Anthropic 更新其负责任扩展政策，引入更灵活的风险治理框架，为 AI 安",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-09"
+    },
+    {
+      "slug": "2026-06-09-cline-cli-v3-0-21",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.21 — 新增全局自动更新开关与 Vertex AI ADC 支持，提升 CLI 稳定性和",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-09"
+    },
+    {
       "slug": "2026-06-08-blog-anthropic-news-an-update-on-our-election-safeguards",
       "zh": true,
       "en": true,
@@ -53,6 +75,72 @@
       "author": "Anthropic",
       "source": "Anthropic",
       "tool": null,
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-08-blog-openai-news-built-to-benefit-everyone-our-plan",
+      "zh": true,
+      "en": true,
+      "title": "Built to benefit everyone: our plan — OpenAI 阐述其确保通用人工智能惠及全人类的愿景与具体计划，值得关注其治理与",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-08-blog-openai-news-confidential-submission-of-draft-s-1-to-the",
+      "zh": true,
+      "en": true,
+      "title": "Confidential submission of draft S-1 to the SEC — OpenAI 向 SEC 秘密提交 S",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-08-blog-openai-news-introducing-the-openai-economic-research-exchange",
+      "zh": true,
+      "en": true,
+      "title": "Introducing the OpenAI Economic Research Exchange — OpenAI 启动经济研究交换项目，探讨 AI 对就业、生产力与经济的影响，为政",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-08-blog-simonwillison-siri-ai-at-wwdc-2026",
+      "zh": true,
+      "en": true,
+      "title": "Siri AI at WWDC 2026 — 苹果WWDC 2026发布Siri AI新特性，基于视觉大模型和私有云，开发者可",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-08-claude-code-2-1-169",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.169 — 新增安全模式与目录切换命令，修复多项启动、连接与界面卡顿问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-08"
+    },
+    {
+      "slug": "2026-06-08-codex-rust-v0-138-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.138.0 — 桌面集成更流畅，图像路径可引用，推理快捷键更灵活",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
       "publishedAt": "2026-06-08"
     },
     {
@@ -790,94 +878,6 @@
       "author": null,
       "source": "cline/cline",
       "tool": "cline",
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-gemini-cli-0-45-0",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.45.0 — 修复终端环境循环与上下文泄露，提升 agent 稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-goose-1-37-0",
-      "zh": true,
-      "en": false,
-      "title": "goose v1.37.0 — 新增 xAI SuperGrok 等 8 个 AI 供应商，强化本地推理与钩子系",
-      "kind": "changelog",
-      "author": null,
-      "source": "block/goose",
-      "tool": "goose",
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-agent-substrate-substrate",
-      "zh": true,
-      "en": false,
-      "title": "substrate — Go 语言实现的 AI Agent 核心系统，为构建可扩展的智能体提供基础框架",
-      "kind": "trending",
-      "author": null,
-      "source": "agent-substrate/substrate",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-alibaba-open-code-review",
-      "zh": true,
-      "en": false,
-      "title": "open-code-review — 阿里开源的混合架构代码审查工具，结合确定性流水线与LLM智能体",
-      "kind": "trending",
-      "author": null,
-      "source": "alibaba/open-code-review",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-antirez-ds4",
-      "zh": true,
-      "en": false,
-      "title": "ds4 — Redis 作者发布 DeepSeek 4 Flash 本地推理引擎，支持 Me",
-      "kind": "trending",
-      "author": null,
-      "source": "antirez/ds4",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-aprilnea-openlogi",
-      "zh": true,
-      "en": false,
-      "title": "OpenLogi — Rust 编写的罗技鼠标驱动本地替代，无需账户和遥测",
-      "kind": "trending",
-      "author": null,
-      "source": "AprilNEA/OpenLogi",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-b-nnett-goose",
-      "zh": true,
-      "en": false,
-      "title": "goose — Rust 实现的 Swift 语言概念验证，探索跨语言编译可能性",
-      "kind": "trending",
-      "author": null,
-      "source": "b-nnett/goose",
-      "tool": null,
-      "publishedAt": "2026-06-03"
-    },
-    {
-      "slug": "2026-06-03-trending-bigpizzav3-codexplusplus",
-      "zh": true,
-      "en": false,
-      "title": "CodexPlusPlus — CodexApp 增强工具，提升使用体验与舒适度",
-      "kind": "trending",
-      "author": null,
-      "source": "BigPizzaV3/CodexPlusPlus",
-      "tool": null,
       "publishedAt": "2026-06-03"
     }
   ]
