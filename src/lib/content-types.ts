@@ -23,6 +23,8 @@ export interface ChangelogItem extends ContentItemBase {
   source: string;
   sourceUrl: string;
   hook: string;
+  /** 语音播报口播稿 (~80–140 字口语稿); 纯音频用, 缺失时播报回退 hook */
+  broadcast?: string;
   model?: string;
   verified?: Verified;
   insight?: string;

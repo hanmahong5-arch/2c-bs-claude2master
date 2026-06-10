@@ -9,6 +9,7 @@ model: deepseek-v3-2-251201
 verified: pending
 kind: changelog
 hook: "桌面集成更流畅，图像路径可引用，推理快捷键更灵活"
+broadcast: "Codex Rust 新版本让桌面集成更流畅，现在命令行工具可以直接切换到桌面应用，无需手动确认，这要求智能体设计时考虑跨进程的上下文传递。同时，本地图像的保存路径能被模型读取，让后续的文件引用和编辑更可靠。另外，推理快捷键变得更灵活，适配了不同终端环境，这提示智能体的交互层需要尊重模型的能力声明。"
 insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新基本不受影响，因为核心是桌面端和本地路径的集成优化。现有用户如果主要使用 CLI 或 Web 界面，无需立即升级；但如果你深度依赖桌面应用与 CLI 的协同工作流，升级能获得更流畅的无缝切换体验。现有的 prompt 或 hook 配置通常无需修改，除非你的 agent 设计需要主动处理跨进程上下文传递或精确解析本地图像文件路径，这属于高级集成需求。"
 tags: [desktop-integration, image-handling, reasoning-effort, plugin-automation]
 ---

@@ -9,6 +9,7 @@ model: deepseek-v3-2-251201
 verified: pending
 kind: changelog
 hook: "修复 CLI 会话恢复、Hub 关闭竞争和运行时中止问题，提升稳定性"
+broadcast: "这次更新主要修复了三个关键问题。首先是解决了命令行工具在重启后会话卡死的情况，现在能自动恢复，保证了智能体交互的连续性。其次是修复了系统关闭时可能出现的错误，提升了整体稳定性。最后还增强了外部通讯工具的安全性，可以限制特定用户访问，让智能体在对外服务时更可控。"
 insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要修复了底层稳定性问题，不影响代理连接本身。现有用户值得升级，特别是那些频繁使用交互式 CLI 或遇到 Hub 关闭报错的开发者，升级后能获得更可靠的会话恢复和系统关闭体验。现有 prompt 或 hook 配置无需修改，但部署 Telegram 连接器的用户需注意新增了用户 ID 白名单的访问控制选项。"
 tags: [cli-fixes, session-recovery, hub-stability, telegram-security]
 ---

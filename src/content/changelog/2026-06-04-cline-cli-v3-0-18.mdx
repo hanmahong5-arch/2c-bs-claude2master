@@ -9,6 +9,7 @@ model: deepseek-v3-2-251201
 verified: pending
 kind: changelog
 hook: "修复 Slack 线程回复与任务取消指示，同步 AI 模型目录并强制更新 SDK。"
+broadcast: "Cline 的最新更新修复了两个关键问题：一是让 Slack 的回复能正确显示在原始消息的线程里，保持对话连贯，这对需要完整上下文的智能体开发很重要；二是任务取消时能立刻清除指示器，提供更清晰的反馈。同时，它同步了最新的 AI 模型目录并强制更新了开发工具包，确保开发者能始终使用最新、最稳定的模型和功能。"
 insight: "对于国内用户，本次更新值得关注。虽然核心修复（Slack线程回复、任务取消指示）主要影响特定工作流，但强制更新SDK和同步Fireworks AI模型目录是关键动作。这意味着通过newapi.lurus.cn代理使用Fireworks模型的用户，其agent harness将能自动访问最新、最稳定的模型列表与功能，无需手动调整配置。建议保持Cline Hub正常运行以完成强制重启，确保SDK更新生效。"
 tags: [slack-integration, task-management, model-registry, sdk-update]
 ---

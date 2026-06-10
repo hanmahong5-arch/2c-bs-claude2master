@@ -93,6 +93,7 @@ export const getChangelog = cache(async function getChangelog(): Promise<Changel
     source: asString(data.source),
     sourceUrl: asString(data.sourceUrl),
     hook: asString(data.hook),
+    broadcast: data.broadcast ? asString(data.broadcast) : undefined,
     model: data.model ? asString(data.model) : undefined,
     verified:
       asString(data.verified) === "tested"

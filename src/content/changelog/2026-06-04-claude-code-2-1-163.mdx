@@ -9,6 +9,7 @@ model: deepseek-v3-2-251201
 verified: pending
 kind: changelog
 hook: "Claude Code 新增版本范围管控与插件列表命令，提升安全与可管理性"
+broadcast: "Claude Code 这次更新带来了两个重要功能。一是管理员可以设置允许运行的版本范围，不符合的版本会被拒绝启动，这大大增强了企业环境下的安全管控。二是新增了插件列表命令，让开发者能更方便地管理和排查插件问题。这些改进让工具更安全、更易管理，对国内开发团队尤其有帮助。"
 insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要强化了企业侧的管理能力，不影响代理服务的正常使用。现有用户无需因功能更新而强制升级，除非管理员设定了新的版本范围。如果你的 prompt 或 hook 配置不涉及版本管控或插件列表命令，也无需修改。但若遇到后台进程挂起问题，建议升级以获取修复。"
 tags: [version-control, plugin-management, session-reliability, bug-fixes]
 ---

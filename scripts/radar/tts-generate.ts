@@ -142,12 +142,14 @@ async function main(): Promise<void> {
   for (const item of keep) {
     const zhPath = path.join(AUDIO_DIR, `${item.slug}.zh.mp3`);
     const enPath = path.join(AUDIO_DIR, `${item.slug}.en.mp3`);
-    const zhText = item.hook ? endZh(cleanForTts(item.hook)) : "";
+    // 优先口播稿 (与 cosy 版一致); 缺失回退裸 hook (旧条目向后兼容)。
+    const zhSource = item.broadcast || item.hook;
+    const zhText = zhSource ? endZh(cleanForTts(zhSource)) : "";
     const enRaw = englishPart(item.title);
     const wantEn = enProse(item, enRaw);
     const enText = wantEn ? endEn(cleanForTts(enRaw)) : "";
 
-    // 中文: 读 hook
+    // 中文: 读口播稿 (回退 hook)
     let zhOk = await exists(zhPath);
     if (!zhOk && zhText) {
       attempted++;

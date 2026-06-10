@@ -40,6 +40,8 @@ import {
 
 const SCRIPT_DIR = import.meta.dir;
 const COSY_URL = process.env.COSY_URL ?? "http://localhost:8123";
+// 若服务端开了 Bearer 鉴权 (COSY_API_KEY), 本地直连也须带同值; 未设则不带 (默认零鉴权)。
+const COSY_API_KEY = process.env.COSY_API_KEY ?? "";
 
 // 情感指令 (inference_instruct2 的 instruct_text)。B1 试听门禁通过后可再调。
 const ZH_INSTRUCT = "用专业、热情的新闻主播语气播报，吐字清晰、节奏明快、富有感染力。";
@@ -75,9 +77,11 @@ async function synthCosy(
   instruct: string,
   outPath: string,
 ): Promise<void> {
+  const headers: Record<string, string> = { "content-type": "application/json" };
+  if (COSY_API_KEY) headers.Authorization = `Bearer ${COSY_API_KEY}`;
   const res = await fetch(`${COSY_URL}/tts`, {
     method: "POST",
-    headers: { "content-type": "application/json" },
+    headers,
     body: JSON.stringify({ text, lang, instruct }),
     // 单句 0.5B fp16 通常 <10s, 给足余量(含冷启动队列)。
     signal: AbortSignal.timeout(120_000),
@@ -143,12 +147,14 @@ async function main(): Promise<void> {
   for (const item of keep) {
     const zhPath = path.join(AUDIO_DIR, `${item.slug}.zh.mp3`);
     const enPath = path.join(AUDIO_DIR, `${item.slug}.en.mp3`);
-    const zhText = item.hook ? endZh(cleanForTts(item.hook)) : "";
+    // 优先口播稿 (代入感 + 成段更好断句); 缺失回退裸 hook (旧条目向后兼容)。整段单次合成。
+    const zhSource = item.broadcast || item.hook;
+    const zhText = zhSource ? endZh(cleanForTts(zhSource)) : "";
     const enRaw = englishPart(item.title);
     const wantEn = enProse(item, enRaw);
     const enText = wantEn ? endEn(cleanForTts(enRaw)) : "";
 
-    // 中文: 读 hook (情感 via ZH_INSTRUCT)
+    // 中文: 读口播稿 (回退 hook), 情感 via ZH_INSTRUCT
     let zhOk = await exists(zhPath);
     if (!zhOk && zhText) {
       attempted++;

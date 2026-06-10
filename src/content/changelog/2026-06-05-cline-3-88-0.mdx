@@ -9,6 +9,7 @@ model: deepseek-v3-2-251201
 verified: pending
 kind: changelog
 hook: "更新 Fireworks AI 模型并修复 MCP 服务器配置同步问题，提升模型选择可靠性与配置稳定性。"
+broadcast: "Cline 最新版本带来了两个重要改进。首先，它更新了 Fireworks AI 的无服务器模型，现在默认使用更前沿的 Kimi K2.6，为开发者构建智能体提供了更可靠、更先进的模型选择。其次，它修复了 MCP 服务器配置在同步时可能被误清空的问题，确保了配置的稳定性和持久性，让开发环境更加可靠。"
 insight: "对于国内用户，本次更新值得升级。新版本将默认模型更新为 Fireworks AI 的 Kimi K2.6，为 agent harness 提供了更前沿的选择。同时，它修复了 MCP 服务器配置同步的关键问题，解决了之前文件监视器可能误清空服务器列表的隐患，这直接提升了配置的稳定性和可靠性。这意味着现有的 prompt 或 hook 配置在升级后会更稳定，不易因配置同步问题而丢失。通过 newapi.lurus.cn 代理使用 Fireworks AI 模型的用户，可以正常获取此次模型更新。"
 tags: [model-update, mcp-fix, configuration, api-endpoint]
 ---

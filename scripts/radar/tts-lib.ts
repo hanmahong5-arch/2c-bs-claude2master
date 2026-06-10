@@ -23,6 +23,8 @@ export interface Item {
   slug: string;
   title: string;
   hook: string;
+  /** 口播稿 (口语播报稿); 空时播报回退 hook */
+  broadcast: string;
   publishedAt: string;
   kind: string;
   /** 博主署名 (kind: blogger); 其他 kind 可空 */
@@ -65,6 +67,7 @@ export async function loadItems(): Promise<Item[]> {
       slug,
       title: field(fm, "title"),
       hook: field(fm, "hook"),
+      broadcast: field(fm, "broadcast"),
       publishedAt: field(fm, "publishedAt"),
       kind: field(fm, "kind") || "changelog",
       author: field(fm, "author"),

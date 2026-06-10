@@ -9,6 +9,7 @@ model: deepseek-v3-2-251201
 verified: pending
 kind: changelog
 hook: "新增模型降级重试与跨会话权限隔离，提升代理系统稳定性与安全性"
+broadcast: "这次更新主要提升了代理系统的稳定性和安全性。新增的后备模型配置可以在主模型过载时自动切换，大大增强了服务的容错能力。同时，系统现在能有效隔离不同会话间的权限，防止权限意外扩散，让代理运行更安全可靠。"
 insight: "对于使用 newapi.lurus.cn 代理的国内用户，本次更新至关重要。它通过新增后备模型链配置，在主模型过载时自动降级重试，直接提升了代理服务的可用性和稳定性。同时，跨会话消息权限的严格隔离修复了潜在的安全隐患。因此，建议所有用户尽快升级，无需修改现有 prompt，但可以检查并配置后备模型以获取更好的容错体验。"
 tags: [fallback-model, security-hardening, stability-fixes, cross-session]
 ---

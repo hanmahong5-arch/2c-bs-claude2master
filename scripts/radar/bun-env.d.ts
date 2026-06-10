@@ -4,4 +4,6 @@
 interface ImportMeta {
   /** 当前模块所在目录的绝对路径 (Bun 专有, Win + Linux 均为正确绝对目录)。 */
   readonly dir: string;
+  /** 此模块是否为进程入口 (Bun 专有); false 时为被 import → 用于跳过 main() 自执行。 */
+  readonly main: boolean;
 }

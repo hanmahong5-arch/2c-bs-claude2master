@@ -96,6 +96,18 @@ const INSIGHT_SYSTEM_PROMPT = `你是 claude2master.com 编辑助手，国内开
 4. 输出严格 JSON：{ "insight": "<这段话>" }
 5. 无任何前后说明文字`;
 
+// 语音播报口播稿: 给单人主播逐条朗读用 (替代裸 hook, 加代入感)。
+// 改动必须 commit 留 diff, 别 patch.
+export const BROADCAST_SYSTEM_PROMPT = `你是 claude2master.com 的语音播报撰稿人。基于已有的中文摘要，写一段给「单人主播口播」用的中文播报稿，硬约束：
+
+1. 2–4 句、80–140 字的口语中文，像主播对听众讲话，自然成句、可直接朗读
+2. 必须点出「是什么」+「为什么值得关注 / 对国内开发者或 agent 开发的影响」
+3. 不要念英文标题、版本号、仓库名（听众听不懂字母数字）；要提到就用中文转述
+4. 不用 bullet、不堆术语、不喊口号、不堆 emoji
+5. 只能用「输入摘要」里已经出现的事实，不引申、不脑补
+6. 输出严格 JSON：{ "broadcast": "<这段话>" }
+7. 无任何前后说明文字`;
+
 interface ReleaseInput {
   kind?: "release";
   repo: string;
@@ -244,7 +256,7 @@ async function callNewapiOnce(
 // 重试包装: newapi 网关在 fresh runner 上首次连接常被 socket-close(冷启动),
 // 后续复用连接即正常。对网络层错误(无 HTTP status)与 5xx 退避重试; 4xx(鉴权/配置)
 // 立即抛出(重试无意义)。仅加韧性, 不改输出格式。
-async function callNewapi(
+export async function callNewapi(
   systemPrompt: string,
   userContent: string,
   maxTokens: number,
@@ -329,18 +341,23 @@ ${input.body || "(no notes provided)"}`;
   return parsed;
 }
 
-async function callCommentary(
-  input: Input,
-  summary: SummaryOutput,
-): Promise<string> {
-  // 注: blogger 不走 commentary (processInput 跳过), 此分支仅为类型收敛与防御兜底。
-  const titleLine = isPractice(input)
+// 输入条目的人读标题行 (供 insight / broadcast 的 LLM 上下文); 覆盖全四类。
+function titleLineFor(input: Input): string {
+  return isPractice(input)
     ? `${input.title} (${input.label})`
     : isTrending(input)
       ? `${input.name} (${input.repo})`
       : isBlogger(input)
         ? `${input.title} (${input.author})`
         : `${input.repo} ${input.tag} — ${input.name}`;
+}
+
+async function callCommentary(
+  input: Input,
+  summary: SummaryOutput,
+): Promise<string> {
+  // 注: blogger 不走 commentary (processInput 跳过), 此分支仅为类型收敛与防御兜底。
+  const titleLine = titleLineFor(input);
 
   const userContent = `输入摘要标题：${titleLine}
 
@@ -369,7 +386,41 @@ ${summary.body}
   return insight;
 }
 
-function escapeYaml(s: string): string {
+// 口播稿: 镜像 callCommentary 的「第二次 LLM 调用」。取 (titleLine, hook, body) 而非
+// 整个 Input → 便于 backfill 脚本从已写 MDX 的 frontmatter 直接重用 (不必重建 Input)。
+export async function callBroadcast(
+  titleLine: string,
+  hook: string,
+  body: string,
+): Promise<string> {
+  const userContent = `输入摘要标题：${titleLine}
+
+中文 hook：${hook}
+
+中文摘要正文：
+${body}
+
+请仅基于以上事实，写一段 80–140 字的口语播报稿。`;
+
+  const content = await callNewapi(BROADCAST_SYSTEM_PROMPT, userContent, 300);
+  let parsed: { broadcast?: string };
+  try {
+    parsed = JSON.parse(content) as { broadcast?: string };
+  } catch {
+    throw new Error(
+      `broadcast LLM did not return valid JSON: ${content.slice(0, 200)}`,
+    );
+  }
+  const broadcast = (parsed.broadcast ?? "").trim();
+  if (broadcast.length < 30) {
+    throw new Error(
+      `broadcast too short (${broadcast.length} chars): ${broadcast.slice(0, 120)}`,
+    );
+  }
+  return broadcast;
+}
+
+export function escapeYaml(s: string): string {
   // YAML 双引号标量里的裸换行会被 content.ts 的逐行 parseFrontmatter 截断字段(甚至
   // 含 "\n---" 时提前终止 frontmatter 致正文丢失)。LLM 输出的 hook/insight/title 可能含
   // 换行 → 先折叠成空格(均为单行展示字段, 语义无损), 再转义反斜杠与引号。
@@ -383,6 +434,7 @@ function buildMdx(
   input: Input,
   summary: SummaryOutput,
   insight: string,
+  broadcast: string,
   slug: string,
 ): string {
   const tagsArr = `[${summary.tags.map((t) => `${t.trim()}`).join(", ")}]`;
@@ -420,6 +472,7 @@ verified: ${verified}
 kind: ${kind}
 author: "${escapeYaml(input.author)}"
 hook: "${escapeYaml(summary.hook)}"
+broadcast: "${escapeYaml(broadcast)}"
 tags: ${tagsArr}
 ---
 
@@ -445,6 +498,7 @@ model: ${MODEL_ID}
 verified: ${verified}
 kind: ${kind}
 hook: "${escapeYaml(summary.hook)}"
+broadcast: "${escapeYaml(broadcast)}"
 insight: "${escapeYaml(insight)}"
 tags: ${tagsArr}
 ---
@@ -472,6 +526,7 @@ model: ${MODEL_ID}
 verified: ${verified}
 kind: ${kind}
 hook: "${escapeYaml(summary.hook)}"
+broadcast: "${escapeYaml(broadcast)}"
 tags: ${tagsArr}
 ---
 
@@ -496,6 +551,7 @@ model: ${MODEL_ID}
 verified: ${verified}
 kind: ${kind}
 hook: "${escapeYaml(summary.hook)}"
+broadcast: "${escapeYaml(broadcast)}"
 insight: "${escapeYaml(insight)}"
 tags: ${tagsArr}
 ---
@@ -589,8 +645,22 @@ async function processInput(
     isTrending(input) || isBlogger(input)
       ? ""
       : await callCommentary(input, summary);
+  // 口播稿: 全四类都生成 (纯音频用)。失败不阻塞整条 —— 音频是补充, tts 层缺 broadcast
+  // 自动回退 hook (与 tts-generate-cosy.ts 的 broadcast ?? hook 一致), 不该丢掉已成的摘要。
+  let broadcast = "";
+  try {
+    broadcast = await callBroadcast(
+      titleLineFor(input),
+      summary.hook,
+      summary.body,
+    );
+  } catch (e) {
+    console.error(
+      `[radar] broadcast skipped for ${inputLabel(input)} (${(e as Error).message}); tts will fall back to hook`,
+    );
+  }
   const slug = deriveSlug(input);
-  const mdx = buildMdx(input, summary, insight, slug);
+  const mdx = buildMdx(input, summary, insight, broadcast, slug);
   const filePath = path.join(CHANGELOG_DIR, `${slug}.mdx`);
   if (opts.dryRun) {
     console.log(`# ---- DRY RUN: ${filePath} ----`);
@@ -674,4 +744,5 @@ async function main(): Promise<void> {
   if (errors.length > 0 && okCount === 0) process.exit(1);
 }
 
-await main();
+// import.meta.main: 仅当作为入口直接运行才跑 main(); 被 backfill-broadcast.ts import 时不触发。
+if (import.meta.main) await main();
