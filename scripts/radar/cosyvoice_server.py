@@ -22,6 +22,7 @@
         可 PUT /voices/<id> {"prompt_text"} 人工修正)。
     GET  /voices            → 已登记音色列表
     PUT  /voices/<id> {prompt_text} → 修正转写
+    DELETE /voices/<id>     → 删除克隆样本+转写+名字 (用户删除权; 后续合成该 id 返回 404)
     /tts 与 /v1/audio/speech 的 voice 支持 "custom:<voice_id>" → inference_zero_shot
         克隆音色合成 (克隆模式与 instruct 情感模式二选一: custom voice 时忽略 instruct)。
     鉴权: 设 COSY_API_KEY 后除 /healthz 外所有端点均需 `Authorization: Bearer <key>`;
@@ -333,6 +334,25 @@ async def fix_voice(vid: str, req: VoiceFixReq):
     with open(os.path.join(VOICES_DIR, f"{vid}.txt"), "w", encoding="utf-8") as f:
         f.write(text)
     return {"voice_id": vid, "prompt_text": text}
+
+
+@app.delete("/voices/{vid}", dependencies=[Depends(require_key)])
+async def delete_voice(vid: str):
+    """删除克隆音色 (样本 wav + 转写 txt + 名字): 用户「一键删除」的服务端落点。
+
+    幂等: 文件不存在也返回 200 deleted=false, 调用方无需区分「已删」与「从未有过」。
+    """
+    if not _VOICE_ID_RE.fullmatch(vid):
+        raise HTTPException(status_code=400, detail=f"bad voice id '{vid}'")
+    deleted = False
+    for ext in (".wav", ".txt", ".name"):
+        p = os.path.join(VOICES_DIR, f"{vid}{ext}")
+        try:
+            os.remove(p)
+            deleted = True
+        except FileNotFoundError:
+            pass
+    return {"voice_id": vid, "deleted": deleted}
 
 
 @app.post("/tts", dependencies=[Depends(require_key)])
