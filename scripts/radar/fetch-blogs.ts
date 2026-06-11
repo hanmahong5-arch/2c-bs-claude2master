@@ -37,6 +37,9 @@ const MAX_ITEMS_PER_SOURCE = Math.max(
   1,
   Number(process.env.RADAR_BLOG_MAX) || 5,
 );
+// 日期下限 — 「观点」段只收近期文章。更老的标 seen 不出稿 (每轮 ≤N 条/源逐步排干档案),
+// 防低频博主 (如 karpathy) 的多年存量被当新内容逐批回灌, 撑爆 CI 时限 (2026-06-10 死循环教训)。
+const MAX_AGE_DAYS = Math.max(1, Number(process.env.RADAR_BLOG_MAX_AGE_DAYS) || 30);
 // 正文截到 8KB — summarize.ts 用 LLM 转中文摘要时不需要全文 (镜像 practices)
 const BODY_CAP = 8000;
 const LIGHTPANDA_WS = process.env.LIGHTPANDA_WS ?? "ws://127.0.0.1:9222";
@@ -534,6 +537,13 @@ async function main(): Promise<void> {
       failCount++;
       continue;
     }
+
+    const stale = items.filter((it) => daysBetween(it.published_at, TODAY) > MAX_AGE_DAYS);
+    for (const it of stale) {
+      state.blogsSeen[src.handle].push(it.url);
+      console.error(`[blogs] ${src.handle}: too old (${it.published_at}), mark seen: ${it.url}`);
+    }
+    items = items.filter((it) => daysBetween(it.published_at, TODAY) <= MAX_AGE_DAYS);
 
     console.error(`[blogs] ${src.handle}: ${items.length} new`);
     for (const it of items) {

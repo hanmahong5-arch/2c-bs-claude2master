@@ -23,7 +23,8 @@ jobs:
   radar:
     name: Fetch + summarize + commit
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # 20min: 15 博主源 × 5 条 × ~14s LLM 摘要的最坏批次 >10min, 曾致 4 连 cancel 死循环 (2026-06-10)
+    timeout-minutes: 20
     permissions:
       contents: write
 
@@ -150,8 +151,9 @@ jobs:
       # CI 只快速上线文章; 本机 RTX 4070 随后补音频再部署一次。
       # tts-generate.ts (edge-tts) 保留为本地 cron 的 fallback。
 
+      # 无条件跑 (内部 no-diff 自跳过): 即使 0 新条目, fetch 阶段的 state.json 推进
+      # (标 seen 旧文/lastPolled) 也必须落库 — 否则下次 run 重复同一批工作。
       - name: Commit + push
-        if: steps.combine.outputs.count != '0'
         run: |
           set -euo pipefail
           git config user.name "c2m-radar-bot"
