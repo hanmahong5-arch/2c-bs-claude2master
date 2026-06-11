@@ -1,0 +1,23 @@
+---
+slug: 2026-06-10-claude-code-2-1-172
+title: "claude-code v2.1.172 — 子代理支持嵌套至5层，修复上下文超限卡死等关键问题"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.172
+publishedAt: 2026-06-10
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "子代理支持嵌套至5层，修复上下文超限卡死等关键问题"
+broadcast: "这次更新让子代理可以嵌套到五层，大大提升了处理复杂任务的能力。同时修复了上下文超限时系统卡死的问题，现在会自动压缩回标准限制，运行更稳定。对国内开发者来说，这意味着开发智能体时能更可靠地执行分层任务，环境隔离也更安全了。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新值得关注。核心修复了1M上下文会话无额度时的永久卡死问题，系统现在能自动压缩回标准限制，这直接提升了代理服务的稳定性和鲁棒性，避免了因额度问题导致的服务中断。因此，现有用户升级到新版本能获得更可靠的使用体验，建议及时更新。"
+tags: [sub-agents, context-management, bug-fixes, performance]
+---
+
+- **子代理现可嵌套至5层**：增强了代理系统的层次化任务分解能力。
+- **修复1M上下文会话无额度时永久卡死**：会话现在会自动压缩回标准限制，提高了系统鲁棒性。
+- **修复后台代理可能误读其他目录项目设置**：确保代理在预热的worker上执行时，环境隔离更可靠。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.172](https://github.com/anthropics/claude-code/releases/tag/v2.1.172)

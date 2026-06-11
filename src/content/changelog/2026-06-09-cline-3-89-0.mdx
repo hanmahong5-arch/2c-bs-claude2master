@@ -1,0 +1,23 @@
+---
+slug: 2026-06-09-cline-3-89-0
+title: "cline v3.89.0 — 支持 Claude Fable 5 模型，修复 MiniMax M3 思考控制，"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v3.89.0
+publishedAt: 2026-06-09
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "支持 Claude Fable 5 模型，修复 MiniMax M3 思考控制，清理 Codex 模型列表。"
+broadcast: "最近，一个开源项目更新了它的模型支持。这次更新增加了对Claude Fable 5模型的支持，这意味着开发者们有了一个更强大的新工具来处理复杂的任务。同时，它还修复了MiniMax模型在思考控制上的问题，让多模型协作更稳定，并且清理了过时的模型列表，让开发者选择起来更清晰。这些改进对国内做智能体开发的团队来说，能提升工具链的可靠性和效率。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新直接影响不大。主要变化在于 Agent Harness 新增了 Claude Fable 5 模型选项，这为处理复杂任务提供了新的选择，现有用户若追求更强能力可考虑升级。同时，MiniMax M3 的思考控制修复提升了多模型集成的稳定性，但现有 prompt 或 hook 配置无需因此改动。Codex 模型列表的清理只是界面优化，不影响功能。"
+tags: [claude-fable-5, minimax-m3, model-list, gateway-fix]
+---
+
+- **新增 Claude Fable 5 模型支持**：为 Agent Harness 提供了新的、可能更强大的模型选项，扩展了其处理复杂任务的能力。
+- **修复 MiniMax M3 思考控制**：确保通过网关调用时，模型的思考控制功能稳定可靠，提升了多模型集成的健壮性。
+- **清理 Codex 模型列表**：移除了过时或不必要的 Codex 模型，简化了配置界面，使开发者能更清晰地选择合适模型。
+
+---
+
+> 原文 release：[cline/cline v3.89.0](https://github.com/cline/cline/releases/tag/v3.89.0)

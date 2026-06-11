@@ -1,0 +1,23 @@
+---
+slug: 2026-06-09-cline-cli-v3-0-22
+title: "cline cli-v3.0.22 — 新增 Claude Fable 5 模型支持，修复 MiniMax M3 网关路"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.22
+publishedAt: 2026-06-09
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增 Claude Fable 5 模型支持，修复 MiniMax M3 网关路由问题"
+broadcast: "这次更新为开发者带来了两个重要改进。首先是新增了对Claude Fable 5模型的支持，为智能体工具链提供了新的高性能选项。其次修复了MiniMax M3模型在网关间的路由问题，提升了多环境部署的可靠性。这两项更新都让框架对不同供应商模型的兼容性和稳定性更强，对国内开发者来说意味着更顺畅的智能体开发体验。"
+insight: "对于使用 Lurus 代理的用户，本次更新值得关注。新增的 Claude Fable 5 模型支持为你的 Agent 工具链提供了新的高性能选项，可以直接通过代理调用。同时，修复的 MiniMax M3 网关路由问题提升了模型特定功能在多环境部署下的可靠性，这意味着通过 newapi.lurus.cn 调用相关模型时，其思考控制等高级功能的传递将更稳定。这两项更新都直接增强了代理后端对不同供应商模型的兼容性，现有用户无需修改 prompt 或 hook 配置即可受益于更稳定的服务。"
+tags: [claude-fable, minimax-m3, model-support, gateway-fix]
+---
+
+- **新增 Claude Fable 5 模型支持**：为 Agent 工具链引入了新的高性能模型选项。
+- **修复 MiniMax M3 思考控制路由**：确保该模型的特定功能在网关间正确传递，提升了多环境部署的可靠性。
+- **两项更新均聚焦于模型集成**：强化了框架对不同供应商模型及其高级功能的兼容性与稳定性。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.22](https://github.com/cline/cline/releases/tag/cli-v3.0.22)

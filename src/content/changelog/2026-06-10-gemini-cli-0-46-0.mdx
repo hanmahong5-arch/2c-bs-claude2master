@@ -1,0 +1,23 @@
+---
+slug: 2026-06-10-gemini-cli-0-46-0
+title: "gemini-cli v0.46.0 — 修复 PTY 崩溃和编辑器死循环，提升 CLI 稳定性与用户体验"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.46.0
+publishedAt: 2026-06-10
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复 PTY 崩溃和编辑器死循环，提升 CLI 稳定性与用户体验"
+broadcast: "谷歌的 Gemini 命令行工具最近更新，主要修复了两个关键问题。一是解决了终端调整大小时可能崩溃的隐患，让开发者在运行自动化任务时更稳定可靠。二是避免了因编辑器配置错误导致的系统死循环，提升了整体使用体验。这次更新对国内开发者来说，意味着构建智能体工具链时，能获得更健壮的基础设施支持。"
+insight: "对于使用 Lurus 代理 newapi.lurus.cn 的国内用户，本次更新值得关注。它修复了 PTY 崩溃和编辑器死循环这两个直接影响 CLI 稳定性的关键问题，能显著提升日常使用体验。虽然摘要未直接提及代理兼容性，但核心修复针对的是底层终端和配置逻辑，这通常与代理无关，因此现有代理连接应不受影响。建议用户升级以获得更稳定的工具链环境，但无需修改现有的代理或 hook 配置。"
+tags: [cli-stability, pty-fix, editor-config, model-transition]
+---
+
+- **修复 PTY 调整大小导致的本地崩溃**：增强终端模拟器在尺寸变化时的健壮性，意味着 Agent 工具链需要处理更稳定的子进程 I/O。
+- **防止无效编辑器配置引发垃圾邮件循环**：当 `preferredEditor` 设置无效时，避免系统陷入重复错误提示，要求 Agent 环境配置具备验证与优雅降级机制。
+- **实验标志存在时自动切换至 GA 模型**：简化了模型版本的升级路径，提示 Agent 框架应支持基于标记的无缝功能切换。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.46.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.46.0)

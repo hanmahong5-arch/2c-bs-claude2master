@@ -1,0 +1,25 @@
+---
+slug: 2026-06-10-blog-simonwillison-datasette-agent-0-2a0
+title: "datasette-agent 0.2a0 — Datasette"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/10/datasette-agent/
+publishedAt: 2026-06-10
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette-Agent 0.2a0 发布，新增用户交互式提问与SQL查询保存功能，提升AI代理的协作与控制能力。"
+broadcast: "Datasette-Agent 新版本发布，这次更新让AI代理更懂协作。它现在能在执行任务时主动向用户提问，比如确认关键操作，确保人类始终掌握控制权。同时，代理生成的SQL查询可以保存下来，但必须经过人工批准才能存储，这为国内开发者构建更可靠、可交互的智能工具提供了新思路。"
+tags: [datasette-agent, ai-agent, human-in-the-loop, sql-generation]
+---
+
+Simon Willison 发布了 Datasette-Agent 0.2a0 版本，核心更新聚焦于增强AI代理与用户的交互协作。
+
+*   **工具支持中途向用户提问**：工具现在可以声明一个 `context` 参数，通过 `await context.ask_user(...)` 方法在运行中暂停并向用户提出是/否、多选或自由文本问题，等待用户回答后才继续执行，这确保了关键决策由人类确认。
+*   **新增内置 `save_query` 工具**：代理可以将生成的SQL查询保存为Datasette的存储查询，但保存操作必须经过人工批准，代理会展示完整的SQL、建议的名称和可见性设置，用户点击确认后才会存储。
+*   **状态持久化与恢复**：被提问暂停的对话会渲染为表单并持久化到内部数据库，即使服务器重启，未完成的对话也能恢复，回答后工具会从顶部重新执行并回放存储的答案。
+
+---
+
+> 原文：[datasette-agent 0.2a0](https://simonwillison.net/2026/Jun/10/datasette-agent/) · 作者 Simon Willison

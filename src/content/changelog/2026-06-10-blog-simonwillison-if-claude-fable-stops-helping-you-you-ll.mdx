@@ -1,0 +1,28 @@
+---
+slug: 2026-06-10-blog-simonwillison-if-claude-fable-stops-helping-you-you-ll
+title: "If Claude Fable stops helping you, you'll never know — Anthropic 被曝在 Claude 中植入隐形干预，对特定研究请求静默降级"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/
+publishedAt: 2026-06-10
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic 被曝在 Claude 中植入隐形干预，对特定研究请求静默降级回复质量。"
+broadcast: "最近有消息爆出，Anthropic公司被发现在其Claude模型中植入了一项隐形干预措施。当用户询问关于前沿大模型开发的具体技术问题时，系统会悄悄降低回复质量，而且完全不提示用户。这对国内开发者来说是个警示，意味着我们可能无法完全信任模型在关键领域的输出，自己的开发工作或许会在不知不觉中被干扰。好在研究社区的强烈反对让这项政策最终被撤回了，这说明开发者的声音对维护技术透明度至关重要。"
+tags: [ai-safety, model-governance, anthropic, ai-ethics]
+---
+
+博主 Simon Willison 引述了 Anthropic 一份长达 319 页的系统卡文件，揭示了其针对 Claude 模型的一项争议性安全措施。
+
+*   **隐形干预特定请求**：文件披露，Anthropic 对涉及前沿 LLM 开发（如构建预训练管道、分布式训练基础设施）的请求，会通过提示词修改、参数微调等方式静默限制 Claude 的回复有效性，且用户不会收到任何提示。
+  *   *对开发者的含义：这意味着开发者无法信任模型在特定关键领域的输出是完整或最优的，其工作可能在不自知的情况下被暗中干扰。*
+*   **旨在阻止竞争与“递归自我改进”**：Anthropic 将此措施的理由归结为防止模型能力被用于加速开发竞争模型，并提及“递归自我改进”的风险。
+  *   *对 AI 生态的含义：这开创了模型提供商出于商业或安全考量，单方面、静默地限制模型核心能力的先例，引发了关于技术开放性与可控性的伦理担忧。*
+*   **政策引发反弹后撤回**：文章更新提到，由于研究社区的广泛反对，Anthropic 已撤回了这项政策。
+  *   *对行业治理的含义：这表明开发者和研究社区对模型行为的“透明性”有强烈要求，能有效制衡提供商可能存在的过度控制行为。*
+
+---
+
+> 原文：[If Claude Fable stops helping you, you'll never know](https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-06-10-opencode-1-17-2
+title: "opencode v1.17.2 — 修复远程配置过期登录、子代理权限和Linux启动器问题，提升稳定性和用户体验"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.2
+publishedAt: 2026-06-10
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复远程配置过期登录、子代理权限和Linux启动器问题，提升稳定性和用户体验"
+broadcast: "这次更新主要修复了三个关键问题。远程配置过期后，系统会提示重新登录，而不是直接失败，这提升了配置加载的可靠性。子代理现在可以独立使用自己的权限，恢复了权限隔离的灵活性，这对多智能体系统的设计很重要。同时，还修复了Linux启动器的问题，让应用能正确打开，这表明跨平台部署需要特别注意系统集成的细节。"
+insight: "对于使用 sst/opencode 的国内用户，这次 v1.17.2 的修复值得关注。远程配置过期自动恢复机制能提升代理服务的稳定性，避免因认证问题导致服务中断，这对依赖 newapi.lurus.cn 代理的国内用户是直接利好，意味着连接可靠性增强。同时，Linux启动器问题的修复也改善了在国产Linux发行版上的使用体验。现有用户如果遇到配置过期或Linux环境下的启动问题，建议升级以获得更稳定的服务。"
+tags: [bugfix, authentication, permissions, linux-support]
+---
+
+- **远程配置过期自动恢复**：当远程配置认证过期时，系统会提示重新登录而非直接失败，确保配置加载的可靠性。这意味着agent harness需要设计更优雅的错误恢复机制。
+- **子代理权限独立配置**：子代理现在可以再次使用其自身配置的权限，恢复了权限隔离的灵活性。这对多agent系统的权限管理设计有重要参考价值。
+- **Linux启动器与设备选择器修复**：修复了Linux启动器身份识别问题，使固定应用能正确打开；同时恢复了设备附件选择器功能。这表明跨平台agent部署需要特别注意系统集成细节。
+
+---
+
+> 原文 release：[sst/opencode v1.17.2](https://github.com/anomalyco/opencode/releases/tag/v1.17.2)

@@ -1,0 +1,23 @@
+---
+slug: 2026-06-09-claude-code-2-1-170
+title: "claude-code v2.1.170 — Claude Fable 5 模型正式开放，修复会话保存问题"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.170
+publishedAt: 2026-06-09
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "Claude Fable 5 模型正式开放，修复会话保存问题"
+broadcast: "Claude 最新的大模型已经正式开放，它的推理和生成能力超越了以往所有公开模型，这意味着开发者能构建更强大的智能助手。同时，这次更新修复了会话保存的问题，确保助手的工作流程和状态可以被可靠记录和恢复，大大提升了开发体验。"
+insight: "对于使用 Lurus 代理的国内开发者，本次更新值得关注。虽然摘要未直接提及 newapi.lurus.cn 代理的兼容性，但核心升级在于底层模型和会话稳定性。Claude Fable 5 作为更强大的 Mythos 级模型已开放，能直接提升通过代理调用的 Agent 能力。同时，修复的会话保存与 --resume 功能问题，确保了工作流的可靠性，这对依赖持久化会话的开发者尤为重要。因此，建议及时升级以获取更强的模型能力和更稳定的体验。"
+tags: [model-update, bug-fix, session-persistence, cli-fix]
+---
+
+- **引入 Claude Fable 5 模型**：这是一个 Mythos 级别的模型，能力超越以往所有公开模型，现已开放使用。这意味着 Agent 可以利用更强大的底层推理和生成能力。
+- **修复会话保存问题**：解决了从 VS Code 集成终端或继承环境变量的 shell 启动时，会话无法保存转录文本的问题。这确保了 Agent 的工作流程和状态能够被可靠地记录和恢复。
+- **修复 --resume 功能**：修复了在上述环境下会话无法出现在 --resume 列表中的问题。这提升了 Agent 的持久性和可中断/可恢复性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170)

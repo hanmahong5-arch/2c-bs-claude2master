@@ -1,0 +1,23 @@
+---
+slug: 2026-06-10-opencode-1-17-0
+title: "opencode v1.17.0 — 提升大型项目文件搜索速度，增强 MCP 连接稳定性，并改进桌面端用户体验。"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.0
+publishedAt: 2026-06-10
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "提升大型项目文件搜索速度，增强 MCP 连接稳定性，并改进桌面端用户体验。"
+broadcast: "这次更新主要提升了代理在大型项目中的文件搜索速度，让处理海量代码库更高效。同时，远程工具调用的连接更稳定可控，出现问题也更容易排查。对于国内开发者来说，这意味着代理在Windows开发环境中的集成更顺畅，管理多个会话也更直观了。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要提升了大型项目的文件搜索速度，这直接优化了处理海量代码库时的体验，值得升级。同时，MCP 连接稳定性的增强有助于减少工具调用时的意外中断，但现有 prompt 或 hook 配置无需改动。桌面端的 WSL 支持等改进则主要优化了 Windows 开发环境下的使用便利性。"
+tags: [performance, mcp-stability, desktop-ui, search]
+---
+
+- **使用 `fff` 工具加速大型项目文件搜索**：这意味着代理在处理海量代码库时能更快定位文件，提升效率。
+- **MCP 工具调用现在接收中止信号，连接状态信息更清晰**：这使得代理的远程工具调用更可控，连接问题更易诊断和恢复。
+- **桌面端支持 WSL，并改进会话列表与服务器 UI**：代理在 Windows 开发环境中的集成更顺畅，管理多个会话和后台服务更直观。
+
+---
+
+> 原文 release：[sst/opencode v1.17.0](https://github.com/anomalyco/opencode/releases/tag/v1.17.0)

@@ -1,0 +1,23 @@
+---
+slug: 2026-06-10-cline-cli-v3-0-23
+title: "cline cli-v3.0.23 — 修复多项云服务配置，支持子代理工具化，提升多平台集成稳定性"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.23
+publishedAt: 2026-06-10
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复多项云服务配置，支持子代理工具化，提升多平台集成稳定性"
+broadcast: "最新版本修复了多项云服务配置问题，让智能体工具能更稳定地调用主流云平台。这次更新还支持将已配置的代理作为子工具嵌套使用，这为设计分层、模块化的智能体工作流提供了核心能力。同时，身份验证管理得到统一，并解决了特定模型下的运行错误，使底层框架更健壮易维护。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新没有直接影响，因为核心修复集中在 Vertex AI、Azure 等海外云服务的配置稳定性上。不过，新版本支持将代理配置为子代理工具，这为设计更复杂的模块化工作流提供了新能力。如果你的现有 prompt 或 hook 配置涉及多级代理调用或需要更稳定的云服务集成，那么升级是值得考虑的，它能提升工作流的可靠性和设计灵活性。"
+tags: [cloud-integration, subagent-tools, oauth-centralization, bug-fixes]
+---
+
+- **修复 Vertex AI 与 Azure Foundry 配置**：确保在 GCP 和 Azure 平台上的 API 调用稳定可靠，意味着 Agent Harness 能更无缝地集成主流云服务。
+- **支持配置代理作为子代理工具**：允许将已配置的 Agent 作为工具嵌套调用，为设计分层、模块化的智能体工作流提供了核心能力。
+- **将 OAuth 管理集中至 SDK 并修复 Fable 5 推理错误**：统一了身份验证管理，同时解决了特定模型下的运行中断问题，使底层框架更健壮、易于维护。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.23](https://github.com/cline/cline/releases/tag/cli-v3.0.23)

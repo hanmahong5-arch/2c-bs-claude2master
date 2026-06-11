@@ -1,13 +1,13 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.169",
-    "openai/codex": "rust-v0.138.0",
+    "anthropics/claude-code": "v2.1.173",
+    "openai/codex": "rust-v0.139.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.21",
+    "cline/cline": "cli-v3.0.23",
     "block/goose": "v1.37.0",
-    "sst/opencode": "v1.16.2",
+    "sst/opencode": "v1.17.3",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.45.2"
+    "google-gemini/gemini-cli": "v0.46.0"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -35,7 +35,9 @@
     "tastyeffectco/sandboxes",
     "anthropics/defending-code-reference-harness",
     "msitarzewski/brew-browser",
-    "tastyeffectco/sandboxd"
+    "tastyeffectco/sandboxd",
+    "akitaonrails/ai-memory",
+    "DEEIX-AI/DEEIX-Chat"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -69,9 +71,9 @@
     "openai-codex-blog": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-09",
-    "claude-code-docs": "2026-06-04",
-    "openai-codex-blog": "2026-06-04"
+    "anthropic-engineering": "2026-06-11",
+    "claude-code-docs": "2026-06-11",
+    "openai-codex-blog": "2026-06-11"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -91,14 +93,24 @@
       "https://simonwillison.net/2026/Jun/5/andreas-kling/",
       "https://simonwillison.net/2026/Jun/1/may-newsletter/",
       "https://simonwillison.net/2026/Jun/7/datasette-agent-edit/",
-      "https://simonwillison.net/2026/Jun/8/wwdc/"
+      "https://simonwillison.net/2026/Jun/8/wwdc/",
+      "https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/",
+      "https://simonwillison.net/2026/Jun/10/datasette-agent/",
+      "https://simonwillison.net/2026/Jun/10/diffusiongemma/",
+      "https://simonwillison.net/2026/Jun/10/jeremy-howard/",
+      "https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
       "https://lilianweng.github.io/posts/2024-11-28-reward-hacking/",
       "https://lilianweng.github.io/posts/2024-07-07-hallucination/",
       "https://lilianweng.github.io/posts/2024-04-12-diffusion-video/",
-      "https://lilianweng.github.io/posts/2024-02-05-human-data-quality/"
+      "https://lilianweng.github.io/posts/2024-02-05-human-data-quality/",
+      "https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/",
+      "https://lilianweng.github.io/posts/2023-06-23-agent/",
+      "https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/",
+      "https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/",
+      "https://lilianweng.github.io/posts/2023-01-10-inference-optimization/"
     ],
     "latentspace": [
       "https://www.latent.space/p/axiom",
@@ -115,7 +127,10 @@
       "https://www.latent.space/p/ainews-founders-and-forward-deployed",
       "https://www.latent.space/p/ainews-anthropic-raises-965b-series",
       "https://www.latent.space/p/cognition",
-      "https://www.latent.space/p/ainews-cognition-raises-1b-in-26b"
+      "https://www.latent.space/p/ainews-cognition-raises-1b-in-26b",
+      "https://www.latent.space/p/ainews-open-models-model-labs-vs",
+      "https://www.latent.space/p/ainews-anthropic-claude-fable-5-mythos",
+      "https://www.latent.space/p/ainews-frontiercode-benchmarking"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -132,7 +147,8 @@
       "https://www.interconnects.ai/p/claude-mythos-and-misguided-open",
       "https://www.interconnects.ai/p/gemma-4-and-what-makes-an-open-model",
       "https://www.interconnects.ai/p/latest-open-artifacts-20-new-orgs",
-      "https://www.interconnects.ai/p/lossy-self-improvement"
+      "https://www.interconnects.ai/p/lossy-self-improvement",
+      "https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -141,7 +157,10 @@
       "http://karpathy.github.io/2021/03/27/forward-pass/",
       "http://karpathy.github.io/2020/06/11/biohacking-lite/",
       "http://karpathy.github.io/2019/04/25/recipe/",
-      "http://karpathy.github.io/2018/01/20/medium/"
+      "http://karpathy.github.io/2018/01/20/medium/",
+      "http://karpathy.github.io/2016/09/07/phd/",
+      "http://karpathy.github.io/2016/05/31/rl/",
+      "http://karpathy.github.io/2015/11/14/ai/"
     ],
     "raschka": [
       "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
@@ -150,7 +169,12 @@
       "https://magazine.sebastianraschka.com/p/components-of-a-coding-agent",
       "https://magazine.sebastianraschka.com/p/visual-attention-variants",
       "https://magazine.sebastianraschka.com/p/a-dream-of-spring-for-open-weight",
-      "https://magazine.sebastianraschka.com/p/categories-of-inference-time-scaling"
+      "https://magazine.sebastianraschka.com/p/categories-of-inference-time-scaling",
+      "https://magazine.sebastianraschka.com/p/state-of-llms-2025",
+      "https://magazine.sebastianraschka.com/p/llm-research-papers-2025-part2",
+      "https://magazine.sebastianraschka.com/p/technical-deepseek",
+      "https://magazine.sebastianraschka.com/p/beyond-standard-llms",
+      "https://magazine.sebastianraschka.com/p/llm-evaluation-4-approaches"
     ],
     "eugeneyan": [
       "https://eugeneyan.com//writing/working-with-ai/",
@@ -159,11 +183,21 @@
       "https://eugeneyan.com//writing/principal/",
       "https://eugeneyan.com//writing/semantic-ids/",
       "https://eugeneyan.com//writing/qa-evals/",
-      "https://eugeneyan.com//speaking/aie-2025/"
+      "https://eugeneyan.com//speaking/aie-2025/",
+      "https://eugeneyan.com//writing/leadership/",
+      "https://eugeneyan.com//writing/news-agents/",
+      "https://eugeneyan.com//writing/eval-process/",
+      "https://eugeneyan.com//writing/writing-faq/",
+      "https://eugeneyan.com//speaking/nvidia-gtc-2025/"
     ],
     "chiphuyen": [
       "https://huyenchip.com//2025/01/16/ai-engineering-pitfalls.html",
-      "https://huyenchip.com//2025/01/07/agents.html"
+      "https://huyenchip.com//2025/01/07/agents.html",
+      "https://huyenchip.com//2024/07/25/genai-platform.html",
+      "https://huyenchip.com//2024/04/17/personal-growth.html",
+      "https://huyenchip.com//2024/03/14/ai-oss.html",
+      "https://huyenchip.com//2024/02/28/predictive-human-preference.html",
+      "https://huyenchip.com//2024/01/16/sampling.html"
     ],
     "oneusefulthing": [
       "https://www.oneusefulthing.org/p/choosing-to-stay-human",
@@ -177,7 +211,10 @@
       "https://www.oneusefulthing.org/p/the-shape-of-ai-jaggedness-bottlenecks",
       "https://www.oneusefulthing.org/p/three-years-from-gpt-3-to-gemini",
       "https://www.oneusefulthing.org/p/giving-your-ai-a-job-interview",
-      "https://www.oneusefulthing.org/p/an-opinionated-guide-to-using-ai"
+      "https://www.oneusefulthing.org/p/an-opinionated-guide-to-using-ai",
+      "https://www.oneusefulthing.org/p/real-ai-agents-and-real-work",
+      "https://www.oneusefulthing.org/p/on-working-with-wizards",
+      "https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos"
     ],
     "importai": [
       "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
@@ -205,7 +242,12 @@
       "https://openai.com/index/boston-childrens-hospital",
       "https://openai.com/index/openai-submits-confidential-s-1",
       "https://openai.com/index/built-to-benefit-everyone-our-plan",
-      "https://openai.com/index/economic-research-exchange"
+      "https://openai.com/index/economic-research-exchange",
+      "https://openai.com/index/using-codex-to-simulate-black-holes",
+      "https://openai.com/index/openai-on-oracle-cloud",
+      "https://openai.com/index/prc-linked-influence-operations-ai-debates",
+      "https://openai.com/index/lseg",
+      "https://openai.com/index/nextdoor"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -219,7 +261,12 @@
       "https://deepmind.google/blog/finding-the-molecular-switches-behind-new-infectious-diseases/",
       "https://deepmind.google/blog/opening-new-paths-in-aging-research/",
       "https://deepmind.google/blog/accelerating-discovery-of-liver-disease-mechanisms/",
-      "https://deepmind.google/blog/uniting-biological-toolkits-for-a-new-approach-to-als/"
+      "https://deepmind.google/blog/uniting-biological-toolkits-for-a-new-approach-to-als/",
+      "https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/",
+      "https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate/",
+      "https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model/",
+      "https://deepmind.google/blog/powering-the-future-of-robotics-in-europe/",
+      "https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -233,7 +280,12 @@
       "https://huggingface.co/blog/JetBrains/mellum2-launch",
       "https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
       "https://huggingface.co/blog/torch-profiler",
-      "https://huggingface.co/blog/local-reachy-mini-conversation"
+      "https://huggingface.co/blog/local-reachy-mini-conversation",
+      "https://huggingface.co/blog/ServiceNow-AI/code-switching",
+      "https://huggingface.co/blog/CohereLabs/introducing-north-mini-code",
+      "https://huggingface.co/blog/mishig/spaces-agents-md",
+      "https://huggingface.co/blog/github-ci-hf-jobs",
+      "https://huggingface.co/blog/openenv-agentic-rl"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -253,20 +305,20 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-09",
-    "lilianweng": "2026-06-04",
-    "latentspace": "2026-06-09",
-    "interconnects": "2026-06-09",
-    "karpathy": "2026-06-07",
-    "raschka": "2026-06-07",
-    "eugeneyan": "2026-06-07",
-    "chiphuyen": "2026-06-04",
-    "oneusefulthing": "2026-06-08",
+    "simonwillison": "2026-06-11",
+    "lilianweng": "2026-06-11",
+    "latentspace": "2026-06-11",
+    "interconnects": "2026-06-11",
+    "karpathy": "2026-06-11",
+    "raschka": "2026-06-11",
+    "eugeneyan": "2026-06-11",
+    "chiphuyen": "2026-06-11",
+    "oneusefulthing": "2026-06-11",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-09",
-    "deepmind": "2026-06-08",
-    "hf-blog": "2026-06-08",
+    "openai-news": "2026-06-11",
+    "deepmind": "2026-06-11",
+    "hf-blog": "2026-06-11",
     "anthropic-news": "2026-06-09"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."

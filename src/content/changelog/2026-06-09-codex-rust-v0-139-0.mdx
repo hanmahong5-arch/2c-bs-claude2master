@@ -1,0 +1,23 @@
+---
+slug: 2026-06-09-codex-rust-v0-139-0
+title: "codex rust-v0.139.0 — 代码模式支持独立网页搜索，工具输入模式增强，提升多工具代理兼容性"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.139.0
+publishedAt: 2026-06-09
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "代码模式支持独立网页搜索，工具输入模式增强，提升多工具代理兼容性"
+broadcast: "这次更新让代码模式可以直接调用独立的网页搜索，这意味着开发者在编写代码时，代理就能实时获取外部信息，大大增强了代码的实用性。同时，工具输入模式也做了优化，能更好地兼容复杂的多工具代理，让开发者能处理更丰富的模式定义。这些改进都让代理开发变得更灵活、更强大。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次升级值得关注。代码模式新增的独立网页搜索功能，意味着代理在代码执行中能实时获取外部信息，这直接提升了代理的实时信息处理能力。同时，工具输入模式的兼容性增强，有助于代理更好地处理复杂的 MCP 工具定义。现有用户升级后，无需修改现有 prompt 或 hook 配置即可获得这些能力提升，代理的调试信息也因 `codex doctor` 的增强而更安全、详细。"
+tags: [web-search, tool-schema, debugging, compatibility]
+---
+
+- **代码模式可直接调用独立网页搜索**：包括嵌套 JavaScript 工具调用，接收纯文本搜索结果，意味着代理能在代码执行中实时获取外部信息。
+- **工具输入模式保留 `oneOf` 和 `allOf`**：大型模式在压缩时保持更浅的结构，提升与复杂 MCP 工具的兼容性，使代理能处理更丰富的模式定义。
+- **`codex doctor` 增强本地报告细节**：包含编辑器和分页器环境信息，同时 JSON 输出中隐藏原始值，便于代理调试时保护敏感数据。
+
+---
+
+> 原文 release：[openai/codex rust-v0.139.0](https://github.com/openai/codex/releases/tag/rust-v0.139.0)

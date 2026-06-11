@@ -1,0 +1,22 @@
+---
+slug: 2026-06-11-claude-code-2-1-173
+title: "claude-code v2.1.173 — 修复 Fable 5 模型名称后缀处理与 Windows 沙盒误报警告"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.173
+publishedAt: 2026-06-11
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复 Fable 5 模型名称后缀处理与 Windows 沙盒误报警告"
+broadcast: "Claude Code 最近修复了两个关键问题。一是自动处理了 Fable 5 模型名称的后缀，避免开发者在调用时产生混淆。二是解决了 Windows 系统上沙盒环境的误报警告，让跨平台开发的检测更准确。这两处修复对国内开发者来说，意味着工具链更稳定，能减少不必要的调试困扰。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要修复了两个底层问题，不影响代理服务的核心功能。Fable 5 模型名称后缀的标准化处理属于内部逻辑调整，用户无需修改现有 prompt 或配置。Windows 沙盒误报警告的修复解决了启动时的干扰信息，提升了体验，但同样不涉及功能变更。因此，现有用户无需急于升级，可按常规节奏更新。"
+tags: [model-normalization, windows-fix, sandbox, bug-fix]
+---
+
+- **Fable 5 模型名称后缀自动剥离**：修复了带 `[1m]` 后缀的模型名称未标准化问题，Fable 5 默认包含 1M 上下文，后缀现被自动移除。这意味着 agent harness 在处理模型标识时需注意版本后缀的隐式含义。
+- **Windows 沙盒依赖误报修复**：解决了 Windows 上沙盒启用时出现的虚假“sandbox dependencies missing”启动警告。这表明跨平台 agent 环境检测逻辑需区分真实缺失与误报。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.173](https://github.com/anthropics/claude-code/releases/tag/v2.1.173)
