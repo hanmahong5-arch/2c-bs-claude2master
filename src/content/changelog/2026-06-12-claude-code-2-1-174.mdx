@@ -1,0 +1,23 @@
+---
+slug: 2026-06-12-claude-code-2-1-174
+title: "claude-code v2.1.174 — 修复多项关键错误并优化模型选择器，提升企业级部署稳定性与使用体验。"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.174
+publishedAt: 2026-06-12
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复多项关键错误并优化模型选择器，提升企业级部署稳定性与使用体验。"
+broadcast: "这次更新主要修复了多项关键错误，并优化了模型选择器。它解决了全屏模式下滚动过快的问题，修正了模型显示逻辑，还修复了后台会话的环境变量继承。这些改进提升了企业级部署的稳定性与使用体验，对国内开发者来说，意味着更可靠、更易用的开发工具。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要修复了后台稳定性问题，特别是会话环境变量继承的修复，能有效防止认证信息在多进程间污染，这对企业级部署的稳定性至关重要。虽然更新未直接影响代理功能，但后台稳定性的提升意味着整体服务可靠性增强。现有用户无需修改 prompt 或 hook 配置，但建议企业用户关注并安排升级，以获取更稳定的会话环境。"
+tags: [bug-fixes, ui-enhancement, enterprise, authentication]
+---
+
+- **禁用全屏模式下的鼠标滚轮加速**：允许用户关闭此功能，意味着界面交互设计需考虑用户对滚动行为的精细控制需求。
+- **修正模型选择器显示逻辑**：确保计划类型与默认模型家族正确对应，意味着产品配置系统需要与计费计划深度绑定。
+- **修复后台会话环境变量继承问题**：防止会话间认证信息污染，意味着多进程架构下环境隔离是稳定性的关键。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.174](https://github.com/anthropics/claude-code/releases/tag/v2.1.174)

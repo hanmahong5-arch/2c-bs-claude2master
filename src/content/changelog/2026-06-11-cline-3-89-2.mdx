@@ -1,0 +1,23 @@
+---
+slug: 2026-06-11-cline-3-89-2
+title: "cline v3.89.2 — 修复 Anthropic 和 Vertex AI 提供商在最新 VS Code "
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v3.89.2
+publishedAt: 2026-06-11
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复 Anthropic 和 Vertex AI 提供商在最新 VS Code 和 Node 24 下的兼容性问题"
+broadcast: "最近有个开发者工具更新了，主要修复了在最新版VS Code和Node环境下，与两个主流AI服务商的兼容性问题。这次更新提醒我们，做AI应用开发时，必须及时管理好核心依赖的版本，否则环境一升级，你的工具链就可能突然用不了。对于国内开发者来说，这强调了建立严格兼容性测试流程的重要性，能帮我们更快响应上游变化，避免项目中断。"
+insight: "对于国内使用 newapi.lurus.cn 代理访问 Anthropic 或 Vertex AI 服务的用户，此次更新至关重要。它修复了在最新 VS Code 和 Node 24 环境下的兼容性问题，直接关系到代理服务的稳定运行。如果你的开发环境已升级到 VS Code 1.123+ 或 Node 24，强烈建议立即升级到 v3.89.2，否则可能遇到因依赖不匹配导致的中断。现有 prompt 或 hook 配置本身无需修改，但核心运行环境依赖必须同步更新。"
+tags: [bug-fix, dependencies, compatibility, providers]
+---
+
+- **升级 Anthropic SDK**：修复了在 VS Code 1.123+ 上 Anthropic 提供商的问题，确保与 Node 24 运行时兼容。这意味着 agent harness 必须保持核心依赖的及时更新，以避免运行时环境升级导致的意外中断。
+- **同步 Vertex AI SDK**：更新了 Vertex AI 提供商，使其与升级后的 Anthropic SDK 兼容。这表明当底层服务 SDK 变更时，相关的集成提供商需要同步更新，以维持整个工具链的功能一致性。
+- **聚焦依赖管理**：此次发布专注于修复因依赖版本不匹配导致的特定问题。这强调了在 agent harness 设计中，需要建立严格的依赖版本控制和兼容性测试流程，以快速响应上游变化。
+
+---
+
+> 原文 release：[cline/cline v3.89.2](https://github.com/cline/cline/releases/tag/v3.89.2)

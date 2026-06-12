@@ -1,0 +1,28 @@
+---
+slug: 2026-06-11-blog-simonwillison-datasette-1-0a33
+title: "datasette 1.0a33 — Datasette 1.0a33 发布，扩展了 API 的 JSON 附加数据模"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/11/datasette/
+publishedAt: 2026-06-11
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 1.0a33 发布，扩展了 API 的 JSON 附加数据模式，让数据探索更灵活。"
+broadcast: "Datasette 的最新版本扩展了其核心 API 的数据模式。现在，通过一个简单的参数，开发者就能在查询数据表、行数据时，一并获取丰富的结构化元数据。这大大简化了客户端整合数据的逻辑，让自动化操作更可靠。值得一提的是，作者本人也利用 AI 编程工具快速搭建了演示工具，这正展示了 AI 如何成为我们开发者的效率助手，加速从想法到成品的迭代过程。"
+tags: [datasette, api-design, ai-assisted-programming, release-notes]
+---
+
+这篇博客介绍了 Datasette 1.0a33 版本的核心更新，重点在于扩展了 `?_extra=` API 模式。
+
+*   **扩展 API 模式**：`?_extra=` 参数现在不仅适用于数据表，还覆盖了查询和行数据，允许 API 返回更丰富的结构化元数据。
+    *   对开发者而言，这意味着能通过单一 API 调用获取更完整的数据上下文，简化了客户端的数据整合逻辑。
+*   **模式正式文档化**：此次更新正式编写了该功能的文档，明确了其使用规范。
+    *   这降低了工具链的集成门槛，使其他开发者或 Agent 能更可靠地依赖此 API 特性进行自动化数据操作。
+*   **AI 辅助开发实践**：作者利用 Claude 和 GPT 等 AI 编程工具，快速构建了一个自定义的 API 探索器来演示新功能。
+    *   这展示了 AI 如何成为开发者的效率倍增器，能快速将概念验证转化为可交互的工具，加速功能迭代与展示。
+
+---
+
+> 原文：[datasette 1.0a33](https://simonwillison.net/2026/Jun/11/datasette/) · 作者 Simon Willison

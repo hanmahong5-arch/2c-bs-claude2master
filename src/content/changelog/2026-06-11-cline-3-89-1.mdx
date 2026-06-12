@@ -1,0 +1,23 @@
+---
+slug: 2026-06-11-cline-3-89-1
+title: "cline v3.89.1 — 修复 VS Code 新版兼容性与 DeepSeek V4 推理格式支持"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v3.89.1
+publishedAt: 2026-06-11
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复 VS Code 新版兼容性与 DeepSeek V4 推理格式支持"
+broadcast: "最近，一个流行的AI编程助手工具修复了在最新版VS Code中的兼容问题，并新增了对国产模型DeepSeek V4推理格式的支持。这意味着国内开发者在使用AI辅助编程时，能更稳定地对接不同模型，避免因环境更新导致的中断。这次更新提醒我们，AI开发工具需要及时适配底层技术变化，才能保证开发体验的流畅性。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要修复了 VS Code 新版兼容性，不影响代理路径本身。如果你的开发环境已升级到 VS Code 1.123 及以上版本，并且正在使用 Anthropic 模型，则值得升级以解决潜在的运行时中断问题。同时，如果你集成了 DeepSeek V4 模型，升级后能确保其推理输出格式被正确解析。现有 prompt 或 hook 配置无需特意修改。"
+tags: [bug-fix, compatibility, model-support, vscode]
+---
+
+- **修复 Anthropic 提供商在 VS Code 1.123+ 的兼容性**：更新后的 Node 24 运行时破坏了捆绑的 Anthropic SDK，现已修复。这意味着 Agent Harness 需要确保核心 SDK 与宿主环境的运行时版本保持兼容。
+- **支持 DeepSeek V4 推理格式**：现在能够正确处理 DeepSeek V4 的推理输出格式。这表明 Agent Harness 的设计必须能灵活适配不同模型供应商特定的响应结构。
+- **维护多环境下的提供商稳定性**：此次更新集中于修复特定环境下的中断问题，强调了在复杂工具链生态中，Agent Harness 需要具备对底层依赖变化的快速响应和隔离修复能力。
+
+---
+
+> 原文 release：[cline/cline v3.89.1](https://github.com/cline/cline/releases/tag/v3.89.1)

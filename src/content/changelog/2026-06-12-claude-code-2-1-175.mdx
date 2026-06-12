@@ -1,0 +1,26 @@
+---
+slug: 2026-06-12-claude-code-2-1-175
+title: "claude-code v2.1.175 — 新增强制模型可用性管理，确保默认模型始终在允许列表中"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.175
+publishedAt: 2026-06-12
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增强制模型可用性管理，确保默认模型始终在允许列表中"
+broadcast: "Claude Code 最新更新引入了强制模型可用性管理功能。这意味着管理员可以设置一个允许使用的模型白名单，如果默认模型不在名单里，系统会自动切换到第一个允许的模型。这项改进能有效防止配置错误导致的模型不可用问题，让国内开发者在构建智能体时，能更安全、可控地管理模型调用，提升了系统的稳定性和合规性。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新直接影响模型可用性管理。管理员现在可以通过启用 enforceAvailableModels 设置，强制要求默认模型必须在托管的 availableModels 白名单内。这意味着，如果你的默认模型（例如 Claude 3.5 Sonnet）不在管理员设置的白名单中，系统将自动回退到白名单里的第一个模型。这确保了代理服务的合规性与可控性，但用户或项目将无法自行添加其他模型。因此，如果你依赖特定的默认模型，需要与管理员确认其已在允许列表中，否则可能会被自动切换模型。"
+tags: [managed-settings, model-constraints, access-control, fallback-behavior]
+---
+
+- 新增 `enforceAvailableModels` 托管设置，启用后 `availableModels` 白名单将约束默认模型选择。
+  - 含义：当默认模型解析到被禁用的模型时，系统会自动回退到白名单中的第一个允许模型，增强了模型使用的可控性。
+- 默认模型若不在允许列表中，将自动回退至首个允许模型。
+  - 含义：这防止了因配置错误导致的模型不可用问题，提升了系统的鲁棒性。
+- 用户或项目设置无法再扩展托管的 `availableModels` 列表。
+  - 含义：管理员可以严格限制可用模型范围，确保合规与安全策略得到强制执行。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.175](https://github.com/anthropics/claude-code/releases/tag/v2.1.175)

@@ -1,0 +1,23 @@
+---
+slug: 2026-06-11-cline-cli-v3-0-24
+title: "cline cli-v3.0.24 — 插件可提交提示词，支持自定义 API 地址，自动打开验证链接提升体验"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.24
+publishedAt: 2026-06-11
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "插件可提交提示词，支持自定义 API 地址，自动打开验证链接提升体验"
+broadcast: "这次更新让插件可以直接向智能代理提交提示词，大大增强了外部工具与代理的互动能力。同时，开发者现在可以自定义后端服务的地址，这为本地部署和测试提供了更多便利。另外，设备认证时系统会自动打开验证链接，简化了登录步骤，让整体使用体验更加流畅。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新值得关注。核心变化是插件现在能向代理提交提示词，这增强了外部工具与代理的联动能力，但现有 prompt 或 hook 配置本身无需修改。同时，新增的自定义 API 基础 URL 功能，允许你覆盖默认地址，这意味着如果你在使用我们的代理服务，可以更灵活地指定后端，部署和测试会更方便。此外，设备认证时自动打开验证链接，确实能简化登录流程。整体来看，升级能获得更好的灵活性和体验，建议更新。"
+tags: [plugin-integration, api-configuration, authentication, cli-enhancement]
+---
+
+- **插件命令现可向代理提交提示词**：扩展了插件的交互能力，使外部工具能更灵活地驱动代理行为。
+- **支持覆盖 API 基础 URL**：允许用户自定义后端服务地址，增强了部署和测试的灵活性。
+- **设备认证时自动打开验证 URL**：简化了登录流程，减少了手动操作步骤，提升了用户体验。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.24](https://github.com/cline/cline/releases/tag/cli-v3.0.24)

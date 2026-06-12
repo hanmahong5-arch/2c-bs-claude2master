@@ -1,0 +1,25 @@
+---
+slug: 2026-06-09-blog-simonwillison-initial-impressions-of-claude-fable-5
+title: "Initial impressions of Claude Fable 5 — 博主实测 Claude Fable 5，揭示其作为大型模型的性能、成本与知识广度"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/9/claude-fable-5/
+publishedAt: 2026-06-09
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "博主实测 Claude Fable 5，揭示其作为大型模型的性能、成本与知识广度，为开发者提供选型参考。"
+broadcast: "博主实测了最新发布的大型模型，发现它虽然速度较慢、成本是前代的两倍，但拥有百万级的上下文窗口和更广的知识储备。这意味着开发者在处理复杂任务时，可能需要为它的深度知识支付更高费用，但它在实际编码测试中成功解决了多步骤的系统集成问题，展现了强大的实用性。"
+tags: [claude-fable-5, llm-evaluation, developer-tools, anthropic]
+---
+
+博主 Simon Willison 在 Anthropic 发布 Claude Fable 5 后，立即进行了约 5.5 小时的深度测试，分享了其初步印象。
+
+*   **性能与成本**：Fable 5 速度较慢，定价是 Claude Opus 4.x 系列的两倍（输入 $10/百万 token，输出 $50/百万 token），但拥有 100 万 token 的上下文窗口。这意味着开发者需在任务复杂度和预算间权衡，高成本可能更适合关键或高价值任务。
+*   **知识广度**：通过对比测试（如列举博主自己的开源项目），Fable 5 展现了远超前代 Opus 4.8 的细节知识储备，博主认为这可能是目前最大的商用模型。这表明在处理需要深厚领域知识的任务时，Fable 5 可能更具优势。
+*   **实际编码能力**：博主通过一个具体任务（将 `micropython-wasm` 项目升级为使用完整 CPython）进行测试。Fable 5 成功识别解决方案并克服环境限制，最终生成可工作的 Python wheel 包。这验证了其在复杂、多步骤的代码生成与系统集成任务上的强大实用性。
+
+---
+
+> 原文：[Initial impressions of Claude Fable 5](https://simonwillison.net/2026/Jun/9/claude-fable-5/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-06-12-opencode-1-17-4
+title: "opencode v1.17.4 — MCP 服务器支持工作目录，修复大仓库快照性能，提升工具兼容性"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.4
+publishedAt: 2026-06-12
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "MCP 服务器支持工作目录，修复大仓库快照性能，提升工具兼容性"
+broadcast: "这次更新让本地工具集成更简单了，现在可以直接从工作目录启动服务器。对大仓库来说，快照性能也大幅提升，因为它会复用已有的Git对象，不用重新计算。同时，还修复了与某些AI模型工具的兼容性问题，确保开发者现有的工具链能继续稳定运行。"
+insight: "对于使用 Lurus 国内代理 newapi.lurus.cn 的用户，本次更新主要涉及底层 MCP 服务器和性能优化，不影响代理接口本身，无需调整代理配置。如果你的工作流重度依赖本地 MCP 工具集成，特别是处理大型 Git 仓库，那么升级到 v1.17.4 是值得的，它能通过支持工作目录和优化快照来提升效率。现有 prompt 或 hook 配置通常无需修改，除非你之前因 Gemini 工具兼容性问题有过临时调整，现在可以回归标准配置。"
+tags: [mcp-server, git-snapshot, tool-compatibility, authentication]
+---
+
+- **本地 MCP 服务器支持 `cwd`**：可从工作区相对目录启动，简化本地工具集成。
+- **快照创建复用 Git 对象**：避免对大仓库重新哈希，显著提升性能。
+- **修复 Gemini 工具模式兼容性**：确保多类型字段的工具能继续工作。
+
+---
+
+> 原文 release：[sst/opencode v1.17.4](https://github.com/anomalyco/opencode/releases/tag/v1.17.4)

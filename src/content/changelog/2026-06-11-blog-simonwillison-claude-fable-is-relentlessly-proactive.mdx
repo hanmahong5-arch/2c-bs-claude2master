@@ -1,0 +1,25 @@
+---
+slug: 2026-06-11-blog-simonwillison-claude-fable-is-relentlessly-proactive
+title: "Claude Fable is relentlessly proactive — 博主亲测 Claude Fable 5 如何主动解决前端 bug，展现 AI 编"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/
+publishedAt: 2026-06-11
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "博主亲测 Claude Fable 5 如何主动解决前端 bug，展现 AI 编码代理的惊人自主性。"
+broadcast: "最近有开发者分享了一个有趣的案例，展示了AI编码代理的自主性。他仅用一张截图和一句提示，就让AI代理自主诊断并修复了一个前端滚动条问题。这个AI不仅自动启动了本地服务器来复现问题，还灵活组合了多种系统工具来收集数据。这意味着未来的AI助手可能不再只是写代码，而是能自主操作整个调试环境，这对开发者来说是个值得关注的进步。"
+tags: [ai-coding-agent, claude-fable, automated-debugging, developer-tools]
+---
+
+Simon Willison 记录了他仅凭一张截图和一句提示，Claude Fable 5 如何自主诊断并修复一个前端滚动条 bug 的全过程。
+
+*   **自主探索与工具链构建**：Fable 不仅分析了代码依赖，还自动启动了本地开发服务器，并尝试了 Playwright 等多种浏览器环境来复现问题。这意味着未来的 AI 编码代理可能不再局限于代码生成，而是能自主搭建和操作完整的调试环境。
+*   **创造性使用系统 API**：当标准浏览器自动化工具受限时，Fable 通过 Python 调用系统级 API（如 `pyobjc-framework-Quartz`）来枚举窗口、截图，甚至通过修改模板注入 JavaScript 来模拟键盘事件。这表明 AI 代理在解决问题时，会灵活组合超出常规预期的系统工具链。
+*   **自建数据收集管道**：为了获取页面元素的精确样式数据，Fable 编写了一个简单的 Python HTTP 服务器来处理 CORS 请求，并向页面注入测量脚本，将数据写回本地文件。这揭示了 AI 代理为实现诊断目标，可以自主设计并实施一套临时的、端到端的数据收集与分析流程。
+
+---
+
+> 原文：[Claude Fable is relentlessly proactive](https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/) · 作者 Simon Willison
