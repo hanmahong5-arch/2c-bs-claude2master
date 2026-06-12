@@ -1,6 +1,94 @@
 {
   "items": [
     {
+      "slug": "2026-06-12-blog-anthropic-news-claude-fable-5-and-claude-mythos-5",
+      "zh": true,
+      "en": true,
+      "title": "Claude Fable 5 and Claude Mythos 5 — Anthropic 发布 Claude Fable 5 与 Mythos 5，展",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-12"
+    },
+    {
+      "slug": "2026-06-12-blog-anthropic-news-introducing-claude-corps",
+      "zh": true,
+      "en": true,
+      "title": "Introducing Claude Corps — Anthropic 启动全国性 AI 奖学金项目，投资 1.5 亿美元培养千名 ",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-06-12"
+    },
+    {
+      "slug": "2026-06-12-blog-latentspace-ainews-loopcraft-the-art-of-stacking-loops",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Loopcraft: The Art of Stacking Loops — Latent Space 探讨 AI 代理开发的核心范式转变：从手动提示转向设计",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-12"
+    },
+    {
+      "slug": "2026-06-12-claude-code-2-1-174",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.174 — 修复多项关键错误并优化模型选择器，提升企业级部署稳定性与使用体验。",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-12"
+    },
+    {
+      "slug": "2026-06-12-claude-code-2-1-175",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.175 — 新增强制模型可用性管理，确保默认模型始终在允许列表中",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-12"
+    },
+    {
+      "slug": "2026-06-12-opencode-1-17-4",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.17.4 — MCP 服务器支持工作目录，修复大仓库快照性能，提升工具兼容性",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-06-12"
+    },
+    {
+      "slug": "2026-06-12-trending-jeff141-meatshell",
+      "zh": true,
+      "en": false,
+      "title": "meatshell — Rust 编写的轻量级 SSH 客户端，内存占用极低",
+      "kind": "trending",
+      "author": null,
+      "source": "jeff141/meatshell",
+      "tool": null,
+      "publishedAt": "2026-06-12"
+    },
+    {
+      "slug": "2026-06-12-trending-mvanhorn-agentcookie",
+      "zh": true,
+      "en": false,
+      "title": "agentcookie — Go 开发的 macOS 代理会话同步工具，通过 Tailscale 实现端到端",
+      "kind": "trending",
+      "author": null,
+      "source": "mvanhorn/agentcookie",
+      "tool": null,
+      "publishedAt": "2026-06-12"
+    },
+    {
       "slug": "2026-06-11-blog-latentspace-ainews-open-models-model-labs-vs-agent-labs",
       "zh": true,
       "en": true,
@@ -12,10 +100,43 @@
       "publishedAt": "2026-06-11"
     },
     {
+      "slug": "2026-06-11-blog-openai-news-bbva-puts-ai-at-the-core-of-banking",
+      "zh": true,
+      "en": true,
+      "title": "BBVA puts AI at the core of banking with OpenAI — BBVA 如何借助 OpenAI 将 ChatGPT 企业版推广至十万员工，加速",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-11"
+    },
+    {
       "slug": "2026-06-11-blog-openai-news-how-an-astrophysicist-uses-codex-to-help-simulate",
       "zh": true,
       "en": true,
       "title": "How an astrophysicist uses Codex to help simulate black — 天体物理学家用 Codex 模拟黑洞，加速验证广义相对论，展示 AI 如何助力前",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-11"
+    },
+    {
+      "slug": "2026-06-11-blog-openai-news-openai-to-acquire-ona",
+      "zh": true,
+      "en": true,
+      "title": "OpenAI to acquire Ona — OpenAI 收购 Ona，为 Codex 引入安全云环境，赋能企业级 AI 代",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-11"
+    },
+    {
+      "slug": "2026-06-11-blog-openai-news-supporting-europe-s-work-in-ensuring-a-trustworthy",
+      "zh": true,
+      "en": true,
+      "title": "Supporting Europe’s work in ensuring a trustworthy AI — OpenAI 支持欧盟 AI 内容透明度实践准则，推动溯源标准与工具，帮助人们理",
       "kind": "blogger",
       "author": "OpenAI",
       "source": "OpenAI",
@@ -34,6 +155,39 @@
       "publishedAt": "2026-06-11"
     },
     {
+      "slug": "2026-06-11-blog-simonwillison-asyncinject-0-7",
+      "zh": true,
+      "en": true,
+      "title": "asyncinject 0.7 — Simon Willison 介绍 asyncinject 0.7 库，展示 A",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-11"
+    },
+    {
+      "slug": "2026-06-11-blog-simonwillison-claude-fable-is-relentlessly-proactive",
+      "zh": true,
+      "en": true,
+      "title": "Claude Fable is relentlessly proactive — 博主亲测 Claude Fable 5 如何主动解决前端 bug，展现 AI 编",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-11"
+    },
+    {
+      "slug": "2026-06-11-blog-simonwillison-datasette-1-0a33",
+      "zh": true,
+      "en": true,
+      "title": "datasette 1.0a33 — Datasette 1.0a33 发布，扩展了 API 的 JSON 附加数据模",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-11"
+    },
+    {
       "slug": "2026-06-11-claude-code-2-1-173",
       "zh": true,
       "en": false,
@@ -42,6 +196,39 @@
       "author": null,
       "source": "anthropics/claude-code",
       "tool": "claude-code",
+      "publishedAt": "2026-06-11"
+    },
+    {
+      "slug": "2026-06-11-cline-3-89-1",
+      "zh": true,
+      "en": false,
+      "title": "cline v3.89.1 — 修复 VS Code 新版兼容性与 DeepSeek V4 推理格式支持",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-11"
+    },
+    {
+      "slug": "2026-06-11-cline-3-89-2",
+      "zh": true,
+      "en": false,
+      "title": "cline v3.89.2 — 修复 Anthropic 和 Vertex AI 提供商在最新 VS Code ",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-11"
+    },
+    {
+      "slug": "2026-06-11-cline-cli-v3-0-24",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.24 — 插件可提交提示词，支持自定义 API 地址，自动打开验证链接提升体验",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
       "publishedAt": "2026-06-11"
     },
     {
@@ -375,6 +562,50 @@
       "publishedAt": "2026-06-09"
     },
     {
+      "slug": "2026-06-09-blog-openai-news-industrial-policy-for-the-intelligence-age",
+      "zh": true,
+      "en": true,
+      "title": "Industrial policy for the Intelligence Age — OpenAI 提出以人为本的 AI 工业政策，旨在扩大机会、共享繁荣并构建韧性制",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-09"
+    },
+    {
+      "slug": "2026-06-09-blog-openai-news-what-codex-unlocks-for-notion",
+      "zh": true,
+      "en": true,
+      "title": "What Codex unlocks for Notion — OpenAI 揭秘 Notion 如何用 Codex 实现一键生成规格、网页语音",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-09"
+    },
+    {
+      "slug": "2026-06-09-blog-simonwillison-initial-impressions-of-claude-fable-5",
+      "zh": true,
+      "en": true,
+      "title": "Initial impressions of Claude Fable 5 — 博主实测 Claude Fable 5，揭示其作为大型模型的性能、成本与知识广度",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-09"
+    },
+    {
+      "slug": "2026-06-09-blog-simonwillison-llm-0-32a3",
+      "zh": true,
+      "en": true,
+      "title": "llm 0.32a3 — Simon Willison 介绍 LLM 0.32a3 版本，展示 Claud",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-09"
+    },
+    {
       "slug": "2026-06-09-claude-code-2-1-170",
       "zh": true,
       "en": false,
@@ -648,237 +879,6 @@
       "source": "anthropics/defending-code-reference-harness",
       "tool": null,
       "publishedAt": "2026-06-07"
-    },
-    {
-      "slug": "2026-06-06-blog-anthropic-news-anthropic-co-founder-chris-olah-s-remarks-on",
-      "zh": true,
-      "en": true,
-      "title": "Anthropic co-founder Chris Olah's remarks on Pope Leo — Anthropic 联合创始人阐述 AI 伦理三大挑战，呼吁全球跨领域对话与监督",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-06"
-    },
-    {
-      "slug": "2026-06-06-blog-latentspace-ainews-not-much-happened-today",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] not much happened today — Latent Space 梳理 AI 领域最新动态：从模型发布、智能体评估到基础",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-06"
-    },
-    {
-      "slug": "2026-06-06-blog-raschka-llm-research-papers-the-2026-list-january-to",
-      "zh": true,
-      "en": true,
-      "title": "LLM Research Papers: The 2026 List (January to May) — Sebastian Raschka 分享其 2026 年前五个月精选的 LLM ",
-      "kind": "blogger",
-      "author": "Sebastian Raschka",
-      "source": "Sebastian Raschka",
-      "tool": null,
-      "publishedAt": "2026-06-06"
-    },
-    {
-      "slug": "2026-06-06-blog-simonwillison-micropython-wasm-0-1a2",
-      "zh": true,
-      "en": true,
-      "title": "micropython-wasm 0.1a2 — Simon Willison 发布 micropython",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-06"
-    },
-    {
-      "slug": "2026-06-06-blog-simonwillison-running-python-code-in-a-sandbox-with-micropython",
-      "zh": true,
-      "en": true,
-      "title": "Running Python code in a sandbox with MicroPython and — Simon Willison 分享如何用 MicroPython 和 WASM ",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-06"
-    },
-    {
-      "slug": "2026-06-06-claude-code-2-1-166",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.166 — 新增模型降级重试与跨会话权限隔离，提升代理系统稳定性与安全性",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-06"
-    },
-    {
-      "slug": "2026-06-06-claude-code-2-1-167",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.167 — 修复了已知错误并提升了系统可靠性，确保更稳定的开发体验。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-06"
-    },
-    {
-      "slug": "2026-06-06-claude-code-2-1-168",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.168 — 修复关键错误并提升系统可靠性，确保代码助手稳定运行",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-06"
-    },
-    {
-      "slug": "2026-06-06-trending-tastyeffectco-sandboxes",
-      "zh": true,
-      "en": false,
-      "title": "sandboxes — 自托管开发沙盒，一键部署预览环境，无需 Kubernetes",
-      "kind": "trending",
-      "author": null,
-      "source": "tastyeffectco/sandboxes",
-      "tool": null,
-      "publishedAt": "2026-06-06"
-    },
-    {
-      "slug": "2026-06-05-blog-anthropic-news-anthropic-confidentially-submits-draft-s-1-to-the",
-      "zh": true,
-      "en": true,
-      "title": "Anthropic confidentially submits draft S-1 to the SEC — Anthropic 秘密提交 IPO 草案，AI 巨头迈向公开市场关键一步",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-05"
-    },
-    {
-      "slug": "2026-06-05-blog-anthropic-news-claude-is-a-space-to-think-anthropic",
-      "zh": true,
-      "en": true,
-      "title": "Claude is a space to think | Anthropic — Anthropic 宣布 Claude 将永久保持无广告，以维护其作为深度思考与",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-05"
-    },
-    {
-      "slug": "2026-06-05-blog-anthropic-news-expanding-project-glasswing",
-      "zh": true,
-      "en": true,
-      "title": "Expanding Project Glasswing — Anthropic 扩大 Glasswing 项目，用 AI 模型为关键软件基础",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-05"
-    },
-    {
-      "slug": "2026-06-05-blog-anthropic-news-introducing-the-services-track-and-partner-hub-of",
-      "zh": true,
-      "en": true,
-      "title": "Introducing the Services Track and Partner Hub of the — Anthropic推出Claude合作伙伴网络服务分级与门户，为企业规模化部署A",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-05"
-    },
-    {
-      "slug": "2026-06-05-blog-anthropic-news-what-we-learned-mapping-a-year-s-worth",
-      "zh": true,
-      "en": true,
-      "title": "What we learned mapping a year’s worth of AI-enabled — Anthropic 分析一年内 AI 驱动的网络威胁，揭示攻击者如何用 AI 深",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-05"
-    },
-    {
-      "slug": "2026-06-05-blog-hf-blog-thousand-token-wood-shipping-a-multi-agent-economy",
-      "zh": true,
-      "en": true,
-      "title": "Thousand Token Wood: shipping a multi-agent economy on — Hugging Face 展示如何在 30 亿参数模型上构建多智能体经济系统，为",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-05"
-    },
-    {
-      "slug": "2026-06-05-blog-latentspace-ainews-not-much-happened-today",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] not much happened today — AI 领域看似平静的一天，实则暗流涌动：从 NVIDIA 的开放模型到 Anth",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-05"
-    },
-    {
-      "slug": "2026-06-05-blog-latentspace-how-to-stop-shipping-low-quality-rl-environments",
-      "zh": true,
-      "en": true,
-      "title": "How to Stop Shipping Low-Quality RL Environments (with — RL 环境质量差如何毒害模型训练，从业者总结常见陷阱与修复方法",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-05"
-    },
-    {
-      "slug": "2026-06-05-blog-simonwillison-openai-help-lockdown-mode",
-      "zh": true,
-      "en": true,
-      "title": "OpenAI Help: Lockdown Mode — OpenAI 推出 Lockdown Mode，通过限制网络请求来防止数据泄露攻",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-05"
-    },
-    {
-      "slug": "2026-06-05-blog-simonwillison-quoting-andreas-kling",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Andreas Kling — Ladybird浏览器项目因AI生成代码泛滥，宣布不再接受公开PR，引发开源社区",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-05"
-    },
-    {
-      "slug": "2026-06-05-claude-code-2-1-165",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.165 — 修复关键错误并提升系统可靠性，确保代理测试流程更稳定。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-05"
-    },
-    {
-      "slug": "2026-06-05-cline-3-88-0",
-      "zh": true,
-      "en": false,
-      "title": "cline v3.88.0 — 更新 Fireworks AI 模型并修复 MCP 服务器配置同步问题，提升模型",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-06-05"
     }
   ]
 }
