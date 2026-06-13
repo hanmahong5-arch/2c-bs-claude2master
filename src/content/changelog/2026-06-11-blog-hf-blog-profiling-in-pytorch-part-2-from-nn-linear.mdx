@@ -1,0 +1,25 @@
+---
+slug: 2026-06-11-blog-hf-blog-profiling-in-pytorch-part-2-from-nn-linear
+title: "Profiling in PyTorch (Part 2): From nn.Linear to a — PyTorch 性能优化：从 nn.Linear 到融合 MLP 的深度剖析，揭"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/torch-mlp-fusion
+publishedAt: 2026-06-11
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "PyTorch 性能优化：从 nn.Linear 到融合 MLP 的深度剖析，揭示模型加速的关键路径。"
+broadcast: "今天我们来聊聊 PyTorch 模型加速的一个关键技巧。研究发现，把多个独立的线性层和激活函数融合成一个定制模块，能大幅减少计算开销，显著提升推理速度。这对于国内开发者来说，意味着在部署模型前，针对硬件做这种深度优化，是提升服务效率、降低成本的重要一步。"
+tags: [pytorch, performance-optimization, kernel-fusion, model-inference]
+---
+
+本文是 PyTorch 性能剖析系列的第二篇，聚焦于如何将标准的 `nn.Linear` 层序列优化为融合的 MLP 模块，以显著提升推理性能。
+
+*   **剖析标准实现瓶颈**：文章通过 PyTorch Profiler 详细展示了由多个独立 `nn.Linear` 层构成的 MLP 在推理时存在大量内核启动开销和内存访问瓶颈。这对开发者意味着，**理解计算图的实际执行流是性能优化的第一步**，不能仅停留在模块堆叠层面。
+*   **引入算子融合技术**：核心方案是将连续的线性层与它们之间的激活函数（如 GeLU）融合为单个定制内核（`FusedMLP`）。这对工具链/框架开发者意味着，**针对高频计算模式设计专用融合算子，是释放硬件算力、减少框架开销的有效手段**。
+*   **展示量化收益与最佳实践**：优化后的融合 MLP 在 A100 GPU 上实现了显著的加速比，并讨论了何时融合收益最大（如隐藏层较宽时）。这对 AI 应用开发者意味着，**在模型部署前，针对特定硬件和模型结构进行算子级的深度优化，是提升服务效率与降低成本的关键环节**。
+
+---
+
+> 原文：[Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP](https://huggingface.co/blog/torch-mlp-fusion) · 作者 Hugging Face

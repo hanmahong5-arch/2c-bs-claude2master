@@ -1,0 +1,23 @@
+---
+slug: 2026-06-13-claude-code-2-1-177
+title: "claude-code v2.1.177 — Claude Code 新增文件大小限制与自动重试，提升代码生成稳定性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.177
+publishedAt: 2026-06-13
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "Claude Code 新增文件大小限制与自动重试，提升代码生成稳定性"
+broadcast: "Claude Code 这次更新主要做了三件事。它新增了文件大小限制，避免内存溢出，让开发者设计智能体时更清楚资源边界。还加入了自动重试功能，应对网络波动，提升了代码生成的稳定性。同时修复了文件路径的兼容性问题，这要求我们在开发跨平台智能体时，必须严格测试路径逻辑。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新不影响代理连接，但需关注核心变化。如果你的 agent harness 涉及大文件处理，必须检查并设置 MAX_FILE_SIZE 环境变量，否则可能因内存溢出导致任务失败。同时，建议为 harness 补充网络错误的重试逻辑以匹配新版本的自动重试机制，从而提升整体稳定性。现有 prompt 无需修改。"
+tags: [file-size-limit, auto-retry, bug-fix, cross-platform]
+---
+
+- 新增 `MAX_FILE_SIZE` 环境变量，限制处理文件大小，避免内存溢出，要求 agent harness 设计时考虑资源边界
+- 引入自动重试机制处理临时网络错误，提高容错性，要求 agent harness 设计需包含错误恢复策略
+- 修复文件路径处理中的边缘情况，确保跨平台兼容性，要求 agent harness 设计需严格测试路径逻辑
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.177](https://github.com/anthropics/claude-code/releases/tag/v2.1.177)

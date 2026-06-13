@@ -1,0 +1,28 @@
+---
+slug: 2026-06-09-blog-simonwillison-setting-a-custom-price-for-a-model-in
+title: "Setting a custom price for a model in AgentsView — 博主分享如何为 AgentsView 自定义模型价格，解决新模型未定价时的使用追"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/9/agentsview-custom-model-price/
+publishedAt: 2026-06-09
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "博主分享如何为 AgentsView 自定义模型价格，解决新模型未定价时的使用追踪问题。"
+broadcast: "最近有开发者发现，当新的AI模型发布后，像AgentsView这样的成本监控工具可能还没来得及更新价格数据，导致无法准确追踪使用成本。这位博主就通过反向工程，找到了为这类工具手动设置自定义价格的方法。这不仅解决了新模型上线时的成本监控空白问题，也展示了高级AI模型在理解和操作其他软件工具方面的实用潜力，对于依赖这些工具进行资源管理的国内开发者和Agent项目来说，是个很实际的技巧。"
+tags: [llm-pricing, cost-monitoring, tool-integration, claude-mythos]
+---
+
+博主 Simon Willison 发现新发布的 Claude Fable 5 模型尚未被 AgentsView 的定价数据库收录，导致无法准确追踪其使用成本。他通过 Fable 模型反向工程了 AgentsView，并找到了设置自定义价格的解决方案。
+
+*   **问题**：AgentsView 依赖内置定价数据库，新模型（如 Claude Fable 5）发布后存在价格数据空白期。
+    *   **对开发者的含义**：这凸显了在快速迭代的 AI 工具生态中，保持成本监控工具时效性的挑战，需要灵活的配置机制。
+*   **方法**：博主利用 Fable 模型本身对 AgentsView 进行了反向工程，找到了自定义模型价格的配置方法。
+    *   **对工具链的含义**：展示了高级 AI 模型（如 Fable）在理解和操作其他软件工具方面的潜力，可用于解决工具间的集成或配置问题。
+*   **结果**：成功为 Claude Fable 5 设置了自定义价格，并在 AgentsView 中以树状图可视化了其在不同本地项目中的使用情况。
+    *   **对 Agent 的含义**：确保了成本监控的连续性和准确性，使得基于新模型运行的 Agent 其资源消耗也能被有效管理和分析。
+
+---
+
+> 原文：[Setting a custom price for a model in AgentsView](https://simonwillison.net/2026/Jun/9/agentsview-custom-model-price/) · 作者 Simon Willison

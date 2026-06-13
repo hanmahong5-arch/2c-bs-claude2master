@@ -1,0 +1,23 @@
+---
+slug: 2026-06-12-claude-code-2-1-176
+title: "claude-code v2.1.176 — 会话标题支持多语言生成，并修复了远程控制、后台会话和模型选择等多个关键问题。"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.176
+publishedAt: 2026-06-12
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "会话标题支持多语言生成，并修复了远程控制、后台会话和模型选择等多个关键问题。"
+broadcast: "Claude Code 最新更新让会话标题能根据对话语言自动生成，让不同语言的用户都能获得更友好的界面体验。这次还修复了模型选择和远程控制的关键问题，提升了多模型环境下的安全性和远程协作的稳定性。这些改进对国内开发者和智能体开发者来说，意味着更可靠、更灵活的开发工具。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新修复了远程控制连接和模型选择的关键问题，增强了多账户登录时的连接稳定性，因此代理服务本身不受影响。现有用户值得升级以获取更稳定的远程协作体验，但无需修改现有 prompt 或 hook 配置，除非你需要利用新的正则匹配页脚链接功能进行界面自定义。"
+tags: [ui-localization, settings-configuration, model-security, remote-control]
+---
+
+- **会话标题根据对话语言生成**：会话标题现在会根据对话语言自动生成，`language` 设置可用于固定特定语言。这意味着 Agent 的界面交互可以更好地适应不同语言用户。
+- **新增正则匹配的页脚链接设置**：添加了 `footerLinksRegexes` 设置，允许通过正则表达式在页脚行配置链接徽章。这为 Agent 的界面自定义和外部工具集成提供了更灵活的配置方式。
+- **修复了模型选择与远程控制的关键问题**：修复了别名模型可能绕过 `availableModels` 限制的问题，并解决了远程控制连接时静默切换会话模型、断开连接提示不友好以及多账户登录时未断开连接等多个问题。这增强了 Agent 在多模型环境下的安全性和远程协作的稳定性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.176](https://github.com/anthropics/claude-code/releases/tag/v2.1.176)
