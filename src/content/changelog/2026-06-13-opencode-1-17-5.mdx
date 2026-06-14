@@ -1,0 +1,23 @@
+---
+slug: 2026-06-13-opencode-1-17-5
+title: "opencode v1.17.5 — Snowflake Cortex 支持外部浏览器 OAuth，修复 MCP 会话"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.5
+publishedAt: 2026-06-13
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "Snowflake Cortex 支持外部浏览器 OAuth，修复 MCP 会话与 TUI 渲染问题"
+broadcast: "这次更新主要优化了与 Snowflake 服务的认证流程，现在支持通过外部浏览器进行身份验证，这要求开发者构建的智能体工具能更好地集成外部认证。同时，修复了会话管理和界面渲染的问题，强调了智能体工具需要更稳定的长连接和更安全的参数传递机制，这对提升国内开发者的工具可靠性很有帮助。"
+insight: "对于使用 Lurus 代理 newapi.lurus.cn 的用户，本次更新主要涉及底层框架的认证与连接管理优化，不影响代理服务的核心功能。现有用户无需立即升级配置或修改 prompt，因为代理层已处理了认证转发。但如果你深度集成了 Snowflake Cortex 并依赖其 OAuth 流程，建议关注 agent harness 的更新说明，以确保外部浏览器认证能正常通过代理工作。"
+tags: [oauth, mcp, tui, bugfix]
+---
+
+- **新增 Snowflake Cortex 外部浏览器 OAuth**：简化了与 Snowflake 服务的认证流程，意味着 agent harness 需要支持更灵活的外部身份验证集成。
+- **修复 MCP 会话管理与工具输出**：恢复了过期会话、清理了陈旧连接并结构化工具输出，要求 agent harness 具备更健壮的长连接和状态管理能力。
+- **修复 TUI 渲染与命令注入问题**：解决了重复渲染 ID 和 `$ARGUMENTS` 导致的文件内容重复注入，强调 agent harness 的 UI 层需要稳定的组件标识和安全的参数传递机制。
+
+---
+
+> 原文 release：[sst/opencode v1.17.5](https://github.com/anomalyco/opencode/releases/tag/v1.17.5)

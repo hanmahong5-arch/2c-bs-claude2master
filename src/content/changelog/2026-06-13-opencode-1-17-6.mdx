@@ -1,0 +1,26 @@
+---
+slug: 2026-06-13-opencode-1-17-6
+title: "opencode v1.17.6 — OpenCode 通过声明支持的客户端能力，提升 MCP 服务器兼容性"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.6
+publishedAt: 2026-06-13
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "OpenCode 通过声明支持的客户端能力，提升 MCP 服务器兼容性"
+broadcast: "OpenCode 这次更新，主要是让服务器能明确声明自己支持哪些功能。这样一来，开发者在集成时就能提前知道哪些功能可用，避免调用不支持的接口导致出错。这对于国内做智能体开发的团队来说，意味着能更稳定地对接不同工具，减少集成过程中的兼容性麻烦。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，此次更新没有直接影响。核心变化是 OpenCode 现在会声明其支持的 MCP 客户端能力，这主要影响底层 Agent Harness 的设计，要求其具备能力协商机制。如果你的现有 prompt 或 hook 配置直接依赖于 MCP 服务器的特定功能，且该功能未被 OpenCode 明确声明支持，那么在与新版集成时可能会遇到兼容性问题，需要检查并确保功能在双方支持范围内。"
+tags: [mcp, compatibility, bugfix, core]
+---
+
+- **声明支持的客户端能力**：OpenCode 现在会明确声明其支持的 MCP 客户端能力。
+  - *对 Agent Harness 设计的含义*：这要求 harness 在集成 MCP 服务器时，需要具备能力协商机制，确保只调用双方都支持的功能。
+- **修复 MCP 服务器兼容性问题**：此改动旨在解决与某些 MCP 客户端的兼容性问题。
+  - *对 Agent Harness 设计的含义*：Harness 需要能够处理服务器能力声明，并在能力不匹配时优雅降级或提供明确错误。
+- **核心功能稳定性提升**：此次更新属于核心模块的 bug 修复。
+  - *对 Agent Harness 设计的含义*：在设计依赖 MCP 协议的 harness 时，应优先考虑使用已明确声明能力的稳定服务器，以减少集成风险。
+
+---
+
+> 原文 release：[sst/opencode v1.17.6](https://github.com/anomalyco/opencode/releases/tag/v1.17.6)

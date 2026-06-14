@@ -1,0 +1,24 @@
+---
+slug: 2026-06-13-blog-simonwillison-publishing-wasm-wheels-to-pypi-for-use-with
+title: "Publishing WASM wheels to PyPI for use with Pyodide — Pyodide 支持发布 WASM 轮子到 PyPI，简化了 WebAssemb"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/
+publishedAt: 2026-06-13
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Pyodide 支持发布 WASM 轮子到 PyPI，简化了 WebAssembly 中 Python 包的发布流程。"
+broadcast: "Pyodide 现在支持把 WebAssembly 包直接发布到 Python 官方仓库，这解决了之前手动维护几百个包的麻烦。对国内开发者来说，这意味着在 WebAssembly 里用 Python 包更方便了，可以直接从官方渠道获取，不用再依赖第三方托管。已经有二十多个包开始采用这种方式，未来会有更多现成的兼容包可用。"
+tags: [pyodide, webassembly, pypi, python-packages]
+---
+
+Pyodide 314.0 版本允许开发者将针对 Pyodide 或兼容 PEP 783 的 Python 运行时构建的包直接发布到 PyPI，解决了之前手动维护 300 多个包的瓶颈。
+- **PyPI 原生支持 WASM 轮子**：PyPI 已支持 `pyemscripten_202*_wasm32` 标签的轮子，包维护者可以像发布原生平台轮子一样发布 WASM 轮子。这对 agent 开发者意味着更便捷的 WebAssembly 包分发，无需依赖第三方托管。
+- **实际案例：luau-wasm 包**：作者通过 GitHub Actions 和 cibuildwheel 将 Luau 语言编译为 WASM 并发布到 PyPI，展示了从构建到部署的完整流程。工具链开发者可参考此案例，自动化 WASM 包的构建和发布。
+- **当前采用情况**：查询显示已有 28 个 PyPI 包使用新标签发布 WASM 轮子，包括 uuid7-rs、pydantic_core 等。这表明社区正在逐步采纳，为开发者提供了更多现成的 WebAssembly 兼容包。
+
+---
+
+> 原文：[Publishing WASM wheels to PyPI for use with Pyodide](https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/) · 作者 Simon Willison

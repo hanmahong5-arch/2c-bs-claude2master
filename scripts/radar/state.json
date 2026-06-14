@@ -5,7 +5,7 @@
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "cli-v3.0.24",
     "block/goose": "v1.37.0",
-    "sst/opencode": "v1.17.4",
+    "sst/opencode": "v1.17.6",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.46.0"
   },
@@ -39,7 +39,8 @@
     "akitaonrails/ai-memory",
     "DEEIX-AI/DEEIX-Chat",
     "jeff141/meatshell",
-    "mvanhorn/agentcookie"
+    "mvanhorn/agentcookie",
+    "SouravRoy-ETL/duckle"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -73,7 +74,7 @@
     "openai-codex-blog": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-13",
+    "anthropic-engineering": "2026-06-14",
     "claude-code-docs": "2026-06-11",
     "openai-codex-blog": "2026-06-11"
   },
@@ -110,7 +111,10 @@
       "https://simonwillison.net/2026/Jun/12/openai-webrtc/",
       "https://simonwillison.net/2026/Jun/12/andrew-singleton/",
       "https://simonwillison.net/2026/Jun/9/agentsview-custom-model-price/",
-      "https://simonwillison.net/2026/Jun/9/andrej-karpathy/"
+      "https://simonwillison.net/2026/Jun/9/andrej-karpathy/",
+      "https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/",
+      "https://simonwillison.net/2026/Jun/13/luau-wasm/",
+      "https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -188,7 +192,10 @@
       "https://magazine.sebastianraschka.com/p/llm-research-papers-2025-part2",
       "https://magazine.sebastianraschka.com/p/technical-deepseek",
       "https://magazine.sebastianraschka.com/p/beyond-standard-llms",
-      "https://magazine.sebastianraschka.com/p/llm-evaluation-4-approaches"
+      "https://magazine.sebastianraschka.com/p/llm-evaluation-4-approaches",
+      "https://magazine.sebastianraschka.com/p/qwen3-from-scratch",
+      "https://magazine.sebastianraschka.com/p/from-gpt-2-to-gpt-oss-analyzing-the",
+      "https://magazine.sebastianraschka.com/p/the-big-llm-architecture-comparison"
     ],
     "eugeneyan": [
       "https://eugeneyan.com//writing/working-with-ai/",
@@ -202,7 +209,10 @@
       "https://eugeneyan.com//writing/news-agents/",
       "https://eugeneyan.com//writing/eval-process/",
       "https://eugeneyan.com//writing/writing-faq/",
-      "https://eugeneyan.com//speaking/nvidia-gtc-2025/"
+      "https://eugeneyan.com//speaking/nvidia-gtc-2025/",
+      "https://eugeneyan.com//writing/recsys-llm/",
+      "https://eugeneyan.com//writing/aireadingclub/",
+      "https://eugeneyan.com//writing/2024-review/"
     ],
     "chiphuyen": [
       "https://huyenchip.com//2025/01/16/ai-engineering-pitfalls.html",
@@ -335,21 +345,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-13",
+    "simonwillison": "2026-06-14",
     "lilianweng": "2026-06-11",
-    "latentspace": "2026-06-13",
-    "interconnects": "2026-06-13",
-    "karpathy": "2026-06-11",
-    "raschka": "2026-06-11",
-    "eugeneyan": "2026-06-11",
+    "latentspace": "2026-06-14",
+    "interconnects": "2026-06-14",
+    "karpathy": "2026-06-14",
+    "raschka": "2026-06-14",
+    "eugeneyan": "2026-06-14",
     "chiphuyen": "2026-06-11",
     "oneusefulthing": "2026-06-13",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-13",
+    "openai-news": "2026-06-14",
     "deepmind": "2026-06-13",
     "hf-blog": "2026-06-13",
-    "anthropic-news": "2026-06-13"
+    "anthropic-news": "2026-06-14"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }
