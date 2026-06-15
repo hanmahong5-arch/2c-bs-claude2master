@@ -5,7 +5,7 @@
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "cli-v3.0.24",
     "block/goose": "v1.37.0",
-    "sst/opencode": "v1.17.6",
+    "sst/opencode": "v1.17.7",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.46.0"
   },
@@ -40,7 +40,9 @@
     "DEEIX-AI/DEEIX-Chat",
     "jeff141/meatshell",
     "mvanhorn/agentcookie",
-    "SouravRoy-ETL/duckle"
+    "SouravRoy-ETL/duckle",
+    "DietrichGebert/ponytail",
+    "tamnd/kage"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -74,7 +76,7 @@
     "openai-codex-blog": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-14",
+    "anthropic-engineering": "2026-06-15",
     "claude-code-docs": "2026-06-11",
     "openai-codex-blog": "2026-06-11"
   },
@@ -114,7 +116,9 @@
       "https://simonwillison.net/2026/Jun/9/andrej-karpathy/",
       "https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/",
       "https://simonwillison.net/2026/Jun/13/luau-wasm/",
-      "https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/"
+      "https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/",
+      "https://simonwillison.net/2026/Jun/15/julia-evans/",
+      "https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -166,7 +170,8 @@
       "https://www.interconnects.ai/p/gemma-4-and-what-makes-an-open-model",
       "https://www.interconnects.ai/p/latest-open-artifacts-20-new-orgs",
       "https://www.interconnects.ai/p/lossy-self-improvement",
-      "https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety"
+      "https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety",
+      "https://www.interconnects.ai/p/welcome-to-the-agi-era-of-ai-governance"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -278,7 +283,8 @@
       "https://openai.com/index/notion",
       "https://openai.com/index/industrial-policy-for-the-intelligence-age",
       "https://openai.com/index/academy-courses-applying-ai-at-work",
-      "https://openai.com/index/preply"
+      "https://openai.com/index/preply",
+      "https://openai.com/index/introducing-openai-partner-network"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -319,7 +325,8 @@
       "https://huggingface.co/blog/github-ci-hf-jobs",
       "https://huggingface.co/blog/openenv-agentic-rl",
       "https://huggingface.co/blog/allenai/olmo-eval",
-      "https://huggingface.co/blog/torch-mlp-fusion"
+      "https://huggingface.co/blog/torch-mlp-fusion",
+      "https://huggingface.co/blog/delta-weight-sync"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -345,21 +352,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-14",
+    "simonwillison": "2026-06-15",
     "lilianweng": "2026-06-11",
-    "latentspace": "2026-06-14",
-    "interconnects": "2026-06-14",
+    "latentspace": "2026-06-15",
+    "interconnects": "2026-06-15",
     "karpathy": "2026-06-14",
     "raschka": "2026-06-14",
     "eugeneyan": "2026-06-14",
     "chiphuyen": "2026-06-11",
-    "oneusefulthing": "2026-06-13",
+    "oneusefulthing": "2026-06-15",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-14",
-    "deepmind": "2026-06-13",
-    "hf-blog": "2026-06-13",
-    "anthropic-news": "2026-06-14"
+    "openai-news": "2026-06-15",
+    "deepmind": "2026-06-15",
+    "hf-blog": "2026-06-15",
+    "anthropic-news": "2026-06-15"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

@@ -1,0 +1,24 @@
+---
+slug: 2026-05-27-blog-hf-blog-shipping-a-trillion-parameters-with-a-hub-bucket
+title: "Shipping a Trillion Parameters With a Hub Bucket: Delta — Hugging Face 介绍 TRL 库如何通过 Delta Weight S"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/delta-weight-sync
+publishedAt: 2026-05-27
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 介绍 TRL 库如何通过 Delta Weight Sync 高效同步万亿参数模型，解决大模型训练中的存储与协作难题。"
+broadcast: "Hugging Face 的 TRL 库推出了一项新功能，它只同步模型训练中权重的增量变化，而不是整个模型，这大大节省了存储和传输成本。通过与云端存储服务集成，团队协作共享模型变得非常方便。这对于国内开发超大模型的团队来说，意味着能更高效地管理万亿参数规模的训练，突破基础设施的限制。"
+tags: [model-training, parameter-sync, huggingface-trl, collaborative-ai]
+---
+
+本文详细介绍了 Hugging Face TRL 库中的 Delta Weight Sync 功能，旨在优化大规模参数模型的训练与协作流程。
+- **Delta Weight Sync 核心机制**：仅同步模型权重的增量变化（delta），而非整个模型，大幅减少存储与传输开销。这对开发者意味着能更高效地管理版本迭代，降低分布式训练中的带宽压力。
+- **与 Hub Bucket 集成**：通过 Hugging Face Hub 的存储桶服务，实现增量的自动上传与下载，简化了团队协作中的模型共享。这为工具链提供了无缝的云端同步方案，提升多节点训练的可操作性。
+- **支持万亿参数规模**：该设计针对当前超大模型（如万亿参数）的训练场景，解决了全权重同步的可行性问题。对 Agent 开发者而言，能更灵活地扩展模型规模，而无需担忧基础设施限制。
+
+---
+
+> 原文：[Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL](https://huggingface.co/blog/delta-weight-sync) · 作者 Hugging Face

@@ -1,0 +1,23 @@
+---
+slug: 2026-06-14-opencode-1-17-7
+title: "opencode v1.17.7 — OpenCode v1.17.7 修复了插件请求、会话路由和 MCP 协议的关键"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.7
+publishedAt: 2026-06-14
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "OpenCode v1.17.7 修复了插件请求、会话路由和 MCP 协议的关键问题"
+broadcast: "OpenCode 最新版本修复了插件请求、会话路由和 MCP 协议的关键问题。现在，插件请求会正确复用活动服务器，不再依赖默认端口，这要求开发者更精确地管理服务器实例。同时，新会话被限定在特定工作区内，提示和状态能准确指向目标，这意味着设计 Agent 时需要明确绑定会话与工作区。此外，MCP 服务器现在能接收当前工作区作为根目录，增强了对上下文的感知，集成工具时需传递正确的目录信息。"
+insight: "对于使用 Lurus 代理的国内开发者，本次更新主要影响 Agent 开发。如果你的 Agent 集成了 OpenCode 插件或 MCP 工具，现有配置可能需要调整。具体来说，调用插件时需确保正确管理服务器实例，而集成 MCP 工具时必须传递当前工作区作为根目录，否则工具可能无法正确感知上下文。这些是底层路由和绑定的修复，不涉及代理地址变更，因此通过 newapi.lurus.cn 访问不受影响。建议检查并更新相关 Agent 的配置代码以适配新版本。"
+tags: [plugin-client, session-routing, mcp-server, sdk-client]
+---
+
+- **插件客户端请求复用活动服务器**：不再假设默认本地端口，确保请求正确路由。这意味着 Agent 工具调用需要更精确地管理服务器实例。
+- **新会话路由限定在其草稿服务器内**：提示和状态将正确指向目标工作区。这要求 Agent 设计时明确会话与工作区的绑定关系。
+- **MCP 服务器可接收当前工作区作为客户端根目录**：增强了 MCP 服务器对工作区上下文的感知能力。Agent 集成 MCP 工具时需传递正确的根目录信息。
+
+---
+
+> 原文 release：[sst/opencode v1.17.7](https://github.com/anomalyco/opencode/releases/tag/v1.17.7)
