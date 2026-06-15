@@ -22,6 +22,7 @@ import { useUrlFilter } from "@/lib/use-url-filter";
 import { Reveal } from "@/components/Reveal";
 import { Volume2 } from "lucide-react";
 import { useBroadcast } from "@/components/broadcast/useBroadcast";
+import RadarHighlights from "@/components/RadarHighlights";
 
 // 筛选值: "all"(按工具分组) | "practice"(实践扁平) | 某 tool key(该工具扁平)
 type Filter = string;
@@ -240,6 +241,16 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
             GitHub Actions 每天 09:30 抓取 {TOOL_NAMES}
             {" "}的新 release + Anthropic 工程博客 + GitHub 热门新项目，自动产出中文摘要 + Lurus 视角。
           </p>
+
+          {hasAnything && (
+            <RadarHighlights
+              trending={trending}
+              bloggers={bloggers}
+              onSelect={selectFilter}
+              className="mt-7"
+            />
+          )}
+
           <div className="mt-6 flex flex-wrap gap-3 text-xs text-[var(--color-text-muted)]">
             <Link
               href="/feed/changelog"
