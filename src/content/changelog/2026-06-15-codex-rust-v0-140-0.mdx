@@ -1,0 +1,23 @@
+---
+slug: 2026-06-15-codex-rust-v0-140-0
+title: "codex rust-v0.140.0 — 新增会话管理、数据导入与安全存储，提升多代理协作的可靠性与用户体验"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.140.0
+publishedAt: 2026-06-15
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增会话管理、数据导入与安全存储，提升多代理协作的可靠性与用户体验"
+broadcast: "这次更新为开发者带来了几个关键改进。新增的会话永久删除功能，让多代理协作时能更安全地管理生命周期。它还支持从其他平台导入配置和对话，方便用户迁移数据。同时，为云端和本地工具添加了更安全的密钥管理，这要求代理系统能灵活支持不同的认证方式，提升了整体开发的可靠性。"
+insight: "对于使用 newapi.lurus.cn 代理的国内用户，本次更新直接影响凭证安全。新增的托管 API 密钥认证与本地加密存储功能，强化了多环境下的安全管理。这意味着代理基础设施需要支持可插拔的认证后端。因此，现有用户需要检查并升级自己的代理配置，以确保能兼容新的认证机制，否则可能影响对 Amazon Bedrock 等服务的正常调用。"
+tags: [session-management, data-import, authentication, reliability]
+---
+
+- **新增会话永久删除功能**，通过命令行和 API 提供带确认的保护机制，并自动清理子代理，意味着代理系统需要设计安全的生命周期管理。
+- **支持从 Claude Code 选择性导入配置和最近对话**，通过 `/import` 命令实现，表明代理框架需考虑用户数据迁移与生态集成。
+- **为 Amazon Bedrock 和 CLI/MCP OAuth 添加托管 API 密钥认证与本地加密存储**，强化了多环境下的凭证安全管理，要求代理基础设施支持可插拔的认证后端。
+
+---
+
+> 原文 release：[openai/codex rust-v0.140.0](https://github.com/openai/codex/releases/tag/rust-v0.140.0)

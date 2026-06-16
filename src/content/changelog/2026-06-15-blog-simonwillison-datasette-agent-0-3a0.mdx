@@ -1,0 +1,25 @@
+---
+slug: 2026-06-15-blog-simonwillison-datasette-agent-0-3a0
+title: "datasette-agent 0.3a0 — Simon Willison 发布 datasette"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/15/datasette-agent/
+publishedAt: 2026-06-15
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 datasette-agent 0.3a0，新增安全数据库写入工具，让 AI 代理在用户监督下直接操作数据。"
+broadcast: "Simon Willison 为他的 AI 代理工具新增了安全写入数据库的功能。现在，AI 代理在执行任何数据修改前，都必须先获得用户的明确批准，这大大降低了未经授权操作的风险。对于国内开发者来说，这意味着可以更放心地构建能直接、安全操作数据的智能应用了。"
+tags: [datasette, ai-agent, database-tools, llm-tool-use]
+---
+
+datasette-agent 0.3a0 版本的核心是引入了一个名为 `execute_write_sql` 的新工具，它允许 AI 代理在获得用户明确批准后，执行数据库写入操作。
+
+*   **用户审批机制**：工具在执行任何写入（如创建表、插入数据）前会请求用户批准，并将用户权限纳入考量。这意味着开发者可以构建能安全修改数据的 AI 应用，而无需担心未经授权的更改。
+*   **增强的终端聊天模式**：`datasette agent chat` 命令现在支持审批流程，并新增了 `--root`、`--yes` 和 `--unsafe` 等选项，方便在不同安全需求下进行测试和自动化。这为工具链集成提供了灵活性，开发者可以根据场景选择交互式或自动化的数据操作方式。
+*   **纯文本输出支持**：工具现在可以提供 HTML 的纯文本替代方案，以便在命令行界面中更好地显示。这改善了开发者在终端中使用 AI 代理与数据库交互的体验，使反馈更清晰易读。
+
+---
+
+> 原文：[datasette-agent 0.3a0](https://simonwillison.net/2026/Jun/15/datasette-agent/) · 作者 Simon Willison

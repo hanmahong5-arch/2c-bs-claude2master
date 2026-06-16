@@ -1,0 +1,28 @@
+---
+slug: 2026-06-16-blog-simonwillison-cloudflare-captcha-on-at-least-one-ampersand
+title: "Cloudflare CAPTCHA on at least one ampersand — 博主分享如何用 Cloudflare 规则精准触发 CAPTCHA，避免误伤普通"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/
+publishedAt: 2026-06-16
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "博主分享如何用 Cloudflare 规则精准触发 CAPTCHA，避免误伤普通搜索，提升用户体验。"
+broadcast: "博主分享了一个实用技巧：通过调整 Cloudflare 的验证规则，让验证码只在搜索网址包含特殊符号时才触发。这样一来，普通搜索不再被误拦，用户体验得到提升，开发者也能更精准地控制安全策略，避免过度防御。"
+tags: [captchas, cloudflare, model-context-protocol, claude-code]
+---
+
+博主 Simon Willison 发现 Cloudflare 的 CAPTCHA 规则常误触发简单搜索，通过调整规则，仅对含 & 符号的复杂查询才启用验证。
+
+- **规则优化**：使用 `(http.request.uri.path wildcard r"/search/*" and http.request.uri.query contains "&")` 条件，让 CAPTCHA 只在搜索 URL 包含至少一个 & 时启动。
+  - 对开发者的含义：精准控制安全策略，减少对正常用户的干扰，提升网站可用性。
+- **工具链尝试**：博主测试了 Cloudflare MCP 与 Claude Code，但发现无法直接编辑规则，转而使用 Cloudflare API。
+  - 对工具链的含义：集成工具时需考虑实际功能限制，灵活切换 API 以完成自动化任务。
+- **问题解决**：调整后，类似 `/search/?q=lemur` 的简单搜索不再触发 CAPTCHA，而复杂查询如含多个参数的 URL 仍受保护。
+  - 对 Agent 的含义：智能代理需理解上下文，避免过度防御，平衡安全与用户体验。
+
+---
+
+> 原文：[Cloudflare CAPTCHA on at least one ampersand](https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/) · 作者 Simon Willison

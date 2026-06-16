@@ -1,7 +1,7 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.177",
-    "openai/codex": "rust-v0.139.0",
+    "anthropics/claude-code": "v2.1.178",
+    "openai/codex": "rust-v0.140.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "cli-v3.0.24",
     "block/goose": "v1.37.0",
@@ -42,7 +42,8 @@
     "mvanhorn/agentcookie",
     "SouravRoy-ETL/duckle",
     "DietrichGebert/ponytail",
-    "tamnd/kage"
+    "tamnd/kage",
+    "duckbugio/flock"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -76,7 +77,7 @@
     "openai-codex-blog": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-15",
+    "anthropic-engineering": "2026-06-16",
     "claude-code-docs": "2026-06-11",
     "openai-codex-blog": "2026-06-11"
   },
@@ -118,7 +119,12 @@
       "https://simonwillison.net/2026/Jun/13/luau-wasm/",
       "https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/",
       "https://simonwillison.net/2026/Jun/15/julia-evans/",
-      "https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/"
+      "https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/",
+      "https://simonwillison.net/2026/Jun/16/fable-5-export-controls/",
+      "https://simonwillison.net/2026/Jun/16/matteo-wong-the-atlantic/",
+      "https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/",
+      "https://simonwillison.net/2026/Jun/15/datasette-agent/",
+      "https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -152,7 +158,8 @@
       "https://www.latent.space/p/ainews-anthropic-claude-fable-5-mythos",
       "https://www.latent.space/p/ainews-frontiercode-benchmarking",
       "https://www.latent.space/p/ainews-loopcraft-the-art-of-stacking",
-      "https://www.latent.space/p/ainews-fable-and-mythos-officially"
+      "https://www.latent.space/p/ainews-fable-and-mythos-officially",
+      "https://www.latent.space/p/ainews-satya-on-loopcraft-building"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -352,10 +359,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-15",
+    "simonwillison": "2026-06-16",
     "lilianweng": "2026-06-11",
-    "latentspace": "2026-06-15",
-    "interconnects": "2026-06-15",
+    "latentspace": "2026-06-16",
+    "interconnects": "2026-06-16",
     "karpathy": "2026-06-14",
     "raschka": "2026-06-14",
     "eugeneyan": "2026-06-14",
@@ -363,10 +370,10 @@
     "oneusefulthing": "2026-06-15",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-15",
+    "openai-news": "2026-06-16",
     "deepmind": "2026-06-15",
     "hf-blog": "2026-06-15",
-    "anthropic-news": "2026-06-15"
+    "anthropic-news": "2026-06-16"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

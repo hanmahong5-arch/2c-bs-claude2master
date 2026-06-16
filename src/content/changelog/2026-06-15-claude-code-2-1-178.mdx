@@ -1,0 +1,23 @@
+---
+slug: 2026-06-15-claude-code-2-1-178
+title: "claude-code v2.1.178 — 权限规则支持工具参数匹配，嵌套技能目录加载优化，子代理启动前安全检查"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.178
+publishedAt: 2026-06-15
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "权限规则支持工具参数匹配，嵌套技能目录加载优化，子代理启动前安全检查"
+broadcast: "Claude代码项目最近更新了权限系统，现在可以根据工具的具体参数进行精细控制，比如能阻止特定模型的子代理操作。同时，嵌套技能目录的加载逻辑也优化了，让配置管理更清晰。更重要的是，子代理在启动前会先经过安全检查，提前拦截风险操作，这对国内开发更安全的智能体应用很有帮助。"
+insight: "对于使用 newapi.lurus.cn 代理的国内用户，本次更新直接影响权限配置与安全流程。现有用户必须升级，因为新的 `Tool(param:value)` 权限规则语法要求你检查并修改所有涉及工具调用的权限配置，以实现基于参数的细粒度控制。同时，自动模式的改进将子代理安全检查前置，这意味着你现有的代理启动流程和相关的 hook 配置可能需要调整，以确保新的安全审查机制能正确生效。"
+tags: [permissions, subagent-safety, configuration-management, bug-fixes]
+---
+
+- **新增 `Tool(param:value)` 权限规则语法**：可基于工具输入参数（支持通配符）进行细粒度控制，例如阻止特定模型的子代理。这意味着权限系统设计需支持对工具调用的深层属性进行策略匹配。
+- **嵌套 `.claude/` 目录配置继承与冲突解决**：最接近工作目录的配置生效，嵌套技能在名称冲突时以 `<目录>:<名称>` 形式共存。这要求代理框架设计支持配置的层级覆盖与命名空间管理。
+- **改进自动模式：子代理启动前经分类器评估**：在生成阶段即拦截可能被阻止的操作请求，填补了安全审查的漏洞。这表明代理安全设计需将策略检查前置到代理实例化之前。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.178](https://github.com/anthropics/claude-code/releases/tag/v2.1.178)
