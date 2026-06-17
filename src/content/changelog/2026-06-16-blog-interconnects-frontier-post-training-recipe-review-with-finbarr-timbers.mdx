@@ -1,0 +1,25 @@
+---
+slug: 2026-06-16-blog-interconnects-frontier-post-training-recipe-review-with-finbarr-timbers
+title: "Frontier post-training recipe review with Finbarr — 解析前沿大模型后训练技术演进，从 InstructGPT 到 2026 年 MO"
+source: "Nathan Lambert"
+sourceUrl: https://www.interconnects.ai/p/frontier-post-training-recipe-review
+publishedAt: 2026-06-16
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Nathan Lambert"
+hook: "解析前沿大模型后训练技术演进，从 InstructGPT 到 2026 年 MOPD 模式，为开发者提供清晰技术路线图。"
+broadcast: "朋友们，大模型的后训练技术正在发生深刻变化。过去简单的三步法，如今已演变成先训练多个专家模型、再整合的复杂模式。这意味着国内开发者需要掌握更模块化的工具链，并深入理解强化学习等核心技术，才能跟上技术演进的步伐。"
+tags: [llm-post-training, reinforcement-learning, model-distillation, ai-engineering]
+---
+
+本文系统梳理了从 InstructGPT 到 2026 年前沿大模型的后训练技术演进路径，并重点分析了当前兴起的 MOPD 模式。
+
+*   **后训练配方已从单一流程演变为复杂生态系统**：早期 InstructGPT 遵循 SFT → RM → RL 的经典三步法，而 2026 年的前沿模型（如 MiMo Flash V2）则采用先训练多个领域专家模型，再通过 MOPD 蒸馏到单一通用模型的模式。这意味着工具链需要支持更复杂、模块化的训练流水线。
+*   **MOPD 成为 2026 年前沿模型的核心整合模式**：其核心是训练多个领域专家教师模型，然后通过最小化反向 KL 散度，将它们的知识蒸馏到一个通用的学生模型中。这要求开发者的工具链能够高效管理和协调多个并行训练任务与知识蒸馏过程。
+*   **技术路线呈现多元化，但 RL 始终是关键驱动力**：尽管具体配方不同（如 DeepSeek R1 以大规模 RL 为核心，GLM-5 分阶段进行不同能力的 RL），但强化学习在后训练中扮演的角色越来越中心化。这表明开发者需要深入掌握 RL 技术栈，并将其与监督微调、蒸馏等技术灵活组合。
+
+---
+
+> 原文：[Frontier post-training recipe review with Finbarr Timbers](https://www.interconnects.ai/p/frontier-post-training-recipe-review) · 作者 Nathan Lambert

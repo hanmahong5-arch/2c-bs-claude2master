@@ -1,0 +1,23 @@
+---
+slug: 2026-06-17-goose-1-38-0
+title: "goose v1.38.0 — Goose v1.38.0 强化 ACP 协议、统一思考模式并新增多个 AI 提"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.38.0
+publishedAt: 2026-06-17
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "Goose v1.38.0 强化 ACP 协议、统一思考模式并新增多个 AI 提供商，提升 Agent 开发与集成能力。"
+broadcast: "Goose 最新版本强化了会话管理能力，让开发者能快速筛选和获取关键对话片段，大大提升了 Agent 系统的上下文处理效率。这次更新还统一了不同 AI 服务的思考与日志模式，为在国内集成和切换多种大模型提供了稳定基础。此外，新增的国内厂商支持和图像读取等工具，也进一步扩展了智能体的感知与执行能力。"
+insight: "对于使用 newapi.lurus.cn 代理的国内用户，本次升级值得关注。Goose v1.38.0 统一了跨提供商的思考模式与日志格式，这意味着代理后端在对接不同模型（如新增的阿里通义千问）时，能获得更稳定、规范的输出和监控数据，有助于提升多模型Agent的切换与运维体验。现有基于旧版ACP协议或特定提供商配置的Agent可能需要检查并适配新的统一接口。"
+tags: [agent-protocol, multi-provider, tool-integration, observability]
+---
+
+- **新增 ACP 会话摘要与筛选功能**：支持获取会话最后消息片段、按关键词和类型筛选会话列表，便于 Agent 系统快速检索和上下文管理。
+- **统一跨提供商的思考模式与 OTLP 日志模式**：规范了不同 AI 服务的推理输出格式和遥测数据，为多模型 Agent 的稳定监控和切换奠定基础。
+- **扩展提供商支持与工具增强**：新增 Perplexity、Alibaba Qwen、xAI SuperGrok 等声明式提供商，并引入图像读取工具和工具输出大小限制配置，丰富了 Agent 的感知与执行选项。
+
+---
+
+> 原文 release：[block/goose v1.38.0](https://github.com/aaif-goose/goose/releases/tag/v1.38.0)

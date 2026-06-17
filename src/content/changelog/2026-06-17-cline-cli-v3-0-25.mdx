@@ -1,0 +1,23 @@
+---
+slug: 2026-06-17-cline-cli-v3-0-25
+title: "cline cli-v3.0.25 — 新增 ClinePass 支持与 MCP 服务器插件，提升模型选择与工具调用效率"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.25
+publishedAt: 2026-06-17
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增 ClinePass 支持与 MCP 服务器插件，提升模型选择与工具调用效率"
+broadcast: "Cline 命令行工具最新版本带来了两项重要更新。一是新增了对 ClinePass 模型的支持，让开发者能更灵活地切换不同模型，提升智能体的适应能力。二是引入了 MCP 服务器插件，通过 OAuth 授权增强了插件安全性，同时优化了工具调用效率，鼓励并行执行以加速任务处理。这些改进对国内开发者来说，意味着在构建智能体时需要更好地设计多模型切换和自动化安全流程。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新不受影响，因为代理服务本身不涉及具体的 CLI 工具功能。现有用户如果正在使用 Cline CLI 并希望扩展模型选择或增强插件安全性，值得升级到 v3.0.25。升级后，现有 prompt 或 hook 配置可能需要调整，以适配新的 ClinePass 模型选择器和 MCP 服务器的 OAuth 授权流程，确保 Agent Harness 能有效支持多模型切换与安全的插件集成。"
+tags: [clinepass, mcp-server, tool-optimization, bug-fixes]
+---
+
+- **新增 ClinePass 支持**：模型选择器现可选用 ClinePass 模型，扩展了模型集成选项，意味着 Agent Harness 设计需支持灵活的多模型切换机制。
+- **引入 MCP 服务器插件支持**：插件安装时可授权 MCP OAuth，增强了插件安全性，要求 Agent Harness 集成时需考虑 OAuth 流程自动化。
+- **优化工具调用与输出管理**：鼓励并行工具调用以加速任务执行，并限制 bash 命令和文件读取的输出大小，这要求 Agent Harness 设计需平衡并发性能与上下文限制。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.25](https://github.com/cline/cline/releases/tag/cli-v3.0.25)

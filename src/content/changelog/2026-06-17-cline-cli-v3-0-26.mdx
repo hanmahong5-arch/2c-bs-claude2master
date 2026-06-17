@@ -1,0 +1,26 @@
+---
+slug: 2026-06-17-cline-cli-v3-0-26
+title: "cline cli-v3.0.26 — 回滚模型选择器 UI，恢复稳定交互体验"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.26
+publishedAt: 2026-06-17
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "回滚模型选择器 UI，恢复稳定交互体验"
+broadcast: "这次更新主要把模型选择界面回退到了之前的稳定版本。这意味着开发者工具更看重用户体验的连贯性，而不是频繁推出实验功能。对国内做智能体开发的朋友来说，这提醒我们界面设计要优先保证核心工作流不受干扰，前后端解耦也更利于独立调整。"
+insight: "对于国内用户，本次更新是纯粹的界面回滚，不影响任何后端逻辑。这意味着通过 newapi.lurus.cn 代理的模型调用完全不受影响，无需调整任何配置或 prompt。现有用户如果已经适应了之前的稳定界面，则无需任何操作；如果曾被实验性功能困扰，此次更新反而是体验优化。核心建议是：无需升级焦虑，保持现有工作流即可，因为变更仅涉及前端交互的稳定性修复。"
+tags: [ui-revert, model-selection, stability, cli]
+---
+
+- 撤销了可展开的模型选择器分区和 ClinePass 模型列表，恢复为之前的模型选择界面。
+  - 这意味着在 agent harness 设计中，界面稳定性优先于实验性功能，避免用户因频繁变更而产生困惑。
+- 本次更新专注于 UI 回退，未引入新功能或底层逻辑改动。
+  - 表明在 agent 工具链中，用户体验的连贯性比界面创新更重要，确保核心工作流不受干扰。
+- 变更仅涉及前端交互层，不影响后端模型调用或配置逻辑。
+  - 提示在构建 agent 系统时，前端与后端应保持解耦，以便独立调整界面而不影响核心功能。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.26](https://github.com/cline/cline/releases/tag/cli-v3.0.26)

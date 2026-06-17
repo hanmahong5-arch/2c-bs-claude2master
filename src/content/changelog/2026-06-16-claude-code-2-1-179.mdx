@@ -1,0 +1,23 @@
+---
+slug: 2026-06-16-claude-code-2-1-179
+title: "claude-code v2.1.179 — 修复流式中断保留部分回复，解决 WSL2 滚动和权限配置导致的性能问题"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.179
+publishedAt: 2026-06-16
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复流式中断保留部分回复，解决 WSL2 滚动和权限配置导致的性能问题"
+broadcast: "这次更新主要修复了几个影响开发者体验的问题。它解决了网络波动时回复中断的毛病，让智能体的对话更连贯。同时，修复了在Windows子系统里鼠标滚动的卡顿，确保开发环境操作顺畅。还优化了大型目录的权限检查，避免配置错误导致界面卡死，提升了开发工具的稳定性。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要修复了流式连接中断的体验问题，这意味着在网络波动时，代理连接的中断将更少地导致会话直接报错，而是能保留部分回复，提升了稳定性。因此，现有用户值得升级以获取更连贯的体验，且代理配置本身不受影响，无需修改。"
+tags: [bug-fixes, performance, ux-improvement, wsl]
+---
+
+- **修复流式连接中断**：部分响应现在会被保留，而非显示原始错误，同时运行工具时的加载动画不再卡住。这意味着 Agent 在遇到网络波动时能提供更连贯的用户体验。
+- **解决 WSL2 鼠标滚动问题**：修复了在 Windows Terminal 和 VS Code 中 WSL2 下鼠标滚动的回归问题。这确保了开发者在混合环境中的界面交互保持顺畅。
+- **优化大型目录的权限检查**：修复了沙盒中 `denyRead`/`allowRead` 通配符覆盖大型目录树时，导致 Bash 工具描述巨大并使会话不可用的问题。这防止了配置错误引发的前端性能崩溃。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.179](https://github.com/anthropics/claude-code/releases/tag/v2.1.179)
