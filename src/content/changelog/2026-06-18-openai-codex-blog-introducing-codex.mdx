@@ -1,0 +1,23 @@
+---
+slug: 2026-06-18-openai-codex-blog-introducing-codex
+title: "Introducing Codex — 了解首个云端并行软件工程代理 Codex 的核心能力与安全设计，把握 AI 编程"
+source: openai-codex-blog
+sourceUrl: https://openai.com/index/introducing-codex/
+publishedAt: 2026-06-18
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: practice
+hook: "了解首个云端并行软件工程代理 Codex 的核心能力与安全设计，把握 AI 编程助手的关键进化。"
+broadcast: "今天要聊的是首个云端并行软件工程代理。它能在独立沙盒里并行处理多项编程任务，还能通过项目指南文件来导航代码库、运行测试。对国内开发者来说，这意味着AI编程助手变得更安全、更懂项目规范，能帮你更高效地协作开发。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，Codex 的云端沙盒和隔离容器设计意味着代理服务本身不受影响，但需注意其核心工作模式。现有 prompt 必须修改，任务描述需高度清晰独立以适配并行处理，并应主动在项目中创建 AGENTS.md 文件来提供结构化指引，这是提升输出质量的关键。同时，prompt 中必须明确包含审查可验证日志和测试结果的环节，以匹配其安全设计。"
+tags: [software-engineering-agent, cloud-sandbox, agents-md, secure-execution]
+---
+
+- **并行处理与沙盒执行**：Codex 为每个任务创建独立的云沙盒环境，预加载代码库，可并行处理多项任务。这意味着设计 prompt 时需确保任务描述清晰、独立，以便代理高效分配资源。
+- **通过 AGENTS.md 文件引导**：用户可在仓库中放置 AGENTS.md 文件，指导 Codex 如何导航代码库、运行测试及遵循项目规范。这强调了为代理提供结构化上下文（类似项目指南）能显著提升其输出质量与合规性。
+- **安全与验证机制**：Codex 在禁用互联网的隔离容器中运行，并通过引用终端日志和测试结果提供可验证的行动证据。这要求 prompt 设计需考虑任务的可观测性，并明确用户审查环节，确保安全可靠。
+
+---
+
+> 原文：[Introducing Codex](https://openai.com/index/introducing-codex/)

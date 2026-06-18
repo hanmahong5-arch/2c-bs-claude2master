@@ -1,13 +1,13 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.179",
-    "openai/codex": "rust-v0.140.0",
+    "anthropics/claude-code": "v2.1.181",
+    "openai/codex": "rust-v0.141.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.26",
+    "cline/cline": "cli-v3.0.27",
     "block/goose": "v1.38.0",
-    "sst/opencode": "v1.17.7",
+    "sst/opencode": "v1.17.8",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.46.0"
+    "google-gemini/gemini-cli": "v0.47.0"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -44,7 +44,9 @@
     "DietrichGebert/ponytail",
     "tamnd/kage",
     "duckbugio/flock",
-    "elvisun/newsjack"
+    "elvisun/newsjack",
+    "XiaomiMiMo/MiMo-Code",
+    "EpicGames/lore"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -75,12 +77,14 @@
       "https://www.anthropic.com/engineering/writing-tools-for-agents"
     ],
     "claude-code-docs": [],
-    "openai-codex-blog": []
+    "openai-codex-blog": [
+      "https://openai.com/index/introducing-codex/"
+    ]
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-17",
-    "claude-code-docs": "2026-06-11",
-    "openai-codex-blog": "2026-06-11"
+    "anthropic-engineering": "2026-06-18",
+    "claude-code-docs": "2026-06-18",
+    "openai-codex-blog": "2026-06-18"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -129,7 +133,10 @@
       "https://simonwillison.net/2026/Jun/17/click-to-play-component/",
       "https://simonwillison.net/2026/Jun/17/netnewswire-status/",
       "https://simonwillison.net/2026/Jun/16/datasette-tailscale/",
-      "https://simonwillison.net/2026/Jun/16/georgi-gerganov/"
+      "https://simonwillison.net/2026/Jun/16/georgi-gerganov/",
+      "https://simonwillison.net/2026/Jun/17/glm-52/",
+      "https://simonwillison.net/2026/Jun/17/charity-majors/",
+      "https://simonwillison.net/2026/Jun/16/datasette/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -141,7 +148,12 @@
       "https://lilianweng.github.io/posts/2023-06-23-agent/",
       "https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/",
       "https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/",
-      "https://lilianweng.github.io/posts/2023-01-10-inference-optimization/"
+      "https://lilianweng.github.io/posts/2023-01-10-inference-optimization/",
+      "https://lilianweng.github.io/posts/2022-09-08-ntk/",
+      "https://lilianweng.github.io/posts/2022-06-09-vlm/",
+      "https://lilianweng.github.io/posts/2022-04-15-data-gen/",
+      "https://lilianweng.github.io/posts/2022-02-20-active-learning/",
+      "https://lilianweng.github.io/posts/2021-12-05-semi-supervised/"
     ],
     "latentspace": [
       "https://www.latent.space/p/axiom",
@@ -165,7 +177,9 @@
       "https://www.latent.space/p/ainews-loopcraft-the-art-of-stacking",
       "https://www.latent.space/p/ainews-fable-and-mythos-officially",
       "https://www.latent.space/p/ainews-satya-on-loopcraft-building",
-      "https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding"
+      "https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding",
+      "https://www.latent.space/p/ainews-midjourney-medical-scan-your",
+      "https://www.latent.space/p/radical-ai"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -185,7 +199,8 @@
       "https://www.interconnects.ai/p/lossy-self-improvement",
       "https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety",
       "https://www.interconnects.ai/p/welcome-to-the-agi-era-of-ai-governance",
-      "https://www.interconnects.ai/p/frontier-post-training-recipe-review"
+      "https://www.interconnects.ai/p/frontier-post-training-recipe-review",
+      "https://www.interconnects.ai/p/state-of-the-blog-mid-2026"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -240,7 +255,10 @@
       "https://huyenchip.com//2024/04/17/personal-growth.html",
       "https://huyenchip.com//2024/03/14/ai-oss.html",
       "https://huyenchip.com//2024/02/28/predictive-human-preference.html",
-      "https://huyenchip.com//2024/01/16/sampling.html"
+      "https://huyenchip.com//2024/01/16/sampling.html",
+      "https://huyenchip.com//2023/10/10/multimodal.html",
+      "https://huyenchip.com//2023/08/16/llm-research-open-challenges.html",
+      "https://huyenchip.com//2023/06/07/generative-ai-strategy.html"
     ],
     "oneusefulthing": [
       "https://www.oneusefulthing.org/p/choosing-to-stay-human",
@@ -299,7 +317,9 @@
       "https://openai.com/index/academy-courses-applying-ai-at-work",
       "https://openai.com/index/preply",
       "https://openai.com/index/introducing-openai-partner-network",
-      "https://openai.com/index/deployment-simulation"
+      "https://openai.com/index/deployment-simulation",
+      "https://openai.com/index/ai-chemist-improves-reaction",
+      "https://openai.com/index/introducing-life-sci-bench"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -364,25 +384,26 @@
       "https://www.anthropic.com/news/fable-mythos-access",
       "https://www.anthropic.com/news/anthropic-public-record",
       "https://www.anthropic.com/news/tcs-anthropic-partnership",
-      "https://www.anthropic.com/news/dxc-anthropic-alliance"
+      "https://www.anthropic.com/news/dxc-anthropic-alliance",
+      "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-17",
-    "lilianweng": "2026-06-11",
-    "latentspace": "2026-06-17",
-    "interconnects": "2026-06-17",
+    "simonwillison": "2026-06-18",
+    "lilianweng": "2026-06-18",
+    "latentspace": "2026-06-18",
+    "interconnects": "2026-06-18",
     "karpathy": "2026-06-17",
     "raschka": "2026-06-17",
     "eugeneyan": "2026-06-17",
-    "chiphuyen": "2026-06-11",
+    "chiphuyen": "2026-06-18",
     "oneusefulthing": "2026-06-17",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-17",
+    "openai-news": "2026-06-18",
     "deepmind": "2026-06-17",
     "hf-blog": "2026-06-17",
-    "anthropic-news": "2026-06-16"
+    "anthropic-news": "2026-06-18"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

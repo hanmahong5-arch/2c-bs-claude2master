@@ -1,0 +1,23 @@
+---
+slug: 2026-06-17-opencode-1-17-8
+title: "opencode v1.17.8 — MCP 工具兼容性增强，桌面端交互优化，提升开发体验"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.8
+publishedAt: 2026-06-17
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "MCP 工具兼容性增强，桌面端交互优化，提升开发体验"
+broadcast: "开源开发平台的最新更新，重点提升了工具兼容性和桌面端体验。现在它能更好地支持第三方工具集成，让开发者构建智能应用时更稳定。同时，桌面操作界面得到优化，文件管理和导航变得更快捷，直接提升了日常开发的工作效率。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要优化了桌面端交互体验，新增了主页标签页切换按钮并改进了文件选择器，这直接提升了开发效率。由于更新未涉及代理接口或核心API调用方式的变更，因此代理服务本身不受影响，现有配置无需改动。"
+tags: [mcp-tools, desktop-ui, bugfixes, openai-compatibility]
+---
+
+- **MCP 工具兼容性修复**：OpenAI 兼容提供者现在能正确处理 MCP 工具模式，Cloudflare AI Gateway 正确接收 API 密钥。这意味着 Agent Harness 能更稳定地集成第三方工具。
+- **MCP 工具错误处理改进**：工具失败时显示服务器原始错误信息，长运行工具在报告进度时保持超时计时器活跃。这有助于开发者更快诊断和调试工具链问题。
+- **桌面端交互优化**：新增主页标签页切换按钮，文件/文件夹选择器在 v2 布局中更快更易导航。这优化了开发者在桌面环境下的工作流效率。
+
+---
+
+> 原文 release：[sst/opencode v1.17.8](https://github.com/anomalyco/opencode/releases/tag/v1.17.8)

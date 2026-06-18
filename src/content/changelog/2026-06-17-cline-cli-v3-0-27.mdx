@@ -1,0 +1,23 @@
+---
+slug: 2026-06-17-cline-cli-v3-0-27
+title: "cline cli-v3.0.27 — CLI 新增技能管理命令，优化 MCP 安装流程与错误处理"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.27
+publishedAt: 2026-06-17
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "CLI 新增技能管理命令，优化 MCP 安装流程与错误处理"
+broadcast: "CLI工具发布了新版本，主要带来了三个实用改进。它新增了统一的技能管理命令，让开发者能更方便地管理AI智能体的各种能力。同时，工具优化了MCP服务器的安装向导，简化了配置流程。此外，它还加强了错误提示功能，当授权失败或输入错误命令时，会给出更清晰的指引，大大提升了开发体验和工具的可靠性。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新不影响代理连接，无需调整。现有用户值得升级，新版统一了技能管理命令，优化了 MCP 安装流程，能显著提升开发效率。现有 prompt 或 hook 配置无需修改，但升级后可利用更清晰的错误提示来调试 MCP OAuth 授权等问题，减少配置困惑。"
+tags: [cli, skill-management, mcp, error-handling]
+---
+
+- 新增 `cline skill` 命令，用于安装和管理技能，其功能与现有的插件和 MCP 管理命令对齐。这意味着 Agent 的技能生态管理接口得到了统一和简化。
+- 增加了预填充的 MCP 安装向导命令，以加速 MCP 服务器的设置过程。这表明工具链在提升开发者体验和降低配置复杂度上持续投入。
+- 改进了插件 MCP OAuth 授权失败时的错误处理和消息提示，并且 CLI 现在会对未知命令或未加引号的多词输入给出明确错误，而非将其误认为提示。这强化了 CLI 的健壮性和用户友好性，减少了因错误输入导致的困惑。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.27](https://github.com/cline/cline/releases/tag/cli-v3.0.27)

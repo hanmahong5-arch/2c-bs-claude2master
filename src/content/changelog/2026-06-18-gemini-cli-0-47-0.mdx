@@ -1,0 +1,23 @@
+---
+slug: 2026-06-18-gemini-cli-0-47-0
+title: "gemini-cli v0.47.0 — Gemini CLI 改进模型映射、修复工具发现并优化会话管理"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.47.0
+publishedAt: 2026-06-18
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "Gemini CLI 改进模型映射、修复工具发现并优化会话管理"
+broadcast: "谷歌的 Gemini 命令行工具最近迎来更新，重点改进了模型映射、修复了工具发现的竞态问题，并优化了会话管理。这次更新让模型选择更准确，工具调用更可靠，还能避免保存无效的会话状态。对于国内开发者来说，这意味着在构建智能体时，能获得更稳定、高效的基础工具支持。"
+insight: "对于使用 Lurus 代理访问 Gemini 的用户，本次更新主要影响底层配置。由于自动模式现在会使用 Gemini 3.5 Flash 模型，如果你在 newapi.lurus.cn 上配置了模型映射，需要检查并确保你的 Agent Harness 能正确解析后端标志，以保证模型选择的准确性。否则，自动模式下的模型调用可能不符合预期。"
+tags: [model-mapping, tool-discovery, session-management, bug-fix]
+---
+
+* **尊重后端定义并更新自动模式**：当启用标志时，自动模式现在会使用 Gemini 3.5 Flash 模型。这意味着 Agent Harness 需要正确解析和传递后端配置标志，以确保模型选择的准确性。
+* **实现 MCP 工具发现的原子更新**：修复了核心中 MCP 工具发现的竞态条件问题。这要求 Agent Harness 的工具发现机制必须是原子操作，以保证工具列表的一致性和可靠性。
+* **避免持久化空的恢复会话**：优化了会话管理，不再保存空的恢复会话。这提示 Agent Harness 在设计和实现状态持久化逻辑时，应包含对无效或空状态的过滤机制，以节省存储并提高效率。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.47.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.47.0)

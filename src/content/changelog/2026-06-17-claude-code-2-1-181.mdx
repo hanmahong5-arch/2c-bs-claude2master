@@ -1,0 +1,23 @@
+---
+slug: 2026-06-17-claude-code-2-1-181
+title: "claude-code v2.1.181 — 新增 /config 指令即时配置、优化长段落流式显示、修复网络驱动器文件写入问"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.181
+publishedAt: 2026-06-17
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增 /config 指令即时配置、优化长段落流式显示、修复网络驱动器文件写入问题"
+broadcast: "Claude Code 最近更新了三个实用功能。首先是新增了即时配置指令，让开发者能在对话中直接调整参数，这对需要动态配置的智能体开发很有帮助。其次是优化了长文本的流式显示，现在逐行输出，提升了实时交互体验。最后还修复了云同步文件夹的文件写入问题，增强了外部文件系统处理的可靠性。"
+insight: "对于使用 newapi.lurus.cn 代理的国内用户，本次更新值得关注。修复了云同步文件夹的写入问题，能直接提升文件操作的可靠性，无需修改现有配置。新增的 /config 指令为高级用户提供了运行时动态调整的灵活性，但普通用户若不涉及交互模式或远程控制，则无需立即升级。流式显示优化主要改善实时交互体验，对纯 API 调用的场景影响有限。"
+tags: [config-syntax, streaming-improvement, file-io-fix, stability]
+---
+
+- **新增 `/config key=value` 语法**：允许在提示符中直接设置任何配置项（如 `/config thinking=false`），适用于交互模式、`-p` 参数和远程控制。这意味着 Agent Harness 的设计需要支持运行时动态配置注入。
+- **改进长段落流式显示**：文本现在逐行显示，而不是等待第一个换行符。这对 Agent Harness 的实时反馈和用户体验设计提出了更高的流式处理要求。
+- **修复 Write/Edit 在云同步文件夹的问题**：解决了网络驱动器和云同步文件夹中生成 0 字节或截断文件的问题。这表明 Agent Harness 在处理外部文件系统时需要更强的鲁棒性和事务完整性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.181](https://github.com/anthropics/claude-code/releases/tag/v2.1.181)
