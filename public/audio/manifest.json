@@ -1,6 +1,39 @@
 {
   "items": [
     {
+      "slug": "2026-06-19-blog-latentspace-ainews-glm-gpt-glm-5-2-passes-vibe",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] GLM > GPT? GLM-5.2 passes vibe check; Z.ai — GLM",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-19"
+    },
+    {
+      "slug": "2026-06-19-claude-code-2-1-183",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.183 — 增强自动模式安全，阻止未授权的破坏性命令，提升代理操作可靠性",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-19"
+    },
+    {
+      "slug": "2026-06-19-trending-nubjs-nub",
+      "zh": true,
+      "en": false,
+      "title": "nub — Rust 写的 Node.js 一体化工具包，提供快速构建与部署能力",
+      "kind": "trending",
+      "author": null,
+      "source": "nubjs/nub",
+      "tool": null,
+      "publishedAt": "2026-06-19"
+    },
+    {
       "slug": "2026-06-18-blog-anthropic-news-anthropic-opens-seoul-office-and-announces-new-partnerships",
       "zh": true,
       "en": true,
@@ -12,6 +45,39 @@
       "publishedAt": "2026-06-18"
     },
     {
+      "slug": "2026-06-18-blog-hf-blog-beyond-lora-can-you-beat-the-most-popular",
+      "zh": true,
+      "en": true,
+      "title": "Beyond LoRA: Can you beat the most popular fine-tuning — Hugging Face 探讨超越 LoRA 的微调技术，揭示更高效模型适配的未",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-18"
+    },
+    {
+      "slug": "2026-06-18-blog-hf-blog-is-it-agentic-enough-benchmarking-open-models-on",
+      "zh": true,
+      "en": true,
+      "title": "Is it agentic enough? Benchmarking open models on your — Hugging Face 提出评估开源模型工具调用能力的新基准，帮助开发者选择适",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-18"
+    },
+    {
+      "slug": "2026-06-18-blog-hf-blog-mosaicleaks-can-your-research-agent-keep-a-secret",
+      "zh": true,
+      "en": true,
+      "title": "MosaicLeaks: Can your research agent keep a secret? — Hugging Face 揭示研究助手可能泄露训练数据，对 AI 安全提出警示",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-18"
+    },
+    {
       "slug": "2026-06-18-blog-latentspace-ainews-midjourney-medical-scan-your-organs-like-you",
       "zh": true,
       "en": true,
@@ -19,6 +85,72 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-18"
+    },
+    {
+      "slug": "2026-06-18-blog-latentspace-the-professor-of-outputmaxxing-anjney-midha-amp",
+      "zh": true,
+      "en": true,
+      "title": "The Professor of Outputmaxxing — Anjney Midha, AMP — 前沿AI竞赛不仅是GPU军备竞赛，更是系统优化与效率提升的工程挑战。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-18"
+    },
+    {
+      "slug": "2026-06-18-blog-openai-news-improving-health-intelligence-in-chatgpt",
+      "zh": true,
+      "en": true,
+      "title": "Improving health intelligence in ChatGPT — OpenAI 介绍 ChatGPT 在健康领域的新能力，展示 AI 如何更可靠地",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-18"
+    },
+    {
+      "slug": "2026-06-18-blog-openai-news-new-usage-analytics-and-updated-spend-controls-for",
+      "zh": true,
+      "en": true,
+      "title": "New usage analytics and updated spend controls for — OpenAI 为 ChatGPT Enterprise 推出新成本控制与用量分析",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-18"
+    },
+    {
+      "slug": "2026-06-18-blog-openai-news-using-ai-to-help-physicians-diagnose-rare-genetic",
+      "zh": true,
+      "en": true,
+      "title": "Using AI to help physicians diagnose rare genetic — OpenAI 研究团队利用推理模型辅助诊断儿童罕见遗传病，在未解病例中成功识别出",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-18"
+    },
+    {
+      "slug": "2026-06-18-blog-simonwillison-datasette-acl-0-6a0",
+      "zh": true,
+      "en": true,
+      "title": "datasette-acl 0.6a0 — Datasette 权限插件升级，从表级控制迈向通用资源共享系统",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-18"
+    },
+    {
+      "slug": "2026-06-18-blog-simonwillison-datasette-apps-host-custom-html-applications-inside-datasette",
+      "zh": true,
+      "en": true,
+      "title": "Datasette Apps: Host custom HTML applications inside — Datasette 新插件 datasette",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-06-18"
     },
@@ -76,6 +208,28 @@
       "source": "XiaomiMiMo/MiMo-Code",
       "tool": null,
       "publishedAt": "2026-06-18"
+    },
+    {
+      "slug": "2026-06-17-blog-hf-blog-from-the-hugging-face-hub-to-robot-hardware",
+      "zh": true,
+      "en": true,
+      "title": "From the Hugging Face Hub to robot hardware with — Hugging Face 展示如何将 Hub 模型直接部署到机器人硬件，实现 A",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-17"
+    },
+    {
+      "slug": "2026-06-17-blog-hf-blog-molmomotion-language-guided-3d-motion-forecasting",
+      "zh": true,
+      "en": true,
+      "title": "MolmoMotion: Language-guided 3D motion forecasting — Hugging Face 介绍 MolmoMotion：用语言引导预测 3D 人",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-17"
     },
     {
       "slug": "2026-06-17-blog-interconnects-state-of-the-blog-mid-2026",
@@ -254,6 +408,17 @@
       "publishedAt": "2026-06-17"
     },
     {
+      "slug": "2026-06-16-blog-deepmind-securing-the-future-of-ai-agents",
+      "zh": true,
+      "en": true,
+      "title": "Securing the future of AI agents — Google DeepMind 分享 AI 智能体安全路线图，结合传统防护与实时",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-06-16"
+    },
+    {
       "slug": "2026-06-16-blog-deepmind-unlocking-uk-house-building-with-ai-accelerated-planning",
       "zh": true,
       "en": true,
@@ -390,6 +555,28 @@
       "zh": true,
       "en": true,
       "title": "datasette-agent 0.3a0 — Simon Willison 发布 datasette",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-15"
+    },
+    {
+      "slug": "2026-06-15-blog-simonwillison-datasette-apps-0-1a2",
+      "zh": true,
+      "en": true,
+      "title": "datasette-apps 0.1a2 — Simon Willison 介绍 Datasette Apps 0.1a2 更",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-15"
+    },
+    {
+      "slug": "2026-06-15-blog-simonwillison-datasette-apps-0-1a3",
+      "zh": true,
+      "en": true,
+      "title": "datasette-apps 0.1a3 — Datasette",
       "kind": "blogger",
       "author": "Simon Willison",
       "source": "Simon Willison",
@@ -692,193 +879,6 @@
       "source": "Latent Space",
       "tool": null,
       "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-blog-openai-news-how-preply-combines-ai-and-human-tutors-to",
-      "zh": true,
-      "en": true,
-      "title": "How Preply combines AI and human tutors to personalize — Preply 如何用 AI 生成课程摘要，为语言学习提供个性化反馈与练习",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-blog-openai-news-new-openai-academy-courses-for-the-next-era",
-      "zh": true,
-      "en": true,
-      "title": "New OpenAI Academy courses for the next era of work — OpenAI 推出三门新课程，帮助职场人掌握 AI 技能、构建可重复工作流，并应",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-blog-simonwillison-openai-webrtc-audio-session-now-with-document-context",
-      "zh": true,
-      "en": true,
-      "title": "OpenAI WebRTC Audio Session, now with document context — Simon Willison 分享如何利用 OpenAI WebRTC API ",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-blog-simonwillison-quoting-andrew-singleton",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Andrew Singleton — AI 投资如何创造虚假繁荣？这篇讽刺寓言揭示了资本游戏的荒诞逻辑。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-claude-code-2-1-174",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.174 — 修复多项关键错误并优化模型选择器，提升企业级部署稳定性与使用体验。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-claude-code-2-1-175",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.175 — 新增强制模型可用性管理，确保默认模型始终在允许列表中",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-claude-code-2-1-176",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.176 — 会话标题支持多语言生成，并修复了远程控制、后台会话和模型选择等多个关键问题。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-opencode-1-17-4",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.17.4 — MCP 服务器支持工作目录，修复大仓库快照性能，提升工具兼容性",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-trending-jeff141-meatshell",
-      "zh": true,
-      "en": false,
-      "title": "meatshell — Rust 编写的轻量级 SSH 客户端，内存占用极低",
-      "kind": "trending",
-      "author": null,
-      "source": "jeff141/meatshell",
-      "tool": null,
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-trending-mvanhorn-agentcookie",
-      "zh": true,
-      "en": false,
-      "title": "agentcookie — Go 开发的 macOS 代理会话同步工具，通过 Tailscale 实现端到端",
-      "kind": "trending",
-      "author": null,
-      "source": "mvanhorn/agentcookie",
-      "tool": null,
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-11-blog-hf-blog-profiling-in-pytorch-part-2-from-nn-linear",
-      "zh": true,
-      "en": true,
-      "title": "Profiling in PyTorch (Part 2): From nn.Linear to a — PyTorch 性能优化：从 nn.Linear 到融合 MLP 的深度剖析，揭",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-11"
-    },
-    {
-      "slug": "2026-06-11-blog-latentspace-ainews-open-models-model-labs-vs-agent-labs",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Open Models, Model Labs vs Agent Labs, and — Sarah Guo 分析 AI 开源模型与闭源实验室的竞争，以及何为无法被训练的",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-11"
-    },
-    {
-      "slug": "2026-06-11-blog-openai-news-bbva-puts-ai-at-the-core-of-banking",
-      "zh": true,
-      "en": true,
-      "title": "BBVA puts AI at the core of banking with OpenAI — BBVA 如何借助 OpenAI 将 ChatGPT 企业版推广至十万员工，加速",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-11"
-    },
-    {
-      "slug": "2026-06-11-blog-openai-news-how-an-astrophysicist-uses-codex-to-help-simulate",
-      "zh": true,
-      "en": true,
-      "title": "How an astrophysicist uses Codex to help simulate black — 天体物理学家用 Codex 模拟黑洞，加速验证广义相对论，展示 AI 如何助力前",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-11"
-    },
-    {
-      "slug": "2026-06-11-blog-openai-news-openai-to-acquire-ona",
-      "zh": true,
-      "en": true,
-      "title": "OpenAI to acquire Ona — OpenAI 收购 Ona，为 Codex 引入安全云环境，赋能企业级 AI 代",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-11"
-    },
-    {
-      "slug": "2026-06-11-blog-openai-news-supporting-europe-s-work-in-ensuring-a-trustworthy",
-      "zh": true,
-      "en": true,
-      "title": "Supporting Europe’s work in ensuring a trustworthy AI — OpenAI 支持欧盟 AI 内容透明度实践准则，推动溯源标准与工具，帮助人们理",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-11"
-    },
-    {
-      "slug": "2026-06-11-blog-simonwillison-anthropic-walks-back-policy-that-could-have-sabotaged",
-      "zh": true,
-      "en": true,
-      "title": "Anthropic Walks Back Policy That Could Have ‘Sabotaged’ — Anthropic 撤回可能阻碍 AI 研究的 Claude 政策，回应社区强烈",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-11"
     }
   ]
 }
