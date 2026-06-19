@@ -1,0 +1,23 @@
+---
+slug: 2026-06-19-claude-code-2-1-183
+title: "claude-code v2.1.183 — 增强自动模式安全，阻止未授权的破坏性命令，提升代理操作可靠性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.183
+publishedAt: 2026-06-19
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "增强自动模式安全，阻止未授权的破坏性命令，提升代理操作可靠性"
+broadcast: "这次更新主要增强了自动模式的安全性，它会阻止代理在未经用户明确允许的情况下，执行像强制重置代码库或销毁基础设施这类高风险命令，有效防止意外损失。同时，它也改进了配置交互的体验，并修复了子代理搜索和界面显示等多个问题，让整个开发工具的运行更稳定可靠。对于国内开发者来说，这意味着你使用AI编程助手时，操作会更安全，日常工作的干扰也会更少。"
+insight: "对于国内使用 newapi.lurus.cn 代理的用户，本次更新主要增强了自动模式下的安全性，明确阻止了未授权的破坏性命令，这不会影响代理连接本身，但提升了操作可靠性。现有用户值得升级，因为修复了多项影响稳定性的子代理与界面错误。现有 prompt 配置无需特意修改，但需注意自动模式下代理的行为已更严格，若依赖高风险命令需在用户请求中明确表达。"
+tags: [safety, configuration, bug-fixes, ui-improvements]
+---
+
+- **阻止未授权的破坏性 Git 和 IaC 命令**：自动模式下，若用户未明确要求，代理无法执行 `git reset --hard`、`terraform destroy` 等高风险命令，防止意外数据丢失。
+- **改进配置与交互体验**：`/config` 指令支持 `--help` 查看键值，且切换设置更直观；移除了启动时的“设置问题”提示，需主动运行 `/doctor` 诊断。
+- **修复多项子代理与界面错误**：解决了 WebSearch 在子代理中返回空结果、TUI 在 Windows Terminal 下渲染错乱、后台任务被意外终止等问题，提升了系统稳定性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.183](https://github.com/anthropics/claude-code/releases/tag/v2.1.183)

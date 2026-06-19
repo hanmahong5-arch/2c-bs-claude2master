@@ -1,0 +1,25 @@
+---
+slug: 2026-06-18-blog-simonwillison-datasette-apps-host-custom-html-applications-inside-datasette
+title: "Datasette Apps: Host custom HTML applications inside — Datasette 新插件 datasette"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/18/datasette-apps/
+publishedAt: 2026-06-18
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 新插件 datasette-apps 发布，允许在安全沙箱内托管自定义 HTML 应用，并与数据库交互。"
+broadcast: "Datasette 最近推出了一个叫 datasette-apps 的新插件，它让开发者能在 Datasette 里直接托管自己写的 HTML 应用。这些应用运行在安全的沙箱环境里，既能安全地读写数据库，又不会影响主系统。对于国内开发者来说，这意味着可以更轻松地构建定制化的数据应用，尤其适合需要处理敏感数据或快速开发原型项目的场景。"
+tags: [datasette, web-application, sqlite, sandbox]
+---
+
+Datasette Apps 是一个新插件，它允许开发者在 Datasette 实例中托管自定义的 HTML+JavaScript 应用。这些应用运行在严格沙箱化的 `<iframe>` 中，可以安全地对 Datasette 中的数据进行读写操作。
+
+*   **安全沙箱与 CSP 策略**：应用通过 `<iframe sandbox>` 和注入的 CSP 元标签被严格限制，无法访问父应用的 DOM、Cookie 或 localStorage，也不能向外部域名发起请求，这为在敏感数据环境中运行不可信代码提供了基础安全保障。
+*   **受控的 API 通信**：沙箱内的应用通过 `MessageChannel()` 与父窗口进行受控通信，可以执行经允许列表验证的只读 SQL 查询。对于写操作，则必须通过 Datasette 的“存储查询”功能来调用特定的预定义查询，从而精细控制数据修改权限。
+*   **LLM 友好的开发模式**：插件本身不依赖 LLM，但其自包含应用的特性和创建表单中提供的可复制提示词，使得现代大语言模型能够很好地理解上下文并生成可运行的应用代码，这大大降低了定制化数据应用的门槛。
+
+---
+
+> 原文：[Datasette Apps: Host custom HTML applications inside Datasette](https://simonwillison.net/2026/Jun/18/datasette-apps/) · 作者 Simon Willison

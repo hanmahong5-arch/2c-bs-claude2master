@@ -1,0 +1,24 @@
+---
+slug: 2026-06-15-blog-simonwillison-datasette-apps-0-1a2
+title: "datasette-apps 0.1a2 — Simon Willison 介绍 Datasette Apps 0.1a2 更"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/15/datasette-apps/
+publishedAt: 2026-06-15
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 介绍 Datasette Apps 0.1a2 更新，强化了应用安全策略与用户体验，值得开发者关注其权限控制新机制。"
+broadcast: "Datasette 应用平台的最新版本，重点加强了安全策略和用户体验。它新增了内容安全策略的权限控制，让开发者能更精细地管理应用来源，这对国内开发者在构建安全可靠的智能体应用时很有帮助。同时，存储查询选择器支持键盘导航并默认显示最近查询，提升了操作效率，修复的交互问题也确保了应用在不同视图下行为一致。"
+tags: [datasette, web-applications, security, developer-tools]
+---
+
+Datasette Apps 0.1a2 版本发布，主要围绕安全策略和交互细节进行改进。
+- **新增 CSP 权限控制**：引入 `apps-set-csp` 权限，并允许插件通过 `allowed_csp_origins` 为非特权用户设置允许列表，这意味着开发者能更精细地管理应用的内容安全策略来源。
+- **优化存储查询选择器**：存储查询选择器现在支持键盘导航，并默认显示最近三条可访问的查询，这提升了用户在频繁操作查询时的效率。
+- **修复交互与显示问题**：解决了应用内片段链接被外部链接确认模态错误拦截的问题，并修复了全屏模式下的链接确认模态和日志面板显示，确保了应用在不同视图下的行为一致性。
+
+---
+
+> 原文：[datasette-apps 0.1a2](https://simonwillison.net/2026/Jun/15/datasette-apps/) · 作者 Simon Willison

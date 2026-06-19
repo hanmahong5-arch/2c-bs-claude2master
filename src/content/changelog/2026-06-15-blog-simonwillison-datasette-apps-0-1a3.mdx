@@ -1,0 +1,24 @@
+---
+slug: 2026-06-15-blog-simonwillison-datasette-apps-0-1a3
+title: "datasette-apps 0.1a3 — Datasette"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/15/datasette-apps-2/
+publishedAt: 2026-06-15
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette-apps 0.1a3 修复了应用创建与权限管理的安全漏洞，提升了多用户协作的安全性。"
+broadcast: "Datasette应用框架最近修复了两个重要的安全漏洞。现在，没有权限的用户不能再随意创建应用，防止了系统被滥用。同时，它也调整了编辑权限，让团队协作时权限管理更清晰、更可预测。这对国内开发多用户工具或智能体系统的团队来说，意味着能更安全、更简单地设计权限模型了。"
+tags: [datasette, permissions, security, collaboration]
+---
+
+Simon Willison 发布了 datasette-apps 0.1a3 版本，主要修复了两个关键权限漏洞。
+- **修复了无权限用户仍可创建应用的漏洞**：此前，即使没有 `create-app` 权限的用户也能创建应用，这可能导致系统被未授权使用。对开发者而言，这意味着在构建多用户工具时必须严格实施权限检查，防止功能被滥用。
+- **修复了非所有者无法被授予编辑权限的问题**：新版本调整了编辑/删除规则，现在与查看权限一致：私有应用仅所有者可修改，否则由 Datasette 的常规权限系统控制。这对团队协作工具链的设计是一个重要提示，权限模型需要清晰区分所有权与共享编辑权。
+- **统一了权限控制逻辑**：将编辑和删除操作的权限逻辑与查看权限对齐，简化了权限管理的复杂性。对于 Agent 或自动化系统，这降低了集成时处理不同权限场景的认知负担，使权限配置更可预测。
+
+---
+
+> 原文：[datasette-apps 0.1a3](https://simonwillison.net/2026/Jun/15/datasette-apps-2/) · 作者 Simon Willison

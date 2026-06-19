@@ -1,0 +1,25 @@
+---
+slug: 2026-06-18-blog-hf-blog-is-it-agentic-enough-benchmarking-open-models-on
+title: "Is it agentic enough? Benchmarking open models on your — Hugging Face 提出评估开源模型工具调用能力的新基准，帮助开发者选择适"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/is-it-agentic-enough
+publishedAt: 2026-06-18
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 提出评估开源模型工具调用能力的新基准，帮助开发者选择适合的 agent 模型。"
+broadcast: "Hugging Face 团队提出了一个评估开源模型工具调用能力的新方法。它主张开发者应该用自己实际使用的工具和工作流来测试模型，而不是依赖抽象的测试集。这种方法能直接帮助国内开发者和团队，筛选出真正能在具体业务环境中可靠工作的智能体模型，推动其实际落地。"
+tags: [agent-benchmark, tool-calling, model-evaluation, open-source-models]
+---
+
+Hugging Face 团队认为，当前评估开源模型代理（agent）能力的方法存在局限，过于依赖特定工具集或基准。他们提出了一种新的评估范式，核心是让开发者基于自己的工具链和实际工作流来测试模型。
+- **以实际工具链为基准**：评估应围绕开发者真实使用的工具（如代码库、API、内部系统）进行，而非抽象测试集。这意味着评估的实用性直接提升。
+- **自动化评估流程**：文章介绍了如何自动化执行“给定任务 -> 模型调用工具 -> 验证结果”的循环，并量化成功率。这为持续集成和模型选型提供了方法论。
+- **关注复杂任务分解**：好的 agent 应能理解复杂指令，并将其分解为正确的工具调用序列。该基准重点测试这种规划与执行能力，直接关系到 agent 的落地效果。
+这种方法旨在将评估从学术竞赛转向工程实践，帮助团队筛选出真正能在其特定环境中可靠工作的模型。
+
+---
+
+> 原文：[Is it agentic enough? Benchmarking open models on your own tooling](https://huggingface.co/blog/is-it-agentic-enough) · 作者 Hugging Face
