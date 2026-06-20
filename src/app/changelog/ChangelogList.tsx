@@ -4,9 +4,7 @@ import { useMemo } from "react";
 import Link from "next/link";
 import { Calendar, Github, Rss } from "lucide-react";
 import {
-  AUTHORED_LABEL,
   KIND_LABEL,
-  VERIFIED_LABEL,
   type ChangelogItem,
   type ChangelogKind,
 } from "@/lib/content-types";
@@ -53,26 +51,6 @@ function ChangelogCard({ c }: { c: ChangelogItem }) {
           <span className="pill text-[10px]">
             {k === "blogger" ? (c.author ?? c.source) : c.source}
           </span>
-          <span className="pill-outline pill text-[10px]">
-            {AUTHORED_LABEL[c.authored]}
-          </span>
-          {c.verified && (
-            <span
-              className={`pill text-[10px] ${
-                c.verified === "tested"
-                  ? "bg-[rgba(31,122,79,0.12)] text-[var(--lt-ok)]"
-                  : "bg-[rgba(184,130,31,0.12)] text-[var(--lt-warn)]"
-              }`}
-              title={
-                c.verified === "tested"
-                  ? "编辑部已在本地复现验证"
-                  : "LLM 自动摘要，未做人工实测"
-              }
-            >
-              <span aria-hidden="true">{c.verified === "tested" ? "✓ " : "⏳ "}</span>
-              {VERIFIED_LABEL[c.verified]}
-            </span>
-          )}
         </div>
         <h3 className="text-xl font-semibold text-[var(--lt-ink)] group-hover:text-[var(--c2m-accent-deep)] transition-colors">
           {c.title}
@@ -238,8 +216,7 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
             每天追踪主流 AI 编码工具。
           </h1>
           <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl">
-            GitHub Actions 每天 09:30 抓取 {TOOL_NAMES}
-            {" "}的新 release + Anthropic 工程博客 + GitHub 热门新项目，自动产出中文摘要 + Lurus 视角。
+            {TOOL_NAMES} 等主流工具的新版本、工程博客与 GitHub 热门项目，每日中文整理 + 编辑视角。
           </p>
 
           {hasAnything && (

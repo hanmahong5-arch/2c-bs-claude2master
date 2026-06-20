@@ -26,7 +26,7 @@ export default function DigestPreview({ preview }: { preview: Preview }) {
           上一期样本
         </p>
         <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-          首期 Weekly Digest 还在准备中 — 每周一早上自动生成并发出。
+          首期 Weekly Digest 还在准备中 — 每周一早上送达。
           先订阅，第一期上线时第一个收到。
         </p>
       </div>

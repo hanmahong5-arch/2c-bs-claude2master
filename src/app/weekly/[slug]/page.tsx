@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getDigest, getDigestBySlug } from "@/lib/content";
-import { AUTHORED_LABEL } from "@/lib/content-types";
 import { digestJsonLd } from "@/lib/jsonld";
 import ShareButtons from "@/components/ShareButtons";
 
@@ -72,10 +71,6 @@ export default async function WeeklyDetail({
 
       <div className="flex items-center gap-2 mb-3 flex-wrap">
         <span className="pill text-[10px]">Week of {item.weekOf}</span>
-        <span className="pill-outline pill text-[10px]">
-          {AUTHORED_LABEL[item.authored]}
-          {item.model ? ` · ${item.model}` : ""}
-        </span>
       </div>
       <h1 className="font-display italic text-4xl md:text-5xl font-semibold mb-4 headline-tight text-[var(--lt-ink)]">
         {item.title}

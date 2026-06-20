@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Play } from "lucide-react";
 import type { Prompt, PromptCategory } from "@/lib/prompts";
-import { MODEL_LABEL } from "@/lib/prompts";
 import { useUrlFilter } from "@/lib/use-url-filter";
 
 type Filter = "全部" | PromptCategory;
@@ -78,9 +77,7 @@ export default function PromptList({
                 aria-label={p.title}
                 className="absolute inset-0 rounded-[inherit]"
               />
-              <p className="eyebrow mb-3">
-                {p.category} · {MODEL_LABEL[p.modelKey]}
-              </p>
+              <p className="eyebrow mb-3">{p.category}</p>
               <h3 className="text-lg font-semibold mb-2 text-[var(--lt-ink)] group-hover:text-[var(--c2m-accent-deep)] transition-colors">
                 {p.title}
               </h3>

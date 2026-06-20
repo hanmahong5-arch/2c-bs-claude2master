@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getHarness, getHarnessBySlug } from "@/lib/content";
-import { AUTHORED_LABEL } from "@/lib/content-types";
 import { harnessJsonLd } from "@/lib/jsonld";
 import ShareButtons from "@/components/ShareButtons";
 
@@ -70,13 +69,6 @@ export default async function HarnessDetail({
         所有 harness 文章
       </Link>
 
-      <div className="flex items-center gap-2 mb-3 flex-wrap">
-        <span className="pill-outline pill text-[10px]">
-          {AUTHORED_LABEL[item.authored]}
-          {item.model ? ` · ${item.model}` : ""}
-        </span>
-      </div>
-
       <h1 className="font-display italic text-4xl md:text-5xl font-semibold mb-4 headline-tight text-[var(--lt-ink)]">
         {item.title}
       </h1>
@@ -95,15 +87,6 @@ export default async function HarnessDetail({
           </span>
         )}
       </div>
-
-      {item.authored === "hybrid" && (
-        <div className="mb-8 px-4 py-3 rounded-md border border-[var(--color-border)] bg-[var(--color-surface-elevated)] text-xs text-[var(--color-text-secondary)] leading-relaxed">
-          本文由 LLM 起草、编辑修订（hybrid 模式
-          {item.model ? `，model: ` : ""}
-          {item.model && <code>{item.model}</code>}
-          ）。技术结论以你自己跑通的实验为准；发现错误请在 GitHub 提 issue。
-        </div>
-      )}
 
       <div className="tutorial-md">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.body}</ReactMarkdown>

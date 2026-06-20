@@ -45,13 +45,13 @@ export default async function RadarSection() {
       <div className="text-center mb-12">
         <p className="eyebrow mb-3 inline-flex items-center gap-1.5 justify-center">
           <Radar size={12} strokeWidth={2} />
-          雷达 · 每日自动追踪
+          雷达 · 每日更新
         </p>
         <h2 className="font-display italic text-3xl md:text-4xl font-semibold text-[var(--lt-ink)] mb-3 headline-tight">
           主流 AI 编码工具在做什么。
         </h2>
         <p className="text-base text-[var(--color-text-secondary)] max-w-2xl mx-auto">
-          每个工具取最新一版 release，每天 09:30 自动抓取 + 中文摘要 + 编辑视角。
+          每个主流工具取最新一版，中文整理 + 编辑视角。
         </p>
       </div>
 
@@ -87,11 +87,6 @@ export default async function RadarSection() {
                   {c.publishedAt}
                   {age && <span>· {age}</span>}
                 </span>
-                {c.verified !== "tested" && (
-                  <span className="text-[var(--color-text-muted)]">
-                    auto · 待验证
-                  </span>
-                )}
               </div>
             </Link>
           );

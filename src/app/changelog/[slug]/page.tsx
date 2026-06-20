@@ -6,9 +6,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getChangelog, getChangelogBySlug } from "@/lib/content";
 import {
-  AUTHORED_LABEL,
   KIND_LABEL,
-  VERIFIED_LABEL,
   type ChangelogKind,
 } from "@/lib/content-types";
 import { changelogJsonLd } from "@/lib/jsonld";
@@ -107,29 +105,6 @@ export default async function ChangelogDetail({
           );
         })()}
         <span className="pill text-[10px]">{item.source}</span>
-        <span className="pill-outline pill text-[10px]">
-          {AUTHORED_LABEL[item.authored]}
-          {item.model ? ` · ${item.model}` : ""}
-        </span>
-        {item.verified && (
-          <span
-            className={`pill text-[10px] ${
-              item.verified === "tested"
-                ? "bg-[rgba(31,122,79,0.12)] text-[var(--lt-ok)]"
-                : "bg-[rgba(184,130,31,0.12)] text-[var(--lt-warn)]"
-            }`}
-            title={
-              item.verified === "tested"
-                ? "编辑部已在本地复现验证"
-                : "LLM 自动摘要，未做人工实测"
-            }
-          >
-            <span aria-hidden="true">
-              {item.verified === "tested" ? "✓ " : "⏳ "}
-            </span>
-            {VERIFIED_LABEL[item.verified]}
-          </span>
-        )}
       </div>
       <h1 className="font-display italic text-4xl md:text-5xl font-semibold mb-4 headline-tight text-[var(--lt-ink)]">
         {item.title}
@@ -155,22 +130,19 @@ export default async function ChangelogDetail({
         </TrackedLink>
       </div>
 
-      {item.authored === "llm" && (
-        <div className="mb-8 px-4 py-3 rounded-md border border-[var(--color-border)] bg-[var(--color-surface-elevated)] text-xs text-[var(--color-text-secondary)] leading-relaxed">
-          本条为 LLM 自动摘要（model: <code>{item.model ?? "unknown"}</code>）。
-          细节以
-          <TrackedLink
-            href={item.sourceUrl}
-            external
-            event="outbound_click"
-            data={{ slug: item.slug, target: "release-disclaimer", source: item.source }}
-            className="text-[var(--c2m-accent-deep)] mx-1"
-          >
-            {sourceLabel}
-          </TrackedLink>
-          为准。发现错误请在 GitHub 提 issue。
-        </div>
-      )}
+      <div className="mb-8 px-4 py-3 rounded-md border border-[var(--color-border)] bg-[var(--color-surface-elevated)] text-xs text-[var(--color-text-secondary)] leading-relaxed">
+        本文为要点摘要，完整细节以
+        <TrackedLink
+          href={item.sourceUrl}
+          external
+          event="outbound_click"
+          data={{ slug: item.slug, target: "release-disclaimer", source: item.source }}
+          className="text-[var(--c2m-accent-deep)] mx-1"
+        >
+          {sourceLabel}
+        </TrackedLink>
+        为准。
+      </div>
 
       <div className="tutorial-md">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.body}</ReactMarkdown>

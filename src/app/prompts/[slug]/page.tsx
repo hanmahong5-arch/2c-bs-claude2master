@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Play } from "lucide-react";
 import { notFound } from "next/navigation";
-import { PROMPTS, getPrompt, MODEL_LABEL } from "@/lib/prompts";
+import { PROMPTS, getPrompt } from "@/lib/prompts";
 import { promptJsonLd } from "@/lib/jsonld";
 import CopyPromptButton from "@/components/CopyPromptButton";
 
@@ -66,9 +66,7 @@ export default async function PromptDetail({
         所有 Prompt
       </Link>
 
-      <p className="eyebrow mb-3">
-        {p.category} · {MODEL_LABEL[p.modelKey]}
-      </p>
+      <p className="eyebrow mb-3">{p.category}</p>
       <h1 className="font-display italic text-4xl md:text-5xl font-semibold mb-4 headline-tight text-[var(--lt-ink)]">
         {p.title}
       </h1>

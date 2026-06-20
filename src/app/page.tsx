@@ -19,7 +19,7 @@ const PRIMARY = [
   {
     icon: MessageSquare,
     title: "在线 Chat",
-    desc: "免登录 3 条试用,当前由 DeepSeek V3.2 驱动 —— Anthropic Claude 接通后自动升级。",
+    desc: "免登录 3 条试用，写代码 · 翻译 · 写作 · 分析，打开就能用，不翻墙。",
     cta: "开始对话",
     href: "/chat",
     featured: true,

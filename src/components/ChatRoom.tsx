@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Send, AlertCircle, Sparkles, ExternalLink } from "lucide-react";
-import { MODEL_LABEL, getPrompt, type ModelKey } from "@/lib/prompts";
+import { getPrompt } from "@/lib/prompts";
 import TrackedLink from "@/components/TrackedLink";
 import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
 
@@ -16,12 +16,6 @@ const NEWAPI_CHAT_EXHAUSTED = buildOutbound(
 
 type Msg = { role: "user" | "assistant"; content: string };
 
-const MODELS: { key: ModelKey; label: string; tag: string }[] = [
-  { key: "haiku", label: MODEL_LABEL.haiku, tag: "简短问答" },
-  { key: "sonnet", label: MODEL_LABEL.sonnet, tag: "日常默认" },
-  { key: "opus", label: MODEL_LABEL.opus, tag: "长篇思考" },
-];
-
 const TRIAL_LIMIT = 3;
 
 export default function ChatRoom() {
@@ -29,9 +23,6 @@ export default function ChatRoom() {
   const initialSlug = sp.get("prompt");
   const initialPrompt = initialSlug ? getPrompt(initialSlug) : undefined;
 
-  const [model, setModel] = useState<ModelKey>(
-    initialPrompt?.modelKey ?? "sonnet",
-  );
   const [msgs, setMsgs] = useState<Msg[]>([]);
   const [input, setInput] = useState<string>(initialPrompt?.body ?? "");
   const [loading, setLoading] = useState(false);
@@ -66,7 +57,6 @@ export default function ChatRoom() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model,
           messages: next.map((m) => ({ role: m.role, content: m.content })),
         }),
       });
@@ -159,10 +149,10 @@ export default function ChatRoom() {
       <header className="mb-6">
         <p className="eyebrow mb-3">在线 Chat</p>
         <h1 className="font-display italic text-3xl md:text-4xl font-semibold mb-3 headline-tight">
-          和 Claude 直接聊。
+          打开就能用的 AI 助手。
         </h1>
         <p className="text-sm md:text-base text-[var(--color-text-secondary)]">
-          免登录 {TRIAL_LIMIT} 次试用。额度用完
+          写代码 · 翻译 · 写作 · 解释报错 —— 免登录 {TRIAL_LIMIT} 次试用，额度用完
           <TrackedLink
             href={NEWAPI_CHAT_EXHAUSTED}
             external
@@ -176,36 +166,7 @@ export default function ChatRoom() {
         </p>
       </header>
 
-      <div className="mb-5 px-4 py-3 rounded-lg border border-[var(--lt-warn)] bg-[rgba(184,130,31,0.06)] flex items-start gap-2 text-sm text-[var(--lt-warn)]">
-        <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />
-        <div className="flex-1 text-[var(--color-text-secondary)]">
-          <span className="font-semibold text-[var(--lt-ink)]">
-            Anthropic Claude channel 接入中
-          </span>
-          {" — "}
-          newapi.lurus.cn 暂未接 Anthropic 上游，3 档临时全映射 DeepSeek V3.2。Claude 接通后立即切换。
-        </div>
-      </div>
-
-      <div className="flex flex-wrap items-center gap-2 mb-4 pb-4 border-b border-[var(--color-border)]">
-        <div className="flex flex-wrap items-center gap-2 flex-1">
-          {MODELS.map((m) => (
-            <button
-              key={m.key}
-              onClick={() => setModel(m.key)}
-              className={
-                m.key === model
-                  ? "pill"
-                  : "pill pill-outline hover:border-[var(--c2m-accent)]"
-              }
-              aria-pressed={m.key === model}
-              type="button"
-            >
-              {m.label}
-              <span className="ml-1.5 text-[10px] opacity-70">{m.tag}</span>
-            </button>
-          ))}
-        </div>
+      <div className="flex items-center justify-end mb-4 pb-4 border-b border-[var(--color-border)]">
         <span className="text-xs text-[var(--color-text-muted)] whitespace-nowrap">
           剩余 {remaining} / {TRIAL_LIMIT} 次
         </span>
@@ -228,11 +189,13 @@ export default function ChatRoom() {
             />
             <div className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
               <p className="font-medium text-[var(--lt-ink)] mb-1">
-                第一次来？试试这些：
+                想做点什么？试试：
               </p>
               <ul className="space-y-1">
+                <li>· 写代码：「写一段 useEffect cleanup 的常见错误」</li>
+                <li>· 解释报错：把一段报错贴进来，问「这是什么意思、怎么修」</li>
                 <li>
-                  · 从{" "}
+                  · 或从{" "}
                   <Link
                     href="/prompts"
                     className="text-[var(--c2m-accent-deep)] hover:underline"
@@ -240,10 +203,6 @@ export default function ChatRoom() {
                     Prompt 库
                   </Link>{" "}
                   挑一条，点「在 Chat 里跑」自动填入
-                </li>
-                <li>· 直接问：「写一段 useEffect cleanup 的常见错误」</li>
-                <li>
-                  · 模型默认 Sonnet，重活点上面 Opus，问翻译切 Haiku
                 </li>
               </ul>
             </div>
@@ -313,8 +272,7 @@ export default function ChatRoom() {
       </div>
 
       <p className="mt-3 text-xs text-[var(--color-text-muted)]">
-        对话不会被存储到服务器（本浏览器内的临时状态）。后端走 newapi.lurus.cn，
-        非 Anthropic 官方 API。
+        对话不会被存储到服务器（本浏览器内的临时状态）。由 Lurus 自营算力驱动。
       </p>
     </div>
   );

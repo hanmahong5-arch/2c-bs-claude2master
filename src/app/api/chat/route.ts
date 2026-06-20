@@ -1,4 +1,3 @@
-import { MODEL_ID, type ModelKey } from "@/lib/prompts";
 import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
 
 export const runtime = "edge";
@@ -7,11 +6,13 @@ export const runtime = "edge";
 const UPGRADE_URL = buildOutbound("newapi", OUTBOUND_CAMPAIGN.chatExhausted);
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
-type ChatBody = { model: ModelKey; messages: ChatMessage[] };
+type ChatBody = { messages: ChatMessage[] };
 
 const NEWAPI_BASE =
   process.env.NEXT_PUBLIC_NEWAPI_BASE_URL ?? "https://newapi.lurus.cn";
 const TRIAL_TOKEN = process.env.NEWAPI_TRIAL_TOKEN ?? "";
+// 引擎模型 id 只在服务端配置 —— 不对用户/UI 暴露(站内不展示模型名)。
+const ENGINE_MODEL = process.env.NEWAPI_CHAT_MODEL ?? "deepseek-v3-2-251201";
 
 const TRIAL_LIMIT = 3;
 const COOKIE_NAME = "c2m_trial";
@@ -81,11 +82,6 @@ export async function POST(req: Request) {
     return jsonError(400, "bad_json", "请求体不是合法 JSON。");
   }
 
-  const modelKey = body.model;
-  if (!modelKey || !(modelKey in MODEL_ID)) {
-    return jsonError(400, "bad_model", "model 字段不合法，应为 haiku/sonnet/opus。");
-  }
-
   const messages = Array.isArray(body.messages) ? body.messages : [];
   if (messages.length === 0) {
     return jsonError(400, "empty_messages", "messages 不能为空。");
@@ -123,7 +119,7 @@ export async function POST(req: Request) {
         Authorization: `Bearer ${TRIAL_TOKEN}`,
       },
       body: JSON.stringify({
-        model: MODEL_ID[modelKey],
+        model: ENGINE_MODEL,
         messages: safeMessages,
         stream: true,
         max_tokens: MAX_TOKENS,

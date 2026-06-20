@@ -49,7 +49,7 @@ export default async function HarnessPage() {
               Agent harness 设计深度。
             </h1>
             <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl">
-              Scaffolding / context window / tool use / eval loop 的工程实践文章。编辑部撰写，不走 LLM 自动摘要。
+              Scaffolding / context window / tool use / eval loop 的工程实践文章，编辑部原创深度。
             </p>
             <div className="mt-6 flex flex-wrap gap-3 text-xs text-[var(--color-text-muted)]">
               <Link href="/feed/harness" className="pill-outline pill hover:text-[var(--c2m-accent-deep)]">
