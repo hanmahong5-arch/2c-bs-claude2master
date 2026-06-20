@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "slug": "2026-06-20-trending-r14dd-patent",
+      "zh": true,
+      "en": false,
+      "title": "patent — Rust 项目 patent：代码查重工具，避免重复造轮子",
+      "kind": "trending",
+      "author": null,
+      "source": "r14dd/patent",
+      "tool": null,
+      "publishedAt": "2026-06-20"
+    },
+    {
+      "slug": "2026-06-19-blog-interconnects-banning-open-source-ai-would-be-a-mistake",
+      "zh": true,
+      "en": true,
+      "title": "Banning Open Source AI Would Be A Mistake — 开源AI是安全、创新与竞争的基石，误禁将扼杀美国技术优势。",
+      "kind": "blogger",
+      "author": "Nathan Lambert",
+      "source": "Nathan Lambert",
+      "tool": null,
+      "publishedAt": "2026-06-19"
+    },
+    {
       "slug": "2026-06-19-blog-latentspace-ainews-glm-gpt-glm-5-2-passes-vibe",
       "zh": true,
       "en": true,
@@ -8,6 +30,17 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-19"
+    },
+    {
+      "slug": "2026-06-19-blog-simonwillison-quoting-sean-lynch",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Sean Lynch — MCP 的核心价值在于将认证流程从智能体上下文窗口分离，提升安全性与效率。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-06-19"
     },
@@ -20,6 +53,17 @@
       "author": null,
       "source": "anthropics/claude-code",
       "tool": "claude-code",
+      "publishedAt": "2026-06-19"
+    },
+    {
+      "slug": "2026-06-19-cline-cli-v3-0-28",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.28 — 新增 ClinePass 引导流程与模型选择，强化多工具并行执行能力",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
       "publishedAt": "2026-06-19"
     },
     {
@@ -835,50 +879,6 @@
       "source": "sst/opencode",
       "tool": "opencode",
       "publishedAt": "2026-06-13"
-    },
-    {
-      "slug": "2026-06-12-blog-anthropic-news-claude-fable-5-and-claude-mythos-5",
-      "zh": true,
-      "en": true,
-      "title": "Claude Fable 5 and Claude Mythos 5 — Anthropic 发布 Claude Fable 5 与 Mythos 5，展",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-blog-anthropic-news-introducing-claude-corps",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Claude Corps — Anthropic 启动全国性 AI 奖学金项目，投资 1.5 亿美元培养千名 ",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-blog-hf-blog-olmo-eval-an-evaluation-workbench-for-the-model",
-      "zh": true,
-      "en": true,
-      "title": "olmo-eval: An evaluation workbench for the model — AllenAI 推出 OLMo",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-12"
-    },
-    {
-      "slug": "2026-06-12-blog-latentspace-ainews-loopcraft-the-art-of-stacking-loops",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Loopcraft: The Art of Stacking Loops — Latent Space 探讨 AI 代理开发的核心范式转变：从手动提示转向设计",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-12"
     }
   ]
 }
