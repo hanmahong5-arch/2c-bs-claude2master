@@ -1,0 +1,23 @@
+---
+slug: 2026-06-19-cline-cli-v3-0-28
+title: "cline cli-v3.0.28 — 新增 ClinePass 引导流程与模型选择，强化多工具并行执行能力"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.28
+publishedAt: 2026-06-19
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "新增 ClinePass 引导流程与模型选择，强化多工具并行执行能力"
+broadcast: "Cline 最新版本带来了几项重要更新。它新增了引导流程和模型选择功能，让配置代理的入门体验更顺畅。同时，工具执行能力得到强化，并能自动控制输出长度，这有助于开发者更好地管理上下文与预算。"
+insight: "对于国内用户，本次更新值得关注。ClinePass引导流程的改进让配置代理的入门体验更顺畅，这对使用newapi.lurus.cn代理的用户是直接利好，能减少初期配置错误。同时，默认截断大型工具结果的功能优化了上下文管理，有助于控制API调用成本。现有用户升级后无需修改现有prompt或hook配置，新功能主要为体验优化和成本控制，升级收益明确。"
+tags: [onboarding, tool-call, hub, context-management]
+---
+
+- **新增 ClinePass 引导流程与模型选择**：改进了错误处理，意味着用户配置代理的入门体验更顺畅。
+- **新增 Hub 原始目录与定制化面板**：仪表板设计更新，便于开发者管理和复用核心组件。
+- **默认截断大型工具结果**：自动控制 MCP 及自定义工具的输出长度，确保上下文不超限，优化了代理的预算管理。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.28](https://github.com/cline/cline/releases/tag/cli-v3.0.28)

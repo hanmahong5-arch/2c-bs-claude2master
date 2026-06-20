@@ -3,7 +3,7 @@
     "anthropics/claude-code": "v2.1.183",
     "openai/codex": "rust-v0.141.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.27",
+    "cline/cline": "cli-v3.0.28",
     "block/goose": "v1.38.0",
     "sst/opencode": "v1.17.8",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -47,7 +47,8 @@
     "elvisun/newsjack",
     "XiaomiMiMo/MiMo-Code",
     "EpicGames/lore",
-    "nubjs/nub"
+    "nubjs/nub",
+    "r14dd/patent"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -83,7 +84,7 @@
     ]
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-19",
+    "anthropic-engineering": "2026-06-20",
     "claude-code-docs": "2026-06-18",
     "openai-codex-blog": "2026-06-18"
   },
@@ -141,7 +142,8 @@
       "https://simonwillison.net/2026/Jun/18/datasette-apps/",
       "https://simonwillison.net/2026/Jun/18/datasette-acl/",
       "https://simonwillison.net/2026/Jun/15/datasette-apps-2/",
-      "https://simonwillison.net/2026/Jun/15/datasette-apps/"
+      "https://simonwillison.net/2026/Jun/15/datasette-apps/",
+      "https://simonwillison.net/2026/Jun/19/sean-lynch/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -207,7 +209,8 @@
       "https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety",
       "https://www.interconnects.ai/p/welcome-to-the-agi-era-of-ai-governance",
       "https://www.interconnects.ai/p/frontier-post-training-recipe-review",
-      "https://www.interconnects.ai/p/state-of-the-blog-mid-2026"
+      "https://www.interconnects.ai/p/state-of-the-blog-mid-2026",
+      "https://www.interconnects.ai/p/banning-open-source-ai-would-be-a"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -405,21 +408,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-19",
+    "simonwillison": "2026-06-20",
     "lilianweng": "2026-06-18",
-    "latentspace": "2026-06-19",
-    "interconnects": "2026-06-19",
-    "karpathy": "2026-06-17",
-    "raschka": "2026-06-17",
-    "eugeneyan": "2026-06-17",
+    "latentspace": "2026-06-20",
+    "interconnects": "2026-06-20",
+    "karpathy": "2026-06-20",
+    "raschka": "2026-06-20",
+    "eugeneyan": "2026-06-20",
     "chiphuyen": "2026-06-18",
     "oneusefulthing": "2026-06-19",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-19",
+    "openai-news": "2026-06-20",
     "deepmind": "2026-06-19",
     "hf-blog": "2026-06-19",
-    "anthropic-news": "2026-06-19"
+    "anthropic-news": "2026-06-20"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }
