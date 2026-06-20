@@ -3,7 +3,7 @@
     "anthropics/claude-code": "v2.1.183",
     "openai/codex": "rust-v0.141.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.28",
+    "cline/cline": "cli-v3.0.29",
     "block/goose": "v1.38.0",
     "sst/opencode": "v1.17.8",
     "RooCodeInc/Roo-Code": "v3.54.0",

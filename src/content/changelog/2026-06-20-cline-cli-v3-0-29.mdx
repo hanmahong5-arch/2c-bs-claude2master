@@ -1,0 +1,23 @@
+---
+slug: 2026-06-20-cline-cli-v3-0-29
+title: "cline cli-v3.0.29 — 隐藏免费模型成本，修复 Z.ai 模型元数据，回退模型显示方式"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.29
+publishedAt: 2026-06-20
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "隐藏免费模型成本，修复 Z.ai 模型元数据，回退模型显示方式"
+broadcast: "Cline 命令行工具最近更新了三个重要功能。首先，免费模型的成本信息被隐藏起来，让界面更简洁，减少干扰。其次，修复了访问某个外部模型时的元数据问题，确保信息准确。最后，模型显示方式回退到之前的版本，保持了界面的一致性。这些改进让开发者使用起来更顺畅，提升了工具的整体体验。"
+insight: "对于国内用户，本次更新不影响 newapi.lurus.cn 代理的使用，因为改动集中在界面显示和模型元数据修复。现有用户无需升级配置或修改 prompt，但若依赖免费模型成本信息进行预算管理，需注意该信息已被隐藏。界面显示方式回退到 v3.0.28 之前的行为，有助于保持操作习惯的一致性。"
+tags: [ui-simplification, bug-fix, model-provider, cli]
+---
+
+- **隐藏免费模型成本**：Cline 免费模型的成本信息不再显示，简化了用户界面，减少干扰。
+- **修复 Z.ai 模型元数据**：解决了通过 Cline 提供商访问 Z.ai 模型时的元数据解析问题，确保模型信息准确。
+- **回退模型显示方式**：模型选择器、选取器和状态栏恢复为 v3.0.28 之前的显示行为，保持界面一致性。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.29](https://github.com/cline/cline/releases/tag/cli-v3.0.29)
