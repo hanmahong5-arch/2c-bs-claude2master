@@ -44,6 +44,11 @@ export type OutboundCampaign =
 const UTM_SOURCE = "claude2master";
 const UTM_MEDIUM = "referral";
 
+// newapi 原生邀请码(root 账号 aff_code): c2m 引流的注册经此落入 newapi users.inviter_id,
+// 使「c2m → 真实注册」可被 SQL 归因 —— utm 对 newapi 不可见, 故归因必须走 aff。
+// 注: 当前复用 root(id=1)的 aff_code; 如需与 owner 个人引荐分离, 后续建专属 c2m 账号换码。
+const NEWAPI_AFF_CODE = "LnyW";
+
 /**
  * 构造带归因参数的出站 URL。
  *
@@ -65,5 +70,9 @@ export function buildOutbound(
   url.searchParams.set("utm_source", UTM_SOURCE);
   url.searchParams.set("utm_medium", UTM_MEDIUM);
   url.searchParams.set("utm_campaign", campaign);
+  // newapi 注册归因(见 NEWAPI_AFF_CODE): 仅 newapi 目标带 aff 邀请码。
+  if (target === "newapi") {
+    url.searchParams.set("aff", NEWAPI_AFF_CODE);
+  }
   return url.toString();
 }

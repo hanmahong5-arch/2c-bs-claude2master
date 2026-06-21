@@ -33,6 +33,18 @@ describe("buildOutbound", () => {
     expect(new URL(result).searchParams.get("utm_campaign")).toBe(campaign);
   });
 
+  test("newapi target 带 aff 邀请码(注册归因落 inviter_id)", () => {
+    const result = buildOutbound("newapi", OUTBOUND_CAMPAIGN.chatExhausted);
+    expect(new URL(result).searchParams.get("aff")).toBe("LnyW");
+  });
+
+  test("非 newapi 目标不带 aff(aff 是 newapi 专属概念)", () => {
+    for (const target of ["forge", "hub"] as const) {
+      const result = buildOutbound(target, OUTBOUND_CAMPAIGN.about);
+      expect(new URL(result).searchParams.get("aff")).toBeNull();
+    }
+  });
+
   test("相同入参两次调用返回字符串相等(决定论)", () => {
     const a = buildOutbound("forge", OUTBOUND_CAMPAIGN.about);
     const b = buildOutbound("forge", OUTBOUND_CAMPAIGN.about);
