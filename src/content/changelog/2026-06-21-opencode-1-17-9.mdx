@@ -1,0 +1,23 @@
+---
+slug: 2026-06-21-opencode-1-17-9
+title: "opencode v1.17.9 — 修复 agent 步数限制问题，支持 GLM"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.9
+publishedAt: 2026-06-21
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "修复 agent 步数限制问题，支持 GLM-5.2 高级思考模式"
+broadcast: "这次更新主要修复了智能体步数限制的问题，现在任务能按预期完成，不会中途失败。同时，它还支持了GLM-5.2的高级思考模式，增强了模型的复杂推理能力。这些改进让智能体开发更稳定高效，对国内开发者来说是个实用的升级。"
+insight: "对于使用 Lurus 的国内开发者，这次更新值得关注。如果你正在使用 agent 功能，修复步数限制问题能直接提升任务完成的可靠性，建议升级。如果你的应用依赖 GLM-5.2 模型，现在可以配置使用其高级思考模式来增强推理能力。至于代理地址 newapi.lurus.cn，本次更新未涉及网络或 API 端点变更，因此使用不受影响。优化提示缓存也能带来一定的响应速度提升。"
+tags: [agent-step-limit, glm-5-2-thinking, prompt-caching, bugfixes]
+---
+
+- **修复 agent 步数限制问题**：强制在达到配置的步数限制时输出最终文本响应，而不是中途失败，确保任务能按预期完成。
+- **支持 GLM-5.2 高级思考模式**：为支持的提供商添加 `high` 和 `max` 思考变体，增强了模型复杂推理能力。
+- **优化提示缓存效率**：停止在后续用户消息中包装转向提醒，使提示缓存保持有效，提升响应速度。
+
+---
+
+> 原文 release：[sst/opencode v1.17.9](https://github.com/anomalyco/opencode/releases/tag/v1.17.9)

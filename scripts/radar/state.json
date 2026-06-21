@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.183",
+    "anthropics/claude-code": "v2.1.185",
     "openai/codex": "rust-v0.141.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "cli-v3.0.29",
     "block/goose": "v1.38.0",
-    "sst/opencode": "v1.17.8",
+    "sst/opencode": "v1.17.9",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.47.0"
   },
@@ -48,7 +48,8 @@
     "XiaomiMiMo/MiMo-Code",
     "EpicGames/lore",
     "nubjs/nub",
-    "r14dd/patent"
+    "r14dd/patent",
+    "omnigent-ai/omnigent"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -84,7 +85,7 @@
     ]
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-20",
+    "anthropic-engineering": "2026-06-21",
     "claude-code-docs": "2026-06-18",
     "openai-codex-blog": "2026-06-18"
   },
@@ -188,7 +189,8 @@
       "https://www.latent.space/p/ainews-midjourney-medical-scan-your",
       "https://www.latent.space/p/radical-ai",
       "https://www.latent.space/p/ainews-glm-gpt-glm-52-passes-vibe",
-      "https://www.latent.space/p/anj"
+      "https://www.latent.space/p/anj",
+      "https://www.latent.space/p/ainews-not-much-happened-today-e7b"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -381,7 +383,9 @@
       "https://huggingface.co/blog/peft-beyond-lora",
       "https://huggingface.co/blog/is-it-agentic-enough",
       "https://huggingface.co/blog/allenai/molmomotion",
-      "https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware"
+      "https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware",
+      "https://huggingface.co/blog/zai-org/glm-52-blog",
+      "https://huggingface.co/blog/agentic-resource-discovery-launch"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -408,21 +412,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-20",
+    "simonwillison": "2026-06-21",
     "lilianweng": "2026-06-18",
-    "latentspace": "2026-06-20",
-    "interconnects": "2026-06-20",
+    "latentspace": "2026-06-21",
+    "interconnects": "2026-06-21",
     "karpathy": "2026-06-20",
     "raschka": "2026-06-20",
     "eugeneyan": "2026-06-20",
     "chiphuyen": "2026-06-18",
-    "oneusefulthing": "2026-06-19",
+    "oneusefulthing": "2026-06-21",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-20",
-    "deepmind": "2026-06-19",
-    "hf-blog": "2026-06-19",
-    "anthropic-news": "2026-06-20"
+    "openai-news": "2026-06-21",
+    "deepmind": "2026-06-21",
+    "hf-blog": "2026-06-21",
+    "anthropic-news": "2026-06-21"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

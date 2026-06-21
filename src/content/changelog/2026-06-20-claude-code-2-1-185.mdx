@@ -1,0 +1,23 @@
+---
+slug: 2026-06-20-claude-code-2-1-185
+title: "claude-code v2.1.185 — API 响应等待提示优化，超时阈值翻倍提升稳定性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.185
+publishedAt: 2026-06-20
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: changelog
+hook: "API 响应等待提示优化，超时阈值翻倍提升稳定性"
+broadcast: "Claude 代码助手最近优化了 API 响应等待的提示。它把提示语从‘无响应’改成了更积极的‘等待响应’，能减少用户等待时的焦虑。更重要的是，触发这个提示的等待时间从 10 秒延长到了 20 秒，大大降低了误报的可能，让整个交互过程更稳定、更可预测。这对依赖 API 稳定性的国内开发者和智能体项目来说，是个很实在的体验提升。"
+insight: "对于使用 Lurus 代理的国内用户，这次更新主要优化了等待提示的体验，将超时阈值从10秒延长到20秒，并改进了提示文案和重试显示。这意味着通过 newapi.lurus.cn 调用 Claude API 时，因网络波动导致的‘无响应’误报会显著减少，整体稳定性感知提升。现有用户无需主动升级或修改配置，这些是服务端的优化，会自动生效。如果你的工作流之前常被短暂的10秒超时干扰，现在体验会更顺畅。"
+tags: [ui-messaging, timeout-handling, user-experience, api-integration]
+---
+
+- **提示文案更积极**：从“无响应”改为“等待响应”，减少用户焦虑感。
+- **触发时间延长**：从 10 秒无响应后提示改为 20 秒，降低误报频率。
+- **重试机制更清晰**：明确显示重试倒计时，提升操作可预测性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.185](https://github.com/anthropics/claude-code/releases/tag/v2.1.185)
