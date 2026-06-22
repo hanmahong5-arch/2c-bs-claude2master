@@ -1,6 +1,127 @@
 {
   "items": [
     {
+      "slug": "2026-06-22-trending-bjarneo-ku",
+      "zh": true,
+      "en": false,
+      "title": "ku — Go 语言开发的快速键盘驱动 Kubernetes TUI 工具",
+      "kind": "trending",
+      "author": null,
+      "source": "bjarneo/ku",
+      "tool": null,
+      "publishedAt": "2026-06-22"
+    },
+    {
+      "slug": "2026-06-21-blog-latentspace-exclusive-250-off-ai-engineer-tix-til-monday",
+      "zh": true,
+      "en": true,
+      "title": "[Exclusive] $250 off AI Engineer tix til Monday — Latent Space 为付费订阅者提供 AI Engineer 大会门票独家",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-21"
+    },
+    {
+      "slug": "2026-06-21-blog-openai-news-samsung-electronics-brings-chatgpt-and-codex-to-employees",
+      "zh": true,
+      "en": true,
+      "title": "Samsung Electronics brings ChatGPT and Codex to — 三星全球部署 ChatGPT 和 Codex，展示企业级 AI 规模化应用案例。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-21"
+    },
+    {
+      "slug": "2026-06-21-blog-simonwillison-sqlite-utils-4-0rc1-adds-migrations-and-nested",
+      "zh": true,
+      "en": true,
+      "title": "sqlite-utils 4.0rc1 adds migrations and nested — SQLite",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-21"
+    },
+    {
+      "slug": "2026-06-21-blog-simonwillison-sqlite-utils-4-0rc1",
+      "zh": true,
+      "en": true,
+      "title": "sqlite-utils 4.0rc1 — Simon Willison 发布 sqlite",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-21"
+    },
+    {
+      "slug": "2026-06-21-blog-simonwillison-temporary-cloudflare-accounts-for-ai-agents",
+      "zh": true,
+      "en": true,
+      "title": "Temporary Cloudflare Accounts for AI agents — Cloudflare 推出临时账户功能，让 AI 代理无需注册即可部署 Work",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-21"
+    },
+    {
+      "slug": "2026-06-21-opencode-1-17-9",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.17.9 — 修复 agent 步数限制问题，支持 GLM",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-06-21"
+    },
+    {
+      "slug": "2026-06-21-trending-omnigent-ai-omnigent",
+      "zh": true,
+      "en": false,
+      "title": "omnigent — 开源 AI 代理框架，可编排 Claude、Cursor 等多种模型与工具，实现",
+      "kind": "trending",
+      "author": null,
+      "source": "omnigent-ai/omnigent",
+      "tool": null,
+      "publishedAt": "2026-06-21"
+    },
+    {
+      "slug": "2026-06-20-blog-latentspace-ainews-not-much-happened-today",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] not much happened today — Latent Space 博主分享 AI 领域动态：GLM 5.2 持续火热，A",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-20"
+    },
+    {
+      "slug": "2026-06-20-claude-code-2-1-185",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.185 — API 响应等待提示优化，超时阈值翻倍提升稳定性",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-20"
+    },
+    {
+      "slug": "2026-06-20-cline-cli-v3-0-29",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.29 — 隐藏免费模型成本，修复 Z.ai 模型元数据，回退模型显示方式",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-20"
+    },
+    {
       "slug": "2026-06-20-trending-r14dd-patent",
       "zh": true,
       "en": false,
@@ -254,10 +375,32 @@
       "publishedAt": "2026-06-18"
     },
     {
+      "slug": "2026-06-17-blog-hf-blog-agentic-resource-discovery-let-agents-search",
+      "zh": true,
+      "en": true,
+      "title": "Agentic Resource Discovery: Let agents search — Hugging Face 推出 Agentic Resource Discove",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-17"
+    },
+    {
       "slug": "2026-06-17-blog-hf-blog-from-the-hugging-face-hub-to-robot-hardware",
       "zh": true,
       "en": true,
       "title": "From the Hugging Face Hub to robot hardware with — Hugging Face 展示如何将 Hub 模型直接部署到机器人硬件，实现 A",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-17"
+    },
+    {
+      "slug": "2026-06-17-blog-hf-blog-glm-5-2-built-for-long-horizon-tasks",
+      "zh": true,
+      "en": true,
+      "title": "GLM-5.2: Built for Long-Horizon Tasks — GLM",
       "kind": "blogger",
       "author": "Hugging Face",
       "source": "Hugging Face",
@@ -736,149 +879,6 @@
       "source": "sst/opencode",
       "tool": "opencode",
       "publishedAt": "2026-06-14"
-    },
-    {
-      "slug": "2026-06-14-trending-souravroy-etl-duckle",
-      "zh": true,
-      "en": false,
-      "title": "duckle — 本地优先的 ETL/ELT 可视化设计器，将拖拽流程编译为 DuckDB SQL",
-      "kind": "trending",
-      "author": null,
-      "source": "SouravRoy-ETL/duckle",
-      "tool": null,
-      "publishedAt": "2026-06-14"
-    },
-    {
-      "slug": "2026-06-13-blog-anthropic-news-just-a-moment",
-      "zh": true,
-      "en": true,
-      "title": "Just a moment... — Anthropic 与 DXC 建立战略联盟，将 Claude 企业级 AI 引",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-13"
-    },
-    {
-      "slug": "2026-06-13-blog-anthropic-news-results-from-first-anthropic-public-record",
-      "zh": true,
-      "en": true,
-      "title": "Results from first Anthropic Public Record — Anthropic 首次大规模民调揭示美国公众对 AI 的真实希望与恐惧，共识大",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-13"
-    },
-    {
-      "slug": "2026-06-13-blog-anthropic-news-statement-on-the-us-government-directive-to-suspend",
-      "zh": true,
-      "en": true,
-      "title": "Statement on the US government directive to suspend — Anthropic 回应美国政府因潜在越狱风险，紧急下架其 Fable 5 和 ",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-13"
-    },
-    {
-      "slug": "2026-06-13-blog-anthropic-news-tcs-and-anthropic-partner-to-bring-claude-to",
-      "zh": true,
-      "en": true,
-      "title": "TCS and Anthropic partner to bring Claude to regulated — Anthropic 与塔塔咨询合作，将 Claude AI 引入金融、医疗等高度",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-13"
-    },
-    {
-      "slug": "2026-06-13-blog-latentspace-ainews-fable-and-mythos-officially-too-dangerous-to",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Fable and Mythos officially too dangerous to — Anthropic 因美国政府指令全球停用 Fable/Mythos 模型，引发",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-13"
-    },
-    {
-      "slug": "2026-06-13-blog-simonwillison-luau-wasm-0-1a0",
-      "zh": true,
-      "en": true,
-      "title": "luau-wasm 0.1a0 — Simon Willison 发布 luau",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-13"
-    },
-    {
-      "slug": "2026-06-13-blog-simonwillison-mapping-sqlite-result-columns-back-to-their-source",
-      "zh": true,
-      "en": true,
-      "title": "Mapping SQLite result columns back to their source — Simon Willison 探索如何将 SQLite 查询结果列映射回原始表.",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-13"
-    },
-    {
-      "slug": "2026-06-13-blog-simonwillison-publishing-wasm-wheels-to-pypi-for-use-with",
-      "zh": true,
-      "en": true,
-      "title": "Publishing WASM wheels to PyPI for use with Pyodide — Pyodide 支持发布 WASM 轮子到 PyPI，简化了 WebAssemb",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-13"
-    },
-    {
-      "slug": "2026-06-13-blog-simonwillison-statement-on-the-us-government-directive-to-suspend",
-      "zh": true,
-      "en": true,
-      "title": "Statement on the US government directive to suspend — 美国政府以国家安全为由，突然下令全球封禁 Anthropic 的 Fable 5",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-13"
-    },
-    {
-      "slug": "2026-06-13-claude-code-2-1-177",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.177 — Claude Code 新增文件大小限制与自动重试，提升代码生成稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-13"
-    },
-    {
-      "slug": "2026-06-13-opencode-1-17-5",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.17.5 — Snowflake Cortex 支持外部浏览器 OAuth，修复 MCP 会话",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-06-13"
-    },
-    {
-      "slug": "2026-06-13-opencode-1-17-6",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.17.6 — OpenCode 通过声明支持的客户端能力，提升 MCP 服务器兼容性",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-06-13"
     }
   ]
 }
