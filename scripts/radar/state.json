@@ -49,7 +49,8 @@
     "EpicGames/lore",
     "nubjs/nub",
     "r14dd/patent",
-    "omnigent-ai/omnigent"
+    "omnigent-ai/omnigent",
+    "bjarneo/ku"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -85,7 +86,7 @@
     ]
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-21",
+    "anthropic-engineering": "2026-06-22",
     "claude-code-docs": "2026-06-18",
     "openai-codex-blog": "2026-06-18"
   },
@@ -144,7 +145,10 @@
       "https://simonwillison.net/2026/Jun/18/datasette-acl/",
       "https://simonwillison.net/2026/Jun/15/datasette-apps-2/",
       "https://simonwillison.net/2026/Jun/15/datasette-apps/",
-      "https://simonwillison.net/2026/Jun/19/sean-lynch/"
+      "https://simonwillison.net/2026/Jun/19/sean-lynch/",
+      "https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/",
+      "https://simonwillison.net/2026/Jun/21/sqlite-utils/",
+      "https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -190,7 +194,8 @@
       "https://www.latent.space/p/radical-ai",
       "https://www.latent.space/p/ainews-glm-gpt-glm-52-passes-vibe",
       "https://www.latent.space/p/anj",
-      "https://www.latent.space/p/ainews-not-much-happened-today-e7b"
+      "https://www.latent.space/p/ainews-not-much-happened-today-e7b",
+      "https://www.latent.space/p/exclusive-250-off-ai-engineer-tix"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -334,7 +339,8 @@
       "https://openai.com/index/introducing-life-sci-bench",
       "https://openai.com/index/chatgpt-enterprise-spend-controls",
       "https://openai.com/index/improving-health-intelligence-in-chatgpt",
-      "https://openai.com/index/diagnose-rare-childhood-diseases"
+      "https://openai.com/index/diagnose-rare-childhood-diseases",
+      "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -412,10 +418,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-21",
+    "simonwillison": "2026-06-22",
     "lilianweng": "2026-06-18",
-    "latentspace": "2026-06-21",
-    "interconnects": "2026-06-21",
+    "latentspace": "2026-06-22",
+    "interconnects": "2026-06-22",
     "karpathy": "2026-06-20",
     "raschka": "2026-06-20",
     "eugeneyan": "2026-06-20",
@@ -423,10 +429,10 @@
     "oneusefulthing": "2026-06-21",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-21",
+    "openai-news": "2026-06-22",
     "deepmind": "2026-06-21",
     "hf-blog": "2026-06-21",
-    "anthropic-news": "2026-06-21"
+    "anthropic-news": "2026-06-22"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

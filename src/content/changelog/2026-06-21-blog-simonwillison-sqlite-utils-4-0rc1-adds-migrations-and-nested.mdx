@@ -1,0 +1,25 @@
+---
+slug: 2026-06-21-blog-simonwillison-sqlite-utils-4-0rc1-adds-migrations-and-nested
+title: "sqlite-utils 4.0rc1 adds migrations and nested — SQLite"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/
+publishedAt: 2026-06-21
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "SQLite-utils 4.0rc1 发布，引入数据库迁移和嵌套事务支持，提升开发效率。"
+broadcast: "Python 操作 SQLite 数据库的工具库迎来了重要更新。这次它集成了数据库迁移功能，让开发者能更方便地管理数据库结构变更。同时，新加入的嵌套事务支持，借鉴了流行框架的设计，能帮助大家写出更健壮的数据操作代码。这两项改进对国内开发者来说，能有效提升开发效率和代码的可靠性。"
+tags: [sqlite, python-library, database-migrations, release-notes]
+---
+
+Simon Willison 宣布了 sqlite-utils 4.0 的首个候选版本，这是一个用于操作 SQLite 数据库的 Python 库和 CLI 工具。本次更新的核心是两项新功能。
+
+*   **新增数据库迁移功能**：该功能基于作者之前独立的 `sqlite-migrate` 包，现已集成。开发者可以通过 Python 代码或 CLI 命令来定义和应用数据库结构变更（如创建表、添加列），简化了版本控制流程。
+*   **引入 `db.atomic()` 支持嵌套事务**：新 API 借鉴了 Django 和 Peewee 的术语，利用 SQLite 的保存点机制，让嵌套事务的管理变得更加直观和容易，有助于构建更健壮的数据操作逻辑。
+*   **包含多项向后不兼容的变更**：版本 4.0 包含一系列破坏性更新，例如修改了 upsert 操作的底层实现、默认启用 CSV/TSV 导入时的类型检测、将视图访问从 `db.table()` 方法中分离等，开发者需要评估升级影响。
+
+---
+
+> 原文：[sqlite-utils 4.0rc1 adds migrations and nested transactions](https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/) · 作者 Simon Willison

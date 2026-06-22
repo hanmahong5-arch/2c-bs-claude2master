@@ -1,0 +1,28 @@
+---
+slug: 2026-06-21-blog-simonwillison-sqlite-utils-4-0rc1
+title: "sqlite-utils 4.0rc1 — Simon Willison 发布 sqlite"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/21/sqlite-utils/
+publishedAt: 2026-06-21
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 sqlite-utils 4.0 候选版，新增数据库迁移与嵌套事务支持，为开发者提供更强大的 SQLite 工具链。"
+broadcast: "Simon Willison 刚刚发布了 SQLite 工具库的一个重要更新候选版。这次更新主要带来了两大功能：一是官方支持的数据库迁移，让开发者能更安全、方便地管理数据库结构的变化；二是新增了嵌套事务处理，帮助我们在执行复杂数据操作时，更好地保证数据的一致性和错误恢复。这对于国内使用 SQLite 进行原型开发或构建轻量级应用的开发者来说，意味着工具链更加成熟和可靠了。"
+tags: [sqlite, python-library, database-migrations, release-notes]
+---
+
+Simon Willison 宣布了 sqlite-utils 4.0 的第一个候选版本，这是一个用于处理 SQLite 数据库的 Python 库。
+
+*   **新增数据库迁移功能**：该版本引入了对数据库模式变更（migrations）的官方支持，允许开发者以可控、可重复的方式管理数据库结构的演变。
+    *   **对开发者的含义**：这简化了数据库版本控制流程，使得在项目生命周期中安全地修改表结构变得更加容易。
+*   **支持嵌套事务**：库现在提供了对嵌套事务（nested transactions）的处理能力，增强了复杂数据操作过程中的错误恢复和原子性保证。
+    *   **对开发者的含义**：开发者可以编写更健壮的代码，在执行一系列相关数据库操作时，能更好地处理部分失败的情况，保持数据一致性。
+*   **作为核心工具更新**：sqlite-utils 是作者数据工作流中的关键组件，此次主要版本更新标志着工具链的成熟度提升。
+    *   **对工具链的含义**：它巩固了 SQLite 在原型设计、数据处理和轻量级应用后端中的实用地位，为开发者提供了更完善的生态工具。
+
+---
+
+> 原文：[sqlite-utils 4.0rc1](https://simonwillison.net/2026/Jun/21/sqlite-utils/) · 作者 Simon Willison

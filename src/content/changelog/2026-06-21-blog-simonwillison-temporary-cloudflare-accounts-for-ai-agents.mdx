@@ -1,0 +1,25 @@
+---
+slug: 2026-06-21-blog-simonwillison-temporary-cloudflare-accounts-for-ai-agents
+title: "Temporary Cloudflare Accounts for AI agents — Cloudflare 推出临时账户功能，让 AI 代理无需注册即可部署 Work"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/
+publishedAt: 2026-06-21
+authored: llm
+model: deepseek-v3-2-251201
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Cloudflare 推出临时账户功能，让 AI 代理无需注册即可部署 Workers 项目，60 分钟后自动销毁。"
+broadcast: "Cloudflare 最近推出了一个临时账户功能，让开发者不用注册就能直接部署代码项目，而且这些项目会在 60 分钟后自动销毁。这对国内做 AI 代理的团队特别有用，因为它能快速测试和演示，还不用操心长期管理账户。更贴心的是，如果你觉得项目不错，还能通过生成的链接把它认领成永久项目，大大提升了开发流程的灵活性。"
+tags: [cloudflare, ai-agents, serverless, temporary-deployment]
+---
+
+Simon Willison 介绍了 Cloudflare 新推出的临时账户功能，允许用户无需创建正式账户即可部署 Cloudflare Workers 项目，项目将在 60 分钟后自动销毁。
+
+- **无需账户即可部署**：通过 `npx wrangler deploy --temporary` 命令，用户可以直接部署代码到临时项目中。这对 agent 开发者意味着可以快速测试和演示代码，无需管理长期账户。
+- **临时项目自动销毁**：部署的项目在 60 分钟后会自动消失，适合短期、一次性的使用场景。这对工具链设计意味着可以集成轻量级、无状态的部署流程，减少资源占用。
+- **支持项目认领**：如果用户希望保留项目，可以通过生成的 URL 认领并转为永久项目。这对开发者意味着在临时测试后，可以灵活选择是否转为正式部署，提高了工作流程的灵活性。
+
+---
+
+> 原文：[Temporary Cloudflare Accounts for AI agents](https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/) · 作者 Simon Willison
