@@ -11,7 +11,7 @@
  *   NEWAPI_TRIAL_TOKEN — newapi.lurus.cn API key (复用 Phase 3 chat)
  *   NEWAPI_BASE_URL    — default https://newapi.lurus.cn
  *   GITHUB_TOKEN       — 抓 single release 时用 (匿名 60req/h)
- *   RADAR_MODEL_ID     — default deepseek-v3-2-251201 (Claude channel 接通后改 claude-haiku-4-5)
+ *   RADAR_MODEL_ID     — default deepseek-chat (稳定别名, 不随版本号轮换 → 渠道升级后不会撞 model-not-available)
  */
 
 import { promises as fs } from "fs";
@@ -25,7 +25,7 @@ const STATE_FILE = path.join(SCRIPT_DIR, "state.json");
 
 const NEWAPI_BASE_URL =
   process.env.NEWAPI_BASE_URL ?? "https://newapi.lurus.cn";
-const MODEL_ID = process.env.RADAR_MODEL_ID ?? "deepseek-v3-2-251201";
+const MODEL_ID = process.env.RADAR_MODEL_ID ?? "deepseek-chat";
 const TOKEN = process.env.NEWAPI_TRIAL_TOKEN ?? "";
 
 // ── 写死的 summarize prompt (审计可查 / 不动态拼接) ────────────────────

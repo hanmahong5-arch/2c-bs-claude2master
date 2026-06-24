@@ -6,7 +6,7 @@ name: Daily Radar
 # → 显式 POST Vercel Deploy Hook 触发部署 (git push 不会自动 build, 见下 Trigger 步骤)
 #
 # Path filter: 只动 src/content/changelog/ + scripts/radar/state.json
-# 失败告警: WECHATWORK_WEBHOOK_URL (复用 lurus daily-audit)
+# 失败告警: ntfy (secret NTFY_RADAR_URL = 完整 topic URL; 可选 NTFY_RADAR_TOKEN 做 Bearer 鉴权)
 # 当日无新 release → exit 0, 不 commit, 不触发部署
 
 on:
@@ -137,7 +137,7 @@ jobs:
         env:
           NEWAPI_TRIAL_TOKEN: ${{ secrets.NEWAPI_TRIAL_TOKEN }}
           NEWAPI_BASE_URL: https://newapi.lurus.cn
-          RADAR_MODEL_ID: deepseek-v3-2-251201
+          RADAR_MODEL_ID: deepseek-chat
         run: |
           set -euo pipefail
           if [ -z "${NEWAPI_TRIAL_TOKEN}" ]; then
@@ -166,7 +166,7 @@ jobs:
           fi
           count="${{ steps.combine.outputs.count }}"
           git commit -m "chore(radar): auto-summarize ${count} new item(s)" \
-                     -m "$(date -u +%Y-%m-%d) daily run · model deepseek-v3-2-251201"
+                     -m "$(date -u +%Y-%m-%d) daily run · model deepseek-chat"
           git push
 
       # 本项目 Vercel 未连 Git(故意如此, 见 vercel-no-git-autodeploy), git push 不触发构建。
@@ -186,11 +186,27 @@ jobs:
           fi
           bunx vercel deploy --prod --yes --token="$VERCEL_TOKEN" && echo "vercel production deploy done"
 
-      - name: Notify wechatwork on failure
-        if: failure() && env.WECHATWORK_WEBHOOK_URL != ''
+      # 失败告警 → ntfy。只 gate 在 failure(): secret 缺失时在步骤内 warn+exit 0,
+      # 不把 secret 判断写进 if: 条件 —— 旧版 `if: ... && env.X != ''` 在 secret 没设时
+      # 整步被 skip → 告警静默从不触发, 正是 6-23/6-24 连挂却无人知的根因。
+      - name: Notify ntfy on failure
+        if: failure()
         env:
-          WECHATWORK_WEBHOOK_URL: ${{ secrets.WECHATWORK_WEBHOOK_URL }}
+          NTFY_RADAR_URL: ${{ secrets.NTFY_RADAR_URL }}
+          NTFY_RADAR_TOKEN: ${{ secrets.NTFY_RADAR_TOKEN }}
         run: |
-          content="⚠️ **c2m daily-radar FAILED** ($(date -u +%Y-%m-%d))\n\nrun: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          payload=$(jq -nc --arg c "$content" '{msgtype: "markdown", markdown: {content: $c}}')
-          curl -sf -X POST -H 'Content-Type: application/json' -d "$payload" "$WECHATWORK_WEBHOOK_URL" || echo "wechatwork push failed"
+          if [ -z "${NTFY_RADAR_URL:-}" ]; then
+            echo "::warning::NTFY_RADAR_URL not set; radar failed but no alert channel configured"
+            exit 0
+          fi
+          run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          auth=()
+          if [ -n "${NTFY_RADAR_TOKEN:-}" ]; then
+            auth=(-H "Authorization: Bearer ${NTFY_RADAR_TOKEN}")
+          fi
+          curl -sf "${auth[@]}" \
+            -H "Title: c2m daily-radar FAILED" \
+            -H "Priority: high" \
+            -H "Tags: warning,rotating_light" \
+            -d "$(date -u +%Y-%m-%d) 雷达管线失败。常见根因: NEWAPI_TRIAL_TOKEN 失效 或 模型 id 不可用。run: ${run_url}" \
+            "$NTFY_RADAR_URL" || echo "::warning::ntfy push failed"

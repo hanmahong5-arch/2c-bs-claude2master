@@ -11,7 +11,7 @@
  * env:
  *   NEWAPI_TRIAL_TOKEN — newapi.lurus.cn API key
  *   NEWAPI_BASE_URL    — default https://newapi.lurus.cn
- *   RADAR_MODEL_ID     — default deepseek-v3-2-251201
+ *   RADAR_MODEL_ID     — default deepseek-chat (稳定别名, 不随版本号轮换)
  *
  * 退出码:
  *   0 — 正常 (含 "本周窗口内无 changelog" → 不产出 MDX, 也是 0)
@@ -31,7 +31,7 @@ const DIGEST_DIR = path.join(ROOT, "src", "content", "digest");
 
 const NEWAPI_BASE_URL =
   process.env.NEWAPI_BASE_URL ?? "https://newapi.lurus.cn";
-const MODEL_ID = process.env.RADAR_MODEL_ID ?? "deepseek-v3-2-251201";
+const MODEL_ID = process.env.RADAR_MODEL_ID ?? "deepseek-chat";
 const TOKEN = process.env.NEWAPI_TRIAL_TOKEN ?? "";
 
 // ── 写死 prompt (审计可查 / 不动态拼接) ────────────────────────────────

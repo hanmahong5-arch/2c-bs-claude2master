@@ -12,7 +12,7 @@ const NEWAPI_BASE =
   process.env.NEXT_PUBLIC_NEWAPI_BASE_URL ?? "https://newapi.lurus.cn";
 const TRIAL_TOKEN = process.env.NEWAPI_TRIAL_TOKEN ?? "";
 // 引擎模型 id 只在服务端配置 —— 不对用户/UI 暴露(站内不展示模型名)。
-const ENGINE_MODEL = process.env.NEWAPI_CHAT_MODEL ?? "deepseek-v3-2-251201";
+const ENGINE_MODEL = process.env.NEWAPI_CHAT_MODEL ?? "deepseek-chat";
 
 const TRIAL_LIMIT = 3;
 const COOKIE_NAME = "c2m_trial";
