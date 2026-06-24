@@ -1,0 +1,23 @@
+---
+slug: 2026-06-22-blog-simonwillison-porting-the-moebius-0-2b-image-inpainting-model
+title: "Porting the Moebius 0.2B image inpainting model to run — 用Claude Code将0.2B图像修复模型移植到浏览器，全程无代码编写。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/22/porting-moebius/
+publishedAt: 2026-06-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用Claude Code将0.2B图像修复模型移植到浏览器，全程无代码编写。"
+broadcast: "最近有开发者用Claude Code，把0.2B参数的图像修复模型从PyTorch移植到了浏览器里，全程没写一行代码。模型权重转成ONNX格式，前端用GitHub Pages部署，还用了缓存避免重复下载。这意味着AI编码代理已经能独立完成从模型转换到前端部署的全流程，开发者的角色正在从编码转向测试和方向引导。"
+tags: [ai-coding-agents, webgpu, onnx, image-inpainting]
+---
+
+- 作者用Claude Code将Moebius 0.2B图像修复模型从PyTorch/CUDA移植到浏览器WebGPU，全程未写一行代码，仅通过提示和测试驱动。
+- 模型权重转换为ONNX格式并托管在Hugging Face，前端用GitHub Pages部署，使用CacheStorage API缓存1.3GB权重，避免重复下载。
+- 对开发者意味着：AI编码代理已能独立完成从模型转换到前端部署的全流程，开发者角色从编码转向测试与方向引导。
+
+---
+
+> 原文：[Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code](https://simonwillison.net/2026/Jun/22/porting-moebius/) · 作者 Simon Willison

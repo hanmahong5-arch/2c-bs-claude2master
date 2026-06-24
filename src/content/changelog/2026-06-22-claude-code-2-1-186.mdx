@@ -1,0 +1,26 @@
+---
+slug: 2026-06-22-claude-code-2-1-186
+title: "claude-code v2.1.186 — MCP CLI登录、!命令自动响应、子代理权限改进"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.186
+publishedAt: 2026-06-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP CLI登录、!命令自动响应、子代理权限改进"
+broadcast: "Claude Code 最新更新带来了几个实用改进。现在支持在无图形界面的服务器上通过命令行完成 MCP 登录认证，这对远程部署的 agent 来说非常方便。另外，bash 命令现在默认会触发 agent 主动响应，你也可以关掉这个功能。还有，子 agent 的权限请求会显示在主会话中，让你更清楚是谁在请求什么权限。"
+insight: "本次更新对国内开发者影响不大，但值得关注。新增的 MCP 无头认证和子代理权限提示改进了远程部署与多 agent 协作的安全性。如果你使用 `!` 命令并希望 agent 自动响应，无需改动；若偏好原有行为，可设置 `respondToBashCommands: false`。通过 newapi.lurus.cn 代理不受影响，建议按需调整配置。"
+tags: [mcp-auth, bash-response, subagent-permissions, cli-improvements]
+---
+
+- 新增 `claude mcp login/logout` 命令，支持 SSH 下 `--no-browser` 完成认证，无需打开交互菜单。
+  - 设计含义：为 agent 提供无头环境下的 MCP 认证能力，便于远程或自动化部署。
+- `!` bash 命令默认触发 agent 自动响应输出；可设置 `"respondToBashCommands": false` 恢复仅上下文行为。
+  - 设计含义：agent 对 shell 命令的响应从被动变为主动，需考虑用户控制开关。
+- 后台子代理的权限提示现在显示在主会话中，并标明请求 agent，Esc 仅拒绝当前工具。
+  - 设计含义：提升多 agent 协作时的安全可见性，避免自动拒绝导致功能受阻。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.186](https://github.com/anthropics/claude-code/releases/tag/v2.1.186)

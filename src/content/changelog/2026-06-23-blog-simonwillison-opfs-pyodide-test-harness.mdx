@@ -1,0 +1,23 @@
+---
+slug: 2026-06-23-blog-simonwillison-opfs-pyodide-test-harness
+title: "OPFS + Pyodide test harness — 用OPFS+Pyodide在浏览器中持久化编辑SQLite文件。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/23/opfs-pyodide/
+publishedAt: 2026-06-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用OPFS+Pyodide在浏览器中持久化编辑SQLite文件。"
+broadcast: "最近有开发者用浏览器自带的私有文件系统，配合在浏览器里运行Python的工具，做了一个测试页面。它能让你在浏览器里直接编辑本地的数据库文件，而且修改能保存下来。这意味着以后很多Python工具可能不用服务器，直接在浏览器里就能读写本地文件，对做无服务器应用的人来说是个好消息。"
+tags: [browsers, pyodide, datasette-lite, opfs]
+---
+
+- 作者探索Datasette Lite能否通过OPFS编辑用户本地的SQLite文件，OPFS是浏览器提供的私有文件系统。
+- 使用Claude Code for web构建了一个测试UI，用于在不同浏览器中验证OPFS与Pyodide的兼容性。
+- 这意味着未来浏览器端的Python应用可能实现本地文件持久化，为无服务器工具链开辟新可能。
+
+---
+
+> 原文：[OPFS + Pyodide test harness](https://simonwillison.net/2026/Jun/23/opfs-pyodide/) · 作者 Simon Willison

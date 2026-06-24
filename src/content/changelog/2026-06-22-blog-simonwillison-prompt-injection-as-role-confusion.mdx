@@ -1,0 +1,23 @@
+---
+slug: 2026-06-22-blog-simonwillison-prompt-injection-as-role-confusion
+title: "Prompt Injection as Role Confusion — LLM无法区分角色标签与用户输入，风格比内容更易引发越狱。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/
+publishedAt: 2026-06-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "LLM无法区分角色标签与用户输入，风格比内容更易引发越狱。"
+broadcast: "最近一项研究发现，大语言模型其实分不清角色标签和用户输入，它更在意文本风格而不是内容本身。只要模仿系统提示的风格，就能轻松让模型越狱，但去掉风格后攻击成功率立刻从61%降到10%。这说明模型依赖表面格式，而不是真正理解角色边界。对开发者来说，这意味着提示注入防御可能永远是个打地鼠游戏，除非模型能真正感知自己的角色。"
+tags: [prompt-injection, role-confusion, llm-security, jailbreaking]
+---
+
+- 研究发现，模型对文本风格的敏感度高于实际内容，模仿系统/思考标签风格的输入可导致越狱，攻击成功率从61%降至10%仅需去风格化。
+- 去风格化（destyling）能显著降低攻击成功率，表明模型依赖表面格式而非语义理解角色边界，这对提示注入防御提出根本挑战。
+- 作者指出，除非LLM实现真正的角色感知，否则注入防御将永远是打地鼠游戏，且角色边界的连续性允许通过看似无害的文本进行大规模、合法的状态操控。
+
+---
+
+> 原文：[Prompt Injection as Role Confusion](https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-06-23-blog-simonwillison-datasette-1-0a35
+title: "datasette 1.0a35 — Datasette 1.0a35 新增创建和修改表的 UI 与 API，并稳定了"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/23/datasette/
+publishedAt: 2026-06-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 1.0a35 新增创建和修改表的 UI 与 API，并稳定了模板上下文。"
+broadcast: "Datasette 的最新测试版带来了一个很实用的更新：现在可以直接通过界面或API来创建和修改数据库表了，包括定义列、主键、外键这些操作。这对国内开发者来说，意味着用Datasette做数据管理时，表结构的调整会方便很多。另外，模板上下文也稳定下来了，相关的变量都列成了文档，直到2.0版本前都不会变，这给基于Datasette做二次开发的人提供了更可靠的参考。"
+tags: [datasette, release, database, api, templates]
+---
+
+- 新增“创建表”界面和 JSON API，支持定义列、主键、自定义类型、非空约束、默认值及外键，简化数据库结构管理。
+- 新增“修改表”界面和 JSON API，支持添加、重命名、重新排序、删除列，以及更改类型、约束、主键和外键，并包含删除表功能，提升表结构灵活性。
+- 新增模板上下文文档，列出核心页面可用变量，并作为稳定 API 直至 2.0，文档由数据类定义生成并附带测试，确保准确性和可维护性。
+
+---
+
+> 原文：[datasette 1.0a35](https://simonwillison.net/2026/Jun/23/datasette/) · 作者 Simon Willison

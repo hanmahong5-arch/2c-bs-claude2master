@@ -1,0 +1,23 @@
+---
+slug: 2026-06-23-claude-code-2-1-187
+title: "claude-code v2.1.187 — 沙箱凭据隔离、结构化输出修复、远程会话加速"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.187
+publishedAt: 2026-06-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "沙箱凭据隔离、结构化输出修复、远程会话加速"
+broadcast: "Claude Code 最新更新来了。这次新增了沙箱凭据隔离功能，能防止沙箱命令读取敏感文件，让 agent 执行更安全。同时修复了结构化输出无限重调的问题，确保工具调用链稳定。远程 MCP 工具调用也不再永久挂起，改为可配置的超时报错。这些改进对国内开发者开发 agent 来说，可靠性和安全性都上了一个台阶。"
+insight: "这次更新对国内用户走 newapi.lurus.cn 代理没有直接影响，但远程 MCP 超时修复值得关注——如果你之前遇到过 agent 因远程工具无响应而卡死，现在可以配置超时时间，避免流程永久挂起。如果你在用结构化输出（如 json-schema 或 agent({schema})），建议升级，因为修复了模型无限重调的问题，后续轮次能稳定返回。沙箱凭据隔离是安全增强，不影响现有 prompt 或 hook 配置。"
+tags: [sandbox, structured-output, mcp, bug-fix]
+---
+
+- 新增 `sandbox.credentials` 设置，阻止沙箱命令读取凭据文件和秘密环境变量，提升 agent 执行安全性。
+- 修复 `--json-schema` 和 `agent({schema})` 中模型无限重调 `StructuredOutput` 的问题，后续轮次可靠返回结构化输出，确保 agent 工具调用链稳定。
+- 修复远程 MCP 工具调用无响应 5 分钟阻塞的问题，改为超时报错（可配置），避免 agent 流程永久挂起。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.187](https://github.com/anthropics/claude-code/releases/tag/v2.1.187)

@@ -1,0 +1,26 @@
+---
+slug: 2026-06-22-codex-rust-v0-142-0
+title: "codex rust-v0.142.0 — Codex 新增 token 预算控制、多 agent 委托模式、索引搜索和时间"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.142.0
+publishedAt: 2026-06-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 新增 token 预算控制、多 agent 委托模式、索引搜索和时间提醒"
+broadcast: "OpenAI 的 Codex 工具最近更新了，新增了 token 预算控制功能，能跨多个 agent 线程跟踪用量并在快用完时自动停止，这对国内开发者做 agent 开发时控制成本很有帮助。还加入了多 agent 委托模式，可以灵活设置 agent 之间怎么协作，以及索引搜索和时间提醒，让 agent 更智能地获取信息。"
+insight: "对于国内开发者，如果正在使用 Codex 的 agent harness，0.142.0 版本值得升级。新增的 token 预算控制能有效防止 agent 线程耗尽资源，建议在全局配置中设定预算上限并启用线程级跟踪。多 agent 委托模式提供了更灵活的协作策略，可根据场景配置为主动委托或仅显式请求。索引搜索模式虽限制 URL 访问，但通过 newapi.lurus.cn 代理不受影响，因为代理仅转发请求，不涉及 URL 白名单。现有 prompt 和 hook 无需修改，但需调整 harness 配置以支持新功能。"
+tags: [token-budget, multi-agent, web-search, time-reminders]
+---
+
+- 新增可配置的 rollout token 预算，跨 agent 线程跟踪使用量，在耗尽时自动中止 turn，并给出剩余预算提醒。
+  - 含义：agent harness 需要支持 token 预算的全局配置与线程级跟踪，并在预算耗尽时强制中断执行。
+- 支持多 agent 委托模式，可在线程和 turn 级别配置为禁用、仅显式请求或主动委托。
+  - 含义：harness 需提供灵活的委托策略配置接口，并能在运行时动态切换。
+- 新增索引化 web 搜索模式，允许实时搜索但限制直接页面访问为服务器批准的 URL。
+  - 含义：agent harness 需集成搜索能力，并实现 URL 访问控制策略。
+
+---
+
+> 原文 release：[openai/codex rust-v0.142.0](https://github.com/openai/codex/releases/tag/rust-v0.142.0)
