@@ -1,0 +1,23 @@
+---
+slug: 2026-06-24-opencode-1-17-10
+title: "opencode v1.17.10 — MCP 增强、CLI 新模式、桌面与 TUI 多项改进"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.10
+publishedAt: 2026-06-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP 增强、CLI 新模式、桌面与 TUI 多项改进"
+broadcast: "最近，OpenCode 更新了一个重要版本，主要增强了 MCP 功能，现在 agent 能动态获取外部资源了。还新增了轻量级的 CLI 模式，适合在资源受限的环境下使用。桌面端也改进了多会话管理，加了进度指示器和可折叠区域。这些变化让国内开发者在构建 agent 时，能更灵活地集成外部工具，提升交互体验。"
+insight: "本次更新对国内用户影响不大，现有 hook 无需调整。MCP 增强主要面向 agent 开发者，普通用户升级意义有限。`--mini` 模式适合低配环境，但非必需。桌面端改进提升多会话体验，值得升级。代理不受影响。"
+tags: [mcp, cli, desktop, tui]
+---
+
+- 新增 MCP 服务器指令注入会话上下文，并支持资源模板列表与读取工具，agent 可动态获取外部资源。
+- 新增 `--mini` CLI 模式，适合轻量级或受限环境下的 agent 交互。
+- 桌面端新增会话进度指示器、可折叠服务器区域及移动端底部导航，提升多会话管理体验。
+
+---
+
+> 原文 release：[sst/opencode v1.17.10](https://github.com/anomalyco/opencode/releases/tag/v1.17.10)

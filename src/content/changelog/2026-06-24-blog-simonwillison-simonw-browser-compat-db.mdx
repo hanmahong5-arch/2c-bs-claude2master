@@ -1,0 +1,26 @@
+---
+slug: 2026-06-24-blog-simonwillison-simonw-browser-compat-db
+title: "simonw/browser-compat-db — 将MDN浏览器兼容数据转为SQLite，通过GitHub分支提供CORS访问。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/24/browser-compat-db/
+publishedAt: 2026-06-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "将MDN浏览器兼容数据转为SQLite，通过GitHub分支提供CORS访问。"
+broadcast: "最近有开发者把MDN的浏览器兼容数据做成了SQLite数据库，文件大概66兆。这意味着咱们可以直接用SQL查询来获取数据，不用再调API了，工具链能简化不少。而且整个转换脚本是用AI辅助生成的，部署也靠GitHub Actions，成本很低。对国内开发者来说，这种把公开数据转成离线库、再用静态托管的方式，挺值得参考的。"
+tags: [sqlite, browser-compat, github-actions, datasette-lite]
+---
+
+- 受Mozilla的MDN MCP服务启发，作者将mdn/browser-compat-data仓库的浏览器兼容性数据转换为SQLite数据库，文件约66MB。
+  - 这意味着开发者可以直接用SQL查询替代API调用，简化工具链中的数据获取流程。
+- 使用Claude Code for Web（Opus 4.8）生成转换脚本，利用sqlite-utils工具完成数据转换。
+  - AI辅助编程降低了数据转换的门槛，开发者可快速生成定制化数据处理工具。
+- 通过GitHub Actions构建数据库并推送到db孤儿分支，利用GitHub仓库的CORS头实现直接下载和Datasette Lite在线探索。
+  - 这种部署方式为静态数据提供了低成本、高可用的访问方案，适合需要公开数据集的场景。
+
+---
+
+> 原文：[simonw/browser-compat-db](https://simonwillison.net/2026/Jun/24/browser-compat-db/) · 作者 Simon Willison

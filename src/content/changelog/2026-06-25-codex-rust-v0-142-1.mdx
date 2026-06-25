@@ -1,0 +1,23 @@
+---
+slug: 2026-06-25-codex-rust-v0-142-1
+title: "codex rust-v0.142.1 — Codex 新增 Windows 系统代理支持，含 PAC/WPAD。"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.142.1
+publishedAt: 2026-06-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 新增 Windows 系统代理支持，含 PAC/WPAD。"
+broadcast: "OpenAI 的 Codex 工具最近更新了，新版本加入了 Windows 系统代理支持，包括 PAC、WPAD 这些常见的代理设置方式。这对国内开发者来说是个好消息，因为很多企业网络环境都依赖系统代理。如果你在开发 agent，就需要考虑集成系统代理解析，确保网络请求能遵循用户的代理配置。不过这个功能是可选开启的，不会影响现有使用习惯。"
+insight: "这个版本对国内开发者来说，如果你在 Windows 上使用 Codex 并通过 newapi.lurus.cn 代理访问，值得升级。新增的 Windows 系统代理支持（PAC/WPAD）是 opt-in 的，不会破坏现有配置，但建议主动开启以利用系统代理规则。如果你之前手动配置了 hook 或代理，可以保持原样，因为新功能是可选且向后兼容的。国内用户走 newapi.lurus.cn 代理不受影响，但开启后可能自动适配系统代理，减少手动设置。"
+tags: [windows, proxy, authentication]
+---
+
+- 新增 Windows 系统代理支持，包括 PAC、WPAD、静态代理和绕过规则。
+- 对 agent harness 设计：需集成系统代理解析，确保网络请求遵循用户代理配置。
+- 该功能为 opt-in，避免默认行为变更，保持向后兼容。
+
+---
+
+> 原文 release：[openai/codex rust-v0.142.1](https://github.com/openai/codex/releases/tag/rust-v0.142.1)

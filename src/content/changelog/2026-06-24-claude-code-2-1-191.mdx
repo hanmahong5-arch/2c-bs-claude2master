@@ -1,0 +1,25 @@
+---
+slug: 2026-06-24-claude-code-2-1-191
+title: "claude-code v2.1.191 — Claude Code 修复多项关键 bug，优化 MCP 可靠性与性能"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.191
+publishedAt: 2026-06-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 修复多项关键 bug，优化 MCP 可靠性与性能"
+broadcast: "Claude Code 最新版本修复了多个关键问题，现在回退操作可以找回清空前的对话，停止后台任务后也不会再意外复活。MCP 连接和授权请求会自动重试网络错误，流式响应的 CPU 占用降低了近四成，沙箱网络权限也减少了重复弹窗。这些改进让 agent 开发更稳定、更高效，值得国内开发者关注。"
+insight: "这次更新对国内用户走 newapi.lurus.cn 代理无直接影响，但值得关注。MCP 自动重试和流式 CPU 降低约 37% 能改善代理下的稳定性与响应速度。如果你常用 /rewind 或 /clear，建议升级以避免上下文丢失；若已配置 prompt 或 hook 涉及 MCP，无需改动。现有用户值得升级，尤其是受网络波动困扰的。"
+tags: [bug-fix, mcp, performance, agent]
+---
+
+- `/rewind` 现在支持从 `/clear` 之前恢复对话，避免丢失上下文。
+- 停止后台 agent 后不再复活，任务面板的停止操作永久生效。
+- MCP 能力发现与 OAuth 请求自动重试瞬态网络错误，提升可靠性。
+- 流式响应 CPU 使用率降低约 37%，通过将文本更新合并为 100ms 间隔实现。
+- 沙箱网络权限对话框允许“是”后会话内不再重复提示，减少干扰。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.191](https://github.com/anthropics/claude-code/releases/tag/v2.1.191)
