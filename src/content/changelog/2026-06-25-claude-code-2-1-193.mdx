@@ -1,0 +1,23 @@
+---
+slug: 2026-06-25-claude-code-2-1-193
+title: "claude-code v2.1.193 — Shell命令全量分类、OpenTelemetry响应日志、后台shell自动回"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.193
+publishedAt: 2026-06-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Shell命令全量分类、OpenTelemetry响应日志、后台shell自动回收"
+broadcast: "Claude Code 最新更新带来了三项实用改进：所有 shell 命令现在都能走自动分类，方便精细控制执行策略；新增了 OpenTelemetry 响应日志，让可观测数据更合规可控；后台 shell 还会自动回收以节省内存。这些对国内开发者做 agent 开发很有参考价值，尤其是资源管理和日志配置方面。"
+insight: "对于国内用户，如果现有 hook 配置中使用了 `autoMode.classifyAllShell`，建议更新以覆盖所有 shell 命令，提升自动模式分类的完整性。`claude_code.assistant_response` 日志事件默认跟随 `OTEL_LOG_USER_PROMPTS`，如需独立控制可设置 `OTEL_LOG_ASSISTANT_RESPONSES`，不影响 newapi.lurus.cn 代理。后台 shell 自动回收默认开启，若需保留空闲 shell 可设置 `CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1`，建议根据资源情况调整。"
+tags: [auto-mode, observability, background-shell, mcp]
+---
+
+- `autoMode.classifyAllShell` 设置可将所有 Bash/PowerShell 命令路由至自动模式分类器，而不仅限于任意代码执行模式。对 agent harness 设计意味着：需要支持更细粒度的命令执行策略配置。
+- 新增 `claude_code.assistant_response` OpenTelemetry 日志事件，默认跟随 `OTEL_LOG_USER_PROMPTS` 设置，可通过 `OTEL_LOG_ASSISTANT_RESPONSES` 独立控制。对 agent harness 设计意味着：需考虑可观测性数据的合规与可配置性。
+- 新增自动内存压力回收空闲后台 shell 命令（可通过 `CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1` 禁用）。对 agent harness 设计意味着：需实现资源感知的后台任务生命周期管理。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.193](https://github.com/anthropics/claude-code/releases/tag/v2.1.193)

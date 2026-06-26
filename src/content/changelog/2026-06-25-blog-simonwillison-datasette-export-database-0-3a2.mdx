@@ -1,0 +1,26 @@
+---
+slug: 2026-06-25-blog-simonwillison-datasette-export-database-0-3a2
+title: "datasette-export-database 0.3a2 — Simon Willison 发布 Datasette 插件小更新，修复版本兼容"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/25/datasette-export-database/
+publishedAt: 2026-06-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 Datasette 插件小更新，修复版本兼容性。"
+broadcast: "Simon Willison 最近更新了他的 Datasette 插件，修复了一个依赖版本锁定的问题。这个插件能让你从 Datasette 直接导出整个数据库文件，方便离线分析。这次更新提醒我们，插件依赖应该用宽松版本范围，避免意外阻断兼容性。对国内开发者来说，维护好依赖兼容性，才能让工具生态更健康。"
+tags: [datasette, plugin, release, compatibility]
+---
+
+- 插件 `datasette-export-database` 0.3a2 修复了 `pyproject.toml` 中错误地将 Datasette 依赖锁定为 `==1.0a27` 的问题，改为 `>=1.0a27`。
+  - 对开发者：依赖版本应使用宽松范围（如 `>=`）而非精确锁定，避免无意中阻断与其他版本的兼容性。
+- 该插件允许用户从 Datasette 实例导出整个 SQLite 数据库文件。
+  - 对工具链：导出功能增强了 Datasette 作为数据发布平台的能力，便于用户获取原始数据进行离线分析。
+- 此版本被作者称为“令人尴尬的小版本”，但修复了实际使用中的兼容性问题。
+  - 对开发者：即使微小修复也值得发布，维护依赖兼容性是插件生态健康的关键。
+
+---
+
+> 原文：[datasette-export-database 0.3a2](https://simonwillison.net/2026/Jun/25/datasette-export-database/) · 作者 Simon Willison

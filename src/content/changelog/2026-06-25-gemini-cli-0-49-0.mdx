@@ -1,0 +1,26 @@
+---
+slug: 2026-06-25-gemini-cli-0-49-0
+title: "gemini-cli v0.49.0 — Gemini CLI v0.49.0 新增 eval 命令、修复安全漏洞并优化工"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.49.0
+publishedAt: 2026-06-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Gemini CLI v0.49.0 新增 eval 命令、修复安全漏洞并优化工具输出"
+broadcast: "Google 的 Gemini CLI 刚刚更新到新版本，这次主要带来了一个叫 eval 的命令，能让 AI 代理自动生成评估清单，实现自我检查和报告输出。同时修复了一个安装技能时的安全漏洞，还优化了工具输出的格式，让代理调用工具更稳定、配置更清晰。对国内开发者来说，这意味着用 Gemini 做自动化任务更安全、更可靠了。"
+insight: "对于国内开发者，如果你正在使用 Gemini CLI 并依赖第三方技能，v0.49.0 的安全修复值得升级，能避免路径遍历风险。eval 命令的 JSON 输出对自动化流程有用，但如果你不涉及评估，可暂缓。工具输出格式变更需注意，若你自定义了 coreTools 配置，需迁移至 tools.core，否则可能失效。通过 newapi.lurus.cn 代理访问不受影响，因为更新不涉及网络层。"
+tags: [eval-command, security-fix, tool-output, configuration]
+---
+
+- 新增 `eval:inventory` 命令，支持 JSON 输出，便于自动化评估流程。
+  - 含义：Agent 可调用此命令获取评估清单，实现自检与报告生成。
+- 修复技能安装中的路径遍历漏洞，并增强零配额快速失败机制。
+  - 含义：Agent 在安装第三方技能时更安全，且资源耗尽时能及时报错而非死循环。
+- 标准化工具输出格式，迁移 `coreTools` 配置至 `tools.core`。
+  - 含义：Agent 工具调用输出更一致，配置结构更清晰，便于扩展。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.49.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.49.0)

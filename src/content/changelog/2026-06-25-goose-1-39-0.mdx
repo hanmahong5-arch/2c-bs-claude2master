@@ -1,0 +1,24 @@
+---
+slug: 2026-06-25-goose-1-39-0
+title: "goose v1.39.0 — Goose v1.39 全面转向 ACP 架构，新增 50+ 功能与大量修复"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.39.0
+publishedAt: 2026-06-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.39 全面转向 ACP 架构，新增 50+ 功能与大量修复"
+broadcast: "Goose 最新版本全面转向了 ACP 架构，也就是智能体通信协议，为智能体开发提供了统一的通信接口。这次更新还加入了图像读取、缓存追踪等实用功能，并支持更多模型提供商，包括通过 Bedrock 调用 GPT 和本地推理。对国内开发者来说，这意味着 agent 开发有了更标准化的通信方式，能更方便地扩展和调试。"
+insight: "Goose v1.39 全面转向 ACP 架构，新增 50+ 功能，对国内用户来说，如果通过 newapi.lurus.cn 代理使用，需确认代理是否兼容 ACP 协议。现有用户若依赖旧版 hook 或 prompt，建议检查是否需要适配新架构，否则可能影响会话管理。升级价值较高，但需测试兼容性。"
+tags: [acp, new-providers, cli-commands, bug-fixes]
+---
+
+- 全面采用 ACP（Agent Communication Protocol）管理会话、配置和扩展，为 agent harness 提供统一通信接口。
+- 新增图像读取工具、模型交互查看、缓存 token 追踪，提升 agent 感知和成本控制能力。
+- 支持 OpenAI GPT via Bedrock、MLX 本地推理、多个新 provider，扩展 agent 模型选择。
+- 新增 `/status`、`/model` CLI 命令，支持 deep link 和会话导入，改善 agent 交互与可移植性。
+
+---
+
+> 原文 release：[block/goose v1.39.0](https://github.com/aaif-goose/goose/releases/tag/v1.39.0)

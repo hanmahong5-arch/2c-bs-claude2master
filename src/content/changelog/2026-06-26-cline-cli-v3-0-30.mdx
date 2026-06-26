@@ -1,0 +1,24 @@
+---
+slug: 2026-06-26-cline-cli-v3-0-30
+title: "cline cli-v3.0.30 — CLI v3.0.30 新增 token 计数、SAP AI Core 支持，修"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.30
+publishedAt: 2026-06-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "CLI v3.0.30 新增 token 计数、SAP AI Core 支持，修复多项问题"
+broadcast: "最近，CLI工具更新到了新版本，在状态栏里加上了token计数功能，和成本一起显示，方便你随时监控token消耗。同时新增了对SAP AI Core的支持，让模型接入的选择更多了。还修复了之前烦人的空内容报错和打包问题，用起来更稳定。对国内开发者来说，这些改进让开发agent时资源监控更直观，模型选择也更灵活。"
+insight: "CLI v3.0.30 的 token 计数和 SAP AI Core 支持是实用更新，但国内用户通过 newapi.lurus.cn 代理时，SAP AI Core 可能无法直接使用，需确认代理是否支持。现有用户若依赖 OpenRouter 推理或遇到空内容错误，建议升级以提升稳定性。Prompt 和 hook 配置无需改动，但可关注 token 监控功能。"
+tags: [token-count, sap-ai-core, openrouter, bug-fix]
+---
+
+- 状态栏新增 token 计数，与成本并列显示，便于监控 token 消耗。
+- 新增 SAP AI Core 提供商支持，扩展模型接入选项。
+- 改进 OpenRouter 推理禁用行为与提示缓存，提升推理稳定性。
+- 修复“ERROR: EMPTY CONTENT”错误及 CLI 运行时打包问题，增强可靠性。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.30](https://github.com/cline/cline/releases/tag/cli-v3.0.30)

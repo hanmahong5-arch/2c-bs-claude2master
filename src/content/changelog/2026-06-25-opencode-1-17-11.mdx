@@ -1,0 +1,23 @@
+---
+slug: 2026-06-25-opencode-1-17-11
+title: "opencode v1.17.11 — 会话快照与回滚，支持撤销文件变更"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.11
+publishedAt: 2026-06-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "会话快照与回滚，支持撤销文件变更"
+broadcast: "OpenCode 最新版本带来了会话快照和回滚功能，你可以撤销之前的文件变更，放心大胆地做实验性修改。桌面版还加入了类似浏览器的标签页快捷键和拖拽操作，管理多个对话更顺手。对国内开发者来说，这些改进让 AI 辅助编程的试错成本更低，工作流也更灵活。"
+insight: "对于国内开发者，如果你经常用 opencode 做实验性修改，这次新增的会话快照与回滚功能值得升级，因为它能撤销文件变更，降低试错成本。现有的 prompt 和 hook 配置无需改动，功能独立。通过 newapi.lurus.cn 代理访问不受影响。"
+tags: [session-snapshots, tab-management, desktop-ui, bugfix]
+---
+
+- 新增会话快照和回滚控制，可回退到早期消息（含文件变更），便于实验性修改。
+- 桌面版增加 Chrome 风格标签页快捷键（mod+1~9）和拖拽标签页，提升多会话管理效率。
+- 修复 MCP OAuth URL 始终打印，确保浏览器登录流程仍可手动完成。
+
+---
+
+> 原文 release：[sst/opencode v1.17.11](https://github.com/anomalyco/opencode/releases/tag/v1.17.11)

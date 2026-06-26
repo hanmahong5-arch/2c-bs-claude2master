@@ -1,13 +1,13 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.191",
+    "anthropics/claude-code": "v2.1.193",
     "openai/codex": "rust-v0.142.1",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.29",
-    "block/goose": "v1.38.0",
-    "sst/opencode": "v1.17.10",
+    "cline/cline": "cli-v3.0.30",
+    "block/goose": "v1.39.0",
+    "sst/opencode": "v1.17.11",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.47.0"
+    "google-gemini/gemini-cli": "v0.49.0"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -54,7 +54,8 @@
     "unicity-astrid/book",
     "baidu/Unlimited-OCR",
     "ProxyShard/ShardBrowser",
-    "overflowy/make-look-scanned"
+    "overflowy/make-look-scanned",
+    "StarTrail-org/PixelRAG"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -90,8 +91,8 @@
     ]
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-25",
-    "claude-code-docs": "2026-06-18",
+    "anthropic-engineering": "2026-06-26",
+    "claude-code-docs": "2026-06-26",
     "openai-codex-blog": "2026-06-25"
   },
   "blogsSeen": {
@@ -158,7 +159,9 @@
       "https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/",
       "https://simonwillison.net/2026/Jun/22/porting-moebius/",
       "https://simonwillison.net/2026/Jun/24/browser-compat-db/",
-      "https://simonwillison.net/2026/Jun/24/tom-macwright/"
+      "https://simonwillison.net/2026/Jun/24/tom-macwright/",
+      "https://simonwillison.net/2026/Jun/25/ai-and-liability/",
+      "https://simonwillison.net/2026/Jun/25/datasette-export-database/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -210,7 +213,8 @@
       "https://www.latent.space/p/ainews-spacex-is-already-a-28byr",
       "https://www.latent.space/p/gray-swan",
       "https://www.latent.space/p/ainews-its-meta-harness-summer",
-      "https://www.latent.space/p/databricks"
+      "https://www.latent.space/p/databricks",
+      "https://www.latent.space/p/ainews-openai-reports-median-internal"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -365,7 +369,8 @@
       "https://openai.com/index/omio",
       "https://openai.com/index/daybreak-securing-the-world",
       "https://openai.com/index/patch-the-planet",
-      "https://openai.com/index/codex-maxxing-long-running-work"
+      "https://openai.com/index/codex-maxxing-long-running-work",
+      "https://openai.com/index/how-agents-are-transforming-work"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -422,7 +427,11 @@
       "https://huggingface.co/blog/ffasr-leaderboard",
       "https://huggingface.co/blog/ibm-research/cuga-apps",
       "https://huggingface.co/blog/huggingface-hub-release-ci",
-      "https://huggingface.co/blog/cross-origin-storage"
+      "https://huggingface.co/blog/cross-origin-storage",
+      "https://huggingface.co/blog/vllm-jobs",
+      "https://huggingface.co/blog/allenai/hybrid-token-prediction",
+      "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6",
+      "https://huggingface.co/blog/local-models-pr-triage"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -450,21 +459,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-25",
+    "simonwillison": "2026-06-26",
     "lilianweng": "2026-06-25",
-    "latentspace": "2026-06-25",
-    "interconnects": "2026-06-25",
+    "latentspace": "2026-06-26",
+    "interconnects": "2026-06-26",
     "karpathy": "2026-06-24",
     "raschka": "2026-06-24",
     "eugeneyan": "2026-06-24",
     "chiphuyen": "2026-06-25",
-    "oneusefulthing": "2026-06-24",
+    "oneusefulthing": "2026-06-26",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-25",
-    "deepmind": "2026-06-24",
-    "hf-blog": "2026-06-24",
-    "anthropic-news": "2026-06-25"
+    "openai-news": "2026-06-26",
+    "deepmind": "2026-06-26",
+    "hf-blog": "2026-06-26",
+    "anthropic-news": "2026-06-26"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }
