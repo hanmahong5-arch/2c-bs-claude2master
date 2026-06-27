@@ -1,0 +1,23 @@
+---
+slug: 2026-06-26-blog-simonwillison-what-happened-after-2-000-people-tried-to
+title: "What happened after 2,000 people tried to hack my AI — 6000次提示注入攻击全部失败，但作者警告仍不可掉以轻心。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/
+publishedAt: 2026-06-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "6000次提示注入攻击全部失败，但作者警告仍不可掉以轻心。"
+broadcast: "最近有个实验，两千人尝试黑掉一个AI助手，结果六千次提示注入攻击全部失败。这说明前沿模型对这类攻击的抵抗力确实变强了，关键是在提示词里加了硬性规则。不过作者也提醒，六千次失败不代表绝对安全，更复杂的攻击可能还能突破，生产系统不能只靠这个防御。"
+tags: [security, ai, prompt-injection, generative-ai, llms]
+---
+
+- 挑战中，6000次邮件攻击（花费500美元token并触发Google账号暂停）均未能泄露秘密，表明前沿模型对注入攻击的抵抗力显著增强。
+- 模型Opus 4.6的提示词明确禁止基于邮件内容泄露凭证、修改文件或执行代码，这种硬性规则是防御成功的关键。
+- 作者强调，即使6000次失败也不代表绝对安全，更复杂的攻击仍可能突破，生产系统不应依赖此类防御。
+
+---
+
+> 原文：[What happened after 2,000 people tried to hack my AI assistant](https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/) · 作者 Simon Willison

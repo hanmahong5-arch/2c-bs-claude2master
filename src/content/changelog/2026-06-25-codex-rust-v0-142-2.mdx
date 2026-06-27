@@ -1,0 +1,24 @@
+---
+slug: 2026-06-25-codex-rust-v0-142-2
+title: "codex rust-v0.142.2 — MCP工具搜索、macOS代理、暗色Logo、安全缓冲UI"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.142.2
+publishedAt: 2026-06-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP工具搜索、macOS代理、暗色Logo、安全缓冲UI"
+broadcast: "OpenAI的Codex工具更新了，现在默认开启工具搜索，让AI能更主动地发现和调用工具。对国内开发者来说，这意味着开发Agent时得适配新的搜索逻辑。另外，macOS客户端现在能自动遵循系统代理设置，还有暗色模式Logo和安全缓冲UI，这些都需要Agent框架去支持。"
+insight: "这次更新对国内用户影响不大，但如果你在用 macOS 并依赖系统代理，建议检查 newapi.lurus.cn 代理是否与 PAC/WPAD 设置冲突。MCP 工具搜索默认开启，旧 prompt 无需改，但 agent harness 需适配搜索逻辑。暗色 Logo 和安全缓冲 UI 是增强体验的，不升级也不影响核心功能。"
+tags: [mcp, macos, plugins, safety-ui]
+---
+
+- MCP工具默认启用工具搜索，提升工具发现能力，同时兼容旧模型和提供商，agent harness需适配搜索逻辑。
+- macOS认证客户端可遵循系统代理、PAC和WPAD设置，agent harness需支持代理配置。
+- 插件支持通过本地清单和远程目录提供暗色模式Logo，agent harness需处理主题相关元数据。
+- 应用可显示更丰富的安全缓冲UI，使用服务器提供的可见性和快速模型元数据，agent harness需传递这些元数据。
+
+---
+
+> 原文 release：[openai/codex rust-v0.142.2](https://github.com/openai/codex/releases/tag/rust-v0.142.2)

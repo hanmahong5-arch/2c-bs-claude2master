@@ -1,0 +1,26 @@
+---
+slug: 2026-06-27-cline-cli-v3-0-31
+title: "cline cli-v3.0.31 — Cline CLI 新增订阅费用显示与 ClinePass 切换提示"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.31
+publishedAt: 2026-06-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline CLI 新增订阅费用显示与 ClinePass 切换提示"
+broadcast: "Cline CLI 最近更新了，现在能显示订阅费用，让你清楚知道哪些费用被覆盖了。积分用完后会提示切换到 ClinePass，还新增了直接打开订阅页面的入口。另外，单次模式要求提示词加引号，避免误解。这些调整让开发者用起来更顺手，对国内做 agent 开发的朋友来说，工具管理更清晰了。"
+insight: "对于国内开发者，如果当前使用 Cline CLI 且依赖订阅覆盖请求费用，这次更新值得升级，因为新增的费用归属提示和 ClinePass 切换引导能帮你更清楚成本结构。如果你通过 newapi.lurus.cn 代理调用 OpenAI 兼容提供商，需注意 MCP 工具名称限制为 64 字符，可能需调整现有 hook 配置。单次模式要求引号包裹提示词，建议检查 prompt 格式。整体上，升级对代理无直接影响，但能优化订阅管理和插件操作。"
+tags: [subscription, cli, mcp, marketplace]
+---
+
+- 请求费用由订阅覆盖时显示提示，帮助用户了解成本归属。
+- 积分耗尽时提示切换至 ClinePass，并在未订阅消息中列出其功能，引导用户升级。
+- 新增从 ClinePass 选项打开订阅页面的入口，简化订阅流程。
+- 支持市场卸载功能，并展示插件捆绑的技能，增强插件管理。
+- 单次模式要求使用引号包裹提示词，避免歧义。
+- 对 OpenAI 兼容提供商，MCP 工具名称限制为 64 字符，确保兼容性。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.31](https://github.com/cline/cline/releases/tag/cli-v3.0.31)

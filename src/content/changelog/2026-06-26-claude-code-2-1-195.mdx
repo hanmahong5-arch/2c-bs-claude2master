@@ -1,0 +1,23 @@
+---
+slug: 2026-06-26-claude-code-2-1-195
+title: "claude-code v2.1.195 — Claude Code 修复多项匹配与语音问题，提升后台任务稳定性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.195
+publishedAt: 2026-06-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 修复多项匹配与语音问题，提升后台任务稳定性"
+broadcast: "Claude Code 最近更新了，修复了不少匹配和语音问题。现在你可以通过环境变量禁用鼠标点击，纯键盘操作更安心。钩子匹配也更精确了，不会误触发。语音输入方面，解决了设备切换和中文等无空格语言的提交问题，对国内开发者来说，语音交互更稳定可靠了。"
+insight: "对于国内开发者，如果你正在使用 Claude Code 并依赖钩子匹配器，建议立即检查配置中是否使用了带连字符的标识符或 MCP 通配符，v2.1.195 已改为精确匹配，旧配置可能失效。语音用户（尤其是中文）应升级以修复听写和自动提交问题。新增的 `CLAUDE_CODE_DISABLE_MOUSE_CLICKS` 环境变量适合纯键盘或防误触场景，可按需启用。通过 newapi.lurus.cn 代理不受影响，升级无风险。"
+tags: [bug-fix, voice-mode, hooks, background-jobs]
+---
+
+- 新增环境变量 `CLAUDE_CODE_DISABLE_MOUSE_CLICKS` 可禁用全屏鼠标点击/拖拽/悬停，保留滚轮。设计含义：为需要纯键盘操作或防误触的场景提供细粒度控制。
+- 修复钩子匹配器对带连字符标识符（如 `code-reviewer`）的误匹配，改为精确匹配；需用 `mcp__brave-search__.*` 匹配 MCP 服务器所有工具。设计含义：避免因模糊匹配导致意外触发，提升钩子路由的确定性。
+- 修复 macOS 语音听写因默认输入设备变更而捕获静音、以及日语/中文/泰语等无空格语言自动提交不触发的问题。设计含义：确保语音输入在设备切换和不同语言下可靠工作，提升多语言用户体验。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.195](https://github.com/anthropics/claude-code/releases/tag/v2.1.195)

@@ -1,0 +1,23 @@
+---
+slug: 2026-06-26-cline-4-0-0
+title: "cline v4.0.0 — Cline 4.0 迁移至统一 SDK，重构插件与市场体系"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.0.0
+publishedAt: 2026-06-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline 4.0 迁移至统一 SDK，重构插件与市场体系"
+broadcast: "Cline 4.0 版本来了，这次最大的变化是迁移到了统一的 SDK，任务、工具这些核心功能都通过共享的 SDK 会话层来协调。对开发者来说，这意味着 agent 框架需要适配新的会话管理，统一状态和错误处理。另外还新增了自定义市场，可以方便地发现和管理各种技能、插件，让 agent 的能力扩展变得更动态。"
+insight: "Cline 4.0 迁移至统一 SDK 后，现有用户若使用自定义 agent harness，必须适配 SDK 会话管理以统一状态与错误处理，否则可能运行异常。新增的 Customize 市场支持动态扩展 Skills 和 MCP 服务器，建议用户根据需求调整 hook 配置以集成市场接口。国内用户通过 newapi.lurus.cn 代理不受影响，因 SDK 和市场的变更不涉及网络层。"
+tags: [sdk-migration, marketplace, plugins, chat-queue]
+---
+
+- 引入 SDK 驱动的 VS Code 扩展运行时，任务、工具、Plan/Act 模式、MCP、检查点等均通过共享 SDK 会话层协调。这意味着 agent harness 需适配 SDK 会话管理，统一状态与错误处理。
+- 新增 Customize 市场，支持发现和管理 Skills、MCP 服务器、插件，含安装/卸载、启用/禁用、搜索过滤。agent harness 可集成市场接口，实现动态能力扩展。
+- 聊天支持消息排队与编辑重发，当前轮次中提交的消息进入队列，可取消。agent harness 需处理并发消息队列，确保用户输入不丢失。
+
+---
+
+> 原文 release：[cline/cline v4.0.0](https://github.com/cline/cline/releases/tag/v4.0.0)

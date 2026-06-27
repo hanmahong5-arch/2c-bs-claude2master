@@ -1,9 +1,9 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.193",
-    "openai/codex": "rust-v0.142.1",
+    "anthropics/claude-code": "v2.1.195",
+    "openai/codex": "rust-v0.142.3",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.30",
+    "cline/cline": "cli-v3.0.31",
     "block/goose": "v1.39.0",
     "sst/opencode": "v1.17.11",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -91,7 +91,7 @@
     ]
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-26",
+    "anthropic-engineering": "2026-06-27",
     "claude-code-docs": "2026-06-26",
     "openai-codex-blog": "2026-06-25"
   },
@@ -161,7 +161,12 @@
       "https://simonwillison.net/2026/Jun/24/browser-compat-db/",
       "https://simonwillison.net/2026/Jun/24/tom-macwright/",
       "https://simonwillison.net/2026/Jun/25/ai-and-liability/",
-      "https://simonwillison.net/2026/Jun/25/datasette-export-database/"
+      "https://simonwillison.net/2026/Jun/25/datasette-export-database/",
+      "https://simonwillison.net/2026/Jun/26/dean-w-ball/",
+      "https://simonwillison.net/2026/Jun/26/timothy-b-lee/",
+      "https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/",
+      "https://simonwillison.net/2026/Jun/26/incident-report/",
+      "https://simonwillison.net/2026/Jun/26/openai/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -370,7 +375,8 @@
       "https://openai.com/index/daybreak-securing-the-world",
       "https://openai.com/index/patch-the-planet",
       "https://openai.com/index/codex-maxxing-long-running-work",
-      "https://openai.com/index/how-agents-are-transforming-work"
+      "https://openai.com/index/how-agents-are-transforming-work",
+      "https://openai.com/index/previewing-gpt-5-6-sol"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -459,21 +465,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-26",
+    "simonwillison": "2026-06-27",
     "lilianweng": "2026-06-25",
-    "latentspace": "2026-06-26",
-    "interconnects": "2026-06-26",
-    "karpathy": "2026-06-24",
-    "raschka": "2026-06-24",
-    "eugeneyan": "2026-06-24",
+    "latentspace": "2026-06-27",
+    "interconnects": "2026-06-27",
+    "karpathy": "2026-06-27",
+    "raschka": "2026-06-27",
+    "eugeneyan": "2026-06-27",
     "chiphuyen": "2026-06-25",
     "oneusefulthing": "2026-06-26",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-26",
+    "openai-news": "2026-06-27",
     "deepmind": "2026-06-26",
     "hf-blog": "2026-06-26",
-    "anthropic-news": "2026-06-26"
+    "anthropic-news": "2026-06-27"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }
