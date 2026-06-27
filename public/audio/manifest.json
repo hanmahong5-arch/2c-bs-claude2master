@@ -1,6 +1,171 @@
 {
   "items": [
     {
+      "slug": "2026-06-27-cline-cli-v3-0-31",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.31 — Cline CLI 新增订阅费用显示与 ClinePass 切换提示",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-27"
+    },
+    {
+      "slug": "2026-06-26-blog-hf-blog-run-a-vllm-server-on-hf-jobs-in",
+      "zh": true,
+      "en": true,
+      "title": "Run a vLLM Server on HF Jobs in One Command — 用一条命令在HF Jobs上部署vLLM推理服务器，简化AI模型服务。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-blog-latentspace-ainews-openai-reports-median-internal-codex-output-tokens",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] OpenAI reports median internal Codex output — OpenAI内部Codex使用量暴增56倍，揭示AI代理实际采用模式。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-blog-openai-news-previewing-gpt-5-6-sol-a-next-generation",
+      "zh": true,
+      "en": true,
+      "title": "Previewing GPT-5.6 Sol: a next-generation model — OpenAI 预览 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-blog-simonwillison-incident-report-cve-2026-lgtm",
+      "zh": true,
+      "en": true,
+      "title": "Incident Report: CVE-2026-LGTM — AI审核代理陷入无限争论循环，消耗4万美元推理费用。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-blog-simonwillison-quoting-dean-w-ball",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Dean W. Ball — AI出口管制如何威胁前沿模型的经济可行性。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-blog-simonwillison-quoting-openai",
+      "zh": true,
+      "en": true,
+      "title": "Quoting OpenAI — OpenAI 发布 GPT",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-blog-simonwillison-quoting-timothy-b-lee",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Timothy B. Lee — 反驳LLM无学习曲线的观点，类比管理技能。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-blog-simonwillison-what-happened-after-2-000-people-tried-to",
+      "zh": true,
+      "en": true,
+      "title": "What happened after 2,000 people tried to hack my AI — 6000次提示注入攻击全部失败，但作者警告仍不可掉以轻心。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-claude-code-2-1-195",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.195 — Claude Code 修复多项匹配与语音问题，提升后台任务稳定性",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-cline-4-0-0",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.0.0 — Cline 4.0 迁移至统一 SDK，重构插件与市场体系",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-cline-cli-v3-0-30",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.30 — CLI v3.0.30 新增 token 计数、SAP AI Core 支持，修",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-codex-rust-v0-142-3",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.142.3 — 维护性补丁，无用户可见变化",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-trending-startrail-org-pixelrag",
+      "zh": true,
+      "en": false,
+      "title": "PixelRAG — 像素级原生搜索，终结网页解析",
+      "kind": "trending",
+      "author": null,
+      "source": "StarTrail-org/PixelRAG",
+      "tool": null,
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-25-blog-hf-blog-which-tokens-does-a-hybrid-model-predict-better",
+      "zh": true,
+      "en": true,
+      "title": "Which tokens does a hybrid model predict better? — 混合预测下一个与未来多个token，提升模型效率与推理速度。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-25"
+    },
+    {
       "slug": "2026-06-25-blog-latentspace-ainews-it-s-meta-harness-summer",
       "zh": true,
       "en": true,
@@ -12,6 +177,50 @@
       "publishedAt": "2026-06-25"
     },
     {
+      "slug": "2026-06-25-blog-openai-news-how-agents-are-transforming-work",
+      "zh": true,
+      "en": true,
+      "title": "How agents are transforming work — OpenAI研究揭示AI代理如何延长任务时长、提升多角色生产力。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-25"
+    },
+    {
+      "slug": "2026-06-25-blog-simonwillison-ai-and-liability",
+      "zh": true,
+      "en": true,
+      "title": "AI and Liability — AI不应成为企业逃避责任的借口，法律应视AI为部署者的代理人。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-25"
+    },
+    {
+      "slug": "2026-06-25-blog-simonwillison-datasette-export-database-0-3a2",
+      "zh": true,
+      "en": true,
+      "title": "datasette-export-database 0.3a2 — Simon Willison 发布 Datasette 插件小更新，修复版本兼容",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-25"
+    },
+    {
+      "slug": "2026-06-25-claude-code-2-1-193",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.193 — Shell命令全量分类、OpenTelemetry响应日志、后台shell自动回",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-25"
+    },
+    {
       "slug": "2026-06-25-codex-rust-v0-142-1",
       "zh": true,
       "en": false,
@@ -20,6 +229,50 @@
       "author": null,
       "source": "openai/codex",
       "tool": "codex",
+      "publishedAt": "2026-06-25"
+    },
+    {
+      "slug": "2026-06-25-codex-rust-v0-142-2",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.142.2 — MCP工具搜索、macOS代理、暗色Logo、安全缓冲UI",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-06-25"
+    },
+    {
+      "slug": "2026-06-25-gemini-cli-0-49-0",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.49.0 — Gemini CLI v0.49.0 新增 eval 命令、修复安全漏洞并优化工",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-06-25"
+    },
+    {
+      "slug": "2026-06-25-goose-1-39-0",
+      "zh": true,
+      "en": false,
+      "title": "goose v1.39.0 — Goose v1.39 全面转向 ACP 架构，新增 50+ 功能与大量修复",
+      "kind": "changelog",
+      "author": null,
+      "source": "block/goose",
+      "tool": "goose",
+      "publishedAt": "2026-06-25"
+    },
+    {
+      "slug": "2026-06-25-opencode-1-17-11",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.17.11 — 会话快照与回滚，支持撤销文件变更",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
       "publishedAt": "2026-06-25"
     },
     {
@@ -307,6 +560,28 @@
       "source": "anthropics/claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-06-23"
+    },
+    {
+      "slug": "2026-06-22-blog-hf-blog-pp-ocrv6-on-hugging-face-50-language-ocr",
+      "zh": true,
+      "en": true,
+      "title": "PP-OCRv6 on Hugging Face: 50-Language OCR from 1.5M to — PP",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-22"
+    },
+    {
+      "slug": "2026-06-22-blog-hf-blog-we-got-local-models-to-triage-the-openclaw",
+      "zh": true,
+      "en": true,
+      "title": "We got local models to triage the OpenClaw repo for — 用本地模型自动化开源仓库分类，零成本提升维护效率。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-22"
     },
     {
       "slug": "2026-06-22-blog-interconnects-glm-5-2-is-the-step-change-for",
@@ -604,281 +879,6 @@
       "source": "cline/cline",
       "tool": "cline",
       "publishedAt": "2026-06-19"
-    },
-    {
-      "slug": "2026-06-19-trending-nubjs-nub",
-      "zh": true,
-      "en": false,
-      "title": "nub — Rust 写的 Node.js 一体化工具包，提供快速构建与部署能力",
-      "kind": "trending",
-      "author": null,
-      "source": "nubjs/nub",
-      "tool": null,
-      "publishedAt": "2026-06-19"
-    },
-    {
-      "slug": "2026-06-18-blog-anthropic-news-anthropic-opens-seoul-office-and-announces-new-partnerships",
-      "zh": true,
-      "en": true,
-      "title": "Anthropic opens Seoul office and announces new — Anthropic 在首尔设立办公室并宣布多项韩国 AI 生态合作，展示其深耕亚",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-blog-hf-blog-beyond-lora-can-you-beat-the-most-popular",
-      "zh": true,
-      "en": true,
-      "title": "Beyond LoRA: Can you beat the most popular fine-tuning — Hugging Face 探讨超越 LoRA 的微调技术，揭示更高效模型适配的未",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-blog-hf-blog-is-it-agentic-enough-benchmarking-open-models-on",
-      "zh": true,
-      "en": true,
-      "title": "Is it agentic enough? Benchmarking open models on your — Hugging Face 提出评估开源模型工具调用能力的新基准，帮助开发者选择适",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-blog-hf-blog-mosaicleaks-can-your-research-agent-keep-a-secret",
-      "zh": true,
-      "en": true,
-      "title": "MosaicLeaks: Can your research agent keep a secret? — Hugging Face 揭示研究助手可能泄露训练数据，对 AI 安全提出警示",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-blog-latentspace-ainews-midjourney-medical-scan-your-organs-like-you",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Midjourney Medical: scan your organs like you — Midjourney 跨界医疗，推出全身超声 CT 扫描仪，旨在让健康监测像去水",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-blog-latentspace-the-professor-of-outputmaxxing-anjney-midha-amp",
-      "zh": true,
-      "en": true,
-      "title": "The Professor of Outputmaxxing — Anjney Midha, AMP — 前沿AI竞赛不仅是GPU军备竞赛，更是系统优化与效率提升的工程挑战。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-blog-openai-news-improving-health-intelligence-in-chatgpt",
-      "zh": true,
-      "en": true,
-      "title": "Improving health intelligence in ChatGPT — OpenAI 介绍 ChatGPT 在健康领域的新能力，展示 AI 如何更可靠地",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-blog-openai-news-new-usage-analytics-and-updated-spend-controls-for",
-      "zh": true,
-      "en": true,
-      "title": "New usage analytics and updated spend controls for — OpenAI 为 ChatGPT Enterprise 推出新成本控制与用量分析",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-blog-openai-news-using-ai-to-help-physicians-diagnose-rare-genetic",
-      "zh": true,
-      "en": true,
-      "title": "Using AI to help physicians diagnose rare genetic — OpenAI 研究团队利用推理模型辅助诊断儿童罕见遗传病，在未解病例中成功识别出",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-blog-simonwillison-datasette-acl-0-6a0",
-      "zh": true,
-      "en": true,
-      "title": "datasette-acl 0.6a0 — Datasette 权限插件升级，从表级控制迈向通用资源共享系统",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-blog-simonwillison-datasette-apps-host-custom-html-applications-inside-datasette",
-      "zh": true,
-      "en": true,
-      "title": "Datasette Apps: Host custom HTML applications inside — Datasette 新插件 datasette",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-codex-rust-v0-141-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.141.0 — 远程执行安全升级、跨平台工作目录保持、插件市场与性能优化，提升多代理系统可靠性与",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-gemini-cli-0-47-0",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.47.0 — Gemini CLI 改进模型映射、修复工具发现并优化会话管理",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-openai-codex-blog-introducing-codex",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Codex — 了解首个云端并行软件工程代理 Codex 的核心能力与安全设计，把握 AI 编程",
-      "kind": "practice",
-      "author": null,
-      "source": "openai-codex-blog",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-trending-epicgames-lore",
-      "zh": true,
-      "en": false,
-      "title": "lore — Epic Games 开源下一代版本控制系统 Lore，旨在革新代码管理",
-      "kind": "trending",
-      "author": null,
-      "source": "EpicGames/lore",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-18-trending-xiaomimimo-mimo-code",
-      "zh": true,
-      "en": false,
-      "title": "MiMo-Code — 小米开源多智能体协同编程框架，模型与智能体共同进化",
-      "kind": "trending",
-      "author": null,
-      "source": "XiaomiMiMo/MiMo-Code",
-      "tool": null,
-      "publishedAt": "2026-06-18"
-    },
-    {
-      "slug": "2026-06-17-blog-hf-blog-agentic-resource-discovery-let-agents-search",
-      "zh": true,
-      "en": true,
-      "title": "Agentic Resource Discovery: Let agents search — Hugging Face 推出 Agentic Resource Discove",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-17"
-    },
-    {
-      "slug": "2026-06-17-blog-hf-blog-from-the-hugging-face-hub-to-robot-hardware",
-      "zh": true,
-      "en": true,
-      "title": "From the Hugging Face Hub to robot hardware with — Hugging Face 展示如何将 Hub 模型直接部署到机器人硬件，实现 A",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-17"
-    },
-    {
-      "slug": "2026-06-17-blog-hf-blog-glm-5-2-built-for-long-horizon-tasks",
-      "zh": true,
-      "en": true,
-      "title": "GLM-5.2: Built for Long-Horizon Tasks — GLM",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-17"
-    },
-    {
-      "slug": "2026-06-17-blog-hf-blog-molmomotion-language-guided-3d-motion-forecasting",
-      "zh": true,
-      "en": true,
-      "title": "MolmoMotion: Language-guided 3D motion forecasting — Hugging Face 介绍 MolmoMotion：用语言引导预测 3D 人",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-17"
-    },
-    {
-      "slug": "2026-06-17-blog-interconnects-state-of-the-blog-mid-2026",
-      "zh": true,
-      "en": true,
-      "title": "State of the blog, mid-2026 — AI前沿博主分享博客定位与运营思考，揭示独立写作与生态建设的真实挑战",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-06-17"
-    },
-    {
-      "slug": "2026-06-17-blog-latentspace-ainews-glm-5-2-the-top-frontend-coding",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] GLM-5.2: the top Frontend Coding model in the — GLM",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-17"
-    },
-    {
-      "slug": "2026-06-17-blog-latentspace-the-self-driving-lab-joseph-krause-radical-ai",
-      "zh": true,
-      "en": true,
-      "title": "🔬 The Self-Driving Lab — Joseph Krause, Radical AI — Radical AI 如何用自驱动实验室加速材料发现，突破传统研发瓶颈",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-17"
-    },
-    {
-      "slug": "2026-06-17-blog-openai-news-a-near-autonomous-ai-chemist-improves-a-challenging",
-      "zh": true,
-      "en": true,
-      "title": "A near-autonomous AI chemist improves a challenging — OpenAI 展示 AI 化学家如何自主优化药物合成反应，为药物研发带来新范式。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-17"
     }
   ]
 }
