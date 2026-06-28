@@ -1,0 +1,26 @@
+---
+slug: 2026-06-28-cline-4-0-1
+title: "cline v4.0.1 — 回滚至SDK迁移前代码，修复4.0.0回归问题"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.0.1
+publishedAt: 2026-06-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "回滚至SDK迁移前代码，修复4.0.0回归问题"
+broadcast: "最近，AI编程助手Cline的VS Code扩展发布了新版本，但这次更新其实是一次紧急回滚，把代码退回到了SDK迁移之前的状态，修复了之前版本出现的回归问题。对开发者来说，这提醒我们，在做Agent框架设计时，一定要留好清晰的回滚路径，版本号管理也要能支持紧急回滚场景，同时重大重构最好在独立分支上进行，避免影响稳定版用户。"
+insight: "如果你正在使用cline/cli的4.0.0版本，建议立即升级到4.0.1，因为该版本回滚了SDK迁移前的稳定代码，修复了4.0.0的回归问题。对于通过newapi.lurus.cn代理的国内用户，升级不受影响，因为版本号提升只是为了让现有用户能接收到更新。如果你自定义了prompt或hook，无需修改，因为回滚的是底层SDK代码，不影响上层配置。"
+tags: [rollback, regression-fix, sdk-migration, stable-release]
+---
+
+- 稳定版VS Code扩展回滚至SDK迁移前代码库，解决4.0.0版本中报告的回归问题。
+  - 对agent harness设计意味着：需确保回滚路径清晰，避免依赖新SDK特性。
+- 以更高版本号发布3.89.2扩展代码，使现有4.0.0用户能接收到更新。
+  - 对agent harness设计意味着：版本号管理需支持紧急回滚场景，保持兼容性。
+- SDK迁移工作继续在`main`分支上独立进行。
+  - 对agent harness设计意味着：重大重构应保持分支隔离，降低对稳定版的影响。
+
+---
+
+> 原文 release：[cline/cline v4.0.1](https://github.com/cline/cline/releases/tag/v4.0.1)

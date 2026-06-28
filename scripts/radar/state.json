@@ -3,7 +3,7 @@
     "anthropics/claude-code": "v2.1.195",
     "openai/codex": "rust-v0.142.3",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.31",
+    "cline/cline": "v4.0.1",
     "block/goose": "v1.39.0",
     "sst/opencode": "v1.17.11",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -91,7 +91,7 @@
     ]
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-27",
+    "anthropic-engineering": "2026-06-28",
     "claude-code-docs": "2026-06-26",
     "openai-codex-blog": "2026-06-25"
   },
@@ -219,7 +219,8 @@
       "https://www.latent.space/p/gray-swan",
       "https://www.latent.space/p/ainews-its-meta-harness-summer",
       "https://www.latent.space/p/databricks",
-      "https://www.latent.space/p/ainews-openai-reports-median-internal"
+      "https://www.latent.space/p/ainews-openai-reports-median-internal",
+      "https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -465,20 +466,20 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-27",
+    "simonwillison": "2026-06-28",
     "lilianweng": "2026-06-25",
-    "latentspace": "2026-06-27",
-    "interconnects": "2026-06-27",
+    "latentspace": "2026-06-28",
+    "interconnects": "2026-06-28",
     "karpathy": "2026-06-27",
     "raschka": "2026-06-27",
     "eugeneyan": "2026-06-27",
     "chiphuyen": "2026-06-25",
-    "oneusefulthing": "2026-06-26",
+    "oneusefulthing": "2026-06-28",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-27",
-    "deepmind": "2026-06-26",
-    "hf-blog": "2026-06-26",
+    "openai-news": "2026-06-28",
+    "deepmind": "2026-06-28",
+    "hf-blog": "2026-06-28",
     "anthropic-news": "2026-06-27"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
