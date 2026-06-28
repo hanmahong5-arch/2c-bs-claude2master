@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "slug": "2026-06-28-cline-4-0-1",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.0.1 — 回滚至SDK迁移前代码，修复4.0.0回归问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "slug": "2026-06-27-blog-latentspace-ainews-openai-gpt-5-6-sol-terra-luna",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] OpenAI GPT-5.6 Sol / Terra / Luna — restricted — OpenAI 发布 GPT",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-27"
+    },
+    {
       "slug": "2026-06-27-cline-cli-v3-0-31",
       "zh": true,
       "en": false,
@@ -856,28 +878,6 @@
       "author": "Simon Willison",
       "source": "Simon Willison",
       "tool": null,
-      "publishedAt": "2026-06-19"
-    },
-    {
-      "slug": "2026-06-19-claude-code-2-1-183",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.183 — 增强自动模式安全，阻止未授权的破坏性命令，提升代理操作可靠性",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-19"
-    },
-    {
-      "slug": "2026-06-19-cline-cli-v3-0-28",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.28 — 新增 ClinePass 引导流程与模型选择，强化多工具并行执行能力",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
       "publishedAt": "2026-06-19"
     }
   ]
