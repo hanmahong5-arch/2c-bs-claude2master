@@ -1,9 +1,9 @@
 {
   "lastSeen": {
     "anthropics/claude-code": "v2.1.195",
-    "openai/codex": "rust-v0.142.3",
+    "openai/codex": "rust-v0.142.4",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v4.0.1",
+    "cline/cline": "cli-v3.0.32",
     "block/goose": "v1.39.0",
     "sst/opencode": "v1.17.11",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -55,7 +55,9 @@
     "baidu/Unlimited-OCR",
     "ProxyShard/ShardBrowser",
     "overflowy/make-look-scanned",
-    "StarTrail-org/PixelRAG"
+    "StarTrail-org/PixelRAG",
+    "valkor-ai/loom",
+    "CodeBendKit/codeseek"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -91,7 +93,7 @@
     ]
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-06-28",
+    "anthropic-engineering": "2026-06-29",
     "claude-code-docs": "2026-06-26",
     "openai-codex-blog": "2026-06-25"
   },
@@ -166,7 +168,9 @@
       "https://simonwillison.net/2026/Jun/26/timothy-b-lee/",
       "https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/",
       "https://simonwillison.net/2026/Jun/26/incident-report/",
-      "https://simonwillison.net/2026/Jun/26/openai/"
+      "https://simonwillison.net/2026/Jun/26/openai/",
+      "https://simonwillison.net/2026/Jun/28/jon-udell/",
+      "https://simonwillison.net/2026/Jun/28/hack-your-summer/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -243,7 +247,8 @@
       "https://www.interconnects.ai/p/frontier-post-training-recipe-review",
       "https://www.interconnects.ai/p/state-of-the-blog-mid-2026",
       "https://www.interconnects.ai/p/banning-open-source-ai-would-be-a",
-      "https://www.interconnects.ai/p/glm-52-is-the-step-change-for-open"
+      "https://www.interconnects.ai/p/glm-52-is-the-step-change-for-open",
+      "https://www.interconnects.ai/p/artifacts-22-zyphra-cohere-and-poolside"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -377,7 +382,8 @@
       "https://openai.com/index/patch-the-planet",
       "https://openai.com/index/codex-maxxing-long-running-work",
       "https://openai.com/index/how-agents-are-transforming-work",
-      "https://openai.com/index/previewing-gpt-5-6-sol"
+      "https://openai.com/index/previewing-gpt-5-6-sol",
+      "https://openai.com/index/hp-frontier-partnership"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -466,10 +472,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-06-28",
+    "simonwillison": "2026-06-29",
     "lilianweng": "2026-06-25",
-    "latentspace": "2026-06-28",
-    "interconnects": "2026-06-28",
+    "latentspace": "2026-06-29",
+    "interconnects": "2026-06-29",
     "karpathy": "2026-06-27",
     "raschka": "2026-06-27",
     "eugeneyan": "2026-06-27",
@@ -477,7 +483,7 @@
     "oneusefulthing": "2026-06-28",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-06-28",
+    "openai-news": "2026-06-29",
     "deepmind": "2026-06-28",
     "hf-blog": "2026-06-28",
     "anthropic-news": "2026-06-27"
