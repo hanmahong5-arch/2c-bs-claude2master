@@ -10,9 +10,11 @@ import {
 } from "@/lib/content-types";
 import {
   TOOLS,
+  TOOL_GROUPS,
   toolForKey,
   toolForSource,
   toolListCopy,
+  toolsInGroup,
   versionFromSourceUrl,
 } from "@/lib/tools";
 import { relativeAge } from "@/lib/date";
@@ -288,7 +290,7 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
         </p>
       ) : filter === "all" ? (
         <div>
-          {TOOLS.map((t) => {
+          {toolsInGroup("coding").map((t) => {
             const group = byKey.get(t.key) ?? [];
             return (
               <ToolSection
@@ -300,6 +302,42 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
               />
             );
           })}
+          {(() => {
+            // 🦞 Agent 运行时专区: agent-runtime 品类工具单独成段, 段头带品类说明。
+            const agentTools = toolsInGroup("agent-runtime");
+            const meta = TOOL_GROUPS.find((g) => g.key === "agent-runtime");
+            const hasAny = agentTools.some(
+              (t) => (byKey.get(t.key)?.length ?? 0) > 0,
+            );
+            if (!hasAny || !meta) return null;
+            return (
+              <section className="mb-10">
+                <h2 className="text-lg font-semibold text-[var(--lt-ink)] inline-flex items-center gap-2 mb-1">
+                  <span className="text-[var(--c2m-accent)]">●</span>
+                  {meta.label}
+                </h2>
+                {meta.blurb && (
+                  <p className="text-sm text-[var(--color-text-muted)] mb-4 max-w-2xl">
+                    {meta.blurb}
+                  </p>
+                )}
+                <div className="pl-1">
+                  {agentTools.map((t) => {
+                    const group = byKey.get(t.key) ?? [];
+                    return (
+                      <ToolSection
+                        key={t.key}
+                        name={t.name}
+                        version={versionOf(group)}
+                        items={group}
+                        feedKey={t.key}
+                      />
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })()}
           {trending.length > 0 && (
             <ToolSection name="🔥 热门项目" version={null} items={trending} />
           )}

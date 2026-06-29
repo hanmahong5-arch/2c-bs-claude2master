@@ -6,7 +6,12 @@ import {
   type ChangelogItem,
   type ChangelogKind,
 } from "@/lib/content-types";
-import { TOOLS, toolForSource, versionFromSourceUrl } from "@/lib/tools";
+import {
+  TOOLS,
+  toolsInGroup,
+  toolForSource,
+  versionFromSourceUrl,
+} from "@/lib/tools";
 import { relativeAge } from "@/lib/date";
 
 function resolveKind(c: ChangelogItem): ChangelogKind {
@@ -26,7 +31,9 @@ export default async function RadarSection() {
       latestByKey.set(tool.key, c);
     }
   }
-  const latestRadar = TOOLS.map((t) => ({ tool: t, item: latestByKey.get(t.key) }))
+  // 首页雷达收口到 coding 品类: agent-runtime 专区只在 /changelog 呈现, 不漏到首页「编码工具」标题下。
+  const latestRadar = toolsInGroup("coding")
+    .map((t) => ({ tool: t, item: latestByKey.get(t.key) }))
     .filter((x): x is { tool: (typeof TOOLS)[number]; item: ChangelogItem } =>
       Boolean(x.item),
     );

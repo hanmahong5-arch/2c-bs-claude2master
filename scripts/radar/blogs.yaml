@@ -107,3 +107,18 @@ blogs:
     url: https://www.anthropic.com/news
     itemSelector: 'a[href*="/news/"]'
     pollDays: 1
+
+  # ── Agent 运行时专区 观点源 (品类 agent-runtime; RSS 经 2026-06-29 逐个 fetch 验证) ──
+  # OpenClaw 作者 Peter Steinberger 个人博客 — 注: 可用路径是 /rss.xml (/feed /atom.xml 均 404)。
+  - author: Peter Steinberger
+    handle: steipete
+    type: rss
+    url: https://steipete.me/rss.xml
+    pollDays: 2
+
+  # OpenClaw 官方项目博客 (发版/安全/生态); /rss.xml 可用 (/blog/rss.xml 404)。
+  - author: OpenClaw
+    handle: openclaw-blog
+    type: rss
+    url: https://openclaw.ai/rss.xml
+    pollDays: 2

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# fetch-releases.sh — 抓 8 个 agent CLI/工具的最新 release
+# fetch-releases.sh — 抓各 agent CLI/工具的最新 release (coding + agent-runtime 专区)
 # REPOS 顺序与展示名必须与 src/lib/tools.ts 的 TOOLS 一致 —— 改一处记得改另一处。
 #
 # 输入: scripts/radar/state.json (lastSeen.<repo>)
@@ -22,6 +22,8 @@ REPOS=(
   "anthropics/claude-code" "openai/codex"
   "google-gemini/gemini-cli" "Aider-AI/aider" "cline/cline"
   "block/goose" "sst/opencode" "RooCodeInc/Roo-Code"
+  # Agent 运行时专区 (品类 agent-runtime; 顺序须与 src/lib/tools.ts TOOLS 续接一致)
+  "openclaw/openclaw" "zeroclaw-labs/zeroclaw" "NousResearch/hermes-agent"
 )
 
 if ! command -v jq >/dev/null 2>&1; then

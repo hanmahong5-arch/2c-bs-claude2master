@@ -27,6 +27,14 @@ const SOURCES_FILE = path.join(SCRIPT_DIR, "sources.yaml");
 
 const TODAY = new Date().toISOString().slice(0, 10);
 
+// 单源单次最多抓 N 篇 — 防大 sitemap (如 openclaw /concepts 49 页、hermes /docs/guides 32 页)
+// 首跑一次性灌爆 CI 时限 (2026-06-10 死循环教训)。超出的 fresh 不标 seen, 下轮继续排干。
+// env RADAR_PRACTICE_MAX 可覆盖 (backfill 时放宽)。
+const MAX_ITEMS_PER_SOURCE = Math.max(
+  1,
+  Number(process.env.RADAR_PRACTICE_MAX) || 6,
+);
+
 interface SitemapSource {
   label: string;
   kind: "sitemap";
@@ -328,11 +336,15 @@ async function main(): Promise<void> {
     if (!state.practicesSeen[src.label]) state.practicesSeen[src.label] = [];
     const seen = new Set(state.practicesSeen[src.label]);
     const fresh = urls.filter((u) => !seen.has(u));
+    // 单源封顶: 大 sitemap 首跑分多轮排干, 不一次灌爆 CI。剩余 fresh 这轮不标 seen → 下轮再取。
+    const capped = fresh.slice(0, MAX_ITEMS_PER_SOURCE);
+    const deferred = fresh.length - capped.length;
     console.error(
-      `[practices] ${src.label}: ${urls.length} total, ${fresh.length} new`,
+      `[practices] ${src.label}: ${urls.length} total, ${fresh.length} new, 本轮抓 ${capped.length}` +
+        (deferred > 0 ? ` (剩 ${deferred} 篇下轮继续)` : ""),
     );
 
-    for (const url of fresh) {
+    for (const url of capped) {
       attemptCount++;
       try {
         const { title, body, published_at } = await fetchPracticePage(url);

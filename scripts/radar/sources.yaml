@@ -23,3 +23,19 @@ sources:
     urls:
       - https://openai.com/index/introducing-codex/
     pollDays: 7
+
+  # ── Agent 运行时专区 (品类 agent-runtime; 源经 2026-06-29 逐个 fetch 验证) ──
+  # OpenClaw 概念/架构文档 (最佳实践子树); 多语言 sitemap, 用英文 /concepts/ 前缀排除 /ar/ /de/。
+  # 49 页 → 靠 fetch-practices.ts 单源封顶分轮排干。
+  - label: openclaw-concepts
+    kind: sitemap
+    url: https://docs.openclaw.ai/sitemap.xml
+    urlPrefix: https://docs.openclaw.ai/concepts/
+    pollDays: 7
+
+  # Hermes Agent guides/how-to (32 页, 含 tips/best-practices); 避开 /docs/user-guide/ (310 页巨坑)。
+  - label: hermes-guides
+    kind: sitemap
+    url: https://hermes-agent.nousresearch.com/docs/sitemap.xml
+    urlPrefix: https://hermes-agent.nousresearch.com/docs/guides/
+    pollDays: 7

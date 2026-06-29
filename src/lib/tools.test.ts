@@ -6,6 +6,7 @@ import {
   toolForKey,
   toolForSource,
   toolListCopy,
+  toolsInGroup,
   versionFromSourceUrl,
 } from "./tools";
 
@@ -97,24 +98,46 @@ describe("TOOLS 注册表自洽", () => {
       expect(sh).toContain(`"${t.repo}"`);
     }
   });
-});
 
-describe("toolListCopy", () => {
-  test('count → "${TOOLS.length} 大 AI 编码工具"', () => {
-    expect(toolListCopy("count")).toBe(`${TOOLS.length} 大 AI 编码工具`);
+  test("agent-runtime 专区 = openclaw / zeroclaw / hermes", () => {
+    expect(toolsInGroup("agent-runtime").map((t) => t.key)).toEqual([
+      "openclaw",
+      "zeroclaw",
+      "hermes",
+    ]);
   });
 
-  test("full → 包含每个工具名, 用顿号连接", () => {
-    const result = toolListCopy("full");
-    // 每个工具名都出现在结果中
+  test("每个工具 group 合法", () => {
     for (const t of TOOLS) {
+      expect(["coding", "agent-runtime"]).toContain(t.group);
+    }
+  });
+});
+
+describe("toolListCopy (仅 coding 品类)", () => {
+  const CODING = toolsInGroup("coding");
+
+  test('count → "N 大 AI 编码工具" (N = coding 工具数, 不含专区)', () => {
+    expect(toolListCopy("count")).toBe(`${CODING.length} 大 AI 编码工具`);
+  });
+
+  test("full → 包含每个 coding 工具名, 用顿号连接", () => {
+    const result = toolListCopy("full");
+    for (const t of CODING) {
       expect(result).toContain(t.name);
     }
-    // 顿号分段数 === TOOLS.length
-    expect(result.split("、").length).toBe(TOOLS.length);
+    // 顿号分段数 === coding 工具数
+    expect(result.split("、").length).toBe(CODING.length);
   });
 
   test("full → 不含 ASCII 逗号", () => {
     expect(toolListCopy("full")).not.toContain(",");
+  });
+
+  test("full → 不含 agent-runtime 专区工具名 (专区不计入主文案)", () => {
+    const result = toolListCopy("full");
+    for (const t of toolsInGroup("agent-runtime")) {
+      expect(result).not.toContain(t.name);
+    }
   });
 });
