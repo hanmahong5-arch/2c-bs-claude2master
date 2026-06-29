@@ -1,0 +1,23 @@
+---
+slug: 2026-06-29-cline-4-0-3
+title: "cline v4.0.3 — ClinePass 提供商对所有用户开放"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.0.3
+publishedAt: 2026-06-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "ClinePass 提供商对所有用户开放"
+broadcast: "Cline 的最新版本中，ClinePass 提供商已经对所有用户开放，不再需要特殊设置。这意味着国内开发者在构建 agent 时，可以直接使用 ClinePass 作为默认提供商，简化了代码中的条件判断逻辑，让开发更顺畅。"
+insight: "对于国内开发者，如果你之前因为 ClinePass 需要功能标志而手动配置了回退逻辑，现在可以简化配置了。ClinePass 已对所有用户开放，无需条件判断，直接使用即可。如果你通过 newapi.lurus.cn 代理使用 Cline，这一变化不影响代理配置，但你可以清理掉之前为兼容旧版本而添加的冗余 prompt 或 hook 逻辑。现有用户值得升级到 v4.0.3，以简化提供商选择。"
+tags: [provider, feature-flag, release]
+---
+
+- ClinePass 提供商现已对所有用户启用，不再需要功能标志。
+- 这意味着所有用户都可以使用 ClinePass 作为默认提供商，无需回退到标准 Cline 提供商。
+- 对 agent harness 设计的影响：简化了提供商选择逻辑，所有 agent 可直接使用 ClinePass，无需条件判断。
+
+---
+
+> 原文 release：[cline/cline v4.0.3](https://github.com/cline/cline/releases/tag/v4.0.3)

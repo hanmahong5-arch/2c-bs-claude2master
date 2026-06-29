@@ -1,0 +1,23 @@
+---
+slug: 2026-06-29-openclaw-concepts-agent-loop
+title: "Agent loop · OpenClaw — 理解OpenClaw agent循环的完整生命周期与可插拔钩子系统"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/agent-loop
+publishedAt: 2026-06-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "理解OpenClaw agent循环的完整生命周期与可插拔钩子系统"
+broadcast: "OpenClaw的agent循环通过队列串行化执行，避免工具冲突，保持历史一致。它还提供了可拦截的钩子系统，比如在调用工具前阻断不安全操作。这对国内开发者设计agent框架很有启发：需要做好并发控制和可插拔的安全约束。"
+insight: "对国内开发者而言，OpenClaw的串行化队列和写锁机制意味着现有agent harness需增加并发控制，否则多会话下易出现状态冲突。钩子系统（如before_tool_call）值得在prompt中预留接口，用于安全拦截或行为修改。若通过newapi.lurus.cn代理，该机制不受影响，但需注意代理本身不提供这些钩子，需自行实现。建议升级时重点评估现有hook配置是否适配串行模型。"
+tags: [agent-loop, hooks, concurrency, session-management]
+---
+
+- **串行化执行与队列**：每个会话的agent运行通过会话队列和全局队列串行化，避免工具/会话竞争，保持历史一致性。这意味着设计agent harness时需考虑并发控制，防止状态冲突。
+- **钩子点拦截**：提供`before_tool_call`、`before_prompt_build`等钩子，可阻断或修改行为。例如`before_tool_call`中`block: true`可终止工具调用，用于安全策略。这启示prompt设计应预留钩子接口，实现可插拔的约束注入。
+- **会话写锁**：使用基于文件的进程感知写锁，防止跨进程的会话文件并发写入，默认超时60秒。这提示agent harness需处理资源竞争，确保持久化一致性。
+
+---
+
+> 原文：[Agent loop · OpenClaw](https://docs.openclaw.ai/concepts/agent-loop)

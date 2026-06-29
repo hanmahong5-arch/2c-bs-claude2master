@@ -1,0 +1,23 @@
+---
+slug: 2026-06-26-zeroclaw-0-8-2
+title: "zeroclaw v0.8.2 — A2A agent discovery + 更安全的入站策略，agent 互操作"
+source: zeroclaw-labs/zeroclaw
+sourceUrl: https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.2
+publishedAt: 2026-06-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "A2A agent discovery + 更安全的入站策略，agent 互操作与防护升级"
+broadcast: "最近开源项目ZeroClaw更新了，主要做了三件事：一是让智能体之间能互相发现和通信，实现真正的互操作；二是给所有入站消息加了一道安全策略层，防止绕过；三是用SQLite持久化运行状态，方便故障恢复。这对国内开发者来说，意味着构建多智能体协作系统时，安全性和可靠性都有了更成熟的参考方案。"
+insight: "v0.8.2 对国内用户值得升级。A2A agent discovery 让 agent 间互操作更灵活，但跨 agent 身份认证与权限隔离需额外配置，现有 prompt 或 hook 需调整以适配新策略。Universal ingress policy layer 默认 Loop 行为，统一入站安全过滤，现有 hook 配置可能需修改以避免绕过。Durable run/task control plane 基于 SQLite 持久化，提升故障恢复能力。走 newapi.lurus.cn 代理不受影响，但需确保代理支持新协议。"
+tags: [a2a-discovery, security, durable-runs, skills]
+---
+
+- **A2A agent discovery** (#7763)：agent 可通过网关描述和发现彼此，实现 agent 间互操作；设计上需考虑跨 agent 身份认证与权限隔离。
+- **Universal ingress policy layer** (#7997)：所有入站消息在模型处理前经过 SOP 策略层，默认 Loop 行为；agent harness 应统一入站安全过滤，避免绕过。
+- **Durable run/task control plane** (#8217)：基于 SQLite 的持久化运行状态、指标和子 agent 监督；agent harness 需支持状态持久化与故障恢复。
+
+---
+
+> 原文 release：[zeroclaw-labs/zeroclaw v0.8.2](https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.2)

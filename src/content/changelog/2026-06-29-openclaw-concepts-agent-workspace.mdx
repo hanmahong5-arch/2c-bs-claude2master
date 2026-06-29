@@ -1,0 +1,26 @@
+---
+slug: 2026-06-29-openclaw-concepts-agent-workspace
+title: "Agent workspace · OpenClaw — Agent 工作区是记忆中枢，文件即指令，结构决定行为。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/agent-workspace
+publishedAt: 2026-06-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "Agent 工作区是记忆中枢，文件即指令，结构决定行为。"
+broadcast: "Agent 工作区就像是它的记忆中枢，所有操作都围绕文件系统展开。通过 AGENTS.md 这类文件，你可以把指令、人格和用户身份拆分开来，比写一大段提示词更清晰。记忆也分短期日志和长期精选，这样既省 token 又方便检索。对国内开发者来说，这种结构化的设计思路，能让 agent 的行为更可控、更安全。"
+insight: "对于国内开发者，如果当前使用单一 prompt 管理 Agent 行为，建议尽快迁移到 AGENTS.md、SOUL.md、USER.md 等独立文件，这样更易维护和复用。工作区是唯一工作目录，但绝对路径仍可逃逸，务必启用沙箱隔离。通过 newapi.lurus.cn 代理访问不受影响，但需注意路径边界和安全策略。记忆分短期日志和长期 MEMORY.md，能减少 token 浪费，值得升级。"
+tags: [agent-workspace, file-based-prompt, memory-management, sandboxing]
+---
+
+- 工作区是唯一工作目录，文件工具和上下文都基于它；绝对路径仍可逃逸，需启用沙箱隔离。
+  *含义*：Agent 的“家”就是文件系统根，设计 prompt 时要明确路径边界和安全策略。
+- 内置 AGENTS.md、SOUL.md、USER.md 等文件，每会话加载，分别控制操作指令、人格语气、用户身份。
+  *含义*：将行为规则、角色设定、用户信息拆成独立文件，比单一大 prompt 更易维护和复用。
+- memory/ 每日日志 + MEMORY.md 长期记忆，仅主会话加载 MEMORY.md，避免注入共享上下文。
+  *含义*：记忆分短期（每日）和长期（精选），通过文件系统管理，减少 token 浪费并支持检索。
+
+---
+
+> 原文：[Agent workspace · OpenClaw](https://docs.openclaw.ai/concepts/agent-workspace)

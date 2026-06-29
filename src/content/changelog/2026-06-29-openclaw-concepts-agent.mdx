@@ -1,0 +1,23 @@
+---
+slug: 2026-06-29-openclaw-concepts-agent
+title: "Agent runtime · OpenClaw — OpenClaw 的 Agent 运行时契约：工作区、引导文件与内置工具如何协同"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/agent
+publishedAt: 2026-06-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OpenClaw 的 Agent 运行时契约：工作区、引导文件与内置工具如何协同"
+broadcast: "OpenClaw 为 Agent 定义了一套运行时契约，通过工作区里的引导文件和内置工具来管理长期记忆与技能。它用文件系统持久化 Agent 的人格，引导流程只执行一次，避免重复破坏状态。这套设计对国内开发者很有启发，能帮我们构建更稳定、可扩展的 Agent 系统。"
+insight: "OpenClaw 的 Agent 运行时契约对国内开发者有一定参考价值。如果你正在使用类似架构，建议检查现有 prompt 是否预留了外部上下文注入点，因为工作区和引导文件会在首轮注入 Project Context。BOOTSTRAP.md 的一次性仪式意味着初始化流程应设计为一次性引导，避免重复执行破坏状态。技能加载优先级支持分层覆盖，如果你通过 newapi.lurus.cn 代理调用，该代理不涉及这些文件系统操作，因此不受影响。总体而言，现有用户无需立即升级，但可参考其设计优化 prompt 结构。"
+tags: [agent-runtime, workspace, bootstrap-files, skills]
+---
+
+- **工作区与引导文件注入**：OpenClaw 要求一个固定的工作区目录，内含 AGENTS.md、SOUL.md 等用户可编辑文件，并在新会话首轮注入系统提示的 Project Context。含义：Agent 的长期记忆和人格通过文件系统持久化，prompt 设计应预留外部上下文注入点。
+- **BOOTSTRAP.md 一次性仪式**：首次运行时创建，完成后自动删除；工作区被清空后不会自动重建，需手动重置。含义：Agent 的初始化流程可设计为一次性引导，避免重复执行破坏状态。
+- **技能加载优先级**：从工作区、项目、个人、托管、内置等位置按优先级加载技能，技能通过 frontmatter 名称暴露。含义：Agent 的技能系统应支持分层覆盖和配置化加载，便于扩展。
+
+---
+
+> 原文：[Agent runtime · OpenClaw](https://docs.openclaw.ai/concepts/agent)

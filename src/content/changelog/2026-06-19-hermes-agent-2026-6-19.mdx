@@ -1,0 +1,26 @@
+---
+slug: 2026-06-19-hermes-agent-2026-6-19
+title: "hermes-agent v2026.6.19 — Hermes Agent 0.17.0 新增 iMessage、Raft 通道，"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.19
+publishedAt: 2026-06-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hermes Agent 0.17.0 新增 iMessage、Raft 通道，桌面应用大升级，子代理后台运行。"
+broadcast: "Hermes Agent 最新版本来了，这次更新让智能体真正能融入你的日常。它新增了iMessage和Raft网络通道，不用Mac也能收发消息，还能加入分布式网络。桌面应用也成熟了，快捷键、通知、子代理后台运行一应俱全。对国内开发者来说，这意味着agent的交互和部署方式更贴近真实使用场景，值得关注。"
+insight: "Hermes Agent 0.17.0 的桌面应用升级和子代理后台运行对国内用户是实用改进，值得升级。iMessage 和 Raft 通道扩展了触达范围，但国内用户通过 newapi.lurus.cn 代理使用不受影响，因为代理仅转发 API 请求，不涉及通道协议。现有 prompt 和 hook 配置无需修改，新功能为增量添加。"
+tags: [agent-framework, multi-channel, desktop-app, automation]
+---
+
+- **新通道：iMessage 与 Raft**：Hermes 通过 Photon 支持 iMessage（无需 Mac 中继），并作为外部代理加入 Raft 网络，扩展了 agent 的触达范围。
+- **桌面应用成熟化**：可重绑定快捷键、原生通知、子代理监控窗口、VS Code 主题安装等，使桌面成为主力交互界面。
+- **子代理后台运行**：`delegate_task(background=true)` 异步执行任务，不阻塞主对话，适合耗时操作。
+- **图像编辑能力**：`image_generate` 支持基于源图像的编辑（如改色、去背景），统一了生成与编辑接口。
+- **自动化蓝图**：通过问答式配置定时任务，无需学习 cron 语法，降低自动化门槛。
+- **记忆工具批量操作**：`memory` 支持原子性批量增删改，避免多轮交互失败。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.6.19](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.19)

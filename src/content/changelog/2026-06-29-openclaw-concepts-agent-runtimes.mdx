@@ -1,0 +1,26 @@
+---
+slug: 2026-06-29-openclaw-concepts-agent-runtimes
+title: "Agent runtimes · OpenClaw — 一文讲清OpenClaw中agent runtime与provider、mode"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/agent-runtimes
+publishedAt: 2026-06-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "一文讲清OpenClaw中agent runtime与provider、model的分层关系"
+broadcast: "OpenClaw把agent runtime和provider分成了不同层，provider管认证和模型发现，runtime管模型执行。这样同一个模型可以换不同的runtime跑，比如内嵌的openclaw或者外部的claude-cli。配置时用agentRuntime.id指定，优先级从模型到provider再到自动模式，最后回退到openclaw。这对国内开发者来说，意味着可以更灵活地切换后端，不用被绑定在单一执行方式上。"
+insight: "对于国内用户，如果当前使用newapi.lurus.cn代理且依赖OpenClaw默认runtime，升级后需检查provider或model条目中是否显式指定了agentRuntime.id，因为旧的全agent runtime键已被忽略。若未指定，系统会回退到openclaw runtime，通常无影响。但若你曾依赖特定runtime（如codex或claude-cli），则需在配置中明确声明，否则可能切换为默认行为。建议升级后优先在model级设置runtime策略，以获得最精确控制。"
+tags: [agent-runtime, openclaw, model-execution, harness]
+---
+
+- **Runtime与provider是不同层**：provider负责认证与模型发现，runtime负责执行模型循环。配置时用`agentRuntime.id`在provider或model条目中指定，旧的全agent runtime键已被忽略。
+  - 设计含义：将执行层与模型选择层解耦，允许同一模型通过不同runtime（如openclaw、codex、claude-cli）运行，灵活切换后端。
+- **两种runtime家族**：Embedded harness（如openclaw、codex插件）在OpenClaw的agent循环内运行；CLI backend（如claude-cli）启动本地CLI进程，但保持模型引用规范。
+  - 设计含义：支持轻量内嵌与重量级外部进程两种执行模式，适应不同场景（内嵌低延迟、CLI复用现有工具链）。
+- **Runtime选择优先级**：model级runtime策略 > provider级 > auto模式（注册插件可声明支持的provider/model对），无匹配时回退到openclaw。
+  - 设计含义：提供细粒度控制，同时保留自动回退，避免配置遗漏导致执行失败。
+
+---
+
+> 原文：[Agent runtimes · OpenClaw](https://docs.openclaw.ai/concepts/agent-runtimes)

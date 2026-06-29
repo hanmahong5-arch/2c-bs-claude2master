@@ -1,0 +1,26 @@
+---
+slug: 2026-06-29-openclaw-concepts-architecture
+title: "Gateway architecture · OpenClaw — 一个网关管理所有消息面，客户端与节点分离，协议严格类型化。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/architecture
+publishedAt: 2026-06-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "一个网关管理所有消息面，客户端与节点分离，协议严格类型化。"
+broadcast: "今天聊聊一个叫OpenClaw的网关架构，它用一个统一的网关管理所有消息通道，比如WhatsApp和Telegram。客户端和节点通过WebSocket连接，但角色不同，节点可以声明自己的能力，比如画布或摄像头。这个设计对国内开发者很有启发，它告诉我们Agent的通信层应该区分控制面和执行面，而且远程调用必须内置幂等机制，防止重复操作。"
+insight: "如果你正在用 newapi.lurus.cn 代理，这个架构对国内用户没有直接影响，因为它是消息面网关，不涉及 API 代理。现有用户值得关注的是：如果你的 agent 需要同时管理多个消息通道（如 WhatsApp、Telegram），这个单一 Gateway 模式能简化连接管理，但需要你按协议要求实现明确的握手（connect → hello-ok）和幂等键机制。如果你现有的 prompt 或 hook 依赖无状态 WebSocket，需要改为有状态会话，否则无法兼容。"
+tags: [gateway-architecture, websocket-protocol, agent-communication, device-pairing]
+---
+
+- 单一 Gateway 进程持有所有消息通道（WhatsApp、Telegram 等），控制面客户端和节点均通过 WebSocket 连接，但角色不同：客户端发送请求、订阅事件；节点声明 `role: node` 并暴露能力（如 `canvas.*`、`camera.*`）。
+  - 含义：Agent 的通信层应区分控制面与执行面，节点通过声明式能力注册实现可扩展的远程操作。
+- 连接生命周期强制先发送 `connect` 帧，握手后通过 `hello-ok` 获得快照（presence + health），后续请求/响应和事件推送均基于此会话。
+  - 含义：Agent 的 WebSocket 协议应设计明确的握手与状态同步阶段，避免无状态乱序消息。
+- 幂等键（idempotency keys）对 `send`、`agent` 等副作用方法必须，服务器保留短时去重缓存；配对需设备身份、挑战签名和显式审批。
+  - 含义：Agent 的远程调用应内置幂等机制，配对流程需结合身份认证与本地信任模型，防止未授权接入。
+
+---
+
+> 原文：[Gateway architecture · OpenClaw](https://docs.openclaw.ai/concepts/architecture)

@@ -1,0 +1,23 @@
+---
+slug: 2026-06-24-openclaw-2026-6-10
+title: "openclaw v2026.6.10 — 自动快速模式与多通道会话可靠性提升"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.6.10
+publishedAt: 2026-06-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "自动快速模式与多通道会话可靠性提升"
+broadcast: "OpenClaw 最新版本带来了自动快速模式，短对话秒回，长对话自动切换，特别适合需要兼顾速度和深度的智能体场景。同时修复了跨通道会话的身份问题，切换后不会混淆，这对多通道 agent 路由设计很关键。还新增了会话转录接口，方便开发者集成日志和调试工具。"
+insight: "对于国内开发者，这次更新值得升级。`/fast auto` 模式能自动平衡响应速度与深度，适合需要兼顾效率的 agent 场景；跨通道会话身份修复解决了多通道路由中的状态混乱问题，如果你的 hook 涉及多通道切换，务必更新配置。持久化转录 SDK 接口简化了日志集成，但需注意 newapi.lurus.cn 代理本身不受影响，升级后正常使用。"
+tags: [fast-mode, session-identity, channel-routing, sdk]
+---
+
+- 新增 `/fast auto` 模式：短对话自动快速响应，长对话或回退时切换至正常模式并保持可见状态，适合需要平衡速度与深度的 agent 场景。
+- 修复跨通道会话身份携带问题：切换通道后不再沿用旧身份，确保状态、反应、线程指向当前通道，对多通道 agent 路由设计至关重要。
+- 提供持久化会话转录 SDK 接口：插件可读取、追加、发布和锁定转录，避免依赖遗留文件路径，简化 agent 日志与调试工具集成。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.6.10](https://github.com/openclaw/openclaw/releases/tag/v2026.6.10)

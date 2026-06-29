@@ -1,0 +1,23 @@
+---
+slug: 2026-06-29-cline-cli-v3-0-34
+title: "cline cli-v3.0.34 — 修复升级提示时机，优化ClinePass引导与选择器"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.34
+publishedAt: 2026-06-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复升级提示时机，优化ClinePass引导与选择器"
+broadcast: "Cline的CLI工具更新了，这次主要修复了一个烦人的问题：升级提示不会再在引导完成后立刻弹出来，让用户少些困惑。同时，ClinePass的引导步骤说得更清楚，选择器也简化了，订阅和计费选项合并到一起。对国内开发者来说，这些优化让Agent开发工具的体验更流畅，减少不必要的干扰。"
+insight: "如果你已经在用 ClinePass，这次升级值得做，主要修复了升级提示过早弹出的 bug，避免被反复打扰。引导步骤的措辞优化和选择器合并让界面更清爽，但功能没变。国内用户通过 newapi.lurus.cn 代理不受影响，因为改动只涉及 UI 和提示逻辑，不涉及网络或 API 调用。建议直接更新，不用改现有 prompt 或 hook 配置。"
+tags: [bug-fix, ui-improvement, user-experience]
+---
+
+- 修复了ClinePass升级通知在完成引导后立即出现的问题，避免用户困惑。
+- 改进了ClinePass引导步骤的措辞，使流程更清晰。
+- 合并Cline提供商选择器中的订阅与使用/计费选项，移除积分链接，简化界面。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.34](https://github.com/cline/cline/releases/tag/cli-v3.0.34)

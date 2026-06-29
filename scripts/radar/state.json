@@ -3,11 +3,14 @@
     "anthropics/claude-code": "v2.1.195",
     "openai/codex": "rust-v0.142.4",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.32",
+    "cline/cline": "v4.0.3",
     "block/goose": "v1.39.0",
     "sst/opencode": "v1.17.11",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.49.0"
+    "google-gemini/gemini-cli": "v0.49.0",
+    "openclaw/openclaw": "v2026.6.10",
+    "zeroclaw-labs/zeroclaw": "v0.8.2",
+    "NousResearch/hermes-agent": "v2026.6.19"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -57,7 +60,8 @@
     "overflowy/make-look-scanned",
     "StarTrail-org/PixelRAG",
     "valkor-ai/loom",
-    "CodeBendKit/codeseek"
+    "CodeBendKit/codeseek",
+    "gykim80/perfectpixel-studio"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -90,12 +94,23 @@
     "claude-code-docs": [],
     "openai-codex-blog": [
       "https://openai.com/index/introducing-codex/"
-    ]
+    ],
+    "openclaw-concepts": [
+      "https://docs.openclaw.ai/concepts/active-memory",
+      "https://docs.openclaw.ai/concepts/agent",
+      "https://docs.openclaw.ai/concepts/agent-loop",
+      "https://docs.openclaw.ai/concepts/agent-runtimes",
+      "https://docs.openclaw.ai/concepts/agent-workspace",
+      "https://docs.openclaw.ai/concepts/architecture"
+    ],
+    "hermes-guides": []
   },
   "practicesLastPolled": {
     "anthropic-engineering": "2026-06-29",
     "claude-code-docs": "2026-06-26",
-    "openai-codex-blog": "2026-06-25"
+    "openai-codex-blog": "2026-06-25",
+    "openclaw-concepts": "2026-06-29",
+    "hermes-guides": "2026-06-29"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -469,6 +484,20 @@
       "https://www.anthropic.com/news/dxc-anthropic-alliance",
       "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem",
       "https://www.anthropic.com/news/introducing-claude-tag"
+    ],
+    "steipete": [
+      "https://steipete.me/posts/2026/openclaw/",
+      "https://steipete.me/posts/2025/shipping-at-inference-speed/",
+      "https://steipete.me/posts/2025/signature-flicker/",
+      "https://steipete.me/posts/just-talk-to-it/",
+      "https://steipete.me/posts/2025/claude-code-anonymous/"
+    ],
+    "openclaw-blog": [
+      "https://openclaw.ai/blog/lighter-core-sharper-claws/",
+      "https://openclaw.ai/blog/where-openclaw-security-is-heading/",
+      "https://openclaw.ai/blog/openclaw-agent-skill-workshop/",
+      "https://openclaw.ai/blog/openclaw-nvidia-skill-security/",
+      "https://openclaw.ai/blog/safer-than-yolo-auto-mode-for-exec-approvals/"
     ]
   },
   "blogsLastPolled": {
@@ -486,7 +515,9 @@
     "openai-news": "2026-06-29",
     "deepmind": "2026-06-28",
     "hf-blog": "2026-06-28",
-    "anthropic-news": "2026-06-27"
+    "anthropic-news": "2026-06-29",
+    "steipete": "2026-06-29",
+    "openclaw-blog": "2026-06-29"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }
