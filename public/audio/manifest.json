@@ -1,10 +1,109 @@
 {
   "items": [
     {
+      "slug": "2026-06-30-trending-xxhuberrr-mineradio",
+      "zh": true,
+      "en": false,
+      "title": "Mineradio — 沉浸式音乐播放器，电影镜头与粒子视觉",
+      "kind": "trending",
+      "author": null,
+      "source": "XxHuberrr/Mineradio",
+      "tool": null,
+      "publishedAt": "2026-06-30"
+    },
+    {
+      "slug": "2026-06-29-blog-hf-blog-discoformer-one-transformer-for-density-and-score-across",
+      "zh": true,
+      "en": true,
+      "title": "DiScoFormer: One transformer for density and score, — 统一密度估计与分数匹配的Transformer，提升跨分布泛化能力。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-blog-openai-news-mapping-europe-s-ai-workforce-opportunity",
+      "zh": true,
+      "en": true,
+      "title": "Mapping Europe’s AI Workforce Opportunity — OpenAI报告：AI将重塑欧盟就业，哪些岗位受影响？",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-blog-simonwillison-count-the-number-of-safari-tabs",
+      "zh": true,
+      "en": true,
+      "title": "Count the number of Safari tabs — 用一行 AppleScript 统计 Safari 标签页数量，极简实用。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-blog-simonwillison-html-table-extractor",
+      "zh": true,
+      "en": true,
+      "title": "HTML table extractor — 一个将粘贴的富文本表格转为多种格式的在线工具。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-blog-simonwillison-ornith-1-0-self-scaffolding-llms-for-agentic",
+      "zh": true,
+      "en": true,
+      "title": "Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding — 开源新模型Ornith",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-claude-code-2-1-196",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.196 — 安全、修复与性能提升，Claude Code 更稳定可靠",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-06-29"
+    },
+    {
       "slug": "2026-06-29-cline-4-0-2",
       "zh": true,
       "en": false,
       "title": "cline v4.0.2 — DeepSeek推理模型新增xhigh推理力度，ClinePass体验优化",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-cline-4-0-3",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.0.3 — ClinePass 提供商对所有用户开放",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-cline-4-0-4",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.0.4 — ClinePass 功能全面开放，无需功能开关",
       "kind": "changelog",
       "author": null,
       "source": "cline/cline",
@@ -23,6 +122,28 @@
       "publishedAt": "2026-06-29"
     },
     {
+      "slug": "2026-06-29-cline-cli-v3-0-33",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.33 — ClinePass 订阅体验优化：备选链接、隐藏已订阅、自适应主题色",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-cline-cli-v3-0-34",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.34 — 修复升级提示时机，优化ClinePass引导与选择器",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-06-29"
+    },
+    {
       "slug": "2026-06-29-codex-rust-v0-142-4",
       "zh": true,
       "en": false,
@@ -34,6 +155,61 @@
       "publishedAt": "2026-06-29"
     },
     {
+      "slug": "2026-06-29-openclaw-concepts-agent-loop",
+      "zh": true,
+      "en": true,
+      "title": "Agent loop · OpenClaw — 理解OpenClaw agent循环的完整生命周期与可插拔钩子系统",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-openclaw-concepts-agent-runtimes",
+      "zh": true,
+      "en": true,
+      "title": "Agent runtimes · OpenClaw — 一文讲清OpenClaw中agent runtime与provider、mode",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-openclaw-concepts-agent-workspace",
+      "zh": true,
+      "en": true,
+      "title": "Agent workspace · OpenClaw — Agent 工作区是记忆中枢，文件即指令，结构决定行为。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-openclaw-concepts-agent",
+      "zh": true,
+      "en": true,
+      "title": "Agent runtime · OpenClaw — OpenClaw 的 Agent 运行时契约：工作区、引导文件与内置工具如何协同",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-openclaw-concepts-architecture",
+      "zh": true,
+      "en": true,
+      "title": "Gateway architecture · OpenClaw — 一个网关管理所有消息面，客户端与节点分离，协议严格类型化。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-06-29"
+    },
+    {
       "slug": "2026-06-29-trending-codebendkit-codeseek",
       "zh": true,
       "en": false,
@@ -41,6 +217,17 @@
       "kind": "trending",
       "author": null,
       "source": "CodeBendKit/codeseek",
+      "tool": null,
+      "publishedAt": "2026-06-29"
+    },
+    {
+      "slug": "2026-06-29-trending-gykim80-perfectpixel-studio",
+      "zh": true,
+      "en": false,
+      "title": "perfectpixel-studio — AI驱动的动画精灵工作室，文本生成角色精灵表",
+      "kind": "trending",
+      "author": null,
+      "source": "gykim80/perfectpixel-studio",
       "tool": null,
       "publishedAt": "2026-06-29"
     },
@@ -118,6 +305,17 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-27"
+    },
+    {
+      "slug": "2026-06-27-blog-raschka-using-local-coding-agents",
+      "zh": true,
+      "en": true,
+      "title": "Using Local Coding Agents — Sebastian Raschka 手把手教你搭建本地编程智能体，用开源模型替代",
+      "kind": "blogger",
+      "author": "Sebastian Raschka",
+      "source": "Sebastian Raschka",
       "tool": null,
       "publishedAt": "2026-06-27"
     },
@@ -273,6 +471,17 @@
       "author": null,
       "source": "StarTrail-org/PixelRAG",
       "tool": null,
+      "publishedAt": "2026-06-26"
+    },
+    {
+      "slug": "2026-06-26-zeroclaw-0-8-2",
+      "zh": true,
+      "en": false,
+      "title": "zeroclaw v0.8.2 — A2A agent discovery + 更安全的入站策略，agent 互操作",
+      "kind": "changelog",
+      "author": null,
+      "source": "zeroclaw-labs/zeroclaw",
+      "tool": "zeroclaw",
       "publishedAt": "2026-06-26"
     },
     {
@@ -529,6 +738,17 @@
       "publishedAt": "2026-06-24"
     },
     {
+      "slug": "2026-06-24-openclaw-2026-6-10",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.6.10 — 自动快速模式与多通道会话可靠性提升",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-06-24"
+    },
+    {
       "slug": "2026-06-24-opencode-1-17-10",
       "zh": true,
       "en": false,
@@ -659,226 +879,6 @@
       "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-06-23"
-    },
-    {
-      "slug": "2026-06-23-blog-simonwillison-opfs-pyodide-test-harness",
-      "zh": true,
-      "en": true,
-      "title": "OPFS + Pyodide test harness — 用OPFS+Pyodide在浏览器中持久化编辑SQLite文件。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-23"
-    },
-    {
-      "slug": "2026-06-23-claude-code-2-1-187",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.187 — 沙箱凭据隔离、结构化输出修复、远程会话加速",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-23"
-    },
-    {
-      "slug": "2026-06-22-blog-hf-blog-pp-ocrv6-on-hugging-face-50-language-ocr",
-      "zh": true,
-      "en": true,
-      "title": "PP-OCRv6 on Hugging Face: 50-Language OCR from 1.5M to — PP",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-22"
-    },
-    {
-      "slug": "2026-06-22-blog-hf-blog-we-got-local-models-to-triage-the-openclaw",
-      "zh": true,
-      "en": true,
-      "title": "We got local models to triage the OpenClaw repo for — 用本地模型自动化开源仓库分类，零成本提升维护效率。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-22"
-    },
-    {
-      "slug": "2026-06-22-blog-interconnects-glm-5-2-is-the-step-change-for",
-      "zh": true,
-      "en": true,
-      "title": "GLM-5.2 is the step change for open agents — GLM",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-06-22"
-    },
-    {
-      "slug": "2026-06-22-blog-latentspace-red-teaming-after-mythos-zico-kolter-matt-fredrikson",
-      "zh": true,
-      "en": true,
-      "title": "Red-Teaming after Mythos — Zico Kolter & Matt — AI安全不是传统网络安全，代理引入全新漏洞类，下一次重大事故是灰犀牛。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-22"
-    },
-    {
-      "slug": "2026-06-22-blog-openai-news-codex-maxxing-for-long-running-work",
-      "zh": true,
-      "en": true,
-      "title": "Codex-maxxing for long-running work — 用Codex管理长期项目，保持上下文连贯性。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-22"
-    },
-    {
-      "slug": "2026-06-22-blog-openai-news-daybreak-tools-for-securing-every-organization-in-the",
-      "zh": true,
-      "en": true,
-      "title": "Daybreak: Tools for securing every organization in the — OpenAI发布Daybreak工具集，用AI规模化发现、验证和修复安全漏洞。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-22"
-    },
-    {
-      "slug": "2026-06-22-blog-openai-news-patch-the-planet-a-daybreak-initiative-to-support",
-      "zh": true,
-      "en": true,
-      "title": "Patch the Planet: a Daybreak initiative to support open — OpenAI用AI+专家审核帮开源维护者找漏洞并修复。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-22"
-    },
-    {
-      "slug": "2026-06-22-blog-simonwillison-porting-the-moebius-0-2b-image-inpainting-model",
-      "zh": true,
-      "en": true,
-      "title": "Porting the Moebius 0.2B image inpainting model to run — 用Claude Code将0.2B图像修复模型移植到浏览器，全程无代码编写。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-22"
-    },
-    {
-      "slug": "2026-06-22-blog-simonwillison-prompt-injection-as-role-confusion",
-      "zh": true,
-      "en": true,
-      "title": "Prompt Injection as Role Confusion — LLM无法区分角色标签与用户输入，风格比内容更易引发越狱。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-22"
-    },
-    {
-      "slug": "2026-06-22-claude-code-2-1-186",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.186 — MCP CLI登录、!命令自动响应、子代理权限改进",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-22"
-    },
-    {
-      "slug": "2026-06-22-codex-rust-v0-142-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.142.0 — Codex 新增 token 预算控制、多 agent 委托模式、索引搜索和时间",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-06-22"
-    },
-    {
-      "slug": "2026-06-22-trending-bjarneo-ku",
-      "zh": true,
-      "en": false,
-      "title": "ku — Go 语言开发的快速键盘驱动 Kubernetes TUI 工具",
-      "kind": "trending",
-      "author": null,
-      "source": "bjarneo/ku",
-      "tool": null,
-      "publishedAt": "2026-06-22"
-    },
-    {
-      "slug": "2026-06-21-blog-eugeneyan-patterns-for-building-cybersecurity-evals",
-      "zh": true,
-      "en": true,
-      "title": "Patterns for Building Cybersecurity Evals — 如何系统构建网络安全评估，确保AI agent安全可靠。",
-      "kind": "blogger",
-      "author": "Eugene Yan",
-      "source": "Eugene Yan",
-      "tool": null,
-      "publishedAt": "2026-06-21"
-    },
-    {
-      "slug": "2026-06-21-blog-latentspace-exclusive-250-off-ai-engineer-tix-til-monday",
-      "zh": true,
-      "en": true,
-      "title": "[Exclusive] $250 off AI Engineer tix til Monday — Latent Space 为付费订阅者提供 AI Engineer 大会门票独家",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-21"
-    },
-    {
-      "slug": "2026-06-21-blog-openai-news-samsung-electronics-brings-chatgpt-and-codex-to-employees",
-      "zh": true,
-      "en": true,
-      "title": "Samsung Electronics brings ChatGPT and Codex to — 三星全球部署 ChatGPT 和 Codex，展示企业级 AI 规模化应用案例。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-21"
-    },
-    {
-      "slug": "2026-06-21-blog-simonwillison-sqlite-utils-4-0rc1-adds-migrations-and-nested",
-      "zh": true,
-      "en": true,
-      "title": "sqlite-utils 4.0rc1 adds migrations and nested — SQLite",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-21"
-    },
-    {
-      "slug": "2026-06-21-blog-simonwillison-sqlite-utils-4-0rc1",
-      "zh": true,
-      "en": true,
-      "title": "sqlite-utils 4.0rc1 — Simon Willison 发布 sqlite",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-21"
-    },
-    {
-      "slug": "2026-06-21-blog-simonwillison-temporary-cloudflare-accounts-for-ai-agents",
-      "zh": true,
-      "en": true,
-      "title": "Temporary Cloudflare Accounts for AI agents — Cloudflare 推出临时账户功能，让 AI 代理无需注册即可部署 Work",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-21"
     }
   ]
 }
