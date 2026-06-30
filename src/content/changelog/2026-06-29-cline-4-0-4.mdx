@@ -1,0 +1,23 @@
+---
+slug: 2026-06-29-cline-4-0-4
+title: "cline v4.0.4 — ClinePass 功能全面开放，无需功能开关"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.0.4
+publishedAt: 2026-06-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "ClinePass 功能全面开放，无需功能开关"
+broadcast: "Cline 的最新版本全面开放了 ClinePass 功能，不再需要手动开启开关，所有用户都能直接使用。这个功能入口现在遍布在引导页面、设置、欢迎横幅和额度提示里。对国内开发者来说，这意味着以后做 agent 开发时，接入付费功能会简单很多，不用再写一堆条件判断了。"
+insight: "ClinePass 功能已全面开放，国内用户无需再通过功能开关启用，直接使用 newapi.lurus.cn 代理即可正常接入。现有用户无需升级或修改 prompt/hook 配置，因为功能标志已移除，所有入口（包括 onboarding、设置、欢迎横幅及额度限制提示）均已默认可用。对于使用 agent harness 的开发者，接入流程更简洁，无需条件判断。"
+tags: [clinepass, feature-flag, ui]
+---
+
+- ClinePass 功能标志完全移除，所有用户均可使用。
+- 入口覆盖 onboarding、设置、欢迎横幅及额度限制提示。
+- 对 agent harness 设计：简化了付费功能的接入流程，无需条件判断。
+
+---
+
+> 原文 release：[cline/cline v4.0.4](https://github.com/cline/cline/releases/tag/v4.0.4)

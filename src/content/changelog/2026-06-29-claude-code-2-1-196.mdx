@@ -1,0 +1,28 @@
+---
+slug: 2026-06-29-claude-code-2-1-196
+title: "claude-code v2.1.196 — 安全、修复与性能提升，Claude Code 更稳定可靠"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.196
+publishedAt: 2026-06-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "安全、修复与性能提升，Claude Code 更稳定可靠"
+broadcast: "Claude Code 最近更新了，主要提升了安全性和稳定性。现在管理员可以为团队统一设置默认模型，agent 开发更规范。安全方面，MCP 服务器需要手动批准才能运行，防止恶意代码。后台任务在重启后也能继续，流式空闲看门狗默认开启，超时自动恢复。这些改进让 agent 开发更可靠，值得关注。"
+insight: "本次更新主要聚焦安全与稳定性，对国内用户通过 newapi.lurus.cn 代理使用无直接影响。现有用户值得升级，尤其是重视安全与后台任务可靠性的场景。升级后需注意，MCP 服务器操作需显式批准，若之前依赖自动启动的 hook 或 prompt 配置，需检查是否涉及 MCP 调用并调整。流式空闲看门狗默认开启，可能影响长任务，建议根据实际需求在配置中调整超时时间。"
+tags: [security, reliability, bug-fix, performance]
+---
+
+- 组织默认模型支持：管理员可在控制台设置，未选择时显示为“Org default”。
+  - 含义：agent 可统一遵循组织模型策略，减少配置分散。
+- 安全改进：`claude mcp list`/`get` 不再自动启动仓库自批准的 MCP 服务器，未信任工作区显示“Pending approval”。
+  - 含义：agent 需显式批准 MCP 服务器，防止恶意代码自动执行。
+- 后台会话可靠性提升：长时间运行的命令在进程重启后仍能存活，Windows 下后台 shell 被移交而非终止。
+  - 含义：agent 后台任务更健壮，减少因进程重启导致的工作丢失。
+- 流式空闲看门狗默认开启：5 分钟无事件则中止并重试。
+  - 含义：agent 响应超时自动恢复，提升长任务稳定性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.196](https://github.com/anthropics/claude-code/releases/tag/v2.1.196)
