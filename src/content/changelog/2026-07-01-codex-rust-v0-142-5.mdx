@@ -1,0 +1,23 @@
+---
+slug: 2026-07-01-codex-rust-v0-142-5
+title: "codex rust-v0.142.5 — 修复WebSocket请求体泄露到日志的bug"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.142.5
+publishedAt: 2026-07-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复WebSocket请求体泄露到日志的bug"
+broadcast: "OpenAI的Codex工具最近更新了一个版本，修复了一个安全漏洞：之前WebSocket请求的完整内容会被写入日志，现在这个问题解决了。对于开发Agent的团队来说，这个修复提醒我们，在设计通信模块时，一定要确保敏感数据不会被日志系统意外记录，避免信息泄露。"
+insight: "如果你正在使用 codex rust 的 agent harness，建议立即升级到 0.142.5，因为修复了 WebSocket 请求体泄露到日志的安全 bug。国内用户通过 newapi.lurus.cn 代理不受影响，但需确认代理是否透传了 WebSocket 请求。现有的 hook 配置无需改动，但建议检查日志输出，确保敏感数据不再被记录。"
+tags: [bug-fix, security, websocket, logging]
+---
+
+- 修复了完整Responses WebSocket请求负载被写入跟踪日志的问题。
+- 这意味着敏感数据不再意外记录，提升了安全性。
+- 对于agent harness设计，需确保WebSocket通信中的请求体不被日志系统捕获，避免信息泄露。
+
+---
+
+> 原文 release：[openai/codex rust-v0.142.5](https://github.com/openai/codex/releases/tag/rust-v0.142.5)

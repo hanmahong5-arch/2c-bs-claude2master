@@ -1,0 +1,23 @@
+---
+slug: 2026-06-30-cline-4-0-5
+title: "cline v4.0.5 — Claude Sonnet 5 支持上线，覆盖主流 API 提供商"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.0.5
+publishedAt: 2026-06-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Sonnet 5 支持上线，覆盖主流 API 提供商"
+broadcast: "Claude Sonnet 5 模型正式上线了，现在你可以在 Anthropic、Bedrock 等七家主流提供商那里直接使用。这对国内开发者来说是个好消息，意味着 agent 开发时能更方便地接入新模型，同时模型选择器和推荐列表也会自动更新，省去了手动配置的麻烦。"
+insight: "对于现有用户，如果已使用 Claude Sonnet 4 或更早版本，值得升级到 v4.0.5 以获取 Sonnet 5 支持，尤其是当你在多个提供商间切换时。模型选择器和推荐列表已更新，无需手动修改 prompt 或 hook 配置。国内用户通过 newapi.lurus.cn 代理不受影响，因为 Sonnet 5 已覆盖主流 API 提供商，代理可正常转发请求。"
+tags: [claude-sonnet-5, model-support, provider-update]
+---
+
+- 新增 Claude Sonnet 5 模型支持，覆盖 Anthropic、Bedrock、Vertex 等 7 个提供商。
+- 模型选择器和推荐模型列表同步更新，用户可快速选用新模型。
+- 对 agent harness 设计意味着：需在模型配置层统一管理多提供商的新模型接入，并动态更新推荐列表。
+
+---
+
+> 原文 release：[cline/cline v4.0.5](https://github.com/cline/cline/releases/tag/v4.0.5)

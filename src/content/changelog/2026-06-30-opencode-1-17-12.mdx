@@ -1,0 +1,26 @@
+---
+slug: 2026-06-30-opencode-1-17-12
+title: "opencode v1.17.12 — MCP OAuth修复、自适应思考、YOLO模式、SDK事件流"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.12
+publishedAt: 2026-06-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP OAuth修复、自适应思考、YOLO模式、SDK事件流"
+broadcast: "这次更新修复了Claude Sonnet 5的自适应思考功能，让智能体能够动态调整推理深度，同时优先处理MCP工具返回的原始内容。新增的YOLO模式可以自动批准权限，实现无中断的自动化流程。SDK还加入了实时事件订阅和会话历史查询，让开发者能更精细地控制智能体的运行。"
+insight: "如果你在用 sst/opencode 且走 newapi.lurus.cn 代理，v1.17.12 值得升。自适应思考让 agent 动态调推理深度，MCP 内容优先于结构化输出，OAuth 后能重连 MCP 服务器，这些改动对国内用户无影响。YOLO 模式自动批权限、桌面端显示令牌与成本，适合自动化场景。SDK 事件流和分页历史让精细控制更顺手。现有 hook 不用改，但建议测试自适应思考是否兼容你的 prompt。"
+tags: [mcp, oauth, sdk, bugfix]
+---
+
+- 修复：Claude Sonnet 5启用自适应思考；MCP内容优先于结构化输出；OAuth后重连MCP服务器（即使被禁用）。
+  - 含义：agent需动态调整推理深度，并优先处理MCP工具返回的原始内容。
+- 新增：TUI的YOLO模式自动批准权限；桌面端自动补全MCP资源、显示令牌与成本总计。
+  - 含义：支持无中断自动化流程，并暴露资源与成本信息供agent决策。
+- 新增：SDK实时事件订阅流、活跃会话访问、分页持久会话历史、权限请求端点。
+  - 含义：agent可订阅事件、查询历史、管理权限，实现更精细的运行时控制。
+
+---
+
+> 原文 release：[sst/opencode v1.17.12](https://github.com/anomalyco/opencode/releases/tag/v1.17.12)

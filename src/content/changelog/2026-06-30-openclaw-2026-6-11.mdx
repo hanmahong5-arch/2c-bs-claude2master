@@ -1,0 +1,26 @@
+---
+slug: 2026-06-30-openclaw-2026-6-11
+title: "openclaw v2026.6.11 — OpenClaw 2026.6.11 修复了数十个渠道交付、模型恢复和会话连续性"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.6.11
+publishedAt: 2026-06-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "OpenClaw 2026.6.11 修复了数十个渠道交付、模型恢复和会话连续性 bug，提升可靠性。"
+broadcast: "OpenClaw 最新版本修复了三十多个渠道的消息错发和重连问题，让回复能准确到达目标对话。同时改进了多个模型的失败处理，减少无声中断。还解决了会话压缩后上下文丢失的毛病，长期对话更连贯。对国内开发者来说，这些修复提示我们：多通道路由、模型回退和会话状态管理，是构建可靠 agent 的关键。"
+insight: "如果你正在用 OpenClaw 做多通道交付，v2026.6.11 值得升级，它修复了 Telegram、Discord 等 30+ 渠道的消息错发和重连丢失，以及模型 fallback 无声失败和会话压缩后上下文丢失。现有 hook 配置无需改动，但建议检查模型 fallback 链和会话超时设置。国内用户通过 newapi.lurus.cn 代理不受影响。"
+tags: [channel-delivery, model-recovery, session-continuity, reliability]
+---
+
+- 修复了 Telegram、Discord、WhatsApp 等 30+ 渠道的消息错发、卡顿、重连丢失问题，确保回复准确到达目标对话。
+  - 对 agent harness 设计意味着：多通道消息路由和重试逻辑需要更健壮的会话绑定和超时处理。
+- 改进了 OpenAI、OpenRouter、Gemini 等模型的设置失败、流式中断和 fallback 行为，减少模型不可用时的无声失败。
+  - 对 agent harness 设计意味着：模型选择、fallback 链和流式状态管理需要更清晰的错误传播和重试策略。
+- 修复了会话压缩后上下文丢失、记忆搜索超时、跨 agent 访问权限提示不清晰等问题，提升长期对话连续性。
+  - 对 agent harness 设计意味着：会话存储、压缩和记忆系统需要更严格的状态一致性和资源清理机制。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.6.11](https://github.com/openclaw/openclaw/releases/tag/v2026.6.11)

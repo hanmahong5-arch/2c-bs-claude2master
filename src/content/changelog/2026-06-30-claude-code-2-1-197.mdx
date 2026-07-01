@@ -1,0 +1,26 @@
+---
+slug: 2026-06-30-claude-code-2-1-197
+title: "claude-code v2.1.197 — Sonnet 5 成默认模型，1M 上下文窗口，促销定价"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.197
+publishedAt: 2026-06-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Sonnet 5 成默认模型，1M 上下文窗口，促销定价"
+broadcast: "Claude Code 刚刚更新，现在默认用上了 Sonnet 5 模型，能一口气处理百万 token 的上下文，相当于可以记住更长的对话或代码库。而且到八月底前，价格特别优惠，每百万 token 只要两到十美元。这对国内开发者来说，意味着可以用更低的成本开发更智能的 agent 应用，但要注意 token 消耗和延迟，升级前最好先测试一下现有集成。"
+insight: "如果你在用 Claude Code 且还没升级到 v2.1.197，建议尽快升级，因为 Sonnet 5 已成为默认模型，且促销定价到 8 月底，$2/$10 每百万 token 很划算。现有 hook 配置无需改动，但要注意 1M 上下文窗口可能增加 token 消耗和延迟。国内用户通过 newapi.lurus.cn 代理不受影响，正常升级即可。"
+tags: [model-update, pricing, context-window]
+---
+
+- Claude Sonnet 5 成为 Claude Code 默认模型，原生支持 1M token 上下文窗口。
+  - 设计含义：Agent 可处理更长对话历史或代码库，需注意 token 消耗与延迟。
+- 促销定价为 $2/$10 每百万 token，持续至 8 月 31 日。
+  - 设计含义：低成本窗口鼓励更频繁的上下文重用，但需监控预算。
+- 需更新至 v2.1.197 才能使用新模型。
+  - 设计含义：版本锁定确保兼容性，升级前需测试现有 harness 集成。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.197](https://github.com/anthropics/claude-code/releases/tag/v2.1.197)
