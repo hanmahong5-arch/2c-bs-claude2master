@@ -12,6 +12,7 @@ const NAV = [
   { href: "/chat", label: "Chat" },
   { href: "/tutorials", label: "教程" },
   { href: "/prompts", label: "Prompt 库" },
+  { href: "/tools", label: "工具" },
   { href: "/api-keys", label: "API key" },
   { href: "/subscribe", label: "订阅" },
 ];

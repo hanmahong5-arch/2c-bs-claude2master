@@ -4,12 +4,15 @@ import { TUTORIALS } from "@/lib/tutorials";
 import { SKILLS } from "@/lib/skills";
 import { getChangelog, getDigest, getHarness } from "@/lib/content";
 import { SEO_LANDINGS } from "@/lib/seo-landings";
+import { ERROR_KB } from "@/lib/error-kb";
 
 const BASE = "https://claude2master.com";
 const now = new Date();
 // prompts/skills 无 per-item 日期字段; 用固定基线(项目上线日)而非 now, 避免每次 build
 // 都给搜索引擎误报"今天刚改", 浪费抓取预算并降低对 lastModified 信号的信任。
 const CONTENT_SEED_DATE = new Date("2026-05-25");
+// 报错库首批收录日(同上, 固定基线防误报)
+const ERRORS_SEED_DATE = new Date("2026-06-30");
 
 const STATIC_ROUTES: {
   path: string;
@@ -28,6 +31,10 @@ const STATIC_ROUTES: {
   { path: "/zh", priority: 0.7, changeFreq: "weekly" },
   { path: "/subscribe", priority: 0.7, changeFreq: "monthly" },
   { path: "/rank", priority: 0.85, changeFreq: "monthly" },
+  { path: "/tools", priority: 0.85, changeFreq: "monthly" },
+  { path: "/tools/price", priority: 0.9, changeFreq: "weekly" },
+  { path: "/tools/tokens", priority: 0.85, changeFreq: "monthly" },
+  { path: "/errors", priority: 0.9, changeFreq: "weekly" },
   { path: "/about", priority: 0.6, changeFreq: "monthly" },
   { path: "/login", priority: 0.3, changeFreq: "yearly" },
   { path: "/signup", priority: 0.3, changeFreq: "yearly" },
@@ -84,6 +91,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: h.publishedAt ? new Date(h.publishedAt) : now,
       changeFrequency: "monthly" as const,
       priority: 0.7,
+    })),
+    ...ERROR_KB.map((e) => ({
+      url: `${BASE}/errors/${e.slug}`,
+      lastModified: ERRORS_SEED_DATE,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
     })),
     ...SEO_LANDINGS.map((l) => ({
       url: `${BASE}/zh/${l.slug}`,

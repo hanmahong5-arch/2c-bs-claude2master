@@ -36,6 +36,10 @@ export const OUTBOUND_CAMPAIGN = {
   about: "about",
   /** skills 详情 → forge */
   skillsPage: "skills-page",
+  /** 价格对比工具页 → newapi */
+  toolsPrice: "tools-price",
+  /** 报错速查库 → newapi */
+  errorsKb: "errors-kb",
 } as const;
 
 export type OutboundCampaign =
