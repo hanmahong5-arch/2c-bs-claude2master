@@ -32,7 +32,7 @@ export interface ModelPrice {
 }
 
 /** 数据核实日期 — 更新 MODEL_PRICES 时必须同步更新 */
-export const PRICES_AS_OF = "2026-06-30";
+export const PRICES_AS_OF = "2026-07-02";
 
 /** USD→CNY 估算汇率,仅用于同表排序与直观对比,页面须标注"估算" */
 export const USD_CNY_RATE = 7.2;
@@ -232,6 +232,45 @@ export const MODEL_PRICES: ModelPrice[] = [
     cnDirect: true,
     sourceUrl: "https://platform.kimi.com/docs/pricing/chat-k26",
     note: "缓存命中输入¥1.10/M；支持文本/图片/视频输入及思考/非思考模式",
+  },
+  {
+    id: "qwen3.7-max",
+    name: "Qwen3.7-Max",
+    vendor: "阿里云",
+    inputPerM: 12,
+    outputPerM: 36,
+    currency: "CNY",
+    context: "1M",
+    tier: "旗舰",
+    cnDirect: true,
+    sourceUrl: "https://help.aliyun.com/zh/model-studio/model-pricing",
+    note: "百炼平台调用；部分模型阶梯计价、Batch对折，开通送免费额度，以官方页为准",
+  },
+  {
+    id: "glm-5.2",
+    name: "GLM-5.2",
+    vendor: "智谱",
+    inputPerM: 1.4,
+    outputPerM: 4.4,
+    currency: "USD",
+    context: "1M",
+    tier: "旗舰",
+    cnDirect: true,
+    sourceUrl: "https://docs.z.ai/guides/overview/pricing",
+    note: "价格取Z.AI国际站美元价(缓存输入$0.26/M)；大陆站bigmodel.cn人民币计价以官方页为准",
+  },
+  {
+    id: "doubao-seed-2.1-pro",
+    name: "豆包 Seed 2.1 Pro",
+    vendor: "字节·火山引擎",
+    inputPerM: 6,
+    outputPerM: 30,
+    currency: "CNY",
+    context: "256K",
+    tier: "旗舰",
+    cnDirect: true,
+    sourceUrl: "https://www.volcengine.com/docs/82379/1544106",
+    note: "缓存命中输入¥1.2/M；同系Turbo版价格约为Pro一半(官方未列逐项单价故未单列)",
   },
   {
     id: "gpt-5.4-mini",
