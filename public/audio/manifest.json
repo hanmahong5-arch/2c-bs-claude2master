@@ -1,6 +1,39 @@
 {
   "items": [
     {
+      "slug": "2026-07-02-goose-1-40-0",
+      "zh": true,
+      "en": false,
+      "title": "goose v1.40.0 — Goose v1.40 新增多语言、新命令、更多 AI 提供商和钩子系统",
+      "kind": "changelog",
+      "author": null,
+      "source": "block/goose",
+      "tool": "goose",
+      "publishedAt": "2026-07-02"
+    },
+    {
+      "slug": "2026-07-02-trending-deepseek-ai-deepspec",
+      "zh": true,
+      "en": false,
+      "title": "DeepSpec — DeepSeek 开源全栈投机解码训练评估框架",
+      "kind": "trending",
+      "author": null,
+      "source": "deepseek-ai/DeepSpec",
+      "tool": null,
+      "publishedAt": "2026-07-02"
+    },
+    {
+      "slug": "2026-07-01-blog-hf-blog-hugging-face-and-cerebras-bring-gemma-4-to",
+      "zh": true,
+      "en": true,
+      "title": "Hugging Face and Cerebras bring Gemma 4 to real-time — Hugging Face与Cerebras合作，将Gemma 4模型用于实时语音",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-07-01"
+    },
+    {
       "slug": "2026-07-01-blog-latentspace-aiewf-daily-dispatch-loops-software-factories-forward-deployed",
       "zh": true,
       "en": true,
@@ -23,6 +56,17 @@
       "publishedAt": "2026-07-01"
     },
     {
+      "slug": "2026-07-01-blog-latentspace-autoresearch-the-feedback-loop-behind-self-improving-agents",
+      "zh": true,
+      "en": true,
+      "title": "Autoresearch: The feedback loop behind self-improving — 本文介绍 Autoresearch 概念，即通过外循环让代理自我改进，并提出了代",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-01"
+    },
+    {
       "slug": "2026-07-01-blog-latentspace-forward-deployed-engineers-and-the-future-of-software",
       "zh": true,
       "en": true,
@@ -31,6 +75,50 @@
       "author": "Latent Space",
       "source": "Latent Space",
       "tool": null,
+      "publishedAt": "2026-07-01"
+    },
+    {
+      "slug": "2026-07-01-blog-latentspace-how-cursor-deploys-ai-inside-the-enterprise",
+      "zh": true,
+      "en": true,
+      "title": "How Cursor deploys AI inside the enterprise — Cursor 的 FDE 团队如何帮企业从个人 AI 工具迈向全流程 AI 软件",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-01"
+    },
+    {
+      "slug": "2026-07-01-blog-latentspace-the-coolest-diffusion-research-isn-t-in-llms",
+      "zh": true,
+      "en": true,
+      "title": "🔬 The Coolest Diffusion Research Isn't in LLMs — Evan — Genesis Molecular AI 用扩散模型攻克小分子药物发现，精度超越",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-01"
+    },
+    {
+      "slug": "2026-07-01-blog-latentspace-warp-ceo-zach-lloyd-on-why-software-factories",
+      "zh": true,
+      "en": true,
+      "title": "Warp CEO Zach Lloyd on why software factories are the — Warp CEO 谈从终端到软件工厂的转型，AI 代理如何自动化开发循环。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-01"
+    },
+    {
+      "slug": "2026-07-01-claude-code-2-1-198",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.198 — Claude in Chrome 正式可用，Agent 通知、数据可视化技能上线",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
       "publishedAt": "2026-07-01"
     },
     {
@@ -43,6 +131,72 @@
       "source": "openai/codex",
       "tool": "codex",
       "publishedAt": "2026-07-01"
+    },
+    {
+      "slug": "2026-07-01-hermes-agent-2026-7-1",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v2026.7.1 — Hermes Agent 100% 清除 P0/P1 问题，MoA 成为一等公民",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
+      "publishedAt": "2026-07-01"
+    },
+    {
+      "slug": "2026-07-01-opencode-1-17-13",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.17.13 — 修复推理模式与Copilot ID重放，桌面UI多项改进",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-07-01"
+    },
+    {
+      "slug": "2026-06-30-blog-deepmind-start-building-with-nano-banana-2-lite-and",
+      "zh": true,
+      "en": true,
+      "title": "Start building with Nano Banana 2 Lite and Gemini Omni — Google DeepMind 发布 Nano Banana 2 Lite 和 ",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-06-30"
+    },
+    {
+      "slug": "2026-06-30-blog-hf-blog-featuring-every-eval-ever-results-on-hugging-face",
+      "zh": true,
+      "en": true,
+      "title": "Featuring Every Eval Ever Results on Hugging Face Model — Hugging Face 将社区评估结果集成到模型页面，提升模型透明度。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-30"
+    },
+    {
+      "slug": "2026-06-30-blog-hf-blog-scarfbench-benchmarking-ai-agents-for-enterprise-java-framework",
+      "zh": true,
+      "en": true,
+      "title": "ScarfBench: Benchmarking AI Agents for Enterprise Java — IBM 推出 ScarfBench，评估 AI 代理迁移企业 Java 框架的能",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-30"
+    },
+    {
+      "slug": "2026-06-30-blog-hf-blog-why-specialization-is-inevitable",
+      "zh": true,
+      "en": true,
+      "title": "Why Specialization Is Inevitable — 通用AI模型不够用，垂直领域定制才是未来。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-06-30"
     },
     {
       "slug": "2026-06-30-blog-latentspace-ahmad-osman-on-why-local-ai-is-catching",
@@ -63,6 +217,17 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-06-30"
+    },
+    {
+      "slug": "2026-06-30-blog-oneusefulthing-the-twilight-of-the-chatbots",
+      "zh": true,
+      "en": true,
+      "title": "The twilight of the chatbots — AI 能力正超指数增长，从聊天机器人转向自主智能体，工作方式将彻底改变。",
+      "kind": "blogger",
+      "author": "Ethan Mollick",
+      "source": "Ethan Mollick",
       "tool": null,
       "publishedAt": "2026-06-30"
     },
@@ -137,6 +302,17 @@
       "zh": true,
       "en": true,
       "title": "Quoting Anthropic — Anthropic 获准恢复 Claude Fable 5 和 Mythos 5",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-06-30"
+    },
+    {
+      "slug": "2026-06-30-blog-simonwillison-shot-scraper-1-10",
+      "zh": true,
+      "en": true,
+      "title": "shot-scraper 1.10 — Simon Willison 发布 shot",
       "kind": "blogger",
       "author": "Simon Willison",
       "source": "Simon Willison",
@@ -703,182 +879,6 @@
       "source": "Hugging Face",
       "tool": null,
       "publishedAt": "2026-06-25"
-    },
-    {
-      "slug": "2026-06-25-blog-latentspace-ainews-it-s-meta-harness-summer",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] It's Meta-Harness Summer — AI 基础设施正从模型竞赛转向“元马具”架构之争，本文梳理了芯片、代理 UX 与",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-25"
-    },
-    {
-      "slug": "2026-06-25-blog-openai-news-how-agents-are-transforming-work",
-      "zh": true,
-      "en": true,
-      "title": "How agents are transforming work — OpenAI研究揭示AI代理如何延长任务时长、提升多角色生产力。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-25"
-    },
-    {
-      "slug": "2026-06-25-blog-simonwillison-ai-and-liability",
-      "zh": true,
-      "en": true,
-      "title": "AI and Liability — AI不应成为企业逃避责任的借口，法律应视AI为部署者的代理人。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-25"
-    },
-    {
-      "slug": "2026-06-25-blog-simonwillison-datasette-export-database-0-3a2",
-      "zh": true,
-      "en": true,
-      "title": "datasette-export-database 0.3a2 — Simon Willison 发布 Datasette 插件小更新，修复版本兼容",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-25"
-    },
-    {
-      "slug": "2026-06-25-claude-code-2-1-193",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.193 — Shell命令全量分类、OpenTelemetry响应日志、后台shell自动回",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-25"
-    },
-    {
-      "slug": "2026-06-25-codex-rust-v0-142-1",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.142.1 — Codex 新增 Windows 系统代理支持，含 PAC/WPAD。",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-06-25"
-    },
-    {
-      "slug": "2026-06-25-codex-rust-v0-142-2",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.142.2 — MCP工具搜索、macOS代理、暗色Logo、安全缓冲UI",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-06-25"
-    },
-    {
-      "slug": "2026-06-25-gemini-cli-0-49-0",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.49.0 — Gemini CLI v0.49.0 新增 eval 命令、修复安全漏洞并优化工",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-06-25"
-    },
-    {
-      "slug": "2026-06-25-goose-1-39-0",
-      "zh": true,
-      "en": false,
-      "title": "goose v1.39.0 — Goose v1.39 全面转向 ACP 架构，新增 50+ 功能与大量修复",
-      "kind": "changelog",
-      "author": null,
-      "source": "block/goose",
-      "tool": "goose",
-      "publishedAt": "2026-06-25"
-    },
-    {
-      "slug": "2026-06-25-opencode-1-17-11",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.17.11 — 会话快照与回滚，支持撤销文件变更",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-06-25"
-    },
-    {
-      "slug": "2026-06-25-trending-overflowy-make-look-scanned",
-      "zh": true,
-      "en": false,
-      "title": "make-look-scanned — 让PDF看起来像扫描件的CLI工具",
-      "kind": "trending",
-      "author": null,
-      "source": "overflowy/make-look-scanned",
-      "tool": null,
-      "publishedAt": "2026-06-25"
-    },
-    {
-      "slug": "2026-06-24-blog-anthropic-news-introducing-claude-tag",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Claude Tag — Claude Tag 让团队在 Slack 中像协作者一样 @Claude，实现",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-06-24"
-    },
-    {
-      "slug": "2026-06-24-blog-deepmind-introducing-computer-use-in-gemini-3-5-flash",
-      "zh": true,
-      "en": true,
-      "title": "Introducing computer use in Gemini 3.5 Flash — Gemini 3.5 Flash 新增计算机使用能力，可操控桌面应用。",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-06-24"
-    },
-    {
-      "slug": "2026-06-24-blog-hf-blog-accelerating-transformers-fine-tuning-with-nvidia-nemo-automodel",
-      "zh": true,
-      "en": true,
-      "title": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo — NVIDIA NeMo AutoModel 如何加速 Transformer 微",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-24"
-    },
-    {
-      "slug": "2026-06-24-blog-hf-blog-introducing-the-ffasr-leaderboard-benchmarking-asr-in-the",
-      "zh": true,
-      "en": true,
-      "title": "Introducing the FFASR Leaderboard: Benchmarking ASR in — Hugging Face 发布 FFASR 排行榜，评估真实场景下的语音识别性能",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-24"
-    },
-    {
-      "slug": "2026-06-24-blog-latentspace-ainews-claude-tag-multiplayer-proactive-persistent-agents-in",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Claude Tag: Multiplayer, Proactive, Persistent — Anthropic 推出 Claude Tag，让 AI 像队友一样在 Slac",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-06-24"
     }
   ]
 }
