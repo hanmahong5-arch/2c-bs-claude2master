@@ -1,0 +1,23 @@
+---
+slug: 2026-07-01-blog-latentspace-autoresearch-the-feedback-loop-behind-self-improving-agents
+title: "Autoresearch: The feedback loop behind self-improving — 本文介绍 Autoresearch 概念，即通过外循环让代理自我改进，并提出了代"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/autoresearch-introspection
+publishedAt: 2026-07-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "本文介绍 Autoresearch 概念，即通过外循环让代理自我改进，并提出了代理配方等模式。"
+broadcast: "今天聊聊Autoresearch这个概念，它通过外循环让代理自我改进，核心是把反馈循环作为系统核心，而不是只盯着模型或工具。其中提出的代理配方，封装了评估、判断器等组件，让开发者能标准化地记录和复用代理的进化过程，大大降低从零构建的成本。这对国内开发者来说，意味着可以更高效地构建能持续自我优化的智能代理系统。"
+tags: [autoresearch, agent-loops, agent-recipes, self-improving-agents]
+---
+
+- **循环即产品**：从模型到工具链再到循环，关键在于设计反馈机制让代理承担更多工作而不产生垃圾输出。这意味着开发者需将反馈循环作为系统核心，而非仅关注模型或工具。
+- **代理配方**：一种可移植格式，封装评估、判断器、信号处理等组件，编码人类专业知识，使代理能迭代改进。这为开发者提供了一种标准化方式，记录和复用代理的进化过程，降低从零构建的成本。
+- **内外循环分离**：内循环处理用户交互，外循环研究并维护主系统。外循环需高效利用 token，避免盲目决策。这提示开发者应构建独立的监控与优化层，确保系统可持续改进。
+
+---
+
+> 原文：[Autoresearch: The feedback loop behind self-improving agents](https://www.latent.space/p/autoresearch-introspection) · 作者 Latent Space

@@ -1,0 +1,23 @@
+---
+slug: 2026-07-01-claude-code-2-1-198
+title: "claude-code v2.1.198 — Claude in Chrome 正式可用，Agent 通知、数据可视化技能上线"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.198
+publishedAt: 2026-07-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude in Chrome 正式可用，Agent 通知、数据可视化技能上线"
+broadcast: "Claude in Chrome 现在正式上线了，Chrome 扩展用户可以直接使用。这次更新给后台 agent 增加了通知钩子，能实现异步通知或状态轮询，还新增了数据可视化技能，可以集成图表和仪表盘设计指导。对国内开发者来说，这意味着 agent 开发在交互和展示能力上又进了一步。"
+insight: "对于国内开发者，如果你已经在使用 Claude in Chrome 扩展，这次更新值得升级，因为新增的 Notification 钩子和 /dataviz 技能能提升 agent 的交互体验和数据可视化能力。如果你通过 newapi.lurus.cn 代理访问，这些功能不受影响，代理仅转发请求，不涉及 hook 或技能配置。现有 prompt 无需修改，但建议在 agent harness 中集成 Notification 钩子以实现异步通知，并利用 /dataviz 技能优化图表输出。"
+tags: [chrome-extension, background-agents, notifications, dataviz]
+---
+
+- Claude in Chrome 现已正式可用，Chrome 扩展用户可直接使用。
+- 后台 agent 新增 `Notification` 钩子（`agent_needs_input` / `agent_completed`），agent harness 可据此实现异步通知或状态轮询。
+- 新增 `/dataviz` 技能，含可运行的色板校验器，agent harness 可集成图表与仪表盘设计指导。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.198](https://github.com/anthropics/claude-code/releases/tag/v2.1.198)

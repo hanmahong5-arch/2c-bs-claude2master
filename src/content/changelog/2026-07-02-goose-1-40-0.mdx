@@ -1,0 +1,23 @@
+---
+slug: 2026-07-02-goose-1-40-0
+title: "goose v1.40.0 — Goose v1.40 新增多语言、新命令、更多 AI 提供商和钩子系统"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.40.0
+publishedAt: 2026-07-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.40 新增多语言、新命令、更多 AI 提供商和钩子系统"
+broadcast: "Goose 工具的最新版本带来了多项实用更新。现在桌面应用支持法语、德语等八种语言，全球开发者都能更方便地使用。同时新增了斜杠命令，比如查看状态、切换模型，操作更高效。最值得关注的是钩子系统，它能让你在工具调用前拒绝或阻塞某些操作，对开发更可控的智能体很有帮助。"
+insight: "Goose v1.40 的钩子系统值得关注，它通过 PreToolUse 和 Stop 决策增强了 Agent 行为控制，如果你在用 Goose 做自动化任务，建议升级并调整 hook 配置来利用这一能力。新增多语言和 CLI 命令对国内用户影响不大，但通过 newapi.lurus.cn 代理使用不受影响，可以放心升级。"
+tags: [multi-language, cli-commands, hooks, ai-providers]
+---
+
+- 桌面应用新增法语、德语等 8 种语言支持，扩大全球用户覆盖。
+- 新增 `/status`、`/model`、`/goal` 等 CLI 斜杠命令，提升交互效率。
+- 引入钩子系统（hooks），支持 PreToolUse 拒绝和阻塞 Stop 决策，增强 Agent 行为控制。
+
+---
+
+> 原文 release：[block/goose v1.40.0](https://github.com/aaif-goose/goose/releases/tag/v1.40.0)

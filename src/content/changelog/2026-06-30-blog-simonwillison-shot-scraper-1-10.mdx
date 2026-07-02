@@ -1,0 +1,28 @@
+---
+slug: 2026-06-30-blog-simonwillison-shot-scraper-1-10
+title: "shot-scraper 1.10 — Simon Willison 发布 shot"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jun/30/shot-scraper/
+publishedAt: 2026-06-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 shot-scraper 1.10，新增视频故事板功能，让 AI 代理自动录制操作演示。"
+broadcast: "Simon Willison 发布了 shot-scraper 的新版本，新增视频故事板功能。现在，开发者只需写一个配置文件，就能让 AI 代理在浏览器里自动操作并录成视频。这对国内做自动化测试或文档演示的朋友来说，意味着可以更高效地生成可视化结果，甚至嵌入到代理工作流中，值得关注。"
+tags: [shot-scraper, browser-automation, video-recording, developer-tools]
+---
+
+- 新命令 `shot-scraper video storyboard.yml` 可通过 YAML 配置文件定义一系列浏览器操作步骤，自动录制为视频。
+  这意味着开发者可以编写脚本让 AI 代理在无头浏览器中执行任务并生成演示视频，极大简化了自动化测试和文档制作。
+
+- 视频录制支持多种输出格式和自定义帧率，并能与现有截图功能结合。
+  工具链的扩展让开发者能更灵活地捕获浏览器行为，为 CI/CD 流程中的可视化验证提供新手段。
+
+- 该功能设计为可被其他工具调用，适合嵌入到代理工作流中。
+  这暗示了 shot-scraper 正从截图工具演变为浏览器自动化录制组件，未来可能成为 AI 代理的标配输出模块。
+
+---
+
+> 原文：[shot-scraper 1.10](https://simonwillison.net/2026/Jun/30/shot-scraper/) · 作者 Simon Willison

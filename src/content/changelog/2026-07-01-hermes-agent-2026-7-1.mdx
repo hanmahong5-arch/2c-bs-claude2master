@@ -1,0 +1,23 @@
+---
+slug: 2026-07-01-hermes-agent-2026-7-1
+title: "hermes-agent v2026.7.1 — Hermes Agent 100% 清除 P0/P1 问题，MoA 成为一等公民"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.1
+publishedAt: 2026-07-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hermes Agent 100% 清除 P0/P1 问题，MoA 成为一等公民，代理可自我验证。"
+broadcast: "Hermes Agent 这次更新把七百多个最严重的问题全部清掉了，核心稳定性有了保障。更厉害的是，多模型协作成了原生功能，代理还能自己验证任务是不是真做完了，不再光靠模型说，而是看实际证据。这对国内开发者做 agent 来说，可靠性和协作能力都上了一个台阶。"
+insight: "如果你正在使用 Hermes Agent，建议立即升级到 v0.18.0：P0/P1 问题已全部清除，核心稳定性有保障；MoA 成为一等公民，无需额外配置即可启用多模型协作；自我验证机制让任务完成判断更可靠。国内用户通过 newapi.lurus.cn 代理不受影响，可以放心升级。"
+tags: [mixture-of-agents, verification, goal-contracts, clean-sweep]
+---
+
+- **P0/P1 问题全部关闭**：约 700 个最高优先级问题在 12 天内解决，repo 中零 P0/P1 遗留。对 agent harness 设计意味着：团队承诺持续保持零积压，确保核心稳定性。
+- **Mixture-of-Agents 成为一等模型**：MoA 预设作为可选模型出现在所有模型选择器中，并显示每个参考模型的推理过程，聚合答案实时流式输出。对 agent harness 设计意味着：多模型协作成为原生能力，无需额外配置。
+- **代理可自我验证工作完成**：`/goal` 引入完成合约，代理通过运行项目检查而非模型断言来判断任务完成，并记录验证证据。对 agent harness 设计意味着：任务完成判断从“模型认为”转向“证据证明”，提升可靠性。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.7.1](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.1)

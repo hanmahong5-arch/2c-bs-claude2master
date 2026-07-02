@@ -1,0 +1,26 @@
+---
+slug: 2026-07-01-opencode-1-17-13
+title: "opencode v1.17.13 — 修复推理模式与Copilot ID重放，桌面UI多项改进"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.13
+publishedAt: 2026-07-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复推理模式与Copilot ID重放，桌面UI多项改进"
+broadcast: "这次更新主要修复了两个关键问题：一是强制推理模式在自定义部署中可靠生效，这意味着开发者在调用推理模型时，设置不会因为兼容性问题而失效；二是停止重放旧的Copilot响应ID，避免后续请求失败。对国内开发者来说，这提醒我们在开发agent时，需要把推理模型和普通模型的设置分开管理，同时确保每个请求的ID唯一，防止状态污染。"
+insight: "本次更新主要修复了推理模式强制生效和Copilot ID重放问题，对国内开发者而言，如果使用newapi.lurus.cn代理且依赖OpenAI兼容推理模型，建议检查自定义部署中推理设置是否独立管理，避免因旧配置导致推理模式失效。现有用户值得升级，尤其是桌面端用户，因为问题提示可最小化恢复和会话页故障隔离能提升日常使用体验。Prompt和hook配置无需改动，但需注意请求ID的唯一性维护。"
+tags: [bug-fix, desktop, openai-compatible, ui-improvement]
+---
+
+- 强制OpenAI兼容推理模型的推理模式，确保自定义部署下设置可靠生效
+  - 含义：agent需明确区分推理模型与普通模型，推理设置应独立管理
+- 停止重放过时的GitHub Copilot响应ID，避免后续请求失败
+  - 含义：agent应维护请求ID的唯一性，避免状态污染
+- 桌面端：问题提示可最小化恢复，会话页故障仅影响当前标签
+  - 含义：agent的UI组件需支持独立状态管理，错误隔离到最小单元
+
+---
+
+> 原文 release：[sst/opencode v1.17.13](https://github.com/anomalyco/opencode/releases/tag/v1.17.13)
