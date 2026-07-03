@@ -23,7 +23,7 @@ export const TOOLS: ToolInfo[] = [
     key: "claude-code",
     label: "Claude Code",
     vendor: "Anthropic",
-    modelDefault: "Sonnet 4.6",
+    modelDefault: "Sonnet 5",
     pricePerMonth: "按 token (典型 $30-100)",
     cnReachability: "proxy-needed",
     openSource: false,
@@ -122,7 +122,7 @@ export interface ScoreCell {
   note: string;
 }
 
-// v0 评分基于:Aider polyglot leaderboard (Claude Sonnet 4.6 ≈ 87% / GPT-5 ≈ 85% / DeepSeek V3 ≈ 64%)
+// v0 评分基于:Aider polyglot leaderboard (上代 Claude Sonnet ≈ 87% / GPT-5 ≈ 85% / DeepSeek V3 ≈ 64%)
 // + Cursor CursorBench (Composer 2 = 61.3, Composer 1.5 = 44.2) + 编辑部主观 + 中文场景调整
 // 中文场景下 Claude / Cursor 都比英文降 5-10%, 国内 LLM (DeepSeek/Qwen) 在某些任务反超
 //
@@ -132,7 +132,7 @@ export interface ScoreCell {
 // **重要**:这些是 c2m 编辑部预期/参考分,**不是**实测榜单。每个 cell 备注说明依据。
 export const SCORES: ScoreCell[] = [
   // react-todo-undo (easy)
-  { tool: "claude-code", task: "react-todo-undo", score: 5, note: "Sonnet 4.6 一次过, useReducer 设计干净" },
+  { tool: "claude-code", task: "react-todo-undo", score: 5, note: "Sonnet 5 一次过, useReducer 设计干净" },
   { tool: "cursor", task: "react-todo-undo", score: 5, note: "Composer 2 一次过, Tab 补全加分" },
   { tool: "cline", task: "react-todo-undo", score: 4, note: "依赖配 Claude/DeepSeek, 配 Claude 时与 #1 持平" },
   { tool: "aider", task: "react-todo-undo", score: 4, note: "CLI 模式对前端任务 UX 一般, 但生成质量 OK" },

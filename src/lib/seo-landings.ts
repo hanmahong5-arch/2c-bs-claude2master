@@ -161,21 +161,21 @@ c2m 的 Changelog 栏目每天同步 anthropics/claude-code 最新 release 中�
   },
   {
     slug: "claude-4-7-api-cn",
-    title: "Claude 4.7 国内 API 怎么调 (2026)",
+    title: "Claude 国内 API 怎么调 (2026)",
     desc:
-      "Claude 4.7 国内能用吗、token 价格多少、newapi/AnyClaude/其他中转怎么选 — 一篇看完。",
+      "Claude 国内能用吗、各档模型 token 价格多少、newapi 等中转怎么选 — 一篇看完。",
     hook:
-      "Claude 4.7 Sonnet/Opus/Haiku 国内 API 实测：价格、延迟、限流、合规 — 你关心的都在这。",
+      "Claude Sonnet / Opus / Haiku / Fable 国内 API：价格、延迟、限流、合规 — 你关心的都在这。",
     keywords: [
-      "Claude 4.7 API",
-      "Claude Opus 4.7",
-      "Claude Sonnet 4.7",
       "Claude API 国内",
       "Claude API 中转",
+      "Claude Opus 4.8",
+      "Claude Sonnet 5",
+      "Claude API 价格",
     ],
-    updatedAt: "2026-05-26",
+    updatedAt: "2026-07-03",
     toc: [
-      { id: "models", label: "Claude 4.7 三档模型" },
+      { id: "models", label: "Claude 模型分档" },
       { id: "pricing", label: "价格对比 (官方 vs 中转)" },
       { id: "providers", label: "国内可用中转盘点" },
       { id: "code-sample", label: "调用示例 (3 语言)" },
@@ -184,25 +184,29 @@ c2m 的 Changelog 栏目每天同步 anthropics/claude-code 最新 release 中�
     sections: [
       {
         id: "models",
-        title: "Claude 4.7 三档模型",
-        body: `Anthropic Claude 4.7 系列在 2026 初发布，分三档：
+        title: "Claude 模型分档",
+        body: `Claude 当前按"档位"分四级，认准档位、不用背版本号（型号会换代，实时单价以 [价格对比表](/tools/price) 为准）：
 
-- **Opus 4.7** (\`claude-opus-4-7\`)：旗舰，支持 1M context (要 beta header)，复杂规划 / 长文本 / 多步推理首选。
-- **Sonnet 4.6** (\`claude-sonnet-4-6\`)：性价比之王，日常 80% 任务用它够用，速度比 Opus 快 2-3 倍。
-- **Haiku 4.5** (\`claude-haiku-4-5-20251001\`)：最快档，分类 / 抽取 / 翻译类轻任务专用，token 单价是 Opus 的 1/10。
+- **最强旗舰 · Fable 5** (\`claude-fable-5\`)：最难的推理 / 长链任务、不计成本要最优解时用。
+- **旗舰 · Opus 4.8** (\`claude-opus-4-8\`)：复杂规划 / 长文本 / 多步推理首选，支持 1M context。
+- **均衡 · Sonnet 5** (\`claude-sonnet-5\`)：性价比之选，日常 80% 任务够用，默认就它。
+- **轻量 · Haiku 4.5** (\`claude-haiku-4-5-20251001\`)：最快档，分类 / 抽取 / 翻译类轻任务专用，单价最低。
 
-**怎么选**：复杂 agent / coding → Opus；常规对话 / RAG → Sonnet；批量结构化任务 → Haiku。Claude Code CLI 默认主跑 Sonnet，可显式切到 Opus。`,
+**怎么选**：批量结构化 → 轻量；常规对话 / coding → 均衡；复杂 agent / 难 debug → 旗舰；要极致效果不在乎成本 → 最强旗舰。`,
       },
       {
         id: "pricing",
         title: "价格对比 (官方 vs 中转)",
-        body: `**官方价格** (2026-05，每百万 token)：
+        body: `**官方价格** (核实于 2026-07，每百万 token；随时以 [价格对比表](/tools/price) 为准)：
 
-| 模型 | 输入 | 输出 | Cache 写 | Cache 读 |
+| 模型 | 输入 | 输出 | Cache 写(5m) | Cache 读 |
 |---|---|---|---|---|
-| Opus 4.7 | $15 | $75 | $18.75 | $1.50 |
-| Sonnet 4.6 | $3 | $15 | $3.75 | $0.30 |
-| Haiku 4.5 | $0.80 | $4 | $1 | $0.08 |
+| Fable 5 | $10 | $50 | $12.5 | $1.0 |
+| Opus 4.8 | $5 | $25 | $6.25 | $0.5 |
+| Sonnet 5 | $2 | $10 | $2.5 | $0.2 |
+| Haiku 4.5 | $1 | $5 | $1.25 | $0.1 |
+
+> Sonnet 5 的 $2/$10 为限时引导价（2026-08-31 前），之后转标准价 $3/$15。
 
 **中转价格**：通常在官方价基础上 +10% ~ +30%，覆盖出口带宽、信用卡通道、汇率与利润。
 
@@ -218,7 +222,7 @@ c2m 的 Changelog 栏目每天同步 anthropics/claude-code 最新 release 中�
 
 **社区中转**：openrouter.ai / anyrouter / closeai 等。优势是模型多 / 价格灵活；劣势是合规与稳定性不如正规 + 多数封锁国内 IP，需要梯子。
 
-**避坑**：广告里 "Claude 4.7 永久会员 99 元" 的镜像几乎都是共享账号池，封号风险随时炸。生产环境用一定走计费透明的渠道。`,
+**避坑**：广告里 "Claude 永久会员 99 元" 的镜像几乎都是共享账号池，封号风险随时炸。生产环境用一定走计费透明的渠道。`,
       },
       {
         id: "code-sample",
@@ -232,7 +236,7 @@ client = anthropic.Anthropic(
     api_key="sk-...",
 )
 resp = client.messages.create(
-    model="claude-sonnet-4-6",
+    model="claude-sonnet-5",
     max_tokens=1024,
     messages=[{"role": "user", "content": "用一句话解释什么是 prompt cache"}],
 )
@@ -248,7 +252,7 @@ const client = new Anthropic({
   apiKey: process.env.NEWAPI_KEY,
 });
 const resp = await client.messages.create({
-  model: "claude-sonnet-4-6",
+  model: "claude-sonnet-5",
   max_tokens: 1024,
   messages: [{ role: "user", content: "Hi" }],
 });
@@ -261,7 +265,7 @@ curl https://newapi.lurus.cn/v1/messages \\
   -H "x-api-key: sk-..." \\
   -H "anthropic-version: 2023-06-01" \\
   -H "content-type: application/json" \\
-  -d '{"model":"claude-sonnet-4-6","max_tokens":256,"messages":[{"role":"user","content":"Hi"}]}'
+  -d '{"model":"claude-sonnet-5","max_tokens":256,"messages":[{"role":"user","content":"Hi"}]}'
 \`\`\``,
       },
       {
@@ -278,7 +282,7 @@ curl https://newapi.lurus.cn/v1/messages \\
       {
         label: "看每日 Claude Code 更新摘要",
         href: "/changelog",
-        desc: "追踪 4.7 系列后续小版本变化",
+        desc: "追踪 Claude 系列版本变化",
       },
       {
         label: "Harness 文章：内部设计解剖",
@@ -353,7 +357,7 @@ curl https://newapi.lurus.cn/v1/messages \\
         title: "价格与国内可用性",
         body: `**Cursor**：$20/月 Pro (含 500 GPT-4-class request)，$40/月 Business。超出额度走 API key bring-your-own。
 
-**Claude Code**：CLI 本身免费，按 Anthropic API token 计费。Sonnet 4.6 ≈ $3/M 输入 + $15/M 输出。重度用户月成本通常 $30-100，但 cache 用好能砍到 1/3。
+**Claude Code**：CLI 本身免费，按 Anthropic API token 计费。Sonnet 5 ≈ $2/M 输入 + $10/M 输出。重度用户月成本通常 $30-100，但 cache 用好能砍到 1/3。
 
 **国内可用性**：
 
@@ -449,7 +453,7 @@ curl https://newapi.lurus.cn/v1/messages \\
 Provider: Anthropic (Compatible)
 Base URL: https://newapi.lurus.cn
 API Key: sk-...你的中转 key
-Model: claude-sonnet-4-6
+Model: claude-sonnet-5
 \`\`\`
 
 这样插件用 Anthropic SDK 协议，但流量走中转 — 跟 Claude Code 同模式。

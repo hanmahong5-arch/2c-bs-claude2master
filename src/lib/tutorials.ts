@@ -591,7 +591,7 @@ Claude 会自己判断什么时候调 tool。你也可以显式指定。
 
 双击 Claude node，配置：
 
-- **Model**: Sonnet 4.6（默认）
+- **Model**: Sonnet 5（默认）
 - **System Prompt**: 把 [周报 prompt](/prompts/weekly-report-builder) 粘进去
 - **Input from**: 上游 Input Trigger 的 \`text\` 字段
 
