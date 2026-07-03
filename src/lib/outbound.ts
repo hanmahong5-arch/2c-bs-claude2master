@@ -42,6 +42,8 @@ export const OUTBOUND_CAMPAIGN = {
   errorsKb: "errors-kb",
   /** MCP 目录 → newapi */
   mcpDirectory: "mcp-directory",
+  /** 大陆访问性对照表 → newapi */
+  accessTable: "access-table",
 } as const;
 
 export type OutboundCampaign =

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Calculator, Hash, LifeBuoy, Plug, Trophy } from "lucide-react";
+import { Calculator, Globe, Hash, LifeBuoy, Plug, Trophy } from "lucide-react";
 import { MODEL_PRICES, PRICES_AS_OF } from "@/lib/llm-prices";
 import { ERROR_KB } from "@/lib/error-kb";
 import { MCP_SERVERS } from "@/lib/mcp-directory";
+import { SERVICES } from "@/lib/service-access";
 import { Reveal } from "@/components/Reveal";
 
 const DESC =
@@ -41,6 +42,12 @@ const TOOL_CARDS = [
     icon: Plug,
     title: "MCP Server 目录",
     desc: `${MCP_SERVERS.length} 个主流 MCP 服务器速查:功能、安装命令、是否需 key、大陆能否直连。`,
+  },
+  {
+    href: "/access",
+    icon: Globe,
+    title: "大陆访问性对照表",
+    desc: `${SERVICES.length} 个主流 AI 服务:官网与 API 大陆要不要代理、是否支持大陆账号,一表看清。`,
   },
   {
     href: "/rank",

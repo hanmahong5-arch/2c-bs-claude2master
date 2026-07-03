@@ -39,6 +39,7 @@ const STATIC_ROUTES: {
   { path: "/tools/tokens", priority: 0.85, changeFreq: "monthly" },
   { path: "/errors", priority: 0.9, changeFreq: "weekly" },
   { path: "/mcp", priority: 0.9, changeFreq: "weekly" },
+  { path: "/access", priority: 0.9, changeFreq: "weekly" },
   { path: "/about", priority: 0.6, changeFreq: "monthly" },
   { path: "/login", priority: 0.3, changeFreq: "yearly" },
   { path: "/signup", priority: 0.3, changeFreq: "yearly" },

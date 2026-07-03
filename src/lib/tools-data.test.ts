@@ -12,6 +12,11 @@ import {
   MCP_CATEGORIES,
   getMcpServer,
 } from "./mcp-directory";
+import {
+  SERVICES,
+  ACCESS_CATEGORIES,
+  ACCESS_AS_OF,
+} from "./service-access";
 
 describe("llm-prices 注册表自洽", () => {
   it("id 唯一", () => {
@@ -115,5 +120,44 @@ describe("mcp-directory 注册表自洽", () => {
   it("getMcpServer 查表", () => {
     expect(getMcpServer(MCP_SERVERS[0].slug)).toBeDefined();
     expect(getMcpServer("nope")).toBeUndefined();
+  });
+});
+
+describe("service-access 注册表自洽", () => {
+  it("id 唯一且 kebab-case", () => {
+    const ids = SERVICES.map((s) => s.id);
+    expect(new Set(ids).size).toBe(ids.length);
+    for (const id of ids) {
+      expect(id, `id "${id}"`).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/);
+    }
+  });
+
+  it("每条内容完整: name/vendor/note 非空, sourceUrl 为 https", () => {
+    for (const s of SERVICES) {
+      expect(s.name.trim().length, `${s.id} name`).toBeGreaterThan(0);
+      expect(s.vendor.trim().length, `${s.id} vendor`).toBeGreaterThan(0);
+      expect(s.note.trim().length, `${s.id} note`).toBeGreaterThan(0);
+      expect(s.sourceUrl.startsWith("https://"), `${s.id} sourceUrl`).toBe(true);
+    }
+  });
+
+  it("reach 值只能是 direct/proxy, category 在 ACCESS_CATEGORIES 内", () => {
+    for (const s of SERVICES) {
+      expect(["direct", "proxy"]).toContain(s.webAccess);
+      expect(["direct", "proxy"]).toContain(s.apiAccess);
+      expect(ACCESS_CATEGORIES.includes(s.category), `${s.id} category`).toBe(true);
+    }
+  });
+
+  it("国产直连一致性: 国产直连类应 web/api 均 direct 且官方支持大陆", () => {
+    for (const s of SERVICES.filter((x) => x.category === "国产直连")) {
+      expect(s.webAccess, `${s.id} web`).toBe("direct");
+      expect(s.apiAccess, `${s.id} api`).toBe("direct");
+      expect(s.officialCn, `${s.id} officialCn`).toBe(true);
+    }
+  });
+
+  it("ACCESS_AS_OF 是 YYYY-MM-DD", () => {
+    expect(ACCESS_AS_OF).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   });
 });
