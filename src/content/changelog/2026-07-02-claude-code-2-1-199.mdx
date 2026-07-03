@@ -1,0 +1,23 @@
+---
+slug: 2026-07-02-claude-code-2-1-199
+title: "claude-code v2.1.199 — 大量bug修复与子代理、后台代理稳定性改进"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.199
+publishedAt: 2026-07-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "大量bug修复与子代理、后台代理稳定性改进"
+broadcast: "Claude Code 的最新版本修复了大量 bug，并重点改进了子代理和后台代理的稳定性。现在子代理被中断时会保留工作并通知父代理，后台代理也不再无故自杀。对国内开发者来说，这意味着用多代理协作开发时更可靠，不容易丢进度。"
+insight: "如果你正在使用 Claude Code 的子代理或后台代理功能，这次 v2.1.199 更新值得升级。子代理中断不再静默失败，而是保留工作并通知父代理，这直接提升了复杂任务的可靠性；后台代理在 Linux 上每 50 秒自杀的 bug 已修复，冷启动 SSH macOS 问题也解决了，后台代理稳定性明显改善。对于国内用户，这些修复不涉及网络或代理层，走 newapi.lurus.cn 不受影响。现有 prompt 或 hook 配置无需改动。"
+tags: [bug-fixes, subagent, background-agent, stability]
+---
+
+- 子代理被限流或服务器错误中断时，现在会保留部分工作并通知父代理，而非静默失败
+- 后台代理在Linux上因损坏worker记录每50秒自杀的bug已修复，冷启动SSH macOS问题也已解决
+- 子代理面板中空闲代理折叠为可展开摘要行，避免占用空间；`/model`等命令在子代理视图下会提示作用于主代理
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.199](https://github.com/anthropics/claude-code/releases/tag/v2.1.199)

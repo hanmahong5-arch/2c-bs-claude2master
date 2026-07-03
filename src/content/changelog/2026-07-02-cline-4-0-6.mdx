@@ -1,0 +1,23 @@
+---
+slug: 2026-07-02-cline-4-0-6
+title: "cline v4.0.6 — 模型能力警告更通用，覆盖更多场景"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.0.6
+publishedAt: 2026-07-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "模型能力警告更通用，覆盖更多场景"
+broadcast: "最近 cline 更新了一个版本，把模型能力警告的逻辑做得更通用了。以前只针对特定模型，现在覆盖更多场景，agent 在更多模型上都会收到能力限制提示，避免开发者误用。这对国内做 agent 开发的朋友来说，提醒我们设计时要平衡好警告触发和用户体验。"
+insight: "对于国内开发者，如果正在使用 newapi.lurus.cn 代理接入非官方模型，v4.0.6 的模型能力警告泛化意味着更多模型会触发提示。建议检查现有 hook 配置，确保警告逻辑与代理模型兼容，避免频繁弹窗影响体验。现有用户值得升级以获取更准确的模型能力边界提示，但需测试与代理的交互效果。"
+tags: [model-capability, warning, generalization]
+---
+
+- 模型能力警告逻辑泛化，不再局限于特定模型。
+- 这意味着 agent 在更多模型上会收到能力限制提示，避免误用。
+- 设计上需考虑警告的触发条件与用户交互的平衡。
+
+---
+
+> 原文 release：[cline/cline v4.0.6](https://github.com/cline/cline/releases/tag/v4.0.6)

@@ -1,0 +1,23 @@
+---
+slug: 2026-07-02-blog-simonwillison-using-dspy-to-evaluate-and-improve-datasette-agent
+title: "Using DSPy to evaluate and improve Datasette Agent's — 用DSPy自动评估并优化Datasette Agent的SQL系统提示词。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/
+publishedAt: 2026-07-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用DSPy自动评估并优化Datasette Agent的SQL系统提示词。"
+broadcast: "最近有开发者用DSPy框架自动评估并优化了Datasette Agent的SQL系统提示词，发现原来的建议反而让模型猜错列名、陷入重试循环。DSPy能帮我们自动化测试和优化提示词，减少手动试错，对提升Agent的SQL查询准确性很有帮助。"
+tags: [dspy, datasette-agent, prompt-optimization, llm-evals]
+---
+
+- 作者用DSPy框架自动评估Datasette Agent的SQL系统提示词，发现基线提示中“不要重复调用describe_table”的建议导致模型猜测列名（如page_count、order_id），引发错误重试循环。
+- DSPy测试了GPT-4.1 mini和nano，识别出多个改进方向，例如在提示词中直接包含列名，或软化避免重复调用的建议。
+- 对开发者而言，DSPy提供了一种自动化、可重复的方法来优化LLM系统提示，减少手动试错，提升Agent的SQL查询准确性和鲁棒性。
+
+---
+
+> 原文：[Using DSPy to evaluate and improve Datasette Agent's SQL system prompts](https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/) · 作者 Simon Willison

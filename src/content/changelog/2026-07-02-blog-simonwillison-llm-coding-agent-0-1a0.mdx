@@ -1,0 +1,23 @@
+---
+slug: 2026-07-02-blog-simonwillison-llm-coding-agent-0-1a0
+title: "llm-coding-agent 0.1a0 — Simon Willison 用 LLM 库构建了一个类似 Claude Cod"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/2/llm-coding-agent/
+publishedAt: 2026-07-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 用 LLM 库构建了一个类似 Claude Code 的编码代理，并开源了 0.1a0 版本。"
+broadcast: "Simon Willison 用他的 LLM 库做了一个类似 Claude Code 的编码代理，最近发布了 0.1a0 版本。这个代理能自动写代码、修测试，还提供了 Python 接口，让开发者可以编程调用。对国内开发者来说，这意味着我们也能用上更灵活的 AI 编码工具，把 LLM 更深地整合到自己的开发流程里。"
+tags: [coding-agents, llm, open-source, ai-tools]
+---
+
+- 项目基于 LLM 库的代理框架，通过两个提示（写 spec 和 TDD 构建）由 Fable 5 自动生成，展示了 AI 辅助开发的能力。
+- 实现了六个工具（编辑、执行命令、列出文件、读取、搜索、写入文件），支持 `--yolo` 和 `--allow` 等模式，可灵活控制代理权限。
+- 提供 Python API `CodingAgent`，允许开发者以编程方式运行编码任务，如修复测试，扩展了 LLM 在工具链中的集成深度。
+
+---
+
+> 原文：[llm-coding-agent 0.1a0](https://simonwillison.net/2026/Jul/2/llm-coding-agent/) · 作者 Simon Willison

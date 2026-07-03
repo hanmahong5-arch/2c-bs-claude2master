@@ -1,0 +1,23 @@
+---
+slug: 2026-07-03-goose-1-41-0
+title: "goose v1.41.0 — Goose v1.41 新增 60+ 功能，涵盖多语言、新模型、钩子与 ACP "
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.41.0
+publishedAt: 2026-07-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.41 新增 60+ 功能，涵盖多语言、新模型、钩子与 ACP 改进"
+broadcast: "Goose 的最新版本带来了超过六十项新功能，最值得关注的是它一口气接入了二十多个新的大模型提供商，包括国内开发者熟悉的讯飞星火。同时新增的钩子系统和全局提示功能，让开发者能更灵活地定制 agent 的行为。ACP 协议也加入了 TLS 加密和思考力度配置，agent 之间的通信更安全可控了。"
+insight: "Goose v1.41 新增了 60+ 功能，但国内用户通过 newapi.lurus.cn 代理使用时，需注意新增的 iFlytek Spark 等国内提供商可能已原生支持，无需额外配置；而 Fireworks AI 等海外模型仍需代理。现有用户若使用钩子系统或全局提示，建议检查 hook 配置是否兼容新版本，尤其是自定义 prompt 可能需调整。ACP 的 TLS 和思考力度配置对安全性有提升，但升级前建议测试代理链路的兼容性。"
+tags: [multi-provider, agent-communication, hooks, localization]
+---
+
+- 新增 iFlytek Spark、Astron MaaS、Fireworks AI 等 20+ 提供商，扩展 agent 可接入的模型生态。
+- 引入 `--edit` 会话标志、`/status` 斜杠命令、钩子系统及全局提示加载，增强 agent 交互与可编程性。
+- ACP 支持 TLS、思考力度配置、工具暴露及会话摘要，提升 agent 通信的安全性与灵活性。
+
+---
+
+> 原文 release：[block/goose v1.41.0](https://github.com/aaif-goose/goose/releases/tag/v1.41.0)
