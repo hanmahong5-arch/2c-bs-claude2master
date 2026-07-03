@@ -1,6 +1,149 @@
 {
   "items": [
     {
+      "slug": "2026-07-03-blog-anthropic-news-redeploying-claude-fable-5",
+      "zh": true,
+      "en": true,
+      "title": "Redeploying Claude Fable 5 — Anthropic 复盘 Fable 5 因出口管制下架事件，详解安全分类器设计",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-07-03"
+    },
+    {
+      "slug": "2026-07-03-blog-latentspace-aiewf-daily-dispatch-the-great-loops-debate-and",
+      "zh": true,
+      "en": true,
+      "title": "AIEWF Daily Dispatch: The great loops debate and the — AI工程师大会辩论：自主软件工厂是未来还是炒作？",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-03"
+    },
+    {
+      "slug": "2026-07-03-blog-latentspace-vercel-s-andrew-qu-on-why-agents-are",
+      "zh": true,
+      "en": true,
+      "title": "Vercel's Andrew Qu on why agents are a new kind of — Vercel 首席软件官谈为何 agent 是全新软件形态，以及 Vercel ",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-03"
+    },
+    {
+      "slug": "2026-07-03-goose-1-41-0",
+      "zh": true,
+      "en": false,
+      "title": "goose v1.41.0 — Goose v1.41 新增 60+ 功能，涵盖多语言、新模型、钩子与 ACP ",
+      "kind": "changelog",
+      "author": null,
+      "source": "block/goose",
+      "tool": "goose",
+      "publishedAt": "2026-07-03"
+    },
+    {
+      "slug": "2026-07-03-trending-modiqo-skillspec",
+      "zh": true,
+      "en": false,
+      "title": "skillspec — 让AI agent技能可测试、可证明",
+      "kind": "trending",
+      "author": null,
+      "source": "modiqo/skillspec",
+      "tool": null,
+      "publishedAt": "2026-07-03"
+    },
+    {
+      "slug": "2026-07-02-blog-latentspace-ainews-not-much-happened-today",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] not much happened today — AI 圈一天动态：模型回归、多模型编排、Agent 记忆与安全评估。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-02"
+    },
+    {
+      "slug": "2026-07-02-blog-latentspace-skill-engineering-and-the-case-against-one-shot",
+      "zh": true,
+      "en": true,
+      "title": "Skill engineering and the case against one-shot AI — Paul Bakaus 提出“技能工程”新范式：AI 代理需要领域词汇和人类引导",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-02"
+    },
+    {
+      "slug": "2026-07-02-blog-latentspace-the-website-of-the-future-may-assemble-itself",
+      "zh": true,
+      "en": true,
+      "title": "The website of the future may assemble itself for every — Adobe探索AI实时组装个性化网页，实现“一人一页”的网站未来。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-02"
+    },
+    {
+      "slug": "2026-07-02-blog-simonwillison-llm-coding-agent-0-1a0",
+      "zh": true,
+      "en": true,
+      "title": "llm-coding-agent 0.1a0 — Simon Willison 用 LLM 库构建了一个类似 Claude Cod",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-02"
+    },
+    {
+      "slug": "2026-07-02-blog-simonwillison-understand-to-participate",
+      "zh": true,
+      "en": true,
+      "title": "Understand to participate — 与AI协作时，理解代码深度决定你能否有效参与。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-02"
+    },
+    {
+      "slug": "2026-07-02-blog-simonwillison-using-dspy-to-evaluate-and-improve-datasette-agent",
+      "zh": true,
+      "en": true,
+      "title": "Using DSPy to evaluate and improve Datasette Agent's — 用DSPy自动评估并优化Datasette Agent的SQL系统提示词。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-02"
+    },
+    {
+      "slug": "2026-07-02-claude-code-2-1-199",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.199 — 大量bug修复与子代理、后台代理稳定性改进",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-07-02"
+    },
+    {
+      "slug": "2026-07-02-cline-4-0-6",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.0.6 — 模型能力警告更通用，覆盖更多场景",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-07-02"
+    },
+    {
       "slug": "2026-07-02-goose-1-40-0",
       "zh": true,
       "en": false,
@@ -736,149 +879,6 @@
       "source": "Latent Space",
       "tool": null,
       "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-26-blog-openai-news-previewing-gpt-5-6-sol-a-next-generation",
-      "zh": true,
-      "en": true,
-      "title": "Previewing GPT-5.6 Sol: a next-generation model — OpenAI 预览 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-26-blog-simonwillison-incident-report-cve-2026-lgtm",
-      "zh": true,
-      "en": true,
-      "title": "Incident Report: CVE-2026-LGTM — AI审核代理陷入无限争论循环，消耗4万美元推理费用。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-26-blog-simonwillison-quoting-dean-w-ball",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Dean W. Ball — AI出口管制如何威胁前沿模型的经济可行性。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-26-blog-simonwillison-quoting-openai",
-      "zh": true,
-      "en": true,
-      "title": "Quoting OpenAI — OpenAI 发布 GPT",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-26-blog-simonwillison-quoting-timothy-b-lee",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Timothy B. Lee — 反驳LLM无学习曲线的观点，类比管理技能。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-26-blog-simonwillison-what-happened-after-2-000-people-tried-to",
-      "zh": true,
-      "en": true,
-      "title": "What happened after 2,000 people tried to hack my AI — 6000次提示注入攻击全部失败，但作者警告仍不可掉以轻心。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-26-claude-code-2-1-195",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.195 — Claude Code 修复多项匹配与语音问题，提升后台任务稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-26-cline-4-0-0",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.0.0 — Cline 4.0 迁移至统一 SDK，重构插件与市场体系",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-26-cline-cli-v3-0-30",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.30 — CLI v3.0.30 新增 token 计数、SAP AI Core 支持，修",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-26-codex-rust-v0-142-3",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.142.3 — 维护性补丁，无用户可见变化",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-26-trending-startrail-org-pixelrag",
-      "zh": true,
-      "en": false,
-      "title": "PixelRAG — 像素级原生搜索，终结网页解析",
-      "kind": "trending",
-      "author": null,
-      "source": "StarTrail-org/PixelRAG",
-      "tool": null,
-      "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-26-zeroclaw-0-8-2",
-      "zh": true,
-      "en": false,
-      "title": "zeroclaw v0.8.2 — A2A agent discovery + 更安全的入站策略，agent 互操作",
-      "kind": "changelog",
-      "author": null,
-      "source": "zeroclaw-labs/zeroclaw",
-      "tool": "zeroclaw",
-      "publishedAt": "2026-06-26"
-    },
-    {
-      "slug": "2026-06-25-blog-hf-blog-which-tokens-does-a-hybrid-model-predict-better",
-      "zh": true,
-      "en": true,
-      "title": "Which tokens does a hybrid model predict better? — 混合预测下一个与未来多个token，提升模型效率与推理速度。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-06-25"
     }
   ]
 }
