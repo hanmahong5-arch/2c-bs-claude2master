@@ -5,6 +5,7 @@ import { SKILLS } from "@/lib/skills";
 import { getChangelog, getDigest, getHarness } from "@/lib/content";
 import { SEO_LANDINGS } from "@/lib/seo-landings";
 import { ERROR_KB } from "@/lib/error-kb";
+import { MCP_SERVERS } from "@/lib/mcp-directory";
 
 const BASE = "https://claude2master.com";
 const now = new Date();
@@ -13,6 +14,8 @@ const now = new Date();
 const CONTENT_SEED_DATE = new Date("2026-05-25");
 // 报错库首批收录日(同上, 固定基线防误报)
 const ERRORS_SEED_DATE = new Date("2026-06-30");
+// MCP 目录首批收录日(同上, 固定基线防误报)
+const MCP_SEED_DATE = new Date("2026-07-03");
 
 const STATIC_ROUTES: {
   path: string;
@@ -35,6 +38,7 @@ const STATIC_ROUTES: {
   { path: "/tools/price", priority: 0.9, changeFreq: "weekly" },
   { path: "/tools/tokens", priority: 0.85, changeFreq: "monthly" },
   { path: "/errors", priority: 0.9, changeFreq: "weekly" },
+  { path: "/mcp", priority: 0.9, changeFreq: "weekly" },
   { path: "/about", priority: 0.6, changeFreq: "monthly" },
   { path: "/login", priority: 0.3, changeFreq: "yearly" },
   { path: "/signup", priority: 0.3, changeFreq: "yearly" },
@@ -97,6 +101,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: ERRORS_SEED_DATE,
       changeFrequency: "monthly" as const,
       priority: 0.75,
+    })),
+    ...MCP_SERVERS.map((s) => ({
+      url: `${BASE}/mcp/${s.slug}`,
+      lastModified: MCP_SEED_DATE,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     })),
     ...SEO_LANDINGS.map((l) => ({
       url: `${BASE}/zh/${l.slug}`,

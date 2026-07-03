@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Calculator, Hash, LifeBuoy, Trophy } from "lucide-react";
+import { Calculator, Hash, LifeBuoy, Plug, Trophy } from "lucide-react";
 import { MODEL_PRICES, PRICES_AS_OF } from "@/lib/llm-prices";
 import { ERROR_KB } from "@/lib/error-kb";
+import { MCP_SERVERS } from "@/lib/mcp-directory";
 import { Reveal } from "@/components/Reveal";
 
 const DESC =
@@ -34,6 +35,12 @@ const TOOL_CARDS = [
     icon: LifeBuoy,
     title: "报错速查库",
     desc: `${ERROR_KB.length} 条 AI 编码工具高频报错的中文自救指南,大陆网络环境特调。`,
+  },
+  {
+    href: "/mcp",
+    icon: Plug,
+    title: "MCP Server 目录",
+    desc: `${MCP_SERVERS.length} 个主流 MCP 服务器速查:功能、安装命令、是否需 key、大陆能否直连。`,
   },
   {
     href: "/rank",

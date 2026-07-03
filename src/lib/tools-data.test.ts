@@ -7,6 +7,11 @@ import {
   USD_CNY_RATE,
 } from "./llm-prices";
 import { ERROR_KB, getErrorEntry } from "./error-kb";
+import {
+  MCP_SERVERS,
+  MCP_CATEGORIES,
+  getMcpServer,
+} from "./mcp-directory";
 
 describe("llm-prices 注册表自洽", () => {
   it("id 唯一", () => {
@@ -65,5 +70,50 @@ describe("error-kb 注册表自洽", () => {
   it("getErrorEntry 查表", () => {
     expect(getErrorEntry(ERROR_KB[0].slug)).toBeDefined();
     expect(getErrorEntry("nope")).toBeUndefined();
+  });
+});
+
+describe("mcp-directory 注册表自洽", () => {
+  it("slug 唯一且 kebab-case", () => {
+    const slugs = MCP_SERVERS.map((s) => s.slug);
+    expect(new Set(slugs).size).toBe(slugs.length);
+    for (const s of slugs) {
+      expect(s, `slug "${s}"`).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/);
+    }
+  });
+
+  it("每条内容完整: name/descZh/detail/install 非空, tags 非空", () => {
+    for (const s of MCP_SERVERS) {
+      expect(s.name.trim().length, `${s.slug} name`).toBeGreaterThan(0);
+      expect(s.descZh.trim().length, `${s.slug} descZh`).toBeGreaterThan(0);
+      expect(s.detail.trim().length, `${s.slug} detail`).toBeGreaterThan(0);
+      expect(s.install.trim().length, `${s.slug} install`).toBeGreaterThan(0);
+      expect(s.tags.length, `${s.slug} tags`).toBeGreaterThan(0);
+    }
+  });
+
+  it("每条 sourceUrl 为 https", () => {
+    for (const s of MCP_SERVERS) {
+      expect(s.sourceUrl.startsWith("https://"), `${s.slug} sourceUrl`).toBe(true);
+    }
+  });
+
+  it("category 都在 MCP_CATEGORIES 内", () => {
+    for (const s of MCP_SERVERS) {
+      expect(MCP_CATEGORIES.includes(s.category), `${s.slug} category`).toBe(true);
+    }
+  });
+
+  it("hosted/托管 类应给出 remote 端点", () => {
+    for (const s of MCP_SERVERS) {
+      if (s.runtime === "hosted") {
+        expect(s.remote.trim().length, `${s.slug} remote`).toBeGreaterThan(0);
+      }
+    }
+  });
+
+  it("getMcpServer 查表", () => {
+    expect(getMcpServer(MCP_SERVERS[0].slug)).toBeDefined();
+    expect(getMcpServer("nope")).toBeUndefined();
   });
 });

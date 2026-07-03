@@ -40,6 +40,8 @@ export const OUTBOUND_CAMPAIGN = {
   toolsPrice: "tools-price",
   /** 报错速查库 → newapi */
   errorsKb: "errors-kb",
+  /** MCP 目录 → newapi */
+  mcpDirectory: "mcp-directory",
 } as const;
 
 export type OutboundCampaign =
