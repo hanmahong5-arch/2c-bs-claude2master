@@ -1,9 +1,9 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.199",
+    "anthropics/claude-code": "v2.1.201",
     "openai/codex": "rust-v0.142.5",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v4.0.6",
+    "cline/cline": "cli-v3.0.37",
     "block/goose": "v1.41.0",
     "sst/opencode": "v1.17.13",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -64,7 +64,8 @@
     "gykim80/perfectpixel-studio",
     "XxHuberrr/Mineradio",
     "deepseek-ai/DeepSpec",
-    "modiqo/skillspec"
+    "modiqo/skillspec",
+    "modiqo/cliare"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -109,7 +110,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-03",
+    "anthropic-engineering": "2026-07-04",
     "claude-code-docs": "2026-07-03",
     "openai-codex-blog": "2026-07-02",
     "openclaw-concepts": "2026-06-29",
@@ -200,7 +201,11 @@
       "https://simonwillison.net/2026/Jun/30/shot-scraper/",
       "https://simonwillison.net/2026/Jul/2/llm-coding-agent/",
       "https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/",
-      "https://simonwillison.net/2026/Jul/2/understand-to-participate/"
+      "https://simonwillison.net/2026/Jul/2/understand-to-participate/",
+      "https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/",
+      "https://simonwillison.net/2026/Jul/3/josh-w-comeau/",
+      "https://simonwillison.net/2026/Jul/3/judgement/",
+      "https://simonwillison.net/2026/Jul/3/june-newsletter/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -269,7 +274,8 @@
       "https://www.latent.space/p/vercel-agents-new-software",
       "https://www.latent.space/p/the-website-of-the-future",
       "https://www.latent.space/p/skill-engineering-design",
-      "https://www.latent.space/p/ainews-not-much-happened-today-900"
+      "https://www.latent.space/p/ainews-not-much-happened-today-900",
+      "https://www.latent.space/p/aiewf-daily-dispatch-agency"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -459,7 +465,8 @@
       "https://deepmind.google/blog/unlocking-uk-house-building-with-ai-accelerated-planning/",
       "https://deepmind.google/blog/securing-the-future-of-ai-agents/",
       "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
-      "https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash/"
+      "https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash/",
+      "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -560,20 +567,20 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-03",
+    "simonwillison": "2026-07-04",
     "lilianweng": "2026-07-02",
-    "latentspace": "2026-07-03",
-    "interconnects": "2026-07-03",
+    "latentspace": "2026-07-04",
+    "interconnects": "2026-07-04",
     "karpathy": "2026-07-03",
     "raschka": "2026-07-03",
     "eugeneyan": "2026-07-03",
     "chiphuyen": "2026-07-02",
-    "oneusefulthing": "2026-07-02",
+    "oneusefulthing": "2026-07-04",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-03",
-    "deepmind": "2026-07-02",
-    "hf-blog": "2026-07-02",
+    "openai-news": "2026-07-04",
+    "deepmind": "2026-07-04",
+    "hf-blog": "2026-07-04",
     "anthropic-news": "2026-07-03",
     "steipete": "2026-07-03",
     "openclaw-blog": "2026-07-03"

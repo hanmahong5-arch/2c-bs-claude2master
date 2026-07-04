@@ -1,0 +1,23 @@
+---
+slug: 2026-07-03-cline-cli-v3-0-36
+title: "cline cli-v3.0.36 — 计划模式切换执行模式不再延迟，避免未批准自动执行"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.36
+publishedAt: 2026-07-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "计划模式切换执行模式不再延迟，避免未批准自动执行"
+broadcast: "最近Cline的CLI工具更新了一个重要修复：在计划模式下，切换到执行模式不再有延迟，而是立即生效。这意味着，一旦你的计划被批准，AI就会立刻用完整的执行工具继续工作，不会再出现未批准就自动执行的情况。对国内开发者来说，这能让Agent开发中的任务切换更可控、更安全。"
+insight: "这个修复对国内用户很重要。如果你在用 newapi.lurus.cn 代理，升级到 v3.0.36 后，计划模式切换执行模式不再延迟，避免了未批准自动执行的风险。建议所有用户尽快升级，特别是那些依赖计划-执行工作流的开发者。现有 prompt 和 hook 配置无需改动，但升级后需注意切换会立即结束计划模式并自动执行已批准计划，确保你的计划确实已准备好执行。"
+tags: [plan-mode, act-mode, bug-fix, agent-harness]
+---
+
+- 修复了计划模式中`switch_to_act_mode`工具直到回合结束才生效的问题：模型会继续使用计划模式工具（无文件编辑器）并通过shell命令编辑文件。
+- 切换至执行模式现在会立即结束计划模式运行，并使用完整的执行模式工具集自动继续执行已批准的计划。
+- 标签页模式切换与回合完成竞态时，不再自动启动未批准的计划执行。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.36](https://github.com/cline/cline/releases/tag/cli-v3.0.36)

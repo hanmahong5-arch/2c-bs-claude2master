@@ -1,0 +1,23 @@
+---
+slug: 2026-07-03-cline-cli-v3-0-35
+title: "cline cli-v3.0.35 — ClinePass 全量开放，修复高输出模型首轮截断问题"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.35
+publishedAt: 2026-07-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "ClinePass 全量开放，修复高输出模型首轮截断问题"
+broadcast: "ClinePass 现在对所有 CLI 用户开放了，不用额外配置就能直接用。同时修复了高输出模型首条消息被截断的问题，确保任务完整传递。还新增了腾讯 TokenHub，给国内开发者更多模型选择。"
+insight: "ClinePass 全量开放后，现有用户无需额外配置即可直接使用，建议立即升级到 v3.0.35 以修复高输出模型首轮截断问题，确保 MiniMax M3 等模型的初始任务完整传递。国内用户通过 newapi.lurus.cn 代理不受影响，因为 ClinePass 是内置功能，不依赖外部代理。"
+tags: [clinepass, bug-fix, provider, cli]
+---
+
+- ClinePass 对所有 CLI 用户开放，无需额外配置即可使用。
+- 修复高输出模型（如 MiniMax M3）首条消息被自动压缩截断的问题，确保初始任务完整传递。
+- 新增 Tencent TokenHub 提供商，扩展模型接入选项。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.35](https://github.com/cline/cline/releases/tag/cli-v3.0.35)

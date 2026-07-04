@@ -1,0 +1,23 @@
+---
+slug: 2026-07-03-claude-code-2-1-200
+title: "claude-code v2.1.200 — AskUserQuestion 不再自动继续，默认权限改为 Manual"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.200
+publishedAt: 2026-07-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "AskUserQuestion 不再自动继续，默认权限改为 Manual"
+broadcast: "Claude Code 的最新更新中，AskUserQuestion 对话框默认不再自动继续，需要你手动确认。同时，默认权限模式改为了手动，agent 在没得到许可前不能自动执行操作。这对国内开发者来说，意味着设计 agent 时必须更明确地等待用户输入，并考虑用户响应延迟，让交互更可控。"
+insight: "这次更新对国内用户影响不大，但如果你在用 AskUserQuestion 做自动流程，需要改 prompt 或 hook 来适配手动确认模式。建议在 agent 配置里加上空闲超时处理，避免用户响应延迟导致流程中断。默认权限改为 Manual 后，现有 prompt 如果依赖自动执行，必须加上显式请求步骤。newapi.lurus.cn 代理不受影响，但建议测试一下后台会话恢复是否正常。总体来看，值得升级，但需要调整交互逻辑。"
+tags: [permissions, background-agents, accessibility, bug-fixes]
+---
+
+- AskUserQuestion 对话框默认不再自动继续，可通过 `/config` 设置空闲超时。这意味着 agent 需要更明确地等待用户输入，设计上需考虑用户响应延迟。
+- 默认权限模式改为 Manual，CLI、VS Code、JetBrains 均统一。agent 在未获许可时不能自动执行操作，需显式请求。
+- 修复了后台会话在睡眠/唤醒后静默停止、崩溃后 daemon.lock 导致 agent 无法重启等问题。agent harness 需更健壮地处理进程生命周期和锁文件。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.200](https://github.com/anthropics/claude-code/releases/tag/v2.1.200)

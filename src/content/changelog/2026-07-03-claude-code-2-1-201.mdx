@@ -1,0 +1,23 @@
+---
+slug: 2026-07-03-claude-code-2-1-201
+title: "claude-code v2.1.201 — Sonnet 5 会话移除中间系统角色提示"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.201
+publishedAt: 2026-07-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Sonnet 5 会话移除中间系统角色提示"
+broadcast: "Claude Sonnet 5 的会话现在去掉了中间的系统角色提示，harness 不能再靠系统角色来发提醒了。这对国内开发者来说是个重要变化，意味着你得调整上下文管理策略，改用用户消息或其他方式来实现提醒机制。"
+insight: "对于使用 Claude Sonnet 5 的国内开发者，如果当前 harness 依赖系统角色注入提醒，建议立即调整上下文管理策略，改为通过用户消息或其他方式实现。现有 prompt 或 hook 配置中涉及系统角色的部分需要修改，否则可能失效。通过 newapi.lurus.cn 代理访问时，该变更同样适用，代理本身不受影响，但需更新应用逻辑。"
+tags: [claude-sonnet-5, system-role, harness-reminders]
+---
+
+- Claude Sonnet 5 会话不再使用对话中期的系统角色来发送 harness 提醒。
+- 这意味着 harness 的上下文管理策略需要调整，不再依赖系统角色注入。
+- 开发者应确保 harness 的提醒机制通过其他方式（如用户消息）实现。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.201](https://github.com/anthropics/claude-code/releases/tag/v2.1.201)
