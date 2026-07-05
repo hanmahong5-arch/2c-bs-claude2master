@@ -1,0 +1,28 @@
+---
+slug: 2026-07-04-blog-simonwillison-better-models-worse-tools
+title: "Better Models: Worse Tools — 新模型更聪明，但调用第三方工具时反而更易出错，原因在于训练偏向。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/4/better-models-worse-tools/
+publishedAt: 2026-07-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "新模型更聪明，但调用第三方工具时反而更易出错，原因在于训练偏向。"
+broadcast: "新模型更聪明了，但调用第三方工具时反而更容易出错。比如最新的Claude模型，调用编辑工具时会凭空添加不存在的字段，导致工具被拒绝。问题根源在于训练时只优化了自家工具，却损害了通用性。这对国内开发者是个提醒：模型升级可能带来隐性破坏，工具链的兼容性需要格外留意。"
+tags: [llm-tool-use, coding-agents, model-training, tool-compatibility]
+---
+
+- 新 Claude 模型（如 Opus 4.8）调用 Pi 的编辑工具时，会凭空添加 schema 中不存在的字段，导致工具调用被拒绝。
+  - 这意味着模型训练中隐含的“工具偏好”会干扰第三方工具链的兼容性，开发者需警惕模型升级带来的隐性破坏。
+
+- 问题根源在于 Anthropic 通过强化学习让模型更擅长使用自家 Claude Code 的编辑工具，却损害了其他自定义编辑工具的调用准确性。
+  - 这揭示了模型训练与工具生态的耦合：模型优化可能只针对特定工具，通用性反而下降。
+
+- 第三方编码工具（如 Pi）可能被迫实现多种编辑工具，以匹配不同模型的最佳调用方式。
+  - 这增加了工具链复杂度，开发者需在模型灵活性与工具一致性之间权衡。
+
+---
+
+> 原文：[Better Models: Worse Tools](https://simonwillison.net/2026/Jul/4/better-models-worse-tools/) · 作者 Simon Willison

@@ -110,7 +110,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-04",
+    "anthropic-engineering": "2026-07-05",
     "claude-code-docs": "2026-07-03",
     "openai-codex-blog": "2026-07-02",
     "openclaw-concepts": "2026-06-29",
@@ -205,7 +205,11 @@
       "https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/",
       "https://simonwillison.net/2026/Jul/3/josh-w-comeau/",
       "https://simonwillison.net/2026/Jul/3/judgement/",
-      "https://simonwillison.net/2026/Jul/3/june-newsletter/"
+      "https://simonwillison.net/2026/Jul/3/june-newsletter/",
+      "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/",
+      "https://simonwillison.net/2026/Jul/5/sqlite-utils/",
+      "https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/",
+      "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -534,7 +538,10 @@
       "https://www.anthropic.com/news/dxc-anthropic-alliance",
       "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem",
       "https://www.anthropic.com/news/introducing-claude-tag",
-      "https://www.anthropic.com/news/redeploying-fable-5"
+      "https://www.anthropic.com/news/redeploying-fable-5",
+      "https://www.anthropic.com/news/claude-sonnet-5",
+      "https://www.anthropic.com/news/claude-science-ai-workbench",
+      "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -567,10 +574,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-04",
+    "simonwillison": "2026-07-05",
     "lilianweng": "2026-07-02",
-    "latentspace": "2026-07-04",
-    "interconnects": "2026-07-04",
+    "latentspace": "2026-07-05",
+    "interconnects": "2026-07-05",
     "karpathy": "2026-07-03",
     "raschka": "2026-07-03",
     "eugeneyan": "2026-07-03",
@@ -578,12 +585,12 @@
     "oneusefulthing": "2026-07-04",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-04",
+    "openai-news": "2026-07-05",
     "deepmind": "2026-07-04",
     "hf-blog": "2026-07-04",
-    "anthropic-news": "2026-07-03",
-    "steipete": "2026-07-03",
-    "openclaw-blog": "2026-07-03"
+    "anthropic-news": "2026-07-05",
+    "steipete": "2026-07-05",
+    "openclaw-blog": "2026-07-05"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

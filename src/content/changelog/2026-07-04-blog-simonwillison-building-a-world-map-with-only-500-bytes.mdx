@@ -1,0 +1,23 @@
+---
+slug: 2026-07-04-blog-simonwillison-building-a-world-map-with-only-500-bytes
+title: "Building a World Map with only 500 bytes — 用445字节和deflate压缩生成可信的ASCII世界地图，展示极简数据与代码"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/
+publishedAt: 2026-07-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用445字节和deflate压缩生成可信的ASCII世界地图，展示极简数据与代码的创造力。"
+broadcast: "今天聊一个极客项目：用不到500字节生成一幅ASCII世界地图。作者把地图数据压缩到445字节，再用浏览器自带的解压API还原。这告诉我们，在带宽或存储受限的场景下，巧用压缩和现代Web API，也能传递复杂信息。"
+tags: [ascii-art, data-urls, javascript, compression]
+---
+
+- 核心技巧是使用deflate压缩将地图数据压缩到445字节，再通过JavaScript解压渲染。
+- 作者用`fetch()`配合`data:` URI和`DecompressionStream`实现解压，展示了浏览器原生API的巧妙用法。
+- 对开发者而言，这启示了在极简资源下（如低带宽或存储受限场景）如何利用压缩和现代Web API高效传递数据。
+
+---
+
+> 原文：[Building a World Map with only 500 bytes](https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/) · 作者 Simon Willison

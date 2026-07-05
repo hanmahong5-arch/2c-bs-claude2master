@@ -1,0 +1,23 @@
+---
+slug: 2026-07-05-blog-simonwillison-sqlite-utils-4-0rc2-mostly-written-by-claude
+title: "sqlite-utils 4.0rc2, mostly written by Claude Fable — Simon Willison used Claude Fable to fix "
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/
+publishedAt: 2026-07-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison used Claude Fable to fix critical bugs in sqlite-utils 4.0, costing $149.25."
+broadcast: "Simon Willison用Claude Fable修复了sqlite-utils 4.0的关键bug，只花了149美元。Claude发现了一个数据丢失的严重问题，并重新设计了事务处理，让每次写入自动提交。更妙的是，他还用GPT-5.5交叉审查，又揪出两个隐藏问题。这种AI协作开发的方式，对国内开发者很有启发。"
+tags: [sqlite-utils, claude-fable, ai-assisted-development, code-review]
+---
+
+- Claude Fable identified a data-loss bug: `delete_where()` never commits, poisoning the connection so subsequent writes are lost. This would have been a major release blocker.
+- After 37 prompts and 34 commits, the agent helped redesign transaction handling: every write method now auto-commits, and `db.atomic()` groups operations. This simplifies the API and prevents silent failures.
+- A cross-model review (GPT-5.5 checking Claude's work) found two subtle issues: `db.query()` auto-committed writes before validating the statement, and `INSERT ... RETURNING` only committed after full iteration. This shows the value of adversarial review between models.
+
+---
+
+> 原文：[sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)](https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/) · 作者 Simon Willison
