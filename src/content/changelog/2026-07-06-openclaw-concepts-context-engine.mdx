@@ -1,0 +1,26 @@
+---
+slug: 2026-07-06-openclaw-concepts-context-engine
+title: "Context engine · OpenClaw — OpenClaw 上下文引擎插件化设计，可自定义组装、压缩与子代理生命周期"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/context-engine
+publishedAt: 2026-07-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OpenClaw 上下文引擎插件化设计，可自定义组装、压缩与子代理生命周期"
+broadcast: "OpenClaw 的上下文引擎采用插件化设计，把消息处理拆成四个阶段，开发者可以自定义组装和压缩策略。它还支持在系统提示里动态追加记忆指令，以及子代理启动前后的上下文传递与清理。这套机制让 agent 开发更灵活，避免硬编码和状态泄漏，值得关注。"
+insight: "OpenClaw 的上下文引擎插件化设计值得国内开发者关注。如果你正在使用 newapi.lurus.cn 代理，该设计不影响现有调用流程，因为它是 agent harness 层面的钩子，而非网络协议变更。对于现有用户，若你的 prompt 构建依赖静态 workspace 文件，建议改为支持运行时追加 systemPromptAddition，以利用动态记忆注入。子代理生命周期钩子可避免状态泄漏，但需评估你的多 agent 场景是否需要。整体上，该设计提升了上下文管理的灵活性，但升级需根据实际需求评估改动成本。"
+tags: [context-engine, plugin-architecture, agent-lifecycle, prompt-assembly]
+---
+
+- **四阶段生命周期**：ingest（存储消息）、assemble（按 token 预算组装消息）、compact（压缩历史）、after turn（持久化状态），引擎可接管或跳过任意阶段。
+  - 含义：agent harness 应提供明确的上下文管理钩子，让插件控制消息选择与压缩策略，而非硬编码。
+- **系统提示追加**：assemble 可返回 `systemPromptAddition`，OpenClaw 将其前置到系统提示中，用于动态注入记忆或检索指令。
+  - 含义：prompt 构建应支持运行时追加上下文相关指令，无需修改静态 workspace 文件。
+- **子代理生命周期钩子**：`prepareSubagentSpawn` 在子代理启动前准备共享上下文，`onSubagentEnded` 在子代理结束时清理。
+  - 含义：跨 agent 边界时，harness 应提供上下文传递与清理机制，避免状态泄漏或重复。
+
+---
+
+> 原文：[Context engine · OpenClaw](https://docs.openclaw.ai/concepts/context-engine)

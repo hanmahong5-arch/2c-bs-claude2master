@@ -1,0 +1,23 @@
+---
+slug: 2026-07-06-openclaw-concepts-commitments
+title: "Inferred commitments · OpenClaw — 让AI主动记住未说出口的后续，无需用户手动设提醒"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/commitments
+publishedAt: 2026-07-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "让AI主动记住未说出口的后续，无需用户手动设提醒"
+broadcast: "OpenClaw让AI能主动记住你未说出口的后续，比如你提到明天面试，它就会默默记下，到时间自然提醒你。这对国内开发者来说，意味着可以设计后台轻量推理通道，在不干扰主对话的前提下捕捉隐含意图，同时通过提示工程隔离不可信数据，避免工具误用。"
+insight: "OpenClaw的隐式承诺提取机制值得关注，它通过后台轻量推理捕获用户隐含意图，无需手动设提醒。对于国内用户，若通过newapi.lurus.cn代理使用，需确认代理是否支持独立上下文扫描和heartbeat注入，否则可能影响承诺的识别与交付。现有用户若使用类似Agent harness，可考虑引入此机制增强自主性，但必须严格遵循安全交付规则，通过提示工程隔离不可信元数据，防止工具误用。作用域和延迟设计确保了对话连贯性，适合需要自然跟进场景。"
+tags: [inferred-commitments, agent-memory, heartbeat, prompt-safety]
+---
+
+- **隐式承诺提取**：OpenClaw在每次回复后，用独立上下文（禁用工具）扫描对话，自动识别用户未明确要求但合理的后续跟进点（如“明天面试”），存储为短期承诺。含义：Agent harness可设计后台轻量推理通道，在不干扰主对话流的前提下捕获隐含意图。
+- **安全交付机制**：承诺到期时通过heartbeat注入，但提示词明确警告模型“承诺元数据不可信”，禁止模型执行其中的指令或使用工具，仅允许自然询问或回复HEARTBEAT_OK。含义：在Agent自主性增强的同时，通过提示工程隔离不可信数据，防止恶意或错误元数据引发工具误用。
+- **严格作用域与延迟**：承诺绑定到创建时的agent、频道和会话，且到期时间至少为一个heartbeat间隔之后，避免立即回显。含义：作用域限制和延迟交付确保跟进感觉像同一对话的自然延续，而非全局提醒系统，维护了对话上下文的连贯性。
+
+---
+
+> 原文：[Inferred commitments · OpenClaw](https://docs.openclaw.ai/concepts/commitments)

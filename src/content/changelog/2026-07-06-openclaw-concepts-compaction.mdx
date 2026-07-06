@@ -1,0 +1,26 @@
+---
+slug: 2026-07-06-openclaw-concepts-compaction
+title: "Compaction · OpenClaw — OpenClaw 的上下文压缩策略：智能摘要、工具调用保护与可插拔提供者。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/compaction
+publishedAt: 2026-07-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OpenClaw 的上下文压缩策略：智能摘要、工具调用保护与可插拔提供者。"
+broadcast: "OpenClaw 推出了一种智能上下文压缩策略，它能在压缩对话时自动保留工具调用与结果的配对，避免上下文断裂。更关键的是，它支持用专门的模型来做压缩，比如本地 Ollama，这样既能提升摘要质量，又不会影响主对话模型。这对国内开发者来说，意味着 Agent 系统可以更灵活地管理长对话，减少信息丢失。"
+insight: "OpenClaw 的上下文压缩策略对国内开发者很有参考价值。如果你使用 newapi.lurus.cn 代理，建议检查是否支持自定义压缩模型，因为摘要质量依赖模型能力。现有用户值得升级，特别是当你的 Agent 频繁因上下文溢出报错时——自动压缩与重试机制能显著提升稳定性。同时，需在 prompt 中增加“压缩前保存重要笔记”的指令，避免信息丢失。工具调用保护功能确保压缩不破坏执行链，建议保留。"
+tags: [context-compression, session-management, tool-call-integrity, pluggable-provider]
+---
+
+- **智能摘要与工具调用保护**：压缩时自动将旧对话摘要化，并确保工具调用与结果配对不被拆分，保留最近未摘要的尾部。
+  - 含义：Agent 框架需在压缩时维护工具调用的完整性，避免上下文断裂影响后续执行。
+- **自动压缩与溢出重试**：会话接近上下文限制或模型返回溢出错误时自动触发压缩并重试，压缩前提醒 Agent 保存重要笔记到内存文件。
+  - 含义：Prompt 设计应包含自动保存关键状态的机制，防止压缩导致信息丢失。
+- **可配置压缩模型与提供者**：支持指定专用模型（如本地 Ollama）或通过插件注册自定义压缩提供者，失败时回退到内置 LLM。
+  - 含义：Agent 系统应允许分离压缩与对话模型，提升摘要质量与系统灵活性。
+
+---
+
+> 原文：[Compaction · OpenClaw](https://docs.openclaw.ai/concepts/compaction)

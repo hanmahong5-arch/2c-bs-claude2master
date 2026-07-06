@@ -65,7 +65,10 @@
     "XxHuberrr/Mineradio",
     "deepseek-ai/DeepSpec",
     "modiqo/skillspec",
-    "modiqo/cliare"
+    "modiqo/cliare",
+    "cobusgreyling/loop-engineering",
+    "langchain-ai/openwiki",
+    "Th0rgal/open_oura"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -105,16 +108,22 @@
       "https://docs.openclaw.ai/concepts/agent-loop",
       "https://docs.openclaw.ai/concepts/agent-runtimes",
       "https://docs.openclaw.ai/concepts/agent-workspace",
-      "https://docs.openclaw.ai/concepts/architecture"
+      "https://docs.openclaw.ai/concepts/architecture",
+      "https://docs.openclaw.ai/concepts/channel-docking",
+      "https://docs.openclaw.ai/concepts/commitments",
+      "https://docs.openclaw.ai/concepts/compaction",
+      "https://docs.openclaw.ai/concepts/context",
+      "https://docs.openclaw.ai/concepts/context-engine",
+      "https://docs.openclaw.ai/concepts/delegate-architecture"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-05",
+    "anthropic-engineering": "2026-07-06",
     "claude-code-docs": "2026-07-03",
     "openai-codex-blog": "2026-07-02",
-    "openclaw-concepts": "2026-06-29",
-    "hermes-guides": "2026-06-29"
+    "openclaw-concepts": "2026-07-06",
+    "hermes-guides": "2026-07-06"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -513,7 +522,8 @@
       "https://huggingface.co/blog/cerebras-gemma4-voice-ai",
       "https://huggingface.co/blog/ibm-research/scarfbench",
       "https://huggingface.co/blog/Dharma-AI/why-specialization-is-inevitable",
-      "https://huggingface.co/blog/eee-community-evals"
+      "https://huggingface.co/blog/eee-community-evals",
+      "https://huggingface.co/blog/revamped-kernels"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -574,20 +584,20 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-05",
+    "simonwillison": "2026-07-06",
     "lilianweng": "2026-07-02",
-    "latentspace": "2026-07-05",
-    "interconnects": "2026-07-05",
-    "karpathy": "2026-07-03",
-    "raschka": "2026-07-03",
-    "eugeneyan": "2026-07-03",
+    "latentspace": "2026-07-06",
+    "interconnects": "2026-07-06",
+    "karpathy": "2026-07-06",
+    "raschka": "2026-07-06",
+    "eugeneyan": "2026-07-06",
     "chiphuyen": "2026-07-02",
-    "oneusefulthing": "2026-07-04",
+    "oneusefulthing": "2026-07-06",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-05",
-    "deepmind": "2026-07-04",
-    "hf-blog": "2026-07-04",
+    "openai-news": "2026-07-06",
+    "deepmind": "2026-07-06",
+    "hf-blog": "2026-07-06",
     "anthropic-news": "2026-07-05",
     "steipete": "2026-07-05",
     "openclaw-blog": "2026-07-05"

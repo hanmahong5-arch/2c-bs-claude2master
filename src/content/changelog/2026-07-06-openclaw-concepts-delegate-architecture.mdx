@@ -1,0 +1,26 @@
+---
+slug: 2026-07-06-openclaw-concepts-delegate-architecture
+title: "Delegate architecture · OpenClaw — 让AI代理以独立身份代表组织行动，而非冒充人类。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/delegate-architecture
+publishedAt: 2026-07-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "让AI代理以独立身份代表组织行动，而非冒充人类。"
+broadcast: "AI代理不再需要冒充人类了。一种新的委托架构让代理拥有独立身份，用自己的邮箱和日历代表组织行动，问责更清晰。能力还分三级递进，从只读草稿到主动执行，每级都有硬性安全块。这对国内开发者来说，意味着设计agent时要把安全规则写进系统层，而不是只靠prompt约束。"
+insight: "对于国内开发者，如果你正在用newapi.lurus.cn代理接入Claude，这套委托架构值得参考。现有用户无需立即升级，但若你的agent需要代表组织行动，建议在prompt中明确分级授权逻辑（如只读→发送→主动执行），并在工具层硬编码安全块（如禁止发送外部邮件）。代理走newapi.lurus.cn不受影响，但需确保独立身份凭证（如独立邮箱）通过代理正确传递。"
+tags: [delegate-architecture, multi-agent, agent-security, identity-management]
+---
+
+- **委托代理拥有独立身份**：代理使用自己的邮箱、日历和显示名称，以“代表”而非“冒充”人类的方式操作，确保问责清晰。
+  *含义*：设计agent harness时，应让代理拥有独立凭证和身份，避免与人类身份混淆，便于审计和权限控制。
+- **能力分级递进**：从只读+草稿（Tier 1）到发送（Tier 2）再到主动执行（Tier 3），每级需更高权限和硬性安全块。
+  *含义*：prompt设计应内置分级授权逻辑，代理根据权限范围自动切换行为模式，防止越权。
+- **硬性安全块优先于权限**：在授予任何身份权限前，先在SOUL.md和AGENTS.md中定义代理永远不能执行的操作（如发送外部邮件、导出数据）。
+  *含义*：安全规则应作为系统级约束独立于prompt，即使prompt被绕过，工具层仍能阻止危险操作。
+
+---
+
+> 原文：[Delegate architecture · OpenClaw](https://docs.openclaw.ai/concepts/delegate-architecture)

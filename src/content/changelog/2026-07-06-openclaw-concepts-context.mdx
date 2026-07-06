@@ -1,0 +1,26 @@
+---
+slug: 2026-07-06-openclaw-concepts-context
+title: "Context · OpenClaw — 理解AI agent的上下文窗口构成，优化token使用与成本"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/context
+publishedAt: 2026-07-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "理解AI agent的上下文窗口构成，优化token使用与成本"
+broadcast: "AI agent的上下文窗口到底被什么占满了？OpenClaw这个工具能帮你把系统提示、文件注入、工具schema的token用量一一列出来，让开发者一眼看出瓶颈在哪。它还支持自动截断超长文件、按需加载技能指令，避免上下文膨胀。对国内做agent开发的朋友来说，这种精细控制token的能力，直接关系到成本优化和模型表现。"
+insight: "OpenClaw 的上下文审计能力值得国内开发者关注。如果你在用 newapi.lurus.cn 代理，建议通过 /context 命令检查 token 分布，优先优化工具 schema 和文件注入上限，避免截断丢失核心指令。现有用户无需升级，但需调整 prompt 配置，按需加载技能指令以控制成本。"
+tags: [context-window, token-management, prompt-engineering, agent-harness]
+---
+
+- **上下文构成透明化**：OpenClaw通过`/context list`、`/context detail`等命令，清晰展示系统提示、注入文件、工具schema等各部分占用的字符/Token数，帮助开发者定位瓶颈。
+  *含义*：Agent harness应提供细粒度上下文审计能力，让开发者能精确控制每次调用的输入。
+- **文件注入与截断机制**：默认注入AGENTS.md等固定文件，并设置单文件最大字符数（如20000）和总注入上限（如60000），超出时自动截断并可选添加警告。
+  *含义*：Prompt设计需考虑文件大小限制，优先注入关键信息，避免因截断丢失核心指令。
+- **技能与工具的分离加载**：系统提示仅包含技能列表（名称+描述），具体指令按需读取；工具schema虽不可见但计入上下文，且不同工具schema大小差异显著（如browser schema近10KB）。
+  *含义*：Agent harness应支持按需加载技能指令，并监控工具schema开销，避免不必要的上下文膨胀。
+
+---
+
+> 原文：[Context · OpenClaw](https://docs.openclaw.ai/concepts/context)

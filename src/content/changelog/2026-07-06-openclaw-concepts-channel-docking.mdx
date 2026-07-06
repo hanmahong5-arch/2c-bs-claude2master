@@ -1,0 +1,23 @@
+---
+slug: 2026-07-06-openclaw-concepts-channel-docking
+title: "Channel docking · OpenClaw — 跨平台对话无缝迁移，保持上下文不中断"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/channel-docking
+publishedAt: 2026-07-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "跨平台对话无缝迁移，保持上下文不中断"
+broadcast: "最近有个叫频道对接的功能挺有意思。它能让你的对话从一个聊天应用无缝转到另一个，比如从Telegram发个命令，后续回复就自动切到Discord，而且聊天历史完全保留。这对开发智能助手的人来说是个提醒：你的系统得支持动态修改消息投递目标，同时保持会话状态稳定，别搞出什么副作用。"
+insight: "对于国内开发者，如果已使用 newapi.lurus.cn 代理，Channel docking 功能不受影响，因为它只改变投递路由，不涉及 API 调用路径。现有用户若需要跨平台无缝迁移对话，值得升级，但需在 prompt 中配置 identityLinks 映射，确保用户身份绑定。hook 配置无需改动，但需注意 docking 不迁移历史，仅更新 lastChannel，因此会话状态保持稳定。"
+tags: [channel-docking, session-routing, multi-platform, identity-links]
+---
+
+- **Channel docking 实现会话转发**：从一个聊天应用（如 Telegram）发送 `/dock_discord` 命令，后续回复会转到 Discord，而对话历史不变。这意味着 agent harness 需要支持动态修改会话的投递目标，且不重建会话。
+- **依赖 identityLinks 配置**：必须将源发送者和目标对等体放在同一身份组中，例如 `alice: ["telegram:123", "discord:456"]`。这要求 prompt 设计时明确用户身份映射，确保跨平台绑定。
+- **仅改变投递路由**：docking 不创建新会话、不迁移历史、不绕过权限策略。这提示 agent harness 应保持会话状态稳定，只更新 `lastChannel` 等字段，避免副作用。
+
+---
+
+> 原文：[Channel docking · OpenClaw](https://docs.openclaw.ai/concepts/channel-docking)
