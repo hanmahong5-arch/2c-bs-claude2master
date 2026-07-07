@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.201",
+    "anthropics/claude-code": "v2.1.202",
     "openai/codex": "rust-v0.142.5",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.37",
+    "cline/cline": "cli-v3.0.38",
     "block/goose": "v1.41.0",
-    "sst/opencode": "v1.17.13",
+    "sst/opencode": "v1.17.14",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.49.0",
     "openclaw/openclaw": "v2026.6.11",
@@ -68,7 +68,10 @@
     "modiqo/cliare",
     "cobusgreyling/loop-engineering",
     "langchain-ai/openwiki",
-    "Th0rgal/open_oura"
+    "Th0rgal/open_oura",
+    "MaximeRivest/riddle",
+    "514-labs/dnsglobe",
+    "yynxxxxx/Codex-X"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -119,7 +122,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-06",
+    "anthropic-engineering": "2026-07-07",
     "claude-code-docs": "2026-07-03",
     "openai-codex-blog": "2026-07-02",
     "openclaw-concepts": "2026-07-06",
@@ -218,7 +221,9 @@
       "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/",
       "https://simonwillison.net/2026/Jul/5/sqlite-utils/",
       "https://simonwillison.net/2026/Jul/4/building-a-world-map-with-only-500-bytes/",
-      "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/"
+      "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/",
+      "https://simonwillison.net/2026/Jul/6/hy3/",
+      "https://simonwillison.net/2026/Jul/6/sqlite-utils/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -288,7 +293,8 @@
       "https://www.latent.space/p/the-website-of-the-future",
       "https://www.latent.space/p/skill-engineering-design",
       "https://www.latent.space/p/ainews-not-much-happened-today-900",
-      "https://www.latent.space/p/aiewf-daily-dispatch-agency"
+      "https://www.latent.space/p/aiewf-daily-dispatch-agency",
+      "https://www.latent.space/p/ainews-the-field-guide-to-fable"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -551,7 +557,8 @@
       "https://www.anthropic.com/news/redeploying-fable-5",
       "https://www.anthropic.com/news/claude-sonnet-5",
       "https://www.anthropic.com/news/claude-science-ai-workbench",
-      "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework"
+      "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+      "https://www.anthropic.com/news/alberta-government-claude-cybersecurity"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -584,10 +591,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-06",
+    "simonwillison": "2026-07-07",
     "lilianweng": "2026-07-02",
-    "latentspace": "2026-07-06",
-    "interconnects": "2026-07-06",
+    "latentspace": "2026-07-07",
+    "interconnects": "2026-07-07",
     "karpathy": "2026-07-06",
     "raschka": "2026-07-06",
     "eugeneyan": "2026-07-06",
@@ -595,12 +602,12 @@
     "oneusefulthing": "2026-07-06",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-06",
+    "openai-news": "2026-07-07",
     "deepmind": "2026-07-06",
     "hf-blog": "2026-07-06",
-    "anthropic-news": "2026-07-05",
-    "steipete": "2026-07-05",
-    "openclaw-blog": "2026-07-05"
+    "anthropic-news": "2026-07-07",
+    "steipete": "2026-07-07",
+    "openclaw-blog": "2026-07-07"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

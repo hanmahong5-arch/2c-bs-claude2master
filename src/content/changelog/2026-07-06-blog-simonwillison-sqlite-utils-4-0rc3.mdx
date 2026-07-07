@@ -1,0 +1,23 @@
+---
+slug: 2026-07-06-blog-simonwillison-sqlite-utils-4-0rc3
+title: "sqlite-utils 4.0rc3 — sqlite"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/6/sqlite-utils/
+publishedAt: 2026-07-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "sqlite-utils 4.0rc3 新增复合外键支持，并修复大小写不敏感列名问题。"
+broadcast: "sqlite-utils 发布了4.0的第三个候选版本，新增了复合外键的检测和创建功能，这是正式版前最后一个重要更新。同时修复了大小写不敏感列名的问题，让数据库操作更符合SQLite的规范。这个工具对国内开发者来说，能更高效地管理SQLite数据库，尤其适合在Agent开发中处理结构化数据。"
+tags: [sqlite-utils, release-notes, compound-foreign-keys, ai-assisted-development]
+---
+
+- 新增复合外键（compound foreign keys）的检测与创建功能，这是 4.0 稳定版前最后一个重大特性，涉及对 `table.foreign_keys` 的细微破坏性变更。
+- 遵循 SQLite 的大小写不敏感列名约定，该改动波及多个模块，需全面测试。
+- 作者使用 Claude Fable 5 和 GPT-5.5 辅助处理积压的 issue 和 PR，体现了 AI 工具在开源维护中的实际应用。
+
+---
+
+> 原文：[sqlite-utils 4.0rc3](https://simonwillison.net/2026/Jul/6/sqlite-utils/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-07-06-opencode-1-17-14
+title: "opencode v1.17.14 — 代码模式MCP适配器、桌面UI大修、多项bug修复"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.14
+publishedAt: 2026-07-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "代码模式MCP适配器、桌面UI大修、多项bug修复"
+broadcast: "最近OpenCode更新了，新增了一个代码模式适配器，能让工具运行受限的编排脚本，没开这个模式时执行工具会被隐藏。还修了分页工具目录的元数据丢失问题，调用更可靠了。桌面版也改了不少，比如显示服务器状态、统一连接流程、支持标签页重开和后台打开。对国内开发者来说，这些改进让Agent开发更稳定、操作更顺手。"
+insight: "如果你在用 sst/opencode 且依赖 MCP 工具，v1.17.14 的代码模式适配器值得升级，它能对工具运行编排脚本，未启用时自动隐藏 execute 工具，避免误调用。桌面 UI 大修改善了草稿服务器状态显示和标签页管理，但国内用户通过 newapi.lurus.cn 代理不受影响，因为更新不涉及网络层。现有 prompt 和 hook 配置无需改动，除非你用了分页 MCP 目录——之前元数据丢失和输出模式验证问题已修复，建议升级以确保工具调用可靠。"
+tags: [mcp-adapter, code-mode, desktop-ui, bugfix]
+---
+
+- 新增代码模式MCP适配器，可对连接的工具运行受限编排脚本；未启用代码模式时隐藏execute工具。
+- 修复分页MCP工具目录丢失元数据和输出模式验证的问题，确保工具调用可靠。
+- 桌面版改进：显示草稿服务器状态、统一提供商连接流程、支持标签页重开和后台打开、优化模型搜索和终端体验。
+
+---
+
+> 原文 release：[sst/opencode v1.17.14](https://github.com/anomalyco/opencode/releases/tag/v1.17.14)

@@ -1,0 +1,26 @@
+---
+slug: 2026-07-07-cline-cli-v3-0-38
+title: "cline cli-v3.0.38 — 视觉与交互升级，模型兼容性增强"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.38
+publishedAt: 2026-07-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "视觉与交互升级，模型兼容性增强"
+broadcast: "Cline 的 CLI 工具更新了，这次主要提升了视觉体验和模型兼容性。新版本用蓝色和琥珀色区分 act 和 plan 两种模式，让你一眼就能看清当前状态。聊天输入框也重新设计，更简洁专注。更重要的是，它现在能容忍弱模型格式错误的输入，减少因格式问题导致的失败，这对国内开发者来说，意味着 Agent 开发更稳定、更省心。"
+insight: "本次更新主要优化了视觉交互和弱模型兼容性，现有用户值得升级。act/plan 模式调色板让状态识别更直观，输入框重设计提升了专注度，这些改动不影响现有 prompt 或 hook 配置。国内用户通过 newapi.lurus.cn 代理使用不受影响，因为更新集中在客户端 UI 和工具容错，不涉及 API 调用逻辑。建议直接升级以获得更好的操作体验。"
+tags: [ui, accessibility, robustness]
+---
+
+- 新增 plan/act 模式调色板：act 模式蓝色，plan 模式琥珀色，应用于对话框、模型选择器等，并优化浅色主题对比度。
+  - 含义：Agent 状态视觉区分更清晰，便于用户快速识别当前模式。
+- 重新设计聊天输入框：采用极简边框、全宽水平线和加粗提示符号，用户消息气泡更紧凑。
+  - 含义：输入区域更简洁，减少视觉干扰，提升专注度。
+- `read_files` 工具现在能容忍弱模型格式错误的输入：将作为独立数组项发送的行范围条目合并回文件路径。
+  - 含义：Agent 对弱模型的鲁棒性提升，减少因输入格式问题导致的失败。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.38](https://github.com/cline/cline/releases/tag/cli-v3.0.38)

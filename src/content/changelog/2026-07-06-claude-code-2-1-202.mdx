@@ -1,0 +1,23 @@
+---
+slug: 2026-07-06-claude-code-2-1-202
+title: "claude-code v2.1.202 — Claude Code 新增动态工作流规模设置与 OTel 属性，修复多项远程控"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.202
+publishedAt: 2026-07-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 新增动态工作流规模设置与 OTel 属性，修复多项远程控制与工作流 Bug"
+broadcast: "Claude Code 最近更新了，新增了动态工作流规模设置，你可以根据任务复杂度调整参与工作的 agent 数量，让资源分配更灵活。同时，工作流现在会带上可观测性标签，方便追踪运行过程。还修复了远程控制时的一些命令和文件问题，多端操作更稳定了。"
+insight: "对于国内开发者，如果你通过 newapi.lurus.cn 代理使用 Claude Code，本次更新不影响代理兼容性，无需调整 hook 配置。现有用户建议升级，因为新增的动态工作流规模设置（小/中/大）能根据任务复杂度灵活分配 agent 数量，提升资源利用率；同时 OTel 属性增强可观测性，便于调试。远程控制 Bug 的修复也值得升级以保障多端交互一致。"
+tags: [dynamic-workflow, opentelemetry, remote-control, bug-fix]
+---
+
+- 新增 `/config` 中的 "Dynamic workflow size" 设置，可控制工作流中 agent 数量（小/中/大），作为建议性指导而非硬性限制，便于根据任务复杂度调整资源分配。
+- 工作流生成的 agent 现在会携带 `workflow.run_id` 和 `workflow.name` 的 OpenTelemetry 属性，使工作流运行活动可从 OTel 数据中重建，增强可观测性。
+- 修复了远程控制（移动端/网页）发送命令时提示 "Unknown command"、无标题图片/文件被静默丢弃等问题，确保多端交互一致性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.202](https://github.com/anthropics/claude-code/releases/tag/v2.1.202)
