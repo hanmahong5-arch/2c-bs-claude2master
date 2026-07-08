@@ -1,0 +1,26 @@
+---
+slug: 2026-07-08-hermes-agent-2026-7-7-2
+title: "hermes-agent v2026.7.7.2 — WhatsApp依赖修复，Docker构建不再报错"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.7.2
+publishedAt: 2026-07-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "WhatsApp依赖修复，Docker构建不再报错"
+broadcast: "Hermes Agent 最近发布了一个小补丁，专门修复了 WhatsApp 桥接的依赖问题。他们把之前用的 Git 提交版本换成了 npm 发布的稳定版，这样安装起来更可靠，不会在 Docker 构建时报错。这个改动提醒我们，在开发 Agent 时，依赖管理最好优先用发布版本，避免因为固定提交导致构建失败。"
+insight: "对于使用WhatsApp桥接的国内用户，建议立即升级到v0.18.2，因为依赖从git commit改为npm发布版本，安装更可靠，能避免Docker构建报错。如果当前配置中使用了旧版WhatsApp hook，无需修改配置，升级即可。通过newapi.lurus.cn代理访问不受影响，因为此补丁仅修复依赖管理，未涉及API或网络层变更。"
+tags: [whatsapp, dependency-fix, docker, patch]
+---
+
+- WhatsApp桥接依赖从git commit改为npm发布的7.0.0-rc13，安装更可靠。
+  - 对agent harness设计意味着：依赖管理应优先使用发布版本而非固定commit，避免构建失败。
+- 此补丁仅修复WhatsApp依赖，无其他功能变更。
+  - 对agent harness设计意味着：紧急补丁应聚焦单一问题，降低回归风险。
+- 完整更新日志将在v0.19.0发布。
+  - 对agent harness设计意味着：版本发布策略可考虑累积变更说明，减少碎片化。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.7.7.2](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.7.2)

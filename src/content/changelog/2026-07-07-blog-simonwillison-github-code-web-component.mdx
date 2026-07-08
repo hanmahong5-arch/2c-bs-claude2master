@@ -1,0 +1,23 @@
+---
+slug: 2026-07-07-blog-simonwillison-github-code-web-component
+title: "github-code Web Component — 用Web Component嵌入GitHub代码片段，无需后端。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/7/github-code-component/
+publishedAt: 2026-07-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用Web Component嵌入GitHub代码片段，无需后端。"
+broadcast: "今天介绍一个实用的Web组件，它能让你直接在网页里嵌入GitHub上的代码片段，不需要后端支持。这个组件会自动把GitHub链接转成原始文件地址，然后获取内容显示出来，还能指定显示哪几行代码。虽然目前没有语法高亮，但胜在轻量简单，特别适合写技术文档或博客时引用代码。对国内开发者来说，这意味着分享代码更方便了，直接在静态页面里就能用。"
+tags: [github, web-components, gpt]
+---
+
+- 该组件将GitHub URL转换为raw.githubusercontent.com链接，通过fetch()获取文件内容，并显示指定行号范围的代码。
+- 目前不支持语法高亮，但提供了轻量级嵌入方案，适合文档或博客中引用代码片段。
+- 对开发者而言，这种模式简化了代码分享，无需依赖第三方服务或后端渲染，可直接在静态页面中使用。
+
+---
+
+> 原文：[github-code Web Component](https://simonwillison.net/2026/Jul/7/github-code-component/) · 作者 Simon Willison

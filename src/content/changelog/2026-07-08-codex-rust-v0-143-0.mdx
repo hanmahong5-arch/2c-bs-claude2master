@@ -1,0 +1,23 @@
+---
+slug: 2026-07-08-codex-rust-v0-143-0
+title: "codex rust-v0.143.0 — 远程插件默认启用，系统代理支持，新模型与MCP改进"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.143.0
+publishedAt: 2026-07-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "远程插件默认启用，系统代理支持，新模型与MCP改进"
+broadcast: "OpenAI的Codex工具更新了，这次远程插件默认开启，可以直接用npm市场的插件，还支持系统代理，认证和API流量都能走代理。另外新增了Amazon Bedrock的GPT-5.6系列模型，推理能力更强。国内开发者做agent开发时，得注意适配远程插件和代理配置，才能用好这些新功能。"
+insight: "如果你在用 Codex 的 Rust 版本，这次升级值得跟进。远程插件默认启用后，建议检查现有插件管理流程是否适配 npm 源，否则可能影响插件加载。系统代理支持对国内用户是利好，走 newapi.lurus.cn 时需确认 agent 代理配置统一，避免认证和 Responses API 流量绕过代理。新增的 Bedrock 模型和 max 推理努力参数，如果 agent 未支持新参数，需调整 prompt 或 hook 配置以兼容。"
+tags: [remote-plugins, system-proxy, bedrock-models, mcp-tools]
+---
+
+- 远程插件默认启用，支持npm市场源和版本显示，需确保插件管理流程适配远程来源。
+- 认证和Responses API流量可通过macOS/Windows系统代理（含PAC/WPAD），agent需统一代理配置。
+- 新增Amazon Bedrock GPT-5.6系列模型及`max`推理努力，agent需支持新模型参数。
+
+---
+
+> 原文 release：[openai/codex rust-v0.143.0](https://github.com/openai/codex/releases/tag/rust-v0.143.0)

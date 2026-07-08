@@ -1,0 +1,23 @@
+---
+slug: 2026-07-08-claude-code-2-1-204
+title: "claude-code v2.1.204 — 修复无头会话中SessionStart钩子不流式传输导致远程worker被回收"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.204
+publishedAt: 2026-07-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复无头会话中SessionStart钩子不流式传输导致远程worker被回收"
+broadcast: "这次更新修复了一个关键问题：在无头会话中，SessionStart钩子事件不再被阻塞，而是会流式传输。之前因为不流式传输，远程worker可能在执行钩子时被误判为空闲而回收，导致初始化中断。这对国内开发者来说是个提醒：设计agent时，一定要考虑钩子执行期间的连接保持机制，避免worker被误回收影响任务连续性。"
+insight: "对于使用无头会话的国内用户，建议立即升级至v2.1.204，因为修复了SessionStart钩子不流式传输导致远程worker被回收的关键问题。如果你通过newapi.lurus.cn代理使用Claude Code，该修复对代理无直接影响，但能确保钩子执行期间worker保持活跃，避免任务中断。现有hook配置无需修改，但建议检查无头会话中的初始化流程是否依赖钩子流式传输。"
+tags: [hook-events, headless-sessions, bug-fix, worker-lifecycle]
+---
+
+- 修复了无头会话中SessionStart钩子事件不流式传输的问题，之前可能导致远程worker在钩子执行期间因空闲被回收。
+- 对agent harness设计的含义：钩子事件流式传输确保远程worker保持活跃，避免因空闲超时中断关键初始化流程。
+- 设计需考虑钩子执行期间的连接保持机制，防止worker被误回收影响任务连续性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.204](https://github.com/anthropics/claude-code/releases/tag/v2.1.204)

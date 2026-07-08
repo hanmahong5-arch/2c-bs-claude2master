@@ -1,0 +1,28 @@
+---
+slug: 2026-07-07-claude-code-2-1-203
+title: "claude-code v2.1.203 — 大量bug修复与性能优化，提升后台会话稳定性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.203
+publishedAt: 2026-07-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "大量bug修复与性能优化，提升后台会话稳定性"
+broadcast: "Claude Code 的新版本来了，这次主要修复了大量bug并优化了性能，特别是后台会话的稳定性提升明显。比如修复了macOS上因内存误判导致的卡死问题，还有子代理被静默终止的bug，现在工作能保留了。对国内开发者来说，这些改进意味着agent开发中的认证管理、资源检测和会话自愈能力都有了更可靠的参考。"
+insight: "这次更新修复了大量后台会话稳定性问题，包括认证过期、内存误判、令牌过期、子代理被终止等，对使用 newapi.lurus.cn 代理的国内用户来说，后台会话的可靠性显著提升。如果你之前遇到后台会话卡死或工具缺失问题，建议升级。现有 prompt 和 hook 配置无需修改，但若你自定义了 effortLevel 或环境变量，升级后这些配置会正确生效。"
+tags: [bug-fix, performance, background-sessions, stability]
+---
+
+- 新增登录过期警告，避免后台会话因认证失效中断；设计含义：agent harness应主动管理认证生命周期。
+- 修复macOS后台会话因低内存误判卡死15-20秒；设计含义：资源检测需更稳健，避免误触发。
+- 修复后台会话因守护进程令牌过期永久无响应，现自动恢复；设计含义：会话应具备自愈能力。
+- 修复返回`claude agents`时子代理被静默终止，现工作得以保留；设计含义：子代理状态需持久化。
+- 修复交互会话中上下文使用指示器每轮重分析整个对话，导致内存和CPU回归；设计含义：增量更新优于全量重算。
+- 修复后台代理继承守护进程的过时PATH，导致Windows上工具缺失；设计含义：环境变量应从调度shell继承。
+- 修复后台会话忽略`effortLevel`设置变更；设计含义：配置变更应实时生效。
+- 减少二进制大小和启动内存各约7MB；设计含义：延迟加载可优化资源占用。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.203](https://github.com/anthropics/claude-code/releases/tag/v2.1.203)

@@ -1,0 +1,23 @@
+---
+slug: 2026-07-07-opencode-1-17-15
+title: "opencode v1.17.15 — 修复上下文溢出与配置读取，优化桌面UI一致性"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.15
+publishedAt: 2026-07-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复上下文溢出与配置读取，优化桌面UI一致性"
+broadcast: "最近开源项目OpenCode更新了，修复了两个关键问题：一是AI上下文窗口溢出时能正确报错，二是配置目录不可用时不再崩溃。这对开发智能体助手的开发者来说很重要，意味着需要更精细地处理不同模型的限制和配置缺失的情况。同时桌面端的终端快捷键和未读状态也优化了，使用起来更顺手。"
+insight: "本次更新主要修复了上下文溢出和配置读取的稳定性问题，对国内用户通过 newapi.lurus.cn 代理使用无直接影响。现有用户建议升级，因为修复了 Z.ai 上下文窗口溢出的错误分类，以及配置目录不可用时的崩溃问题，这些改进能提升 agent harness 的健壮性。如果之前遇到因 token 限制导致的异常，升级后会更稳定。prompt 和 hook 配置无需改动，但需注意 agent harness 需处理不同 LLM 的 token 限制错误。"
+tags: [bugfix, desktop-ui, configuration, terminal]
+---
+
+- 修复Z.ai上下文窗口溢出错误分类，确保超长请求触发正确失败模式，对agent harness意味着需区分不同LLM的token限制错误。
+- 优雅处理不可用的配置目录，避免读取配置时崩溃，对agent harness意味着需处理配置缺失场景。
+- 终端快捷键在终端聚焦时优先，并显示待处理问题的未读状态，对agent harness意味着需管理输入焦点和会话状态。
+
+---
+
+> 原文 release：[sst/opencode v1.17.15](https://github.com/anomalyco/opencode/releases/tag/v1.17.15)

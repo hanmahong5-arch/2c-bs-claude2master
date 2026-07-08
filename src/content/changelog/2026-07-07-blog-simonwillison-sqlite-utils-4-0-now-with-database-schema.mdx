@@ -1,0 +1,26 @@
+---
+slug: 2026-07-07-blog-simonwillison-sqlite-utils-4-0-now-with-database-schema
+title: "sqlite-utils 4.0, now with database schema migrations — Simon Willison 发布 sqlite"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/7/sqlite-utils-4/
+publishedAt: 2026-07-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 sqlite-utils 4.0，核心新特性是数据库迁移系统，简化 SQLite 项目 schema 演进。"
+broadcast: "Simon Willison 发布了 sqlite-utils 4.0，核心亮点是新增了数据库迁移系统，让 SQLite 项目的 schema 演进变得简单可控。这套系统能实现原生 ALTER TABLE 不支持的修改，比如改列类型，对国内开发者来说，它为无 ORM 的 SQLite 项目提供了一种轻量级的版本管理方案。此外，新版本还支持嵌套事务和复合外键，让复杂操作更安全可靠，值得关注。"
+tags: [sqlite-utils, database-migrations, sqlite, python]
+---
+
+- 迁移系统基于 Python 文件定义变更序列，利用 `table.transform()` 实现 SQLite 原生 ALTER TABLE 不支持的 schema 修改（如改列类型），通过创建临时表、复制数据、替换旧表实现。
+  - 对开发者：提供了一种轻量、可编程的 schema 版本管理方案，尤其适合无 ORM 的 SQLite 项目。
+- 新增 `db.atomic()` 上下文管理器支持嵌套事务，利用 SQLite 保存点实现事务内事务，提升迁移安全性和可推理性。
+  - 对工具链：使复杂数据库操作（如批量迁移）更可靠，降低数据损坏风险。
+- 支持复合外键，包括创建、转换和通过 `table.foreign_keys` 内省；该功能由 AI 代码助手协助设计 API。
+  - 对开发者：填补了 sqlite-utils 在关系完整性方面的关键缺口，使库更适用于复杂数据模型。
+
+---
+
+> 原文：[sqlite-utils 4.0, now with database schema migrations](https://simonwillison.net/2026/Jul/7/sqlite-utils-4/) · 作者 Simon Willison

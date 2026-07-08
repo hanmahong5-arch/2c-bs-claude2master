@@ -1,0 +1,26 @@
+---
+slug: 2026-07-07-blog-simonwillison-sqlite-utils-4-0
+title: "sqlite-utils 4.0 — Simon Willison 发布 sqlite"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/7/sqlite-utils/
+publishedAt: 2026-07-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 sqlite-utils 4.0，新增数据库 schema 迁移功能。"
+broadcast: "Simon Willison 发布了 sqlite-utils 4.0，新增了数据库结构迁移功能。现在你可以直接用命令添加、重命名或删除列，不用手动写迁移脚本，也不用依赖复杂的 ORM。对国内开发者来说，这意味着在构建 agent 工具链时，能更安全、更简单地管理数据状态，让自动化流程更可靠。"
+tags: [sqlite-utils, database-migrations, cli-tools, data-management]
+---
+
+- 新增 `sqlite-utils migrate` 命令，支持对已有 SQLite 数据库执行 schema 变更，如添加、重命名、删除列或修改类型。
+  - 这意味着开发者无需手动编写迁移脚本或依赖 ORM，即可安全地演进数据库结构。
+- 迁移基于检测当前 schema 与目标 schema 的差异自动生成，并支持回滚操作。
+  - 对 agent 工具链而言，这降低了动态数据管理的门槛，使自动化流程能更可靠地维护持久化状态。
+- 该版本还改进了 CLI 交互，如 `--csv` 和 `--nl` 输出格式，以及更清晰的错误提示。
+  - 这些细节优化让 sqlite-utils 更适合作为数据管道中的通用组件，便于集成到各种脚本和 agent 工作流中。
+
+---
+
+> 原文：[sqlite-utils 4.0](https://simonwillison.net/2026/Jul/7/sqlite-utils/) · 作者 Simon Willison
