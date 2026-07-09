@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "slug": "2026-07-09-cline-4-0-7",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.0.7 — ClinePass 新增限流错误与免费模型选择",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-07-09"
+    },
+    {
+      "slug": "2026-07-09-cline-cli-v3-0-39",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.39 — Cline 免费模型上线，编辑 diff 更准确",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-07-09"
+    },
+    {
       "slug": "2026-07-08-blog-latentspace-ainews-lilian-weng-summarizes-35-papers-on-harness",
       "zh": true,
       "en": true,
@@ -8,6 +30,94 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-08"
+    },
+    {
+      "slug": "2026-07-08-blog-latentspace-why-ai-infrastructure-must-evolve-for-agent-experience",
+      "zh": true,
+      "en": true,
+      "title": "Why AI Infrastructure must evolve for Agent Experience — Modal CTO 谈 AI 基础设施如何从开发者体验转向代理体验。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-08"
+    },
+    {
+      "slug": "2026-07-08-blog-openai-news-helping-k-12-educators-build-practical-ai-skills",
+      "zh": true,
+      "en": true,
+      "title": "Helping K–12 educators build practical AI skills — OpenAI联合基金会为K",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-08"
+    },
+    {
+      "slug": "2026-07-08-blog-openai-news-our-approach-to-government-and-national-security-partnerships",
+      "zh": true,
+      "en": true,
+      "title": "Our approach to government and national security — OpenAI 阐述与政府及国家安全合作的原则与路径。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-08"
+    },
+    {
+      "slug": "2026-07-08-blog-openai-news-separating-signal-from-noise-in-coding-evaluations",
+      "zh": true,
+      "en": true,
+      "title": "Separating signal from noise in coding evaluations — SWE",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-08"
+    },
+    {
+      "slug": "2026-07-08-blog-openclaw-blog-introducing-the-openclaw-foundation",
+      "zh": true,
+      "en": true,
+      "title": "Introducing the OpenClaw Foundation — OpenClaw 转型非营利，推动个人 AI 普及。",
+      "kind": "blogger",
+      "author": "OpenClaw",
+      "source": "OpenClaw",
+      "tool": null,
+      "publishedAt": "2026-07-08"
+    },
+    {
+      "slug": "2026-07-08-blog-simonwillison-introducing-gpt-live",
+      "zh": true,
+      "en": true,
+      "title": "Introducing GPT‑Live — GPT",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-08"
+    },
+    {
+      "slug": "2026-07-08-blog-simonwillison-quoting-kenton-varda",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Kenton Varda — Kenton Varda 禁止团队用 AI 写变更描述，因它忽略高层框架。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-08"
+    },
+    {
+      "slug": "2026-07-08-blog-simonwillison-rewriting-bun-in-rust",
+      "zh": true,
+      "en": true,
+      "title": "Rewriting Bun in Rust — 用AI代理将Bun从Zig重写为Rust，成本16.5万美元，测试套件是关键。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-07-08"
     },
@@ -23,6 +133,17 @@
       "publishedAt": "2026-07-08"
     },
     {
+      "slug": "2026-07-08-claude-code-2-1-205",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.205 — 修复多项bug，优化自动模式与agent视图，新增/doctor诊断命令",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-07-08"
+    },
+    {
       "slug": "2026-07-08-codex-rust-v0-143-0",
       "zh": true,
       "en": false,
@@ -31,6 +152,17 @@
       "author": null,
       "source": "openai/codex",
       "tool": "codex",
+      "publishedAt": "2026-07-08"
+    },
+    {
+      "slug": "2026-07-08-gemini-cli-0-50-0",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.50.0 — Gemini CLI 新增工具注册发现，CI 修复防发布错误",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
       "publishedAt": "2026-07-08"
     },
     {
@@ -485,6 +617,17 @@
       "publishedAt": "2026-07-05"
     },
     {
+      "slug": "2026-07-04-blog-lilianweng-harness-engineering-for-self-improvement",
+      "zh": true,
+      "en": true,
+      "title": "Harness Engineering for Self-Improvement — AI通过改进自身训练和部署流程实现递归自我提升，加速研究发展。",
+      "kind": "blogger",
+      "author": "Lilian Weng",
+      "source": "Lilian Weng",
+      "tool": null,
+      "publishedAt": "2026-07-04"
+    },
+    {
       "slug": "2026-07-04-blog-simonwillison-better-models-worse-tools",
       "zh": true,
       "en": true,
@@ -736,149 +879,6 @@
       "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-07-02"
-    },
-    {
-      "slug": "2026-07-02-blog-simonwillison-understand-to-participate",
-      "zh": true,
-      "en": true,
-      "title": "Understand to participate — 与AI协作时，理解代码深度决定你能否有效参与。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-02"
-    },
-    {
-      "slug": "2026-07-02-blog-simonwillison-using-dspy-to-evaluate-and-improve-datasette-agent",
-      "zh": true,
-      "en": true,
-      "title": "Using DSPy to evaluate and improve Datasette Agent's — 用DSPy自动评估并优化Datasette Agent的SQL系统提示词。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-02"
-    },
-    {
-      "slug": "2026-07-02-claude-code-2-1-199",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.199 — 大量bug修复与子代理、后台代理稳定性改进",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-07-02"
-    },
-    {
-      "slug": "2026-07-02-cline-4-0-6",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.0.6 — 模型能力警告更通用，覆盖更多场景",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-07-02"
-    },
-    {
-      "slug": "2026-07-02-goose-1-40-0",
-      "zh": true,
-      "en": false,
-      "title": "goose v1.40.0 — Goose v1.40 新增多语言、新命令、更多 AI 提供商和钩子系统",
-      "kind": "changelog",
-      "author": null,
-      "source": "block/goose",
-      "tool": "goose",
-      "publishedAt": "2026-07-02"
-    },
-    {
-      "slug": "2026-07-02-trending-deepseek-ai-deepspec",
-      "zh": true,
-      "en": false,
-      "title": "DeepSpec — DeepSeek 开源全栈投机解码训练评估框架",
-      "kind": "trending",
-      "author": null,
-      "source": "deepseek-ai/DeepSpec",
-      "tool": null,
-      "publishedAt": "2026-07-02"
-    },
-    {
-      "slug": "2026-07-01-blog-hf-blog-hugging-face-and-cerebras-bring-gemma-4-to",
-      "zh": true,
-      "en": true,
-      "title": "Hugging Face and Cerebras bring Gemma 4 to real-time — Hugging Face与Cerebras合作，将Gemma 4模型用于实时语音",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-07-01"
-    },
-    {
-      "slug": "2026-07-01-blog-latentspace-aiewf-daily-dispatch-loops-software-factories-forward-deployed",
-      "zh": true,
-      "en": true,
-      "title": "AIEWF Daily Dispatch: Loops, Software Factories & — AI工程大会第二天：循环、软件工厂和前部署工程师成为焦点。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-07-01"
-    },
-    {
-      "slug": "2026-07-01-blog-latentspace-ainews-sonnet-5-today-and-fable-5-tomorrow",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Sonnet 5 today, and Fable 5 tomorrow — Sonnet 5 发布，性能提升但 token 消耗大增，Fable 5 缺席引",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-07-01"
-    },
-    {
-      "slug": "2026-07-01-blog-latentspace-autoresearch-the-feedback-loop-behind-self-improving-agents",
-      "zh": true,
-      "en": true,
-      "title": "Autoresearch: The feedback loop behind self-improving — 本文介绍 Autoresearch 概念，即通过外循环让代理自我改进，并提出了代",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-07-01"
-    },
-    {
-      "slug": "2026-07-01-blog-latentspace-forward-deployed-engineers-and-the-future-of-software",
-      "zh": true,
-      "en": true,
-      "title": "Forward Deployed Engineers and the future of software — Forward deployed engineering is defined ",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-07-01"
-    },
-    {
-      "slug": "2026-07-01-blog-latentspace-how-cursor-deploys-ai-inside-the-enterprise",
-      "zh": true,
-      "en": true,
-      "title": "How Cursor deploys AI inside the enterprise — Cursor 的 FDE 团队如何帮企业从个人 AI 工具迈向全流程 AI 软件",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-07-01"
-    },
-    {
-      "slug": "2026-07-01-blog-latentspace-the-coolest-diffusion-research-isn-t-in-llms",
-      "zh": true,
-      "en": true,
-      "title": "🔬 The Coolest Diffusion Research Isn't in LLMs — Evan — Genesis Molecular AI 用扩散模型攻克小分子药物发现，精度超越",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-07-01"
     }
   ]
 }
