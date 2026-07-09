@@ -1,0 +1,24 @@
+---
+slug: 2026-07-08-claude-code-2-1-205
+title: "claude-code v2.1.205 — 修复多项bug，优化自动模式与agent视图，新增/doctor诊断命令"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.205
+publishedAt: 2026-07-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复多项bug，优化自动模式与agent视图，新增/doctor诊断命令"
+broadcast: "Claude Code 的最新更新来了，这次主要修复了不少自动模式和 agent 视图的 bug，比如自动模式现在会阻止篡改会话记录，执行危险删除前也会先问用户。另外新增了 /doctor 诊断命令，能帮你检查和修复设置问题。对国内开发者来说，这些改进让 agent 开发更稳定可靠，值得关注。"
+insight: "v2.1.205 主要是一次稳定性修复，对国内用户通过 newapi.lurus.cn 代理使用无直接影响。如果你之前遇到 agent 状态显示错误、Windows 下误删文件或 JSON Schema 失效等问题，值得升级。自动模式新增的 rm -rf 安全询问和 /doctor 诊断命令对日常使用有帮助，但无需为此修改现有 prompt 或 hook 配置。建议按需升级。"
+tags: [bug-fix, auto-mode, agent-view, diagnostics]
+---
+
+- 自动模式新增规则，阻止篡改会话记录文件；执行`rm -rf`前若变量无法解析则询问用户。
+- 修复`--json-schema`无效时静默输出非结构化内容、`format`关键字被拒绝的问题；修复Windows工作树删除时因NTFS链接误删外部文件。
+- 修复agent列表状态显示错误（后台agent恢复后仍显示“失败”/“完成”、任务状态翻转、会话到PR链接丢失等）；agent视图修复行高与头部裁剪。
+- 新增`/doctor`命令进行完整设置检查与修复；保留“Claude Browser”MCP服务器名称，防止用户配置冲突。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.205](https://github.com/anthropics/claude-code/releases/tag/v2.1.205)

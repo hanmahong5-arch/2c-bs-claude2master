@@ -1,0 +1,23 @@
+---
+slug: 2026-07-08-gemini-cli-0-50-0
+title: "gemini-cli v0.50.0 — Gemini CLI 新增工具注册发现，CI 修复防发布错误"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.50.0
+publishedAt: 2026-07-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Gemini CLI 新增工具注册发现，CI 修复防发布错误"
+broadcast: "谷歌的Gemini命令行工具更新了，这次新增了工具注册发现功能，让AI代理能更灵活地集成各种工具。同时修复了CI构建中的依赖安装问题，以及发布时的崩溃故障。对国内开发者来说，这意味着用Gemini搭建智能代理时，环境更稳定，部署也更可靠了。"
+insight: "这次更新对国内用户通过 newapi.lurus.cn 代理使用 Gemini CLI 没有直接影响，因为修复的是 CI 和发布流程，不涉及网络或 API 调用。如果你已经在用 Gemini CLI 构建 agent，工具注册发现功能值得升级，能简化工具集成。现有 prompt 或 hook 配置无需改动，但建议升级后检查 agent 构建是否正常，确保依赖安装一致。"
+tags: [tool-registry, ci-fix, cli]
+---
+
+- 新增工具注册发现功能，允许 CLI 动态发现和注册工具，简化 agent 工具集成流程。
+- 修复 CI 中 npm ci 忽略脚本的问题，确保依赖安装一致性，避免 agent 环境构建失败。
+- 修复工作区二进制文件遮蔽和 NPM 发布崩溃问题，提升 agent 部署可靠性。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.50.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.50.0)

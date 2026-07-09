@@ -1,0 +1,23 @@
+---
+slug: 2026-07-09-cline-4-0-7
+title: "cline v4.0.7 — ClinePass 新增限流错误与免费模型选择"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.0.7
+publishedAt: 2026-07-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "ClinePass 新增限流错误与免费模型选择"
+broadcast: "Cline 最新版本带来了 ClinePass 的限流错误提示，当你遇到配额超限时，可以一键切换到按量计费，非常方便。同时免费模型现在按已订阅和免费分页展示，还附上了模型描述，选模型更简单了。这些改进对国内开发者来说，意味着使用 Cline 做 agent 开发时，资源管理和模型选择都更顺畅了。"
+insight: "对于国内用户，如果你正在使用 ClinePass 且遇到限流错误，v4.0.7 新增的一键切换按量计费选项值得升级，能快速恢复使用。免费模型选择界面优化后更清晰，但如果你已通过 newapi.lurus.cn 代理接入，需确认代理是否支持新限流错误处理，建议测试后再决定是否升级。现有 prompt 或 hook 配置无需改动。"
+tags: [clinepass, billing, model-selection, ui-copy]
+---
+
+- 新增 ClinePass 限流错误，提供一键切换至按量计费选项，便于处理配额超限。
+- 免费模型按“已订阅”和“免费”分页展示，并附模型描述，简化模型选择流程。
+- 优化 ClinePass 引导文案，移除 GLM 5.1 引用，减少用户混淆。
+
+---
+
+> 原文 release：[cline/cline v4.0.7](https://github.com/cline/cline/releases/tag/v4.0.7)

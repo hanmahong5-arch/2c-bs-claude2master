@@ -1,0 +1,23 @@
+---
+slug: 2026-07-08-blog-openai-news-separating-signal-from-noise-in-coding-evaluations
+title: "Separating signal from noise in coding evaluations — SWE"
+source: "OpenAI"
+sourceUrl: https://openai.com/index/separating-signal-from-noise-coding-evaluations
+publishedAt: 2026-07-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "OpenAI"
+hook: "SWE-Bench Pro 基准测试存在严重噪声，影响 AI 编码评估可靠性。"
+broadcast: "最近有研究发现，SWE-Bench Pro 这个用来评估 AI 编码能力的基准测试，存在严重的噪声问题。大约三成的测试用例本身就有错误，或者环境配置有问题，导致模型得分虚高，这对我们国内开发者选择模型会造成误导。所以，在使用这类评估结果时，一定要留意它的可靠性，最好通过多次测试取中位数来减少干扰。"
+tags: [swe-bench, coding-evaluation, benchmark-noise, ai-reliability]
+---
+
+- SWE-Bench Pro 中 30% 的测试用例存在噪声，包括测试本身错误或环境配置问题，导致模型得分虚高。
+- 噪声主要来自不稳定的依赖项和随机失败，使得评估结果不可重复，对开发者选择模型造成误导。
+- 改进建议包括使用更严格的测试过滤和多次运行取中位数，以提升基准测试的信噪比，确保工具链评估的准确性。
+
+---
+
+> 原文：[Separating signal from noise in coding evaluations](https://openai.com/index/separating-signal-from-noise-coding-evaluations) · 作者 OpenAI

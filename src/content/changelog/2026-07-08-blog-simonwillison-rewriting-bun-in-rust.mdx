@@ -1,0 +1,28 @@
+---
+slug: 2026-07-08-blog-simonwillison-rewriting-bun-in-rust
+title: "Rewriting Bun in Rust — 用AI代理将Bun从Zig重写为Rust，成本16.5万美元，测试套件是关键。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/
+publishedAt: 2026-07-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用AI代理将Bun从Zig重写为Rust，成本16.5万美元，测试套件是关键。"
+broadcast: "最近有个大新闻：Bun这个JavaScript运行时，因为Zig版本内存管理问题太多，团队用AI代理花了16.5万美元，11天就重写成了Rust。关键是测试套件帮了大忙，保证了正确性。这对国内开发者来说，意味着语言选择不再是死胡同，AI让大规模重写变得可行，以后开发可以更放心地选安全语言了。"
+tags: [ai-assisted-programming, agentic-engineering, rust, bun]
+---
+
+- Bun的Zig版本因内存管理（use-after-free、double-free等）导致大量bug，Jarred Sumner决定用Rust重写，利用Rust的安全特性消除这类问题。
+  **含义**：语言选择不再是单向决策，AI代理让大规模重写变得可行，开发者可优先考虑语言的安全性和生态。
+
+- 重写依赖TypeScript编写的测试套件作为一致性基准，AI代理（Claude Mythos/Fable）在11天内自动将Zig代码移植为Rust，通过率很高。
+  **含义**：语言无关的测试套件是AI辅助重写的核心资产，它提供了验证正确性的客观标准，降低了合并AI生成代码的风险。
+
+- 合并百万行级PR的信任来自：测试套件（百万断言）、对抗性代码审查、以及修复生成过程而非手动修复代码。最终新Rust版本在Claude Code中上线，启动速度提升10%，用户无感知。
+  **含义**：AI代理工程需要流程化质量保障，修复生成逻辑比逐行修代码更高效，且“无聊”的平稳过渡是成功标志。
+
+---
+
+> 原文：[Rewriting Bun in Rust](https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/) · 作者 Simon Willison
