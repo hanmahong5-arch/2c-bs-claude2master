@@ -1,0 +1,23 @@
+---
+slug: 2026-07-08-blog-hf-blog-native-speed-vllm-transformers-modeling-backend
+title: "Native-speed vLLM transformers modeling backend — Hugging Face 推出 vLLM 后端，让 Transformers 模"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/native-speed-vllm-transformers-backend
+publishedAt: 2026-07-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 推出 vLLM 后端，让 Transformers 模型推理速度提升数倍。"
+broadcast: "Hugging Face 推出了一个基于 vLLM 的新后端，能让 Transformers 模型的推理速度提升好几倍。它通过优化显存和批处理，让开发者不用改代码就能获得接近原生的高性能，特别适合聊天机器人和代码生成这类需要高吞吐量的场景。"
+tags: [vllm, transformers, inference-optimization, hugging-face]
+---
+
+- vLLM 后端利用 PagedAttention 和连续批处理，显著提高吞吐量，减少显存占用。这意味着开发者无需修改模型代码即可获得接近原生 vLLM 的性能。
+- 该后端支持 Hugging Face 生态中的大多数模型，包括 LLaMA、Mistral 等，并自动处理模型转换。开发者可以无缝迁移现有推理流程，降低部署成本。
+- 与原生 Transformers 相比，vLLM 后端在长序列生成场景下速度提升可达 5-10 倍，且保持输出质量不变。这对需要高吞吐的聊天机器人、代码生成等应用至关重要。
+
+---
+
+> 原文：[Native-speed vLLM transformers modeling backend](https://huggingface.co/blog/native-speed-vllm-transformers-backend) · 作者 Hugging Face

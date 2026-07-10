@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.205",
-    "openai/codex": "rust-v0.143.0",
+    "anthropics/claude-code": "v2.1.206",
+    "openai/codex": "rust-v0.144.1",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "cli-v3.0.39",
     "block/goose": "v1.41.0",
-    "sst/opencode": "v1.17.15",
+    "sst/opencode": "v1.17.18",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.50.0",
     "openclaw/openclaw": "v2026.6.11",
@@ -71,7 +71,11 @@
     "Th0rgal/open_oura",
     "MaximeRivest/riddle",
     "514-labs/dnsglobe",
-    "yynxxxxx/Codex-X"
+    "yynxxxxx/Codex-X",
+    "elder-plinius/T3MP3ST",
+    "bikini/exploitarium",
+    "can1357/pon",
+    "JayWebtech/autoshorts"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -122,8 +126,8 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-09",
-    "claude-code-docs": "2026-07-03",
+    "anthropic-engineering": "2026-07-10",
+    "claude-code-docs": "2026-07-10",
     "openai-codex-blog": "2026-07-09",
     "openclaw-concepts": "2026-07-06",
     "hermes-guides": "2026-07-06"
@@ -231,7 +235,12 @@
       "https://simonwillison.net/2026/Jul/7/sqlite-utils-2/",
       "https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/",
       "https://simonwillison.net/2026/Jul/8/introducing-gptlive/",
-      "https://simonwillison.net/2026/Jul/8/kenton-varda/"
+      "https://simonwillison.net/2026/Jul/8/kenton-varda/",
+      "https://simonwillison.net/2026/Jul/10/openai/",
+      "https://simonwillison.net/2026/Jul/9/gpt-5-6/",
+      "https://simonwillison.net/2026/Jul/9/muse-spark-1-1/",
+      "https://simonwillison.net/2026/Jul/9/llm-meta-ai/",
+      "https://simonwillison.net/2026/Jul/9/llm/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -305,7 +314,8 @@
       "https://www.latent.space/p/aiewf-daily-dispatch-agency",
       "https://www.latent.space/p/ainews-the-field-guide-to-fable",
       "https://www.latent.space/p/ainews-lilian-weng-summarizes-35",
-      "https://www.latent.space/p/modal2026"
+      "https://www.latent.space/p/modal2026",
+      "https://www.latent.space/p/ainews-spacexai-launches-grok-45"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -477,7 +487,11 @@
       "https://openai.com/index/government-national-security-partnerships",
       "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
       "https://openai.com/index/k-12-educators-practical-skills",
-      "https://openai.com/index/introducing-gpt-live"
+      "https://openai.com/index/introducing-gpt-live",
+      "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
+      "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+      "https://openai.com/index/bio-bug-bounty",
+      "https://openai.com/index/gpt-5-6"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -551,7 +565,9 @@
       "https://huggingface.co/blog/microsoft/foundry-managed-compute",
       "https://huggingface.co/blog/skypilot-hf-storage",
       "https://huggingface.co/blog/lerobot-release-v060",
-      "https://huggingface.co/blog/Photoroom/prx-part4-data"
+      "https://huggingface.co/blog/Photoroom/prx-part4-data",
+      "https://huggingface.co/blog/nvidia/open-data-for-agents",
+      "https://huggingface.co/blog/native-speed-vllm-transformers-backend"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -580,7 +596,11 @@
       "https://www.anthropic.com/news/claude-sonnet-5",
       "https://www.anthropic.com/news/claude-science-ai-workbench",
       "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
-      "https://www.anthropic.com/news/alberta-government-claude-cybersecurity"
+      "https://www.anthropic.com/news/alberta-government-claude-cybersecurity",
+      "https://www.anthropic.com/news/hard-questions",
+      "https://www.anthropic.com/news/ust-claude",
+      "https://www.anthropic.com/news/ben-bernanke",
+      "https://www.anthropic.com/news/reflect-with-claude"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -614,21 +634,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-09",
+    "simonwillison": "2026-07-10",
     "lilianweng": "2026-07-09",
-    "latentspace": "2026-07-09",
-    "interconnects": "2026-07-09",
+    "latentspace": "2026-07-10",
+    "interconnects": "2026-07-10",
     "karpathy": "2026-07-09",
     "raschka": "2026-07-09",
     "eugeneyan": "2026-07-09",
     "chiphuyen": "2026-07-09",
-    "oneusefulthing": "2026-07-08",
+    "oneusefulthing": "2026-07-10",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-09",
-    "deepmind": "2026-07-08",
-    "hf-blog": "2026-07-08",
-    "anthropic-news": "2026-07-09",
+    "openai-news": "2026-07-10",
+    "deepmind": "2026-07-10",
+    "hf-blog": "2026-07-10",
+    "anthropic-news": "2026-07-10",
     "steipete": "2026-07-09",
     "openclaw-blog": "2026-07-09"
   },

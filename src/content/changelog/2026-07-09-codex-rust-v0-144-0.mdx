@@ -1,0 +1,26 @@
+---
+slug: 2026-07-09-codex-rust-v0-144-0
+title: "codex rust-v0.144.0 — MCP 工具交互认证、写权限审批、pnpm 检测等多项 Agent 体验改进"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.144.0
+publishedAt: 2026-07-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP 工具交互认证、写权限审批、pnpm 检测等多项 Agent 体验改进"
+broadcast: "OpenAI 的 Codex 工具刚刚更新了，这次重点优化了 agent 的使用体验。新增了写操作审批模式，只读操作自动放行，减少 agent 执行时的中断。MCP 工具现在可以直接请求交互式认证，agent 处理外部工具身份验证更灵活。对国内开发者来说，这些改进让 agent 在复杂任务中更稳定、更高效，值得关注。"
+insight: "本次更新对国内用户通过 newapi.lurus.cn 代理使用 Codex 没有直接影响。值得关注的是 writes 审批模式，如果你在用 agent 处理文件写入任务，建议开启只读自动放行，减少中断。MCP 工具交互认证不再需要实验性开关，如果你的 hook 里配置了相关认证逻辑，可以简化配置。pnpm 检测对使用 pnpm 全局安装的用户更友好，无需手动指定包管理器。整体上，这些改进提升了 agent 的稳定性和易用性，建议升级。"
+tags: [mcp, app-approval, sandbox, multi-agent]
+---
+
+- 新增 `writes` 应用审批模式，声明只读操作自动放行，写操作才弹审批，减少 agent 执行时的中断次数。
+- MCP 工具现在无需实验性 opt-in 即可请求交互式认证，agent harness 可更灵活地处理外部工具的身份验证流程。
+- 全局 pnpm 安装的 Codex 被自动检测，诊断和更新使用正确的包管理器，避免 agent 环境配置错误。
+- Ultra 推理模式下，高多 agent 并发会触发警告，帮助用户控制 token 消耗，agent harness 可据此调整并发策略。
+- 修复了 Windows 沙箱中可写根目录的删除权限和主运行时访问，确保 agent 在沙箱内文件操作的正确性。
+- 粘贴的终端控制序列不再破坏 TUI 渲染或对话历史，agent 的终端交互更稳定。
+
+---
+
+> 原文 release：[openai/codex rust-v0.144.0](https://github.com/openai/codex/releases/tag/rust-v0.144.0)

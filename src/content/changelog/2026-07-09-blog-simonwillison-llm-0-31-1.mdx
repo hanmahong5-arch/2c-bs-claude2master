@@ -1,0 +1,23 @@
+---
+slug: 2026-07-09-blog-simonwillison-llm-0-31-1
+title: "llm 0.31.1 — 修复了 OpenAI 兼容 API 中空参数工具调用导致的 JSON 错误。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/9/llm/
+publishedAt: 2026-07-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "修复了 OpenAI 兼容 API 中空参数工具调用导致的 JSON 错误。"
+broadcast: "最近 llm 工具链修复了一个关键问题：当某些 AI 提供商返回空参数的工具调用时，OpenAI 兼容接口会报 JSON 错误。这个 bug 是在测试第三方插件时发现的，提醒我们跨平台兼容性测试有多重要。对国内开发者来说，这次修复让 llm 在处理不同 API 时更稳定，减少了集成风险。"
+tags: [llm, bug-fix, openai-compatible, tool-call]
+---
+
+- 修复了 OpenAI Chat Completion 端点中，某些提供商的工具调用因空参数引发 JSON 错误的 bug。
+- 该 bug 在测试 llm-meta-ai 时被发现，凸显了跨提供商兼容性测试的重要性。
+- 对于开发者而言，此修复确保了 llm 工具链在处理不同 API 时的稳定性，减少集成风险。
+
+---
+
+> 原文：[llm 0.31.1](https://simonwillison.net/2026/Jul/9/llm/) · 作者 Simon Willison

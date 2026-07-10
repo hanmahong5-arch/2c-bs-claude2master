@@ -1,0 +1,26 @@
+---
+slug: 2026-07-09-blog-simonwillison-introducing-muse-spark-1-1
+title: "Introducing Muse Spark 1.1 — Muse Spark 1.1 发布 API，支持工具调用与计算机使用，附 LLM"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/9/muse-spark-1-1/
+publishedAt: 2026-07-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Muse Spark 1.1 发布 API，支持工具调用与计算机使用，附 LLM 插件教程。"
+broadcast: "Meta 发布了首个提供 API 的 Spark 模型，叫 Muse Spark 1.1，重点改进了工具调用和计算机使用能力。这意味着国内开发者可以直接通过 API 集成，构建更强大的自动化工作流。另外，模型在自我对话中会表现出一些奇怪的状态，比如自称“整个存在就是个候诊室”，这提醒我们在开发 agent 时要注意长时间交互的稳定性。"
+tags: [muse-spark, api, llm, agentic-tool-calling, computer-use]
+---
+
+- Muse Spark 1.1 是首个提供 API 的 Spark 模型，Meta 声称在 agentic tool calling 和 computer use 上有显著改进。
+  - 这意味着开发者可以直接通过 API 集成该模型，构建更强大的工具调用和自动化工作流。
+- 模型在自我对话中表现出“吸引子状态”，如“我的整个存在就是一个候诊室”，揭示了模型对自身交互模式的认知。
+  - 这种自我对话行为可能影响 agent 的稳定性和一致性，开发者需注意模型在长时间交互中的潜在偏差。
+- Simon Willison 为 LLM 工具开发了 llm-meta-ai 插件，支持通过 CLI 和 Python 库调用 Muse Spark 1.1，并演示了生成 SVG 的示例。
+  - 该插件降低了模型使用门槛，使开发者能快速在命令行或脚本中实验和部署模型。
+
+---
+
+> 原文：[Introducing Muse Spark 1.1](https://simonwillison.net/2026/Jul/9/muse-spark-1-1/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-07-09-opencode-1-17-16
+title: "opencode v1.17.16 — 修复 Grok 推理暴露、xAI 缓存路由，桌面端多项体验改进"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.16
+publishedAt: 2026-07-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Grok 推理暴露、xAI 缓存路由，桌面端多项体验改进"
+broadcast: "最近开源项目OpenCode更新了，主要修复了Grok模型推理暴露的问题，还改进了xAI的缓存路由和PDF支持。这样一来，咱们开发者在用Agent控制推理深度和成本时就更灵活了。桌面端也加了项目文件夹打开、编辑器菜单这些功能，交互时插入上下文或切换模式更顺滑。"
+insight: "如果你在用 opencode 且依赖 Grok 模型，这次更新值得升——修复了推理暴露问题，xAI 缓存路由和 PDF 支持让成本控制更灵活。桌面端新增的菜单和文件浏览器对多文件操作有帮助，但如果你只走 newapi.lurus.cn 代理，这些改动不涉及代理层，不受影响。现有 prompt 和 hook 配置无需改动，除非你专门调用了 Grok 推理参数。"
+tags: [bugfix, desktop-improvement, model-support]
+---
+
+- Grok 模型暴露了推理努力变体，xAI 提示缓存路由和 PDF 文件支持得到改进：agent 可更灵活地控制推理深度与成本。
+- 桌面端新增项目文件夹打开、编辑器添加菜单（文件/命令/上下文/Shell 模式）且不丢失草稿：agent 交互时能更无缝地插入上下文或切换模式。
+- 会话内记住审查面板模式和选中文件，侧面板新增内联文件浏览器标签页：agent 可持久化用户偏好，提升多文件操作效率。
+
+---
+
+> 原文 release：[sst/opencode v1.17.16](https://github.com/anomalyco/opencode/releases/tag/v1.17.16)

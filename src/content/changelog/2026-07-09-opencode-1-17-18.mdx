@@ -1,0 +1,22 @@
+---
+slug: 2026-07-09-opencode-1-17-18
+title: "opencode v1.17.18 — 修复 Copilot 零计费批次崩溃，新增 Muse Spark 提示"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.18
+publishedAt: 2026-07-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Copilot 零计费批次崩溃，新增 Muse Spark 提示"
+broadcast: "最近 OpenCode 更新修复了一个重要问题，当 GitHub Copilot 返回零计费批次时，之前会导致 agent 崩溃和定价数据出错，现在终于稳定了。同时新增了 Meta Muse Spark 模型的专用提示，让 agent 能根据不同模型定制行为。这对国内开发者来说，意味着用 Copilot 做 agent 开发时，定价逻辑更可靠，模型适配也更灵活了。"
+insight: "如果你正在使用 GitHub Copilot 且遇到零计费批次导致的崩溃，v1.17.18 的修复值得升级。对于使用 Meta Muse Spark 模型的用户，新增的专用系统提示可以按模型定制 agent 行为，建议更新 prompt 配置以利用该功能。国内用户通过 newapi.lurus.cn 代理不受影响，升级后直接生效。"
+tags: [bugfix, pricing, model-specific-prompt]
+---
+
+- 修复 GitHub Copilot 返回零计费批次模型时的崩溃和错误定价数据，确保 agent 定价逻辑稳定。
+- 新增 Meta Muse Spark 模型专用系统提示，支持 agent 按模型定制行为。
+
+---
+
+> 原文 release：[sst/opencode v1.17.18](https://github.com/anomalyco/opencode/releases/tag/v1.17.18)

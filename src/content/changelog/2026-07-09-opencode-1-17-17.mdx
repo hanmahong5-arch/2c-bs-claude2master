@@ -1,0 +1,23 @@
+---
+slug: 2026-07-09-opencode-1-17-17
+title: "opencode v1.17.17 — 修复推理模型与UI细节，提升v2会话体验"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.17
+publishedAt: 2026-07-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复推理模型与UI细节，提升v2会话体验"
+broadcast: "这次更新主要修复了推理模型和界面细节，让智能体在对话时能更好支持多种模型推理。同时，模型选择器的标签显示更完整，新增了可关闭的介绍弹窗和自由模型选择器，整体操作界面更清晰。对国内开发者来说，这些改进能让智能体开发体验更顺畅。"
+insight: "这次更新主要针对推理模型和UI细节，对国内用户通过newapi.lurus.cn使用影响不大。如果你在用v2会话，建议升级，因为新增了自由模型选择器和可关闭的弹窗，界面更清晰。现有prompt和hook配置无需改动，但如果你用Meta模型做推理，可以检查一下供应商请求处理是否更稳定了。总体值得升级，尤其v2用户。"
+tags: [bugfix, ui-improvement, v2-session]
+---
+
+- 改进Meta模型对推理变体及供应商请求的处理，增强agent对多模型推理的支持。
+- 修复模型选择器标签中字母下降部分被裁剪的问题，提升UI可读性。
+- 新增可关闭的标签页介绍弹窗、v2自由模型选择器，并优化子代理任务行与还原停靠栏样式，使agent界面更清晰易用。
+
+---
+
+> 原文 release：[sst/opencode v1.17.17](https://github.com/anomalyco/opencode/releases/tag/v1.17.17)

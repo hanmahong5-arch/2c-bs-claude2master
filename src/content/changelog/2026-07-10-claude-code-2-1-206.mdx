@@ -1,0 +1,25 @@
+---
+slug: 2026-07-10-claude-code-2-1-206
+title: "claude-code v2.1.206 — Claude Code 修复多项 bug，提升 agent 工作流与配置体验"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.206
+publishedAt: 2026-07-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 修复多项 bug，提升 agent 工作流与配置体验"
+broadcast: "Claude Code 最新版本修复了多个影响 agent 工作流的 bug，比如过期登录和 MCP 超时问题。现在 /cd 命令能自动建议目录路径，/doctor 会帮你精简 CLAUDE.md 文件，/commit-push-pr 也支持一键推送到远程仓库。这些改进让国内开发者在配置 agent 和日常开发时更顺畅，减少手动操作和等待时间。"
+insight: "这次 v2.1.206 更新对现有用户来说值得升级，尤其是频繁使用 agent 工作流的用户。后台 agent 更新后立即升级，解决了旧会话延迟问题，能提升体验。如果你在用 `/cd` 或 `/commit-push-pr`，新版本简化了操作，建议升级。`/doctor` 新增的裁剪建议有助于保持 `CLAUDE.md` 精简，值得调整配置。国内用户通过 newapi.lurus.cn 代理不受影响，可以放心升级。"
+tags: [bug-fix, cli, agent-workflow, mcp]
+---
+
+- `/cd` 新增目录路径建议，与 `/add-dir` 行为一致，减少手动输入。
+- `/doctor` 可建议裁剪 `CLAUDE.md` 中代码库可推导的内容，保持文件精简。
+- `/commit-push-pr` 自动允许推送到配置的远程仓库，简化 git 操作。
+- 后台 agent 在更新后立即升级，避免旧会话升级延迟。
+- 修复了过期登录、MCP 超时、OAuth 重认证、`/model` 选择器错位等多项问题。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.206](https://github.com/anthropics/claude-code/releases/tag/v2.1.206)

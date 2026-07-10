@@ -1,0 +1,26 @@
+---
+slug: 2026-07-09-codex-rust-v0-144-1
+title: "codex rust-v0.144.1 — 修复安装和代码模式可靠性问题"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.144.1
+publishedAt: 2026-07-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复安装和代码模式可靠性问题"
+broadcast: "OpenAI 的 Codex 工具发布了新版本，主要修复了安装和代码模式的可靠性问题。现在它能兼容不同格式的发布元数据，避免安装失败；在 macOS 上确保所有必要组件正确暴露；如果配套组件缺失，还能自动降级到嵌入式运行，保证核心功能不中断。这对国内开发者来说，意味着 agent 的安装和部署可以更稳定、更健壮。"
+insight: "这次更新主要修复了安装和代码模式的可靠性问题，对国内用户通过 newapi.lurus.cn 代理使用没有直接影响。如果你当前使用独立安装方式，建议升级到 0.144.1 版本，以避免因 GitHub 元数据格式变化导致的安装失败。代码模式方面，macOS 用户升级后能确保主机二进制正确暴露，同时当主机二进制不可用时，agent 会自动降级到嵌入式运行时，保持核心功能可用。因此，现有用户值得升级，无需修改 prompt 或 hook 配置。"
+tags: [bug-fix, installation, code-mode, reliability]
+---
+
+- 修复了 GitHub 返回紧凑或重排序的发布元数据时独立安装失败的问题。
+  - 含义：agent 的安装流程需要兼容不同格式的元数据，避免因外部 API 变化而中断。
+- 确保 macOS 包安装时，`code-mode` 主机与 `codex` 可执行文件一同暴露。
+  - 含义：agent 的部署应确保所有必要组件（如主机二进制）正确暴露，避免功能缺失。
+- 当配套主机二进制不可用时，回退到嵌入式运行时以保持代码模式工作。
+  - 含义：agent 应具备降级策略，在依赖组件缺失时仍能提供核心功能。
+
+---
+
+> 原文 release：[openai/codex rust-v0.144.1](https://github.com/openai/codex/releases/tag/rust-v0.144.1)
