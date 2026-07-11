@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "slug": "2026-07-11-blog-latentspace-ainews-not-much-happened-today",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] not much happened today — GPT",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-11"
+    },
+    {
+      "slug": "2026-07-11-claude-code-2-1-207",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.207 — 自动模式默认开启，多项修复提升稳定性与安全性",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-07-11"
+    },
+    {
+      "slug": "2026-07-11-cline-4-0-8",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.0.8 — GCP Vertex 新增更多模型及自定义模型输入",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-07-11"
+    },
+    {
+      "slug": "2026-07-11-trending-nasa-spacewasm",
+      "zh": true,
+      "en": false,
+      "title": "spacewasm — NASA 开源的航天级 WebAssembly 解释器",
+      "kind": "trending",
+      "author": null,
+      "source": "nasa/spacewasm",
+      "tool": null,
+      "publishedAt": "2026-07-11"
+    },
+    {
       "slug": "2026-07-10-blog-anthropic-news-inviting-hard-questions",
       "zh": true,
       "en": true,
@@ -30,6 +74,39 @@
       "kind": "blogger",
       "author": "Anthropic",
       "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-07-10"
+    },
+    {
+      "slug": "2026-07-10-blog-latentspace-ainews-openai-launches-gpt-5-6-sol-terra",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] OpenAI launches GPT 5.6 Sol/Terra/Luna, Codex — OpenAI发布GPT",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-10"
+    },
+    {
+      "slug": "2026-07-10-blog-openai-news-how-deutsche-telekom-is-rewiring-telecommunications-with-ai",
+      "zh": true,
+      "en": true,
+      "title": "How Deutsche Telekom is rewiring telecommunications — 德国电信如何用AI重塑电信业：客服、网络、员工全链路升级。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-10"
+    },
+    {
+      "slug": "2026-07-10-blog-simonwillison-quoting-nilay-patel",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Nilay Patel — AR眼镜需持续录像上传云端，隐私代价极高，或应叫停。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-07-10"
     },
@@ -802,83 +879,6 @@
       "source": "sst/opencode",
       "tool": "opencode",
       "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-trending-cobusgreyling-loop-engineering",
-      "zh": true,
-      "en": false,
-      "title": "loop-engineering — AI编码代理的循环工程实用模式与CLI工具",
-      "kind": "trending",
-      "author": null,
-      "source": "cobusgreyling/loop-engineering",
-      "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-trending-langchain-ai-openwiki",
-      "zh": true,
-      "en": false,
-      "title": "openwiki — 用AI自动维护代码库文档的CLI工具",
-      "kind": "trending",
-      "author": null,
-      "source": "langchain-ai/openwiki",
-      "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-trending-th0rgal-open-oura",
-      "zh": true,
-      "en": false,
-      "title": "open_oura — 开源 Oura 戒指数据本地处理工具",
-      "kind": "trending",
-      "author": null,
-      "source": "Th0rgal/open_oura",
-      "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-05-blog-anthropic-news-claude-science-an-ai-workbench-for-scientists",
-      "zh": true,
-      "en": true,
-      "title": "Claude Science, an AI workbench for scientists — Anthropic 推出 Claude Science，一个整合科研工具链的 A",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-07-05"
-    },
-    {
-      "slug": "2026-07-05-blog-anthropic-news-introducing-claude-sonnet-5",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Claude Sonnet 5 — Anthropic 发布 Claude Sonnet 5，以更低价格接近 Opu",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-07-05"
-    },
-    {
-      "slug": "2026-07-05-blog-anthropic-news-more-details-on-fable-5-s-cyber-safeguards",
-      "zh": true,
-      "en": true,
-      "title": "More details on Fable 5’s cyber safeguards and our — Anthropic详解Fable 5的网络安全分类器与AI越狱严重性框架。",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-07-05"
-    },
-    {
-      "slug": "2026-07-05-blog-simonwillison-sqlite-utils-4-0rc2-mostly-written-by-claude",
-      "zh": true,
-      "en": true,
-      "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable — Simon Willison used Claude Fable to fix ",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-05"
     }
   ]
 }
