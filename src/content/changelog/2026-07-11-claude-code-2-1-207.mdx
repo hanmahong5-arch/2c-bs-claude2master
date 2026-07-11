@@ -1,0 +1,25 @@
+---
+slug: 2026-07-11-claude-code-2-1-207
+title: "claude-code v2.1.207 — 自动模式默认开启，多项修复提升稳定性与安全性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.207
+publishedAt: 2026-07-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "自动模式默认开启，多项修复提升稳定性与安全性"
+broadcast: "Claude Code 的新版本来了，自动模式在多个云平台上默认开启，国内开发者用起来更方便。这次修复了长代码块导致的终端卡顿，还堵住了一个命令注入漏洞，安全性提升明显。如果你在用 Agent 开发，建议关注这些修复，能避免不少坑。"
+insight: "对于国内用户，如果通过 newapi.lurus.cn 代理使用 Claude Code，这次更新值得升级。自动模式在 Bedrock/Vertex AI 上默认开启，能简化操作，但如果你之前手动关闭过，升级后记得检查 disableAutoMode 配置。另外，shell-form 命令的注入漏洞修复很重要，建议将相关 prompt 或 hook 中的 ${user_config.*} 替换为 exec 形式或环境变量，避免安全风险。代理本身不受影响，可以放心升级。"
+tags: [auto-mode, security, stability, plugin]
+---
+
+- Auto mode 在 Bedrock/Vertex AI/Foundry 上默认可用，无需 opt-in；可通过 `disableAutoMode` 关闭。
+- 修复流式响应中长列表/表格/代码块导致的终端冻结和按键延迟问题。
+- 修复插件 shell-form 命令中 `${user_config.*}` 注入漏洞，建议改用 exec 形式或环境变量。
+- 修复非交互式运行中远程管理设置被永久记录为已同意而未显示安全确认对话框。
+- 修复自动更新器覆盖自定义启动脚本/符号链接，`/doctor` 现在会报告外部管理的启动器。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.207](https://github.com/anthropics/claude-code/releases/tag/v2.1.207)

@@ -1,0 +1,24 @@
+---
+slug: 2026-07-11-cline-4-0-8
+title: "cline v4.0.8 — GCP Vertex 新增更多模型及自定义模型输入"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.0.8
+publishedAt: 2026-07-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "GCP Vertex 新增更多模型及自定义模型输入"
+broadcast: "最近，cline 工具更新了，主要针对 GCP Vertex 平台。现在，Vertex 新增了更多模型选项，而且你还能在模型下拉菜单里自由输入自定义模型。这对开发 agent 的人来说，意味着你的系统得支持动态模型列表，还得提供灵活的配置接口，方便用户随时接入新模型。"
+insight: "对于国内开发者，如果当前使用 GCP Vertex 且依赖固定模型列表，建议更新至 v4.0.8 以利用新增的模型选项和自定义输入功能。若通过 newapi.lurus.cn 代理访问 Vertex，需确认代理是否支持动态模型列表和自定义模型标识符的转发，否则可能需要调整 hook 配置。现有用户值得升级，但需验证代理兼容性。"
+tags: [gcp-vertex, model-selection, custom-model]
+---
+
+- GCP Vertex 提供商新增更多模型选项，扩展了可用模型范围。
+  - 对 agent harness 设计意味着：需支持动态模型列表，便于集成新模型。
+- 模型下拉菜单增加自由输入选项，允许用户指定自定义 Vertex 模型。
+  - 对 agent harness 设计意味着：需提供灵活的模型配置接口，支持用户自定义模型标识符。
+
+---
+
+> 原文 release：[cline/cline v4.0.8](https://github.com/cline/cline/releases/tag/v4.0.8)
