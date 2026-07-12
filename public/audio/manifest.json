@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "slug": "2026-07-12-trending-justvugg-colibri",
+      "zh": true,
+      "en": false,
+      "title": "colibri — 25GB内存跑744B MoE模型，纯C实现",
+      "kind": "trending",
+      "author": null,
+      "source": "JustVugg/colibri",
+      "tool": null,
+      "publishedAt": "2026-07-12"
+    },
+    {
+      "slug": "2026-07-12-trending-yu9191-wloc",
+      "zh": true,
+      "en": false,
+      "title": "wloc — 修改 Apple 网络定位的代理工具",
+      "kind": "trending",
+      "author": null,
+      "source": "Yu9191/wloc",
+      "tool": null,
+      "publishedAt": "2026-07-12"
+    },
+    {
       "slug": "2026-07-11-blog-latentspace-ainews-not-much-happened-today",
       "zh": true,
       "en": true,
@@ -8,6 +30,17 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-11"
+    },
+    {
+      "slug": "2026-07-11-blog-simonwillison-sqlite-utils-4-1",
+      "zh": true,
+      "en": true,
+      "title": "sqlite-utils 4.1 — sqlite",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-07-11"
     },
@@ -74,6 +107,17 @@
       "kind": "blogger",
       "author": "Anthropic",
       "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-07-10"
+    },
+    {
+      "slug": "2026-07-10-blog-hf-blog-profiling-in-pytorch-part-3-attention-is-all",
+      "zh": true,
+      "en": true,
+      "title": "Profiling in PyTorch (Part 3): Attention is all you — 用 PyTorch Profiler 分析注意力机制性能瓶颈，优化 Transf",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
       "tool": null,
       "publishedAt": "2026-07-10"
     },
@@ -834,50 +878,6 @@
       "author": null,
       "source": "openclaw-concepts",
       "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-openclaw-concepts-context-engine",
-      "zh": true,
-      "en": true,
-      "title": "Context engine · OpenClaw — OpenClaw 上下文引擎插件化设计，可自定义组装、压缩与子代理生命周期",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-openclaw-concepts-context",
-      "zh": true,
-      "en": true,
-      "title": "Context · OpenClaw — 理解AI agent的上下文窗口构成，优化token使用与成本",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-openclaw-concepts-delegate-architecture",
-      "zh": true,
-      "en": true,
-      "title": "Delegate architecture · OpenClaw — 让AI代理以独立身份代表组织行动，而非冒充人类。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-opencode-1-17-14",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.17.14 — 代码模式MCP适配器、桌面UI大修、多项bug修复",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
       "publishedAt": "2026-07-06"
     }
   ]
