@@ -76,7 +76,9 @@
     "bikini/exploitarium",
     "can1357/pon",
     "JayWebtech/autoshorts",
-    "nasa/spacewasm"
+    "nasa/spacewasm",
+    "JustVugg/colibri",
+    "Yu9191/wloc"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -127,7 +129,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-11",
+    "anthropic-engineering": "2026-07-12",
     "claude-code-docs": "2026-07-10",
     "openai-codex-blog": "2026-07-09",
     "openclaw-concepts": "2026-07-06",
@@ -242,7 +244,8 @@
       "https://simonwillison.net/2026/Jul/9/muse-spark-1-1/",
       "https://simonwillison.net/2026/Jul/9/llm-meta-ai/",
       "https://simonwillison.net/2026/Jul/9/llm/",
-      "https://simonwillison.net/2026/Jul/10/nilay-patel/"
+      "https://simonwillison.net/2026/Jul/10/nilay-patel/",
+      "https://simonwillison.net/2026/Jul/11/sqlite-utils/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -572,7 +575,8 @@
       "https://huggingface.co/blog/lerobot-release-v060",
       "https://huggingface.co/blog/Photoroom/prx-part4-data",
       "https://huggingface.co/blog/nvidia/open-data-for-agents",
-      "https://huggingface.co/blog/native-speed-vllm-transformers-backend"
+      "https://huggingface.co/blog/native-speed-vllm-transformers-backend",
+      "https://huggingface.co/blog/torch-attention-profile"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -639,21 +643,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-11",
+    "simonwillison": "2026-07-12",
     "lilianweng": "2026-07-09",
-    "latentspace": "2026-07-11",
-    "interconnects": "2026-07-11",
-    "karpathy": "2026-07-09",
-    "raschka": "2026-07-09",
-    "eugeneyan": "2026-07-09",
+    "latentspace": "2026-07-12",
+    "interconnects": "2026-07-12",
+    "karpathy": "2026-07-12",
+    "raschka": "2026-07-12",
+    "eugeneyan": "2026-07-12",
     "chiphuyen": "2026-07-09",
-    "oneusefulthing": "2026-07-10",
+    "oneusefulthing": "2026-07-12",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-11",
-    "deepmind": "2026-07-10",
-    "hf-blog": "2026-07-10",
-    "anthropic-news": "2026-07-11",
+    "openai-news": "2026-07-12",
+    "deepmind": "2026-07-12",
+    "hf-blog": "2026-07-12",
+    "anthropic-news": "2026-07-12",
     "steipete": "2026-07-11",
     "openclaw-blog": "2026-07-11"
   },

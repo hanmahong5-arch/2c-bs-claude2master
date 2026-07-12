@@ -1,0 +1,23 @@
+---
+slug: 2026-07-10-blog-hf-blog-profiling-in-pytorch-part-3-attention-is-all
+title: "Profiling in PyTorch (Part 3): Attention is all you — 用 PyTorch Profiler 分析注意力机制性能瓶颈，优化 Transf"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/torch-attention-profile
+publishedAt: 2026-07-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "用 PyTorch Profiler 分析注意力机制性能瓶颈，优化 Transformer 推理。"
+broadcast: "本期我们聊聊如何用 PyTorch Profiler 分析注意力机制的性能瓶颈。文章指出，softmax 和矩阵乘法是 Transformer 推理中的主要热点。通过对比 FlashAttention 等不同实现，Profiler 能清晰展示内存带宽和计算效率的差异。这对国内开发者优化大模型推理、降低部署成本很有参考价值。"
+tags: [pytorch-profiler, attention-mechanism, transformer-optimization, performance-analysis]
+---
+
+- 文章展示了如何使用 PyTorch Profiler 捕获注意力层的前向和反向传播耗时，发现 softmax 和矩阵乘法是主要热点。
+- 通过对比不同实现（原生 PyTorch、FlashAttention、xformers），Profiler 能清晰显示各变体的内存带宽和计算效率差异。
+- 开发者可借助 Profiler 的火焰图和内存时间线定位具体算子瓶颈，从而针对性选择优化策略（如 kernel fusion 或精度降低）。
+
+---
+
+> 原文：[Profiling in PyTorch (Part 3): Attention is all you profile](https://huggingface.co/blog/torch-attention-profile) · 作者 Hugging Face

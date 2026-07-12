@@ -1,0 +1,24 @@
+---
+slug: 2026-07-11-blog-simonwillison-sqlite-utils-4-1
+title: "sqlite-utils 4.1 — sqlite"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/11/sqlite-utils/
+publishedAt: 2026-07-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "sqlite-utils 4.1 新增 --code 内联 Python 生成行、类型覆盖、严格表转换等小功能，由 AI 辅助实现。"
+broadcast: "sqlite-utils 4.1 来了，这次新增了 --code 选项，让你在命令行里直接写 Python 代码来生成数据行，不用再搞外部文件了。还有 --type 强制指定列类型，比如邮编不会丢前导零。最值得关注的是，作者用 AI 辅助实现了这些功能，甚至让模型帮忙测试，这对国内开发者来说是个启发：小工具开发也能借助 AI 提效。"
+tags: [sqlite-utils, python, cli-tools, ai-assisted-programming]
+---
+
+- 新增 `--code` 选项，允许在 CLI 中直接嵌入 Python 函数或文件路径来生成插入/更新行，替代外部文件导入，简化数据管道。
+- 支持 `--type` 覆盖列类型（如 ZIP 码强制为 TEXT），避免 CSV 导入时前导零丢失；`drop-index` 命令和 `--ignore` 选项让索引管理更灵活。
+- `transform` 命令新增 `--strict`/`--no-strict`，利用已有复制机制实现表严格模式切换，填补了 SQLite 无法直接 ALTER 的空白。
+- 作者用 GPT-5.6 和 Codex 辅助实现多项功能，并让模型手动测试边缘情况，展示了 AI 辅助编程在小型工具开发中的实际价值。
+
+---
+
+> 原文：[sqlite-utils 4.1](https://simonwillison.net/2026/Jul/11/sqlite-utils/) · 作者 Simon Willison
