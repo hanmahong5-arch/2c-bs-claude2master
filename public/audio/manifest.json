@@ -1,6 +1,149 @@
 {
   "items": [
     {
+      "slug": "2026-07-13-codex-rust-v0-144-2",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.144.2 — 修复Guardian自动审查提示回归，恢复旧策略",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-07-13"
+    },
+    {
+      "slug": "2026-07-13-openclaw-concepts-dreaming",
+      "zh": true,
+      "en": true,
+      "title": "Dreaming · OpenClaw — 背景记忆巩固系统，将短期信号自动提升为持久记忆。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-07-13"
+    },
+    {
+      "slug": "2026-07-13-openclaw-concepts-experimental-features",
+      "zh": true,
+      "en": true,
+      "title": "Experimental features · OpenClaw — 减少本地模型工具列表，避免上下文溢出和格式错误",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-07-13"
+    },
+    {
+      "slug": "2026-07-13-openclaw-concepts-features",
+      "zh": true,
+      "en": true,
+      "title": "Features · OpenClaw — 一个网关连接所有聊天平台，多智能体路由与隔离会话。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-07-13"
+    },
+    {
+      "slug": "2026-07-13-openclaw-concepts-managed-worktrees",
+      "zh": true,
+      "en": true,
+      "title": "Managed worktrees · OpenClaw — 给每个Agent任务独立的git分支和工作目录，避免污染源码仓库。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-07-13"
+    },
+    {
+      "slug": "2026-07-13-openclaw-concepts-mantis-slack-desktop-runbook",
+      "zh": true,
+      "en": true,
+      "title": "Mantis Slack desktop runbook · OpenClaw — 真实桌面Slack UI的自动化QA方案，解决单元测试无法覆盖的集成bug",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-07-13"
+    },
+    {
+      "slug": "2026-07-13-openclaw-concepts-mantis",
+      "zh": true,
+      "en": true,
+      "title": "Mantis · OpenClaw — 用真实 CI 证据和 PR 评论验证 AI agent 行为，避免回归",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-07-13"
+    },
+    {
+      "slug": "2026-07-13-trending-tencent-browserskill",
+      "zh": true,
+      "en": false,
+      "title": "BrowserSkill — 让AI用你的真实浏览器，不打断工作",
+      "kind": "trending",
+      "author": null,
+      "source": "Tencent/BrowserSkill",
+      "tool": null,
+      "publishedAt": "2026-07-13"
+    },
+    {
+      "slug": "2026-07-12-blog-interconnects-6-months-to-live-for-open-models",
+      "zh": true,
+      "en": true,
+      "title": "6 months to live for open models — 开放模型面临6个月内被禁风险，蒸馏争议与监管行动正加速。",
+      "kind": "blogger",
+      "author": "Nathan Lambert",
+      "source": "Nathan Lambert",
+      "tool": null,
+      "publishedAt": "2026-07-12"
+    },
+    {
+      "slug": "2026-07-12-blog-simonwillison-directly-responsible-individuals-dri",
+      "zh": true,
+      "en": true,
+      "title": "Directly Responsible Individuals (DRI) — 为什么AI代理不能成为项目的直接负责人？",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-12"
+    },
+    {
+      "slug": "2026-07-12-blog-simonwillison-fable-gets-another-bump",
+      "zh": true,
+      "en": true,
+      "title": "Fable gets another bump — Anthropic 再次延长 Fable 模型访问期限，OpenAI 则取消限制",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-12"
+    },
+    {
+      "slug": "2026-07-12-blog-simonwillison-shot-scraper-1-11",
+      "zh": true,
+      "en": true,
+      "title": "shot-scraper 1.11 — shot",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-12"
+    },
+    {
+      "slug": "2026-07-12-blog-simonwillison-sqlite-utils-4-1-1",
+      "zh": true,
+      "en": true,
+      "title": "sqlite-utils 4.1.1 — sqlite",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-12"
+    },
+    {
       "slug": "2026-07-12-trending-justvugg-colibri",
       "zh": true,
       "en": false,
@@ -736,149 +879,6 @@
       "source": "anthropics/claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-07-07"
-    },
-    {
-      "slug": "2026-07-07-cline-cli-v3-0-38",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.38 — 视觉与交互升级，模型兼容性增强",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-07-07"
-    },
-    {
-      "slug": "2026-07-07-opencode-1-17-15",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.17.15 — 修复上下文溢出与配置读取，优化桌面UI一致性",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-07-07"
-    },
-    {
-      "slug": "2026-07-07-trending-514-labs-dnsglobe",
-      "zh": true,
-      "en": false,
-      "title": "dnsglobe — 终端里的全球 DNS 传播可视化地图",
-      "kind": "trending",
-      "author": null,
-      "source": "514-labs/dnsglobe",
-      "tool": null,
-      "publishedAt": "2026-07-07"
-    },
-    {
-      "slug": "2026-07-07-trending-maximerivest-riddle",
-      "zh": true,
-      "en": false,
-      "title": "riddle — 手写笔记与AI对话的魔法日记本",
-      "kind": "trending",
-      "author": null,
-      "source": "MaximeRivest/riddle",
-      "tool": null,
-      "publishedAt": "2026-07-07"
-    },
-    {
-      "slug": "2026-07-07-trending-yynxxxxx-codex-x",
-      "zh": true,
-      "en": false,
-      "title": "Codex-X — 本地运行 Codex 模型的桌面管理器",
-      "kind": "trending",
-      "author": null,
-      "source": "yynxxxxx/Codex-X",
-      "tool": null,
-      "publishedAt": "2026-07-07"
-    },
-    {
-      "slug": "2026-07-06-blog-hf-blog-kernels-major-updates",
-      "zh": true,
-      "en": true,
-      "title": "🤗 Kernels: Major Updates — Hugging Face 更新内核，提升模型训练与推理性能。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-blog-hf-blog-prx-part-4-our-data-strategy",
-      "zh": true,
-      "en": true,
-      "title": "PRX Part 4: Our Data Strategy — Photoroom 分享其数据策略，如何构建高质量训练数据以提升模型性能。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-blog-simonwillison-sqlite-utils-4-0rc3",
-      "zh": true,
-      "en": true,
-      "title": "sqlite-utils 4.0rc3 — sqlite",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-blog-simonwillison-tencent-hy3",
-      "zh": true,
-      "en": false,
-      "title": "tencent/Hy3 — 腾讯发布295B MoE模型Hy3，性能媲美2",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-claude-code-2-1-202",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.202 — Claude Code 新增动态工作流规模设置与 OTel 属性，修复多项远程控",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-openclaw-concepts-channel-docking",
-      "zh": true,
-      "en": true,
-      "title": "Channel docking · OpenClaw — 跨平台对话无缝迁移，保持上下文不中断",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-openclaw-concepts-commitments",
-      "zh": true,
-      "en": true,
-      "title": "Inferred commitments · OpenClaw — 让AI主动记住未说出口的后续，无需用户手动设提醒",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-06"
-    },
-    {
-      "slug": "2026-07-06-openclaw-concepts-compaction",
-      "zh": true,
-      "en": true,
-      "title": "Compaction · OpenClaw — OpenClaw 的上下文压缩策略：智能摘要、工具调用保护与可插拔提供者。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-06"
     }
   ]
 }
