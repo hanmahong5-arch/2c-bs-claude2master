@@ -1,0 +1,23 @@
+---
+slug: 2026-07-13-openclaw-concepts-features
+title: "Features · OpenClaw — 一个网关连接所有聊天平台，多智能体路由与隔离会话。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/features
+publishedAt: 2026-07-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "一个网关连接所有聊天平台，多智能体路由与隔离会话。"
+broadcast: "今天介绍一个开源项目，它用一个统一的网关连接了二十多个聊天平台，包括微信、Telegram 这些常用的。对开发者来说，这意味着你只需要写一套提示词，就能让智能体在所有平台上工作，不用为每个平台单独适配。它还支持多智能体路由和会话隔离，群聊里@一下就能激活，非常实用。"
+insight: "如果你已经在用 OpenClaw，值得升级到支持多智能体路由和隔离会话的版本，这能避免群聊上下文污染。现有的 prompt 需要增加 session 标识和路由规则，同时可以利用统一的 channel 接口减少平台适配工作。国内用户通过 newapi.lurus.cn 代理访问不受影响，因为 Gateway 只是统一入口，不改变底层 API 调用方式。"
+tags: [multi-agent-routing, channel-gateway, session-isolation, media-support]
+---
+
+- 通过单一 Gateway 连接 Discord、iMessage、Signal、Slack、Telegram、WhatsApp 等 20+ 渠道，官方插件一键安装。这意味着 agent harness 需要抽象出统一的 channel 接口，让 prompt 设计不必为每个平台重复适配。
+- 支持多智能体路由，每个工作空间或发送者拥有隔离会话，群聊通过 @提及激活。这要求 prompt 中明确 session 标识和路由规则，避免上下文污染。
+- 内置媒体处理（图片、音频、视频、文档）及生成能力，支持语音转录和 TTS。agent harness 需提供统一的 media I/O 抽象，prompt 中可声明模型支持的媒体类型。
+
+---
+
+> 原文：[Features · OpenClaw](https://docs.openclaw.ai/concepts/features)

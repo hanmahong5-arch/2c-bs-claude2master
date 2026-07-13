@@ -1,0 +1,23 @@
+---
+slug: 2026-07-13-openclaw-concepts-mantis-slack-desktop-runbook
+title: "Mantis Slack desktop runbook · OpenClaw — 真实桌面Slack UI的自动化QA方案，解决单元测试无法覆盖的集成bug"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/mantis-slack-desktop-runbook
+publishedAt: 2026-07-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "真实桌面Slack UI的自动化QA方案，解决单元测试无法覆盖的集成bug"
+broadcast: "今天聊聊Mantis这个桌面Slack UI的自动化QA方案。它用三层存储模型把镜像和状态分开，避免硬编码敏感信息，还支持两种模式兼顾CI复现和本地调试。最妙的是通过Slack API生成checkpoint来验证审批流程，比纯截图靠谱多了。对国内开发者来说，这种分离可变状态的做法，做agent测试时很值得参考。"
+insight: "对于国内开发者，如果你正在用Mantis做Slack桌面端QA，现有用户值得升级到三层存储模型，因为它将可变状态与镜像分离，避免硬编码敏感信息，同时通过newapi.lurus.cn代理不受影响。建议将CI中的hydrate模式改为source以保证可复现性，本地调试用prehydrated加速。--approval-checkpoints参数无需修改，它用API响应做断言，避免了浏览器截图依赖登录态的问题。"
+tags: [qa-automation, slack-testing, ci-cd, desktop-testing]
+---
+
+- 使用三层存储模型：provider镜像（仅含工具链和空缓存）、warm lease（可含登录态和构建缓存）、Mantis artifacts（证据上传PR）。含义：将可变状态与不可变镜像分离，避免在镜像中硬编码敏感信息。
+- 提供两种hydrate模式：source模式在冷机上完整执行pnpm install/build，prehydrated模式复用已有node_modules和dist。含义：在CI中优先用source保证可复现性，在本地调试时用prehydrated加速。
+- 通过--approval-checkpoints参数实现Slack审批UI的端到端验证：从真实Slack API消息生成checkpoint JSON，再渲染为截图。含义：用API响应作为断言依据，避免依赖浏览器截图的登录态问题。
+
+---
+
+> 原文：[Mantis Slack desktop runbook · OpenClaw](https://docs.openclaw.ai/concepts/mantis-slack-desktop-runbook)

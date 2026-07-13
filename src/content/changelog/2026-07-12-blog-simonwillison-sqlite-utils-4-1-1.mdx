@@ -1,0 +1,26 @@
+---
+slug: 2026-07-12-blog-simonwillison-sqlite-utils-4-1-1
+title: "sqlite-utils 4.1.1 — sqlite"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/12/sqlite-utils/
+publishedAt: 2026-07-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "sqlite-utils 4.1.1 修复了事务中外键级联删除的隐患，并改进了文档互引。"
+broadcast: "sqlite-utils 更新了，这次修复了一个容易踩坑的问题：如果你在事务里对带外键的表做变换，而外键设置了级联删除，数据可能会悄悄丢失。新版本会直接报错阻止你，避免意外。文档也做了改进，外键和事务的说明更清楚了，CLI和Python接口还能互相跳转。对国内开发者来说，这个提醒很重要，做数据迁移时记得检查外键约束。"
+tags: [sqlite, sqlite-utils, bug-fix, documentation]
+---
+
+- 修复了一个边缘情况：当表被外键引用且定义了破坏性 ON DELETE 动作（CASCADE、SET NULL、SET DEFAULT）时，在事务中调用 table.transform() 会因无法修改 PRAGMA foreign_keys 而静默删除或修改数据；新版本抛出 TransactionError 阻止此类操作。
+  *含义*：开发者需注意在事务中执行表变换时外键约束的潜在副作用，避免数据意外丢失。
+- 提供了关于外键和事务的详细文档及变通方案，帮助用户理解问题并找到替代方法。
+  *含义*：工具链应提供清晰的错误信息和文档，指导用户规避复杂约束下的陷阱。
+- CLI 和 Python API 文档现在互相交叉引用，方便用户在不同接口间切换。
+  *含义*：良好的文档设计能降低学习成本，提升开发者体验。
+
+---
+
+> 原文：[sqlite-utils 4.1.1](https://simonwillison.net/2026/Jul/12/sqlite-utils/) · 作者 Simon Willison

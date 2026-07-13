@@ -1,0 +1,26 @@
+---
+slug: 2026-07-13-openclaw-concepts-dreaming
+title: "Dreaming · OpenClaw — 背景记忆巩固系统，将短期信号自动提升为持久记忆。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/dreaming
+publishedAt: 2026-07-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "背景记忆巩固系统，将短期信号自动提升为持久记忆。"
+broadcast: "最近有个叫“梦境”的记忆巩固系统挺有意思，它把短期信号自动变成持久记忆。对开发者来说，关键在于它用三阶段分工来避免记忆噪声，还通过六个维度给记忆打分，只有够重要的才被保留。这种设计能帮我们做出更聪明的智能体，让记忆管理不再是一锅粥。"
+insight: "如果你在用类似背景记忆巩固系统，建议检查现有prompt是否只依赖单一指标。OpenClaw的六信号加权（如Relevance 0.30、Frequency 0.24）提供了更精细的排序逻辑，值得参考。国内用户通过newapi.lurus.cn代理访问时，该方案不涉及网络层改动，代理不受影响。现有用户若想升级，需在hook中增加多维度评分阶段，并确保影子试验报告只读，避免误写入。"
+tags: [memory-consolidation, agent-memory, background-processing, scoring-system]
+---
+
+- **三阶段协作**：light 排序去重，REM 主题反思，deep 加权评分后写入 MEMORY.md，各阶段职责分离。
+  *含义*：agent 记忆系统可设计分阶段处理，避免一次性写入导致噪声。
+- **深度排名六信号**：Relevance(0.30)、Frequency(0.24)、Query diversity(0.15)、Recency(0.15)、Consolidation(0.10)、Conceptual richness(0.06)，加权后过阈值才提升。
+  *含义*：prompt 可引导 agent 按多维度评估记忆重要性，而非单一指标。
+- **影子试验报告只读**：helpful/neutral/harmful 判定仅影响排序元数据，不直接写入 MEMORY.md。
+  *含义*：引入 review 信号时需隔离写权限，避免误提升。
+
+---
+
+> 原文：[Dreaming · OpenClaw](https://docs.openclaw.ai/concepts/dreaming)

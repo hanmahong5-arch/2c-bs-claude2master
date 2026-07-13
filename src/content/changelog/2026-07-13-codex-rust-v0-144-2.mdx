@@ -1,0 +1,23 @@
+---
+slug: 2026-07-13-codex-rust-v0-144-2
+title: "codex rust-v0.144.2 — 修复Guardian自动审查提示回归，恢复旧策略"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.144.2
+publishedAt: 2026-07-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复Guardian自动审查提示回归，恢复旧策略"
+broadcast: "OpenAI的Codex工具最近更新了一个小版本，主要修复了Guardian自动审查功能的一个问题。之前因为提示更新导致审查策略和工具行为出现异常，现在回滚到了旧策略，让Agent的审查行为更稳定。这对国内开发者来说是个提醒：在设计Agent框架时，一定要注意提示的版本控制和回滚机制，避免因为提示变化引发意外决策。"
+insight: "这次回滚对国内用户来说是个好消息，如果你在用 newapi.lurus.cn 代理接入 Codex，Guardian 审查行为恢复旧策略后会更稳定，不必担心因提示变化导致意外拦截。建议保持现有 prompt 和 hook 配置不变，暂时无需调整。对于现有用户，这次修复值得升级，能避免审查策略波动带来的不确定性。"
+tags: [guardian, auto-review, prompt-regression, bug-fix]
+---
+
+- 回滚了导致Guardian自动审查策略、请求格式和工具行为异常的提示更新。
+- 恢复旧策略意味着Agent的审查行为更稳定，避免因提示变化引发意外决策。
+- 设计Agent Harness时需注意提示回归风险，应建立提示版本控制与回滚机制。
+
+---
+
+> 原文 release：[openai/codex rust-v0.144.2](https://github.com/openai/codex/releases/tag/rust-v0.144.2)

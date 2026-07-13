@@ -1,0 +1,26 @@
+---
+slug: 2026-07-12-blog-simonwillison-shot-scraper-1-11
+title: "shot-scraper 1.11 — shot"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/12/shot-scraper/
+publishedAt: 2026-07-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "shot-scraper 1.11 改进了服务器启动等待机制，并统一了 JS 文件加载选项。"
+broadcast: "shot-scraper 1.11 改进了服务器启动等待机制，从固定一秒延长到最多三十秒轮询端口，让自动化截图更可靠。新增的 JS 文件加载选项，支持从本地文件或标准输入加载脚本，方便开发者复用代码。这些改进让截图流程更稳定，脚本管理也更高效。"
+tags: [shot-scraper, cli-tools, automation, web-scraping]
+---
+
+- 服务器启动等待时间从固定1秒改为最多30秒轮询端口，确保 shot-scraper multi/video 在服务器启动慢时也能正常工作。
+  - 这意味着自动化截图流程更可靠，减少因服务器延迟导致的失败。
+- 新增 --js-file 选项，支持从本地文件、标准输入或 GitHub 用户名/脚本加载 JavaScript，替代 --javascript 内联字符串。
+  - 开发者可以复用外部 JS 文件，提升脚本管理和协作效率。
+- shot-scraper javascript 和 html 命令新增 --timeout 选项，与其他命令保持一致。
+  - 统一超时设置降低使用复杂度，避免因命令差异导致的配置错误。
+
+---
+
+> 原文：[shot-scraper 1.11](https://simonwillison.net/2026/Jul/12/shot-scraper/) · 作者 Simon Willison

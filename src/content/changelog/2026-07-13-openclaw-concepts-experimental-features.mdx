@@ -1,0 +1,23 @@
+---
+slug: 2026-07-13-openclaw-concepts-experimental-features
+title: "Experimental features · OpenClaw — 减少本地模型工具列表，避免上下文溢出和格式错误"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/experimental-features
+publishedAt: 2026-07-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "减少本地模型工具列表，避免上下文溢出和格式错误"
+broadcast: "OpenClaw 新增了一个实验性功能，开启后能自动精简本地模型可用的工具列表，只保留核心编码工具。这能有效避免模型因为工具描述太长而出现上下文溢出或格式错误，特别适合小模型或工具调用容易出错的场景。"
+insight: "如果你在用本地模型且遇到工具调用格式错误或上下文溢出，建议开启 localModelLean: true，它会移除 browser、cron 等重型工具，只保留核心编码工具，同时把插件目录切换为结构化 Tool Search，减少小模型因 schema 相似导致的误调用。国内用户通过 newapi.lurus.cn 代理不受影响，因为这是客户端配置。稳定路径优先用 tools.profile 或 allow/deny，只有完整 agent 轮次失败时才开 lean 模式。"
+tags: [local-model, tool-surface, experimental-features, openclaw]
+---
+
+- 开启 `localModelLean: true` 会移除 browser、cron、message 等 9 个重型工具，仅保留核心编码工具，减少模型因工具描述过长导致的上下文溢出或格式错误。
+- 该模式默认将插件/MCP/客户端目录切换为结构化 Tool Search（tool_search、tool_describe、tool_call），避免小模型因过多相似 schema 产生错误调用。
+- 仅当后端能正常对话但完整 agent 轮次失败（如工具调用格式错误）时才启用，稳定路径优先使用 tools.profile 或 tools.allow/deny。
+
+---
+
+> 原文：[Experimental features · OpenClaw](https://docs.openclaw.ai/concepts/experimental-features)

@@ -1,0 +1,23 @@
+---
+slug: 2026-07-13-openclaw-concepts-mantis
+title: "Mantis · OpenClaw — 用真实 CI 证据和 PR 评论验证 AI agent 行为，避免回归"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/mantis
+publishedAt: 2026-07-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "用真实 CI 证据和 PR 评论验证 AI agent 行为，避免回归"
+broadcast: "今天介绍一个叫 Mantis 的工具，它用真实的 CI 证据和 PR 评论来验证 AI agent 的行为，避免回归。它会在真实聊天平台里跑测试，用 bot 令牌和浏览器双重验证，确保修复有效。对国内开发者来说，这能帮 agent 开发更稳定，减少模拟器带来的偏差。"
+insight: "Mantis 的 OpenClaw 方案对国内开发者有明确价值：如果你正在维护 AI agent 或自动化脚本，且苦于回归问题，值得升级。它用真实 CI 证据和 PR 评论验证行为，而非模拟器，能更可靠地避免回归。现有 prompt 或 hook 配置无需改动，但需注意测试环境需对接 Discord 或 Slack 等真实平台。通过 newapi.lurus.cn 代理访问不受影响，因为方案本身不依赖特定 API 路由。"
+tags: [ci-evidence, regression-testing, agent-harness, visual-witness]
+---
+
+- 运行前后对比场景：对已知坏基线和新候选分别执行相同测试，只有基线失败且候选通过才算通过，确保修复有效。
+- 使用真实聊天平台（Discord、Slack）作为测试环境，通过 bot 令牌和浏览器见证双重验证，避免模拟器偏差。
+- 支持持久化浏览器配置文件（如 Chrome 用户数据目录），使登录状态跨运行保持，实现长期稳定的 UI 见证。
+
+---
+
+> 原文：[Mantis · OpenClaw](https://docs.openclaw.ai/concepts/mantis)

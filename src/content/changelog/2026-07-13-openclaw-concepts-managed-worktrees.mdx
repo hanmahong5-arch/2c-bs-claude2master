@@ -1,0 +1,26 @@
+---
+slug: 2026-07-13-openclaw-concepts-managed-worktrees
+title: "Managed worktrees · OpenClaw — 给每个Agent任务独立的git分支和工作目录，避免污染源码仓库。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/managed-worktrees
+publishedAt: 2026-07-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "给每个Agent任务独立的git分支和工作目录，避免污染源码仓库。"
+broadcast: "Agent开发中，最头疼的就是分支冲突和临时文件残留。现在有个新方案，给每个Agent任务分配独立的git分支和工作目录，互不干扰。还能自动保留本地配置，任务结束后生成快照，30天内可恢复。这对需要频繁迭代的国内开发者来说，能省下不少清理仓库的精力。"
+insight: "对于国内开发者，如果使用 OpenClaw 管理 Agent 任务，建议升级以利用隔离工作树和快照恢复功能，避免分支冲突和临时文件残留。现有 prompt 或 hook 配置无需修改，因为 .worktreeinclude 文件可携带本地配置。通过 newapi.lurus.cn 代理访问不受影响，该功能仅涉及本地 git 操作。"
+tags: [managed-worktrees, git-isolation, agent-workspace, snapshot-restore]
+---
+
+- 每个工作树位于 `<state-dir>/worktrees/<repo-fingerprint>/<name>`，分支名为 `openclaw/<name>`，基于请求的 base ref 创建。
+  - 含义：Agent 任务获得隔离的 git 工作区，避免分支冲突和临时目录残留。
+- 通过 `.worktreeinclude` 文件（gitignore 模式）将选中的忽略/未跟踪文件复制到新工作树，不会覆盖已有文件。
+  - 含义：允许 Agent 任务携带必要的本地配置（如 .env），同时保持仓库整洁。
+- 删除工作树前会创建包含跟踪和非忽略未跟踪文件的快照提交，保留 30 天可恢复；脏工作树或含未推送提交的工作树不会被自动删除。
+  - 含义：Agent 任务的工作状态可安全回滚，避免意外丢失修改。
+
+---
+
+> 原文：[Managed worktrees · OpenClaw](https://docs.openclaw.ai/concepts/managed-worktrees)
