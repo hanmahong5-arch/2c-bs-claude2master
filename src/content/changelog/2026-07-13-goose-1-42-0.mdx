@@ -1,0 +1,23 @@
+---
+slug: 2026-07-13-goose-1-42-0
+title: "goose v1.42.0 — Goose v1.42 新增 Ollama 动态模型发现、每条消息 token "
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.42.0
+publishedAt: 2026-07-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.42 新增 Ollama 动态模型发现、每条消息 token 统计和项目分组"
+broadcast: "Goose 最新版本带来了几个实用更新：现在能自动发现 Ollama 上的模型并适配上下文限制，让智能体更灵活地调用不同模型。每条消息都会显示 token 消耗和成本，方便你监控和优化 agent 开销。聊天会话还能按项目分组，多项目开发时管理起来更清晰。"
+insight: "Goose v1.42 的三项更新对国内用户均有实际价值。如果你在用 Ollama 本地模型，动态模型发现能省去手动配置的麻烦，建议升级；如果已通过 newapi.lurus.cn 代理接入，OllamaCloudProvider 的上下文限制可自动适配模型能力，无需修改现有 hook。每条消息的 token 统计和会话汇总对成本监控很有用，建议开启。项目分组功能不影响代理配置，但能提升多项目管理效率，值得升级。"
+tags: [ollama, usage-stats, session-grouping, provider-bindings]
+---
+
+- 新增 OllamaCloudProvider，支持动态模型发现和上下文限制，使 agent 可自动适配不同模型能力。
+- 每条消息显示 token、成本、TTFT、tok/s 等使用统计，并汇总会话总计，便于 agent 成本监控和优化。
+- 聊天会话按项目分组导航，目录切换器显示项目名，提升多项目 agent 工作流组织效率。
+
+---
+
+> 原文 release：[block/goose v1.42.0](https://github.com/aaif-goose/goose/releases/tag/v1.42.0)

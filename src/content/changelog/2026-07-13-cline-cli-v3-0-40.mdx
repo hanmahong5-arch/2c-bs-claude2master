@@ -1,0 +1,27 @@
+---
+slug: 2026-07-13-cline-cli-v3-0-40
+title: "cline cli-v3.0.40 — Cline CLI 修复多项稳定性问题，新增手动 API 密钥入口"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.40
+publishedAt: 2026-07-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline CLI 修复多项稳定性问题，新增手动 API 密钥入口"
+broadcast: "Cline CLI 的最新更新修复了多个稳定性问题，比如切换模型时配置不重新加载、自动更新在全局安装后失败等。特别新增了手动输入 API 密钥的入口，为自动化流程提供了备用认证方式。这些改进让 agent 在动态调整和长会话中更加可靠，对国内开发者来说，意味着更稳定的工具链和更少的意外中断。"
+insight: "这次更新主要修复了稳定性问题，新增的手动 API 密钥入口对使用 newapi.lurus.cn 代理的用户没有直接影响，因为代理本身已处理密钥。现有用户如果遇到自动更新失败或会话中断，建议升级。如果使用 Cline OAuth 且需要备用认证，可以配置手动密钥。其他修复如模型切换配置重载、上下文压缩预算处理，对 prompt 和 hook 配置无强制改动要求，但升级后体验更稳定。"
+tags: [cli, bug-fix, oauth, session]
+---
+
+- 新增手动 API 密钥逃生口：Cline OAuth 提供商支持从设置手动输入密钥，为自动化流程提供备用认证方式。
+- 修复切换模型时提供商配置不重新加载的问题：确保 agent 在动态调整模型时能正确更新配置。
+- 修复自动更新在 Bun 全局安装后因符号链接解析失败的问题：提升 agent 自动更新机制的可靠性。
+- 修复令牌刷新时因网络或服务器错误导致意外登出：增强 agent 会话的持久性。
+- ClinePass 用量限制错误现在清晰显示：帮助 agent 在达到限制时快速定位问题。
+- 同一会话中继续时保留会话 ID：确保 agent 在长会话中上下文连续。
+- 强化上下文压缩预算处理：提升 agent 在资源受限时的稳定性。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.40](https://github.com/cline/cline/releases/tag/cli-v3.0.40)

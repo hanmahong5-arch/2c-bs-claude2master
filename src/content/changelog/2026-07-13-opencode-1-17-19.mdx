@@ -1,0 +1,23 @@
+---
+slug: 2026-07-13-opencode-1-17-19
+title: "opencode v1.17.19 — OpenCode v1.17.19 修复多项 Bug，新增 OAuth 与模型选"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.19
+publishedAt: 2026-07-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "OpenCode v1.17.19 修复多项 Bug，新增 OAuth 与模型选择"
+broadcast: "OpenCode 最新版本修复了多个问题，并加入了 OpenAI 的高级推理模式，让智能体能够调用更强的推理能力。同时新增了 OAuth 认证支持，简化了开发者的接入流程。这些更新对国内做 agent 开发的团队来说，意味着更灵活的模型选择和更便捷的认证方式。"
+insight: "如果你已经在用 OpenCode 的 hook，这次 v1.17.19 值得升级，主要是修复了 bug 并新增了 OAuth 支持，能简化认证流程。对于国内用户，通过 newapi.lurus.cn 代理使用 OpenAI pro 推理模式或 xAI Responses 时，注意默认禁用响应存储可能影响需要持久化的场景，但整体无直接冲突。现有 prompt 配置无需改动。"
+tags: [bugfix, oauth, model-selection, ui-improvements]
+---
+
+- 新增 OpenAI pro 推理模式支持，允许 agent 使用更高级推理能力。
+- xAI Responses 默认禁用响应存储，减少不必要的数据持久化。
+- 新增 Luna Responses Lite 的 OAuth 支持，简化认证流程。
+
+---
+
+> 原文 release：[sst/opencode v1.17.19](https://github.com/anomalyco/opencode/releases/tag/v1.17.19)

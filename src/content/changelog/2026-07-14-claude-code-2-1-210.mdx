@@ -1,0 +1,24 @@
+---
+slug: 2026-07-14-claude-code-2-1-210
+title: "claude-code v2.1.210 — Claude Code 修复大量 bug，强化隔离与安全性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.210
+publishedAt: 2026-07-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 修复大量 bug，强化隔离与安全性"
+broadcast: "Claude Code 的最新更新修复了大量 bug，并强化了安全性。现在工具调用有了实时耗时计数器，不再担心卡死；权限模型也改为更安全的读写分离。特别值得关注的是，它修复了子 agent 能操作主仓库的漏洞，以及非人类输入误触发关键词的问题。这对国内开发者来说，意味着 agent 的隔离和权限控制必须更加严格。"
+insight: "v2.1.210 的权限模型变更（Write→Edit/Read）和隔离漏洞修复是升级关键。如果你在用旧版且配置了 Write 规则，必须更新 hook 中的权限声明，否则 agent 会拒绝执行。隔离修复不影响 newapi.lurus.cn 代理，但建议检查子 agent 的 git 操作是否受限。ultracode 误触发修复对国内用户无直接影响，但若你通过 webhook 调用 agent，需确认 opt-in 逻辑已更新。整体值得升级，但需同步调整 prompt 中的权限描述。"
+tags: [bug-fixes, security, isolation, permissions]
+---
+
+- 新增实时耗时计数器，长时工具调用不再看似卡死；agent harness 可借此判断工具是否仍在运行。
+- 弃用 `Write(path)` 等权限规则，改用 `Edit(path)` 或 `Read(path)`；agent 权限模型需统一为更安全的读写分离。
+- 修复 `isolation: 'worktree'` 子 agent 能对主仓库执行 git 命令的漏洞；隔离机制需确保子 agent 操作范围严格受限。
+- 修复 `ultracode` 关键词在非人类输入（如 webhook）中误触发；agent 的 opt-in 机制应仅响应人类意图。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.210](https://github.com/anthropics/claude-code/releases/tag/v2.1.210)

@@ -1,0 +1,24 @@
+---
+slug: 2026-07-13-opencode-1-17-20
+title: "opencode v1.17.20 — 修复Codex兼容性，新增Azure AI GPT"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.17.20
+publishedAt: 2026-07-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复Codex兼容性，新增Azure AI GPT-5.6支持"
+broadcast: "最近开源项目OpenCode更新了，主要做了两件事：一是移除了旧版Codex的临时方案，让和OpenAI新API的配合更顺畅；二是把Azure AI的支持升级到了GPT-5.6。这对国内开发者来说，意味着用Azure云服务调用最新模型更方便了，做智能体开发时模型选择也更灵活。"
+insight: "对于国内用户，如果当前使用newapi.lurus.cn代理且依赖OpenAI Luna Responses Lite，建议升级至v1.17.20，因为移除了过时的Codex变通方案，能避免请求干扰。同时，新增的Azure AI GPT-5.6支持为使用Azure服务的用户提供了更多模型选择，但若未使用Azure则无需调整。现有prompt和hook配置无需改动，升级后即可受益。"
+tags: [bugfix, azure-ai, gpt-5-6, compatibility]
+---
+
+- 移除过时的Codex变通方案，避免干扰OpenAI Luna Responses Lite请求。
+  - 含义：简化代码，提升与OpenAI新API的兼容性。
+- 更新Azure AI支持至GPT-5.6。
+  - 含义：扩展模型选择，适配最新Azure AI服务。
+
+---
+
+> 原文 release：[sst/opencode v1.17.20](https://github.com/anomalyco/opencode/releases/tag/v1.17.20)

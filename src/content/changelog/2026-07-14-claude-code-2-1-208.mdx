@@ -1,0 +1,23 @@
+---
+slug: 2026-07-14-claude-code-2-1-208
+title: "claude-code v2.1.208 — 大量bug修复与性能优化，提升稳定性和可访问性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.208
+publishedAt: 2026-07-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "大量bug修复与性能优化，提升稳定性和可访问性"
+broadcast: "Claude Code 最新版本重点修复了多项内存泄漏问题，长会话时内存占用明显下降，运行更稳定。同时新增了屏幕阅读器模式，方便视障开发者使用。自动更新后上下文窗口重置的bug也已修复，恢复长会话时不再误报上下文已满。"
+insight: "这次更新对现有用户来说值得升级，尤其是长会话用户，内存泄漏修复能显著降低资源占用，避免卡顿或崩溃。屏幕阅读器模式是新增功能，普通用户无需改动 prompt 或 hook 配置。国内用户通过 newapi.lurus.cn 代理使用不受影响，因为更新内容不涉及网络或代理层变更。"
+tags: [accessibility, bug-fix, performance, memory-leak]
+---
+
+- 新增屏幕阅读器模式（`claude --ax-screen-reader`），支持无障碍文本渲染，方便视障用户使用
+- 修复多项内存泄漏：MCP stdio服务器stderr累积、LSP文档无限增长、异步钩子输出残留等，长会话内存使用显著降低
+- 修复上下文窗口在自动更新后重置为200k的问题，避免恢复长会话时误报“100%上下文已用”
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.208](https://github.com/anthropics/claude-code/releases/tag/v2.1.208)

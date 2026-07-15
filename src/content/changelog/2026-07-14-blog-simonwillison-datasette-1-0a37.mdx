@@ -1,0 +1,23 @@
+---
+slug: 2026-07-14-blog-simonwillison-datasette-1-0a37
+title: "datasette 1.0a37 — Datasette 1.0a37 发布，修复权限系统性能与文档，回滚破坏性 AP"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/14/datasette/
+publishedAt: 2026-07-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 1.0a37 发布，修复权限系统性能与文档，回滚破坏性 API 变更。"
+broadcast: "Datasette 发布了新版本，这次主要修复了权限系统的性能和文档，让权限配置更容易理解。另外，之前一个破坏性的API改动导致很多插件测试失败，作者果断回滚了。这说明对开发者来说，插件生态的稳定性比界面一致性更重要，权限优化也降低了大数据集的管理难度。"
+tags: [datasette, release, permissions, api-compatibility]
+---
+
+- 权限系统性能与文档改进：优化了权限检查逻辑，减少查询开销，并补充了权限配置的文档说明，使开发者更易理解权限模型。
+- 回滚破坏性 API 变更：因一次外观性 API 改动导致几乎所有现有插件测试套件失败，作者选择回滚，强调向后兼容性对生态的重要性。
+- 对开发者的含义：插件生态的稳定性优先于界面一致性，API 变更需谨慎评估影响；权限系统的优化降低了大规模数据集下的管理复杂度。
+
+---
+
+> 原文：[datasette 1.0a37](https://simonwillison.net/2026/Jul/14/datasette/) · 作者 Simon Willison

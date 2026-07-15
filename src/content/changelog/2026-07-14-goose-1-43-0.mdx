@@ -1,0 +1,23 @@
+---
+slug: 2026-07-14-goose-1-43-0
+title: "goose v1.43.0 — 桌面ACP会话恢复、每消息用量统计、多模型支持"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.43.0
+publishedAt: 2026-07-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "桌面ACP会话恢复、每消息用量统计、多模型支持"
+broadcast: "桌面ACP会话现在支持休眠和断线后自动重连，agent长任务更可靠了。新增的每消息用量统计UI能帮你监控token和成本，调用开销一目了然。还加入了OllamaCloud动态模型发现和多家新提供商，模型选择更丰富。"
+insight: "v1.43.0 值得升级，尤其适合跑长任务的用户。ACP 会话自动重连能减少断线丢进度，每消息用量统计让成本监控更细。国内用户走 newapi.lurus.cn 代理不受影响，模型提供商新增 iFlytek 等，但需确认代理是否支持。现有 prompt 和 hook 配置无需改动。"
+tags: [acp, usage-stats, model-providers, desktop]
+---
+
+- 桌面ACP会话支持休眠和断线后自动重连，提升agent长任务可靠性。
+- 新增每消息用量统计UI（token、成本、TTFT、tok/s），便于监控agent调用成本。
+- 新增OllamaCloudProvider动态模型发现、iFlytek/Astron/Fireworks AI等提供商，扩展agent模型选择。
+
+---
+
+> 原文 release：[block/goose v1.43.0](https://github.com/aaif-goose/goose/releases/tag/v1.43.0)

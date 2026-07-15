@@ -1,0 +1,23 @@
+---
+slug: 2026-07-14-claude-code-2-1-209
+title: "claude-code v2.1.209 — 修复 agent 后台会话中对话框被阻塞的问题"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.209
+publishedAt: 2026-07-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 agent 后台会话中对话框被阻塞的问题"
+broadcast: "Claude的Agent工具最近更新了一个小版本，修复了后台会话中对话框被阻塞的问题。之前因为一个过于宽泛的防护，导致Agent在后台运行时，像“/model”这样的对话框会卡住，现在这个bug被解决了。对国内开发者来说，这意味着在构建Agent时，UI交互的权限控制需要更精细，不能简单用全局防护，否则会影响核心功能。"
+insight: "如果你在用 Claude Code 的 agent 后台功能，之前遇到对话框被阻塞的问题，现在 v2.1.209 已修复，值得升级。这次改动回退了过于宽泛的防护，说明官方意识到全局防护会误伤核心交互。国内用户通过 newapi.lurus.cn 代理升级不受影响，建议尽快更新，避免 agent 后台运行时对话框卡住。"
+tags: [bug-fix, agent, dialog]
+---
+
+- 修复了 `/model` 等对话框在 `claude agents` 后台会话中被阻塞的问题，原因是回退了一个过于宽泛的防护。
+- 这意味着 agent 在后台运行时，用户仍可正常与对话框交互，不会因防护误判而卡住。
+- 设计含义：agent 的 UI 交互路径需要更精细的权限控制，避免全局防护影响核心功能。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.209](https://github.com/anthropics/claude-code/releases/tag/v2.1.209)

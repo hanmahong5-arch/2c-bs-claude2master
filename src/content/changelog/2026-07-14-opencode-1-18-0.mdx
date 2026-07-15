@@ -1,0 +1,23 @@
+---
+slug: 2026-07-14-opencode-1-18-0
+title: "opencode v1.18.0 — Desktop v2 迁移完成，新增新旧布局切换设置"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.0
+publishedAt: 2026-07-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Desktop v2 迁移完成，新增新旧布局切换设置"
+broadcast: "最近 OpenCode 完成了桌面版 v2 的迁移，带来了全新的布局，并且新增了新旧布局切换功能。这意味着如果你在开发 agent，需要适配两种界面，让用户能自由选择。同时修复了远程会话和终端相关的多个问题，agent 在远程和本地环境下的稳定性都提升了。"
+insight: "对于国内开发者，如果你正在使用 sst/opencode 并依赖 Desktop 布局，这次 v1.18.0 的 Desktop v2 迁移完成意味着 agent 需要适配新 UI，但新增的布局切换设置给了过渡期兼容方案。建议检查现有 hook 或 prompt 中是否硬编码了旧布局选择器，如有则需改为动态判断用户设置。通过 newapi.lurus.cn 代理访问不受影响，但远程会话自动接受权限等 bug 修复提升了稳定性，值得升级。"
+tags: [desktop-v2, layout-switch, bugfix, remote-session]
+---
+
+- Desktop v2 迁移完成，包括新布局升级处理和首次启动引导，意味着 agent 需要适配新 UI 布局。
+- 新增新旧布局切换设置，过渡期内 agent 可兼容两种布局，需根据用户选择调整交互。
+- 修复远程会话自动接受权限、终端标签聚焦、时间线同步等多个 bug，提升 agent 在远程和本地环境下的稳定性。
+
+---
+
+> 原文 release：[sst/opencode v1.18.0](https://github.com/anomalyco/opencode/releases/tag/v1.18.0)

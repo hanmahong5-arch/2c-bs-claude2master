@@ -1,0 +1,26 @@
+---
+slug: 2026-07-14-blog-simonwillison-lobste-rs-is-now-running-on-sqlite
+title: "lobste.rs is now running on SQLite — Lobsters 从 MariaDB 迁移到 SQLite，性能提升、成本减半，"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/14/lobsters-sqlite/
+publishedAt: 2026-07-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Lobsters 从 MariaDB 迁移到 SQLite，性能提升、成本减半，证明单机 SQLite 在 2026 年依然能打。"
+broadcast: "知名技术社区 Lobsters 最近把数据库从 MariaDB 换成了 SQLite，结果 CPU 和内存占用都降了，网站响应更快，服务器成本直接砍半。这说明在中等规模的 Web 应用里，SQLite 完全能当主力数据库用，而且运维更简单。对国内开发者来说，如果做 Agent 或轻量应用，这种单机方案能省下不少分布式维护的麻烦。"
+tags: [sqlite, migration, rails, case-study]
+---
+
+- Lobsters 完成从 MariaDB 到 SQLite 的迁移，CPU 和内存使用下降，站点响应更快，VPS 成本减半。
+  - 对开发者：SQLite 在中等规模 Web 应用中可作为主数据库，降低运维复杂度。
+- 迁移后 Rails 应用运行在单台 VPS 上，主数据库文件仅 3.8GB，另有缓存、队列和反滥用数据库。
+  - 对工具链：SQLite 的轻量特性适合单机部署，减少分布式数据库的维护开销。
+- 迁移 PR 仅增删 735/593 行代码，基于多个前置 PR，展示了渐进式迁移的可能性。
+  - 对 agent：SQLite 的简单性使自动化运维和迁移更易实现，适合资源受限场景。
+
+---
+
+> 原文：[lobste.rs is now running on SQLite](https://simonwillison.net/2026/Jul/14/lobsters-sqlite/) · 作者 Simon Willison

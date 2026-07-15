@@ -1,0 +1,23 @@
+---
+slug: 2026-07-14-blog-simonwillison-quoting-github-changelog
+title: "Quoting GitHub Changelog — GitHub Dependabot 引入三天冷却期，提升依赖更新安全性。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/14/github-changeling/
+publishedAt: 2026-07-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "GitHub Dependabot 引入三天冷却期，提升依赖更新安全性。"
+broadcast: "GitHub 的 Dependabot 现在会等新版本发布三天后，才自动创建更新请求。这个冷却期能避免上游版本回滚带来的无效更新，减轻 CI 压力。对国内开发者来说，依赖更新更稳了，但紧急安全补丁可能会晚到，需要留意。"
+tags: [dependency-cooldowns, packaging, security, github]
+---
+
+- Dependabot 现在默认等待新版本发布三天后才创建更新 PR，无需额外配置。
+- 这一冷却期机制可减少因上游版本回滚或紧急修复导致的无效更新，降低 CI 负担。
+- 对开发者而言，这意味着依赖更新更稳定，但需注意紧急安全补丁可能被延迟。
+
+---
+
+> 原文：[Quoting GitHub Changelog](https://simonwillison.net/2026/Jul/14/github-changeling/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-07-13-openclaw-2026-7-1
+title: "openclaw v2026.7.1 — Control UI 大改版，GPT"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.7.1
+publishedAt: 2026-07-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Control UI 大改版，GPT-5.6 兼容，Gateway 崩溃不再无限重启"
+broadcast: "OpenClaw 最新版本带来了 Control UI 的全面翻新，对话和监控面板可以并排显示，这对 agent 开发者的界面设计提出了新要求。同时，它兼容了 GPT-5.6 和腾讯 Hy3，意味着 agent 框架需要更灵活地支持新模型。最值得关注的是，Gateway 崩溃后不再无限重启，而是进入修复路径，这提醒我们在 agent 运行时管理中要加入熔断和降级机制。"
+insight: "openclaw 2026.7.1 的 Control UI 大改版和 GPT-5.6 兼容对国内开发者是利好，但现有用户需评估自己的 agent harness 是否支持动态模型发现和面板嵌入，否则建议升级。Gateway 崩溃不再无限重启，意味着熔断机制已内置，若你之前依赖无限重启的 hook 或自定义重试逻辑，必须修改配置。走 newapi.lurus.cn 代理的用户不受影响，因为兼容性更新在模型层，代理无需改动。"
+tags: [control-ui, model-support, gateway-reliability, agent-harness]
+---
+
+- **Control UI 全面翻新**：对话可并排组织，任务、成本、健康状态等面板紧邻聊天区。这意味着 agent harness 的 UI 层需要更灵活地嵌入实时监控和操作面板。
+- **GPT-5.6 兼容与 Tencent Hy3 完整支持**：新增模型和提供商的完整配置路径。agent harness 需支持动态模型发现和认证，以适配不断扩展的模型生态。
+- **Gateway 崩溃不再无限重启**：反复失败的 Gateway 会进入稳定修复路径而非无限重启。agent harness 的运行时管理应引入熔断和优雅降级机制。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.7.1](https://github.com/openclaw/openclaw/releases/tag/v2026.7.1)
