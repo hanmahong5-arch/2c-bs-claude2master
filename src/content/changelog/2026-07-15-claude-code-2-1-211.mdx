@@ -1,0 +1,26 @@
+---
+slug: 2026-07-15-claude-code-2-1-211
+title: "claude-code v2.1.211 — 子代理文本输出、权限预览修复、后台会话稳定性提升"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.211
+publishedAt: 2026-07-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "子代理文本输出、权限预览修复、后台会话稳定性提升"
+broadcast: "Claude Code 最新更新来了，这次重点提升了子代理的透明度和安全性。现在你可以通过新标志捕获子代理的完整推理过程，方便外部工具分析。同时修复了权限预览中的视觉篡改漏洞，让审批更可靠。后台会话稳定性也增强了，多会话切换不再掉线，对国内开发者构建复杂 Agent 工作流很有帮助。"
+insight: "这次更新主要修复了权限预览的安全漏洞和后台会话稳定性问题，对国内用户通过 newapi.lurus.cn 代理使用无直接影响。如果你在自动化流程中依赖子代理的完整推理链，建议启用 --forward-subagent-text 标志以捕获子代理文本。现有 hook 配置中若使用了 PreToolUse 的 ask 决策，需注意其已被降级为提示，用户确认流程可能需调整。整体上，升级能提升安全性和稳定性，值得操作。"
+tags: [subagent, security, background-sessions, bug-fix]
+---
+
+- 新增 `--forward-subagent-text` 标志和环境变量，可在 stream-json 输出中包含子代理文本和思考过程，便于外部工具捕获完整推理链。
+- 修复权限预览中未中和双向覆盖、零宽字符等问题，防止工具输入视觉篡改审批消息，增强安全审计可靠性。
+- 修复自动模式覆盖 PreToolUse hook 的 `ask` 决策，hook 的 `ask` 现在会降级为提示，确保用户始终有确认机会。
+- 修复多个共享凭据存储的 Claude Code 会话在唤醒后同时登出，以及插件 MCP 服务器在空闲 Web 会话唤醒后未重连，提升后台任务持久性。
+- 修复子代理在恢复或后续消息时模型覆盖被重置为父模型，确保子代理独立模型配置生效。
+- 修复 `/clear` 未重置会话成本计数器，状态栏成本现在从 $0 开始，便于准确追踪。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.211](https://github.com/anthropics/claude-code/releases/tag/v2.1.211)

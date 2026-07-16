@@ -1,0 +1,30 @@
+---
+slug: 2026-07-15-cline-sdk-sdk-v0-0-61
+title: "cline sdk/sdk/v0.0.61 — SDK v0.0.61 提升上下文压缩、工作区持久化与终端可靠性"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.61
+publishedAt: 2026-07-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK v0.0.61 提升上下文压缩、工作区持久化与终端可靠性"
+broadcast: "最近，AI编程助手Claude的SDK更新到了新版本，重点提升了上下文压缩、工作区持久化和终端可靠性。现在压缩任务会报告进度，方便你监控；工作区的git信息也能跨会话保存，不用重复初始化。另外，终端修复了多个问题，切换模式时还会给出提示。这些改进让开发流程更顺畅，对国内开发者来说，意味着更稳定的Agent开发体验。"
+insight: "SDK v0.0.61 的改进主要面向开发者体验，现有用户值得升级以获取终端可靠性修复和编辑器差异视图恢复。如果你使用 newapi.lurus.cn 代理，模型 ID 自动建议功能可能简化配置，但需确认代理是否兼容 OpenAI 端点。工作区持久化可避免重复初始化，但无需修改现有 prompt 或 hook 配置。"
+tags: [sdk, context-compaction, workspace-persistence, terminal-reliability]
+---
+
+- 上下文压缩现在报告进度状态，便于监控长时间运行的任务。
+- 工作区 git 信息（分支/远程）持久化并跨会话刷新，避免重复初始化。
+- 修复良性 git 状态被误报为初始化错误，提升错误报告准确性。
+- 系统提示中添加 Plan/Act 模式指导，切换模式时提供提示。
+- 恢复 SDK 编辑工具的编辑器差异视图，增强代码审查体验。
+- 模型 ID 从 OpenAI 兼容端点自动建议，简化配置。
+- VS Code 终端可靠性改进（OSC 633 解析、退出码、超时处理）。
+- 提供者特定请求头集中到 LLM 层，便于统一管理。
+- 遥测附加组织上下文，增强身份识别。
+- 新增共享 `@cline/ui` 主题包，促进 UI 一致性。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.61](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.61)

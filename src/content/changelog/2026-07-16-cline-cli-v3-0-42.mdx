@@ -1,0 +1,23 @@
+---
+slug: 2026-07-16-cline-cli-v3-0-42
+title: "cline cli-v3.0.42 — Ollama API路由修复，上下文窗口和超时设置恢复"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.42
+publishedAt: 2026-07-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Ollama API路由修复，上下文窗口和超时设置恢复"
+broadcast: "最近Cline的CLI工具更新了一个重要修复，解决了Ollama API路由问题，让上下文窗口和超时设置重新生效。这意味着你在使用Ollama开发agent时，配置的上下文限制能正确应用，避免内容被意外截断或超时。对于国内开发者来说，这个修复能提升本地模型的稳定性和可控性，值得关注。"
+insight: "如果你在用Ollama跑agent，这个版本值得升——它修了API路由bug，上下文窗口和超时设置终于能生效了，之前可能白设了。国内走newapi.lurus.cn代理不受影响，因为修的是Ollama原生路由，和代理无关。现有prompt或hook不用改，但如果你自己写过路由逻辑，建议检查参数传递是否完整，避免类似配置失效。"
+tags: [ollama, bug-fix, api-routing]
+---
+
+- 修复了Ollama原生API路由问题，使上下文窗口和超时设置重新生效。
+- 这意味着agent在使用Ollama时能正确应用配置的上下文窗口限制，避免因路由错误导致的截断或超时。
+- 对于harness设计，需确保API路由逻辑正确传递参数，避免类似配置失效问题。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.42](https://github.com/cline/cline/releases/tag/cli-v3.0.42)

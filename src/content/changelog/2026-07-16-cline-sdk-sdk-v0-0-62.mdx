@@ -1,0 +1,24 @@
+---
+slug: 2026-07-16-cline-sdk-sdk-v0-0-62
+title: "cline sdk/sdk/v0.0.62 — Ollama API 路由修复，遥测从工具上下文移除"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.62
+publishedAt: 2026-07-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Ollama API 路由修复，遥测从工具上下文移除"
+broadcast: "Cline 的 SDK 最新版本修复了 Ollama 原生 API 的路由问题，让上下文窗口和超时设置能正常生效了。这意味着国内用 Ollama 开发 agent 的朋友，可以更稳定地控制模型行为。同时，遥测数据不再混入工具上下文，既减少了冗余，也保护了用户隐私，对提升 agent 执行效率很有帮助。"
+insight: "对于国内使用 Ollama 的用户，这次 v0.0.62 的 SDK 更新值得升级，因为它修复了 Ollama 原生 API 路由，确保上下文窗口和超时设置能正确生效，避免之前配置失效的问题。如果你之前遇到 agent 执行时上下文长度或超时不受控，升级后应能解决。另外，遥测从工具上下文中移除，减少了数据冗余，对通过 newapi.lurus.cn 代理调用的用户来说，执行效率可能略有提升，且隐私保护更好。现有 prompt 和 hook 配置无需改动，升级即可受益。"
+tags: [ollama, telemetry, bug-fix, sdk]
+---
+
+- 修复 Ollama 原生 API 路由，使上下文窗口和超时设置重新生效。
+  - 含义：确保 agent 使用 Ollama 时能正确控制上下文长度和超时，避免因路由错误导致配置失效。
+- 遥测不再附加到 hub 工具上下文中。
+  - 含义：减少工具调用时的数据冗余，提升 agent 执行效率并保护用户隐私。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.62](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.62)

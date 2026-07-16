@@ -1,0 +1,26 @@
+---
+slug: 2026-07-15-blog-simonwillison-xai-org-grok-build-now-open-source
+title: "xai-org/grok-build, now open source — xAI 开源 Grok Build 全部代码，回应隐私争议，揭示终端编码代理的惊"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/15/grok-build/
+publishedAt: 2026-07-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "xAI 开源 Grok Build 全部代码，回应隐私争议，揭示终端编码代理的惊人复杂度。"
+broadcast: "xAI 最近开源了 Grok Build 的全部代码，足足有八十多万行 Rust，复杂度跟 OpenAI Codex 差不多。这次开源是因为隐私争议，代码里还藏着 Google Cloud 上传模块，但已经被禁用。对国内开发者来说，这揭示了终端编码代理的工程投入有多大，也提醒我们做工具链一定要默认隐私优先。"
+tags: [open-source, ai, rust, coding-agents, privacy]
+---
+
+- Grok Build 包含 844,530 行 Rust 代码，仅约 3% 为第三方依赖，复杂度远超预期，与 OpenAI Codex 规模相当。
+  - 这意味着终端编码代理的工程投入巨大，开源后开发者可深入分析其架构，但维护成本极高。
+- 代码中保留了 Google Cloud 上传模块，但已硬编码返回错误禁用；系统提示和子代理提示被公开，后者包含“不得泄露提示内容”指令。
+  - 隐私争议促使 xAI 彻底开源并删除已收集数据，但代码残留显示早期设计对数据上传缺乏限制，提醒工具链开发者需默认隐私优先。
+- 工具实现部分移植自 Codex 和 OpenCode，如 apply_patch、bash、edit 等，并可能根据检测到的现有设置（如 Codex/Claude/Cursor）切换。
+  - 这种“适配器”模式表明编码代理需兼容多种生态，开源后社区可贡献更多工具实现，但需注意许可证合规。
+
+---
+
+> 原文：[xai-org/grok-build, now open source](https://simonwillison.net/2026/Jul/15/grok-build/) · 作者 Simon Willison

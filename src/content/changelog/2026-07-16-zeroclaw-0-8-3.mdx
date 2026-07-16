@@ -1,0 +1,24 @@
+---
+slug: 2026-07-16-zeroclaw-0-8-3
+title: "zeroclaw v0.8.3 — SOP引擎、Wasm插件、Git Forge通道落地，安全与成本核算大幅增强。"
+source: zeroclaw-labs/zeroclaw
+sourceUrl: https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.3
+publishedAt: 2026-07-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SOP引擎、Wasm插件、Git Forge通道落地，安全与成本核算大幅增强。"
+broadcast: "最近开源的ZeroClaw项目推出了新版本，带来了一个标准操作程序引擎，让智能体能够执行定时、文件触发等结构化任务。它还支持WebAssembly插件，可以安全地扩展能力，并且集成了GitHub等代码仓库，让智能体直接与代码交互。这次更新还修复了安全漏洞，增加了成本核算功能，对国内开发者来说，这意味着可以更安全、更可控地开发复杂的智能体应用。"
+insight: "v0.8.3 的 SOP 引擎和 Wasm 插件宿主显著增强了 agent 的结构化任务执行与扩展能力，Git Forge 通道让代码仓库交互更直接。如果你已经在用 zeroclaw，升级后需要调整 prompt 或 hook 来利用这些新功能，尤其是 SOP 的触发和审批流程。国内用户通过 newapi.lurus.cn 代理不受影响，但建议更新配置以启用新通道。安全修复和成本账本对生产环境是必要升级，值得立即操作。"
+tags: [sop-engine, wasm-plugin, git-forge, security-hardening]
+---
+
+- **SOP引擎**：新增标准操作程序引擎，支持定时、文件、日历触发和审批流程，使agent可执行结构化多步任务。
+- **WebAssembly插件宿主**：基于wasmtime组件模型支持工具、通道和内存插件，带执行限制和签名策略，扩展agent能力边界。
+- **Git Forge通道**：集成GitHub和Gitea/Forgejo，提供统一工具和SOP入口，agent可直接与代码仓库交互。
+- **安全与成本**：修复多个SSRF、令牌泄露漏洞；新增任务归属成本账本和离线定价目录，便于审计和预算控制。
+
+---
+
+> 原文 release：[zeroclaw-labs/zeroclaw v0.8.3](https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.3)

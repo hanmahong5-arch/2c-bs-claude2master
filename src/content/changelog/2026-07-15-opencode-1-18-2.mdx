@@ -1,0 +1,23 @@
+---
+slug: 2026-07-15-opencode-1-18-2
+title: "opencode v1.18.2 — 子代理不再默认嵌套，Meta模型推理深度改进"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.2
+publishedAt: 2026-07-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "子代理不再默认嵌套，Meta模型推理深度改进"
+broadcast: "最新版本中，子代理默认不再嵌套，避免无限递归，你可以通过配置来限制深度。同时，Meta模型的推理深度提升，能处理更复杂的任务。这对国内开发者来说，意味着构建多代理系统时更可控、更稳定，值得关注。"
+insight: "对于国内用户，如果你通过 newapi.lurus.cn 代理使用 sst/opencode，本次更新值得升级。子代理默认不再嵌套，可避免无限递归，但若你依赖嵌套功能，需检查 `subagent_depth` 配置是否需要调整。Meta 模型推理深度提升，对复杂任务处理更有利，无需修改现有 prompt。桌面端快捷键和修复项不影响代理使用。总体建议升级，配置上注意子代理行为变化。"
+tags: [subagent, meta-model, desktop, bugfix]
+---
+
+- 子代理默认不再启动嵌套子代理，可通过 `subagent_depth` 配置限制，避免无限递归。
+- Meta 模型的默认推理深度提升，增强复杂任务处理能力。
+- 桌面端新增 `Mod+N` 快捷键打开新标签页，修复 Help 按钮和会话可见性问题。
+
+---
+
+> 原文 release：[sst/opencode v1.18.2](https://github.com/anomalyco/opencode/releases/tag/v1.18.2)

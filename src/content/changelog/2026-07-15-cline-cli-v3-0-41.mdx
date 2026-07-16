@@ -1,0 +1,23 @@
+---
+slug: 2026-07-15-cline-cli-v3-0-41
+title: "cline cli-v3.0.41 — CLI v3.0.41 优化压缩进度、模型建议与 Git 信息持久化"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.41
+publishedAt: 2026-07-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "CLI v3.0.41 优化压缩进度、模型建议与 Git 信息持久化"
+broadcast: "Cline 的 CLI 工具更新了，现在压缩文件时能在界面里看到进度条，后台任务一目了然。配置 OpenAI 兼容服务时，模型 ID 会自动补全，省得手打。工作区的 Git 分支和远程信息会跨会话保存并自动刷新，这样 agent 开发时上下文更稳定，不用重复配置了。"
+insight: "本次更新对国内用户影响不大，但值得关注。如果你使用 newapi.lurus.cn 代理并配置 OpenAI 兼容端点，自动建议模型 ID 能减少手动输入错误。Git 信息持久化让 agent 上下文更稳定，适合依赖分支/远程的自动化流程。现有用户可升级，无需修改 prompt 或 hook 配置。"
+tags: [cli, tui, git, model-configuration]
+---
+
+- 压缩操作在 TUI 中显示进度状态，便于用户监控后台任务。
+- 配置提供商时，OpenAI 兼容端点自动建议模型 ID，减少手动输入。
+- 工作区 Git 信息（分支/远程）跨会话持久化并刷新，agent 可依赖稳定上下文。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.41](https://github.com/cline/cline/releases/tag/cli-v3.0.41)

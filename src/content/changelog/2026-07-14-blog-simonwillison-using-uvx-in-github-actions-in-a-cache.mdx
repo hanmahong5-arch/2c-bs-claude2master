@@ -1,0 +1,23 @@
+---
+slug: 2026-07-14-blog-simonwillison-using-uvx-in-github-actions-in-a-cache
+title: "Using uvx in GitHub Actions in a cache-friendly way — 如何让 uvx 在 GitHub Actions 中缓存友好地使用 Python"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/
+publishedAt: 2026-07-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "如何让 uvx 在 GitHub Actions 中缓存友好地使用 Python 工具。"
+broadcast: "在 GitHub Actions 里用 uvx 运行 Python 工具时，每次都会重新下载最新版，很慢。现在有个好办法：设置一个固定日期作为环境变量，让 uvx 只解析那个日期前的版本，再把日期放进缓存键。这样就能缓存工具和依赖，手动改日期就能升级。对国内开发者来说，这能大幅提升 CI 速度，减少网络等待。"
+tags: [python, github-actions, uv, caching, packaging]
+---
+
+- 设置 `UV_EXCLUDE_NEWER` 环境变量为固定日期（如 `2026-07-12`），使 uvx 始终解析该日期前的最新版本，避免每次运行都下载最新版。
+- 将该日期作为 GitHub Actions 缓存键的一部分，通过手动更新日期来触发缓存失效和工具升级。
+- 此方法避免了每次工作流运行时从 PyPI 重新下载工具及其依赖，显著提升 CI 速度和可靠性。
+
+---
+
+> 原文：[Using uvx in GitHub Actions in a cache-friendly way](https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/) · 作者 Simon Willison

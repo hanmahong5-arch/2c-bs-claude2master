@@ -1,0 +1,23 @@
+---
+slug: 2026-07-16-codex-rust-v0-144-5
+title: "codex rust-v0.144.5 — 更精准的危险命令检测，拒绝理由更清晰"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.144.5
+publishedAt: 2026-07-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "更精准的危险命令检测，拒绝理由更清晰"
+broadcast: "OpenAI 的 Codex 工具更新了，这次主要加强了危险命令的检测能力，能识别更多强制删除文件的写法。而且当命令被拒绝时，给出的理由更清晰了，方便开发者快速定位问题。对于做 agent 开发的朋友来说，需要同步更新安全策略，同时可以利用这些明确的拒绝信息来优化用户体验。"
+insight: "对于国内用户，如果当前使用 newapi.lurus.cn 代理接入 Codex，本次升级主要影响危险命令检测的覆盖面和拒绝信息的清晰度。现有用户值得升级，因为更精准的检测能减少误放风险，而更明确的拒绝理由有助于调试和优化 prompt。如果你的 hook 配置中涉及 rm 命令的过滤规则，建议同步更新安全策略以匹配新版规则。代理本身不受影响，但升级后需测试 hook 兼容性。"
+tags: [dangerous-command-detection, bug-fix, safety]
+---
+
+- 扩展了危险命令检测规则，覆盖更多强制 `rm` 形式。
+- 当命令被拒绝时，提供更明确的拒绝原因，便于调试。
+- 对 agent harness 设计：需同步更新安全策略，并利用清晰拒绝信息优化用户反馈。
+
+---
+
+> 原文 release：[openai/codex rust-v0.144.5](https://github.com/openai/codex/releases/tag/rust-v0.144.5)

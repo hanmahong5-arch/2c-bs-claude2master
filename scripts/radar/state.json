@@ -1,15 +1,15 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.210",
-    "openai/codex": "rust-v0.144.4",
+    "anthropics/claude-code": "v2.1.211",
+    "openai/codex": "rust-v0.144.5",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.40",
+    "cline/cline": "cli-v3.0.42",
     "block/goose": "v1.43.0",
-    "sst/opencode": "v1.18.1",
+    "sst/opencode": "v1.18.2",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.50.0",
     "openclaw/openclaw": "v2026.7.1",
-    "zeroclaw-labs/zeroclaw": "v0.8.2",
+    "zeroclaw-labs/zeroclaw": "v0.8.3",
     "NousResearch/hermes-agent": "v2026.7.7.2"
   },
   "trendingSeen": [
@@ -82,7 +82,8 @@
     "Tencent/BrowserSkill",
     "modiqo/waggle",
     "cosmtrek/mindwalk",
-    "clawkwork/clawk"
+    "clawkwork/clawk",
+    "xai-org/grok-build"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -139,9 +140,9 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-15",
+    "anthropic-engineering": "2026-07-16",
     "claude-code-docs": "2026-07-10",
-    "openai-codex-blog": "2026-07-09",
+    "openai-codex-blog": "2026-07-16",
     "openclaw-concepts": "2026-07-13",
     "hermes-guides": "2026-07-13"
   },
@@ -264,7 +265,12 @@
       "https://simonwillison.net/2026/Jul/14/pedalican/",
       "https://simonwillison.net/2026/Jul/14/lobsters-sqlite/",
       "https://simonwillison.net/2026/Jul/14/armin-ronacher/",
-      "https://simonwillison.net/2026/Jul/14/datasette/"
+      "https://simonwillison.net/2026/Jul/14/datasette/",
+      "https://simonwillison.net/2026/Jul/16/grok-mermaid/",
+      "https://simonwillison.net/2026/Jul/15/grok-build/",
+      "https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/",
+      "https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/",
+      "https://simonwillison.net/2026/Jul/13/doomql/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -526,7 +532,9 @@
       "https://openai.com/index/managing-ai-investments-in-agentic-era",
       "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
       "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-      "https://openai.com/academy/getting-started"
+      "https://openai.com/academy/getting-started",
+      "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
+      "https://openai.com/index/unlocking-self-improvement-gpt-red"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -673,21 +681,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-15",
-    "lilianweng": "2026-07-09",
-    "latentspace": "2026-07-15",
-    "interconnects": "2026-07-15",
+    "simonwillison": "2026-07-16",
+    "lilianweng": "2026-07-16",
+    "latentspace": "2026-07-16",
+    "interconnects": "2026-07-16",
     "karpathy": "2026-07-15",
     "raschka": "2026-07-15",
     "eugeneyan": "2026-07-15",
-    "chiphuyen": "2026-07-09",
+    "chiphuyen": "2026-07-16",
     "oneusefulthing": "2026-07-15",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-15",
+    "openai-news": "2026-07-16",
     "deepmind": "2026-07-15",
     "hf-blog": "2026-07-15",
-    "anthropic-news": "2026-07-15",
+    "anthropic-news": "2026-07-16",
     "steipete": "2026-07-15",
     "openclaw-blog": "2026-07-15"
   },
