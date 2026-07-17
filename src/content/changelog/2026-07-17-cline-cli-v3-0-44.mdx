@@ -1,0 +1,22 @@
+---
+slug: 2026-07-17-cline-cli-v3-0-44
+title: "cline cli-v3.0.44 — 修复BOM头解析，优化多模型输出token处理"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.44
+publishedAt: 2026-07-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复BOM头解析，优化多模型输出token处理"
+broadcast: "最近，一个叫Cline的CLI工具更新了，主要修了两个问题。一是修复了BOM头导致的配置文件解析错误，这常见于Windows编辑器保存的文件，所以如果你在用Agent框架，得注意兼容这个，不然配置可能加载失败。二是改进了不同模型的最大输出token处理，这对开发Agent的人来说很重要，因为要适配不同模型的限制，确保输出完整。"
+insight: "如果你在用Windows编辑器保存配置文件，建议升级到v3.0.44，避免BOM头导致的解析错误。同时，如果使用多模型输出，新版本优化了token处理，但需注意agent harness可能需要适配不同模型的token限制。国内用户通过newapi.lurus.cn代理不受影响，无需调整hook配置。"
+tags: [token-handling, bom-parsing, configuration, compatibility]
+---
+
+- 改进跨提供商的max输出token处理，涉及网关路由、OpenAI供应商和推理模型。这意味着agent harness需适配不同模型的token限制，确保输出完整。
+- 修复UTF-8 BOM头导致的配置文件解析错误，常见于Windows编辑器保存的文件。agent harness应兼容BOM头，避免配置加载失败。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.44](https://github.com/cline/cline/releases/tag/cli-v3.0.44)

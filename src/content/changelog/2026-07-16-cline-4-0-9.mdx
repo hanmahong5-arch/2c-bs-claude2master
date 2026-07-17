@@ -1,0 +1,23 @@
+---
+slug: 2026-07-16-cline-4-0-9
+title: "cline v4.0.9 — 修复 token 计数与 BOM 编码问题，新增 GPT"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.0.9
+publishedAt: 2026-07-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 token 计数与 BOM 编码问题，新增 GPT-5.6 模型"
+broadcast: "最近，Cline 工具发布了新版本，主要修复了两个问题：一是解决了 token 计数被高估的 bug，让计费更准确；二是修复了从 UTF-8 BOM 文件加载技能的问题，提升了跨平台兼容性。同时，新增了 GPT-5.6 模型，给开发者提供了更多选择。这些改进对国内开发者来说，意味着更稳定的使用体验和更精准的成本控制。"
+insight: "本次更新主要修复了 token 计数和 BOM 编码问题，对国内用户通过 newapi.lurus.cn 代理使用 OpenAI 兼容接口的计费准确性有直接改善，建议升级。新增的 GPT-5.6 模型目前仅在 ChatGPT 订阅中可用，现有用户无需修改 prompt 或 hook 配置即可受益于修复。"
+tags: [bug-fix, model-support, token-counting, encoding]
+---
+
+- 新增 GPT-5.6 ChatGPT 订阅模型，扩展可用模型选项。
+- 修复 OpenAI 兼容提供商的累计用量快照处理，避免 token 计数被高估，确保计费准确。
+- 修复从 UTF-8 BOM 文件加载技能的问题，提高跨平台兼容性。
+
+---
+
+> 原文 release：[cline/cline v4.0.9](https://github.com/cline/cline/releases/tag/v4.0.9)

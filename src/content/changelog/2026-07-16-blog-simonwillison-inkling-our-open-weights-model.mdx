@@ -1,0 +1,23 @@
+---
+slug: 2026-07-16-blog-simonwillison-inkling-our-open-weights-model
+title: "Inkling: Our open-weights model — Mira Murati 团队发布开源混合专家模型 Inkling，975B 总参"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/16/inkling/
+publishedAt: 2026-07-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Mira Murati 团队发布开源混合专家模型 Inkling，975B 总参数，Apache-2.0 许可。"
+broadcast: "Mira Murati 团队最近开源了一款名为 Inkling 的混合专家模型，总参数达到 975B，但每次推理只激活 41B 参数，效率很高。它采用 Apache-2.0 许可，开发者可以自由使用和微调，特别适合需要多模态能力的场景。不过，模型训练数据的透明度不高，大家使用时需要自己评估合规风险。"
+tags: [open-weights, mixture-of-experts, multimodal, llm-release]
+---
+
+- Inkling 是一个 975B 总参数、41B 活跃参数的混合专家模型，采用 Apache-2.0 许可，训练于 45 万亿 token 的多模态数据。这意味着开发者可以自由使用、微调并部署该模型，无需担心许可限制。
+- 模型并非追求前沿性能，而是作为强大的基础模型，配合 Thinking Machines Lab 的 Tinker 平台进行微调。这为开发者提供了一个定制化入口，尤其适合需要多模态能力和高效推理的场景。
+- 模型卡和训练数据文档信息量极少，仅提及使用公开网络数据和第三方数据集。这反映了当前开源模型在数据透明度上的普遍不足，开发者需自行评估数据合规性与潜在风险。
+
+---
+
+> 原文：[Inkling: Our open-weights model](https://simonwillison.net/2026/Jul/16/inkling/) · 作者 Simon Willison

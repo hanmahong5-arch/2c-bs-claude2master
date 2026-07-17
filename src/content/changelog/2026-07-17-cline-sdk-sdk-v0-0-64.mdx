@@ -1,0 +1,26 @@
+---
+slug: 2026-07-17-cline-sdk-sdk-v0-0-64
+title: "cline sdk/sdk/v0.0.64 — SDK修复BOM文件解析与token处理"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.64
+publishedAt: 2026-07-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK修复BOM文件解析与token处理"
+broadcast: "这次SDK更新修复了两个关键问题：一是改进了不同模型的最大输出token处理，让agent能统一应对各种模型的限制，避免输出被截断；二是修复了带UTF-8 BOM的文件解析问题，确保Windows编辑器保存的元数据能被正确读取。对国内开发者来说，这意味着agent在跨模型和跨平台场景下更稳定可靠。"
+insight: "对于国内开发者，如果使用 newapi.lurus.cn 代理接入 Cline 的 SDK v0.0.64，建议检查并更新 hook 配置。本次更新修复了 BOM 文件解析问题，若现有 prompt 或 hook 中涉及读取用户指令文件，需确保兼容 UTF-8 BOM 格式，避免元数据解析失败。同时，max output token 处理的改进可能影响跨模型输出，建议测试现有 agent 的 token 限制逻辑，必要时调整配置。总体而言，升级 SDK 并同步修改相关 hook 是值得的。"
+tags: [sdk, token-handling, file-parsing, bug-fix]
+---
+
+- 改进了跨提供商的max output token处理，包括网关路由、OpenAI供应商和推理模型。
+  - 含义：agent需统一处理不同模型的token限制，避免输出截断。
+- 修复了以UTF-8 BOM开头的frontmatter和用户指令文件的解析问题。
+  - 含义：agent应兼容Windows编辑器保存的文件，确保元数据正确读取。
+- 完整变更日志见链接。
+  - 含义：可追踪底层SDK的细节调整。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.64](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.64)

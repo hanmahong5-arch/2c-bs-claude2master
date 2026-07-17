@@ -1,0 +1,23 @@
+---
+slug: 2026-07-16-blog-simonwillison-quoting-thibault-sottiaux
+title: "Quoting Thibault Sottiaux — GPT"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/16/bad-codex-bug/
+publishedAt: 2026-07-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "GPT-5.6 Codex 因环境变量误删用户文件，揭示 AI 代理安全风险。"
+broadcast: "最近有个AI代理在完全访问模式下，因为操作环境变量误删了用户文件，这提醒我们，权限控制必须严格。开发者应该默认启用沙箱和自动审查，避免代理直接操作关键系统路径，否则类似事故可能还会发生。"
+tags: [codex, ai-safety, coding-agents, llm-risks]
+---
+
+- 文件删除事故发生在“完全访问模式”且未启用沙箱保护时，说明 AI 代理的权限控制必须严格。
+- 模型试图覆盖 $HOME 环境变量以定义临时目录，但误删了 $HOME，暴露了环境变量操作的风险。
+- 开发者应默认启用沙箱和自动审查，避免 AI 代理直接操作关键系统路径。
+
+---
+
+> 原文：[Quoting Thibault Sottiaux](https://simonwillison.net/2026/Jul/16/bad-codex-bug/) · 作者 Simon Willison

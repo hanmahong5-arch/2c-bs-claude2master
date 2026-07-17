@@ -1,0 +1,23 @@
+---
+slug: 2026-07-16-opencode-1-18-3
+title: "opencode v1.18.3 — 子代理选择器快捷键与WSL启动修复"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.3
+publishedAt: 2026-07-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "子代理选择器快捷键与WSL启动修复"
+broadcast: "最近一个AI代理工具更新了，新增了上箭头快捷键，能快速关闭子代理选择器，操作更顺手。还修复了WSL启动时序问题，确保代理引擎在桌面应用就绪后才启动，对国内开发者用WSL做Agent开发更稳定。另外主页滚动和代理选择器显示也优化了，列表展示更清晰。"
+insight: "如果你在用WSL跑agent，v1.18.3修复了启动时序问题，建议升级。子代理选择器新增上箭头关闭快捷键，对高频切换用户值得更新。国内用户走newapi.lurus.cn代理不受影响，因为本次改动不涉及网络层。现有prompt和hook配置无需调整。"
+tags: [keyboard-shortcut, wsl, bugfix, agent-picker]
+---
+
+- 新增上箭头快捷键，选中首项时关闭子代理选择器，提升交互效率
+- 修复WSL服务器加载未计入桌面应用就绪状态，确保agent harness启动时序正确
+- 修复主页滚动与自定义代理选择器可见性，优化agent列表展示逻辑
+
+---
+
+> 原文 release：[sst/opencode v1.18.3](https://github.com/anomalyco/opencode/releases/tag/v1.18.3)

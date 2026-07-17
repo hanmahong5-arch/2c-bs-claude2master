@@ -1,0 +1,26 @@
+---
+slug: 2026-07-16-blog-hf-blog-security-incident-disclosure-july-2026
+title: "Security incident disclosure — July 2026 — Hugging Face 披露 2026 年 7 月安全事件，强调零信任与审计重"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/security-incident-july-2026
+publishedAt: 2026-07-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 披露 2026 年 7 月安全事件，强调零信任与审计重要性。"
+broadcast: "Hugging Face 最近披露了一起安全事件，攻击者通过泄露的 CI/CD 令牌进入了内部系统，导致模型元数据和部分用户信息暴露。这件事提醒我们，CI/CD 管道已经成为关键攻击面，开发者必须严格管理令牌，实施最小权限原则。事件发生后，团队立即轮换了所有密钥，并引入了强制多因素认证。对于国内开发者来说，这意味着自动化密钥轮换和实时日志监控应该成为标配，同时模型供应链安全也需要全链路的完整性校验。"
+tags: [security-incident, supply-chain-security, ci-cd, zero-trust]
+---
+
+- 攻击者通过泄露的 CI/CD 令牌访问内部系统，暴露了模型元数据和部分用户信息。
+  - 含义：CI/CD 管道成为关键攻击面，开发者需严格管理令牌生命周期并实施最小权限原则。
+- 事件触发后，团队立即轮换所有密钥、审计访问日志并引入强制多因素认证。
+  - 含义：自动化密钥轮换和实时日志监控应成为工具链标配，以缩短响应窗口。
+- 事后改进包括对模型仓库实施签名验证和依赖扫描，防止供应链投毒。
+  - 含义：模型供应链安全需要从上传到部署的全链路完整性校验，类似软件包管理的最佳实践。
+
+---
+
+> 原文：[Security incident disclosure — July 2026](https://huggingface.co/blog/security-incident-july-2026) · 作者 Hugging Face

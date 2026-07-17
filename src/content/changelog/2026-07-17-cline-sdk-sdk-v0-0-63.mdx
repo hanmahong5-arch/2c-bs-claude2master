@@ -1,0 +1,23 @@
+---
+slug: 2026-07-17-cline-sdk-sdk-v0-0-63
+title: "cline sdk/sdk/v0.0.63 — SDK 新增连续错误限制触发的遥测事件"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.63
+publishedAt: 2026-07-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK 新增连续错误限制触发的遥测事件"
+broadcast: "SDK 新增了一个遥测事件，当连续错误达到限制时会自动触发。这意味着 agent 开发者可以统一处理错误限制逻辑，而不用每个宿主自己写一遍，对国内开发者来说，开发更省事了。"
+insight: "对于使用 Cline SDK v0.0.63 的国内开发者，如果你在 newapi.lurus.cn 代理上运行 agent，建议检查宿主是否已捕获新的 `task.mistake_limit_reached` 事件。该事件统一了连续错误限制的触发逻辑，意味着你可以移除各宿主中自行实现的错误限制 hook，转而依赖 SDK 内置的遥测事件。现有用户值得升级，因为能简化代码并避免宿主间逻辑不一致。代理不受影响，事件在 SDK 层发出，与网络无关。"
+tags: [sdk, telemetry, error-handling]
+---
+
+- 会话运行时在达到连续错误限制时发出 `task.mistake_limit_reached` 遥测事件。
+  - 所有宿主（CLI、VS Code 扩展、hub daemon）均可捕获该事件，包括未配置宿主提示时的自动停止。
+  - 设计含义：agent 可通过该事件统一处理错误限制逻辑，无需各宿主自行实现。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.63](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.63)

@@ -1,0 +1,26 @@
+---
+slug: 2026-07-16-blog-simonwillison-kimi-k3-and-what-we-can-still-learn
+title: "Kimi K3, and what we can still learn from the pelican — Simon Willison用“鹈鹕骑自行车”测试新模型Kimi K3，揭示其成"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/16/kimi-k3/
+publishedAt: 2026-07-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison用“鹈鹕骑自行车”测试新模型Kimi K3，揭示其成本、推理和工具调用能力。"
+broadcast: "最近Simon Willison用“鹈鹕骑自行车”这个简单测试，试了Kimi K3模型。结果发现，它虽然参数高达2.8万亿，但推理成本不低，一次就要25美分，而且只能选最大推理模式。这提醒我们，别光看参数，实际用起来成本和控制性才是关键。"
+tags: [kimi-k3, llm-benchmark, ai-pricing, agentic-tools]
+---
+
+- Kimi K3拥有2.8万亿参数，自称首个“开源3T级模型”，在多项基准上超越Claude Opus 4.8和GPT-5.5，但输给Claude Fable 5和GPT-5.6 Sol。
+  - 含义：模型规模竞赛持续，但开源模型正逼近闭源顶尖水平，开发者需关注性价比而非单纯参数。
+- 鹈鹕测试显示K3仅支持“最大”推理模式，消耗13,241个推理token，单次成本25美分，且存在约85个token的隐藏系统提示。
+  - 含义：推理成本仍高，隐藏提示可能影响可控性，开发者需测试实际任务开销。
+- Willison强调鹈鹕测试已无法区分顶尖模型，但作为“hello world”仍有用：验证模型输出SVG能力、估算成本和推理，并推动他实际尝试新模型。
+  - 含义：简单测试虽过时，但能快速暴露模型特性（如推理模式、视觉能力），开发者应结合自身任务设计更相关的评估。
+
+---
+
+> 原文：[Kimi K3, and what we can still learn from the pelican benchmark](https://simonwillison.net/2026/Jul/16/kimi-k3/) · 作者 Simon Willison

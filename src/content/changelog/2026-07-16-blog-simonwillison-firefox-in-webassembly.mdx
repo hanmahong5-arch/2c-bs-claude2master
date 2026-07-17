@@ -1,0 +1,26 @@
+---
+slug: 2026-07-16-blog-simonwillison-firefox-in-webassembly
+title: "Firefox in WebAssembly — Firefox 被编译成 WebAssembly 在浏览器中运行，展示 AI 辅"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/
+publishedAt: 2026-07-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Firefox 被编译成 WebAssembly 在浏览器中运行，展示 AI 辅助编程的极限。"
+broadcast: "最近有个项目把 Firefox 浏览器整个编译成了 WebAssembly，让它在另一个浏览器里完整跑起来。这为跨浏览器测试和隔离执行提供了新思路，而且开发过程全靠 AI 编程助手完成，虽然花了约两万五千美元，但订阅模式让成本可控。对国内开发者来说，这意味着 AI 辅助编程已经能搞定大型系统移植了。"
+tags: [firefox, webassembly, ai-assisted-programming, browser-engineering]
+---
+
+- 项目将 Firefox/Gecko 编译为 WebAssembly，使其能在另一个浏览器中完整运行，利用 Gecko 的单进程特性降低移植复杂度。
+  *含义：* 这种跨浏览器嵌套运行方式为浏览器兼容性测试和隔离执行提供了新思路。
+- 开发过程消耗约 25000 美元的 Claude Opus 和 Fable tokens，但通过 Claude Max 订阅计划大幅降低成本。
+  *含义：* AI 辅助编程正从代码片段生成转向大型系统移植，成本模型和订阅策略直接影响可行性。
+- 所有流量通过 Wisp 协议经 Puter 服务器代理，支持端到端加密（HTTPS 流量加密，HTTP 明文）。
+  *含义：* 浏览器沙箱限制迫使网络代理成为必要，但加密验证表明可构建可信的远程执行环境。
+
+---
+
+> 原文：[Firefox in WebAssembly](https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/) · 作者 Simon Willison

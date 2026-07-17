@@ -1,0 +1,26 @@
+---
+slug: 2026-07-17-cline-cli-v3-0-43
+title: "cline cli-v3.0.43 — 自动信任系统证书，解决企业代理TLS错误"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.43
+publishedAt: 2026-07-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "自动信任系统证书，解决企业代理TLS错误"
+broadcast: "最新发布的CLI工具自动信任系统证书，解决了企业代理下的TLS错误。这意味着国内开发者在部署智能体时，不再需要手动配置证书，网络连接更稳定，跨平台兼容性也更好。"
+insight: "这次更新对国内企业用户是实打实的利好。如果你之前因为公司代理或TLS防火墙导致agent连不上，现在可以省掉手动设`NODE_EXTRA_CA_CERTS`的麻烦，直接信任系统证书就行。Windows用户也不用再折腾中间CA证书了。走newapi.lurus.cn代理的用户不受影响，证书问题已经自动处理。建议所有现有用户升级到v3.0.43，hook配置无需改动。"
+tags: [certificate-trust, proxy-support, tls, cli]
+---
+
+- CLI现在自动信任操作系统证书存储，无需手动设置`NODE_EXTRA_CA_CERTS`。
+  - 这意味着agent在复杂网络环境中部署时，证书配置更简单，减少因证书问题导致的连接失败。
+- 修复了“无法获取本地颁发者证书”错误，包括Windows中间CA存储。
+  - agent在Windows系统上运行时，不再需要额外处理中间证书，提升了跨平台兼容性。
+- 支持企业代理和TLS检查防火墙后的工作。
+  - agent可以在受限网络环境中更可靠地通信，无需用户干预证书配置。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.43](https://github.com/cline/cline/releases/tag/cli-v3.0.43)

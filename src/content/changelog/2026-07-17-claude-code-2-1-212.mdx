@@ -1,0 +1,26 @@
+---
+slug: 2026-07-17-claude-code-2-1-212
+title: "claude-code v2.1.212 — 会话控制、安全限制与大量bug修复，提升Agent稳定性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.212
+publishedAt: 2026-07-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "会话控制、安全限制与大量bug修复，提升Agent稳定性"
+broadcast: "Claude Code 最新更新来了，这次重点提升了 Agent 的稳定性。新版本把复制会话和启动子任务分成了两个独立操作，还加入了网络搜索和子 Agent 的调用上限，防止失控循环。另外修复了计划模式下自动执行文件修改命令绕过权限的问题，对国内开发者来说，这些改进让 Agent 在复杂任务中更可控、更安全。"
+insight: "本次更新对国内用户通过 newapi.lurus.cn 代理使用无直接影响，但值得关注。新增的 WebSearch 和子 Agent 上限（默认200）以及 MCP 工具超时后台化，能有效防止失控循环和长时间阻塞，对稳定性提升明显。如果你之前因 Agent 失控或超时问题困扰，建议升级。`/fork` 改为后台复制，原功能由 `/subtask` 替代，需调整 prompt 或 hook 中的相关指令。`claude auto-mode reset` 提供了可编程重置入口，便于自动化管理。总体而言，升级收益大于成本。"
+tags: [session-control, safety-limits, bug-fix, agent-harness]
+---
+
+- `/fork` 改为后台复制会话，原`/fork`功能由`/subtask`替代；设计上区分了“复制会话”与“启动子任务”两种操作。
+- 新增`claude auto-mode reset`恢复默认自动模式配置，支持`--yes`跳过确认；提供可编程重置入口。
+- 新增WebSearch调用上限（默认200）和子Agent生成上限（默认200），防止失控循环；`/clear`重置预算，便于资源管理。
+- MCP工具调用超2分钟自动后台化，阈值可配置；避免长时间阻塞主会话。
+- 修复计划模式下自动运行文件修改命令（如`touch`、`rm`）绕过权限提示的问题；确保安全策略生效。
+- 修复SIGTERM导致Bash工具进程树孤儿化的问题；CLI现在终止进程树并退出143，保证清理。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.212](https://github.com/anthropics/claude-code/releases/tag/v2.1.212)
