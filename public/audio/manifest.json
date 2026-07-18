@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "slug": "2026-07-18-claude-code-2-1-214",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.214 — Claude Code 修复多项权限绕过漏洞，新增结束对话工具",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-07-18"
+    },
+    {
       "slug": "2026-07-17-blog-latentspace-ainews-kimi-k3-2-8t-a50b-the-largest",
       "zh": true,
       "en": true,
@@ -8,6 +19,39 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-17"
+    },
+    {
+      "slug": "2026-07-17-blog-openai-news-a-scorecard-for-the-ai-age",
+      "zh": true,
+      "en": true,
+      "title": "A scorecard for the AI age — OpenAI 提出 AI 投资回报的实用记分卡，聚焦有用工作、任务成本、可靠性和",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-17"
+    },
+    {
+      "slug": "2026-07-17-blog-simonwillison-llm-clich-highlighter",
+      "zh": true,
+      "en": true,
+      "title": "LLM cliché highlighter — 用 AI 检测 AI 写作的套话，帮你识别空洞的 LLM 风格文本。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-17"
+    },
+    {
+      "slug": "2026-07-17-blog-simonwillison-quoting-kimi-k3",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Kimi K3 — AI 助手拒绝泄露系统提示后反问用户，揭示其人格化设计。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-07-17"
     },
@@ -210,10 +254,32 @@
       "publishedAt": "2026-07-16"
     },
     {
+      "slug": "2026-07-16-blog-simonwillison-mermaid-to-ascii-art-mermaid-ascii",
+      "zh": true,
+      "en": true,
+      "title": "Mermaid to ASCII art (mermaid-ascii) — 将 Mermaid 图表转为纯 ASCII 艺术，支持颜色，编译为 WebAss",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-16"
+    },
+    {
       "slug": "2026-07-16-blog-simonwillison-mermaid-to-unicode-box-art-grok-mermaid",
       "zh": true,
       "en": true,
       "title": "Mermaid to Unicode box art (grok-mermaid) — 将Mermaid图表渲染为终端友好的Unicode字符画，通过WASM在浏览器运",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-16"
+    },
+    {
+      "slug": "2026-07-16-blog-simonwillison-quoting-linus-torvalds",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Linus Torvalds — Linus Torvalds 明确表态：Linux 不是反 AI 项目，AI 已",
       "kind": "blogger",
       "author": "Simon Willison",
       "source": "Simon Willison",
@@ -273,6 +339,17 @@
       "author": null,
       "source": "openai/codex",
       "tool": "codex",
+      "publishedAt": "2026-07-16"
+    },
+    {
+      "slug": "2026-07-16-gemini-cli-0-51-0",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.51.0 — 安全修复与沙箱加固，提升 agent 可靠性",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
       "publishedAt": "2026-07-16"
     },
     {
@@ -802,83 +879,6 @@
       "source": "openclaw-concepts",
       "tool": null,
       "publishedAt": "2026-07-13"
-    },
-    {
-      "slug": "2026-07-13-openclaw-concepts-mantis-slack-desktop-runbook",
-      "zh": true,
-      "en": true,
-      "title": "Mantis Slack desktop runbook · OpenClaw — 真实桌面Slack UI的自动化QA方案，解决单元测试无法覆盖的集成bug",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-13"
-    },
-    {
-      "slug": "2026-07-13-openclaw-concepts-mantis",
-      "zh": true,
-      "en": true,
-      "title": "Mantis · OpenClaw — 用真实 CI 证据和 PR 评论验证 AI agent 行为，避免回归",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-13"
-    },
-    {
-      "slug": "2026-07-13-opencode-1-17-19",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.17.19 — OpenCode v1.17.19 修复多项 Bug，新增 OAuth 与模型选",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-07-13"
-    },
-    {
-      "slug": "2026-07-13-opencode-1-17-20",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.17.20 — 修复Codex兼容性，新增Azure AI GPT",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-07-13"
-    },
-    {
-      "slug": "2026-07-13-trending-tencent-browserskill",
-      "zh": true,
-      "en": false,
-      "title": "BrowserSkill — 让AI用你的真实浏览器，不打断工作",
-      "kind": "trending",
-      "author": null,
-      "source": "Tencent/BrowserSkill",
-      "tool": null,
-      "publishedAt": "2026-07-13"
-    },
-    {
-      "slug": "2026-07-12-blog-interconnects-6-months-to-live-for-open-models",
-      "zh": true,
-      "en": true,
-      "title": "6 months to live for open models — 开放模型面临6个月内被禁风险，蒸馏争议与监管行动正加速。",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-07-12"
-    },
-    {
-      "slug": "2026-07-12-blog-simonwillison-directly-responsible-individuals-dri",
-      "zh": true,
-      "en": true,
-      "title": "Directly Responsible Individuals (DRI) — 为什么AI代理不能成为项目的直接负责人？",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-12"
     }
   ]
 }
