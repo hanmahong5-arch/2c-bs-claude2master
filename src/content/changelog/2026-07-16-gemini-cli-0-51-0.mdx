@@ -1,0 +1,26 @@
+---
+slug: 2026-07-16-gemini-cli-0-51-0
+title: "gemini-cli v0.51.0 — 安全修复与沙箱加固，提升 agent 可靠性"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.51.0
+publishedAt: 2026-07-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "安全修复与沙箱加固，提升 agent 可靠性"
+broadcast: "谷歌的Gemini命令行工具发布了新版本，重点修复了安全漏洞并加固了沙箱。现在敏感路径过滤更严格，macOS沙箱中的git配置也被设为只读，能有效防止攻击和配置篡改。这对国内开发者来说，意味着使用agent时的安全性和可靠性都得到了提升。"
+insight: "这次更新主要聚焦安全加固，对于国内通过 newapi.lurus.cn 代理使用 Gemini CLI 的用户来说，代理本身不受影响，但建议检查本地 hook 配置中是否涉及敏感路径或 gitconfig 的读写操作。如果现有 prompt 依赖 agent 输出中的转义序列或思维链，可能需要微调以适配更严格的过滤规则。总体而言，升级能提升安全性，值得操作。"
+tags: [security, sandbox, bug-fix, agent-safety]
+---
+
+- 安全修复：强制敏感路径黑名单大小写不敏感，并修复 VSCode HITL 漏洞。
+  - 含义：agent 路径过滤更严格，防止绕过攻击。
+- 沙箱加固：macOS 沙箱中 `~/.gitconfig` 设为只读，防止配置篡改。
+  - 含义：限制 agent 环境副作用，提升隔离性。
+- 核心修复：保留现代模型的字符串转义序列，并清除历史中的思维泄漏。
+  - 含义：确保 agent 输出准确，避免内部推理泄露。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.51.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.51.0)

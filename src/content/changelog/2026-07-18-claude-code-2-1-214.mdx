@@ -1,0 +1,23 @@
+---
+slug: 2026-07-18-claude-code-2-1-214
+title: "claude-code v2.1.214 — Claude Code 修复多项权限绕过漏洞，新增结束对话工具"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.214
+publishedAt: 2026-07-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 修复多项权限绕过漏洞，新增结束对话工具"
+broadcast: "Claude Code 最近更新了，修复了好几个权限绕过漏洞。比如之前用 dir/** 这种规则会误匹配任意目录，现在必须严格限定在工作目录下。还新增了一个结束对话工具，让 Claude 能主动断开恶意用户的会话。这些修复对国内开发者做 agent 权限设计很有参考价值，提醒我们权限匹配要精确，还得给 agent 加上自我保护机制。"
+insight: "这次更新对国内用户通过 newapi.lurus.cn 代理使用 Claude Code 没有直接影响，但权限修复值得关注。如果你之前依赖 `dir/**` 做深度匹配，必须改为 `**/dir/**`，否则规则会失效。新增的 EndConversation 工具不影响现有 prompt 或 hook 配置，但建议检查是否有超长命令或 shell 语法变体的场景，因为权限分析器现在默认拒绝，可能影响某些自动化流程。总体而言，建议升级并调整路径规则。"
+tags: [security-fixes, permission-model, tooling, windows-compatibility]
+---
+
+- 修复了 `dir/**` 允许规则误匹配任意目录的 bug，现在仅匹配 `<cwd>/dir`；hook 条件同理，需用 `**/dir/**` 实现深度匹配。设计含义：权限路径匹配需严格限定工作目录，避免意外授权。
+- 新增 EndConversation 工具，Claude 可主动结束与恶意用户的会话。设计含义：Agent 需具备自我保护机制，防止被滥用或越狱。
+- 修复了超长命令（>10000字符）自动执行、zsh 变量下标误判、`help`/`man` 命令绕过检查等权限漏洞。设计含义：权限分析器必须覆盖所有 shell 语法变体，失败时默认拒绝。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.214](https://github.com/anthropics/claude-code/releases/tag/v2.1.214)

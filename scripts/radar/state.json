@@ -1,13 +1,13 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.212",
+    "anthropics/claude-code": "v2.1.214",
     "openai/codex": "rust-v0.144.5",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "cli-v3.0.44",
     "block/goose": "v1.43.0",
     "sst/opencode": "v1.18.3",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.50.0",
+    "google-gemini/gemini-cli": "v0.51.0",
     "openclaw/openclaw": "v2026.7.1",
     "zeroclaw-labs/zeroclaw": "v0.8.3",
     "NousResearch/hermes-agent": "v2026.7.7.2"
@@ -141,7 +141,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-17",
+    "anthropic-engineering": "2026-07-18",
     "claude-code-docs": "2026-07-17",
     "openai-codex-blog": "2026-07-16",
     "openclaw-concepts": "2026-07-13",
@@ -276,7 +276,11 @@
       "https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/",
       "https://simonwillison.net/2026/Jul/16/kimi-k3/",
       "https://simonwillison.net/2026/Jul/16/bad-codex-bug/",
-      "https://simonwillison.net/2026/Jul/16/inkling/"
+      "https://simonwillison.net/2026/Jul/16/inkling/",
+      "https://simonwillison.net/2026/Jul/17/kimi-k3/",
+      "https://simonwillison.net/2026/Jul/17/llm-cliche-highlighter/",
+      "https://simonwillison.net/2026/Jul/16/mermaid-ascii/",
+      "https://simonwillison.net/2026/Jul/16/linus-torvalds/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -545,7 +549,8 @@
       "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
       "https://openai.com/index/unlocking-self-improvement-gpt-red",
       "https://openai.com/index/why-teens-deserve-access-safe-ai",
-      "https://openai.com/index/cars24"
+      "https://openai.com/index/cars24",
+      "https://openai.com/index/a-scorecard-for-the-ai-age"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -698,21 +703,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-17",
+    "simonwillison": "2026-07-18",
     "lilianweng": "2026-07-16",
-    "latentspace": "2026-07-17",
-    "interconnects": "2026-07-17",
-    "karpathy": "2026-07-15",
-    "raschka": "2026-07-15",
-    "eugeneyan": "2026-07-15",
+    "latentspace": "2026-07-18",
+    "interconnects": "2026-07-18",
+    "karpathy": "2026-07-18",
+    "raschka": "2026-07-18",
+    "eugeneyan": "2026-07-18",
     "chiphuyen": "2026-07-16",
     "oneusefulthing": "2026-07-17",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-17",
+    "openai-news": "2026-07-18",
     "deepmind": "2026-07-17",
     "hf-blog": "2026-07-17",
-    "anthropic-news": "2026-07-17",
+    "anthropic-news": "2026-07-18",
     "steipete": "2026-07-17",
     "openclaw-blog": "2026-07-17"
   },
