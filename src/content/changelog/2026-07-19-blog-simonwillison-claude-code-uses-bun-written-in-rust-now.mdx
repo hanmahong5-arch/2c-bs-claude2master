@@ -1,0 +1,23 @@
+---
+slug: 2026-07-19-blog-simonwillison-claude-code-uses-bun-written-in-rust-now
+title: "Claude Code uses Bun written in Rust now — Simon Willison 验证了 Claude Code 已悄悄换用 Rus"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/
+publishedAt: 2026-07-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 验证了 Claude Code 已悄悄换用 Rust 版 Bun，启动快 10%，但没人注意到。"
+broadcast: "最近有人发现，Claude Code 悄悄换上了用 Rust 写的 Bun 运行时，启动速度快了 10%，但大部分用户根本没注意到。这说明底层运行时替换可以做到完全无感，只要性能提升且不破坏兼容性，开发者几乎察觉不到变化。对国内做 agent 的朋友来说，这种“无痛升级”的思路很值得借鉴。"
+tags: [bun, rust, anthropic, claude-code, jarred-sumner]
+---
+
+- 通过 `strings` 命令检查 Claude Code 二进制文件，发现其包含 Bun v1.4.0 版本号，而公开 Bun 最新版为 v1.3.14，说明 Anthropic 使用了未发布的预览版。
+- 在二进制中找到了 563 个 `.rs` 源文件路径，如 `src/runtime/bake/dev_server/mod.rs`，证实 Rust 移植版 Bun 已集成到 Claude Code 中。
+- 这一改动对开发者意味着：底层运行时替换可以做到“无感升级”，只要性能提升（如启动快 10%）且不破坏兼容性，用户几乎不会察觉。
+
+---
+
+> 原文：[Claude Code uses Bun written in Rust now](https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/) · 作者 Simon Willison

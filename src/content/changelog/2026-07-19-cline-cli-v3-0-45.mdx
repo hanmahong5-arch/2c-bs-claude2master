@@ -1,0 +1,23 @@
+---
+slug: 2026-07-19-cline-cli-v3-0-45
+title: "cline cli-v3.0.45 — 安装体积减半，Kimi K3 加入，团队运行更可靠"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.45
+publishedAt: 2026-07-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "安装体积减半，Kimi K3 加入，团队运行更可靠"
+broadcast: "Cline 的 CLI 工具更新了，安装体积从六百多兆降到了不到三百兆，因为把两个大模型提供者改成了按需加载，这样 agent 环境初始化时占的资源更少。还加入了 Kimi K3 模型，让 agent 调用模型更灵活。团队协作时，spawn 工具不再暴露给队友，出错时队友会看到失败报告，协作更安全、错误更清晰。"
+insight: "这次更新对现有用户来说值得升级，尤其是团队协作场景。安装体积从 640MB 降至 285MB，显著降低了环境初始化资源占用，建议所有用户升级。Kimi K3 加入 ClinePass 模型，如果你需要更多模型选项，可以调整 prompt 或 hook 来利用它。spawn 工具不再暴露给队友，出错时报告为失败而非完成，这提升了协作安全性，但如果你依赖旧行为，可能需要修改相关 hook 或工作流。国内用户通过 newapi.lurus.cn 代理不受影响，因为更新不涉及网络层。"
+tags: [performance, team-collaboration, model-support, cli]
+---
+
+- 安装体积从 ~640MB 降至 ~285MB：Claude Code 和 Codex 提供者变为按需加载，减少 agent 环境初始化的资源占用。
+- Kimi K3 作为 ClinePass 模型可用：扩展了 agent 可调用的模型选项，增加灵活性。
+- 团队运行中 spawn 工具不再暴露给队友，出错队友运行报告为失败而非完成：提升 agent 协作的安全性和错误可见性。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.45](https://github.com/cline/cline/releases/tag/cli-v3.0.45)

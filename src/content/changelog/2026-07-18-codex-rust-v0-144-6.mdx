@@ -1,0 +1,26 @@
+---
+slug: 2026-07-18-codex-rust-v0-144-6
+title: "codex rust-v0.144.6 — GPT"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.144.6
+publishedAt: 2026-07-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "GPT-5.6 Sol/Terra/Luna 上下文窗口修正为 272K"
+broadcast: "OpenAI 刚刚为 GPT-5.6 系列模型推送了一个热修复，把 Sol、Terra 和 Luna 的上下文窗口统一修正为 27 万 2 千 tokens。这意味着开发 agent 的朋友需要更新模型配置，才能充分利用更大的上下文能力。同时要注意，这个改动只影响 GPT-5.6 系列，其他模型不受影响，所以 agent 在调用时得区分模型版本，避免通用假设。"
+insight: "如果你在用 GPT-5.6 Sol/Terra/Luna，建议立即更新 agent 的上下文窗口配置到 272K，否则会浪费模型能力。其他模型不受影响，无需改动。国内用户通过 newapi.lurus.cn 代理不受此次 hotfix 影响，但建议确认代理是否同步了最新元数据。"
+tags: [gpt-5.6, context-window, bug-fix, model-metadata]
+---
+
+- 更新了 GPT-5.6 Sol、Terra 和 Luna 的捆绑指令，并修正其上下文窗口为 272,000 tokens。
+  - 含义：agent 需适配更大的上下文窗口，以充分利用模型能力。
+- 修复仅针对 GPT-5.6 系列模型，其他模型不受影响。
+  - 含义：agent 需区分模型版本，避免通用假设。
+- 变更通过 hotfix 回传到 0.144 分支。
+  - 含义：agent 应关注 hotfix 更新，确保使用最新元数据。
+
+---
+
+> 原文 release：[openai/codex rust-v0.144.6](https://github.com/openai/codex/releases/tag/rust-v0.144.6)

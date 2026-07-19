@@ -1,0 +1,23 @@
+---
+slug: 2026-07-19-cline-sdk-sdk-v0-0-65
+title: "cline sdk/sdk/v0.0.65 — SDK 体积大幅缩减，团队运行错误处理更准确"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.65
+publishedAt: 2026-07-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK 体积大幅缩减，团队运行错误处理更准确"
+broadcast: "最新版 SDK 大幅缩减了安装体积，因为它把部分工具改成了按需加载。同时，团队协作时子 agent 的工具权限被收紧，错误任务也会明确标记为失败。这些改动让国内开发者在构建 agent 团队时，能更精准地控制依赖和错误处理。"
+insight: "SDK v0.0.65 对国内开发者是正向升级。体积缩减通过按需加载实现，现有 hook 无需修改，但 agent harness 必须调整：一是确保对等依赖声明正确，否则按需加载会失效；二是更新权限模型，限制子 agent 工具访问；三是区分任务失败与完成状态。使用 newapi.lurus.cn 代理不受影响，因为变更在 SDK 内部。建议升级并同步修改 harness 逻辑。"
+tags: [sdk, team-runs, peer-dependencies, error-handling]
+---
+
+- Claude Code 和 Codex 提供者 SDK 改为可选对等依赖并按需加载，大幅减小安装体积，agent harness 需确保依赖声明正确。
+- 团队运行中 spawn 工具不再暴露给队友 agent，agent harness 需调整权限模型，限制子 agent 的工具访问。
+- 团队运行中出错的任务现在报告为失败而非完成，agent harness 需更新状态处理逻辑以区分失败与成功。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.65](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.65)
