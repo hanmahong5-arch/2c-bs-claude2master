@@ -1,0 +1,28 @@
+---
+slug: 2026-07-20-openclaw-concepts-markdown-formatting
+title: "Markdown formatting · OpenClaw — 一次解析，多端渲染：OpenClaw 的 Markdown 管道设计"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/markdown-formatting
+publishedAt: 2026-07-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "一次解析，多端渲染：OpenClaw 的 Markdown 管道设计"
+broadcast: "OpenClaw 提出了一种新的 Markdown 管道设计，先把内容解析成统一的中间表示，再根据不同平台渲染成原生格式。这意味着开发者不用为每个输出通道重复解析，一次处理就能多端适配。对国内做 Agent 开发的团队来说，这种思路能显著降低多平台兼容的维护成本，值得关注。"
+insight: "OpenClaw 的 Markdown 管道设计值得国内开发者参考。如果你正在维护多端输出的 Agent，建议将解析与渲染分离，避免重复解析。现有 prompt 或 hook 中若涉及分块逻辑，需检查是否按 IR 文本分块，防止样式截断。表格处理的多模式配置对国内平台兼容性友好，但需注意 newapi.lurus.cn 代理本身不涉及 Markdown 渲染，因此不受影响。总体而言，该设计值得升级采用。"
+tags: [markdown-pipeline, intermediate-representation, multi-channel-rendering, chunking]
+---
+
+- 将 Markdown 解析为中间表示（IR），包含纯文本、样式和链接跨度，再按频道渲染为原生格式。
+  **含义**：Agent harness 应抽象出统一的内部表示，避免为每个输出通道重复解析。
+
+- 分块在 IR 文本上进行，确保内联样式和链接不被截断，并在下一块重新打开样式。
+  **含义**：分块策略需考虑语义完整性，防止格式断裂导致渲染错误。
+
+- 表格处理支持 code、bullets、block、off 四种模式，可逐频道或逐账号配置。
+  **含义**：为不同平台提供可配置的降级方案，提升兼容性。
+
+---
+
+> 原文：[Markdown formatting · OpenClaw](https://docs.openclaw.ai/concepts/markdown-formatting)

@@ -3,7 +3,7 @@
     "anthropics/claude-code": "v2.1.215",
     "openai/codex": "rust-v0.144.6",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.45",
+    "cline/cline": "cli-v3.0.46",
     "block/goose": "v1.43.0",
     "sst/opencode": "v1.18.3",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -138,16 +138,22 @@
       "https://docs.openclaw.ai/concepts/features",
       "https://docs.openclaw.ai/concepts/managed-worktrees",
       "https://docs.openclaw.ai/concepts/mantis",
-      "https://docs.openclaw.ai/concepts/mantis-slack-desktop-runbook"
+      "https://docs.openclaw.ai/concepts/mantis-slack-desktop-runbook",
+      "https://docs.openclaw.ai/concepts/main-session",
+      "https://docs.openclaw.ai/concepts/markdown-formatting",
+      "https://docs.openclaw.ai/concepts/memory",
+      "https://docs.openclaw.ai/concepts/memory-builtin",
+      "https://docs.openclaw.ai/concepts/memory-honcho",
+      "https://docs.openclaw.ai/concepts/memory-qmd"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-19",
+    "anthropic-engineering": "2026-07-20",
     "claude-code-docs": "2026-07-17",
     "openai-codex-blog": "2026-07-16",
-    "openclaw-concepts": "2026-07-13",
-    "hermes-guides": "2026-07-13"
+    "openclaw-concepts": "2026-07-20",
+    "hermes-guides": "2026-07-20"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -286,7 +292,9 @@
       "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/",
       "https://simonwillison.net/2026/Jul/18/sqlite-query-explainer/",
       "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/",
-      "https://simonwillison.net/2026/Jul/18/quixote/"
+      "https://simonwillison.net/2026/Jul/18/quixote/",
+      "https://simonwillison.net/2026/Jul/20/sam-altman/",
+      "https://simonwillison.net/2026/Jul/19/ai-mania/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -713,10 +721,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-19",
+    "simonwillison": "2026-07-20",
     "lilianweng": "2026-07-16",
-    "latentspace": "2026-07-19",
-    "interconnects": "2026-07-19",
+    "latentspace": "2026-07-20",
+    "interconnects": "2026-07-20",
     "karpathy": "2026-07-18",
     "raschka": "2026-07-18",
     "eugeneyan": "2026-07-18",
@@ -724,7 +732,7 @@
     "oneusefulthing": "2026-07-19",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-19",
+    "openai-news": "2026-07-20",
     "deepmind": "2026-07-19",
     "hf-blog": "2026-07-19",
     "anthropic-news": "2026-07-19",

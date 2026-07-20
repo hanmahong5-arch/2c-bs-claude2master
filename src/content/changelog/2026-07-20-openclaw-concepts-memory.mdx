@@ -1,0 +1,26 @@
+---
+slug: 2026-07-20-openclaw-concepts-memory
+title: "Memory overview · OpenClaw — 把记忆写成Markdown文件，没有隐藏状态，让Agent真正记住该记的。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/memory
+publishedAt: 2026-07-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "把记忆写成Markdown文件，没有隐藏状态，让Agent真正记住该记的。"
+broadcast: "最近有个叫OpenClaw的项目，把Agent的记忆写成了Markdown文件，分三层管理：持久事实、每日笔记和梦境摘要。启动时只加载关键部分，避免上下文膨胀。更妙的是，每条记忆都标注了生效条件和过期时间，让Agent自动判断行动边界。这对国内开发者做Agent长对话很有启发，记忆不再是一团黑盒。"
+insight: "OpenClaw 的分层记忆设计值得国内开发者关注。MEMORY.md 持久事实加最近两天笔记的加载策略，能有效控制上下文长度，避免 prompt 预算失控。如果你正被长对话中 Agent 丢失关键信息困扰，这套方案值得尝试。行动敏感记忆的条件约束机制，能减少误操作，适合需要精细权限控制的场景。国内用户通过 newapi.lurus.cn 代理使用不受影响，因为默认 SQLite 后端无额外依赖，memory_search 的混合搜索也支持多种嵌入提供商，部署灵活。"
+tags: [memory-management, prompt-design, agent-architecture, context-window]
+---
+
+- 记忆分三层：MEMORY.md存持久事实，每日笔记存上下文，DREAMS.md存梦境摘要。Agent启动时只加载MEMORY.md和最近两天的笔记，避免上下文膨胀。
+  - 设计含义：显式分层让prompt预算可控，Agent不会因历史过长而丢失关键信息。
+- 行动敏感记忆需注明生效条件、过期时间或授权来源，例如“此API迁移由另一会话设计，本线程不应编辑实现”。
+  - 设计含义：在prompt中嵌入条件约束，让Agent在决策时自动判断行动边界，减少误操作。
+- 使用memory_search进行混合搜索（语义+关键词），支持多种嵌入提供商，默认SQLite后端无需额外依赖。
+  - 设计含义：提供可插拔的检索能力，让Agent在长对话中快速定位相关记忆，而不必全量注入。
+
+---
+
+> 原文：[Memory overview · OpenClaw](https://docs.openclaw.ai/concepts/memory)

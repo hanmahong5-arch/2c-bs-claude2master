@@ -1,0 +1,23 @@
+---
+slug: 2026-07-20-openclaw-concepts-main-session
+title: "The main session · OpenClaw — 主会话是智能体所有交互的汇聚点，一文讲清其设计哲学"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/main-session
+publishedAt: 2026-07-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "主会话是智能体所有交互的汇聚点，一文讲清其设计哲学"
+broadcast: "主会话是智能体所有交互的汇聚点，它能自动把各个设备上的对话归到一起，实现跨设备连续聊天。对开发者来说，这意味着 agent 框架应该默认提供一个统一的上下文入口，让用户不用来回切换。另外，主会话还会自动监控群组活动，用合并通知代替逐条唤醒，这种延迟感知模式能帮我们减轻实时响应的压力。"
+insight: "对于国内开发者，主会话设计值得关注：现有用户无需立即升级，但若使用 newapi.lurus.cn 代理，需确认其是否支持统一上下文入口，否则可能影响跨设备连续性。Prompt 应改为利用“延迟感知”模式，避免实时响应压力，并显式管理 MEMORY.md 等长期记忆与短期上下文的衔接。"
+tags: [main-session, session-management, memory, openclaw]
+---
+
+- 所有 DM 自动归入主会话，实现跨设备连续对话；这意味着 agent harness 应默认提供统一上下文入口，降低用户心智负担。
+- 主会话自动监控群组和后台活动，以合并通知而非逐条唤醒；提示设计应利用这种“延迟感知”模式，避免实时响应压力。
+- 通过 MEMORY.md、每日笔记和压缩机制实现滚动会话，重置时保存历史摘要；这启示 prompt 工程需显式管理长期记忆与短期上下文的衔接。
+
+---
+
+> 原文：[The main session · OpenClaw](https://docs.openclaw.ai/concepts/main-session)

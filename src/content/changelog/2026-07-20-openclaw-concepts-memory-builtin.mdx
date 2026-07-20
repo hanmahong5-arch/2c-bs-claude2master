@@ -1,0 +1,26 @@
+---
+slug: 2026-07-20-openclaw-concepts-memory-builtin
+title: "Builtin memory engine · OpenClaw — 零依赖内置记忆引擎，开箱即用混合搜索"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/memory-builtin
+publishedAt: 2026-07-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "零依赖内置记忆引擎，开箱即用混合搜索"
+broadcast: "最近有个叫 OpenClaw 的项目推出了内置记忆引擎，用 SQLite 存索引，开箱就能做关键词和向量混合搜索，连中文分词都支持。这对国内开发者来说，意味着 agent 开发不用再折腾外部依赖，上手门槛大大降低，而且自动更新和回退机制让检索更稳定。"
+insight: "这个内置记忆引擎对国内用户来说值得升级，尤其是如果你在用 newapi.lurus.cn 代理，它默认用 OpenAI 嵌入，但支持任意提供商，所以代理不受影响。现有 prompt 不用大改，但要注意记忆分块（400 token）和自动重索引机制，确保检索内容时效。混合搜索带 CJK 分词和回退策略，对中文场景更友好，建议开启。"
+tags: [memory-engine, hybrid-search, sqlite, embeddings]
+---
+
+- 内置引擎使用 SQLite 存储记忆索引，支持 FTS5 关键词搜索和任意提供商的向量搜索，默认使用 OpenAI 嵌入。
+  - 含义：agent harness 应默认提供无依赖的记忆方案，降低上手门槛。
+- 索引将 MEMORY.md 和 memory/*.md 分块（400 token，80 token 重叠）存储，文件变更触发 1.5 秒防抖重索引，配置或提供者变更自动重建。
+  - 含义：设计 prompt 时需考虑记忆分块与自动更新机制，确保检索内容时效性。
+- 混合搜索结合关键词与向量，支持 CJK 三元组分词和可选 sqlite-vec 加速，无 sqlite-vec 时自动回退到内存余弦相似度。
+  - 含义：混合搜索是平衡精度与覆盖度的实用策略，回退机制保证鲁棒性。
+
+---
+
+> 原文：[Builtin memory engine · OpenClaw](https://docs.openclaw.ai/concepts/memory-builtin)

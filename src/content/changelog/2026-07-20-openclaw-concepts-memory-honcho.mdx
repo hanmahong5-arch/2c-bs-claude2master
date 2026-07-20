@@ -1,0 +1,23 @@
+---
+slug: 2026-07-20-openclaw-concepts-memory-honcho
+title: "Honcho memory · OpenClaw — 让AI代理拥有跨会话持久记忆，无需手动维护Markdown文件。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/memory-honcho
+publishedAt: 2026-07-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "让AI代理拥有跨会话持久记忆，无需手动维护Markdown文件。"
+broadcast: "今天介绍一个叫Honcho memory的项目，它能让AI代理拥有跨会话的持久记忆。即使对话重置或切换频道，上下文也能保留，还能自动学习用户偏好和沟通风格。这对国内开发者来说，意味着可以省去手动维护记忆文件的工作，让代理更智能地理解用户。"
+insight: "Honcho 的跨会话持久记忆和自动用户建模，对国内开发者来说，意味着可以大幅减少手动维护 MEMORY.md 的繁琐工作。如果你当前依赖手动管理上下文，建议升级到 Honcho 这类自动同步方案，并调整 prompt 设计，减少显式指令，转而利用自动构建的用户模型。同时，语义搜索功能要求 agent harness 集成 RAG，在 prompt 构建前注入相关记忆。通过 newapi.lurus.cn 代理使用 Honcho 不受影响，但需确保代理配置支持外部存储同步。"
+tags: [memory-management, user-modeling, semantic-search, cross-session]
+---
+
+- **跨会话记忆**：对话在每次交互后持久化，即使会话重置、压缩或切换频道，上下文仍保留。这意味着agent harness需设计为自动同步外部存储，而非依赖临时上下文。
+- **用户建模**：Honcho自动维护用户偏好、事实、沟通风格等档案，无需手动写入MEMORY.md。提示工程可减少显式指令，转而利用自动构建的用户模型。
+- **语义搜索**：支持对历史对话的观察进行语义搜索，而不仅是当前会话。agent harness应集成检索增强生成（RAG）能力，在prompt构建前注入相关记忆。
+
+---
+
+> 原文：[Honcho memory · OpenClaw](https://docs.openclaw.ai/concepts/memory-honcho)

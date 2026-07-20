@@ -1,0 +1,23 @@
+---
+slug: 2026-07-20-openclaw-concepts-memory-qmd
+title: "QMD memory engine · OpenClaw — 本地优先的混合搜索引擎，让AI代理记忆更精准"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/memory-qmd
+publishedAt: 2026-07-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "本地优先的混合搜索引擎，让AI代理记忆更精准"
+broadcast: "最近有个叫QMD的记忆引擎，它把BM25、向量搜索和重排序三种方法组合起来，让AI代理的召回更精准。更关键的是，它能索引项目文档、团队笔记甚至历史对话，让代理记住更早的交互。对国内开发者来说，这意味着可以低成本提升Agent的长期记忆能力，避免单一搜索的盲区。"
+insight: "对于国内开发者，如果你已经在用 QMD 引擎，这次升级值得做：BM25+向量+重排序的组合能显著提升召回率，尤其适合需要精准记忆的 AI 代理场景。现有 hook 配置无需大改，新版本兼容旧版，且支持自动降级。通过 newapi.lurus.cn 代理访问不受影响，建议直接升级以利用多集合搜索和更广的索引能力。"
+tags: [memory-engine, hybrid-search, local-first, agent-tooling]
+---
+
+- **BM25+向量搜索+重排序**：QMD组合三种检索方式，通过查询扩展和重排序提升召回率，避免单一搜索的盲区。
+- **索引额外目录与会话记录**：可配置项目文档、团队笔记等任意路径，并自动索引历史对话，让代理能回忆更早的交互。
+- **自动降级与兼容性**：QMD不可用时无缝回退内置引擎；支持新旧版本QMD，通过检测帮助文本适配多集合搜索或单集合兼容路径。
+
+---
+
+> 原文：[QMD memory engine · OpenClaw](https://docs.openclaw.ai/concepts/memory-qmd)
