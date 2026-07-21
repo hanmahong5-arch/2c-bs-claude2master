@@ -1,0 +1,25 @@
+---
+slug: 2026-07-20-hermes-agent-2026-7-20
+title: "hermes-agent v2026.7.20 — Hermes Agent 首 token 延迟暴降 80%，并引入智能审批、密码"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20
+publishedAt: 2026-07-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hermes Agent 首 token 延迟暴降 80%，并引入智能审批、密码管理器集成等关键特性。"
+broadcast: "Hermes Agent 最新版本让首 token 延迟从 4.3 秒降到 0.9 秒，快了近五倍。还加入了智能审批和密码管理器集成，API 密钥不用再明文存储了。这对国内开发者来说，意味着 agent 启动更快、更安全，多 agent 协作也更可靠。"
+insight: "Hermes Agent 这次更新对国内用户来说很实在。首 token 延迟从 4.3 秒降到 0.9 秒，体验提升明显，值得升级。如果你之前自己写了 prompt 来加速响应，现在可以去掉那些 hack，因为流式思考已经默认开启。智能审批默认启用，但建议检查一下拒绝规则，避免误拦。通过 newapi.lurus.cn 代理访问不受影响，因为更新主要在 agent 内部，不涉及网络层改动。密码管理器集成让密钥存储更安全，建议把明文 API 密钥迁移到 Bitwarden 或 1Password。"
+tags: [performance, security, multi-agent, gateway]
+---
+
+- 首 token 延迟降低约 80%（从 4.3 秒降至 0.9 秒），推理模型默认流式输出思考过程。这意味着 agent 启动和响应更快，用户等待感大幅减少。
+- 智能审批默认启用：LLM 自动评估标记命令，用户可定义拒绝规则和原因。这减少了人工审批疲劳，同时保持对危险命令的控制。
+- 新增可插拔 SecretSource 接口，支持 Bitwarden 和 1Password 获取密钥。API 密钥不再需要明文存储，提升了安全性。
+- 子代理任务返回实时转录文件，后台委托结果持久化（即使进程重启也能恢复）。这使多 agent 协作更可靠、可观测。
+- 网关新增持久化投递账本，确保最终响应在网关崩溃后重新投递。消除了消息丢失的 P1 问题。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.7.20](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20)

@@ -1,0 +1,23 @@
+---
+slug: 2026-07-20-claude-code-2-1-216
+title: "claude-code v2.1.216 — 性能修复与沙箱文件系统隔离选项"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.216
+publishedAt: 2026-07-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "性能修复与沙箱文件系统隔离选项"
+broadcast: "Claude Code 的最新更新带来了更灵活的沙箱配置，你可以单独关闭文件系统隔离，但保留网络控制，这对需要精细权限管理的 agent 开发很有帮助。同时修复了长对话中消息处理越来越慢的问题，提醒我们在设计 agent 时要避免复杂度随轮数平方增长的操作。"
+insight: "这次更新对国内用户来说，如果你通过 newapi.lurus.cn 代理使用 Claude Code，沙箱文件系统隔离新增的禁用选项值得关注——它允许你跳过文件系统隔离但保留网络控制，适合需要本地文件读写但不想开放网络权限的场景。另外，长会话卡顿修复提示现有用户应检查自己的 prompt 或 hook 配置，避免 O(n²) 复杂度的消息归一化操作。OAuth 令牌过期修复则提醒你确保代理能正确处理令牌刷新。整体上，建议升级并调整相关配置。"
+tags: [performance, sandbox, authentication, bug-fix]
+---
+
+- 新增 `sandbox.filesystem.disabled` 设置，可跳过文件系统隔离但保留网络出口控制，为 agent 提供更细粒度的沙箱配置。
+- 修复长会话中消息归一化成本随轮数二次增长导致的卡顿，agent 在持续交互中应避免 O(n²) 复杂度操作。
+- 修复 OAuth 令牌过期后自动模式拒绝命令的问题，agent 需处理令牌刷新并重试授权请求。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.216](https://github.com/anthropics/claude-code/releases/tag/v2.1.216)

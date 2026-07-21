@@ -1,0 +1,23 @@
+---
+slug: 2026-07-20-cline-4-0-10
+title: "cline v4.0.10 — 新增遥测追踪连续错误次数"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.0.10
+publishedAt: 2026-07-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "新增遥测追踪连续错误次数"
+broadcast: "Cline 最新版本新增了遥测功能，能追踪 agent 连续出错的次数。这意味着开发者可以量化监控 agent 的容错机制，更方便地调试和优化稳定性。对国内做 agent 开发的朋友来说，在设计测试框架时，别忘了把遥测数据收集考虑进去。"
+insight: "对于国内开发者，如果使用 newapi.lurus.cn 代理接入 Cline，v4.0.10 新增的遥测功能不会直接影响现有 hook 或 prompt 配置，但建议关注遥测数据收集对代理流量的潜在影响。现有用户无需立即升级，除非需要量化监控 agent 的连续错误次数以优化容错机制。升级后，可在 harness 中集成遥测接口，但需确保代理兼容性。总体而言，此版本主要面向调试场景，非必需更新。"
+tags: [telemetry, error-handling, monitoring]
+---
+
+- 新增遥测功能，追踪 Cline 达到连续错误限制时的事件。
+- 这意味着 agent 的容错机制可被量化监控，便于调试和改进。
+- 设计 harness 时需考虑遥测数据收集，以评估 agent 的稳定性。
+
+---
+
+> 原文 release：[cline/cline v4.0.10](https://github.com/cline/cline/releases/tag/v4.0.10)

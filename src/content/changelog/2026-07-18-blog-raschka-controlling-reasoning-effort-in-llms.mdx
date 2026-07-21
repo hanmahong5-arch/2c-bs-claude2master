@@ -1,0 +1,23 @@
+---
+slug: 2026-07-18-blog-raschka-controlling-reasoning-effort-in-llms
+title: "Controlling Reasoning Effort in LLMs — 如何让LLM像GPT"
+source: "Sebastian Raschka"
+sourceUrl: https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms
+publishedAt: 2026-07-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Sebastian Raschka"
+hook: "如何让LLM像GPT-5.6那样支持多级推理努力度调节"
+broadcast: "推理模型和普通LLM最大的不同，是它会输出思考过程，而不是直接给答案。通过强化学习只奖励最终正确答案，模型自己就能学会纠错和回溯，这就是所谓的“啊哈时刻”。对开发者来说，这意味着可以忽略中间步骤，专注结果监督。另外，控制推理努力度能帮你在性能和成本之间找到平衡，根据任务难度动态调整，让推理更高效。"
+tags: [reasoning-models, inference-scaling, rlvr, effort-control]
+---
+
+- 推理模型的核心是输出中间推理轨迹（reasoning trace），而非直接给出答案，这与传统LLM有本质区别。这意味着开发者需要为模型设计支持逐步推理的架构和训练流程。
+- 通过强化学习与可验证奖励（RLVR）训练，仅基于最终答案的正确性提供奖励信号，模型就能自发学会自我纠错和回溯（即“啊哈时刻”）。这提示开发者，训练推理模型时可以忽略中间轨迹，专注于结果监督。
+- 推理努力度调节本质上是推理时计算扩展（inference scaling）的一种形式，通过控制输出token长度或多次采样（如self-consistency）来平衡性能与成本。开发者应根据任务复杂度动态选择努力度，以优化推理效率。
+
+---
+
+> 原文：[Controlling Reasoning Effort in LLMs](https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms) · 作者 Sebastian Raschka

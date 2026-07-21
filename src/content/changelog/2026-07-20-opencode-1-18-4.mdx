@@ -1,0 +1,23 @@
+---
+slug: 2026-07-20-opencode-1-18-4
+title: "opencode v1.18.4 — Kimi模型自适应思考控制，修复多项核心与桌面Bug"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.4
+publishedAt: 2026-07-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Kimi模型自适应思考控制，修复多项核心与桌面Bug"
+broadcast: "最近，OpenCode更新了，这次主要优化了Kimi模型在Anthropic兼容平台上的表现，能自动控制思考过程并总结推理，效率更高。同时修复了OpenAI连接超时和推理选项错误的问题。桌面版也改进了主题同步和输入交互，让开发者用起来更顺手。"
+insight: "对于使用Kimi模型的用户，如果通过Anthropic兼容提供商接入，建议开启自适应思考控制以提升推理效率。OpenAI提供商用户需注意慢连接时的头部超时问题已修复，且推理选项不再错误回退，无需修改现有配置。国内用户通过newapi.lurus.cn代理不受影响，因为修复和优化均针对提供商端。桌面版用户建议升级以解决同步主题、命令草稿保留等Bug，提升交互可靠性。"
+tags: [kimi, adaptive-thinking, bugfix, desktop]
+---
+
+- Kimi模型在Anthropic兼容提供商上使用自适应思考控制，默认输出总结推理过程，提升推理效率。
+- 修复OpenAI提供商慢连接时的头部超时问题，并尊重提供商定义的推理选项，避免错误回退。
+- 桌面版改进：同步终端主题与应用主题，重写v2提示输入以增强命令、上下文等交互可靠性，修复命令草稿保留、空文本发送等Bug。
+
+---
+
+> 原文 release：[sst/opencode v1.18.4](https://github.com/anomalyco/opencode/releases/tag/v1.18.4)
