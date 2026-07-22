@@ -1,0 +1,26 @@
+---
+slug: 2026-07-22-cline-desktop-v0-0-2
+title: "cline desktop-v0.0.2 — Cline桌面版首发，自动更新省心"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.2
+publishedAt: 2026-07-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline桌面版首发，自动更新省心"
+broadcast: "Cline桌面版首次发布，支持苹果芯片和英特尔芯片的Mac电脑，而且有自动更新功能，启动时和每两小时就会检查新版本，后台下载后一键重启。这对国内开发者来说，意味着可以更省心地使用最新工具，专注于本地调试和监控智能体会话，不用再手动维护版本了。"
+insight: "Cline桌面版首发，macOS用户值得升级，尤其是Apple Silicon和Intel机型均支持，首次从GitHub下载DMG后，自动更新机制会省去后续手动维护的麻烦。对于使用newapi.lurus.cn代理的国内用户，该桌面版本身不涉及代理配置变更，但需注意网络环境是否影响自动更新检查。现有prompt或hook配置无需改动，因为桌面版主要优化了本地调试和分发流程。"
+tags: [desktop-app, macos, auto-update, first-release]
+---
+
+- 首次公开发布macOS桌面应用，支持Apple Silicon和Intel，签名公证。
+  - 对agent harness设计：提供原生桌面环境，便于本地调试和监控agent会话。
+- 自动更新机制：启动时及每2小时检查更新，后台下载，一键重启。
+  - 对agent harness设计：确保用户始终使用最新版本，减少手动维护成本。
+- 仅需首次从GitHub下载DMG，后续版本自动推送。
+  - 对agent harness设计：简化分发流程，提升用户体验。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.2](https://github.com/cline/cline/releases/tag/desktop-v0.0.2)

@@ -1,9 +1,9 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.216",
-    "openai/codex": "rust-v0.144.6",
+    "anthropics/claude-code": "v2.1.217",
+    "openai/codex": "rust-v0.145.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v4.0.10",
+    "cline/cline": "desktop-v0.0.3",
     "block/goose": "v1.43.0",
     "sst/opencode": "v1.18.4",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -151,7 +151,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-21",
+    "anthropic-engineering": "2026-07-22",
     "claude-code-docs": "2026-07-17",
     "openai-codex-blog": "2026-07-16",
     "openclaw-concepts": "2026-07-20",
@@ -298,7 +298,9 @@
       "https://simonwillison.net/2026/Jul/20/sam-altman/",
       "https://simonwillison.net/2026/Jul/19/ai-mania/",
       "https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/",
-      "https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/"
+      "https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/",
+      "https://simonwillison.net/2026/Jul/21/nativ/",
+      "https://simonwillison.net/2026/Jul/21/cat-and-thariq/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -383,7 +385,9 @@
       "https://www.latent.space/p/the-lab-of-the-future-should-feel",
       "https://www.latent.space/p/ainews-thinkys-inkling-975b-a41b",
       "https://www.latent.space/p/ainews-not-much-happened-today-830",
-      "https://www.latent.space/p/ainews-not-much-happened-today-173"
+      "https://www.latent.space/p/ainews-not-much-happened-today-173",
+      "https://www.latent.space/p/ainews-ai-cybersecurity-becomes-top",
+      "https://www.latent.space/p/xaira"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -573,7 +577,10 @@
       "https://openai.com/index/why-teens-deserve-access-safe-ai",
       "https://openai.com/index/cars24",
       "https://openai.com/index/a-scorecard-for-the-ai-age",
-      "https://openai.com/index/safety-alignment-long-horizon-models"
+      "https://openai.com/index/safety-alignment-long-horizon-models",
+      "https://openai.com/index/introducing-chatgpt-small-business-program",
+      "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+      "https://openai.com/index/david-velez-robin-vince-join-openai-boards"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -730,10 +737,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-21",
+    "simonwillison": "2026-07-22",
     "lilianweng": "2026-07-16",
-    "latentspace": "2026-07-21",
-    "interconnects": "2026-07-21",
+    "latentspace": "2026-07-22",
+    "interconnects": "2026-07-22",
     "karpathy": "2026-07-21",
     "raschka": "2026-07-21",
     "eugeneyan": "2026-07-21",
@@ -741,10 +748,10 @@
     "oneusefulthing": "2026-07-21",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-21",
+    "openai-news": "2026-07-22",
     "deepmind": "2026-07-21",
     "hf-blog": "2026-07-21",
-    "anthropic-news": "2026-07-19",
+    "anthropic-news": "2026-07-22",
     "steipete": "2026-07-21",
     "openclaw-blog": "2026-07-21"
   },

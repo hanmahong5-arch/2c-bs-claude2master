@@ -1,0 +1,23 @@
+---
+slug: 2026-07-22-cline-desktop-v0-0-3
+title: "cline desktop-v0.0.3 — 简化推理状态显示，提升界面清晰度"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.3
+publishedAt: 2026-07-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "简化推理状态显示，提升界面清晰度"
+broadcast: "最近桌面版工具更新了一个小版本，把聊天记录里的推理状态从啰嗦的文字改成了简单的“Thinking”，还去掉了脑部图标。对做agent开发的朋友来说，这个改动提醒我们：状态显示越简洁，用户理解越快，不必要的图标和文字反而会干扰注意力。"
+insight: "对于使用 Cline 桌面版的用户，v0.0.3 的推理状态显示简化值得升级，尤其是如果你觉得之前的“推理中”描述和脑部图标占用了聊天记录空间。升级后无需修改 prompt 或 hook 配置，因为这只是界面层的精简。国内用户通过 newapi.lurus.cn 代理使用不受影响，因为改动不涉及 API 通信或模型调用。"
+tags: [ui, simplification, chat]
+---
+
+- 聊天记录中的推理部分状态文本从冗余描述简化为“Thinking”。
+- 移除了脑部图标，减少视觉干扰。
+- 对 agent harness 设计而言，状态显示应保持简洁，避免不必要的信息和图标，使用户能快速理解当前状态。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.3](https://github.com/cline/cline/releases/tag/desktop-v0.0.3)

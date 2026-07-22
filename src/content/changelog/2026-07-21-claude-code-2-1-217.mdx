@@ -1,0 +1,23 @@
+---
+slug: 2026-07-21-claude-code-2-1-217
+title: "claude-code v2.1.217 — emoji补全、内存泄漏修复、子代理并发限制等多项改进"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.217
+publishedAt: 2026-07-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "emoji补全、内存泄漏修复、子代理并发限制等多项改进"
+broadcast: "Claude Code 的最新更新来了，这次加入了 emoji 短代码自动补全，输入冒号加关键词就能插入表情，对 agent 交互更友好。同时修复了内存泄漏问题，并限制了并发子代理数量，防止资源被无限占用。国内开发者在构建长会话 agent 时，稳定性和可控性都会明显提升。"
+insight: "这次更新对国内用户通过 newapi.lurus.cn 代理使用 Claude Code 没有直接影响。如果你已经在用 agent 模式处理复杂任务，建议升级：内存泄漏修复和子代理并发限制（默认 20）能显著提升长会话稳定性，防止资源耗尽。emoji 补全默认开启，对输入体验有改善，但可通过配置关闭。现有 prompt 和 hook 无需改动。"
+tags: [emoji-completion, memory-leak, subagent-concurrency, bug-fixes]
+---
+
+- 新增 emoji 短代码自动补全（如输入 `:heart:` 插入 ❤️），可通过 `emojiCompletionEnabled` 设置关闭；对 agent 输入体验更友好。
+- 修复 MCP 工具输出截断后仍保留完整结果导致的内存泄漏；agent 长会话内存更稳定。
+- 限制并发子代理数（默认 20，`CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 可调），并禁止子代理默认嵌套；防止 agent 无限扇出，资源可控。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.217](https://github.com/anthropics/claude-code/releases/tag/v2.1.217)

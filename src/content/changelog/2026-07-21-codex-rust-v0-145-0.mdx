@@ -1,0 +1,30 @@
+---
+slug: 2026-07-21-codex-rust-v0-145-0
+title: "codex rust-v0.145.0 — Codex 0.145.0 稳定多智能体 V2、分页线程历史、音频支持与导入迁移"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.145.0
+publishedAt: 2026-07-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.145.0 稳定多智能体 V2、分页线程历史、音频支持与导入迁移"
+broadcast: "Codex 的最新版本稳定了多智能体协作功能，现在你可以配置多个子智能体，让它们分工合作。同时，它新增了分页线程历史，方便管理长对话，还支持导入Cursor和Claude Code的设置与记忆。这对国内开发者来说，意味着agent开发在多智能体编排和工具兼容性上有了更成熟的参考。"
+insight: "Codex 0.145.0 稳定了多智能体 V2 和分页历史，对国内用户来说，如果通过 newapi.lurus.cn 代理使用，这些新功能应该不受影响，因为代理只转发请求，不涉及具体功能。现有用户值得升级，尤其是需要多智能体协作或长对话管理的场景。如果你之前配置了自定义 prompt 或 hook，建议检查是否需要适配新的子智能体模型和并发设置，但核心 hook 逻辑可能无需大改。"
+tags: [multi-agent, thread-history, audio, import-migration]
+---
+
+- 稳定多智能体 V2 体验，支持可配置子智能体模型、推理级别、并发、角色恢复与导航改进。
+  - 设计含义：Agent harness 需支持多智能体编排、角色管理与并发控制。
+- 新增实验性分页线程历史，支持高效恢复、搜索、持久化名称、子智能体与记忆。
+  - 设计含义：Agent harness 需管理长对话状态、分页存储与子智能体上下文隔离。
+- 扩展 `/import` 支持迁移 Cursor 和 Claude Code 设置、MCP 服务器、插件、会话、命令及项目级记忆。
+  - 设计含义：Agent harness 需提供标准导入接口以兼容第三方工具配置与记忆。
+- 新增音频输入/输出与流式实时 V3 对话，支持常见本地音频格式。
+  - 设计含义：Agent harness 需处理多模态输入输出与实时流式通信。
+- 改进终端响应性能：增量 Markdown 渲染、减少重绘、缓存、有界命令输出。
+  - 设计含义：Agent harness 需优化流式输出渲染与 UI 响应性。
+
+---
+
+> 原文 release：[openai/codex rust-v0.145.0](https://github.com/openai/codex/releases/tag/rust-v0.145.0)

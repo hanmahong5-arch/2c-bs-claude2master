@@ -1,0 +1,26 @@
+---
+slug: 2026-07-22-cline-desktop-latest
+title: "cline desktop-latest — 桌面版自动更新机制更新，指向最新版本"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-latest
+publishedAt: 2026-07-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "桌面版自动更新机制更新，指向最新版本"
+broadcast: "Cline Code 桌面版现在支持自动更新了，它新增了一个资源文件来指向最新版本。这意味着开发者可以省去手动下载的麻烦，让 Agent 自动完成更新流程。对于国内开发者来说，这能显著提升部署效率，但设计 Agent 时也要注意保证更新源的稳定可靠。"
+insight: "对于使用 Cline Code desktop 的国内用户，本次更新引入了自动更新机制，通过 latest.json 指向最新版本，Agent 可自动检查并升级，无需手动下载。如果你已在使用桌面版，建议确保网络环境能稳定访问更新源，否则可能影响自动更新。若通过 newapi.lurus.cn 代理，需确认代理能否正常获取 latest.json 及对应版本包，否则更新可能失败。现有 prompt 或 hook 配置无需修改，但建议测试自动更新流程是否畅通。"
+tags: [auto-update, desktop, release-management]
+---
+
+- 新增 `latest.json` 资源文件，指向最新的 `desktop-vX.Y.Z` 版本。
+  - 含义：Agent 可通过检查此文件实现自动更新，无需手动下载。
+- 该版本为滚动发布，支持桌面应用自动更新。
+  - 含义：Agent 的更新流程可完全自动化，提升部署效率。
+- 标记为不可删除，确保更新链稳定。
+  - 含义：Agent 设计需考虑更新源的持久性和可靠性。
+
+---
+
+> 原文 release：[cline/cline desktop-latest](https://github.com/cline/cline/releases/tag/desktop-latest)
