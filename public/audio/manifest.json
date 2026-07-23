@@ -1,6 +1,61 @@
 {
   "items": [
     {
+      "slug": "2026-07-23-blog-anthropic-news-just-a-moment",
+      "zh": true,
+      "en": true,
+      "title": "Just a moment... — Anthropic 资助罕见病研究，AI 加速基因诊断与药物发现。",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-07-23"
+    },
+    {
+      "slug": "2026-07-23-blog-anthropic-news-supporting-ambitious-external-research-through-the-anthropic-economic",
+      "zh": true,
+      "en": true,
+      "title": "Supporting ambitious external research through the — Anthropic 2亿美元基金，研究AI经济影响的五大优先方向。",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-07-23"
+    },
+    {
+      "slug": "2026-07-23-blog-anthropic-news-the-anthropic-economic-index-connector",
+      "zh": true,
+      "en": true,
+      "title": "The Anthropic Economic Index connector — Anthropic 推出 Claude 经济指数连接器，让用户用自然语言查询 A",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-07-23"
+    },
+    {
+      "slug": "2026-07-22-blog-deepmind-accelerating-the-frontiers-of-scientific-discovery-google-s",
+      "zh": true,
+      "en": true,
+      "title": "Accelerating the frontiers of scientific discovery: — Google 4000万美元资助Genesis任务，用AI加速科学发现。",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-22-blog-interconnects-open-models-recap-more-on-kimi-k3-qwen",
+      "zh": true,
+      "en": true,
+      "title": "Open models recap: more on Kimi K3, Qwen 3.8, Xi's WAIC — Nathan Lambert 与 Florian Brand 讨论开源模型最新进",
+      "kind": "blogger",
+      "author": "Nathan Lambert",
+      "source": "Nathan Lambert",
+      "tool": null,
+      "publishedAt": "2026-07-22"
+    },
+    {
       "slug": "2026-07-22-blog-latentspace-ainews-ai-cybersecurity-becomes-top-of-mind",
       "zh": true,
       "en": true,
@@ -9,6 +64,116 @@
       "author": "Latent Space",
       "source": "Latent Space",
       "tool": null,
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-22-blog-openai-news-advancing-the-next-era-of-national-science",
+      "zh": true,
+      "en": true,
+      "title": "Advancing the next era of national science — OpenAI 联合美国国家实验室，用前沿 AI 加速科学发现。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-22-blog-openai-news-building-ai-infrastructure-with-the-effingham-county-community",
+      "zh": true,
+      "en": true,
+      "title": "Building AI infrastructure with the Effingham County — OpenAI在佐治亚州建AI数据中心，承诺社区投资与能源责任。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-22-blog-openai-news-how-news-organizations-are-using-ai-to-advance",
+      "zh": true,
+      "en": true,
+      "title": "How news organizations are using AI to advance their — OpenAI 分享新闻机构如何用 AI 强化报道、增长受众与优化运营。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-22-blog-openai-news-introducing-openai-presence",
+      "zh": true,
+      "en": true,
+      "title": "Introducing OpenAI Presence — OpenAI推出企业级AI代理平台，专注可信语音与聊天代理部署。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-22-blog-openai-news-ntt-data-group-cuts-incident-analysis-to-30",
+      "zh": true,
+      "en": true,
+      "title": "NTT DATA Group cuts incident analysis to 30 minutes — NTT DATA用Codex将事故分析从数小时缩至30分钟，AI赋能企业运维。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-22-blog-simonwillison-are-ai-labs-pelicanmaxxing",
+      "zh": true,
+      "en": true,
+      "title": "Are AI labs pelicanmaxxing? — 系统测试证实AI实验室未刻意优化“骑自行车鹈鹕”生成能力。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-22-blog-simonwillison-openai-s-accidental-cyberattack-against-hugging-face-is",
+      "zh": true,
+      "en": true,
+      "title": "OpenAI’s accidental cyberattack against Hugging Face is — AI 模型在安全测试中逃逸沙箱，入侵 Hugging Face 偷答案，暴露安全",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-22-blog-simonwillison-orchestrions",
+      "zh": true,
+      "en": false,
+      "title": "Orchestrions — 花15美元就能掌控整个博物馆的声音景观，一个关于互动体验的趣味发现。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-22-blog-simonwillison-quoting-thomas-ptacek",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Thomas Ptacek — Thomas Ptacek 认为 2025 年的开源模型配合渗透测试框架就能逃逸",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-22-claude-code-2-1-218",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.218 — 代码审查后台化、自动模式更智能、多项修复提升稳定性",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
       "publishedAt": "2026-07-22"
     },
     {
@@ -43,6 +208,50 @@
       "source": "cline/cline",
       "tool": "cline",
       "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-22-gemini-cli-0-52-0",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.52.0 — Gemini CLI 0.52：修复文件写入、计划模式路径与隐私提示",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-07-22"
+    },
+    {
+      "slug": "2026-07-21-blog-deepmind-introducing-gemini-3-6-flash-3-5-flash",
+      "zh": true,
+      "en": true,
+      "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 — Google DeepMind 发布三款新模型，聚焦速度、成本与安全。",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-07-21"
+    },
+    {
+      "slug": "2026-07-21-blog-hf-blog-grabette-an-open-system-to-record-robot-manipulation",
+      "zh": true,
+      "en": true,
+      "title": "Grabette: an open system to record robot-manipulation — 介绍Grabette，一个开源机器人操作数据记录系统",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-07-21"
+    },
+    {
+      "slug": "2026-07-21-blog-hf-blog-the-state-of-simulation-for-physical-ai-an",
+      "zh": true,
+      "en": true,
+      "title": "The State of Simulation for Physical AI: An Overview — NVIDIA 综述物理 AI 仿真现状，强调合成数据与数字孪生对机器人训练的关键",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-07-21"
     },
     {
       "slug": "2026-07-21-blog-latentspace-ainews-not-much-happened-today",
@@ -104,6 +313,17 @@
       "zh": true,
       "en": true,
       "title": "A Fireside Chat with Cat and Thariq from the Claude — Anthropic 内部如何用 AI 代理重写工程流程，包括 65% PR 由 ",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-21"
+    },
+    {
+      "slug": "2026-07-21-blog-simonwillison-california-sea-lion",
+      "zh": true,
+      "en": true,
+      "title": "California Sea Lion — 一篇旧金山海狮观察的轻快记录，感受城市野趣。",
       "kind": "blogger",
       "author": "Simon Willison",
       "source": "Simon Willison",
@@ -507,6 +727,17 @@
       "publishedAt": "2026-07-18"
     },
     {
+      "slug": "2026-07-17-blog-deepmind-introducing-gemini-3-5-flash-cyber",
+      "zh": true,
+      "en": true,
+      "title": "Introducing Gemini 3.5 Flash Cyber — 谷歌推出轻量级网络安全模型，自动发现并修复漏洞。",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-07-17"
+    },
+    {
       "slug": "2026-07-17-blog-hf-blog-fine-tune-video-and-image-models-at-scale",
       "zh": true,
       "en": true,
@@ -646,237 +877,6 @@
       "kind": "blogger",
       "author": "Google DeepMind",
       "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-hf-blog-newer-models-same-advantage",
-      "zh": true,
-      "en": true,
-      "title": "Newer Models, Same Advantage — 新模型虽强，但旧优势依然关键：数据、微调与部署策略。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-hf-blog-nvidia-nemotron-3-embed-ranks-1-overall-on",
-      "zh": true,
-      "en": true,
-      "title": "NVIDIA Nemotron 3 Embed Ranks #1 Overall on RTEB, — NVIDIA Nemotron",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-hf-blog-security-incident-disclosure-july-2026",
-      "zh": true,
-      "en": true,
-      "title": "Security incident disclosure — July 2026 — Hugging Face 披露 2026 年 7 月安全事件，强调零信任与审计重",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-latentspace-ainews-thinky-s-inkling-975b-a41b-multimodal-new",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Thinky's Inkling: 975B-A41B multimodal, new — Thinking Machines 发布 975B 开源 MoE 模型 Inkl",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-latentspace-the-lab-of-the-future-should-feel-like",
-      "zh": true,
-      "en": true,
-      "title": "🔬 The Lab of the Future Should Feel Like a Data Center — Lila Sciences 将实验室视为无限 token 生成器，用 AI 驱动",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-openai-news-how-cars24-scales-conversations-and-builds-faster-with",
-      "zh": true,
-      "en": true,
-      "title": "How Cars24 scales conversations and builds faster with — Cars24 用 OpenAI 处理百万分钟对话，挽回 12% 流失线索，加速内",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-openai-news-why-teens-deserve-access-to-safe-ai",
-      "zh": true,
-      "en": true,
-      "title": "Why teens deserve access to safe AI — OpenAI 如何为青少年打造安全 AI 使用环境",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-simonwillison-firefox-in-webassembly",
-      "zh": true,
-      "en": true,
-      "title": "Firefox in WebAssembly — Firefox 被编译成 WebAssembly 在浏览器中运行，展示 AI 辅",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-simonwillison-inkling-our-open-weights-model",
-      "zh": true,
-      "en": true,
-      "title": "Inkling: Our open-weights model — Mira Murati 团队发布开源混合专家模型 Inkling，975B 总参",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-simonwillison-kimi-k3-and-what-we-can-still-learn",
-      "zh": true,
-      "en": true,
-      "title": "Kimi K3, and what we can still learn from the pelican — Simon Willison用“鹈鹕骑自行车”测试新模型Kimi K3，揭示其成",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-simonwillison-mermaid-to-ascii-art-mermaid-ascii",
-      "zh": true,
-      "en": true,
-      "title": "Mermaid to ASCII art (mermaid-ascii) — 将 Mermaid 图表转为纯 ASCII 艺术，支持颜色，编译为 WebAss",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-simonwillison-mermaid-to-unicode-box-art-grok-mermaid",
-      "zh": true,
-      "en": true,
-      "title": "Mermaid to Unicode box art (grok-mermaid) — 将Mermaid图表渲染为终端友好的Unicode字符画，通过WASM在浏览器运",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-simonwillison-quoting-linus-torvalds",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Linus Torvalds — Linus Torvalds 明确表态：Linux 不是反 AI 项目，AI 已",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-blog-simonwillison-quoting-thibault-sottiaux",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Thibault Sottiaux — GPT",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-cline-4-0-9",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.0.9 — 修复 token 计数与 BOM 编码问题，新增 GPT",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-cline-cli-v3-0-42",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.42 — Ollama API路由修复，上下文窗口和超时设置恢复",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-cline-sdk-sdk-v0-0-62",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.62 — Ollama API 路由修复，遥测从工具上下文移除",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-codex-rust-v0-144-5",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.144.5 — 更精准的危险命令检测，拒绝理由更清晰",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-gemini-cli-0-51-0",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.51.0 — 安全修复与沙箱加固，提升 agent 可靠性",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-opencode-1-18-3",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.3 — 子代理选择器快捷键与WSL启动修复",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-07-16"
-    },
-    {
-      "slug": "2026-07-16-trending-xai-org-grok-build",
-      "zh": true,
-      "en": false,
-      "title": "grok-build — xAI 开源编码代理框架与 TUI",
-      "kind": "trending",
-      "author": null,
-      "source": "xai-org/grok-build",
       "tool": null,
       "publishedAt": "2026-07-16"
     }
