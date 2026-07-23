@@ -1,0 +1,26 @@
+---
+slug: 2026-07-22-gemini-cli-0-52-0
+title: "gemini-cli v0.52.0 — Gemini CLI 0.52：修复文件写入、计划模式路径与隐私提示"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.52.0
+publishedAt: 2026-07-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Gemini CLI 0.52：修复文件写入、计划模式路径与隐私提示"
+broadcast: "谷歌的Gemini命令行工具更新了，这次修复了文件写入时对JSON和IPYNB格式的意外修改，让智能体处理结构化文件更可靠。还改进了计划模式的路径支持，用起来更灵活。另外，权限或配额不足时会有清晰的提示和设置指引，对国内开发者调试智能体很有帮助。"
+insight: "Gemini CLI 0.52 的修复主要提升了 agent 处理结构化文件（JSON/IPYNB）的可靠性，避免意外格式修改，这对国内用户通过 newapi.lurus.cn 代理使用 Gemini 时同样受益。计划模式支持相对路径降低了配置复杂度，但现有用户无需立即升级，除非你频繁使用计划模式或处理结构化文件。当前 prompt 和 hook 配置无需改动，代理不受影响。"
+tags: [file-handling, plan-mode, error-handling, privacy]
+---
+
+- 修复 `write_file` 和 `replace` 工具对 JSON/IPYNB 文件跳过 LLM 修正，避免意外修改格式。
+  - 含义：agent 处理结构化文件时更可靠，减少数据损坏风险。
+- 简化计划模式写入策略，支持相对路径。
+  - 含义：agent 在计划模式下使用路径更灵活，降低配置复杂度。
+- 无 Code Assist 层级时显示清晰提示；项目配额错误附带设置指引。
+  - 含义：agent 在权限或配额不足时提供可操作反馈，提升调试体验。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.52.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.52.0)

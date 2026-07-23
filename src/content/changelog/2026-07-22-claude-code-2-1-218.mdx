@@ -1,0 +1,23 @@
+---
+slug: 2026-07-22-claude-code-2-1-218
+title: "claude-code v2.1.218 — 代码审查后台化、自动模式更智能、多项修复提升稳定性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.218
+publishedAt: 2026-07-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "代码审查后台化、自动模式更智能、多项修复提升稳定性"
+broadcast: "Claude Code 的最新更新把代码审查搬到了后台，不再占用对话窗口，自动模式也变得更聪明了，危险操作不再弹窗，而是由分类器自动判断。另外还修了一个 Windows 路径的编码 bug。对国内开发者来说，这些改进让 agent 在自动化流程中更流畅、更少打断。"
+insight: "对于国内用户，本次更新值得升级。代码审查改为后台运行，不再干扰当前对话，体验更流畅。自动模式中危险操作不再弹窗，改由分类器裁决，减少了手动确认的繁琐，但需留意是否降低了对危险操作的感知。Windows 路径中 `\\u` 前缀段被错误转换的问题已修复，使用 newapi.lurus.cn 代理的用户不受影响，可正常升级。现有 prompt 或 hook 配置无需改动。"
+tags: [code-review, auto-mode, bug-fix, accessibility]
+---
+
+- `/code-review` 改为后台子代理运行，不再填充对话，且仍以堆叠的斜杠命令为审查目标。
+- 自动模式中危险操作（如 `rm`、后台 `&`、可疑 Windows 路径）不再弹出权限对话框，改由自动模式分类器裁决。
+- 修复了 Windows 路径中 `\u` 前缀段被错误转换为 CJK 字符导致文件不可访问的问题。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.218](https://github.com/anthropics/claude-code/releases/tag/v2.1.218)
