@@ -1,0 +1,23 @@
+---
+slug: 2026-07-23-goose-1-44-0
+title: "goose v1.44.0 — Goose v1.44 新增 Gemini 模型、会话编辑与多语言支持"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.44.0
+publishedAt: 2026-07-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.44 新增 Gemini 模型、会话编辑与多语言支持"
+broadcast: "Goose 的最新版本加入了 Gemini 等新模型，让智能体可以接入更多大语言模型后端。同时新增的会话编辑功能，允许你在分支前修改对话，大大提升了交互的灵活性。另外还支持了法语、德语等八种桌面语言，这对国内开发者做全球化的智能体部署很有参考价值。"
+insight: "Goose v1.44 新增 Gemini 等模型支持，如果你在用 newapi.lurus.cn 代理，这些新模型应该都能直接接入，无需额外配置。会话编辑功能对调试 prompt 很有帮助，建议升级后试试 --edit 标志来微调对话分支。多语言支持对国内开发者影响不大，但如果你有海外部署需求，升级后可以覆盖更多用户。总体来看，这次升级值得做，尤其是想尝试 Gemini 或需要更灵活调试的场景。"
+tags: [new-models, session-editing, multi-language, provider-support]
+---
+
+- 新增 Gemini、GPT-5.6、Muse Spark 1.1 等模型支持，agent 可接入更多 LLM 后端。
+- 新增 `--edit` 会话标志，允许在分支前编辑对话，提升 agent 交互灵活性。
+- 新增法语、德语等 8 种桌面语言，扩大 agent 全球化部署能力。
+
+---
+
+> 原文 release：[block/goose v1.44.0](https://github.com/aaif-goose/goose/releases/tag/v1.44.0)

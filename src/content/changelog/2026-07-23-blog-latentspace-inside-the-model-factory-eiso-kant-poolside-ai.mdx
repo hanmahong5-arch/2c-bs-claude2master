@@ -1,0 +1,23 @@
+---
+slug: 2026-07-23-blog-latentspace-inside-the-model-factory-eiso-kant-poolside-ai
+title: "Inside the Model Factory — Eiso Kant, Poolside AI — Poolside 的 Model Factory 如何用工程化将模型迭代周期压缩"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/poolside
+publishedAt: 2026-07-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Poolside 的 Model Factory 如何用工程化将模型迭代周期压缩至八周。"
+broadcast: "Poolside 的 Model Factory 把模型迭代周期从六个月压缩到了五到八周，靠的是工程化流水线。更关键的是，他们认为未来 agent 不该调用工具，而是直接写脚本。这对国内开发者意味着，模型训练和 agent 架构都可能要换思路了。"
+tags: [model-factory, engineering-productivity, agent-architecture, pre-training]
+---
+
+- Poolside 的 Model Factory 每月运行 1–2 万次实验，通过流式数据直接注入训练、不可变数据与版本化代码实现可复现实验，将模型迭代从六个月缩短至五到八周。这意味着模型开发正从手工作坊转向自动化工厂，工具链必须支持高速实验与数据溯源。
+- Eiso 认为 MCP 和传统工具调用“愚蠢”，未来 agent 应直接写脚本而非从预定义工具中选择，最小化 harness、使用容器并赋予模型自由。这暗示 agent 架构应从工具编排转向脚本生成，降低中间层复杂度。
+- 池侧坚持从头训练模型而非蒸馏更大模型，并认为强化学习将提前进入预训练阶段，next-token prediction 仍未能充分提取网络知识。这对预训练范式提出挑战：RL 与 curriculum design 的融合可能成为下一波效率提升的关键。
+
+---
+
+> 原文：[Inside the Model Factory — Eiso Kant, Poolside AI](https://www.latent.space/p/poolside) · 作者 Latent Space
