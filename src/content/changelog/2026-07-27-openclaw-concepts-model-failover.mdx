@@ -1,0 +1,23 @@
+---
+slug: 2026-07-27-openclaw-concepts-model-failover
+title: "Model failover · OpenClaw — OpenClaw 的模型故障转移机制：如何优雅处理 LLM 调用失败"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/model-failover
+publishedAt: 2026-07-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OpenClaw 的模型故障转移机制：如何优雅处理 LLM 调用失败"
+broadcast: "OpenClaw 的模型故障转移机制，能优雅处理大模型调用失败。它先在同一服务商内换认证凭据，不行再切备用模型，避免过早换服务商。用户指定的模型失败会报错，不会静默回退，尊重用户意图。还能临时跳过认证失败的模型，减少重复重试。这对国内开发者设计 agent 的容错逻辑很有参考价值。"
+insight: "如果你在用 OpenClaw 的 newapi.lurus.cn 代理，建议检查现有 hook 配置：确保 prompt 中用户通过 /model 指定的模型不会因 fallback 被静默替换，否则可能违背用户意图。另外，若代理频繁遇到认证失败，可考虑启用 OPENCLAW_FALLBACK_SKIP_TTL_MS 缓存，减少重复重试带来的延迟和成本，但注意主模型应保留错误暴露。现有用户无需升级，只需调整配置即可。"
+tags: [model-failover, error-handling, auth-rotation, agent-runtime]
+---
+
+- **分层故障处理**：先在同一提供商内轮换认证凭据，再按 fallbacks 列表切换到备用模型。含义：Agent harness 应区分凭据级和模型级故障，避免过早切换提供商。
+- **用户显式选择不触发 fallback**：用户通过 /model 等设置的模型是严格选择，失败时报错而非静默回退。含义：prompt 设计需明确区分“用户指定”与“系统自动选择”，尊重用户意图。
+- **可选认证失败跳过缓存**：通过 `OPENCLAW_FALLBACK_SKIP_TTL_MS` 启用后，非主候选模型因认证失败会被临时跳过，避免重复重试。含义：为减少延迟和成本，可引入带 TTL 的失败缓存，但主模型永不跳过以暴露真实错误。
+
+---
+
+> 原文：[Model failover · OpenClaw](https://docs.openclaw.ai/concepts/model-failover)

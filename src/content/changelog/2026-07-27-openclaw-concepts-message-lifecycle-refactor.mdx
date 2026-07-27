@@ -1,0 +1,26 @@
+---
+slug: 2026-07-27-openclaw-concepts-message-lifecycle-refactor
+title: "Message lifecycle refactor · OpenClaw — 一次消息生命周期重构，解决重启丢消息的可靠性难题"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/message-lifecycle-refactor
+publishedAt: 2026-07-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "一次消息生命周期重构，解决重启丢消息的可靠性难题"
+broadcast: "这次消息生命周期的重构，解决了重启丢消息的可靠性难题。核心思路是把发送意图先持久化再调用平台，确保崩溃后能恢复。对国内开发者来说，这意味着agent开发中消息发送的可靠性有了标准化方案，能根据返回结果决定重试或降级，避免消息丢失。"
+insight: "这次重构对国内用户通过 newapi.lurus.cn 代理使用 OpenClaw 没有直接影响，但如果你正在自建 agent harness，建议升级。核心改进是消息发送的持久化与平台调用分离，解决了重启丢消息问题。现有 hook 配置可能需要调整：发送结果现在返回四种状态，建议根据 `partial_failed` 和 `failed` 增加重试或降级逻辑；接收确认策略建议改为 `after_durable_send`，避免确认后崩溃导致回复丢失。现有用户值得升级，尤其是对可靠性要求高的场景。"
+tags: [message-lifecycle, durability, at-least-once, agent-harness]
+---
+
+- 核心不变式：核心决定消息应存在后，发送意图必须先持久化再调用平台，平台回执必须在成功后提交，实现至少一次恢复。
+  - 对 agent harness 设计含义：消息发送的持久化与平台调用分离，确保崩溃后能恢复发送状态。
+- 引入 `sendDurableMessageBatch` 封装渲染、发送、提交/失败步骤，返回 `sent`/`suppressed`/`partial_failed`/`failed` 四种结果。
+  - 对 agent harness 设计含义：标准化发送结果枚举，让上层逻辑能根据结果决定重试或降级。
+- 接收上下文通过 `ack()`/`nack(error)` 和可配置的确认策略（如 `after_durable_send`），控制何时确认事件已处理。
+  - 对 agent harness 设计含义：将确认时机与下游发送绑定，避免确认后崩溃导致回复丢失。
+
+---
+
+> 原文：[Message lifecycle refactor · OpenClaw](https://docs.openclaw.ai/concepts/message-lifecycle-refactor)

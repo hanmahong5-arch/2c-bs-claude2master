@@ -1,0 +1,23 @@
+---
+slug: 2026-07-24-claude-code-2-1-219
+title: "claude-code v2.1.219 — Opus 5 默认、子代理嵌套深度增至 3，沙箱网络白名单强化"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.219
+publishedAt: 2026-07-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Opus 5 默认、子代理嵌套深度增至 3，沙箱网络白名单强化"
+broadcast: "Claude Code 更新了，默认模型升级为 Opus 5，支持百万级上下文，这对 agent 的工具调用和记忆策略影响不小。沙箱网络白名单更严格了，不列在允许列表里的主机直接拒绝连接。子代理嵌套深度从 1 层增加到 3 层，编排能力更强，但也要留意延迟和错误传播的问题。"
+insight: "现有用户值得升级：Opus 5 默认且上下文扩至 1M，适合长文档或复杂任务，但快速模式定价较高，需评估成本。子代理嵌套深度增至 3，若当前 prompt 依赖单层代理，可考虑调整任务分解策略以利用深度，但注意延迟和错误风险。沙箱网络白名单强化，若通过 newapi.lurus.cn 代理访问外部服务，需确保代理域名加入白名单，否则连接被静默拒绝，建议提前配置。"
+tags: [model-update, sandbox, subagent, networking]
+---
+
+- Claude Opus 5 成为默认 Opus 模型，支持 1M 上下文，快速模式定价 $10/$50 每百万 token。Agent 设计需考虑更大上下文窗口对工具调用和记忆策略的影响。
+- 新增 `sandbox.network.strictAllowlist` 设置，拒绝非白名单主机连接且不提示。Agent 沙箱网络策略更严格，需提前规划允许的外部服务。
+- 子代理嵌套深度从 1 增至 3（默认），可通过环境变量禁用。Agent 编排能力增强，支持更深层任务分解，但需注意深度增加带来的延迟和错误传播。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.219](https://github.com/anthropics/claude-code/releases/tag/v2.1.219)

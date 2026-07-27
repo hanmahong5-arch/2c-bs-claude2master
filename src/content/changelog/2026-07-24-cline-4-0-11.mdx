@@ -1,0 +1,26 @@
+---
+slug: 2026-07-24-cline-4-0-11
+title: "cline v4.0.11 — 新增Claude Opus 5及Kimi K3支持，修复定价与工具调用"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.0.11
+publishedAt: 2026-07-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "新增Claude Opus 5及Kimi K3支持，修复定价与工具调用"
+broadcast: "Cline 最新版本新增了 Claude Opus 5 和 Kimi K3 模型支持，其中 Opus 5 拥有超大上下文窗口，能处理更复杂的任务。同时修复了定价和工具调用问题，让开发者用起来更放心。这对国内 Agent 开发来说，意味着更多模型选择和更稳定的调用体验。"
+insight: "本次更新新增了Claude Opus 5和Kimi K3模型支持，并修复了定价与工具调用问题。对于现有用户，如果你需要处理长对话或复杂任务，升级后可以选用更大上下文窗口的模型，提升能力；同时Kimi K3的原生工具调用更可靠，建议更新hook配置以利用新模型。国内用户通过newapi.lurus.cn代理使用不受影响，但需注意Claude Opus 1M的定价已修正，成本估算更准确。"
+tags: [new-models, pricing-fix, tool-calling, telemetry]
+---
+
+- 新增Claude Opus 5模型支持，覆盖Anthropic、Claude Code、Bedrock、Vertex、Cline和OpenRouter提供商，包括1M上下文窗口变体。
+  - 含义：Agent可选用更大上下文窗口的模型，提升长对话或复杂任务的处理能力。
+- 新增Moonshot Kimi K3模型支持，并启用原生工具调用，修复空响应问题。
+  - 含义：扩展模型选择，确保工具调用可靠性，避免因模型不兼容导致的失败。
+- 修正Claude Opus 1M上下文变体的定价，此前对超过200k令牌的请求成本估算过高。
+  - 含义：准确反映实际使用成本，避免预算误判，优化资源规划。
+
+---
+
+> 原文 release：[cline/cline v4.0.11](https://github.com/cline/cline/releases/tag/v4.0.11)

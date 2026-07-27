@@ -1,0 +1,28 @@
+---
+slug: 2026-07-25-blog-simonwillison-ruff-v0-16-0
+title: "Ruff v0.16.0 — Ruff 0.16.0 默认启用 413 条规则，大幅提升 Python 代码质"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/25/ruff/
+publishedAt: 2026-07-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Ruff 0.16.0 默认启用 413 条规则，大幅提升 Python 代码质量检查力度。"
+broadcast: "Python开发者注意了，Ruff工具的最新版本默认启用了413条规则，能自动发现语法和运行时错误。更厉害的是，它还能自动修复大部分问题，而且输出格式对AI编码助手很友好，这意味着国内开发者可以更高效地提升代码质量，甚至让AI帮你修bug。"
+tags: [python, ruff, linting, developer-tools]
+---
+
+- Ruff v0.16.0 将默认启用规则从 59 条增至 413 条，覆盖语法错误和运行时错误，无需配置即可发现严重问题。
+  *含义*：开发者应主动升级并修复新警告，避免 CI 意外失败。
+
+- 作者在三个大型项目上运行新规则，发现数百个次要问题，但通过 `--fix --unsafe-fixes` 自动修复了 1538 个错误中的 1538 个。
+  *含义*：自动化修复工具可大幅降低升级成本，但需配合测试套件确保安全。
+
+- Ruff 的错误输出（如 DTZ005、BLE001）直接提供修复提示，且与 AI 编码代理（如 Codex、Claude Code）兼容。
+  *含义*：工具链应设计为机器可读，以支持 AI 驱动的自动修复工作流。
+
+---
+
+> 原文：[Ruff v0.16.0](https://simonwillison.net/2026/Jul/25/ruff/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-07-27-openclaw-concepts-models
+title: "Models CLI · OpenClaw — 模型选择与故障切换的精确控制，避免意外降级或拒绝服务"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/models
+publishedAt: 2026-07-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "模型选择与故障切换的精确控制，避免意外降级或拒绝服务"
+broadcast: "今天聊聊模型选择与故障切换的精确控制。这套方案让主模型优先，失败后才按顺序尝试备用模型，避免意外降级。用户如果指定了模型，系统会严格遵循，不会自动回退，保证意图不被覆盖。另外，白名单机制可以限制可用模型，防止未授权调用，对国内开发者构建可靠的agent系统很有参考价值。"
+insight: "如果你正在用 newapi.lurus.cn 代理，这个分层回退机制不会受影响，因为代理只转发请求，不干预模型选择逻辑。现有用户值得升级：严格模式能避免用户指定模型被自动降级，适合对模型版本敏感的场景；allowlist 则适合需要限制模型范围的团队。如果你之前用 prompt 或 hook 手动实现了类似回退逻辑，可以简化掉，改用原生支持更可靠。"
+tags: [model-selection, fallback, allowlist, agent-configuration]
+---
+
+- **模型选择顺序**：主模型优先，然后按顺序尝试fallbacks，认证轮换在provider内部完成，失败后才切换下一个fallback。含义：agent harness应支持分层回退策略，避免单点故障。
+- **用户选择严格模式**：通过`/model`或session pin选择的模型，如果不可达会直接失败，不会自动回退。含义：用户显式选择应覆盖自动回退逻辑，保证用户意图的确定性。
+- **allowlist控制**：`modelPolicy.allow`可限制可用模型列表，使用精确ref或前缀通配符（如`provider/*`），空列表则允许所有。含义：安全策略应支持白名单机制，防止未授权模型被调用。
+
+---
+
+> 原文：[Models CLI · OpenClaw](https://docs.openclaw.ai/concepts/models)

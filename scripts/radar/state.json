@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.218",
+    "anthropics/claude-code": "v2.1.220",
     "openai/codex": "rust-v0.145.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "desktop-v0.0.4",
+    "cline/cline": "v4.0.11",
     "block/goose": "v1.44.0",
-    "sst/opencode": "v1.18.4",
+    "sst/opencode": "v1.18.6",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.52.0",
     "openclaw/openclaw": "v2026.7.1",
@@ -89,7 +89,11 @@
     "zerx-lab/FluxDown",
     "unicity-aos/aos-ce",
     "vshulcz/deja-vu",
-    "oso95/scroll-world"
+    "oso95/scroll-world",
+    "img2threejs/img2threejs",
+    "YTwsy/OpenSurge-for-Mac",
+    "Charles-0509/Grok-Register",
+    "pax-beehive/paxm"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -147,16 +151,22 @@
       "https://docs.openclaw.ai/concepts/memory",
       "https://docs.openclaw.ai/concepts/memory-builtin",
       "https://docs.openclaw.ai/concepts/memory-honcho",
-      "https://docs.openclaw.ai/concepts/memory-qmd"
+      "https://docs.openclaw.ai/concepts/memory-qmd",
+      "https://docs.openclaw.ai/concepts/memory-search",
+      "https://docs.openclaw.ai/concepts/message-lifecycle-refactor",
+      "https://docs.openclaw.ai/concepts/messages",
+      "https://docs.openclaw.ai/concepts/model-failover",
+      "https://docs.openclaw.ai/concepts/model-providers",
+      "https://docs.openclaw.ai/concepts/models"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-24",
+    "anthropic-engineering": "2026-07-27",
     "claude-code-docs": "2026-07-24",
     "openai-codex-blog": "2026-07-23",
-    "openclaw-concepts": "2026-07-20",
-    "hermes-guides": "2026-07-20"
+    "openclaw-concepts": "2026-07-27",
+    "hermes-guides": "2026-07-27"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -308,7 +318,11 @@
       "https://simonwillison.net/2026/Jul/22/all-the-orchestrions/",
       "https://simonwillison.net/2026/Jul/21/sighting-383713864/",
       "https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/",
-      "https://simonwillison.net/2026/Jul/23/seth-larson/"
+      "https://simonwillison.net/2026/Jul/23/seth-larson/",
+      "https://simonwillison.net/2026/Jul/26/relay-market/",
+      "https://simonwillison.net/2026/Jul/25/ruff/",
+      "https://simonwillison.net/2026/Jul/25/boris-cherny/",
+      "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -398,7 +412,8 @@
       "https://www.latent.space/p/xaira",
       "https://www.latent.space/p/ainews-black-forest-labs-flux-3-multimodal",
       "https://www.latent.space/p/ainews-laguna-s-21-released-cheaper",
-      "https://www.latent.space/p/poolside"
+      "https://www.latent.space/p/poolside",
+      "https://www.latent.space/p/ainews-claude-opus-5-fable-level"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -505,7 +520,8 @@
       "https://www.oneusefulthing.org/p/real-ai-agents-and-real-work",
       "https://www.oneusefulthing.org/p/on-working-with-wizards",
       "https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos",
-      "https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots"
+      "https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots",
+      "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22"
     ],
     "importai": [
       "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
@@ -692,7 +708,8 @@
       "https://huggingface.co/blog/real-world-voiceeq",
       "https://huggingface.co/blog/nvidia/cosmos3edge",
       "https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai",
-      "https://huggingface.co/blog/grabette"
+      "https://huggingface.co/blog/grabette",
+      "https://huggingface.co/blog/nunchaku-diffusers"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -731,7 +748,8 @@
       "https://www.anthropic.com/news/economic-futures-research-fund-agenda",
       "https://www.anthropic.com/news/anthropic-economic-index-connector",
       "https://www.anthropic.com/news/donation-public-first-action",
-      "https://www.anthropic.com/news/rare-disease-research-grants"
+      "https://www.anthropic.com/news/rare-disease-research-grants",
+      "https://www.anthropic.com/news/claude-opus-5"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -765,23 +783,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-24",
+    "simonwillison": "2026-07-27",
     "lilianweng": "2026-07-23",
-    "latentspace": "2026-07-24",
-    "interconnects": "2026-07-24",
-    "karpathy": "2026-07-24",
-    "raschka": "2026-07-24",
-    "eugeneyan": "2026-07-24",
+    "latentspace": "2026-07-27",
+    "interconnects": "2026-07-27",
+    "karpathy": "2026-07-27",
+    "raschka": "2026-07-27",
+    "eugeneyan": "2026-07-27",
     "chiphuyen": "2026-07-23",
-    "oneusefulthing": "2026-07-23",
+    "oneusefulthing": "2026-07-27",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-24",
-    "deepmind": "2026-07-23",
-    "hf-blog": "2026-07-23",
-    "anthropic-news": "2026-07-23",
-    "steipete": "2026-07-23",
-    "openclaw-blog": "2026-07-23"
+    "openai-news": "2026-07-27",
+    "deepmind": "2026-07-27",
+    "hf-blog": "2026-07-27",
+    "anthropic-news": "2026-07-27",
+    "steipete": "2026-07-27",
+    "openclaw-blog": "2026-07-27"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

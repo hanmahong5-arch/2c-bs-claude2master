@@ -1,0 +1,23 @@
+---
+slug: 2026-07-24-opencode-1-18-5
+title: "opencode v1.18.5 — 修复多模型推理与桌面端双服务器兼容"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.5
+publishedAt: 2026-07-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复多模型推理与桌面端双服务器兼容"
+broadcast: "最新版本修复了多模型推理时可能出现的对话中断问题，让AI代理的交互更加稳定。同时桌面端现在能兼容新旧服务器，支持数据传输和会话时间线查看，对国内开发者来说，这意味着更可靠的本地开发环境。"
+insight: "对于国内用户，如果正在使用 newapi.lurus.cn 代理接入 Claude 或 OpenAI，这次更新值得升级。它修复了多模型推理时 agent 中断和对话破坏的问题，能显著提升稳定性。桌面端双服务器兼容意味着旧版 hook 配置可能需要调整，建议检查传输和审查数据部分是否适配新服务器。代理本身不受影响，但升级后能更好利用修复的稳定性改进。"
+tags: [bugfix, desktop, multi-model, server-compatibility]
+---
+
+- Claude 自适应思考处理覆盖更多响应格式，避免 agent 推理中断。
+- 修复 OpenAI 响应阶段处理可能破坏对话，保证 agent 交互稳定性。
+- 桌面端支持当前服务器传输、审查数据、会话时间线及事件流，兼容新旧服务器。
+
+---
+
+> 原文 release：[sst/opencode v1.18.5](https://github.com/anomalyco/opencode/releases/tag/v1.18.5)

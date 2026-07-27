@@ -1,0 +1,23 @@
+---
+slug: 2026-07-27-openclaw-concepts-model-providers
+title: "Model providers · OpenClaw — 一文讲清OpenClaw多模型供应商配置与运行时分离机制"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/model-providers
+publishedAt: 2026-07-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "一文讲清OpenClaw多模型供应商配置与运行时分离机制"
+broadcast: "OpenClaw 的多模型供应商配置，让开发者用 provider/model 格式灵活引用模型，还能通过白名单控制权限。更关键的是，它把模型选择和运行时彻底分离，避免隐式切换带来的混乱。另外，API 密钥只在限流时自动轮换，设计上更稳健。这对国内 agent 开发来说，是值得参考的架构思路。"
+insight: "对于国内开发者，如果你已在 newapi.lurus.cn 上使用 OpenClaw 代理，当前配置无需改动。模型引用格式 `provider/model` 和运行时分离机制（通过 `agentRuntime.id` 指定）不影响代理层，因为代理只转发请求。API 密钥轮换机制仅针对限流响应（429），非限流错误直接失败，建议在 prompt 或 hook 中增加重试逻辑，但无需修改密钥管理配置。现有用户无需升级，只需确保模型别名和策略设置正确即可。"
+tags: [model-providers, runtime-separation, api-key-rotation, openclaw-config]
+---
+
+- **模型引用格式**：使用 `provider/model` 格式（如 `opencode/claude-opus-4-6`），通过 `agents.defaults.models` 配置别名和模型级设置，`modelPolicy.allow` 可设显式白名单。含义：agent harness 应支持灵活的模型引用与策略控制。
+- **供应商/运行时分离**：OpenAI 模型引用 `openai/<model>` 与运行时解耦，通过 `agentRuntime.id` 显式指定 `"openclaw"` 或 `"codex"`，避免隐式切换。含义：设计 agent 系统时，模型选择与执行环境应独立配置。
+- **API 密钥轮换机制**：仅在收到限流响应（如 429）时自动轮换密钥，非限流错误直接失败。密钥优先级：`OPENCLAW_LIVE_<PROVIDER>_KEY` > `PROVIDER_API_KEYS` > `PROVIDER_API_KEY`。含义：prompt 工程需考虑重试策略与密钥管理的解耦。
+
+---
+
+> 原文：[Model providers · OpenClaw](https://docs.openclaw.ai/concepts/model-providers)

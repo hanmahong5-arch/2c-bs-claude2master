@@ -1,0 +1,23 @@
+---
+slug: 2026-07-27-openclaw-concepts-messages
+title: "Messages · OpenClaw — 消息去重、防抖、排队与流式回复，构建可靠的多通道Agent通信层"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/messages
+publishedAt: 2026-07-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "消息去重、防抖、排队与流式回复，构建可靠的多通道Agent通信层"
+broadcast: "今天介绍一个面向多通道Agent的通信层，它通过消息去重和防抖来避免重复调用，还能用排队、中断等机制灵活控制并发。最特别的是流式分块输出，既尊重平台字符限制，又支持静默回复，对国内开发者构建稳定Agent很有参考价值。"
+insight: "如果你已经在用 Lurus 的 newapi.lurus.cn 代理，这套 hook 完全兼容，因为它是纯应用层逻辑，不涉及底层 API 路由。现有用户值得升级：去重和防抖能直接减少重复调用和碎片化请求，排队机制让并发更可控，流式分块和静默回复则优化了输出体验。你不需要改现有 prompt，但建议在 hook 配置里根据场景调整防抖时长和排队策略，比如对文本消息启用 2000ms 防抖，对媒体命令保持立即触发。"
+tags: [message-deduplication, debouncing, queueing, streaming]
+---
+
+- **去重与防抖**：内存缓存20分钟/5000条去重；文本消息可设置2000ms防抖合并，媒体/控制命令立即触发，避免重复或碎片化调用。
+- **排队与中断**：支持steer（注入当前运行）、followup（排队等待）、collect（批量合并）、interrupt（中断重启），配合500ms内置防抖和20条上限，灵活控制并发。
+- **流式分块与静默回复**：块流式按文本块输出，分块尊重频道字符限制且不分割代码块；`NO_REPLY`令牌可静默回复但仍传递媒体附件，减少无效输出。
+
+---
+
+> 原文：[Messages · OpenClaw](https://docs.openclaw.ai/concepts/messages)
