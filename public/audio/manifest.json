@@ -1,6 +1,182 @@
 {
   "items": [
     {
+      "slug": "2026-07-27-blog-anthropic-news-introducing-claude-opus-5",
+      "zh": true,
+      "en": true,
+      "title": "Introducing Claude Opus 5 — Claude Opus 5 接近旗舰模型性能，价格减半，是日常使用的性价比之选。",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-openclaw-concepts-message-lifecycle-refactor",
+      "zh": true,
+      "en": true,
+      "title": "Message lifecycle refactor · OpenClaw — 一次消息生命周期重构，解决重启丢消息的可靠性难题",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-openclaw-concepts-messages",
+      "zh": true,
+      "en": true,
+      "title": "Messages · OpenClaw — 消息去重、防抖、排队与流式回复，构建可靠的多通道Agent通信层",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-openclaw-concepts-model-failover",
+      "zh": true,
+      "en": true,
+      "title": "Model failover · OpenClaw — OpenClaw 的模型故障转移机制：如何优雅处理 LLM 调用失败",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-openclaw-concepts-model-providers",
+      "zh": true,
+      "en": true,
+      "title": "Model providers · OpenClaw — 一文讲清OpenClaw多模型供应商配置与运行时分离机制",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-openclaw-concepts-models",
+      "zh": true,
+      "en": true,
+      "title": "Models CLI · OpenClaw — 模型选择与故障切换的精确控制，避免意外降级或拒绝服务",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-opencode-1-18-6",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.6 — 修复分支缓存与V1兼容性问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-trending-charles-0509-grok-register",
+      "zh": true,
+      "en": false,
+      "title": "Grok-Register — Grok 免费注册 CLI 工具",
+      "kind": "trending",
+      "author": null,
+      "source": "Charles-0509/Grok-Register",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-trending-img2threejs-img2threejs",
+      "zh": true,
+      "en": false,
+      "title": "img2threejs — 图片转3D模型，输出Three.js代码",
+      "kind": "trending",
+      "author": null,
+      "source": "img2threejs/img2threejs",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-trending-pax-beehive-paxm",
+      "zh": true,
+      "en": false,
+      "title": "paxm — 持久化记忆层，让AI编码代理不丢上下文",
+      "kind": "trending",
+      "author": null,
+      "source": "pax-beehive/paxm",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-trending-ytwsy-opensurge-for-mac",
+      "zh": true,
+      "en": false,
+      "title": "OpenSurge-for-Mac — macOS 全屋网关与管控平面",
+      "kind": "trending",
+      "author": null,
+      "source": "YTwsy/OpenSurge-for-Mac",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-26-blog-simonwillison-an-inside-look-at-the-relay-market-powering",
+      "zh": true,
+      "en": true,
+      "title": "An Inside Look at the Relay Market Powering Token — LLM token灰色市场揭秘：代理池如何利用漏洞低价转售API。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-26"
+    },
+    {
+      "slug": "2026-07-25-blog-latentspace-ainews-claude-opus-5-fable-level-performance-at",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Claude Opus 5: Fable-level performance at Opus — Claude Opus 5 发布，基准测试争议与真实编码能力并存。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-25"
+    },
+    {
+      "slug": "2026-07-25-blog-simonwillison-quoting-boris-cherny",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Boris Cherny — Anthropic Opus 5 大幅提升抗提示注入能力，系统卡数据证实。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-25"
+    },
+    {
+      "slug": "2026-07-25-blog-simonwillison-ruff-v0-16-0",
+      "zh": true,
+      "en": true,
+      "title": "Ruff v0.16.0 — Ruff 0.16.0 默认启用 413 条规则，大幅提升 Python 代码质",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-25"
+    },
+    {
+      "slug": "2026-07-25-claude-code-2-1-220",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.220 — Claude Code 修复多项 bug，提升稳定性",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-07-25"
+    },
+    {
       "slug": "2026-07-24-blog-latentspace-ainews-black-forest-labs-flux-3-multimodal-flow",
       "zh": true,
       "en": true,
@@ -12,6 +188,39 @@
       "publishedAt": "2026-07-24"
     },
     {
+      "slug": "2026-07-24-blog-simonwillison-introducing-claude-opus-5",
+      "zh": true,
+      "en": true,
+      "title": "Introducing Claude Opus 5 — Anthropic发布Claude Opus 5，性能接近Fable 5但价格减",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-24"
+    },
+    {
+      "slug": "2026-07-24-claude-code-2-1-219",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.219 — Opus 5 默认、子代理嵌套深度增至 3，沙箱网络白名单强化",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-07-24"
+    },
+    {
+      "slug": "2026-07-24-cline-4-0-11",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.0.11 — 新增Claude Opus 5及Kimi K3支持，修复定价与工具调用",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-07-24"
+    },
+    {
       "slug": "2026-07-24-cline-desktop-v0-0-4",
       "zh": true,
       "en": false,
@@ -20,6 +229,17 @@
       "author": null,
       "source": "cline/cline",
       "tool": "cline",
+      "publishedAt": "2026-07-24"
+    },
+    {
+      "slug": "2026-07-24-opencode-1-18-5",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.5 — 修复多模型推理与桌面端双服务器兼容",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
       "publishedAt": "2026-07-24"
     },
     {
@@ -67,6 +287,17 @@
       "publishedAt": "2026-07-23"
     },
     {
+      "slug": "2026-07-23-blog-hf-blog-bringing-nunchaku-4-bit-diffusion-inference-to-diffusers",
+      "zh": true,
+      "en": true,
+      "title": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers — Hugging Face 将 Nunchaku 4",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-07-23"
+    },
+    {
       "slug": "2026-07-23-blog-latentspace-ainews-laguna-s-2-1-released-cheaper-than",
       "zh": true,
       "en": true,
@@ -85,6 +316,17 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-23"
+    },
+    {
+      "slug": "2026-07-23-blog-oneusefulthing-an-opinionated-guide-to-which-ai-to-use",
+      "zh": true,
+      "en": true,
+      "title": "An opinionated guide to which AI to use to do stuff — Ethan Mollick 对比 ChatGPT 和 Claude 的 agen",
+      "kind": "blogger",
+      "author": "Ethan Mollick",
+      "source": "Ethan Mollick",
       "tool": null,
       "publishedAt": "2026-07-23"
     },
@@ -637,248 +879,6 @@
       "source": "openclaw-concepts",
       "tool": null,
       "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-openclaw-concepts-memory",
-      "zh": true,
-      "en": true,
-      "title": "Memory overview · OpenClaw — 把记忆写成Markdown文件，没有隐藏状态，让Agent真正记住该记的。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-opencode-1-18-4",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.4 — Kimi模型自适应思考控制，修复多项核心与桌面Bug",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-19-blog-simonwillison-ai-mania-is-eviscerating-global-decision-making",
-      "zh": true,
-      "en": true,
-      "title": "AI Mania Is Eviscerating Global Decision-Making — AI狂热如何让企业高管编造虚假战略，扭曲决策。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-19"
-    },
-    {
-      "slug": "2026-07-19-blog-simonwillison-claude-code-uses-bun-written-in-rust-now",
-      "zh": true,
-      "en": true,
-      "title": "Claude Code uses Bun written in Rust now — Simon Willison 验证了 Claude Code 已悄悄换用 Rus",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-19"
-    },
-    {
-      "slug": "2026-07-19-claude-code-2-1-215",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.215 — Claude不再自动运行验证和代码审查技能",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-07-19"
-    },
-    {
-      "slug": "2026-07-19-cline-cli-v3-0-45",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.45 — 安装体积减半，Kimi K3 加入，团队运行更可靠",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-07-19"
-    },
-    {
-      "slug": "2026-07-19-cline-cli-v3-0-46",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.46 — 修复了CLI对API额度不足的检测，避免通用错误提示",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-07-19"
-    },
-    {
-      "slug": "2026-07-19-cline-sdk-sdk-v0-0-65",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.65 — SDK 体积大幅缩减，团队运行错误处理更准确",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-07-19"
-    },
-    {
-      "slug": "2026-07-19-trending-nethical6-conversation-steganography",
-      "zh": true,
-      "en": false,
-      "title": "conversation-steganography — 用LLM在正常对话中隐藏消息",
-      "kind": "trending",
-      "author": null,
-      "source": "nethical6/conversation-steganography",
-      "tool": null,
-      "publishedAt": "2026-07-19"
-    },
-    {
-      "slug": "2026-07-19-trending-zerx-lab-fluxdown",
-      "zh": true,
-      "en": false,
-      "title": "FluxDown — Rust 多协议下载管理器，支持流媒体与磁力链接",
-      "kind": "trending",
-      "author": null,
-      "source": "zerx-lab/FluxDown",
-      "tool": null,
-      "publishedAt": "2026-07-19"
-    },
-    {
-      "slug": "2026-07-18-blog-latentspace-ainews-not-much-happened-today",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] not much happened today — Kimi K3 发布引发格局重估：中国开源模型逼近前沿，效率堆栈取代算力护城河。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-07-18"
-    },
-    {
-      "slug": "2026-07-18-blog-raschka-controlling-reasoning-effort-in-llms",
-      "zh": true,
-      "en": true,
-      "title": "Controlling Reasoning Effort in LLMs — 如何让LLM像GPT",
-      "kind": "blogger",
-      "author": "Sebastian Raschka",
-      "source": "Sebastian Raschka",
-      "tool": null,
-      "publishedAt": "2026-07-18"
-    },
-    {
-      "slug": "2026-07-18-blog-simonwillison-claude-make-fable-5-permanent",
-      "zh": true,
-      "en": true,
-      "title": "Claude make Fable 5 permanent — Anthropic 因竞争压力将 Fable 5 永久纳入订阅计划，取消原定移除",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-18"
-    },
-    {
-      "slug": "2026-07-18-blog-simonwillison-nascheme-quixote",
-      "zh": true,
-      "en": false,
-      "title": "nascheme/quixote — 一个21年历史的Python Web框架仍在活跃开发，Quixote的持久生命力",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-18"
-    },
-    {
-      "slug": "2026-07-18-blog-simonwillison-sqlite-query-explainer",
-      "zh": true,
-      "en": true,
-      "title": "SQLite Query Explainer — 用AI解释SQLite查询计划，降低开发者理解门槛。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-18"
-    },
-    {
-      "slug": "2026-07-18-claude-code-2-1-214",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.214 — Claude Code 修复多项权限绕过漏洞，新增结束对话工具",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-07-18"
-    },
-    {
-      "slug": "2026-07-18-codex-rust-v0-144-6",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.144.6 — GPT",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-07-18"
-    },
-    {
-      "slug": "2026-07-17-blog-deepmind-introducing-gemini-3-5-flash-cyber",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Gemini 3.5 Flash Cyber — 谷歌推出轻量级网络安全模型，自动发现并修复漏洞。",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-07-17"
-    },
-    {
-      "slug": "2026-07-17-blog-hf-blog-fine-tune-video-and-image-models-at-scale",
-      "zh": true,
-      "en": true,
-      "title": "Fine-tune video and image models at scale with NVIDIA — NVIDIA NeMo Automodel 与 Diffusers 结合，实现视",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-07-17"
-    },
-    {
-      "slug": "2026-07-17-blog-latentspace-ainews-kimi-k3-2-8t-a50b-the-largest",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Kimi K3 2.8T-A50B: the largest open model ever — Kimi K3 2.8T参数开源模型发布，性能接近顶级闭源模型，定价对标Sonn",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-07-17"
-    },
-    {
-      "slug": "2026-07-17-blog-openai-news-a-scorecard-for-the-ai-age",
-      "zh": true,
-      "en": true,
-      "title": "A scorecard for the AI age — OpenAI 提出 AI 投资回报的实用记分卡，聚焦有用工作、任务成本、可靠性和",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-07-17"
-    },
-    {
-      "slug": "2026-07-17-blog-simonwillison-llm-clich-highlighter",
-      "zh": true,
-      "en": true,
-      "title": "LLM cliché highlighter — 用 AI 检测 AI 写作的套话，帮你识别空洞的 LLM 风格文本。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-17"
     }
   ]
 }
