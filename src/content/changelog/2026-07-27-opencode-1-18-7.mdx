@@ -1,0 +1,23 @@
+---
+slug: 2026-07-27-opencode-1-18-7
+title: "opencode v1.18.7 — 修复 macOS 全屏标题栏、命令面板和项目选择器滚动问题"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.7
+publishedAt: 2026-07-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 macOS 全屏标题栏、命令面板和项目选择器滚动问题"
+broadcast: "最近 opencode 更新了一个小版本，主要修复了 macOS 全屏模式下标题栏多余内边距的问题，界面更清爽了。同时，命令面板在移除阴影命令后不会再错误重现，项目选择器也支持滚动，长列表操作更方便。对国内开发者来说，这些细节优化能提升日常编码体验，值得关注。"
+insight: "对于国内开发者，如果你使用 macOS 并常在全屏模式下工作，这次更新值得升级，因为它修复了多余的标题栏内边距，界面更整洁。命令面板的修复提升了命令管理的可靠性，如果你自定义了 prompt 或 hook 且依赖命令面板，建议检查配置是否受影响。项目选择器新增滚动功能，长列表时更实用。通过 newapi.lurus.cn 代理使用不受影响，因为更新仅涉及本地 UI 和逻辑修复。"
+tags: [bugfix, ui, macos, desktop]
+---
+
+- 移除 macOS 全屏模式下多余的标题栏内边距，使界面更整洁。
+- 修复命令面板条目在阴影命令移除后错误重现的问题，提升命令管理可靠性。
+- 为项目选择器下拉列表添加滚动功能，长列表时可用。
+
+---
+
+> 原文 release：[sst/opencode v1.18.7](https://github.com/anomalyco/opencode/releases/tag/v1.18.7)

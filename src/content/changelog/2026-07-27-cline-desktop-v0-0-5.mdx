@@ -1,0 +1,26 @@
+---
+slug: 2026-07-27-cline-desktop-v0-0-5
+title: "cline desktop-v0.0.5 — 性能大升级，界面流畅度提升6倍，输入不再卡顿"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.5
+publishedAt: 2026-07-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "性能大升级，界面流畅度提升6倍，输入不再卡顿"
+broadcast: "桌面版大版本更新，界面流畅度直接提升六倍，输入不再卡顿。这次优化把动画帧率锁定在60帧，输入延迟大幅降低，还修复了任务完成后卡在加载中的问题。对开发者来说，这种渲染与逻辑分离、异步非阻塞的设计思路，很值得在智能体开发中借鉴。"
+insight: "这次桌面端v0.0.5更新主要优化了UI流畅度和输入响应，对国内用户通过newapi.lurus.cn代理使用无直接影响。如果你当前使用旧版且常遇到界面卡顿或输入延迟，建议升级；若已流畅则非必须。现有prompt和hook配置无需调整，因为更新集中在渲染和异步处理，未改动接口逻辑。"
+tags: [performance, bug-fix, ui, desktop-app]
+---
+
+- 动画背景帧率从~10fps提升至锁定60fps，输入延迟从245次卡顿降至3次，流式响应合并更新而非逐token重绘，启动时provider目录只加载一次。
+  *对agent harness设计*：渲染与逻辑分离，减少不必要的重渲染，提升用户交互流畅度。
+- 原生文件夹选择器和命令执行不再因侧车写入日志或发现编辑器而冻结应用。
+  *对agent harness设计*：异步非阻塞操作，避免UI线程阻塞，提升响应性。
+- 修复了队列任务完成后composer卡在“Agent is working...”的问题。
+  *对agent harness设计*：状态管理需正确处理异步任务完成信号，避免死锁。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.5](https://github.com/cline/cline/releases/tag/desktop-v0.0.5)

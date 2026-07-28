@@ -3,9 +3,9 @@
     "anthropics/claude-code": "v2.1.220",
     "openai/codex": "rust-v0.145.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v4.0.11",
+    "cline/cline": "desktop-v0.0.6",
     "block/goose": "v1.44.0",
-    "sst/opencode": "v1.18.6",
+    "sst/opencode": "v1.18.7",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.52.0",
     "openclaw/openclaw": "v2026.7.1",
@@ -93,7 +93,8 @@
     "img2threejs/img2threejs",
     "YTwsy/OpenSurge-for-Mac",
     "Charles-0509/Grok-Register",
-    "pax-beehive/paxm"
+    "pax-beehive/paxm",
+    "kvcache-ai/AgentENV"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -162,7 +163,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-27",
+    "anthropic-engineering": "2026-07-28",
     "claude-code-docs": "2026-07-24",
     "openai-codex-blog": "2026-07-23",
     "openclaw-concepts": "2026-07-27",
@@ -322,7 +323,9 @@
       "https://simonwillison.net/2026/Jul/26/relay-market/",
       "https://simonwillison.net/2026/Jul/25/ruff/",
       "https://simonwillison.net/2026/Jul/25/boris-cherny/",
-      "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/"
+      "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/",
+      "https://simonwillison.net/2026/Jul/27/kimi-k3/",
+      "https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -615,7 +618,8 @@
       "https://openai.com/index/introducing-openai-presence",
       "https://openai.com/index/ntt-data",
       "https://openai.com/index/health-in-chatgpt",
-      "https://openai.com/index/codex-collaborator-creative-team"
+      "https://openai.com/index/codex-collaborator-creative-team",
+      "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -749,7 +753,9 @@
       "https://www.anthropic.com/news/anthropic-economic-index-connector",
       "https://www.anthropic.com/news/donation-public-first-action",
       "https://www.anthropic.com/news/rare-disease-research-grants",
-      "https://www.anthropic.com/news/claude-opus-5"
+      "https://www.anthropic.com/news/claude-opus-5",
+      "https://www.anthropic.com/news/position-open-weights-models",
+      "https://www.anthropic.com/news/cognizant-anthropic"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -783,10 +789,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-27",
+    "simonwillison": "2026-07-28",
     "lilianweng": "2026-07-23",
-    "latentspace": "2026-07-27",
-    "interconnects": "2026-07-27",
+    "latentspace": "2026-07-28",
+    "interconnects": "2026-07-28",
     "karpathy": "2026-07-27",
     "raschka": "2026-07-27",
     "eugeneyan": "2026-07-27",
@@ -794,10 +800,10 @@
     "oneusefulthing": "2026-07-27",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-27",
+    "openai-news": "2026-07-28",
     "deepmind": "2026-07-27",
     "hf-blog": "2026-07-27",
-    "anthropic-news": "2026-07-27",
+    "anthropic-news": "2026-07-28",
     "steipete": "2026-07-27",
     "openclaw-blog": "2026-07-27"
   },
