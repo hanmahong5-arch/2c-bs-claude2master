@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "slug": "2026-07-28-blog-anthropic-news-expanding-our-partnership-with-cognizant-anthropic",
+      "zh": true,
+      "en": true,
+      "title": "Expanding our partnership with Cognizant | Anthropic — Anthropic 与 Cognizant 扩大合作，将 Claude 嵌入企业",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-blog-anthropic-news-our-position-on-open-weights-models",
+      "zh": true,
+      "en": true,
+      "title": "Our position on open-weights models — Anthropic CEO澄清未主张禁止开源模型，提出芯片管制、蒸馏打击和安全测",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-cline-desktop-v0-0-6",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.6 — 队列消息可编辑，更新提示常驻，启动无闪烁",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-trending-kvcache-ai-agentenv",
+      "zh": true,
+      "en": false,
+      "title": "AgentENV — 分布式Agent环境运行平台",
+      "kind": "trending",
+      "author": null,
+      "source": "kvcache-ai/AgentENV",
+      "tool": null,
+      "publishedAt": "2026-07-28"
+    },
+    {
       "slug": "2026-07-27-blog-anthropic-news-introducing-claude-opus-5",
       "zh": true,
       "en": true,
@@ -9,6 +53,50 @@
       "author": "Anthropic",
       "source": "Anthropic",
       "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-blog-openai-news-how-ai-is-expanding-what-people-do-at",
+      "zh": true,
+      "en": true,
+      "title": "How AI is expanding what people do at work — AI 正在打破岗位边界，让员工承担更多跨职能任务。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-blog-simonwillison-an-opinionated-guide-to-which-ai-to-use",
+      "zh": true,
+      "en": true,
+      "title": "An opinionated guide to which AI to use to do stuff — Ethan Mollick更新AI指南，聚焦Agent系统与电脑操控模式。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-blog-simonwillison-moonshotai-kimi-k3",
+      "zh": true,
+      "en": false,
+      "title": "moonshotai/Kimi-K3 — Moonshot 发布 2.8T 参数 K3 模型，但许可证更严格，要求大 MA",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-cline-desktop-v0-0-5",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.5 — 性能大升级，界面流畅度提升6倍，输入不再卡顿",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
       "publishedAt": "2026-07-27"
     },
     {
@@ -71,6 +159,17 @@
       "zh": true,
       "en": false,
       "title": "opencode v1.18.6 — 修复分支缓存与V1兼容性问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-opencode-1-18-7",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.7 — 修复 macOS 全屏标题栏、命令面板和项目选择器滚动问题",
       "kind": "changelog",
       "author": null,
       "source": "sst/opencode",
@@ -778,105 +877,6 @@
       "kind": "blogger",
       "author": "Simon Willison",
       "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-blog-simonwillison-who-s-afraid-of-chinese-models",
-      "zh": true,
-      "en": true,
-      "title": "Who’s Afraid of Chinese Models? — 美国应立法允许蒸馏中国模型，以应对开源竞争。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-claude-code-2-1-216",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.216 — 性能修复与沙箱文件系统隔离选项",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-cline-4-0-10",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.0.10 — 新增遥测追踪连续错误次数",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-hermes-agent-2026-7-20",
-      "zh": true,
-      "en": false,
-      "title": "hermes-agent v2026.7.20 — Hermes Agent 首 token 延迟暴降 80%，并引入智能审批、密码",
-      "kind": "changelog",
-      "author": null,
-      "source": "NousResearch/hermes-agent",
-      "tool": "hermes",
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-openclaw-concepts-main-session",
-      "zh": true,
-      "en": true,
-      "title": "The main session · OpenClaw — 主会话是智能体所有交互的汇聚点，一文讲清其设计哲学",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-openclaw-concepts-markdown-formatting",
-      "zh": true,
-      "en": true,
-      "title": "Markdown formatting · OpenClaw — 一次解析，多端渲染：OpenClaw 的 Markdown 管道设计",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-openclaw-concepts-memory-builtin",
-      "zh": true,
-      "en": true,
-      "title": "Builtin memory engine · OpenClaw — 零依赖内置记忆引擎，开箱即用混合搜索",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-openclaw-concepts-memory-honcho",
-      "zh": true,
-      "en": true,
-      "title": "Honcho memory · OpenClaw — 让AI代理拥有跨会话持久记忆，无需手动维护Markdown文件。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-openclaw-concepts-memory-qmd",
-      "zh": true,
-      "en": true,
-      "title": "QMD memory engine · OpenClaw — 本地优先的混合搜索引擎，让AI代理记忆更精准",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
       "tool": null,
       "publishedAt": "2026-07-20"
     }
