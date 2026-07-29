@@ -1,0 +1,23 @@
+---
+slug: 2026-07-28-cline-cli-v3-0-47
+title: "cline cli-v3.0.47 — 免费模型支持、设置持久化、Agentic压缩默认启用"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.47
+publishedAt: 2026-07-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "免费模型支持、设置持久化、Agentic压缩默认启用"
+broadcast: "Cline CLI 最新版带来了免费模型支持，界面上会显示免费标识和额度重置时间，方便你管理使用。同时，设置里的开关现在重启后也能保持，不用每次都重新配置。最值得关注的是，Agentic压缩成了默认策略，让智能体更聪明地管理上下文，避免工具密集时出问题，这对开发agent应用来说是个实用升级。"
+insight: "对于国内开发者，如果正在使用 cline 的免费模型，这次更新值得升级，因为新增的免费额度管理功能（显示限额和重置时间）能帮你更清晰地控制使用。如果你之前手动调整过 /settings 中的通用开关（如 plan/act 模式、工具自动批准），升级后这些设置会持久保存，无需重复配置。Agentic 压缩默认启用并修复了上下文切割问题，如果你之前遇到过上下文管理异常，建议更新。通过 newapi.lurus.cn 代理访问不受影响，无需修改 hook 配置。"
+tags: [free-models, settings-persistence, agentic-compaction, tui-fixes]
+---
+
+- 免费模型端到端支持：显示“(free)”标识，达到限额时显示重置时间卡片，方便用户管理免费额度。
+- `/settings` 中的通用开关（plan/act模式、工具自动批准、压缩模式）重启后保持，提升agent配置持久性。
+- Agentic压缩成为默认上下文压缩策略，修复了静默回退到基础压缩和工具密集记录无法找到切割点的问题，使agent能更智能地管理上下文窗口。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.47](https://github.com/cline/cline/releases/tag/cli-v3.0.47)

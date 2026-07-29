@@ -1,0 +1,23 @@
+---
+slug: 2026-07-28-opencode-1-18-9
+title: "opencode v1.18.9 — 修复 MCP 兼容性与桌面导航崩溃"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.9
+publishedAt: 2026-07-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 MCP 兼容性与桌面导航崩溃"
+broadcast: "最新版本修复了与旧版 MCP 客户端的兼容问题，让 agent 工具调用更稳定。同时解决了桌面导航崩溃，提升交互可靠性。还新增了可选的 V2 桌面侧边栏，为国内开发者提供更灵活的本地服务集成方式。"
+insight: "如果你正在使用旧版 MCP SDK 客户端，这次更新恢复了兼容性，建议升级以避免 agent 工具调用协议中断。桌面导航崩溃的修复也提升了交互可靠性，值得升级。新增的 V2 桌面侧边栏是 opt-in 功能，不影响现有配置，无需修改 prompt 或 hook。国内用户通过 newapi.lurus.cn 代理不受影响，可以正常升级。"
+tags: [bugfix, mcp-compatibility, desktop-stability, sidecar]
+---
+
+- 恢复与旧版 MCP SDK 客户端的兼容性，确保 agent 工具调用协议稳定。
+- 修复 Solid 清理崩溃，避免桌面应用导航中断，提升 agent 交互可靠性。
+- 新增 V2 桌面侧边栏（opt-in），由捆绑 CLI 服务驱动，为 agent 提供更灵活的本地服务集成方式。
+
+---
+
+> 原文 release：[sst/opencode v1.18.9](https://github.com/anomalyco/opencode/releases/tag/v1.18.9)

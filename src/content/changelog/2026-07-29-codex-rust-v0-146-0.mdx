@@ -1,0 +1,23 @@
+---
+slug: 2026-07-29-codex-rust-v0-146-0
+title: "codex rust-v0.146.0 — 会话管理、Agent插件、线程分叉与WebSocket远程执行"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.146.0
+publishedAt: 2026-07-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "会话管理、Agent插件、线程分叉与WebSocket远程执行"
+broadcast: "OpenAI 的 Codex 工具推出了新版本，重点改进了会话管理，现在可以命名和固定对话，切换时也不会关闭。更重要的是，它支持 Agent 插件市场，还能通过 WebSocket 连接远程主机执行代码。这对国内开发者来说，意味着 agent 开发的环境和工具生态都更灵活了。"
+insight: "对于国内开发者，如果已经在用 newapi.lurus.cn 代理，这次升级的 WebSocket 远程执行和线程分叉功能会直接受益，无需额外配置。现有用户值得升级，因为多会话管理和 Agent 插件生态的扩展能显著提升开发效率，特别是需要同时维护多个上下文或使用自定义工具的场景。现有 prompt 和 hook 配置无需改动，新功能是增量增强。"
+tags: [session-management, agent-plugins, thread-forking, websocket]
+---
+
+- 新增 `/new` 和 `/clear` 命名会话、固定线程、切换侧边对话不关闭，提升多会话管理能力。
+- 支持 Agent Plugins 清单、工作区插件发布及 Amazon Bedrock/Claude Code 插件市场，扩展 agent 工具生态。
+- 支持分页历史线程分叉（含临时分叉），WebSocket 连接远程 Code Mode 主机，增强 agent 执行环境灵活性。
+
+---
+
+> 原文 release：[openai/codex rust-v0.146.0](https://github.com/openai/codex/releases/tag/rust-v0.146.0)

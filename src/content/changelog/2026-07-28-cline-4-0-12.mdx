@@ -1,0 +1,24 @@
+---
+slug: 2026-07-28-cline-4-0-12
+title: "cline v4.0.12 — 免费模型支持与流式响应保留"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.0.12
+publishedAt: 2026-07-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "免费模型支持与流式响应保留"
+broadcast: "Cline 的最新更新带来了免费模型支持，开发者可以直接在模型选择器中看到标有免费字样的选项，当达到使用限制时，系统会显示包含重置时间的错误卡片。这意味着 agent 需要学会处理配额状态，并在出错时给出用户能操作的反馈。另外，这次还修复了一个重要问题：之前 CLI 因为最大轮次错误退出时，已经流式传输的响应会被丢弃，现在这些部分输出会被保留，让 agent 的容错和用户体验都更好。"
+insight: "这次更新对国内用户通过 newapi.lurus.cn 代理使用没有直接影响，但新增的免费模型支持值得关注。如果你正在使用免费模型，建议检查 prompt 或 hook 配置，确保能正确处理配额限制时的错误卡片和重置时间提示，避免 agent 因模型不可用而中断。对于付费用户，升级意义不大，主要改进是修复了 CLI 中流式响应被丢弃的问题，如果你经常使用 CLI 且遇到类似情况，可以考虑升级。"
+tags: [free-models, error-handling, streaming, cli]
+---
+
+- 新增免费 Cline 模型，模型选择器中显示“(free)”，达到免费限制时显示专用错误卡片并包含重置时间。
+  - 含义：agent 需处理模型配额状态，在错误时提供用户可操作的反馈。
+- 修复 CLI 因 max-turns 错误退出时，已流式传输的 Claude Code 响应被丢弃的问题。
+  - 含义：agent 应确保部分有效输出不被丢失，提升容错与用户体验。
+
+---
+
+> 原文 release：[cline/cline v4.0.12](https://github.com/cline/cline/releases/tag/v4.0.12)

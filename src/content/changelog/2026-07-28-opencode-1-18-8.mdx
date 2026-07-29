@@ -1,0 +1,26 @@
+---
+slug: 2026-07-28-opencode-1-18-8
+title: "opencode v1.18.8 — MCP 服务器重连、OAuth 回调端口修复，桌面端多项体验优化"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.8
+publishedAt: 2026-07-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP 服务器重连、OAuth 回调端口修复，桌面端多项体验优化"
+broadcast: "OpenCode 最新版本改进了 MCP 服务器的重连机制，现在会话过期后能自动恢复连接，同时修复了 OAuth 回调端口的问题。桌面端也新增了快捷键和标签页导航优化，让操作更流畅。这对国内开发者来说，意味着开发 agent 时能更稳定地处理 MCP 会话和 OAuth 流程，提升用户体验。"
+insight: "本次更新主要修复了 MCP 服务器重连和 OAuth 回调端口问题，对国内用户通过 newapi.lurus.cn 代理使用无直接影响。如果你正在使用 MCP 服务器，建议升级以解决会话过期后的重连问题，并确保 OAuth 回调端口配置正确。桌面端新增的快捷键和导航优化值得体验，但现有 prompt 或 hook 配置无需改动。"
+tags: [mcp, oauth, desktop, bugfix]
+---
+
+- 核心：改进与新版 MCP 服务器和 OAuth 流程的兼容性；修复 SDK 会话过期后 MCP 服务器重连，支持并发请求；`mcp debug` 现在会使用配置的 OAuth 回调端口；停止向新版 Gemini 模型发送已弃用的采样默认值。
+  - 含义：agent 需处理 MCP 会话过期后的自动重连，并确保 OAuth 回调端口配置生效。
+- 桌面：新增快捷键打开项目选择器；标签页键盘导航遵循可见顺序；打开文件时展开带尾部分隔符的 Windows 文件夹；集成需要关注时服务器状态显示蓝色；提供商连接状态更改后立即刷新；Linux 包安装 AppStream 元数据；本地桌面运行使用频道数据库；防止从主页关闭项目时冻结；防止右侧面板加载时冻结会话视图。
+  - 含义：agent 需适配桌面端新的导航和状态刷新机制，确保与 MCP 服务器交互的稳定性。
+- 社区贡献：修复核心中 MCP 环境字段；修复 Linux 包中 AppStream 元数据安装。
+  - 含义：agent 需注意 MCP 环境字段的正确性，并支持 Linux 平台的元数据安装。
+
+---
+
+> 原文 release：[sst/opencode v1.18.8](https://github.com/anomalyco/opencode/releases/tag/v1.18.8)

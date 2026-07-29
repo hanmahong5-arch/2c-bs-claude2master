@@ -1,13 +1,13 @@
 {
   "lastSeen": {
     "anthropics/claude-code": "v2.1.220",
-    "openai/codex": "rust-v0.145.0",
+    "openai/codex": "rust-v0.146.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "desktop-v0.0.6",
+    "cline/cline": "desktop-v0.0.7",
     "block/goose": "v1.44.0",
-    "sst/opencode": "v1.18.7",
+    "sst/opencode": "v1.18.9",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.52.0",
+    "google-gemini/gemini-cli": "v0.53.0",
     "openclaw/openclaw": "v2026.7.1",
     "zeroclaw-labs/zeroclaw": "v0.8.3",
     "NousResearch/hermes-agent": "v2026.7.20"
@@ -163,7 +163,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-28",
+    "anthropic-engineering": "2026-07-29",
     "claude-code-docs": "2026-07-24",
     "openai-codex-blog": "2026-07-23",
     "openclaw-concepts": "2026-07-27",
@@ -325,7 +325,12 @@
       "https://simonwillison.net/2026/Jul/25/boris-cherny/",
       "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/",
       "https://simonwillison.net/2026/Jul/27/kimi-k3/",
-      "https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/"
+      "https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/",
+      "https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/",
+      "https://simonwillison.net/2026/Jul/28/akshat-bubna/",
+      "https://simonwillison.net/2026/Jul/28/uv/",
+      "https://simonwillison.net/2026/Jul/28/anatomy-of-a-frontier-lab-agent-intrusion/",
+      "https://simonwillison.net/2026/Jul/26/sqlite-utils/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -416,7 +421,10 @@
       "https://www.latent.space/p/ainews-black-forest-labs-flux-3-multimodal",
       "https://www.latent.space/p/ainews-laguna-s-21-released-cheaper",
       "https://www.latent.space/p/poolside",
-      "https://www.latent.space/p/ainews-claude-opus-5-fable-level"
+      "https://www.latent.space/p/ainews-claude-opus-5-fable-level",
+      "https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic",
+      "https://www.latent.space/p/chatgpt-work",
+      "https://www.latent.space/p/ainews-much-ado-about-open-weights"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -619,7 +627,8 @@
       "https://openai.com/index/ntt-data",
       "https://openai.com/index/health-in-chatgpt",
       "https://openai.com/index/codex-collaborator-creative-team",
-      "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work"
+      "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work",
+      "https://openai.com/index/scientific-computing-agentic-ai"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -649,7 +658,8 @@
       "https://deepmind.google/blog/our-approach-to-bioresilience/",
       "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
       "https://deepmind.google/blog/introducing-gemini-36-flash-35-flash-lite-and-35-flash-cyber/",
-      "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/"
+      "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/",
+      "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -713,7 +723,11 @@
       "https://huggingface.co/blog/nvidia/cosmos3edge",
       "https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai",
       "https://huggingface.co/blog/grabette",
-      "https://huggingface.co/blog/nunchaku-diffusers"
+      "https://huggingface.co/blog/nunchaku-diffusers",
+      "https://huggingface.co/blog/allenai/olmoearth-infrastructure",
+      "https://huggingface.co/blog/LiquidAI/lfm2-5-encoders",
+      "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
+      "https://huggingface.co/blog/agent-intrusion-technical-timeline"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -789,23 +803,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-28",
+    "simonwillison": "2026-07-29",
     "lilianweng": "2026-07-23",
-    "latentspace": "2026-07-28",
-    "interconnects": "2026-07-28",
+    "latentspace": "2026-07-29",
+    "interconnects": "2026-07-29",
     "karpathy": "2026-07-27",
     "raschka": "2026-07-27",
     "eugeneyan": "2026-07-27",
     "chiphuyen": "2026-07-23",
-    "oneusefulthing": "2026-07-27",
+    "oneusefulthing": "2026-07-29",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-28",
-    "deepmind": "2026-07-27",
-    "hf-blog": "2026-07-27",
-    "anthropic-news": "2026-07-28",
-    "steipete": "2026-07-27",
-    "openclaw-blog": "2026-07-27"
+    "openai-news": "2026-07-29",
+    "deepmind": "2026-07-29",
+    "hf-blog": "2026-07-29",
+    "anthropic-news": "2026-07-29",
+    "steipete": "2026-07-29",
+    "openclaw-blog": "2026-07-29"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

@@ -1,0 +1,27 @@
+---
+slug: 2026-07-29-cline-desktop-v0-0-7
+title: "cline desktop-v0.0.7 — 系统托盘、分页收藏、子代理状态、免费模型支持"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.7
+publishedAt: 2026-07-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "系统托盘、分页收藏、子代理状态、免费模型支持"
+broadcast: "桌面版Cline更新到0.0.7版本，新增系统托盘图标，能实时显示正在运行的代理会话数，方便你同时监控多个任务。会话历史支持分页和收藏，子代理的运行结果也能在应用里直接追踪。还加入了免费模型支持，达到限制时会显示重置时间，对国内开发者来说，降低了使用门槛，让Agent开发更顺手。"
+insight: "如果你已经在用 Cline 桌面版，v0.0.7 值得升级。系统托盘和分页收藏能显著改善多会话管理，子代理状态追踪对复杂任务更友好。免费模型支持降低了成本，但国内用户通过 newapi.lurus.cn 代理时，需注意修复后的中国端点切换功能已正常，无需额外配置。现有 prompt 和 hook 配置无需改动，升级后直接受益。"
+tags: [desktop-app, ui-improvements, bug-fixes, free-tier]
+---
+
+- 新增系统托盘图标，显示运行中的代理会话数，便于监控多会话状态。
+- 会话历史分页（每页10条），收藏会话并按最近活动排序，状态点颜色统一，提升导航效率。
+- 子代理和队友运行结果在应用中展示，支持追踪子任务状态。
+- 聊天界面优化：工具图标、思考时间、重新样式推理区、对齐时间戳、消息操作不抖动。
+- 免费模型支持并标注“(free)”，达到限制时显示重置时间，降低使用门槛。
+- 修复中国/国际端点切换被忽略的问题，确保区域路由正确。
+- 修复模型返回字符串行号导致工具调用失败的问题，减少重试开销。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.7](https://github.com/cline/cline/releases/tag/desktop-v0.0.7)

@@ -1,0 +1,23 @@
+---
+slug: 2026-07-28-gemini-cli-0-53-0
+title: "gemini-cli v0.53.0 — 修复ReAct循环、A2A安全与凭证回退，提升稳定性"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.53.0
+publishedAt: 2026-07-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复ReAct循环、A2A安全与凭证回退，提升稳定性"
+broadcast: "谷歌的Gemini命令行工具更新了，这次重点修复了ReAct循环问题和A2A安全漏洞，还改进了凭证回退机制。对国内开发者来说，这些修复能防止工具调用出错和无限循环，让智能体开发更稳定可靠。"
+insight: "这个版本主要修复了ReAct循环、A2A安全与凭证回退问题，对国内用户通过newapi.lurus.cn代理使用gemini-cli的稳定性有正面影响。如果你之前遇到过工具调用后400错误或无限循环，建议升级。现有prompt和hook配置无需改动，但需确认agent harness已启用循环检测与任务隔离机制。"
+tags: [react-loop, a2a-security, credential-fallback, stability]
+---
+
+- 修复工具响应分组与角色合并，防止400错误：要求agent harness在并发工具调用后合并连续相同角色消息。
+- 缓解无限ReAct循环与提示注入：agent harness需实现循环检测与终止机制。
+- 强制工作区信任与任务隔离，防止RCE：agent harness应隔离不同来源的任务执行环境。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.53.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.53.0)

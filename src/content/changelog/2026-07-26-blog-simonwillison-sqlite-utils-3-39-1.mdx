@@ -1,0 +1,23 @@
+---
+slug: 2026-07-26-blog-simonwillison-sqlite-utils-3-39-1
+title: "sqlite-utils 3.39.1 — sqlite"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/26/sqlite-utils/
+publishedAt: 2026-07-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "sqlite-utils 3.39.1 修复了 table.delete_where() 的 bug，提升数据清理可靠性。"
+broadcast: "sqlite-utils 的最新更新修复了一个删除数据时的bug，确保数据清理更可靠。这个修复是从新版本反向移植回来的，让还在用旧版本的朋友也能用上。对开发者来说，稳定的删除操作是构建数据管道的基础，能省下不少调试的麻烦。"
+tags: [sqlite-utils, bug-fix, data-cleaning, backport]
+---
+
+- 修复了 table.delete_where() 方法在特定条件下无法正确删除记录的问题，确保数据操作一致性。
+- 该修复从版本 4 反向移植到 3.39.1，方便仍使用旧版本的用户获得关键更新。
+- 对开发者而言，稳定的删除操作是构建可靠数据管道的基础，减少因底层库缺陷导致的调试成本。
+
+---
+
+> 原文：[sqlite-utils 3.39.1](https://simonwillison.net/2026/Jul/26/sqlite-utils/) · 作者 Simon Willison

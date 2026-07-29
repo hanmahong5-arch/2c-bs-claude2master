@@ -1,0 +1,23 @@
+---
+slug: 2026-07-28-cline-sdk-sdk-v0-0-66
+title: "cline sdk/sdk/v0.0.66 — Cline SDK v0.0.66 修复关键 compaction bug，新增"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.66
+publishedAt: 2026-07-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline SDK v0.0.66 修复关键 compaction bug，新增持久化与免费模型支持"
+broadcast: "Cline SDK 最新版本修复了一个关键 bug，现在上下文压缩能正确使用模型的实际窗口，避免无限增长。同时新增了免费模型，适合低成本测试场景。这对国内开发者来说，意味着 agent 开发中的上下文管理更稳定，测试成本也更低了。"
+insight: "SDK v0.0.66 的 compaction 修复值得关注：默认 agentic compaction 不再回退到 basic，且 assistant 消息可作为切割边界，解决了工具密集对话上下文无限增长的痛点。如果你在用 OpenAI Compatible 提供商，建议升级以避免压缩失效。cline-free 模型适合低成本测试，但国内用户走 newapi.lurus.cn 代理时需确认该模型是否可用，摘要未提及代理影响，建议自行验证。"
+tags: [sdk, compaction, bug-fix, free-model]
+---
+
+- 新增 `cline-free` 免费模型，定价为零，超限返回专用错误含重置时间，适合低成本测试场景。
+- Agentic compaction 成为默认策略，修复在 OpenAI Compatible 提供商上回退到 basic compaction 的 bug，确保压缩始终使用模型真实上下文窗口。
+- 修复工具密集对话中 agentic compaction 找不到切割点导致上下文无限增长的问题，现在 assistant 消息可作为有效切割边界。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.66](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.66)

@@ -1,0 +1,26 @@
+---
+slug: 2026-07-28-blog-hf-blog-lfm2-5-encoders-for-fast-long-context-inference
+title: "LFM2.5-Encoders for Fast Long-Context Inference on CPU — Liquid AI 发布 LFM2.5 编码器，实现 CPU 上高效长上下文推理"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/LiquidAI/lfm2-5-encoders
+publishedAt: 2026-07-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Liquid AI 发布 LFM2.5 编码器，实现 CPU 上高效长上下文推理。"
+broadcast: "Liquid AI 新发布的 LFM2.5 编码器，让 CPU 也能高效处理百万 token 的长文本。它用线性注意力把计算复杂度降下来，开发者不用 GPU 就能跑长文档问答或代码分析，硬件门槛大大降低。对 Agent 开发来说，它的混合专家架构还能按需激活子网络，多任务场景下资源利用更灵活。"
+tags: [long-context, cpu-inference, linear-attention, mixture-of-experts]
+---
+
+- LFM2.5 编码器基于线性注意力机制，将计算复杂度从 O(n²) 降至 O(n)，支持 100 万 token 上下文窗口，在 CPU 上即可运行。
+  - 这意味着开发者无需 GPU 即可部署长文档问答、代码库分析等应用，大幅降低硬件门槛。
+- 模型采用混合专家架构（MoE），在保持高性能的同时减少激活参数，提升推理速度。
+  - 对于 Agent 工具链，MoE 设计允许按需激活子网络，适合多任务场景下的资源优化。
+- 在 LongBench 等基准测试中，LFM2.5 编码器在长上下文任务上达到与 Transformer 模型相当的效果，但推理延迟更低。
+  - 这表明线性注意力模型已具备实用价值，开发者可将其集成到 RAG 或记忆系统中，实现实时交互。
+
+---
+
+> 原文：[LFM2.5-Encoders for Fast Long-Context Inference on CPU](https://huggingface.co/blog/LiquidAI/lfm2-5-encoders) · 作者 Hugging Face

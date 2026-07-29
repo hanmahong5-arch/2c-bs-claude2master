@@ -1,0 +1,23 @@
+---
+slug: 2026-07-28-blog-simonwillison-discovering-cryptographic-weaknesses-with-claude
+title: "Discovering cryptographic weaknesses with Claude — Anthropic用Claude Mythos发现密码学弱点，提示词是关键。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/
+publishedAt: 2026-07-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic用Claude Mythos发现密码学弱点，提示词是关键。"
+broadcast: "Anthropic用Claude Mythos在60小时内发现了密码学算法的数学缺陷，靠的是反复鼓励模型不要放弃。这说明大模型需要明确的方向引导才能突破思维定势，未来开发Agent工具时，得内置自动调整目标和提供鼓励的韧性机制。"
+tags: [llm-research, cryptanalysis, prompt-engineering, ai-security]
+---
+
+- 研究人员通过反复提示鼓励模型不要放弃，如“find something that worth publishing”，最终让Claude Mythos在60小时内发现HAWK和简化版AES的数学缺陷，尽管这些缺陷无实际影响。
+- 提示词中包括拼写错误和直接指令（如“why not do aes-128 r7?”），说明LLM需要明确、持续的方向引导才能突破“不可能”的思维定势。
+- 总API成本约10万美元，主要人工干预是激励模型坚持，这暗示未来Agent工具链需内置“韧性”机制，自动调整目标或提供鼓励。
+
+---
+
+> 原文：[Discovering cryptographic weaknesses with Claude](https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/) · 作者 Simon Willison

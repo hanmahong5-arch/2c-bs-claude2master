@@ -1,0 +1,23 @@
+---
+slug: 2026-07-28-blog-simonwillison-uv-0-12-0
+title: "uv 0.12.0 — uv 0.12.0 默认项目结构改为 src/ 布局，并集成构建后端。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/28/uv/
+publishedAt: 2026-07-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "uv 0.12.0 默认项目结构改为 src/ 布局，并集成构建后端。"
+broadcast: "Python 包管理器 uv 的新版本来了，它现在默认把项目文件放在 src 文件夹里，而不是直接扔在根目录。这个改动让项目结构更规范，对国内开发者来说，以后写 Python 项目或者做 agent 开发，都能少踩一些路径混乱的坑。"
+tags: [python, packaging, uv]
+---
+
+- uv init 现在默认创建 src/ 布局的项目，而非在根目录放 main.py，这鼓励更规范的 Python 项目结构。
+- 新项目自动配置 uv_build 后端，支持 wheel 和 tar.gz 构建，简化了发布流程。
+- 设置脚本别名 uv-run-uv-init 执行 main()，方便快速运行项目，对开发者意味着更一致的开发体验。
+
+---
+
+> 原文：[uv 0.12.0](https://simonwillison.net/2026/Jul/28/uv/) · 作者 Simon Willison
