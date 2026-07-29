@@ -1,6 +1,39 @@
 {
   "items": [
     {
+      "slug": "2026-07-29-blog-latentspace-ainews-fearing-rsi-openai-anthropic-gdm-meta-thinky",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Fearing RSI: OpenAI, Anthropic, GDM, Meta, — AI员工联名呼吁放缓研发，HuggingFace披露机器速度网络攻击细节。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-29"
+    },
+    {
+      "slug": "2026-07-29-cline-desktop-v0-0-7",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.7 — 系统托盘、分页收藏、子代理状态、免费模型支持",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-07-29"
+    },
+    {
+      "slug": "2026-07-29-codex-rust-v0-146-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.146.0 — 会话管理、Agent插件、线程分叉与WebSocket远程执行",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-07-29"
+    },
+    {
       "slug": "2026-07-28-blog-anthropic-news-expanding-our-partnership-with-cognizant-anthropic",
       "zh": true,
       "en": true,
@@ -23,6 +56,127 @@
       "publishedAt": "2026-07-28"
     },
     {
+      "slug": "2026-07-28-blog-hf-blog-lfm2-5-encoders-for-fast-long-context-inference",
+      "zh": true,
+      "en": true,
+      "title": "LFM2.5-Encoders for Fast Long-Context Inference on CPU — Liquid AI 发布 LFM2.5 编码器，实现 CPU 上高效长上下文推理",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-blog-hf-blog-the-olmoearth-platform-geospatial-inference-at-planetary-scale",
+      "zh": true,
+      "en": true,
+      "title": "The OlmoEarth Platform: Geospatial inference at — AI2 的 OlmoEarth 平台如何实现行星级地理空间推理。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-blog-latentspace-ainews-much-ado-about-open-weights",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Much ado about Open Weights — 开源权重模型的政治博弈与Kimi K3技术突破，揭示AI行业新格局。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-blog-latentspace-codex-from-0-to-10m-users-building-chatgpt",
+      "zh": true,
+      "en": true,
+      "title": "Codex from 0 to 10M Users: Building ChatGPT Work — — Codex从代码工具演变为知识工作平台，用户数10个月增长10倍，非开发者增速是",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-blog-openai-news-scientific-computing-in-the-age-of-agentic-ai",
+      "zh": true,
+      "en": true,
+      "title": "Scientific computing in the age of agentic AI — AI编码代理如何加速科学计算与基因组学发现",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-blog-simonwillison-anatomy-of-a-frontier-lab-agent-intrusion-a",
+      "zh": true,
+      "en": true,
+      "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical — 一篇技术时间线，详述 OpenAI 代理如何利用零日漏洞突破沙箱，在 Huggi",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-blog-simonwillison-discovering-cryptographic-weaknesses-with-claude",
+      "zh": true,
+      "en": true,
+      "title": "Discovering cryptographic weaknesses with Claude — Anthropic用Claude Mythos发现密码学弱点，提示词是关键。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-blog-simonwillison-quoting-akshat-bubna",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Akshat Bubna — Modal CTO澄清客户未认证端点致AI代理逃逸，平台未被攻破。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-blog-simonwillison-uv-0-12-0",
+      "zh": true,
+      "en": true,
+      "title": "uv 0.12.0 — uv 0.12.0 默认项目结构改为 src/ 布局，并集成构建后端。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-cline-4-0-12",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.0.12 — 免费模型支持与流式响应保留",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-cline-cli-v3-0-47",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.47 — 免费模型支持、设置持久化、Agentic压缩默认启用",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-07-28"
+    },
+    {
       "slug": "2026-07-28-cline-desktop-v0-0-6",
       "zh": true,
       "en": false,
@@ -31,6 +185,50 @@
       "author": null,
       "source": "cline/cline",
       "tool": "cline",
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-cline-sdk-sdk-v0-0-66",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.66 — Cline SDK v0.0.66 修复关键 compaction bug，新增",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-gemini-cli-0-53-0",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.53.0 — 修复ReAct循环、A2A安全与凭证回退，提升稳定性",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-opencode-1-18-8",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.8 — MCP 服务器重连、OAuth 回调端口修复，桌面端多项体验优化",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-07-28"
+    },
+    {
+      "slug": "2026-07-28-opencode-1-18-9",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.9 — 修复 MCP 兼容性与桌面导航崩溃",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
       "publishedAt": "2026-07-28"
     },
     {
@@ -52,6 +250,28 @@
       "kind": "blogger",
       "author": "Anthropic",
       "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-blog-hf-blog-anatomy-of-a-frontier-lab-agent-intrusion-a",
+      "zh": true,
+      "en": true,
+      "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical — Hugging Face 复盘 2026 年 7 月前沿实验室智能体入侵事件的技",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-07-27"
+    },
+    {
+      "slug": "2026-07-27-blog-hf-blog-nvidia-cosmos-h-dreams-bringing-real-time-generative",
+      "zh": true,
+      "en": true,
+      "title": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative — NVIDIA用生成式AI实时模拟手术场景，加速机器人训练。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
       "tool": null,
       "publishedAt": "2026-07-27"
     },
@@ -225,6 +445,17 @@
       "zh": true,
       "en": true,
       "title": "An Inside Look at the Relay Market Powering Token — LLM token灰色市场揭秘：代理池如何利用漏洞低价转售API。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-26"
+    },
+    {
+      "slug": "2026-07-26-blog-simonwillison-sqlite-utils-3-39-1",
+      "zh": true,
+      "en": true,
+      "title": "sqlite-utils 3.39.1 — sqlite",
       "kind": "blogger",
       "author": "Simon Willison",
       "source": "Simon Willison",
@@ -648,237 +879,6 @@
       "source": "cline/cline",
       "tool": "cline",
       "publishedAt": "2026-07-22"
-    },
-    {
-      "slug": "2026-07-22-gemini-cli-0-52-0",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.52.0 — Gemini CLI 0.52：修复文件写入、计划模式路径与隐私提示",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-07-22"
-    },
-    {
-      "slug": "2026-07-21-blog-deepmind-introducing-gemini-3-6-flash-3-5-flash",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 — Google DeepMind 发布三款新模型，聚焦速度、成本与安全。",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-blog-hf-blog-grabette-an-open-system-to-record-robot-manipulation",
-      "zh": true,
-      "en": true,
-      "title": "Grabette: an open system to record robot-manipulation — 介绍Grabette，一个开源机器人操作数据记录系统",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-blog-hf-blog-the-state-of-simulation-for-physical-ai-an",
-      "zh": true,
-      "en": true,
-      "title": "The State of Simulation for Physical AI: An Overview — NVIDIA 综述物理 AI 仿真现状，强调合成数据与数字孪生对机器人训练的关键",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-blog-latentspace-ainews-not-much-happened-today",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] not much happened today — 中国开源模型竞争白热化，Kimi K3 和 Qwen 3.8 接连发布，引发美国",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-blog-latentspace-causal-models-need-causal-data-xaira-s-x",
-      "zh": true,
-      "en": true,
-      "title": "🔬Causal Models Need Causal Data - Xaira’s X-Cell model — Xaira用信息富集数据突破基因表达预测瓶颈，打造因果模型X",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-blog-openai-news-david-v-lez-and-robin-vince-join-the",
-      "zh": true,
-      "en": true,
-      "title": "David Vélez and Robin Vince join the boards of the — OpenAI 董事会新增金融与科技领袖，强化治理与全球扩张。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-blog-openai-news-introducing-the-chatgpt-for-small-business-program",
-      "zh": true,
-      "en": true,
-      "title": "Introducing the ChatGPT for small business program — OpenAI推出小企业ChatGPT计划，助力创业者提升AI技能并自动化工作。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-blog-openai-news-openai-and-hugging-face-partner-to-address-security",
-      "zh": true,
-      "en": true,
-      "title": "OpenAI and Hugging Face partner to address security — OpenAI与Hugging Face披露模型评估期间的安全事件，揭示高级网络攻",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-blog-simonwillison-a-fireside-chat-with-cat-and-thariq-from",
-      "zh": true,
-      "en": true,
-      "title": "A Fireside Chat with Cat and Thariq from the Claude — Anthropic 内部如何用 AI 代理重写工程流程，包括 65% PR 由 ",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-blog-simonwillison-california-sea-lion",
-      "zh": true,
-      "en": true,
-      "title": "California Sea Lion — 一篇旧金山海狮观察的轻快记录，感受城市野趣。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-blog-simonwillison-nativ-run-ai-models-locally-on-your-mac",
-      "zh": true,
-      "en": true,
-      "title": "Nativ: Run AI models locally on your Mac — Mac 本地运行 AI 模型的桌面应用，支持聊天和 API 服务。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-claude-code-2-1-217",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.217 — emoji补全、内存泄漏修复、子代理并发限制等多项改进",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-codex-rust-v0-145-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.145.0 — Codex 0.145.0 稳定多智能体 V2、分页线程历史、音频支持与导入迁移",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-trending-unicity-aos-aos-ce",
-      "zh": true,
-      "en": false,
-      "title": "aos-ce — 开源代理操作系统，让AI Agent原生运行",
-      "kind": "trending",
-      "author": null,
-      "source": "unicity-aos/aos-ce",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-21-trending-vshulcz-deja-vu",
-      "zh": true,
-      "en": false,
-      "title": "deja-vu — 跨代理会话日志的追溯搜索与MCP召回工具",
-      "kind": "trending",
-      "author": null,
-      "source": "vshulcz/deja-vu",
-      "tool": null,
-      "publishedAt": "2026-07-21"
-    },
-    {
-      "slug": "2026-07-20-blog-hf-blog-introducing-cosmos-3-edge",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Cosmos 3 Edge — NVIDIA 推出 Cosmos 3 Edge 模型，专为边缘设备优化，提升 A",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-blog-interconnects-kimi-k3-the-open-weights-escalation",
-      "zh": true,
-      "en": true,
-      "title": "Kimi K3: The open-weights escalation — Kimi K3 发布，开源模型逼近前沿，中美差距缩至3",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-blog-openai-news-safety-and-alignment-in-an-era-of-long",
-      "zh": true,
-      "en": true,
-      "title": "Safety and alignment in an era of long-horizon models — OpenAI 分享长周期模型部署中的安全教训与防护升级。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-blog-simonwillison-quoting-sam-altman",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Sam Altman — Sam Altman 邮件曝光：开源 GPT",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-20"
-    },
-    {
-      "slug": "2026-07-20-blog-simonwillison-reverse-engineering-is-cheap-now",
-      "zh": true,
-      "en": true,
-      "title": "Reverse-engineering is cheap now — AI 让逆向工程变得廉价，改变了个人自动化项目的 ROI 计算。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-20"
     }
   ]
 }
