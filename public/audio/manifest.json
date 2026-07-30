@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "slug": "2026-07-29-blog-latentspace-ainews-ai-is-eating-finance-aie-nyc-now",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] AI is eating Finance; AIE NYC now open — AI 正在全面渗透金融业，从投行到数字银行，Agent 成为核心基础设施。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-29"
+    },
+    {
       "slug": "2026-07-29-blog-latentspace-ainews-fearing-rsi-openai-anthropic-gdm-meta-thinky",
       "zh": true,
       "en": true,
@@ -8,6 +19,83 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-07-29"
+    },
+    {
+      "slug": "2026-07-29-blog-openai-news-accelerating-scientific-discovery-with-chatgpt-for-academic-researchers",
+      "zh": true,
+      "en": true,
+      "title": "Accelerating scientific discovery with ChatGPT for — OpenAI 向 10 万学术研究者免费提供 ChatGPT 高级模型，加速科学",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-29"
+    },
+    {
+      "slug": "2026-07-29-blog-openai-news-how-enabling-two-settings-tripled-our-scores-on",
+      "zh": true,
+      "en": true,
+      "title": "How enabling two settings tripled our scores on the — OpenAI 通过两个 API 设置将 ARC",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-29"
+    },
+    {
+      "slug": "2026-07-29-blog-openai-news-how-gpt-5-6-fuses-frontier-intelligence-with",
+      "zh": true,
+      "en": true,
+      "title": "How GPT-5.6 fuses frontier intelligence with frontier — OpenAI 如何用 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-07-29"
+    },
+    {
+      "slug": "2026-07-29-blog-simonwillison-adding-a-custom-mcp-server-to-claude-and",
+      "zh": true,
+      "en": true,
+      "title": "Adding a custom MCP server to Claude and ChatGPT — 如何为 Claude 和 ChatGPT 添加自定义 MCP 服务器，步骤详解。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-29"
+    },
+    {
+      "slug": "2026-07-29-blog-simonwillison-ai-worming-through-word",
+      "zh": true,
+      "en": true,
+      "title": "AI Worming through Word — AI蠕虫通过Word文档自我复制，揭示Copilot的深层安全漏洞。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-29"
+    },
+    {
+      "slug": "2026-07-29-blog-simonwillison-quoting-d-richard-hipp",
+      "zh": true,
+      "en": true,
+      "title": "Quoting D. Richard Hipp — SQL 如何让 COBOL 程序员失业又转型，类比 AI 对开发者的影响。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-07-29"
+    },
+    {
+      "slug": "2026-07-29-blog-simonwillison-quoting-matthew-green",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Matthew Green — AI 正赶上密码学从传统算法转向后量子算法的历史窗口，可能重塑密码分析。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-07-29"
     },
@@ -31,6 +119,17 @@
       "author": null,
       "source": "openai/codex",
       "tool": "codex",
+      "publishedAt": "2026-07-29"
+    },
+    {
+      "slug": "2026-07-29-goose-1-45-0",
+      "zh": true,
+      "en": false,
+      "title": "goose v1.45.0 — Goose v1.45 增强模型支持、工具调用与离线文档",
+      "kind": "changelog",
+      "author": null,
+      "source": "block/goose",
+      "tool": "goose",
       "publishedAt": "2026-07-29"
     },
     {
@@ -779,105 +878,6 @@
       "author": "OpenAI",
       "source": "OpenAI",
       "tool": null,
-      "publishedAt": "2026-07-22"
-    },
-    {
-      "slug": "2026-07-22-blog-openai-news-ntt-data-group-cuts-incident-analysis-to-30",
-      "zh": true,
-      "en": true,
-      "title": "NTT DATA Group cuts incident analysis to 30 minutes — NTT DATA用Codex将事故分析从数小时缩至30分钟，AI赋能企业运维。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-07-22"
-    },
-    {
-      "slug": "2026-07-22-blog-simonwillison-are-ai-labs-pelicanmaxxing",
-      "zh": true,
-      "en": true,
-      "title": "Are AI labs pelicanmaxxing? — 系统测试证实AI实验室未刻意优化“骑自行车鹈鹕”生成能力。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-22"
-    },
-    {
-      "slug": "2026-07-22-blog-simonwillison-openai-s-accidental-cyberattack-against-hugging-face-is",
-      "zh": true,
-      "en": true,
-      "title": "OpenAI’s accidental cyberattack against Hugging Face is — AI 模型在安全测试中逃逸沙箱，入侵 Hugging Face 偷答案，暴露安全",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-22"
-    },
-    {
-      "slug": "2026-07-22-blog-simonwillison-orchestrions",
-      "zh": true,
-      "en": false,
-      "title": "Orchestrions — 花15美元就能掌控整个博物馆的声音景观，一个关于互动体验的趣味发现。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-22"
-    },
-    {
-      "slug": "2026-07-22-blog-simonwillison-quoting-thomas-ptacek",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Thomas Ptacek — Thomas Ptacek 认为 2025 年的开源模型配合渗透测试框架就能逃逸",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-22"
-    },
-    {
-      "slug": "2026-07-22-claude-code-2-1-218",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.218 — 代码审查后台化、自动模式更智能、多项修复提升稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-07-22"
-    },
-    {
-      "slug": "2026-07-22-cline-desktop-latest",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-latest — 桌面版自动更新机制更新，指向最新版本",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-07-22"
-    },
-    {
-      "slug": "2026-07-22-cline-desktop-v0-0-2",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.2 — Cline桌面版首发，自动更新省心",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-07-22"
-    },
-    {
-      "slug": "2026-07-22-cline-desktop-v0-0-3",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.3 — 简化推理状态显示，提升界面清晰度",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
       "publishedAt": "2026-07-22"
     }
   ]
