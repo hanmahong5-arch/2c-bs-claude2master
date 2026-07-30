@@ -4,7 +4,7 @@
     "openai/codex": "rust-v0.146.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "desktop-v0.0.7",
-    "block/goose": "v1.44.0",
+    "block/goose": "v1.45.0",
     "sst/opencode": "v1.18.9",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.53.0",
@@ -163,9 +163,9 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-07-29",
+    "anthropic-engineering": "2026-07-30",
     "claude-code-docs": "2026-07-24",
-    "openai-codex-blog": "2026-07-23",
+    "openai-codex-blog": "2026-07-30",
     "openclaw-concepts": "2026-07-27",
     "hermes-guides": "2026-07-27"
   },
@@ -330,7 +330,11 @@
       "https://simonwillison.net/2026/Jul/28/akshat-bubna/",
       "https://simonwillison.net/2026/Jul/28/uv/",
       "https://simonwillison.net/2026/Jul/28/anatomy-of-a-frontier-lab-agent-intrusion/",
-      "https://simonwillison.net/2026/Jul/26/sqlite-utils/"
+      "https://simonwillison.net/2026/Jul/26/sqlite-utils/",
+      "https://simonwillison.net/2026/Jul/29/d-richard-hipp/",
+      "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/",
+      "https://simonwillison.net/2026/Jul/29/matthew-green/",
+      "https://simonwillison.net/2026/Jul/29/mcp-in-claude-and-chatgpt/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -424,7 +428,8 @@
       "https://www.latent.space/p/ainews-claude-opus-5-fable-level",
       "https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic",
       "https://www.latent.space/p/chatgpt-work",
-      "https://www.latent.space/p/ainews-much-ado-about-open-weights"
+      "https://www.latent.space/p/ainews-much-ado-about-open-weights",
+      "https://www.latent.space/p/ainews-ai-is-eating-finance-aie-nyc"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -628,7 +633,10 @@
       "https://openai.com/index/health-in-chatgpt",
       "https://openai.com/index/codex-collaborator-creative-team",
       "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work",
-      "https://openai.com/index/scientific-computing-agentic-ai"
+      "https://openai.com/index/scientific-computing-agentic-ai",
+      "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+      "https://openai.com/index/chatgpt-for-academic-researchers",
+      "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -803,21 +811,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-07-29",
-    "lilianweng": "2026-07-23",
-    "latentspace": "2026-07-29",
-    "interconnects": "2026-07-29",
-    "karpathy": "2026-07-27",
-    "raschka": "2026-07-27",
-    "eugeneyan": "2026-07-27",
-    "chiphuyen": "2026-07-23",
+    "simonwillison": "2026-07-30",
+    "lilianweng": "2026-07-30",
+    "latentspace": "2026-07-30",
+    "interconnects": "2026-07-30",
+    "karpathy": "2026-07-30",
+    "raschka": "2026-07-30",
+    "eugeneyan": "2026-07-30",
+    "chiphuyen": "2026-07-30",
     "oneusefulthing": "2026-07-29",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-07-29",
+    "openai-news": "2026-07-30",
     "deepmind": "2026-07-29",
     "hf-blog": "2026-07-29",
-    "anthropic-news": "2026-07-29",
+    "anthropic-news": "2026-07-30",
     "steipete": "2026-07-29",
     "openclaw-blog": "2026-07-29"
   },

@@ -1,0 +1,26 @@
+---
+slug: 2026-07-29-goose-1-45-0
+title: "goose v1.45.0 — Goose v1.45 增强模型支持、工具调用与离线文档"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.45.0
+publishedAt: 2026-07-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.45 增强模型支持、工具调用与离线文档"
+broadcast: "Goose 的最新版本增强了模型支持，现在可以调用最新的 Gemini 和 Opus5 模型，推理能力更强了。它还支持离线文档访问，方便在隔离环境中部署。另外，你可以禁用内置技能，只加载自定义工具，这对国内开发者定制 agent 非常实用。"
+insight: "Goose v1.45 的离线文档和禁用内置技能功能对国内开发者很实用，尤其适合内网部署。如果你在用旧版，建议升级以获取更稳定的模型支持和工具调用。通过 newapi.lurus.cn 代理调用 Gemini 或 DeepSeek v4 不受影响，但注意确认代理兼容新的事件消息标识。现有 prompt 和 hook 无需改动，除非你依赖旧版动态模型发现。"
+tags: [model-support, tool-calling, offline-docs, bug-fixes]
+---
+
+- 新增稳定的事件消息标识，便于 agent 追踪和调试事件流。
+- 支持最新 Gemini 模型及 Opus5 自适应思考，扩展 agent 可用的推理能力。
+- 可配置 GOOSE_DOCS_ROOT 实现离线文档访问，适合隔离环境部署。
+- 允许禁用内置技能，让 agent 只加载自定义工具集。
+- 修复动态模型发现、DeepSeek v4 API 及 Grok 支持，确保模型选择器准确。
+- 改进 ACP 工具调用处理，保留工具输出并修复链式摘要。
+
+---
+
+> 原文 release：[block/goose v1.45.0](https://github.com/aaif-goose/goose/releases/tag/v1.45.0)
