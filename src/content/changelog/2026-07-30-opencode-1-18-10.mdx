@@ -1,0 +1,26 @@
+---
+slug: 2026-07-30-opencode-1-18-10
+title: "opencode v1.18.10 — 自动发现 Modal 模型，修复桌面端标签页损坏问题"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.10
+publishedAt: 2026-07-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "自动发现 Modal 模型，修复桌面端标签页损坏问题"
+broadcast: "最近这个开源AI编程工具更新了，现在能自动发现可用的模型，不用手动配置，接入更简单了。对做agent开发的来说，这种自动发现机制能减少硬编码，以后扩展模型会方便很多。另外还修了桌面端标签页保存出错的问题，避免重启后状态错乱，体验更稳定。"
+insight: "此次更新对现有用户价值明确：若你正使用桌面端并依赖保存标签页，建议立即升级，因为修复了跨启动持久化错误状态这一实际问题。自动发现 Modal 模型可减少手动配置，但若你已稳定使用现有模型配置，则非必须改动。国内用户通过 newapi.lurus.cn 代理访问时，此更新不涉及代理层变更，因此不受影响。总体而言，升级收益大于风险，尤其对桌面端用户。"
+tags: [model-discovery, desktop-ui, bugfix, persistence]
+---
+
+- 核心：自动发现可用的 Modal 模型，无需手动配置，简化模型接入。
+  - 对 harness 设计：模型发现机制可减少硬编码，提升扩展性。
+- 桌面端：防止重复添加附件，始终显示新会话按钮，优化通知堆叠与移动端布局。
+  - 对 harness 设计：改进 UI 交互细节，提升用户体验一致性。
+- 修复：修复损坏的保存标签页，避免跨启动持久化错误状态；隐藏模型变体选择器直到数据加载完成。
+  - 对 harness 设计：增强状态持久化健壮性，避免加载时序问题。
+
+---
+
+> 原文 release：[sst/opencode v1.18.10](https://github.com/anomalyco/opencode/releases/tag/v1.18.10)

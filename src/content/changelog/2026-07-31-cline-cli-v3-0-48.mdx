@@ -1,0 +1,25 @@
+---
+slug: 2026-07-31-cline-cli-v3-0-48
+title: "cline cli-v3.0.48 — CLI 历史记录进入 TUI，连接器会话恢复，MCP 超时可配置"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.48
+publishedAt: 2026-07-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "CLI 历史记录进入 TUI，连接器会话恢复，MCP 超时可配置"
+broadcast: "最近这个命令行工具更新了，历史记录可以直接在界面里查看和恢复，不用再开第二个窗口了。连接器断线后会自动重连到新会话，不用手动改配置文件。MCP服务器的超时时间也能自己设置了，慢一点的服务器也不会轻易失败。这些改进对做智能体开发的朋友来说，用起来会更顺手。"
+insight: "这次升级对现有用户是值得的，尤其如果你在用 Slack/Discord 连接器，旧绑定丢失后能自动重放，省去手动改 threads.json 的麻烦。MCP 超时可配置也解决了慢服务器硬编码 5 秒失败的问题，建议把 timeout 调大。但注意 OpenRouter 默认模型换成了 sonnet-5，如果你依赖旧默认，记得显式指定。国内走 newapi.lurus.cn 代理不受影响，因为改动都在 CLI 内部逻辑，不涉及网络层。"
+tags: [cli, mcp, session-recovery, tui]
+---
+
+- `cline history` 在现有 TUI 内打开，支持恢复和删除，不再渲染第二个视图，简化了交互流程。
+- 连接器线程（Slack、Discord 等）在绑定会话丢失时自动丢弃旧绑定并重放到新会话，无需手动编辑 `threads.json`，增强了健壮性。
+- MCP 服务器的 `timeout` 设置现在对 `initialize`、`tools/list`、`tools/call` 生效，替代硬编码 5 秒限制，慢服务器不再失败。
+- 推理控制从 models.dev 目录路由，预算受限且编码正确，跨提供商一致。
+- OpenRouter 默认模型改为 `anthropic/claude-sonnet-5`，影响默认行为。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.48](https://github.com/cline/cline/releases/tag/cli-v3.0.48)

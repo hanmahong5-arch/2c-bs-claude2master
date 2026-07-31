@@ -1,0 +1,24 @@
+---
+slug: 2026-07-31-cline-4-1-0
+title: "cline v4.1.0 — Cline 4.1.0 引入 A/B 双扩展包，远程灰度切换，失败自动回退。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.0
+publishedAt: 2026-07-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline 4.1.0 引入 A/B 双扩展包，远程灰度切换，失败自动回退。"
+broadcast: "Cline 4.1.0 这次更新挺有意思，它把稳定版拆成了新旧两个扩展包，通过远程控制来灰度切换，先让百分之一的用户试试。如果新扩展出问题，会自动回退到旧版，不用你操心。对做 agent 开发的朋友来说，这种双版本共存和动态切换的设计值得参考，特别是要保证状态兼容和任务可见性。"
+insight: "Cline 4.1.0 的 A/B 双扩展包设计，对现有用户而言，升级后无需手动迁移设置，但需注意新扩展创建的任务在旧扩展下不可见，若你依赖旧版查看任务，建议暂缓升级或等待灰度稳定。远程灰度切换和自动回退机制降低了风险，但国内用户通过 newapi.lurus.cn 代理不受影响，因为切换是客户端加载器行为，不涉及网络请求变更。若你使用自定义 hook，需确认其兼容双版本共存，否则可能在新扩展下失效。"
+tags: [a-b-testing, extension, rollout, fallback]
+---
+
+- 4.1.0 将稳定版转为组合包：一个 VSIX 内含旧扩展和新 SDK 扩展，由加载器按窗口激活其一，受远程分阶段控制。
+- 灰度从 1% 用户开始，窗口重载时切换，不在会话中途变更；新扩展激活失败自动回退旧扩展，无需用户操作。
+- 设置、凭据、偏好共享，无迁移丢失；但新扩展创建的任务在旧扩展下不可见，重新提升后恢复。
+- 对 agent harness 设计：需支持双版本共存与动态切换，确保状态兼容和回退机制，并考虑任务可见性隔离。
+
+---
+
+> 原文 release：[cline/cline v4.1.0](https://github.com/cline/cline/releases/tag/v4.1.0)

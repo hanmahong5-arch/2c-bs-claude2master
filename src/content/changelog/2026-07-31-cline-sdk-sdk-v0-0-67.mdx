@@ -1,0 +1,23 @@
+---
+slug: 2026-07-31-cline-sdk-sdk-v0-0-67
+title: "cline sdk/sdk/v0.0.67 — SDK 推理控制、MCP 超时、会话分叉等多项修复与增强"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.67
+publishedAt: 2026-07-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK 推理控制、MCP 超时、会话分叉等多项修复与增强"
+broadcast: "这期更新给开发者带来了更顺手的推理控制，预算和力度都能统一管理，超了还会自动调整。MCP 连接也支持单独设置超时时间了，默认一分钟，最长一小时，比原来灵活不少。另外新增了会话分叉功能，可以回头修改早期提示再继续跑，还能读取常驻会话的实时内容，对调试 agent 流程会方便很多。"
+insight: "SDK v0.0.67 的推理控制统一由 models.dev 驱动，若你现有配置依赖硬编码或旧版逻辑，建议核对预算钳制行为，避免越界被自动调整。MCP 超时改为 per-server 配置，默认 60 秒，若现有 hook 依赖固定超时，需按新范围调整。会话分叉和 readLiveMessages 是新增能力，不影响现有 prompt，但可考虑用于恢复历史场景。国内经 newapi.lurus.cn 代理不受影响，升级后按需调整配置即可。"
+tags: [sdk, reasoning-control, mcp-timeout, session-forking]
+---
+
+- 推理控制（effort/budget/on-off）由 models.dev 目录驱动并统一编码，Anthropic 强制模式显式处理，越界预算自动钳制。
+- MCP 客户端现在遵循 per-server timeout 配置（默认 60s，范围 1-3600s），替代硬编码限制。
+- 新增会话分叉和用户运行消息 API，支持编辑早期提示并恢复历史；`readLiveMessages` 可读取常驻会话内存转录。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.67](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.67)

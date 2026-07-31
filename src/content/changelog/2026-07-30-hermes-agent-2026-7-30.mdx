@@ -1,0 +1,28 @@
+---
+slug: 2026-07-30-hermes-agent-2026-7-30
+title: "hermes-agent v2026.7.30 — Hermes Agent 稳定补丁版，汇总 1000+ PR，为下游部署提供可靠"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30
+publishedAt: 2026-07-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hermes Agent 稳定补丁版，汇总 1000+ PR，为下游部署提供可靠基线。"
+broadcast: "最近 Hermes Agent 推出了一个稳定补丁版，汇总了一千多个改进，主要修复了网关、语音和桌面应用的问题。这次更新还新增了频道支持和视频生成功能，让 agent 能处理更多样的内容。对国内开发者来说，这个稳定版本很适合作为部署基线，能减少环境差异，不过也要留意语音交互的稳定性，确保实时体验更可靠。"
+insight: "如果你正基于 v0.19.0 跑生产任务，这个补丁版值得升，1000+ PR 的修复集中在网关和语音稳定性，能直接降低线上故障率。现有 hook 配置不用大改，但若用到 Telegram 或语音，建议回归测试。国内用户走 newapi.lurus.cn 代理不受影响，它只做 API 转发，不涉及 Hermes 自身网络层。等 v0.20.0 发布说明再评估功能增量。"
+tags: [patch-release, stability, bug-fixes, platform]
+---
+
+- 自 v0.19.0 以来合并约 1000+ PR，约 2789 次提交，主要包含网关、语音子系统、桌面应用和安装程序的错误修复与稳定性改进。
+- 新增 Buzz/Nostr 频道支持、FLUX3 视频生成与交付、Telegram 媒体可靠性提升，以及语音模式回归修复。
+- 完整发布说明将在 v0.20.0 中提供，涵盖 v0.19.0 以来的所有亮点和贡献者名单。
+
+对 agent harness 设计的含义：
+- 稳定标签便于锁定依赖版本，减少环境差异。
+- 频道和媒体功能扩展意味着需要处理更多异构输入输出。
+- 语音模式修复提示需关注实时交互的稳定性。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.7.30](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30)

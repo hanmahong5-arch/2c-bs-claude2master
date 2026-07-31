@@ -1,0 +1,24 @@
+---
+slug: 2026-07-31-cline-4-1-1
+title: "cline v4.1.1 — MCP 路由从随机 uid 改为 server name，重启后不再错乱"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.1
+publishedAt: 2026-07-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP 路由从随机 uid 改为 server name，重启后不再错乱"
+broadcast: "今天要聊一个对开发者很实用的更新，MCP 工具的路由方式从随机编号改成了稳定的服务器名称，这样重启或服务器列表变动后，路由就不会再错乱了。对做 agent 开发的朋友来说，这提醒我们工具路由要基于稳定标识符，别用临时 ID，同时清理废弃机制也能减少维护成本和潜在问题。"
+insight: "这次 v4.1.1 把 MCP 路由从随机 uid 改成 server name，对现有用户是正向修复，重启后路由不再错乱，值得升级。如果你之前因为路由不稳定改过 prompt 或 hook 配置，现在可以检查是否简化，但不必强制改动。国内用户走 newapi.lurus.cn 代理不受影响，因为这是本地路由逻辑调整，与代理无关。建议直接升级，降低维护成本。"
+tags: [mcp, routing, stability, refactor]
+---
+
+- MCP 工具调用路由从随机 uid 改为 server name，重启和服务器列表变化后路由稳定。
+- 对 harness 设计：工具路由应基于稳定标识符，避免内存中临时 ID 导致状态不一致。
+- 移除 McpHub 中残留的 server-key 机制，简化内部逻辑。
+- 对 harness 设计：清理废弃机制，减少维护成本和潜在 bug。
+
+---
+
+> 原文 release：[cline/cline v4.1.1](https://github.com/cline/cline/releases/tag/v4.1.1)

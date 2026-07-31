@@ -1,0 +1,23 @@
+---
+slug: 2026-07-30-blog-simonwillison-llm-0-32rc2
+title: "llm 0.32rc2 — llm 0.32rc2 发布，默认模型升级为 GPT"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/30/llm-rc2/
+publishedAt: 2026-07-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "llm 0.32rc2 发布，默认模型升级为 GPT-5.6 Luna，并新增 openai endpoint 命令，方便测试任意兼容端点。"
+broadcast: "最近llm这个命令行工具发布了新版本，默认模型升级成了性能更好的GPT-5.6 Luna，虽然价格稍贵，但你可以随时切换回更便宜的旧模型。更值得关注的是，它新增了一个命令，能直接测试任何兼容OpenAI接口的服务，不用提前配置，也不记录日志，对咱们国内开发者调试本地模型或者自定义接口来说，会方便很多。"
+tags: [llm, cli, openai-compatible, default-model]
+---
+
+- 默认模型从 GPT-4o mini 升级为 GPT-5.6 Luna，价格略高（输入 $0.20/M，输出 $1.20/M），但性能更好；用户可通过 `llm models default` 切换回 4o mini 或更便宜的 GPT-5 nano。
+- 新增 `llm openai endpoint` 命令，允许直接对任意 OpenAI 兼容端点运行提示、聊天和模型列表，无需预先配置模型，且调用不记录日志。
+- 该命令可通过 `uvx --pre` 一行运行，例如对 LM Studio 本地模型发起带工具的提示，极大简化了测试流程，对开发者调试自定义端点很有价值。
+
+---
+
+> 原文：[llm 0.32rc2](https://simonwillison.net/2026/Jul/30/llm-rc2/) · 作者 Simon Willison

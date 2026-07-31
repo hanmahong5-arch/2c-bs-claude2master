@@ -1,0 +1,25 @@
+---
+slug: 2026-07-30-blog-simonwillison-llm-chat-completions-server-0-1a0
+title: "llm-chat-completions-server 0.1a0 — Simon Willison 发布 llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/
+publishedAt: 2026-07-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 llm-chat-completions-server，让本地 LLM 模型通过 OpenAI 兼容 API 提供服务。"
+broadcast: "最近有个新工具发布了，它能让本地的大语言模型通过兼容OpenAI的接口对外提供服务。这样一来，开发者就能把本地模型轻松接入现有的各种AI工具里，不用改代码。而且它还用了内容寻址技术，对请求消息去重，避免重复存储，挺省资源的。这个工具还是AI辅助开发的产物，说明现在写这类标准接口的效率确实高了不少。"
+tags: [llm, openai-compatible, local-server, content-addressable-logs]
+---
+
+- 新插件利用 LLM 0.32rc1 的内容可寻址日志，对 OpenAI Chat Completions 请求中的消息进行哈希去重，避免重复存储。
+- 通过 `uv tool install` 和 `llm install` 即可启动本地服务器，暴露所有已安装的 LLM 模型，兼容 OpenAI API 格式。
+- 代码由 GPT-5.6 生成，展示了 AI 辅助开发在实现标准 API 接口时的效率。
+
+对开发者而言，这意味着可以轻松将本地模型接入现有 OpenAI 生态工具，同时利用内容寻址优化存储。
+
+---
+
+> 原文：[llm-chat-completions-server 0.1a0](https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/) · 作者 Simon Willison
