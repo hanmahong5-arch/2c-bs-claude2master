@@ -1,0 +1,23 @@
+---
+slug: 2026-07-31-blog-simonwillison-stateless-mcp-has-recaptured-my-interest-and-inspired
+title: "Stateless MCP has recaptured my interest (and inspired — MCP 2.0 无状态化大幅简化协议，作者重燃兴趣并构建三个新工具。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/31/stateless-mcp/
+publishedAt: 2026-07-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "MCP 2.0 无状态化大幅简化协议，作者重燃兴趣并构建三个新工具。"
+broadcast: "最近MCP协议有了大变化，无状态化让原本需要两次请求的会话初始化合并成一次，不用再维护会话ID，实现起来简单多了。作者因此重燃兴趣，还做了两个新工具，一个能交互式查看和调用MCP工具，另一个让AI通过SQL查询数据库。这对国内开发者来说是个好消息，因为无状态协议更适合Web应用，而且比直接访问shell更安全可控。"
+tags: [mcp, model-context-protocol, ai-agents, developer-tools]
+---
+
+- 无状态 MCP 将原本需要两次 HTTP 请求的会话初始化与工具调用合并为一次，无需维护会话 ID，简化了客户端和服务端实现，也更适合可扩展的 Web 应用。
+- 作者用 Codex 构建了 mcp-explorer CLI 工具，可交互式列出、检查和调用 MCP 工具，展示了无状态协议下工具开发的便捷性。
+- 作者还发布了 datasette-mcp 插件，为 Datasette 实例添加 MCP 端点，使 agent 能通过 SQL 查询数据库，并强调 MCP 比任意 shell 访问更易审计和控制，适合敏感应用。
+
+---
+
+> 原文：[Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)](https://simonwillison.net/2026/Jul/31/stateless-mcp/) · 作者 Simon Willison

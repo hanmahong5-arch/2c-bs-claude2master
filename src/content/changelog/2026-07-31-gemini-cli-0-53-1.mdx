@@ -1,0 +1,23 @@
+---
+slug: 2026-07-31-gemini-cli-0-53-1
+title: "gemini-cli v0.53.1 — 修复补丁冲突，稳定性小幅提升"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.53.1
+publishedAt: 2026-07-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复补丁冲突，稳定性小幅提升"
+broadcast: "谷歌的Gemini命令行工具发布了新版本，这次主要是修复了一个补丁冲突的问题。这个修复保证了版本分支能干净合并，减少了构建失败的风险。对做智能体开发的开发者来说，集成这个版本时最好检查一下相关补丁的兼容性，让工具运行得更稳定。"
+insight: "如果你正使用 v0.53.0 且遇到构建失败或补丁冲突，这次 v0.53.1 值得升级，它专门修复了合并冲突，能减少构建风险。升级前建议检查你本地是否有自定义补丁，确保与官方补丁兼容。国内用户走 newapi.lurus.cn 代理不受影响，因为此版本仅涉及补丁合并，与代理无关。若你未遇到冲突，可暂缓升级，但长期看保持最新更稳妥。"
+tags: [patch, bug-fix, stability]
+---
+
+- 修复了一个补丁冲突问题，该问题源于将 f47d6c6 提交合并到 v0.53.0 分支时产生的冲突。
+- 对 agent harness 设计而言，此修复确保了版本分支的干净合并，减少了因冲突导致的构建失败风险。
+- 建议在集成此版本时，检查相关补丁的兼容性，以保持 harness 的稳定运行。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.53.1](https://github.com/google-gemini/gemini-cli/releases/tag/v0.53.1)

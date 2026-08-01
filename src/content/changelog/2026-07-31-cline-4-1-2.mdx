@@ -1,0 +1,23 @@
+---
+slug: 2026-07-31-cline-4-1-2
+title: "cline v4.1.2 — Cline 设置页新增扩展变体标识，快速区分 Legacy 与 Next。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.2
+publishedAt: 2026-07-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline 设置页新增扩展变体标识，快速区分 Legacy 与 Next。"
+broadcast: "Cline 这次更新在设置页面里加了一个小标识，能直接看出你用的是旧版还是新版。这个改动对开发者挺友好，以后调试或者反馈问题，一眼就能确认版本，不用再猜了。而且合并发布的两个版本都支持，保持一致，挺省心的。"
+insight: "这次 v4.1.2 的变体标识对国内用户影响不大，但值得留意。如果你在用 Legacy 或 Next 版本，升级后可在设置页 About 区直接确认当前变体，方便排查问题。不过，现有 prompt 或 hook 配置无需为此改动，功能仅用于显示。若你通过 newapi.lurus.cn 代理访问，该更新不涉及代理逻辑，应该不受影响。建议升级后瞄一眼变体标识，确保与预期一致即可。"
+tags: [extension-variant, settings-ui, version-info]
+---
+
+- 设置页 About 区域显示当前扩展变体（Legacy 或 Next），便于用户识别版本。
+- 对 agent harness 设计：需在 UI 中暴露构建变体信息，便于调试与反馈。
+- 该功能同时适用于合并发布包中的两个 bundle，确保一致性。
+
+---
+
+> 原文 release：[cline/cline v4.1.2](https://github.com/cline/cline/releases/tag/v4.1.2)

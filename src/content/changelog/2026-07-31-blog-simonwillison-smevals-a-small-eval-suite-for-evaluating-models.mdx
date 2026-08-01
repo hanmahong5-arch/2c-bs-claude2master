@@ -1,0 +1,23 @@
+---
+slug: 2026-07-31-blog-simonwillison-smevals-a-small-eval-suite-for-evaluating-models
+title: "smevals - a small eval suite for evaluating models, — Simon Willison 推出 smevals，一个轻量级评估套件，用于比较"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Jul/31/smevals/
+publishedAt: 2026-07-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 推出 smevals，一个轻量级评估套件，用于比较模型、提示词和工具链。"
+broadcast: "最近有个叫 smevals 的新工具挺值得关注的，它是个轻量级的评估套件，能帮你比较不同模型、提示词和工具链。它用 YAML 文件定义评估任务，还能把运行和评分分开，甚至让其他模型来当裁判做复杂检查。对国内开发者来说，这降低了评估门槛，用命令行就能快速上手，方便验证模型能力。"
+tags: [evals, llm, tooling, ai]
+---
+
+- smevals 是一个新工具，通过 YAML 文件定义评估任务，支持多模型对比运行，并分离运行与评分阶段，最后可生成静态 HTML 报告。
+- 核心概念包括 eval、task、config、run、runner、grader 和 check，其中 grader 可调用其他模型进行复杂检查，这为自动化评估提供了灵活性。
+- 该工具强调通过命令行与编码代理交互，例如 `uvx smevals docs` 可快速上手，这降低了评估门槛，使开发者能更便捷地验证模型能力。
+
+---
+
+> 原文：[smevals - a small eval suite for evaluating models, prompts, and harnesses](https://simonwillison.net/2026/Jul/31/smevals/) · 作者 Simon Willison
