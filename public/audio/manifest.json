@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "slug": "2026-08-02-cline-cli-v3-0-49",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.49 — CLI v3.0.49 修复了检查点与撤销，并增强了 Ollama 稳定性。",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-02"
+    },
+    {
       "slug": "2026-08-01-blog-latentspace-ainews-not-much-happened-today",
       "zh": true,
       "en": true,
@@ -779,105 +790,6 @@
       "author": "OpenAI",
       "source": "OpenAI",
       "tool": null,
-      "publishedAt": "2026-07-27"
-    },
-    {
-      "slug": "2026-07-27-blog-simonwillison-an-opinionated-guide-to-which-ai-to-use",
-      "zh": true,
-      "en": true,
-      "title": "An opinionated guide to which AI to use to do stuff — Ethan Mollick更新AI指南，聚焦Agent系统与电脑操控模式。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-27"
-    },
-    {
-      "slug": "2026-07-27-blog-simonwillison-moonshotai-kimi-k3",
-      "zh": true,
-      "en": false,
-      "title": "moonshotai/Kimi-K3 — Moonshot 发布 2.8T 参数 K3 模型，但许可证更严格，要求大 MA",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-07-27"
-    },
-    {
-      "slug": "2026-07-27-cline-desktop-v0-0-5",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.5 — 性能大升级，界面流畅度提升6倍，输入不再卡顿",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-07-27"
-    },
-    {
-      "slug": "2026-07-27-openclaw-concepts-message-lifecycle-refactor",
-      "zh": true,
-      "en": true,
-      "title": "Message lifecycle refactor · OpenClaw — 一次消息生命周期重构，解决重启丢消息的可靠性难题",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-27"
-    },
-    {
-      "slug": "2026-07-27-openclaw-concepts-messages",
-      "zh": true,
-      "en": true,
-      "title": "Messages · OpenClaw — 消息去重、防抖、排队与流式回复，构建可靠的多通道Agent通信层",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-27"
-    },
-    {
-      "slug": "2026-07-27-openclaw-concepts-model-failover",
-      "zh": true,
-      "en": true,
-      "title": "Model failover · OpenClaw — OpenClaw 的模型故障转移机制：如何优雅处理 LLM 调用失败",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-27"
-    },
-    {
-      "slug": "2026-07-27-openclaw-concepts-model-providers",
-      "zh": true,
-      "en": true,
-      "title": "Model providers · OpenClaw — 一文讲清OpenClaw多模型供应商配置与运行时分离机制",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-27"
-    },
-    {
-      "slug": "2026-07-27-openclaw-concepts-models",
-      "zh": true,
-      "en": true,
-      "title": "Models CLI · OpenClaw — 模型选择与故障切换的精确控制，避免意外降级或拒绝服务",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-07-27"
-    },
-    {
-      "slug": "2026-07-27-opencode-1-18-6",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.6 — 修复分支缓存与V1兼容性问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
       "publishedAt": "2026-07-27"
     }
   ]
