@@ -1,0 +1,24 @@
+---
+slug: 2026-08-01-opencode-1-18-11
+title: "opencode v1.18.11 — 修复 MCP 重连循环与桌面端多项 UI 问题"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.11
+publishedAt: 2026-08-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 MCP 重连循环与桌面端多项 UI 问题"
+broadcast: "最近开源工具opencode更新了，这次主要修复了MCP连接反复重连的问题，让智能体和外部工具通信更稳定。同时，也解决了桌面端一些界面显示的小毛病，比如标签错位、状态过期这些。对国内开发者来说，这些修复能减少开发中的干扰，让工作流更顺畅，值得关注。"
+insight: "这次 v1.18.11 的修复对国内用户来说，最值得关注的是 MCP 重连循环的修复，如果你在用 MCP 且遇到连接不稳定，升级后体验会明显改善。桌面端 UI 修复属于锦上添花，不影响核心使用。至于代理，摘要没提 newapi.lurus.cn 相关改动，所以现有代理配置应该不受影响，可以放心升级。建议直接更新，无需调整 prompt 或 hook 配置。"
+tags: [mcp, desktop, bugfix, ui]
+---
+
+- 修复 MCP SSE 连接在服务器错误响应后陷入重连循环的问题，提升 agent 与外部工具通信的稳定性。
+- 修复 provider 模型配置中交错推理字段（如 `reasoning_text`）的解析，确保自定义字段正确生效。
+- 桌面端外部链接改为系统浏览器打开，避免应用内嵌浏览器干扰 agent 工作流。
+- 修复会话标签页状态过期、文件树标签裁剪、调试 gutter 标签错位等 UI 问题，提升桌面端操作可靠性。
+
+---
+
+> 原文 release：[sst/opencode v1.18.11](https://github.com/anomalyco/opencode/releases/tag/v1.18.11)

@@ -1,0 +1,25 @@
+---
+slug: 2026-08-01-cline-sdk-sdk-v0-0-68
+title: "cline sdk/sdk/v0.0.68 — SDK 修复错误透传、模型名解析与 Windows 命令执行，提升 agent "
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.68
+publishedAt: 2026-08-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK 修复错误透传、模型名解析与 Windows 命令执行，提升 agent 稳定性"
+broadcast: "最近这个开发工具包更新了，主要修复了几个让开发者头疼的问题。现在通过网关转发错误时，能直接看到真实的上游信息，排查上下文超限这类问题方便多了。另外，在Windows上跑命令也更稳了，不会因为编码问题导致乱码或卡住。对做agent开发的朋友来说，这些改进能让调试更顺畅，值得关注。"
+insight: "SDK v0.0.68 主要修复稳定性问题，对现有用户而言，若你正被错误信息不透明或 Windows 命令执行问题困扰，值得升级。模型名解析的改进可简化宿主配置，但无需立即改动现有 prompt 或 hook。国内用户通过 newapi.lurus.cn 代理不受影响，因为修复集中在 SDK 内部错误处理和命令执行，不涉及网络层。建议按需升级，并留意新导出的辅助函数以优化错误处理。"
+tags: [sdk, error-handling, windows, model-catalog]
+---
+
+- Provider 错误经 Vercel AI Gateway 转发时保留真实上游消息，不再显示 Zod 原始 dump 或 `[object Object]`，便于 agent 诊断上下文超限等问题。
+- `fetchClineRecommendedModels` 返回展示用模型名，通过目录解析别名，统一超时预算，宿主无需自行映射 ID 到名称。
+- Windows 下 PowerShell 命令改用 UTF-8 stdin 传输，避免非 ASCII 命令因代码页损坏及命令行长度限制，`getShellInvocation()` 取代 `getShellArgs()`，写入失败报错而非挂起。
+- 修复根目录会话无法运行命令的问题，`basename("/")` 产生空 workspace 提示导致校验失败。
+- 导出 finish-reason 和 auth-error 辅助函数，便于描述 agent 错误。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.68](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.68)

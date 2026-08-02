@@ -1,0 +1,23 @@
+---
+slug: 2026-08-02-cline-cli-v3-0-49
+title: "cline cli-v3.0.49 — CLI v3.0.49 修复了检查点与撤销，并增强了 Ollama 稳定性。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.49
+publishedAt: 2026-08-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "CLI v3.0.49 修复了检查点与撤销，并增强了 Ollama 稳定性。"
+broadcast: "最近这个命令行工具更新了，修复了检查点恢复和撤销功能，现在能完整回退工作区，但会保留忽略文件，对管理构建产物特别有用。另外，本地大模型启动超时延长到五分钟，还会重试空响应，用起来更稳了。还修了 Windows 下中文命令传输的问题，跨平台开发更省心。"
+insight: "这次升级对现有用户来说值得跟进，尤其是本地 Ollama 场景，冷启动超时延长到 5 分钟能明显减少失败。检查点回退现在会清理任务创建的文件但保留 .gitignore 路径，如果你用构建产物管理，建议升级后重新验证 hook 配置，避免误删。国内走 newapi.lurus.cn 代理不受影响，因为改动集中在本地执行层，不涉及网络链路。"
+tags: [checkpoint, ollama, windows, cli]
+---
+
+- 检查点恢复现在会完整回退工作区，删除任务后创建的文件，但保留 .gitignore 路径，这对构建产物管理很重要。
+- Ollama 响应启动超时从 30 秒延长至 5 分钟，并重试空响应，适合本地大模型冷启动场景。
+- 修复了 Windows 下 PowerShell 命令的 UTF-8 传输，避免非 ASCII 命令失败，对跨平台 harness 有参考价值。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.49](https://github.com/cline/cline/releases/tag/cli-v3.0.49)

@@ -1,0 +1,32 @@
+---
+slug: 2026-08-02-cline-sdk-sdk-v0-0-69
+title: "cline sdk/sdk/v0.0.69 — Ollama 超时与空响应重试、checkpoint 修复，agent 可靠性提"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.69
+publishedAt: 2026-08-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Ollama 超时与空响应重试、checkpoint 修复，agent 可靠性提升"
+broadcast: "这次更新主要提升了agent的可靠性。比如，Ollama冷启动时等待时间从30秒延长到5分钟，避免大模型启动慢导致失败；空响应也会自动重试。另外，checkpoint恢复现在能真正回滚文件，但会避开构建输出等忽略路径。对开发者来说，设计harness时要注意区分冷启动和不可达，超时策略要可配置，重试要防无限循环。"
+insight: "这次 SDK 更新对国内开发者是实打实的利好：Ollama 冷启动超时放宽到 5 分钟，配合 newapi.lurus.cn 代理时，建议确认代理层没有更短的超时限制，否则仍可能提前断连。现有用户值得升级，尤其是用 Ollama 跑大模型或依赖 checkpoint 做文件回滚的，但要注意旧 checkpoint 行为保守，升级后新 checkpoint 才会真正回滚文件。prompt 和 hook 配置不用大改，只是 checkpoint 触发逻辑变了，如果之前靠 run-boundary 检测，建议检查一下是否还生效。"
+tags: [ollama, checkpoint, error-handling, sdk]
+---
+
+- Ollama 响应起始超时默认从 30 秒增至 5 分钟，冷启动大模型不再失败；不可达服务器仍立即失败，请求可取消，显式 `requestTimeoutMs` 仍生效。
+  - 对 harness 设计：需区分冷启动与不可达，超时策略应可配置且可取消。
+- Ollama 完全空响应（无文本/推理/工具调用）现在在模型边界重试，而非直接失败；非空流式响应无额外延迟，错误或超限响应不变。
+  - 对 harness 设计：空响应重试可提高鲁棒性，但需避免无限重试，并保持流式性能。
+- VS Code 和 CLI 中 checkpoint 创建修复：run-boundary 检测假设 prompt 作为 run 输入，但实际在初始消息中，导致无 checkpoint；检测现支持进程重启和压缩。
+  - 对 harness 设计：checkpoint 触发条件需与实际消息流匹配，并考虑持久化。
+- Checkpoint 恢复成为真正的工作区回滚：捕获并恢复任务期间创建的文件，删除 checkpoint 后创建的文件；`.gitignore` 路径（构建输出、`node_modules`、`.env`）不受影响，恢复前有恢复快照可回滚。旧 checkpoint 保持保守行为。
+  - 对 harness 设计：文件系统回滚需谨慎处理忽略路径，并提供安全恢复机制。
+- 迁移用户若存储的模型 id 不在运行时目录中，则回退到默认 Cline 模型，避免未知 id 进入推理请求。
+  - 对 harness 设计：模型 id 校验和回退策略可防止配置错误。
+- 工具使用错误通知不再报告为 provider API 错误，provider 错误不再重复计数，错误详情保留。
+  - 对 harness 设计：错误分类和去重有助于监控和调试。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.69](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.69)

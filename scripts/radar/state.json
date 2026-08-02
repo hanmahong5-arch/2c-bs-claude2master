@@ -3,9 +3,9 @@
     "anthropics/claude-code": "v2.1.220",
     "openai/codex": "rust-v0.146.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v4.1.2",
+    "cline/cline": "cli-v3.0.49",
     "block/goose": "v1.45.0",
-    "sst/opencode": "v1.18.10",
+    "sst/opencode": "v1.18.11",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.53.1",
     "openclaw/openclaw": "v2026.7.1",
@@ -166,7 +166,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-01",
+    "anthropic-engineering": "2026-08-02",
     "claude-code-docs": "2026-07-31",
     "openai-codex-blog": "2026-07-30",
     "openclaw-concepts": "2026-07-27",
@@ -347,7 +347,12 @@
       "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
       "https://simonwillison.net/2026/Jul/31/llm-mcp-client/",
       "https://simonwillison.net/2026/Jul/31/oxide-and-friends/",
-      "https://simonwillison.net/2026/Jul/31/smevals/"
+      "https://simonwillison.net/2026/Jul/31/smevals/",
+      "https://simonwillison.net/2026/Aug/2/open-letters/",
+      "https://simonwillison.net/2026/Aug/2/july-newsletter/",
+      "https://simonwillison.net/2026/Aug/1/greg-brockman/",
+      "https://simonwillison.net/2026/Aug/1/datasette-apps/",
+      "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -658,7 +663,8 @@
       "https://openai.com/index/advancing-responsible-ai-across-europe",
       "https://openai.com/index/building-abundant-intelligence",
       "https://openai.com/index/unive",
-      "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation"
+      "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
+      "https://openai.com/index/ten-advances-in-mathematics"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -839,23 +845,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-01",
+    "simonwillison": "2026-08-02",
     "lilianweng": "2026-07-30",
-    "latentspace": "2026-08-01",
-    "interconnects": "2026-08-01",
-    "karpathy": "2026-07-30",
-    "raschka": "2026-07-30",
-    "eugeneyan": "2026-07-30",
+    "latentspace": "2026-08-02",
+    "interconnects": "2026-08-02",
+    "karpathy": "2026-08-02",
+    "raschka": "2026-08-02",
+    "eugeneyan": "2026-08-02",
     "chiphuyen": "2026-07-30",
-    "oneusefulthing": "2026-07-31",
+    "oneusefulthing": "2026-08-02",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-01",
-    "deepmind": "2026-07-31",
-    "hf-blog": "2026-07-31",
-    "anthropic-news": "2026-08-01",
-    "steipete": "2026-07-31",
-    "openclaw-blog": "2026-07-31"
+    "openai-news": "2026-08-02",
+    "deepmind": "2026-08-02",
+    "hf-blog": "2026-08-02",
+    "anthropic-news": "2026-08-02",
+    "steipete": "2026-08-02",
+    "openclaw-blog": "2026-08-02"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

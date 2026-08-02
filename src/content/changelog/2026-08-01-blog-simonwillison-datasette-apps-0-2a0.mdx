@@ -1,0 +1,23 @@
+---
+slug: 2026-08-01-blog-simonwillison-datasette-apps-0-2a0
+title: "datasette-apps 0.2a0 — Datasette Apps 0.2a0 新增调试工具，让 AI 代理能隐形测试"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/1/datasette-apps/
+publishedAt: 2026-08-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette Apps 0.2a0 新增调试工具，让 AI 代理能隐形测试应用。"
+broadcast: "最近，Datasette 应用推出了新版本，给 AI 代理加了两样实用工具。一个是调试工具，能让代理在隐藏的窗口里测试应用，检查功能是否正常；另一个是列表工具，可以列出你能编辑的应用，方便代理直接上手。这对国内开发者来说，意味着 AI 驱动的开发会更自动化，测试和修改应用都省事多了。"
+tags: [datasette, ai-agent, testing, developer-tools]
+---
+
+- 新增 `app_debug()` 工具，代理可在不可见 iframe 中运行 JavaScript 测试应用，检查功能或测量元素尺寸。
+- 新增 `app_list()` 工具，列出用户有权限编辑的应用，便于代理直接操作。
+- 这些工具基于 `datasette-agent` 的 `context.browser_task()` 机制，为 AI 驱动的应用开发提供了自动化测试和编辑能力。
+
+---
+
+> 原文：[datasette-apps 0.2a0](https://simonwillison.net/2026/Aug/1/datasette-apps/) · 作者 Simon Willison
