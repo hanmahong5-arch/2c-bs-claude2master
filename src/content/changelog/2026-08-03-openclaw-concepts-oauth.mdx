@@ -1,0 +1,23 @@
+---
+slug: 2026-08-03-openclaw-concepts-oauth
+title: "OAuth · OpenClaw — OAuth 令牌轮换与多账号路由的工程实践，避免登录互踢。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/oauth
+publishedAt: 2026-08-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OAuth 令牌轮换与多账号路由的工程实践，避免登录互踢。"
+broadcast: "今天聊聊 OAuth 令牌轮换和多账号路由的工程实践。OpenClaw 把本地配置作为权威令牌源，外部令牌只做引导，这样多工具登录就不会互相踢掉。对开发者来说，令牌存储要集中管理，避免刷新竞争；同时要支持无界面环境，提供手动粘贴回退。多账号时建议隔离或按需路由，别复制刷新令牌，防止泄露。"
+insight: "现有用户若已用 OpenClaw 管理 OAuth，升级时建议保留令牌汇集中存储的做法，外部 CLI 令牌仅作引导，避免多工具互踢。多账号场景下，单 agent 多 profile 按需路由可行，但刷新必须写回主存储，别复制刷新令牌。国内走 newapi.lurus.cn 代理不受影响，因为令牌轮换与路由是本地逻辑，与网络代理无关。若你的 harness 还没做手动粘贴回退，建议补上，headless 环境会用到。"
+tags: [oauth, token-management, multi-account, agent-auth]
+---
+
+- **令牌汇（token sink）设计**：OpenClaw 将本地 OAuth 配置文件作为权威令牌源，外部 CLI 令牌仅用于初始引导，避免多工具登录互相失效。对 harness 的启示：令牌存储需集中管理，防止刷新竞争。
+- **PKCE 流程与手动粘贴**：登录时生成 verifier/challenge，回调优先，手动粘贴可竞争，先完成者生效。对 harness 的启示：OAuth 流程需支持 headless 环境，提供手动回退。
+- **多账号路由**：推荐隔离 agents，或单 agent 内多 profile 按需路由；刷新时写回主存储，不复制刷新令牌。对 harness 的启示：多账号需明确隔离或路由策略，避免令牌泄露。
+
+---
+
+> 原文：[OAuth · OpenClaw](https://docs.openclaw.ai/concepts/oauth)

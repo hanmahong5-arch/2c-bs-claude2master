@@ -1,0 +1,26 @@
+---
+slug: 2026-08-02-cline-desktop-v0-0-8
+title: "cline desktop-v0.0.8 — Cline 桌面版支持编辑任意历史消息并回滚工作区，Agent 调试效率大增。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.8
+publishedAt: 2026-08-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline 桌面版支持编辑任意历史消息并回滚工作区，Agent 调试效率大增。"
+broadcast: "Cline 桌面版这次更新，最亮眼的是能直接编辑历史消息，改完会自动回滚工作区重新执行，而且恢复是事务性的，不会卡在半路。这对做 agent 开发的朋友特别有用，意味着调试时能大胆分支探索，不用怕搞乱状态。另外检查点更可靠，推理参数也统一管理了，整体上让 agent 的调试和配置都更省心。"
+insight: "这次桌面版更新对现有用户价值明确：如果你经常调试 Agent 或需要回溯历史对话，升级很值得，尤其编辑历史消息并回滚工作区的功能，能显著提升调试效率。不过要注意，检查点恢复是事务性的，升级后建议先在小项目上验证现有 hook 配置是否兼容，避免恢复失败导致状态不一致。国内用户走 newapi.lurus.cn 代理不受影响，因为更新主要涉及本地状态管理和模型元数据，不改变网络请求路径。"
+tags: [checkpoint, session-fork, model-catalog, ollama]
+---
+
+- 支持编辑对话中任意历史消息，应用会分叉会话、回滚工作区到该消息的检查点并重新执行，且恢复操作是事务性的，失败不会导致半回滚状态。
+  - 对 agent harness 设计：这要求 harness 具备细粒度的状态快照和回滚能力，以支持交互式调试和分支探索。
+- 检查点创建更可靠，覆盖重启、压缩、恢复会话等场景，恢复时回滚整个工作区而非仅对话。
+  - 对 agent harness 设计：harness 需要持久化工作区状态，并确保恢复的原子性，避免部分恢复导致的不一致。
+- 推理控制（如 effort、thinking budget）现在来自共享模型目录，每个模型只显示其支持的选项。
+  - 对 agent harness 设计：harness 应通过统一的模型元数据来配置推理参数，避免硬编码或猜测。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.8](https://github.com/cline/cline/releases/tag/desktop-v0.0.8)

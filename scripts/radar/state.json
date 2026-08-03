@@ -3,13 +3,13 @@
     "anthropics/claude-code": "v2.1.220",
     "openai/codex": "rust-v0.146.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.49",
+    "cline/cline": "v4.1.3",
     "block/goose": "v1.45.0",
     "sst/opencode": "v1.18.11",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.53.1",
     "openclaw/openclaw": "v2026.7.1",
-    "zeroclaw-labs/zeroclaw": "v0.8.3",
+    "zeroclaw-labs/zeroclaw": "v0.8.4",
     "NousResearch/hermes-agent": "v2026.7.30"
   },
   "trendingSeen": [
@@ -97,7 +97,8 @@
     "kvcache-ai/AgentENV",
     "openai/codex-security",
     "perplexityai/numbat",
-    "mesamirh/MovieBox-Tui"
+    "mesamirh/MovieBox-Tui",
+    "yc-software/qm"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -161,16 +162,22 @@
       "https://docs.openclaw.ai/concepts/messages",
       "https://docs.openclaw.ai/concepts/model-failover",
       "https://docs.openclaw.ai/concepts/model-providers",
-      "https://docs.openclaw.ai/concepts/models"
+      "https://docs.openclaw.ai/concepts/models",
+      "https://docs.openclaw.ai/concepts/agent-bindings",
+      "https://docs.openclaw.ai/concepts/memory-architecture",
+      "https://docs.openclaw.ai/concepts/multi-agent",
+      "https://docs.openclaw.ai/concepts/multi-user",
+      "https://docs.openclaw.ai/concepts/oauth",
+      "https://docs.openclaw.ai/concepts/parallel-specialist-lanes"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-02",
+    "anthropic-engineering": "2026-08-03",
     "claude-code-docs": "2026-07-31",
     "openai-codex-blog": "2026-07-30",
-    "openclaw-concepts": "2026-07-27",
-    "hermes-guides": "2026-07-27"
+    "openclaw-concepts": "2026-08-03",
+    "hermes-guides": "2026-08-03"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -352,7 +359,10 @@
       "https://simonwillison.net/2026/Aug/2/july-newsletter/",
       "https://simonwillison.net/2026/Aug/1/greg-brockman/",
       "https://simonwillison.net/2026/Aug/1/datasette-apps/",
-      "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/"
+      "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/",
+      "https://simonwillison.net/2026/Aug/2/condense-json/",
+      "https://simonwillison.net/2026/Jul/31/slack-emoji-maker/",
+      "https://simonwillison.net/2026/Jul/31/datasette-agent/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -477,7 +487,8 @@
       "https://www.interconnects.ai/p/artifacts-22-zyphra-cohere-and-poolside",
       "https://www.interconnects.ai/p/6-months-to-live-for-open-models",
       "https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation",
-      "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3"
+      "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3",
+      "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -845,10 +856,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-02",
+    "simonwillison": "2026-08-03",
     "lilianweng": "2026-07-30",
-    "latentspace": "2026-08-02",
-    "interconnects": "2026-08-02",
+    "latentspace": "2026-08-03",
+    "interconnects": "2026-08-03",
     "karpathy": "2026-08-02",
     "raschka": "2026-08-02",
     "eugeneyan": "2026-08-02",
@@ -856,10 +867,10 @@
     "oneusefulthing": "2026-08-02",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-02",
+    "openai-news": "2026-08-03",
     "deepmind": "2026-08-02",
     "hf-blog": "2026-08-02",
-    "anthropic-news": "2026-08-02",
+    "anthropic-news": "2026-08-03",
     "steipete": "2026-08-02",
     "openclaw-blog": "2026-08-02"
   },

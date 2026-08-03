@@ -1,0 +1,23 @@
+---
+slug: 2026-08-03-openclaw-concepts-parallel-specialist-lanes
+title: "Parallel specialist lanes · OpenClaw — 并行AI代理如何不互相拖慢？三条务实原则与分阶段落地指南。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/parallel-specialist-lanes
+publishedAt: 2026-08-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "并行AI代理如何不互相拖慢？三条务实原则与分阶段落地指南。"
+broadcast: "今天聊聊并行AI代理怎么不互相拖慢。核心是先给每个代理定好职责和交接规则，再用队列控制并发，让高价值任务优先。最后加个协调者统一调度。这套思路对国内开发者做多代理系统很有参考价值，能避免资源浪费和任务混乱。"
+insight: "现有用户若已配置多代理并行，建议先检查是否已定义车道契约，否则升级前先补上职责与交接规则，避免上下文污染。并发上限和优先级队列值得优先配置，能显著减少模型容量争抢。协调者应最后引入，且仅在契约明确时才有价值。国内用户走 newapi.lurus.cn 代理不受影响，但需确认代理稳定性以支撑并发请求。"
+tags: [multi-agent, parallelism, lane-contracts, queueing]
+---
+
+- **先定车道契约**：每个代理明确职责、非目标、聊天预算和交接规则，避免重复劳动和上下文污染。
+- **控制并发与优先级**：用队列和并发上限，高价值任务优先，重活转后台，避免全局模型容量争抢。
+- **最后加协调者**：多车道活跃时，用协调者跟踪任务、去重、路由交接，但需先有契约，否则只是混乱。
+
+---
+
+> 原文：[Parallel specialist lanes · OpenClaw](https://docs.openclaw.ai/concepts/parallel-specialist-lanes)
