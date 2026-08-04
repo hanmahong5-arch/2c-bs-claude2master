@@ -1,0 +1,30 @@
+---
+slug: 2026-08-04-openclaw-2026-7-1-1
+title: "openclaw v2026.7.1-1 — 修复 Codex 中途停止、启动崩溃等关键问题，提升 agent 稳定性。"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-1
+publishedAt: 2026-08-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Codex 中途停止、启动崩溃等关键问题，提升 agent 稳定性。"
+broadcast: "最近有个叫 OpenClaw 的智能体框架更新了，主要修复了几个关键问题。比如之前 Codex 在回复进度消息后可能会中途停止，现在能确保它给出最终答复；还有启动时可能崩溃的死循环也修好了。对国内开发者来说，这意味着用这个框架跑智能体任务会更稳定，升级和插件更新也更顺畅，值得关注。"
+insight: "这次更新主要修复稳定性问题，对现有用户而言，如果遇到 Codex 中途停止或启动崩溃，值得升级；否则可观望。prompt 和 hook 配置无需改动，修复集中在底层 harness 逻辑。国内用户走 newapi.lurus.cn 代理不受影响，因为更新不涉及网络层，但建议升级后验证 WSL 权限和插件更新是否正常。"
+tags: [bug-fixes, stability, codex, memory-core]
+---
+
+- **Codex 进度回复**：进度消息后保持会话运行，确保 GPT/Codex 输出最终权威回复，避免中途停止。
+  - 含义：harness 需区分进度与最终响应，确保完整交互。
+- **Memory Core 启动修复**：恢复派生索引与缓存冲突，避免 Gateway 陷入致命重启循环，同时保留向量存储损坏重试。
+  - 含义：harness 需处理存储损坏与恢复，避免启动阻塞。
+- **WSL 权限容错**：仅当状态路径已私有时才容忍 EROFS，保持宽权限的 fail-closed 处理。
+  - 含义：harness 需精细处理权限错误，平衡安全与兼容。
+- **遗留迁移恢复**：使审查后的迁移残留非致命，不阻塞正常升级。
+  - 含义：harness 需容忍非关键迁移问题，保证升级流畅。
+- **托管插件更新**：恢复过期的 npm 锁元数据，使官方插件可干净更新。
+  - 含义：harness 需处理依赖元数据过期，确保插件可维护。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.7.1-1](https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-1)

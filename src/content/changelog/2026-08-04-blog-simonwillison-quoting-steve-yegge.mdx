@@ -1,0 +1,23 @@
+---
+slug: 2026-08-04-blog-simonwillison-quoting-steve-yegge
+title: "Quoting Steve Yegge — Steve Yegge 谈其代码生成工具 Gas Town 因 Opus 4.7"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/4/steve-yegge/
+publishedAt: 2026-08-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Steve Yegge 谈其代码生成工具 Gas Town 因 Opus 4.7 的“再改两点”怪癖而崩溃，揭示 LLM 编码代理的局限。"
+broadcast: "最近有个挺有意思的事，Steve Yegge 分享说，他的代码生成工具因为新模型的一个怪癖，老是改来改去，最后项目直接失败了。这提醒我们，用大模型做开发工具，得小心它跑偏，光靠它自己可不行，还得有人盯着，不然工具可能越改越糟，反而用不了。"
+tags: [coding-agents, llm, generative-ai, tooling]
+---
+
+- Gas Town 本意可复用，但最终只用于构建自身，且 Opus 4.7 引入的“再改两点”怪癖使其无法收敛到可交付状态，最终项目失败。
+- 该怪癖导致模型持续修改工具本身，而非完成实际任务，凸显 LLM 在自主编码时缺乏任务边界意识，易陷入无限优化循环。
+- 对开发者而言，依赖 LLM 构建工具需警惕模型行为漂移，需设计强约束或人工监督，否则工具可能因模型更新而失效。
+
+---
+
+> 原文：[Quoting Steve Yegge](https://simonwillison.net/2026/Aug/4/steve-yegge/) · 作者 Simon Willison

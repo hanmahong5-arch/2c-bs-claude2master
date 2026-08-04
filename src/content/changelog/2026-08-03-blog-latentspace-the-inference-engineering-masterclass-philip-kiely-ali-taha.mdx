@@ -1,0 +1,23 @@
+---
+slug: 2026-08-03-blog-latentspace-the-inference-engineering-masterclass-philip-kiely-ali-taha
+title: "The Inference Engineering Masterclass — Philip Kiely & — Baseten 团队详解推理工程：如何将开源模型变成快、稳、省的 API，以及 "
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/inference-eng
+publishedAt: 2026-08-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Baseten 团队详解推理工程：如何将开源模型变成快、稳、省的 API，以及 10 倍加速的实战路径。"
+broadcast: "今天聊聊推理工程，Baseten 团队分享了如何把开源模型变成又快又稳又省的服务。他们发现，量化模型不一定会掉精度，反而能提升两成吞吐量，这给开发者提供了新的优化思路。更重要的是，推理系统正走向专业化分工，不同环节用不同 GPU，甚至用小模型加速大模型。这意味着，构建高效服务得重新思考架构，而不是光堆硬件。"
+tags: [inference-engineering, llm-serving, quantization, kv-cache]
+---
+
+- 推理优化仍能带来 20%、100% 甚至 200% 的性能提升，例如 GLM-5.2 实验中量化更多层反而保持基准质量并提高 20% 吞吐量，因为不同层的误差可能相互抵消。对开发者而言，量化不再是简单的精度损失，而是可精细调控的性能杠杆。
+- 推理系统正走向专业化分工：prefill 和 decode 由不同 GPU 处理，缓存感知路由复用 KV cache，推测解码用小模型加速大模型。这意味着构建高效服务需要重新思考架构，而非仅堆硬件。
+- 推理与训练的边界在模糊：模型可帮助优化运行自身的核函数，持续学习通过持久 KV cache 实现。未来系统可能形成自我优化的闭环，开发者需关注训练与推理的协同设计。
+
+---
+
+> 原文：[The Inference Engineering Masterclass — Philip Kiely & Ali Taha, Baseten](https://www.latent.space/p/inference-eng) · 作者 Latent Space

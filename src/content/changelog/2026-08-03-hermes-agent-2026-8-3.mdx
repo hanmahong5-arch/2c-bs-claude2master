@@ -1,0 +1,26 @@
+---
+slug: 2026-08-03-hermes-agent-2026-8-3
+title: "hermes-agent v2026.8.3 — Hermes Agent 0.20 发布：语音交互、A2A 协议、桌面平台化，工"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.3
+publishedAt: 2026-08-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hermes Agent 0.20 发布：语音交互、A2A 协议、桌面平台化，工具自愈与压缩优化。"
+broadcast: "最近，Hermes Agent 推出了新版本，带来了语音对话功能，支持打断和唤醒词，用起来更自然。更重要的是，它实现了与其他智能体协作的标准化协议，让不同系统能互相通信。桌面版也升级成了平台，可以实时预览生成内容，还支持插件扩展。这对国内开发者来说，意味着开发智能体时，交互方式和协作能力都有了新参考。"
+insight: "这次升级对现有用户价值明确：语音交互和 A2A 协议是实打实的新能力，但如果你主要用 CLI 跑自动化任务，升级收益有限，建议等插件生态稳定后再动。桌面平台化意味着 hook 配置可能变化，现有 artifacts 预览相关 hook 需重新验证。国内用户走 newapi.lurus.cn 代理不受影响，因为升级不涉及网络层，但语音流对延迟敏感，建议测试代理下的实时性。"
+tags: [voice, a2a, desktop, tool-recovery]
+---
+
+- 新增流式语音对话，支持打断、唤醒词和免提控制，跨 CLI、桌面及网关平台。
+  - 对 agent harness 设计：需处理实时音频流、打断事件和低延迟 TTS 合成。
+- 实现 A2A v1.0 协议，支持与其他 agent 发现、通信和协作。
+  - 对 agent harness 设计：需标准化 agent 间通信协议，支持异构系统集成。
+- 桌面应用升级为平台，支持 artifacts 实时预览、插件 SDK 和全局快捷入口。
+  - 对 agent harness 设计：需提供可扩展的 UI 框架和沙箱环境，确保安全运行生成内容。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.8.3](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.3)
