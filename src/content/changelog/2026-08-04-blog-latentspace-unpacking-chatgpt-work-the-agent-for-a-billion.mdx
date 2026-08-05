@@ -1,0 +1,23 @@
+---
+slug: 2026-08-04-blog-latentspace-unpacking-chatgpt-work-the-agent-for-a-billion
+title: "Unpacking ChatGPT Work: the Agent for a Billion Users — OpenAI 发布 ChatGPT Work，面向十亿用户的知识工作代理，本文拆"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/unpacking-chatgpt-work
+publishedAt: 2026-08-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "OpenAI 发布 ChatGPT Work，面向十亿用户的知识工作代理，本文拆解其架构与设计选择。"
+broadcast: "OpenAI 推出了面向知识工作的代理产品 ChatGPT Work，它运行在云端虚拟机上，能连接邮件、日历等数百种插件，直接生成文档和表格。它的核心设计是每个任务有独立的工作目录，状态会持久保存，但线程之间不共享目录，靠产品层来获取上下文。对国内开发者来说，这展示了代理从写代码走向通用工作平台的趋势，不过线程隔离和记忆外部化也带来了新的上下文管理挑战。"
+tags: [chatgpt-work, ai-agents, knowledge-work, openai]
+---
+
+- ChatGPT Work 是 OpenAI 面向知识工作的代理产品，基于 Codex harness，运行在云端微VM上，可连接 Slack、邮件、日历等数百种插件，生成文档、表格、网站等成品。
+- 其核心设计是持久化工作区：每个任务有独立目录，状态同步到持久存储，但线程间不共享工作目录，依赖 ChatGPT 产品层（如压缩摘要、Personal Context 工具）获取上下文，文件与对话分离存储。
+- 对开发者而言，Work 展示了代理从编码工具向通用知识工作平台的演进，其架构（云VM、持久化、外部记忆）为构建复杂代理系统提供了参考，但线程隔离和记忆外部化也带来上下文管理的新挑战。
+
+---
+
+> 原文：[Unpacking ChatGPT Work: the Agent for a Billion Users](https://www.latent.space/p/unpacking-chatgpt-work) · 作者 Latent Space

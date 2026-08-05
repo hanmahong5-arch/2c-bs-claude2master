@@ -1,0 +1,25 @@
+---
+slug: 2026-08-04-blog-simonwillison-pipenetwork-minimax-h3-mlx
+title: "PipeNetwork/minimax-h3-mlx — MiniMax"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/
+publishedAt: 2026-08-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "MiniMax-H3 开源模型在 Apple Silicon 上跑通，生成 15 秒带音频视频，但需 115GB 模型和 45 分钟。"
+broadcast: "最近有个叫 MiniMax-H3 的开源多模态模型，能在苹果电脑上本地跑通了，可以生成最长十五秒带声音的视频片段。不过代价不小，光模型文件就要下载一百多 GB，生成一个视频差不多要四十五分钟。这告诉我们，开源多模态模型在消费级硬件上运行是可能的，但资源消耗和提示调优依然是开发者要面对的主要挑战。"
+tags: [ai, generative-ai, mlx, text-to-video, minimax]
+---
+
+- MiniMax-H3 是一个多模态生成系统，接受文本、图像、音频和视频输入，可生成最长 15 秒的带音频视频片段。
+- 通过 MLX 移植，Simon Willison 在 M5 Max MacBook Pro 上成功运行，但下载了约 115GB 模型文件，生成单个视频耗时近 45 分钟，显示本地运行成本高。
+- 生成的视频质量不错，但音频因未按提示指南操作而变成类似语音的噪声，说明提示工程对多模态生成至关重要。
+
+对开发者而言，这展示了开源多模态模型在消费级硬件上运行的可能性，但资源消耗和提示调优仍是主要挑战。
+
+---
+
+> 原文：[PipeNetwork/minimax-h3-mlx](https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/) · 作者 Simon Willison

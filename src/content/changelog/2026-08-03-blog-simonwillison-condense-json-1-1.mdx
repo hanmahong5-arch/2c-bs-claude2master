@@ -1,0 +1,23 @@
+---
+slug: 2026-08-03-blog-simonwillison-condense-json-1-1
+title: "condense-json 1.1 — condense"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/3/condense-json/
+publishedAt: 2026-08-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "condense-json 1.1 新增对象合并与替换功能，提升 JSON 压缩效率。"
+broadcast: "最近有个叫 condense-json 的工具更新了，它专门用来压缩 JSON 数据。这次新版本能识别相似对象，只记录变化的部分，压缩效率更高了。而且它加了自动测试，保证压缩和解压都可靠。对咱们做开发的来说，处理大量 JSON 数据时能省不少空间，用起来也更放心。"
+tags: [json, compression, python, llm]
+---
+
+- 新版本允许 Replacements 对象包含非字符串值，这些值会被识别并用于结构替换，增强了压缩的灵活性。
+- 支持基于对象的合并操作，condense_json() 会识别相似对象并存储更新或删除键的指令，uncondense_json() 可应用这些合并，减少重复数据。
+- 使用 Hypothesis 属性测试库添加了往返测试，确保压缩与解压的可靠性，对开发者而言，这意味着更稳健的 JSON 处理工具。
+
+---
+
+> 原文：[condense-json 1.1](https://simonwillison.net/2026/Aug/3/condense-json/) · 作者 Simon Willison

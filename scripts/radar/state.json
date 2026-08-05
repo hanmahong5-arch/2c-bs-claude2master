@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.221",
+    "anthropics/claude-code": "v2.1.222",
     "openai/codex": "rust-v0.146.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "v4.1.3",
     "block/goose": "v1.45.0",
-    "sst/opencode": "v1.18.12",
+    "sst/opencode": "v1.18.13",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.53.1",
     "openclaw/openclaw": "v2026.7.1-2",
@@ -100,7 +100,8 @@
     "mesamirh/MovieBox-Tui",
     "yc-software/qm",
     "zenbu-labs/terminal-browser",
-    "yc-duan/fastctx"
+    "yc-duan/fastctx",
+    "firecrawl/anydoc"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -175,7 +176,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-04",
+    "anthropic-engineering": "2026-08-05",
     "claude-code-docs": "2026-07-31",
     "openai-codex-blog": "2026-07-30",
     "openclaw-concepts": "2026-08-03",
@@ -368,7 +369,12 @@
       "https://simonwillison.net/2026/Aug/4/steve-yegge/",
       "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/",
       "https://simonwillison.net/2026/Aug/3/david-crawshaw/",
-      "https://simonwillison.net/2026/Aug/3/devtools-must-be-open-source-exedev/"
+      "https://simonwillison.net/2026/Aug/3/devtools-must-be-open-source-exedev/",
+      "https://simonwillison.net/2026/Aug/4/new-release-of-llm/",
+      "https://simonwillison.net/2026/Aug/4/llm-anthropic/",
+      "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/",
+      "https://simonwillison.net/2026/Aug/4/llm/",
+      "https://simonwillison.net/2026/Aug/3/condense-json/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -468,7 +474,9 @@
       "https://www.latent.space/p/ontologies-agentic-systems",
       "https://www.latent.space/p/ainews-not-much-happened-today-038",
       "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new",
-      "https://www.latent.space/p/inference-eng"
+      "https://www.latent.space/p/inference-eng",
+      "https://www.latent.space/p/ainews-megakernels-are-so-dead-and",
+      "https://www.latent.space/p/unpacking-chatgpt-work"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -686,7 +694,10 @@
       "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
       "https://openai.com/index/ten-advances-in-mathematics",
       "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
-      "https://openai.com/index/circles"
+      "https://openai.com/index/circles",
+      "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
+      "https://openai.com/index/learn-teach-chatgpt-work-codex",
+      "https://openai.com/index/apple-is-getting-this-wrong"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -832,7 +843,8 @@
       "https://www.anthropic.com/news/claude-opus-5",
       "https://www.anthropic.com/news/position-open-weights-models",
       "https://www.anthropic.com/news/cognizant-anthropic",
-      "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+      "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "https://www.anthropic.com/news/tino-cuellar"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -867,21 +879,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-04",
+    "simonwillison": "2026-08-05",
     "lilianweng": "2026-07-30",
-    "latentspace": "2026-08-04",
-    "interconnects": "2026-08-04",
-    "karpathy": "2026-08-02",
-    "raschka": "2026-08-02",
-    "eugeneyan": "2026-08-02",
+    "latentspace": "2026-08-05",
+    "interconnects": "2026-08-05",
+    "karpathy": "2026-08-05",
+    "raschka": "2026-08-05",
+    "eugeneyan": "2026-08-05",
     "chiphuyen": "2026-07-30",
     "oneusefulthing": "2026-08-04",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-04",
+    "openai-news": "2026-08-05",
     "deepmind": "2026-08-04",
     "hf-blog": "2026-08-04",
-    "anthropic-news": "2026-08-04",
+    "anthropic-news": "2026-08-05",
     "steipete": "2026-08-04",
     "openclaw-blog": "2026-08-04"
   },

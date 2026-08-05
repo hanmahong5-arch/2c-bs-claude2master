@@ -1,0 +1,25 @@
+---
+slug: 2026-08-04-claude-code-2-1-222
+title: "claude-code v2.1.222 — 修复隔离、代理、MCP 统计等 20 项，安全与稳定性提升"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.222
+publishedAt: 2026-08-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复隔离、代理、MCP 统计等 20 项，安全与稳定性提升"
+broadcast: "这次更新主要修复了隔离、代理和统计方面的问题，一共二十项。现在工作树隔离后，子代理没法执行破坏性的git命令了，文件编辑和Bash操作也更安全。另外，使用统计只算真正消耗工具结果的请求，方便成本监控。启动检查也改用和API请求一样的代理方式，避免代理后挂起。整体上安全性和稳定性都有提升，对开发者和agent部署来说更可靠。"
+insight: "这次 v2.1.222 的 20 项修复主要落在安全与稳定性上，对国内用户是利好。工作树隔离和 PreToolUse 钩子不再绕过后台任务，意味着现有 hook 配置若依赖自动允许，需检查是否影响子代理或摘要流程，建议按新边界调整。启动连通性检查改用代理感知传输，对走 newapi.lurus.cn 代理的用户更友好，能减少挂起。若你已在用 v2.1.x，值得升级，但升级后务必回归测试 hook 行为。"
+tags: [security, bug-fixes, proxy, mcp]
+---
+
+- 工作树隔离会话及子代理现无法对主检出执行破坏性 git 命令，文件编辑与 Bash 在所有会话类型中均受隔离。
+- PreToolUse 自动允许钩子不再绕过后台代理任务（摘要、压缩、重命名）中的工具限制，增强安全边界。
+- `/usage` 现仅将实际消耗工具结果的请求计入 MCP 服务器份额，避免过度归因，利于成本监控。
+- 启动连通性检查现使用与 API 请求相同的代理感知传输，避免 HTTPS 代理后挂起，提升部署兼容性。
+- `SendMessage` 长摘要自动截断而非拒绝，防止发送失败，提升跨会话通信可靠性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.222](https://github.com/anthropics/claude-code/releases/tag/v2.1.222)

@@ -1,0 +1,23 @@
+---
+slug: 2026-08-05-blog-latentspace-ainews-megakernels-are-so-dead-and-so-back
+title: "[AINews] Megakernels are so dead and so back — Megakernels 在推理工程中是否已死？本文回顾争论并给出最新进展。"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/ainews-megakernels-are-so-dead-and
+publishedAt: 2026-08-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Megakernels 在推理工程中是否已死？本文回顾争论并给出最新进展。"
+broadcast: "今天我们来聊聊推理引擎里一个老话题，融合内核到底还行不行。过去它因为启动开销被推崇，但实际写起来太难，很多公司干脆不用。不过最近有团队开源了一个新版本，说整体吞吐能提升四成，成本节省可能达到数十亿美元。看来这个方向还没死透，值得做推理优化的朋友关注一下。"
+tags: [megakernels, inference-engineering, gpu-architecture, kernel-fusion]
+---
+
+- 争论焦点：融合内核（megakernel）因启动开销和内核间重叠问题而受推崇，但实际编写高度优化的融合内核极难，且 TensorRT-LLM 等模块化内核通过并行优化各组件往往更快，导致许多公司不在生产中使用融合内核。
+- 硬件影响：NVIDIA 的 Rubin GPU 架构设计被认为“杀死”了 megakernel，同时 Kyle Kranen 宣布的依赖触发机制解决了部分此前需要融合的流水线阻塞问题，但物理约束仍存。
+- 新进展：Stuart Sul 团队发布开源 megakernel“Mixture of Kittens”，声称整体 token 吞吐提升 41%，可能带来数十亿美元级成本节省，显示该方向仍有生命力。
+
+---
+
+> 原文：[[AINews] Megakernels are so dead and so back](https://www.latent.space/p/ainews-megakernels-are-so-dead-and) · 作者 Latent Space
