@@ -1,0 +1,24 @@
+---
+slug: 2026-08-06-claude-code-2-1-223
+title: "claude-code v2.1.223 — Claude Code 新版本强化安全与权限控制，并优化会话恢复和模型窗口管理。"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.223
+publishedAt: 2026-08-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 新版本强化安全与权限控制，并优化会话恢复和模型窗口管理。"
+broadcast: "Claude Code 这次更新，重点在安全和权限上做了加强。现在可以批量管理整个 GitHub 组织的仓库权限，还修了好几个能绕过安全限制的漏洞，让智能体跑起来更让人放心。另外，它也会自动限制对话长度，防止会话无限膨胀。最后，代码审查命令改了个新名字，还会记住你上次用的审查级别，用起来更顺手了。"
+insight: "对于现有用户，这次升级值得跟进，尤其是安全敏感场景。新增的 owner/* 通配符和权限绕过修复，能有效降低 agent 执行风险，建议更新后重新审视现有策略配置，利用通配符简化管理。自动压缩逻辑对未知模型 ID 的限制，可能影响自定义模型的使用，需注意配置。国内用户走 newapi.lurus.cn 代理不受影响，但建议升级后测试会话恢复和模型窗口管理功能。"
+tags: [security, permissions, context-window, code-review]
+---
+
+- 新增 `owner/*` 通配符支持，可批量允许或阻止 GitHub 组织下的所有 marketplace 仓库，简化策略配置。
+- 修复多个权限绕过漏洞，包括 Bash 命令隐藏、动态 import 逃逸沙箱等，提升 agent 执行安全性。
+- 自动压缩逻辑更新，对未知模型 ID 强制限制上下文窗口，避免会话无限增长。
+- `/review` 改为 `/code-review` 别名，并支持记忆上次使用的审查级别，提升工作流效率。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.223](https://github.com/anthropics/claude-code/releases/tag/v2.1.223)

@@ -1,0 +1,23 @@
+---
+slug: 2026-08-05-codex-rust-v0-146-1
+title: "codex rust-v0.146.1 — Codex 为 cyber 模型收紧自动审查默认值，权限变化终端可见。"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.146.1
+publishedAt: 2026-08-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 为 cyber 模型收紧自动审查默认值，权限变化终端可见。"
+broadcast: "OpenAI 的 Codex 更新了，这次对具备 cyber 能力的模型，自动审查的默认值变得更安全，能降低风险。而且终端界面会解释权限变更，让用户清楚审查行为怎么调整。这对国内做 agent 开发的开发者来说，提醒我们要根据模型能力动态调整安全策略，并且把权限变化透明化，值得关注。"
+insight: "这次 codex 更新对国内用户影响不大，但值得留意。如果你在用 cyber 模型，自动审查默认值变严，终端会提示权限变化，建议升级后先跑一遍现有 prompt，确认审查行为是否符合预期。hook 配置暂时不用大改，但若依赖旧审查宽松度，需重新评估。走 newapi.lurus.cn 代理不受影响，升级即可。"
+tags: [security, defaults, terminal-ui, cyber-model]
+---
+
+- 对具备 cyber 能力的模型，自动审查默认值更安全，降低风险。
+- 终端界面会解释权限变更，用户能理解审查行为调整。
+- 对 agent harness 设计：需按模型能力动态调整安全策略，并透明化权限变化。
+
+---
+
+> 原文 release：[openai/codex rust-v0.146.1](https://github.com/openai/codex/releases/tag/rust-v0.146.1)

@@ -1,0 +1,24 @@
+---
+slug: 2026-08-06-gemini-cli-0-54-0
+title: "gemini-cli v0.54.0 — Gemini CLI 修复会话状态、安全与上下文管理，提升 agent 稳定性"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.54.0
+publishedAt: 2026-08-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Gemini CLI 修复会话状态、安全与上下文管理，提升 agent 稳定性"
+broadcast: "谷歌的Gemini命令行工具更新了，这次主要修复了几个影响稳定性的问题。比如，当模型切换时，它会自动更换会话标识，避免出错，让智能体运行更连贯。同时，强制使用加密连接来保护你的登录凭证，更安全。另外，还优化了历史记录，减少不必要的token消耗。对开发者来说，这意味着用起来更省心，也更可靠。"
+insight: "这次 v0.54.0 修复集中在会话、安全和上下文管理，属于稳定性提升。如果你在用 Gemini CLI 且遇到模型回退报错，建议升级；现有 prompt 或 hook 配置无需改动，因为修复的是底层行为。国内用户走 newapi.lurus.cn 代理不受影响，认证强制 HTTPS 反而更安全，可放心升级。"
+tags: [session-rotation, security, context-management, bug-fixes]
+---
+
+- 模型回退时轮换会话 ID，避免状态化 API 错误，确保 agent 连续运行。
+- 强制 Google 认证走 HTTPS，防止明文泄露，增强凭证安全。
+- 禁用上下文管理时过滤思考片段，历史记录更干净，减少 token 浪费。
+- 文件钥匙链强制标签长度校验，防止无效标签，提升配置可靠性。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.54.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.54.0)

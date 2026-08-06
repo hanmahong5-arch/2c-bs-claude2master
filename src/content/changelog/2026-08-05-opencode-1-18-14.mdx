@@ -1,0 +1,26 @@
+---
+slug: 2026-08-05-opencode-1-18-14
+title: "opencode v1.18.14 — xAI 登录简化，远程与无头环境更友好；错误重试增强。"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.14
+publishedAt: 2026-08-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "xAI 登录简化，远程与无头环境更友好；错误重试增强。"
+broadcast: "最近开源智能体工具更新了，主要做了三件事。一是登录更简单，用设备码就行，特别适合远程和无头环境，自动化部署更方便。二是错误处理更稳，能自动重试临时错误，减少人工干预。三是远程工作区不再转发本地目录，路径更清晰。对做智能体开发的朋友来说，这些改进让部署和运行都更省心。"
+insight: "这次更新对国内用户影响不大，但值得关注。xAI 登录简化成单一设备码，远程或无头环境部署更省事，如果你在用这类场景，建议升级。错误重试增强是实打实的稳定性提升，现有 prompt 和 hook 配置不用改，兼容性没问题。远程工作区路径解析变化，如果你有依赖宿主目录的 hook，得检查下，避免路径错乱。走 newapi.lurus.cn 代理不受影响，放心用。"
+tags: [xai-login, error-retry, remote-workspace, bugfix]
+---
+
+- xAI 登录简化为单一设备码流程，更适合无头/远程环境。
+  - 对 agent harness 设计：减少交互步骤，利于自动化部署。
+- 保留结构化流式错误，兼容提供商可重试；增加瞬时错误重试。
+  - 对 agent harness 设计：提升鲁棒性，减少手动干预。
+- 远程工作区不再转发宿主目录，提示从远程根解析。
+  - 对 agent harness 设计：确保路径一致性，避免混淆。
+
+---
+
+> 原文 release：[sst/opencode v1.18.14](https://github.com/anomalyco/opencode/releases/tag/v1.18.14)

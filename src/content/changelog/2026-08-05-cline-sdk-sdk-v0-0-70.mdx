@@ -1,0 +1,26 @@
+---
+slug: 2026-08-05-cline-sdk-sdk-v0-0-70
+title: "cline sdk/sdk/v0.0.70 — SDK v0.0.70 强化 Plan 模式安全、修复上下文溢出与 Bedroc"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.70
+publishedAt: 2026-08-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK v0.0.70 强化 Plan 模式安全、修复上下文溢出与 Bedrock 缓存等关键问题。"
+broadcast: "最近，Cline 的 SDK 更新到了新版本，主要提升了开发安全性。现在，在 Plan 模式下，它会严格阻止文件修改命令，只允许只读操作，这样能防止 agent 误改代码。另外，还修复了上下文溢出和缓存问题，让开发过程更稳定。对国内开发者来说，这意味着用 agent 写代码时更安全、更省心。"
+insight: "这次 SDK v0.0.70 的更新对现有用户来说，Plan 模式的安全强化是实打实的升级点，如果你在用 agent 跑自动化任务，建议升级并检查现有 prompt 里是否依赖了被禁的写操作命令，否则会直接报错。上下文溢出自动压缩和空响应重试能减少日常卡顿，但工具调用空响应不重试这点要注意，别指望它兜底。国内走 newapi.lurus.cn 代理不受影响，Bedrock 缓存修复只针对 AWS 用户，和代理链路无关。整体值得升，但改配置前先测一遍现有流程。"
+tags: [plan-mode, context-window, bedrock, sdk]
+---
+
+- Plan 模式硬性阻止文件编辑命令（如 sed -i、重定向、git 修改等），仅允许只读命令，提升 agent 安全性。
+- 上下文溢出自动检测并强制压缩重试，无需额外 LLM 调用，失败时给出可操作错误。
+- 会话记录新增 mode 字段，根会话持久化改为惰性，避免空历史记录。
+- 空响应在所有 provider 上重试，不再仅限 Ollama，但工具调用空响应不重试。
+- 自适应 Claude 模型不再发送手动思考 wire shape，模型目录携带推理元数据。
+- Bedrock 提示缓存修复，使用 Converse cachePoint 标记，缓存读写恢复正常。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.70](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.70)
