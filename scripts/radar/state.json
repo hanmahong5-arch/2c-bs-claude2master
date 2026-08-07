@@ -1,9 +1,9 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.223",
-    "openai/codex": "rust-v0.146.1",
+    "anthropics/claude-code": "v2.1.224",
+    "openai/codex": "rust-v0.147.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v4.1.5",
+    "cline/cline": "v4.1.6",
     "block/goose": "v1.45.0",
     "sst/opencode": "v1.18.14",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -102,7 +102,8 @@
     "zenbu-labs/terminal-browser",
     "yc-duan/fastctx",
     "firecrawl/anydoc",
-    "magicrew/doc7"
+    "magicrew/doc7",
+    "gavamedia/deltafin"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -177,8 +178,8 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-06",
-    "claude-code-docs": "2026-07-31",
+    "anthropic-engineering": "2026-08-07",
+    "claude-code-docs": "2026-08-07",
     "openai-codex-blog": "2026-08-06",
     "openclaw-concepts": "2026-08-03",
     "hermes-guides": "2026-08-03"
@@ -380,7 +381,10 @@
       "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/",
       "https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/",
       "https://simonwillison.net/2026/Aug/5/incident-report/",
-      "https://simonwillison.net/2026/Aug/5/raccoon-heist/"
+      "https://simonwillison.net/2026/Aug/5/raccoon-heist/",
+      "https://simonwillison.net/2026/Aug/6/datasette/",
+      "https://simonwillison.net/2026/Aug/6/datasette-2/",
+      "https://simonwillison.net/2026/Aug/6/simon-willison-on-technical-blogging/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -704,7 +708,10 @@
       "https://openai.com/index/circles",
       "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
       "https://openai.com/index/learn-teach-chatgpt-work-codex",
-      "https://openai.com/index/apple-is-getting-this-wrong"
+      "https://openai.com/index/apple-is-getting-this-wrong",
+      "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+      "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
+      "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -852,7 +859,8 @@
       "https://www.anthropic.com/news/position-open-weights-models",
       "https://www.anthropic.com/news/cognizant-anthropic",
       "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
-      "https://www.anthropic.com/news/tino-cuellar"
+      "https://www.anthropic.com/news/tino-cuellar",
+      "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -887,10 +895,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-06",
+    "simonwillison": "2026-08-07",
     "lilianweng": "2026-08-06",
-    "latentspace": "2026-08-06",
-    "interconnects": "2026-08-06",
+    "latentspace": "2026-08-07",
+    "interconnects": "2026-08-07",
     "karpathy": "2026-08-05",
     "raschka": "2026-08-05",
     "eugeneyan": "2026-08-05",
@@ -898,10 +906,10 @@
     "oneusefulthing": "2026-08-06",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-06",
+    "openai-news": "2026-08-07",
     "deepmind": "2026-08-06",
     "hf-blog": "2026-08-06",
-    "anthropic-news": "2026-08-06",
+    "anthropic-news": "2026-08-07",
     "steipete": "2026-08-06",
     "openclaw-blog": "2026-08-06"
   },

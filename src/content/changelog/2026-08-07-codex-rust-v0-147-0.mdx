@@ -1,0 +1,30 @@
+---
+slug: 2026-08-07-codex-rust-v0-147-0
+title: "codex rust-v0.147.0 — Codex 0.147.0 引入插件搜索、会话分节、自动审批，并强化安全与 MC"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.147.0
+publishedAt: 2026-08-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.147.0 引入插件搜索、会话分节、自动审批，并强化安全与 MCP 支持。"
+broadcast: "OpenAI 的 Codex 工具更新了，这次带来了不少实用功能。它现在支持插件搜索和安装，还能把长对话按分节整理，方便浏览。另外新增了自动审批功能，可以减少人工操作。更重要的是，它加强了对 MCP 协议的支持，并修复了敏感信息泄露的问题。对国内开发者来说，这意味着开发 agent 时能更安全、更高效地集成外部工具。"
+insight: "Codex 0.147.0 的自动审批和会话分节对国内开发者是加分项，但升级前务必确认现有 hook 是否兼容 MCP 新协议，否则可能影响集成。若你通过 newapi.lurus.cn 代理使用，建议先小范围测试，因为代理对 MCP 分页发现的支持可能滞后。现有用户值得升级，但需调整自动审批策略，并检查日志脱敏配置，以防 token 泄露风险。"
+tags: [agent-plugins, mcp, approval, security]
+---
+
+- 支持便携式 Agent 插件安装，并可跨本地、个人、工作区和远程目录搜索插件。
+  - Harness 可动态发现并加载插件，扩展 agent 能力。
+- 会话可按持久化、手动排序的分节组织，长对话支持增量浏览。
+  - Harness 需管理分节元数据，优化长上下文导航。
+- 新增 `--approve-for-me` 标志，实现自动审查的审批流程。
+  - Harness 可配置自动审批策略，减少人工干预。
+- 支持 MCP 2026-07-28 协议，包括分页发现、多轮请求和非阻塞服务器启动。
+  - Harness 需适配新协议，提升 MCP 集成效率。
+- 修复了命令显示和回放历史中秘密和完整 bearer token 的泄露问题。
+  - Harness 应确保敏感信息在日志和 UI 中脱敏。
+
+---
+
+> 原文 release：[openai/codex rust-v0.147.0](https://github.com/openai/codex/releases/tag/rust-v0.147.0)

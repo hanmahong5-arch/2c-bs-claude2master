@@ -1,0 +1,26 @@
+---
+slug: 2026-08-06-cline-sdk-sdk-v0-0-71
+title: "cline sdk/sdk/v0.0.71 — 推理设置跨 AI SDK 统一，错误遥测归因更准"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.71
+publishedAt: 2026-08-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "推理设置跨 AI SDK 统一，错误遥测归因更准"
+broadcast: "这次SDK更新，把推理设置统一了，不管用哪家AI服务，包括本地模型，都能用同一套配置，不用再为不同服务单独调整。另外，错误报告现在能准确归到具体模型上，排查问题更方便。还新增了一个新模型的支持，对做智能体开发的朋友来说，配置和监控都更省心了。"
+insight: "这次 SDK 更新对现有用户是正向的，推理设置统一解析后，跨 Ollama 等提供商不再需要各自特判，建议检查现有 prompt 或 hook 里是否还有针对旧 thinking 覆盖的配置，可考虑简化。错误遥测归因到实际模型，排查问题更准。国内用户走 newapi.lurus.cn 代理不受影响，模型目录新增的 muse-spark 模型可留意，但不必急于升级。"
+tags: [sdk, reasoning-settings, telemetry, model-catalog]
+---
+
+- 推理设置（effort 级别、启用/禁用）现在跨 AI SDK 提供商（含 Ollama）可移植解析，替代了各提供商的 thinking 覆盖，显式禁用优先。
+  - 对 harness 设计：统一推理配置接口，减少 provider 特判。
+- agent 运行的 `sdk.error` 遥测归因到实际使用的模型，并去除事件属性中的 undefined 值。
+  - 对 harness 设计：错误监控更准确，便于定位模型问题。
+- 从 models.dev 刷新模型目录，新增 `meta/muse-spark-1.2-contributor`（Cline 提供商）。
+  - 对 harness 设计：模型列表更新，可支持新模型。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.71](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.71)

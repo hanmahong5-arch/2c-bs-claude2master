@@ -1,0 +1,26 @@
+---
+slug: 2026-08-06-cline-cli-v3-0-51
+title: "cline cli-v3.0.51 — 推理强度设置跨提供商统一生效，关闭推理请求被全面尊重"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.51
+publishedAt: 2026-08-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "推理强度设置跨提供商统一生效，关闭推理请求被全面尊重"
+broadcast: "这次更新让推理强度设置在不同模型提供商之间统一生效了，连关闭推理的请求也会被尊重，对开发者来说，管理跨模型行为会简单不少。另外还新增了一个模型选项，并且错误报告会显示实际用的模型，方便排查问题。整体上对搭建 agent 的开发者挺友好。"
+insight: "这次更新对国内用户是利好，推理强度设置跨提供商统一生效，意味着你之前为不同模型单独调 prompt 或 hook 的习惯可以简化，建议把配置收敛到统一入口。但注意，关闭推理的请求虽被尊重，不同模型实际表现仍有差异，别盲目依赖。如果你走 newapi.lurus.cn 代理，模型目录刷新后需确认代理端同步支持 meta/muse-spark-1.2-contributor，否则新模型可能调用失败。现有用户值得升级，但升级后先小范围验证推理行为再全量切换。"
+tags: [reasoning-effort, model-catalog, telemetry, cli]
+---
+
+- 推理强度设置现在跨提供商一致生效，不再依赖各提供商的思考覆盖，包括 Ollama，且关闭推理的请求在所有提供商都被尊重。
+  - 对 agent harness 设计：统一推理控制可简化跨模型行为管理，但需注意不同模型对推理支持的实际差异。
+- Cline 提供商新增 `meta/muse-spark-1.2-contributor` 模型可选，并刷新了模型目录。
+  - 对 agent harness 设计：模型目录更新需同步到 harness 的模型选择逻辑，确保新模型可被正确调用。
+- 错误遥测现在报告运行中实际使用的模型。
+  - 对 agent harness 设计：错误报告包含模型信息有助于诊断问题，harness 应确保遥测数据准确传递模型标识。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.51](https://github.com/cline/cline/releases/tag/cli-v3.0.51)
