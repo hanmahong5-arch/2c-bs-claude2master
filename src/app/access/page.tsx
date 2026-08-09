@@ -97,7 +97,8 @@ export default function AccessPage() {
             <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-3">
               {cat}
             </h2>
-            <div className="overflow-x-auto">
+            {/* sm 以上表格,sm 以下每行一张卡片(标签:值垂直堆叠),避免小屏只能横向滚动 */}
+            <div className="hidden sm:block overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="text-left text-xs text-[var(--color-text-muted)] border-b border-[var(--color-border)]">
@@ -144,6 +145,50 @@ export default function AccessPage() {
                   ))}
                 </tbody>
               </table>
+            </div>
+
+            <div className="sm:hidden space-y-3">
+              {rows.map((s) => (
+                <div key={s.id} className="card card-compact">
+                  <a
+                    href={s.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-[var(--lt-ink)] hover:text-[var(--c2m-accent-deep)]"
+                  >
+                    {s.name}
+                  </a>
+                  <dl className="mt-2 text-xs space-y-1.5">
+                    <div className="flex justify-between">
+                      <dt className="text-[var(--color-text-muted)]">提供方</dt>
+                      <dd className="text-[var(--color-text-secondary)]">{s.vendor}</dd>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <dt className="text-[var(--color-text-muted)]">官网 / App</dt>
+                      <dd>
+                        <ReachCell reach={s.webAccess} />
+                      </dd>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <dt className="text-[var(--color-text-muted)]">官方 API</dt>
+                      <dd>
+                        <ReachCell reach={s.apiAccess} />
+                      </dd>
+                    </div>
+                    <div className="flex justify-between">
+                      <dt className="text-[var(--color-text-muted)]">大陆账号</dt>
+                      <dd>{s.officialCn ? "✅" : "—"}</dd>
+                    </div>
+                    <div className="flex justify-between">
+                      <dt className="text-[var(--color-text-muted)]">网关中转</dt>
+                      <dd>{s.viaGateway ? "✅" : "—"}</dd>
+                    </div>
+                  </dl>
+                  <p className="mt-2 text-xs text-[var(--color-text-secondary)] leading-relaxed pt-1.5 border-t border-[var(--color-border)]">
+                    {s.note}
+                  </p>
+                </div>
+              ))}
             </div>
           </section>
         );

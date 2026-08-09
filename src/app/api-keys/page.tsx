@@ -33,7 +33,7 @@ const STEPS = [
     icon: Key,
     n: "01",
     title: "注册",
-    desc: "用手机号 / 微信 / 邮箱注册，复用 Lurus 统一账号体系（Zitadel）。",
+    desc: "用手机号 / 微信 / 邮箱注册，复用 Lurus 统一账号体系（OIDC）。",
   },
   {
     icon: Wallet,

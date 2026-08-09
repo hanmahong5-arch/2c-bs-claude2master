@@ -18,6 +18,11 @@ export async function generateStaticParams() {
   return items.map((c) => ({ slug: c.slug }));
 }
 
+// 该路由为纯 SSG:所有合法 slug 均已在构建期通过 generateStaticParams 枚举。
+// 关闭 dynamicParams 让未知 slug 在路由匹配阶段直接 404,
+// 避免流式 SSR 下 notFound() 触发晚于 header flush 导致状态码仍为 200。
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {

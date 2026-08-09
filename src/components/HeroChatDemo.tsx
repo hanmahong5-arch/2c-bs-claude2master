@@ -80,7 +80,7 @@ export default function HeroChatDemo() {
               ) : (
                 <code
                   key={idx}
-                  className="block my-2 px-3 py-2 rounded-md bg-[#1B1924] text-[#E2DEF0] font-mono text-[13px] leading-[1.7]"
+                  className="block my-2 px-3 py-2 rounded-md bg-[var(--code-bg)] text-[var(--code-fg)] font-mono text-[13px] leading-[1.7]"
                 >
                   {part.replace(/^ts\n/, "")}
                 </code>

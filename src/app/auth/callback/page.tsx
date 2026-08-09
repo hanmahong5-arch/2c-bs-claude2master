@@ -14,7 +14,7 @@ export default function AuthCallbackPage() {
       />
       <p className="text-[var(--color-text-secondary)]">处理登录回调…</p>
       <p className="text-xs text-[var(--color-text-muted)] mt-2">
-        Phase 3 接入 Zitadel OIDC 后，此页处理 token exchange。
+        账号体系升级中，此页用于处理登录后的跳转。
       </p>
     </div>
   );

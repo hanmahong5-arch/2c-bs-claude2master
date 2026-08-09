@@ -127,8 +127,8 @@ export default function PriceTable({ models }: { models: ModelPrice[] }) {
         </span>
       </div>
 
-      {/* 价格表 */}
-      <div className="overflow-x-auto">
+      {/* 价格表 — sm 以上表格,sm 以下每行一张卡片(标签:值垂直堆叠),避免小屏只能横向滚动 */}
+      <div className="hidden sm:block overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
             <tr className="text-left text-xs text-[var(--color-text-muted)] border-b border-[var(--color-border)]">
@@ -174,6 +174,53 @@ export default function PriceTable({ models }: { models: ModelPrice[] }) {
             ))}
           </tbody>
         </table>
+      </div>
+
+      <div className="sm:hidden space-y-3">
+        {rows.map(({ m, cost }) => (
+          <div key={m.id} className="card card-compact">
+            <div className="flex items-center justify-between gap-2 mb-2">
+              <a
+                href={m.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-[var(--lt-ink)] hover:text-[var(--c2m-accent-deep)]"
+                title={m.note || "官方定价页"}
+              >
+                {m.name}
+              </a>
+              <span className="pill-outline pill text-[10px] shrink-0">{m.tier}</span>
+            </div>
+            <dl className="text-xs space-y-1.5">
+              <div className="flex justify-between">
+                <dt className="text-[var(--color-text-muted)]">厂商</dt>
+                <dd className="text-[var(--color-text-secondary)]">{m.vendor}</dd>
+              </div>
+              <div className="flex justify-between">
+                <dt className="text-[var(--color-text-muted)]">输入 /1M</dt>
+                <dd className="tabular-nums">{fmtRaw(m, m.inputPerM)}</dd>
+              </div>
+              <div className="flex justify-between">
+                <dt className="text-[var(--color-text-muted)]">输出 /1M</dt>
+                <dd className="tabular-nums">{fmtRaw(m, m.outputPerM)}</dd>
+              </div>
+              <div className="flex justify-between">
+                <dt className="text-[var(--color-text-muted)]">上下文</dt>
+                <dd>{m.context}</dd>
+              </div>
+              <div className="flex justify-between">
+                <dt className="text-[var(--color-text-muted)]">大陆直连</dt>
+                <dd>{m.cnDirect ? "✅" : "需代理"}</dd>
+              </div>
+              <div className="flex justify-between pt-1.5 border-t border-[var(--color-border)]">
+                <dt className="text-[var(--color-text-muted)]">本次用量成本</dt>
+                <dd className="font-medium text-[var(--lt-ink)] tabular-nums">
+                  {fmtMoney(cost)}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        ))}
       </div>
 
       <p className="mt-4 text-xs text-[var(--color-text-muted)]">

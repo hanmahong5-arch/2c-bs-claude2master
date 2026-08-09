@@ -170,7 +170,7 @@ export function BroadcastBar() {
             type="button"
             onClick={togglePlay}
             disabled={!hasQueue}
-            className="shrink-0 size-9 rounded-full bg-[var(--c2m-accent-deep)] text-white inline-flex items-center justify-center hover:opacity-90 disabled:opacity-40"
+            className="shrink-0 size-11 rounded-full bg-[var(--c2m-accent-deep)] text-white inline-flex items-center justify-center hover:opacity-90 disabled:opacity-40"
             aria-label={playing ? "暂停" : "播放"}
           >
             {playing ? <Pause size={16} /> : <Play size={16} />}
@@ -179,7 +179,7 @@ export function BroadcastBar() {
             type="button"
             onClick={() => jump(-1)}
             disabled={!hasQueue}
-            className="shrink-0 text-[var(--color-text-secondary)] hover:text-[var(--c2m-accent-deep)] disabled:opacity-40"
+            className="shrink-0 min-w-11 min-h-11 inline-flex items-center justify-center text-[var(--color-text-secondary)] hover:text-[var(--c2m-accent-deep)] disabled:opacity-40"
             aria-label="上一条"
           >
             <SkipBack size={16} />
@@ -188,7 +188,7 @@ export function BroadcastBar() {
             type="button"
             onClick={() => jump(1)}
             disabled={!hasQueue}
-            className="shrink-0 text-[var(--color-text-secondary)] hover:text-[var(--c2m-accent-deep)] disabled:opacity-40"
+            className="shrink-0 min-w-11 min-h-11 inline-flex items-center justify-center text-[var(--color-text-secondary)] hover:text-[var(--c2m-accent-deep)] disabled:opacity-40"
             aria-label="下一条"
           >
             <SkipForward size={16} />

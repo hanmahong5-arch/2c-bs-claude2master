@@ -50,7 +50,7 @@ export default function Header() {
           claude<span className="text-[var(--c2m-accent-deep)]">2</span>master
         </Link>
 
-        <nav aria-label="主导航" className="hidden md:flex items-center gap-1">
+        <nav aria-label="主导航" className="hidden lg:flex items-center gap-1">
           {NAV.map((item) => {
             const active =
               pathname === item.href || pathname.startsWith(item.href + "/");
@@ -80,7 +80,7 @@ export default function Header() {
         <button
           aria-label={open ? "关闭菜单" : "打开菜单"}
           aria-expanded={open}
-          className="md:hidden p-2 -mr-2 text-[var(--lt-ink)]"
+          className="lg:hidden p-2.5 -mr-2.5 text-[var(--lt-ink)]"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
@@ -90,7 +90,7 @@ export default function Header() {
       {open && (
         <nav
           aria-label="移动导航"
-          className="md:hidden border-t border-[var(--color-border)] bg-[var(--lt-paper)]"
+          className="lg:hidden border-t border-[var(--color-border)] bg-[var(--lt-paper)]"
         >
           {NAV.map((item) => {
             const active =

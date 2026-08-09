@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Calendar, Github, Rss } from "lucide-react";
 import {
@@ -83,6 +83,9 @@ function ChangelogCard({ c }: { c: ChangelogItem }) {
   );
 }
 
+// 每段默认只渲染最新 N 条,避免"全部"筛选下一次性吃满全量 DOM;超出部分靠"查看更多"展开。
+const SECTION_VISIBLE_DEFAULT = 10;
+
 // 一个分组段: 段头 `● {name}  最新 {version}  [RSS]` + 该组卡片倒序。
 // feedKey 仅工具段传入 → 段头出现 per-tool RSS pill; 其他/实践段不传 → 不显示。
 function ToolSection({
@@ -96,7 +99,10 @@ function ToolSection({
   items: ChangelogItem[];
   feedKey?: string;
 }) {
+  const [expanded, setExpanded] = useState(false);
   if (items.length === 0) return null;
+  const visibleItems = expanded ? items : items.slice(0, SECTION_VISIBLE_DEFAULT);
+  const remaining = items.length - visibleItems.length;
   return (
     <section className="mb-10">
       <div className="flex items-baseline gap-3 mb-4">
@@ -121,10 +127,19 @@ function ToolSection({
         )}
       </div>
       <ul className="space-y-4">
-        {items.map((c) => (
+        {visibleItems.map((c) => (
           <ChangelogCard key={c.slug} c={c} />
         ))}
       </ul>
+      {remaining > 0 && (
+        <button
+          type="button"
+          onClick={() => setExpanded(true)}
+          className="pill-outline pill mt-4 hover:text-[var(--c2m-accent-deep)]"
+        >
+          查看更多（还有 {remaining} 条）
+        </button>
+      )}
     </section>
   );
 }

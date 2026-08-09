@@ -18,12 +18,14 @@ export default function LoginPage() {
         欢迎回来。
       </h1>
       <p className="text-[var(--color-text-secondary)] mb-8 leading-relaxed">
-        我们复用 Lurus 统一账号体系（Zitadel）。Phase 3 接入后这里会显示登录表单。
+        账号体系升级中，当前请通过 newapi 完成登录，后续可无缝迁移到 Lurus 统一账号。
       </p>
 
       <div className="card mb-6 text-left">
+        <p className="eyebrow mb-2">为什么先去 newapi？</p>
         <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-4">
-          需要立即用 Claude？先去 newapi 注册个账户：
+          claude2master 与 newapi 共用同一套账号与计费体系，登录入口暂时对齐到 newapi ——
+          先在这边登录即可立即用 Claude，无需重复开户。
         </p>
         <TrackedLink
           href={NEWAPI_LOGIN}

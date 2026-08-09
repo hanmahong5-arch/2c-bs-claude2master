@@ -39,6 +39,29 @@ html {
   --font-sans: var(--font-inter-tight), -apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-mono: var(--font-jetbrains-mono), 'Source Code Pro', Menlo, monospace;
+
+  /* ── Radius scale (single source, replaces scattered literals) ── */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+
+  /* ── Code block palette (shared: .code-block + tutorial-md pre + inline demo) ── */
+  --code-bg: #1B1924;
+  --code-fg: #E2DEF0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lt-paper: #17150F;
+    --lt-bg:    #211E17;
+    --lt-ink:   #F2EEE2;
+    --lt-rule:  #3A362A;
+    --color-surface-elevated: #241F17;
+    --color-text-secondary: #C9C4B4;
+    --color-text-muted: #948F7C;
+    --c2m-accent-soft: rgba(124, 92, 255, 0.2);
+  }
 }
 
 @theme inline {
@@ -97,7 +120,7 @@ body {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.625rem 1.25rem;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.4;
@@ -149,7 +172,7 @@ body {
 .card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   padding: 1.5rem;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -196,7 +219,7 @@ body {
 /* Compact secondary card — lighter padding, lower visual weight */
 .card-compact {
   padding: 1.125rem 1.25rem;
-  border-radius: 14px;
+  border-radius: var(--radius-md);
 }
 
 /* ── Pill / badge ── */
@@ -205,7 +228,7 @@ body {
   align-items: center;
   gap: 0.375rem;
   padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
   background: var(--c2m-accent-soft);
   color: var(--c2m-accent-deep);
   font-size: 0.75rem;
@@ -251,10 +274,10 @@ body {
 
 /* ── Code block ── */
 .code-block {
-  background: #1B1924;
-  color: #E2DEF0;
+  background: var(--code-bg);
+  color: var(--code-fg);
   border: 1px solid #2A2638;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   font: 13px/1.7 var(--font-mono);
   padding: 1rem 1.25rem;
   overflow-x: auto;
@@ -457,10 +480,10 @@ body {
   white-space: nowrap;
 }
 .tutorial-md pre {
-  background: #1B1924;
-  color: #E2DEF0;
+  background: var(--code-bg);
+  color: var(--code-fg);
   border: 1px solid #2A2638;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   font: 13px/1.7 var(--font-mono);
   padding: 1rem 1.25rem;
   overflow-x: auto;

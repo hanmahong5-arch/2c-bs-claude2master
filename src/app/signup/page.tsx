@@ -22,8 +22,10 @@ export default function SignupPage() {
       </p>
 
       <div className="card mb-6 text-left">
+        <p className="eyebrow mb-2">为什么先去 newapi？</p>
         <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-4">
-          注册流程接入中。Phase 3 上线 Zitadel OIDC 后这里直接走 SSO。
+          claude2master 与 newapi 共用同一套账号与计费体系。在 newapi 完成注册即可立即解锁
+          Chat 与 API key，账号体系升级后无缝合并，不影响你已有的数据。
         </p>
         <TrackedLink
           href={NEWAPI_SIGNUP}

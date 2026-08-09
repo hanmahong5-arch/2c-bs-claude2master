@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Copy, Check } from "lucide-react";
+import { Copy, Check, AlertTriangle } from "lucide-react";
 
 export default function CopyPromptButton({
   text,
@@ -13,14 +13,18 @@ export default function CopyPromptButton({
   variant?: "primary" | "secondary";
 }) {
   const [copied, setCopied] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   async function onCopy() {
     try {
       await navigator.clipboard.writeText(text);
+      setFailed(false);
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
     } catch {
       setCopied(false);
+      setFailed(true);
+      setTimeout(() => setFailed(false), 2400);
     }
   }
 
@@ -32,10 +36,16 @@ export default function CopyPromptButton({
       onClick={onCopy}
       className={cls}
       type="button"
-      aria-label={copied ? "已复制" : label}
+      aria-label={copied ? "已复制" : failed ? "复制失败，请手动选择文本" : label}
     >
-      {copied ? <Check size={14} /> : <Copy size={14} />}
-      {copied ? "已复制" : label}
+      {copied ? (
+        <Check size={14} />
+      ) : failed ? (
+        <AlertTriangle size={14} />
+      ) : (
+        <Copy size={14} />
+      )}
+      {copied ? "已复制" : failed ? "复制失败，请手动选择文本" : label}
     </button>
   );
 }
