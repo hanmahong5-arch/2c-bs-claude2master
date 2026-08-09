@@ -1,0 +1,30 @@
+---
+slug: 2026-08-08-claude-code-2-1-225
+title: "claude-code v2.1.225 — Claude Code 网关限额、远程控制增强与多项稳定性修复"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.225
+publishedAt: 2026-08-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 网关限额、远程控制增强与多项稳定性修复"
+broadcast: "Claude Code 更新了，这次主要加强了网关消费限额，超限时会告诉你具体额度和重置时间，开发者在做自动化任务时要记得处理这个通知。另外，远程控制现在可以按名称启动会话，跨机器的身份确认也更稳定了。还修复了 OAuth 令牌被覆盖导致会话中断的问题，以及自动模式里安全拒绝被误算成连续阻止的 bug。对做 agent 开发的朋友来说，这些修复能让任务调度和重试策略更可靠。"
+insight: "此次更新对现有用户价值有限，主要是稳定性修复。若你已在使用 v2.1.x，建议升级以修复 OAuth token 覆盖和 MCP 401 问题，避免 headless 会话中断。网关限额和远程控制增强对个人开发者影响不大，但若用 newapi.lurus.cn 代理，需确认网关同步支持限额，否则超限提示可能不准确。现有 prompt 和 hook 配置无需改动，但 agent harness 需注意安全拒绝与普通限制的区分。"
+tags: [gateway-spend-limit, remote-control, oauth-fix, stability]
+---
+
+- 新增网关消费限额支持，超限时显示具体额度、重置时间和操作者消息，需网关同步更新。
+  - 对 agent harness：需处理限额通知并调整任务调度。
+- `claude agents` 对不受信任目录增加工作区信任提示，与 `claude` 行为一致。
+  - 对 agent harness：需在启动时处理信任确认流程。
+- 修复 OAuth token 被短期 token 覆盖导致 headless 会话中断，以及 MCP OAuth 在 macOS 上因 keychain 超时出现 401 错误。
+  - 对 agent harness：需确保 token 管理稳定，避免会话中断。
+- 修复自动模式中安全过滤拒绝被计入连续阻止限制，模型被告知继续而非重试。
+  - 对 agent harness：需区分安全拒绝与普通限制，优化重试策略。
+- SendMessage 现在可按名称启动远程控制会话，且已确认的收件人不会被同名的本机会话替换。
+  - 对 agent harness：需支持跨机器会话寻址与身份确认。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.225](https://github.com/anthropics/claude-code/releases/tag/v2.1.225)

@@ -1,14 +1,14 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.224",
+    "anthropics/claude-code": "v2.1.226",
     "openai/codex": "rust-v0.147.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v4.1.6",
+    "cline/cline": "cli-v3.0.52",
     "block/goose": "v1.45.0",
-    "sst/opencode": "v1.18.14",
+    "sst/opencode": "v1.18.15",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.54.0",
-    "openclaw/openclaw": "v2026.7.1-2",
+    "google-gemini/gemini-cli": "v0.54.4",
+    "openclaw/openclaw": "v2026.6.34",
     "zeroclaw-labs/zeroclaw": "v0.8.4",
     "NousResearch/hermes-agent": "v2026.8.3"
   },
@@ -178,7 +178,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-07",
+    "anthropic-engineering": "2026-08-09",
     "claude-code-docs": "2026-08-07",
     "openai-codex-blog": "2026-08-06",
     "openclaw-concepts": "2026-08-03",
@@ -384,7 +384,12 @@
       "https://simonwillison.net/2026/Aug/5/raccoon-heist/",
       "https://simonwillison.net/2026/Aug/6/datasette/",
       "https://simonwillison.net/2026/Aug/6/datasette-2/",
-      "https://simonwillison.net/2026/Aug/6/simon-willison-on-technical-blogging/"
+      "https://simonwillison.net/2026/Aug/6/simon-willison-on-technical-blogging/",
+      "https://simonwillison.net/2026/Aug/8/auto-mode/",
+      "https://simonwillison.net/2026/Aug/8/now-we-have-a-timeline-of-the-openai-accidental-attack-against-h/",
+      "https://simonwillison.net/2026/Aug/8/john-gruber/",
+      "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+      "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -487,7 +492,9 @@
       "https://www.latent.space/p/inference-eng",
       "https://www.latent.space/p/ainews-megakernels-are-so-dead-and",
       "https://www.latent.space/p/unpacking-chatgpt-work",
-      "https://www.latent.space/p/ainews-jeff-sanjay-oriol-and-quoc"
+      "https://www.latent.space/p/ainews-jeff-sanjay-oriol-and-quoc",
+      "https://www.latent.space/p/ainews-zawinskis-law-of-multiagents",
+      "https://www.latent.space/p/ainews-amd-buys-taalas"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -711,7 +718,9 @@
       "https://openai.com/index/apple-is-getting-this-wrong",
       "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
       "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
-      "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work"
+      "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work",
+      "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
+      "https://openai.com/index/hsp-gruppe"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -745,7 +754,8 @@
       "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/",
       "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
       "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/",
-      "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+      "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+      "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -815,7 +825,9 @@
       "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
       "https://huggingface.co/blog/agent-intrusion-technical-timeline",
       "https://huggingface.co/blog/Dharma-AI/gpu-management",
-      "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b"
+      "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b",
+      "https://huggingface.co/blog/allenai/tutormoments",
+      "https://huggingface.co/blog/baseten"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -895,23 +907,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-07",
+    "simonwillison": "2026-08-09",
     "lilianweng": "2026-08-06",
-    "latentspace": "2026-08-07",
-    "interconnects": "2026-08-07",
-    "karpathy": "2026-08-05",
-    "raschka": "2026-08-05",
-    "eugeneyan": "2026-08-05",
+    "latentspace": "2026-08-09",
+    "interconnects": "2026-08-09",
+    "karpathy": "2026-08-09",
+    "raschka": "2026-08-09",
+    "eugeneyan": "2026-08-09",
     "chiphuyen": "2026-08-06",
-    "oneusefulthing": "2026-08-06",
+    "oneusefulthing": "2026-08-09",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-07",
-    "deepmind": "2026-08-06",
-    "hf-blog": "2026-08-06",
-    "anthropic-news": "2026-08-07",
-    "steipete": "2026-08-06",
-    "openclaw-blog": "2026-08-06"
+    "openai-news": "2026-08-09",
+    "deepmind": "2026-08-09",
+    "hf-blog": "2026-08-09",
+    "anthropic-news": "2026-08-09",
+    "steipete": "2026-08-09",
+    "openclaw-blog": "2026-08-09"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

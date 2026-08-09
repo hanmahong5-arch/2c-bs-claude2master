@@ -1,0 +1,23 @@
+---
+slug: 2026-08-08-claude-code-2-1-226
+title: "claude-code v2.1.226 — Claude Code 小版本更新，修复 bug 并提升可靠性。"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.226
+publishedAt: 2026-08-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 小版本更新，修复 bug 并提升可靠性。"
+broadcast: "Claude Code 最近发布了小版本更新，主要修复了一些问题，让整体运行更稳定，意外中断的情况也少了。对咱们做智能体开发的朋友来说，底层命令行工具更可靠，意味着咱们在搭建自动化流程时，能少花精力去处理重试和报错，开发体验会更顺畅。"
+insight: "这次 v2.1.226 是纯稳定性修复，没有新功能，现有用户值得升级，因为能减少意外中断，降低重试成本。如果你在 agent harness 里依赖 CLI 工具链，升级后错误处理逻辑可以简化，但 prompt 和 hook 配置不受影响，不用改。国内用户走 newapi.lurus.cn 代理不受影响，因为这是本地 CLI 更新，与代理无关，放心升。"
+tags: [bug-fixes, reliability]
+---
+
+- 修复了若干 bug，提升整体稳定性。
+- 可靠性改进，减少意外中断。
+- 对 agent harness 设计而言，依赖更稳的 CLI 工具链，减少重试和错误处理成本。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.226](https://github.com/anthropics/claude-code/releases/tag/v2.1.226)

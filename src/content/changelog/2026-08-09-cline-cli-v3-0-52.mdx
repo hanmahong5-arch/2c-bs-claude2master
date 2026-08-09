@@ -1,0 +1,26 @@
+---
+slug: 2026-08-09-cline-cli-v3-0-52
+title: "cline cli-v3.0.52 — CLI v3.0.52 修复 MCP 与中断恢复，提升 TUI 可读性与稳定性"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.52
+publishedAt: 2026-08-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "CLI v3.0.52 修复 MCP 与中断恢复，提升 TUI 可读性与稳定性"
+broadcast: "这次更新主要修复了 MCP 和中断恢复的问题，让工具管理更简单，调试体验也更稳定。对国内开发者来说，计划任务能复用已有配置，省去重复设置；中断后上下文不丢，agent 干活更靠谱。网络中断会自动重试，也减少了失败概率。"
+insight: "这次更新对国内用户是利好，尤其走 newapi.lurus.cn 代理时，LiteLLM 改用 Chat Completions 修复了兼容性，网络中断自动重试也提升了稳定性。现有用户建议升级，特别是依赖 MCP 或长任务中断恢复的场景，收益明显。若你已配置 provider 和 hook，计划任务复用保存设置，基本不用改；但若 MCP 服务器常挂起，建议用新 uninstall 命令清理，避免 30 秒初始化预算拖慢会话创建。"
+tags: [mcp, tui, resilience, cli]
+---
+
+- `cline mcp uninstall` 命令可移除已安装的 MCP 服务器，简化 MCP 管理。
+- 计划任务复用已保存的 provider 设置，无需单独配置，降低配置负担。
+- TUI 中 MCP 工具结果以可读文本显示，二进制负载不再被破坏，且畸形负载不再导致渲染崩溃，提升调试体验。
+- 中断后队列中的提示词得以保留，会话上下文在中断后保持，恢复时状态一致，增强 agent 的韧性。
+- 挂起的 MCP 服务器不再阻塞会话创建，未配置的 stdio 服务器有 30 秒初始化预算，避免无限等待。
+- LiteLLM 请求改用 Chat Completions，修复代理兼容性；网络中断在模型输出前自动重试，提高可靠性。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.52](https://github.com/cline/cline/releases/tag/cli-v3.0.52)

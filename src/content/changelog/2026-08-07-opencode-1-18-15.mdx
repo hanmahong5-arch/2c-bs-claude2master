@@ -1,0 +1,23 @@
+---
+slug: 2026-08-07-opencode-1-18-15
+title: "opencode v1.18.15 — 消息排序与清理修复，桌面端导出与多语言增强"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.15
+publishedAt: 2026-08-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "消息排序与清理修复，桌面端导出与多语言增强"
+broadcast: "最近这个开源AI编程工具更新了，主要修了消息排序和清理的问题。以前聊天记录可能因为导入而乱序，现在按真实时间排，回退和分叉更可靠了。另外桌面版能导出完整对话，还支持多语言。对咱们国内开发者来说，整理对话和协作时会更顺手，值得关注。"
+insight: "这次更新对现有用户是值得升级的，尤其是消息排序和压缩清理的修复，直接解决了导入乱序和工具调用历史丢失的痛点。如果你之前遇到过回退或分叉操作不稳定的情况，升级后会更可靠。桌面端导出完整会话 JSON 对需要备份或迁移的用户很实用，多语言覆盖也提升了体验。至于国内用户走 newapi.lurus.cn 代理，本次更新未涉及代理相关改动，因此不受影响，可以放心升级。"
+tags: [message-ordering, desktop-export, localization, bugfix]
+---
+
+- 消息排序改用真实时间而非 ID，导入或遗留乱序不再影响对话顺序，回退/分叉操作更可靠。
+- 压缩清理按文件时间戳删除过期文件，重复压缩保留早期工具调用历史，避免结果丢失。
+- 桌面端支持导出完整会话 JSON，并新增多语言覆盖，会话列表按活动时间排序更稳定。
+
+---
+
+> 原文 release：[sst/opencode v1.18.15](https://github.com/anomalyco/opencode/releases/tag/v1.18.15)
