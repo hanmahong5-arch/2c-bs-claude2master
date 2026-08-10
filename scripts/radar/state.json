@@ -3,7 +3,7 @@
     "anthropics/claude-code": "v2.1.226",
     "openai/codex": "rust-v0.147.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.52",
+    "cline/cline": "desktop-v0.0.11",
     "block/goose": "v1.45.0",
     "sst/opencode": "v1.18.15",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -173,16 +173,22 @@
       "https://docs.openclaw.ai/concepts/multi-agent",
       "https://docs.openclaw.ai/concepts/multi-user",
       "https://docs.openclaw.ai/concepts/oauth",
-      "https://docs.openclaw.ai/concepts/parallel-specialist-lanes"
+      "https://docs.openclaw.ai/concepts/parallel-specialist-lanes",
+      "https://docs.openclaw.ai/concepts/personal-agent-benchmark-pack",
+      "https://docs.openclaw.ai/concepts/presence",
+      "https://docs.openclaw.ai/concepts/progress-drafts",
+      "https://docs.openclaw.ai/concepts/qa-e2e-automation",
+      "https://docs.openclaw.ai/concepts/queue",
+      "https://docs.openclaw.ai/concepts/queue-steering"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-09",
+    "anthropic-engineering": "2026-08-10",
     "claude-code-docs": "2026-08-07",
     "openai-codex-blog": "2026-08-06",
-    "openclaw-concepts": "2026-08-03",
-    "hermes-guides": "2026-08-03"
+    "openclaw-concepts": "2026-08-10",
+    "hermes-guides": "2026-08-10"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -389,7 +395,12 @@
       "https://simonwillison.net/2026/Aug/8/now-we-have-a-timeline-of-the-openai-accidental-attack-against-h/",
       "https://simonwillison.net/2026/Aug/8/john-gruber/",
       "https://simonwillison.net/2026/Aug/7/openai-timeline/",
-      "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/"
+      "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/",
+      "https://simonwillison.net/2026/Aug/10/openclaw/",
+      "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/",
+      "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/",
+      "https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/",
+      "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -523,7 +534,8 @@
       "https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation",
       "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3",
       "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21",
-      "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and"
+      "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and",
+      "https://www.interconnects.ai/p/lessons-from-the-hacks"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -907,10 +919,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-09",
+    "simonwillison": "2026-08-10",
     "lilianweng": "2026-08-06",
-    "latentspace": "2026-08-09",
-    "interconnects": "2026-08-09",
+    "latentspace": "2026-08-10",
+    "interconnects": "2026-08-10",
     "karpathy": "2026-08-09",
     "raschka": "2026-08-09",
     "eugeneyan": "2026-08-09",
@@ -918,10 +930,10 @@
     "oneusefulthing": "2026-08-09",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-09",
+    "openai-news": "2026-08-10",
     "deepmind": "2026-08-09",
     "hf-blog": "2026-08-09",
-    "anthropic-news": "2026-08-09",
+    "anthropic-news": "2026-08-10",
     "steipete": "2026-08-09",
     "openclaw-blog": "2026-08-09"
   },

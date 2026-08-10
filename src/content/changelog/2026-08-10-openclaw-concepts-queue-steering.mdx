@@ -1,0 +1,23 @@
+---
+slug: 2026-08-10-openclaw-concepts-queue-steering
+title: "Steering queue · OpenClaw — 了解OpenClaw如何在不打断工具调用的情况下，将新消息注入正在运行的会话，提"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/queue-steering
+publishedAt: 2026-08-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "了解OpenClaw如何在不打断工具调用的情况下，将新消息注入正在运行的会话，提升agent响应效率。"
+broadcast: "OpenClaw推出了一项新能力，能在不打断工具运行的情况下，把新消息直接送进正在进行的会话里。它会在工具启动前检查，已经跑起来的继续跑，没启动的就跳过，这样模型能及时看到新消息。对做agent开发的朋友来说，这能明显提升响应效率，而且还能按需选择排队或中断模式，挺实用的。"
+insight: "现有用户若依赖工具调用的连续性，升级OpenClaw后需注意steering默认注入模式会跳过未启动的工具调用，可能影响依赖顺序执行的场景。建议根据实际需求调整模式：需要中断时选interrupt，需要排队时选followup。国内用户走newapi.lurus.cn代理不受影响，因为steering机制在本地会话层运行，与网络代理无关。配置上无需改动，但需理解模式差异以优化agent响应效率。"
+tags: [queue-steering, agent-runtime, message-delivery, tool-boundary]
+---
+
+- **工具边界检查**：OpenClaw在工具启动边界检查steering，已运行的工具不中断，未启动的调用被跳过并返回合成错误，确保模型可见新消息。
+- **并行原子检查点**：并行工具调用在启动前一次性检查，steering消息到达前已启动的调用继续，未启动的全部取消，保持转录结构完整。
+- **模式选择**：steer模式默认注入，followup/collect模式排队，interrupt模式中止当前运行。根据需求选择，如需要中断用interrupt，需要排队用followup。
+
+---
+
+> 原文：[Steering queue · OpenClaw](https://docs.openclaw.ai/concepts/queue-steering)

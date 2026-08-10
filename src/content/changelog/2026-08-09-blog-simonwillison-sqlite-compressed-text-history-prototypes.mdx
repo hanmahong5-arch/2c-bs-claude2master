@@ -1,0 +1,25 @@
+---
+slug: 2026-08-09-blog-simonwillison-sqlite-compressed-text-history-prototypes
+title: "SQLite compressed text-history prototypes — Simon Willison 用 zstd 压缩 JSON 数组存储 SQLit"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/
+publishedAt: 2026-08-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 用 zstd 压缩 JSON 数组存储 SQLite 文本历史，1000 次修订压缩至 0.4%。"
+broadcast: "今天聊聊一个有意思的存储优化思路。有人用压缩算法把SQLite里的文本历史大幅瘦身，一千次修改的二十多兆数据，最后只剩八十多KB，压缩比相当惊人。做法是把每次修订的完整内容放进JSON数组，再用zstd压缩，重复文本越多效果越好。为了避免每次编辑都解压重压，还按块存储。这对做文档类应用的开发者挺有启发，能明显降低存储成本。"
+tags: [sqlite, compression, revision-history, zstd]
+---
+
+- 将每次修订的完整文本存入 JSON 数组，再用 zlib 或 zstd 压缩，利用重复文本大幅缩减存储。
+- 实验显示 1000 次模拟修订的 20.4 MB 原始文本压缩至 80.3 KB，压缩比约 250:1。
+- 为避免每次编辑解压重压整个数组，将历史分块存储，每块最多 128 个修订或 3MB 未压缩 JSON。
+
+对开发者而言，这种方案为关系数据库中的版本历史提供了高效存储思路，尤其适合文档型应用，可显著降低存储成本。
+
+---
+
+> 原文：[SQLite compressed text-history prototypes](https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/) · 作者 Simon Willison

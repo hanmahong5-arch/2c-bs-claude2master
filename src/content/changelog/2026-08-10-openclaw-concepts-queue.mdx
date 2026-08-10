@@ -1,0 +1,25 @@
+---
+slug: 2026-08-10-openclaw-concepts-queue
+title: "Command queue · OpenClaw — 多消息并发时如何避免 agent 冲突？OpenClaw 的队列机制给出答案。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/queue
+publishedAt: 2026-08-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "多消息并发时如何避免 agent 冲突？OpenClaw 的队列机制给出答案。"
+broadcast: "多消息同时涌来时，智能体容易手忙脚乱，甚至引发冲突。OpenClaw 的队列机制通过按会话排队，确保同一时间只处理一个任务，还提供了四种模式，比如合并静默消息或中断当前任务，并支持防抖和容量限制。对开发者来说，这为设计稳定的智能体框架提供了重要参考，能有效提升并发处理体验。"
+insight: "如果你正在用 OpenClaw 做多会话 agent，这个队列机制值得认真看：它把并发冲突从'靠运气'变成'可配置'。现有用户建议直接升级，因为四种模式（steer/followup/collect/interrupt）能覆盖大部分真实场景，尤其是 collect 的静默合并和 interrupt 的中止，对国内用户处理高频消息很实用。配置上，建议按会话设 debounceMs 和 cap，避免队列溢出；drop 策略选 summarize 可保留关键信息。至于 newapi.lurus.cn 代理，队列机制在应用层，不影响代理链路，放心用。"
+tags: [command-queue, concurrency, message-delivery, agent-runtime]
+---
+
+- **串行化入站自动回复**：通过 lane-aware FIFO 队列，按会话键入队，保证同一会话同时只有一个运行，避免 LLM 调用冲突和资源竞争。
+- **四种队列模式**：`steer`（注入当前运行）、`followup`（排队后续）、`collect`（合并静默后执行）、`interrupt`（中止当前运行），可按会话或频道配置。
+- **队列选项与降级**：支持 `debounceMs` 防抖、`cap` 容量上限、`drop` 策略（如 summarize 保留摘要），防止队列溢出。
+
+对 agent harness 设计：队列机制是管理并发和用户体验的关键，需提供可配置的降级策略和模式选择。
+
+---
+
+> 原文：[Command queue · OpenClaw](https://docs.openclaw.ai/concepts/queue)

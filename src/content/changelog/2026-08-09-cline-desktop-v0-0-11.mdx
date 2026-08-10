@@ -1,0 +1,25 @@
+---
+slug: 2026-08-09-cline-desktop-v0-0-11
+title: "cline desktop-v0.0.11 — 桌面版 v0.0.11：粘贴图片、修复会话与 MCP 稳定性，提升 agent "
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.11
+publishedAt: 2026-08-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "桌面版 v0.0.11：粘贴图片、修复会话与 MCP 稳定性，提升 agent 工作流可靠性。"
+broadcast: "桌面版更新了，现在可以直接粘贴图片到输入框，多模态操作更方便。非代码项目打开时不再显示看不懂的术语，对普通用户更友好。还修复了会话和调试的不少问题，特别是服务器卡住不再影响使用，网络断了也会自动重试。这些改进让智能体干活更稳，值得试试。"
+insight: "这次桌面版更新对现有用户来说，值得升级。粘贴图片和修复会话覆盖问题能直接提升日常调试效率，MCP 挂起不再阻塞会话也减少了卡顿。如果你在用远程 MCP 且依赖 OAuth，这次支持更稳。国内用户走 newapi.lurus.cn 代理不受影响，因为更新主要涉及本地交互和 MCP 连接，不改变 API 路由。建议升级后留意非 git 文件夹的提示变化，但无需改动现有 prompt 或 hook 配置。"
+tags: [desktop-app, clipboard-image, mcp-stability, session-durability]
+---
+
+- 支持从剪贴板直接粘贴图片到 composer，简化多模态输入。
+- 打开非 git 文件夹不再显示 git 术语，欢迎建议根据实际内容调整，对非代码项目更友好。
+- 修复会话模型覆盖、diff 路径解析、失败 turn 错误显示等问题，提升调试与上下文准确性。
+- MCP 服务器挂起不再阻塞会话创建，stdio 服务器有 30 秒初始化预算，远程 SSE 支持 OAuth 授权。
+- 中断后队列提示保留，会话上下文持久化，网络中断自动重试，增强 agent 任务韧性。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.11](https://github.com/cline/cline/releases/tag/desktop-v0.0.11)

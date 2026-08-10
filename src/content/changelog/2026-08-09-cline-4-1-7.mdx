@@ -1,0 +1,25 @@
+---
+slug: 2026-08-09-cline-4-1-7
+title: "cline v4.1.7 — Cline v4.1.7 修复中断会话、MCP 挂起，增强检查点与 OAuth "
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.7
+publishedAt: 2026-08-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline v4.1.7 修复中断会话、MCP 挂起，增强检查点与 OAuth 支持"
+broadcast: "Cline 工具的最新版本修复了不少烦人的问题，比如会话中断和服务器卡住。现在中断后能继续处理，还能查看所有改动，对开发者来说更省心了。另外，它改进了与外部服务的连接，特别是 OAuth 支持，让代理开发更顺畅。总之，这次更新让工具更稳定，值得关注。"
+insight: "Cline v4.1.7 修复了中断会话和 MCP 挂起问题，对国内用户来说，如果你之前遇到会话中断或 MCP 卡住，这次升级值得做。但注意 LiteLLM 改用 Chat Completions，如果你走 newapi.lurus.cn 代理，建议确认代理兼容性，必要时调整配置。检查点增强对代码审查有帮助，但现有 hook 配置无需大改，除非你依赖未跟踪文件 diff。"
+tags: [checkpoints, mcp, session-resilience, oauth]
+---
+
+- 恢复“查看更改”按钮，基于 SDK 检查点，可审查任务所有改动；无改动时隐藏。
+- 中断时保留排队提示，中止后继续处理，并正确报告失败；会话上下文跨中止持久化。
+- 修复 MCP 服务器挂起阻塞会话创建，stdio 服务器 30 秒初始化预算；SSE 服务器 401 触发 OAuth。
+- LiteLLM 改用 Chat Completions，修复代理请求；Vertex ADC 令牌刷新使用配置的 fetch。
+- 检查点 diff 包含未跟踪文件，git 中途初始化也能捕获；空窗口 @-mention 搜索回退到 cwd 或桌面。
+
+---
+
+> 原文 release：[cline/cline v4.1.7](https://github.com/cline/cline/releases/tag/v4.1.7)
