@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.226",
+    "anthropics/claude-code": "v2.1.227",
     "openai/codex": "rust-v0.147.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "desktop-v0.0.11",
     "block/goose": "v1.45.0",
-    "sst/opencode": "v1.18.15",
+    "sst/opencode": "v1.18.16",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.54.4",
     "openclaw/openclaw": "v2026.6.34",
@@ -103,7 +103,8 @@
     "yc-duan/fastctx",
     "firecrawl/anydoc",
     "magicrew/doc7",
-    "gavamedia/deltafin"
+    "gavamedia/deltafin",
+    "wie-project/kakehashi"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -184,7 +185,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-10",
+    "anthropic-engineering": "2026-08-11",
     "claude-code-docs": "2026-08-07",
     "openai-codex-blog": "2026-08-06",
     "openclaw-concepts": "2026-08-10",
@@ -400,7 +401,9 @@
       "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/",
       "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/",
       "https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/",
-      "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/"
+      "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/",
+      "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/",
+      "https://simonwillison.net/2026/Aug/6/datasette-auth-tokens/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -535,7 +538,8 @@
       "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3",
       "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21",
       "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and",
-      "https://www.interconnects.ai/p/lessons-from-the-hacks"
+      "https://www.interconnects.ai/p/lessons-from-the-hacks",
+      "https://www.interconnects.ai/p/5-useful-things-youll-learn-in-my"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -732,7 +736,12 @@
       "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
       "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work",
       "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
-      "https://openai.com/index/hsp-gruppe"
+      "https://openai.com/index/hsp-gruppe",
+      "https://openai.com/index/responsible-ai-infrastructure-texas",
+      "https://openai.com/index/model-ml",
+      "https://openai.com/index/building-an-ai-native-finance-function",
+      "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
+      "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -839,7 +848,10 @@
       "https://huggingface.co/blog/Dharma-AI/gpu-management",
       "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b",
       "https://huggingface.co/blog/allenai/tutormoments",
-      "https://huggingface.co/blog/baseten"
+      "https://huggingface.co/blog/baseten",
+      "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+      "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
+      "https://huggingface.co/blog/muse-glimmer"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -919,23 +931,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-10",
+    "simonwillison": "2026-08-11",
     "lilianweng": "2026-08-06",
-    "latentspace": "2026-08-10",
-    "interconnects": "2026-08-10",
+    "latentspace": "2026-08-11",
+    "interconnects": "2026-08-11",
     "karpathy": "2026-08-09",
     "raschka": "2026-08-09",
     "eugeneyan": "2026-08-09",
     "chiphuyen": "2026-08-06",
-    "oneusefulthing": "2026-08-09",
+    "oneusefulthing": "2026-08-11",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-10",
-    "deepmind": "2026-08-09",
-    "hf-blog": "2026-08-09",
-    "anthropic-news": "2026-08-10",
-    "steipete": "2026-08-09",
-    "openclaw-blog": "2026-08-09"
+    "openai-news": "2026-08-11",
+    "deepmind": "2026-08-11",
+    "hf-blog": "2026-08-11",
+    "anthropic-news": "2026-08-11",
+    "steipete": "2026-08-11",
+    "openclaw-blog": "2026-08-11"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

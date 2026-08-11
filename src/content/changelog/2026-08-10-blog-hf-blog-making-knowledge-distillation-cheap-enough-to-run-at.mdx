@@ -1,0 +1,23 @@
+---
+slug: 2026-08-10-blog-hf-blog-making-knowledge-distillation-cheap-enough-to-run-at
+title: "Making Knowledge Distillation Cheap Enough to Run at — 如何让知识蒸馏成本足够低，从而大规模运行？"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation
+publishedAt: 2026-08-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "如何让知识蒸馏成本足够低，从而大规模运行？"
+broadcast: "今天聊聊知识蒸馏，简单说就是让一个小模型学习大模型的本事。但过去这过程很费算力，现在有个新方法，能减少教师模型的计算次数，用学生自己的中间结果来模拟教师输出，训练时间大大缩短。对咱们开发者来说，好处很明显，就算算力有限，也能训练出又小又聪明的模型，推理成本也跟着降下来，值得关注。"
+tags: [knowledge-distillation, model-compression, efficient-training]
+---
+
+- 文章提出一种高效知识蒸馏方法，通过减少教师模型的前向传播次数来降低计算成本。
+- 该方法利用学生模型的中间表示来近似教师输出，从而在保持性能的同时大幅减少训练时间。
+- 对开发者而言，这意味着可以在有限算力下部署更小的模型，同时保留大模型的知识，降低推理成本。
+
+---
+
+> 原文：[Making Knowledge Distillation Cheap Enough to Run at Scale](https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation) · 作者 Hugging Face

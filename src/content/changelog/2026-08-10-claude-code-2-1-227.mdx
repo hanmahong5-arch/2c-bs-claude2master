@@ -1,0 +1,30 @@
+---
+slug: 2026-08-10-claude-code-2-1-227
+title: "claude-code v2.1.227 — 修复订阅层级误判、Bash 命令失败及 TUI 回退问题"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.227
+publishedAt: 2026-08-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复订阅层级误判、Bash 命令失败及 TUI 回退问题"
+broadcast: "这次更新主要修了几个烦人的问题，比如订阅层级判断错误，还有在GitHub的自动构建环境里命令跑不起来的情况。另外，斜杠命令菜单的显示也优化了，选中行更清楚，特殊字符也不会乱。对咱们做开发工具的人来说，这些修复提醒我们，订阅状态和权限配置在会话里得传对，不然功能会误判，还有界面渲染和性能也得注意，别让事件循环卡住。"
+insight: "这次修复主要针对订阅层级误判和 CI 环境权限问题，对国内用户通过 newapi.lurus.cn 代理使用影响不大。若你现有配置未触发这些 bug，无需升级；但若在 GitHub 托管运行器上使用 claude-code-action，建议升级以修复 Bash 命令失败。TUI 回退修复和菜单改进属于体验优化，可择机升级。"
+tags: [bug-fixes, cli, tui, performance]
+---
+
+- 修复了会话以过期登录令牌启动时，功能标志未按用户订阅层级评估的问题，避免 Max 用户被错误提示启用 Fable 的用量积分。
+  - 对 harness 设计：需确保订阅状态在会话生命周期内正确传递，避免因令牌过期导致功能误判。
+- 修复了在 GitHub 托管运行器上，`claude-code-action` 中所有 Bash 命令因 `allowed_non_write_users` 而失败的问题。
+  - 对 harness 设计：需注意 CI 环境下的权限配置，确保命令执行不受非写入用户限制。
+- 修复了 `/tui` 将对话回退到首条消息之前的问题。
+  - 对 harness 设计：需确保 TUI 状态管理正确处理回退操作，避免丢失会话上下文。
+- 改进了斜杠命令菜单：蓝色仅标记选中行，匹配字符加粗而非变色，保留 emoji 或重音字符。
+  - 对 harness 设计：需关注终端 UI 渲染细节，提升可访问性和视觉清晰度。
+- 性能改进：减少文件未找到建议和 at-mention 大小检查时的事件循环阻塞。
+  - 对 harness 设计：需优化异步操作，避免阻塞事件循环，提升响应速度。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.227](https://github.com/anthropics/claude-code/releases/tag/v2.1.227)
