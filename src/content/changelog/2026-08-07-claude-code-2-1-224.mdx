@@ -1,0 +1,32 @@
+---
+slug: 2026-08-07-claude-code-2-1-224
+title: "claude-code v2.1.224 — 自托管运行器、插件归档源、跨会话消息，以及多项安全修复。"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.224
+publishedAt: 2026-08-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "自托管运行器、插件归档源、跨会话消息，以及多项安全修复。"
+broadcast: "最近Claude Code更新了，带来了几个值得关注的变化。现在你可以用自带的工具，把自己的机器或容器变成运行环境，适合团队使用。插件安装也支持直接从压缩包获取，还能校验文件完整性。另外，不同会话之间可以互相发消息了，这对搭建多智能体协作很有帮助。还修复了长路径导致会话混乱的问题，并取消了子代理数量上限，不过并发和深度限制还在。"
+insight: "本次更新对国内用户影响不大，但值得关注。若你使用 Team/Enterprise 计划，可尝试自托管运行器以利用自有资源，但需注意配置复杂度。现有 prompt 和 hook 配置无需改动，除非你依赖跨会话通信或插件归档源，这些是新增能力。通过 newapi.lurus.cn 代理访问不受影响，安全修复和路径问题修复对稳定性有益。建议普通用户按需升级，企业用户可评估新功能。"
+tags: [self-hosted-runner, cross-session-messaging, sandbox-security, plugin-archive]
+---
+
+- 新增 `claude self-hosted-runner`，可将自有机器或容器作为 Claude Code 会话的运行环境（Team/Enterprise 计划）。
+  - 对 harness 设计：需支持自定义执行环境，并管理会话生命周期。
+- 新增 `archive` 插件源，支持从 HTTPS zip 安装插件，可选 SHA-256 固定。
+  - 对 harness 设计：插件管理需支持非 git/npm 来源，并验证完整性。
+- 新增跨会话 `SendMessage`，会话间可互相发送消息，并通过 `ListAgents` 发现其他会话。
+  - 对 harness 设计：需实现跨会话通信机制，并处理消息投递失败。
+- 修复沙箱凭据掩码选项（如 JWT 解码、AWS SigV4 重签名）仅在特定设置下生效。
+  - 对 harness 设计：需正确配置网络终止和设置来源，确保安全功能生效。
+- 修复长项目路径（>200字符）导致会话目录串扰的问题。
+  - 对 harness 设计：需处理路径哈希冲突，确保会话隔离。
+- 移除每会话 200 子代理上限，但保留并发和深度限制。
+  - 对 harness 设计：需调整资源管理策略，支持长时间运行会话。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.224](https://github.com/anthropics/claude-code/releases/tag/v2.1.224)

@@ -1,0 +1,23 @@
+---
+slug: 2026-08-04-openclaw-2026-7-1-2
+title: "openclaw v2026.7.1-2 — npm 插件元数据兼容修复，确保官方插件可正常安装更新。"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-2
+publishedAt: 2026-08-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "npm 插件元数据兼容修复，确保官方插件可正常安装更新。"
+broadcast: "这次更新修复了npm插件元数据的兼容问题，让官方插件能正常安装和更新。对开发者来说，这意味着插件管理更稳定，版本追踪更准确，agent开发环境也更可靠。"
+insight: "这次修复对国内用户影响不大，但如果你在用官方插件且之前遇到安装或更新失败，建议升级到 v2026.7.1-2。升级后插件元数据兼容性增强，能更稳定地追踪版本。若你通过 newapi.lurus.cn 代理使用，代理本身不受影响，但插件更新走代理时可能仍需验证。现有 hook 配置无需改动，除非你自定义了 npm 插件管理逻辑。"
+tags: [npm-plugin, metadata, bugfix]
+---
+
+- 修复 npm 插件更新：接受新版 npm 客户端的单例数组元数据，使官方插件能安装和更新到修正版本。
+- 对 agent harness 设计的影响：需兼容不同 npm 客户端返回的元数据格式，避免插件管理失败。
+- 确保插件版本追踪准确，提升 harness 的插件生态稳定性。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.7.1-2](https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-2)

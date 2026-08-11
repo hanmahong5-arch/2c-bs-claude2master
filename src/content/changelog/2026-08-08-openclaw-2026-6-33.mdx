@@ -1,0 +1,26 @@
+---
+slug: 2026-08-08-openclaw-2026-6-33
+title: "openclaw v2026.6.33 — openclaw 2026.6.33 强化安全边界、长任务可靠性及渠道投递稳定性"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.6.33
+publishedAt: 2026-08-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "openclaw 2026.6.33 强化安全边界、长任务可靠性及渠道投递稳定性。"
+broadcast: "这次openclaw的新版本，主要是在安全和稳定性上做了加强。比如，它限制了网络和密钥相关的数据大小，防止信息泄露，这对我们设计智能体框架很有启发，得在数据入口和日志出口都做好过滤。另外，长任务运行更可靠了，能区分是真卡住还是模型调用慢，避免误杀。还有消息投递也增强了，重连时不会丢消息或重复发送，这对保证状态一致很重要。"
+insight: "这次更新对国内用户是值得升级的，尤其是长任务可靠性提升，能减少误杀。现有 hook 配置建议检查超时与健康检查逻辑，确保能区分真实停滞和长模型调用。走 newapi.lurus.cn 代理不受影响，因为更新主要涉及网络边界和渠道投递，不改变代理协议。升级后注意 Telegram 凭据不再进诊断信息，排查问题时要调整日志查看方式。"
+tags: [security, reliability, channel-delivery, credential-safety]
+---
+
+- 网络与密钥边界收紧：provider 流、Discord 响应、浏览器抓取、OAuth 路径及日志均限制恶意响应大小，Telegram 凭据不再进入诊断信息。
+  - 对 harness 设计：需在数据入口和日志出口统一实施大小与敏感信息过滤，防止信息泄露。
+- 长运行代理更可靠：发布、存活检查与看门狗逻辑能区分真实停滞与长模型调用或后端卡死。
+  - 对 harness 设计：超时与健康检查需感知任务类型，避免误杀长时间运行的操作。
+- 渠道投递增强：Discord 重连不再丢队列消息或重复非幂等发送，Telegram 机器人间及回复围栏处理保留线程与授权结果。
+  - 对 harness 设计：消息投递需具备幂等与重连恢复机制，确保状态一致。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.6.33](https://github.com/openclaw/openclaw/releases/tag/v2026.6.33)

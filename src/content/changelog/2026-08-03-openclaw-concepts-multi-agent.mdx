@@ -1,0 +1,23 @@
+---
+slug: 2026-08-03-openclaw-concepts-multi-agent
+title: "Multi-agent routing · OpenClaw — 多智能体路由：隔离状态、绑定消息，避免会话冲突的实操指南。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/multi-agent
+publishedAt: 2026-08-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "多智能体路由：隔离状态、绑定消息，避免会话冲突的实操指南。"
+broadcast: "今天聊聊多智能体路由，简单说就是每个智能体都有自己的独立工作区和会话库，通过绑定账号来分配消息。关键是别让多个智能体共用同一个目录，不然认证和会话状态会打架。技能和插件也能按智能体隔离，比如知识库只给自己用。这对做多智能体开发的开发者来说，能避免不少冲突和混乱。"
+insight: "如果你正在用多 agent 路由，现有配置大概率不用大改，但务必检查是否跨 agent 复用了 agentDir，这是最常见的冲突源。建议按摘要把每个 agent 的 workspace、SQLite 会话库彻底隔离，OAuth 凭据别手动复制。至于 newapi.lurus.cn 代理，摘要没提，无法判断影响，别瞎猜。总体值得按此规范梳理一遍，尤其多账号场景。"
+tags: [multi-agent, routing, isolation, openclaw]
+---
+
+- 每个 agent 有独立 workspace、agentDir 和 SQLite 会话库，绑定 channel account 到 agent 实现消息路由。
+- 不要跨 agent 复用 agentDir，否则认证和会话状态冲突；OAuth 凭据默认不跨 agent 复制。
+- 技能和插件存储可按 agent 隔离，如 Memory Wiki 设 scope 为 agent，避免知识共享。
+
+---
+
+> 原文：[Multi-agent routing · OpenClaw](https://docs.openclaw.ai/concepts/multi-agent)

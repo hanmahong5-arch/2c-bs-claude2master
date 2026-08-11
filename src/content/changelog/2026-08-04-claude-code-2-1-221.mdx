@@ -1,0 +1,23 @@
+---
+slug: 2026-08-04-claude-code-2-1-221
+title: "claude-code v2.1.221 — Focus view 隐藏工具活动，sandbox 文件 mask 模式，多项安"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.221
+publishedAt: 2026-08-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Focus view 隐藏工具活动，sandbox 文件 mask 模式，多项安全与稳定性修复"
+broadcast: "最近 Claude 代码工具更新了，在 VSCode 里新增了专注视图，可以把工具活动折叠成摘要，还能看到正在运行的工具，用快捷键就能切换。另外，Linux 和 WSL 的沙箱增加了文件掩码模式，能保护凭证文件，macOS 上则直接拒绝。还修复了 zsh 绕过权限检查的漏洞。这些改进对国内开发者来说，能提升编码安全性和专注度，值得关注。"
+insight: "这次更新对现有用户来说，升级价值主要在安全侧：zsh 权限绕过漏洞修复值得立即跟进，尤其国内团队常用 zsh 环境。Focus view 和 sandbox mask 模式属于体验增强，不影响现有 prompt 或 hook 配置。国内用户走 newapi.lurus.cn 代理不受影响，升级后无需调整代理设置，按常规流程更新即可。"
+tags: [focus-view, sandbox-masking, security-fixes, vscode]
+---
+
+- VSCode 新增 Focus view，可折叠工具活动为每轮摘要，并显示运行中工具指示器，快捷键 Ctrl+Alt+F。
+- Linux/WSL 沙箱新增 `mode: "mask"` 凭据文件处理，沙箱命令读取哨兵副本，出站时替换真实值；macOS 回退为 deny。
+- 修复 zsh 在 `[[ ]]` 中绕过 Bash 工具权限检查的漏洞，受影响命令现在会提示权限。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.221](https://github.com/anthropics/claude-code/releases/tag/v2.1.221)

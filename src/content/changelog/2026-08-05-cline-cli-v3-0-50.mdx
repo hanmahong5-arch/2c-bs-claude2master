@@ -1,0 +1,30 @@
+---
+slug: 2026-08-05-cline-cli-v3-0-50
+title: "cline cli-v3.0.50 — CLI v3.0.50：TUI 换肤、Plan 模式硬拦截文件编辑、空响应重试等"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.50
+publishedAt: 2026-08-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "CLI v3.0.50：TUI 换肤、Plan 模式硬拦截文件编辑、空响应重试等多项修复"
+broadcast: "这次更新给命令行工具带来了不少实用改进。界面可以换主题了，有十一种可选，看着更顺眼。更重要的是，在计划模式下，文件编辑操作会被严格限制，只能执行只读命令，安全性提升不少。另外，遇到空响应或上下文不够时，工具会自动重试或压缩，不再直接报错，用起来更省心。"
+insight: "这次 CLI v3.0.50 的 Plan 模式硬拦截文件编辑，对现有用户是明确的安全升级，建议升级并检查自己的 hook 是否依赖 sed -i 这类写命令，否则会被拦。空响应重试和上下文压缩是稳定性增强，值得跟进。国内用户走 newapi.lurus.cn 代理不受影响，因为改动在客户端逻辑，不涉及网络层。总之，升级是划算的，但先确认自己的自动化脚本不踩 Plan 模式的红线。"
+tags: [cli, tui, plan-mode, reliability]
+---
+
+- 新增 TUI 主题选择（/theme 或设置），支持 11 种内置主题，CLINE_THEME 可覆盖。
+  - 含义：harness 可让用户自定义界面，提升可辨识度。
+- Plan 模式硬拦截文件编辑命令（sed -i、重定向等），仅允许只读命令。
+  - 含义：harness 需区分命令类型，严格限制写操作，增强安全性。
+- 空模型响应在所有 provider 上重试，不再直接失败。
+  - 含义：harness 应实现重试逻辑，提高鲁棒性。
+- 上下文耗尽时自动压缩并重试一次，而非报错。
+  - 含义：harness 需处理长对话，自动压缩策略。
+- 修复 Telegram 斜杠命令被拦截、竞态连接、Bedrock 缓存等问题。
+  - 含义：harness 需注意集成细节，避免静默失败。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.50](https://github.com/cline/cline/releases/tag/cli-v3.0.50)

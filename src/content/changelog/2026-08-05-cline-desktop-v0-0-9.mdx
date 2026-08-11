@@ -1,0 +1,29 @@
+---
+slug: 2026-08-05-cline-desktop-v0-0-9
+title: "cline desktop-v0.0.9 — Cline 桌面版统一架构，自动恢复上下文，修复多项关键错误"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.9
+publishedAt: 2026-08-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline 桌面版统一架构，自动恢复上下文，修复多项关键错误"
+broadcast: "Cline 桌面版出了新版本，这次把安装方式统一了，还自动迁移旧数据，省心不少。更关键的是，它能在上下文快用完时自动压缩重试，不再直接失败，这对长任务开发特别有用。另外，计划模式也更安全，只允许只读操作，防止误改文件。对国内开发者来说，这些改进让日常开发更稳定，值得更新试试。"
+insight: "这次桌面版更新对现有用户来说值得升级，尤其是自动迁移旧架构和上下文耗尽自动压缩重试，能直接减少中断。计划模式硬阻止写操作提升了安全性，但如果你依赖斜杠命令或插件识别，需留意同名命令消除歧义和真实包名显示，现有配置基本兼容。国内走 newapi.lurus.cn 代理不受影响，因为更新未涉及网络层，可放心升级。"
+tags: [desktop, context-management, bug-fixes, model-providers]
+---
+
+- 桌面版改为通用 macOS 下载，自动迁移旧架构安装，简化分发。
+- 会话历史可按来源过滤，新增侧边栏过滤控件，便于管理多入口会话。
+- 编辑器显示 token 用量环和累计成本，接近限制时变色，提醒上下文管理。
+- 技能加入斜杠命令菜单，同名命令消除歧义，避免覆盖。
+- 插件显示真实包名，不再统一为 "index"，提升可识别性。
+- 计划模式硬阻止文件编辑 shell 命令，仅允许只读操作，增强安全。
+- 上下文耗尽时自动压缩并重试一次，而非直接失败。
+- 空模型响应在所有提供商上重试，修复 OpenRouter 等硬失败。
+- Bedrock 提示缓存修复，缓存读写不再为 0，并支持地理推断。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.9](https://github.com/cline/cline/releases/tag/desktop-v0.0.9)

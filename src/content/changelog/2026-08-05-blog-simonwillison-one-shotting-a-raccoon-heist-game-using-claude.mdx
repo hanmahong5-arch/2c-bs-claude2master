@@ -1,0 +1,24 @@
+---
+slug: 2026-08-05-blog-simonwillison-one-shotting-a-raccoon-heist-game-using-claude
+title: "One-shotting a Raccoon Heist game using Claude Fable 5 — Simon Willison用Claude Fable 5从旧推文一键生成完整3"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/5/raccoon-heist/
+publishedAt: 2026-08-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison用Claude Fable 5从旧推文一键生成完整3D游戏，展示AI自主开发全流程。"
+broadcast: "最近有个开发者用Claude Fable 5，把两年前AI生成的一个游戏概念截图，直接喂给模型，结果它自己就做出了一个能玩的3D游戏，还部署到了网页上。这中间，模型还自己加了巡逻狗之类的玩法，甚至用工具测试修复了手机上的显示问题。对咱们做开发的人来说，这挺有启发的，说明AI已经能独立走完从设计到上线的全流程，但过程中也得靠外部工具盯着点，以后咱们的工具链得让AI更透明、更好控制才行。"
+tags: [ai-agents, claude-code, game-development, autonomous-coding]
+---
+
+- 作者将2022年GPT-3和DALL-E生成的游戏概念截图直接喂给Claude Fable 5，要求其独立构建完整游戏，结果成功生成可玩的3D游戏，并部署到GitHub Pages。
+- 关键技巧：通过GitHub Pages实时预览Claude Code的中间成果，并赋予其OpenAI API密钥用于生成纹理，弥补了Claude自身图像生成能力的不足。
+- Claude自主添加了巡逻狗等游戏机制，并利用Playwright进行自测，修复了移动端可见性问题，展示了AI在复杂任务中的自主迭代能力。
+- 对开发者而言，这验证了AI代理可独立完成从设计到部署的全流程，但需通过外部工具（如GitHub Pages）辅助监控和干预，提示未来工具链需强化代理的可观察性和可控性。
+
+---
+
+> 原文：[One-shotting a Raccoon Heist game using Claude Fable 5](https://simonwillison.net/2026/Aug/5/raccoon-heist/) · 作者 Simon Willison

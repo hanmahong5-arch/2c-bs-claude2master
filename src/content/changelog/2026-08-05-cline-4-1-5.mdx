@@ -1,0 +1,24 @@
+---
+slug: 2026-08-05-cline-4-1-5
+title: "cline v4.1.5 — 免费模型下线提示与推理设置统一，agent 配置更稳"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.5
+publishedAt: 2026-08-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "免费模型下线提示与推理设置统一，agent 配置更稳"
+broadcast: "这次更新把推理设置统一了，不同模型提供商的行为会更一致，对开发者来说配置更省心。另外，当免费模型下线时，会直接给出提示和切换按钮，而不是干巴巴的报错，这能帮用户快速恢复工作。对做 agent 开发的朋友来说，这种可操作的错误提示和统一的配置抽象，值得借鉴。"
+insight: "本次更新对现有用户价值有限，不建议立即升级。免费模型下线提示虽直观，但仅影响使用免费模型的用户；推理设置统一映射是内部重构，对日常使用无明显感知。若你正用免费模型，升级后注意切换按钮位置；否则可暂缓。国内用户走 newapi.lurus.cn 代理不受影响，无需调整配置。现有 prompt 和 hook 配置无需改动，保持稳定即可。"
+tags: [model-promotion, reasoning-settings, ai-sdk, harness]
+---
+
+- 免费模型下线时显示专属提示，并提供切换模型的按钮，替代通用错误。
+  - 对 harness 设计：错误信息应可操作，引导用户快速恢复。
+- 推理设置（effort 级别、开关）统一映射到 AI SDK 共享路径，跨提供商（含 Ollama）行为一致。
+  - 对 harness 设计：配置抽象层减少提供商差异，提升可移植性。
+
+---
+
+> 原文 release：[cline/cline v4.1.5](https://github.com/cline/cline/releases/tag/v4.1.5)

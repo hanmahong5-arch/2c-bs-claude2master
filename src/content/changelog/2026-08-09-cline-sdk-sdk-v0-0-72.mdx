@@ -1,0 +1,23 @@
+---
+slug: 2026-08-09-cline-sdk-sdk-v0-0-72
+title: "cline sdk/sdk/v0.0.72 — SDK v0.0.72 增强中断恢复、MCP 容错与 OAuth 支持"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.72
+publishedAt: 2026-08-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK v0.0.72 增强中断恢复、MCP 容错与 OAuth 支持"
+broadcast: "最近这个开发工具的新版本挺值得关注的，它把中断恢复做得更稳了，编辑不会丢，任务失败也会明确报告。另外，外部工具卡住不再影响整体使用，还支持了更安全的授权方式。对咱们做智能体开发的朋友来说，这些改进能让调试和运行更省心，值得试试。"
+insight: "这次 SDK 更新对现有用户来说，中断恢复和 MCP 容错是实打实的增强，值得升级。如果你在用 LiteLLM 或远程 MCP，建议升级并检查配置，因为请求路径和 OAuth 提示有变化。国内用户走 newapi.lurus.cn 代理不受影响，但网络中断重试和 Vertex ADC 代理支持可能对稳定性有帮助，建议升级后观察效果。"
+tags: [sdk, interruption-handling, mcp, oauth]
+---
+
+- 中断的提示队列现在保留并应用编辑，会话停止语义一致，上下文持久化，失败任务报告为 run.failed。
+- MCP 服务器挂起不再阻塞会话创建，stdio 服务器有 30 秒初始化预算，远程 SSE 支持 OAuth 授权提示。
+- LiteLLM 请求改走 Chat Completions，网络中断重试，Vertex ADC 刷新支持代理，检查点包含未跟踪文件。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.72](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.72)

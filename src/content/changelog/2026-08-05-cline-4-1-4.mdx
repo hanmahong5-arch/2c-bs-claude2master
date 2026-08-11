@@ -1,0 +1,26 @@
+---
+slug: 2026-08-05-cline-4-1-4
+title: "cline v4.1.4 — Cline v4.1.4 强化计划模式安全，修复多项稳定性问题。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.4
+publishedAt: 2026-08-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline v4.1.4 强化计划模式安全，修复多项稳定性问题。"
+broadcast: "最近Cline工具更新了，主要强化了计划模式的安全性，现在会直接阻止文件编辑和代码变更，确保只读调查。这对做智能体开发的朋友是个提醒，安全控制得放在工具层，不能光靠模型自觉。另外，模式切换现在完全由用户控制，模型不能再自己改主意。还有，上下文不够用的时候会自动压缩重试，实在不行会告诉你原因，这几点都挺值得关注的。"
+insight: "Cline v4.1.4 的更新对现有用户是值得升级的，尤其是计划模式硬性阻止文件编辑和移除模型发起的模式切换，显著提升了安全性和可控性。如果你依赖计划模式进行只读调查，升级后无需修改 prompt 或 hook 配置，因为行为已在工具层强制。国内用户通过 newapi.lurus.cn 代理访问不受影响，升级后建议测试上下文耗尽恢复功能，确保自动压缩策略符合你的工作流。"
+tags: [plan-mode, safety, context-management, bug-fixes]
+---
+
+- **计划模式硬性阻止文件编辑命令**：不再依赖提示，直接拒绝文件操作、git 变更等，确保只读调查。
+  - 对 harness 设计：需在工具调用层强制校验模式，而非仅靠模型自律。
+- **移除模型发起的计划到执行切换**：模式切换完全由用户控制，避免模型中途改变行为。
+  - 对 harness 设计：状态机应严格由用户事件驱动，模型输出不可作为模式变更依据。
+- **修复上下文耗尽恢复**：自动压缩并重试一次，无法恢复时给出明确原因。
+  - 对 harness 设计：需内置上下文管理策略，处理超限场景，避免原始错误暴露。
+
+---
+
+> 原文 release：[cline/cline v4.1.4](https://github.com/cline/cline/releases/tag/v4.1.4)

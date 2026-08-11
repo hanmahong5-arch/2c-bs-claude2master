@@ -1,0 +1,23 @@
+---
+slug: 2026-08-04-opencode-1-18-12
+title: "opencode v1.18.12 — 修复 Azure GPT"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.12
+publishedAt: 2026-08-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Azure GPT-5.5+ 推理请求失败，并优化桌面端性能与搜索。"
+broadcast: "最近这个AI编程工具更新了，主要修了几个问题。如果你在用Azure上的推理模型，之前请求会失败，现在修好了，用起来更稳定。另外，桌面端处理大图片或附件时不再卡顿，交互更流畅。还有，项目搜索现在能匹配到所有已知项目，范围更大了，对开发者来说更方便。"
+insight: "此次更新对国内用户影响不大，但如果你是 Azure GPT-5.5+ 推理模型的使用者，建议升级以修复请求失败问题。桌面端性能优化和搜索范围扩大属于体验改进，现有配置无需改动。若通过 newapi.lurus.cn 代理访问，本次修复不涉及代理层，应不受影响。总体而言，值得升级，尤其依赖 Azure 推理场景。"
+tags: [bugfix, azure, desktop, performance]
+---
+
+- Azure GPT-5.5+ 启用推理时请求失败已修复，确保 agent 在 Azure 上使用推理模型稳定。
+- 桌面端大图片或附件草稿导致 composer 卡顿已优化，提升 agent 交互流畅度。
+- 项目搜索现在匹配所有已知项目，而非仅前五个，扩大 agent 可访问项目范围。
+
+---
+
+> 原文 release：[sst/opencode v1.18.12](https://github.com/anomalyco/opencode/releases/tag/v1.18.12)

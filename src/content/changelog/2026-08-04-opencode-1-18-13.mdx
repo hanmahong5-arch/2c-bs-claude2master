@@ -1,0 +1,24 @@
+---
+slug: 2026-08-04-opencode-1-18-13
+title: "opencode v1.18.13 — 修复 RTL 布局与空白标题，提升桌面端响应速度"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.13
+publishedAt: 2026-08-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 RTL 布局与空白标题，提升桌面端响应速度"
+broadcast: "最近这个AI编程工具更新了，主要修了不少界面问题。现在审查代码时能看到PR编号和链接，方便追踪。另外，阿拉伯语这类从右往左读的布局也修好了，标签、抽屉这些操作更顺手。没起标题的对话会自动生成名字，不会空白。界面反应也更快了，因为处理文字的任务挪到了后台。对国内开发者来说，界面更顺眼、响应更快，用起来肯定更舒服。"
+insight: "这次 v1.18.13 主要修 RTL 和空标题，对国内多数用 LTR 的用户影响不大，但无标题自动命名和 markdown 移出主线程能提升日常体验，值得升级。若你现有 hook 依赖 PR 上下文，现在多了编号和 URL，可考虑调整提取逻辑。走 newapi.lurus.cn 代理不受影响，放心更新。"
+tags: [tui, desktop, rtl, localization]
+---
+
+- GitHub PR 审查上下文现在包含 PR 编号和 URL，便于追踪。
+- 修复多处 RTL 布局问题，包括标签页、抽屉、调整大小和标题栏交互，并统一方向图标和抽屉位置。
+- 无标题会话回退到生成名称，避免空白显示；markdown 解析移出主线程，提升渲染响应性。
+- 桌面端 UI 文案本地化扩展，新增 RTL 支持、区域感知复数规则及更多语言。
+
+---
+
+> 原文 release：[sst/opencode v1.18.13](https://github.com/anomalyco/opencode/releases/tag/v1.18.13)

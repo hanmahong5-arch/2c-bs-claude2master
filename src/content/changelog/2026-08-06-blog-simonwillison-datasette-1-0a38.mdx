@@ -1,0 +1,23 @@
+---
+slug: 2026-08-06-blog-simonwillison-datasette-1-0a38
+title: "datasette 1.0a38 — Datasette 1.0a38 修复了一个 SQL 注入漏洞，影响混合公开和私"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/6/datasette/
+publishedAt: 2026-08-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 1.0a38 修复了一个 SQL 注入漏洞，影响混合公开和私有表的实例。"
+broadcast: "最近，数据发布工具 Datasette 推出新版本，修复了一个重要的安全问题。这个漏洞会让用户通过特殊构造的 SQL 语句，绕过权限限制，读取到同一数据库中本应保密的私有数据，即使管理员已经关闭了相关执行权限。对于同时管理公开和私有数据的开发者来说，这提醒我们要特别留意权限系统与直接执行 SQL 之间的潜在冲突，谨慎配置，才能确保数据安全。"
+tags: [security, sql-injection, datasette]
+---
+
+- 该漏洞允许用户通过 SQL 注入绕过权限限制，读取同一数据库中私有表的数据，即使已禁用 execute-sql 权限。
+- 修复版本为 1.0a38 和 0.65.3，建议管理员在混合表场景下禁用 execute-sql 权限以规避风险。
+- 对开发者而言，此案例凸显了权限系统与原始 SQL 执行之间的潜在冲突，需谨慎配置以保障数据安全。
+
+---
+
+> 原文：[datasette 1.0a38](https://simonwillison.net/2026/Aug/6/datasette/) · 作者 Simon Willison

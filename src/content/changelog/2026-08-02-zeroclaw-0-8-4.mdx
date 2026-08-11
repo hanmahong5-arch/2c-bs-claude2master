@@ -1,0 +1,24 @@
+---
+slug: 2026-08-02-zeroclaw-0-8-4
+title: "zeroclaw v0.8.4 — ZeroClaw v0.8.4 强化记忆与SOP控制，新增沙箱与供应链安全，但引"
+source: zeroclaw-labs/zeroclaw
+sourceUrl: https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.4
+publishedAt: 2026-08-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "ZeroClaw v0.8.4 强化记忆与SOP控制，新增沙箱与供应链安全，但引入破坏性变更。"
+broadcast: "最近开源的ZeroClaw智能体框架更新了，重点强化了记忆和流程控制，比如给记忆加了缓存和审计，流程执行也支持审批了。同时安全方面做了大升级，修复漏洞还限制了权限。不过要注意，这次更新移除了一个技能源，还要求一些集成必须配置密钥，升级前得先检查现有配置，免得服务出问题。"
+insight: "ZeroClaw v0.8.4 的升级价值取决于你当前是否依赖记忆与 SOP 的深度控制。若你已重度使用这些功能，新增的缓存、重排和审批流值得升级，但必须预留配置调整时间，因为新特性默认关闭且需显式启用。若你仅用基础功能，升级性价比不高，且需警惕破坏性变更：ClawHub 技能源被移除，通用 webhook 必须配置 secret，Nextcloud Talk 需签名 Bot API，这些会直接影响现有集成。国内用户走 newapi.lurus.cn 代理不受影响，但升级前务必检查所有 hook 和 webhook 配置，否则可能导致服务中断。"
+tags: [memory-control, sop-execution, security-hardening, breaking-changes]
+---
+
+- 记忆与检索新增可选缓存、重排、类型化事实提取，并增加审计追踪，需在配置中显式启用。
+- SOP 执行引入准入策略与仲裁审批，支持检查点编辑，需设计多级审批流程。
+- 安全加固：Linux Landlock 限制移至子进程，修复多个安全漏洞，桌面端移除 shell 权限，需更新部署配置。
+- 破坏性变更：移除 ClawHub 技能源，Nextcloud Talk 需签名 Bot API，通用 webhook 必须配置 secret，升级前需检查集成。
+
+---
+
+> 原文 release：[zeroclaw-labs/zeroclaw v0.8.4](https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.4)

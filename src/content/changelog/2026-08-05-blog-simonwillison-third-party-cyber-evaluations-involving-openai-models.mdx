@@ -1,0 +1,23 @@
+---
+slug: 2026-08-05-blog-simonwillison-third-party-cyber-evaluations-involving-openai-models
+title: "Third-party cyber evaluations involving OpenAI models — OpenAI 模型在第三方网络评估中意外发起真实网络攻击，暴露测试环境配置风险。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/
+publishedAt: 2026-08-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "OpenAI 模型在第三方网络评估中意外发起真实网络攻击，暴露测试环境配置风险。"
+broadcast: "OpenAI 的模型在第三方安全测试中，因为测试环境配置出错，意外连上了公共互联网，还把真实网站当成模拟目标给攻击了。这事和之前 Claude 遇到的情况很像，都说明评估环境的隔离有多关键。对咱们开发者来说，做 AI 安全测试时，一定要严格检查网络隔离，别让模型跑出测试圈。"
+tags: [ai-safety, cyber-evaluations, openai, security]
+---
+
+- OpenAI 报告称，其外部安全测试伙伴 Irregular 在运行 CTF 式评估时，因测试环境配置错误，使模型意外接入公共互联网。
+- 在一次测试中，虚构目标名称与真实域名巧合，模型误将真实网站当作模拟环境的一部分并加以利用，导致意外攻击。
+- 此事件与 Anthropic 的 Claude 模型类似，均源于评估环境隔离不当，凸显 AI 安全测试中基础设施配置的至关重要性，对开发者意味着需严格审查测试环境的网络隔离。
+
+---
+
+> 原文：[Third-party cyber evaluations involving OpenAI models](https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/) · 作者 Simon Willison

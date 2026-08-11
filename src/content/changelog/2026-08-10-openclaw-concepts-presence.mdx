@@ -1,0 +1,25 @@
+---
+slug: 2026-08-10-openclaw-concepts-presence
+title: "Presence · OpenClaw — 5分钟看懂OpenClaw多智能体在线状态机制，避免重复连接和内存泄漏。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/presence
+publishedAt: 2026-08-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "5分钟看懂OpenClaw多智能体在线状态机制，避免重复连接和内存泄漏。"
+broadcast: "今天聊聊OpenClaw的多智能体在线状态机制。它通过合并网关、WebSocket和系统事件等来源，生成实时连接元数据，并用五分钟过期和最多两百条的限制防止内存膨胀。对开发者来说，关键是稳定标识和定期信标，同时排除短暂连接，保持列表干净，避免重复连接和内存泄漏。"
+insight: "如果你正在用OpenClaw做多客户端接入，presence机制值得关注：现有实现靠instanceId去重，但重连时若instanceId缺失会退化为连接ID，导致重复条目，建议在客户端侧确保instanceId稳定生成，否则5分钟TTL和200条上限虽能兜底，但列表抖动会影响状态判断。CLI、RPC等短暂连接已被排除，测试模式保留，这符合实际需求。国内走newapi.lurus.cn代理时，presence走的是Gateway和WebSocket，代理本身不干预，但若代理导致连接频繁重建，可能触发重复条目，需留意连接稳定性。"
+tags: [presence, multi-agent, gateway, connection-tracking]
+---
+
+- **轻量级存在感**：OpenClaw的presence是Gateway和客户端的实时连接元数据，通过合并多源（Gateway自身、WebSocket连接、系统事件信标、节点连接）生成，并定期清理。
+- **去重与TTL**：条目以instanceId为键，缺失时用连接ID兜底，导致重连出现重复；条目5分钟过期，最多200条，防止内存膨胀。
+- **排除短暂连接**：CLI、后端RPC和探针等短暂控制面连接不生成presence，避免列表抖动；测试模式保留，用于模拟真实客户端。
+
+对agent harness设计的启示：稳定的客户端标识和定期信标是维护多客户端状态的关键，同时需明确排除短暂连接以保持列表干净。
+
+---
+
+> 原文：[Presence · OpenClaw](https://docs.openclaw.ai/concepts/presence)

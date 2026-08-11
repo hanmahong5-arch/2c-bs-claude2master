@@ -1,0 +1,25 @@
+---
+slug: 2026-08-10-openclaw-concepts-qa-e2e-automation
+title: "QA overview · OpenClaw — OpenClaw 的 QA 体系如何用真实通道和画像驱动端到端验证？"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/qa-e2e-automation
+publishedAt: 2026-08-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OpenClaw 的 QA 体系如何用真实通道和画像驱动端到端验证？"
+broadcast: "OpenClaw 的 QA 体系用画像来驱动测试，比如通过 qa run 指定画像，就能按场景分类自动分派测试，还能生成评分卡。它特别强调要模拟真实通道，像 Slack 或 Telegram 这样的环境，而不是只在模拟器里跑。对国内开发者来说，这意味着做 agent 测试时，应该用画像覆盖真实场景，并且失败时要明确关闭，而不是悄悄替换，这样才能保证验证的可靠性。"
+insight: "现有用户若已按画像驱动方式组织 QA，升级价值有限；若仍靠手工场景，值得引入 taxonomy 画像与通道扩展机制。国内用户走 newapi.lurus.cn 代理时，QA 命令本身不涉及模型调用，代理不受影响，但需确认画像执行扩展通道时是否依赖外部服务。建议保持现有 hook 配置，重点检查失败关闭策略是否已启用，避免默认替换掩盖问题。"
+tags: [qa-automation, e2e-testing, taxonomy-profiles, observability]
+---
+
+- 用 `qa run --qa-profile smoke-ci` 等画像驱动测试，按 taxonomy.yaml 解析成员并分派场景，支持按 surface/category 过滤，结果含画像评分卡。
+- 覆盖 ID 精确对应 taxonomy-surface.feature，主覆盖满足 ID，次覆盖仅建议；场景执行通道为 OR 列表，画像执行会扩展至所有支持通道。
+- 提供 `qa parity-report` 和 `qa confidence-report` 等命令，比较模型轴奇偶性、分类证据产物，并支持负控制金丝雀检测漂移。
+
+对 agent harness 设计：QA 应模拟真实通道（如 Slack/Telegram），用画像驱动覆盖，并确保失败关闭而非默认替换。
+
+---
+
+> 原文：[QA overview · OpenClaw](https://docs.openclaw.ai/concepts/qa-e2e-automation)

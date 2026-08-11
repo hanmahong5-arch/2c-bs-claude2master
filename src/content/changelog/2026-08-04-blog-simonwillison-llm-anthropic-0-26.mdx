@@ -1,0 +1,23 @@
+---
+slug: 2026-08-04-blog-simonwillison-llm-anthropic-0-26
+title: "llm-anthropic 0.26 — llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/4/llm-anthropic/
+publishedAt: 2026-08-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "llm-anthropic 0.26 发布，新增 Claude 5 系列模型与服务器端工具支持，并简化推理控制。"
+broadcast: "最近有个叫 llm-anthropic 的工具更新了，新增了 Claude 5 系列模型，还支持服务器端工具，比如网页搜索和代码执行。这对国内开发者来说挺值得关注的，因为推理过程现在能流式显示，还能控制思考深度，让 AI 开发更灵活。"
+tags: [llm, anthropic, claude, model-context-protocol]
+---
+
+- 新增 claude-fable-5、claude-sonnet-5 和 claude-opus-5 模型，并支持通过 LLM 的 -T 接口或 Python tools= 使用 WebSearch、WebFetch、CodeExecution 和 AnthropicMCP 等服务器端工具。
+- 推理、工具调用、工具结果及服务器端工具结果现在以类型化事件流式传输，CLI 提示的推理默认显示在标准错误中，可通过 -R 隐藏。
+- 简化了扩展思考为 thinking 和 thinking_effort（低/中/高/极高/最大），Claude 5 模型默认思考，Sonnet 5 和 Opus 5 可通过 -o thinking 0 禁用，Fable 5 始终思考。
+
+---
+
+> 原文：[llm-anthropic 0.26](https://simonwillison.net/2026/Aug/4/llm-anthropic/) · 作者 Simon Willison

@@ -1,0 +1,26 @@
+---
+slug: 2026-08-08-openclaw-2026-6-34
+title: "openclaw v2026.6.34 — openclaw 2026.6.34 强化浏览器与网络边界安全，提升会话恢复与通"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.6.34
+publishedAt: 2026-08-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "openclaw 2026.6.34 强化浏览器与网络边界安全，提升会话恢复与通道稳定性，并预告插件 SDK 迁移。"
+broadcast: "最近开源的智能体框架更新了，重点加强了浏览器和网络的安全边界，防止不安全路径绕过沙箱。同时，会话恢复和通道稳定性也提升了，任务中断后能自动恢复，不会悄悄失败。这对国内开发者来说，意味着构建长任务智能体时，可以更放心地依赖底层框架的容错能力，减少自己处理异常的工作量。"
+insight: "本次更新对现有用户而言，建议升级以获取会话恢复与通道稳定性增强，尤其适合长任务场景。浏览器与网络边界的安全强化，意味着若你自定义了 hook 或路由配置，需检查是否涉及不安全路径，避免被新策略拦截。国内用户走 newapi.lurus.cn 代理不受影响，但升级后建议验证代理通道的幂等与背压行为，确保消息不丢失。"
+tags: [security, reliability, plugin-sdk, channel-stability]
+---
+
+- 浏览器路由、DNS 目标、自定义源及回环端点拒绝不安全访问路径，强化沙箱边界。
+  - 对 agent harness 设计：需在 harness 层统一实施访问控制，防止绕过沙箱。
+- 会话写入、provider 回退、流进度处理及 stdio 失败可恢复，不再静默终止任务。
+  - 对 agent harness 设计：harness 应内置重试与状态恢复机制，确保长任务韧性。
+- 待处理通道工作可恢复，确认幂等，Discord 网关突发流量有界。
+  - 对 agent harness 设计：通道层需支持幂等操作与背压控制，避免消息丢失或过载。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.6.34](https://github.com/openclaw/openclaw/releases/tag/v2026.6.34)

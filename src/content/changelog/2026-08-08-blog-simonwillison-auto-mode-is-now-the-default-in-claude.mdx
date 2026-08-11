@@ -1,0 +1,25 @@
+---
+slug: 2026-08-08-blog-simonwillison-auto-mode-is-now-the-default-in-claude
+title: "Auto mode is now the default in Claude Code for Pro, — Anthropic 将 Claude Code 默认设为自动模式，并称其能抵御提"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/8/auto-mode/
+publishedAt: 2026-08-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic 将 Claude Code 默认设为自动模式，并称其能抵御提示注入，但独立验证仍存疑。"
+broadcast: "Anthropic 最近把 Claude Code 的默认模式改成了自动，说是能挡住九成左右的危险操作，比人手动确认还靠谱。不过呢，这个安全效果目前主要靠他们自家测试，第三方验证还不多，所以咱们国内开发者用的时候，还是得自己留个心眼，特别是在工具链里限制好数据访问，别光图省事。"
+tags: [claude-code, auto-mode, prompt-injection, agent-security]
+---
+
+- Anthropic 宣布从 8 月 14 日起，Claude Code 的 Pro、Max 和 Team 计划新会话默认启用自动模式，内部几乎全员使用。
+- 内部测试显示，人类仅拒绝 13.6% 的危险操作，而自动模式可拦截 89%，凸显确认疲劳问题。
+- 第三方评估称 720 次间接提示注入攻击均未成功，但作者质疑恶意包指令等场景，认为需更多独立验证。
+
+对开发者而言，自动模式减少人工确认，但安全边界仍需谨慎设计，尤其在工具链中限制数据访问。
+
+---
+
+> 原文：[Auto mode is now the default in Claude Code for Pro, Max, and Team plans](https://simonwillison.net/2026/Aug/8/auto-mode/) · 作者 Simon Willison

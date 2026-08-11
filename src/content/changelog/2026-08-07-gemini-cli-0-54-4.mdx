@@ -1,0 +1,25 @@
+---
+slug: 2026-08-07-gemini-cli-0-54-4
+title: "gemini-cli v0.54.4 — 补丁修复与版本回滚，稳定发布流程"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.54.4
+publishedAt: 2026-08-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "补丁修复与版本回滚，稳定发布流程"
+broadcast: "谷歌的Gemini命令行工具发布了新版本，这次主要是修复了一个问题，并调整了版本号。过程中还出现了版本回滚，最终稳定在0.54.4。对开发者来说，这提醒我们自动化发布流程中，版本控制和回滚机制很重要，能确保发布稳定，避免出错。"
+insight: "这次 v0.54.4 的发布过程暴露了版本管理上的反复，但最终回滚并稳定发布，说明官方在流程上做了修正。对于现有用户，如果你正使用 v0.54.x 且未遇到问题，不必急于升级，等后续版本验证更充分再动更稳妥。至于 hook 配置，本次只是补丁修复，不涉及行为变更，现有配置无需调整。国内用户走 newapi.lurus.cn 代理不受影响，因为这是官方版本发布，与代理通道无关。"
+tags: [patch, version-bump, release-process]
+---
+
+- 修复补丁：cherry-pick 56f9688 至 v0.54.0 分支，生成 v0.54.1，修复特定问题。
+- 版本号更新：从 v0.54.1 升至 v0.54.2，但随后被回滚，说明发布流程有调整。
+- 回滚版本：撤销版本号提升，最终发布 v0.54.4，确保版本一致性。
+
+对 agent harness 设计：需关注版本控制与回滚机制，确保自动化发布流程稳定。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.54.4](https://github.com/google-gemini/gemini-cli/releases/tag/v0.54.4)

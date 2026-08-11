@@ -1,0 +1,36 @@
+---
+slug: 2026-08-07-cline-desktop-v0-0-10
+title: "cline desktop-v0.0.10 — MCP OAuth 认证、错误可见性提升、模型连接引导增强"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.10
+publishedAt: 2026-08-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP OAuth 认证、错误可见性提升、模型连接引导增强"
+broadcast: "桌面版工具更新了，这次重点提升了MCP服务器的OAuth认证支持，能查看状态、取消重试，配置变了令牌会失效。错误显示也更清楚了，配置无效的服务器不再悄悄消失，方便调试。另外，欢迎界面新增了连接模型的引导，能识别已连接的Bedrock等，减少配置错误。对开发者来说，失败不再静默，调试和配置都更省心了。"
+insight: "这次更新对国内用户值得升级，尤其修复了 Vertex AI 凭据刷新走配置 fetch 的代理问题，说明 newapi.lurus.cn 代理场景下更稳。MCP 错误不再静默消失，配置无效的服务器能直接定位，现有 hook 配置建议检查一遍，尤其涉及 OAuth 的服务器，令牌失效逻辑变了。模型凭据缺失时错误会明确指向设置，欢迎屏也加了连接引导，整体对排查配置问题更友好，升级后按提示调整即可。"
+tags: [mcp, oauth, error-handling, ui-fixes]
+---
+
+- MCP 服务器支持 OAuth 认证，可查看状态、取消/重试，支持预注册客户端，配置变更时令牌失效。
+  - 对 agent harness：需处理 OAuth 流程和令牌生命周期管理。
+- MCP 错误显示在单个服务器上，配置无效的服务器不再静默消失。
+  - 对 agent harness：错误定位更精准，便于调试。
+- 发送消息无模型凭据或队列失败时，在转录中显示错误及原因，并指向设置。
+  - 对 agent harness：失败不再静默，需捕获并展示错误。
+- 修复首条消息重复渲染、composer 卡在“工作中”等问题。
+  - 对 agent harness：提升 UI 稳定性。
+- 欢迎屏新增“连接模型”提示，实时识别已连接的 Bedrock/Vertex 等。
+  - 对 agent harness：引导用户配置模型，减少配置错误。
+- 新增快捷键：Cmd/Ctrl+N 新会话，Cmd/Ctrl+, 设置，Esc 停止。
+  - 对 agent harness：提供快捷操作，提升效率。
+- 推理控制跨 AI SDK 提供商一致，包括 Ollama。
+  - 对 agent harness：确保推理设置正确传递。
+- Vertex AI 凭据刷新使用配置的 fetch，修复代理问题。
+  - 对 agent harness：网络环境兼容性增强。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.10](https://github.com/cline/cline/releases/tag/desktop-v0.0.10)

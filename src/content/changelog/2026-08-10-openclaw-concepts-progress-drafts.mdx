@@ -1,0 +1,23 @@
+---
+slug: 2026-08-10-openclaw-concepts-progress-drafts
+title: "Progress drafts · OpenClaw — 把多轮“正在工作”消息合并成一条实时状态行，减少刷屏。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/progress-drafts
+publishedAt: 2026-08-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "把多轮“正在工作”消息合并成一条实时状态行，减少刷屏。"
+broadcast: "今天聊聊OpenClaw的一个新功能，它能把多轮工作状态合并成一条实时更新的进度条，避免刷屏。这个设计对开发者很友好，因为进度信息来自真实运行事件，还能自定义标签，甚至隐藏敏感内容。对做agent开发的朋友来说，这能提升交互体验，让用户更清楚任务进展。"
+insight: "这个进度合并功能对国内用户是纯增益，值得升级。它把多轮‘正在工作’刷屏收敛成一条实时状态行，最终替换为答案，体验干净很多。现有 prompt 和 hook 不用改，默认配置即可生效。走 newapi.lurus.cn 代理不受影响，因为进度更新只是客户端展示逻辑，不涉及额外网络请求或密钥传输。建议直接开启 streaming.mode: 'progress'，并留意 web_fetch 等耗时操作会延迟 5 秒才显示进度，属正常现象。"
+tags: [progress-drafts, streaming, agent-ui, channel-config]
+---
+
+- 设置 `streaming.mode: "progress"` 后，OpenClaw 只在真正开始工作时创建一条消息，随工具调用实时更新，最后替换为最终答案，避免临时“还在处理”消息堆积。
+- 进度行来自真实运行事件（工具启动、计划、审批等），工具可主动发送带 `progress.text` 的公开进度更新，但必须延迟到操作真正耗时（如 web_fetch 延迟 5 秒），且内容不得含密钥或原始输出。
+- 支持自定义标签（固定或随机池）、隐藏标签、控制命令文本显示（`commandText: "status"`）以及开启评论通道（`commentary`）来穿插模型前言。
+
+---
+
+> 原文：[Progress drafts · OpenClaw](https://docs.openclaw.ai/concepts/progress-drafts)

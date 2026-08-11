@@ -1,0 +1,24 @@
+---
+slug: 2026-08-10-openclaw-concepts-personal-agent-benchmark-pack
+title: "Personal agent benchmark pack · OpenClaw — 用10个本地场景测个人助手，防泄密防假进度，值得5分钟。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/personal-agent-benchmark-pack
+publishedAt: 2026-08-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "用10个本地场景测个人助手，防泄密防假进度，值得5分钟。"
+broadcast: "今天给大家介绍一个个人助手评测工具包，它用十个本地场景来测试助手能力，比如提醒、记忆、审批拒绝这些。每个场景只测一件事，而且用模拟数据保证结果稳定，不碰真实隐私。对国内开发者来说，这种小而本地化的测试方式，能有效防止假进度，值得花五分钟了解一下。"
+insight: "这个 benchmark 包对国内开发者很有参考价值，尤其是隐私隔离和确定性测试的设计，能有效防止假进度。如果你已有类似个人助手项目，值得花5分钟用这10个场景自测，但要注意它用的是 mock-openai，真实环境未必完全一致。对于 hook 配置，建议先跑一遍看哪些场景失败，再针对性调整，不必全盘照搬。走 newapi.lurus.cn 代理不受影响，因为测试完全本地且不碰真实密钥。"
+tags: [personal-agent, benchmark, privacy, qa-scenarios]
+---
+
+- 10个YAML场景覆盖提醒、记忆、审批拒绝、失败恢复等，每个场景只测一个行为，用mock-openai保证确定性。
+- 隐私模型严格隔离：只用假用户、假偏好、假密钥，不碰真实记忆或配置，红action检查用假标记，失败可安全排查。
+- 扩展方式：新场景加YAML并声明语义ID，避免加新runner或依赖，直到场景足够稳定。
+- 对harness设计：场景应小、本地、确定性，且用证明支撑的完成声明，防止假进度。
+
+---
+
+> 原文：[Personal agent benchmark pack · OpenClaw](https://docs.openclaw.ai/concepts/personal-agent-benchmark-pack)

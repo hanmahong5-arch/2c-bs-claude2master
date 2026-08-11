@@ -1,0 +1,24 @@
+---
+slug: 2026-08-03-openclaw-concepts-agent-bindings
+title: "Agent bindings · OpenClaw — 消息路由到哪个agent？OpenClaw用绑定规则按通道、账号、角色精确分流。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/agent-bindings
+publishedAt: 2026-08-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "消息路由到哪个agent？OpenClaw用绑定规则按通道、账号、角色精确分流。"
+broadcast: "今天聊聊OpenClaw里的agent绑定规则，它解决的是消息来了该交给哪个agent处理的问题。规则按通道、账号、角色这些信息来匹配，而不是看消息内容本身。规则有优先级，窄的规则要放在前面，不然可能被宽的规则抢先。这个设计提醒我们，做agent路由时，要明确优先级和回退策略，避免隐式默认，对国内开发者做多agent系统很有参考价值。"
+insight: "现有用户若依赖消息内容做路由，建议改为基于通道事实的绑定规则，并显式声明回退策略，避免静默错误。国内用户走 newapi.lurus.cn 代理不受影响，绑定规则仅影响 agent 分流，与代理无关。升级时需检查窄规则是否置于宽规则前，并确认默认账号匹配是否符合预期。"
+tags: [agent-bindings, routing, multi-agent, openclaw]
+---
+
+- 绑定规则在通道已接受消息后生效，仅决定由哪个agent处理，不负责账号创建或访问控制，需与配对、白名单等独立配置。
+- 匹配字段支持账号、peer、guild、team、Discord角色，按具体度排序，同层先匹配先得，窄规则应放在宽规则前。
+- 省略accountId只匹配默认账号，需用"*"显式声明通道级回退；绑定不存在的agent会静默错误。
+- 对harness设计：路由决策应基于通道事实而非消息内容，且需明确优先级和回退策略，避免隐式默认。
+
+---
+
+> 原文：[Agent bindings · OpenClaw](https://docs.openclaw.ai/concepts/agent-bindings)

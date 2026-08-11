@@ -1,0 +1,23 @@
+---
+slug: 2026-08-02-blog-simonwillison-condense-json-1-0
+title: "condense-json 1.0 — Simon Willison 发布 condense"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/2/condense-json/
+publishedAt: 2026-08-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 condense-json 1.0，用替换表压缩 JSON 中重复字符串，节省存储空间。"
+broadcast: "最近有个叫 condense-json 的工具发布了 1.0 版本，它能把 JSON 里重复出现的字符串用特殊标记替换掉，从而压缩数据体积。这个工具支持双向转换，既能压缩也能还原，作者已经用它来压缩 AI 生成的日志，节省了不少存储空间。对国内开发者来说，如果你在处理大量 JSON 数据，尤其是 AI 应用产生的日志，这个思路挺值得参考的。"
+tags: [json, compression, python, llm]
+---
+
+- condense-json 通过一个替换表（replacements）将 JSON 中重复出现的字符串或子串替换为特殊语法 `{"$r": ...}`，从而压缩数据体积。
+- 该库支持 `condense_json` 和 `uncondense_json` 双向转换，可逆操作，便于存储和恢复原始数据。
+- 作者已将其用于 LLM 生成的 SQLite 日志中，以减少存储占用，体现了在工具链中优化数据持久化的实际价值。
+
+---
+
+> 原文：[condense-json 1.0](https://simonwillison.net/2026/Aug/2/condense-json/) · 作者 Simon Willison

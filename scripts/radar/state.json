@@ -1,16 +1,16 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.220",
-    "openai/codex": "rust-v0.146.0",
+    "anthropics/claude-code": "v2.1.227",
+    "openai/codex": "rust-v0.147.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.49",
+    "cline/cline": "desktop-v0.0.11",
     "block/goose": "v1.45.0",
-    "sst/opencode": "v1.18.11",
+    "sst/opencode": "v1.18.16",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.53.1",
-    "openclaw/openclaw": "v2026.7.1",
-    "zeroclaw-labs/zeroclaw": "v0.8.3",
-    "NousResearch/hermes-agent": "v2026.7.30"
+    "google-gemini/gemini-cli": "v0.54.4",
+    "openclaw/openclaw": "v2026.6.34",
+    "zeroclaw-labs/zeroclaw": "v0.8.4",
+    "NousResearch/hermes-agent": "v2026.8.3"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -97,7 +97,14 @@
     "kvcache-ai/AgentENV",
     "openai/codex-security",
     "perplexityai/numbat",
-    "mesamirh/MovieBox-Tui"
+    "mesamirh/MovieBox-Tui",
+    "yc-software/qm",
+    "zenbu-labs/terminal-browser",
+    "yc-duan/fastctx",
+    "firecrawl/anydoc",
+    "magicrew/doc7",
+    "gavamedia/deltafin",
+    "wie-project/kakehashi"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -161,16 +168,28 @@
       "https://docs.openclaw.ai/concepts/messages",
       "https://docs.openclaw.ai/concepts/model-failover",
       "https://docs.openclaw.ai/concepts/model-providers",
-      "https://docs.openclaw.ai/concepts/models"
+      "https://docs.openclaw.ai/concepts/models",
+      "https://docs.openclaw.ai/concepts/agent-bindings",
+      "https://docs.openclaw.ai/concepts/memory-architecture",
+      "https://docs.openclaw.ai/concepts/multi-agent",
+      "https://docs.openclaw.ai/concepts/multi-user",
+      "https://docs.openclaw.ai/concepts/oauth",
+      "https://docs.openclaw.ai/concepts/parallel-specialist-lanes",
+      "https://docs.openclaw.ai/concepts/personal-agent-benchmark-pack",
+      "https://docs.openclaw.ai/concepts/presence",
+      "https://docs.openclaw.ai/concepts/progress-drafts",
+      "https://docs.openclaw.ai/concepts/qa-e2e-automation",
+      "https://docs.openclaw.ai/concepts/queue",
+      "https://docs.openclaw.ai/concepts/queue-steering"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-02",
-    "claude-code-docs": "2026-07-31",
-    "openai-codex-blog": "2026-07-30",
-    "openclaw-concepts": "2026-07-27",
-    "hermes-guides": "2026-07-27"
+    "anthropic-engineering": "2026-08-11",
+    "claude-code-docs": "2026-08-07",
+    "openai-codex-blog": "2026-08-06",
+    "openclaw-concepts": "2026-08-10",
+    "hermes-guides": "2026-08-10"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -352,7 +371,39 @@
       "https://simonwillison.net/2026/Aug/2/july-newsletter/",
       "https://simonwillison.net/2026/Aug/1/greg-brockman/",
       "https://simonwillison.net/2026/Aug/1/datasette-apps/",
-      "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/"
+      "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/",
+      "https://simonwillison.net/2026/Aug/2/condense-json/",
+      "https://simonwillison.net/2026/Jul/31/slack-emoji-maker/",
+      "https://simonwillison.net/2026/Jul/31/datasette-agent/",
+      "https://simonwillison.net/2026/Aug/4/steve-yegge/",
+      "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/",
+      "https://simonwillison.net/2026/Aug/3/david-crawshaw/",
+      "https://simonwillison.net/2026/Aug/3/devtools-must-be-open-source-exedev/",
+      "https://simonwillison.net/2026/Aug/4/new-release-of-llm/",
+      "https://simonwillison.net/2026/Aug/4/llm-anthropic/",
+      "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/",
+      "https://simonwillison.net/2026/Aug/4/llm/",
+      "https://simonwillison.net/2026/Aug/3/condense-json/",
+      "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/",
+      "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/",
+      "https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/",
+      "https://simonwillison.net/2026/Aug/5/incident-report/",
+      "https://simonwillison.net/2026/Aug/5/raccoon-heist/",
+      "https://simonwillison.net/2026/Aug/6/datasette/",
+      "https://simonwillison.net/2026/Aug/6/datasette-2/",
+      "https://simonwillison.net/2026/Aug/6/simon-willison-on-technical-blogging/",
+      "https://simonwillison.net/2026/Aug/8/auto-mode/",
+      "https://simonwillison.net/2026/Aug/8/now-we-have-a-timeline-of-the-openai-accidental-attack-against-h/",
+      "https://simonwillison.net/2026/Aug/8/john-gruber/",
+      "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+      "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/",
+      "https://simonwillison.net/2026/Aug/10/openclaw/",
+      "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/",
+      "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/",
+      "https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/",
+      "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/",
+      "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/",
+      "https://simonwillison.net/2026/Aug/6/datasette-auth-tokens/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -450,7 +501,14 @@
       "https://www.latent.space/p/ainews-ai-is-eating-finance-aie-nyc",
       "https://www.latent.space/p/ainews-gpt-56-price-cut-by-20-80",
       "https://www.latent.space/p/ontologies-agentic-systems",
-      "https://www.latent.space/p/ainews-not-much-happened-today-038"
+      "https://www.latent.space/p/ainews-not-much-happened-today-038",
+      "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new",
+      "https://www.latent.space/p/inference-eng",
+      "https://www.latent.space/p/ainews-megakernels-are-so-dead-and",
+      "https://www.latent.space/p/unpacking-chatgpt-work",
+      "https://www.latent.space/p/ainews-jeff-sanjay-oriol-and-quoc",
+      "https://www.latent.space/p/ainews-zawinskis-law-of-multiagents",
+      "https://www.latent.space/p/ainews-amd-buys-taalas"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -477,7 +535,11 @@
       "https://www.interconnects.ai/p/artifacts-22-zyphra-cohere-and-poolside",
       "https://www.interconnects.ai/p/6-months-to-live-for-open-models",
       "https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation",
-      "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3"
+      "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3",
+      "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21",
+      "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and",
+      "https://www.interconnects.ai/p/lessons-from-the-hacks",
+      "https://www.interconnects.ai/p/5-useful-things-youll-learn-in-my"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -664,7 +726,22 @@
       "https://openai.com/index/building-abundant-intelligence",
       "https://openai.com/index/unive",
       "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
-      "https://openai.com/index/ten-advances-in-mathematics"
+      "https://openai.com/index/ten-advances-in-mathematics",
+      "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
+      "https://openai.com/index/circles",
+      "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
+      "https://openai.com/index/learn-teach-chatgpt-work-codex",
+      "https://openai.com/index/apple-is-getting-this-wrong",
+      "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+      "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
+      "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work",
+      "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
+      "https://openai.com/index/hsp-gruppe",
+      "https://openai.com/index/responsible-ai-infrastructure-texas",
+      "https://openai.com/index/model-ml",
+      "https://openai.com/index/building-an-ai-native-finance-function",
+      "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
+      "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -698,7 +775,8 @@
       "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/",
       "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
       "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/",
-      "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+      "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+      "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -767,7 +845,13 @@
       "https://huggingface.co/blog/LiquidAI/lfm2-5-encoders",
       "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
       "https://huggingface.co/blog/agent-intrusion-technical-timeline",
-      "https://huggingface.co/blog/Dharma-AI/gpu-management"
+      "https://huggingface.co/blog/Dharma-AI/gpu-management",
+      "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b",
+      "https://huggingface.co/blog/allenai/tutormoments",
+      "https://huggingface.co/blog/baseten",
+      "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+      "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
+      "https://huggingface.co/blog/muse-glimmer"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -810,7 +894,9 @@
       "https://www.anthropic.com/news/claude-opus-5",
       "https://www.anthropic.com/news/position-open-weights-models",
       "https://www.anthropic.com/news/cognizant-anthropic",
-      "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+      "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "https://www.anthropic.com/news/tino-cuellar",
+      "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -845,23 +931,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-02",
-    "lilianweng": "2026-07-30",
-    "latentspace": "2026-08-02",
-    "interconnects": "2026-08-02",
-    "karpathy": "2026-08-02",
-    "raschka": "2026-08-02",
-    "eugeneyan": "2026-08-02",
-    "chiphuyen": "2026-07-30",
-    "oneusefulthing": "2026-08-02",
+    "simonwillison": "2026-08-11",
+    "lilianweng": "2026-08-06",
+    "latentspace": "2026-08-11",
+    "interconnects": "2026-08-11",
+    "karpathy": "2026-08-09",
+    "raschka": "2026-08-09",
+    "eugeneyan": "2026-08-09",
+    "chiphuyen": "2026-08-06",
+    "oneusefulthing": "2026-08-11",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-02",
-    "deepmind": "2026-08-02",
-    "hf-blog": "2026-08-02",
-    "anthropic-news": "2026-08-02",
-    "steipete": "2026-08-02",
-    "openclaw-blog": "2026-08-02"
+    "openai-news": "2026-08-11",
+    "deepmind": "2026-08-11",
+    "hf-blog": "2026-08-11",
+    "anthropic-news": "2026-08-11",
+    "steipete": "2026-08-11",
+    "openclaw-blog": "2026-08-11"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

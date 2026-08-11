@@ -1,0 +1,23 @@
+---
+slug: 2026-08-04-blog-simonwillison-new-release-of-llm-adds-support-for-reasoning
+title: "New release of LLM adds support for reasoning traces, — LLM 0.32 发布：支持推理轨迹、OpenAI Responses、服务端工"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/4/new-release-of-llm/
+publishedAt: 2026-08-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "LLM 0.32 发布：支持推理轨迹、OpenAI Responses、服务端工具，并重新设计日志系统。"
+broadcast: "最近，LLM 命令行工具发布了新版本，这次更新对开发者来说挺实用。它新增了推理轨迹显示，思考过程单独输出，不会干扰正常结果，调试和审计起来更方便。还支持了 OpenAI 和 Anthropic 的服务端工具，像代码解释器、网页搜索这些，一行命令就能调用，让命令行工具变成了强大的智能体前端。另外，日志存储也改进了，基于 Git 模型，避免重复，存储效率更高，为复杂智能体系统提供了可扩展的基础。"
+tags: [llm, cli, agent, logging]
+---
+
+- 新增推理轨迹显示：运行推理模型时，思考过程输出到 stderr，不影响 stdout 管道，可用 -R 隐藏。对开发者意味着可观察性提升，便于调试和审计。
+- 支持服务端工具：OpenAI 的 CodeInterpreter、WebSearch，Anthropic 的 WebSearch、WebFetch、CodeExecution、AnthropicMCP，可通过一行命令调用。这简化了工具集成，让 CLI 成为强大的 agent 前端。
+- 内容寻址日志存储：基于 Git 模型，避免重复 JSON 日志，提升存储效率。对构建复杂 agent 系统的开发者，提供了可扩展的日志基础。
+
+---
+
+> 原文：[New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging](https://simonwillison.net/2026/Aug/4/new-release-of-llm/) · 作者 Simon Willison
