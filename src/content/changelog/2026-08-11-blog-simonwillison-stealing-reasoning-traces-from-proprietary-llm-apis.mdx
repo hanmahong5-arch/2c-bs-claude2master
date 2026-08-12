@@ -1,0 +1,24 @@
+---
+slug: 2026-08-11-blog-simonwillison-stealing-reasoning-traces-from-proprietary-llm-apis
+title: "Stealing Reasoning Traces from Proprietary LLM APIs — 研究者从专有LLM API中窃取隐藏推理链，揭示加密缺陷与安全漏洞。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/
+publishedAt: 2026-08-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "研究者从专有LLM API中窃取隐藏推理链，揭示加密缺陷与安全漏洞。"
+broadcast: "最近有研究者发现，从几大主流AI模型的接口里，竟然能偷到它们隐藏的推理过程。原因是用了一样的加密钥匙，可以把推理内容重放到弱一点的模型里，再通过越狱恢复出来。这提醒我们，模型内部思考的保密性其实很脆弱，对做智能体开发的朋友来说，数据安全这块得多留个心眼。"
+tags: [llm-security, prompt-injection, jailbreaking, reasoning-traces]
+---
+
+- 论文发现Anthropic、OpenAI和Google的模型使用相同加密密钥，可将推理块重放到较弱模型中，通过越狱恢复明文推理。
+- 攻击利用Claude Haiku 4.5的漏洞，通过特定提示词诱导模型转录推理内容，而4.6版本已修复此问题。
+- 泄露的推理痕迹显示模型内部思考过程，如GPT-5.5的CSS设计思路，表明这些内容并非为人类阅读设计。
+- 提示注入变体：诱导模型在推理中思考数据外泄，再重放推理块，可提高指令遵循率，威胁数据安全。
+
+---
+
+> 原文：[Stealing Reasoning Traces from Proprietary LLM APIs](https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/) · 作者 Simon Willison

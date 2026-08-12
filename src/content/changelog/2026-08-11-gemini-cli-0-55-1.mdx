@@ -1,0 +1,24 @@
+---
+slug: 2026-08-11-gemini-cli-0-55-1
+title: "gemini-cli v0.55.1 — Gemini CLI 0.55.1 修复多项安全与稳定性问题，并引入工具注册发现"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.55.1
+publishedAt: 2026-08-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Gemini CLI 0.55.1 修复多项安全与稳定性问题，并引入工具注册发现与评估报告。"
+broadcast: "Gemini CLI 这次更新，主要修复了安全漏洞，比如路径拦截不区分大小写、符号链接逃逸，还有提示注入导致的死循环，这对开发智能体框架的开发者是个提醒，得加强路径校验和循环检测。另外，它新增了工具注册发现机制，方便动态扩展工具，还加了评估覆盖率报告，能帮你量化测试覆盖，值得关注。"
+insight: "对于现有用户，这次升级值得做，尤其是安全修复和评估报告功能，能直接提升稳定性。如果你在 harness 里用了自定义工具或 prompt，建议检查是否依赖旧路径校验逻辑，因为大小写和符号链接处理变了。国内用户走 newapi.lurus.cn 代理不受影响，升级后正常使用即可。"
+tags: [security, tool-registry, evals, stability]
+---
+
+- 新增工具注册发现机制，便于动态扩展工具集，对 harness 设计意味着需支持运行时工具注册与发现。
+- 修复敏感路径拦截不区分大小写及符号链接目录逃逸，强化沙箱安全，harness 应严格校验路径并遵循最小权限。
+- 修复 ReAct 循环与提示注入导致的无限循环，并过滤思考内容，harness 需设计循环检测与上下文清理机制。
+- 新增评估覆盖率报告命令，支持本地报告，harness 可集成评估工具以量化测试覆盖。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.55.1](https://github.com/google-gemini/gemini-cli/releases/tag/v0.55.1)

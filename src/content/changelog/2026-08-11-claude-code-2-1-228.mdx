@@ -1,0 +1,23 @@
+---
+slug: 2026-08-11-claude-code-2-1-228
+title: "claude-code v2.1.228 — 修复多项关键 bug，强化技能安全，提升跨会话消息体验。"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.228
+publishedAt: 2026-08-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复多项关键 bug，强化技能安全，提升跨会话消息体验。"
+broadcast: "最近Claude代码工具更新了，修了好几个关键问题，用起来更稳定了。特别值得关注的是，它强化了云端技能的安全，不会随便执行本地命令或展开文件，这对我们做智能体开发的人来说，意味着在设计外部技能时，必须严格隔离执行权限，防止风险。另外，跨会话的消息显示也改进了，能更清楚地看到谁说了什么，同时优化了云端服务的错误提示，让我们能更快发现问题。这些改动都提示我们，在开发时要多注意异步任务的反馈和错误处理的及时性。"
+insight: "这次 v2.1.228 主要修 bug 和强化安全，稳定性提升明显，现有用户值得升级，尤其是遇到 Windows 下 git 找不到或 /tui 回退问题的。但注意，如果你本地配了 claude.ai 同步技能，升级后本地不再执行 `!` 命令或展开 `@` 文件，相关 hook 或 prompt 里依赖这些行为的配置要改，避免失效。国内走 newapi.lurus.cn 代理不受影响，因为改动不涉及网络层，但 Vertex AI 凭据失败会快速失败，代理配置若依赖旧行为需留意。"
+tags: [bug-fixes, security, cross-session, vertex-ai]
+---
+
+- 修复交互会话因内部布局错误停止重绘、Windows 下 git 找不到、/tui 回退模型等多项 bug，提升稳定性。
+- 强化 claude.ai 同步技能：不再遮蔽本地命令或 MCP 提示，描述净化，且本地不执行 `!` 命令或展开 `@` 文件，对 harness 设计意味着需严格隔离外部技能的执行权限。
+- 改进跨会话消息显示（内联展示发送者和内容），并优化 Vertex AI 凭据失败快速失败、压缩进度提示，对 harness 设计意味着需关注异步任务状态反馈和凭据错误处理的及时性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.228](https://github.com/anthropics/claude-code/releases/tag/v2.1.228)

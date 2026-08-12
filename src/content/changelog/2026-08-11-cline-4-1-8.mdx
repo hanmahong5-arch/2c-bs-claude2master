@@ -1,0 +1,25 @@
+---
+slug: 2026-08-11-cline-4-1-8
+title: "cline v4.1.8 — Vertex 模型全目录可见，Yolo 模式并入自动批准"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.8
+publishedAt: 2026-08-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Vertex 模型全目录可见，Yolo 模式并入自动批准"
+broadcast: "这次更新让谷歌云的大模型选择更透明了，能看到每个区域的全部模型，手动输入也支持，不过没提供的模型会报错并提示怎么恢复。另外，原来的极速模式开关被取消了，现在统一用自动批准来控制无人值守运行，老配置会自动迁移。对国内开发者来说，用谷歌云模型做自动化任务时，成本估算和权限控制会更清楚，值得关注。"
+insight: "如果你在用 Vertex 模型，这次升级值得做，因为模型选择器不再硬编码过滤，全目录可见，还能手动输入目录外 ID，灵活性大增。但注意 Fable 5 成本按未知计费，别被低估。Yolo 模式被移除，自动批准菜单成了唯一控制源，旧配置会自动迁移，所以现有 hook 配置基本不用改，但建议检查一下自动批准设置是否还符合预期。国内用户走 newapi.lurus.cn 代理不受影响，因为改动都在模型选择和批准逻辑上。"
+tags: [vertex-ai, model-picker, auto-approve, bug-fix]
+---
+
+- Vertex 模型选择器现在显示每个区域的全量目录，不再硬编码过滤，未提供的模型会在请求时报错并给出恢复指引。
+- 手动输入任意 Vertex 模型 ID，包括目录外的模型，支持 Fable 5。
+- Fable 5 成本在 Vertex 上按未知计费，避免低估实际费用。
+- 移除 Yolo 模式开关，自动批准菜单成为无人值守运行的唯一控制源，旧配置自动迁移。
+- 修复压缩摘要器不尊重最大输出 token 设置的问题。
+
+---
+
+> 原文 release：[cline/cline v4.1.8](https://github.com/cline/cline/releases/tag/v4.1.8)

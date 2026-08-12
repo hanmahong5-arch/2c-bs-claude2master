@@ -1,13 +1,13 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.227",
+    "anthropics/claude-code": "v2.1.228",
     "openai/codex": "rust-v0.147.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "desktop-v0.0.11",
+    "cline/cline": "cli-v3.0.53",
     "block/goose": "v1.45.0",
     "sst/opencode": "v1.18.16",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.54.4",
+    "google-gemini/gemini-cli": "v0.55.1",
     "openclaw/openclaw": "v2026.6.34",
     "zeroclaw-labs/zeroclaw": "v0.8.4",
     "NousResearch/hermes-agent": "v2026.8.3"
@@ -104,7 +104,10 @@
     "firecrawl/anydoc",
     "magicrew/doc7",
     "gavamedia/deltafin",
-    "wie-project/kakehashi"
+    "wie-project/kakehashi",
+    "trycompai/crm",
+    "Flaminis/Dalaran",
+    "ZenGeekLabs/DJOneHub"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -185,7 +188,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-11",
+    "anthropic-engineering": "2026-08-12",
     "claude-code-docs": "2026-08-07",
     "openai-codex-blog": "2026-08-06",
     "openclaw-concepts": "2026-08-10",
@@ -403,7 +406,9 @@
       "https://simonwillison.net/2026/Aug/9/sqlite-text-history-prototype/",
       "https://simonwillison.net/2026/Aug/7/pdfs-are-terrible/",
       "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/",
-      "https://simonwillison.net/2026/Aug/6/datasette-auth-tokens/"
+      "https://simonwillison.net/2026/Aug/6/datasette-auth-tokens/",
+      "https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/",
+      "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -508,7 +513,9 @@
       "https://www.latent.space/p/unpacking-chatgpt-work",
       "https://www.latent.space/p/ainews-jeff-sanjay-oriol-and-quoc",
       "https://www.latent.space/p/ainews-zawinskis-law-of-multiagents",
-      "https://www.latent.space/p/ainews-amd-buys-taalas"
+      "https://www.latent.space/p/ainews-amd-buys-taalas",
+      "https://www.latent.space/p/chai-discovery",
+      "https://www.latent.space/p/ainews-muse-glimmer-and-spark-open"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -741,7 +748,12 @@
       "https://openai.com/index/model-ml",
       "https://openai.com/index/building-an-ai-native-finance-function",
       "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
-      "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands"
+      "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands",
+      "https://openai.com/index/testing-ads-in-chatgpt",
+      "https://openai.com/index/daybreak-models-are-now-available-on-aws",
+      "https://openai.com/index/premium-seats-chatgpt-business",
+      "https://openai.com/index/zapier",
+      "https://openai.com/index/virgin-atlantic/chatgpt-work"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -931,21 +943,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-11",
+    "simonwillison": "2026-08-12",
     "lilianweng": "2026-08-06",
-    "latentspace": "2026-08-11",
-    "interconnects": "2026-08-11",
-    "karpathy": "2026-08-09",
-    "raschka": "2026-08-09",
-    "eugeneyan": "2026-08-09",
+    "latentspace": "2026-08-12",
+    "interconnects": "2026-08-12",
+    "karpathy": "2026-08-12",
+    "raschka": "2026-08-12",
+    "eugeneyan": "2026-08-12",
     "chiphuyen": "2026-08-06",
     "oneusefulthing": "2026-08-11",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-11",
+    "openai-news": "2026-08-12",
     "deepmind": "2026-08-11",
     "hf-blog": "2026-08-11",
-    "anthropic-news": "2026-08-11",
+    "anthropic-news": "2026-08-12",
     "steipete": "2026-08-11",
     "openclaw-blog": "2026-08-11"
   },
