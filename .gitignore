@@ -35,3 +35,7 @@ next-env.d.ts
 Thumbs.db
 
 .vercel
+
+# TTS 预览音频与 Python 缓存不入 git
+_cosy-preview/
+__pycache__/
