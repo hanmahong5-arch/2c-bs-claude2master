@@ -1,6 +1,160 @@
 {
   "items": [
     {
+      "slug": "2026-08-12-trending-flaminis-dalaran",
+      "zh": true,
+      "en": false,
+      "title": "Dalaran — Rust 编写的机器人多模态时序数据可视化基础设施",
+      "kind": "trending",
+      "author": null,
+      "source": "Flaminis/Dalaran",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-trending-trycompai-crm",
+      "zh": true,
+      "en": false,
+      "title": "crm — 为 AI 代理设计的开源 CRM，Agentic",
+      "kind": "trending",
+      "author": null,
+      "source": "trycompai/crm",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-trending-zengeeklabs-djonehub",
+      "zh": true,
+      "en": false,
+      "title": "DJOneHub — DJI 4G 模块的 macOS 原生管理工具",
+      "kind": "trending",
+      "author": null,
+      "source": "ZenGeekLabs/DJOneHub",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-11-blog-latentspace-ainews-muse-glimmer-and-spark-open-weights-return",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Muse Glimmer and Spark: Open Weights return — Meta发布开源模型Muse Glimmer，重申个人超级智能愿景，强调个体赋权",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-11"
+    },
+    {
+      "slug": "2026-08-11-blog-latentspace-the-bioai-phase-shift-matthew-mcpartlon-neil-patil",
+      "zh": true,
+      "en": true,
+      "title": "🔬The BioAI Phase Shift - Matthew McPartlon & Neil — Chai Discovery 如何用 AI 工具撬动制药业，实现从科学到工程的转",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-11"
+    },
+    {
+      "slug": "2026-08-11-blog-openai-news-daybreak-models-are-now-available-on-aws",
+      "zh": true,
+      "en": true,
+      "title": "Daybreak models are now available on AWS — OpenAI 与 AWS 合作，将 Daybreak 网络安全模型引入 Bedr",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-11"
+    },
+    {
+      "slug": "2026-08-11-blog-openai-news-testing-ads-in-chatgpt",
+      "zh": true,
+      "en": true,
+      "title": "Testing ads in ChatGPT — OpenAI 开始在 ChatGPT 中测试广告，以支持免费访问，并强调标签、独",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-11"
+    },
+    {
+      "slug": "2026-08-11-blog-simonwillison-stealing-reasoning-traces-from-proprietary-llm-apis",
+      "zh": true,
+      "en": true,
+      "title": "Stealing Reasoning Traces from Proprietary LLM APIs — 研究者从专有LLM API中窃取隐藏推理链，揭示加密缺陷与安全漏洞。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-11"
+    },
+    {
+      "slug": "2026-08-11-blog-simonwillison-there-are-no-lossless-transformations-of-natural-language",
+      "zh": true,
+      "en": true,
+      "title": "There are no lossless transformations of — AI改写会丢失信息，作者提出工程师使用AI写作的内部政策。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-11"
+    },
+    {
+      "slug": "2026-08-11-claude-code-2-1-228",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.228 — 修复多项关键 bug，强化技能安全，提升跨会话消息体验。",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-11"
+    },
+    {
+      "slug": "2026-08-11-cline-4-1-8",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.1.8 — Vertex 模型全目录可见，Yolo 模式并入自动批准",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-11"
+    },
+    {
+      "slug": "2026-08-11-cline-cli-v3-0-53",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.53 — CLI 升级后不再连上旧 Hub 守护进程，修复推理模型压缩被跳过问题。",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-11"
+    },
+    {
+      "slug": "2026-08-11-cline-sdk-sdk-v0-0-73",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.73 — SDK 修复 daemon 重连、推理模型压缩跳过，新增 Fable 5 支持",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-11"
+    },
+    {
+      "slug": "2026-08-11-gemini-cli-0-55-1",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.55.1 — Gemini CLI 0.55.1 修复多项安全与稳定性问题，并引入工具注册发现",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-08-11"
+    },
+    {
       "slug": "2026-08-11-trending-wie-project-kakehashi",
       "zh": true,
       "en": false,
@@ -67,6 +221,17 @@
       "publishedAt": "2026-08-10"
     },
     {
+      "slug": "2026-08-10-blog-openai-news-how-zapier-transformed-core-marketing-processes-with-chatgpt",
+      "zh": true,
+      "en": true,
+      "title": "How Zapier transformed core marketing processes with — Zapier 用 ChatGPT Work 优化营销漏斗、生成素材并自动化报告。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-10"
+    },
+    {
       "slug": "2026-08-10-blog-openai-news-model-ml-completes-finance-work-more-efficiently-with",
       "zh": true,
       "en": true,
@@ -89,10 +254,32 @@
       "publishedAt": "2026-08-10"
     },
     {
+      "slug": "2026-08-10-blog-openai-news-premium-seats-are-coming-to-chatgpt-business",
+      "zh": true,
+      "en": true,
+      "title": "Premium seats are coming to ChatGPT Business — OpenAI为ChatGPT Business推出高级席位，提升团队高负载任务使",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-10"
+    },
+    {
       "slug": "2026-08-10-blog-openai-news-putting-frontier-cyber-models-in-more-trusted-hands",
       "zh": true,
       "en": true,
       "title": "Putting frontier cyber models in more trusted hands — OpenAI 将前沿网络模型开放给受信伙伴，用于授权网络安全服务。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-10"
+    },
+    {
+      "slug": "2026-08-10-blog-openai-news-virgin-atlantic-sharpens-customer-journeys-with-chatgpt-work",
+      "zh": true,
+      "en": true,
+      "title": "Virgin Atlantic sharpens customer journeys with ChatGPT — 维珍航空用ChatGPT Work加速客户旅程研究、产品规划与决策。",
       "kind": "blogger",
       "author": "OpenAI",
       "source": "OpenAI",
@@ -200,7 +387,7 @@
     },
     {
       "slug": "2026-08-10-openclaw-concepts-queue",
-      "zh": false,
+      "zh": true,
       "en": true,
       "title": "Command queue · OpenClaw — 多消息并发时如何避免 agent 冲突？OpenClaw 的队列机制给出答案。",
       "kind": "practice",
@@ -692,193 +879,6 @@
       "source": "cline/cline",
       "tool": "cline",
       "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-cline-cli-v3-0-51",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.51 — 推理强度设置跨提供商统一生效，关闭推理请求被全面尊重",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-cline-sdk-sdk-v0-0-71",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.71 — 推理设置跨 AI SDK 统一，错误遥测归因更准",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-gemini-cli-0-54-0",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.54.0 — Gemini CLI 修复会话状态、安全与上下文管理，提升 agent 稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-trending-magicrew-doc7",
-      "zh": true,
-      "en": false,
-      "title": "doc7 — 把文档变成 AI 可读的 Markdown，视觉理解加持",
-      "kind": "trending",
-      "author": null,
-      "source": "magicrew/doc7",
-      "tool": null,
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-05-blog-anthropic-news-tino-cuellar-joins-anthropic-as-chief-global-affairs",
-      "zh": true,
-      "en": true,
-      "title": "Tino Cuellar joins Anthropic as Chief Global Affairs — Anthropic任命前加州最高法院法官Tino Cuéllar为首席全球事务官",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-08-05"
-    },
-    {
-      "slug": "2026-08-05-blog-latentspace-ainews-megakernels-are-so-dead-and-so-back",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Megakernels are so dead and so back — Megakernels 在推理工程中是否已死？本文回顾争论并给出最新进展。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-05"
-    },
-    {
-      "slug": "2026-08-05-blog-simonwillison-introducing-muse-code-and-muse-spark-1-2",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Muse Code and Muse Spark 1.2 — Meta发布Muse Code和Spark 1.2，强调长序列agentic工具",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-05"
-    },
-    {
-      "slug": "2026-08-05-blog-simonwillison-one-shotting-a-raccoon-heist-game-using-claude",
-      "zh": true,
-      "en": true,
-      "title": "One-shotting a Raccoon Heist game using Claude Fable 5 — Simon Willison用Claude Fable 5从旧推文一键生成完整3",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-05"
-    },
-    {
-      "slug": "2026-08-05-blog-simonwillison-third-party-cyber-evaluations-involving-openai-models",
-      "zh": true,
-      "en": true,
-      "title": "Third-party cyber evaluations involving OpenAI models — OpenAI 模型在第三方网络评估中意外发起真实网络攻击，暴露测试环境配置风险。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-05"
-    },
-    {
-      "slug": "2026-08-05-cline-4-1-4",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.4 — Cline v4.1.4 强化计划模式安全，修复多项稳定性问题。",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-05"
-    },
-    {
-      "slug": "2026-08-05-cline-4-1-5",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.5 — 免费模型下线提示与推理设置统一，agent 配置更稳",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-05"
-    },
-    {
-      "slug": "2026-08-05-cline-cli-v3-0-50",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.50 — CLI v3.0.50：TUI 换肤、Plan 模式硬拦截文件编辑、空响应重试等",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-05"
-    },
-    {
-      "slug": "2026-08-05-cline-desktop-v0-0-9",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.9 — Cline 桌面版统一架构，自动恢复上下文，修复多项关键错误",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-05"
-    },
-    {
-      "slug": "2026-08-05-cline-sdk-sdk-v0-0-70",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.70 — SDK v0.0.70 强化 Plan 模式安全、修复上下文溢出与 Bedroc",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-05"
-    },
-    {
-      "slug": "2026-08-05-codex-rust-v0-146-1",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.146.1 — Codex 为 cyber 模型收紧自动审查默认值，权限变化终端可见。",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-08-05"
-    },
-    {
-      "slug": "2026-08-05-opencode-1-18-14",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.14 — xAI 登录简化，远程与无头环境更友好；错误重试增强。",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-08-05"
-    },
-    {
-      "slug": "2026-08-05-trending-firecrawl-anydoc",
-      "zh": true,
-      "en": false,
-      "title": "anydoc — 把办公文档一键转成干净 Markdown 的 Rust 库",
-      "kind": "trending",
-      "author": null,
-      "source": "firecrawl/anydoc",
-      "tool": null,
-      "publishedAt": "2026-08-05"
     }
   ]
 }
