@@ -1,6 +1,182 @@
 {
   "items": [
     {
+      "slug": "2026-08-13-blog-latentspace-ainews-spacexai-grok-4-6-and-grok-bot",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] SpaceXAI Grok 4.6 and Grok @Bot — Grok 4.6 发布，效率登顶，AI 代理成知识工作新战场。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-opencode-1-18-18",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.18 — 修复 Kimi 系统提示词选择与 xai 推理强度问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-trending-egoist-waku",
+      "zh": true,
+      "en": false,
+      "title": "waku — 为所有编码代理打造的本地原生应用",
+      "kind": "trending",
+      "author": null,
+      "source": "egoist/waku",
+      "tool": null,
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-12-blog-deepmind-putting-sign-language-ai-into-users-hands",
+      "zh": true,
+      "en": true,
+      "title": "Putting sign language AI into users’ hands — Google DeepMind推出手语转文本模型，助力聋人沟通。",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-blog-hf-blog-introducing-olmoearth-embeddings-custom-embedding-exports-from-olmoearth",
+      "zh": true,
+      "en": true,
+      "title": "Introducing OlmoEarth embeddings: Custom embedding — OlmoEarth 推出自定义嵌入导出，简化下游分析工作流。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-blog-hf-blog-lfm2-5-vl-3b-for-better-and-faster",
+      "zh": true,
+      "en": true,
+      "title": "LFM2.5-VL-3B for Better and Faster Vision Capabilities — LFM2.5",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-blog-interconnects-i-wrote-an-ai-textbook-how-long-until",
+      "zh": true,
+      "en": true,
+      "title": "I wrote an AI textbook — how long until AI can do it — 作者亲历写AI教科书，发现模型长文写作停滞，对AI自主科研能力提出质疑。",
+      "kind": "blogger",
+      "author": "Nathan Lambert",
+      "source": "Nathan Lambert",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-blog-latentspace-ainews-how-to-steal-a-reasoning-trace",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] How to steal a Reasoning Trace — 前沿模型隐藏推理被破解，隐私风险与蒸馏争议并存。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-blog-openai-news-from-assistance-to-execution-how-enterprises-put-ai",
+      "zh": true,
+      "en": true,
+      "title": "From assistance to execution: How enterprises put AI to — OpenAI 调研：企业如何从辅助走向执行，前沿公司如何领先采用智能体 AI。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-blog-openai-news-how-ringcentral-builds-ai-native-work-from-engineering",
+      "zh": true,
+      "en": true,
+      "title": "How RingCentral builds AI-native work from engineering — RingCentral 如何用 ChatGPT Work 和 Codex 加速 ",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-blog-simonwillison-alchemy-utils-0-1a0",
+      "zh": true,
+      "en": true,
+      "title": "alchemy-utils 0.1a0 — Simon Willison 用 AI 快速构建了数据库无关的 sqlite",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-blog-simonwillison-deepseek-v4-pro-0813-on-openrouter",
+      "zh": true,
+      "en": true,
+      "title": "DeepSeek V4 Pro 0813 (on OpenRouter) — DeepSeek V4 Pro 0813 发布，Simon 实测发现不同推理等级",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-blog-simonwillison-quoting-florian-herrengt",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Florian Herrengt — AI 让代码库变得无人能懂，认知债务正在累积。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-claude-code-2-1-229",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.229 — Claude Code 2.1.229 修复多项崩溃，新增插件市场命令源与 SS",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-goose-1-46-0",
+      "zh": true,
+      "en": false,
+      "title": "goose v1.46.0 — Goose v1.46.0 大版本：缓存安全、流式输出、用量统计与多语言支持",
+      "kind": "changelog",
+      "author": null,
+      "source": "block/goose",
+      "tool": "goose",
+      "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-12-opencode-1-18-17",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.17 — 会话压缩保留完整轮次，重试风暴被遏制，PDF附件支持Copilot",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-08-12"
+    },
+    {
       "slug": "2026-08-12-trending-flaminis-dalaran",
       "zh": true,
       "en": false,
@@ -32,6 +208,17 @@
       "source": "ZenGeekLabs/DJOneHub",
       "tool": null,
       "publishedAt": "2026-08-12"
+    },
+    {
+      "slug": "2026-08-11-blog-hf-blog-thinking-of-ace-we-can-do-it-with",
+      "zh": true,
+      "en": true,
+      "title": "Thinking of ACE? We Can Do It with Fewer Tokens — IBM 研究团队提出 ALTKEvolve，用更少 token 实现 ACE 级",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-11"
     },
     {
       "slug": "2026-08-11-blog-latentspace-ainews-muse-glimmer-and-spark-open-weights-return",
@@ -74,6 +261,17 @@
       "kind": "blogger",
       "author": "OpenAI",
       "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-11"
+    },
+    {
+      "slug": "2026-08-11-blog-simonwillison-datasette-upload-dbs-0-5a0",
+      "zh": true,
+      "en": true,
+      "title": "datasette-upload-dbs 0.5a0 — Datasette 插件新版本，支持通过 API 上传和原子替换数据库。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-08-11"
     },
@@ -681,204 +879,6 @@
       "source": "anthropics/claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-cline-desktop-v0-0-10",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.10 — MCP OAuth 认证、错误可见性提升、模型连接引导增强",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-codex-rust-v0-147-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.147.0 — Codex 0.147.0 引入插件搜索、会话分节、自动审批，并强化安全与 MC",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-gemini-cli-0-54-4",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.54.4 — 补丁修复与版本回滚，稳定发布流程",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-opencode-1-18-15",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.15 — 消息排序与清理修复，桌面端导出与多语言增强",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-trending-gavamedia-deltafin",
-      "zh": true,
-      "en": false,
-      "title": "deltafin — 单设备跑满血 Kimi K3，还带 OpenAI 兼容 API",
-      "kind": "trending",
-      "author": null,
-      "source": "gavamedia/deltafin",
-      "tool": null,
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-06-blog-deepmind-weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones",
-      "zh": true,
-      "en": true,
-      "title": "WeatherNext: AI model achieves breakthrough in — Google DeepMind 的 WeatherNext 模型在气旋预报上取得",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-blog-hf-blog-baseten-on-hugging-face-inference-providers",
-      "zh": true,
-      "en": true,
-      "title": "Baseten on Hugging Face Inference Providers 🔥 — Hugging Face 与 Baseten 合作，在推理提供商中提供 GPU ",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-blog-latentspace-ainews-jeff-sanjay-oriol-and-quoc-depart-deepmind",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Jeff, Sanjay, Oriol, and Quoc depart DeepMind; — DeepMind 四位核心人物出走创办 Discovery Loop，谷歌 AI",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-blog-openai-news-from-asking-to-doing-how-the-world-is",
-      "zh": true,
-      "en": true,
-      "title": "From asking to doing: How the world is putting ChatGPT — OpenAI 发布全球 ChatGPT 使用数据，揭示用户从提问到执行的转变趋势",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-blog-openai-news-improving-gpt-5-6-sol-in-chatgpt-and",
-      "zh": true,
-      "en": true,
-      "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access — GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-blog-openai-news-working-with-the-american-psychological-association-on-youth",
-      "zh": true,
-      "en": true,
-      "title": "Working with the American Psychological Association on — OpenAI与APA合作，推动青少年心理健康与AI负责任使用。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-blog-simonwillison-an-ai-model-from-meta-also-hacked-another",
-      "zh": true,
-      "en": true,
-      "title": "An AI model from Meta also hacked another company — Meta 的 AI 模型在测试中意外攻击了另一家公司，这是继 OpenAI 和 ",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-blog-simonwillison-datasette-0-65-3",
-      "zh": true,
-      "en": true,
-      "title": "datasette 0.65.3 — Datasette 0.65.3 修复了 SQL 注入漏洞，安全更新值得关注。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-blog-simonwillison-datasette-1-0a38",
-      "zh": true,
-      "en": true,
-      "title": "datasette 1.0a38 — Datasette 1.0a38 修复了一个 SQL 注入漏洞，影响混合公开和私",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-blog-simonwillison-datasette-auth-tokens-0-4a13",
-      "zh": true,
-      "en": true,
-      "title": "datasette-auth-tokens 0.4a13 — Simon Willison 发布 datasette",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-blog-simonwillison-simon-willison-on-technical-blogging",
-      "zh": true,
-      "en": true,
-      "title": "Simon Willison on Technical Blogging — Simon Willison谈技术博客：降低标准，及时发布，比追求完美更重要。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-claude-code-2-1-223",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.223 — Claude Code 新版本强化安全与权限控制，并优化会话恢复和模型窗口管理。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-06"
-    },
-    {
-      "slug": "2026-08-06-cline-4-1-6",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.6 — Cline 新增模型并修复遥测归属，值得一看。",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-06"
     }
   ]
 }
