@@ -1,0 +1,23 @@
+---
+slug: 2026-08-12-opencode-1-18-17
+title: "opencode v1.18.17 — 会话压缩保留完整轮次，重试风暴被遏制，PDF附件支持Copilot"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.17
+publishedAt: 2026-08-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "会话压缩保留完整轮次，重试风暴被遏制，PDF附件支持Copilot"
+broadcast: "最近有个开发工具更新了，它改进了会话压缩，能保留完整的近期对话，给小型模型生成更清晰的摘要，让上下文更连贯。同时限制了自动重试次数，避免重试风暴，稳定性更好。还支持了PDF附件，配合视觉模型使用，多模态输入能力更强了。对做智能体开发的朋友来说，这些改进能让对话更稳定、输入更丰富，值得关注。"
+insight: "这次更新对现有用户是值得升级的，尤其是你如果经常跑长会话或依赖Copilot处理PDF，稳定性提升明显。会话压缩保留完整轮次，意味着上下文丢失风险降低，但如果你已经自定义了压缩相关的hook，建议检查是否与新逻辑冲突，可能需要微调。重试风暴被遏制，对国内走newapi.lurus.cn代理的用户是利好，因为网络波动时不会因反复重试拖垮请求，代理链路更稳。PDF支持Copilot则属于新增能力，不影响现有配置。"
+tags: [session-compaction, retry-jitter, pdf-attachment, bugfix]
+---
+
+- 会话压缩现在保留完整近期轮次，并为小模型生成更清晰的摘要，有助于保持上下文连贯性。
+- 自动会话重试次数被限制并加入抖动，避免重试风暴，提升稳定性。
+- PDF附件现可用于支持视觉的GitHub Copilot模型，扩展了多模态输入能力。
+
+---
+
+> 原文 release：[sst/opencode v1.18.17](https://github.com/anomalyco/opencode/releases/tag/v1.18.17)

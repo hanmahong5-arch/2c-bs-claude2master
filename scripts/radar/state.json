@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.228",
+    "anthropics/claude-code": "v2.1.229",
     "openai/codex": "rust-v0.147.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "cli-v3.0.53",
-    "block/goose": "v1.45.0",
-    "sst/opencode": "v1.18.16",
+    "block/goose": "v1.46.0",
+    "sst/opencode": "v1.18.18",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.55.1",
     "openclaw/openclaw": "v2026.6.34",
@@ -107,7 +107,8 @@
     "wie-project/kakehashi",
     "trycompai/crm",
     "Flaminis/Dalaran",
-    "ZenGeekLabs/DJOneHub"
+    "ZenGeekLabs/DJOneHub",
+    "egoist/waku"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -188,9 +189,9 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-12",
+    "anthropic-engineering": "2026-08-13",
     "claude-code-docs": "2026-08-07",
-    "openai-codex-blog": "2026-08-06",
+    "openai-codex-blog": "2026-08-13",
     "openclaw-concepts": "2026-08-10",
     "hermes-guides": "2026-08-10"
   },
@@ -408,7 +409,11 @@
       "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/",
       "https://simonwillison.net/2026/Aug/6/datasette-auth-tokens/",
       "https://simonwillison.net/2026/Aug/11/there-are-no-lossless-transformations-of-natural-language-text/",
-      "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/"
+      "https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/",
+      "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/",
+      "https://simonwillison.net/2026/Aug/12/alchemy-utils/",
+      "https://simonwillison.net/2026/Aug/12/florian-herrengt/",
+      "https://simonwillison.net/2026/Aug/11/datasette-upload-dbs/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -515,7 +520,9 @@
       "https://www.latent.space/p/ainews-zawinskis-law-of-multiagents",
       "https://www.latent.space/p/ainews-amd-buys-taalas",
       "https://www.latent.space/p/chai-discovery",
-      "https://www.latent.space/p/ainews-muse-glimmer-and-spark-open"
+      "https://www.latent.space/p/ainews-muse-glimmer-and-spark-open",
+      "https://www.latent.space/p/ainews-spacexai-grok-46-and-grok",
+      "https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -546,7 +553,8 @@
       "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21",
       "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and",
       "https://www.interconnects.ai/p/lessons-from-the-hacks",
-      "https://www.interconnects.ai/p/5-useful-things-youll-learn-in-my"
+      "https://www.interconnects.ai/p/5-useful-things-youll-learn-in-my",
+      "https://www.interconnects.ai/p/i-wrote-an-ai-textbook-how-long-until"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -753,7 +761,9 @@
       "https://openai.com/index/daybreak-models-are-now-available-on-aws",
       "https://openai.com/index/premium-seats-chatgpt-business",
       "https://openai.com/index/zapier",
-      "https://openai.com/index/virgin-atlantic/chatgpt-work"
+      "https://openai.com/index/virgin-atlantic/chatgpt-work",
+      "https://openai.com/index/how-enterprises-put-ai-to-work",
+      "https://openai.com/index/ringcentral"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -788,7 +798,8 @@
       "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
       "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/",
       "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
-      "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
+      "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+      "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -863,7 +874,10 @@
       "https://huggingface.co/blog/baseten",
       "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
       "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
-      "https://huggingface.co/blog/muse-glimmer"
+      "https://huggingface.co/blog/muse-glimmer",
+      "https://huggingface.co/blog/allenai/olmoearth-embeddings",
+      "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b",
+      "https://huggingface.co/blog/ibm-research/altk-evolve-sldd"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -943,23 +957,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-12",
-    "lilianweng": "2026-08-06",
-    "latentspace": "2026-08-12",
-    "interconnects": "2026-08-12",
+    "simonwillison": "2026-08-13",
+    "lilianweng": "2026-08-13",
+    "latentspace": "2026-08-13",
+    "interconnects": "2026-08-13",
     "karpathy": "2026-08-12",
     "raschka": "2026-08-12",
     "eugeneyan": "2026-08-12",
-    "chiphuyen": "2026-08-06",
-    "oneusefulthing": "2026-08-11",
+    "chiphuyen": "2026-08-13",
+    "oneusefulthing": "2026-08-13",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-12",
-    "deepmind": "2026-08-11",
-    "hf-blog": "2026-08-11",
-    "anthropic-news": "2026-08-12",
-    "steipete": "2026-08-11",
-    "openclaw-blog": "2026-08-11"
+    "openai-news": "2026-08-13",
+    "deepmind": "2026-08-13",
+    "hf-blog": "2026-08-13",
+    "anthropic-news": "2026-08-13",
+    "steipete": "2026-08-13",
+    "openclaw-blog": "2026-08-13"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

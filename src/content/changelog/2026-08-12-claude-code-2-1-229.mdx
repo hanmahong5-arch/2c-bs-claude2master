@@ -1,0 +1,28 @@
+---
+slug: 2026-08-12-claude-code-2-1-229
+title: "claude-code v2.1.229 — Claude Code 2.1.229 修复多项崩溃，新增插件市场命令源与 SS"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.229
+publishedAt: 2026-08-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 2.1.229 修复多项崩溃，新增插件市场命令源与 SSE 保活"
+broadcast: "最近Claude Code更新了，修复了不少崩溃问题，比如窄窗口下进度条显示异常，还有工具调用参数出错的情况。特别值得关注的是，它新增了插件市场命令源，不用重启就能加载插件，同时给网关加了心跳保活，避免长时间思考时连接断开。对国内开发者来说，用起来会更稳定，尤其是处理复杂任务时。"
+insight: "这次更新对国内用户值得升级，尤其是走 newapi.lurus.cn 代理的，SSE keepalive 心跳能避免长思考时 Vertex/Bedrock 空闲超时断连，稳定性提升明显。现有 hook 配置不用改，插件市场 command 源是新增能力，不影响已有配置。修复的崩溃和 Windows 路径问题也值得跟进，建议直接升级到 2.1.229。"
+tags: [bug-fixes, plugin-marketplace, streaming, crash-fixes]
+---
+
+- 新增插件市场 `command` 源，支持本地命令输出插件目录，每次会话重新解析，无需重启。
+- 网关流式响应增加 SSE keepalive 心跳，避免长思考时 Vertex/Bedrock 空闲超时断连。
+- 修复窄终端下进度条/表格渲染导致的 RangeError 崩溃，影响 `--continue`/`--resume`。
+- 修复工具调用参数非字符串（如 glob）导致的崩溃，以及 Windows 扩展路径/UNC 路径崩溃。
+- 修复禁用 attribution header 时 auto mode 每次工具调用失败的问题。
+- 修复 MCP OAuth 重定向 URI 使用 `localhost` 被严格授权服务器拒绝，改用 `127.0.0.1`。
+- 修复 IDE 诊断数千条时 UI 卡顿，以及文件监视器句柄泄漏。
+- 改进工作流扇出，错开同前缀兄弟代理，利用缓存提示前缀。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.229](https://github.com/anthropics/claude-code/releases/tag/v2.1.229)

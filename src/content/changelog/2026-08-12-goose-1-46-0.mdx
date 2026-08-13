@@ -1,0 +1,26 @@
+---
+slug: 2026-08-12-goose-1-46-0
+title: "goose v1.46.0 — Goose v1.46.0 大版本：缓存安全、流式输出、用量统计与多语言支持"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.46.0
+publishedAt: 2026-08-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.46.0 大版本：缓存安全、流式输出、用量统计与多语言支持"
+broadcast: "最近Goose这个大版本更新挺值得关注的。它把请求组装改得更安全，能提高缓存命中率，还加了流式输出，命令跑的时候能实时看到结果。另外每条消息的用量统计也出来了，能看token和成本。对咱们做agent开发的来说，这些改动提醒我们，上下文构建和缓存策略得分开，还要支持事件驱动和增量渲染，方便监控成本。"
+insight: "Goose v1.46.0 的缓存安全组装和流式输出对现有用户是正向升级，尤其适合长会话场景，建议升级以提升缓存命中率并实时查看输出。若你已自定义 prompt 或 hook，需注意上下文构建与缓存策略解耦，避免可变状态破坏前缀缓存。国内用户通过 newapi.lurus.cn 代理不受影响，但用量统计 UI 新增了 tokens 和成本跟踪，可借此监控代理流量消耗，无需调整现有配置。"
+tags: [cache-safe, streaming, usage-stats, i18n]
+---
+
+- 引入缓存安全的请求组装，采用 append-only 轮次上下文并声明缓存语义，提升提示缓存命中率。
+  - 对 harness 设计：需将上下文构建与缓存策略解耦，避免可变状态破坏前缀缓存。
+- 新增流式 shell 输出，命令运行时实时显示结果。
+  - 对 harness 设计：流式输出要求事件驱动架构，支持增量渲染与取消。
+- 增加每条消息的用量统计 UI（tokens、成本、TTFT、tok/s），并跟踪缓存 tokens。
+  - 对 harness 设计：需在消息级别记录元数据，并聚合会话总计，便于成本监控。
+
+---
+
+> 原文 release：[block/goose v1.46.0](https://github.com/aaif-goose/goose/releases/tag/v1.46.0)

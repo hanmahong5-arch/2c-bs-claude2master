@@ -1,0 +1,24 @@
+---
+slug: 2026-08-13-opencode-1-18-18
+title: "opencode v1.18.18 — 修复 Kimi 系统提示词选择与 xai 推理强度问题"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.18
+publishedAt: 2026-08-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Kimi 系统提示词选择与 xai 推理强度问题"
+broadcast: "这次更新修复了两个关键问题，一个是Kimi的系统提示词选择，确保用对提示词，另一个是xai模型的高推理强度设置。对开发者来说，这提醒我们做智能体框架时，得按不同模型区分提示词和推理参数，不然复杂任务表现会受影响。"
+insight: "这次修复对国内用户影响不大，但如果你在用 Kimi 或 xai 模型，建议升级。修复了系统提示词选择和推理强度，能避免行为偏差和复杂任务表现问题。升级后无需改 prompt 或 hook 配置，官方已处理。走 newapi.lurus.cn 代理不受影响，正常使用即可。"
+tags: [bugfix, model-provider, reasoning-effort]
+---
+
+- 修复官方 Moonshot 和 Kimi 提供商的系统提示词选择，确保使用正确的 Kimi 提示词。
+  - 对 agent harness 设计：需按提供商区分模型能力，避免通用提示词导致行为偏差。
+- 修复 xai 模型的 xhigh 推理强度设置，确保高推理模式生效。
+  - 对 agent harness 设计：推理强度参数需与模型 API 对齐，否则影响复杂任务表现。
+
+---
+
+> 原文 release：[sst/opencode v1.18.18](https://github.com/anomalyco/opencode/releases/tag/v1.18.18)
