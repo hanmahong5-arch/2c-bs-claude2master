@@ -1,0 +1,23 @@
+---
+slug: 2026-08-13-blog-simonwillison-sqlite-utils-4-2
+title: "sqlite-utils 4.2 — sqlite"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/13/sqlite-utils/
+publishedAt: 2026-08-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "sqlite-utils 4.2 发布，增强 transform() 以保留更多表结构约束。"
+broadcast: "sqlite-utils 这个数据库工具发布了新版本，重点增强了表结构转换功能，现在能保留更多约束和注释，对开发者来说，修改表结构时更安全、更可控了。它还新增了检查约束的查询接口，让数据库工具链更透明。不过要注意，这个版本有个崩溃问题，已经在后续版本修复了，大家升级时记得选稳定版。"
+tags: [sqlite, sqlite-utils, release, database-tools]
+---
+
+- 新版本显著增强了 `table.transform()` 功能，通过创建新表并复制数据的方式，支持更复杂的 ALTER TABLE 操作，同时保留检查约束、唯一约束和列注释等边缘情况。
+- 新增了用于检查约束的内省属性，使开发者能更便捷地查询和验证表结构，提升数据库工具链的透明度和可控性。
+- 该版本包含多位贡献者的改进，但随后发现 4.2 存在崩溃问题，已在 4.2.1 中修复，提醒开发者关注版本稳定性。
+
+---
+
+> 原文：[sqlite-utils 4.2](https://simonwillison.net/2026/Aug/13/sqlite-utils/) · 作者 Simon Willison

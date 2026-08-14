@@ -1,0 +1,23 @@
+---
+slug: 2026-08-13-claude-code-2-1-231
+title: "claude-code v2.1.231 — 修复 MCP OAuth 登录重定向 URI 不匹配问题"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.231
+publishedAt: 2026-08-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 MCP OAuth 登录重定向 URI 不匹配问题"
+broadcast: "这次更新修复了MCP登录时重定向地址不匹配的问题，特别是像Slack这类使用预注册客户端的服务。对做Agent开发的朋友来说，得注意回调地址要和服务器注册的完全一致，不然集成会失败。测试时也别忘了覆盖预注册客户端的场景，确保兼容性。"
+insight: "这次修复针对的是 MCP OAuth 登录重定向 URI 不匹配，主要影响像 Slack 这类使用预注册 OAuth 客户端的服务器。如果你现有 hook 或 prompt 里配置了 MCP 集成，且涉及 OAuth 登录，建议检查回调 URI 是否与服务器预注册的完全一致，否则升级后仍可能失败。国内用户走 newapi.lurus.cn 代理不受此修复影响，但测试时需覆盖预注册 OAuth 场景，确保兼容性。总体值得升级，但需同步核对配置。"
+tags: [mcp, oauth, bug-fix]
+---
+
+- 修复了 MCP OAuth 登录时重定向 URI 不匹配的问题，影响使用预注册 OAuth 客户端的服务器（如 Slack）。
+- 对 agent harness 设计：需确保 OAuth 回调 URI 与服务器预注册的 URI 完全一致，避免集成失败。
+- 对 agent harness 设计：测试时需覆盖预注册 OAuth 客户端的场景，确保兼容性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.231](https://github.com/anthropics/claude-code/releases/tag/v2.1.231)

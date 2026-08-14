@@ -1,0 +1,23 @@
+---
+slug: 2026-08-13-blog-simonwillison-sqlite-utils-4-2-1
+title: "sqlite-utils 4.2.1 — sqlite"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/13/sqlite-utils-2/
+publishedAt: 2026-08-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "sqlite-utils 4.2.1 修复崩溃 bug，并演示如何用 uv 隔离依赖做冒烟测试。"
+broadcast: "sqlite-utils 这个工具更新了，修了一个崩溃问题，原因是少声明了一个依赖包。作者用 uv 的隔离模式做了测试，确保在干净环境下也能正常用。这件事提醒咱们，发布工具时依赖声明要完整，uv 的隔离功能正好能帮咱们提前发现这类问题。"
+tags: [packaging, python, sqlite-utils, uv]
+---
+
+- 修复了因 `typing_extensions` 未声明为依赖而导致的崩溃，该包仅作为开发依赖间接安装，直接使用 `uvx` 时缺失。
+- 通过 `uv run --isolated --no-default-groups` 运行冒烟测试，确保 CLI 在无开发依赖环境下正常工作。
+- 对开发者而言，这提醒了依赖声明需完整，并展示了 uv 的隔离功能可有效验证打包正确性。
+
+---
+
+> 原文：[sqlite-utils 4.2.1](https://simonwillison.net/2026/Aug/13/sqlite-utils-2/) · 作者 Simon Willison

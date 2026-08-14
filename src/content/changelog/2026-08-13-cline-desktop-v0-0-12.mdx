@@ -1,0 +1,26 @@
+---
+slug: 2026-08-13-cline-desktop-v0-0-12
+title: "cline desktop-v0.0.12 — Cline桌面版v0.0.12：工具调用独立展示，修复多项关键问题"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.12
+publishedAt: 2026-08-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline桌面版v0.0.12：工具调用独立展示，修复多项关键问题"
+broadcast: "Cline桌面版更新了，这次把每个工具调用都单独列出来，带图标和状态，点开还能看详情，命令输出和编辑改动都直接显示。运行中的工具会高亮成紫色，完成变灰，出错保持红色，看着特别清楚。还修了Claude Code的一些问题，现在能锚定工作区、加载设置，权限也更合理了。对咱们做agent开发的来说，调试和追踪执行过程会方便很多。"
+insight: "这次桌面版更新对现有用户值得升级，尤其你依赖Claude Code provider的话，修复了会话锚定和权限问题，工作流更稳。工具调用独立成行加状态高亮，调试体验明显提升，但如果你主要用API或CLI，升级收益有限。国内用户走newapi.lurus.cn代理不受影响，因为改动在桌面端展示层和provider配置，不涉及网络链路。建议升级后检查~/.claude设置是否按预期加载，确保工作区权限符合预期。"
+tags: [desktop-app, tool-call-ui, claude-code-provider, bug-fixes]
+---
+
+- 每个工具调用在转录中独立成行，带图标、状态和可展开详情，命令输出和编辑diff内联显示。
+  - 对harness设计：更清晰的执行追踪，便于调试和审计。
+- 运行中的工具行高亮为紫色，完成后变灰，错误保持红色；diff渲染器遵循应用主题。
+  - 对harness设计：视觉反馈更直观，主题一致性提升。
+- 修复Claude Code provider：会话锚定工作区，加载~/.claude设置，允许工作区内文件编辑。
+  - 对harness设计：agentic工作流更可靠，权限控制更合理。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.12](https://github.com/cline/cline/releases/tag/desktop-v0.0.12)

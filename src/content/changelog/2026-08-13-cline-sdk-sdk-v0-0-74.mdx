@@ -1,0 +1,29 @@
+---
+slug: 2026-08-13-cline-sdk-sdk-v0-0-74
+title: "cline sdk/sdk/v0.0.74 — 修复 Claude Code 集成、工具调用 JSON 截断误修、Hub 守护进"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.74
+publishedAt: 2026-08-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Claude Code 集成、工具调用 JSON 截断误修、Hub 守护进程升级等关键问题"
+broadcast: "这次SDK更新解决了不少实际问题，特别是修复了工具调用时参数被截断导致出错的情况，现在会直接拒绝而不是乱修。另外，流式调用崩溃和登出误报也处理了，遥测数据量大幅减少，对开发者来说更稳定也更省资源。"
+insight: "如果你在用 Claude Code 集成，这次升级值得做，因为原生工具声明和权限加载让工作区编辑更顺，但命令执行仍受原设置约束，行为更可控。工具调用 JSON 截断从误修改为拒绝，是正确方向，避免参数错误，但你的 prompt 若依赖截断后自动修复，得改。国内走 newapi.lurus.cn 代理不受影响，因为修复集中在 SDK 内部，不涉及网络层。建议升级，并检查工具调用相关 hook 配置。"
+tags: [sdk, bug-fixes, telemetry, hub]
+---
+
+- Claude Code provider 现在声明自己的原生工具，会话锚定工作目录，加载用户权限配置，工作区内文件编辑自动批准，命令执行仍受 Claude 设置约束。
+- 工具调用 JSON 截断时不再错误修复，而是拒绝，避免参数错误。
+- 修复流式工具调用索引非连续导致的崩溃，更新 AI SDK 包。
+- Hub 守护进程升级方向性，避免互相淘汰，旧版本仍被替换。
+- 修复关闭时未处理的拒绝，退出码干净。
+- `run.started` 事件携带 requestId 和 clientId，便于多客户端关联。
+- Token 遥测改为分桶报告，避免重复计数，降低约 5 倍膨胀。
+- 非自愿登出（刷新令牌被拒）现在报告，临时网络失败不再算登出。
+- 流式 token 增量不再镜像到遥测，减少 97% 事件量。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.74](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.74)

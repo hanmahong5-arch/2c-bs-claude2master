@@ -1,0 +1,24 @@
+---
+slug: 2026-08-13-cline-4-1-9
+title: "cline v4.1.9 — 修复 token 过期、日志误报，SDK 版 Claude Code 可用性提升"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.9
+publishedAt: 2026-08-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 token 过期、日志误报，SDK 版 Claude Code 可用性提升"
+broadcast: "最近这个AI编程助手更新了，主要修了几个烦人的问题。比如登录过期后，现在能正常刷新，不用反复重试了。还有日志误报和静默退出也处理了，会明确告诉你原因。对用SDK做开发的朋友来说，工具调用更稳了，权限规则加载也正常了。另外，流式处理不再崩溃，token计数也准了，缓存会话能省不少钱。整体就是更可靠，用起来更省心。"
+insight: "这次 v4.1.9 主要修的是稳定性和准确性，对日常用 Claude Code 的开发者来说，值得升级，尤其是长空闲后首次请求失败和 token 计数虚高这两个痛点，能明显改善体验。如果你在用 SDK 版，权限规则加载和工具调用的修复也值得跟进。至于 hook 配置，这次没提需要改，现有配置应该不用动。国内走 newapi.lurus.cn 代理的话，这次修复不涉及代理层面，影响不大，可以放心升。"
+tags: [bug-fix, sdk, claude-code, token]
+---
+
+- 修复 token 刷新后仍因旧 token 过期而失败的问题，确保长空闲后首次请求成功。
+- 修复迁移任务误报成功和静默登出问题，现在会明确报告登出原因。
+- SDK 版修复 Claude Code 原生工具、工作目录锚定、权限规则加载，并拒绝截断的 tool-call JSON。
+- 修复流式 tool call 索引崩溃和 token 计数虚高（缓存会话约 5 倍）。
+
+---
+
+> 原文 release：[cline/cline v4.1.9](https://github.com/cline/cline/releases/tag/v4.1.9)

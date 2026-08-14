@@ -1,0 +1,25 @@
+---
+slug: 2026-08-13-cline-cli-v3-0-54
+title: "cline cli-v3.0.54 — CLI v3.0.54 修复 Claude Code 代理、工具调用 JSON "
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.54
+publishedAt: 2026-08-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "CLI v3.0.54 修复 Claude Code 代理、工具调用 JSON 截断等关键问题"
+broadcast: "这次命令行工具更新，修复了代理工具调用和JSON截断等关键问题，让开发更稳定。特别是缓存统计虚高的问题解决了，对国内开发者来说，日常使用会更可靠，值得关注。"
+insight: "此次 CLI v3.0.54 修复了工具调用 JSON 截断和代理工具定义问题，对现有用户而言，若你依赖 Claude Code 代理或流式工具调用，建议升级以避免潜在错误。国内用户通过 newapi.lurus.cn 代理时，由于修复涉及代理桥接，升级后需确认代理配置兼容性，但核心功能不受影响。现有 hook 配置无需改动，但若使用严格提供商或缓存密集型会话，升级可消除 token 统计虚高问题。"
+tags: [cli, bug-fixes, claude-code, hub-daemon]
+---
+
+- Claude Code 代理现在运行原生工具，不再接收无法桥接的工具定义；会话锚定工作目录，加载权限规则，工作区内文件编辑自动批准，命令执行仍受 Claude 设置约束。
+- 工具调用 JSON 截断不再被静默修复，未终止字符串的载荷会被拒绝，避免参数错误。
+- 严格提供商不再因消息内容仅含空文本部分而报错；流式工具调用索引非零或不连续不再导致崩溃。
+- Hub 守护进程升级方向性：新版本 CLI 会附加到较新守护进程并提示更新，避免互相淘汰；Yolo 和沙箱会话不受影响。
+- 修复守护进程关闭时客户端仍连接导致的错误退出；修复缓存密集型会话 token 统计虚高约 5 倍的问题。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.54](https://github.com/cline/cline/releases/tag/cli-v3.0.54)
