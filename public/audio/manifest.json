@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "slug": "2026-08-14-trending-deepseek-ai-deepseek-harness",
+      "zh": true,
+      "en": false,
+      "title": "deepseek-harness — DeepSeek 开源插件化测试框架，一切皆插件",
+      "kind": "trending",
+      "author": null,
+      "source": "deepseek-ai/deepseek-harness",
+      "tool": null,
+      "publishedAt": "2026-08-14"
+    },
+    {
+      "slug": "2026-08-14-trending-drumih-turbo-fieldfare",
+      "zh": true,
+      "en": false,
+      "title": "turbo-fieldfare — Swift 实现 Gemma 4 26B",
+      "kind": "trending",
+      "author": null,
+      "source": "drumih/turbo-fieldfare",
+      "tool": null,
+      "publishedAt": "2026-08-14"
+    },
+    {
       "slug": "2026-08-13-blog-latentspace-ainews-spacexai-grok-4-6-and-grok-bot",
       "zh": true,
       "en": true,
@@ -9,6 +31,160 @@
       "author": "Latent Space",
       "source": "Latent Space",
       "tool": null,
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-blog-openai-news-openai-appoints-dali-rajic-as-chief-revenue-officer",
+      "zh": true,
+      "en": true,
+      "title": "OpenAI appoints Dali Rajic as Chief Revenue Officer — OpenAI任命Dali Rajic为首席营收官，推动AI商业价值实现。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-blog-openai-news-previewing-ultrafast-mode-gpt-5-6-sol-at",
+      "zh": true,
+      "en": true,
+      "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the — OpenAI 推出 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-blog-openai-news-the-builder-s-guide-to-gpt-5-6",
+      "zh": true,
+      "en": true,
+      "title": "The builder’s guide to GPT‑5.6 — OpenAI 官方指南：如何用 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-blog-simonwillison-alchemy-utils-0-1a1",
+      "zh": true,
+      "en": true,
+      "title": "alchemy-utils 0.1a1 — Simon Willison 发布 alchemy",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-blog-simonwillison-llm-gemini-0-33",
+      "zh": true,
+      "en": true,
+      "title": "llm-gemini 0.33 — Simon Willison 发布 llm",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-blog-simonwillison-sqlite-utils-4-2-1",
+      "zh": true,
+      "en": true,
+      "title": "sqlite-utils 4.2.1 — sqlite",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-blog-simonwillison-sqlite-utils-4-2",
+      "zh": true,
+      "en": true,
+      "title": "sqlite-utils 4.2 — sqlite",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-claude-code-2-1-231",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.231 — 修复 MCP OAuth 登录重定向 URI 不匹配问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-claude-code-2-1-232",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.232 — 子代理默认后台运行，跨会话消息直达，GitLab 全面支持",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-cline-4-1-9",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.1.9 — 修复 token 过期、日志误报，SDK 版 Claude Code 可用性提升",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-cline-cli-v3-0-54",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.54 — CLI v3.0.54 修复 Claude Code 代理、工具调用 JSON ",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-cline-desktop-v0-0-12",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.12 — Cline桌面版v0.0.12：工具调用独立展示，修复多项关键问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-cline-sdk-sdk-v0-0-74",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.74 — 修复 Claude Code 集成、工具调用 JSON 截断误修、Hub 守护进",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-hermes-agent-2026-8-13",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v2026.8.13 — Hermes Agent 发布稳定补丁版，汇总 656 个 PR，为下游部署提供",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
       "publishedAt": "2026-08-13"
     },
     {
@@ -703,182 +879,6 @@
       "source": "Latent Space",
       "tool": null,
       "publishedAt": "2026-08-08"
-    },
-    {
-      "slug": "2026-08-08-blog-simonwillison-auto-mode-is-now-the-default-in-claude",
-      "zh": true,
-      "en": true,
-      "title": "Auto mode is now the default in Claude Code for Pro, — Anthropic 将 Claude Code 默认设为自动模式，并称其能抵御提",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-08"
-    },
-    {
-      "slug": "2026-08-08-blog-simonwillison-now-we-have-a-timeline-of-the-openai",
-      "zh": true,
-      "en": true,
-      "title": "Now we have a timeline of the OpenAI accidental attack — OpenAI 误攻 Hugging Face 事件时间线，揭示 RLVR 训练中",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-08"
-    },
-    {
-      "slug": "2026-08-08-blog-simonwillison-quoting-john-gruber",
-      "zh": true,
-      "en": true,
-      "title": "Quoting John Gruber — Simon Willison引用John Gruber谈博客写作心态：现场演奏而",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-08"
-    },
-    {
-      "slug": "2026-08-08-claude-code-2-1-225",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.225 — Claude Code 网关限额、远程控制增强与多项稳定性修复",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-08"
-    },
-    {
-      "slug": "2026-08-08-claude-code-2-1-226",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.226 — Claude Code 小版本更新，修复 bug 并提升可靠性。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-08"
-    },
-    {
-      "slug": "2026-08-08-openclaw-2026-6-33",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.6.33 — openclaw 2026.6.33 强化安全边界、长任务可靠性及渠道投递稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-08-08"
-    },
-    {
-      "slug": "2026-08-08-openclaw-2026-6-34",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.6.34 — openclaw 2026.6.34 强化浏览器与网络边界安全，提升会话恢复与通",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-08-08"
-    },
-    {
-      "slug": "2026-08-07-blog-anthropic-news-improving-fable-5-safeguards",
-      "zh": true,
-      "en": true,
-      "title": "Improving Fable 5 Safeguards — Anthropic 大幅减少 Fable 5 生物学查询误拦截，同时保持安全边界",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-blog-hf-blog-tutormoments-do-ai-tutors-know-when-to-help",
-      "zh": true,
-      "en": true,
-      "title": "TutorMoments: Do AI tutors know when to help and when — AI 导师何时该帮、何时该退？TutorMoments 数据集给出答案。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-blog-latentspace-ainews-amd-buys-taalas",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] AMD buys Taalas — AMD收购Taalas，AI芯片竞争加剧；Meta模型与OpenAI统一模型，A",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-blog-openai-news-how-hsp-gruppe-builds-ai-capabilities-for-tax",
-      "zh": true,
-      "en": true,
-      "title": "How HSP GRUPPE builds AI capabilities for tax advisory — HSP GRUPPE 用 ChatGPT Enterprise 提升税务咨询效率",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-blog-openai-news-responding-to-the-next-frontier-of-critical-cyber",
-      "zh": true,
-      "en": true,
-      "title": "Responding to the next frontier of critical cyber — OpenAI 公布 Astra 初步网络安全评估及强化防护措施。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-blog-simonwillison-moonlight-mayhem-raccoon-heist-by-codex-gpt-5",
-      "zh": true,
-      "en": true,
-      "title": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 — Simon Willison用同一提示词测试Codex与GPT",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-blog-simonwillison-now-we-have-a-timeline-of-the-openai",
-      "zh": true,
-      "en": true,
-      "title": "Now we have a timeline of the OpenAI accidental attack — OpenAI 意外攻击 Hugging Face 的完整时间线，揭示 AI 代理",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-blog-simonwillison-the-tokenpocalypse-is-here-companies-are-scrambling-to",
-      "zh": true,
-      "en": true,
-      "title": "The Tokenpocalypse Is Here: Companies Are Scrambling To — PDF转Markdown竟成AI成本黑洞，企业正为token消耗发愁。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-07"
-    },
-    {
-      "slug": "2026-08-07-claude-code-2-1-224",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.224 — 自托管运行器、插件归档源、跨会话消息，以及多项安全修复。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-07"
     }
   ]
 }
