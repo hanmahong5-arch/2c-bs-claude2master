@@ -1,0 +1,26 @@
+---
+slug: 2026-08-14-cline-sdk-sdk-v0-0-75
+title: "cline sdk/sdk/v0.0.75 — SDK v0.0.75 带来模型自主搜索、Hub 稳定性修复和沙箱回收。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.75
+publishedAt: 2026-08-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK v0.0.75 带来模型自主搜索、Hub 稳定性修复和沙箱回收。"
+broadcast: "这次更新给模型加上了自主搜索能力，默认关闭，需要手动开启，而且搜索结果会保存下来，方便会话恢复时保持一致。另外修复了多个实例互相干扰的问题，新构建不会抢占正在运行的实例，等空闲了再切换。对开发者来说，做智能体框架时得注意工具调用和进程协调，避免会话中断。"
+insight: "对于现有用户，如果依赖 Cline 网关且遇到扩展思考预算失效，v0.0.75 值得升级，修复了该问题。但网络搜索默认关闭，需手动启用，且对 harness 有额外要求，普通用户可暂缓。国内走 newapi.lurus.cn 代理不受影响，因为该版本未涉及代理相关改动，但需注意新 provider 配置传递可能影响自定义网关设置，建议升级后验证配置。"
+tags: [web-search, hub-stability, sandbox-reclaim, provider]
+---
+
+- 新增 provider 执行的网络搜索，模型可在对话中搜索，结果持久化，默认关闭，需在设置中启用 `web_search` 工具。
+  - 对 harness 设计：需支持工具调用和结果回放，确保会话恢复时搜索状态一致。
+- Cline 网关新增专用 provider，修复 `cline-pass` 扩展思考预算未生效的问题。
+  - 对 harness 设计：需区分不同 provider 的配置传递，确保参数正确到达模型。
+- 修复多实例 Hub 互杀问题，通过构建 ID 全序比较避免冲突；新构建不再抢占活跃 Hub，空闲时再切换。
+  - 对 harness 设计：需实现优雅的进程协调和版本兼容，避免会话中断。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.75](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.75)

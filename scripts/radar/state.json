@@ -1,9 +1,9 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.232",
+    "anthropics/claude-code": "v2.1.233",
     "openai/codex": "rust-v0.147.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v4.1.9",
+    "cline/cline": "desktop-v0.0.13",
     "block/goose": "v1.46.0",
     "sst/opencode": "v1.18.18",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -110,7 +110,8 @@
     "ZenGeekLabs/DJOneHub",
     "egoist/waku",
     "deepseek-ai/deepseek-harness",
-    "drumih/turbo-fieldfare"
+    "drumih/turbo-fieldfare",
+    "guillaumemeyer/watermarks-remover"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -191,7 +192,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-14",
+    "anthropic-engineering": "2026-08-15",
     "claude-code-docs": "2026-08-14",
     "openai-codex-blog": "2026-08-13",
     "openclaw-concepts": "2026-08-10",
@@ -419,7 +420,8 @@
       "https://simonwillison.net/2026/Aug/13/sqlite-utils-2/",
       "https://simonwillison.net/2026/Aug/13/sqlite-utils/",
       "https://simonwillison.net/2026/Aug/13/llm-gemini/",
-      "https://simonwillison.net/2026/Aug/13/alchemy-utils/"
+      "https://simonwillison.net/2026/Aug/13/alchemy-utils/",
+      "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -528,7 +530,8 @@
       "https://www.latent.space/p/chai-discovery",
       "https://www.latent.space/p/ainews-muse-glimmer-and-spark-open",
       "https://www.latent.space/p/ainews-spacexai-grok-46-and-grok",
-      "https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace"
+      "https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace",
+      "https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -560,7 +563,8 @@
       "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and",
       "https://www.interconnects.ai/p/lessons-from-the-hacks",
       "https://www.interconnects.ai/p/5-useful-things-youll-learn-in-my",
-      "https://www.interconnects.ai/p/i-wrote-an-ai-textbook-how-long-until"
+      "https://www.interconnects.ai/p/i-wrote-an-ai-textbook-how-long-until",
+      "https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -808,7 +812,8 @@
       "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/",
       "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
       "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
-      "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
+      "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
+      "https://deepmind.google/blog/introducing-gemini-3-7-flash/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -886,7 +891,10 @@
       "https://huggingface.co/blog/muse-glimmer",
       "https://huggingface.co/blog/allenai/olmoearth-embeddings",
       "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b",
-      "https://huggingface.co/blog/ibm-research/altk-evolve-sldd"
+      "https://huggingface.co/blog/ibm-research/altk-evolve-sldd",
+      "https://huggingface.co/blog/state-of-open-models-summer-2026",
+      "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop",
+      "https://huggingface.co/blog/icml-2026-open-reproductions"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -931,7 +939,8 @@
       "https://www.anthropic.com/news/cognizant-anthropic",
       "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
       "https://www.anthropic.com/news/tino-cuellar",
-      "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+      "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
+      "https://www.anthropic.com/news/claude-text-watermark"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -966,23 +975,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-14",
+    "simonwillison": "2026-08-15",
     "lilianweng": "2026-08-13",
-    "latentspace": "2026-08-14",
-    "interconnects": "2026-08-14",
-    "karpathy": "2026-08-12",
-    "raschka": "2026-08-12",
-    "eugeneyan": "2026-08-12",
+    "latentspace": "2026-08-15",
+    "interconnects": "2026-08-15",
+    "karpathy": "2026-08-15",
+    "raschka": "2026-08-15",
+    "eugeneyan": "2026-08-15",
     "chiphuyen": "2026-08-13",
-    "oneusefulthing": "2026-08-13",
+    "oneusefulthing": "2026-08-15",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-14",
-    "deepmind": "2026-08-13",
-    "hf-blog": "2026-08-13",
-    "anthropic-news": "2026-08-14",
-    "steipete": "2026-08-13",
-    "openclaw-blog": "2026-08-13"
+    "openai-news": "2026-08-15",
+    "deepmind": "2026-08-15",
+    "hf-blog": "2026-08-15",
+    "anthropic-news": "2026-08-15",
+    "steipete": "2026-08-15",
+    "openclaw-blog": "2026-08-15"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

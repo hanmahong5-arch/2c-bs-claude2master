@@ -1,0 +1,23 @@
+---
+slug: 2026-08-14-cline-4-1-10
+title: "cline v4.1.10 — Cline v4.1.10 新增联网搜索，修复 Hub 冲突，更新模型目录。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.10
+publishedAt: 2026-08-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline v4.1.10 新增联网搜索，修复 Hub 冲突，更新模型目录。"
+broadcast: "Cline 这次更新带来了联网搜索功能，模型可以在任务中直接搜索网页，结果会留在对话里。这对做 agent 的朋友是个提醒，得想清楚搜索权限怎么控制、结果怎么塞进上下文。另外还修了多实例冲突，不同版本不会互相干扰了，空闲的沙箱进程也会被回收，资源管理更省心。"
+insight: "Cline v4.1.10 的联网搜索和沙箱回收对国内用户影响不大，但多实例冲突修复值得关注。若你同时运行多个 Cline 构建，建议升级以避免 Hub 守护进程互杀。现有 prompt 和 hook 配置无需改动，除非你依赖搜索功能，需注意权限控制。走 newapi.lurus.cn 代理不受影响，因为此版本未涉及网络层变更。"
+tags: [web-search, hub-fix, resource-reclaim, model-catalog]
+---
+
+- 新增联网搜索：支持该能力的模型可在任务中搜索网页，结果持久化显示在对话中。对 harness 设计：需考虑搜索请求的权限控制、结果注入上下文的方式及跨会话存储。
+- 修复多实例冲突：不同构建的 Cline 不再互相关闭 Hub 守护进程，避免会话异常中断。对 harness 设计：多实例共存时需通过总序比较构建身份，确保只有一个实例能接管。
+- 优化资源回收：空闲的插件沙箱进程会被回收，不再占用资源。对 harness 设计：沙箱生命周期管理需考虑空闲超时和资源释放策略。
+
+---
+
+> 原文 release：[cline/cline v4.1.10](https://github.com/cline/cline/releases/tag/v4.1.10)

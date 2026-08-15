@@ -1,0 +1,24 @@
+---
+slug: 2026-08-14-blog-simonwillison-don-t-classify-hallucinate
+title: "Don't classify. Hallucinate! — Simon Willison 提出用 LLM 生成新标签，再通过向量嵌入匹配现有"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/
+publishedAt: 2026-08-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 提出用 LLM 生成新标签，再通过向量嵌入匹配现有标签，解决博客标签分类难题。"
+broadcast: "今天聊聊一个有趣的标签分类思路。有位开发者面对一千八百多个标签，直接让AI选太不现实，于是换个办法：先让AI自由发挥生成新标签，再用向量匹配去现有标签库里找最接近的。这样既灵活又省事，对做内容管理或搜索优化的朋友很有启发，能减少不少人工维护的功夫。"
+tags: [llm, embeddings, tagging, ai]
+---
+
+- 作者博客有 1856 个标签，直接让 LLM 从这么多标签中选择匹配项不现实。
+- Doug Turnbull 的方案是让模型先自由生成标签，再用向量嵌入在现有标签库中找最接近的，避免分类限制。
+- 提示词中提供标签形状示例（如层级结构）能帮助模型生成更符合实际的标签。
+- 对开发者而言，这提供了一种灵活的标签或分类方法，可应用于内容管理、搜索优化等场景，减少人工维护成本。
+
+---
+
+> 原文：[Don't classify. Hallucinate!](https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/) · 作者 Simon Willison

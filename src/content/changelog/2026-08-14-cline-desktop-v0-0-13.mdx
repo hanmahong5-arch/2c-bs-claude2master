@@ -1,0 +1,32 @@
+---
+slug: 2026-08-14-cline-desktop-v0-0-13
+title: "cline desktop-v0.0.13 — 桌面端 v0.0.13：字体缩放、联网搜索、修复 Hub 冲突，值得一看。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.13
+publishedAt: 2026-08-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "桌面端 v0.0.13：字体缩放、联网搜索、修复 Hub 冲突，值得一看。"
+broadcast: "桌面端工具更新了，这次带来了字体大小设置，启动前就能生效，避免界面闪烁。还支持联网搜索，结果会记录在会话里，方便回溯。另外修复了多实例冲突和推理预算不生效的问题，空闲进程也会自动清理。对做智能体开发的朋友来说，这些细节值得关注，能帮你把工具调用和会话管理做得更稳。"
+insight: "此次桌面端更新对国内用户影响不大，但值得关注。若你正用 Cline Pass 且 extended thinking 预算未生效，升级后应能修复；若多开实例，新版本会附加到现有 Hub，避免互杀。联网搜索和字体缩放属体验优化，可升级体验。走 newapi.lurus.cn 代理不受影响，但需确认网关是否传递推理参数。建议升级并测试 extended thinking 与 Hub 行为。"
+tags: [desktop-app, settings, web-search, bug-fixes]
+---
+
+- 新增字体大小设置，启动前应用，避免闪烁。
+  - 对 harness 设计：需在窗口绘制前读取并应用用户偏好，避免视觉跳变。
+- 支持联网搜索的模型可开启 Web Search，结果记录在 transcript 中。
+  - 对 harness 设计：需将外部工具调用及其结果持久化到会话记录，保证可回溯。
+- 修复 Cline Pass 下 extended thinking 预算未生效的问题。
+  - 对 harness 设计：需确保所有 API 路径（包括网关）都正确传递推理参数。
+- 修复多实例 Hub 互杀问题，新实例会附加到现有 Hub 而非替换。
+  - 对 harness 设计：需实现优雅的进程协调，避免资源竞争和会话中断。
+- 空闲的插件沙箱进程会被回收，不再残留。
+  - 对 harness 设计：需管理子进程生命周期，及时清理空闲资源。
+- 模型目录更新，新增 Crusoe 提供商。
+  - 对 harness 设计：需保持模型列表动态更新，支持新提供商。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.13](https://github.com/cline/cline/releases/tag/desktop-v0.0.13)

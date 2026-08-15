@@ -1,0 +1,26 @@
+---
+slug: 2026-08-14-cline-cli-v3-0-55
+title: "cline cli-v3.0.55 — 修复 Hub 更新竞态，防止会话被杀，流式渲染更稳"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.55
+publishedAt: 2026-08-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Hub 更新竞态，防止会话被杀，流式渲染更稳"
+broadcast: "这次更新主要修复了自动更新可能打断正在运行会话的问题，改成了退出时再安装，这样就不会影响工作流了。同时，多个命令行实例同时运行时，也不会再互相干扰，稳定性更好。另外，流式输出的格式也更稳定，不会闪回原始文本，对开发者来说，这些改进让工具用起来更顺手，也更适合集成到自己的智能体里。"
+insight: "这次更新对现有用户是值得升级的，尤其是多开 CLI 或依赖 Hub 的场景，修复了更新竞态和实例互杀问题，稳定性提升明显。如果你在用 agent harness，建议关注更新时机改为退出时安装，避免会话被中断。国内用户走 newapi.lurus.cn 代理不受影响，更新机制与网络代理无关。流式渲染不再闪烁，体验更顺，升级成本低，推荐直接更新。"
+tags: [update-safety, hub-connection, streaming-render, bug-fix]
+---
+
+- 自动更新不再在 CLI 连接 Hub 时安装，改为退出时安装，避免后台更新导致会话中断。
+  - 对 agent harness：需确保更新流程不会影响正在运行的会话，可参考此机制。
+- 修复两个 CLI 实例互相关闭对方 Hub 守护进程的问题，通过构建身份全序比较解决。
+  - 对 agent harness：多实例共存时需防止资源竞争，确保稳定性。
+- 流式 markdown 不再闪烁回原始文本，保持渲染状态。
+  - 对 agent harness：流式输出应保持格式稳定，提升用户体验。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.55](https://github.com/cline/cline/releases/tag/cli-v3.0.55)

@@ -1,0 +1,25 @@
+---
+slug: 2026-08-14-claude-code-2-1-233
+title: "claude-code v2.1.233 — Claude Code 2.1.233：GitLab MR 支持、内存限制、安全"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.233
+publishedAt: 2026-08-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 2.1.233：GitLab MR 支持、内存限制、安全修复"
+broadcast: "Claude Code 这次更新带来了几个实用改进。现在可以直接识别GitLab合并请求的链接，方便跨平台协作。还新增了内存限制功能，防止构建过程失控，对资源隔离很有参考价值。另外修复了一个Windows下的安全漏洞，避免凭据泄露。这些改动对国内开发者来说，特别是做Agent开发的朋友，值得关注一下。"
+insight: "这次更新对国内用户来说，最值得关注的是安全修复和内存限制。如果你在用 Claude Code 管理 GitLab MR，新增的 URL 支持值得升级；但如果只是日常编码，升级与否影响不大。内存限制和 MCP 长连接修复对稳定性有帮助，建议升级。走 newapi.lurus.cn 代理不受影响，但需注意 Todo 工具在新模型上默认禁用，若依赖该功能，需在配置中显式开启，并留意模型差异。"
+tags: [gitlab, memory-limit, security, mcp]
+---
+
+- 新增 GitLab MR URL 支持，`--worktree` 和 agents 视图可显示 `!N`，方便跨平台协作。
+- 新增 `CLAUDE_CODE_TOOL_MEMORY_LIMIT` 内存 cgroup 限制，防止构建失控拖垮会话，对资源隔离有参考价值。
+- 修复 MCP v2 长连接被服务器超时断开的问题，对 serverless 环境下的订阅稳定性有借鉴意义。
+- 修复 Windows 路径绕过 UNC 校验的 NTLM 凭据泄露漏洞，安全加固值得关注。
+- Todo 工具在 Opus 4.8 等新模型上默认禁用，需显式开启，模型能力差异需适配。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.233](https://github.com/anthropics/claude-code/releases/tag/v2.1.233)

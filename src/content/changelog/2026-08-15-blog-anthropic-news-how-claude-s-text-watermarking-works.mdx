@@ -1,0 +1,24 @@
+---
+slug: 2026-08-15-blog-anthropic-news-how-claude-s-text-watermarking-works
+title: "How Claude's text watermarking works — Claude 文本水印如何在不影响输出质量的前提下标记 AI 生成内容？"
+source: "Anthropic"
+sourceUrl: https://www.anthropic.com/news/claude-text-watermark
+publishedAt: 2026-08-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Anthropic"
+hook: "Claude 文本水印如何在不影响输出质量的前提下标记 AI 生成内容？"
+broadcast: "今天聊聊Claude的文本水印技术。它不添加隐藏字符，而是利用生成时的随机选择来标记AI内容，对输出质量几乎没有影响。对开发者来说，这提供了一种合规的内容标记方式，但要注意它对短文本和事实性内容检测效果有限，无法识别具体用户。"
+tags: [ai-watermark, claude, content-authenticity, eu-ai-act]
+---
+
+- 水印利用模型生成文本时的低风险随机选择（如“阴天”或“灰色”），通过密钥改变随机性来源，留下可检测模式，不添加隐藏字符或额外 token。
+- 对读者和输出质量无实际影响，内部测试及 SynthID-Text 研究均显示无显著差异，人类评估者也难以区分。
+- 水印仅能估计文本由 Claude 生成的可能性，无法识别具体用户，且对短文本或事实性内容（如代码、数学）效果有限。
+- 对开发者而言，水印提供了一种合规的 AI 内容标记手段，但需注意其检测局限，尤其在编辑或短文本场景下。
+
+---
+
+> 原文：[How Claude's text watermarking works](https://www.anthropic.com/news/claude-text-watermark) · 作者 Anthropic
