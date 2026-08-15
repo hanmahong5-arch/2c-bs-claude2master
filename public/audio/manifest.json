@@ -1,6 +1,127 @@
 {
   "items": [
     {
+      "slug": "2026-08-15-blog-anthropic-news-how-claude-s-text-watermarking-works",
+      "zh": true,
+      "en": true,
+      "title": "How Claude's text watermarking works — Claude 文本水印如何在不影响输出质量的前提下标记 AI 生成内容？",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-08-15"
+    },
+    {
+      "slug": "2026-08-15-trending-guillaumemeyer-watermarks-remover",
+      "zh": true,
+      "en": false,
+      "title": "watermarks-remover — 去除AI水印的多格式工具，支持C2PA与文本痕迹清理",
+      "kind": "trending",
+      "author": null,
+      "source": "guillaumemeyer/watermarks-remover",
+      "tool": null,
+      "publishedAt": "2026-08-15"
+    },
+    {
+      "slug": "2026-08-14-blog-hf-blog-state-of-open-models-summer-2026-observations",
+      "zh": true,
+      "en": true,
+      "title": "State of Open Models: Summer 2026 Observations — 开源模型生态夏季观察：性能、许可与工具链的现状与趋势。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-14"
+    },
+    {
+      "slug": "2026-08-14-blog-interconnects-glm-5-3-how-chinese-labs-keep-stride",
+      "zh": true,
+      "en": true,
+      "title": "GLM-5.3: How Chinese labs keep stride with the frontier — GLM",
+      "kind": "blogger",
+      "author": "Nathan Lambert",
+      "source": "Nathan Lambert",
+      "tool": null,
+      "publishedAt": "2026-08-14"
+    },
+    {
+      "slug": "2026-08-14-blog-latentspace-ainews-gemini-3-7-flash-brings-gdm-back",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Gemini 3.7 Flash brings GDM back to the — Gemini 3.7 Flash发布，性能大幅提升，GDM重回前沿。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-14"
+    },
+    {
+      "slug": "2026-08-14-blog-simonwillison-don-t-classify-hallucinate",
+      "zh": true,
+      "en": true,
+      "title": "Don't classify. Hallucinate! — Simon Willison 提出用 LLM 生成新标签，再通过向量嵌入匹配现有",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-14"
+    },
+    {
+      "slug": "2026-08-14-claude-code-2-1-233",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.233 — Claude Code 2.1.233：GitLab MR 支持、内存限制、安全",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-14"
+    },
+    {
+      "slug": "2026-08-14-cline-4-1-10",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.1.10 — Cline v4.1.10 新增联网搜索，修复 Hub 冲突，更新模型目录。",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-14"
+    },
+    {
+      "slug": "2026-08-14-cline-cli-v3-0-55",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.55 — 修复 Hub 更新竞态，防止会话被杀，流式渲染更稳",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-14"
+    },
+    {
+      "slug": "2026-08-14-cline-desktop-v0-0-13",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.13 — 桌面端 v0.0.13：字体缩放、联网搜索、修复 Hub 冲突，值得一看。",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-14"
+    },
+    {
+      "slug": "2026-08-14-cline-sdk-sdk-v0-0-75",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.75 — SDK v0.0.75 带来模型自主搜索、Hub 稳定性修复和沙箱回收。",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-14"
+    },
+    {
       "slug": "2026-08-14-trending-deepseek-ai-deepseek-harness",
       "zh": true,
       "en": false,
@@ -21,6 +142,39 @@
       "source": "drumih/turbo-fieldfare",
       "tool": null,
       "publishedAt": "2026-08-14"
+    },
+    {
+      "slug": "2026-08-13-blog-deepmind-introducing-gemini-3-7-flash",
+      "zh": true,
+      "en": true,
+      "title": "Introducing Gemini 3.7 Flash — Google DeepMind 发布 Gemini 3.7 Flash，主打低延",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-blog-hf-blog-record-train-and-deploy-from-one-place-with",
+      "zh": true,
+      "en": true,
+      "title": "Record, train, and deploy from one place with Strands — Strands Agents 与 LeRobot 集成，实现机器人数据采集、训练",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-13"
+    },
+    {
+      "slug": "2026-08-13-blog-hf-blog-what-we-learned-by-reproducing-2-200-papers",
+      "zh": true,
+      "en": true,
+      "title": "What We Learned by Reproducing 2,200 papers from ICML — 复现2200篇ICML论文，总结可复现性经验与工具链启示。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-13"
     },
     {
       "slug": "2026-08-13-blog-latentspace-ainews-spacexai-grok-4-6-and-grok-bot",
@@ -725,160 +879,6 @@
       "source": "openclaw-concepts",
       "tool": null,
       "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-openclaw-concepts-progress-drafts",
-      "zh": true,
-      "en": true,
-      "title": "Progress drafts · OpenClaw — 把多轮“正在工作”消息合并成一条实时状态行，减少刷屏。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-openclaw-concepts-qa-e2e-automation",
-      "zh": true,
-      "en": true,
-      "title": "QA overview · OpenClaw — OpenClaw 的 QA 体系如何用真实通道和画像驱动端到端验证？",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-openclaw-concepts-queue-steering",
-      "zh": true,
-      "en": true,
-      "title": "Steering queue · OpenClaw — 了解OpenClaw如何在不打断工具调用的情况下，将新消息注入正在运行的会话，提",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-openclaw-concepts-queue",
-      "zh": true,
-      "en": true,
-      "title": "Command queue · OpenClaw — 多消息并发时如何避免 agent 冲突？OpenClaw 的队列机制给出答案。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-opencode-1-18-16",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.16 — 配置容错、项目注册、mac常驻等多项修复",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-09-blog-interconnects-lessons-from-the-hacks",
-      "zh": true,
-      "en": true,
-      "title": "Lessons from the hacks — 前沿模型攻击事件揭示AI行业与政府激励错配，未来12",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-08-09"
-    },
-    {
-      "slug": "2026-08-09-blog-simonwillison-github-models-is-now-retired",
-      "zh": true,
-      "en": true,
-      "title": "GitHub Models is now retired — GitHub Models 退役，Simon Willison 分析原因并分享替",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-09"
-    },
-    {
-      "slug": "2026-08-09-blog-simonwillison-quoting-claude-opus-5-system-prompt",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Claude Opus 5 system prompt — Simon Willison 引用 Claude Opus 5 系统提示，展示 ",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-09"
-    },
-    {
-      "slug": "2026-08-09-blog-simonwillison-sqlite-compressed-text-history-prototypes",
-      "zh": true,
-      "en": true,
-      "title": "SQLite compressed text-history prototypes — Simon Willison 用 zstd 压缩 JSON 数组存储 SQLit",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-09"
-    },
-    {
-      "slug": "2026-08-09-cline-4-1-7",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.7 — Cline v4.1.7 修复中断会话、MCP 挂起，增强检查点与 OAuth ",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-09"
-    },
-    {
-      "slug": "2026-08-09-cline-cli-v3-0-52",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.52 — CLI v3.0.52 修复 MCP 与中断恢复，提升 TUI 可读性与稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-09"
-    },
-    {
-      "slug": "2026-08-09-cline-desktop-v0-0-11",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.11 — 桌面版 v0.0.11：粘贴图片、修复会话与 MCP 稳定性，提升 agent ",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-09"
-    },
-    {
-      "slug": "2026-08-09-cline-sdk-sdk-v0-0-72",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.72 — SDK v0.0.72 增强中断恢复、MCP 容错与 OAuth 支持",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-09"
-    },
-    {
-      "slug": "2026-08-08-blog-latentspace-ainews-zawinski-s-law-of-multiagents",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Zawinski's Law of MultiAgents — 多智能体系统正成为安全与工程的核心，Zawinski定律揭示其必然趋势。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-08"
     }
   ]
 }
