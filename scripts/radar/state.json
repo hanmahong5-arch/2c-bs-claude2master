@@ -111,7 +111,8 @@
     "egoist/waku",
     "deepseek-ai/deepseek-harness",
     "drumih/turbo-fieldfare",
-    "guillaumemeyer/watermarks-remover"
+    "guillaumemeyer/watermarks-remover",
+    "anywhere-labs/deepseek-harness-desktop"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -192,7 +193,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-15",
+    "anthropic-engineering": "2026-08-16",
     "claude-code-docs": "2026-08-14",
     "openai-codex-blog": "2026-08-13",
     "openclaw-concepts": "2026-08-10",
@@ -421,7 +422,9 @@
       "https://simonwillison.net/2026/Aug/13/sqlite-utils/",
       "https://simonwillison.net/2026/Aug/13/llm-gemini/",
       "https://simonwillison.net/2026/Aug/13/alchemy-utils/",
-      "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/"
+      "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
+      "https://simonwillison.net/2026/Aug/15/cors-chat/",
+      "https://simonwillison.net/2026/Aug/15/sighting-391300422/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -531,7 +534,8 @@
       "https://www.latent.space/p/ainews-muse-glimmer-and-spark-open",
       "https://www.latent.space/p/ainews-spacexai-grok-46-and-grok",
       "https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace",
-      "https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm"
+      "https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm",
+      "https://www.latent.space/p/flue-2"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -975,10 +979,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-15",
+    "simonwillison": "2026-08-16",
     "lilianweng": "2026-08-13",
-    "latentspace": "2026-08-15",
-    "interconnects": "2026-08-15",
+    "latentspace": "2026-08-16",
+    "interconnects": "2026-08-16",
     "karpathy": "2026-08-15",
     "raschka": "2026-08-15",
     "eugeneyan": "2026-08-15",
@@ -986,10 +990,10 @@
     "oneusefulthing": "2026-08-15",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-15",
+    "openai-news": "2026-08-16",
     "deepmind": "2026-08-15",
     "hf-blog": "2026-08-15",
-    "anthropic-news": "2026-08-15",
+    "anthropic-news": "2026-08-16",
     "steipete": "2026-08-15",
     "openclaw-blog": "2026-08-15"
   },
