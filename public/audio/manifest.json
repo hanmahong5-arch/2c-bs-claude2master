@@ -1,6 +1,17 @@
 {
   "items": [
     {
+      "slug": "2026-08-16-trending-anywhere-labs-deepseek-harness-desktop",
+      "zh": true,
+      "en": false,
+      "title": "deepseek-harness-desktop — DeepSeek 生态桌面端，让 AI 工作流更顺手",
+      "kind": "trending",
+      "author": null,
+      "source": "anywhere-labs/deepseek-harness-desktop",
+      "tool": null,
+      "publishedAt": "2026-08-16"
+    },
+    {
       "slug": "2026-08-15-blog-anthropic-news-how-claude-s-text-watermarking-works",
       "zh": true,
       "en": true,
@@ -8,6 +19,39 @@
       "kind": "blogger",
       "author": "Anthropic",
       "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-08-15"
+    },
+    {
+      "slug": "2026-08-15-blog-latentspace-react-for-agents-astro-creator-brings-hooks-to",
+      "zh": true,
+      "en": true,
+      "title": "React for Agents: Astro Creator Brings Hooks to his — Astro 作者推出 Flue 2，将 React Hooks 引入 Agent",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-15"
+    },
+    {
+      "slug": "2026-08-15-blog-simonwillison-cors-chat",
+      "zh": true,
+      "en": true,
+      "title": "CORS Chat — 用CORS Chat测试本地LLM端点，支持流式SVG渲染。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-15"
+    },
+    {
+      "slug": "2026-08-15-blog-simonwillison-northern-gannet",
+      "zh": true,
+      "en": true,
+      "title": "Northern Gannet — 一只北大西洋海鸟为何成为太平洋唯一？Morris的14年故事。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-08-15"
     },
@@ -833,50 +877,6 @@
       "kind": "blogger",
       "author": "Simon Willison",
       "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-simonwillison-quoting-openclaw",
-      "zh": true,
-      "en": true,
-      "title": "Quoting OpenClaw — OpenClaw 发现澳洲健身房预订 API 无授权检查，可取消他人预订。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-claude-code-2-1-227",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.227 — 修复订阅层级误判、Bash 命令失败及 TUI 回退问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-openclaw-concepts-personal-agent-benchmark-pack",
-      "zh": true,
-      "en": true,
-      "title": "Personal agent benchmark pack · OpenClaw — 用10个本地场景测个人助手，防泄密防假进度，值得5分钟。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-openclaw-concepts-presence",
-      "zh": true,
-      "en": true,
-      "title": "Presence · OpenClaw — 5分钟看懂OpenClaw多智能体在线状态机制，避免重复连接和内存泄漏。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
       "tool": null,
       "publishedAt": "2026-08-10"
     }
