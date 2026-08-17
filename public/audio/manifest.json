@@ -1,6 +1,138 @@
 {
   "items": [
     {
+      "slug": "2026-08-17-openclaw-concepts-retry",
+      "zh": true,
+      "en": true,
+      "title": "Retry policy · OpenClaw — 重试策略如何避免重复操作并保证消息顺序？",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-openclaw-concepts-session-attachment",
+      "zh": true,
+      "en": true,
+      "title": "Session synchronization and attachment · — 多客户端共享同一会话状态，无需复制转录，附编码工具更高效。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-openclaw-concepts-session-pruning",
+      "zh": true,
+      "en": true,
+      "title": "Session pruning · OpenClaw — 修剪工具输出，省缓存费，防上下文膨胀，值得一读。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-openclaw-concepts-session-search",
+      "zh": true,
+      "en": true,
+      "title": "Session search · OpenClaw — 精确检索历史会话原文，与语义记忆互补，提升Agent记忆利用效率。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-openclaw-concepts-session-state",
+      "zh": true,
+      "en": true,
+      "title": "Session state awareness · OpenClaw — 多会话协作时，如何检测状态变化并避免重复通知？",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-openclaw-concepts-session",
+      "zh": true,
+      "en": true,
+      "title": "Session management · OpenClaw — 会话管理是 agent 记忆的基石，本文教你如何隔离、重置和清理会话。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-trending-harry0703-mangodisk",
+      "zh": true,
+      "en": false,
+      "title": "MangoDisk — macOS/Windows 安全优先的磁盘清理与空间分析工具",
+      "kind": "trending",
+      "author": null,
+      "source": "harry0703/MangoDisk",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-trending-mengmengcode-vocat",
+      "zh": true,
+      "en": false,
+      "title": "VoCat — 开源蜂窝调制解调器控制面板，管理 EC20/EC25 全功能",
+      "kind": "trending",
+      "author": null,
+      "source": "MengMengCode/VoCat",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-trending-orbien-org-orbien",
+      "zh": true,
+      "en": false,
+      "title": "orbien — 5MB 内网穿透工具，支持 QUIC/KCP 多协议",
+      "kind": "trending",
+      "author": null,
+      "source": "orbien-org/orbien",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-16-blog-simonwillison-markdown-svg-upgrades",
+      "zh": true,
+      "en": true,
+      "title": "Markdown SVG upgrades — Simon Willison 升级 Markdown SVG 渲染工具，新增 M",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-16"
+    },
+    {
+      "slug": "2026-08-16-blog-simonwillison-quoting-dario-amodei",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Dario Amodei — Anthropic CEO谈AI信任危机：不是营销问题，而是兑现承诺的问题。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-16"
+    },
+    {
+      "slug": "2026-08-16-blog-simonwillison-qwen-3-8-27b-is-excellent-but-it",
+      "zh": true,
+      "en": true,
+      "title": "Qwen 3.8 27B is excellent, but it defaults to wildly — Qwen 3.8 27B 本地模型性能出色，但默认过度思考，需调低推理级别。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-16"
+    },
+    {
       "slug": "2026-08-16-trending-anywhere-labs-deepseek-harness-desktop",
       "zh": true,
       "en": false,
@@ -745,138 +877,6 @@
       "kind": "blogger",
       "author": "Hugging Face",
       "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-hf-blog-making-knowledge-distillation-cheap-enough-to-run-at",
-      "zh": true,
-      "en": true,
-      "title": "Making Knowledge Distillation Cheap Enough to Run at — 如何让知识蒸馏成本足够低，从而大规模运行？",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-hf-blog-meta-is-back-with-muse-glimmer-local-agentic",
-      "zh": true,
-      "en": true,
-      "title": "Meta is back with Muse Glimmer: local, agentic, — Meta 发布 Muse Glimmer：本地、智能体、多模态、开源，一文看懂其",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-interconnects-5-useful-things-you-ll-learn-in-my",
-      "zh": true,
-      "en": true,
-      "title": "5 useful things you'll learn in my new post-training — Nathan Lambert 新书发布，提炼 RLHF 与后训练的核心直觉、历史",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-openai-news-expanding-daybreak-as-the-cyber-defense-window-narrows",
-      "zh": true,
-      "en": true,
-      "title": "Expanding Daybreak as the Cyber Defense Window Narrows — OpenAI推出网络安全专用模型GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-openai-news-how-zapier-transformed-core-marketing-processes-with-chatgpt",
-      "zh": true,
-      "en": true,
-      "title": "How Zapier transformed core marketing processes with — Zapier 用 ChatGPT Work 优化营销漏斗、生成素材并自动化报告。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-openai-news-model-ml-completes-finance-work-more-efficiently-with",
-      "zh": true,
-      "en": true,
-      "title": "Model ML completes finance work more efficiently with — OpenAI 展示 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-openai-news-openai-s-letter-to-governor-abbott-on-responsible",
-      "zh": true,
-      "en": true,
-      "title": "OpenAI’s letter to Governor Abbott on responsible AI — OpenAI致信德州州长，承诺负责任AI基础设施，支持可靠透明增长。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-openai-news-premium-seats-are-coming-to-chatgpt-business",
-      "zh": true,
-      "en": true,
-      "title": "Premium seats are coming to ChatGPT Business — OpenAI为ChatGPT Business推出高级席位，提升团队高负载任务使",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-openai-news-putting-frontier-cyber-models-in-more-trusted-hands",
-      "zh": true,
-      "en": true,
-      "title": "Putting frontier cyber models in more trusted hands — OpenAI 将前沿网络模型开放给受信伙伴，用于授权网络安全服务。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-openai-news-virgin-atlantic-sharpens-customer-journeys-with-chatgpt-work",
-      "zh": true,
-      "en": true,
-      "title": "Virgin Atlantic sharpens customer journeys with ChatGPT — 维珍航空用ChatGPT Work加速客户旅程研究、产品规划与决策。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-openai-news-what-building-an-ai-native-finance-function-taught",
-      "zh": true,
-      "en": true,
-      "title": "What building an AI-native finance function taught me — OpenAI CFO分享构建AI原生财务部门的五个经验，涵盖自动化预测、强化控制",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-10"
-    },
-    {
-      "slug": "2026-08-10-blog-simonwillison-introducing-muse-glimmer",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Muse Glimmer — Meta 新开源 30B 模型 Muse Glimmer，主打端到端智能体任务完",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-08-10"
     }
