@@ -112,7 +112,10 @@
     "deepseek-ai/deepseek-harness",
     "drumih/turbo-fieldfare",
     "guillaumemeyer/watermarks-remover",
-    "anywhere-labs/deepseek-harness-desktop"
+    "anywhere-labs/deepseek-harness-desktop",
+    "orbien-org/orbien",
+    "harry0703/MangoDisk",
+    "MengMengCode/VoCat"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -188,16 +191,22 @@
       "https://docs.openclaw.ai/concepts/progress-drafts",
       "https://docs.openclaw.ai/concepts/qa-e2e-automation",
       "https://docs.openclaw.ai/concepts/queue",
-      "https://docs.openclaw.ai/concepts/queue-steering"
+      "https://docs.openclaw.ai/concepts/queue-steering",
+      "https://docs.openclaw.ai/concepts/retry",
+      "https://docs.openclaw.ai/concepts/session",
+      "https://docs.openclaw.ai/concepts/session-attachment",
+      "https://docs.openclaw.ai/concepts/session-pruning",
+      "https://docs.openclaw.ai/concepts/session-search",
+      "https://docs.openclaw.ai/concepts/session-state"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-16",
+    "anthropic-engineering": "2026-08-17",
     "claude-code-docs": "2026-08-14",
     "openai-codex-blog": "2026-08-13",
-    "openclaw-concepts": "2026-08-10",
-    "hermes-guides": "2026-08-10"
+    "openclaw-concepts": "2026-08-17",
+    "hermes-guides": "2026-08-17"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -424,7 +433,10 @@
       "https://simonwillison.net/2026/Aug/13/alchemy-utils/",
       "https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/",
       "https://simonwillison.net/2026/Aug/15/cors-chat/",
-      "https://simonwillison.net/2026/Aug/15/sighting-391300422/"
+      "https://simonwillison.net/2026/Aug/15/sighting-391300422/",
+      "https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/",
+      "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+      "https://simonwillison.net/2026/Aug/16/dario-amodei/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -979,23 +991,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-16",
+    "simonwillison": "2026-08-17",
     "lilianweng": "2026-08-13",
-    "latentspace": "2026-08-16",
-    "interconnects": "2026-08-16",
+    "latentspace": "2026-08-17",
+    "interconnects": "2026-08-17",
     "karpathy": "2026-08-15",
     "raschka": "2026-08-15",
     "eugeneyan": "2026-08-15",
     "chiphuyen": "2026-08-13",
-    "oneusefulthing": "2026-08-15",
+    "oneusefulthing": "2026-08-17",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-16",
-    "deepmind": "2026-08-15",
-    "hf-blog": "2026-08-15",
-    "anthropic-news": "2026-08-16",
-    "steipete": "2026-08-15",
-    "openclaw-blog": "2026-08-15"
+    "openai-news": "2026-08-17",
+    "deepmind": "2026-08-17",
+    "hf-blog": "2026-08-17",
+    "anthropic-news": "2026-08-17",
+    "steipete": "2026-08-17",
+    "openclaw-blog": "2026-08-17"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

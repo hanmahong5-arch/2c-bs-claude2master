@@ -1,0 +1,25 @@
+---
+slug: 2026-08-17-openclaw-concepts-session-search
+title: "Session search · OpenClaw — 精确检索历史会话原文，与语义记忆互补，提升Agent记忆利用效率。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/session-search
+publishedAt: 2026-08-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "精确检索历史会话原文，与语义记忆互补，提升Agent记忆利用效率。"
+broadcast: "今天聊聊Agent的记忆利用。有个新功能，能对历史会话原文做精确搜索，返回匹配片段和时间戳，还能配合历史记录看上下文。它和语义记忆互补，一个查原文，一个查意思，能提升Agent对过往经验的利用效率。不过要注意，重索引时结果可能不全，需要重试。对做Agent开发的朋友来说，这值得关注。"
+insight: "现有用户若依赖语义记忆，建议升级以补上精确检索短板，但需注意重索引时结果可能不完整，关键场景要重试。国内走 newapi.lurus.cn 代理不受影响，因为该功能是本地索引与事务写入，不涉及额外网络请求。若你已有自定义 hook 做记忆检索，可评估是否替换为 sessions_search，它返回脱敏片段且受可见性规则限制，更安全，但需自行处理上下文拼接。"
+tags: [session-search, memory, agent-harness, sqlite]
+---
+
+- `sessions_search` 支持对历史会话原文进行精确搜索，返回 `sessionKey`、时间戳、角色和匹配片段，可配合 `sessions_history` 获取上下文。
+- 搜索结果受可见性规则限制，且摘要在返回前会被脱敏，确保安全。
+- 索引与消息持久化在同一事务中，保证实时性，但重索引时结果可能不完整，需重试。
+
+对 agent harness 设计：提供精确搜索接口，与语义记忆互补，可提升 Agent 对历史经验的利用效率。
+
+---
+
+> 原文：[Session search · OpenClaw](https://docs.openclaw.ai/concepts/session-search)

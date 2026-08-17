@@ -1,0 +1,25 @@
+---
+slug: 2026-08-17-openclaw-concepts-retry
+title: "Retry policy · OpenClaw — 重试策略如何避免重复操作并保证消息顺序？"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/retry
+publishedAt: 2026-08-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "重试策略如何避免重复操作并保证消息顺序？"
+broadcast: "今天聊聊重试策略，它只重试当前步骤，不会把整个流程重跑一遍，这样能避免重复操作，特别是那些不能重复执行的动作。如果等待时间超过六十秒，就直接让错误返回，触发模型切换，不傻等。像 Discord 和 Telegram 这些平台，限流时用指数退避，但解析错误就不重试，直接降级成纯文本。这对做 agent 开发的来说，重试得考虑幂等性和延迟，才能更稳。"
+insight: "现有用户若依赖 OpenClaw 的重试策略，建议先核对自身流程是否按请求粒度设计，避免整流程重试导致重复副作用。长等待场景下，x-should-retry 注入能加速故障转移，值得保留；但需确认模型端支持该头。国内走 newapi.lurus.cn 代理时，重试策略本身不受影响，但代理的稳定性可能影响 Retry-After 判断，建议监控超时阈值。整体上，按请求重试和平台特定退避是合理默认，无需大改。"
+tags: [retry-policy, message-delivery, error-handling, agent-harness]
+---
+
+- **按请求重试而非整个流程**：OpenClaw 只重试当前步骤，避免已完成步骤的重复执行，确保非幂等操作不被重复。
+- **处理长等待重试**：当 Retry-After 超过 60 秒时，注入 `x-should-retry: false` 让错误立即返回，触发模型故障转移，避免长时间阻塞。
+- **平台特定重试**：Discord 和 Telegram 对限流和瞬时错误使用指数退避，但解析错误不重试，直接降级为纯文本。
+
+对 agent harness 设计：重试策略需考虑幂等性和延迟，避免重复副作用，并利用故障转移提高鲁棒性。
+
+---
+
+> 原文：[Retry policy · OpenClaw](https://docs.openclaw.ai/concepts/retry)

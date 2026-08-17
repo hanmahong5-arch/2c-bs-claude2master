@@ -1,0 +1,25 @@
+---
+slug: 2026-08-16-blog-simonwillison-markdown-svg-upgrades
+title: "Markdown SVG upgrades — Simon Willison 升级 Markdown SVG 渲染工具，新增 M"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/
+publishedAt: 2026-08-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 升级 Markdown SVG 渲染工具，新增 MP4 导出，让动画 SVG 随处可分享。"
+broadcast: "最近有个工具升级挺有意思，它能把 Markdown 转成 SVG 图形，现在还能直接在浏览器里导出成 MP4 视频，连动画都能保留。这意味着你做的动态图表，不用再担心平台不支持，随手就能分享出去。对开发者来说，这展示了纯前端处理复杂媒体格式的可行性，也提醒我们，格式转换这类通用需求，在工具链里其实很有潜力。"
+tags: [svg, markdown, ffmpeg-wasm, web-tools]
+---
+
+- 工具支持粘贴 Markdown 或通过 URL 加载 Gist，渲染 SVG 并生成可书签的页面，方便分享 Markdown 转录。
+- 新增 PNG/JPEG 标签页，在浏览器内将 SVG 转为位图，解决不支持 SVG 的平台分享问题。
+- 新增 MP4 标签页，检测 SVG 动画并估算时长，用 ffmpeg.wasm 在浏览器内合成视频，突破平台限制。
+
+对开发者而言，这展示了纯前端处理复杂媒体格式的可行性，也提示了工具链中“格式转换”作为通用需求的潜力。
+
+---
+
+> 原文：[Markdown SVG upgrades](https://simonwillison.net/2026/Aug/16/markdown-svg-upgrades/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-08-17-openclaw-concepts-session
+title: "Session management · OpenClaw — 会话管理是 agent 记忆的基石，本文教你如何隔离、重置和清理会话。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/session
+publishedAt: 2026-08-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "会话管理是 agent 记忆的基石，本文教你如何隔离、重置和清理会话。"
+broadcast: "今天聊聊 agent 的会话管理，这可是记忆的基石。多用户环境下，默认所有私信共享一个会话，容易泄露隐私，必须按频道和发送者隔离。会话还能按天或空闲自动重置，旧事件会被丢弃，避免污染新对话。另外，自动清理旧会话能防止存储无限增长，保证长期稳定运行。对开发者来说，这些设计直接关系到多租户安全和系统可靠性。"
+insight: "如果你正用 OpenClaw 做多用户服务，现有配置必须改：默认 DM 共享会话有隐私风险，务必启用 dmScope 按频道隔离。自动重置和清理机制建议按实际场景调优，尤其要区分系统事件与用户交互，避免会话被意外拉长。国内用户走 newapi.lurus.cn 代理不受影响，这些是本地配置项，放心升级。"
+tags: [session-management, memory, privacy, lifecycle]
+---
+
+- **DM 隔离**：默认所有 DM 共享一个会话，多用户时必须启用 `dmScope: "per-channel-peer"` 按频道和发送者隔离，防止隐私泄露。对 harness 设计：会话路由需考虑多租户安全。
+- **会话重置策略**：支持 daily 和 idle 两种自动重置，可全局配置并按聊天类型或频道覆盖。重置后旧会话的系统事件被丢弃，避免污染新会话。对 harness 设计：需区分用户交互和系统事件，避免后者延长会话生命周期。
+- **会话维护**：通过 `session.maintenance` 设置 `pruneAfter` 和 `maxEntries` 自动清理旧会话，防止存储无限增长。对 harness 设计：应内置存储上限和清理机制，保证长期运行稳定。
+
+---
+
+> 原文：[Session management · OpenClaw](https://docs.openclaw.ai/concepts/session)

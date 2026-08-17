@@ -1,0 +1,24 @@
+---
+slug: 2026-08-16-blog-simonwillison-qwen-3-8-27b-is-excellent-but-it
+title: "Qwen 3.8 27B is excellent, but it defaults to wildly — Qwen 3.8 27B 本地模型性能出色，但默认过度思考，需调低推理级别。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/16/qwen-38-27b/
+publishedAt: 2026-08-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Qwen 3.8 27B 本地模型性能出色，但默认过度思考，需调低推理级别。"
+broadcast: "最近有个本地视觉模型很火，性能确实不错，但默认设置下特别爱“多想”，简单任务也要耗很久。实测生成一张图，默认要二十多分钟，关掉推理后只要两分钟。所以对开发者来说，模型本身够强，但记得把推理级别调低，不然效率会大打折扣。"
+tags: [local-llm, qwen, reasoning-effort, vision-model]
+---
+
+- Qwen 3.8 27B 是 Apache 2 许可的 27B 参数视觉模型，适合在笔记本上运行，但默认推理级别为 xhigh，导致简单任务也消耗大量 token 和等待时间。
+- 作者实测，生成一个 SVG 图像在默认设置下需 21 分钟，而关闭推理后仅需 2 分钟，建议用户优先使用 low 或关闭推理。
+- 模型在边界框标注任务上表现优秀，能准确识别图像中的物体，且能自主构建工具，但过度思考会带来不必要的复杂性。
+- 对开发者而言，本地模型的能力已足够强大，但需注意默认配置可能影响效率，合理调整推理参数是关键。
+
+---
+
+> 原文：[Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things](https://simonwillison.net/2026/Aug/16/qwen-38-27b/) · 作者 Simon Willison

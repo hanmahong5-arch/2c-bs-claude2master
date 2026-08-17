@@ -1,0 +1,23 @@
+---
+slug: 2026-08-17-openclaw-concepts-session-state
+title: "Session state awareness · OpenClaw — 多会话协作时，如何检测状态变化并避免重复通知？"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/session-state
+publishedAt: 2026-08-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "多会话协作时，如何检测状态变化并避免重复通知？"
+broadcast: "今天聊聊多会话协作里的状态感知问题。系统会把各种事件记成信号日志，只留元数据和一行摘要，不存消息内容。观察者拿着游标，收到合并后的过期通知，还能冻结水位，避免重复提醒。想拉精确增量就用状态接口的变更查询，有历史缺口就全量刷新。这对做智能体协作的开发者挺实用，能减少冗余通知，让状态同步更干净。"
+insight: "这套会话状态感知机制对国内多会话协作场景很有价值，现有用户值得升级，尤其适合处理消息风暴下的重复通知问题。若你已配置 prompt 或 hook 依赖消息内容，需注意信号日志仅含元数据和摘要，不含正文，相关逻辑要改为基于类型化事件和游标增量。走 newapi.lurus.cn 代理不受影响，因为状态同步与网络代理无关，但建议升级后先在小范围验证 changesSince 增量拉取和 historyGap 全量刷新的触发条件，避免漏报。"
+tags: [session-state, multi-agent, event-log, reconciliation]
+---
+
+- 信号日志记录类型化事件（如 human_direct_message、goal_changed），仅含元数据和一行摘要，不含消息内容。
+- 观察者持有游标，收到合并后的单条过期通知，且冻结水位，避免重复通知。
+- 通过 session_status 的 changesSince 拉取精确增量，historyGap 标志指示需全量刷新。
+
+---
+
+> 原文：[Session state awareness · OpenClaw](https://docs.openclaw.ai/concepts/session-state)

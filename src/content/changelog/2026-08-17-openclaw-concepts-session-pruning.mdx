@@ -1,0 +1,24 @@
+---
+slug: 2026-08-17-openclaw-concepts-session-pruning
+title: "Session pruning · OpenClaw — 修剪工具输出，省缓存费，防上下文膨胀，值得一读。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/session-pruning
+publishedAt: 2026-08-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "修剪工具输出，省缓存费，防上下文膨胀，值得一读。"
+broadcast: "今天聊聊一个很实用的工具输出修剪机制。它只在内存里动手，不碰磁盘记录，而且只在缓存过期、上下文超三成时才执行，能省缓存费又防上下文膨胀。超长结果会保留首尾、中间省略，但最后几轮对话和首个用户消息前的关键引导内容绝不修剪。这对做智能体开发的朋友很有启发，修剪策略得兼顾缓存命中和上下文控制，还得保住关键引导。"
+insight: "现有用户若依赖缓存复用，升级前需确认修剪触发条件（缓存TTL过期且上下文超30%）不会误伤关键引导内容，最后三轮助手消息和首个用户消息前的内容受保护，可放心。若使用newapi.lurus.cn代理，修剪仅在内存中执行，不影响磁盘记录和代理链路，但需注意超4000字符工具结果的截断策略可能影响长输出场景，建议按需配置允许/拒绝修剪的工具名。"
+tags: [context-pruning, cache-ttl, tool-results, memory-management]
+---
+
+- 修剪仅在内存中，不修改磁盘记录，且只在缓存 TTL 过期且上下文超 30% 时执行，避免破坏缓存复用。
+- 超 4000 字符的工具结果保留首尾各 1500 字符，中间用省略号；若仍超 50% 且可修剪内容超 5 万字符，则硬清除并替换占位符。
+- 最后三轮助手消息和首个用户消息前的内容永不修剪，保护引导文件；可配置允许/拒绝修剪的工具名。
+- 对 agent harness 设计：修剪策略需兼顾缓存命中与上下文控制，且需保留关键引导内容。
+
+---
+
+> 原文：[Session pruning · OpenClaw](https://docs.openclaw.ai/concepts/session-pruning)

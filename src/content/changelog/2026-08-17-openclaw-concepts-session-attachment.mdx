@@ -1,0 +1,23 @@
+---
+slug: 2026-08-17-openclaw-concepts-session-attachment
+title: "Session synchronization and attachment · — 多客户端共享同一会话状态，无需复制转录，附编码工具更高效。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/session-attachment
+publishedAt: 2026-08-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "多客户端共享同一会话状态，无需复制转录，附编码工具更高效。"
+broadcast: "今天聊聊 OpenClaw 的一个新概念，它让多个客户端能共享同一个会话状态，不用各自复制转录，效率高多了。而且它用短链接来标识会话，还能解决歧义，链接更稳定。最贴心的是，它给编码工具提供临时授权，用完就撤销，既安全又灵活。这对做 agent 开发的国内朋友来说，是个值得关注的好消息。"
+insight: "如果你正用多客户端管理同一会话，这次 Gateway 统一状态值得升级，能省去手动同步转录的麻烦。短链接解析让分享更稳，但现有 prompt 或 hook 配置基本不用动，attach 临时授权是新增能力，不影响旧逻辑。国内用户走 newapi.lurus.cn 代理时，只要 Gateway 协议走标准 HTTP，通常不受影响，建议升级后先验证短链接解析和 attach 授权是否正常。"
+tags: [session-sync, gateway, mcp-grant, cli]
+---
+
+- **Gateway 统一会话状态**：所有客户端（TUI、移动端、ACP）通过 Gateway 协议读写同一会话，避免独立副本。
+- **短链接解析**：短 ID 是权威标识，客户端可请求更长前缀解决歧义，提升链接稳定性。
+- **attach 临时 MCP 授权**：`openclaw attach` 为编码工具生成会话级临时授权，退出即撤销，安全且灵活。
+
+---
+
+> 原文：[Session synchronization and attachment · OpenClaw](https://docs.openclaw.ai/concepts/session-attachment)
