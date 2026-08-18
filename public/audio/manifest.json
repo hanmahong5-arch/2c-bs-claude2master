@@ -1,6 +1,105 @@
 {
   "items": [
     {
+      "slug": "2026-08-18-trending-pinvou-pinvou-agent",
+      "zh": true,
+      "en": false,
+      "title": "pinvou-agent — 开源桌面 AI 代理，整合工具、文件与工作流",
+      "kind": "trending",
+      "author": null,
+      "source": "Pinvou/pinvou-agent",
+      "tool": null,
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-17-blog-latentspace-ainews-stripe-buys-openrouter-for-7b",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Stripe buys OpenRouter for $7B — Stripe 70亿美元收购 OpenRouter，AI 路由层价值重估与基础设",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-blog-openai-news-new-policy-ideas-for-the-intelligence-age",
+      "zh": true,
+      "en": true,
+      "title": "New policy ideas for the Intelligence Age — OpenAI资助14个独立项目，探索AI政策新思路，以扩大经济机会并增强社会韧性",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-blog-openai-news-openai-joins-ports-pike-project",
+      "zh": true,
+      "en": true,
+      "title": "OpenAI joins PORTS-Pike project — OpenAI 加入 PORTS",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-blog-openai-news-the-defender-s-window",
+      "zh": true,
+      "en": true,
+      "title": "The Defender’s Window — OpenAI 如何用 AI 重塑网络安全防御，并给安全团队提出具体行动建议。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-blog-simonwillison-qwen-3-8-27b-scores-52-on-the",
+      "zh": true,
+      "en": true,
+      "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis — 27B 小模型追平 GPT",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-blog-simonwillison-we-tracked-a-shipment-of-rare-books-it",
+      "zh": true,
+      "en": true,
+      "title": "We Tracked a Shipment of Rare Books. It Ended at an — 追踪一单稀有书籍订单，最终发现它被送往亚马逊AI训练设施。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-claude-code-2-1-234",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.234 — 新增项目目录名变量、GitLab MR 徽章，多项安全修复与远程控制改进",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-17"
+    },
+    {
+      "slug": "2026-08-17-hermes-agent-2026-8-16-2",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v2026.8.16.2 — Hermes Agent 0.20.3 聚合 125 个 PR，含 MCP 2.",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
+      "publishedAt": "2026-08-17"
+    },
+    {
       "slug": "2026-08-17-openclaw-concepts-retry",
       "zh": true,
       "en": true,
@@ -133,6 +232,17 @@
       "publishedAt": "2026-08-16"
     },
     {
+      "slug": "2026-08-16-hermes-agent-2026-8-16",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v2026.8.16 — Hermes Agent 补丁版：967 提交、397 PR，含多网关注册表、M",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
+      "publishedAt": "2026-08-16"
+    },
+    {
       "slug": "2026-08-16-trending-anywhere-labs-deepseek-harness-desktop",
       "zh": true,
       "en": false,
@@ -162,6 +272,17 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-15"
+    },
+    {
+      "slug": "2026-08-15-blog-raschka-building-an-ai-text-detector-from-scratch",
+      "zh": true,
+      "en": true,
+      "title": "Building an AI Text Detector From Scratch — Sebastian Raschka 从零构建 AI 文本检测器，讲解原理并演示如",
+      "kind": "blogger",
+      "author": "Sebastian Raschka",
+      "source": "Sebastian Raschka",
       "tool": null,
       "publishedAt": "2026-08-15"
     },
@@ -217,6 +338,17 @@
       "kind": "blogger",
       "author": "Nathan Lambert",
       "source": "Nathan Lambert",
+      "tool": null,
+      "publishedAt": "2026-08-14"
+    },
+    {
+      "slug": "2026-08-14-blog-latentspace-ainews-cursor-s-60b-acquisition-by-spacexai-closes",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Cursor's $60B acquisition by SpaceXai closes — Cursor 被 SpaceXAI 收购，开源模型与 Agent 运行时成为焦点",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
       "tool": null,
       "publishedAt": "2026-08-14"
     },
@@ -747,138 +879,6 @@
       "source": "Latent Space",
       "tool": null,
       "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-blog-openai-news-daybreak-models-are-now-available-on-aws",
-      "zh": true,
-      "en": true,
-      "title": "Daybreak models are now available on AWS — OpenAI 与 AWS 合作，将 Daybreak 网络安全模型引入 Bedr",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-blog-openai-news-testing-ads-in-chatgpt",
-      "zh": true,
-      "en": true,
-      "title": "Testing ads in ChatGPT — OpenAI 开始在 ChatGPT 中测试广告，以支持免费访问，并强调标签、独",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-blog-simonwillison-datasette-upload-dbs-0-5a0",
-      "zh": true,
-      "en": true,
-      "title": "datasette-upload-dbs 0.5a0 — Datasette 插件新版本，支持通过 API 上传和原子替换数据库。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-blog-simonwillison-stealing-reasoning-traces-from-proprietary-llm-apis",
-      "zh": true,
-      "en": true,
-      "title": "Stealing Reasoning Traces from Proprietary LLM APIs — 研究者从专有LLM API中窃取隐藏推理链，揭示加密缺陷与安全漏洞。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-blog-simonwillison-there-are-no-lossless-transformations-of-natural-language",
-      "zh": true,
-      "en": true,
-      "title": "There are no lossless transformations of — AI改写会丢失信息，作者提出工程师使用AI写作的内部政策。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-claude-code-2-1-228",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.228 — 修复多项关键 bug，强化技能安全，提升跨会话消息体验。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-cline-4-1-8",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.8 — Vertex 模型全目录可见，Yolo 模式并入自动批准",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-cline-cli-v3-0-53",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.53 — CLI 升级后不再连上旧 Hub 守护进程，修复推理模型压缩被跳过问题。",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-cline-sdk-sdk-v0-0-73",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.73 — SDK 修复 daemon 重连、推理模型压缩跳过，新增 Fable 5 支持",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-gemini-cli-0-55-1",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.55.1 — Gemini CLI 0.55.1 修复多项安全与稳定性问题，并引入工具注册发现",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-trending-wie-project-kakehashi",
-      "zh": true,
-      "en": false,
-      "title": "kakehashi — Linux ARM64 上跑 macOS 用户态翻译层",
-      "kind": "trending",
-      "author": null,
-      "source": "wie-project/kakehashi",
-      "tool": null,
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-10-blog-hf-blog-build-low-latency-multilingual-voice-agents-open-weights",
-      "zh": true,
-      "en": true,
-      "title": "Build Low-Latency Multilingual Voice Agents: Open — NVIDIA Magpie TTS 开源多语言语音合成，支持低延迟部署与完全控制",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-10"
     }
   ]
 }
