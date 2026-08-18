@@ -1,0 +1,25 @@
+---
+slug: 2026-08-17-hermes-agent-2026-8-16-2
+title: "hermes-agent v2026.8.16.2 — Hermes Agent 0.20.3 聚合 125 个 PR，含 MCP 2."
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16.2
+publishedAt: 2026-08-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hermes Agent 0.20.3 聚合 125 个 PR，含 MCP 2.x 迁移与多项稳定性修复。"
+broadcast: "最近Hermes Agent更新了，这次一口气合并了125个改动，重点是把MCP协议升级到了新版本，还加强了子进程的隔离，防止环境互相干扰。另外，调度器现在能自我修复，会话交接也不容易丢数据了，插件安装还多了安全扫描。对咱们国内做Agent开发的来说，这些稳定性修复和协议适配挺关键的，能让工具调用更可靠，长期跑任务也更省心。"
+insight: "这次升级对现有用户来说，MCP 2.x 迁移是硬性门槛，如果你在用 MCP 工具，得先适配新协议，否则工具调用可能不兼容。调度器自愈和会话交接修复值得升，能减少长跑任务的中断和状态丢失。插件安全扫描是新增流程，装插件时注意审查。国内走 newapi.lurus.cn 代理不受影响，升级本身不涉及网络层。建议先测 MCP 兼容性再全量升级。"
+tags: [mcp-2x, python-isolation, scheduler-self-heal, plugin-security]
+---
+
+- MCP 2.x SDK 迁移及 stateless 协议支持：需适配新协议，确保工具调用兼容。
+- 子进程 Python 运行时隔离（PYTHONHOME/PYTHONPATH）：强化环境隔离，防止污染。
+- 调度器自愈（EMFILE 恢复、陈旧认领协调）：提升长时间运行可靠性。
+- 会话交接数据丢失修复：保障状态一致性。
+- 插件安装安全扫描：引入安全审查流程。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.8.16.2](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16.2)

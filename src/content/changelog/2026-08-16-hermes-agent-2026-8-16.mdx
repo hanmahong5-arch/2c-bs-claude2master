@@ -1,0 +1,24 @@
+---
+slug: 2026-08-16-hermes-agent-2026-8-16
+title: "hermes-agent v2026.8.16 — Hermes Agent 补丁版：967 提交、397 PR，含多网关注册表、M"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16
+publishedAt: 2026-08-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hermes Agent 补丁版：967 提交、397 PR，含多网关注册表、MCP 健康检查等关键修复。"
+broadcast: "这次 Hermes Agent 的补丁版更新，重点强化了多环境管理能力，比如桌面端新增了多网关注册和健康检查，还优化了终端交互和安装稳定性。对国内开发者来说，最值得关注的是它针对长对话启用了提示缓存，能明显提升性能，同时降低了部署失败的风险，值得一试。"
+insight: "这次补丁版对多网关和 MCP 健康检查的修复，明显是冲着多环境管理去的。如果你已经在用 Hermes Agent 管理多个网关，升级价值很高，能减少配置混乱和连接故障。CLI 的 Windows 更新探测和 Kitty 键盘协议支持，对国内 Windows 终端用户是实打实的体验提升。至于 newapi.lurus.cn 代理，摘要里没提，无法判断是否受影响，但建议升级后先跑一遍 MCP 健康检查确认连通性。现有 prompt 和 hook 配置不用大改，除非你依赖 LiteLLM Claude 的 prompt caching，那可以顺手优化下长对话场景。"
+tags: [patch-release, multi-gateway, mcp-health, prompt-caching]
+---
+
+- 桌面应用新增多网关 Connections 注册表、profile 作用域刷新、MCP 健康检查和 deep links，提升多环境管理能力。
+- CLI 增强：Windows 更新探测、Kitty 键盘协议支持、chat -c 加固，改善终端交互稳定性。
+- 网关支持持久化模型路由、/loop 完成、Telegram DM 主题，并针对 LiteLLM Claude 启用 prompt caching，优化长对话性能。
+- 安装器在 Linux 和 Windows 上更健壮，降低部署失败风险。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.8.16](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16)

@@ -1,0 +1,61 @@
+---
+slug: 2026-08-17-claude-code-2-1-234
+title: "claude-code v2.1.234 — 新增项目目录名变量、GitLab MR 徽章，多项安全修复与远程控制改进"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.234
+publishedAt: 2026-08-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "新增项目目录名变量、GitLab MR 徽章，多项安全修复与远程控制改进"
+broadcast: "Claude Code 这次更新挺实用，新增了项目目录名变量，方便管理多个会话，还加了 GitLab 合并请求徽章。更重要的是修复了 Windows 下可能泄露登录凭据的安全问题，以及不少远程控制的细节。对国内开发者来说，这些改进能提升日常开发效率，尤其是安全加固值得关注。"
+insight: "这次更新对国内用户影响不大，主要是安全修复和远程控制改进。如果你在用代理 newapi.lurus.cn，不受影响，因为改动不涉及网络层。现有用户建议升级，特别是用 GitLab 的，新增 MR 徽章挺实用。hook 配置不用改，新增的环境变量和键绑定是可选功能。安全方面，拒绝 Windows NT 路径和修复 MCP 密钥泄露值得关注，建议尽快升级。"
+tags: [environment-variable, security, remote-control, bug-fixes]
+---
+
+- 新增 `CLAUDE_CODE_PROJECT_DIR_NAME` 环境变量，可自定义会话转录目录名，便于多会话主机管理。
+- 新增 `selection:clear` 键绑定动作，可清除应用内文本选择，提升键盘操作效率。
+- 新增 GitLab MR 徽章，显示在 footer 和 statusline，需 glab CLI 认证。
+- 安全加固：拒绝 Windows NT 命名空间路径，防止 NTLM 凭据泄露。
+- 修复长会话自动模式网络权限重复检查问题。
+- 修复会话级权限答案在后台子代理提示中丢失的问题。
+- 修复非流式响应缺少 thinking/text 字段导致的崩溃。
+- 修复特殊 Unicode 序列导致 markdown 渲染缓慢。
+- 修复 `SendMessage` 拒绝从 `ListAgents` 复制的收件人问题。
+- 修复 git 远程主机误检测问题。
+- 修复 MCP 诊断泄露密钥问题。
+- 修复 `strictKnownMarketplaces` 接受不匹配的 SCP 源。
+- 修复全屏复制丢失字符、水平线渲染、shell 命令计数等问题。
+- 修复权限对话框被关闭、队列命令发送错误等问题。
+- 修复接受全屏渲染器后丢失权限模式。
+- 修复 `/tui` 重启丢失工具规则。
+- 修复信任提示缺少仓库范围警告。
+- 修复 IDE diff 标签关闭导致权限提示错误。
+- 修复远程控制文件上传问题。
+- 修复登录后陈旧令牌提醒泄漏。
+- 修复权限预览中凭据掩码可隐藏命令等问题。
+- 修复跨会话消息被丢弃问题。
+- 远程控制：账户切换立即停止会话。
+- 远程控制：同步权限模式和模型信息。
+- 远程控制：支持手机端 effort 选择。
+- `SendMessage` 和 `ListAgents` 报告会话列表过长。
+- 过期凭证提示登录。
+- 改进转录：用户提示渲染 markdown。
+- 改进错误信息，包含响应详情。
+- 改进自动会话标题为短名称。
+- 降低 `claude-api` 技能上下文成本。
+- `/permissions` 和 `/add-dir` 可在工作中打开。
+- `/goal` 在错误时自动清除，后台任务超时检查。
+- `setup-token` 拒绝多余参数。
+- Esc 不再清除鼠标选择。
+- 移除冗余的自动模式分类器行。
+- 移除默认队友模型设置。
+- 调暗运行工具头的时间计数器。
+- 后台任务通知使用 system-reminder。
+- Mantle 跳过启动探测。
+- Windows 启动不再卡在重命名重试。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.234](https://github.com/anthropics/claude-code/releases/tag/v2.1.234)

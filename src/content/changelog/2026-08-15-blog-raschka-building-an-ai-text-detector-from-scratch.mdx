@@ -1,0 +1,23 @@
+---
+slug: 2026-08-15-blog-raschka-building-an-ai-text-detector-from-scratch
+title: "Building an AI Text Detector From Scratch — Sebastian Raschka 从零构建 AI 文本检测器，讲解原理并演示如"
+source: "Sebastian Raschka"
+sourceUrl: https://magazine.sebastianraschka.com/p/ai-detector-from-scratch
+publishedAt: 2026-08-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Sebastian Raschka"
+hook: "Sebastian Raschka 从零构建 AI 文本检测器，讲解原理并演示如何训练小型语言模型规避检测。"
+broadcast: "今天聊聊怎么从零做一个AI文本检测器。作者用微调分类器的方式，给文本打分，判断是不是机器写的。这个项目不只是个模型，还带评估、训练和本地部署，能直接做成接口和界面，用来过滤垃圾内容。特别提醒的是，检测器和生成模型就像猫鼠游戏，新模型可能绕过去，所以做工具链的朋友得考虑对抗性，别太依赖单一检测。"
+tags: [ai-detection, llm, fine-tuning, distilbert]
+---
+
+- 文章介绍如何通过微调 DistilBERT 分类器构建一个返回 0-100 分的 AI 检测器，类似 Substack 的检测功能，并强调分数是分类器对训练分布的估计，而非真实概率。
+- 作者指出 AI 检测器与生成模型之间存在“猫鼠游戏”，检测器可能误判人类文本，且新模型可能规避检测，这提醒开发者在构建工具链时需考虑对抗性鲁棒性。
+- 项目目标是提供一个端到端的 LLM 应用案例，包括评估、训练和本地部署，最终生成 API 和 UI，可用于过滤垃圾内容或辅助写作，对 agent 工具链开发者有参考价值。
+
+---
+
+> 原文：[Building an AI Text Detector From Scratch](https://magazine.sebastianraschka.com/p/ai-detector-from-scratch) · 作者 Sebastian Raschka
