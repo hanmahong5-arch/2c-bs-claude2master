@@ -1,6 +1,160 @@
 {
   "items": [
     {
+      "slug": "2026-08-19-trending-awesome-dsh-plugin-awesome-dsh-plugin",
+      "zh": true,
+      "en": false,
+      "title": "awesome-dsh-plugin — DeepSeek Harness 插件精选列表，一站式发现生态工具",
+      "kind": "trending",
+      "author": null,
+      "source": "awesome-dsh-plugin/awesome-dsh-plugin",
+      "tool": null,
+      "publishedAt": "2026-08-19"
+    },
+    {
+      "slug": "2026-08-19-trending-lexmount-moli",
+      "zh": true,
+      "en": false,
+      "title": "moli — Rust 写的轻量无头浏览器，专为 AI 代理设计",
+      "kind": "trending",
+      "author": null,
+      "source": "lexmount/moli",
+      "tool": null,
+      "publishedAt": "2026-08-19"
+    },
+    {
+      "slug": "2026-08-18-blog-hf-blog-how-much-memory-does-your-agent-actually-need",
+      "zh": true,
+      "en": true,
+      "title": "How Much Memory Does Your Agent Actually Need? — IBM 研究团队提出 ALTK",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-blog-hf-blog-multi-vector-late-interaction-embedding-models-with-sentence",
+      "zh": true,
+      "en": true,
+      "title": "Multi-Vector (Late Interaction) Embedding Models with — 多向量嵌入模型如何提升检索精度，及 Sentence Transformers ",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-blog-latentspace-frontier-model-cost-and-open-weights-popularity-is",
+      "zh": true,
+      "en": true,
+      "title": "Frontier Model Cost and Open-Weights Popularity is — Glean 如何用模型路由控制成本，并借开源模型崛起优化企业 AI 部署。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-blog-openai-news-how-nvidia-scales-expertise-with-chatgpt-work",
+      "zh": true,
+      "en": true,
+      "title": "How NVIDIA scales expertise with ChatGPT Work — NVIDIA 用 ChatGPT Work 减少人工任务、连接信号并规模化成功流",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-blog-openai-news-introducing-chatgpt-for-teens-built-for-learning-backed",
+      "zh": true,
+      "en": true,
+      "title": "Introducing ChatGPT for Teens: Built for learning, — OpenAI 为青少年推出 ChatGPT，强化保护与家长控制。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-blog-openai-news-pacing-model-development-in-an-era-of-cyber",
+      "zh": true,
+      "en": true,
+      "title": "Pacing model development in an era of cyber-critical — OpenAI 如何通过监控、对齐和安全措施来把控前沿模型开发节奏。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-blog-openai-news-partnering-with-codeai-to-prepare-the-first-ai",
+      "zh": true,
+      "en": true,
+      "title": "Partnering with CodeAI to prepare the first AI — OpenAI与CodeAI合作，旨在培养学生AI素养与批判性思维。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-blog-openai-news-strengthening-democratic-oversight-in-national-security",
+      "zh": true,
+      "en": true,
+      "title": "Strengthening democratic oversight in national security — OpenAI 推出计划，加强 AI 在国家安全领域的民主监督。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-blog-simonwillison-mojo-is-now-open-source",
+      "zh": true,
+      "en": true,
+      "title": "Mojo🔥 is now open source — Mojo 语言正式开源，从 Python 超集转向独立语言，聚焦 GPU 编程。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-claude-code-2-1-235",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.235 — 拼写检查、缓存修复、权限对话框改进，值得一看",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-codex-rust-v0-148-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.148.0 — Codex 0.148.0：TUI 导出 Markdown、会话 fork/归档",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-hermes-agent-2026-8-18",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v2026.8.18 — Hermes Agent 补丁版：桌面毛玻璃、标签侧栏、NVIDIA 技能扫描等",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
+      "publishedAt": "2026-08-18"
+    },
+    {
       "slug": "2026-08-18-trending-pinvou-pinvou-agent",
       "zh": true,
       "en": false,
@@ -10,6 +164,17 @@
       "source": "Pinvou/pinvou-agent",
       "tool": null,
       "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-17-blog-hf-blog-same-cluster-33-points-more-utilization-what-changed",
+      "zh": true,
+      "en": true,
+      "title": "Same Cluster, 33 Points More Utilization: What Changed — 通过调整任务调度顺序，同一集群利用率提升33个百分点，本文揭示调度策略的关键作用",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-17"
     },
     {
       "slug": "2026-08-17-blog-latentspace-ainews-stripe-buys-openrouter-for-7b",
@@ -714,171 +879,6 @@
       "source": "Nathan Lambert",
       "tool": null,
       "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-blog-latentspace-ainews-how-to-steal-a-reasoning-trace",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] How to steal a Reasoning Trace — 前沿模型隐藏推理被破解，隐私风险与蒸馏争议并存。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-blog-openai-news-from-assistance-to-execution-how-enterprises-put-ai",
-      "zh": true,
-      "en": true,
-      "title": "From assistance to execution: How enterprises put AI to — OpenAI 调研：企业如何从辅助走向执行，前沿公司如何领先采用智能体 AI。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-blog-openai-news-how-ringcentral-builds-ai-native-work-from-engineering",
-      "zh": true,
-      "en": true,
-      "title": "How RingCentral builds AI-native work from engineering — RingCentral 如何用 ChatGPT Work 和 Codex 加速 ",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-blog-simonwillison-alchemy-utils-0-1a0",
-      "zh": true,
-      "en": true,
-      "title": "alchemy-utils 0.1a0 — Simon Willison 用 AI 快速构建了数据库无关的 sqlite",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-blog-simonwillison-deepseek-v4-pro-0813-on-openrouter",
-      "zh": true,
-      "en": true,
-      "title": "DeepSeek V4 Pro 0813 (on OpenRouter) — DeepSeek V4 Pro 0813 发布，Simon 实测发现不同推理等级",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-blog-simonwillison-quoting-florian-herrengt",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Florian Herrengt — AI 让代码库变得无人能懂，认知债务正在累积。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-claude-code-2-1-229",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.229 — Claude Code 2.1.229 修复多项崩溃，新增插件市场命令源与 SS",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-goose-1-46-0",
-      "zh": true,
-      "en": false,
-      "title": "goose v1.46.0 — Goose v1.46.0 大版本：缓存安全、流式输出、用量统计与多语言支持",
-      "kind": "changelog",
-      "author": null,
-      "source": "block/goose",
-      "tool": "goose",
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-opencode-1-18-17",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.17 — 会话压缩保留完整轮次，重试风暴被遏制，PDF附件支持Copilot",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-trending-flaminis-dalaran",
-      "zh": true,
-      "en": false,
-      "title": "Dalaran — Rust 编写的机器人多模态时序数据可视化基础设施",
-      "kind": "trending",
-      "author": null,
-      "source": "Flaminis/Dalaran",
-      "tool": null,
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-trending-trycompai-crm",
-      "zh": true,
-      "en": false,
-      "title": "crm — 为 AI 代理设计的开源 CRM，Agentic",
-      "kind": "trending",
-      "author": null,
-      "source": "trycompai/crm",
-      "tool": null,
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-trending-zengeeklabs-djonehub",
-      "zh": true,
-      "en": false,
-      "title": "DJOneHub — DJI 4G 模块的 macOS 原生管理工具",
-      "kind": "trending",
-      "author": null,
-      "source": "ZenGeekLabs/DJOneHub",
-      "tool": null,
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-11-blog-hf-blog-thinking-of-ace-we-can-do-it-with",
-      "zh": true,
-      "en": true,
-      "title": "Thinking of ACE? We Can Do It with Fewer Tokens — IBM 研究团队提出 ALTKEvolve，用更少 token 实现 ACE 级",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-blog-latentspace-ainews-muse-glimmer-and-spark-open-weights-return",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Muse Glimmer and Spark: Open Weights return — Meta发布开源模型Muse Glimmer，重申个人超级智能愿景，强调个体赋权",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-11"
-    },
-    {
-      "slug": "2026-08-11-blog-latentspace-the-bioai-phase-shift-matthew-mcpartlon-neil-patil",
-      "zh": true,
-      "en": true,
-      "title": "🔬The BioAI Phase Shift - Matthew McPartlon & Neil — Chai Discovery 如何用 AI 工具撬动制药业，实现从科学到工程的转",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-11"
     }
   ]
 }
