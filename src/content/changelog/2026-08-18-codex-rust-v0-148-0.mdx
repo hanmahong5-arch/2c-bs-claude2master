@@ -1,0 +1,30 @@
+---
+slug: 2026-08-18-codex-rust-v0-148-0
+title: "codex rust-v0.148.0 — Codex 0.148.0：TUI 导出 Markdown、会话 fork/归档"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.148.0
+publishedAt: 2026-08-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.148.0：TUI 导出 Markdown、会话 fork/归档、Bedrock 支持、hooks 异步化。"
+broadcast: "OpenAI 的 Codex 工具更新了，这次主要改进了命令行界面，可以把对话记录导出成 Markdown 文件，方便保存和分享。同时，会话管理更灵活，支持分叉和归档，还能用亚马逊的 Bedrock 服务。另外，自动化脚本现在能异步运行，调用外部工具。这些变化对开发者来说，意味着工作流程更顺畅，状态管理也更稳定。"
+insight: "这次 0.148.0 值得升级，尤其是 TUI 导出 Markdown 和会话 fork/归档，对日常调试和审计很有用。hooks 异步化后，如果你现有配置里有同步命令，建议改成异步并留意生命周期，避免中断。国内用户走 newapi.lurus.cn 代理不受影响，因为新增的 Bedrock 是独立 provider，不影响现有 OpenAI 兼容路由。整体升级成本低，收益明确。"
+tags: [tui-export, session-fork, bedrock-provider, async-hooks]
+---
+
+- TUI 新增 `/export` 将完整对话导出为 Markdown，可复制到剪贴板或存为新文件。
+  - 对 harness 设计：对话记录可导出，便于审计和复用。
+- `codex exec fork` 支持会话分叉，TUI 恢复选择器可归档/恢复会话。
+  - 对 harness 设计：会话管理更灵活，支持分支工作流。
+- 新增 Amazon Bedrock Runtime 内置 provider，支持 AWS profile、region 和 GPT-5.6 路由。
+  - 对 harness 设计：多 provider 支持，需考虑配置和认证的抽象。
+- Hooks 现在可异步运行命令并调用 MCP 工具。
+  - 对 harness 设计：hooks 能力增强，可集成外部工具，但需注意异步生命周期管理。
+- 修复：模型切换不再留下陈旧指令，恢复会话保留工作目录和审批策略，MCP 服务器在 OAuth 重新认证后自动恢复。
+  - 对 harness 设计：状态一致性提升，减少中断。
+
+---
+
+> 原文 release：[openai/codex rust-v0.148.0](https://github.com/openai/codex/releases/tag/rust-v0.148.0)

@@ -1,0 +1,23 @@
+---
+slug: 2026-08-18-blog-hf-blog-how-much-memory-does-your-agent-actually-need
+title: "How Much Memory Does Your Agent Actually Need? — IBM 研究团队提出 ALTK"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/ibm-research/altk-evolve-hmm
+publishedAt: 2026-08-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "IBM 研究团队提出 ALTK-Evolve 方法，动态调整智能体记忆窗口，以平衡性能与内存开销。"
+broadcast: "很多智能体都用固定长度的记忆窗口，但不同任务对历史信息的需求差别很大，要么浪费内存，要么信息不够用。IBM 团队提出的 ALTK-Evolve 方法，能根据任务进展动态调整记忆窗口，在保持性能的同时大幅降低内存占用。对开发者来说，这意味着设计智能体时不该默认固定上下文，而要考虑自适应机制，让长时任务更高效、更省资源。"
+tags: [agent-memory, adaptive-context, llm-efficiency]
+---
+
+- 文章指出，当前智能体普遍使用固定长度的记忆窗口，但实际任务对历史信息的需求差异很大，导致内存浪费或信息不足。
+- 作者提出 ALTK-Evolve 算法，根据任务进展和上下文相关性，动态扩展或收缩记忆窗口，实验显示在保持性能的同时显著降低内存占用。
+- 对开发者而言，这意味着智能体设计不应默认固定上下文长度，而应引入自适应机制，以提升长时任务的效率与资源利用率。
+
+---
+
+> 原文：[How Much Memory Does Your Agent Actually Need?](https://huggingface.co/blog/ibm-research/altk-evolve-hmm) · 作者 Hugging Face

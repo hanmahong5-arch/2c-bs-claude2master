@@ -1,0 +1,26 @@
+---
+slug: 2026-08-18-claude-code-2-1-235
+title: "claude-code v2.1.235 — 拼写检查、缓存修复、权限对话框改进，值得一看"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.235
+publishedAt: 2026-08-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "拼写检查、缓存修复、权限对话框改进，值得一看"
+broadcast: "最近这个代码助手工具更新了，新增了拼写检查功能，能在输入时标出错别字，帮你写出更准确的提示词。同时修复了缓存失效和权限对话框误操作的问题，用起来更稳定也更安全。对国内开发者来说，这些改进能减少日常开发中的小麻烦，值得关注。"
+insight: "本次更新值得国内用户升级，特别是拼写检查功能可提升提示词质量，而缓存修复和权限对话框改进增强了稳定性与安全性。若你使用 newapi.lurus.cn 代理，这些修复不影响代理，但建议升级后测试缓存命中率。现有 hook 配置无需改动，但可考虑启用 spellcheck 设置。"
+tags: [spellcheck, cache-fix, permission-dialog, vim-mode]
+---
+
+- 新增可选 `spellcheck` 设置，利用 aspell/hunspell/ispell 在输入时下划线标出拼写错误，提升提示词质量。
+- 修复语言服务器重连导致整个提示词缓存失效的问题，确保缓存命中率稳定。
+- 修复权限对话框中的 Shift+Tab 误操作，避免意外批准编辑权限，增强安全性。
+- 改进 Agent 工具在不可用时的错误提示，明确列出可用代理，减少混淆。
+- 优化后台云会话（如 /ultrareview）的内存和 CPU 占用，不再重复扫描事件流。
+- 修复 Vim 模式下切换详细转录或关闭面板时保持 NORMAL 模式和光标位置。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.235](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)

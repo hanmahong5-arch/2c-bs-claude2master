@@ -1,0 +1,32 @@
+---
+slug: 2026-08-18-hermes-agent-2026-8-18
+title: "hermes-agent v2026.8.18 — Hermes Agent 补丁版：桌面毛玻璃、标签侧栏、NVIDIA 技能扫描等"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.18
+publishedAt: 2026-08-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hermes Agent 补丁版：桌面毛玻璃、标签侧栏、NVIDIA 技能扫描等 74 个 PR 合并。"
+broadcast: "最近，Hermes Agent 发布了一个补丁版，主要给桌面界面加了毛玻璃效果，还改进了侧栏，让管理多个机器人更方便。同时，它修复了群聊中的一些问题，并在安装技能时增加了安全扫描。这些更新对开发者来说，意味着界面更美观，操作更顺手，而且运行更稳定，值得关注。"
+insight: "本次 Hermes Agent 补丁版主要聚焦 UI 与稳定性，对国内用户而言，若你正使用桌面端管理多 bot，标签侧栏和毛玻璃效果值得升级，体验更直观。但需注意，现有 prompt 或 hook 配置无需改动，功能增强不涉及接口变更。若你通过 newapi.lurus.cn 代理访问，此版本未提及代理相关调整，理论上不受影响，但建议升级后测试群聊长轮次与 cron 任务，确保路由与超时配置正常。"
+tags: [patch-release, desktop-ui, bot-mode, skill-evaluator]
+---
+
+- 桌面 UI 新增毛玻璃/半透明效果，含磨砂玻璃、取色器及 macOS 预选，提升视觉一致性。
+  - 对 agent harness 设计：UI 层需考虑跨平台窗口材质与系统集成。
+- 侧栏改为 SESSIONS|BOTS 标签式，支持按 bot 隐藏/显示，优化多 bot 管理。
+  - 对 agent harness 设计：会话与 bot 导航需更灵活的可视化控制。
+- Bot Mode 修复群聊长轮次、Markdown 渲染及跨机器路由问题。
+  - 对 agent harness 设计：群聊场景需强化状态同步与渲染稳定性。
+- NVIDIA SkillEvaluator 在技能安装时执行 Tier 1 许可与安全扫描。
+  - 对 agent harness 设计：技能安装流程应集成自动安全审查。
+- cron 媒体发送加固：可配置超时、手动运行附件、错失触发提示。
+  - 对 agent harness 设计：定时任务需提供更健壮的故障恢复与可见性。
+- SessionDB 修复事件循环线程竞争，提升稳定性。
+  - 对 agent harness 设计：底层存储需避免并发冲突，保证数据一致。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.8.18](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.18)

@@ -1,0 +1,23 @@
+---
+slug: 2026-08-17-blog-hf-blog-same-cluster-33-points-more-utilization-what-changed
+title: "Same Cluster, 33 Points More Utilization: What Changed — 通过调整任务调度顺序，同一集群利用率提升33个百分点，本文揭示调度策略的关键作用"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/Dharma-AI/gpu-management-pt2
+publishedAt: 2026-08-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "通过调整任务调度顺序，同一集群利用率提升33个百分点，本文揭示调度策略的关键作用。"
+broadcast: "今天聊个有意思的发现：同样的硬件，只是调整了任务调度顺序，GPU集群利用率就能提升33个百分点。这说明调度策略对资源效率影响巨大，不是简单先来先服务就行。对咱们做多agent系统的开发者来说，任务队列管理值得重视，通过智能排序减少资源空闲，整体吞吐量就能上去。"
+tags: [gpu-scheduling, cluster-utilization, task-ordering, resource-management]
+---
+
+- 文章指出，在相同硬件条件下，仅改变任务调度顺序即可将GPU集群利用率提升33个百分点，说明调度策略对资源效率影响巨大。
+- 作者强调，调度顺序优化需考虑任务依赖、资源需求和优先级，而非简单先来先服务，这为agent工具链中的任务编排提供了参考。
+- 对开发者而言，这意味着在构建多agent系统时，应重视任务队列管理，通过智能排序减少资源空闲，提升整体吞吐量。
+
+---
+
+> 原文：[Same Cluster, 33 Points More Utilization: What Changed Was the Order](https://huggingface.co/blog/Dharma-AI/gpu-management-pt2) · 作者 Hugging Face
