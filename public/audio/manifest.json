@@ -1,6 +1,116 @@
 {
   "items": [
     {
+      "slug": "2026-08-20-claude-code-2-1-237",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.237 — 修复网关缓存，新增简洁输出风格，提升效率",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-20"
+    },
+    {
+      "slug": "2026-08-19-blog-latentspace-ainews-memory-prices-up-500-in-12-months",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Memory prices up 500% in 12 months — 内存价格暴涨500%，AI基础设施面临RAMageddon，本文盘点AI圈一周动",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-19"
+    },
+    {
+      "slug": "2026-08-19-blog-openai-news-offering-zero-data-retention-for-frontier-models",
+      "zh": true,
+      "en": true,
+      "title": "Offering Zero Data Retention for frontier models — OpenAI 为前沿模型提供零数据保留，并预览私有安全处理。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-19"
+    },
+    {
+      "slug": "2026-08-19-blog-openai-news-replit-expands-access-to-software-creation-with-gpt",
+      "zh": true,
+      "en": true,
+      "title": "Replit expands access to software creation with GPT-5.6 — Replit 推出免费模式，用 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-19"
+    },
+    {
+      "slug": "2026-08-19-blog-simonwillison-conceptual-integrity-and-counting-lines-of-code",
+      "zh": true,
+      "en": true,
+      "title": "Conceptual integrity and counting lines of code — Simon Willison 谈 AI 改变软件开发：行数指标为何有效，以及概念",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-19"
+    },
+    {
+      "slug": "2026-08-19-blog-simonwillison-quoting-jeremy-morrell",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Jeremy Morrell — LLM降低扩展成本，现代沙箱提供安全边界，可扩展软件迎来新机遇。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-19"
+    },
+    {
+      "slug": "2026-08-19-blog-simonwillison-smolmachines-smolvm-as-a-sandbox-for-untrusted-python",
+      "zh": true,
+      "en": true,
+      "title": "smolmachines / smolvm as a sandbox for untrusted Python — Simon Willison 用 Claude Fable 5 测试 smolm",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-19"
+    },
+    {
+      "slug": "2026-08-19-claude-code-2-1-236",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.236 — 跨会话通知、默认模型变量、沙箱修复，值得一看",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-19"
+    },
+    {
+      "slug": "2026-08-19-cline-desktop-v0-0-14",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.14 — 桌面版 v0.0.14：原生通知、语音输入、命令流式输出，多项体验修复",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-19"
+    },
+    {
+      "slug": "2026-08-19-gemini-cli-0-56-0",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.56.0 — Gemini CLI 新增多工具并行调用，提升 agent 效率",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-08-19"
+    },
+    {
       "slug": "2026-08-19-trending-awesome-dsh-plugin-awesome-dsh-plugin",
       "zh": true,
       "en": false,
@@ -52,6 +162,28 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-blog-openai-news-asana-cleared-5-years-of-engineering-work-in",
+      "zh": true,
+      "en": true,
+      "title": "Asana cleared 5 years of engineering work in 2 weeks — Asana用Codex两周完成五年工作量，成本仅1.2万美元。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-18"
+    },
+    {
+      "slug": "2026-08-18-blog-openai-news-chatgpt-ads-expands-across-europe",
+      "zh": true,
+      "en": true,
+      "title": "ChatGPT Ads expands across Europe — OpenAI将ChatGPT广告扩展到31个欧洲市场，广告主可在用户决策时触达。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
       "tool": null,
       "publishedAt": "2026-08-18"
     },
@@ -747,138 +879,6 @@
       "source": "anthropics/claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-claude-code-2-1-232",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.232 — 子代理默认后台运行，跨会话消息直达，GitLab 全面支持",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-cline-4-1-9",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.9 — 修复 token 过期、日志误报，SDK 版 Claude Code 可用性提升",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-cline-cli-v3-0-54",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.54 — CLI v3.0.54 修复 Claude Code 代理、工具调用 JSON ",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-cline-desktop-v0-0-12",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.12 — Cline桌面版v0.0.12：工具调用独立展示，修复多项关键问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-cline-sdk-sdk-v0-0-74",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.74 — 修复 Claude Code 集成、工具调用 JSON 截断误修、Hub 守护进",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-hermes-agent-2026-8-13",
-      "zh": true,
-      "en": false,
-      "title": "hermes-agent v2026.8.13 — Hermes Agent 发布稳定补丁版，汇总 656 个 PR，为下游部署提供",
-      "kind": "changelog",
-      "author": null,
-      "source": "NousResearch/hermes-agent",
-      "tool": "hermes",
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-opencode-1-18-18",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.18 — 修复 Kimi 系统提示词选择与 xai 推理强度问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-trending-egoist-waku",
-      "zh": true,
-      "en": false,
-      "title": "waku — 为所有编码代理打造的本地原生应用",
-      "kind": "trending",
-      "author": null,
-      "source": "egoist/waku",
-      "tool": null,
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-12-blog-deepmind-putting-sign-language-ai-into-users-hands",
-      "zh": true,
-      "en": true,
-      "title": "Putting sign language AI into users’ hands — Google DeepMind推出手语转文本模型，助力聋人沟通。",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-blog-hf-blog-introducing-olmoearth-embeddings-custom-embedding-exports-from-olmoearth",
-      "zh": true,
-      "en": true,
-      "title": "Introducing OlmoEarth embeddings: Custom embedding — OlmoEarth 推出自定义嵌入导出，简化下游分析工作流。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-blog-hf-blog-lfm2-5-vl-3b-for-better-and-faster",
-      "zh": true,
-      "en": true,
-      "title": "LFM2.5-VL-3B for Better and Faster Vision Capabilities — LFM2.5",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-12"
-    },
-    {
-      "slug": "2026-08-12-blog-interconnects-i-wrote-an-ai-textbook-how-long-until",
-      "zh": true,
-      "en": true,
-      "title": "I wrote an AI textbook — how long until AI can do it — 作者亲历写AI教科书，发现模型长文写作停滞，对AI自主科研能力提出质疑。",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-08-12"
     }
   ]
 }
