@@ -1,0 +1,32 @@
+---
+slug: 2026-08-19-cline-desktop-v0-0-14
+title: "cline desktop-v0.0.14 — 桌面版 v0.0.14：原生通知、语音输入、命令流式输出，多项体验修复"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.14
+publishedAt: 2026-08-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "桌面版 v0.0.14：原生通知、语音输入、命令流式输出，多项体验修复"
+broadcast: "桌面版工具更新了，这次带来了原生通知和语音输入，任务完成或需要你操作时，即使后台运行也能提醒你。语音输入可以直接用麦克风转写，挺方便的。命令输出改成流式显示，还保留颜色，跑长任务时体验更顺。另外，图像生成模型也支持了，图片能直接显示。对做智能体开发的朋友来说，这些改进让日常调试和交互更顺手，值得试试。"
+insight: "桌面版 v0.0.14 主要增强体验，原生通知和语音输入对国内用户实用，但需注意语音转写依赖已配置模型，若走 newapi.lurus.cn 代理，建议确认模型支持语音输入，否则功能受限。现有用户值得升级，尤其常用后台任务和命令流式输出者。若已自定义 hook 或 prompt，本次更新未涉及相关改动，配置无需调整，但可留意 Web 搜索开关说明更清晰，便于优化设置。"
+tags: [desktop-app, notifications, voice-input, bug-fixes]
+---
+
+- 新增 macOS 原生通知，任务完成或需输入时提醒，可后台运行。
+- 支持语音输入，通过麦克风按钮转写，使用已配置的模型。
+- 命令输出流式显示，保留终端颜色，可滚动，支持后台运行。
+- 支持图像生成模型，图片内联显示。
+- 完成的任务折叠为摘要，展开可看详情。
+- 推理轨迹和工具行动画展开，尊重减少动态设置。
+- 问题卡片重新设计，支持多选和快捷键。
+- 设置中 Web 搜索开关说明更清晰，显示可用提供商。
+- 助手 markdown 渲染统一，桌面与云端一致。
+- 悬停操作浮动，会话卡片简化。
+- 新增 Cline Code Beta 应用，独立安装。
+- 修复事件流卡住、Yolo 模式误用、命令执行错误等问题。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.14](https://github.com/cline/cline/releases/tag/desktop-v0.0.14)

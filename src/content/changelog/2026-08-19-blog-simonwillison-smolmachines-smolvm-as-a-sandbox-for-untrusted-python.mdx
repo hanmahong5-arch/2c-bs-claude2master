@@ -1,0 +1,23 @@
+---
+slug: 2026-08-19-blog-simonwillison-smolmachines-smolvm-as-a-sandbox-for-untrusted-python
+title: "smolmachines / smolvm as a sandbox for untrusted Python — Simon Willison 用 Claude Fable 5 测试 smolm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/
+publishedAt: 2026-08-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 用 Claude Fable 5 测试 smolmachines 沙箱，探索运行不可信代码的边界。"
+broadcast: "今天聊聊一个叫小机器人的沙箱工具，它用微虚拟机来安全运行不可信的代码，限制资源访问。虽然网页环境跑不起来，但在云端虚拟机上能顺利执行。对开发者来说，这给处理用户提交的数据转换任务提供了安全方案，不过得留意环境依赖和资源限制。"
+tags: [sandboxing, untrusted-code, firecracker, ai-research]
+---
+
+- smolmachines 提供基于 Firecracker 的微虚拟机，用于安全运行不可信 Python 和 JavaScript，限制 CPU、内存、网络和文件系统访问。
+- 在 Claude Code for web 环境中因缺少嵌套虚拟化而无法运行，但通过 GitHub Actions 的 /dev/kvm 支持成功执行测试，展示了灵活变通。
+- 对开发者而言，这为执行用户提交的数据转换任务提供了安全沙箱方案，但需注意环境依赖（如 KVM）和资源限制。
+
+---
+
+> 原文：[smolmachines / smolvm as a sandbox for untrusted Python & JavaScript](https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/) · 作者 Simon Willison

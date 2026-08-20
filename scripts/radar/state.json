@@ -1,13 +1,13 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.235",
+    "anthropics/claude-code": "v2.1.237",
     "openai/codex": "rust-v0.148.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "desktop-v0.0.13",
+    "cline/cline": "desktop-v0.0.14",
     "block/goose": "v1.46.0",
     "sst/opencode": "v1.18.18",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.55.1",
+    "google-gemini/gemini-cli": "v0.56.0",
     "openclaw/openclaw": "v2026.6.34",
     "zeroclaw-labs/zeroclaw": "v0.8.4",
     "NousResearch/hermes-agent": "v2026.8.18"
@@ -205,9 +205,9 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-19",
+    "anthropic-engineering": "2026-08-20",
     "claude-code-docs": "2026-08-14",
-    "openai-codex-blog": "2026-08-13",
+    "openai-codex-blog": "2026-08-20",
     "openclaw-concepts": "2026-08-17",
     "hermes-guides": "2026-08-17"
   },
@@ -442,7 +442,10 @@
       "https://simonwillison.net/2026/Aug/16/dario-amodei/",
       "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/",
       "https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/",
-      "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/"
+      "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/",
+      "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/",
+      "https://simonwillison.net/2026/Aug/19/jeremy-morrell/",
+      "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -556,7 +559,8 @@
       "https://www.latent.space/p/flue-2",
       "https://www.latent.space/p/ainews-stripe-buys-openrouter-for",
       "https://www.latent.space/p/ainews-cursors-60b-acquisition-by",
-      "https://www.latent.space/p/glean-model-routing"
+      "https://www.latent.space/p/glean-model-routing",
+      "https://www.latent.space/p/ainews-memory-prices-up-500-in-12"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -811,7 +815,11 @@
       "https://openai.com/index/partnering-with-codeai",
       "https://openai.com/index/pacing-model-development-cyber-capabilities",
       "https://openai.com/index/chatgpt-for-teens",
-      "https://openai.com/index/nvidia/chatgpt-work"
+      "https://openai.com/index/nvidia/chatgpt-work",
+      "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+      "https://openai.com/index/replit",
+      "https://openai.com/index/chatgpt-ads-expands-across-europe",
+      "https://openai.com/index/asana"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1013,21 +1021,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-19",
-    "lilianweng": "2026-08-13",
-    "latentspace": "2026-08-19",
-    "interconnects": "2026-08-19",
+    "simonwillison": "2026-08-20",
+    "lilianweng": "2026-08-20",
+    "latentspace": "2026-08-20",
+    "interconnects": "2026-08-20",
     "karpathy": "2026-08-18",
     "raschka": "2026-08-18",
     "eugeneyan": "2026-08-18",
-    "chiphuyen": "2026-08-13",
+    "chiphuyen": "2026-08-20",
     "oneusefulthing": "2026-08-19",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-19",
+    "openai-news": "2026-08-20",
     "deepmind": "2026-08-19",
     "hf-blog": "2026-08-19",
-    "anthropic-news": "2026-08-19",
+    "anthropic-news": "2026-08-20",
     "steipete": "2026-08-19",
     "openclaw-blog": "2026-08-19"
   },

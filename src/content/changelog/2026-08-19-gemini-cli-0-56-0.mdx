@@ -1,0 +1,26 @@
+---
+slug: 2026-08-19-gemini-cli-0-56-0
+title: "gemini-cli v0.56.0 — Gemini CLI 新增多工具并行调用，提升 agent 效率"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0
+publishedAt: 2026-08-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Gemini CLI 新增多工具并行调用，提升 agent 效率"
+broadcast: "谷歌的Gemini命令行工具更新了，现在能同时调用多个工具，不用再一个个排队等结果，效率高了不少。这对做智能体开发的朋友来说是个好消息，因为并行调用意味着任务能跑得更快，但同时也得考虑怎么合并结果、处理冲突。另外，它还加了工具结果缓存，避免重复干活，不过缓存失效的问题也得留意。错误处理也更详细了，方便调试和自动恢复。"
+insight: "这次更新对现有用户价值明确：并行工具调用和结果缓存能直接减少等待、提升效率，值得升级。但注意，若你自建了 agent harness，并发合并、缓存失效和错误恢复这些新逻辑需要同步适配，否则可能引入一致性问题。国内走 newapi.lurus.cn 代理不受影响，升级后照常使用。"
+tags: [parallel-tools, caching, error-handling, cli]
+---
+
+- 支持并行工具调用，多个工具可同时执行，减少等待时间。
+- 对 agent harness 设计：需处理并发结果合并与冲突解决。
+- 新增工具结果缓存，避免重复调用，提升性能。
+- 对 agent harness 设计：需考虑缓存失效策略与一致性。
+- 改进工具错误处理，提供更详细的错误信息。
+- 对 agent harness 设计：需增强错误恢复与重试机制。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.56.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0)

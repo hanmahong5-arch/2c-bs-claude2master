@@ -1,0 +1,23 @@
+---
+slug: 2026-08-20-claude-code-2-1-237
+title: "claude-code v2.1.237 — 修复网关缓存，新增简洁输出风格，提升效率"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.237
+publishedAt: 2026-08-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复网关缓存，新增简洁输出风格，提升效率"
+broadcast: "最近Claude代码工具更新了，主要修了一个缓存问题，如果你用自定义网关或地址，现在缓存能正常工作了，这样能减少延迟和成本。另外新增了简洁输出风格，直接给结果，不废话，但质量不变。对开发者来说，自定义配置下能依赖缓存省token，简洁风格也适合快速响应的场景，值得试试。"
+insight: "如果你正用 LLM 网关或自定义 base URL，这次缓存修复值得升级，能省 token 和延迟。新增的简洁输出风格适合快速响应场景，但工作质量不变，可在 /config 里切换。国内用户走 newapi.lurus.cn 代理不受影响，缓存修复对自定义网关同样生效，建议升级后测试一下缓存命中情况。"
+tags: [prompt-caching, output-style, gateway, config]
+---
+
+- 修复了使用 LLM 网关或自定义 base URL 时的提示缓存问题，确保这些场景下缓存正常工作，减少延迟和成本。
+- 新增内置“简洁”输出风格，Claude 直接给出结果，跳过开场白和叙述，但工作质量不变。可在 /config 的输出风格中选择。
+- 对 agent harness 设计：缓存修复意味着自定义网关配置下可依赖缓存，优化 token 使用；简洁风格可减少冗长输出，提升交互效率，适合需要快速响应的场景。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.237](https://github.com/anthropics/claude-code/releases/tag/v2.1.237)
