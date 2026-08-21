@@ -1,0 +1,25 @@
+---
+slug: 2026-08-20-opencode-1-18-19
+title: "opencode v1.18.19 — 新增 AI Gateway 直连，修复多项兼容性与计费问题"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.19
+publishedAt: 2026-08-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "新增 AI Gateway 直连，修复多项兼容性与计费问题"
+broadcast: "最近开源编程工具更新了，新增了直接连接云端AI网关的功能，让开发者用起来更省事。同时调整了速率限制，更贴近订阅服务，大家要注意用量。还修复了不少兼容性和稳定性问题，比如认证显示和连接超时。对国内开发者来说，这些改进让AI辅助编程更顺畅，值得关注。"
+insight: "这次更新对国内用户影响不大，但值得关注。新增的 AI Gateway 直连简化了集成，不过如果你正用着 newapi.lurus.cn 代理，现有配置无需改动，仍可正常使用。Codex 速率限制更贴近订阅，需留意配额。Qwen 默认采样参数被移除，若你之前为兼容性手动设置过，建议检查是否多余。总体看，稳定性修复值得升级，但升级前确认你的 hook 配置不依赖旧参数即可。"
+tags: [ai-gateway, rate-limits, bugfixes, desktop]
+---
+
+- 新增 Cloudflare AI Gateway 模型的 OpenAI/Anthropic 原生直连，简化集成。
+- Codex 速率限制更贴近 ChatGPT 订阅，需注意配额管理。
+- 移除 Qwen 默认采样参数，避免发送不支持设置，确保兼容性。
+- 修复 /connect 显示认证提供商、忽略畸形定价、WebSocket 超限回退等，提升稳定性。
+- 桌面版保留服务器详情可编辑，改善用户体验。
+
+---
+
+> 原文 release：[sst/opencode v1.18.19](https://github.com/anomalyco/opencode/releases/tag/v1.18.19)

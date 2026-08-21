@@ -1,0 +1,30 @@
+---
+slug: 2026-08-20-codex-rust-v0-149-0
+title: "codex rust-v0.149.0 — Codex 0.149.0 新增 agents 仪表盘、队列命令和 Vim 增强"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.149.0
+publishedAt: 2026-08-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.149.0 新增 agents 仪表盘、队列命令和 Vim 增强，并修复多项安全与恢复问题。"
+broadcast: "OpenAI 的 Codex 工具更新了，这次带来了一个可视化的任务管理面板，可以搜索、启动、停止任务，还支持自定义快捷键。另外新增了队列命令，能向现有会话发消息，甚至唤醒空闲会话。对开发智能体的朋友来说，任务管理从命令行转向可视化，异步消息投递也更可靠，值得关注。"
+insight: "这次 0.149.0 的更新对国内用户影响不大，核心是任务管理和编辑体验的增强。如果你已经在用 Codex 做日常开发，升级是值得的，特别是 `codex queue` 能异步唤醒会话，配合代理使用更顺手。现有 prompt 或 hook 配置不需要改动，因为变更集中在 CLI 和仪表盘层面。走 newapi.lurus.cn 代理不受影响，`codex doctor` 新增的网络诊断项反而能帮你更快定位代理连接问题。"
+tags: [agents-dashboard, queue-command, vim-editing, sdk-config]
+---
+
+- 新增 `codex agents` 交互式仪表盘，可搜索、启动、打开、重命名和停止任务，并支持自定义快捷键。
+  - 对 agent harness 设计：任务管理从 CLI 转向可视化仪表盘，需考虑状态同步与快捷键配置。
+- 新增 `codex queue` 命令，可向现有本地或远程会话发送消息，且队列消息能可靠唤醒空闲会话。
+  - 对 agent harness 设计：支持异步消息投递，需处理会话命名冲突和消息语义保持。
+- 扩展 Vim 编辑能力，支持字符替换及 `cw`、`c$`、`cc` 等变更动作。
+  - 对 agent harness 设计：TUI 编辑体验增强，需适配不同编辑模式。
+- `codex doctor` 新增诊断项，覆盖端点保护、网络/代理故障、桌面应用状态和更新连接。
+  - 对 agent harness 设计：诊断能力扩展，便于排查环境问题。
+- SDK 支持传递精确 CLI 配置覆盖，并可选择 `max` 或 `ultra` 推理强度。
+  - 对 agent harness 设计：SDK 灵活性提升，需确保配置覆盖与推理强度参数正确传递。
+
+---
+
+> 原文 release：[openai/codex rust-v0.149.0](https://github.com/openai/codex/releases/tag/rust-v0.149.0)

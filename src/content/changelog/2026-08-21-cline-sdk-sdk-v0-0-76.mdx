@@ -1,0 +1,25 @@
+---
+slug: 2026-08-21-cline-sdk-sdk-v0-0-76
+title: "cline sdk/sdk/v0.0.76 — SDK 新增图像生成、定时任务，修复多项工具事件与钩子问题"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.76
+publishedAt: 2026-08-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK 新增图像生成、定时任务，修复多项工具事件与钩子问题"
+broadcast: "这次更新给开发者带来了两个实用功能，一是模型驱动的图像生成，图片能存进会话历史并导出，不过需要模型支持。二是代理可以创建定时任务和待办议程，作用范围限定在工作区。另外还修复了工具事件被丢弃的问题，钩子处理也更完善了。对做智能体开发的朋友来说，这些改进让任务调度和工具调用更可靠，值得关注。"
+insight: "SDK v0.0.76 对现有用户值得升级，尤其依赖工具事件与钩子行为的场景，修复了 provider 工具活动丢弃和 PreToolUse 修改未传递的问题，升级后行为更可预期。技能斜杠命令改为 skills 工具加载，若你自定义过斜杠命令，需检查配置是否兼容。国内用户走 newapi.lurus.cn 代理不受影响，本次更新纯 SDK 层，未涉及网络或代理逻辑。"
+tags: [image-generation, scheduled-tasks, hooks, tool-events]
+---
+
+- 新增模型驱动的图像生成，图像持久化到会话历史与导出，需模型支持。
+- 代理可创建定时任务与持久化待办议程，作用域限定工作区。
+- 技能斜杠命令改为通过 skills 工具加载，记录输入而非 SKILL.md 全文，避免重复注入。
+- 修复 provider 执行工具活动被丢弃，现以观察事件呈现。
+- PreToolUse 的 contextModification 现在会传递给模型，PostToolUse 钩子被等待并支持取消。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.76](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.76)
