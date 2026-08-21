@@ -1,6 +1,127 @@
 {
   "items": [
     {
+      "slug": "2026-08-21-cline-sdk-sdk-v0-0-76",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.76 — SDK 新增图像生成、定时任务，修复多项工具事件与钩子问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-trending-autumn-27-artex",
+      "zh": true,
+      "en": false,
+      "title": "ARTEX — AI 自主渗透测试系统，Go 实现",
+      "kind": "trending",
+      "author": null,
+      "source": "Autumn-27/ARTEX",
+      "tool": null,
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-trending-hairyf-deepseek-harness-desktop",
+      "zh": true,
+      "en": false,
+      "title": "deepseek-harness-desktop — 5MB 安装包，零配置跑 DeepSeek 的桌面工具",
+      "kind": "trending",
+      "author": null,
+      "source": "hairyf/deepseek-harness-desktop",
+      "tool": null,
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-trending-pgrundev-pgbot",
+      "zh": true,
+      "en": false,
+      "title": "pgbot — 给 AI 代理装上 Postgres 大脑的 Go 工具",
+      "kind": "trending",
+      "author": null,
+      "source": "pgrundev/pgbot",
+      "tool": null,
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-20-blog-hf-blog-up-to-3-2x-faster-inference-with-lfm2",
+      "zh": true,
+      "en": true,
+      "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark — LFM2.5",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-20"
+    },
+    {
+      "slug": "2026-08-20-blog-latentspace-ainews-death-of-params-z-ai-ceo-jie",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Death of Params: Z.ai CEO Jie Tang on GLM 5.3 — GLM 5.3 揭示后训练新缩放定律：参数不再是唯一关键，环境合成与长程 RL ",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-20"
+    },
+    {
+      "slug": "2026-08-20-blog-latentspace-the-wayfinder-skill-navigating-the-fog-of-war",
+      "zh": true,
+      "en": true,
+      "title": "The /wayfinder Skill: Navigating the “Fog of War” of — Matt Pocock 的 /wayfinder 技能，帮你和 AI 代理在项目",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-20"
+    },
+    {
+      "slug": "2026-08-20-blog-openai-news-introducing-ai-futures",
+      "zh": true,
+      "en": true,
+      "title": "Introducing AI Futures — OpenAI新博客探讨AI如何重塑权力、治理、经济与个人自由。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-20"
+    },
+    {
+      "slug": "2026-08-20-blog-openai-news-stampli-cuts-launch-hours-by-68-using-chatgpt",
+      "zh": true,
+      "en": true,
+      "title": "Stampli cuts launch hours by 68% using ChatGPT Work — Stampli用ChatGPT Work将发布工时削减68%，展示AI如何加速产",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-20"
+    },
+    {
+      "slug": "2026-08-20-blog-simonwillison-a-shot-scraper-style-json-api-on-bun",
+      "zh": true,
+      "en": true,
+      "title": "A shot-scraper-style JSON API on Bun 1.4's new — Bun 1.4 新增 Bun.WebView，Simon Willison 用它",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-20"
+    },
+    {
+      "slug": "2026-08-20-blog-simonwillison-chatgpt-search-now-uses-the-site-operator-at",
+      "zh": true,
+      "en": true,
+      "title": "ChatGPT search now uses the site:operator at scale — ChatGPT搜索大规模使用site",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-20"
+    },
+    {
       "slug": "2026-08-20-claude-code-2-1-237",
       "zh": true,
       "en": false,
@@ -9,6 +130,39 @@
       "author": null,
       "source": "anthropics/claude-code",
       "tool": "claude-code",
+      "publishedAt": "2026-08-20"
+    },
+    {
+      "slug": "2026-08-20-claude-code-2-1-238",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.238 — Claude Code 新增 keybindingFlavor、插件 heade",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-20"
+    },
+    {
+      "slug": "2026-08-20-codex-rust-v0-149-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.149.0 — Codex 0.149.0 新增 agents 仪表盘、队列命令和 Vim 增强",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-08-20"
+    },
+    {
+      "slug": "2026-08-20-opencode-1-18-19",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.19 — 新增 AI Gateway 直连，修复多项兼容性与计费问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
       "publishedAt": "2026-08-20"
     },
     {
@@ -725,160 +879,6 @@
       "source": "cline/cline",
       "tool": "cline",
       "publishedAt": "2026-08-14"
-    },
-    {
-      "slug": "2026-08-14-trending-deepseek-ai-deepseek-harness",
-      "zh": true,
-      "en": false,
-      "title": "deepseek-harness — DeepSeek 开源插件化测试框架，一切皆插件",
-      "kind": "trending",
-      "author": null,
-      "source": "deepseek-ai/deepseek-harness",
-      "tool": null,
-      "publishedAt": "2026-08-14"
-    },
-    {
-      "slug": "2026-08-14-trending-drumih-turbo-fieldfare",
-      "zh": true,
-      "en": false,
-      "title": "turbo-fieldfare — Swift 实现 Gemma 4 26B",
-      "kind": "trending",
-      "author": null,
-      "source": "drumih/turbo-fieldfare",
-      "tool": null,
-      "publishedAt": "2026-08-14"
-    },
-    {
-      "slug": "2026-08-13-blog-deepmind-introducing-gemini-3-7-flash",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Gemini 3.7 Flash — Google DeepMind 发布 Gemini 3.7 Flash，主打低延",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-blog-hf-blog-record-train-and-deploy-from-one-place-with",
-      "zh": true,
-      "en": true,
-      "title": "Record, train, and deploy from one place with Strands — Strands Agents 与 LeRobot 集成，实现机器人数据采集、训练",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-blog-hf-blog-what-we-learned-by-reproducing-2-200-papers",
-      "zh": true,
-      "en": true,
-      "title": "What We Learned by Reproducing 2,200 papers from ICML — 复现2200篇ICML论文，总结可复现性经验与工具链启示。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-blog-latentspace-ainews-spacexai-grok-4-6-and-grok-bot",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] SpaceXAI Grok 4.6 and Grok @Bot — Grok 4.6 发布，效率登顶，AI 代理成知识工作新战场。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-blog-openai-news-openai-appoints-dali-rajic-as-chief-revenue-officer",
-      "zh": true,
-      "en": true,
-      "title": "OpenAI appoints Dali Rajic as Chief Revenue Officer — OpenAI任命Dali Rajic为首席营收官，推动AI商业价值实现。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-blog-openai-news-previewing-ultrafast-mode-gpt-5-6-sol-at",
-      "zh": true,
-      "en": true,
-      "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the — OpenAI 推出 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-blog-openai-news-the-builder-s-guide-to-gpt-5-6",
-      "zh": true,
-      "en": true,
-      "title": "The builder’s guide to GPT‑5.6 — OpenAI 官方指南：如何用 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-blog-simonwillison-alchemy-utils-0-1a1",
-      "zh": true,
-      "en": true,
-      "title": "alchemy-utils 0.1a1 — Simon Willison 发布 alchemy",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-blog-simonwillison-llm-gemini-0-33",
-      "zh": true,
-      "en": true,
-      "title": "llm-gemini 0.33 — Simon Willison 发布 llm",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-blog-simonwillison-sqlite-utils-4-2-1",
-      "zh": true,
-      "en": true,
-      "title": "sqlite-utils 4.2.1 — sqlite",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-blog-simonwillison-sqlite-utils-4-2",
-      "zh": true,
-      "en": true,
-      "title": "sqlite-utils 4.2 — sqlite",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-13"
-    },
-    {
-      "slug": "2026-08-13-claude-code-2-1-231",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.231 — 修复 MCP OAuth 登录重定向 URI 不匹配问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-13"
     }
   ]
 }
