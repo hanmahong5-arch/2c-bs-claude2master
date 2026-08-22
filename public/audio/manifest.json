@@ -1,6 +1,138 @@
 {
   "items": [
     {
+      "slug": "2026-08-22-trending-jundizhou-easy-stock",
+      "zh": true,
+      "en": false,
+      "title": "easy-stock — Go 写的 A 股行情分析与 AI 智能投研智能体",
+      "kind": "trending",
+      "author": null,
+      "source": "jundizhou/easy-stock",
+      "tool": null,
+      "publishedAt": "2026-08-22"
+    },
+    {
+      "slug": "2026-08-21-blog-latentspace-ainews-poolside-gets-12b-reverse-execuhire-to-nvidia",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Poolside gets $12B reverse-execuhire to — Poolside 被 NVIDIA 反向收购，创始人留任、员工转投，揭示 AI ",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-blog-latentspace-simulation-the-new-scaling-law-joon-sung-park",
+      "zh": true,
+      "en": true,
+      "title": "Simulation: the new Scaling Law — Joon Sung Park, — Simile AI 用模拟人类行为做数字孪生，85% 准确率，或成新 scali",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-blog-simonwillison-llm-0-32-1",
+      "zh": true,
+      "en": true,
+      "title": "llm 0.32.1 — LLM 0.32.1 修复因 OpenAI 库弃用 httpx 导致的安装问题，",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-blog-simonwillison-llm-openrouter-0-7",
+      "zh": true,
+      "en": true,
+      "title": "llm-openrouter 0.7 — llm",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-blog-simonwillison-quoting-matt-webb",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Matt Webb — Matt Webb 用 ChatGPT 当导师学会四元数，AI 推动持续学习。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-blog-simonwillison-stop-making-tuis",
+      "zh": true,
+      "en": true,
+      "title": "Stop Making TUIs — Simon Willison 呼吁停止只做 TUI，用 AI 低成本构建原生 G",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-claude-code-2-1-239",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.239 — 成本估算含数据驻留溢价，新增API迁移命令，修复大量代理与全屏问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-cline-4-1-11",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.1.11 — Cline v4.1.11 修复多项关键 bug，并支持模型生成图片。",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-cline-4-1-12",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.1.12 — 修复企业 MCP 控制与自定义模型工具调用",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-cline-cli-v3-0-56",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.56 — 图像生成、技能加载方式、钩子修复等多项更新",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-cline-desktop-v0-0-15",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.15 — Cline 桌面版更名并整合插件、模型选择器，修复多项关键 bug。",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-21"
+    },
+    {
       "slug": "2026-08-21-cline-sdk-sdk-v0-0-76",
       "zh": true,
       "en": false,
@@ -9,6 +141,61 @@
       "author": null,
       "source": "cline/cline",
       "tool": "cline",
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-cline-sdk-sdk-v0-0-77",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.77 — tasks 工具按客户端类型集中解析，避免无效注册",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-goose-1-47-0",
+      "zh": true,
+      "en": false,
+      "title": "goose v1.47.0 — Goose v1.47.0 强化 OAuth 安全、上下文管理，并引入新的 ag",
+      "kind": "changelog",
+      "author": null,
+      "source": "block/goose",
+      "tool": "goose",
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-hermes-agent-2026-8-19",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v2026.8.19 — Hermes Agent 0.20.5 聚合 323 个 PR，含 Bot Mo",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-opencode-1-18-20",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.20 — 修复子代理失败与网络错误重试，提升稳定性",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-opencode-1-18-21",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.21 — 修复模型未知结束原因导致提前停止，以及桌面端搜索与归档命令问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
       "publishedAt": "2026-08-21"
     },
     {
@@ -692,193 +879,6 @@
       "source": "NousResearch/hermes-agent",
       "tool": "hermes",
       "publishedAt": "2026-08-16"
-    },
-    {
-      "slug": "2026-08-16-trending-anywhere-labs-deepseek-harness-desktop",
-      "zh": true,
-      "en": false,
-      "title": "deepseek-harness-desktop — DeepSeek 生态桌面端，让 AI 工作流更顺手",
-      "kind": "trending",
-      "author": null,
-      "source": "anywhere-labs/deepseek-harness-desktop",
-      "tool": null,
-      "publishedAt": "2026-08-16"
-    },
-    {
-      "slug": "2026-08-15-blog-anthropic-news-how-claude-s-text-watermarking-works",
-      "zh": true,
-      "en": true,
-      "title": "How Claude's text watermarking works — Claude 文本水印如何在不影响输出质量的前提下标记 AI 生成内容？",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-08-15"
-    },
-    {
-      "slug": "2026-08-15-blog-latentspace-react-for-agents-astro-creator-brings-hooks-to",
-      "zh": true,
-      "en": true,
-      "title": "React for Agents: Astro Creator Brings Hooks to his — Astro 作者推出 Flue 2，将 React Hooks 引入 Agent",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-15"
-    },
-    {
-      "slug": "2026-08-15-blog-raschka-building-an-ai-text-detector-from-scratch",
-      "zh": true,
-      "en": true,
-      "title": "Building an AI Text Detector From Scratch — Sebastian Raschka 从零构建 AI 文本检测器，讲解原理并演示如",
-      "kind": "blogger",
-      "author": "Sebastian Raschka",
-      "source": "Sebastian Raschka",
-      "tool": null,
-      "publishedAt": "2026-08-15"
-    },
-    {
-      "slug": "2026-08-15-blog-simonwillison-cors-chat",
-      "zh": true,
-      "en": true,
-      "title": "CORS Chat — 用CORS Chat测试本地LLM端点，支持流式SVG渲染。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-15"
-    },
-    {
-      "slug": "2026-08-15-blog-simonwillison-northern-gannet",
-      "zh": true,
-      "en": true,
-      "title": "Northern Gannet — 一只北大西洋海鸟为何成为太平洋唯一？Morris的14年故事。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-15"
-    },
-    {
-      "slug": "2026-08-15-trending-guillaumemeyer-watermarks-remover",
-      "zh": true,
-      "en": false,
-      "title": "watermarks-remover — 去除AI水印的多格式工具，支持C2PA与文本痕迹清理",
-      "kind": "trending",
-      "author": null,
-      "source": "guillaumemeyer/watermarks-remover",
-      "tool": null,
-      "publishedAt": "2026-08-15"
-    },
-    {
-      "slug": "2026-08-14-blog-hf-blog-state-of-open-models-summer-2026-observations",
-      "zh": true,
-      "en": true,
-      "title": "State of Open Models: Summer 2026 Observations — 开源模型生态夏季观察：性能、许可与工具链的现状与趋势。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-14"
-    },
-    {
-      "slug": "2026-08-14-blog-interconnects-glm-5-3-how-chinese-labs-keep-stride",
-      "zh": true,
-      "en": true,
-      "title": "GLM-5.3: How Chinese labs keep stride with the frontier — GLM",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-08-14"
-    },
-    {
-      "slug": "2026-08-14-blog-latentspace-ainews-cursor-s-60b-acquisition-by-spacexai-closes",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Cursor's $60B acquisition by SpaceXai closes — Cursor 被 SpaceXAI 收购，开源模型与 Agent 运行时成为焦点",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-14"
-    },
-    {
-      "slug": "2026-08-14-blog-latentspace-ainews-gemini-3-7-flash-brings-gdm-back",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Gemini 3.7 Flash brings GDM back to the — Gemini 3.7 Flash发布，性能大幅提升，GDM重回前沿。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-14"
-    },
-    {
-      "slug": "2026-08-14-blog-simonwillison-don-t-classify-hallucinate",
-      "zh": true,
-      "en": true,
-      "title": "Don't classify. Hallucinate! — Simon Willison 提出用 LLM 生成新标签，再通过向量嵌入匹配现有",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-14"
-    },
-    {
-      "slug": "2026-08-14-claude-code-2-1-233",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.233 — Claude Code 2.1.233：GitLab MR 支持、内存限制、安全",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-14"
-    },
-    {
-      "slug": "2026-08-14-cline-4-1-10",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.10 — Cline v4.1.10 新增联网搜索，修复 Hub 冲突，更新模型目录。",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-14"
-    },
-    {
-      "slug": "2026-08-14-cline-cli-v3-0-55",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.55 — 修复 Hub 更新竞态，防止会话被杀，流式渲染更稳",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-14"
-    },
-    {
-      "slug": "2026-08-14-cline-desktop-v0-0-13",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.13 — 桌面端 v0.0.13：字体缩放、联网搜索、修复 Hub 冲突，值得一看。",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-14"
-    },
-    {
-      "slug": "2026-08-14-cline-sdk-sdk-v0-0-75",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.75 — SDK v0.0.75 带来模型自主搜索、Hub 稳定性修复和沙箱回收。",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-14"
     }
   ]
 }
