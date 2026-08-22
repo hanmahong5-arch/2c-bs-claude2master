@@ -1,0 +1,26 @@
+---
+slug: 2026-08-21-goose-1-47-0
+title: "goose v1.47.0 — Goose v1.47.0 强化 OAuth 安全、上下文管理，并引入新的 ag"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.47.0
+publishedAt: 2026-08-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.47.0 强化 OAuth 安全、上下文管理，并引入新的 agent 循环状态机。"
+broadcast: "这次更新重点强化了安全与稳定性，比如OAuth认证更规范，还修复了上下文超限的问题。特别值得关注的是，它引入了一个新的状态机来管理智能体的循环流程，这样开发者就能更轻松地控制复杂任务，也让框架更容易扩展，对做智能体开发的朋友来说是个好消息。"
+insight: "这次升级对现有用户价值不大，除非你正被 OAuth 或上下文超限问题困扰。若在用 Gemini OAuth，需尽快迁移到预注册客户端，否则可能失效。unrolled 状态机是内部重构，对 prompt 和 hook 配置无直接影响，不必改动。国内走 newapi.lurus.cn 代理不受影响，安全传输和状态机都在客户端侧，代理层无需调整。建议按需升级，优先处理 OAuth 兼容性。"
+tags: [oauth, context-management, agent-loop, bug-fixes]
+---
+
+- 新增 OAuth 预注册客户端支持，并强制安全 token 传输，弃用 Gemini OAuth。
+  - 对 harness 设计：需确保 OAuth 流程符合安全规范，并注意 provider 兼容性。
+- 修复上下文超限错误处理，包括字节大小限制和显式禁用思考。
+  - 对 harness 设计：需统一错误分类，并针对模型能力调整请求参数。
+- 引入 unrolled agent loop 状态机，并泛化以支持多种 agent 类型。
+  - 对 harness 设计：可复用状态机简化循环控制，提升可扩展性。
+
+---
+
+> 原文 release：[block/goose v1.47.0](https://github.com/aaif-goose/goose/releases/tag/v1.47.0)

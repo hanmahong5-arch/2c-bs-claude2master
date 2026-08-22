@@ -1,0 +1,25 @@
+---
+slug: 2026-08-21-hermes-agent-2026-8-19
+title: "hermes-agent v2026.8.19 — Hermes Agent 0.20.5 聚合 323 个 PR，含 Bot Mo"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.19
+publishedAt: 2026-08-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hermes Agent 0.20.5 聚合 323 个 PR，含 Bot Mode 群聊、无密钥 Web 层等关键更新。"
+broadcast: "最近，Hermes Agent 更新到了新版本，这次一口气合并了三百多个改进。最亮眼的是新增了群聊模式，多个代理可以一起在群里协作，还支持无密钥的网页搜索，新装就能直接用。另外，定时任务现在能记住之前的对话，还能按任务调整思考深度。对咱们做代理开发的朋友来说，这些更新意味着要更关注线程管理、密钥切换和超时保护这些细节了。"
+insight: "这次 0.20.5 聚合 323 个 PR，Bot Mode 群聊和无密钥 Web 层是实打实的升级点。如果你在用旧版，值得升，但注意 harness 要跟上线程状态管理和密钥故障切换，否则群聊和零密钥搜索体验会打折。国内用户走 newapi.lurus.cn 代理不受影响，无密钥层只是新增入口，原有密钥配置照常。现有 prompt 和 hook 不用大改，倒是 cron 任务多了持久记忆和推理力度，建议按任务调一下，别一刀切。"
+tags: [bot-mode, web-tier, cli, cron]
+---
+
+- **Bot Mode 新增群组房间线程与可折叠对话摘要**：支持多代理群聊场景，harness 需管理线程状态与摘要折叠逻辑。
+- **无密钥 Web 层上线**：5 家供应商免费轮换 + 环形故障转移，新装零密钥即可搜索，harness 需实现密钥管理与故障切换。
+- **CLI 打磨**：模糊 /model 选择器、Ctrl+P 命令面板、更丰富的 /status，harness 需优化交互与状态展示。
+- **执行纪律与运行时停滞防护**：基于 Composio 评估发现，harness 需加强超时与停滞检测。
+- **cron 任务获得持久记忆与按任务推理力度**：harness 需支持任务级记忆与推理配置。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.8.19](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.19)

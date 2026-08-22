@@ -1,0 +1,30 @@
+---
+slug: 2026-08-21-claude-code-2-1-239
+title: "claude-code v2.1.239 — 成本估算含数据驻留溢价，新增API迁移命令，修复大量代理与全屏问题"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.239
+publishedAt: 2026-08-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "成本估算含数据驻留溢价，新增API迁移命令，修复大量代理与全屏问题"
+broadcast: "这次更新给开发者带来了几个实用变化。成本估算现在会把数据驻留区域的额外溢价算进去，做预算控制时得留意这一点。另外新增了API迁移命令，方便把Python项目升级到新版本。还修复了代理环境下重复计费、页面内容缓存过久等一堆问题，对做智能体开发的来说，这些细节能减少不少麻烦。"
+insight: "本次更新对国内用户影响不大，但值得关注两点：一是成本估算新增数据驻留溢价，若你使用数据驻留工作区，预算控制需重新校准；二是新增API迁移命令，若你的Python项目还在用anthropic 0.x，建议升级到1.x并改用`anthropic.Timeout`。代理方面，修复了Bedrock重复计费和HTTPS代理挂起问题，走newapi.lurus.cn代理的稳定性应有所提升，现有配置无需改动，但建议留意升级后是否触发新的代理行为。"
+tags: [cost-estimation, api-migration, proxy-fixes, fullscreen-ui]
+---
+
+- 成本估算（/cost、状态栏、--max-budget-usd）现包含数据驻留工作区的1.1倍美国推理溢价。
+  - 对harness设计：需在成本计算中考虑区域溢价，确保预算控制准确。
+- 新增 `/claude-api upgrade` 命令，将Python项目从anthropic 0.x迁移到1.x，并更新Python参考（超时用`anthropic.Timeout`）。
+  - 对harness设计：需支持API版本迁移，并更新超时处理方式。
+- 修复Bedrock在代理剥离Content-Type时静默重复计费的问题，以及启动时HTTPS代理挂起问题。
+  - 对harness设计：需处理代理环境下的流式响应和凭据刷新，避免重复调用。
+- 修复WebFetch保留过期页面内容整个会话的问题，现仅保留15分钟。
+  - 对harness设计：需实现内容缓存过期机制，防止内存泄漏。
+- 修复全屏模式下权限提示误触发、面板遮挡消息等问题，并改进表单滚动。
+  - 对harness设计：需优化全屏UI交互，确保提示和面板不干扰对话。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.239](https://github.com/anthropics/claude-code/releases/tag/v2.1.239)

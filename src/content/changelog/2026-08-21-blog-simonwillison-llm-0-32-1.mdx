@@ -1,0 +1,23 @@
+---
+slug: 2026-08-21-blog-simonwillison-llm-0-32-1
+title: "llm 0.32.1 — LLM 0.32.1 修复因 OpenAI 库弃用 httpx 导致的安装问题，"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/21/llm/
+publishedAt: 2026-08-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "LLM 0.32.1 修复因 OpenAI 库弃用 httpx 导致的安装问题，并预告迁移至 httpx2。"
+broadcast: "最近有个叫LLM的工具更新了，修复了一个安装问题。原因是它依赖的OpenAI库不再支持某个网络组件，导致安装失败。这次更新暂时解决了问题，但也提醒我们，开发时要主动声明依赖，别让隐式依赖出岔子。接下来它还会换用新的网络组件，大家得留意上游变化，及时适配。"
+tags: [llm, openai, httpx, dependency-management]
+---
+
+- OpenAI Python 库移除了对 httpx 的依赖，导致 LLM 因传递依赖而失效，0.32.1 通过固定 openai<3 临时修复。
+- 对开发者而言，依赖传递性风险凸显，需主动声明直接依赖，避免隐式依赖断裂。
+- 未来 0.33 版本将迁移至 httpx2，提示工具链需紧跟上游库变化，及时适配新 HTTP 客户端。
+
+---
+
+> 原文：[llm 0.32.1](https://simonwillison.net/2026/Aug/21/llm/) · 作者 Simon Willison

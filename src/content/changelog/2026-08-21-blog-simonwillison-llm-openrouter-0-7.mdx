@@ -1,0 +1,23 @@
+---
+slug: 2026-08-21-blog-simonwillison-llm-openrouter-0-7
+title: "llm-openrouter 0.7 — llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/21/llm-openrouter/
+publishedAt: 2026-08-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "llm-openrouter 0.7 发布，适配 LLM 0.32，支持推理模型与 Responses API，新增三个服务端工具。"
+broadcast: "最近有个叫llm-openrouter的插件更新了，它适配了新版LLM，还改用了一种新的接口，让推理模型在调用工具和输出时更稳定。另外新增了三个服务端工具，可以直接让模型执行命令或抓网页，省去来回沟通。对开发者来说，这展示了插件怎么快速跟上变化，还能提升自动化任务的效率。"
+tags: [llm, openrouter, cli, tools]
+---
+
+- 插件更新至兼容 LLM 0.32，并改用 OpenRouter 的 Responses API 实现，使推理模型（如 o1 系列）在工具调用和流式输出上表现更稳定。
+- 新增 Shell、WebFetch、WebSearch 三个服务端工具，可通过 `-T` 选项启用，扩展了 CLI 的自动化能力，例如直接让模型执行 shell 命令或抓取网页。
+- 对开发者而言，这展示了插件生态如何快速跟进上游 API 变化，并利用服务端工具减少客户端往返，提升 agent 任务效率。
+
+---
+
+> 原文：[llm-openrouter 0.7](https://simonwillison.net/2026/Aug/21/llm-openrouter/) · 作者 Simon Willison

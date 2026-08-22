@@ -1,16 +1,16 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.238",
+    "anthropics/claude-code": "v2.1.239",
     "openai/codex": "rust-v0.149.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "sdk/sdk/v0.0.76",
-    "block/goose": "v1.46.0",
-    "sst/opencode": "v1.18.19",
+    "cline/cline": "v4.1.12",
+    "block/goose": "v1.47.0",
+    "sst/opencode": "v1.18.21",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.56.0",
     "openclaw/openclaw": "v2026.6.34",
     "zeroclaw-labs/zeroclaw": "v0.8.4",
-    "NousResearch/hermes-agent": "v2026.8.18"
+    "NousResearch/hermes-agent": "v2026.8.19"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -121,7 +121,8 @@
     "lexmount/moli",
     "hairyf/deepseek-harness-desktop",
     "Autumn-27/ARTEX",
-    "pgrundev/pgbot"
+    "pgrundev/pgbot",
+    "jundizhou/easy-stock"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -208,7 +209,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-21",
+    "anthropic-engineering": "2026-08-22",
     "claude-code-docs": "2026-08-21",
     "openai-codex-blog": "2026-08-20",
     "openclaw-concepts": "2026-08-17",
@@ -450,7 +451,11 @@
       "https://simonwillison.net/2026/Aug/19/jeremy-morrell/",
       "https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/",
       "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/",
-      "https://simonwillison.net/2026/Aug/20/bun-webview-json-api/"
+      "https://simonwillison.net/2026/Aug/20/bun-webview-json-api/",
+      "https://simonwillison.net/2026/Aug/21/llm/",
+      "https://simonwillison.net/2026/Aug/21/llm-openrouter/",
+      "https://simonwillison.net/2026/Aug/21/stop-making-tuis/",
+      "https://simonwillison.net/2026/Aug/21/matt-webb/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -567,7 +572,9 @@
       "https://www.latent.space/p/glean-model-routing",
       "https://www.latent.space/p/ainews-memory-prices-up-500-in-12",
       "https://www.latent.space/p/wayfinder-skill",
-      "https://www.latent.space/p/ainews-death-of-params-zai-ceo-jie"
+      "https://www.latent.space/p/ainews-death-of-params-zai-ceo-jie",
+      "https://www.latent.space/p/simile",
+      "https://www.latent.space/p/ainews-poolside-gets-12b-reverse"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1031,10 +1038,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-21",
+    "simonwillison": "2026-08-22",
     "lilianweng": "2026-08-20",
-    "latentspace": "2026-08-21",
-    "interconnects": "2026-08-21",
+    "latentspace": "2026-08-22",
+    "interconnects": "2026-08-22",
     "karpathy": "2026-08-21",
     "raschka": "2026-08-21",
     "eugeneyan": "2026-08-21",
@@ -1042,10 +1049,10 @@
     "oneusefulthing": "2026-08-21",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-21",
+    "openai-news": "2026-08-22",
     "deepmind": "2026-08-21",
     "hf-blog": "2026-08-21",
-    "anthropic-news": "2026-08-21",
+    "anthropic-news": "2026-08-22",
     "steipete": "2026-08-21",
     "openclaw-blog": "2026-08-21"
   },

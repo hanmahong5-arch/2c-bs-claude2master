@@ -1,0 +1,28 @@
+---
+slug: 2026-08-21-cline-desktop-v0-0-15
+title: "cline desktop-v0.0.15 — Cline 桌面版更名并整合插件、模型选择器，修复多项关键 bug。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.15
+publishedAt: 2026-08-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline 桌面版更名并整合插件、模型选择器，修复多项关键 bug。"
+broadcast: "Cline 桌面版更新了，名字和图标都换了，但你的设置和聊天记录都还在。现在插件、服务器和技能都整合到一个地方，还多了个市场页面。选模型也更方便，按推荐和免费分类，不用再看那些难懂的编号。另外，代理能创建待办和定时任务，还修了不少烦人的 bug，比如复制消息和代码折叠的问题，PowerShell 命令出错也会及时停下。对国内开发者来说，这些改进让日常开发更顺手，值得更新试试。"
+insight: "这次桌面版更名并整合插件中心，对现有用户来说升级价值明显，尤其修复了 PreToolUse/PostToolUse 钩子失效和 PowerShell 误报成功等关键问题，建议升级。模型选择器不再显示原始 ID，但代理配置不受影响。国内走 newapi.lurus.cn 代理的用户，升级后需确认模型名称是否仍匹配，若用自定义模型 ID 可能需调整选择器配置。"
+tags: [desktop-app, model-selector, hooks, bug-fixes]
+---
+
+- 应用更名为 Cline，品牌与图标更新，设置和会话数据保留。
+- 插件、MCP 服务器和技能统一为插件中心，新增 Marketplace 页面。
+- 模型选择器按推荐和免费分层，显示名称和描述，不再显示原始 ID。
+- 代理可创建持久化待办和一次性/定期日程。
+- 修复检查点恢复、会话状态、耗时统计、复制消息、代码块折叠等问题。
+- 修复 PreToolUse/PostToolUse 钩子输出和取消控制失效。
+- PowerShell 命令遇错即停，不再输出洪水后报成功。
+- 新增 AMD、Arcee 等提供商，更新模型目录和定价。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.15](https://github.com/cline/cline/releases/tag/desktop-v0.0.15)

@@ -1,0 +1,23 @@
+---
+slug: 2026-08-21-opencode-1-18-21
+title: "opencode v1.18.21 — 修复模型未知结束原因导致提前停止，以及桌面端搜索与归档命令问题"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.21
+publishedAt: 2026-08-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复模型未知结束原因导致提前停止，以及桌面端搜索与归档命令问题"
+broadcast: "最近有个AI开发工具更新了，主要修复了模型提前停止的问题，现在即使模型返回未知的结束原因，也能继续响应，这对开发agent来说很重要，意味着处理更稳定。另外，桌面端搜索和归档命令的问题也修好了，用起来更顺手。这些改进提醒我们，开发时要注意模型输出的各种情况，别依赖单一信号。"
+insight: "这次修复对国内开发者影响不大，但值得关注的是模型未知结束原因的处理逻辑。如果你在用 opencode 跑长任务，建议升级，避免提前停止导致输出截断。Vertex AI 多区域路由改动只影响走官方云的用户，走 newapi.lurus.cn 代理不受影响。桌面端搜索和归档命令的修复属于体验优化，现有 hook 配置无需改动，升级后注意验证一下命令是否正常即可。"
+tags: [bugfix, model-handling, vertex-ai, desktop]
+---
+
+- 模型返回未知 finish reason 时，不再提前停止，而是继续响应。这要求 harness 对模型输出结束状态的处理更鲁棒，不能依赖单一结束信号。
+- Vertex AI 的 `eu` 和 `us` 多区域 Gemini 请求改走 REP 端点。这提示 harness 在配置云模型时需考虑区域路由差异，确保请求到达正确端点。
+- 桌面端修复了文件搜索加载期间结果消失的问题，并统一了两种布局下的归档会话命令。这提醒 harness 在桌面集成中需保持 UI 状态一致性和命令注册的完整性。
+
+---
+
+> 原文 release：[sst/opencode v1.18.21](https://github.com/anomalyco/opencode/releases/tag/v1.18.21)

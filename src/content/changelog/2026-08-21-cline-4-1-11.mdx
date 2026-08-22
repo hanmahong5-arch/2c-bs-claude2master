@@ -1,0 +1,26 @@
+---
+slug: 2026-08-21-cline-4-1-11
+title: "cline v4.1.11 — Cline v4.1.11 修复多项关键 bug，并支持模型生成图片。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.11
+publishedAt: 2026-08-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline v4.1.11 修复多项关键 bug，并支持模型生成图片。"
+broadcast: "Cline 这次更新挺实在的，主要修了一堆关键 bug，比如在最新版 VS Code 里命令失效、带空格路径的文件引用出错，还有换行符导致的多行编辑显示问题。另外，它现在支持模型在对话里直接生成图片了。对咱们做 agent 开发的来说，这意味着要更注意不同编辑器版本和文件编码的兼容，还有会话状态和配置的隔离，别让任务之间互相干扰。"
+insight: "Cline v4.1.11 的修复集中在编辑器兼容性和会话状态隔离上，对国内用户而言，如果之前遇到路径空格或 CRLF 问题，升级是值得的。但新增的图片生成功能对现有 prompt 或 hook 配置没有直接影响，无需改动。至于 newapi.lurus.cn 代理，摘要中未提及相关改动，因此不受影响，可放心继续使用。"
+tags: [bug-fixes, image-generation, sdk-bundle, legacy-bundle]
+---
+
+- 新增：支持模型在任务中生成图片，并内联显示在对话中。
+  - 对 harness 设计：需处理图片消息的渲染与存储，确保多模态交互流畅。
+- 修复：代码操作在 VS Code 1.134 上“命令未找到”的问题；@文件提及在含空格路径下失效；CRLF 行尾的多行编辑 diff 视图。
+  - 对 harness 设计：需兼容不同编辑器版本和文件编码，提升健壮性。
+- 修复：恢复任务时保留存活会话而非重建；任务级设置覆盖不再泄漏；LiteLLM 输入 token 限制不再被覆盖；Gemini 自定义 base URL 恢复。
+  - 对 harness 设计：需确保会话状态隔离和配置持久化，避免跨任务污染。
+
+---
+
+> 原文 release：[cline/cline v4.1.11](https://github.com/cline/cline/releases/tag/v4.1.11)

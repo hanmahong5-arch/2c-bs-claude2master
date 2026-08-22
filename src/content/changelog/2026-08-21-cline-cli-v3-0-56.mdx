@@ -1,0 +1,25 @@
+---
+slug: 2026-08-21-cline-cli-v3-0-56
+title: "cline cli-v3.0.56 — 图像生成、技能加载方式、钩子修复等多项更新"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.56
+publishedAt: 2026-08-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "图像生成、技能加载方式、钩子修复等多项更新"
+broadcast: "这次更新让支持图像生成的模型可以直接在对话里产出图片，终端里会保存临时文件并打印路径，网页导出也能内嵌图片。技能命令改成了通过工具加载，不再展开到消息里，指令只传给模型一次，这样更干净。另外还修复了不少问题，比如对话框颜色不随主题变、钩子输出被忽略等等。对国内开发者来说，这些修复让终端工具用起来更顺手，值得关注。"
+insight: "本次更新对现有用户影响不大，但值得关注。若你依赖图像生成或技能斜杠命令，建议升级，因为技能加载方式改为通过工具调用，历史记录更干净，且修复了钩子失效问题。国内用户经 newapi.lurus.cn 代理不受影响，但需注意非聊天模型被移除，--model 会拒绝，若你有相关配置需调整。整体修复了多个钩子与命令错误，稳定性提升，可考虑升级。"
+tags: [image-generation, skills-tool, hooks-fix, model-catalog]
+---
+
+- 支持图像生成的模型可在对话中直接产出媒体，TUI 保存临时文件并打印路径，HTML 导出内嵌图片，ACP 客户端接收图像内容。
+- Skill 斜杠命令改为通过 skills 工具加载，不再展开到消息中，历史记录显示原始命令，指令只传给模型一次；工作流和 zen 模式仍展开。
+- 非聊天模型（图像、语音等）从模型选择器和 ACP 列表中移除，`--model` 拒绝此类模型。
+- 修复多个问题：TUI 对话框颜色不随主题变化、账户对话框选择箭头、provider 执行工具活动被丢弃、`PreToolUse` 的 `contextModification` 未生效、`PostToolUse` 钩子输出和取消控制被忽略、`run_commands` 的 ENOENT 错误、PowerShell 命令错误处理、Gemini 自定义基础 URL、远程 hub 的 `cline schedule` 命令授权。
+- 使用量显示计费网关成本，模型目录更新，新增多个提供商。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.56](https://github.com/cline/cline/releases/tag/cli-v3.0.56)

@@ -1,0 +1,23 @@
+---
+slug: 2026-08-21-opencode-1-18-20
+title: "opencode v1.18.20 — 修复子代理失败与网络错误重试，提升稳定性"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.20
+publishedAt: 2026-08-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复子代理失败与网络错误重试，提升稳定性"
+broadcast: "最近，开源工具链又有更新，这次重点提升了稳定性。如果子代理在执行任务时失败，现在会返回一个可恢复的任务标识，方便你重试或接着做。同时，遇到网络错误也会自动重试，减少临时故障带来的影响。对国内开发者来说，这意味着用这个工具搭建智能体时，运行会更可靠，少些意外中断。"
+insight: "这次更新对现有用户是值得升级的，尤其是经常遇到子代理失败或网络波动的情况。修复后，子代理失败会返回可恢复的 task_id，网络错误也会自动重试，能明显减少中断。如果你之前为这些错误写过复杂的重试 prompt 或 hook，现在可以简化了，系统内置处理更可靠。另外，Cerebras 的 max_completion_tokens 保留意味着输出行为更稳定，不用额外配置。国内用户走 newapi.lurus.cn 代理不受影响，网络重试逻辑反而更友好。"
+tags: [bugfix, subagent, retry, stability]
+---
+
+- 子代理工具调用失败时返回可恢复的 `task_id`，便于重试或恢复。
+- 对 `finish_reason: network_error` 及更多网络错误变体进行重试，减少临时故障影响。
+- 保留 Cerebras 的 `max_completion_tokens`，避免额外输出上限，确保模型行为符合预期。
+
+---
+
+> 原文 release：[sst/opencode v1.18.20](https://github.com/anomalyco/opencode/releases/tag/v1.18.20)

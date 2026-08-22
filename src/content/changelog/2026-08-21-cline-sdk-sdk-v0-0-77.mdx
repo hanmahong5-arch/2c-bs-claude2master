@@ -1,0 +1,23 @@
+---
+slug: 2026-08-21-cline-sdk-sdk-v0-0-77
+title: "cline sdk/sdk/v0.0.77 — tasks 工具按客户端类型集中解析，避免无效注册"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.77
+publishedAt: 2026-08-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "tasks 工具按客户端类型集中解析，避免无效注册"
+broadcast: "这次更新把任务工具按客户端类型做了区分，CLI和编辑器会话不再注册用不了的工具，减少无效调用。对做智能体开发的朋友来说，提醒我们工具注册得考虑运行环境，别一股脑全挂上，这样更干净也更高效。"
+insight: "这次 SDK 更新对国内开发者是利好，尤其是用 CLI 或 VS Code 跑任务时，不会再注册那些根本执行不了的工具，减少无效调用和报错。如果你现在用的是旧版 SDK，建议升级到 v0.0.77，能省去不少排查时间。至于 hook 配置，如果你之前为 tasks 工具写了针对特定客户端的逻辑，现在可以简化了，因为核心已经按客户端类型集中解析。走 newapi.lurus.cn 代理不受影响，工具可用性只跟客户端类型挂钩，跟网络代理无关。"
+tags: [sdk, tool-catalog, client-scoping]
+---
+
+- tasks 工具（持久待办、一次性或周期调度）现在按客户端类型限定可用性，宿主声明客户端类型，核心工具目录集中解析。
+- CLI 和 VS Code 会话不再注册无法执行的工具，减少无效调用。
+- Hub 会话从请求客户端元数据解析相同逻辑，确保工具可用性与客户端匹配，对 harness 设计意味着工具注册需考虑运行环境。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.77](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.77)
