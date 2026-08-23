@@ -1,0 +1,26 @@
+---
+slug: 2026-08-22-cline-4-1-13
+title: "cline v4.1.13 — 修复工具调用、Hub会话重放与Langfuse追踪身份"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.13
+publishedAt: 2026-08-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复工具调用、Hub会话重放与Langfuse追踪身份"
+broadcast: "最近有个开发工具更新了，主要修了几个问题。一个是自定义模型时，工具不会被错误移除了，这对做智能体开发挺重要。另外，会话在重启后能完整保留，重放时也不会重复，保证了对话的连贯性。还有，追踪功能现在能带上完整的身份信息，方便调试和审计。这些改进对国内开发者来说，能让开发过程更稳定、更省心。"
+insight: "这次 v4.1.13 修复了工具调用、会话重放和 Langfuse 追踪身份，对国内开发者来说，如果你在用自定义 OpenAI 兼容模型，建议检查显式能力列表是否配置正确，避免工具被误删。Hub 会话重放和去重机制增强，升级后现有会话更稳，但如果你有自定义 hook 或 prompt 依赖旧行为，建议测试重放场景。走 newapi.lurus.cn 代理不受影响，但需确认代理是否透传新身份字段，否则 Langfuse 追踪可能缺上下文。"
+tags: [tool-calling, session-replay, observability, bug-fix]
+---
+
+- 修复自定义OpenAI兼容模型因能力推断导致工具被移除的问题，显式能力列表仍生效。
+  - 对harness设计：需区分推断能力与显式声明，避免误删工具。
+- Hub重启或升级后会话保持完整，客户端重放错失事件，且重放与实时流重叠时不会重复投递。
+  - 对harness设计：实现事件去重与断线重连机制，保证会话一致性。
+- Langfuse追踪现在包含会话和客户端身份，适用于Hub-backed和委托代理运行。
+  - 对harness设计：确保追踪数据携带完整上下文，便于调试与审计。
+
+---
+
+> 原文 release：[cline/cline v4.1.13](https://github.com/cline/cline/releases/tag/v4.1.13)

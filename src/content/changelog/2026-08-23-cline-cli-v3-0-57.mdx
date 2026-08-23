@@ -1,0 +1,25 @@
+---
+slug: 2026-08-23-cline-cli-v3-0-57
+title: "cline cli-v3.0.57 — CLI v3.0.57 带来 hub 排空/升级、会话恢复、工具调用修复等关键改"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.57
+publishedAt: 2026-08-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "CLI v3.0.57 带来 hub 排空/升级、会话恢复、工具调用修复等关键改进。"
+broadcast: "这次命令行工具的更新，主要解决了几个关键问题。比如，它现在能更好地处理任务中断和恢复，重启后会话不会丢，还能避免重复投递。另外，修复了一个自定义模型下工具调用被静默禁用的问题，这对国内开发者来说很重要，意味着使用兼容接口时，工具功能能正常工作了。整体上，这次更新让工具更稳定，也更方便追踪调试。"
+insight: "如果你在用 CLI v3.0.57，hub 排空和升级的自动恢复值得关注，中断后能自动续上，不用手动处理。会话重连去重也解决了重复投递的隐患。但最要紧的是自定义 OpenAI 兼容模型的工具调用修复——之前可能被静默禁用，升级后记得验证你的配置是否恢复正常。国内走 newapi.lurus.cn 代理不受影响，按官方升级即可，不用改 hook。"
+tags: [cli, hub, session-recovery, tool-calling]
+---
+
+- `cline hub drain` 停止接收新变更工作，`--off` 解除；`hub upgrade` 排空后重启，中断时自动恢复，避免拒绝工作。
+- 会话在 hub 重启后存活，客户端重连时按事件 ID 去重重放，确保不重复投递。
+- 修复自定义 OpenAI 兼容模型因推断能力列表导致工具调用被静默禁用的问题。
+- Langfuse 追踪现在携带会话和客户端身份，便于分组和版本追踪。
+- 模型目录更新，影响多个提供商的默认模型选择。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.57](https://github.com/cline/cline/releases/tag/cli-v3.0.57)

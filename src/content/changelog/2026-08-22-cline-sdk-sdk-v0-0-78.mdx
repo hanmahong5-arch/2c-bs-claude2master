@@ -1,0 +1,24 @@
+---
+slug: 2026-08-22-cline-sdk-sdk-v0-0-78
+title: "cline sdk/sdk/v0.0.78 — SDK 升级：hub 可无损排空，工具调用修复，追踪更完整"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.78
+publishedAt: 2026-08-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK 升级：hub 可无损排空，工具调用修复，追踪更完整"
+broadcast: "这次SDK升级带来了几个实用改进。首先，消息中心现在可以安全排空，正在跑的任务会完成，新请求会被拒绝，而且重连的客户端还能重放历史事件，不会重复投递。另外，修复了一个自定义模型工具调用被静默禁用的问题，追踪功能也更完整了，能区分不同会话。最后提醒一下，模型目录更新了，没固定模型的用户可能会受影响，建议留意一下默认模型的变化。"
+insight: "这次 SDK 升级对国内开发者是利好，尤其 hub 排空和事件去重让重连更稳，值得升级。但注意模型目录刷新，未固定模型的用户默认模型可能变更，建议检查配置。工具调用修复对自定义 OpenAI 兼容模型很重要，若你此前遇到静默禁用，升级后应恢复。走 newapi.lurus.cn 代理不受影响，可放心升级。"
+tags: [sdk, hub-drain, tool-calling, observability]
+---
+
+- hub 支持排空与升级，拒绝新变更但完成运行中任务，持久事件日志让重连客户端重放，事件按 id 去重，避免重复投递。
+- 修复自定义 OpenAI 兼容模型因能力列表推断导致工具调用被静默禁用的问题，显式能力列表仍生效。
+- Langfuse 追踪增加会话与客户端身份，hub 会话从请求头重建，委托代理归入父会话。
+- 模型目录刷新，多个提供商默认模型变更，未固定模型的用户将受影响。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.78](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.78)

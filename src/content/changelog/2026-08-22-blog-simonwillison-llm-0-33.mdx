@@ -1,0 +1,23 @@
+---
+slug: 2026-08-22-blog-simonwillison-llm-0-33
+title: "llm 0.33 — Simon Willison 发布 llm 0.33，升级 OpenAI 库、支"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/22/llm/
+publishedAt: 2026-08-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 llm 0.33，升级 OpenAI 库、支持模板组合与推理摘要。"
+broadcast: "Simon Willison 发布了 llm 工具的新版本，这次升级主要解决了兼容性问题，还带来了两个实用功能：一是可以给每次调用单独设置 API 密钥，方便多租户场景；二是模板可以重复组合使用，把模型配置和提示词分开，让复杂工作流更模块化。对国内开发者来说，这意味着基于 llm 的工具链需要适配新依赖，但换来更稳定的 API 支持和更灵活的开发方式。"
+tags: [llm, release-notes, openai, cli-tools]
+---
+
+- 升级到 OpenAI Python 库 3.x，并将 HTTP 客户端依赖从 httpx 切换到 httpx2，修复了兼容性问题。这意味着基于 llm 的工具链需要适配新的依赖，但换来更稳定的 API 支持。
+- `llm embed` 和 `llm embed-multi` 现在支持 `--key` 参数，Python 方法也接受 `key=`，允许为每次调用传递独立的 API 密钥，而不改变共享模型状态。这对多租户或密钥轮换场景很有用，插件开发者需注意兼容性回退。
+- `llm prompt -t/--template` 可重复使用，按顺序组合模板，实现模型配置与提示分离。例如，先保存一个带高推理选项的模型模板，再保存一个生成 SVG 的提示模板，然后组合执行。这为复杂工作流提供了模块化复用能力。
+
+---
+
+> 原文：[llm 0.33](https://simonwillison.net/2026/Aug/22/llm/) · 作者 Simon Willison

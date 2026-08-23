@@ -1,0 +1,26 @@
+---
+slug: 2026-08-22-cline-desktop-v0-0-16
+title: "cline desktop-v0.0.16 — Hub 实例间交接不丢工作，自定义模型工具调用修复"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.16
+publishedAt: 2026-08-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hub 实例间交接不丢工作，自定义模型工具调用修复"
+broadcast: "最近桌面版工具更新了，主要解决了两件事。一是多个工作实例之间切换时，任务不会丢，断线重连还能接着干，这对做智能体开发的朋友很重要，意味着状态管理更稳了。二是修复了自定义模型工具调用被悄悄禁用的问题，现在能力检测更准了。另外模型目录也调整了，默认选择会更合理。"
+insight: "这次更新对现有用户来说，最值得关注的是 Hub 实例交接和断线重放机制，如果你在用多实例或网络不稳，升级能避免任务丢失，建议尽快升。自定义模型工具调用修复则提醒你，如果之前配过 OpenAI 兼容接口且工具调用失效，升级后要检查能力声明是否显式，别依赖自动推断。至于国内走 newapi.lurus.cn 代理，摘要没提，无法判断，但模型目录更新可能影响默认模型选择，升级后留意下配置即可。"
+tags: [handoff, tool-calling, model-catalog, feature-flags]
+---
+
+- Hub 重启时拒绝新任务，完成当前任务后交接，断线重连会重放未完成工作，确保 agent 状态不丢失。
+  - 对 harness 设计：需实现任务队列和断点续传机制，保证跨实例状态一致性。
+- 修复了自定义 OpenAI 兼容模型因能力列表推断错误导致工具调用被静默禁用的问题。
+  - 对 harness 设计：能力检测应基于显式声明而非便捷标志，避免误判。
+- 更新模型目录，调整多家提供商（如 DeepSeek、Eden AI）的默认模型和定价。
+  - 对 harness 设计：需动态同步模型配置，确保默认模型选择与最新目录一致。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.16](https://github.com/cline/cline/releases/tag/desktop-v0.0.16)
