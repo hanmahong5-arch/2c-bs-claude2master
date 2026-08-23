@@ -1,6 +1,138 @@
 {
   "items": [
     {
+      "slug": "2026-08-23-claude-code-2-1-241",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.241 — Claude Code 小版本更新，修复 bug 提升稳定性。",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-23"
+    },
+    {
+      "slug": "2026-08-23-cline-cli-v3-0-57",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.57 — CLI v3.0.57 带来 hub 排空/升级、会话恢复、工具调用修复等关键改",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-23"
+    },
+    {
+      "slug": "2026-08-23-trending-dsh-tauri-desk-deepseek-harness-desktop",
+      "zh": true,
+      "en": false,
+      "title": "deepseek-harness-desktop — 5MB 安装包，零配置跑 DeepSeek 的桌面工具",
+      "kind": "trending",
+      "author": null,
+      "source": "dsh-tauri-desk/deepseek-harness-desktop",
+      "tool": null,
+      "publishedAt": "2026-08-23"
+    },
+    {
+      "slug": "2026-08-22-blog-latentspace-ainews-10-worse-100x-cheaper-10000x-faster-why",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] 10% worse, 100x cheaper, 10000x faster: Why — 模拟正在接管AI：从奖励信号到物理世界，每个环节正被模型替代。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-22"
+    },
+    {
+      "slug": "2026-08-22-blog-latentspace-the-evolution-of-the-agent-harness",
+      "zh": true,
+      "en": true,
+      "title": "The Evolution of the Agent Harness — Agent 突然变好用，关键不在模型，而在 harness 的进化。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-22"
+    },
+    {
+      "slug": "2026-08-22-blog-simonwillison-llm-0-33",
+      "zh": true,
+      "en": true,
+      "title": "llm 0.33 — Simon Willison 发布 llm 0.33，升级 OpenAI 库、支",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-22"
+    },
+    {
+      "slug": "2026-08-22-blog-simonwillison-more-than-just-code-review",
+      "zh": true,
+      "en": true,
+      "title": "More than just code review — Simon Willison 谈如何高效使用编码代理：不止代码审查。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-22"
+    },
+    {
+      "slug": "2026-08-22-blog-simonwillison-quoting-linus-torvalds",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Linus Torvalds — Linus Torvalds 分享 AI 辅助调试内核的实战体验，AI 虽多次放",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-22"
+    },
+    {
+      "slug": "2026-08-22-claude-code-2-1-240",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.240 — Claude Code 修复 bug 提升稳定性，值得快速了解。",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-22"
+    },
+    {
+      "slug": "2026-08-22-cline-4-1-13",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.1.13 — 修复工具调用、Hub会话重放与Langfuse追踪身份",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-22"
+    },
+    {
+      "slug": "2026-08-22-cline-desktop-v0-0-16",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.16 — Hub 实例间交接不丢工作，自定义模型工具调用修复",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-22"
+    },
+    {
+      "slug": "2026-08-22-cline-sdk-sdk-v0-0-78",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.78 — SDK 升级：hub 可无损排空，工具调用修复，追踪更完整",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-22"
+    },
+    {
       "slug": "2026-08-22-trending-jundizhou-easy-stock",
       "zh": true,
       "en": false,
@@ -10,6 +142,28 @@
       "source": "jundizhou/easy-stock",
       "tool": null,
       "publishedAt": "2026-08-22"
+    },
+    {
+      "slug": "2026-08-21-blog-deepmind-from-atari-to-eve-online-building-on-15",
+      "zh": true,
+      "en": true,
+      "title": "From Atari to EVE Online: Building on 15 Years of AI — DeepMind 15年游戏AI研究：从Atari到EVE Online，如何用",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-08-21"
+    },
+    {
+      "slug": "2026-08-21-blog-hf-blog-measuring-benchmark-optimization-in-speech-recognition",
+      "zh": true,
+      "en": true,
+      "title": "Measuring benchmark optimization in speech recognition — Hugging Face 用基准测试优化语音识别模型，提升准确率与效率。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-21"
     },
     {
       "slug": "2026-08-21-blog-latentspace-ainews-poolside-gets-12b-reverse-execuhire-to-nvidia",
@@ -725,160 +879,6 @@
       "source": "anthropics/claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-hermes-agent-2026-8-16-2",
-      "zh": true,
-      "en": false,
-      "title": "hermes-agent v2026.8.16.2 — Hermes Agent 0.20.3 聚合 125 个 PR，含 MCP 2.",
-      "kind": "changelog",
-      "author": null,
-      "source": "NousResearch/hermes-agent",
-      "tool": "hermes",
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-openclaw-concepts-retry",
-      "zh": true,
-      "en": true,
-      "title": "Retry policy · OpenClaw — 重试策略如何避免重复操作并保证消息顺序？",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-openclaw-concepts-session-attachment",
-      "zh": true,
-      "en": true,
-      "title": "Session synchronization and attachment · — 多客户端共享同一会话状态，无需复制转录，附编码工具更高效。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-openclaw-concepts-session-pruning",
-      "zh": true,
-      "en": true,
-      "title": "Session pruning · OpenClaw — 修剪工具输出，省缓存费，防上下文膨胀，值得一读。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-openclaw-concepts-session-search",
-      "zh": true,
-      "en": true,
-      "title": "Session search · OpenClaw — 精确检索历史会话原文，与语义记忆互补，提升Agent记忆利用效率。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-openclaw-concepts-session-state",
-      "zh": true,
-      "en": true,
-      "title": "Session state awareness · OpenClaw — 多会话协作时，如何检测状态变化并避免重复通知？",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-openclaw-concepts-session",
-      "zh": true,
-      "en": true,
-      "title": "Session management · OpenClaw — 会话管理是 agent 记忆的基石，本文教你如何隔离、重置和清理会话。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-trending-harry0703-mangodisk",
-      "zh": true,
-      "en": false,
-      "title": "MangoDisk — macOS/Windows 安全优先的磁盘清理与空间分析工具",
-      "kind": "trending",
-      "author": null,
-      "source": "harry0703/MangoDisk",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-trending-mengmengcode-vocat",
-      "zh": true,
-      "en": false,
-      "title": "VoCat — 开源蜂窝调制解调器控制面板，管理 EC20/EC25 全功能",
-      "kind": "trending",
-      "author": null,
-      "source": "MengMengCode/VoCat",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-trending-orbien-org-orbien",
-      "zh": true,
-      "en": false,
-      "title": "orbien — 5MB 内网穿透工具，支持 QUIC/KCP 多协议",
-      "kind": "trending",
-      "author": null,
-      "source": "orbien-org/orbien",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-16-blog-simonwillison-markdown-svg-upgrades",
-      "zh": true,
-      "en": true,
-      "title": "Markdown SVG upgrades — Simon Willison 升级 Markdown SVG 渲染工具，新增 M",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-16"
-    },
-    {
-      "slug": "2026-08-16-blog-simonwillison-quoting-dario-amodei",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Dario Amodei — Anthropic CEO谈AI信任危机：不是营销问题，而是兑现承诺的问题。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-16"
-    },
-    {
-      "slug": "2026-08-16-blog-simonwillison-qwen-3-8-27b-is-excellent-but-it",
-      "zh": true,
-      "en": true,
-      "title": "Qwen 3.8 27B is excellent, but it defaults to wildly — Qwen 3.8 27B 本地模型性能出色，但默认过度思考，需调低推理级别。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-16"
-    },
-    {
-      "slug": "2026-08-16-hermes-agent-2026-8-16",
-      "zh": true,
-      "en": false,
-      "title": "hermes-agent v2026.8.16 — Hermes Agent 补丁版：967 提交、397 PR，含多网关注册表、M",
-      "kind": "changelog",
-      "author": null,
-      "source": "NousResearch/hermes-agent",
-      "tool": "hermes",
-      "publishedAt": "2026-08-16"
     }
   ]
 }
