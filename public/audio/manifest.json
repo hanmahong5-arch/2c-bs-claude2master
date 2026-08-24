@@ -1,6 +1,94 @@
 {
   "items": [
     {
+      "slug": "2026-08-24-codex-rust-v0-149-1",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.149.1 — Codex 0.149.1 补丁发布，修复问题并优化稳定性。",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-08-24"
+    },
+    {
+      "slug": "2026-08-24-openclaw-concepts-session-tool",
+      "zh": true,
+      "en": true,
+      "title": "Session tools · OpenClaw — 跨会话工具集：让 agent 管理会话、编排子代理，值得 5 分钟。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-24"
+    },
+    {
+      "slug": "2026-08-24-openclaw-concepts-soul",
+      "zh": true,
+      "en": true,
+      "title": "SOUL.md personality guide · OpenClaw — 让 AI 助手有性格：SOUL.md 教你告别机器人腔，5 分钟改出有灵魂的提示",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-24"
+    },
+    {
+      "slug": "2026-08-24-openclaw-concepts-standing-intents",
+      "zh": true,
+      "en": true,
+      "title": "Standing intents · OpenClaw — 事件触发记忆：让代理在特定话题出现时自动提醒，而非定时任务。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-24"
+    },
+    {
+      "slug": "2026-08-24-openclaw-concepts-streaming",
+      "zh": true,
+      "en": true,
+      "title": "Streaming and chunking · OpenClaw — OpenClaw 双流式层设计：块流与预览流，如何避免重复媒体与自然节奏。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-24"
+    },
+    {
+      "slug": "2026-08-24-openclaw-concepts-system-prompt",
+      "zh": true,
+      "en": true,
+      "title": "System prompt · OpenClaw — OpenClaw 如何分层构建系统提示词，兼顾缓存与动态上下文。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-24"
+    },
+    {
+      "slug": "2026-08-23-blog-simonwillison-anthropic-s-best-ai-model-struggles-to-attract",
+      "zh": true,
+      "en": true,
+      "title": "Anthropic’s best AI model struggles to attract users as — Anthropic最强模型Fable 5因成本高而用户少，市场更青睐便宜模型。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-23"
+    },
+    {
+      "slug": "2026-08-23-blog-simonwillison-quoting-drew-breunig",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Drew Breunig — Drew Breunig 谈 Fable 模型的高成本如何改变工作分配策略。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-23"
+    },
+    {
       "slug": "2026-08-23-claude-code-2-1-241",
       "zh": true,
       "en": false,
@@ -9,6 +97,28 @@
       "author": null,
       "source": "anthropics/claude-code",
       "tool": "claude-code",
+      "publishedAt": "2026-08-23"
+    },
+    {
+      "slug": "2026-08-23-cline-4-1-14",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.1.14 — 模型目录大更新，新增多款前沿模型，并修复会话完成遥测问题。",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-23"
+    },
+    {
+      "slug": "2026-08-23-cline-4-1-15",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.1.15 — MCP工具自动批准开关修复，现在真正生效",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
       "publishedAt": "2026-08-23"
     },
     {
@@ -52,6 +162,17 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-22"
+    },
+    {
+      "slug": "2026-08-22-blog-raschka-how-claude-watermarks-ai-generated-text",
+      "zh": true,
+      "en": true,
+      "title": "How Claude Watermarks AI-Generated Text — Sebastian Raschka 用 52 页幻灯片和 48 分钟视频，从零讲",
+      "kind": "blogger",
+      "author": "Sebastian Raschka",
+      "source": "Sebastian Raschka",
       "tool": null,
       "publishedAt": "2026-08-22"
     },
@@ -758,127 +879,6 @@
       "source": "anthropics/claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-08-18"
-    },
-    {
-      "slug": "2026-08-18-codex-rust-v0-148-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.148.0 — Codex 0.148.0：TUI 导出 Markdown、会话 fork/归档",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-08-18"
-    },
-    {
-      "slug": "2026-08-18-hermes-agent-2026-8-18",
-      "zh": true,
-      "en": false,
-      "title": "hermes-agent v2026.8.18 — Hermes Agent 补丁版：桌面毛玻璃、标签侧栏、NVIDIA 技能扫描等",
-      "kind": "changelog",
-      "author": null,
-      "source": "NousResearch/hermes-agent",
-      "tool": "hermes",
-      "publishedAt": "2026-08-18"
-    },
-    {
-      "slug": "2026-08-18-trending-pinvou-pinvou-agent",
-      "zh": true,
-      "en": false,
-      "title": "pinvou-agent — 开源桌面 AI 代理，整合工具、文件与工作流",
-      "kind": "trending",
-      "author": null,
-      "source": "Pinvou/pinvou-agent",
-      "tool": null,
-      "publishedAt": "2026-08-18"
-    },
-    {
-      "slug": "2026-08-17-blog-hf-blog-same-cluster-33-points-more-utilization-what-changed",
-      "zh": true,
-      "en": true,
-      "title": "Same Cluster, 33 Points More Utilization: What Changed — 通过调整任务调度顺序，同一集群利用率提升33个百分点，本文揭示调度策略的关键作用",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-blog-latentspace-ainews-stripe-buys-openrouter-for-7b",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Stripe buys OpenRouter for $7B — Stripe 70亿美元收购 OpenRouter，AI 路由层价值重估与基础设",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-blog-openai-news-new-policy-ideas-for-the-intelligence-age",
-      "zh": true,
-      "en": true,
-      "title": "New policy ideas for the Intelligence Age — OpenAI资助14个独立项目，探索AI政策新思路，以扩大经济机会并增强社会韧性",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-blog-openai-news-openai-joins-ports-pike-project",
-      "zh": true,
-      "en": true,
-      "title": "OpenAI joins PORTS-Pike project — OpenAI 加入 PORTS",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-blog-openai-news-the-defender-s-window",
-      "zh": true,
-      "en": true,
-      "title": "The Defender’s Window — OpenAI 如何用 AI 重塑网络安全防御，并给安全团队提出具体行动建议。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-blog-simonwillison-qwen-3-8-27b-scores-52-on-the",
-      "zh": true,
-      "en": true,
-      "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis — 27B 小模型追平 GPT",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-blog-simonwillison-we-tracked-a-shipment-of-rare-books-it",
-      "zh": true,
-      "en": true,
-      "title": "We Tracked a Shipment of Rare Books. It Ended at an — 追踪一单稀有书籍订单，最终发现它被送往亚马逊AI训练设施。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-17"
-    },
-    {
-      "slug": "2026-08-17-claude-code-2-1-234",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.234 — 新增项目目录名变量、GitLab MR 徽章，多项安全修复与远程控制改进",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-17"
     }
   ]
 }
