@@ -1,0 +1,23 @@
+---
+slug: 2026-08-24-openclaw-concepts-streaming
+title: "Streaming and chunking · OpenClaw — OpenClaw 双流式层设计：块流与预览流，如何避免重复媒体与自然节奏。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/streaming
+publishedAt: 2026-08-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OpenClaw 双流式层设计：块流与预览流，如何避免重复媒体与自然节奏。"
+broadcast: "今天聊聊OpenClaw的流式输出设计，它用块流和预览流两层来发送内容，块流发完整段落，预览流更新临时消息，这样能避免重复媒体，让交互更自然。对开发者来说，关键是分块算法会按段落、换行、句子的优先级切分，而且不会拆代码围栏，所以写提示词时要指定边界规则，防止破坏Markdown格式。另外，合并块和随机延迟能控制节奏，减少刷屏，模拟真人打字的感觉，值得关注。"
+insight: "现有用户若追求更自然的交互节奏，值得升级以利用双流式层和分块算法，但需在 prompt 中明确边界规则，避免破坏 Markdown。国内用户走 newapi.lurus.cn 代理不受影响，因为该设计仅涉及输出层，不改变代理链路。建议保留现有 hook 配置，仅调整 prompt 以适配块流与预览流的区分。"
+tags: [streaming, chunking, message-delivery, agent-harness]
+---
+
+- **双流式层**：块流发送完整块，预览流更新临时消息；无 token 级流式。设计含义：harness 需区分粗粒度块与细粒度预览。
+- **分块算法**：低/高边界、断点偏好（段落>换行>句子），代码围栏不分割。设计含义：prompt 需指定边界规则，避免破坏 Markdown。
+- **合并与延迟**：合并块减少刷屏，随机延迟模拟人类节奏。设计含义：控制输出节奏，提升交互自然度。
+
+---
+
+> 原文：[Streaming and chunking · OpenClaw](https://docs.openclaw.ai/concepts/streaming)

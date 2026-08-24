@@ -1,0 +1,23 @@
+---
+slug: 2026-08-22-blog-raschka-how-claude-watermarks-ai-generated-text
+title: "How Claude Watermarks AI-Generated Text — Sebastian Raschka 用 52 页幻灯片和 48 分钟视频，从零讲"
+source: "Sebastian Raschka"
+sourceUrl: https://magazine.sebastianraschka.com/p/claude-watermarking
+publishedAt: 2026-08-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Sebastian Raschka"
+hook: "Sebastian Raschka 用 52 页幻灯片和 48 分钟视频，从零讲解 Claude 文本水印的底层机制。"
+broadcast: "今天要聊一个挺有意思的话题，就是Claude怎么给AI生成的文本打水印。简单说，这个水印不是额外加在文字上的，而是藏在模型生成文本的常规过程里，一个很小的调整，完全不影响生成质量。它是在模型预测下一个词的时候起作用的，用户根本看不见，只有Anthropic自己才能解码，用来识别一段文字是不是Claude生成的。对国内做agent开发的朋友来说，理解这个机制挺重要，因为以后判断内容是不是AI写的，可能就得靠这类技术了。"
+tags: [claude-watermarking, llm, from-scratch, text-generation]
+---
+
+- 水印不是附加在文本上的额外步骤，而是嵌入在 LLM 常规文本生成过程中的一个微小调整，不影响生成质量。
+- 理解水印需要先理解 LLM 的 token 生成机制：文本先被 token 化，再经模型预测下一个 token，水印就在这个采样环节起作用。
+- 水印对用户不可见，只有 Anthropic 能解码，用于识别文本是否由 Claude 生成，这依赖于其内部实现细节。
+
+---
+
+> 原文：[How Claude Watermarks AI-Generated Text](https://magazine.sebastianraschka.com/p/claude-watermarking) · 作者 Sebastian Raschka

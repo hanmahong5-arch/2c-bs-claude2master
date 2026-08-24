@@ -1,0 +1,23 @@
+---
+slug: 2026-08-24-codex-rust-v0-149-1
+title: "codex rust-v0.149.1 — Codex 0.149.1 补丁发布，修复问题并优化稳定性。"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.149.1
+publishedAt: 2026-08-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.149.1 补丁发布，修复问题并优化稳定性。"
+broadcast: "OpenAI 的 Codex 工具发布了新补丁，主要是修复问题、提升稳定性。对做智能体开发的朋友来说，这种补丁提醒我们要注意依赖锁定和回归测试，集成前最好看看变更日志，评估对现有工作流的影响。"
+insight: "作为补丁版本，0.149.1 主要修复问题并优化稳定性，对现有用户而言，如果当前工作流稳定，不必急于升级，但若遇到相关 bug 则值得跟进。升级前务必锁定依赖并跑回归测试，避免意外影响。国内用户通过 newapi.lurus.cn 代理访问时，补丁本身不涉及代理层，理论上不受影响，但建议在集成前查看完整变更日志，确认无破坏性改动后再操作。"
+tags: [patch-release, stability, codex]
+---
+
+- 本次发布为补丁版本，基于 0.149.0 的修复更新。
+- 对 agent harness 设计而言，补丁发布意味着需要关注依赖锁定和回归测试。
+- 建议在集成前查看完整变更日志，评估对现有工作流的影响。
+
+---
+
+> 原文 release：[openai/codex rust-v0.149.1](https://github.com/openai/codex/releases/tag/rust-v0.149.1)

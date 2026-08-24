@@ -1,0 +1,23 @@
+---
+slug: 2026-08-23-cline-4-1-15
+title: "cline v4.1.15 — MCP工具自动批准开关修复，现在真正生效"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.15
+publishedAt: 2026-08-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP工具自动批准开关修复，现在真正生效"
+broadcast: "最近有个开发工具更新了，修复了一个关于MCP工具自动批准的小问题。以前那个总开关不太灵，只对单独勾选的工具有效，现在修好了，打开就能自动批准所有MCP工具调用。这对做智能体开发的朋友挺重要的，提醒我们在设计权限控制时，要保证全局开关和细节设置一致，别让用户搞混。"
+insight: "这次修复让MCP工具自动批准开关真正生效，对现有用户来说，如果之前依赖单独勾选工具来控制权限，升级后需注意全局开关会覆盖个体设置，建议重新检查你的MCP工具权限配置，避免意外放行。国内用户走newapi.lurus.cn代理不受影响，此修复仅涉及本地开关逻辑。总体值得升级，但升级后务必确认权限层级符合你的预期。"
+tags: [mcp, auto-approve, bug-fix]
+---
+
+- 修复了“Use MCP servers”开关仅对单独勾选的工具生效的问题，现在开启后自动批准所有MCP工具调用。
+- 对agent harness设计的影响：确保全局开关与细粒度权限控制的一致性，避免用户困惑。
+- 对agent harness设计的影响：需要明确权限层级，全局开关应覆盖或叠加个体设置。
+
+---
+
+> 原文 release：[cline/cline v4.1.15](https://github.com/cline/cline/releases/tag/v4.1.15)

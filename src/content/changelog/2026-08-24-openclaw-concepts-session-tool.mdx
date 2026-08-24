@@ -1,0 +1,26 @@
+---
+slug: 2026-08-24-openclaw-concepts-session-tool
+title: "Session tools · OpenClaw — 跨会话工具集：让 agent 管理会话、编排子代理，值得 5 分钟。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/session-tool
+publishedAt: 2026-08-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "跨会话工具集：让 agent 管理会话、编排子代理，值得 5 分钟。"
+broadcast: "今天聊聊跨会话工具集，它让智能体能管理会话、编排子代理，还能跨会话搜索历史，输出时自动过滤敏感信息。对开发者来说，这意味着可以设计更安全的工具边界，同时引导智能体分解任务、并行处理。工具权限还能按场景分层配置，确保最小权限，值得花五分钟了解。"
+insight: "这套跨会话工具集对现有用户价值明确：若你已在用 OpenClaw 做多步任务，值得升级以启用 sessions_spawn 等编排能力，但需先确认 profile 是否已含全套工具，否则用 /tools 检查并调整配置。国内用户走 newapi.lurus.cn 代理不受影响，因为工具集是 harness 层能力，与 API 路由无关。建议升级后重点验证输出安全过滤是否剥离了思考标签和凭据，避免内部细节泄露。"
+tags: [session-tools, agent-orchestration, tool-policy, memory]
+---
+
+- 提供 sessions_list、sessions_history、sessions_search 等工具，支持跨会话发现、读取和搜索，且输出经过安全过滤（剥离思考标签、工具调用 XML、凭据等）。
+  - 对 harness 设计：工具输出需内置安全边界，避免泄露内部细节。
+- sessions_send、sessions_spawn、sessions_yield 支持跨会话消息、后台子代理及等待结果，实现复杂编排。
+  - 对 prompt 设计：可引导 agent 分解任务，利用子代理并行处理。
+- 工具受 profile 和策略控制，如 coding 含全套编排，messaging 含 spawn 生命周期，且可用 /tools 检查。
+  - 对 harness 设计：工具权限需分层可配置，确保最小权限。
+
+---
+
+> 原文：[Session tools · OpenClaw](https://docs.openclaw.ai/concepts/session-tool)

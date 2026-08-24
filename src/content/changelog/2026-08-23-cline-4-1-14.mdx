@@ -1,0 +1,24 @@
+---
+slug: 2026-08-23-cline-4-1-14
+title: "cline v4.1.14 — 模型目录大更新，新增多款前沿模型，并修复会话完成遥测问题。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.14
+publishedAt: 2026-08-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "模型目录大更新，新增多款前沿模型，并修复会话完成遥测问题。"
+broadcast: "这次模型目录更新了不少新面孔，像视觉预览、长上下文这些能力都有覆盖，做智能体的朋友记得及时同步模型列表，让用户能选到最新模型。另外还修了个遥测问题，以前有些会话结束不上报完成，现在保证每次只报一次，这对监控和调试来说很重要。"
+insight: "这次更新主要是模型目录扩充和遥测修复，对现有用户来说，如果你正用 cline 做 agent 开发，值得升级，因为新增的 DeepSeek V4 Flash 视觉预览和 Qwen3.8 等模型可能带来更优的本地或云端选择，但需注意各模型能力差异。你的 prompt 和 hook 配置无需改动，升级后模型列表会自动同步。国内用户走 newapi.lurus.cn 代理不受影响，升级后记得在模型列表里重新确认你常用的模型是否可用，并留意遥测修复后会话完成上报更准确，便于监控。"
+tags: [model-catalog, telemetry, bug-fix]
+---
+
+- 内置模型目录刷新，新增 Claude Fable 5、Grok 4.6 on Vertex、DeepSeek V4 Flash 变体（含视觉预览）、MiMo v2.5、Qwen3.8 27B、Gemma 4 26B、LongCat 2.0、Nemotron 3.5 Lightning 及 Thinking Machines 的 Inkling 模型。
+  - 对 agent harness 设计：需及时同步模型列表，确保用户可选最新模型，并注意各模型能力差异（如视觉预览）。
+- 修复交互式会话的任务完成遥测问题，此前部分会话因 teardown 路径未上报完成，现确保每次会话仅上报一次。
+  - 对 agent harness 设计：遥测准确性对监控和调试至关重要，需保证会话生命周期中完成事件可靠触发。
+
+---
+
+> 原文 release：[cline/cline v4.1.14](https://github.com/cline/cline/releases/tag/v4.1.14)

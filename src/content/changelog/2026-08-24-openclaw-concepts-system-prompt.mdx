@@ -1,0 +1,23 @@
+---
+slug: 2026-08-24-openclaw-concepts-system-prompt
+title: "System prompt · OpenClaw — OpenClaw 如何分层构建系统提示词，兼顾缓存与动态上下文。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/system-prompt
+publishedAt: 2026-08-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OpenClaw 如何分层构建系统提示词，兼顾缓存与动态上下文。"
+broadcast: "今天聊聊OpenClaw这个项目，它把系统提示词分成了三层来组装，一层管渲染，一层管配置，还有一层负责注入实时信息，这样分开设计，调试和导出都方便多了。更妙的是，它把稳定的内容放在缓存前面，容易变的内容放后面，这样能提升性能。还有个子代理最小提示模式，能省掉记忆和自更新，只留工具和安全，针对不同任务裁剪，开销小还更聚焦。对咱们做Agent开发的，这思路挺值得借鉴。"
+insight: "这套三层组装和缓存边界的设计，对现有用户升级价值明显：若你正手动拼 prompt 或频繁改 hook，建议按渲染/配置分离重构，并把稳定内容移到前缀缓存之上，能显著降低开销。国内走 newapi.lurus.cn 代理不受影响，因为缓存优化在服务端逻辑层，与网络路径无关。子代理 minimal 模式值得一试，尤其对高频小任务，裁剪后更省 token。"
+tags: [system-prompt, prompt-engineering, agent-runtime, caching]
+---
+
+- **三层组装**：`buildAgentSystemPrompt` 纯渲染，`resolveAgentSystemPromptConfig` 解析配置，运行时适配器注入实时事实。含义：提示词构建应分离渲染与配置，便于调试和导出。
+- **缓存边界**：稳定内容（如项目上下文）置于前缀缓存之上，易变内容（如消息、运行时）置于之下。含义：设计提示词时需考虑缓存复用，提升性能。
+- **子代理最小提示**：`promptMode=minimal` 省略记忆、自更新等部分，保留工具、安全等。含义：针对不同任务裁剪提示词，可减少开销并聚焦核心。
+
+---
+
+> 原文：[System prompt · OpenClaw](https://docs.openclaw.ai/concepts/system-prompt)

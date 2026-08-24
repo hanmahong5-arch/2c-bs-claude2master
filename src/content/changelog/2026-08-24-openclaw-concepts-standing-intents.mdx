@@ -1,0 +1,25 @@
+---
+slug: 2026-08-24-openclaw-concepts-standing-intents
+title: "Standing intents · OpenClaw — 事件触发记忆：让代理在特定话题出现时自动提醒，而非定时任务。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/standing-intents
+publishedAt: 2026-08-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "事件触发记忆：让代理在特定话题出现时自动提醒，而非定时任务。"
+broadcast: "今天聊聊代理的记忆新玩法：不是定时提醒，而是事件触发。当对话里出现特定关键词，比如提到发布候选，代理就会自动提醒你确认回滚负责人。这套机制存在本地数据库里，匹配前先做关键词过滤，不调用模型，所以延迟很低。它还自带冷却和次数限制，防止过度打扰。对国内开发者来说，这种结构化的事件记忆设计，能让代理更懂分寸，值得关注。"
+insight: "现有用户若已配置定时任务，值得升级到 standing intents，它用 FTS 预过滤加无模型调用，延迟低且不耗 token。但要注意默认冷却 24 小时、最多触发 3 次、90 天过期，需按实际场景调整。国内用户走 newapi.lurus.cn 代理不受影响，因为匹配过程不依赖模型调用，仅存储和匹配在本地 SQLite 完成。建议将高频提醒改为事件触发，并显式管理取消状态，避免误报。"
+tags: [event-triggered-memory, prospective-memory, agent-harness, fire-budget]
+---
+
+- 事件型意图（standing intent）是“当触发词出现时执行指令”的记忆，如“当提到发布候选时提醒确认回滚负责人”，存储在 SQLite 中，匹配前做 FTS 关键词预过滤，无模型调用，确保低延迟。
+- 匹配时同步检查作用域、过期、冷却和触发次数，默认冷却 24 小时、最多触发 3 次、90 天过期，防止过度提醒。
+- 取消意图是显式状态变更，而非模型推断，避免主动系统过度行动；意图生命周期包括 pending、armed、fired、done、cancelled、expired。
+
+对 agent harness 设计：事件记忆应独立于上下文，用结构化匹配和预算控制误报，且取消需显式状态管理。
+
+---
+
+> 原文：[Standing intents · OpenClaw](https://docs.openclaw.ai/concepts/standing-intents)
