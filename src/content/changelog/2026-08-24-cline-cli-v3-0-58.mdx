@@ -1,0 +1,26 @@
+---
+slug: 2026-08-24-cline-cli-v3-0-58
+title: "cline cli-v3.0.58 — Cline CLI 更新：日志上限 64MiB，新增两个模型提供商，默认模型变更"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.58
+publishedAt: 2026-08-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline CLI 更新：日志上限 64MiB，新增两个模型提供商，默认模型变更。"
+broadcast: "Cline 的命令行工具更新了，这次有几个值得注意的变化。首先，首次启动时的优惠弹窗没了，那个四块九毛九的首月促销要结束了，做开发工具的朋友记得清理相关界面。另外，日志记录现在有了上限，超过六十四兆就会自动清理旧数据，防止无限增长。模型列表也更新了，新增了两家服务商，还调整了默认模型，大家用的时候留意一下默认选择的变化。"
+insight: "这次更新对现有用户影响不大，但值得注意两点：一是 ClinePass 首月优惠即将结束，如果你还没用这个促销，现在升级可能不划算；二是默认模型变更，如果你依赖 Aki.io 或 NanoGPT 的旧默认模型，建议检查并调整配置。新增的 AgentRouter 和 Opper 提供商对国内用户走 newapi.lurus.cn 代理没有直接影响，但日志上限 64MiB 的调整意味着长期使用需留意磁盘占用，建议定期清理。整体上，升级不迫切，但配置需同步更新。"
+tags: [cli, logging, model-catalog, promo]
+---
+
+- 首次启动的 ClinePass 弹窗不再宣传 $4.99 首月优惠，该促销即将结束。
+  - 对 harness 设计：需移除或更新相关促销 UI 逻辑，避免误导用户。
+- Hub 事件日志磁盘上限设为 64 MiB，超出后丢弃最旧事件并回收空间，修剪在卷和定时器上运行。
+  - 对 harness 设计：需实现日志轮转和容量控制，防止无限增长。
+- 模型目录刷新，新增 AgentRouter 和 Opper 提供商，更新模型列表和价格；Aki.io 和 NanoGPT 的默认模型变更。
+  - 对 harness 设计：需同步更新模型配置，注意默认模型变化可能影响用户预期。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.58](https://github.com/cline/cline/releases/tag/cli-v3.0.58)

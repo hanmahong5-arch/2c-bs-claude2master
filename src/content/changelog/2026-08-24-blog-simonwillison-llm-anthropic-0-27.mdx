@@ -1,0 +1,23 @@
+---
+slug: 2026-08-24-blog-simonwillison-llm-anthropic-0-27
+title: "llm-anthropic 0.27 — Simon Willison 发布 llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/24/llm-anthropic/
+publishedAt: 2026-08-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 llm-anthropic 0.27，适配 anthropic 库升级到 httpx2，并用 AI 辅助完成迁移。"
+broadcast: "Simon Willison 发布了新版本，主要是为了适配 Anthropic 库的升级，底层网络库换成了新的版本。这次迁移过程很有意思，是借助 AI 辅助完成的，让 AI 读官方指南并跑通测试。对开发者来说，以后升级第三方库时，AI 能帮上大忙，减少重复劳动，不过最后还是得人工检查，确保没问题。"
+tags: [llm, anthropic, httpx, python, ai-assisted-development]
+---
+
+- 该版本主要兼容 anthropic Python 库 v1.0.0，后者从 httpx 切换到 httpx2，OpenAI 的 v3.0.0 也做了同样变更。
+- 迁移过程借助 Claude Code 中的 Fable 5 模型，通过提示词读取官方迁移指南并让测试通过，最终生成 PR。
+- 对开发者而言，AI 辅助迁移可显著降低升级第三方库时的重复劳动，但需人工审查确保正确性。
+
+---
+
+> 原文：[llm-anthropic 0.27](https://simonwillison.net/2026/Aug/24/llm-anthropic/) · 作者 Simon Willison

@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.241",
+    "anthropics/claude-code": "v2.1.243",
     "openai/codex": "rust-v0.149.1",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v4.1.15",
+    "cline/cline": "cli-v3.0.58",
     "block/goose": "v1.47.0",
-    "sst/opencode": "v1.18.21",
+    "sst/opencode": "v1.18.22",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.56.0",
     "openclaw/openclaw": "v2026.6.34",
@@ -123,7 +123,8 @@
     "Autumn-27/ARTEX",
     "pgrundev/pgbot",
     "jundizhou/easy-stock",
-    "dsh-tauri-desk/deepseek-harness-desktop"
+    "dsh-tauri-desk/deepseek-harness-desktop",
+    "anywhere-labs/dsh-desktop"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -216,7 +217,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-24",
+    "anthropic-engineering": "2026-08-25",
     "claude-code-docs": "2026-08-21",
     "openai-codex-blog": "2026-08-20",
     "openclaw-concepts": "2026-08-24",
@@ -467,7 +468,9 @@
       "https://simonwillison.net/2026/Aug/22/llm/",
       "https://simonwillison.net/2026/Aug/22/more-than-just-code-review/",
       "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/",
-      "https://simonwillison.net/2026/Aug/23/drew-breunig/"
+      "https://simonwillison.net/2026/Aug/23/drew-breunig/",
+      "https://simonwillison.net/2026/Aug/24/llm-anthropic/",
+      "https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -850,7 +853,8 @@
       "https://openai.com/index/chatgpt-ads-expands-across-europe",
       "https://openai.com/index/asana",
       "https://openai.com/index/introducing-ai-futures",
-      "https://openai.com/index/stampli"
+      "https://openai.com/index/stampli",
+      "https://openai.com/index/gpt-5-6-in-kiro"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1055,23 +1059,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-24",
+    "simonwillison": "2026-08-25",
     "lilianweng": "2026-08-20",
-    "latentspace": "2026-08-24",
-    "interconnects": "2026-08-24",
+    "latentspace": "2026-08-25",
+    "interconnects": "2026-08-25",
     "karpathy": "2026-08-24",
     "raschka": "2026-08-24",
     "eugeneyan": "2026-08-24",
     "chiphuyen": "2026-08-20",
-    "oneusefulthing": "2026-08-23",
+    "oneusefulthing": "2026-08-25",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-24",
-    "deepmind": "2026-08-23",
-    "hf-blog": "2026-08-23",
-    "anthropic-news": "2026-08-24",
-    "steipete": "2026-08-23",
-    "openclaw-blog": "2026-08-23"
+    "openai-news": "2026-08-25",
+    "deepmind": "2026-08-25",
+    "hf-blog": "2026-08-25",
+    "anthropic-news": "2026-08-25",
+    "steipete": "2026-08-25",
+    "openclaw-blog": "2026-08-25"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

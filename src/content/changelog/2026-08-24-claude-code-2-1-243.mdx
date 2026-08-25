@@ -1,0 +1,25 @@
+---
+slug: 2026-08-24-claude-code-2-1-243
+title: "claude-code v2.1.243 — Claude Code 新版本：新增循环用量分析、模型选择器定制、缓存 TTL "
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.243
+publishedAt: 2026-08-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 新版本：新增循环用量分析、模型选择器定制、缓存 TTL 设置等多项改进。"
+broadcast: "Claude Code 这次更新挺实用，新增了循环用量分析，能看清每轮循环消耗了多少 token，方便揪出失控的任务。还允许定制模型选择器，限制或推荐特定模型，同时可以分别设置主对话和子代理的缓存时长，优化成本和延迟。另外，远程工具断线后能自动重连了，对做 agent 开发的开发者来说，监控和稳定性都更省心。"
+insight: "如果你在用 Claude Code 做多轮 agent 任务，这次升级值得关注：/usage 的 Loops 分解能直接暴露失控循环，建议升级后先跑一轮看数据。modelPicker 和缓存 TTL 都是可选项，不急着改配置，但如果你走 newapi.lurus.cn 代理，远程 MCP 断线重连的修复对稳定性是实打实的提升，建议优先验证这条链路。整体判断：值得升级，重点看 usage 和 MCP 恢复。"
+tags: [usage-monitoring, model-picker, prompt-cache, mcp-fixes]
+---
+
+- `/usage` 新增 Loops 分解，显示每轮循环的运行次数、token 数等，便于发现失控的循环任务。对 agent harness 设计：可监控子任务资源消耗。
+- 新增 `modelPicker` 设置，可定制 `/model` 选择器，支持任意模型 ID（包括 Vertex/Bedrock）。对 agent harness 设计：允许限制或推荐模型列表。
+- 新增 `promptCacheTtl` 和 `subagentPromptCacheTtl` 设置，可分别控制主对话和子代理的缓存时长。对 agent harness 设计：可优化成本与延迟。
+- 新增 `modelPricing` 托管设置，使用组织合同价计算成本。对 agent harness 设计：成本报告更准确。
+- 修复远程 MCP 服务器断线后无法恢复的问题，现在会自动重连或报告失败。对 agent harness 设计：增强外部工具连接的稳定性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.243](https://github.com/anthropics/claude-code/releases/tag/v2.1.243)

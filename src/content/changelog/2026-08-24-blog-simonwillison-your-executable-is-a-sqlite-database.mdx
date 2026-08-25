@@ -1,0 +1,23 @@
+---
+slug: 2026-08-24-blog-simonwillison-your-executable-is-a-sqlite-database
+title: "Your executable is a SQLite database — 把 SQLite 数据库文件直接当可执行程序运行，一个 Linux 上的巧妙技巧"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/
+publishedAt: 2026-08-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "把 SQLite 数据库文件直接当可执行程序运行，一个 Linux 上的巧妙技巧。"
+broadcast: "今天聊一个特别巧妙的 Linux 技巧，有人把 SQLite 数据库文件直接变成了可执行程序。原理是往数据库的特定位置写入标记，再把程序代码存进表里，系统就能识别并运行它。对开发者来说，这展示了文件格式的灵活性，启发我们把数据和代码融合起来，不过也要留意安全和兼容问题。"
+tags: [linux, sqlite, executable, binfmt-misc]
+---
+
+- Farid Zakaria 提出利用 SQLite 文件格式中的 4 字节应用 ID（偏移 68 字节）设为 `SELF`，将 ELF 可执行文件的各组件存入 SQLite 表，实现“数据库即可执行文件”。
+- 通过 `binfmt_misc` 机制，内核可识别该模式并调用解释器执行，无需 NixOS 也能注册，如写入 `/proc/sys/fs/binfmt_misc/register`。
+- 对开发者而言，这展示了文件格式的灵活性和系统扩展性，启发将数据与代码融合的新思路，但需注意安全性和兼容性。
+
+---
+
+> 原文：[Your executable is a SQLite database](https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/) · 作者 Simon Willison

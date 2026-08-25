@@ -1,0 +1,25 @@
+---
+slug: 2026-08-24-opencode-1-18-22
+title: "opencode v1.18.22 — 修复兼容性与登录链接，提升多提供商稳定性"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.22
+publishedAt: 2026-08-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复兼容性与登录链接，提升多提供商稳定性"
+broadcast: "最近这个开源编程工具更新了，主要修复了一些兼容性问题，比如登录链接现在更可靠，还避免把不支持的参数发给某些服务商，用起来更稳了。另外桌面端选模型时界面也更好用。对咱们国内开发者来说，这些修复能让对接不同大模型服务时少踩坑，值得关注。"
+insight: "这次更新主要是兼容性修复，没有新增功能。如果你在用 opencode 且遇到登录链接或 textVerbosity 参数报错，建议升级。国内用户走 newapi.lurus.cn 代理不受影响，因为修复的是设备登录和提供商兼容，不涉及代理链路。现有 hook 配置无需改动，除非你用了 Amazon Bedrock 或依赖 textVerbosity 参数，否则升级后体验更稳。"
+tags: [bugfix, compatibility, login, desktop]
+---
+
+- 移除过时的 Go 首月折扣信息，避免误导用户。
+- 修复设备登录链接，支持相对 URL 和基础路径，确保认证流程可靠。
+- 修复 textVerbosity 参数被错误发送给不支持的 OpenAI 兼容提供商，增强兼容性。
+- 更新 Amazon Bedrock 提供商，修复兼容性问题。
+- 桌面端模型选择器滚动时保持提供商头部可见，改善 UI 体验。
+
+---
+
+> 原文 release：[sst/opencode v1.18.22](https://github.com/anomalyco/opencode/releases/tag/v1.18.22)

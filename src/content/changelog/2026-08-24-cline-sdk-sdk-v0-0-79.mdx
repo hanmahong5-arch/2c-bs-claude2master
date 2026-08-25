@@ -1,0 +1,26 @@
+---
+slug: 2026-08-24-cline-sdk-sdk-v0-0-79
+title: "cline sdk/sdk/v0.0.79 — SDK 事件日志上限 64MiB，修复 telemetry 丢失，更新模型目录"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79
+publishedAt: 2026-08-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK 事件日志上限 64MiB，修复 telemetry 丢失，更新模型目录"
+broadcast: "这次SDK更新，把事件日志的磁盘占用上限设成了64兆，写满就自动清理旧的，防止数据库无限膨胀。同时修好了任务完成数据丢失的问题，现在每次会话结束都会准确上报一次。另外还更新了模型目录，新增了提供商，调整了默认模型。对咱们做开发来说，得注意日志清理策略，还有别把默认模型写死，要动态获取。"
+insight: "这次 SDK 更新对现有用户影响不大，但值得关注。事件日志上限 64MiB 和清理策略是内部机制，如果你自己写 harness 或长时间跑任务，建议留意磁盘占用，不过默认行为已足够安全。telemetry 修复是正向的，不用改配置。模型目录新增了 AgentRouter 和 Opper，Aki.io 和 NanoGPT 默认模型变了，如果你依赖这些提供商，可能需要检查自己的模型配置。走 newapi.lurus.cn 代理不受影响，因为这是 SDK 层面的更新，与代理无关。总体，现有用户无需升级，除非你用到新提供商。"
+tags: [event-log, telemetry, model-catalog, sdk]
+---
+
+- 事件日志磁盘上限 64MiB，旧事件优先删除并 vacuum，每追加 16MiB 即触发清理，避免 SQLite 无限膨胀。
+  - 对 harness 设计：需考虑事件日志的存储上限与清理策略，防止长期运行导致磁盘占用失控。
+- 修复 `task.completed` telemetry 在多数交互会话中丢失的问题，现在每次会话结束都会精确发送一次。
+  - 对 harness 设计：确保 telemetry 事件在会话所有退出路径中可靠发送，避免数据缺失。
+- 模型目录更新，新增 AgentRouter 和 Opper 提供商，调整模型列表与价格，Aki.io 和 NanoGPT 的默认模型变更。
+  - 对 harness 设计：需动态获取模型目录，避免硬编码默认模型，以适应提供商和默认值的变化。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.79](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.79)
