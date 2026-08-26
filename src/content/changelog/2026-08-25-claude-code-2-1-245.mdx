@@ -1,0 +1,23 @@
+---
+slug: 2026-08-25-claude-code-2-1-245
+title: "claude-code v2.1.245 — 修复 Linux 上 glibc 2.44 导致的启动崩溃"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.245
+publishedAt: 2026-08-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Linux 上 glibc 2.44 导致的启动崩溃"
+broadcast: "最近Claude Code更新了，主要修复了在最新版Linux系统上启动就崩溃的问题。如果你用的是Arch或Fedora这些更新快的发行版，之前可能遇到过打不开的情况，现在解决了。这件事提醒我们，做Agent工具时得注意运行环境的兼容性，特别是系统库版本，最好在测试时覆盖最新的环境，或者提供静态链接的选项。"
+insight: "这次修复对 Linux 用户是刚需，特别是 Arch 等滚动发行版，升级 v2.1.245 能直接解决启动崩溃。如果你在用这些系统，建议立即升级；其他发行版影响不大。现有 prompt 和 hook 配置无需改动，属于底层兼容性修复。国内走 newapi.lurus.cn 代理不受影响，因为问题在本地 glibc 而非网络层。CI 里建议加个最新 glibc 环境测试，避免回归。"
+tags: [linux, bugfix, compatibility]
+---
+
+- 修复了在 glibc 2.44 的 Linux 发行版（如 Arch、CachyOS、Fedora Rawhide）上启动崩溃的问题。
+- 对 agent harness 设计：需关注运行时环境兼容性，尤其是系统库版本。
+- 建议在 CI 中覆盖最新 glibc 环境，或提供静态链接选项。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.245](https://github.com/anthropics/claude-code/releases/tag/v2.1.245)

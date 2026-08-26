@@ -1,6 +1,6 @@
 ---
 slug: 2026-08-18-claude-code-2-1-235
-title: "claude-code v2.1.235 — 拼写检查、缓存修复、权限对话框改进，值得一看"
+title: "claude-code v2.1.235 — 拼写检查、缓存修复、权限对话框改进，提升 agent 开发体验。"
 source: anthropics/claude-code
 sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.235
 publishedAt: 2026-08-18
@@ -8,18 +8,17 @@ authored: llm
 model: deepseek-chat
 verified: pending
 kind: changelog
-hook: "拼写检查、缓存修复、权限对话框改进，值得一看"
-broadcast: "最近这个代码助手工具更新了，新增了拼写检查功能，能在输入时标出错别字，帮你写出更准确的提示词。同时修复了缓存失效和权限对话框误操作的问题，用起来更稳定也更安全。对国内开发者来说，这些改进能减少日常开发中的小麻烦，值得关注。"
-insight: "本次更新值得国内用户升级，特别是拼写检查功能可提升提示词质量，而缓存修复和权限对话框改进增强了稳定性与安全性。若你使用 newapi.lurus.cn 代理，这些修复不影响代理，但建议升级后测试缓存命中率。现有 hook 配置无需改动，但可考虑启用 spellcheck 设置。"
-tags: [spellcheck, cache-fix, permission-dialog, vim-mode]
+hook: "拼写检查、缓存修复、权限对话框改进，提升 agent 开发体验。"
+broadcast: "最近这个AI编程工具更新了，新增了拼写检查功能，能在输入时标出拼写错误，帮开发者快速发现提示词问题。还修复了语言服务器断连导致缓存失效的问题，以及权限对话框的误操作，让依赖缓存的开发工作流更稳定。另外优化了后台云会话的资源占用，长时间运行更省内存和CPU。这些改进对国内做智能体开发的开发者来说，能提升日常开发体验和效率。"
+insight: "对于现有用户，v2.1.235 值得升级，尤其是依赖缓存和权限安全的 agent 工作流。拼写检查是可选功能，可按需开启；缓存修复和权限对话框改进是实质性的体验提升。国内用户通过 newapi.lurus.cn 代理不受影响，因为更新主要涉及本地功能。建议升级并调整 hook 配置以启用拼写检查，同时注意权限对话框的改进。"
+tags: [spellcheck, cache-fix, permission-dialog, performance]
 ---
 
-- 新增可选 `spellcheck` 设置，利用 aspell/hunspell/ispell 在输入时下划线标出拼写错误，提升提示词质量。
-- 修复语言服务器重连导致整个提示词缓存失效的问题，确保缓存命中率稳定。
-- 修复权限对话框中的 Shift+Tab 误操作，避免意外批准编辑权限，增强安全性。
-- 改进 Agent 工具在不可用时的错误提示，明确列出可用代理，减少混淆。
-- 优化后台云会话（如 /ultrareview）的内存和 CPU 占用，不再重复扫描事件流。
-- 修复 Vim 模式下切换详细转录或关闭面板时保持 NORMAL 模式和光标位置。
+- 新增可选 `spellcheck` 设置，利用 aspell/hunspell/ispell 在输入时下划线标出拼写错误，便于 agent 开发中快速发现提示词拼写问题。
+- 修复语言服务器断连重连导致整个提示词缓存失效的问题，减少不必要的重算，对依赖缓存的 agent 工作流更友好。
+- 修复权限对话框中 Shift+Tab 误批准编辑并授予全局权限的问题，现在正确关闭字段，避免意外授权。
+- 改进 Agent 工具在不可用时的错误提示，明确列出可用 agent，帮助开发者快速定位配置问题。
+- 优化后台云会话（如 /ultrareview）的内存和 CPU 占用，不再重复扫描事件流，提升长时间运行时的资源效率。
 
 ---
 

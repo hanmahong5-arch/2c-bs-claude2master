@@ -1,0 +1,23 @@
+---
+slug: 2026-08-25-opencode-1-18-23
+title: "opencode v1.18.23 — 修复 Cloudflare AI Gateway 路由与 Anthropic 模"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.23
+publishedAt: 2026-08-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Cloudflare AI Gateway 路由与 Anthropic 模型兼容问题"
+broadcast: "这次更新主要修复了 Cloudflare AI 网关的路由问题，现在非 Workers 模型也能正常通过 API 使用了。对于用 Anthropic 模型的开发者来说，模型 ID 的兼容性也做了调整，避免出错。另外还解决了会话管理和 GitHub 认证的问题，整体更稳定，值得关注。"
+insight: "如果你正在用 Cloudflare AI Gateway 且走 Anthropic 模型，这次修复值得升级，点号模型 ID 转连字符能避免路由报错。现有 hook 配置不用大改，但建议确认网关请求头是否涉及父会话 ID。国内用户走 newapi.lurus.cn 代理不受影响，因为修复针对的是 Cloudflare 侧兼容性，与代理链路无关。总体判断：升级成本低，收益明确。"
+tags: [bugfix, cloudflare-ai-gateway, anthropic, authentication]
+---
+
+- 修复 Cloudflare AI Gateway 对第三方提供商的路由，非 Workers 模型现可通过 REST API 正常工作。
+- 修复 Anthropic 模型通过网关时，将点号模型 ID 转换为连字符形式，确保兼容。
+- 修复会话感知提供商的父会话 ID 请求头问题，并修复 GitHub 不可变 OIDC 令牌认证。
+
+---
+
+> 原文 release：[sst/opencode v1.18.23](https://github.com/anomalyco/opencode/releases/tag/v1.18.23)

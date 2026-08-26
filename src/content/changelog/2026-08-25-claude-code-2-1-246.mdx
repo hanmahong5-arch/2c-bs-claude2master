@@ -1,0 +1,30 @@
+---
+slug: 2026-08-25-claude-code-2-1-246
+title: "claude-code v2.1.246 — Bash 通配符规则漏洞、长 diff 卡顿等 40+ 修复，值得一看"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.246
+publishedAt: 2026-08-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Bash 通配符规则漏洞、长 diff 卡顿等 40+ 修复，值得一看"
+broadcast: "这次Claude Code的更新修复了四十多个问题，特别值得关注的是，它堵住了一个Bash命令规则里的安全漏洞，防止通配符被意外利用。另外，超长代码的显示卡顿也解决了。对咱们做Agent开发的朋友来说，这些修复提醒我们，在设计工具规则和界面时，得把边界和性能都考虑周全。"
+insight: "本次更新对现有用户价值明显，特别是 Bash 通配符规则漏洞的警告，建议检查现有 harness 规则，避免意外授权。长 diff 卡顿的修复也值得升级，提升体验。国内用户通过 newapi.lurus.cn 代理不受影响，可放心升级。若使用 MCP 工具，注意修复后的报错行为，确保配置正确。"
+tags: [bug-fixes, permissions, mcp, performance]
+---
+
+- Bash 允许规则中通配符在子命令前（如 `Bash(git * main)`）会匹配选项插入，现启动时警告。
+  - 设计 harness 时需注意规则匹配的边界，避免意外授权。
+- 超长单行 diff（如 base64）导致严重卡顿，现截断显示并标记。
+  - 渲染长内容时需考虑性能，避免阻塞 UI。
+- 新增 Auto 模式标签页于 `/permissions`，可查看编辑分类器规则。
+  - 提供更细粒度的权限控制，便于自动化场景。
+- 修复 MCP 工具调用被中断时误报为“完成无输出”，现明确报错。
+  - 工具调用状态需准确传递，避免误导模型。
+- 修复 `--strict-mcp-config` 会话提示批准未加载的服务器，导致后台会话卡住。
+  - 配置加载逻辑需与实际使用一致，避免启动阻塞。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.246](https://github.com/anthropics/claude-code/releases/tag/v2.1.246)

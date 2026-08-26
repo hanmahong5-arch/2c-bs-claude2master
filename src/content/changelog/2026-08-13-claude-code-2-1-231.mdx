@@ -9,14 +9,14 @@ model: deepseek-chat
 verified: pending
 kind: changelog
 hook: "修复 MCP OAuth 登录重定向 URI 不匹配问题"
-broadcast: "这次更新修复了MCP登录时重定向地址不匹配的问题，特别是像Slack这类使用预注册客户端的服务。对做Agent开发的朋友来说，得注意回调地址要和服务器注册的完全一致，不然集成会失败。测试时也别忘了覆盖预注册客户端的场景，确保兼容性。"
-insight: "这次修复针对的是 MCP OAuth 登录重定向 URI 不匹配，主要影响像 Slack 这类使用预注册 OAuth 客户端的服务器。如果你现有 hook 或 prompt 里配置了 MCP 集成，且涉及 OAuth 登录，建议检查回调 URI 是否与服务器预注册的完全一致，否则升级后仍可能失败。国内用户走 newapi.lurus.cn 代理不受此修复影响，但测试时需覆盖预注册 OAuth 场景，确保兼容性。总体值得升级，但需同步核对配置。"
+broadcast: "这次更新修复了一个挺关键的问题，就是MCP登录时重定向地址对不上的情况，特别是像Slack这种提前注册过的服务器。对咱们做智能体开发的人来说，以后接MCP服务，得留意重定向地址的配置，得跟服务器那边提前注册的保持一致，不然登录就会失败。测试的时候，也别忘了把这种预注册客户端的场景覆盖进去。"
+insight: "这次修复主要针对 MCP OAuth 登录的重定向 URI 不匹配，对使用预注册客户端的服务器（如 Slack）影响较大。如果你现有配置中集成了这类 MCP 服务器，建议升级到 v2.1.231，并检查重定向 URI 是否与服务器预注册的一致，否则登录可能失败。国内用户走 newapi.lurus.cn 代理时，此修复不涉及代理链路，代理本身不受影响，但需确保 OAuth 流程中的 URI 配置正确。"
 tags: [mcp, oauth, bug-fix]
 ---
 
 - 修复了 MCP OAuth 登录时重定向 URI 不匹配的问题，影响使用预注册 OAuth 客户端的服务器（如 Slack）。
-- 对 agent harness 设计：需确保 OAuth 回调 URI 与服务器预注册的 URI 完全一致，避免集成失败。
-- 对 agent harness 设计：测试时需覆盖预注册 OAuth 客户端的场景，确保兼容性。
+- 对 agent harness 设计：集成 MCP 服务器时需注意 OAuth 重定向 URI 的配置，确保与服务器预注册的 URI 一致。
+- 对 agent harness 设计：测试 OAuth 流程时，应覆盖使用预注册客户端的场景，避免登录失败。
 
 ---
 

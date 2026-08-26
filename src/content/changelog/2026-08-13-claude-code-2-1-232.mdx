@@ -1,6 +1,6 @@
 ---
 slug: 2026-08-13-claude-code-2-1-232
-title: "claude-code v2.1.232 — 子代理默认后台运行，跨会话消息直达，GitLab 全面支持"
+title: "claude-code v2.1.232 — 子代理默认 fork、跨会话 @ 提及、GitLab 支持增强，安全修复密集。"
 source: anthropics/claude-code
 sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.232
 publishedAt: 2026-08-13
@@ -8,17 +8,20 @@ authored: llm
 model: deepseek-chat
 verified: pending
 kind: changelog
-hook: "子代理默认后台运行，跨会话消息直达，GitLab 全面支持"
-broadcast: "这次更新让子代理默认在后台运行，还支持跨会话直接发消息，开发时协作更顺手了。同时全面支持 GitLab，安全方面也修了不少漏洞，比如权限绕过和符号链接问题。对国内开发者来说，多平台支持和更稳的远程会话，能让 agent 开发更省心。"
-insight: "此次更新对现有用户价值明确：子代理默认后台运行并继承对话缓存，适合多任务并行，但需留意并发资源占用；跨会话 @ 提及与 SendMessage 直达功能实用，不过命名冲突要提前规避。国内用户经 newapi.lurus.cn 代理访问不受影响，安全修复如 PowerShell 权限绕过、Git Bash 符号链接等强化了沙箱，建议及时升级。若你已配置 prompt 或 hook，可暂不改动，但需检查 GitLab 令牌脱敏相关设置。"
-tags: [subagent, cross-session, gitlab, security]
+hook: "子代理默认 fork、跨会话 @ 提及、GitLab 支持增强，安全修复密集。"
+broadcast: "这次更新把子代理的默认行为改了，现在它们会继承完整对话和缓存，而且非队友代理默认在后台运行。另外，你可以用@符号直接提到另一个会话，消息能直达同名会话。对做agent开发的朋友来说，得注意适配子代理的并发和缓存复用，还要处理跨会话的消息路由。GitLab支持也增强了，还修了不少安全漏洞，特别是权限绕过的问题，值得关注。"
+insight: "这次更新值得升级，尤其是子代理默认 fork 和跨会话 @ 提及，对多任务协作是实打实的增强。现有 prompt 和 hook 配置建议微调：子代理后台运行和跨会话路由可能影响你的 harness 逻辑，需适配并发与命名冲突。国内用户走 newapi.lurus.cn 代理不受影响，安全修复（如 PowerShell 权限绕过）反而更稳，建议尽快升级。"
+tags: [subagent-fork, cross-session-messaging, gitlab-support, security-fixes]
 ---
 
-- 子代理 fork 默认开启，继承完整对话与缓存，非 teammate 代理后台运行，需注意并发与资源管理。
-- 输入 @ 可提及另一会话，SendMessage 直达同名会话，跨会话通信更直接，需处理命名冲突。
-- 新增 GitLab 令牌脱敏与插件市场支持，安全策略需覆盖更多平台。
-- 多项安全修复：PowerShell 权限绕过、Git Bash 符号链接、嵌套仓库信任等，强化沙箱与信任边界。
-- 远程控制会话稳定性提升，重连窗口延长至 30 分钟，需考虑网络波动下的会话管理。
+- 子代理 fork 默认开启，继承完整对话与缓存；交互式会话中非队友代理默认后台运行。
+  - 对 harness 设计：需适配子代理并发与缓存复用，管理后台任务生命周期。
+- 输入 @ 可提及另一会话，SendMessage 直达同名会话；会话命名自动去重。
+  - 对 harness 设计：需实现跨会话消息路由与命名冲突处理。
+- 新增 GitLab 令牌脱敏、插件市场支持 GitLab URL、配置别名。
+  - 对 harness 设计：需扩展凭证保护与市场解析逻辑。
+- 多项安全修复：PowerShell 权限绕过、Git Bash 符号链接、嵌套仓库信任等。
+  - 对 harness 设计：需加强沙箱与路径验证，防止权限提升。
 
 ---
 

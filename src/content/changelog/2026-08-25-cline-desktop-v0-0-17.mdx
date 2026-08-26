@@ -1,0 +1,30 @@
+---
+slug: 2026-08-25-cline-desktop-v0-0-17
+title: "cline desktop-v0.0.17 — Cline 桌面版大改：插件/MCP/技能统一中心，模型页重设计，语音独立设置"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.17
+publishedAt: 2026-08-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline 桌面版大改：插件/MCP/技能统一中心，模型页重设计，语音独立设置"
+broadcast: "Cline 桌面版这次更新，把插件、MCP、技能这些配置都统一到了一个中心里，还带实时计数，找起来方便多了。模型页也重新设计了，按连接状态分组，OAuth 还能用浏览器直接登录，省去不少管理密钥的麻烦。语音输入单独放到了设置页，只有配置好了才会出现麦克风按钮。另外，会话搜索现在能搜全部历史记录，对长会话管理挺有帮助的。"
+insight: "这次桌面版把插件、MCP、技能等全部收进 Customize 中心，配置入口统一了，但如果你之前依赖独立 Marketplace 页或 agent 的 todo 工具，升级后得重新适应。模型页的 OAuth 浏览器登录对国内用户是好事，省去手动填 key 的麻烦。至于 newapi.lurus.cn 代理，摘要没提，但既然认证方式变了，建议升级后先确认代理连接是否正常。整体值得升，但别急着删旧配置，先跑通核心流程。"
+tags: [desktop-app, ui-redesign, settings, voice-input]
+---
+
+- 插件、MCP、技能、规则、钩子、工具合并为 Customize 中心，带标签页和实时计数，目录浏览与安装项同页，移除独立 Marketplace 页。
+  - 对 agent harness 设计：统一配置入口减少上下文切换，实时计数便于状态感知。
+- 模型页重设计：提供商分组为已连接/热门/全部，OAuth 提供商支持浏览器登录，显式连接/断开操作。
+  - 对 agent harness 设计：认证状态更清晰，浏览器登录简化 OAuth 流程，减少 API key 管理负担。
+- 语音输入移至独立设置页，仅显示已连接且支持转录的提供商，并预选默认模型；麦克风按钮仅在配置后出现。
+  - 对 agent harness 设计：语音功能按需启用，避免未配置时的无效入口。
+- 会话搜索改为对话框，搜索全部历史而非仅侧边栏已加载项。
+  - 对 agent harness 设计：全局搜索提升历史会话检索效率，适合长会话管理。
+- 移除 agent 的 todo 工具和 Agenda 面板，但定时任务不受影响。
+  - 对 agent harness 设计：简化工具集，减少维护面，但需确保替代方案。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.17](https://github.com/cline/cline/releases/tag/desktop-v0.0.17)

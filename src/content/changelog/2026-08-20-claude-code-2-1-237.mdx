@@ -1,6 +1,6 @@
 ---
 slug: 2026-08-20-claude-code-2-1-237
-title: "claude-code v2.1.237 — 修复网关缓存，新增简洁输出风格，提升效率"
+title: "claude-code v2.1.237 — 修复LLM网关缓存，新增简洁输出风格"
 source: anthropics/claude-code
 sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.237
 publishedAt: 2026-08-20
@@ -8,15 +8,15 @@ authored: llm
 model: deepseek-chat
 verified: pending
 kind: changelog
-hook: "修复网关缓存，新增简洁输出风格，提升效率"
-broadcast: "最近Claude代码工具更新了，主要修了一个缓存问题，如果你用自定义网关或地址，现在缓存能正常工作了，这样能减少延迟和成本。另外新增了简洁输出风格，直接给结果，不废话，但质量不变。对开发者来说，自定义配置下能依赖缓存省token，简洁风格也适合快速响应的场景，值得试试。"
-insight: "如果你正用 LLM 网关或自定义 base URL，这次缓存修复值得升级，能省 token 和延迟。新增的简洁输出风格适合快速响应场景，但工作质量不变，可在 /config 里切换。国内用户走 newapi.lurus.cn 代理不受影响，缓存修复对自定义网关同样生效，建议升级后测试一下缓存命中情况。"
-tags: [prompt-caching, output-style, gateway, config]
+hook: "修复LLM网关缓存，新增简洁输出风格"
+broadcast: "这次更新修复了使用自定义网关时缓存失效的问题，让响应更快、成本更低。同时新增了简洁输出风格，Claude直接给结果，不啰嗦，但活儿照干。对做Agent开发的朋友来说，这风格能省不少token，适合高频交互场景。"
+insight: "如果你正用 LLM 网关或自定义 base URL，这次缓存修复值得升级，能恢复 prompt 缓存、提速降本。新增的简洁输出风格适合高频交互，可在 /config 里切换，不影响完成度。国内走 newapi.lurus.cn 代理的，缓存修复同样生效，建议升级后留意行为变化，必要时调整 hook 配置。"
+tags: [prompt-caching, output-style, llm-gateway]
 ---
 
-- 修复了使用 LLM 网关或自定义 base URL 时的提示缓存问题，确保这些场景下缓存正常工作，减少延迟和成本。
-- 新增内置“简洁”输出风格，Claude 直接给出结果，跳过开场白和叙述，但工作质量不变。可在 /config 的输出风格中选择。
-- 对 agent harness 设计：缓存修复意味着自定义网关配置下可依赖缓存，优化 token 使用；简洁风格可减少冗长输出，提升交互效率，适合需要快速响应的场景。
+- 修复了使用 LLM 网关或自定义 base URL 时 prompt 缓存失效的问题，确保这些场景下缓存正常工作，提升响应速度并降低成本。
+- 新增内置 "Concise" 输出风格，Claude 直接给出结果，跳过前言和叙述，但工作完成度不变。可在 /config 的 Output style 中选择。
+- 对 agent harness 设计的影响：若使用自定义网关，需注意缓存修复带来的行为变化；简洁风格可减少 token 消耗，适合高频交互场景。
 
 ---
 

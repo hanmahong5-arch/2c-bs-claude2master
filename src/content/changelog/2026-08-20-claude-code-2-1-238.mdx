@@ -1,6 +1,6 @@
 ---
 slug: 2026-08-20-claude-code-2-1-238
-title: "claude-code v2.1.238 — Claude Code 新增 keybindingFlavor、插件 heade"
+title: "claude-code v2.1.238 — keybindingFlavor、插件 headersHelper、自托管 ru"
 source: anthropics/claude-code
 sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.238
 publishedAt: 2026-08-20
@@ -8,17 +8,16 @@ authored: llm
 model: deepseek-chat
 verified: pending
 kind: changelog
-hook: "Claude Code 新增 keybindingFlavor、插件 headersHelper，并修复大量远程控制与 MCP 问题。"
-broadcast: "Claude Code 这次更新挺实在的，新增了可配置的按键风格，还让插件能动态生成临时认证头，安装时也会提醒你确认。另外修复了子代理工具结果内存不释放的问题，长会话更稳了。对咱们做 agent 开发的来说，这些改动提示我们要注意键位可配置、认证要动态、内存得管好，别让长任务卡死。"
-insight: "这次 v2.1.238 对国内用户来说，升级价值中等。如果你在用代理（比如 newapi.lurus.cn），新增的 `--proxy-authorization-command/file` 和插件 headersHelper 可能影响现有配置，建议先确认代理认证方式是否兼容，必要时调整启动参数。默认 keybinding 没变，不用改配置。如果你长会话多，内存修复值得升；否则可观望。MCP 凭据隔离和信任目录要求，可能需重新授权，注意升级后检查。"
-tags: [keybinding, plugin-marketplace, self-hosted-runner, memory-fix]
+hook: "keybindingFlavor、插件 headersHelper、自托管 runner 增强，多项修复提升稳定性。"
+broadcast: "这次更新给开发者带来了几个实用改进。新增的按键设置可以切换命令行操作风格，让交互更顺手。插件市场现在支持动态生成网络请求头，安装时需要注意凭证安全。自托管运行器增强了网络边缘场景的可靠性，同时修复了内存释放和会话恢复等问题，让长时间开发更稳定。"
+insight: "这次 v2.1.238 的更新对国内用户来说，最值得关注的是自托管 runner 的增强，特别是延迟关闭和代理授权命令，能提升网络边缘场景的可靠性，如果你在用自托管 runner，建议升级并调整相关配置。keybindingFlavor 和 headersHelper 属于可选优化，不影响现有 prompt 或 hook 的核心逻辑，但 headersHelper 涉及凭证隔离，安装插件时需留意。至于 newapi.lurus.cn 代理，摘要未提及，无法判断是否受影响，建议升级后自行验证。"
+tags: [keybinding, plugin-marketplace, self-hosted-runner, bug-fixes]
 ---
 
-- 新增 `keybindingFlavor: "readline"` 设置，使 Ctrl+W 按 Bash 方式删除至空白；默认 classic 不变。对 harness 设计：需支持可配置键位绑定，并保持默认行为稳定。
-- 插件市场支持 `headersHelper` 生成临时 HTTP 头，安装/更新时需确认（`-y` 跳过）。对 harness 设计：需在插件安装流程中集成动态认证，并提示用户确认。
-- 新增 `self-hosted-runner --defer-shutdown-max-min` 和 `--proxy-authorization-command/file`，增强优雅退出与代理认证。对 harness 设计：需支持延迟关闭和动态代理头，确保长任务不中断。
-- 修复子代理工具结果内存无限增长，现离开显示窗口即释放。对 harness 设计：需管理工具结果生命周期，避免长会话内存泄漏。
-- 修复 MCP `headersHelper` 不继承凭据环境变量，且需信任目录。对 harness 设计：需隔离凭据，并强制信任确认。
+- 新增 `keybindingFlavor` 设置，可切换 readline 风格 Ctrl+W，影响提示符交互设计。
+- 插件 marketplace 支持 `headersHelper` 动态生成 HTTP 头，安装/更新时需确认，注意凭证隔离。
+- 自托管 runner 新增延迟关闭和代理授权命令，增强网络边缘场景的可靠性。
+- 修复子代理结果内存释放、输出风格漂移、远程控制会话恢复等问题，提升长会话稳定性。
 
 ---
 

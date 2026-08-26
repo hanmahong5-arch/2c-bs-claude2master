@@ -1,6 +1,6 @@
 ---
 slug: 2026-08-19-claude-code-2-1-236
-title: "claude-code v2.1.236 — 跨会话通知、默认模型变量、沙箱修复，值得一看"
+title: "claude-code v2.1.236 — 跨会话通知、默认模型变量、沙箱通配符修复，值得一看"
 source: anthropics/claude-code
 sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.236
 publishedAt: 2026-08-19
@@ -8,15 +8,18 @@ authored: llm
 model: deepseek-chat
 verified: pending
 kind: changelog
-hook: "跨会话通知、默认模型变量、沙箱修复，值得一看"
-broadcast: "这次更新给开发者带来几个实用变化。新增了一个环境变量，可以设置新会话的默认模型，而且手动切换后依然能记住你的选择。另外，跨会话通知功能也来了，其他会话空闲时会主动提醒你，不用再反复轮询。沙箱在苹果系统上的安全规则也更严格了，防止通过重命名绕过限制。这些改进对协调多任务和提升开发效率都挺有帮助的。"
-insight: "这次更新对国内用户影响不大，但值得关注。如果你用 newapi.lurus.cn 代理，新增的 ANTHROPIC_DEFAULT_MODEL 变量和沙箱修复都不涉及代理层，现有配置无需改动。不过，跨会话通知功能对多任务协调有用，建议升级后体验。沙箱规则强化了 macOS 安全性，但如果你在 Linux 或 Windows 上开发，影响有限。总体而言，升级成本低，收益明确，值得跟进。"
+hook: "跨会话通知、默认模型变量、沙箱通配符修复，值得一看"
+broadcast: "这次更新带来了几个实用功能。你可以通过环境变量设置新会话的默认模型，而且随时可以用命令覆盖，非常灵活。另外，跨会话通知也升级了，当另一个会话空闲时会自动提醒你，不用再反复刷新。最后，macOS 上的沙箱规则更严格了，通配符拒绝会优先执行，防止通过重命名绕过限制，对安全敏感的开发者来说是个好消息。"
+insight: "这次更新对现有用户价值不大，但值得关注。新增的默认模型变量和跨会话通知属于增量优化，不改变核心工作流，现有 prompt 和 hook 配置无需改动。国内用户走 newapi.lurus.cn 代理不受影响，因为更新不涉及网络层。建议保持当前配置，除非你依赖跨会话通知或沙箱通配符修复，否则无需升级。"
 tags: [environment-variable, cross-session, sandbox, bug-fixes]
 ---
 
-- 新增 `ANTHROPIC_DEFAULT_MODEL` 环境变量，设置新会话默认模型，但 `/model` 选择仍可覆盖并持久化，与 `ANTHROPIC_MODEL` 不同。
-- `SendMessage` 支持 `notify_when_idle`，可请求其他会话空闲时通知，一次性、无需轮询，适合协调多会话任务。
-- 沙箱在 macOS 上通配符读拒绝规则优先于允许区域，覆盖目录内容且防重命名绕过，强化安全边界。
+- 新增 `ANTHROPIC_DEFAULT_MODEL` 环境变量，设置新会话默认模型，`/model` 可覆盖并持久化。
+  - 对 harness 设计：提供更灵活的模型配置入口，需区分默认与覆盖逻辑。
+- 跨会话 `SendMessage` 支持 `notify_when_idle`，请求另一会话空闲时通知，一次性且无需轮询。
+  - 对 harness 设计：实现跨会话协作需考虑异步通知机制和生命周期管理。
+- 沙箱在 macOS 上通配符读拒绝规则优先于允许区域，覆盖目录内容且防重命名绕过。
+  - 对 harness 设计：安全策略需处理规则优先级和绕过防护。
 
 ---
 

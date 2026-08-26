@@ -1,0 +1,24 @@
+---
+slug: 2026-08-25-blog-simonwillison-eve-online-the-move-to-python-3-begins
+title: "EVE Online: The Move to Python 3 Begins! — EVE Online 宣布将 240 万行代码从 Python 2 迁移到 Py"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/
+publishedAt: 2026-08-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "EVE Online 宣布将 240 万行代码从 Python 2 迁移到 Python 3，这是大型 Python 项目迁移的经典案例。"
+broadcast: "最近，大型网游《星战前夜》宣布要把两百四十万行代码从旧版Python升级到新版Python，这可是个不小的工程。他们打算用自动化脚本处理大部分代码，再靠人工检查两万个行为差异点。这件事告诉我们，大型项目迁移不能指望一次性重写，自动化加人工审查才是务实路子。对咱们做开发或者搞智能体工具的人来说，也是个提醒，机器能帮忙找差异，但关键判断还得靠人。"
+tags: [python-migration, eve-online, stackless, legacy-code]
+---
+
+- EVE Online 自 2003 年上线以来一直使用 Stackless Python，最近一次大升级是 2010 年迁移到 Python 2.7。此次迁移将使用 futurize 脚本处理 240 万行代码，并人工审查约 2 万个 Python 2/3 行为差异点（如整数除法）。
+- 对开发者而言，这展示了大型代码库迁移的务实路径：自动化工具 + 人工审查，而非一次性重写。
+- 公告未提及 Stackless 的替代方案，但去年 EVE Frontier 已用开源库 carbonengine/scheduler 取代了 Stackless，这可能为 EVE Online 提供迁移方向。
+- 对 agent 工具链的启示：代码迁移可借助自动化脚本，但语义差异仍需人工判断，agent 可辅助定位差异点。
+
+---
+
+> 原文：[EVE Online: The Move to Python 3 Begins!](https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-08-25-gemini-cli-0-57-0
+title: "gemini-cli v0.57.0 — 修复 IDE 连接、容量错误重试、多轮回滚等核心稳定性问题"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0
+publishedAt: 2026-08-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 IDE 连接、容量错误重试、多轮回滚等核心稳定性问题"
+broadcast: "谷歌的Gemini命令行工具发布了新版本，主要修复了开发环境连接和稳定性问题。现在它能更顺畅地连接IDE，遇到容量不足时会自动重试，多轮对话中断也能完整回滚。对国内开发者来说，这意味着用命令行做Agent开发时更可靠，少踩坑，值得更新试试。"
+insight: "这次 v0.57.0 主要修稳定性，如果你在用 IDE 连接或遇到容量报错，值得升级。修复了 OAuth 重定向和目录匹配问题，容量错误会自动重试，多轮请求取消时能整体回滚，对长会话更友好。国内走 newapi.lurus.cn 代理不受影响，因为改动都在客户端逻辑。现有 prompt 和 hook 配置不用改，除非你依赖子代理在 agents 禁用时的旧行为，那需要留意启动交接令牌的回归修复。"
+tags: [oauth, retry, eval, stability]
+---
+
+- 动态解析 Cloud Workstations 代理重定向 URI，修复 OAuth 流程；IDE 连接目录不匹配问题已解决。
+- 容量错误增加上下文感知静默重试与可用性 TTL；取消或中止时回滚整个多轮请求，提升可靠性。
+- 新增 eval 工具调用格式化与失败摘要；子代理在 agents 模式禁用时不再运行，修复启动时交接令牌回归。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.57.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0)
