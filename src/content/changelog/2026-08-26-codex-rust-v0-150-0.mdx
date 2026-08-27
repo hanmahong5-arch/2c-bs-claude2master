@@ -1,0 +1,30 @@
+---
+slug: 2026-08-26-codex-rust-v0-150-0
+title: "codex rust-v0.150.0 — Codex 0.150.0 新增任务 @ 提及、/copy 选择器、中断钩子，并"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.150.0
+publishedAt: 2026-08-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.150.0 新增任务 @ 提及、/copy 选择器、中断钩子，并修复多项安全与稳定性问题。"
+broadcast: "OpenAI 的 Codex 工具更新了，这次新增了任务间的 @ 提及功能，让多个智能体可以互相读取和发送消息，协作更顺畅。还加了复制选择器和中断钩子，方便你控制输出和应对中断。更重要的是，它加强了安全策略，不受信任的项目不再提供指令，权限变化后也会强制管理规则。这对国内开发者来说，意味着多智能体协作和安全性设计有了新参考。"
+insight: "Codex 0.150.0 的更新对现有用户价值明确：若你依赖多任务协作或需要精细复制响应，升级值得；但若仅用基础功能，可暂缓。新增的 Interrupt 钩子要求你调整现有 hook 配置，否则中断行为可能不符合预期。国内用户经 newapi.lurus.cn 代理不受影响，因为更新集中在功能与安全层面，未涉及网络协议。建议升级前评估中断钩子对现有工作流的影响，并注意未受信任项目不再读取 AGENTS.md 的安全变化。"
+tags: [task-references, interrupt-hooks, security, bug-fixes]
+---
+
+- 支持在终端用 `@` 引用其他 Codex 任务，可让 agent 读取、创建或发送消息，便于多任务协作。
+  - 对 harness 设计：需在 agent 上下文中解析任务引用，并管理跨任务通信。
+- `/copy` 新增响应目标选择器，可复制完整响应、代码块或引用块。
+  - 对 harness 设计：需提供结构化输出选择能力，并保持与终端交互的一致性。
+- 新增 `Interrupt` 钩子，可在顶层回合被中断时运行命令或 MCP 处理器。
+  - 对 harness 设计：需定义中断生命周期，并允许自定义清理或恢复逻辑。
+- 未受信任的项目不再提供项目级 `AGENTS.md` 指令，且权限更改后仍强制管理 deny-read 规则。
+  - 对 harness 设计：需区分信任级别，并确保安全策略在动态权限变化中持续生效。
+- 修复了 Unix 下因分离进程持有终端或输出缓冲导致的关闭挂起问题。
+  - 对 harness 设计：需管理子进程的终端和输出资源，避免阻塞退出流程。
+
+---
+
+> 原文 release：[openai/codex rust-v0.150.0](https://github.com/openai/codex/releases/tag/rust-v0.150.0)

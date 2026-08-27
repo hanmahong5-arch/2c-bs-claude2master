@@ -1,0 +1,25 @@
+---
+slug: 2026-08-26-claude-code-2-1-247
+title: "claude-code v2.1.247 — Claude Code 新增反馈草稿、API 成本优化、更稳的修复与安全加固"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.247
+publishedAt: 2026-08-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 新增反馈草稿、API 成本优化、更稳的修复与安全加固"
+broadcast: "Claude Code 这次更新带来了几个实用功能。新增了反馈草稿工具，可以让 AI 先起草反馈报告，你确认后再发送。还加入了 API 成本优化命令，能分析项目支出并给出优化建议。另外修复了非拉丁键盘快捷键失效的问题，也加固了插件市场安全性。对国内开发者来说，成本优化和反馈功能都很实用，值得升级体验。"
+insight: "这次更新对国内用户最实际的是 /claude-api cost-optimize 命令，能直接分析项目 API 支出并给出缓存、token 优化建议，值得升级。同时新增的 SendFeedback 工具默认开启，如果你不想让 Claude 起草反馈，记得用 feedbackDrafts 设置关掉。至于走 newapi.lurus.cn 代理，本次改动未涉及代理链路，不受影响，可以放心升级。"
+tags: [feedback-tool, cost-optimization, bug-fixes, security]
+---
+
+- 新增 SendFeedback 工具，Claude 可起草反馈报告供用户审查发送，可用 feedbackDrafts 设置关闭。
+- 新增 /claude-api cost-optimize 命令，分析项目 API 支出并逐步优化缓存、token、批处理等。
+- 修复子代理在模型 404 时使用会话回退模型链，错误信息更完整。
+- 修复非拉丁键盘布局下 Ctrl 快捷键失效，以及鼠标报告拆分读取导致的文本注入。
+- 加固插件市场，拒绝控制字符，转义输出；改进 Bedrock/Vertex 等会话的 MCP 错误提示。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.247](https://github.com/anthropics/claude-code/releases/tag/v2.1.247)

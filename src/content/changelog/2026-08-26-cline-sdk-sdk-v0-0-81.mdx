@@ -1,0 +1,23 @@
+---
+slug: 2026-08-26-cline-sdk-sdk-v0-0-81
+title: "cline sdk/sdk/v0.0.81 — SDK 事件不再携带完整对话，内存暴涨问题修复"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.81
+publishedAt: 2026-08-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK 事件不再携带完整对话，内存暴涨问题修复"
+broadcast: "这次SDK更新把事件里的完整对话记录去掉了，只保留状态快照，需要内容时再主动拉取。以前事件带全量对话，内存能涨到25GB，现在轻量多了。对做agent开发的朋友来说，事件流更省资源，但记得按需取消息，别漏了数据。"
+insight: "这次 SDK 更新把事件负载砍到只剩状态快照，内存暴涨的坑算是填了。如果你之前被 25GB 进程吓到过，升级是值得的，但代价是不能再靠事件被动拿对话，得主动调 session.messages 拉取。对现有 hook 配置来说，凡是依赖 session.updated 里完整消息的逻辑都得改，改成按需查询。国内走 newapi.lurus.cn 代理不受影响，这只是 SDK 内部事件结构调整，跟网络代理无关。"
+tags: [sdk, event-stream, memory-optimization, breaking-change]
+---
+
+- `session.updated` 等事件不再包含完整对话记录，仅含状态快照（状态、用量、模型、工作区、检查点）。
+- 需要对话内容时，通过 `session.messages` 命令主动获取，避免每次事件都传输大量数据。
+- 修复了因事件携带完整对话导致的内存膨胀问题（曾出现 25GB 进程），对 agent harness 设计意味着事件流更轻量，但需按需拉取消息。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.81](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.81)

@@ -1,0 +1,26 @@
+---
+slug: 2026-08-26-cline-desktop-v0-0-19
+title: "cline desktop-v0.0.19 — 修复内存暴涨，状态更新不再携带完整对话记录"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.19
+publishedAt: 2026-08-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复内存暴涨，状态更新不再携带完整对话记录"
+broadcast: "这次桌面版更新重点修复了长会话中内存暴涨的问题，状态更新不再携带完整对话记录，而是按需获取，这样多客户端同步时能省下不少内存和传输开销。对开发者来说，这种状态与数据分离的设计思路值得借鉴。另外模型目录也刷新了，新增了七个提供商，部分默认模型有调整，如果你没固定模型，可能会被切换到新默认，建议显式固定一下，避免意外变化。"
+insight: "如果你在用长会话且多客户端同步，v0.0.19 的内存修复值得升级，状态与数据分离后传输更轻。但注意默认模型有变，ClinePass 等改成了 GLM 5.3，未固定模型的用户会切换，建议在配置里显式固定模型。国内走 newapi.lurus.cn 代理不受影响，升级后无需改 hook 配置。"
+tags: [memory-fix, model-catalog, default-model, desktop-app]
+---
+
+- 修复长会话中后台进程内存膨胀：状态更新仅携带状态、用量、模型、工作区、检查点，转录按需获取，避免多客户端同步时复制完整对话。
+  - 对 harness 设计：状态与数据分离，减少不必要的传输和内存占用。
+- 模型目录刷新：新增 7 个提供商，更新模型列表和定价。
+  - 对 harness 设计：需动态适配模型提供商和默认模型变化。
+- 多个提供商默认模型变更（如 ClinePass 改为 GLM 5.3），未固定模型的用户将使用新默认。
+  - 对 harness 设计：注意默认模型可能变化，建议显式固定模型以避免意外切换。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.19](https://github.com/cline/cline/releases/tag/desktop-v0.0.19)

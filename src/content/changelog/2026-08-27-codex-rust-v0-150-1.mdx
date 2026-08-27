@@ -1,0 +1,23 @@
+---
+slug: 2026-08-27-codex-rust-v0-150-1
+title: "codex rust-v0.150.1 — 远程压缩现在默认将保留图像计入 token 预算，自动修剪旧图像。"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.150.1
+publishedAt: 2026-08-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "远程压缩现在默认将保留图像计入 token 预算，自动修剪旧图像。"
+broadcast: "今天要聊的是 OpenAI 的 Codex 工具更新，这次远程压缩功能有了新变化。现在默认会把保留的图像计入 token 预算，超出时自动修剪旧图像。这对做 agent 开发的朋友来说，意味着远程会话里得更注意图像资源管理，别让预算超了。设计 harness 时，最好预留图像清理机制，或者提醒用户及时清理，免得影响任务执行。"
+insight: "这次更新对现有用户影响不大，但如果你在远程会话中依赖图像输入，建议升级并检查 hook 配置。默认将保留图像计入 token 预算，意味着旧图像可能被自动修剪，可能导致上下文丢失。国内用户走 newapi.lurus.cn 代理不受影响，但需注意 token 消耗可能增加。建议在 harness 中预留图像清理机制，或提示用户及时清理，避免超出预算。"
+tags: [remote-compaction, token-budget, image-retention]
+---
+
+- 远程压缩现在默认将保留图像计入 token 预算，超出时修剪旧图像。
+- 这意味着 agent 在远程会话中需要更谨慎地管理图像资源，避免超出预算。
+- 设计 harness 时，应预留图像清理机制，或提示用户及时清理。
+
+---
+
+> 原文 release：[openai/codex rust-v0.150.1](https://github.com/openai/codex/releases/tag/rust-v0.150.1)

@@ -1,0 +1,24 @@
+---
+slug: 2026-08-26-blog-hf-blog-training-and-finetuning-multi-vector-embedding-models-with
+title: "Training and Finetuning Multi-Vector Embedding Models — Hugging Face 教你训练多向量嵌入模型，提升检索精度。"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/train-multi-vector-encoder
+publishedAt: 2026-08-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 教你训练多向量嵌入模型，提升检索精度。"
+broadcast: "今天要聊一个提升检索精度的好方法，Hugging Face 教大家训练多向量嵌入模型。这种模型会给每个词都生成向量，比传统单向量模型更能捕捉语义细节，检索结果更准。训练时要用对比学习，注意正负样本的搭配，微调时调整好学习率，用 Sentence Transformers 库能简化流程。虽然多向量模型会占用更多存储和算力，但对复杂查询效果提升明显，适合对精度要求高的场景。"
+tags: [multi-vector-embeddings, sentence-transformers, retrieval, fine-tuning]
+---
+
+- 多向量嵌入模型（如 ColBERT）为每个 token 生成向量，相比单向量模型能捕捉更细粒度的语义匹配，提升检索精度。
+- 训练时需构造正负样本对，使用对比学习损失函数，并注意 batch 内负样本的采样策略，以提升模型区分能力。
+- 微调预训练模型时，需调整学习率和训练轮数，避免过拟合，同时利用 Sentence Transformers 库简化训练流程，降低上手门槛。
+- 对开发者而言，多向量模型虽增加存储和计算开销，但能显著改善复杂查询的检索效果，适合对精度要求高的场景。
+
+---
+
+> 原文：[Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers](https://huggingface.co/blog/train-multi-vector-encoder) · 作者 Hugging Face

@@ -1,0 +1,23 @@
+---
+slug: 2026-08-26-blog-simonwillison-qwen3-8-flash-next
+title: "Qwen3.8-Flash-Next — Qwen新模型，125B参数仅6B激活，本地运行性能强劲。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/26/qwen38-flash-next/
+publishedAt: 2026-08-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Qwen新模型，125B参数仅6B激活，本地运行性能强劲。"
+broadcast: "今天要聊一个开源新模型，来自通义千问团队，叫闪速下一代。它总参数有一千多亿，但每次只激活其中一小部分，所以跑起来特别快。有开发者已经在个人电脑上测试过，能本地运行，还生成了图片。这意味着以后更强大的模型可以装在自己电脑里，不用总依赖云端接口，对做智能体开发的朋友来说，是个值得关注的新趋势。"
+tags: [qwen, open-weights, moE, local-inference]
+---
+
+- Qwen3.8-Flash-Next 是 Qwen 推出的开源权重多模态 MoE 模型，作为 Qwen4 架构的早期预览，总参数 125B，但仅 6B 激活，带来显著性能提升。
+- Simon 在 DGX Spark 上使用 Unsloth 量化版本测试，包括 72.5GB 和 78.9GB 的量化模型，并展示了生成图像，表明该模型可在消费级硬件上运行。
+- 对开发者而言，这意味着更强大的模型可以本地部署，降低对云 API 的依赖，同时 MoE 架构的高效性可能成为未来模型设计的趋势。
+
+---
+
+> 原文：[Qwen3.8-Flash-Next](https://simonwillison.net/2026/Aug/26/qwen38-flash-next/) · 作者 Simon Willison

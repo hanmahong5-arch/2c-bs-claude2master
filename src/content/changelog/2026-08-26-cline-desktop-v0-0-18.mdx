@@ -1,0 +1,28 @@
+---
+slug: 2026-08-26-cline-desktop-v0-0-18
+title: "cline desktop-v0.0.18 — Cline桌面版更新：侧栏时间排序回归，Marketplace独立，计划任务交互"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.18
+publishedAt: 2026-08-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline桌面版更新：侧栏时间排序回归，Marketplace独立，计划任务交互优化。"
+broadcast: "Cline桌面版更新了，侧栏会话现在默认按时间排序，还能折叠分区，找历史记录更方便了。新增的Marketplace页面，把插件、MCP服务器和技能集中起来浏览，安装也改成了进程内完成，不用再依赖命令行。计划卡片整卡可点，详情页变成单滚动视图，任务管理更流畅。这些改动对开发者来说，能减少点击层级，提升日常开发效率。"
+insight: "这次桌面版更新对现有用户来说，侧栏时间排序回归和计划任务交互优化值得升级，能明显提升日常操作效率。Marketplace独立后，插件和MCP服务器浏览更集中，但Customize只显示已安装项，建议你检查现有hook和技能配置，确认是否需调整入口。国内用户走newapi.lurus.cn代理不受影响，因为安装流程改为进程内，无需CLI，代理稳定性更好。总体建议升级，并顺手整理侧栏分组和计划任务视图。"
+tags: [desktop-app, ui-ux, marketplace, scheduling]
+---
+
+- 侧栏会话默认按时间排序，可折叠分区，一键切换项目分组；计划任务带时钟图标，列表自适应高度。
+  对harness设计：会话组织方式影响用户检索效率，需提供灵活视图。
+- 新增Marketplace页面，集中浏览插件、MCP服务器和技能，支持类型过滤和标签；Customize仅显示已安装项。
+  对harness设计：资源发现与安装分离，清晰区分浏览与配置。
+- 计划卡片整卡可点击，详情页改为单滚动视图，显示最近运行并可展开全部；"Run now"直接进入会话。
+  对harness设计：减少点击层级，提升任务管理流畅性。
+- 修复从Marketplace安装失败问题，改为进程内安装，无需CLI；订阅计费提供商不再显示成本估算。
+  对harness设计：安装流程简化，成本显示需考虑计费模式。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.18](https://github.com/cline/cline/releases/tag/desktop-v0.0.18)

@@ -1,0 +1,24 @@
+---
+slug: 2026-08-26-cline-cli-v3-0-60
+title: "cline cli-v3.0.60 — 修复 hub 内存暴涨、新文件行尾、搜索崩溃等关键问题，并更新模型目录。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.60
+publishedAt: 2026-08-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 hub 内存暴涨、新文件行尾、搜索崩溃等关键问题，并更新模型目录。"
+broadcast: "这次命令行工具更新，主要解决了几个关键问题。比如后台进程内存暴涨，长会话时可能占用几十个G，现在修复了，但需要重启才能生效，这对做智能体开发的要注意管理广播开销。另外还修复了新文件行尾和搜索崩溃的问题，跨平台处理更稳定。同时移除了远程地址里的凭据，避免泄露给模型，还更新了模型目录，新增了七家提供商，默认模型也有调整。"
+insight: "如果你在用 CLI v3.0.60 且遇到 hub 内存暴涨，升级后务必重启命令，否则修复不生效。国内用户走 newapi.lurus.cn 代理不受影响，因为本次改动不涉及代理链路。现有 prompt 或 hook 配置无需改动，但要注意长会话广播开销，建议管理会话长度。未固定模型的用户默认模型有变，如 ClinePass 改为 GLM 5.3，需留意行为变化。"
+tags: [memory-fix, model-catalog, security, bug-fixes]
+---
+
+- 修复后台 hub 进程内存暴涨：长会话中状态更新向所有客户端广播完整对话副本，可致进程达数十 GB。升级后需重启命令生效，对 agent harness 意味着需管理长会话广播开销。
+- 新文件使用平台原生行尾，代码搜索工具不再因超长单行崩溃，提升跨平台文件处理与搜索稳定性。
+- 不再为 Claude Code 显示成本估算（其用量通常由订阅覆盖），并移除 git 远程 URL 中的凭据，避免泄露给模型。
+- 修复 MCP 服务器安装参数中 `--` 分隔符的解析错误，并更新模型目录：新增 7 家提供商，多个默认模型变更（如 ClinePass 改为 GLM 5.3），未固定模型的用户将获得新默认值。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.60](https://github.com/cline/cline/releases/tag/cli-v3.0.60)
