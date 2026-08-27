@@ -1,6 +1,61 @@
 {
   "items": [
     {
+      "slug": "2026-08-27-blog-latentspace-ainews-hot-chips-openai-s-jalape-o-cerebras",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Hot Chips: OpenAI’s Jalapeño, Cerebras CS-5, — OpenAI自研芯片Jalapeño性能超越Blackwell，推理栈与智能体工",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-27"
+    },
+    {
+      "slug": "2026-08-27-blog-latentspace-ainews-nvidia-buys-huggingface-for-13b-as-openai",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI — NVIDIA 130 亿美元收购 HuggingFace，GLM",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-27"
+    },
+    {
+      "slug": "2026-08-27-blog-openai-news-expanding-openai-s-presence-in-brazil",
+      "zh": true,
+      "en": true,
+      "title": "Expanding OpenAI’s presence in Brazil — OpenAI 拓展巴西市场，深化与开发者、企业和社区的合作，推动 AI 应用。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-27"
+    },
+    {
+      "slug": "2026-08-27-codex-rust-v0-150-1",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.150.1 — 远程压缩现在默认将保留图像计入 token 预算，自动修剪旧图像。",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-08-27"
+    },
+    {
+      "slug": "2026-08-27-trending-n4darae-anti-mage",
+      "zh": true,
+      "en": false,
+      "title": "anti-mage — Go 写的浏览器测试工具，多参数算法计算",
+      "kind": "trending",
+      "author": null,
+      "source": "N4darae/anti-mage",
+      "tool": null,
+      "publishedAt": "2026-08-27"
+    },
+    {
       "slug": "2026-08-26-blog-anthropic-news-funding-better-evaluations-of-ai-s-impact-on",
       "zh": true,
       "en": true,
@@ -9,6 +64,193 @@
       "author": "Anthropic",
       "source": "Anthropic",
       "tool": null,
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-blog-deepmind-intelligent-transcription-with-gemini-3-5-transcribe",
+      "zh": true,
+      "en": true,
+      "title": "Intelligent transcription with Gemini 3.5 Transcribe — Gemini 3.5 Transcribe 带来更智能的语音转文字，值得关注。",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-blog-hf-blog-training-and-finetuning-multi-vector-embedding-models-with",
+      "zh": true,
+      "en": true,
+      "title": "Training and Finetuning Multi-Vector Embedding Models — Hugging Face 教你训练多向量嵌入模型，提升检索精度。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-blog-latentspace-lovable-cto-the-future-of-saas-is-apps",
+      "zh": true,
+      "en": true,
+      "title": "Lovable CTO: The Future of SaaS Is Apps That Agents Can — Lovable CTO 谈未来：应用将变成 Agent 可直接调用的能力，公司大",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-blog-latentspace-we-have-foundation-models-for-language-not-for",
+      "zh": true,
+      "en": true,
+      "title": "🔬“We have foundation models for language, not for — Anima Anandkumar谈物理基础模型：为何语言模型方法不适用于物理世界",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-blog-openai-news-bringing-chatgpt-for-teachers-to-more-u-s",
+      "zh": true,
+      "en": true,
+      "title": "Bringing ChatGPT for Teachers to more U.S. school — OpenAI将ChatGPT for Teachers扩展至55个美国学区，惠及",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-blog-openai-news-how-loveholidays-is-making-everyone-a-builder-with",
+      "zh": true,
+      "en": true,
+      "title": "How loveholidays is making everyone a builder with Codex — loveholidays 用 Codex 让全员成为开发者，加速创意落地。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-blog-openai-news-learning-never-stops-how-ai-makes-learning-continuous",
+      "zh": true,
+      "en": true,
+      "title": "Learning never stops: How AI makes learning continuous — OpenAI报告：ChatGPT如何让学习突破课堂，实现持续学习。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-blog-openai-news-the-hugging-face-incident-and-the-road-ahead",
+      "zh": true,
+      "en": true,
+      "title": "The Hugging Face incident and the road ahead — OpenAI 披露 Hugging Face 安全事件，强调 AI 模型安全与监",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-blog-simonwillison-quoting-paul-dix",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Paul Dix — Paul Dix 惊叹 AI 写出百万行代码并持续优化，最终成为可靠软件。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-blog-simonwillison-qwen3-8-flash-next",
+      "zh": true,
+      "en": false,
+      "title": "Qwen3.8-Flash-Next — Qwen新模型，125B参数仅6B激活，本地运行性能强劲。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-claude-code-2-1-247",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.247 — Claude Code 新增反馈草稿、API 成本优化、更稳的修复与安全加固",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-cline-cli-v3-0-60",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.60 — 修复 hub 内存暴涨、新文件行尾、搜索崩溃等关键问题，并更新模型目录。",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-cline-desktop-v0-0-18",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.18 — Cline桌面版更新：侧栏时间排序回归，Marketplace独立，计划任务交互",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-cline-desktop-v0-0-19",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.19 — 修复内存暴涨，状态更新不再携带完整对话记录",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-cline-sdk-sdk-v0-0-80",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.80 — SDK 修复文件写入换行、搜索崩溃，并更新模型目录",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-cline-sdk-sdk-v0-0-81",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.81 — SDK 事件不再携带完整对话，内存暴涨问题修复",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-26-codex-rust-v0-150-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.150.0 — Codex 0.150.0 新增任务 @ 提及、/copy 选择器、中断钩子，并",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
       "publishedAt": "2026-08-26"
     },
     {
@@ -21,6 +263,39 @@
       "source": "Gaoshu705/QzoneArchive",
       "tool": null,
       "publishedAt": "2026-08-26"
+    },
+    {
+      "slug": "2026-08-25-blog-hf-blog-granite-4-2-llms-how-they-re-built",
+      "zh": true,
+      "en": true,
+      "title": "Granite 4.2 LLMs: How They're Built — IBM Granite 4.2 模型的技术细节与构建方法。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-25"
+    },
+    {
+      "slug": "2026-08-25-blog-hf-blog-quantization-aware-healing-a-compressed-4-bit-model",
+      "zh": true,
+      "en": true,
+      "title": "Quantization-Aware Healing: a compressed, 4-bit model — 介绍一种新的量化方法，让4",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-25"
+    },
+    {
+      "slug": "2026-08-25-blog-hf-blog-wire-it-run-it-deploy-it-ai-workflows",
+      "zh": true,
+      "en": true,
+      "title": "Wire It, Run It, Deploy It: AI Workflows in Gradio — 用Gradio构建AI工作流，从原型到部署的完整指南。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-25"
     },
     {
       "slug": "2026-08-25-blog-latentspace-ainews-andrew-ng-gets-into-ai-engineering",
@@ -507,6 +782,17 @@
       "publishedAt": "2026-08-21"
     },
     {
+      "slug": "2026-08-21-blog-hf-blog-how-hugging-face-inference-endpoints-jobs-and-buckets",
+      "zh": true,
+      "en": true,
+      "title": "How Hugging Face Inference Endpoints, Jobs, and Buckets — Hugging Face 如何用推理端点、任务和存储桶支撑 Papers wit",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-21"
+    },
+    {
       "slug": "2026-08-21-blog-hf-blog-measuring-benchmark-optimization-in-speech-recognition",
       "zh": true,
       "en": true,
@@ -593,292 +879,6 @@
       "source": "anthropics/claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-cline-4-1-11",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.11 — Cline v4.1.11 修复多项关键 bug，并支持模型生成图片。",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-cline-4-1-12",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.12 — 修复企业 MCP 控制与自定义模型工具调用",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-cline-cli-v3-0-56",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.56 — 图像生成、技能加载方式、钩子修复等多项更新",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-cline-desktop-v0-0-15",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.15 — Cline 桌面版更名并整合插件、模型选择器，修复多项关键 bug。",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-cline-sdk-sdk-v0-0-76",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.76 — SDK 新增图像生成、定时任务，修复多项工具事件与钩子问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-cline-sdk-sdk-v0-0-77",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.77 — tasks 工具按客户端类型集中解析，避免无效注册",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-goose-1-47-0",
-      "zh": true,
-      "en": false,
-      "title": "goose v1.47.0 — Goose v1.47.0 强化 OAuth 安全、上下文管理，并引入新的 ag",
-      "kind": "changelog",
-      "author": null,
-      "source": "block/goose",
-      "tool": "goose",
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-hermes-agent-2026-8-19",
-      "zh": true,
-      "en": false,
-      "title": "hermes-agent v2026.8.19 — Hermes Agent 0.20.5 聚合 323 个 PR，含 Bot Mo",
-      "kind": "changelog",
-      "author": null,
-      "source": "NousResearch/hermes-agent",
-      "tool": "hermes",
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-opencode-1-18-20",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.20 — 修复子代理失败与网络错误重试，提升稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-opencode-1-18-21",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.21 — 修复模型未知结束原因导致提前停止，以及桌面端搜索与归档命令问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-trending-autumn-27-artex",
-      "zh": true,
-      "en": false,
-      "title": "ARTEX — AI 自主渗透测试系统，Go 实现",
-      "kind": "trending",
-      "author": null,
-      "source": "Autumn-27/ARTEX",
-      "tool": null,
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-trending-hairyf-deepseek-harness-desktop",
-      "zh": true,
-      "en": false,
-      "title": "deepseek-harness-desktop — 5MB 安装包，零配置跑 DeepSeek 的桌面工具",
-      "kind": "trending",
-      "author": null,
-      "source": "hairyf/deepseek-harness-desktop",
-      "tool": null,
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-trending-pgrundev-pgbot",
-      "zh": true,
-      "en": false,
-      "title": "pgbot — 给 AI 代理装上 Postgres 大脑的 Go 工具",
-      "kind": "trending",
-      "author": null,
-      "source": "pgrundev/pgbot",
-      "tool": null,
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-20-blog-hf-blog-up-to-3-2x-faster-inference-with-lfm2",
-      "zh": true,
-      "en": true,
-      "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark — LFM2.5",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-20"
-    },
-    {
-      "slug": "2026-08-20-blog-latentspace-ainews-death-of-params-z-ai-ceo-jie",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Death of Params: Z.ai CEO Jie Tang on GLM 5.3 — GLM 5.3 揭示后训练新缩放定律：参数不再是唯一关键，环境合成与长程 RL ",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-20"
-    },
-    {
-      "slug": "2026-08-20-blog-latentspace-the-wayfinder-skill-navigating-the-fog-of-war",
-      "zh": true,
-      "en": true,
-      "title": "The /wayfinder Skill: Navigating the “Fog of War” of — Matt Pocock 的 /wayfinder 技能，帮你和 AI 代理在项目",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-20"
-    },
-    {
-      "slug": "2026-08-20-blog-openai-news-introducing-ai-futures",
-      "zh": true,
-      "en": true,
-      "title": "Introducing AI Futures — OpenAI新博客探讨AI如何重塑权力、治理、经济与个人自由。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-20"
-    },
-    {
-      "slug": "2026-08-20-blog-openai-news-stampli-cuts-launch-hours-by-68-using-chatgpt",
-      "zh": true,
-      "en": true,
-      "title": "Stampli cuts launch hours by 68% using ChatGPT Work — Stampli用ChatGPT Work将发布工时削减68%，展示AI如何加速产",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-20"
-    },
-    {
-      "slug": "2026-08-20-blog-simonwillison-a-shot-scraper-style-json-api-on-bun",
-      "zh": true,
-      "en": true,
-      "title": "A shot-scraper-style JSON API on Bun 1.4's new — Bun 1.4 新增 Bun.WebView，Simon Willison 用它",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-20"
-    },
-    {
-      "slug": "2026-08-20-blog-simonwillison-chatgpt-search-now-uses-the-site-operator-at",
-      "zh": true,
-      "en": true,
-      "title": "ChatGPT search now uses the site:operator at scale — ChatGPT搜索大规模使用site",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-20"
-    },
-    {
-      "slug": "2026-08-20-claude-code-2-1-237",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.237 — 修复LLM网关缓存，新增简洁输出风格",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-20"
-    },
-    {
-      "slug": "2026-08-20-claude-code-2-1-238",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.238 — keybindingFlavor、插件 headersHelper、自托管 ru",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-20"
-    },
-    {
-      "slug": "2026-08-20-codex-rust-v0-149-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.149.0 — Codex 0.149.0 新增 agents 仪表盘、队列命令和 Vim 增强",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-08-20"
-    },
-    {
-      "slug": "2026-08-20-opencode-1-18-19",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.19 — 新增 AI Gateway 直连，修复多项兼容性与计费问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-08-20"
-    },
-    {
-      "slug": "2026-08-19-blog-latentspace-ainews-memory-prices-up-500-in-12-months",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Memory prices up 500% in 12 months — 内存价格暴涨500%，AI基础设施面临RAMageddon，本文盘点AI圈一周动",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-19"
-    },
-    {
-      "slug": "2026-08-19-blog-openai-news-offering-zero-data-retention-for-frontier-models",
-      "zh": true,
-      "en": true,
-      "title": "Offering Zero Data Retention for frontier models — OpenAI 为前沿模型提供零数据保留，并预览私有安全处理。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-19"
     }
   ]
 }
