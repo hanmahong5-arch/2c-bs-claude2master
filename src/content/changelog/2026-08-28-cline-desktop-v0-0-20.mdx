@@ -1,0 +1,31 @@
+---
+slug: 2026-08-28-cline-desktop-v0-0-20
+title: "cline desktop-v0.0.20 — Windows 支持、图片内联、全局搜索，Cline Desktop 大更新"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.20
+publishedAt: 2026-08-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Windows 支持、图片内联、全局搜索，Cline Desktop 大更新"
+broadcast: "Cline 桌面版这次更新，正式支持了 Windows，还带签名安装包，后台进程也不弹窗了。最直观的是，工具返回的截图能直接内联显示，不用再看一堆乱码文本。另外，会话搜索现在能搜全部历史，按快捷键就能调出命令栏。对国内开发者来说，Windows 支持更省心，图片内联和全局搜索也让日常开发调试顺畅不少。"
+insight: "Windows 用户现在可以正式升级到 v0.0.20，获得签名安装包和自动更新，体验与 macOS 同步。图片内联显示和全局搜索是实用改进，但现有 prompt 或 hook 配置无需改动，因为核心工作流未变。国内用户通过 newapi.lurus.cn 代理不受影响，升级后注意 MCP 路径回退和全局规则路径扩展，确保配置正确。"
+tags: [windows-support, image-rendering, session-search, scheduled-tasks]
+---
+
+- Windows 正式支持：提供签名安装包，自动更新与 macOS 同步；后台进程不再弹窗，MCP 路径回退 USERPROFILE。
+- 工具返回的图片（截图等）内联显示，可点击展开、轮播查看，替代 base64 文本。
+- 会话搜索覆盖全量历史，侧边栏搜索图标打开命令栏（Cmd/Ctrl+P），服务端排序结果。
+- 新增 GitHub 集成引导步骤。
+- 修复更新后定时任务丢失；agent 创建的调度统一存于 `~/.cline/schedules`，并在 Schedules 页显示。
+- 完成的调度会话自动展开最终答案，标记为“Scheduled task completed”或失败，摘要渲染为 markdown。
+- 建议的例程模板要求最终报告，使调度运行结果可读。
+- 修复凭据显示与 Codex 登录问题，OAuth 错误明确提示。
+- 检查点恢复拒绝在提交后重置工作区。
+- 全局规则路径扩展至 `~/Cline/Rules`，修复 WSL 问题。
+- `apply_patch` 保留 CRLF 行尾。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.20](https://github.com/cline/cline/releases/tag/desktop-v0.0.20)

@@ -1,0 +1,24 @@
+---
+slug: 2026-08-28-opencode-1-18-24
+title: "opencode v1.18.24 — 修复 Bedrock 缓存、支持 Azure Entra ID 登录，兼容 V2"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.24
+publishedAt: 2026-08-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Bedrock 缓存、支持 Azure Entra ID 登录，兼容 V2 配置"
+broadcast: "最近开源AI编程工具更新了，修复了亚马逊云推理响应被缓存导致会话中断的问题，还支持了微软云账号直接登录，不用再配密钥，简化了认证流程。同时兼容新旧配置格式，对国内开发者来说，用起来更顺手，特别是混合配置环境下，能减少不少麻烦。"
+insight: "这次更新对国内用户影响不大，但如果你是 Azure 用户，值得关注：现在能用 Entra ID 登录，省去 API 密钥管理。现有 prompt 和 hook 配置不用改，V1 能读 V2 配置，兼容性更好。走 newapi.lurus.cn 代理不受影响，Bedrock 缓存修复主要针对海外服务。建议 Azure 用户升级，其他用户按需即可。"
+tags: [bugfix, azure, config, desktop]
+---
+
+- Bedrock 推理响应不再被缓存为不可重放的空消息，避免会话中断。
+- Azure 提供商可通过 Azure CLI 使用 Microsoft Entra ID 登录，无需 API 密钥，简化认证流程。
+- V1 读取支持的 V2 配置字段，混合配置环境下更兼容。
+- 桌面端：归档会话立即从首页列表消失，提升界面反馈。
+
+---
+
+> 原文 release：[sst/opencode v1.18.24](https://github.com/anomalyco/opencode/releases/tag/v1.18.24)

@@ -1,0 +1,23 @@
+---
+slug: 2026-08-27-blog-simonwillison-breaking-claude-code-opus-5-auto-mode
+title: "Breaking Claude Code Opus 5 Auto Mode — Claude Code 自动模式被曝 80% 成功率绕过，安全机制反成漏洞。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/
+publishedAt: 2026-08-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Claude Code 自动模式被曝 80% 成功率绕过，安全机制反成漏洞。"
+broadcast: "最近有研究者发现，Claude Code 的自动模式存在一个安全漏洞，攻击者可以通过诱导它下载并解压压缩包来执行恶意代码，而且这种攻击在八成测试中都没被拦住。更麻烦的是，当它自己发现入侵想清理时，自动模式反而阻止了清理命令，安全机制成了帮凶。所以对开发者来说，面对这类攻击，最稳妥的办法还是用沙箱环境，比如容器或虚拟机，同时限制网络访问，别把敏感文件暴露出来。"
+tags: [prompt-injection, sandboxing, claude-code, security]
+---
+
+- 研究者 Johann Rehberger 发现，通过诱导 Claude Code 下载并解压 zip 文件，可执行恶意代码，且自动模式在 80% 的测试中未能阻止。
+- 更严重的是，当 Claude 检测到入侵并尝试终止恶意进程时，自动模式竟阻止了清理命令，安全机制本身成为故障的一部分。
+- 作者认同结论：面对对抗性攻击，唯一安全的方式是使用沙箱，如容器或虚拟机，并限制网络出口、监控代理、不暴露敏感文件。
+
+---
+
+> 原文：[Breaking Claude Code Opus 5 Auto Mode](https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/) · 作者 Simon Willison

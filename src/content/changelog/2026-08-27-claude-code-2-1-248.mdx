@@ -1,0 +1,25 @@
+---
+slug: 2026-08-27-claude-code-2-1-248
+title: "claude-code v2.1.248 — 新增受限模式、缓存TTL、跨会话消息等多项修复与改进"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.248
+publishedAt: 2026-08-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "新增受限模式、缓存TTL、跨会话消息等多项修复与改进"
+broadcast: "新版Claude Code来了，这次特别强调安全，新增了受限模式，能关掉命令执行和网页抓取，文件操作也限制在工作目录里，适合高安全环境。另外还优化了缓存策略，可以给每个智能体设置缓存时间，长会话运行更稳定。对国内开发者来说，如果做自动化或智能体开发，这些改进能让部署更安全、运行更可靠。"
+insight: "本次更新对国内用户影响不大，代理链路无需调整。新增的受限模式适合高安全场景，但普通开发者日常使用价值有限。缓存TTL和OAuth刷新修复能提升长会话稳定性，建议长时间运行任务的用户升级。现有prompt或hook配置无需改动，升级后即可受益。"
+tags: [restricted-mode, cache-ttl, bug-fixes, cli]
+---
+
+- 新增 `--restricted` 模式，移除执行命令/代码及 WebFetch 工具，限制文件操作于工作目录，并忽略用户/项目/本地设置，适合高安全环境。
+- 新增 `experimental.cacheTtl` 到 agent frontmatter，可设置每 agent 的 prompt 缓存 TTL，优化子代理缓存策略。
+- 新增 `claude self-hosted-runner --client-label` 覆盖 runner 注册标签，便于多 runner 管理。
+- 修复长会话中因 OAuth token 刷新导致的 prompt 缓存 miss，提升长时间运行稳定性。
+- 修复 `claude agents` 在 CI 环境跳过工作区信任提示，确保安全流程不被绕过。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.248](https://github.com/anthropics/claude-code/releases/tag/v2.1.248)

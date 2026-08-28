@@ -1,16 +1,16 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.247",
+    "anthropics/claude-code": "v2.1.250",
     "openai/codex": "rust-v0.150.1",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.60",
-    "block/goose": "v1.47.0",
-    "sst/opencode": "v1.18.23",
+    "cline/cline": "desktop-v0.0.20",
+    "block/goose": "v1.48.0",
+    "sst/opencode": "v1.18.25",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.57.0",
     "openclaw/openclaw": "v2026.6.34",
     "zeroclaw-labs/zeroclaw": "v0.8.4",
-    "NousResearch/hermes-agent": "v2026.8.19"
+    "NousResearch/hermes-agent": "v2026.8.27"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -126,7 +126,8 @@
     "dsh-tauri-desk/deepseek-harness-desktop",
     "anywhere-labs/dsh-desktop",
     "Gaoshu705/QzoneArchive",
-    "N4darae/anti-mage"
+    "N4darae/anti-mage",
+    "pathwaycom/arc-task-gen"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -219,8 +220,8 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-27",
-    "claude-code-docs": "2026-08-21",
+    "anthropic-engineering": "2026-08-28",
+    "claude-code-docs": "2026-08-28",
     "openai-codex-blog": "2026-08-27",
     "openclaw-concepts": "2026-08-24",
     "hermes-guides": "2026-08-24"
@@ -475,7 +476,8 @@
       "https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/",
       "https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/",
       "https://simonwillison.net/2026/Aug/26/qwen38-flash-next/",
-      "https://simonwillison.net/2026/Aug/26/paul-dix/"
+      "https://simonwillison.net/2026/Aug/26/paul-dix/",
+      "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -601,7 +603,8 @@
       "https://www.latent.space/p/ainews-nvidia-buys-huggingface-for",
       "https://www.latent.space/p/ainews-hot-chips-openais-jalapeno",
       "https://www.latent.space/p/lovable-future-of-saas",
-      "https://www.latent.space/p/anima"
+      "https://www.latent.space/p/anima",
+      "https://www.latent.space/p/ainews-openai-to-reach-agi-bar-by"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -873,7 +876,10 @@
       "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
       "https://openai.com/index/learning-never-stops",
       "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
-      "https://openai.com/index/loveholidays"
+      "https://openai.com/index/loveholidays",
+      "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+      "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
+      "https://openai.com/index/introducing-intelligence-age"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1050,7 +1056,9 @@
       "https://www.anthropic.com/news/tino-cuellar",
       "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
       "https://www.anthropic.com/news/claude-text-watermark",
-      "https://www.anthropic.com/news/wellbeing-research-grants"
+      "https://www.anthropic.com/news/wellbeing-research-grants",
+      "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "https://www.anthropic.com/news/expanding-support-for-scientists"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -1085,10 +1093,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-27",
+    "simonwillison": "2026-08-28",
     "lilianweng": "2026-08-27",
-    "latentspace": "2026-08-27",
-    "interconnects": "2026-08-27",
+    "latentspace": "2026-08-28",
+    "interconnects": "2026-08-28",
     "karpathy": "2026-08-27",
     "raschka": "2026-08-27",
     "eugeneyan": "2026-08-27",
@@ -1096,10 +1104,10 @@
     "oneusefulthing": "2026-08-27",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-27",
+    "openai-news": "2026-08-28",
     "deepmind": "2026-08-27",
     "hf-blog": "2026-08-27",
-    "anthropic-news": "2026-08-27",
+    "anthropic-news": "2026-08-28",
     "steipete": "2026-08-27",
     "openclaw-blog": "2026-08-27"
   },

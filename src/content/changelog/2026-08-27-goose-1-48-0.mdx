@@ -1,0 +1,26 @@
+---
+slug: 2026-08-27-goose-1-48-0
+title: "goose v1.48.0 — Goose v1.48.0 新增多个声明式 provider、on_failur"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.48.0
+publishedAt: 2026-08-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.48.0 新增多个声明式 provider、on_failure 钩子，并大幅强化安全边界。"
+broadcast: "最近，Goose 工具发布了新版本，带来了不少值得关注的变化。它新增了好几个声明式的服务提供商，还支持自定义成本字段，让成本追踪更灵活。更重要的是，工具调用失败时现在可以编程处理了，而且安全方面也大大加强，比如权限拒绝优先、敏感数据追踪会被抑制。对咱们做智能体开发的朋友来说，这意味着配置更简单、出错更好管，安全底线也更牢了。"
+insight: "Goose v1.48.0 的安全收紧和 on_failure 钩子值得现有用户升级，尤其涉及工具调用失败处理或敏感数据追踪的场景。升级后需检查 PreToolUse 钩子配置，确保 on_failure 逻辑符合预期，并适配新 provider 的认证与计费。国内用户走 newapi.lurus.cn 代理不受影响，但需确认新 provider 的请求路径是否兼容代理转发。"
+tags: [providers, hooks, security, observability]
+---
+
+- 新增 TrustedRouter、OpenCode Zen、Gondola、SayGM、Lynkr、PleumRouter 等声明式 provider，并支持自定义成本字段驱动成本追踪。
+  - 对 harness 设计：provider 配置更声明化，成本追踪可扩展，需适配新 provider 的认证与计费。
+- PreToolUse 钩子新增 `on_failure` 块，且 PreToolUseResult 事件提供稳定的 tool_call_id。
+  - 对 harness 设计：工具调用失败可编程处理，生命周期追踪更可靠，需在事件循环中处理新事件。
+- 大量安全修复：权限拒绝优先、失败关闭于畸形工具可见性、敏感 OTLP 追踪抑制等。
+  - 对 harness 设计：安全默认收紧，需确保权限模型与数据脱敏符合新约束。
+
+---
+
+> 原文 release：[block/goose v1.48.0](https://github.com/aaif-goose/goose/releases/tag/v1.48.0)

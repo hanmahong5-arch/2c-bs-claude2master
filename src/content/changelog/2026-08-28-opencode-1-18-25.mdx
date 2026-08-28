@@ -1,0 +1,23 @@
+---
+slug: 2026-08-28-opencode-1-18-25
+title: "opencode v1.18.25 — 修复 Azure 认证，无需 Bun 即可登录"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.25
+publishedAt: 2026-08-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Azure 认证，无需 Bun 即可登录"
+broadcast: "今天要聊的是 opencode 的最新更新，它修复了 Azure 认证问题，现在登录不再需要依赖 Bun 了。这对开发者来说是个好消息，因为减少了运行时依赖，让 agent 在不同环境里跑起来更省心。同时，认证流程简化后，部署和配置的复杂度也降低了，对做 agent 开发的朋友来说，维护成本更低了。"
+insight: "如果你正用 Azure 认证且之前因 Bun 依赖受阻，这次修复值得升级，能减少运行时依赖、提升跨环境兼容性。现有 hook 配置无需改动，认证流程简化后部署复杂度降低。国内用户走 newapi.lurus.cn 代理不受影响，可放心更新。"
+tags: [azure, authentication, bugfix]
+---
+
+- Azure CLI 登录不再依赖 Bun，修复了认证流程。
+- 对 agent harness 设计：减少运行时依赖，提升跨环境兼容性。
+- 简化认证集成，降低部署和配置复杂度。
+
+---
+
+> 原文 release：[sst/opencode v1.18.25](https://github.com/anomalyco/opencode/releases/tag/v1.18.25)

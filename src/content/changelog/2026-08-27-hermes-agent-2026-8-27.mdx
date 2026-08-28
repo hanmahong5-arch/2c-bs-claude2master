@@ -1,0 +1,26 @@
+---
+slug: 2026-08-27-hermes-agent-2026-8-27
+title: "hermes-agent v2026.8.27 — Hermes Agent 大版本前哨：525 个 PR 合并，新模型、缓存、安全"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.27
+publishedAt: 2026-08-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hermes Agent 大版本前哨：525 个 PR 合并，新模型、缓存、安全增强。"
+broadcast: "最近开源社区有个大动作，Hermes Agent 在准备大版本更新前，一口气合并了五百多个改进。现在它支持用户授权后浏览真实浏览器，还能通过远程安全更新引擎。对开发者来说，工具搜索更聪明了，密钥存进系统钥匙串，缓存策略也优化了，调用延迟和成本都能降下来。这波更新，值得关注。"
+insight: "此次更新对现有用户而言，值得升级，但需注意新功能带来的配置调整。若你已使用远程MCP或依赖web_search/web_extract，建议启用TTL缓存以降低token成本。国内用户经newapi.lurus.cn代理访问不受影响，但升级后需检查浏览器授权与SSH远程更新等新安全流程，确保符合你的使用场景。"
+tags: [agent-harness, mcp, caching, security]
+---
+
+- 新增 consent-gated 真实浏览器配置浏览，支持 Windows 关闭审批流；桌面浏览器独立 OS 窗口，SSH 远程更新引擎。
+  - 对 harness 设计：需处理用户授权边界与远程控制安全。
+- 远程 MCP 目录扩展至 50+ 供应商托管服务器，web_search/web_extract 支持 TTL 缓存，默认 lean-tail 压缩。
+  - 对 harness 设计：缓存与压缩策略影响工具调用延迟与 token 成本。
+- 多查询 tool_search 带词干提取，OS 钥匙串加密存储 secrets，更新器通过控制套接字暂停网关。
+  - 对 harness 设计：增强工具发现与密钥管理，更新流程更安全。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.8.27](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.27)
