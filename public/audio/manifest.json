@@ -1,6 +1,105 @@
 {
   "items": [
     {
+      "slug": "2026-08-28-blog-anthropic-news-expanding-our-support-for-scientists",
+      "zh": true,
+      "en": true,
+      "title": "Expanding our support for scientists — Anthropic 为科学家提供 1 万免费订阅席位，并扩展 AI for Sc",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-08-28"
+    },
+    {
+      "slug": "2026-08-28-blog-anthropic-news-previewing-the-model-hardware-standard",
+      "zh": true,
+      "en": true,
+      "title": "Previewing the Model Hardware Standard — Anthropic 发布模型硬件标准 MHS，让 AI 代理安全操作物理设备，将",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-08-28"
+    },
+    {
+      "slug": "2026-08-28-blog-latentspace-ainews-openai-to-reach-agi-bar-by-end",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] OpenAI to reach AGI bar by end-2026 — OpenAI 预计 2026 年底内部宣布 AGI，本周还有开源机器人、GLM",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-28"
+    },
+    {
+      "slug": "2026-08-28-blog-openai-news-supporting-thailand-s-next-generation-of-ai-startups",
+      "zh": true,
+      "en": true,
+      "title": "Supporting Thailand’s next generation of AI startups — OpenAI与泰国MHESI合作，为10家健康、教育初创企业提供8周加速器，助力",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-28"
+    },
+    {
+      "slug": "2026-08-28-claude-code-2-1-250",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.250 — 修复 bug，提升稳定性，值得快速了解。",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-28"
+    },
+    {
+      "slug": "2026-08-28-cline-desktop-v0-0-20",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.20 — Windows 支持、图片内联、全局搜索，Cline Desktop 大更新",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-28"
+    },
+    {
+      "slug": "2026-08-28-opencode-1-18-24",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.24 — 修复 Bedrock 缓存、支持 Azure Entra ID 登录，兼容 V2",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-08-28"
+    },
+    {
+      "slug": "2026-08-28-opencode-1-18-25",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.25 — 修复 Azure 认证，无需 Bun 即可登录",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-08-28"
+    },
+    {
+      "slug": "2026-08-28-trending-pathwaycom-arc-task-gen",
+      "zh": true,
+      "en": false,
+      "title": "arc-task-gen — 生成分布匹配的ARC",
+      "kind": "trending",
+      "author": null,
+      "source": "pathwaycom/arc-task-gen",
+      "tool": null,
+      "publishedAt": "2026-08-28"
+    },
+    {
       "slug": "2026-08-27-blog-latentspace-ainews-hot-chips-openai-s-jalape-o-cerebras",
       "zh": true,
       "en": true,
@@ -23,6 +122,17 @@
       "publishedAt": "2026-08-27"
     },
     {
+      "slug": "2026-08-27-blog-openai-news-better-answers-broader-thinking-what-students-gain-from",
+      "zh": true,
+      "en": true,
+      "title": "Better answers, broader thinking: What students gain — OpenAI随机试验：ChatGPT加批判性思维训练如何提升学生作业原创性。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-27"
+    },
+    {
       "slug": "2026-08-27-blog-openai-news-expanding-openai-s-presence-in-brazil",
       "zh": true,
       "en": true,
@@ -34,6 +144,28 @@
       "publishedAt": "2026-08-27"
     },
     {
+      "slug": "2026-08-27-blog-simonwillison-breaking-claude-code-opus-5-auto-mode",
+      "zh": true,
+      "en": true,
+      "title": "Breaking Claude Code Opus 5 Auto Mode — Claude Code 自动模式被曝 80% 成功率绕过，安全机制反成漏洞。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-27"
+    },
+    {
+      "slug": "2026-08-27-claude-code-2-1-248",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.248 — 新增受限模式、缓存TTL、跨会话消息等多项修复与改进",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-27"
+    },
+    {
       "slug": "2026-08-27-codex-rust-v0-150-1",
       "zh": true,
       "en": false,
@@ -42,6 +174,28 @@
       "author": null,
       "source": "openai/codex",
       "tool": "codex",
+      "publishedAt": "2026-08-27"
+    },
+    {
+      "slug": "2026-08-27-goose-1-48-0",
+      "zh": true,
+      "en": false,
+      "title": "goose v1.48.0 — Goose v1.48.0 新增多个声明式 provider、on_failur",
+      "kind": "changelog",
+      "author": null,
+      "source": "block/goose",
+      "tool": "goose",
+      "publishedAt": "2026-08-27"
+    },
+    {
+      "slug": "2026-08-27-hermes-agent-2026-8-27",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v2026.8.27 — Hermes Agent 大版本前哨：525 个 PR 合并，新模型、缓存、安全",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
       "publishedAt": "2026-08-27"
     },
     {
@@ -725,160 +879,6 @@
       "source": "anthropics/claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-08-22"
-    },
-    {
-      "slug": "2026-08-22-cline-4-1-13",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.13 — 修复工具调用、Hub会话重放与Langfuse追踪身份",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-22"
-    },
-    {
-      "slug": "2026-08-22-cline-desktop-v0-0-16",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.16 — Hub 实例间交接不丢工作，自定义模型工具调用修复",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-22"
-    },
-    {
-      "slug": "2026-08-22-cline-sdk-sdk-v0-0-78",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.78 — SDK 升级：hub 可无损排空，工具调用修复，追踪更完整",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-22"
-    },
-    {
-      "slug": "2026-08-22-trending-jundizhou-easy-stock",
-      "zh": true,
-      "en": false,
-      "title": "easy-stock — Go 写的 A 股行情分析与 AI 智能投研智能体",
-      "kind": "trending",
-      "author": null,
-      "source": "jundizhou/easy-stock",
-      "tool": null,
-      "publishedAt": "2026-08-22"
-    },
-    {
-      "slug": "2026-08-21-blog-deepmind-from-atari-to-eve-online-building-on-15",
-      "zh": true,
-      "en": true,
-      "title": "From Atari to EVE Online: Building on 15 Years of AI — DeepMind 15年游戏AI研究：从Atari到EVE Online，如何用",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-blog-hf-blog-how-hugging-face-inference-endpoints-jobs-and-buckets",
-      "zh": true,
-      "en": true,
-      "title": "How Hugging Face Inference Endpoints, Jobs, and Buckets — Hugging Face 如何用推理端点、任务和存储桶支撑 Papers wit",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-blog-hf-blog-measuring-benchmark-optimization-in-speech-recognition",
-      "zh": true,
-      "en": true,
-      "title": "Measuring benchmark optimization in speech recognition — Hugging Face 用基准测试优化语音识别模型，提升准确率与效率。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-blog-latentspace-ainews-poolside-gets-12b-reverse-execuhire-to-nvidia",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Poolside gets $12B reverse-execuhire to — Poolside 被 NVIDIA 反向收购，创始人留任、员工转投，揭示 AI ",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-blog-latentspace-simulation-the-new-scaling-law-joon-sung-park",
-      "zh": true,
-      "en": true,
-      "title": "Simulation: the new Scaling Law — Joon Sung Park, — Simile AI 用模拟人类行为做数字孪生，85% 准确率，或成新 scali",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-blog-simonwillison-llm-0-32-1",
-      "zh": true,
-      "en": true,
-      "title": "llm 0.32.1 — LLM 0.32.1 修复因 OpenAI 库弃用 httpx 导致的安装问题，",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-blog-simonwillison-llm-openrouter-0-7",
-      "zh": true,
-      "en": true,
-      "title": "llm-openrouter 0.7 — llm",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-blog-simonwillison-quoting-matt-webb",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Matt Webb — Matt Webb 用 ChatGPT 当导师学会四元数，AI 推动持续学习。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-blog-simonwillison-stop-making-tuis",
-      "zh": true,
-      "en": true,
-      "title": "Stop Making TUIs — Simon Willison 呼吁停止只做 TUI，用 AI 低成本构建原生 G",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-21"
-    },
-    {
-      "slug": "2026-08-21-claude-code-2-1-239",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.239 — 成本估算含数据驻留溢价，新增全屏渲染器，修复多项关键 bug。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-21"
     }
   ]
 }
