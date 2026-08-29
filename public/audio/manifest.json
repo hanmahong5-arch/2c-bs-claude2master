@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "slug": "2026-08-29-blog-latentspace-ainews-openai-shuts-off-cursor",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] OpenAI shuts off Cursor — OpenAI切断Cursor访问，AI新闻周报解析事件及开源模型、推理系统新动态",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-29"
+    },
+    {
+      "slug": "2026-08-29-trending-yjh051108-dsh-routing-suite",
+      "zh": true,
+      "en": false,
+      "title": "dsh-routing-suite — JS 路由套件：注入器加任务感知推理模式路由",
+      "kind": "trending",
+      "author": null,
+      "source": "yjh051108/dsh-routing-suite",
+      "tool": null,
+      "publishedAt": "2026-08-29"
+    },
+    {
       "slug": "2026-08-28-blog-anthropic-news-expanding-our-support-for-scientists",
       "zh": true,
       "en": true,
@@ -23,6 +45,17 @@
       "publishedAt": "2026-08-28"
     },
     {
+      "slug": "2026-08-28-blog-hf-blog-the-open-asr-leaderboard-adds-its-first-global",
+      "zh": true,
+      "en": true,
+      "title": "The Open ASR Leaderboard Adds Its First Global South — 开源语音识别排行榜首次纳入南半球语言，推动技术普惠。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-08-28"
+    },
+    {
       "slug": "2026-08-28-blog-latentspace-ainews-openai-to-reach-agi-bar-by-end",
       "zh": true,
       "en": true,
@@ -30,6 +63,17 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-08-28"
+    },
+    {
+      "slug": "2026-08-28-blog-openai-news-our-decision-on-cursor-following-its-acquisition-by",
+      "zh": true,
+      "en": true,
+      "title": "Our decision on Cursor following its acquisition by — OpenAI 因 Cursor 被 SpaceX 收购而终止向其提供模型。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
       "tool": null,
       "publishedAt": "2026-08-28"
     },
@@ -45,10 +89,32 @@
       "publishedAt": "2026-08-28"
     },
     {
+      "slug": "2026-08-28-blog-simonwillison-just-a-rumour-of-a-bug-is-enough",
+      "zh": true,
+      "en": true,
+      "title": "Just a rumour of a bug is enough to find a security — AI 代理让安全漏洞从传闻到利用只需几分钟，开源维护者面临新挑战。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-28"
+    },
+    {
       "slug": "2026-08-28-claude-code-2-1-250",
       "zh": true,
       "en": false,
       "title": "claude-code v2.1.250 — 修复 bug，提升稳定性，值得快速了解。",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-28"
+    },
+    {
+      "slug": "2026-08-28-claude-code-2-1-251",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.251 — 模型切换钩子、子代理流式输出、缓存统计等关键更新，值得一看。",
       "kind": "changelog",
       "author": null,
       "source": "anthropics/claude-code",
@@ -98,6 +164,28 @@
       "source": "pathwaycom/arc-task-gen",
       "tool": null,
       "publishedAt": "2026-08-28"
+    },
+    {
+      "slug": "2026-08-27-blog-deepmind-gemini-omni-1-1-flash-lets-you-build",
+      "zh": true,
+      "en": true,
+      "title": "Gemini Omni 1.1 Flash lets you build with more control — Gemini Omni 1.1 Flash 发布，强调开发者可控性与实时交互能力",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-08-27"
+    },
+    {
+      "slug": "2026-08-27-blog-deepmind-piloting-the-world-s-first-double-blind-ai",
+      "zh": true,
+      "en": true,
+      "title": "Piloting the world's first double-blind AI evaluations — Google DeepMind 首次试点双盲 AI 评估，防止模型评测中的偏见。",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-08-27"
     },
     {
       "slug": "2026-08-27-blog-latentspace-ainews-hot-chips-openai-s-jalape-o-cerebras",
@@ -791,94 +879,6 @@
       "source": "cline/cline",
       "tool": "cline",
       "publishedAt": "2026-08-23"
-    },
-    {
-      "slug": "2026-08-23-trending-dsh-tauri-desk-deepseek-harness-desktop",
-      "zh": true,
-      "en": false,
-      "title": "deepseek-harness-desktop — 5MB 安装包，零配置跑 DeepSeek 的桌面工具",
-      "kind": "trending",
-      "author": null,
-      "source": "dsh-tauri-desk/deepseek-harness-desktop",
-      "tool": null,
-      "publishedAt": "2026-08-23"
-    },
-    {
-      "slug": "2026-08-22-blog-latentspace-ainews-10-worse-100x-cheaper-10000x-faster-why",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] 10% worse, 100x cheaper, 10000x faster: Why — 模拟正在接管AI：从奖励信号到物理世界，每个环节正被模型替代。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-22"
-    },
-    {
-      "slug": "2026-08-22-blog-latentspace-the-evolution-of-the-agent-harness",
-      "zh": true,
-      "en": true,
-      "title": "The Evolution of the Agent Harness — Agent 突然变好用，关键不在模型，而在 harness 的进化。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-22"
-    },
-    {
-      "slug": "2026-08-22-blog-raschka-how-claude-watermarks-ai-generated-text",
-      "zh": true,
-      "en": true,
-      "title": "How Claude Watermarks AI-Generated Text — Sebastian Raschka 用 52 页幻灯片和 48 分钟视频，从零讲",
-      "kind": "blogger",
-      "author": "Sebastian Raschka",
-      "source": "Sebastian Raschka",
-      "tool": null,
-      "publishedAt": "2026-08-22"
-    },
-    {
-      "slug": "2026-08-22-blog-simonwillison-llm-0-33",
-      "zh": true,
-      "en": true,
-      "title": "llm 0.33 — Simon Willison 发布 llm 0.33，升级 OpenAI 库、支",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-22"
-    },
-    {
-      "slug": "2026-08-22-blog-simonwillison-more-than-just-code-review",
-      "zh": true,
-      "en": true,
-      "title": "More than just code review — Simon Willison 谈如何高效使用编码代理：不止代码审查。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-22"
-    },
-    {
-      "slug": "2026-08-22-blog-simonwillison-quoting-linus-torvalds",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Linus Torvalds — Linus Torvalds 分享 AI 辅助调试内核的实战体验，AI 虽多次放",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-22"
-    },
-    {
-      "slug": "2026-08-22-claude-code-2-1-240",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.240 — Claude Code 修复 bug 提升稳定性，值得快速了解。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-22"
     }
   ]
 }
