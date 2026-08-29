@@ -1,0 +1,25 @@
+---
+slug: 2026-08-28-claude-code-2-1-251
+title: "claude-code v2.1.251 — 模型切换钩子、子代理流式输出、缓存统计等关键更新，值得一看。"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.251
+publishedAt: 2026-08-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "模型切换钩子、子代理流式输出、缓存统计等关键更新，值得一看。"
+broadcast: "这次更新给开发者带来了不少实用功能，比如新增了模型切换的钩子，可以拦截或注释切换，还提供了会话恢复时的缓存成本信息。另外，前台子代理的工具调用和结果现在能实时流式传输到远程控制端，方便监控。安全方面也修复了文件工具越权读写和插件路径穿越等漏洞，值得关注。"
+insight: "这次更新对国内用户影响不大，newapi.lurus.cn 代理不受影响。但新增的 PreModelSwitch/PostModelSwitch 钩子值得关注，如果你现有 hook 配置涉及模型切换，建议检查是否需要适配，以利用拦截或注释能力。子代理流式输出到 Remote Control 是体验提升，但后台子代理仍只显示状态，升级前可评估是否依赖此功能。安全修复（符号链接越权、路径穿越）建议尽快升级，尤其是多用户环境。"
+tags: [hooks, subagents, security, caching]
+---
+
+- 新增 `PreModelSwitch`/`PostModelSwitch` 钩子事件，可拦截或注释模型切换；`SessionStart` 恢复钩子提供会话陈旧度和重新缓存成本。
+- 前台子代理的工具调用和结果现在实时流式传输到 Remote Control 客户端，后台子代理仍仅显示状态。
+- `/usage` 新增花费限制条，状态行新增 `rate_limits.spend_limit` 字段；`/cost` 新增每会话提示缓存行（命中率、未命中、重新缓存令牌、冷/热），状态行脚本可匹配 `prompt_cache` 对象。
+- 修复了文件工具在权限检查后跟随符号链接交换导致的越权读写问题，以及插件命令路径穿越、项目设置启用详细追踪等安全漏洞。
+- 改进了 Bash 命令输出文件在沙箱中的创建和读取方式，防止重定向或替换。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.251](https://github.com/anthropics/claude-code/releases/tag/v2.1.251)
