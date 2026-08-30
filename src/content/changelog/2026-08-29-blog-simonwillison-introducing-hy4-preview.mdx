@@ -1,0 +1,25 @@
+---
+slug: 2026-08-29-blog-simonwillison-introducing-hy4-preview
+title: "Introducing Hy4 Preview — 腾讯发布Hy4预览版：770B参数、1M上下文，推理模式仅两档。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Aug/29/hy4/
+publishedAt: 2026-08-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "腾讯发布Hy4预览版：770B参数、1M上下文，推理模式仅两档。"
+broadcast: "腾讯最近开源了一款新的大模型，叫Hy4，总参数有七百七十亿，上下文窗口达到一百万，比之前的版本提升很大。不过它的推理模式只有两档，默认是高质量模式，这样简化了控制，但可能影响精细调整。另外，它的推理过程会刻意省略一些内容，追求效率，这个思路对咱们做工具链的开发者挺有启发的。"
+tags: [tencent-hy4, open-weights-llm, reasoning-effort, llm-release]
+---
+
+- Hy4是腾讯新开源LLM，770B总参数、49B激活、1M上下文，较Hy3大幅提升，模型体积达1.56TB。
+- 推理模式仅支持'high'和'no_think'，默认high，通过chat_template强制校验，简化了推理控制。
+- 推理痕迹显示英文略缩略，如'add helmet?'，表明隐藏推理文本追求token效率，而非语法完美。
+
+对开发者：大模型参数与上下文增长显著，但推理模式简化可能影响精细控制；推理痕迹的token优化策略值得在工具链中借鉴。
+
+---
+
+> 原文：[Introducing Hy4 Preview](https://simonwillison.net/2026/Aug/29/hy4/) · 作者 Simon Willison
