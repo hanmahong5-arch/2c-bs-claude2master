@@ -1,6 +1,116 @@
 {
   "items": [
     {
+      "slug": "2026-08-31-blog-oneusefulthing-agency-and-agents",
+      "zh": true,
+      "en": true,
+      "title": "Agency and Agents — AI代理在沙箱中自发协作、欺骗评分系统，甚至攻击真实网站，揭示自主AI的惊人能力",
+      "kind": "blogger",
+      "author": "Ethan Mollick",
+      "source": "Ethan Mollick",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-openclaw-2026-8-1",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.8.1 — OpenClaw 2026.8.1 大幅增强会话搜索、跨设备工作流与交互式结果，",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-openclaw-concepts-memory-provenance",
+      "zh": true,
+      "en": true,
+      "title": "Memory provenance and deletion · OpenCla — 记忆溯源与删除：如何精准清除代理会话产生的记忆痕迹",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-openclaw-concepts-typebox",
+      "zh": true,
+      "en": true,
+      "title": "TypeBox · OpenClaw — TypeBox 如何成为 OpenClaw 网关协议的唯一事实源，驱动校验、代码",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-openclaw-concepts-typing-indicators",
+      "zh": true,
+      "en": true,
+      "title": "Typing indicators · OpenClaw — 5分钟读懂OpenClaw打字指示器配置，优化AI交互反馈体验。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-openclaw-concepts-usage-tracking",
+      "zh": true,
+      "en": true,
+      "title": "Usage tracking · OpenClaw — OpenClaw 如何精确追踪 token 用量与配额，并优雅降级到会话日志。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-openclaw-concepts-user-model",
+      "zh": true,
+      "en": true,
+      "title": "User model · OpenClaw — USER.md 如何稳定跨会话记住你的偏好？一文讲清格式与身份验证。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-trending-deeplethe-utopia",
+      "zh": true,
+      "en": false,
+      "title": "utopia — 首个开源企业级世界模型，用 Rust 构建",
+      "kind": "trending",
+      "author": null,
+      "source": "deeplethe/utopia",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-trending-zhu1090093659-dsh-web",
+      "zh": true,
+      "en": false,
+      "title": "dsh-web — DeepSeek 插件聚合生态，万物皆插件",
+      "kind": "trending",
+      "author": null,
+      "source": "zhu1090093659/dsh-web",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-30-blog-simonwillison-understanding-chatgpt-work",
+      "zh": true,
+      "en": true,
+      "title": "Understanding ChatGPT Work — Simon Willison 拆解 ChatGPT Work 双形态，重点讲云端",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-30"
+    },
+    {
       "slug": "2026-08-30-trending-chrisgreg-boop",
       "zh": true,
       "en": false,
@@ -42,6 +152,17 @@
       "author": "Simon Willison",
       "source": "Simon Willison",
       "tool": null,
+      "publishedAt": "2026-08-29"
+    },
+    {
+      "slug": "2026-08-29-codex-rust-v0-151-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.151.0 — MCP 工具结果可被扩展拦截，插件目录按仓库配置合并",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
       "publishedAt": "2026-08-29"
     },
     {
@@ -758,127 +879,6 @@
       "source": "cline/cline",
       "tool": "cline",
       "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-24-cline-sdk-sdk-v0-0-79",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.79 — SDK 事件日志上限 64MiB，修复 telemetry 丢失，更新模型目录",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-24-codex-rust-v0-149-1",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.149.1 — Codex 0.149.1 补丁发布，修复问题并优化稳定性。",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-24-openclaw-concepts-session-tool",
-      "zh": true,
-      "en": true,
-      "title": "Session tools · OpenClaw — 跨会话工具集：让 agent 管理会话、编排子代理，值得 5 分钟。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-24-openclaw-concepts-soul",
-      "zh": true,
-      "en": true,
-      "title": "SOUL.md personality guide · OpenClaw — 让 AI 助手有性格：SOUL.md 教你告别机器人腔，5 分钟改出有灵魂的提示",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-24-openclaw-concepts-standing-intents",
-      "zh": true,
-      "en": true,
-      "title": "Standing intents · OpenClaw — 事件触发记忆：让代理在特定话题出现时自动提醒，而非定时任务。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-24-openclaw-concepts-streaming",
-      "zh": true,
-      "en": true,
-      "title": "Streaming and chunking · OpenClaw — OpenClaw 双流式层设计：块流与预览流，如何避免重复媒体与自然节奏。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-24-openclaw-concepts-system-prompt",
-      "zh": true,
-      "en": true,
-      "title": "System prompt · OpenClaw — OpenClaw 如何分层构建系统提示词，兼顾缓存与动态上下文。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-24-opencode-1-18-22",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.22 — 修复兼容性与登录链接，提升多提供商稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-23-blog-simonwillison-anthropic-s-best-ai-model-struggles-to-attract",
-      "zh": true,
-      "en": true,
-      "title": "Anthropic’s best AI model struggles to attract users as — Anthropic最强模型Fable 5因成本高而用户少，市场更青睐便宜模型。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-23"
-    },
-    {
-      "slug": "2026-08-23-blog-simonwillison-quoting-drew-breunig",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Drew Breunig — Drew Breunig 谈 Fable 模型的高成本如何改变工作分配策略。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-23"
-    },
-    {
-      "slug": "2026-08-23-claude-code-2-1-241",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.241 — Claude Code 修复 bug，提升可靠性，值得快速了解。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-23"
     }
   ]
 }
