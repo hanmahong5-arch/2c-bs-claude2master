@@ -1,0 +1,25 @@
+---
+slug: 2026-08-31-openclaw-concepts-usage-tracking
+title: "Usage tracking · OpenClaw — OpenClaw 如何精确追踪 token 用量与配额，并优雅降级到会话日志。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/usage-tracking
+publishedAt: 2026-08-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OpenClaw 如何精确追踪 token 用量与配额，并优雅降级到会话日志。"
+broadcast: "OpenClaw 这次更新了用量追踪功能，直接从服务商拉取配额，不靠估算，还支持在实时数据缺失时回退到会话日志补全。对开发者来说，状态覆盖的优先级很清晰，自定义模板还能热加载，做 agent 时能更精确控制成本，值得关注。"
+insight: "现有用户若依赖 /usage 精确配额，建议升级以获取 provider 直连与三态控制，但需注意显式 off 持久化后不会被默认值覆盖，重置需手动执行。若已自定义 footer 模板，热加载与静默回退机制可放心使用，但无效模板会告警。国内走 newapi.lurus.cn 代理不受影响，因为追踪逻辑独立于网络路径，仅依赖 provider 端点与本地日志回退。"
+tags: [usage-tracking, quota-monitoring, session-state, config-precedence]
+---
+
+- 直接从各 provider 用量端点拉取配额，不估算计费；配额窗口统一显示为 X% left，无窗口则显示摘要文本。
+- /status 和 session_status 在实时快照缺 token/model 数据时，回退到会话 transcript 日志，补全缺失计数并恢复模型标签。
+- /usage 支持 off/tokens/full 三态，显式 off 持久化后不可被配置默认值覆盖；/usage reset 才清除覆盖。
+- 自定义 footer 模板支持 JSON 文件热加载，无效模板静默回退内置样式并告警。
+- 对 agent harness 设计：用量追踪需区分 provider 报告与本地估算，且状态覆盖需明确优先级。
+
+---
+
+> 原文：[Usage tracking · OpenClaw](https://docs.openclaw.ai/concepts/usage-tracking)

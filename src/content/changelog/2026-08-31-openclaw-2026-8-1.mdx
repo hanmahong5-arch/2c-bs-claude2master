@@ -1,0 +1,25 @@
+---
+slug: 2026-08-31-openclaw-2026-8-1
+title: "openclaw v2026.8.1 — OpenClaw 2026.8.1 大幅增强会话搜索、跨设备工作流与交互式结果，"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.8.1
+publishedAt: 2026-08-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "OpenClaw 2026.8.1 大幅增强会话搜索、跨设备工作流与交互式结果，并引入多项破坏性迁移。"
+broadcast: "OpenClaw 这次更新挺实在的，重点提升了会话搜索和跨设备工作流，还能在聊天里直接展示互动结果。对开发者来说，最需要注意的是它移除了内置的 OpenProse 插件，模型引用也做了迁移，升级时得留意配置调整。整体上，这些改动让代理开发更灵活，但也要求我们在会话管理和安全凭据处理上多下功夫。"
+insight: "这次升级对现有用户是值得的，但必须注意破坏性迁移：内置 OpenProse 插件被移除，codex/* 模型引用要改成 openai/*，旧配置得靠迁移工具处理。如果你在用这些模型或插件，建议先备份配置再升级。会话搜索、跨设备工作流和私有凭据请求都是实打实的增强，但 harness 侧需要额外适配。至于 newapi.lurus.cn 代理，摘要里没提，无法判断是否受影响，建议升级前先测试。"
+tags: [session-search, cloud-workers, interactive-widgets, breaking-changes]
+---
+
+- **会话搜索与恢复**：支持按精确词或短语搜索历史对话，并重新打开匹配消息的上下文。对 harness 设计意味着需要持久化可检索的会话索引，并支持从搜索结果快速恢复会话状态。
+- **跨设备会话与云工作器**：可在配对设备或云工作器上运行会话，迁移工作区并复用预热机器。harness 需支持会话迁移、工作区同步及云资源生命周期管理。
+- **交互式结果与仪表板**：聊天中可使用 widget，固定到会话仪表板，并导出为图片。harness 需支持 widget 渲染、权限控制及导出功能。
+- **私有凭据请求**：代理可通过掩码提示请求凭据，避免值进入聊天或模型上下文，并支持代理限制替换。harness 需实现安全的凭据存储与请求流程。
+- **OpenProse 与 OpenAI 路由迁移（破坏性）**：移除内置 OpenProse 插件，迁移 codex/* 模型引用至 openai/*。harness 需提供迁移工具并处理旧配置。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.8.1](https://github.com/openclaw/openclaw/releases/tag/v2026.8.1)

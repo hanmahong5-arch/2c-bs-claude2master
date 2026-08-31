@@ -1,0 +1,23 @@
+---
+slug: 2026-08-31-openclaw-concepts-typebox
+title: "TypeBox · OpenClaw — TypeBox 如何成为 OpenClaw 网关协议的唯一事实源，驱动校验、代码"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/typebox
+publishedAt: 2026-08-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "TypeBox 如何成为 OpenClaw 网关协议的唯一事实源，驱动校验、代码生成与多端一致。"
+broadcast: "今天聊聊 TypeBox 在 OpenClaw 网关协议里的角色。它把协议定义变成了唯一事实源，校验、代码生成都从这一份定义来，省得手写多份容易出错。更妙的是，生成结果会对照发布契约检查，防止悄悄跑偏。对做 agent 开发的朋友来说，这种用单一 schema 驱动多端一致的做法，很值得借鉴。"
+insight: "如果你已经在用 OpenClaw 网关，TypeBox 这套单一事实源值得升级跟进，它把校验、代码生成和协议一致性绑在一起，能显著减少多端漂移。现有 prompt 或 hook 配置不用大改，但新增协议方法时务必按 schema→fragment→validator 的顺序注册，因为原生代码生成依赖插入顺序，乱序会导致生成结果偏离。国内用户走 newapi.lurus.cn 代理不受影响，协议层变更对代理透明，放心升级。"
+tags: [typebox, protocol-schema, codegen, single-source-of-truth]
+---
+
+- **单一事实源**：用 TypeBox 定义网关 WS 协议，运行时校验（AJV）、JSON Schema 导出、Swift/Kotlin 代码生成全部由此驱动，避免多份手写定义漂移。
+- **生成物检查**：`protocol:gen` 不比对 gitignored 的 JSON Schema，而是断言发布契约（帧定义、顺序、判别映射），防止生成结果悄悄偏离。
+- **端到端示例**：新增 `system.echo` 方法时，先加 schema，再注册到 fragment，最后导出 validator；强调保持注册顺序，因为原生代码生成依赖插入顺序。
+
+---
+
+> 原文：[TypeBox · OpenClaw](https://docs.openclaw.ai/concepts/typebox)

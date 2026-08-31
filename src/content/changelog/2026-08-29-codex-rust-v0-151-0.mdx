@@ -1,0 +1,25 @@
+---
+slug: 2026-08-29-codex-rust-v0-151-0
+title: "codex rust-v0.151.0 — MCP 工具结果可被扩展拦截，插件目录按仓库配置合并"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.151.0
+publishedAt: 2026-08-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP 工具结果可被扩展拦截，插件目录按仓库配置合并"
+broadcast: "OpenAI 的 Codex 工具更新了，这次重点是给开发者更多控制权。现在 MCP 工具的结果可以在交给模型之前被拦截检查或替换，相当于加了个中间层，方便你调试或调整。另外，插件目录会合并仓库配置，之前被隐藏的有效插件现在能正常显示了。对做 agent 开发的朋友来说，这些改动意味着更灵活的环境控制和更少的配置冲突，值得关注。"
+insight: "这次更新对国内用户影响不大，但值得关注的是 MCP 工具结果可被扩展拦截，如果你现有 hook 依赖 MCP 返回的原始数据，建议检查是否会被中间层改动。插件目录合并仓库级配置后，若你同时使用多个仓库，需注意配置冲突，避免插件被意外隐藏。远程沙箱强制真实环境，走 newapi.lurus.cn 代理时需确保传递正确的环境上下文，否则可能影响执行。整体上，升级前建议先测试现有 prompt 和 hook 配置。"
+tags: [mcp, plugins, sandbox, model-switching]
+---
+
+- MCP 工具结果可在到达模型前被扩展检查或替换，为 harness 提供中间层干预点。
+- 可选 MCP 服务器发现新增可配置宽限期，harness 可调整启动等待策略。
+- 插件目录合并仓库级配置，无效项目市场不再隐藏有效插件，harness 需处理配置冲突。
+- 修复模型切换时工具可用性和推理努力保持正确，harness 需同步模型状态。
+- 远程沙箱强制使用执行器真实主目录、OS 和路径约定，harness 需传递环境上下文。
+
+---
+
+> 原文 release：[openai/codex rust-v0.151.0](https://github.com/openai/codex/releases/tag/rust-v0.151.0)

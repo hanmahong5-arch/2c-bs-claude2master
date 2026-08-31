@@ -1,0 +1,23 @@
+---
+slug: 2026-08-31-openclaw-concepts-user-model
+title: "User model · OpenClaw — USER.md 如何稳定跨会话记住你的偏好？一文讲清格式与身份验证。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/user-model
+publishedAt: 2026-08-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "USER.md 如何稳定跨会话记住你的偏好？一文讲清格式与身份验证。"
+broadcast: "今天聊聊怎么让AI助手在跨会话时记住你的偏好。核心就是一份用户档案文件，用明确的祈使句写下你的习惯，每条都标注日期和状态。当偏好改变时，直接标记旧条目作废，而不是不断追加新内容，这样指令就不会混乱。另外，身份验证和偏好档案是分开的，你的GitHub身份只用于提交署名，不会暴露给模型。这对国内开发者做智能体开发很有参考价值，能有效避免长对话中偏好丢失的问题。"
+insight: "现有用户值得升级，尤其当长对话中偏好常被遗忘时。USER.md 用祈使句加日期状态，能稳定记忆，但需注意：偏好变更要原地标 superseded，别追加新条目，否则指令会歧义。若你已用 hook 管理偏好，建议对照此格式调整，避免重复或冲突。国内走 newapi.lurus.cn 代理不受影响，身份验证与代理无关，GitHub 身份仅用于提交署名，不会暴露给模型，可放心用。"
+tags: [user-model, memory, identity, preferences]
+---
+
+- USER.md 存稳定偏好，用“Always/Never/Prefer”祈使句，每条带日期和状态，避免长对话中偏好跟随退化。
+- 偏好变更时原地标记 superseded，不追加新条目，保证当前指令无歧义。
+- 身份验证区分 Gateway 档案与 USER.md，GitHub 身份用于提交署名，且不暴露给模型。
+
+---
+
+> 原文：[User model · OpenClaw](https://docs.openclaw.ai/concepts/user-model)

@@ -1,0 +1,24 @@
+---
+slug: 2026-08-31-openclaw-concepts-memory-provenance
+title: "Memory provenance and deletion · OpenCla — 记忆溯源与删除：如何精准清除代理会话产生的记忆痕迹"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/memory-provenance
+publishedAt: 2026-08-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "记忆溯源与删除：如何精准清除代理会话产生的记忆痕迹"
+broadcast: "今天聊聊记忆溯源与删除。OpenClaw 能按会话精准清除记忆痕迹，但删除前必须预览确认影响范围，而且只删记忆，不碰原始记录。准入策略能阻止特定来源进入记忆，但只管未来，不管过去。这对 agent 开发挺重要，记忆删除得有边界，预览和干跑模式不能少，避免误删。"
+insight: "对于现有用户，若你依赖 OpenClaw 的记忆功能，建议升级以利用更精准的删除能力，但需注意删除前务必使用 --dry-run 预览，避免误删。若你已配置准入策略（如 excludeSessions），它仅阻止新数据，不清理旧数据，需结合 memory forget 手动清理。国内用户通过 newapi.lurus.cn 代理访问时，该功能不受影响，因为记忆删除是本地操作，不涉及代理链路。"
+tags: [memory-provenance, deletion, session-lineage, admission-policy]
+---
+
+- OpenClaw 记录会话来源谱系，`memory forget` 按会话 ID 精准删除相关记忆条目和工件，但不会删除原始转录或外部副本。
+- 删除前必须用 `--dry-run` 预览，检查 `sessionResolutions`、`entryKeys` 等字段，确认影响范围；预览不保存为计划，需重新运行。
+- 准入策略（`excludeSessions`）可阻止特定来源（如 Gmail）进入记忆，但仅前瞻性，不删除已有数据；遗忘记录会永久排除该会话。
+- 对 agent harness 设计：记忆删除需明确边界，提供预览和干跑模式，且准入与删除分离，避免误删和恢复。
+
+---
+
+> 原文：[Memory provenance and deletion · OpenClaw](https://docs.openclaw.ai/concepts/memory-provenance)

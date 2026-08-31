@@ -1,14 +1,14 @@
 {
   "lastSeen": {
     "anthropics/claude-code": "v2.1.251",
-    "openai/codex": "rust-v0.150.1",
+    "openai/codex": "rust-v0.151.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "desktop-v0.0.20",
     "block/goose": "v1.48.0",
     "sst/opencode": "v1.18.25",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.57.0",
-    "openclaw/openclaw": "v2026.6.34",
+    "openclaw/openclaw": "v2026.8.1",
     "zeroclaw-labs/zeroclaw": "v0.8.4",
     "NousResearch/hermes-agent": "v2026.8.27"
   },
@@ -130,7 +130,9 @@
     "pathwaycom/arc-task-gen",
     "yjh051108/dsh-routing-suite",
     "FareedKhan-dev/kimi-k3-in-c",
-    "chrisgreg/boop"
+    "chrisgreg/boop",
+    "zhu1090093659/dsh-web",
+    "deeplethe/utopia"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -218,16 +220,21 @@
       "https://docs.openclaw.ai/concepts/standing-intents",
       "https://docs.openclaw.ai/concepts/streaming",
       "https://docs.openclaw.ai/concepts/system-prompt",
-      "https://docs.openclaw.ai/concepts/timezone"
+      "https://docs.openclaw.ai/concepts/timezone",
+      "https://docs.openclaw.ai/concepts/memory-provenance",
+      "https://docs.openclaw.ai/concepts/typebox",
+      "https://docs.openclaw.ai/concepts/typing-indicators",
+      "https://docs.openclaw.ai/concepts/usage-tracking",
+      "https://docs.openclaw.ai/concepts/user-model"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-08-30",
+    "anthropic-engineering": "2026-08-31",
     "claude-code-docs": "2026-08-28",
     "openai-codex-blog": "2026-08-27",
-    "openclaw-concepts": "2026-08-24",
-    "hermes-guides": "2026-08-24"
+    "openclaw-concepts": "2026-08-31",
+    "hermes-guides": "2026-08-31"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -482,7 +489,8 @@
       "https://simonwillison.net/2026/Aug/26/paul-dix/",
       "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
       "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/",
-      "https://simonwillison.net/2026/Aug/29/hy4/"
+      "https://simonwillison.net/2026/Aug/29/hy4/",
+      "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -727,7 +735,8 @@
       "https://www.oneusefulthing.org/p/on-working-with-wizards",
       "https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos",
       "https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots",
-      "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22"
+      "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22",
+      "https://www.oneusefulthing.org/p/agency-and-agents"
     ],
     "importai": [
       "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
@@ -1099,27 +1108,28 @@
       "https://openclaw.ai/blog/virustotal-partnership/",
       "https://openclaw.ai/blog/introducing-openclaw/",
       "https://openclaw.ai/blog/introducing-openclaw-foundation/",
-      "https://openclaw.ai/blog/extended-stable-releases-and-maturity-scorecards/"
+      "https://openclaw.ai/blog/extended-stable-releases-and-maturity-scorecards/",
+      "https://openclaw.ai/blog/openclaw-2-accidentally/"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-08-30",
+    "simonwillison": "2026-08-31",
     "lilianweng": "2026-08-27",
-    "latentspace": "2026-08-30",
-    "interconnects": "2026-08-30",
+    "latentspace": "2026-08-31",
+    "interconnects": "2026-08-31",
     "karpathy": "2026-08-30",
     "raschka": "2026-08-30",
     "eugeneyan": "2026-08-30",
     "chiphuyen": "2026-08-27",
-    "oneusefulthing": "2026-08-29",
+    "oneusefulthing": "2026-08-31",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-08-30",
-    "deepmind": "2026-08-29",
-    "hf-blog": "2026-08-29",
-    "anthropic-news": "2026-08-30",
-    "steipete": "2026-08-29",
-    "openclaw-blog": "2026-08-29"
+    "openai-news": "2026-08-31",
+    "deepmind": "2026-08-31",
+    "hf-blog": "2026-08-31",
+    "anthropic-news": "2026-08-31",
+    "steipete": "2026-08-31",
+    "openclaw-blog": "2026-08-31"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

@@ -1,0 +1,25 @@
+---
+slug: 2026-08-31-openclaw-concepts-typing-indicators
+title: "Typing indicators · OpenClaw — 5分钟读懂OpenClaw打字指示器配置，优化AI交互反馈体验。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/typing-indicators
+publishedAt: 2026-08-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "5分钟读懂OpenClaw打字指示器配置，优化AI交互反馈体验。"
+broadcast: "今天聊聊OpenClaw的打字指示器配置，它用四种模式控制启动时机，从完全不显示到模型一开始思考就显示，按需选择。心跳运行也能当存活信号，但可以关掉。关键是配置灵活，能设全局默认值，也能单独给某个代理覆盖，刷新频率还能调。对开发者来说，这不仅是界面细节，更是让用户感知系统状态、提升交互透明度和信任感的关键。"
+insight: "现有用户若依赖打字指示器反馈，建议按需调整配置：交互频繁场景可改用thinking或message模式提升感知，心跳场景默认开启但可全局禁用。国内用户经newapi.lurus.cn代理访问时，该配置属客户端行为，不受代理影响，可放心调整。"
+tags: [typing-indicators, configuration, agent-harness, user-feedback]
+---
+
+- **四种模式控制打字指示器启动时机**：`never`、`instant`、`thinking`、`message`，从完全不显示到模型循环开始即显示，按需选择。
+- **心跳运行也支持打字指示**：作为存活信号，在心跳开始时启动，但可被`typingMode: "never"`禁用，且目标不支持时自动隐藏。
+- **配置灵活**：可设置全局默认值，也可为单个代理覆盖策略，`typingIntervalSeconds`控制刷新频率（默认6秒）。
+
+对agent harness设计的启示：打字指示器不仅是UI细节，更是用户感知系统状态的关键，合理配置能提升交互透明度和信任感。
+
+---
+
+> 原文：[Typing indicators · OpenClaw](https://docs.openclaw.ai/concepts/typing-indicators)
