@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "slug": "2026-09-01-blog-anthropic-news-improving-our-alignment-and-security-practices",
+      "zh": true,
+      "en": true,
+      "title": "Improving our alignment and security practices — Anthropic 披露 Claude 越权访问真实系统事件，并公布安全加固与对",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-blog-latentspace-ainews-fal-s-h3-max-live-breaks-the",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Fal’s H3 Max Live breaks the infinite videogen — Fal后训练Minimax H3，实现视频生成快于观看，突破无限视频生成壁垒。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-codex-rust-v0-152-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.152.0 — Vim 搜索、限流横幅、MCP 增强，Codex 0.152.0 更新速览",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-trending-crmne-fastpotify",
+      "zh": true,
+      "en": false,
+      "title": "fastpotify — Rust 写的原生 Spotify 客户端，轻量快速跨平台",
+      "kind": "trending",
+      "author": null,
+      "source": "crmne/fastpotify",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
       "slug": "2026-08-31-blog-oneusefulthing-agency-and-agents",
       "zh": true,
       "en": true,
@@ -9,6 +53,94 @@
       "author": "Ethan Mollick",
       "source": "Ethan Mollick",
       "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-blog-openai-news-a-milestone-in-expanding-access-to-ai",
+      "zh": true,
+      "en": true,
+      "title": "A milestone in expanding access to AI — OpenAI 宣布 ChatGPT Ads 年化收入达 10 亿美元，并全球扩展",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-blog-openai-news-openai-supports-california-s-bill-to-advance-youth",
+      "zh": true,
+      "en": true,
+      "title": "OpenAI supports California’s bill to advance youth AI — OpenAI支持加州青少年AI安全法案，平衡保护与探索。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-blog-openai-news-polimill-builds-japan-s-next-generation-public-ai",
+      "zh": true,
+      "en": true,
+      "title": "Polimill builds Japan's next-generation public AI — Polimill 用 OpenAI 模型帮助日本市政机构搜索和利用行政知识，加速",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-blog-simonwillison-introducing-wrapture",
+      "zh": true,
+      "en": true,
+      "title": "Introducing wrapture — Wrapture：用AI辅助开发的Python库，统一测试与追踪，配置化观测。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-blog-simonwillison-quoting-andrew-digby",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Andrew Digby — 新西兰鸮鹦鹉数量突破325只，从51只到复苏的保育奇迹。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-claude-code-2-1-252",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.252 — 修复 Mac 上 Bash 命令失败、权限保存及远程会话卡顿问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-cline-desktop-v0-0-21",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.21 — 桌面版 v0.0.21：停止会话更彻底，模型目录实时更新",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-08-31"
+    },
+    {
+      "slug": "2026-08-31-hermes-agent-2026-8-31",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v2026.8.31 — Hermes Agent 0.21.0 让多智能体协作成为内置社交网络，cron",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
       "publishedAt": "2026-08-31"
     },
     {
@@ -747,138 +879,6 @@
       "source": "OpenAI",
       "tool": null,
       "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-blog-simonwillison-eve-online-the-move-to-python-3-begins",
-      "zh": true,
-      "en": true,
-      "title": "EVE Online: The Move to Python 3 Begins! — EVE Online 宣布将 240 万行代码从 Python 2 迁移到 Py",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-claude-code-2-1-245",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.245 — 修复 Linux 上 glibc 2.44 导致的启动崩溃",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-claude-code-2-1-246",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.246 — Bash 通配符规则漏洞、长 diff 卡顿等 40+ 修复，值得一看",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-cline-desktop-v0-0-17",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.17 — Cline 桌面版大改：插件/MCP/技能统一中心，模型页重设计，语音独立设置",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-gemini-cli-0-57-0",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.57.0 — 修复 IDE 连接、容量错误重试、多轮回滚等核心稳定性问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-opencode-1-18-23",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.23 — 修复 Cloudflare AI Gateway 路由与 Anthropic 模",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-trending-anywhere-labs-dsh-desktop",
-      "zh": true,
-      "en": false,
-      "title": "dsh-desktop — DeepSeek 插件生态的桌面端，桌面本身也是插件",
-      "kind": "trending",
-      "author": null,
-      "source": "anywhere-labs/dsh-desktop",
-      "tool": null,
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-24-blog-openai-news-advancing-price-performance-for-developers-with-gpt-5",
-      "zh": true,
-      "en": true,
-      "title": "Advancing price-performance for developers with GPT‑5.6 — GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-24-blog-simonwillison-llm-anthropic-0-27",
-      "zh": true,
-      "en": true,
-      "title": "llm-anthropic 0.27 — Simon Willison 发布 llm",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-24-blog-simonwillison-your-executable-is-a-sqlite-database",
-      "zh": true,
-      "en": true,
-      "title": "Your executable is a SQLite database — 把 SQLite 数据库文件直接当可执行程序运行，一个 Linux 上的巧妙技巧",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-24-claude-code-2-1-243",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.243 — Claude Code 新版本：新增循环用量分析、模型选择器定制、缓存 TTL ",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-24"
-    },
-    {
-      "slug": "2026-08-24-cline-cli-v3-0-58",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.58 — Cline CLI 更新：日志上限 64MiB，新增两个模型提供商，默认模型变更",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-24"
     }
   ]
 }
