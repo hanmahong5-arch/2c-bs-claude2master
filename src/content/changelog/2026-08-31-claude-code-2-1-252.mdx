@@ -1,0 +1,24 @@
+---
+slug: 2026-08-31-claude-code-2-1-252
+title: "claude-code v2.1.252 — 修复 Mac 上 Bash 命令失败、权限保存及远程会话卡顿问题"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.252
+publishedAt: 2026-08-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Mac 上 Bash 命令失败、权限保存及远程会话卡顿问题"
+broadcast: "这次更新主要修复了 Mac 上的一些问题，比如 Bash 命令偶尔失败、权限设置不保存，还有远程会话卡顿。对国内开发者来说，最直接的影响就是工具执行更稳定，配置项目更省心，远程操作也不会再干等半天，整体开发体验会顺畅不少。"
+insight: "这次 v2.1.252 主要修了 Mac 上 Bash 命令失败、权限保存和远程会话卡顿，都是稳定性问题。如果你在用 Claude Code 且遇到这些情况，建议升级；否则可观望。现有 prompt 或 hook 配置无需改动，因为修复的是底层执行逻辑。国内用户走 newapi.lurus.cn 代理不受影响，这些修复与代理无关，可放心升级。"
+tags: [bug-fixes, bash, remote-control, permissions]
+---
+
+- 修复了某些 Mac 上 Bash 命令因任务目录移动或链接而失败的问题，确保工具执行稳定性。
+- 修复了无本地设置文件时“始终允许”权限不保存的问题，简化项目配置流程。
+- 修复了远程控制会话在 claude.ai 连接降级时工具完成后卡顿数分钟的问题，提升响应性。
+- 修复了后台任务大量错误输出导致对话超限的问题，避免 API 请求失败。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.252](https://github.com/anthropics/claude-code/releases/tag/v2.1.252)

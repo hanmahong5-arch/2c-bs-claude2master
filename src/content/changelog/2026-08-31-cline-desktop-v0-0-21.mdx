@@ -1,0 +1,34 @@
+---
+slug: 2026-08-31-cline-desktop-v0-0-21
+title: "cline desktop-v0.0.21 — 桌面版 v0.0.21：停止会话更彻底，模型目录实时更新"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.21
+publishedAt: 2026-08-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "桌面版 v0.0.21：停止会话更彻底，模型目录实时更新"
+broadcast: "桌面版新版本来了，这次更新把市场改成了双栏浏览，找工具更直观。停止会话会彻底终止所有子任务，避免后台残留进程。模型目录支持实时刷新，新模型不用更新应用就能用。还修复了认证错误分类和追踪问题，对开发者来说，这些改进让工具更稳定、更易用。"
+insight: "这次桌面版更新对国内用户值得升级，尤其双栏浏览和模型目录实时刷新能明显提升工具发现效率。但注意停止会话会级联终止所有子代理，如果你有复杂任务链，升级后需重新评估会话管理方式。模型目录新增 TokenGo 和 Volcengine Ark，且调整了 36 个提供商默认模型，若你通过 newapi.lurus.cn 代理使用，建议升级后检查默认模型是否匹配，避免意外切换。401/403 错误归类更清晰，排查 API 密钥问题会更方便。"
+tags: [desktop-app, marketplace, session-management, model-catalog]
+---
+
+- 市场改为双栏浏览，左列表右详情，支持分类筛选，便于发现和比较工具。
+  - 对 harness 设计：UI 信息架构优化，提升工具发现效率。
+- 停止会话会终止所有子代理和队友任务，并持久化取消状态，避免后台孤儿进程。
+  - 对 harness 设计：需要实现级联取消和状态同步机制。
+- 文件附件可拖放到聊天输入任意位置，降低操作门槛。
+  - 对 harness 设计：交互区域扩大，需处理拖放事件边界。
+- Cline 提供商模型从实时目录刷新，新模型无需更新应用即可使用。
+  - 对 harness 设计：模型列表动态化，需支持运行时更新。
+- 401/403 响应归类为认证错误，区分 API 密钥问题与提供商故障。
+  - 对 harness 设计：错误处理需细化，便于用户诊断。
+- 修复 Langfuse 追踪在发布构建中未初始化的问题，并适配 AI SDK 7。
+  - 对 harness 设计：确保遥测在优化构建中正常工作。
+- 模型目录更新，新增 TokenGo 和 Volcengine Ark，调整约 36 个提供商的默认模型。
+  - 对 harness 设计：默认模型变化可能影响行为，需关注兼容性。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.21](https://github.com/cline/cline/releases/tag/desktop-v0.0.21)

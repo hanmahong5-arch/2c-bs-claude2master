@@ -1,0 +1,23 @@
+---
+slug: 2026-08-31-hermes-agent-2026-8-31
+title: "hermes-agent v2026.8.31 — Hermes Agent 0.21.0 让多智能体协作成为内置社交网络，cron"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31
+publishedAt: 2026-08-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hermes Agent 0.21.0 让多智能体协作成为内置社交网络，cron 记忆与实时子代理编排大幅增强。"
+broadcast: "最近有个叫 Hermes Agent 的新版本，把多智能体协作做成了内置的社交网络。每个智能体都有名字、头像，还能在群聊里互相 @，协作方式从管道变成了团队聊天。另外，定时任务现在有了持久记忆，还能实时调整子任务。这对国内开发者来说，意味着构建智能体时，可以更自然地管理团队协作和任务调度了。"
+insight: "这次升级把多智能体协作从管道变成团队聊天，cron 记忆和实时子代理编排也补上了。如果你现有 harness 还在用老式管道调度，建议升级，重点改两处：一是持久化 agent 身份和群组会话，二是给 delegate_task 加细粒度控制和结果回收。国内走 newapi.lurus.cn 代理不受影响，升级后照常使用。"
+tags: [multi-agent, cron-memory, subagent-orchestration, bot-mode]
+---
+
+- **Bot Mode 内置**：桌面应用内每个 agent 有名字、头像和群聊，支持 @提及，多 agent 协作从管道变成团队聊天。对 harness 设计：需支持持久化 agent 身份与群组会话管理。
+- **Cron 记忆与连续性**：定时任务现在有持久记忆和 notepad，`continuity=true` 传递上次输出，monitor 模式无变化时跳过 LLM。对 harness 设计：调度任务需考虑状态持久化与去重。
+- **实时子代理编排**：`delegate_task` 支持列出、中途修正、提前停止并保留部分结果，默认迭代 250 次、并发 10。对 harness 设计：需要更细粒度的任务控制与结果回收机制。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.8.31](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31)

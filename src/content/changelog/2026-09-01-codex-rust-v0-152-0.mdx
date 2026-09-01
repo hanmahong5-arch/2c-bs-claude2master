@@ -1,0 +1,30 @@
+---
+slug: 2026-09-01-codex-rust-v0-152-0
+title: "codex rust-v0.152.0 — Vim 搜索、限流横幅、MCP 增强，Codex 0.152.0 更新速览"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.152.0
+publishedAt: 2026-09-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Vim 搜索、限流横幅、MCP 增强，Codex 0.152.0 更新速览"
+broadcast: "OpenAI 的 Codex 工具更新了，这次在 Vim 模式下支持了搜索功能，编辑代码会更顺手。另外，限流提示现在会引导你去处理用量问题，MCP 工具也支持更灵活的命名和输出限制，能防止 token 溢出。对做 agent 开发的朋友来说，这些改进让工具更实用，但也要注意键位冲突和解析准确性。"
+insight: "本次更新对国内用户影响不大，但值得关注。若你使用 Vim 模式，建议升级以体验搜索功能，但需注意键位冲突。现有 prompt 和 hook 配置无需改动，MCP 命名和输出限制的调整不影响现有配置。通过 newapi.lurus.cn 代理访问不受影响，限流横幅和凭据刷新提示在代理环境下同样适用。建议升级以获取修复和改进。"
+tags: [vim-mode, mcp, rate-limit, bug-fixes]
+---
+
+- Vim 模式支持 `/` 和 `?` 搜索草稿，高亮匹配，`n`/`N` 循环导航。
+  - 对 agent harness 设计：可提升文本编辑效率，但需注意与现有键位冲突。
+- 限流横幅提供操作入口，如检查用量、管理积分、重置限制。
+  - 对 agent harness 设计：需处理限流状态，引导用户采取行动。
+- MCP 服务器名支持 `:`、`@`、`/`、`.`，并支持包风格命名；单个 MCP 工具可设置 `output_token_limit`。
+  - 对 agent harness 设计：命名更灵活，但需确保解析正确；输出限制可防止 token 溢出。
+- 凭据刷新进度在 TUI 和 `codex exec` 中显示，包括 Bedrock 重新认证。
+  - 对 agent harness 设计：需向用户透明展示认证状态。
+- 修复：自动批准审查保留更长消息和更大对话记录，且跨历史压缩保留用户指令。
+  - 对 agent harness 设计：确保关键上下文不丢失。
+
+---
+
+> 原文 release：[openai/codex rust-v0.152.0](https://github.com/openai/codex/releases/tag/rust-v0.152.0)
