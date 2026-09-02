@@ -1,6 +1,94 @@
 {
   "items": [
     {
+      "slug": "2026-09-02-blog-anthropic-news-developing-enterprise-frontier-safeguards-with-our-customers",
+      "zh": true,
+      "en": true,
+      "title": "Developing Enterprise Frontier Safeguards with our — Anthropic 推出企业前沿防护，解决数据隐私与安全监控的矛盾。",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "slug": "2026-09-02-blog-simonwillison-quoting-rick-brewster",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Rick Brewster — Paint.NET 作者用 Claude 重写 Direct2D，让应用在 WI",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "slug": "2026-09-02-cline-4-1-17",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.1.17 — Cline v4.1.17 修复内存泄漏、工具调用静默禁用等关键问题，并更新模型",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "slug": "2026-09-02-cline-cli-v3-0-61",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.61 — CLI 更新：处理旧 Hub、签名、MCP 超时、模型默认值变更",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "slug": "2026-09-02-cline-desktop-v0-0-22",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.22 — Cline 桌面版导入 Claude Code 等历史会话，并修复多项工具调用问",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "slug": "2026-09-02-cline-sdk-sdk-v0-0-82",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.82 — SDK 修复工具静默禁用、图片丢失，新增会话导入与搜索",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "slug": "2026-09-02-trending-furkankly-zoetrope",
+      "zh": true,
+      "en": false,
+      "title": "zoetrope — 把 Claude Code 会话变成实时流程图",
+      "kind": "trending",
+      "author": null,
+      "source": "furkankly/zoetrope",
+      "tool": null,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "slug": "2026-09-02-trending-sapientinc-praxist",
+      "zh": true,
+      "en": false,
+      "title": "PRAXIST — 可执行研究的自主系统，让研究结果可量化验证",
+      "kind": "trending",
+      "author": null,
+      "source": "sapientinc/PRAXIST",
+      "tool": null,
+      "publishedAt": "2026-09-02"
+    },
+    {
       "slug": "2026-09-01-blog-anthropic-news-improving-our-alignment-and-security-practices",
       "zh": true,
       "en": true,
@@ -8,6 +96,39 @@
       "kind": "blogger",
       "author": "Anthropic",
       "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-blog-deepmind-introducing-agentic-video-understanding-with-gemini",
+      "zh": true,
+      "en": true,
+      "title": "Introducing agentic video understanding with Gemini — Gemini 新增智能体视频理解，可实时感知并响应视频中的指令。",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-blog-hf-blog-benchmirt-what-are-llm-benchmarks-actually-measuring",
+      "zh": true,
+      "en": true,
+      "title": "BenchMIRT: What are LLM benchmarks actually measuring? — LLM基准测试到底在测什么？本文揭示其局限与改进方向。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-blog-hf-blog-introducing-huggingface-kernels-200-webgpu-kernels-for-local",
+      "zh": true,
+      "en": true,
+      "title": "Introducing @huggingface/kernels: 200+ WebGPU Kernels — Hugging Face 发布 200+ WebGPU 内核，加速浏览器本地 A",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
       "tool": null,
       "publishedAt": "2026-09-01"
     },
@@ -23,6 +144,127 @@
       "publishedAt": "2026-09-01"
     },
     {
+      "slug": "2026-09-01-blog-latentspace-prs-not-welcome-how-top-ai-open-source",
+      "zh": true,
+      "en": true,
+      "title": "PRs NOT Welcome: How Top AI Open Source Projects Are — 顶级AI开源项目为何关闭PR？维护者用自家代理重掌控制权。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-blog-openai-news-healthcare-organizations-can-now-connect-ehr-and-additional",
+      "zh": true,
+      "en": true,
+      "title": "Healthcare organizations can now connect EHR and — OpenAI让ChatGPT接入电子病历，辅助临床决策。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-blog-openai-news-how-ai-native-companies-turn-workflows-into-operating",
+      "zh": true,
+      "en": true,
+      "title": "How AI-native companies turn workflows into operating — OpenAI 分享 Basis、Clay、Exa Labs 如何用 AI 代理优",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-blog-openai-news-how-law-firm-gilbert-tobin-governs-and-scales",
+      "zh": true,
+      "en": true,
+      "title": "How law firm Gilbert + Tobin governs and scales AI with — 顶尖律所如何用CEO主导+严格治理规模化部署ChatGPT与Codex。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-blog-openai-news-path-to-astra-critical-capabilities-and-frontier-safeguards",
+      "zh": true,
+      "en": true,
+      "title": "Path to Astra: critical capabilities and frontier — OpenAI首个达到关键网络安全能力阈值的模型Astra，发布前强化了防护措施。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-blog-simonwillison-claude-fable-5-1-made-me-a-really",
+      "zh": true,
+      "en": true,
+      "title": "Claude Fable 5.1 made me a really nice animated pelican — Simon Willison用“鹈鹕骑自行车”测试Claude Fable 5.",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-blog-simonwillison-codex-bundles-libreoffice",
+      "zh": true,
+      "en": true,
+      "title": "Codex bundles LibreOffice — OpenAI Codex 桌面应用捆绑了 LibreOffice 等开源工具，用",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-blog-simonwillison-geojson-map-viewer",
+      "zh": true,
+      "en": true,
+      "title": "GeoJSON Map Viewer — Simon Willison用AI工具快速构建GeoJSON地图查看器，展示LL",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-blog-simonwillison-quoting-tarn-adams",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Tarn Adams — Dwarf Fortress 联合创作者谈游戏 AI 与行为设计，揭示其背后的真",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-claude-code-2-1-257",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.257 — Claude Code 更新：新增 Fable 5.1 模型、时间格式设置及多项",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-claude-code-2-1-258",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.258 — 修复 macOS 12 启动回归及远程会话权限重发错误",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-09-01"
+    },
+    {
       "slug": "2026-09-01-codex-rust-v0-152-0",
       "zh": true,
       "en": false,
@@ -31,6 +273,50 @@
       "author": null,
       "source": "openai/codex",
       "tool": "codex",
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-codex-rust-v0-152-1",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.152.1 — 修复 Guardian 审批未遵循 Node REPL 策略的问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-gemini-cli-0-58-0",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.58.0 — 修复沙箱隔离、忽略路径与历史回滚，提升 CLI 稳定性",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-openclaw-2026-8-2",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.8.2 — Home 可停靠侧栏、Linux 桌面版、后台会话与更安全的升级机制。",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "slug": "2026-09-01-opencode-1-18-26",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.26 — 修复 Claude 5 会话、Bedrock 推理及工具计时等核心问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
       "publishedAt": "2026-09-01"
     },
     {
@@ -593,292 +879,6 @@
       "source": "Anthropic",
       "tool": null,
       "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-blog-deepmind-intelligent-transcription-with-gemini-3-5-transcribe",
-      "zh": true,
-      "en": true,
-      "title": "Intelligent transcription with Gemini 3.5 Transcribe — Gemini 3.5 Transcribe 带来更智能的语音转文字，值得关注。",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-blog-hf-blog-training-and-finetuning-multi-vector-embedding-models-with",
-      "zh": true,
-      "en": true,
-      "title": "Training and Finetuning Multi-Vector Embedding Models — Hugging Face 教你训练多向量嵌入模型，提升检索精度。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-blog-latentspace-lovable-cto-the-future-of-saas-is-apps",
-      "zh": true,
-      "en": true,
-      "title": "Lovable CTO: The Future of SaaS Is Apps That Agents Can — Lovable CTO 谈未来：应用将变成 Agent 可直接调用的能力，公司大",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-blog-latentspace-we-have-foundation-models-for-language-not-for",
-      "zh": true,
-      "en": true,
-      "title": "🔬“We have foundation models for language, not for — Anima Anandkumar谈物理基础模型：为何语言模型方法不适用于物理世界",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-blog-openai-news-bringing-chatgpt-for-teachers-to-more-u-s",
-      "zh": true,
-      "en": true,
-      "title": "Bringing ChatGPT for Teachers to more U.S. school — OpenAI将ChatGPT for Teachers扩展至55个美国学区，惠及",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-blog-openai-news-how-loveholidays-is-making-everyone-a-builder-with",
-      "zh": true,
-      "en": true,
-      "title": "How loveholidays is making everyone a builder with Codex — loveholidays 用 Codex 让全员成为开发者，加速创意落地。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-blog-openai-news-learning-never-stops-how-ai-makes-learning-continuous",
-      "zh": true,
-      "en": true,
-      "title": "Learning never stops: How AI makes learning continuous — OpenAI报告：ChatGPT如何让学习突破课堂，实现持续学习。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-blog-openai-news-the-hugging-face-incident-and-the-road-ahead",
-      "zh": true,
-      "en": true,
-      "title": "The Hugging Face incident and the road ahead — OpenAI 披露 Hugging Face 安全事件，强调 AI 模型安全与监",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-blog-simonwillison-quoting-paul-dix",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Paul Dix — Paul Dix 惊叹 AI 写出百万行代码并持续优化，最终成为可靠软件。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-blog-simonwillison-qwen3-8-flash-next",
-      "zh": true,
-      "en": false,
-      "title": "Qwen3.8-Flash-Next — Qwen新模型，125B参数仅6B激活，本地运行性能强劲。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-claude-code-2-1-247",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.247 — Claude Code 新增反馈草稿、API 成本优化、更稳的修复与安全加固",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-cline-cli-v3-0-60",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.60 — 修复 hub 内存暴涨、新文件行尾、搜索崩溃等关键问题，并更新模型目录。",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-cline-desktop-v0-0-18",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.18 — Cline桌面版更新：侧栏时间排序回归，Marketplace独立，计划任务交互",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-cline-desktop-v0-0-19",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.19 — 修复内存暴涨，状态更新不再携带完整对话记录",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-cline-sdk-sdk-v0-0-80",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.80 — SDK 修复文件写入换行、搜索崩溃，并更新模型目录",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-cline-sdk-sdk-v0-0-81",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.81 — SDK 事件不再携带完整对话，内存暴涨问题修复",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-codex-rust-v0-150-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.150.0 — Codex 0.150.0 新增任务 @ 提及、/copy 选择器、中断钩子，并",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-26-trending-gaoshu705-qzonearchive",
-      "zh": true,
-      "en": false,
-      "title": "QzoneArchive — QQ空间数据一键归档到本地的开源工具",
-      "kind": "trending",
-      "author": null,
-      "source": "Gaoshu705/QzoneArchive",
-      "tool": null,
-      "publishedAt": "2026-08-26"
-    },
-    {
-      "slug": "2026-08-25-blog-hf-blog-granite-4-2-llms-how-they-re-built",
-      "zh": true,
-      "en": true,
-      "title": "Granite 4.2 LLMs: How They're Built — IBM Granite 4.2 模型的技术细节与构建方法。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-blog-hf-blog-quantization-aware-healing-a-compressed-4-bit-model",
-      "zh": true,
-      "en": true,
-      "title": "Quantization-Aware Healing: a compressed, 4-bit model — 介绍一种新的量化方法，让4",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-blog-hf-blog-wire-it-run-it-deploy-it-ai-workflows",
-      "zh": true,
-      "en": true,
-      "title": "Wire It, Run It, Deploy It: AI Workflows in Gradio — 用Gradio构建AI工作流，从原型到部署的完整指南。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-blog-latentspace-ainews-andrew-ng-gets-into-ai-engineering",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Andrew Ng gets into AI Engineering — Andrew Ng 重推 DeepLearning.ai 聚焦 AI 工程，总结",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-blog-openai-news-disrupting-a-new-covert-influence-campaign-from-russia",
-      "zh": true,
-      "en": true,
-      "title": "Disrupting a new covert influence campaign from Russia — OpenAI封禁俄罗斯AI影响力行动账号，揭露虚假智库与主权指数。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-blog-openai-news-introducing-the-admin-plugin-for-chatgpt-work-and",
-      "zh": true,
-      "en": true,
-      "title": "Introducing the Admin plugin for ChatGPT Work and Codex — OpenAI 推出 Admin 插件，用于管理 ChatGPT Work 和 C",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-blog-openai-news-jalape-o-s-first-results-show-industry-leading",
-      "zh": true,
-      "en": true,
-      "title": "Jalapeño’s first results show industry-leading speed — OpenAI自研推理芯片Jalapeño首秀，主打速度与能效。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-25"
-    },
-    {
-      "slug": "2026-08-25-blog-openai-news-the-full-stack-behind-abundant-intelligence",
-      "zh": true,
-      "en": true,
-      "title": "The full stack behind abundant intelligence — OpenAI CFO 拆解从芯片到产品的全栈，解释智能成本下降与规模扩张的复合效",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-25"
     }
   ]
 }
