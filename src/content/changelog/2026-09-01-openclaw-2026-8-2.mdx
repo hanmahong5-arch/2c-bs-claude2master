@@ -1,0 +1,23 @@
+---
+slug: 2026-09-01-openclaw-2026-8-2
+title: "openclaw v2026.8.2 — Home 可停靠侧栏、Linux 桌面版、后台会话与更安全的升级机制。"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.8.2
+publishedAt: 2026-09-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Home 可停靠侧栏、Linux 桌面版、后台会话与更安全的升级机制。"
+broadcast: "这次更新给 Home 界面加了可停靠的侧栏，能直接管理上下文快照，多任务时更顺手。Linux 用户现在有桌面版了，支持托盘和快捷键，聊天更方便。后台会话也能直接创建运行，完成后随时打开。对做 agent 开发的朋友来说，这些改动提醒我们要把上下文管理、桌面集成和前后台任务的状态区分开，值得关注。"
+insight: "这次更新对国内用户影响不大，但值得关注。如果你在用旧版，建议升级，因为后台会话和 Home 停靠栏能明显改善多任务体验，且升级机制更安全。现有 prompt 或 hook 配置无需改动，新功能是增量式的。至于代理，newapi.lurus.cn 走的是 API 转发，不涉及桌面端或 UI 层，所以不受影响。唯一要留意的是 Linux 桌面版若走代理，需确认系统代理设置，但这不是本次更新的核心变化。"
+tags: [home-dock, linux-desktop, background-sessions, safer-upgrades]
+---
+
+- Home 可停靠在工作区侧边或底部，支持预览/移除工作上下文快照或附加选中文本；设计多任务 UI 时需考虑上下文快照的显式管理。
+- Linux 新增 .deb/AppImage 桌面版，支持系统托盘与 X11 快捷键快速聊天；跨平台 harness 需适配不同桌面集成方式。
+- 后台会话可从 New Session 直接创建并运行，保留本地/云/设备放置，完成后可打开；需区分前台与后台任务的资源与状态管理。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.8.2](https://github.com/openclaw/openclaw/releases/tag/v2026.8.2)

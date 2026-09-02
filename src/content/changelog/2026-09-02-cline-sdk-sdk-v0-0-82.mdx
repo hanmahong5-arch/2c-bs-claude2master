@@ -1,0 +1,23 @@
+---
+slug: 2026-09-02-cline-sdk-sdk-v0-0-82
+title: "cline sdk/sdk/v0.0.82 — SDK 修复工具静默禁用、图片丢失，新增会话导入与搜索"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.82
+publishedAt: 2026-09-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK 修复工具静默禁用、图片丢失，新增会话导入与搜索"
+broadcast: "这次SDK更新修复了两个关键问题，一个是工具调用可能被静默禁用，另一个是图片输入会丢失，现在都解决了。同时新增了会话导入功能，可以把其他工具的历史记录带过来，还支持全文搜索。对开发者来说，这些修复让AI代理更稳定可靠，值得关注。"
+insight: "这次 SDK 修复了工具静默禁用和图片丢失的严重问题，如果你在用旧版且遇到类似情况，建议升级。新增的会话导入和搜索功能对迁移用户有帮助，但现有 prompt 和 hook 配置无需改动。国内走 newapi.lurus.cn 代理不受影响，可放心升级。"
+tags: [sdk, bug-fixes, session-import, model-catalog]
+---
+
+- 修复网关模型能力列表为空导致工具调用被静默禁用、图片输入被丢弃的问题，统一翻译器并改用结构检测，确保 minified 构建下 Langfuse 追踪可用。
+- 新增 SessionImportService，从 Claude Code、Codex、opencode 导入历史会话，事务性且幂等，可恢复。
+- 新增服务端全文搜索会话历史，hub 命令暴露；模型目录实时加载，新增 10 个提供商，默认模型变更影响 57 个提供商。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.82](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.82)

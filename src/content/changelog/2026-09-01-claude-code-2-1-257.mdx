@@ -1,0 +1,28 @@
+---
+slug: 2026-09-01-claude-code-2-1-257
+title: "claude-code v2.1.257 — Claude Code 更新：新增 Fable 5.1 模型、时间格式设置及多项"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.257
+publishedAt: 2026-09-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 更新：新增 Fable 5.1 模型、时间格式设置及多项安全与修复。"
+broadcast: "Claude Code 最近更新了，带来了新的 Fable 5.1 模型，默认使用，支持百万级上下文，但价格也相应调整，这对开发 agent 的朋友来说，得重新考虑成本结构。另外，新增了时间格式和时区设置，方便日志显示。更关键的是，自动模式不再自动批准云元数据获取，需要明确环境预期，避免意外操作。还有，可以强制所有子代理使用指定模型，简化管理。这些改动对国内开发者来说，意味着要更精细地控制 agent 行为和成本。"
+insight: "此次更新引入 Fable 5.1 默认模型，成本结构变化明显，现有用户若依赖缓存读取需关注 $0.25 定价。新增的 Containment Escape 规则会改变自动批准行为，建议检查现有 hook 配置，避免云元数据操作被意外拦截。国内用户经 newapi.lurus.cn 代理访问时，新模型参数与成本结构可能影响计费，需确认代理端是否已适配。子代理模型强制设置可简化管理，但需评估与现有 prompt 的兼容性。"
+tags: [model-update, settings, security, bug-fixes]
+---
+
+- 新增 Claude Fable 5.1 模型，默认使用，1M 上下文，价格 $10/$50 每百万 token，缓存读取 $0.25。
+  - 对 agent harness 设计：需适配新模型参数与成本结构。
+- 新增 `timeFormat` 和 `timeZone` 设置，支持 12/24 小时制及 strftime 格式。
+  - 对 agent harness 设计：可自定义时间显示，便于日志与界面。
+- 新增 Containment Escape 规则，自动模式不再自动批准云元数据获取等操作。
+  - 对 agent harness 设计：需明确环境预期，避免意外批准。
+- 新增 `CLAUDE_CODE_SUBAGENT_MODEL_FORCE` 强制所有子代理使用指定模型。
+  - 对 agent harness 设计：可统一子代理模型，简化管理。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.257](https://github.com/anthropics/claude-code/releases/tag/v2.1.257)

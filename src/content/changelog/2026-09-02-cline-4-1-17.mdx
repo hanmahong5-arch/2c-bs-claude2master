@@ -1,0 +1,26 @@
+---
+slug: 2026-09-02-cline-4-1-17
+title: "cline v4.1.17 — Cline v4.1.17 修复内存泄漏、工具调用静默禁用等关键问题，并更新模型"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.17
+publishedAt: 2026-09-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline v4.1.17 修复内存泄漏、工具调用静默禁用等关键问题，并更新模型目录。"
+broadcast: "最近，Cline 工具发布了新版本，修复了几个关键问题。比如，之前长对话中内存会不断膨胀，现在改为只传状态快照，不再广播完整对话，这对开发智能体框架的朋友很有启发。另外，还修复了工具调用被静默禁用的问题，提醒我们能力列表为空时应视为未知，而不是直接禁用。这些改动对国内开发者优化智能体设计很有参考价值。"
+insight: "Cline v4.1.17 主要修复内存泄漏和工具调用误禁用，对现有用户是值得升级的，特别是使用 Dify 或 SAP AI Core 的用户，升级后工具调用不再被静默禁用。若你自建 agent harness，建议参考其修复思路：状态更新用快照而非全量广播，能力列表为空视为未知而非禁用。国内用户通过 newapi.lurus.cn 代理不受影响，升级无额外风险。"
+tags: [memory-leak, tool-calling, checkpoint, model-catalog]
+---
+
+- 修复 Hub 进程内存膨胀：状态更新不再广播完整对话，只传状态快照。
+  - 对 agent harness 设计：长会话中应避免全量状态广播，采用增量或快照以控制内存。
+- 修复工具调用被静默禁用：Dify、SAP AI Core 等模型目录能力列表为空被误读为禁用。
+  - 对 agent harness 设计：能力列表为空时应视为未知而非禁用，需显式声明不支持。
+- 修复恢复检查点后丢失提交：若之后有提交则拒绝恢复，避免静默丢失。
+  - 对 agent harness 设计：恢复操作需检查状态一致性，防止覆盖后续变更。
+
+---
+
+> 原文 release：[cline/cline v4.1.17](https://github.com/cline/cline/releases/tag/v4.1.17)

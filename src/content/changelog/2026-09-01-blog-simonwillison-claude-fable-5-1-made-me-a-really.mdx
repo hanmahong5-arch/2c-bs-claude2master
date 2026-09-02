@@ -1,0 +1,23 @@
+---
+slug: 2026-09-01-blog-simonwillison-claude-fable-5-1-made-me-a-really
+title: "Claude Fable 5.1 made me a really nice animated pelican — Simon Willison用“鹈鹕骑自行车”测试Claude Fable 5."
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/1/claude-fable-5-1/
+publishedAt: 2026-09-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison用“鹈鹕骑自行车”测试Claude Fable 5.1，发现推理等级差异巨大。"
+broadcast: "最近有人用鹈鹕骑自行车的动画测试了Claude的新模型，发现推理等级对结果影响很大。低等级又快又便宜，但画面简单；高等级虽然要花几美元、等几分钟，但细节特别丰富。这提醒我们，做开发时得按任务难度选推理等级，不然成本和质量不好平衡。而且推理过程也算钱，得留意。"
+tags: [claude-fable-5-1, reasoning-effort, svg-generation, cost-analysis]
+---
+
+- Fable 5.1 在低和中等推理等级下几乎不显示推理痕迹，输出token数相近，成本约10美分，但高等级（xhigh和max）推理痕迹显著，成本分别升至1.83美元和3.30美元，耗时数分钟。
+- 推理等级影响输出质量：max等级生成的SVG细节丰富，如鹈鹕的蓝帽、鱼篮，而低等级则简单。这提示开发者需根据任务复杂度选择推理等级，以平衡成本与质量。
+- 作者将max生成的SVG通过管道输入高推理等级进行动画化，成本1.37美元，成功产出动画。这展示了模型在创意任务中的潜力，但需注意推理token计入输出，影响成本。
+
+---
+
+> 原文：[Claude Fable 5.1 made me a really nice animated pelican](https://simonwillison.net/2026/Sep/1/claude-fable-5-1/) · 作者 Simon Willison

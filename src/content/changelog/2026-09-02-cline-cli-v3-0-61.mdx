@@ -1,0 +1,29 @@
+---
+slug: 2026-09-02-cline-cli-v3-0-61
+title: "cline cli-v3.0.61 — CLI 更新：处理旧 Hub、签名、MCP 超时、模型默认值变更"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.61
+publishedAt: 2026-09-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "CLI 更新：处理旧 Hub、签名、MCP 超时、模型默认值变更"
+broadcast: "这次命令行工具的更新，主要解决了一些实际使用中的麻烦。比如，远程模型服务连不上时，现在十秒就会自动超时，不会卡住整个会话；还有，之前某些模型工具被悄悄禁用、图片丢失的问题也修好了。另外，模型列表也刷新了，新增了十家服务商，默认模型也做了调整。对国内开发者来说，这些修复能让工具调用更稳定，减少排查问题的成本。"
+insight: "这次更新对现有用户影响不小，建议先处理旧 Hub 再升级，避免任务中断。远程 MCP 超时修复值得关注，但模型默认值变更（尤其 Anthropic 改默认）可能影响已有 prompt 行为，建议检查配置。国内走 newapi.lurus.cn 代理不受影响，但若用 Dify 或 Langfuse，建议升级后验证调用是否正常。"
+tags: [cli, bug-fixes, model-catalog, mcp]
+---
+
+- 旧 Hub 升级前会提示影响会话数，先排空再替换，避免中断进行中的任务。
+- Windows 二进制 Authenticode 签名，启动被策略拦截时给出可操作错误。
+- 远程 MCP 不可达时 10 秒超时，不再导致会话启动失败。
+- 修复 Dify 等模型工具调用被静默禁用、图片丢失的问题。
+- Langfuse 追踪在发布版中正常工作，修复类名混淆问题。
+- 检查点恢复拒绝在有后续提交时执行，防止丢失提交。
+- 全局规则支持 `~/Cline/Rules`，适配 WSL 和无头安装。
+- 中止会话会取消子代理和队友，调度任务存储位置变更。
+- 模型目录刷新，新增 10 个提供商，57 个提供商默认模型变更，Anthropic 默认改为 Claude Fable 5.1。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.61](https://github.com/cline/cline/releases/tag/cli-v3.0.61)

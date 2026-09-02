@@ -1,0 +1,24 @@
+---
+slug: 2026-09-01-claude-code-2-1-258
+title: "claude-code v2.1.258 — 修复 macOS 12 启动回归及远程会话权限重发错误"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.258
+publishedAt: 2026-09-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 macOS 12 启动回归及远程会话权限重发错误"
+broadcast: "这次更新主要修复了两个问题，一是解决了在 macOS 12 老系统上无法启动的情况，这个 bug 是之前版本引入的，对开发者来说提醒我们发布前要覆盖旧系统兼容性测试。二是修复了远程会话中权限重新批准不生效时出现的报错，避免了会话中断，这对做 agent 开发的朋友很重要，处理权限重发时得确保消息有效。"
+insight: "如果你正卡在 macOS 12 上无法启动，这个版本值得立即升级，它专门修复了 2.1.255 引入的回归。若你使用远程或定时会话并遇到过权限重发报错，升级后应能恢复正常，无需改动现有 prompt 或 hook 配置。国内用户走 newapi.lurus.cn 代理不受影响，按常规升级即可。"
+tags: [bug-fix, macos-compatibility, permission-handling]
+---
+
+- 修复 macOS 12 (Monterey) 上无法启动的问题，该问题由 2.1.255 引入。
+  - 对 harness 设计：需在发布前覆盖旧系统兼容性测试。
+- 修复远程和定时会话中，重新发送的权限批准无法应用时出现的“用户消息必须非空”错误。
+  - 对 harness 设计：处理权限重发失败时，应确保消息内容有效，避免会话中断。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.258](https://github.com/anthropics/claude-code/releases/tag/v2.1.258)

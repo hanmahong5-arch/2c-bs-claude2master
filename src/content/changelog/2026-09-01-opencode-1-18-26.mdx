@@ -1,0 +1,23 @@
+---
+slug: 2026-09-01-opencode-1-18-26
+title: "opencode v1.18.26 — 修复 Claude 5 会话、Bedrock 推理及工具计时等核心问题"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.26
+publishedAt: 2026-09-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Claude 5 会话、Bedrock 推理及工具计时等核心问题"
+broadcast: "最近有个开源AI编程工具更新了，主要修复了几个关键问题。现在它和Claude 5配合更稳定，长对话不容易中断。另外，对亚马逊云上的GPT-5.6模型支持也更好了，推理过程更可靠。还有工具调用的计时更准确，日志记录也更清晰。这些改进对经常用AI写代码的开发者来说，能减少不少麻烦。"
+insight: "这次 v1.18.26 主要修稳定性，不涉及协议或配置变更，现有用户升级风险低，建议直接升。Claude 5 长会话和 Bedrock 推理的修复对国内走代理的用户是利好，但摘要没提代理链路改动，newapi.lurus.cn 不受影响。prompt 和 hook 不用动，工具计时和 apply_patch 的修复是底层优化，升级后自然生效。"
+tags: [bugfix, claude-5, bedrock, tool-call]
+---
+
+- Claude 5 会话现在能容忍过时的 thinking 块，不再因提示或工具变更而失败，提升长会话稳定性。
+- Bedrock GPT-5.6 支持 `none` 推理努力，且推理与重放处理更可靠，增强多模型兼容性。
+- 工具调用计时在元数据更新时保持准确，`apply_patch` 不再产生空移动路径，改善权限元数据与日志可靠性。
+
+---
+
+> 原文 release：[sst/opencode v1.18.26](https://github.com/anomalyco/opencode/releases/tag/v1.18.26)

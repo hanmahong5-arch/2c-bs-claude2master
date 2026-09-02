@@ -1,0 +1,23 @@
+---
+slug: 2026-09-01-codex-rust-v0-152-1
+title: "codex rust-v0.152.1 — 修复 Guardian 审批未遵循 Node REPL 策略的问题"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.152.1
+publishedAt: 2026-09-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 Guardian 审批未遵循 Node REPL 策略的问题"
+broadcast: "最近，OpenAI 的 Codex 工具更新了一个小版本，主要修复了 Guardian 审批功能的一个问题。之前，在 Node 的交互式环境里，Guardian 的审批可能没按预期来，现在它会遵循通过模型元数据提供的策略了。这对做 Agent 开发的朋友来说是个提醒，要确保模型元数据里的策略能正确传给审批流程，这样 Guardian 的行为才会更符合预期。"
+insight: "此次修复对现有用户影响不大，但如果你在 Node REPL 环境下使用 Guardian 审批，建议升级到 0.152.1 以确保策略生效。若你自定义了 hook 或依赖模型元数据传递策略，需检查配置是否已正确传递，否则审批行为可能仍不符合预期。国内用户通过 newapi.lurus.cn 代理不受影响，可正常升级。"
+tags: [bug-fix, guardian, node-repl, policy]
+---
+
+- Guardian 审批现在会遵循通过模型元数据提供的 Node REPL 策略。
+- 这意味着在 Node REPL 环境中，Guardian 的审批行为将更符合预期。
+- 对 agent harness 设计而言，需确保模型元数据中的策略被正确传递并应用于审批流程。
+
+---
+
+> 原文 release：[openai/codex rust-v0.152.1](https://github.com/openai/codex/releases/tag/rust-v0.152.1)

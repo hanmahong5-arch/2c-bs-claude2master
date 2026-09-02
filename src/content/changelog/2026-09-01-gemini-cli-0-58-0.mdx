@@ -1,0 +1,23 @@
+---
+slug: 2026-09-01-gemini-cli-0-58-0
+title: "gemini-cli v0.58.0 — 修复沙箱隔离、忽略路径与历史回滚，提升 CLI 稳定性"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0
+publishedAt: 2026-09-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复沙箱隔离、忽略路径与历史回滚，提升 CLI 稳定性"
+broadcast: "谷歌刚刚更新了他们的命令行AI助手，这次重点加固了安全沙箱，把容器相关的接口都隔离得更严实了，能有效降低被攻击的风险。同时修好了文件忽略规则和操作回滚的小毛病，让整个工具用起来更稳定。对咱们做智能体开发的来说，这意味着底层交互更可靠，可以放心依赖它来跑自动化任务了。"
+insight: "此次 v0.58.0 主要针对底层稳定性，对普通用户影响有限。若你使用自定义 harness 或依赖沙箱隔离，升级后需检查路径配置，特别是 macOS 下 Docker 相关路径是否适配更严的隔离规则。忽略路径的符号链接处理已统一，建议同步调整 harness 的路径解析逻辑，避免误判。历史回滚优化提升了会话可靠性，值得升级。国内用户经 newapi.lurus.cn 代理访问不受影响，可放心升级。"
+tags: [sandbox, path-handling, history, stability]
+---
+
+- **沙箱隔离加固**：macOS Seatbelt 现在隔离 Docker 与容器运行时 socket 和二进制，降低逃逸风险，harness 需适配更严的沙箱路径。
+- **忽略路径处理修复**：统一符号链接评估，避免忽略规则误判，harness 应确保路径解析一致。
+- **历史回滚优化**：修复回滚与重试提示，提升交互可靠性，harness 可依赖更稳定的会话状态。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.58.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0)

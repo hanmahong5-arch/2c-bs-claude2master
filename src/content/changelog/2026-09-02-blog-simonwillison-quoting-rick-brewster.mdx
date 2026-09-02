@@ -1,0 +1,23 @@
+---
+slug: 2026-09-02-blog-simonwillison-quoting-rick-brewster
+title: "Quoting Rick Brewster — Paint.NET 作者用 Claude 重写 Direct2D，让应用在 WI"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/2/rick-brewster/
+publishedAt: 2026-09-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Paint.NET 作者用 Claude 重写 Direct2D，让应用在 WINE 上运行。"
+broadcast: "最近有个挺有意思的事，Paint.NET 的作者为了让软件能在 WINE 上跑，居然让 Claude 从头逆向重写了 Direct2D，代码量高达十八万行。大部分代码是 AI 自动生成的，作者自己都没法逐行检查。虽然 Claude 效率很高，但也得有人盯着，比如资源管理出错就得人工纠正。这事对国内开发者来说，说明 AI 写代码能扛大活，但离了人把关还是不行。"
+tags: [reverse-engineering, coding-agents, claude, vibe-coding]
+---
+
+- Paint.NET 在 WINE 上无法完整使用 Direct2D，作者让 Claude 从零逆向重写了一个内部版本，代码量达 18 万行。
+- 大部分代码是“vibe coding”产物，未经彻底审查，作者表示无法逐一检查如此庞大的代码量。
+- Claude 有时效率极高，但也需大量监督，例如资源管理错误（未正确调用 AddRef）和设计问题，需人工纠正。
+
+---
+
+> 原文：[Quoting Rick Brewster](https://simonwillison.net/2026/Sep/2/rick-brewster/) · 作者 Simon Willison

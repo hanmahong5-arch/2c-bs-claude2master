@@ -1,0 +1,25 @@
+---
+slug: 2026-09-02-cline-desktop-v0-0-22
+title: "cline desktop-v0.0.22 — Cline 桌面版导入 Claude Code 等历史会话，并修复多项工具调用问"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.22
+publishedAt: 2026-09-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline 桌面版导入 Claude Code 等历史会话，并修复多项工具调用问题"
+broadcast: "Cline 桌面版最近更新了，现在可以直接把 Claude Code 等工具里的历史会话导入进来，还能批量选，转成能接着用的会话，而且用的是你当前配置的模型。另外还修了不少工具调用的问题，比如之前 Dify 这些模型工具会被悄悄禁用，现在都正常了。对国内开发者来说，如果你在用 Cline 做 agent 开发，这版更顺手，历史记录不丢，工具也更稳。"
+insight: "这次桌面版更新对国内用户最实际的价值是历史会话导入，能把 Claude Code 等会话迁到 Cline 并沿用当前 provider/model，迁移成本低。若你正用旧版且依赖 Dify 或 SAP AI Core 的工具调用，建议升级，因为修复了静默禁用问题。走 newapi.lurus.cn 代理不受影响，导入后仍走当前配置，无需改 hook。Web 搜索默认开启，注意隐私即可。"
+tags: [history-import, voice-input, tool-calling, model-catalog]
+---
+
+- 新增从 Claude Code、Codex、opencode 导入历史会话，可批量选择并转为可恢复的 Cline 会话，导入后使用当前配置的 provider 和 model。
+- 定时任务在侧边栏折叠为单行，显示运行次数，展开后按最新优先列出，便于管理。
+- macOS 语音输入修复，需添加麦克风权限描述。
+- Web 搜索默认开启；市场详情面板改为点击打开。
+- 修复 Dify、SAP AI Core 等模型工具调用被静默禁用的问题，以及空能力列表导致图片读取丢失的问题。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.22](https://github.com/cline/cline/releases/tag/desktop-v0.0.22)
