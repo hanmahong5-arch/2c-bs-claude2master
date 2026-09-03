@@ -1,0 +1,23 @@
+---
+slug: 2026-09-02-opencode-1-18-27
+title: "opencode v1.18.27 — 修复超时与Anthropic兼容性，提升稳定性"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.27
+publishedAt: 2026-09-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复超时与Anthropic兼容性，提升稳定性"
+broadcast: "各位开发者朋友，今天要聊的是opencode工具的最新更新。这次主要修复了超时问题，并提升了与Anthropic的兼容性。现在默认将超时时间设为五分钟，可以减少慢启动失败，而且还能关闭流式超时。另外，对Claude模型的新功能做了配置调整，避免旧模型出问题。这次更新让工具更稳定，对咱们做智能体开发的朋友来说，是个好消息。"
+insight: "这次更新对国内用户是利好，尤其是走 newapi.lurus.cn 代理时，默认 5 分钟超时能显著减少慢启动失败，建议保留默认值，除非你有特殊需求再考虑禁用。Anthropic 的 thinking.blockBinding 默认开启且仅对 Claude 5.1+ 生效，如果你还在用旧模型，建议检查配置并显式关闭，避免请求被拒。现有用户值得升级，改动小但稳定性提升明显，prompt 和 hook 配置基本不用动，除非你之前为超时或兼容性做过 workaround。"
+tags: [timeouts, anthropic, bugfix, sse]
+---
+
+- 默认将provider header和流式chunk超时设为5分钟，减少慢启动失败，可用`false`禁用流式超时。
+- Anthropic `thinking.blockBinding`可通过配置退出，且仅对Claude 5.1+生效，避免旧模型拒绝请求。
+- 取消超时SSE读取时避免未处理错误，增强健壮性。
+
+---
+
+> 原文 release：[sst/opencode v1.18.27](https://github.com/anomalyco/opencode/releases/tag/v1.18.27)

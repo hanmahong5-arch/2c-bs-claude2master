@@ -1,0 +1,23 @@
+---
+slug: 2026-09-02-claude-code-2-1-259
+title: "claude-code v2.1.259 — 企业级 MCP 管控、无头模式权限、多项稳定性修复"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.259
+publishedAt: 2026-09-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "企业级 MCP 管控、无头模式权限、多项稳定性修复"
+broadcast: "这次更新给企业用户带来了更省心的管理方式，可以统一配置远程服务，不用再逐个设置命令。同时，无人值守环境下会自动拒绝所有权限询问，但安全规则依然生效，非常适合自动化任务。另外还修复了多个稳定性问题，让开发过程更顺畅，值得关注。"
+insight: "这次更新对国内用户影响不大，但如果你是团队管理员，值得升级：managedMcpServers 能统一管控 MCP 服务器，省去逐台配置。无头模式加 --permission-prompts none 适合 CI/CD 无人值守，权限模式仍生效，安全可控。现有 prompt 或 hook 配置无需改动，修复的并发覆盖问题反而让配置更可靠。走 newapi.lurus.cn 代理不受影响，可放心升级。"
+tags: [managed-mcp, headless-mode, bug-fixes, enterprise]
+---
+
+- 新增 `managedMcpServers` 设置，组织可统一配置 HTTP/SSE MCP 服务器，跳过命令型条目，便于集中管理。
+- 新增 `--permission-prompts none`，无头环境自动拒绝所有提示，权限模式仍生效，适合无人值守。
+- 修复并发会话互相覆盖配置、Bash 读取规则遗漏、OAuth 刷新导致缓存失效等问题，提升稳定性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.259](https://github.com/anthropics/claude-code/releases/tag/v2.1.259)

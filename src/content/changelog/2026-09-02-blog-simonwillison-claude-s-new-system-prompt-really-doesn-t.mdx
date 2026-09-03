@@ -1,0 +1,23 @@
+---
+slug: 2026-09-02-blog-simonwillison-claude-s-new-system-prompt-really-doesn-t
+title: "Claude's new system prompt really doesn't want to — Anthropic 更新 Claude 系统提示词，新增版权限制与风格调整，Si"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/
+publishedAt: 2026-09-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic 更新 Claude 系统提示词，新增版权限制与风格调整，Simon Willison 逐条解析其影响。"
+broadcast: "Anthropic 最近更新了 Claude 的系统提示词，新增了版权限制，比如禁止复制歌词、诗句和书籍段落，甚至对视觉作品也有限制，连生成刺猬索尼克这样的角色都不行。这背后是索尼和华纳的诉讼压力，说明法律风险正在直接影响模型的行为。对国内开发者来说，这意味着在开发 agent 时，要更注意版权合规，避免生成受保护的内容，同时也要关注模型风格调整带来的交互变化。"
+tags: [ai-safety, copyright, system-prompts, anthropic]
+---
+
+- 新增禁止复制歌词、诗句及书籍段落的条款，并规定一旦拒绝，后续类似请求均会拒绝，除非作品早于 1929 年。此变化紧随索尼与华纳对 Anthropic 的诉讼，反映法律风险对模型行为的直接塑造。
+- 扩展版权限制至视觉作品，包括 SVG、CSS 等代码生成的图像，禁止绘制已知角色或品牌形象，即使改变姿势或风格。示例中 Claude 拒绝生成刺猬索尼克，转而提供原创设计，显示模型对描述的识别能力。
+- 调整回答风格，要求简洁、避免使用“genuinely”等修饰词，并移除鼓励结束对话的指令，改为强调保持自尊与持续帮助。Simon 发现未发布的工具规则仍存在，提示公开提示词并非完整。
+
+---
+
+> 原文：[Claude's new system prompt really doesn't want to reproduce song lyrics](https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/) · 作者 Simon Willison

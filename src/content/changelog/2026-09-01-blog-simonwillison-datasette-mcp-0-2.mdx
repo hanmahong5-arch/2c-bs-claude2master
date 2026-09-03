@@ -1,0 +1,23 @@
+---
+slug: 2026-09-01-blog-simonwillison-datasette-mcp-0-2
+title: "datasette-mcp 0.2 — Datasette MCP 0.2 发布，优化 SQL 查询结果格式，提升模型理"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/1/datasette-mcp/
+publishedAt: 2026-09-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette MCP 0.2 发布，优化 SQL 查询结果格式，提升模型理解列映射。"
+broadcast: "最近有个叫数据查询工具的小更新，它把查询结果从原来的数组格式改成了对象数组，这样模型就不会搞混列的顺序了。这个版本是首个稳定版，作者自己也在用，说明可靠性不错。对国内开发者来说，这意味着AI代理解析数据时出错会更少，开发起来更省心。"
+tags: [datasette, mcp, ai-tools, release]
+---
+
+- 新版本将 `execute_sql` 的 `rows` 从数组的数组改为对象数组，避免模型混淆列顺序。
+- 依赖 `mcp>=2.1.1`，这是首个非 alpha 版本，作者已自用验证稳定性。
+- 对开发者意味着：MCP 工具输出结构更友好，可降低 AI 代理解析数据的错误率。
+
+---
+
+> 原文：[datasette-mcp 0.2](https://simonwillison.net/2026/Sep/1/datasette-mcp/) · 作者 Simon Willison

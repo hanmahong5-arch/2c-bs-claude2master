@@ -1,0 +1,46 @@
+---
+slug: 2026-09-03-codex-rust-v0-153-0
+title: "codex rust-v0.153.0 — Codex 0.153.0：Vim 撤销重做、插件远程市场、Guardian 优"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.153.0
+publishedAt: 2026-09-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.153.0：Vim 撤销重做、插件远程市场、Guardian 优化与实验性上下文管理"
+broadcast: "Codex 工具更新了，这次给 Vim 用户带来了撤销和重做功能，还支持从远程市场装插件。另外，它优化了断线重连，能保留你的草稿和记录。对开发者来说，最值得关注的是新增的实验性上下文管理，能更精细地控制 token 用量，不过默认是关闭的，需要主动开启才能体验。"
+insight: "本次更新对国内用户影响不大，但值得关注的是新增的上下文管理实验模式，默认关闭，不会影响现有流程。若你已使用 Vim 模式，升级后能获得撤销重做支持，体验更完整。现有 hook 配置无需改动，但注意 `tui.disable_paste_burst` 取代了旧设置，旧配置仍兼容。走 newapi.lurus.cn 代理不受影响，升级前建议先备份配置，并留意实验模式可能带来的行为变化。"
+tags: [vim-mode, plugin-marketplace, guardian, context-management]
+---
+
+- Vim 模式支持 `u` 撤销与 `Ctrl+R` 重做，完整保留草稿、粘贴内容和附件。
+  - 对 harness 设计：编辑器内撤销/重做需与底层状态同步，确保复杂输入不丢失。
+- 插件 CLI 支持从远程市场列出、安装和移除插件。
+  - 对 harness 设计：需实现插件来源策略与远程仓库管理，确保安全与可追溯。
+- 新增 `tui.auto_recap = false` 可禁用自动回顾，手动 `/recap` 仍可用。
+  - 对 harness 设计：提供细粒度控制，避免自动行为干扰用户流程。
+- TUI 历史显示完整补丁、后台终端输入和单个完成命令。
+  - 对 harness 设计：历史记录需包含完整上下文，便于调试与回放。
+- Plus/Team 用户在约五小时窗口内用量不足一半时提前收到警告。
+  - 对 harness 设计：需实现用量监控与主动通知机制。
+- 修复：应用服务器断开后 TUI 会话自动重连，保留草稿和记录，暂停不确定或排队提交。
+  - 对 harness 设计：需具备断线恢复与状态一致性保障。
+- Full Access 模式跳过 Guardian 审查，User approval 模式跳过后台评分，但敏感操作检查保留。
+  - 对 harness 设计：权限模式需动态调整安全审查策略。
+- Guardian 审查历史在压缩、重启和用户分叉后保留，并隔离子代理历史。
+  - 对 harness 设计：需持久化安全审查记录，支持回滚边界。
+- MCP 工具批准按应用账户隔离，macOS 相对路径启动更可靠。
+  - 对 harness 设计：需考虑多账户隔离与跨平台路径解析。
+- 回滚压缩包含共享历史，`codex exec resume` 支持压缩回滚，线程分叉支持符号链接会话根。
+  - 对 harness 设计：需处理复杂文件系统场景。
+- 配置与 API：线程元数据包含可空 `model` 和 `reasoningEffort` 字段，支持结构化异步问题。
+  - 对 harness 设计：API 需向前兼容，新增字段可空。
+- `tui.disable_paste_burst` 取代顶层设置，旧设置仍作为后备。
+  - 对 harness 设计：配置迁移需保持向后兼容。
+- 新增默认关闭的 `features.context_management.experimental_mode`，启用后激活 token 预算上下文、历史笔记和 `new_context` 工具，仅限特定 ChatGPT 会话。
+  - 对 harness 设计：实验性功能需明确排除条件，避免影响现有流程。
+
+---
+
+> 原文 release：[openai/codex rust-v0.153.0](https://github.com/openai/codex/releases/tag/rust-v0.153.0)
