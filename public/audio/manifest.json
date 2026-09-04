@@ -1,6 +1,83 @@
 {
   "items": [
     {
+      "slug": "2026-09-04-blog-latentspace-ainews-gpt-6-astra-openai-s-biggest-llm",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] GPT-6 Astra: OpenAI’s biggest LLM launch of — OpenAI发布GPT",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-04"
+    },
+    {
+      "slug": "2026-09-04-blog-simonwillison-august-newsletter-is-out",
+      "zh": true,
+      "en": true,
+      "title": "August newsletter is out — Simon Willison 八月赞助者通讯：OpenAI 事故、Claude ",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-04"
+    },
+    {
+      "slug": "2026-09-03-blog-deepmind-introducing-weathernext-3-our-most-advanced-and-accurate",
+      "zh": true,
+      "en": true,
+      "title": "Introducing WeatherNext 3, our most advanced and — Google DeepMind发布WeatherNext 3，全球最先进AI天气",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-blog-hf-blog-fine-tuning-a-350m-model-for-better-structured",
+      "zh": true,
+      "en": true,
+      "title": "Fine-tuning a 350M Model for Better Structured Outputs — 用100步GRPO微调350M模型，提升结构化输出能力，值得一试。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-blog-hf-blog-give-your-coding-agents-a-memory-you-own",
+      "zh": true,
+      "en": true,
+      "title": "Give Your Coding Agents a Memory You Own — Hugging Face 发布 Funes，为编码代理提供可自持的长期记忆。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-blog-hf-blog-neomme-an-efficient-multimodal-native-and-multilingual-encoder",
+      "zh": true,
+      "en": true,
+      "title": "NeoMME: an efficient Multimodal-native and Multilingual — NeoMME：高效多模态原生多语言编码器，统一文本与图像表示。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-blog-hf-blog-training-a-coding-model-to-paint-watercolours-with",
+      "zh": true,
+      "en": true,
+      "title": "Training a coding model to paint watercolours with TRL — 用TRL和OpenEnv训练编码模型画水彩，探索多模态生成新路径。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-03"
+    },
+    {
       "slug": "2026-09-03-blog-latentspace-ainews-muse-spark-1-3-matches-gpt-5",
       "zh": true,
       "en": true,
@@ -12,6 +89,105 @@
       "publishedAt": "2026-09-03"
     },
     {
+      "slug": "2026-09-03-blog-latentspace-gpt-6-astra-an-automated-ai-engineer-you",
+      "zh": true,
+      "en": true,
+      "title": "GPT-6 Astra: an automated AI Engineer you can hire for — GPT",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-blog-openai-news-daybreak-for-frontline-defenders-1b-to-protect-essential",
+      "zh": true,
+      "en": true,
+      "title": "Daybreak for Frontline Defenders: $1B to protect — OpenAI 10亿美元计划，用前沿AI守护关键基础设施。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-blog-openai-news-legora-reviewed-41-documents-in-minutes-with-gpt",
+      "zh": true,
+      "en": true,
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra — GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-blog-openai-news-playco-cut-manual-fixes-50-prototyping-games-with",
+      "zh": true,
+      "en": true,
+      "title": "Playco cut manual fixes 50% prototyping games with — Playco用GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-blog-openai-news-safety-overview-gpt-6-astra",
+      "zh": true,
+      "en": true,
+      "title": "Safety overview: GPT-6 Astra — OpenAI 发布 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-blog-openclaw-blog-openclaw-improves-user-onboarding-with-a-new-installer",
+      "zh": true,
+      "en": true,
+      "title": "OpenClaw improves user onboarding with a new installer — OpenClaw 新安装器与 Windows 本地模型配置简化，加速上手。",
+      "kind": "blogger",
+      "author": "OpenClaw",
+      "source": "OpenClaw",
+      "tool": null,
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-blog-simonwillison-gpt-6-astra",
+      "zh": true,
+      "en": true,
+      "title": "GPT‑6 Astra — OpenAI发布GPT",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-claude-code-2-1-260",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.260 — diff 面板、缓存诊断、权限修复，agent 开发必读",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-cline-desktop-v0-0-23",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.23 — Agent 插件统一由 Hub 管理，修复版本误报和语音配置跳转。",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-03"
+    },
+    {
       "slug": "2026-09-03-codex-rust-v0-153-0",
       "zh": true,
       "en": false,
@@ -20,6 +196,50 @@
       "author": null,
       "source": "openai/codex",
       "tool": "codex",
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-codex-rust-v0-153-1",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.153.1 — Codex 支持隐藏配置 GPT",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-codex-rust-v0-153-2",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.153.2 — GPT",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-goose-1-49-0",
+      "zh": true,
+      "en": false,
+      "title": "goose v1.49.0 — Goose v1.49.0 大幅强化安全边界，并新增多项 agent 开发关键能",
+      "kind": "changelog",
+      "author": null,
+      "source": "block/goose",
+      "tool": "goose",
+      "publishedAt": "2026-09-03"
+    },
+    {
+      "slug": "2026-09-03-openclaw-2026-9-1",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.9.1 — OpenClaw 2026.9.1：Mermaid 渲染、快速安装、个人技能库与",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
       "publishedAt": "2026-09-03"
     },
     {
@@ -63,6 +283,39 @@
       "kind": "blogger",
       "author": "Anthropic",
       "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "slug": "2026-09-02-blog-deepmind-introducing-gemini-3-8-flash-and-3-8",
+      "zh": true,
+      "en": true,
+      "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber — Google DeepMind 发布 Gemini 3.8 Flash 与 3.",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "slug": "2026-09-02-blog-deepmind-proactive-cyber-defense-for-governments-and-enterprises",
+      "zh": true,
+      "en": true,
+      "title": "Proactive cyber defense for governments and enterprises — Google DeepMind 提出主动网络防御框架，用 AI 预判攻击，而非被",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "slug": "2026-09-02-blog-hf-blog-real-time-intelligence-with-ibm-time-series-models",
+      "zh": true,
+      "en": true,
+      "title": "Real-Time Intelligence with IBM Time Series Models on — IBM时序模型与Confluent集成，实现实时智能预测。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
       "tool": null,
       "publishedAt": "2026-09-02"
     },
@@ -626,259 +879,6 @@
       "source": "openclaw-concepts",
       "tool": null,
       "publishedAt": "2026-08-31"
-    },
-    {
-      "slug": "2026-08-31-openclaw-concepts-user-model",
-      "zh": true,
-      "en": true,
-      "title": "User model · OpenClaw — USER.md 如何稳定跨会话记住你的偏好？一文讲清格式与身份验证。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-08-31"
-    },
-    {
-      "slug": "2026-08-31-trending-deeplethe-utopia",
-      "zh": true,
-      "en": false,
-      "title": "utopia — 首个开源企业级世界模型，用 Rust 构建",
-      "kind": "trending",
-      "author": null,
-      "source": "deeplethe/utopia",
-      "tool": null,
-      "publishedAt": "2026-08-31"
-    },
-    {
-      "slug": "2026-08-31-trending-zhu1090093659-dsh-web",
-      "zh": true,
-      "en": false,
-      "title": "dsh-web — DeepSeek 插件聚合生态，万物皆插件",
-      "kind": "trending",
-      "author": null,
-      "source": "zhu1090093659/dsh-web",
-      "tool": null,
-      "publishedAt": "2026-08-31"
-    },
-    {
-      "slug": "2026-08-30-blog-simonwillison-understanding-chatgpt-work",
-      "zh": true,
-      "en": true,
-      "title": "Understanding ChatGPT Work — Simon Willison 拆解 ChatGPT Work 双形态，重点讲云端",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-30"
-    },
-    {
-      "slug": "2026-08-30-trending-chrisgreg-boop",
-      "zh": true,
-      "en": false,
-      "title": "boop — 自托管开发者通知收件箱，应用事件直达手机",
-      "kind": "trending",
-      "author": null,
-      "source": "chrisgreg/boop",
-      "tool": null,
-      "publishedAt": "2026-08-30"
-    },
-    {
-      "slug": "2026-08-30-trending-fareedkhan-dev-kimi-k3-in-c",
-      "zh": true,
-      "en": false,
-      "title": "kimi-k3-in-c — 2.78万亿参数Kimi K3在单CPU上跑推理，仅需8.24GB内存",
-      "kind": "trending",
-      "author": null,
-      "source": "FareedKhan-dev/kimi-k3-in-c",
-      "tool": null,
-      "publishedAt": "2026-08-30"
-    },
-    {
-      "slug": "2026-08-29-blog-latentspace-ainews-openai-shuts-off-cursor",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] OpenAI shuts off Cursor — OpenAI切断Cursor访问，AI新闻周报解析事件及开源模型、推理系统新动态",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-29"
-    },
-    {
-      "slug": "2026-08-29-blog-simonwillison-introducing-hy4-preview",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Hy4 Preview — 腾讯发布Hy4预览版：770B参数、1M上下文，推理模式仅两档。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-29"
-    },
-    {
-      "slug": "2026-08-29-codex-rust-v0-151-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.151.0 — MCP 工具结果可被扩展拦截，插件目录按仓库配置合并",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-08-29"
-    },
-    {
-      "slug": "2026-08-29-trending-yjh051108-dsh-routing-suite",
-      "zh": true,
-      "en": false,
-      "title": "dsh-routing-suite — JS 路由套件：注入器加任务感知推理模式路由",
-      "kind": "trending",
-      "author": null,
-      "source": "yjh051108/dsh-routing-suite",
-      "tool": null,
-      "publishedAt": "2026-08-29"
-    },
-    {
-      "slug": "2026-08-28-blog-anthropic-news-expanding-our-support-for-scientists",
-      "zh": true,
-      "en": true,
-      "title": "Expanding our support for scientists — Anthropic 为科学家提供 1 万免费订阅席位，并扩展 AI for Sc",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-08-28"
-    },
-    {
-      "slug": "2026-08-28-blog-anthropic-news-previewing-the-model-hardware-standard",
-      "zh": true,
-      "en": true,
-      "title": "Previewing the Model Hardware Standard — Anthropic 发布模型硬件标准 MHS，让 AI 代理安全操作物理设备，将",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-08-28"
-    },
-    {
-      "slug": "2026-08-28-blog-hf-blog-the-open-asr-leaderboard-adds-its-first-global",
-      "zh": true,
-      "en": true,
-      "title": "The Open ASR Leaderboard Adds Its First Global South — 开源语音识别排行榜首次纳入南半球语言，推动技术普惠。",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-08-28"
-    },
-    {
-      "slug": "2026-08-28-blog-latentspace-ainews-openai-to-reach-agi-bar-by-end",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] OpenAI to reach AGI bar by end-2026 — OpenAI 预计 2026 年底内部宣布 AGI，本周还有开源机器人、GLM",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-08-28"
-    },
-    {
-      "slug": "2026-08-28-blog-openai-news-our-decision-on-cursor-following-its-acquisition-by",
-      "zh": true,
-      "en": true,
-      "title": "Our decision on Cursor following its acquisition by — OpenAI 因 Cursor 被 SpaceX 收购而终止向其提供模型。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-28"
-    },
-    {
-      "slug": "2026-08-28-blog-openai-news-supporting-thailand-s-next-generation-of-ai-startups",
-      "zh": true,
-      "en": true,
-      "title": "Supporting Thailand’s next generation of AI startups — OpenAI与泰国MHESI合作，为10家健康、教育初创企业提供8周加速器，助力",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-28"
-    },
-    {
-      "slug": "2026-08-28-blog-simonwillison-just-a-rumour-of-a-bug-is-enough",
-      "zh": true,
-      "en": true,
-      "title": "Just a rumour of a bug is enough to find a security — AI 代理让安全漏洞从传闻到利用只需几分钟，开源维护者面临新挑战。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-08-28"
-    },
-    {
-      "slug": "2026-08-28-claude-code-2-1-250",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.250 — 修复 bug，提升稳定性，值得快速了解。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-28"
-    },
-    {
-      "slug": "2026-08-28-claude-code-2-1-251",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.251 — 模型切换钩子、子代理流式输出、缓存统计等关键更新，值得一看。",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-08-28"
-    },
-    {
-      "slug": "2026-08-28-cline-desktop-v0-0-20",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.20 — Windows 支持、图片内联、全局搜索，Cline Desktop 大更新",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-08-28"
-    },
-    {
-      "slug": "2026-08-28-opencode-1-18-24",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.24 — 修复 Bedrock 缓存、支持 Azure Entra ID 登录，兼容 V2",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-08-28"
-    },
-    {
-      "slug": "2026-08-28-opencode-1-18-25",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.25 — 修复 Azure 认证，无需 Bun 即可登录",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-08-28"
-    },
-    {
-      "slug": "2026-08-28-trending-pathwaycom-arc-task-gen",
-      "zh": true,
-      "en": false,
-      "title": "arc-task-gen — 生成分布匹配的ARC",
-      "kind": "trending",
-      "author": null,
-      "source": "pathwaycom/arc-task-gen",
-      "tool": null,
-      "publishedAt": "2026-08-28"
     }
   ]
 }
