@@ -1,0 +1,25 @@
+---
+slug: 2026-09-03-openclaw-2026-9-1
+title: "openclaw v2026.9.1 — OpenClaw 2026.9.1：Mermaid 渲染、快速安装、个人技能库与"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.1
+publishedAt: 2026-09-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "OpenClaw 2026.9.1：Mermaid 渲染、快速安装、个人技能库与更稳的更新流程"
+broadcast: "OpenClaw 这次更新，把聊天里的图表代码直接变成能放大看的图，对咱们做智能体输出可视化特别有帮助。新装的时候能自动识别你现有的登录，上手更快。还加了个人技能库，能按身份分开管理技能，方便复用。更新也更稳了，出问题能回滚，网关跑久了也不容易崩，值得试试。"
+insight: "这次更新对现有用户更偏体验优化而非功能革命。若你已在用旧版且网关运行稳定，不必急着升，但若常被 Mermaid 输出或更新中断困扰，值得升级并利用回滚机制降低风险。个人技能库按身份隔离对共享网关是实用增强，可考虑整理现有 prompt 为技能复用。国内走 newapi.lurus.cn 代理不受影响，更新流程本身更稳，建议择机升级并保留配置。"
+tags: [mermaid, quick-start, skills-library, update-reliability]
+---
+
+- 聊天中 Mermaid 代码块现在渲染为图表，支持放大预览和移动端重试，对 agent 输出可视化有直接帮助。
+- 新安装可检测现有 Claude Code/Codex 登录并快速启动，降低首次使用门槛，适合快速验证 agent 行为。
+- `openclaw skills library` 支持个人技能库与 ZIP 导入，便于在共享网关上按身份隔离技能，提升复用性。
+- `openclaw update` 增加回滚与配置保留机制，失败时由内置 triage agent 处理，减少更新中断风险。
+- 网关启动恢复能力增强，坏 cron 行隔离、内存优化，提升长时间运行的稳定性。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.1](https://github.com/openclaw/openclaw/releases/tag/v2026.9.1)

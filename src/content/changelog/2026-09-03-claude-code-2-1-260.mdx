@@ -1,0 +1,25 @@
+---
+slug: 2026-09-03-claude-code-2-1-260
+title: "claude-code v2.1.260 — diff 面板、缓存诊断、权限修复，agent 开发必读"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.260
+publishedAt: 2026-09-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "diff 面板、缓存诊断、权限修复，agent 开发必读"
+broadcast: "最近这个AI编程助手更新了，新增了对比查看代码改动的面板，能全屏并排显示，方便你观察它编辑的过程。同时，它现在能提示缓存没命中的原因，帮你省token。还修复了一些安全漏洞，比如路径带括号时权限失效的问题，让沙箱更安全。对做agent开发的朋友来说，这些改进让工具更可靠，值得关注。"
+insight: "这次更新对现有用户价值明确：如果你常靠 /rewind 回滚或依赖权限规则，值得升级，修复了误报和括号路径失效这类实际坑。hook 配置不用大改，但若你自定义过系统提示或工具定义，缓存命中率可能受影响，建议升级后留意 /cost 提示。走 newapi.lurus.cn 代理不受影响，更新不涉及网络层。整体是稳定性修复，agent 开发场景建议跟进。"
+tags: [diff-panel, permission-fixes, prompt-cache, structured-output]
+---
+
+- 新增 `/diff` 面板，全屏模式并排显示未提交更改，便于观察 agent 编辑过程。
+- `/cost` 和状态行现在提示缓存未命中的可能原因（如工具定义或系统提示变更、超过 TTL），有助于优化 token 成本。
+- 修复了路径含括号的权限规则失效、正则错误导致编辑失败、zsh 命令隐藏命令替换绕过 Bash 权限检查等问题，强化了沙箱安全。
+- 修复了 `/rewind` 误报成功、残留文件读取跟踪等问题，确保回滚可靠。
+- 改进了结构化输出，拒绝无法满足的 JSON Schema，并优化了 1M 上下文模型的自动压缩时机。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.260](https://github.com/anthropics/claude-code/releases/tag/v2.1.260)

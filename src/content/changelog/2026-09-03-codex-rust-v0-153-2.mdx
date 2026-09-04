@@ -1,0 +1,23 @@
+---
+slug: 2026-09-03-codex-rust-v0-153-2
+title: "codex rust-v0.153.2 — GPT"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.153.2
+publishedAt: 2026-09-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "GPT-6-Astra Fast 档描述修正，仅文本变更"
+broadcast: "OpenAI 的 Codex 工具更新了一个小版本，主要修正了 GPT-6-Astra 快速档的描述，从原来的 1.5 倍速改为 2 倍速并增加用量。这虽然只是文字上的改动，不影响实际运行，但对开发者来说是个提醒：在给用户展示模型档位信息时，描述一定要准确，避免造成误解。"
+insight: "这次只是描述文本修正，不影响实际请求逻辑，所以现有用户无需升级或改动配置。但如果你在 prompt 或 hook 里引用了旧的“1.5x”描述，建议同步更新，避免给 agent 或用户造成误导。国内走 newapi.lurus.cn 代理不受影响，因为变更不涉及执行层。整体判断：低优先级，按需改文案即可。"
+tags: [bug-fix, text-update, gpt-6-astra]
+---
+
+- 修正 GPT-6-Astra Fast 档描述，从“1.5x”改为“2x speed, increased usage”。
+- 该变更仅影响显示文本，不影响请求执行逻辑。
+- 对 agent harness 设计：提示用户时需注意模型档位描述准确性，避免误导。
+
+---
+
+> 原文 release：[openai/codex rust-v0.153.2](https://github.com/openai/codex/releases/tag/rust-v0.153.2)

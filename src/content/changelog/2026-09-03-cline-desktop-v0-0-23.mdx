@@ -1,0 +1,26 @@
+---
+slug: 2026-09-03-cline-desktop-v0-0-23
+title: "cline desktop-v0.0.23 — Agent 插件统一由 Hub 管理，修复版本误报和语音配置跳转。"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.23
+publishedAt: 2026-09-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Agent 插件统一由 Hub 管理，修复版本误报和语音配置跳转。"
+broadcast: "最近桌面版工具更新了，插件现在统一由共享中心管理，放在指定文件夹里的插件会自动验证并启动，还能单独设置。这次还修了版本误报的问题，更新提示不再反复出现。另外登录时会在应用内显示确认码，方便核对。对开发者来说，插件管理更集中，安全流程也更清晰了。"
+insight: "这次更新把 Agent 插件统一收归 Hub 管理，对国内用户影响不大，但值得注意：如果你之前手动在 ~/.agents/plugins 下配置过插件，现在会经过 plugin.json 验证，技能和 MCP 服务器会自动启动，建议检查一遍现有配置是否兼容。版本误报的修复说明官方开始按实际功能比对版本，升级到 v0.0.23 能避免反复弹窗。走 newapi.lurus.cn 代理的国内用户不受此次改动影响，可放心升级。"
+tags: [agent-plugins, hub, desktop-app, bug-fixes]
+---
+
+- Agent 插件现由共享 Hub 发现和运行，`~/.agents/plugins` 下的包通过 `plugin.json` 验证，其技能和 MCP 服务器自动启动，设置中可单独管理。
+  - 对 harness 设计：插件发现和生命周期集中化，需考虑 Hub 的权限和隔离。
+- 修复了“Hub 已更新”对话框反复出现的问题，构建不匹配提示仅在应用更新暂存后显示，且“稍后”选项跨会话保持。
+  - 对 harness 设计：版本比较需基于实际功能而非构建指纹，避免误导用户。
+- 登录时在应用内显示设备确认码，便于与浏览器核对。
+  - 对 harness 设计：安全流程需提供清晰的用户反馈，减少中间步骤的困惑。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.23](https://github.com/cline/cline/releases/tag/desktop-v0.0.23)

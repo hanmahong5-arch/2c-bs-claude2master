@@ -1,14 +1,14 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.259",
-    "openai/codex": "rust-v0.153.0",
+    "anthropics/claude-code": "v2.1.260",
+    "openai/codex": "rust-v0.153.2",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v4.1.17",
-    "block/goose": "v1.48.0",
+    "cline/cline": "desktop-v0.0.23",
+    "block/goose": "v1.49.0",
     "sst/opencode": "v1.18.27",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.58.0",
-    "openclaw/openclaw": "v2026.8.2",
+    "openclaw/openclaw": "v2026.9.1",
     "zeroclaw-labs/zeroclaw": "v0.8.4",
     "NousResearch/hermes-agent": "v2026.8.31"
   },
@@ -236,8 +236,8 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-03",
-    "claude-code-docs": "2026-08-28",
+    "anthropic-engineering": "2026-09-04",
+    "claude-code-docs": "2026-09-04",
     "openai-codex-blog": "2026-09-03",
     "openclaw-concepts": "2026-08-31",
     "hermes-guides": "2026-08-31"
@@ -507,7 +507,9 @@
       "https://simonwillison.net/2026/Sep/2/llm-gemini/",
       "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
       "https://simonwillison.net/2026/Sep/1/datasette-mcp/",
-      "https://simonwillison.net/2026/Sep/1/python-315-rc-2/"
+      "https://simonwillison.net/2026/Sep/1/python-315-rc-2/",
+      "https://simonwillison.net/2026/Sep/4/august-newsletter/",
+      "https://simonwillison.net/2026/Sep/3/gpt6-astra/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -639,7 +641,9 @@
       "https://www.latent.space/p/ainews-fals-h3-max-live-breaks-the",
       "https://www.latent.space/p/pr-not-welcome",
       "https://www.latent.space/p/ainews-muse-spark-13-matches-gpt",
-      "https://www.latent.space/p/ainews-claude-fablemythos-51-new"
+      "https://www.latent.space/p/ainews-claude-fablemythos-51-new",
+      "https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest",
+      "https://www.latent.space/p/astra"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -924,7 +928,11 @@
       "https://openai.com/index/path-to-astra",
       "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
       "https://openai.com/index/gilbert-tobin",
-      "https://openai.com/index/atv-big-air-tour"
+      "https://openai.com/index/atv-big-air-tour",
+      "https://openai.com/index/daybreak-for-frontline-defenders",
+      "https://openai.com/index/legora-financial-statement-review-with-astra",
+      "https://openai.com/index/playco-game-prototyping-with-astra",
+      "https://openai.com/index/safety-overview-gpt-6-astra"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -966,7 +974,10 @@
       "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/",
       "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
       "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
-      "https://deepmind.google/blog/introducing-agentic-video-in-gemini/"
+      "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+      "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
+      "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
+      "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -1060,7 +1071,12 @@
       "https://huggingface.co/blog/pwc-search",
       "https://huggingface.co/blog/open-asr-leaderboard-global-south",
       "https://huggingface.co/blog/allenai/benchmirt",
-      "https://huggingface.co/blog/webgpu-kernels"
+      "https://huggingface.co/blog/webgpu-kernels",
+      "https://huggingface.co/blog/Hcompany/neomme",
+      "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+      "https://huggingface.co/blog/funes",
+      "https://huggingface.co/blog/train-to-paint-with-code",
+      "https://huggingface.co/blog/ibm-research/real-time-intelligence"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -1143,27 +1159,28 @@
       "https://openclaw.ai/blog/introducing-openclaw/",
       "https://openclaw.ai/blog/introducing-openclaw-foundation/",
       "https://openclaw.ai/blog/extended-stable-releases-and-maturity-scorecards/",
-      "https://openclaw.ai/blog/openclaw-2-accidentally/"
+      "https://openclaw.ai/blog/openclaw-2-accidentally/",
+      "https://openclaw.ai/blog/macos-installer-windows-local-ai/"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-03",
+    "simonwillison": "2026-09-04",
     "lilianweng": "2026-09-03",
-    "latentspace": "2026-09-03",
-    "interconnects": "2026-09-03",
+    "latentspace": "2026-09-04",
+    "interconnects": "2026-09-04",
     "karpathy": "2026-09-02",
     "raschka": "2026-09-02",
     "eugeneyan": "2026-09-02",
     "chiphuyen": "2026-09-03",
-    "oneusefulthing": "2026-09-02",
+    "oneusefulthing": "2026-09-04",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-03",
-    "deepmind": "2026-09-02",
-    "hf-blog": "2026-09-02",
-    "anthropic-news": "2026-09-03",
-    "steipete": "2026-09-02",
-    "openclaw-blog": "2026-09-02"
+    "openai-news": "2026-09-04",
+    "deepmind": "2026-09-04",
+    "hf-blog": "2026-09-04",
+    "anthropic-news": "2026-09-04",
+    "steipete": "2026-09-04",
+    "openclaw-blog": "2026-09-04"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

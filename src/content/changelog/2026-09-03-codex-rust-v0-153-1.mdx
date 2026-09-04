@@ -1,0 +1,23 @@
+---
+slug: 2026-09-03-codex-rust-v0-153-1
+title: "codex rust-v0.153.1 — Codex 支持隐藏配置 GPT"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.153.1
+publishedAt: 2026-09-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 支持隐藏配置 GPT-6-Astra，不改变默认模型。"
+broadcast: "OpenAI 的 Codex 工具最近更新了，现在可以通过 API 配置一个叫 GPT-6-Astra 的模型，而且不会改变默认模型，也不会在模型选择器里显示。这对开发者来说挺有意义，因为测试新模型时，可以不影响用户正常体验。同时，这种隐藏配置也意味着需要支持通过环境变量或配置文件来设置模型，给 agent 开发提供了更灵活的测试路径。"
+insight: "这次升级对现有用户价值不大，除非你正想私下测试 GPT-6-Astra 且不想影响默认体验。若你依赖默认模型或模型选择器，无需改动任何配置，升级后行为不变。但若你通过 newapi.lurus.cn 代理访问，需确认代理是否透传隐藏模型所需的 API 配置或环境变量，否则该能力可能不可用。建议先小范围验证再决定是否升级。"
+tags: [model-config, gpt-6-astra, api]
+---
+
+- 新增通过 API 配置 GPT-6-Astra 的能力，且不改变默认模型或出现在模型选择器中。
+- 对 agent harness 设计：模型配置可独立于默认模型，便于测试新模型而不影响用户体验。
+- 隐藏模型选项意味着需要支持非用户可见的模型配置路径，可能涉及环境变量或配置文件。
+
+---
+
+> 原文 release：[openai/codex rust-v0.153.1](https://github.com/openai/codex/releases/tag/rust-v0.153.1)

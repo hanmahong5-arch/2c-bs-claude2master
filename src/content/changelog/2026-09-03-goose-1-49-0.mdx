@@ -1,0 +1,24 @@
+---
+slug: 2026-09-03-goose-1-49-0
+title: "goose v1.49.0 — Goose v1.49.0 大幅强化安全边界，并新增多项 agent 开发关键能"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.49.0
+publishedAt: 2026-09-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.49.0 大幅强化安全边界，并新增多项 agent 开发关键能力。"
+broadcast: "最近Goose工具升级了，重点强化了安全边界，还加了不少对开发agent有用的新功能。比如工具调用失败时可以执行自定义逻辑，方便处理错误；还引入了稳定的调用标识，能更好地追踪结果。更重要的是，它强制了模型工具白名单，防止秘密泄露，这提醒我们在设计智能体时，一定要内置权限和数据保护机制。另外，启动体验也改善了，模型接入更简单。"
+insight: "Goose v1.49.0 的安全强化值得关注，尤其强制工具白名单和防 secret 泄露，对国内 agent 开发者是重要提醒。若你已用旧版，建议升级以获取更稳的权限边界，但需测试现有 hook 兼容性。新增 on_failure 块和 tool_call_id 可优化错误追踪，值得重构相关逻辑。走 newapi.lurus.cn 代理不受影响，升级后按官方文档调整配置即可。"
+tags: [agent-hooks, security, tool-lifecycle, providers]
+---
+
+- 新增 `on_failure` 块用于 PreToolUse 钩子，使工具调用失败时可执行自定义逻辑，对 agent 的错误处理流程设计有参考价值。
+- 引入 `PreToolUseResult` 事件和稳定的 `tool_call_id`，贯穿工具生命周期，便于追踪和关联工具调用结果。
+- 大量安全修复，如强制每轮模型工具白名单、限制代码模式回调输出、防止 secret 泄露等，提示 agent 设计需内置权限与数据保护机制。
+- 扩展后台加载，CLI 提示符立即可用，改善启动体验；新增多个声明式 provider，简化模型接入。
+
+---
+
+> 原文 release：[block/goose v1.49.0](https://github.com/aaif-goose/goose/releases/tag/v1.49.0)

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-03-blog-hf-blog-fine-tuning-a-350m-model-for-better-structured
+title: "Fine-tuning a 350M Model for Better Structured Outputs — 用100步GRPO微调350M模型，提升结构化输出能力，值得一试。"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/grpo-with-trl-ifstruct
+publishedAt: 2026-09-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "用100步GRPO微调350M模型，提升结构化输出能力，值得一试。"
+broadcast: "今天聊一个对开发者很实用的技巧，用一百步的强化学习，就能微调一个三亿五千万参数的小模型，让它的结构化输出，比如生成JSON格式，变得更可靠。这个方法不需要大量标注数据，成本很低。对做智能体开发的朋友来说，这意味着小模型也能稳定输出符合要求的格式，减少了对大模型的依赖，也更方便本地部署和保护隐私。"
+tags: [grpo, trl, structured-output, fine-tuning]
+---
+
+- 文章展示了使用TRL库对350M参数模型进行GRPO微调，仅需100步即可显著改善结构化输出（如JSON格式）的生成质量。
+- 该方法通过强化学习直接优化输出格式的奖励信号，无需大量标注数据，为开发者提供了一种低成本、高效的模型定制路径。
+- 对agent工具链而言，这意味着小型模型也能可靠地生成符合schema的输出，降低了对大型专有模型的依赖，利于本地化和隐私保护。
+
+---
+
+> 原文：[Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps](https://huggingface.co/blog/grpo-with-trl-ifstruct) · 作者 Hugging Face

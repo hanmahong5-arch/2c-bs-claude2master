@@ -1,0 +1,23 @@
+---
+slug: 2026-09-03-blog-simonwillison-gpt-6-astra
+title: "GPT‑6 Astra — OpenAI发布GPT"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/3/gpt6-astra/
+publishedAt: 2026-09-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "OpenAI发布GPT-6 Astra，性能对标Claude Fable，但推理成本与基准测试细节值得关注。"
+broadcast: "OpenAI发布了新一代模型GPT-6 Astra，定价和Claude Fable 5一样，但官方自报的基准分数更高，尤其在某个推理测试上接近满分。不过要注意，这个高分是在自定义测试环境下跑出来的，默认环境下分数就低了不少。虽然它在安全任务上表现亮眼，但综合智能指数仍落后于其他竞品，所以并不是全面领先，国内开发者选型时得看清测试条件再下结论。"
+tags: [openai, gpt-6-astra, llm-benchmarks, ai-pricing]
+---
+
+- GPT-6 Astra API定价与Claude Fable 5相同，为$10/百万输入和$50/百万输出，但OpenAI自报基准分数更高，尤其在ARC-AGI 3上达到99.9%。
+- 然而，99.9%的分数是通过自定义的Provider Adapter harness实现的，默认harness下仅为62.7%，提示基准测试结果可能受测试环境显著影响。
+- 在安全任务上表现突出，ExploitBench满分，但Artificial Analysis的智能指数显示其仍落后于Claude Fable 5.1和Meta的Muse Spark 1.3，表明并非全面领先。
+
+---
+
+> 原文：[GPT‑6 Astra](https://simonwillison.net/2026/Sep/3/gpt6-astra/) · 作者 Simon Willison
