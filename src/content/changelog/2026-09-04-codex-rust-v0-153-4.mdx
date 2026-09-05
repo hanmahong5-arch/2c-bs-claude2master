@@ -1,0 +1,24 @@
+---
+slug: 2026-09-04-codex-rust-v0-153-4
+title: "codex rust-v0.153.4 — Astra 模型默认可见，异步问题仅在工具可用时提示"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.153.4
+publishedAt: 2026-09-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Astra 模型默认可见，异步问题仅在工具可用时提示"
+broadcast: "这次更新里，Astra 模型成了默认选项，开发者不用特意配置就能用到它。不过要注意，它只在有工具可用的时候，才会用异步方式提问。所以做集成的话，得动态检查工具状态，免得出现没意义的交互。这对搞智能体开发的朋友来说，是个值得留意的变化。"
+insight: "这次升级把 Astra 设为默认模型，现有用户如果没显式配置模型，升级后行为会变，建议先确认自己的 prompt 和 hook 是否兼容 Astra。异步问题只在工具可用时才提示，意味着你的 hook 逻辑要动态判断工具状态，否则可能触发无效交互。国内走 newapi.lurus.cn 代理的用户，升级本身不影响代理链路，但模型默认值变化可能影响请求参数，建议升级后做一轮回归测试。"
+tags: [model-picker, default-model, async-questions, tool-availability]
+---
+
+- Astra 模型在捆绑的模型选择器中可见，并成为未显式配置时的默认模型。
+  - 含义：harness 需考虑默认模型变更，确保与 Astra 兼容。
+- Astra 的指导仅在会话中工具可用时使用异步问题。
+  - 含义：harness 需动态检查工具可用性，避免无效交互。
+
+---
+
+> 原文 release：[openai/codex rust-v0.153.4](https://github.com/openai/codex/releases/tag/rust-v0.153.4)

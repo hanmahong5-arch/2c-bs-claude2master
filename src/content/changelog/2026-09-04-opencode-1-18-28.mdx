@@ -1,0 +1,26 @@
+---
+slug: 2026-09-04-opencode-1-18-28
+title: "opencode v1.18.28 — 会话ID追踪与桌面认证修复，提升调试与登录体验"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.28
+publishedAt: 2026-09-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "会话ID追踪与桌面认证修复，提升调试与登录体验"
+broadcast: "这次更新主要修复了桌面端的登录和调试体验。现在发送会话标识，能让跨会话的请求追踪更清晰，这对做智能体框架的开发者是个提醒，在调用接口时带上会话信息，日志排查会方便很多。另外，桌面认证也修好了，用对了客户端标识，登录不再出错。图标也放大了，看着更清楚。整体就是让开发调试和日常使用都更顺手。"
+insight: "这次更新对现有用户价值不大，主要是内部调试和认证修复。如果你在用桌面客户端且遇到登录问题，升级能解决；否则可暂缓。会话ID追踪和客户端ID认证是内部机制，无需改你的prompt或hook配置。国内走newapi.lurus.cn代理不受影响，因为改动不涉及网络层。建议按需升级，别折腾配置。"
+tags: [session-tracking, authentication, desktop-ui]
+---
+
+- 发送会话ID作为GitHub Copilot交互头，改善跨会话请求追踪。
+  - 对agent harness设计：需在API调用中传递会话标识，便于日志关联与调试。
+- 桌面客户端ID用于OpenCode账户设备认证，修复认证流程。
+  - 对agent harness设计：确保认证时使用正确的客户端标识，避免混淆。
+- 增大打开应用图标尺寸，提升可见性。
+  - 对agent harness设计：注意UI细节，优化用户交互体验。
+
+---
+
+> 原文 release：[sst/opencode v1.18.28](https://github.com/anomalyco/opencode/releases/tag/v1.18.28)

@@ -1,0 +1,26 @@
+---
+slug: 2026-09-04-opencode-1-18-29
+title: "opencode v1.18.29 — 修复 GPT 版本识别，支持整数版本号与订阅模型显示"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.29
+publishedAt: 2026-09-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 GPT 版本识别，支持整数版本号与订阅模型显示"
+broadcast: "这次更新修复了GPT版本识别的问题，现在整数版本号也能被正确识别了，比如gpt-6，之前可能会漏掉。另外，订阅用户现在也能看到gpt-6-astra这个模型了。对做agent开发的朋友来说，这意味着模型过滤逻辑要更灵活，别用太严格的版本判断，同时订阅用户的模型列表要动态更新，别让新模型藏着不显示。"
+insight: "这次修复对国内用户影响不大，但值得关注。如果你在用 Codex OAuth 且订阅了 OpenAI，之前可能看不到 gpt-6-astra，现在升级到 v1.18.29 就能正常显示，建议更新。至于走 newapi.lurus.cn 代理，摘要里没提，应该不受影响。现有 prompt 和 hook 配置不用改，只是版本识别和显示逻辑更稳了。整体是次小修，不急但升了更省心。"
+tags: [bugfix, model-filtering, oauth, console]
+---
+
+- Codex OAuth 模型过滤现可识别整数 GPT 版本（如 `gpt-6`），此前可能被遗漏。
+  - 对 harness 设计：模型版本解析需兼容非语义化版本号，避免过滤逻辑过严。
+- 修复 `gpt-6-astra` 未对 OpenAI 订阅用户显示的问题。
+  - 对 harness 设计：订阅用户可见模型列表需动态同步，确保新模型及时暴露。
+- 社区贡献：中文文档加粗渲染修复，控制台新增配额重置操作。
+  - 对 harness 设计：文档与 UI 操作需保持同步，便于用户管理配额。
+
+---
+
+> 原文 release：[sst/opencode v1.18.29](https://github.com/anomalyco/opencode/releases/tag/v1.18.29)

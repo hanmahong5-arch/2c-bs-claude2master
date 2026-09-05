@@ -1,0 +1,25 @@
+---
+slug: 2026-09-04-claude-code-2-1-261
+title: "claude-code v2.1.261 — Claude Code 新版本：诊断、输出上限、技能体检与大量修复"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.261
+publishedAt: 2026-09-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Code 新版本：诊断、输出上限、技能体检与大量修复"
+broadcast: "Claude Code 这次更新挺实在的，主要给开发者带来几个实用改进。现在命令和后台任务的输出上限能大幅提高，看长日志不用老切换文件了。还新增了一个技能体检命令，能帮你找出哪些技能一直没用上，方便清理，省下不少 token。另外，快速打字时字符乱序或丢失的问题也修好了，交互更可靠。对国内做 agent 开发的朋友来说，这些细节优化能让日常调试更顺手。"
+insight: "此次更新对现有用户价值明显，建议升级。若你常因命令或后台任务输出被截断而频繁切换文件，新上限 128K 字符能显著减少打断；若 hook 配置依赖并行工具调用的输出，升级可修复恢复会话时输出丢失的问题，保证上下文完整。国内用户走 newapi.lurus.cn 代理不受影响，可正常升级。另外，可用 /skill-doctor 检查未使用技能，裁剪以优化 token 成本。"
+tags: [cli, settings, diagnostics, bug-fixes]
+---
+
+- 新增 `bashOutputMaxChars` 和 `taskOutputMaxChars` 设置，可将命令及后台任务输出上限提升至 128K 字符，内联输出更多，减少文件切换。
+- 新增 `/skill-doctor` 命令，展示未使用技能及其上下文成本，便于裁剪，优化 token 使用。
+- 新增 `--append-subagent-system-prompt-file`，支持从文件读取子代理系统提示，适合超长提示场景。
+- 修复快速输入时字符乱序或丢失的问题，提升交互可靠性。
+- 修复恢复会话时并行工具调用的 hook 输出丢失，确保上下文完整。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.261](https://github.com/anthropics/claude-code/releases/tag/v2.1.261)

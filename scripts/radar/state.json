@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.260",
-    "openai/codex": "rust-v0.153.2",
+    "anthropics/claude-code": "v2.1.261",
+    "openai/codex": "rust-v0.153.4",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "desktop-v0.0.23",
     "block/goose": "v1.49.0",
-    "sst/opencode": "v1.18.27",
+    "sst/opencode": "v1.18.29",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.58.0",
     "openclaw/openclaw": "v2026.9.1",
@@ -138,7 +138,9 @@
     "furkankly/zoetrope",
     "LaoFeng-mouse/flyingmouse-format",
     "jub0t/Concat",
-    "DavidCarliez/trustmebro"
+    "DavidCarliez/trustmebro",
+    "MengTo/threeui",
+    "soirihiroka/shrimply"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -236,7 +238,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-04",
+    "anthropic-engineering": "2026-09-05",
     "claude-code-docs": "2026-09-04",
     "openai-codex-blog": "2026-09-03",
     "openclaw-concepts": "2026-08-31",
@@ -509,7 +511,9 @@
       "https://simonwillison.net/2026/Sep/1/datasette-mcp/",
       "https://simonwillison.net/2026/Sep/1/python-315-rc-2/",
       "https://simonwillison.net/2026/Sep/4/august-newsletter/",
-      "https://simonwillison.net/2026/Sep/3/gpt6-astra/"
+      "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
+      "https://simonwillison.net/2026/Sep/4/astra-pelicans/",
+      "https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -932,7 +936,8 @@
       "https://openai.com/index/daybreak-for-frontline-defenders",
       "https://openai.com/index/legora-financial-statement-review-with-astra",
       "https://openai.com/index/playco-game-prototyping-with-astra",
-      "https://openai.com/index/safety-overview-gpt-6-astra"
+      "https://openai.com/index/safety-overview-gpt-6-astra",
+      "https://openai.com/index/gpt-6-astra"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1164,21 +1169,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-04",
+    "simonwillison": "2026-09-05",
     "lilianweng": "2026-09-03",
-    "latentspace": "2026-09-04",
-    "interconnects": "2026-09-04",
-    "karpathy": "2026-09-02",
-    "raschka": "2026-09-02",
-    "eugeneyan": "2026-09-02",
+    "latentspace": "2026-09-05",
+    "interconnects": "2026-09-05",
+    "karpathy": "2026-09-05",
+    "raschka": "2026-09-05",
+    "eugeneyan": "2026-09-05",
     "chiphuyen": "2026-09-03",
     "oneusefulthing": "2026-09-04",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-04",
+    "openai-news": "2026-09-05",
     "deepmind": "2026-09-04",
     "hf-blog": "2026-09-04",
-    "anthropic-news": "2026-09-04",
+    "anthropic-news": "2026-09-05",
     "steipete": "2026-09-04",
     "openclaw-blog": "2026-09-04"
   },

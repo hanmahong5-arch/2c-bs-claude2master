@@ -1,0 +1,24 @@
+---
+slug: 2026-09-04-codex-rust-v0-153-3
+title: "codex rust-v0.153.3 — Codex 新增 GPT"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.153.3
+publishedAt: 2026-09-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 新增 GPT-6-Astra 模型支持，并修正其异步提问指引。"
+broadcast: "OpenAI 的 Codex 工具更新了，现在支持 GPT-6-Astra 模型，可以在亚马逊的模型选择器里选用。这次还修正了异步提问的指引，明确这个模型只接受文本，并且要用支持的工具。对做 agent 开发的朋友来说，得更新模型列表，还得调整工具调用逻辑，别给它发非文本内容，这样才能让新模型正常工作。"
+insight: "这次更新对国内用户影响不大，因为新增的 GPT-6-Astra 模型支持主要面向 Amazon Bedrock 路由，而 newapi.lurus.cn 代理是否接入该模型并未提及。若你当前通过代理使用 Codex，建议先确认代理是否已同步支持此模型，再决定是否升级。现有 hook 配置无需大改，但若你自定义了工具调用逻辑，需注意 GPT-6-Astra 仅接受文本，避免向其发送非文本内容，否则可能触发异步澄清问题。总体而言，升级价值取决于你是否需要该模型，否则可暂缓。"
+tags: [model-support, bedrock, bug-fix]
+---
+
+- 在 Amazon Bedrock 模型选择器中新增 GPT-6-Astra，支持 Mantle 和 Runtime 全球/美国路由。
+  - 对 agent harness 设计：需更新模型列表，确保新模型可被选用。
+- 修正 GPT-6-Astra 的异步澄清问题指引，明确其仅接受文本，并使用受支持的工具。
+  - 对 agent harness 设计：需调整工具调用逻辑，避免向模型发送非文本内容。
+
+---
+
+> 原文 release：[openai/codex rust-v0.153.3](https://github.com/openai/codex/releases/tag/rust-v0.153.3)
