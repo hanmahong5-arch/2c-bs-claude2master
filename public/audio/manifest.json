@@ -1,6 +1,72 @@
 {
   "items": [
     {
+      "slug": "2026-09-06-claude-code-2-1-263",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.263 — Claude Code 小版本更新，修复 bug 提升稳定性。",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-09-06"
+    },
+    {
+      "slug": "2026-09-06-trending-ooolabdev-ooosplat",
+      "zh": true,
+      "en": false,
+      "title": "ooosplat — 本地视频转 3D 高斯泼溅的桌面应用",
+      "kind": "trending",
+      "author": null,
+      "source": "ooolabdev/ooosplat",
+      "tool": null,
+      "publishedAt": "2026-09-06"
+    },
+    {
+      "slug": "2026-09-05-blog-latentspace-openclaw-power-macbook-simplicity-five-days-with-grok",
+      "zh": true,
+      "en": true,
+      "title": "OpenClaw Power, MacBook Simplicity: Five Days With Grok — Grok Bot 五天上手体验：把 agent 配置简化成登录，像开箱 MacB",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-05"
+    },
+    {
+      "slug": "2026-09-05-blog-simonwillison-introducing-gpt-6-astra-for-developers",
+      "zh": true,
+      "en": true,
+      "title": "Introducing GPT-6 Astra for developers — OpenAI发布GPT",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-05"
+    },
+    {
+      "slug": "2026-09-05-blog-simonwillison-using-blender-with-coding-agents-on-macos",
+      "zh": true,
+      "en": true,
+      "title": "Using Blender with coding agents on macOS — Simon Willison 展示如何让编码代理在 macOS 上调用 Blen",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-05"
+    },
+    {
+      "slug": "2026-09-05-openclaw-2026-9-2",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.9.2 — GPT",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-09-05"
+    },
+    {
       "slug": "2026-09-05-trending-mengto-threeui",
       "zh": true,
       "en": false,
@@ -20,6 +86,17 @@
       "author": null,
       "source": "soirihiroka/shrimply",
       "tool": null,
+      "publishedAt": "2026-09-05"
+    },
+    {
+      "slug": "2026-09-05-zeroclaw-0-8-5",
+      "zh": true,
+      "en": false,
+      "title": "zeroclaw v0.8.5 — ZeroClaw v0.8.5 引入 ZeroRelay/ZeroRouter，",
+      "kind": "changelog",
+      "author": null,
+      "source": "zeroclaw-labs/zeroclaw",
+      "tool": "zeroclaw",
       "publishedAt": "2026-09-05"
     },
     {
@@ -802,83 +879,6 @@
       "source": "google-gemini/gemini-cli",
       "tool": "gemini-cli",
       "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-openclaw-2026-8-2",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.8.2 — Home 可停靠侧栏、Linux 桌面版、后台会话与更安全的升级机制。",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-opencode-1-18-26",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.26 — 修复 Claude 5 会话、Bedrock 推理及工具计时等核心问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-trending-crmne-fastpotify",
-      "zh": true,
-      "en": false,
-      "title": "fastpotify — Rust 写的原生 Spotify 客户端，轻量快速跨平台",
-      "kind": "trending",
-      "author": null,
-      "source": "crmne/fastpotify",
-      "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-08-31-blog-oneusefulthing-agency-and-agents",
-      "zh": true,
-      "en": true,
-      "title": "Agency and Agents — AI代理在沙箱中自发协作、欺骗评分系统，甚至攻击真实网站，揭示自主AI的惊人能力",
-      "kind": "blogger",
-      "author": "Ethan Mollick",
-      "source": "Ethan Mollick",
-      "tool": null,
-      "publishedAt": "2026-08-31"
-    },
-    {
-      "slug": "2026-08-31-blog-openai-news-a-milestone-in-expanding-access-to-ai",
-      "zh": true,
-      "en": true,
-      "title": "A milestone in expanding access to AI — OpenAI 宣布 ChatGPT Ads 年化收入达 10 亿美元，并全球扩展",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-31"
-    },
-    {
-      "slug": "2026-08-31-blog-openai-news-openai-supports-california-s-bill-to-advance-youth",
-      "zh": true,
-      "en": true,
-      "title": "OpenAI supports California’s bill to advance youth AI — OpenAI支持加州青少年AI安全法案，平衡保护与探索。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-31"
-    },
-    {
-      "slug": "2026-08-31-blog-openai-news-polimill-builds-japan-s-next-generation-public-ai",
-      "zh": true,
-      "en": true,
-      "title": "Polimill builds Japan's next-generation public AI — Polimill 用 OpenAI 模型帮助日本市政机构搜索和利用行政知识，加速",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-08-31"
     }
   ]
 }
