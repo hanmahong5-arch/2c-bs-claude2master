@@ -1,0 +1,23 @@
+---
+slug: 2026-09-05-openclaw-2026-9-2
+title: "openclaw v2026.9.2 — GPT"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.2
+publishedAt: 2026-09-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "GPT-6 Astra 支持、Swarm 默认开启、回复跨重启恢复，值得 30 秒了解。"
+broadcast: "这次更新带来了几个对开发者很实用的变化。首先，它支持了新一代的GPT-6 Astra模型，能处理文本和图像，还支持工具调用。其次，回复功能在服务重启后不会丢失，这对稳定性很重要。另外，多代理的并发编排现在默认开启，用起来更方便。这些改动都要求开发者在适配时注意新模型的接口和数据的持久化处理，值得花时间了解一下。"
+insight: "这次升级对现有用户价值有限，除非你重度依赖多代理并发或跨重启稳定性。Swarm 默认开启可能改变现有子代理行为，建议先显式退出或限制工具，观察聚合逻辑是否冲突。回复跨重启恢复需 harness 配合，若你自建了持久化层，务必检查恢复标记避免覆盖。国内走 newapi.lurus.cn 代理不受影响，GPT-6 Astra 支持属可选，非必需不急着适配。"
+tags: [gpt-6-astra, recovery, swarm, settings]
+---
+
+- GPT-6 Astra 模型支持：可选 `openai/gpt-6-astra`，支持文本/图像输入与工具调用。Agent harness 需适配新模型 API 及订阅发现逻辑。
+- 回复跨重启恢复：活动、排队、委派回复在 Gateway 重启后不丢失，且保留继续指令。Harness 需实现持久化恢复标记，避免并发回复互相覆盖。
+- Swarm 默认启用：并发子代理编排开箱即用，仍可显式退出或限制工具。Harness 需处理子代理生命周期与结果聚合，同时尊重既有限制。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.2](https://github.com/openclaw/openclaw/releases/tag/v2026.9.2)

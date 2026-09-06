@@ -1,0 +1,23 @@
+---
+slug: 2026-09-05-zeroclaw-0-8-5
+title: "zeroclaw v0.8.5 — ZeroClaw v0.8.5 引入 ZeroRelay/ZeroRouter，"
+source: zeroclaw-labs/zeroclaw
+sourceUrl: https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.5
+publishedAt: 2026-09-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "ZeroClaw v0.8.5 引入 ZeroRelay/ZeroRouter，强化插件安全边界，并修复多处漏洞。"
+broadcast: "ZeroClaw 这个智能体框架发布了新版本，主要做了两件事：一是给智能体之间的通信加上了更安全的传输层，支持盲转发和证书注册；二是大幅收紧了插件和技能的安全边界，默认禁止不安全的操作。另外还修复了两个高危漏洞，包括一个沙箱逃逸问题。对国内做智能体开发的朋友来说，这提醒我们，插件越用越多，安全防线必须跟上，否则很容易被恶意利用。"
+insight: "ZeroClaw v0.8.5 的安全加固值得升级，尤其是修复了 Wasmtime 沙箱逃逸和路径遍历漏洞，对插件隔离有实质提升。现有用户应尽快升级，但需注意技能 HTTP 默认关闭和更严格的 agent 边界，可能需调整现有配置。国内用户走 newapi.lurus.cn 代理不受影响，升级后建议重新验证插件兼容性。"
+tags: [security, networking, plugins, release]
+---
+
+- 新增 ZeroRelay 与 ZeroRouter，提供盲转发、mTLS 注册和托管路由预设，为 agent 通信提供更安全的传输层。
+- 插件和技能安全大幅收紧：强制类型化实例配置、作用域密钥、主机拥有出口、路径遍历防护，技能 HTTP 执行默认失败关闭，agent 设计需遵循更严格的边界。
+- 修复 Wasmtime 沙箱逃逸（RUSTSEC-2026-0222）及插件 wasm_path 遍历漏洞（GHSA-93f6-34w8-5g98），升级安全栈。
+
+---
+
+> 原文 release：[zeroclaw-labs/zeroclaw v0.8.5](https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.5)
