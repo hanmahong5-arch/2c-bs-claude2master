@@ -1,6 +1,83 @@
 {
   "items": [
     {
+      "slug": "2026-09-07-openclaw-concepts-subagent-yield-handoff",
+      "zh": true,
+      "en": true,
+      "title": "Subagent yield handoff · OpenClaw — 子代理让出控制权后，任务如何不丢？看注册表如何接管续跑。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-09-07"
+    },
+    {
+      "slug": "2026-09-06-blog-openai-news-an-alien-mind",
+      "zh": true,
+      "en": true,
+      "title": "An Alien Mind — OpenAI 研究员反思 AI 对齐挑战，呼吁更强防护与国际协作。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-06"
+    },
+    {
+      "slug": "2026-09-06-blog-openai-news-research-acceleration-the-view-inside-openai",
+      "zh": true,
+      "en": true,
+      "title": "Research acceleration: The view inside OpenAI — OpenAI 内部数据显示，编码智能体正加速 AI 研究进程。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-06"
+    },
+    {
+      "slug": "2026-09-06-blog-simonwillison-quoting-zach-kehs",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Zach Kehs — 代码没有物理极限，可以无限变差，警惕技术债失控。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-06"
+    },
+    {
+      "slug": "2026-09-06-blog-simonwillison-research-acceleration-the-view-inside-openai",
+      "zh": true,
+      "en": true,
+      "title": "Research acceleration: The view inside OpenAI — OpenAI内部研究加速：编码代理如何改变其研究流程，揭示自改进路径。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-06"
+    },
+    {
+      "slug": "2026-09-06-blog-simonwillison-the-purpose-of-dns-is-to-spread-scams",
+      "zh": true,
+      "en": true,
+      "title": "The purpose of DNS is to spread scams — 新注册域名五分之一是诈骗，DNS 沦为犯罪温床。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-06"
+    },
+    {
+      "slug": "2026-09-06-blog-simonwillison-there-s-no-limit-to-how-bad-code",
+      "zh": true,
+      "en": true,
+      "title": "There's No Limit to How Bad Code Can Get — Simon Willison 谈为何推倒重写常失败，建议用迁移和测试治理技术债。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-06"
+    },
+    {
       "slug": "2026-09-06-claude-code-2-1-263",
       "zh": true,
       "en": false,
@@ -801,83 +878,6 @@
       "author": "Simon Willison",
       "source": "Simon Willison",
       "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-blog-simonwillison-python-3-15-0-candidate-2-is-here",
-      "zh": true,
-      "en": true,
-      "title": "Python 3.15.0 candidate 2 is here! — Python 3.15 RC2发布，作者强调RC测试重要性并分享CI配置。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-blog-simonwillison-quoting-tarn-adams",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Tarn Adams — Dwarf Fortress 联合创作者谈游戏 AI 与行为设计，揭示其背后的真",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-claude-code-2-1-257",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.257 — Claude Code 更新：新增 Fable 5.1 模型、时间格式设置及多项",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-claude-code-2-1-258",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.258 — 修复 macOS 12 启动回归及远程会话权限重发错误",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-codex-rust-v0-152-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.152.0 — Vim 搜索、限流横幅、MCP 增强，Codex 0.152.0 更新速览",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-codex-rust-v0-152-1",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.152.1 — 修复 Guardian 审批未遵循 Node REPL 策略的问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-gemini-cli-0-58-0",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.58.0 — 修复沙箱隔离、忽略路径与历史回滚，提升 CLI 稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
       "publishedAt": "2026-09-01"
     }
   ]
