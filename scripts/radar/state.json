@@ -234,16 +234,17 @@
       "https://docs.openclaw.ai/concepts/typebox",
       "https://docs.openclaw.ai/concepts/typing-indicators",
       "https://docs.openclaw.ai/concepts/usage-tracking",
-      "https://docs.openclaw.ai/concepts/user-model"
+      "https://docs.openclaw.ai/concepts/user-model",
+      "https://docs.openclaw.ai/concepts/subagent-yield-handoff"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-06",
+    "anthropic-engineering": "2026-09-07",
     "claude-code-docs": "2026-09-04",
     "openai-codex-blog": "2026-09-03",
-    "openclaw-concepts": "2026-08-31",
-    "hermes-guides": "2026-08-31"
+    "openclaw-concepts": "2026-09-07",
+    "hermes-guides": "2026-09-07"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -516,7 +517,11 @@
       "https://simonwillison.net/2026/Sep/4/astra-pelicans/",
       "https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/",
       "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/",
-      "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/"
+      "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/",
+      "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/",
+      "https://simonwillison.net/2026/Sep/6/the-purpose-of-dns-is-to-spread-scams/",
+      "https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/",
+      "https://simonwillison.net/2026/Sep/6/zach-kehs/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -941,7 +946,9 @@
       "https://openai.com/index/legora-financial-statement-review-with-astra",
       "https://openai.com/index/playco-game-prototyping-with-astra",
       "https://openai.com/index/safety-overview-gpt-6-astra",
-      "https://openai.com/index/gpt-6-astra"
+      "https://openai.com/index/gpt-6-astra",
+      "https://openai.com/index/an-alien-mind",
+      "https://openai.com/index/research-acceleration-view-inside-openai"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1173,10 +1180,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-06",
+    "simonwillison": "2026-09-07",
     "lilianweng": "2026-09-03",
-    "latentspace": "2026-09-06",
-    "interconnects": "2026-09-06",
+    "latentspace": "2026-09-07",
+    "interconnects": "2026-09-07",
     "karpathy": "2026-09-05",
     "raschka": "2026-09-05",
     "eugeneyan": "2026-09-05",
@@ -1184,10 +1191,10 @@
     "oneusefulthing": "2026-09-06",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-06",
+    "openai-news": "2026-09-07",
     "deepmind": "2026-09-06",
     "hf-blog": "2026-09-06",
-    "anthropic-news": "2026-09-06",
+    "anthropic-news": "2026-09-07",
     "steipete": "2026-09-06",
     "openclaw-blog": "2026-09-06"
   },

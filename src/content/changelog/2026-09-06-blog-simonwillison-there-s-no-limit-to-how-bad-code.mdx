@@ -1,0 +1,23 @@
+---
+slug: 2026-09-06-blog-simonwillison-there-s-no-limit-to-how-bad-code
+title: "There's No Limit to How Bad Code Can Get — Simon Willison 谈为何推倒重写常失败，建议用迁移和测试治理技术债。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/
+publishedAt: 2026-09-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 谈为何推倒重写常失败，建议用迁移和测试治理技术债。"
+broadcast: "今天聊聊为什么推倒重写代码常常会失败。旧系统还在跑核心业务，可开发者觉得它快被替换了，就没动力去改进，技术债越积越多。新团队又低估了旧系统的复杂度，文档测试都缺，最后只能双系统并存。更聪明的做法是加固旧系统，多写自动化测试，做针对性重构。对咱们开发者来说，渐进式改进往往比彻底重写更靠谱。"
+tags: [technical-debt, migrations, rewrites, software-engineering]
+---
+
+- 推倒重写常失败：旧系统仍在运行核心业务，改动不可避免，但开发者因系统将被替换而缺乏动力，技术债继续累积。
+- 新系统团队低估旧系统复杂度，因文档和测试缺失，难以全面理解行为，导致交付延迟，最终被迫只处理部分功能，形成双系统并存。
+- 更优策略是加固旧系统：增加自动化测试，进行针对性重构，而非追求绿地重写。这符合 Will Larson 的迁移理念，对开发者意味着应优先考虑渐进式改进。
+
+---
+
+> 原文：[There's No Limit to How Bad Code Can Get](https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/) · 作者 Simon Willison

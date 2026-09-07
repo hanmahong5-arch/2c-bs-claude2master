@@ -1,0 +1,26 @@
+---
+slug: 2026-09-07-openclaw-concepts-subagent-yield-handoff
+title: "Subagent yield handoff · OpenClaw — 子代理让出控制权后，任务如何不丢？看注册表如何接管续跑。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/subagent-yield-handoff
+publishedAt: 2026-09-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "子代理让出控制权后，任务如何不丢？看注册表如何接管续跑。"
+broadcast: "子代理主动让出控制权后，任务不会丢，而是由注册表接管继续跑。这背后有个关键设计：交接时所有权要明确转移，继任者得重新通过网关拿全新权限，旧工具和审批都不保留。对做智能体开发的来说，这种权限与任务线分离、加上确定性批次去重的思路，能有效防止越权和重复触发，值得借鉴。"
+insight: "这次子代理让出控制权的设计，对现有用户是明确利好。若你正用 OpenClaw 跑多步任务，值得升级以换取注册表接管续跑的确定性，避免旧执行残留。交接后权限全新准入，意味着你现有 hook 里若依赖旧工具回调，需同步调整，否则继任者会因无权限而中断。国内走 newapi.lurus.cn 代理不受影响，因为交接逻辑在 harness 层，与网络通道无关。建议升级后重点验证批次去重和权限重置两条路径。"
+tags: [subagent-yield, task-handoff, registry, delivery]
+---
+
+- **显式让出后由注册表接管**：子代理让出时冻结子运行ID并推进批次，后续由注册表调度续跑，而非由子代理自行继续。
+  - 对 harness 设计：让出/交接需有明确的所有权转移，避免旧执行残留。
+- **交接不复活旧权限**：继任者需重新通过 Gateway 准入，获得全新执行权限，旧工具、审批等回调不保留。
+  - 对 harness 设计：权限与任务线分离，防止越权或陈旧回调。
+- **确定性批次与去重**：冻结的运行ID排序，批次身份含请求者、子ID和代次，成功结算后不可重复触发。
+  - 对 harness 设计：用幂等批次和确定性顺序保证交付可靠。
+
+---
+
+> 原文：[Subagent yield handoff · OpenClaw](https://docs.openclaw.ai/concepts/subagent-yield-handoff)
