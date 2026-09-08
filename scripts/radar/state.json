@@ -10,7 +10,7 @@
     "google-gemini/gemini-cli": "v0.58.0",
     "openclaw/openclaw": "v2026.9.2",
     "zeroclaw-labs/zeroclaw": "v0.8.5",
-    "NousResearch/hermes-agent": "v2026.8.31"
+    "NousResearch/hermes-agent": "v2026.9.7"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -141,7 +141,8 @@
     "DavidCarliez/trustmebro",
     "MengTo/threeui",
     "soirihiroka/shrimply",
-    "ooolabdev/ooosplat"
+    "ooolabdev/ooosplat",
+    "okf-memory/okf-agent-memory"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -240,7 +241,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-07",
+    "anthropic-engineering": "2026-09-08",
     "claude-code-docs": "2026-09-04",
     "openai-codex-blog": "2026-09-03",
     "openclaw-concepts": "2026-09-07",
@@ -521,7 +522,12 @@
       "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/",
       "https://simonwillison.net/2026/Sep/6/the-purpose-of-dns-is-to-spread-scams/",
       "https://simonwillison.net/2026/Sep/6/theres-no-limit-to-how-bad-code-can-get/",
-      "https://simonwillison.net/2026/Sep/6/zach-kehs/"
+      "https://simonwillison.net/2026/Sep/6/zach-kehs/",
+      "https://simonwillison.net/2026/Sep/7/llm/",
+      "https://simonwillison.net/2026/Sep/7/creepy-crawlies/",
+      "https://simonwillison.net/2026/Sep/7/jakub-pachocki/",
+      "https://simonwillison.net/2026/Sep/7/video-compressor/",
+      "https://simonwillison.net/2026/Sep/7/equal-earth/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -656,7 +662,8 @@
       "https://www.latent.space/p/ainews-claude-fablemythos-51-new",
       "https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest",
       "https://www.latent.space/p/astra",
-      "https://www.latent.space/p/grok-bot"
+      "https://www.latent.space/p/grok-bot",
+      "https://www.latent.space/p/aeo"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -948,7 +955,8 @@
       "https://openai.com/index/safety-overview-gpt-6-astra",
       "https://openai.com/index/gpt-6-astra",
       "https://openai.com/index/an-alien-mind",
-      "https://openai.com/index/research-acceleration-view-inside-openai"
+      "https://openai.com/index/research-acceleration-view-inside-openai",
+      "https://openai.com/index/supporting-independent-journalism-in-ukraine"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1180,23 +1188,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-07",
+    "simonwillison": "2026-09-08",
     "lilianweng": "2026-09-03",
-    "latentspace": "2026-09-07",
-    "interconnects": "2026-09-07",
-    "karpathy": "2026-09-05",
-    "raschka": "2026-09-05",
-    "eugeneyan": "2026-09-05",
+    "latentspace": "2026-09-08",
+    "interconnects": "2026-09-08",
+    "karpathy": "2026-09-08",
+    "raschka": "2026-09-08",
+    "eugeneyan": "2026-09-08",
     "chiphuyen": "2026-09-03",
-    "oneusefulthing": "2026-09-06",
+    "oneusefulthing": "2026-09-08",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-07",
-    "deepmind": "2026-09-06",
-    "hf-blog": "2026-09-06",
-    "anthropic-news": "2026-09-07",
-    "steipete": "2026-09-06",
-    "openclaw-blog": "2026-09-06"
+    "openai-news": "2026-09-08",
+    "deepmind": "2026-09-08",
+    "hf-blog": "2026-09-08",
+    "anthropic-news": "2026-09-08",
+    "steipete": "2026-09-08",
+    "openclaw-blog": "2026-09-08"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

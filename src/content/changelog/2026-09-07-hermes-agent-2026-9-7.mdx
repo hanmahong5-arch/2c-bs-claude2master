@@ -1,0 +1,24 @@
+---
+slug: 2026-09-07-hermes-agent-2026-9-7
+title: "hermes-agent v2026.9.7 — Hermes Agent 0.21.1 补丁版：模块化、性能与可靠性改进，完整说"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.7
+publishedAt: 2026-09-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hermes Agent 0.21.1 补丁版：模块化、性能与可靠性改进，完整说明待 0.22.0。"
+broadcast: "今天要聊的是 Hermes Agent 的新补丁版本，它把代码库拆得更模块化，启动也更快了。对咱们开发者来说，最值得关注的是它新增了桌面控制和浏览器操作能力，还改进了授权和定时任务。如果你在用这个框架，记得更新授权策略，并且多测测子代理的稳定性，免得任务出错没人管。"
+insight: "本次 Hermes Agent 0.21.1 为补丁版，模块化重构和启动性能优化是重点，但完整说明要等 0.22.0。现有用户若依赖桌面自动化或浏览器注释，可考虑升级以获取新能力；若仅用基础功能，可观望。harness 需适配新模块边界并重新基准测试，现有 prompt 和 hook 配置大概率要调整，尤其是 MCP 授权策略和 cron 调度。国内用户走 newapi.lurus.cn 代理不受影响，但升级前建议在测试环境验证委托可靠性和定时任务。"
+tags: [patch-release, modularization, performance, reliability]
+---
+
+- 代码库模块化与文件操作、启动性能优化：harness 需适配新模块边界，并重新基准测试启动延迟。
+- 新增桌面会话控制与浏览器注释功能：harness 可扩展桌面自动化与浏览器交互能力。
+- MCP 授权改进与 cron 调度/投递修复：harness 需更新授权策略，并验证定时任务可靠性。
+- 委托可靠性提升：harness 应加强子代理任务监控与错误恢复。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.9.7](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.7)

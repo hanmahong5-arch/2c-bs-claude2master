@@ -1,0 +1,23 @@
+---
+slug: 2026-09-07-blog-simonwillison-creepy-crawlies
+title: "Creepy crawlies — Linux内核仓库遭爬虫滥用，CPU资源被浪费，Simon Willison担忧"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/7/creepy-crawlies/
+publishedAt: 2026-09-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Linux内核仓库遭爬虫滥用，CPU资源被浪费，Simon Willison担忧Datasette面临同样问题。"
+broadcast: "最近Linux内核的官方仓库遇到一个头疼事，大量爬虫程序疯狂抓取网页，消耗的电脑资源比所有正常访问加起来还多，光是为了应付它们就占用了十四个CPU核心。这给做数据工具的开发者提了个醒，比如Datasette的作者就担心自己的项目也会被这样滥用。看来以后做网站，真得提前想想怎么防爬虫，不然资源都白搭进去了。"
+tags: [crawling, git, linux, datasette, ai-ethics]
+---
+
+- Konstantin Ryabitsev指出，git.kernel.org 上用于渲染提交给爬虫的CPU周期超过了所有合法访问（包括git克隆）的总和。
+- 在5个地理分布节点上，有14个CPU核心持续用于为爬虫渲染HTML，这反映了滥用爬虫已成为普遍问题。
+- Simon Willison由此联想到自己的Datasette项目，它提供大量可爬取的网页，担心也会遭受类似资源浪费，提示开发者需考虑爬虫防护策略。
+
+---
+
+> 原文：[Creepy crawlies](https://simonwillison.net/2026/Sep/7/creepy-crawlies/) · 作者 Simon Willison
