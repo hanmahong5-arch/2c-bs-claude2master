@@ -1,6 +1,105 @@
 {
   "items": [
     {
+      "slug": "2026-09-08-trending-okf-memory-okf-agent-memory",
+      "zh": true,
+      "en": false,
+      "title": "okf-agent-memory — 为AI编码代理打造的Git原生持久记忆层，实现OKF v0.2规范。",
+      "kind": "trending",
+      "author": null,
+      "source": "okf-memory/okf-agent-memory",
+      "tool": null,
+      "publishedAt": "2026-09-08"
+    },
+    {
+      "slug": "2026-09-07-blog-latentspace-the-frontier-aeo-tracker-what-astra-chooses-and",
+      "zh": true,
+      "en": true,
+      "title": "The Frontier AEO Tracker: What Astra Chooses (and every — Latent Space 发布前沿 AEO 追踪器，揭示各模型推荐偏好及 AEO",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-07"
+    },
+    {
+      "slug": "2026-09-07-blog-openai-news-supporting-independent-journalism-in-ukraine",
+      "zh": true,
+      "en": true,
+      "title": "Supporting independent journalism in Ukraine — OpenAI联合多方推出AI项目，助力乌克兰独立新闻业创新与韧性。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-07"
+    },
+    {
+      "slug": "2026-09-07-blog-simonwillison-creepy-crawlies",
+      "zh": true,
+      "en": true,
+      "title": "Creepy crawlies — Linux内核仓库遭爬虫滥用，CPU资源被浪费，Simon Willison担忧",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-07"
+    },
+    {
+      "slug": "2026-09-07-blog-simonwillison-llm-0-35",
+      "zh": true,
+      "en": true,
+      "title": "llm 0.35 — Simon Willison 发布 llm 0.35，支持 OpenAI 新模型",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-07"
+    },
+    {
+      "slug": "2026-09-07-blog-simonwillison-mercator-equal-earth",
+      "zh": true,
+      "en": true,
+      "title": "Mercator ↔ Equal Earth — Simon Willison用GPT",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-07"
+    },
+    {
+      "slug": "2026-09-07-blog-simonwillison-quoting-jakub-pachocki",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Jakub Pachocki — OpenAI首席科学家谈为何需更快训练更聪明模型以构建防御系统。",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-07"
+    },
+    {
+      "slug": "2026-09-07-blog-simonwillison-video-compressor",
+      "zh": true,
+      "en": true,
+      "title": "Video compressor — 用 Claude Code 快速构建基于 WebAssembly 的 FFmpe",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-07"
+    },
+    {
+      "slug": "2026-09-07-hermes-agent-2026-9-7",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v2026.9.7 — Hermes Agent 0.21.1 补丁版：模块化、性能与可靠性改进，完整说",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
+      "publishedAt": "2026-09-07"
+    },
+    {
       "slug": "2026-09-07-openclaw-concepts-subagent-yield-handoff",
       "zh": true,
       "en": true,
@@ -778,105 +877,6 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-blog-latentspace-prs-not-welcome-how-top-ai-open-source",
-      "zh": true,
-      "en": true,
-      "title": "PRs NOT Welcome: How Top AI Open Source Projects Are — 顶级AI开源项目为何关闭PR？维护者用自家代理重掌控制权。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-blog-openai-news-healthcare-organizations-can-now-connect-ehr-and-additional",
-      "zh": true,
-      "en": true,
-      "title": "Healthcare organizations can now connect EHR and — OpenAI让ChatGPT接入电子病历，辅助临床决策。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-blog-openai-news-how-ai-native-companies-turn-workflows-into-operating",
-      "zh": true,
-      "en": true,
-      "title": "How AI-native companies turn workflows into operating — OpenAI 分享 Basis、Clay、Exa Labs 如何用 AI 代理优",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-blog-openai-news-how-law-firm-gilbert-tobin-governs-and-scales",
-      "zh": true,
-      "en": true,
-      "title": "How law firm Gilbert + Tobin governs and scales AI with — 顶尖律所如何用CEO主导+严格治理规模化部署ChatGPT与Codex。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-blog-openai-news-path-to-astra-critical-capabilities-and-frontier-safeguards",
-      "zh": true,
-      "en": true,
-      "title": "Path to Astra: critical capabilities and frontier — OpenAI首个达到关键网络安全能力阈值的模型Astra，发布前强化了防护措施。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-blog-simonwillison-claude-fable-5-1-made-me-a-really",
-      "zh": true,
-      "en": true,
-      "title": "Claude Fable 5.1 made me a really nice animated pelican — Simon Willison用“鹈鹕骑自行车”测试Claude Fable 5.",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-blog-simonwillison-codex-bundles-libreoffice",
-      "zh": true,
-      "en": true,
-      "title": "Codex bundles LibreOffice — OpenAI Codex 桌面应用捆绑了 LibreOffice 等开源工具，用",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-blog-simonwillison-datasette-mcp-0-2",
-      "zh": true,
-      "en": true,
-      "title": "datasette-mcp 0.2 — Datasette MCP 0.2 发布，优化 SQL 查询结果格式，提升模型理",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-01"
-    },
-    {
-      "slug": "2026-09-01-blog-simonwillison-geojson-map-viewer",
-      "zh": true,
-      "en": true,
-      "title": "GeoJSON Map Viewer — Simon Willison用AI工具快速构建GeoJSON地图查看器，展示LL",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-09-01"
     }
