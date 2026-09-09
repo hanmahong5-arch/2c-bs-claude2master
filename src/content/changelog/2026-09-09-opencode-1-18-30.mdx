@@ -1,0 +1,23 @@
+---
+slug: 2026-09-09-opencode-1-18-30
+title: "opencode v1.18.30 — GPT"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.30
+publishedAt: 2026-09-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "GPT-6 系统提示词、Bedrock DeepSeek ID 修复等多项更新"
+broadcast: "最近，开源项目opencode发布了新版本，带来了几项重要更新。它新增了GPT-6模型的系统提示词，让智能体框架的指令基础更适配。同时修复了Bedrock上DeepSeek模型ID的保留问题，让依赖这个服务的开发者用起来更可靠。另外还更新了Azure和OpenAI的SDK，并在GitLab上增加了推理努力变体，给模型配置提供了更多选择。对国内做智能体开发的朋友来说，这些改进能让模型调用更稳定，配置也更灵活，值得关注。"
+insight: "本次更新对现有用户价值有限，主要是模型适配与修复。若你使用 Bedrock DeepSeek，务必升级以解决模型 ID 解析问题；若用 Azure/OpenAI，SDK 更新可提升稳定性，但非必需。新增 GPT-6 系统提示词仅影响使用该模型的 harness，普通用户无需调整 prompt 或 hook。国内用户走 newapi.lurus.cn 代理不受影响，可正常升级。"
+tags: [gpt-6, bedrock, azure, gitlab]
+---
+
+- 新增 GPT-6 模型的 Astra 系统提示词，为 agent harness 提供更适配的指令基础。
+- 修复 Bedrock DeepSeek 模型 ID（含 ARN）保留问题，确保模型解析正确，对依赖 Bedrock 的 harness 更可靠。
+- 更新 Azure 和 OpenAI provider SDK，并新增 GitLab 上 GPT/Claude 模型的推理努力变体，扩展了模型能力配置选项。
+
+---
+
+> 原文 release：[sst/opencode v1.18.30](https://github.com/anomalyco/opencode/releases/tag/v1.18.30)

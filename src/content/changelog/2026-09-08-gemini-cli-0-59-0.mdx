@@ -1,0 +1,26 @@
+---
+slug: 2026-09-08-gemini-cli-0-59-0
+title: "gemini-cli v0.59.0 — 修复 MCP 安全漏洞：SSRF 与工作区信任强制关闭"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0
+publishedAt: 2026-09-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 MCP 安全漏洞：SSRF 与工作区信任强制关闭"
+broadcast: "谷歌发布了一款命令行工具的新版本，重点修复了模型上下文协议中的安全漏洞，包括服务器端请求伪造问题，并强制要求工作区信任关闭。这对国内开发者来说是个提醒，在开发智能体时，要严格校验服务器地址，默认拒绝不信任的服务器，防止恶意数据窃取和内部攻击。"
+insight: "这次 v0.59.0 的安全修复对现有用户是必须升级的，尤其你如果启用了 MCP 或 OAuth 相关功能。SSRF 漏洞和信任强制关闭直接影响安全性，建议立即更新。升级后，现有 prompt 和 hook 配置大概率不用改，但要注意 MCP 服务器 URL 和信任设置是否符合新的 fail-closed 模型。国内用户走 newapi.lurus.cn 代理不受影响，因为修复集中在客户端侧。总之，升级是明确动作，别拖。"
+tags: [security, mcp, ssrf, trust]
+---
+
+- 修复 MCP OAuth 元数据发现与认证中的 SSRF 漏洞，限制请求目标，防止服务器端请求伪造。
+  - 对 agent harness 设计：需严格校验 MCP 服务器 URL，避免代理发起任意网络请求。
+- 在受限模式下强制工作区信任关闭，并过滤 mcpServers 配置，仅允许受信任的服务器。
+  - 对 agent harness 设计：需实现 fail-closed 信任模型，默认拒绝未授权 MCP 服务器。
+- 这些修复增强了 MCP 集成的安全性，防止恶意服务器窃取数据或发起内部攻击。
+  - 对 agent harness 设计：应定期审计 MCP 配置，确保安全策略及时更新。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.59.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0)

@@ -1,0 +1,25 @@
+---
+slug: 2026-09-08-claude-code-2-1-265
+title: "claude-code v2.1.265 — 插件热加载、工具结果上限、缓存修复等多项稳定性改进"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.265
+publishedAt: 2026-09-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件热加载、工具结果上限、缓存修复等多项稳定性改进"
+broadcast: "最近Claude Code更新了，主要带来几个实用改进。现在插件支持热加载，不用重启就能动态增删，方便开发者灵活扩展。工具结果落盘设了1GB上限，超长输出会被截断并提示，大家要注意管理。另外修复了子代理恢复时缓存失效、后台会话被误终止等问题，还堵上了一个插件路径的安全漏洞。整体稳定性提升，对日常开发体验是实打实的优化。"
+insight: "这次 v2.1.265 的稳定性修复值得关注，尤其是插件热加载和缓存修复对日常使用体验提升明显。如果你在用旧版且常切换子代理或长输出场景，建议升级。现有 hook 配置无需大改，但工具结果 1GB 上限意味着长输出需主动截断管理，否则可能被截断。国内用户走 newapi.lurus.cn 代理不受影响，升级后照常使用。"
+tags: [plugin-hot-reload, tool-result-cap, cache-fix, security]
+---
+
+- 新增 `--plugin-dir` 指向文件夹时热加载子插件，支持运行时增删，便于动态扩展。
+- 工具结果落盘新增 1GB 上限，超限截断并在预览中提示，需注意长输出管理。
+- 修复子代理恢复时工具列表和系统提示变化导致缓存失效，提升恢复效率。
+- 修复后台会话空闲超时误终止，以及远程控制结束信号提前发送的问题。
+- 修复插件路径符号链接检查绕过漏洞，增强安全性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.265](https://github.com/anthropics/claude-code/releases/tag/v2.1.265)

@@ -1,0 +1,25 @@
+---
+slug: 2026-09-08-goose-1-50-0
+title: "goose v1.50.0 — Goose v1.50.0 支持 GPT"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.50.0
+publishedAt: 2026-09-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.50.0 支持 GPT-6 Astra，强化工具调用与安全边界。"
+broadcast: "Goose 工具更新了，这次加入了 GPT-6 Astra 模型，让 agent 能调用外部工具，干活更主动。不过对开发者来说，得注意安全边界，比如强制 HTTPS 连接，还有限制会话命名路径，这些都要在 harness 里加强校验。另外，子代理环境也要隔离，确保数据隐私合规。总的来说，这次更新让 agent 更强大，但也提醒我们安全不能放松。"
+insight: "Goose v1.50.0 新增 GPT-6 Astra 支持并强化工具调用与安全边界，对现有用户而言，若依赖旧模型或自定义工具，升级前需确认 harness 适配新 API 及工具注册权限。国内用户走 newapi.lurus.cn 代理时，强制 HTTPS 与安全校验可能影响连接，建议先测试代理兼容性。现有 prompt 或 hook 配置若涉及子代理或内容捕获，需调整以符合隐私合规要求。"
+tags: [model-support, tool-calling, security, observability]
+---
+
+- 新增 GPT-6 Astra 模型支持，扩展模型选择范围，harness 需适配新模型 API。
+- goose-agent 支持工具调用，agent 可主动调用外部工具，harness 需管理工具注册与权限。
+- 强制 Snowflake 连接使用 HTTPS，并限制 CLI 会话命名路径，harness 需加强安全校验。
+- 追踪中尊重内容捕获退出选项，harness 需确保数据隐私合规。
+- 子代理平台守卫强制执行，harness 需隔离子代理环境。
+
+---
+
+> 原文 release：[block/goose v1.50.0](https://github.com/aaif-goose/goose/releases/tag/v1.50.0)

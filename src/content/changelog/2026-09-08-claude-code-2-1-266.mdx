@@ -1,0 +1,23 @@
+---
+slug: 2026-09-08-claude-code-2-1-266
+title: "claude-code v2.1.266 — 修复代理配置回归：CLAUDE_CODE_USE_GATEWAY 不再强制云登录"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.266
+publishedAt: 2026-09-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复代理配置回归：CLAUDE_CODE_USE_GATEWAY 不再强制云登录"
+broadcast: "这次更新修复了一个代理配置的回归问题。以前单独设置某个环境变量，会强制要求登录云端网关，现在必须和另外两个变量一起设置才会生效。而且它和自定义认证方式共存时，请求也不会再失败了。对开发者的启发是，环境变量最好保持明确的组合语义，别让单个变量引发意外行为，回归测试也要覆盖代理和网关的场景。"
+insight: "如果你正用 2.1.265 且单独设了 CLAUDE_CODE_USE_GATEWAY 导致被强制云登录，这次升级值得做，能直接解除误登录。但注意，修复后该变量必须和 ANTHROPIC_BASE_URL、ANTHROPIC_AUTH_TOKEN 三件套一起设才生效，单独设等于没用。走 newapi.lurus.cn 代理的国内用户，只要按三件套配好，不受影响，现有配置不用改。建议顺手把回归测试补上，防再犯。"
+tags: [bug-fix, proxy, environment-variables, regression]
+---
+
+- 修复 2.1.265 回归：`CLAUDE_CODE_USE_GATEWAY` 单独设置时不再强制 Cloud-gateway 登录，需与 `ANTHROPIC_BASE_URL` 和 `ANTHROPIC_AUTH_TOKEN` 同时设置才生效。
+- 该变量与 API key、`apiKeyHelper` 或自定义认证头共存时，请求不再失败，无需更改配置。
+- 对 harness 设计：环境变量应保持明确组合语义，避免单变量触发意外行为；回归测试需覆盖代理和网关场景。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.266](https://github.com/anthropics/claude-code/releases/tag/v2.1.266)

@@ -1,0 +1,25 @@
+---
+slug: 2026-09-08-openclaw-2026-9-3
+title: "openclaw v2026.9.3 — OpenClaw 2026.9.3 引入安全更新演练、性能优化与多项破坏性变更，"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.3
+publishedAt: 2026-09-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "OpenClaw 2026.9.3 引入安全更新演练、性能优化与多项破坏性变更，值得一看。"
+broadcast: "OpenClaw 2026.9.3 来了，这次更新把安全演练和性能优化都安排上了，更新失败还能恢复，不用停掉正在运行的网关。不过要注意，它要求新版 Node 环境，部分接口也有调整，国内开发者升级前得先做好适配。另外，技能现在能跨工作区保存，还加了浏览器标签实时查看等新功能，对日常开发调试会更方便。"
+insight: "如果你正用 OpenClaw，这次 2026.9.3 值得升，但别急着点更新。破坏性变更要求 Node 24.16+ 或 26.1+，且 SDK 别名和回调字段有调整，现有 prompt 或 hook 配置大概率要改，建议先在隔离环境演练。国内用户走 newapi.lurus.cn 代理不受影响，但升级前务必确认核心与插件兼容性，利用好失败恢复机制，避免中断健康 Gateway。"
+tags: [update-safety, performance, breaking-changes, skill-workshop]
+---
+
+- 更新流程更安全：核心与插件变更先在隔离候选状态演练，支持从失败更新中恢复，无需停止健康 Gateway。
+- 性能提升：保留热提示缓存，减少冷会话更新和记忆搜索中的不必要工作，复用 worker 构建。
+- 破坏性变更：要求 Node 24.16+ 或 26.1+，多个 SDK 别名和回调字段调整，需迁移。
+- 技能 Workshop 改为 agent 持有集合，跨工作区持久化，Doctor 可安全处理缺失草稿建议。
+- 新增浏览器标签实时查看、macOS 原生标签页、账户管理、会话分享、会议库、团队报告等功能。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.3](https://github.com/openclaw/openclaw/releases/tag/v2026.9.3)
