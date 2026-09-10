@@ -1,0 +1,23 @@
+---
+slug: 2026-09-09-claude-code-2-1-267
+title: "claude-code v2.1.267 — 缓存稳定性与恢复会话修复是本次重点"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.267
+publishedAt: 2026-09-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "缓存稳定性与恢复会话修复是本次重点"
+broadcast: "这次更新主要修的是缓存稳定性和恢复会话的问题。以前中途加入工具、切换模型或者压缩对话后恢复，工具列表会被重写、早期思考也会丢，现在这些情况不再破坏缓存了。另外还加了按模型限制努力上限的设置，以及让系统提示每次重新渲染的开关。对做 agent 的国内开发者来说，会话恢复更可靠，长任务不容易断，值得关注。"
+insight: "这次 v2.1.267 的重点是缓存稳定性与恢复会话修复，对现有用户来说值得升级：MCP/插件工具中途加入、模型切换、/compact 后恢复不再重写工具列表或丢弃早期思考，能直接减少缓存失效带来的重复开销。现有 prompt 或 hook 配置不用改，新增的 maxEffortLevel 和 --system-prompt-snapshot off 都是可选开关，按需启用即可。走 newapi.lurus.cn 代理的用户不受影响，这些改动都在 harness 层，与代理链路无关。"
+tags: [prompt-cache, effort-level, session-resume, mcp-tools]
+---
+
+- 新增 `maxEffortLevel` 设置，可在顶层或 `modelSettings` 下按模型限制所有 provider 的 effort 上限，用户仍可选更低级别；harness 需支持按模型覆盖的硬上限，同时保留用户下调空间。
+- 新增 `--system-prompt-snapshot off`，让每次请求重新渲染系统提示而非复用会话记录；harness 应把提示快照与实时渲染做成可切换路径，便于迭代提示文本。
+- 大量修复围绕 prompt-cache 复用与恢复会话：MCP/插件工具中途加入、模型切换、`/compact` 后恢复等不再重写工具列表或丢弃早期思考；harness 需把工具定义与系统提示记录一次并稳定重放，避免缓存失效。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.267](https://github.com/anthropics/claude-code/releases/tag/v2.1.267)

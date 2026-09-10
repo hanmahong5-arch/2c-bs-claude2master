@@ -1,0 +1,23 @@
+---
+slug: 2026-09-10-blog-simonwillison-quoting-calif-research
+title: "Quoting Calif Research — AI 两天写出微信零点击蠕虫 RCE，安全研究门槛被大幅拉低"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/10/calif-research/
+publishedAt: 2026-09-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "AI 两天写出微信零点击蠕虫 RCE，安全研究门槛被大幅拉低"
+broadcast: "安全团队演示了一个叫微信蠕虫的攻击：通过微信通话就能在苹果和安卓上自动传播，受害者不用接听、不用任何操作，甚至接起来也听不到声音，攻击照样成功。更值得警惕的是，他们靠 AI 只用两天就找到漏洞并写出利用，再花一周做成蠕虫，过去这需要更大团队做上几个月。对国内开发者来说，安全评审和威胁建模不能再按老节奏排期了。"
+tags: [ai-security, zero-click-exploit, llm-tooling, wechat]
+---
+
+- Calif Research 发布 WeWorm 演示：首个通过微信通话在 iOS 与 Android 上传播的零点击蠕虫，受害者无需接听、无需任何操作，即使接听也听不到声音，攻击依然成功。这意味着通讯类 App 的通话信令面正成为 agent 时代最危险的攻击入口。
+- 团队借助 AI 发现漏洞并写出首个 RCE 利用，仅用约两天；再花一周把利用做成蠕虫。过去这种规模的蠕虫需要更大团队数月才能完成，说明漏洞挖掘与利用开发正被 LLM 显著加速。
+- 团队自述 AI 已能完成大部分工作，人类只负责判断攻击目标与安全测试方式。对开发者的含义是：安全评审与威胁建模不能再按旧节奏排期，防御方同样需要把 AI 纳入工具链。
+
+---
+
+> 原文：[Quoting Calif Research](https://simonwillison.net/2026/Sep/10/calif-research/) · 作者 Simon Willison

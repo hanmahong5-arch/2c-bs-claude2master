@@ -1,0 +1,23 @@
+---
+slug: 2026-09-08-blog-hf-blog-safety-for-whom-refusing-the-right-subset-of
+title: "Safety for Whom? Refusing the Right Subset of a Topic, — Hugging Face 博客讨论安全对齐的粒度问题：模型该拒绝话题中的危险子集"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom
+publishedAt: 2026-09-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 博客讨论安全对齐的粒度问题：模型该拒绝话题中的危险子集，而非整个话题。"
+broadcast: "最近有篇博客聊到安全对齐的粒度问题：模型不该因为一个话题里有一部分危险内容，就把整个话题都拒绝掉，而应该只拒绝真正有害的那部分。这事对做智能体和工具链的人挺重要，因为过滤太粗会误伤正常请求，把合法任务也挡掉。所以评估安全策略时，得同时看漏拒和误拒，把拒绝什么当成可调的参数，而不是简单的开关。"
+tags: [ai-safety, alignment, refusal, llm]
+---
+
+- 文章标题提出核心问题：安全对齐不应以整个话题为单位拒绝，而应只拒绝话题中真正有害的子集，避免过度拒绝误伤正常请求。
+- 这一区分对 agent 与工具链意味着：安全过滤层需要更细粒度的判定，否则会阻断合法任务，降低 agent 的可用性。
+- 对开发者而言，评估安全策略时应同时衡量漏拒与误拒，把「拒绝什么」当作可调参数而非二元开关。
+
+---
+
+> 原文：[Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic](https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom) · 作者 Hugging Face

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-09-blog-simonwillison-blend-url-viewer
+title: ".blend URL Viewer — 用 GPT"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/9/blender-viewer/
+publishedAt: 2026-09-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用 GPT-6 Astra 生成法贝热彩蛋 3D 模型，并做了个浏览器 .blend 查看器"
+broadcast: "有人先让图像模型画出一枚剧集主题的法贝热彩蛋，再交给编码智能体调用本地建模工具，跑了将近十八分钟，产出了多个三维模型文件。这件事值得关注的地方在于，图像生成、编码智能体和本地工具已经能串成一条从概念图到三维资产的流水线，而且把本地能力封装成可复用的技能文件，正成为让智能体稳定调用工具的关键做法。"
+tags: [blender, coding-agents, gpt-6-astra, generative-ai]
+---
+
+- 作者先用 ChatGPT Images 2.5 生成一枚以剧集 Pluribus 为主题的法贝热彩蛋图片，再把它贴进 Codex 的 GPT-6 Astra，让它调用本地 Blender skill 建模，跑了 17 分 51 秒产出多个 .blend 文件。含义：图像生成 + 编码 agent + 本地工具 skill 已能串成一条从概念图到 3D 资产的流水线。
+- 他把之前随手 vibe-code 的 Blender 查看实验整理进自己的 tools 集合，现在可以在浏览器里直接查看这个 Pluribus 模型。含义：agent 产出的中间产物需要轻量查看器，否则人无法验收。
+- 文中提到 skill 文件是他自己按某种方式创建的，并链接了相关 TIL。含义：把本地能力封装成可复用 skill 文件，正成为让 agent 稳定调用 Blender 这类工具的关键做法。
+
+---
+
+> 原文：[.blend URL Viewer](https://simonwillison.net/2026/Sep/9/blender-viewer/) · 作者 Simon Willison

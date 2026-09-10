@@ -1,0 +1,23 @@
+---
+slug: 2026-09-10-cline-desktop-v0-0-25
+title: "cline desktop-v0.0.25 — Codex 模型列表收紧、Windows 更新不再卡死、失败发送可恢复提示词"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.25
+publishedAt: 2026-09-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 模型列表收紧、Windows 更新不再卡死、失败发送可恢复提示词"
+broadcast: "这次桌面端更新有三个变化值得留意。一是模型列表收紧，只保留订阅计划里真正可用的模型，并按后端真实预算封顶，不再沿用接口那个更大的上限。二是 Windows 更新不再卡死，安装前会先停掉常驻后台进程。三是发送失败时，提示词和附件会回到输入框，不会白写。对做 agent 的人来说，模型选择要和后端能力对齐，子进程和草稿状态也得显式管好。"
+insight: "这次 Desktop v0.0.25 对国内用户的实际影响集中在模型选择上：Codex 订阅侧移除了 GPT-4o、GPT-4.1 和 chatgpt-image-latest，gpt-5.4 系列退役，默认切到 gpt-5.6-terra，并按后端真实 400K/272K/128K 预算封顶。如果你在 Cline 里手动指定过被移除的模型，升级后需要改回计划内可用项，否则选择器会失效。走 newapi.lurus.cn 代理的用户，只要代理侧仍按后端真实预算转发，本次收紧不会额外增加配置改动，但建议升级后确认默认模型已切到 gpt-5.6-terra。"
+tags: [cline-desktop, codex-models, windows-installer, prompt-recovery]
+---
+
+- Codex 订阅模型列表只保留计划可用项：GPT-4o、GPT-4.1、chatgpt-image-latest 被移除，gpt-5.4 系列退役，默认切到 gpt-5.6-terra，且按后端真实 400K/272K/128K 预算封顶。含义：harness 的模型选择器必须与后端能力对齐，不能直接继承 API 的 1.05M 上限。
+- Windows 更新不再报 "Error opening file for writing"：安装器会先按完整路径停掉常驻的 Cline Hub daemon，再执行安装。含义：harness 若让子进程比主程序活得更久，安装/升级流程必须显式处理它，且要避免误杀并行渠道。
+- 发送在回合开始前失败时，提示词与附件会回到输入框，并与等待期间新加的内容合并；若已开始输入则不覆盖。含义：乐观 UI 需要可回滚的草稿状态，而不是直接清空。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.25](https://github.com/cline/cline/releases/tag/desktop-v0.0.25)

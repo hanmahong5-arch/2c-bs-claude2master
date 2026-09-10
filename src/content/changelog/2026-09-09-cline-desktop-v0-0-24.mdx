@@ -1,0 +1,23 @@
+---
+slug: 2026-09-09-cline-desktop-v0-0-24
+title: "cline desktop-v0.0.24 — 桌面端修掉消息重复、队列丢失与静默停摆三类硬伤"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.24
+publishedAt: 2026-09-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "桌面端修掉消息重复、队列丢失与静默停摆三类硬伤"
+broadcast: "这次桌面端更新修掉了三个挺要命的毛病：消息重复、队列丢失，还有模型卡住时悄无声息地停摆。对做 agent 的人来说，这提醒我们，流式去重得看真实的订阅状态，不能靠计时器猜；自动熔断也得给用户一个能选的恢复出口，不然卡死就变成静默失败。另外检查点改成按会话保留快照，不再每条消息都重建索引，大文件也不会拖慢节奏了。"
+insight: "这次 Desktop v0.0.24 修的是消息重复、队列丢失和静默停摆三类硬伤，属于稳定性修复而非功能新增。现有桌面端用户值得升级，尤其是遇到过多 GB 未跟踪文件拖慢每条消息、或 sidecar 重启后丢消息的人，升级收益直接。prompt 和 hook 配置不用改，本次没有涉及调用协议或配置格式的变更。国内走 newapi.lurus.cn 代理的用户不受影响，摘要中未提及任何与代理链路相关的改动。"
+tags: [agent-harness, streaming-dedup, loop-detection, checkpointing]
+---
+
+- 直播流去重改为直接查询 ClineCore 订阅状态，不再靠计时器推断；sidecar 重启后流计数器归零导致的消息丢弃也已修复。含义：harness 的流式去重必须基于权威订阅事实，而非时间窗口猜测。
+- 循环检测器触发后桌面端现在弹出「换方法/停止」决策回调，并把指引注入当前轮次。含义：自动熔断必须带可交互的恢复路径，否则模型卡死会表现为静默失败。
+- 检查点不再每轮重建 git 索引，改为每会话保留一个快照索引，多 GB 未跟踪文件不再阻塞每条消息。含义：harness 的持久化开销应按会话摊销，而非按消息重算。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.24](https://github.com/cline/cline/releases/tag/desktop-v0.0.24)

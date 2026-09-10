@@ -1,0 +1,23 @@
+---
+slug: 2026-09-09-codex-rust-v0-154-0
+title: "codex rust-v0.154.0 — GPT"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.154.0
+publishedAt: 2026-09-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "GPT-6-Astra 上架与 worktree 隔离会话，agent 编排能力再升级"
+broadcast: "这次更新里，模型目录新增了一个叫 GPT-6-Astra 的新模型，意味着工具得支持多模型路由，而不是硬编码单一后端。另外还加了实验性的隔离检出功能，能把会话状态和文件快照解耦，方便分叉和回滚；异步内联问答也让主草稿不会丢。对做 agent 的国内开发者来说，这几点都在提示：编排层要更灵活。"
+insight: "这次 0.154.0 的更新对国内用户的实际影响有限，GPT-6-Astra 进模型选择器和 Bedrock 目录、worktree 隔离会话、异步内联问答，都是 harness 层面的能力扩展。现有用户不必急着升级，除非你要用 GPT-6-Astra 或 worktree 隔离检出；现有 prompt 和 hook 配置无需改动。走 newapi.lurus.cn 代理的用户不受影响，模型路由变化在 harness 内部处理，代理链路照常。"
+tags: [model-picker, worktree, async-input, agent-harness]
+---
+
+- **GPT-6-Astra 进入模型选择器与 Bedrock 目录**：模型目录新增 GPT-6-Astra，意味着 harness 需支持多模型路由与能力声明，而非硬编码单一后端。
+- **实验性 worktree 支持**：通过 `--worktree` 或 `/worktree` 创建隔离检出，可浏览与恢复，提示 harness 应把会话状态与文件系统快照解耦，便于 fork 与回滚。
+- **异步内联问答**：Codex 工作时可用建议选项或自定义文本回答，不丢失主草稿，说明 harness 需支持非阻塞的用户输入通道与草稿保护。
+
+---
+
+> 原文 release：[openai/codex rust-v0.154.0](https://github.com/openai/codex/releases/tag/rust-v0.154.0)
