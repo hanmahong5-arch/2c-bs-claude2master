@@ -1,0 +1,24 @@
+---
+slug: 2026-09-10-codex-python-v0-154-0
+title: "codex python-v0.154.0 — Python SDK 新增外部消息与推理档位，升级需注意三处迁移"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/python-v0.154.0
+publishedAt: 2026-09-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Python SDK 新增外部消息与推理档位，升级需注意三处迁移"
+broadcast: "OpenAI 的 Codex 发布了新版 Python 开发包，这次给推理加上了两档更高的预算，让调度框架能按任务难度动态选择，而不是固定一档。它还允许外部消息注入到运行流程里，但只有工具级权限，事件流也要自己合并。对国内做 agent 的开发者来说，升级时要注意三处迁移，比如部分字段位置变了、通知变成强类型、晚加入的回合不会回放早期事件。"
+insight: "这次 Python SDK 0.154.0 的迁移点比较硬：HookMetadata 字段移入 .root、部分通知变强类型载荷、晚加入的 turn handle 不回放早期事件，现有 hook 配置基本都要跟着改，否则容易静默失效。新增的 max/ultra 推理档位和 ExternalMessage 属于能力扩展，不急着用可以先不动。国内走 newapi.lurus.cn 代理的用户，升级本身不受影响，但建议先在小项目验证 hook 迁移再全量升。"
+tags: [codex-sdk, reasoning-effort, external-message, migration]
+---
+
+- 新增 `max` 与 `ultra` 两档 reasoning effort，harness 可按任务难度动态选择推理预算，而非固定单一档位。
+- `ExternalMessage` 可注入同步/异步 `run()`、`turn()`，能开启新回合或加入进行中的普通回合，但仅具工具级权限、不授予用户授权，且事件流独立，harness 需自行合并多流。
+- resume/fork 新增 `include_turns`，`turn_service_tier` 只作用于新启动的单个回合，`source` 提供元数据；历史选择只改返回响应、不改模型上下文。
+- 迁移点：`HookMetadata` 字段移入 `.root`，部分通知变为强类型载荷，晚加入的 turn handle 不回放早期事件。
+
+---
+
+> 原文 release：[openai/codex python-v0.154.0](https://github.com/openai/codex/releases/tag/python-v0.154.0)

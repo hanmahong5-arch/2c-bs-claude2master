@@ -1,0 +1,23 @@
+---
+slug: 2026-09-11-blog-simonwillison-datasette-1-0a39-and-0-65-4-security
+title: "Datasette 1.0a39 and 0.65.4 security releases — Datasette 发布两个安全补丁版，作者用前沿模型做审计并分享双人协作修漏洞"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/11/datasette-security/
+publishedAt: 2026-09-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 发布两个安全补丁版，作者用前沿模型做审计并分享双人协作修漏洞流程。"
+broadcast: "Datasette 刚刚发了两个安全补丁版本，如果你的实例同时挂着公开表和私有表，建议尽快升级。作者这次拉上搭档，用几个前沿模型对项目做了一轮大规模审计，挖出了一些非常隐蔽的 bug，还定下一条流程：一个人先写复现测试，另一个人再修，每个问题至少两个人加不同模型的 agent 过一遍。对做 agent 工具链的国内开发者来说，多模型审计加测试先行，很可能成为以后修安全漏洞的默认打法。"
+tags: [datasette, security, ai-agents, code-review]
+---
+
+- 发布 1.0a39 与 0.65.4 两个安全补丁版本，针对公开 Web 上同时混有公开与私有表的实例，提示部署者应尽快升级。
+- 作者与 Alex Garcia 用 Claude Fable 5.1、GPT-5.6、GPT-6 Astra 对 Datasette 做大规模审计，发现若干非常隐蔽的 bug，并称今后会把前沿模型安全审计纳入日常开发。
+- 协作方式：在共享私有仓库中，一人先写复现问题的自动化测试，另一人实现修复，确保每个问题至少两名人类加不同模型的 agent 过目。对 agent 工具链的启示是，多模型审计加测试先行的分工可成为安全修复的默认工作流。
+
+---
+
+> 原文：[Datasette 1.0a39 and 0.65.4 security releases](https://simonwillison.net/2026/Sep/11/datasette-security/) · 作者 Simon Willison

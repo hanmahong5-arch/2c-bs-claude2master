@@ -1,0 +1,23 @@
+---
+slug: 2026-09-10-claude-code-2-1-268
+title: "claude-code v2.1.268 — 网关计费对齐、权限规则修复、WebFetch 超时"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.268
+publishedAt: 2026-09-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "网关计费对齐、权限规则修复、WebFetch 超时——三条都影响 harness 设计"
+broadcast: "这次更新有三处值得留意。网关新增了计费配置，客户端能拿到和网关一致的费率，成本口径要统一到网关侧，别再靠客户端估算。权限规则也修好了，符号链接路径必须先规范化再匹配，否则拒绝规则会失效。另外网页抓取不再无限挂起，超时后会自动失败，还能自己调整时限，避免智能体被单个请求卡死。"
+insight: "这次 v2.1.268 值得升级，重点在权限规则修复：符号链接目录上的 deny/ask 规则此前不生效，路径必须规范化后再匹配，如果你的 hook 或权限配置依赖 /tmp、/etc 这类路径，建议升级后重新验证一遍。网关新增 pricing 配置，成本口径统一到网关侧，走 newapi.lurus.cn 代理的用户费率与 /cost 会以托管设置为准，客户端估算不再作数。WebFetch 默认 300 秒超时，可用 CLAUDE_CODE_WEBFETCH_DEADLINE_MS 调整，长任务 harness 需显式设上限。"
+tags: [gateway-pricing, permission-rules, webfetch-timeout, agent-harness]
+---
+
+- 网关新增 `pricing:` 配置，登录客户端通过托管设置拿到相同费率，`/cost` 与遥测和消费计量一致；harness 需把成本口径统一到网关侧，而非客户端估算。
+- 修复符号链接目录（macOS `/etc`、`/tmp`、`/var`，Linux `/bin`）上的 deny/ask 规则在按真实路径给出时不生效，以及 Bash 忽略符号链接路径写法的 deny 规则；权限检查必须对路径做规范化后再匹配。
+- WebFetch 在服务器保持连接不结束时不再无限挂起，300 秒后失败，可用 `CLAUDE_CODE_WEBFETCH_DEADLINE_MS` 覆盖（0 关闭）；工具调用需要显式超时上限，避免 agent 循环被单个请求卡死。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.268](https://github.com/anthropics/claude-code/releases/tag/v2.1.268)

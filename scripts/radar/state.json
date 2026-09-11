@@ -1,14 +1,14 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.267",
-    "openai/codex": "rust-v0.154.0",
+    "anthropics/claude-code": "v2.1.268",
+    "openai/codex": "python-v0.154.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "desktop-v0.0.25",
     "block/goose": "v1.50.0",
     "sst/opencode": "v1.18.30",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.59.0",
-    "openclaw/openclaw": "v2026.9.3",
+    "openclaw/openclaw": "v2026.9.4",
     "zeroclaw-labs/zeroclaw": "v0.8.5",
     "NousResearch/hermes-agent": "v2026.9.7"
   },
@@ -144,7 +144,8 @@
     "ooolabdev/ooosplat",
     "okf-memory/okf-agent-memory",
     "iAmCorey/Wake",
-    "lnkiai/m3e-canvas"
+    "lnkiai/m3e-canvas",
+    "faisalkindi/DLSS5oneclick"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -243,8 +244,8 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-10",
-    "claude-code-docs": "2026-09-04",
+    "anthropic-engineering": "2026-09-11",
+    "claude-code-docs": "2026-09-11",
     "openai-codex-blog": "2026-09-10",
     "openclaw-concepts": "2026-09-07",
     "hermes-guides": "2026-09-07"
@@ -534,7 +535,10 @@
       "https://simonwillison.net/2026/Sep/8/on-navier-stokes/",
       "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
       "https://simonwillison.net/2026/Sep/10/calif-research/",
-      "https://simonwillison.net/2026/Sep/9/blender-viewer/"
+      "https://simonwillison.net/2026/Sep/9/blender-viewer/",
+      "https://simonwillison.net/2026/Sep/11/datasette-security/",
+      "https://simonwillison.net/2026/Sep/10/trynix/",
+      "https://simonwillison.net/2026/Sep/10/shopify-react-native/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -709,7 +713,8 @@
       "https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride",
       "https://www.interconnects.ai/p/teaching-everyone-to-fish-for-tokens",
       "https://www.interconnects.ai/p/latest-open-artifacts-24-motif-3",
-      "https://www.interconnects.ai/p/when-will-average-people-feel-ais"
+      "https://www.interconnects.ai/p/when-will-average-people-feel-ais",
+      "https://www.interconnects.ai/p/one-resignation-turned-the-embers"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -742,7 +747,8 @@
       "https://magazine.sebastianraschka.com/p/using-local-coding-agents",
       "https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms",
       "https://magazine.sebastianraschka.com/p/ai-detector-from-scratch",
-      "https://magazine.sebastianraschka.com/p/claude-watermarking"
+      "https://magazine.sebastianraschka.com/p/claude-watermarking",
+      "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and"
     ],
     "eugeneyan": [
       "https://eugeneyan.com//writing/working-with-ai/",
@@ -978,7 +984,12 @@
       "https://openai.com/index/gpt-6-astra-next-generation-work",
       "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
       "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
-      "https://openai.com/index/1password"
+      "https://openai.com/index/1password",
+      "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+      "https://openai.com/index/put-data-to-work",
+      "https://openai.com/index/introducing-chatgpt-financial-services",
+      "https://openai.com/index/expanding-ai-access-us-government",
+      "https://openai.com/index/introducing-the-agents-api"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1213,21 +1224,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-10",
+    "simonwillison": "2026-09-11",
     "lilianweng": "2026-09-10",
-    "latentspace": "2026-09-10",
-    "interconnects": "2026-09-10",
-    "karpathy": "2026-09-08",
-    "raschka": "2026-09-08",
-    "eugeneyan": "2026-09-08",
+    "latentspace": "2026-09-11",
+    "interconnects": "2026-09-11",
+    "karpathy": "2026-09-11",
+    "raschka": "2026-09-11",
+    "eugeneyan": "2026-09-11",
     "chiphuyen": "2026-09-10",
     "oneusefulthing": "2026-09-10",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-10",
+    "openai-news": "2026-09-11",
     "deepmind": "2026-09-10",
     "hf-blog": "2026-09-10",
-    "anthropic-news": "2026-09-10",
+    "anthropic-news": "2026-09-11",
     "steipete": "2026-09-10",
     "openclaw-blog": "2026-09-10"
   },

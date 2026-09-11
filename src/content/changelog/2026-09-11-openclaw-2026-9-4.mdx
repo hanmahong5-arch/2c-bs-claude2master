@@ -1,0 +1,23 @@
+---
+slug: 2026-09-11-openclaw-2026-9-4
+title: "openclaw v2026.9.4 — 回滚安全、插件统一、云会话预置：一次面向 agent harness 的稳定性升"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.4
+publishedAt: 2026-09-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "回滚安全、插件统一、云会话预置：一次面向 agent harness 的稳定性升级"
+broadcast: "这次更新主要围绕稳定性：更新失败时能保留旧包、恢复旧配置和服务，但数据库迁移仍需提前备份。插件方面，内置和社区插件现在可以在控制界面里统一发现、安装和配置。另外还预置了云会话，本地项目或公开仓库能复用现成资源，终端也支持键盘选择和自由文本提问。对做 agent 的开发者来说，这意味着更新失败可以当成可恢复状态来处理，插件管理有了单一入口，交互式澄清也有了原生通道。"
+insight: "这次 v2026.9.4 值得现有用户升级，重点在更新失败可回滚：schema 与配置检查通过时会保留旧包并恢复旧配置与服务，但数据库迁移仍需预更新备份，所以升级前先做备份再动手。插件统一工作区把内置与 ClawHub 插件的发现、安装、配置、授权收进 Control UI，现有分散的插件配置建议逐步迁到这一入口，prompt 本身不必改。摘要未提及 newapi.lurus.cn 代理，国内走代理是否受影响暂无依据。"
+tags: [release-notes, agent-harness, rollback, plugins]
+---
+
+- **可回滚的失败更新**：schema 与配置检查通过时，保留旧包并恢复旧配置与服务；数据库迁移仍需预更新备份。含义：harness 应把「更新失败」建模为可恢复状态，而非终态。
+- **插件统一工作区**：内置与 ClawHub 插件可在 Control UI 中统一发现、安装、配置与授权。含义：插件生命周期需要单一入口，减少 agent 运行时对分散配置的依赖。
+- **预置云会话与终端问答**：符合条件的本地项目或公开 GitHub 仓库可复用预置 worker，TUI 支持键盘选择、自由文本与多问题提示。含义：harness 需区分「准备态」与「运行态」资源，并为交互式澄清提供原生通道。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.4](https://github.com/openclaw/openclaw/releases/tag/v2026.9.4)

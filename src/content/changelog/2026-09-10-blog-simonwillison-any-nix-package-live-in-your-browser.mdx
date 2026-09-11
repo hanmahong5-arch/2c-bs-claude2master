@@ -1,0 +1,23 @@
+---
+slug: 2026-09-10-blog-simonwillison-any-nix-package-live-in-your-browser
+title: "Any Nix package, live in your browser — Nix 包在浏览器里跑起来：qemu"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/10/trynix/
+publishedAt: 2026-09-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Nix 包在浏览器里跑起来：qemu-wasm 虚拟机可启动 13 年来任意 Nix 包，还能一键预览 PR 构建"
+broadcast: "有个新工具能让过去十三年里的任意软件包直接在浏览器里跑起来，不用装容器也不用连远程机器，点一下链接就能进交互环境。更实用的是，它还能在代码合并请求上自动评论一条链接，点开就能启动这次改动的真实构建。对国内开发者和做智能体的人来说，这意味着环境启动成本被压到一条网址，可运行环境能像链接一样分享和嵌入工作流。"
+tags: [nix, webassembly, github-actions, code-review]
+---
+
+- trynix.dev 用 qemu-wasm 在浏览器内跑 x86_64 Linux 虚拟机，可启动过去 13 年的任意 Nix 包，且包是 URL 可寻址的（如 `?pkg=python3@3.6.2` 点 Load 即得交互 shell）。含义：复现旧环境不再依赖本地容器或远程机器，浏览器即沙箱。
+- 作者 Farid Zakaria 在此之上做了 trynix-preview：一个 GitHub Action，会在 PR 上评论一条链接，点开就能在浏览器里启动该 PR 的构建。含义：代码审查从读 diff 变成直接进真实运行环境验证。
+- 整个方案没有服务器，只有浏览器。含义：对 agent 与工具链而言，环境启动成本被压到一条 URL，可把"可运行环境"当作可分享的链接嵌入工作流。
+
+---
+
+> 原文：[Any Nix package, live in your browser](https://simonwillison.net/2026/Sep/10/trynix/) · 作者 Simon Willison

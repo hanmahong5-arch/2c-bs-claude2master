@@ -1,0 +1,23 @@
+---
+slug: 2026-09-10-openclaw-2026-6-35
+title: "openclaw v2026.6.35 — 六月 LTS 收官版：边界收紧、长任务不丢活"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.6.35
+publishedAt: 2026-09-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "六月 LTS 收官版：边界收紧、长任务不丢活"
+broadcast: "这次更新是六月长期支持版的收官版本，重点在边界收紧和长任务不丢活。它给响应和内存设了上限，恶意大请求没法再拖垮进程；投递和运行时恢复也做了调整，失败时能保留正确结果。对国内做智能体的开发者来说，这意味着读前限流、区分可重放操作、把输入校验前置到工具入口，都该当成默认做法，而不是事后补救。"
+insight: "这次 2026.6.35 是六月 LTS 收官版，重点在边界收紧和长任务不丢活。现有用户值得升级，尤其是跑长任务和 channel 集成的场景，因为响应与内存上限、投递与运行时恢复都直接关系到 agent run 不被恶意大 payload 或预期失败打断。升级后建议把「读前限流」和输入校验前置到工具调用入口当作默认配置，而不是事后截断。走 newapi.lurus.cn 代理的国内用户，摘要里没有提到代理相关变化，按现有方式继续用即可。"
+tags: [lts-release, agent-harness, input-validation, retry-recovery]
+---
+
+- **响应与内存上限**：provider、搜索、embedding、媒体与 channel 集成在读取成功或错误响应前先设上限，恶意大 payload 无法耗尽进程内存；harness 侧应把「读前限流」当作默认，而非事后截断。
+- **投递与运行时恢复**：出站重试时序、channel 生命周期、abort 处理、进程 I/O 与持久状态恢复在预期失败下保留正确操作结果；harness 需区分「可安全重放」与「不可重放」的操作。
+- **工具与工作区输入校验**：浏览器自动化、本地工具、工作区读取与插件元数据在畸形或超大输入进入前即拒绝，避免打断进行中的 agent run；输入校验应前置到工具调用入口。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.6.35](https://github.com/openclaw/openclaw/releases/tag/v2026.6.35)
