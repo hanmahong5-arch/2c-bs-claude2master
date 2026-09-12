@@ -1,0 +1,23 @@
+---
+slug: 2026-09-11-blog-openai-news-rapidly-scaling-online-storage-to-serve-over-1
+title: "Rapidly scaling online storage to serve over 1 billion — OpenAI 把内部存储库 Habitat 从 Python 库改造成全球分布式"
+source: "OpenAI"
+sourceUrl: https://openai.com/index/scaling-storage-one-billion-users-part-one
+publishedAt: 2026-09-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "OpenAI"
+hook: "OpenAI 把内部存储库 Habitat 从 Python 库改造成全球分布式平台，支撑 10 亿用户、每秒 2200 万请求。"
+broadcast: "OpenAI 把内部一个原本只是 Python 库的存储系统，改造成了全球分布式平台，现在支撑着超过十亿用户、每秒两千两百万次请求。这件事值得国内开发者和做 agent 的人留意：大规模工具链的瓶颈往往出在存储层，而不是模型层，而且这种改造是分阶段推进的，没法一步到位。"
+tags: [openai, storage-scaling, chatgpt-infra, distributed-systems]
+---
+
+- Habitat 最初只是 Python 库，后演进为全球分布式存储平台，服务 ChatGPT 超 10 亿用户、峰值 22M 请求/秒。对 agent 的含义：大规模工具链的瓶颈往往在存储层而非模型层。
+- 文章以“第一部分”形式讲述这次扩容过程，说明该改造是分阶段推进的工程，而非一次性重构。对开发者的含义：基础设施演进需要按阶段规划，不能指望一步到位。
+- 存储平台要同时承载 10 亿级用户与每秒千万级请求，意味着架构必须面向全球分布而非单点扩展。对工具链的含义：面向 agent 的后端设计要提前考虑跨区域与高并发。
+
+---
+
+> 原文：[Rapidly scaling online storage to serve over 1 billion ChatGPT users](https://openai.com/index/scaling-storage-one-billion-users-part-one) · 作者 OpenAI

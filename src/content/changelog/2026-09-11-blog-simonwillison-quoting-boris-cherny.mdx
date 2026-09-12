@@ -1,0 +1,23 @@
+---
+slug: 2026-09-11-blog-simonwillison-quoting-boris-cherny
+title: "Quoting Boris Cherny — Anthropic 的 Boris Cherny 主张：AI 写的生产代码标准应"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/11/boris-cherny/
+publishedAt: 2026-09-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic 的 Boris Cherny 主张：AI 写的生产代码标准应高于人类，靠工程护栏兜底"
+broadcast: "Anthropic 的 Boris Cherny 提出，AI 写的生产代码标准应该比人写的更高，而不是更宽松。他们内部为此堆了多层护栏，包括大量 lint 规则、测试、端到端测试、每日运行的 fuzzer，还有自动化代码审查和安全审查。对国内开发者的含义是：自动化产出必须配自动化验收，不能靠人肉 review 兜底，coding agent 的收益取决于你愿意投入多少验证基础设施。"
+tags: [coding-agents, ai-assisted-programming, code-quality, anthropic]
+---
+
+- Cherny 认为 Claude 产出的生产代码门槛应比人写的更高，而非更宽松——对 agent 工具链的含义是：自动化产出必须配自动化验收，不能靠人肉 review 兜底。
+- Anthropic 内部为此堆了多层护栏：大量 lint 规则、大量测试、Claude 驱动的端到端测试、每日运行的 Claude fuzzer，以及自动化的代码审查与安全审查。
+- 还有自动化代码重构作为持续维护手段；Cherny 警告缺少这些护栏，最终会留下难以长期维护的烂摊子——对开发者的含义是，coding agent 的收益取决于你愿意投入多少验证基础设施。
+
+---
+
+> 原文：[Quoting Boris Cherny](https://simonwillison.net/2026/Sep/11/boris-cherny/) · 作者 Simon Willison

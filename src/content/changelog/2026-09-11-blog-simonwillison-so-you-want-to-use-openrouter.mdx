@@ -1,0 +1,23 @@
+---
+slug: 2026-09-11-blog-simonwillison-so-you-want-to-use-openrouter
+title: "So you want to use OpenRouter? — OpenRouter 自动路由省钱省事，但同一模型在不同后端行为不一致，作者提醒"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/
+publishedAt: 2026-09-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "OpenRouter 自动路由省钱省事，但同一模型在不同后端行为不一致，作者提醒如何锁定供应商。"
+broadcast: "你可能听说过 OpenRouter 能自动帮你挑最划算的模型、还能自动兜底，但有人提醒，同一个模型在不同供应商那表现其实不一样，有的连视觉能力都没有，推理选项的处理也各不相同。所以作者建议，用参数锁定供应商，再查一下某个模型到底有哪些供应商可选，把不确定性收回到自己手里。"
+tags: [openrouter, llm-routing, ai-infrastructure, api-reliability]
+---
+
+- OpenRouter 宣称自动处理 fallback 并为每次请求挑选最划算的选项，但 Mohamed Moustafa 指出这带来一系列问题：不同供应商运行不同的服务软件与优化配置，同一个 OpenRouter 端点返回的模型行为可能并不一致。
+- 差异具体到能力层面：某些供应商对视觉模型甚至不具备视觉能力，reasoning effort 选项的处理方式也各不相同，这意味着同一 model ID 的实际表现取决于被路由到谁。
+- 作者给出的解法是用 `provider.only` 参数控制路由到哪个供应商，并用 `/endpoints` 方法查询某个 model ID 可用的供应商列表，把不确定性收回到自己手里。
+
+---
+
+> 原文：[So you want to use OpenRouter?](https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/) · 作者 Simon Willison

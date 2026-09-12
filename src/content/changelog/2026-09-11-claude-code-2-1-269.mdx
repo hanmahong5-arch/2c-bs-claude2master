@@ -1,0 +1,23 @@
+---
+slug: 2026-09-11-claude-code-2-1-269
+title: "claude-code v2.1.269 — 插件评测、并发上限、缓存修复，三条都动 harness 底层"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.269
+publishedAt: 2026-09-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件评测、并发上限、缓存修复，三条都动 harness 底层"
+broadcast: "这次更新有三条都动到了底层。插件现在能跑评测并输出评分报告，插件质量可以回归验证了；单次工作流的并发上限也开放成配置项，最高能调到二百五十六；另外还修了续写和恢复会话时缓存失效的问题。对做 agent 的国内开发者来说，插件可测、并发可配、缓存前缀要稳，这三条都是搭 harness 时绕不开的。"
+insight: "这次 v2.1.269 三条都动 harness 底层，现有用户值得升级：插件评测让插件可回归验证，并发上限用 CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS 暴露，续写与恢复路径的缓存前缀也修稳了。如果你有插件或 fan-out 工作流，建议升级后把并发上限显式配置，并检查续写、恢复场景的 prompt cache 是否稳定；走 newapi.lurus.cn 代理的用户，摘要未提及代理受影响，按原方式升级即可。"
+tags: [plugin-eval, concurrency-limit, prompt-cache, agent-harness]
+---
+
+- 新增 `claude plugin eval`：对插件跑评测套件并输出 JSON/HTML 评分报告，意味着插件质量可被回归验证，harness 需把插件当作可测单元而非黑盒。
+- 新增 `CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS`（1–256）提高单次 Workflow 并发 agent 上限，说明 fan-out 场景的调度上限应由配置暴露而非硬编码。
+- 修复输出 token 截断后自动续写那一轮 prompt cache 被部分失效，以及中断后恢复会话改变早期上下文重发的问题，提示 harness 的续写与恢复路径必须保持缓存前缀稳定。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.269](https://github.com/anthropics/claude-code/releases/tag/v2.1.269)

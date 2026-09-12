@@ -1,0 +1,23 @@
+---
+slug: 2026-09-10-blog-hf-blog-rebuilding-automatic1111-with-gradio-workflow
+title: "Rebuilding AUTOMATIC1111 with Gradio Workflow — Hugging Face 用 Gradio Workflow 重造 AUTOMA"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/gradio-workflow-1111
+publishedAt: 2026-09-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 用 Gradio Workflow 重造 AUTOMATIC1111，演示如何把复杂 WebUI 拆成可组合的节点式工作流。"
+broadcast: "Hugging Face 最近做了一件事，他们用 Gradio 的工作流重新实现了那个很火的图像生成界面。原本耦合在一起的网页界面，被拆成了一个个独立、可复用的节点，模型加载、提示词、采样这些步骤都显式暴露出来，方便替换和调试。对国内做 agent 和工具链的开发者来说，这提示我们：把工具封装成可编排的节点，比提供一个大而全的接口，更利于自动化调用和组合。"
+tags: [gradio, automatic1111, workflow, huggingface]
+---
+
+- 文章以 AUTOMATIC1111 为参照，用 Gradio Workflow 重新实现其界面与流程，说明原本耦合的 WebUI 可以被拆成独立、可复用的节点。
+- 这种节点化组织让图像生成步骤（模型加载、提示词、采样等）显式暴露为工作流中的环节，便于替换与调试，而非藏在单一脚本里。
+- 对 agent 与工具链的启示是：把工具封装成可编排的节点，比提供一个大而全的接口更利于自动化调用与组合。
+
+---
+
+> 原文：[Rebuilding AUTOMATIC1111 with Gradio Workflow](https://huggingface.co/blog/gradio-workflow-1111) · 作者 Hugging Face

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-12-blog-latentspace-ainews-deepseek-v4-1-flash-763b-p8b-d16b
+title: "[AINews] DeepSeek v4.1-Flash: 763B-P8B-D16B novel — DeepSeek 用全新因果编码器"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b
+publishedAt: 2026-09-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "DeepSeek 用全新因果编码器-解码器架构推出 v4.1-Flash，把长时 agent 的推理成本压到新低"
+broadcast: "DeepSeek 发布了新模型，用上全新的因果编码器解码器架构，把长上下文推理的算力和显存开销大幅压了下来，缓存占用最多降到原来的八分之一。这对做常驻 agent 的开发者意义很大，单次会话能承载更多轮工具调用和历史记忆，而且它采用宽松的开源许可，支持超长上下文和图像输入，价格也压得很低，之前因为成本搁置的常驻方案可以重新评估了。"
+tags: [deepseek, encoder-decoder, kv-cache, long-running-agents]
+---
+
+- **架构换代**：v4.1-Flash 采用因果 Encoder–Decoder，prefill 仅 8B 激活、decode 16B 激活（总参 763B），稀疏度约 1–2%。这意味着长上下文推理的算力与显存开销被结构性重估，agent 工具链可据此重新设计上下文预算。
+- **KV cache 大幅缩小**：结合 Sliding-Window Attention Bounded Replay 等改动，KV cache 占用最多降至 V4 Flash 的 1/8。对长时间运行的 agent 而言，这直接决定单会话能承载多少轮工具调用与历史记忆。
+- **定价与开放**：输入 $0.30/1M、输出 $1.20/1M，缓存输入 $0.006/1M，另有 50% 错峰折扣，MIT 许可、1M 上下文、文本+图像输入。开发者可把此前因成本搁置的常驻 agent 方案重新纳入评估。
+
+---
+
+> 原文：[[AINews] DeepSeek v4.1-Flash: 763B-P8B-D16B novel causal Encoder–Decoder architecture with vision marks the Return of the Whale](https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b) · 作者 Latent Space

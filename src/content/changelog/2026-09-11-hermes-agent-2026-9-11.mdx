@@ -1,0 +1,23 @@
+---
+slug: 2026-09-11-hermes-agent-2026-9-11
+title: "hermes-agent v2026.9.11 — 0.21.0 后 state.db 损坏的根因修复与多 profile 隔离加固"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11
+publishedAt: 2026-09-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "0.21.0 后 state.db 损坏的根因修复与多 profile 隔离加固"
+broadcast: "Hermes Agent 刚发了个修复版，专门解决之前状态数据库损坏的老毛病。它把写入者收敛到一处，搜索索引坏了也能降级重建，不再连累会话列表崩溃；多套配置之间的凭证和密钥也彻底隔离了。对咱们做 agent 的人来说，这提醒一件事：连接所有权要集中管，凭证必须按配置显式绑定，别指望进程级缓存兜底。"
+insight: "这次 v0.21.2 的核心是修 0.21.0 之后 state.db 损坏的根因，并收紧多 profile 隔离。我的判断是：已经在 0.21.0 或 0.21.1 上跑、且遇到过 state.db 损坏或 sessions list、export 崩溃的用户，值得升到 0.21.2，升级后建议跑一次 doctor --fix 处理不安全的 checkpoint。用多 profile 的用户要留意，次级 profile 不再继承默认白名单、凭证、vault 密钥和 MEDIA 附件，升级后需按 profile 显式重新绑定，否则相关调用会失效。走 newapi.lurus.cn 代理的用户不受影响，摘要未涉及代理层改动。"
+tags: [sqlite-state-db, multi-profile-isolation, fts-index, agent-harness]
+---
+
+- **state.db 写入者收敛**：hosted-room 状态迁至 `shared-state.db`，dashboard 先以只读打开，cron 守卫走连接注册表，`doctor --fix` 拒绝不安全的 checkpoint。含义：harness 应集中管理连接所有权，避免多进程争抢 POSIX 锁。
+- **FTS 损坏降级为 `fts_index`**：搜索降级、索引稍后重建，transcript 不受影响；单条坏行不再让 `sessions list`/export 崩溃。含义：错误分类要按子系统作用域，读路径需对脏数据做 coerce 与分块。
+- **多 profile 隔离收紧**：次级 profile 不再继承默认白名单、凭证、vault 密钥或 `MEDIA:` 附件。含义：harness 的凭证与路由必须按 profile 显式绑定，不能靠进程级 memo 兜底。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.9.11](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11)

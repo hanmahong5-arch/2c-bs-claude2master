@@ -1,0 +1,23 @@
+---
+slug: 2026-09-11-cline-desktop-v0-0-26
+title: "cline desktop-v0.0.26 — Cline 桌面版把 PR 状态搬进输入框，还修了一批会话卡死与调度停摆的坑"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.26
+publishedAt: 2026-09-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline 桌面版把 PR 状态搬进输入框，还修了一批会话卡死与调度停摆的坑"
+broadcast: "Cline 桌面版这次更新，把当前分支的 PR 状态直接搬进了输入框，编号、合并状态、改动行数和检查结果都能看到，还能点开看日志，每三十秒刷新一次。对国内做 agent 的开发者来说，这相当于把外部代码托管状态当成只读上下文喂给模型，但边界怎么划、什么时候该隐藏，值得参考。同时它还修了会话卡死和调度停摆的问题。"
+insight: "这次 v0.0.26 对现有用户值得升级：它修掉了删除排队 prompt 后残留幽灵消息、以及从 checkpoint 恢复 fork 会话卡在 Thinking 两个实际痛点，属于稳定性修复而非破坏性变更，直接升即可。你现有的 prompt 和 hook 配置不用改，因为改动集中在状态推断与持久化逻辑，没有触及配置格式。国内走 newapi.lurus.cn 代理的用户也不受影响，摘要里没有任何涉及网络层或代理行为的改动。"
+tags: [cline-desktop, agent-harness, session-state, github-pr]
+---
+
+- composer 现在显示当前分支的 GitHub PR：编号、合并状态、改动行数与 CI 检查，可点击跳转或展开查看日志，可见时每 30 秒刷新；依赖 `gh` CLI 登录与 GitHub.com origin，默认分支、detached HEAD 及不支持仓库自动隐藏，且不会替你 push 或提交 PR。含义：harness 可把外部 VCS 状态作为只读上下文注入，但需明确边界与降级隐藏条件。
+- 删除排队中的 prompt 不再在 transcript 留下从未执行的消息：此前 sidecar 以「待处理列表缩短且头部变化」推断已开始，现改为只依赖 runtime 的真实 start 事件。含义：状态推断应基于显式事件而非列表形状的启发式。
+- 从 checkpoint 恢复 fork 的会话不再卡在 Thinking：带种子历史物化的会话持久化时未传递状态，行与 manifest 写成 running 而实际空闲。含义：持久化状态必须与实时状态一致，否则恢复路径会永久挂起。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.26](https://github.com/cline/cline/releases/tag/desktop-v0.0.26)
