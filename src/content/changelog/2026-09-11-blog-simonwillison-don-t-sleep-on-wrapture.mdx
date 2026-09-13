@@ -1,0 +1,23 @@
+---
+slug: 2026-09-11-blog-simonwillison-don-t-sleep-on-wrapture
+title: "Don't sleep on wrapture — Python 猴子补丁库 wrapture 可同时用于测试与可观测性，作者称其被"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/11/wrapture/
+publishedAt: 2026-09-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Python 猴子补丁库 wrapture 可同时用于测试与可观测性，作者称其被低估"
+broadcast: "最近有个叫 wrapture 的 Python 猴子补丁库被作者称为被低估，它能同时用在测试和可观测性上。它支持用配置文件做零代码追踪，不用改 Python 代码就能接入，还覆盖了 flask、django 等大量框架。对国内做 agent 的团队来说，这套运行时插桩能力可以复用同一套机制，直接拿来诊断调用链。"
+tags: [python, monkey-patching, observability, testing]
+---
+
+- Graham Dumpleton 于 8 月 31 日发布 wrapture，一个同时服务测试与可观测性（类似 New Relic 式追踪）的猴子补丁库，作者几乎每天更新教程。对 agent 工具链而言，这意味着运行时插桩能力可以复用同一套机制。
+- 它支持用 TOML 文件做零代码追踪，完全不改 Python 代码即可配置；配套的 wrapture-instrumentation 包已覆盖 flask、django、fastapi、httpx、sqlalchemy、grpc 等大量框架与库。开发者接入追踪的成本因此大幅降低。
+- 功能还包括记录调用时间线并渲染成树、跨多次调用改变行为的 phased behaviour、计时聚合找慢代码，以及导出到 OpenTelemetry。对构建可观测 agent 的团队来说，这些原语可直接用于诊断调用链。
+
+---
+
+> 原文：[Don't sleep on wrapture](https://simonwillison.net/2026/Sep/11/wrapture/) · 作者 Simon Willison

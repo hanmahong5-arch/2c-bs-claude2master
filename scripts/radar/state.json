@@ -1,6 +1,6 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.269",
+    "anthropics/claude-code": "v2.1.270",
     "openai/codex": "python-v0.154.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "desktop-v0.0.26",
@@ -148,7 +148,9 @@
     "faisalkindi/DLSS5oneclick",
     "CopilotKit/OpenBot",
     "XiaoDuoYa/codex-with-chatgpt",
-    "amagine-ai/Amagine3D"
+    "amagine-ai/Amagine3D",
+    "EvoMap/AutoResearch",
+    "unstablebuild/rune"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -247,7 +249,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-12",
+    "anthropic-engineering": "2026-09-13",
     "claude-code-docs": "2026-09-11",
     "openai-codex-blog": "2026-09-10",
     "openclaw-concepts": "2026-09-07",
@@ -546,7 +548,12 @@
       "https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/",
       "https://simonwillison.net/2026/Sep/11/boris-cherny/",
       "https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/",
-      "https://simonwillison.net/2026/Sep/11/hugging-face-security/"
+      "https://simonwillison.net/2026/Sep/11/hugging-face-security/",
+      "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
+      "https://simonwillison.net/2026/Sep/12/sighting-399708714/",
+      "https://simonwillison.net/2026/Sep/12/paul-ford/",
+      "https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/",
+      "https://simonwillison.net/2026/Sep/11/wrapture/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -686,7 +693,8 @@
       "https://www.latent.space/p/ainews-openai-reports-navier-stokes",
       "https://www.latent.space/p/ainews-collusionwiki-a-second-undisclosed",
       "https://www.latent.space/p/ainews-not-much-happened-today-d3b",
-      "https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b"
+      "https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b",
+      "https://www.latent.space/p/forward-deployed-engineer-best-practices"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1239,10 +1247,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-12",
+    "simonwillison": "2026-09-13",
     "lilianweng": "2026-09-10",
-    "latentspace": "2026-09-12",
-    "interconnects": "2026-09-12",
+    "latentspace": "2026-09-13",
+    "interconnects": "2026-09-13",
     "karpathy": "2026-09-11",
     "raschka": "2026-09-11",
     "eugeneyan": "2026-09-11",
@@ -1250,10 +1258,10 @@
     "oneusefulthing": "2026-09-12",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-12",
+    "openai-news": "2026-09-13",
     "deepmind": "2026-09-12",
     "hf-blog": "2026-09-12",
-    "anthropic-news": "2026-09-12",
+    "anthropic-news": "2026-09-13",
     "steipete": "2026-09-12",
     "openclaw-blog": "2026-09-12"
   },

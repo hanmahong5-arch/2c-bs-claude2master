@@ -1,0 +1,23 @@
+---
+slug: 2026-09-12-blog-latentspace-the-rise-of-the-forward-deployed-engineer-and
+title: "The Rise of the Forward Deployed Engineer — and How To — Palantir 前 FDE 复盘：这个岗位不是咨询，而是产品团队的延伸"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/forward-deployed-engineer-best-practices
+publishedAt: 2026-09-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Palantir 前 FDE 复盘：这个岗位不是咨询，而是产品团队的延伸"
+broadcast: "今天聊一个叫“前置部署工程师”的岗位。一位曾在知名数据公司做这行的工程师复盘说，他当年在真实银行数据上部署存储系统，因为数据里有空时间戳，逻辑直接崩溃，被派到客户现场才第一次直面真实用户。他总结出这个岗位的核心是：解决客户问题换洞察，再反哺产品该建什么。对国内做 agent 落地的团队来说，这提醒我们，工具链只在合成数据上验证远远不够，真实脏数据会击穿设计假设，而且得先想清楚这个角色到底属于产品还是销售。"
+tags: [forward-deployed-engineer, palantir, product-feedback-loop, ai-hiring]
+---
+
+- 作者在 Palantir 部署 Phoenix 存储系统时，因真实银行数据有空时间戳，导致保留逻辑生成 230 万个 keyspace、需 14TB 内存而崩溃。含义：agent 工具链若只在合成数据上验证，生产环境的脏数据会直接击穿设计假设。
+- 他由此被派到客户现场修复，才第一次直面真实用户，并总结出 FDE 的核心循环：解决客户问题以换取洞察，再反哺产品该建什么。含义：工具链团队需要一条从现场反馈到核心产品的稳定回路，而非靠私人关系传递需求。
+- 他观察到如今 FDE 一词被泛化，同一称呼下可能是销售工程师、背配额的 Python 开发者或带 SOW 的顾问，报告线和激励完全不同。含义：招聘或定义 agent 落地角色时，先明确它属于产品还是销售，否则协作边界必然混乱。
+
+---
+
+> 原文：[The Rise of the Forward Deployed Engineer — and How To Do the Job Right](https://www.latent.space/p/forward-deployed-engineer-best-practices) · 作者 Latent Space

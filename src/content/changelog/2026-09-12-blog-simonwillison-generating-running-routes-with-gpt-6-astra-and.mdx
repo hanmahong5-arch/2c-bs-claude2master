@@ -1,0 +1,23 @@
+---
+slug: 2026-09-12-blog-simonwillison-generating-running-routes-with-gpt-6-astra-and
+title: "Generating running routes with GPT-6 Astra and ChatGPT — 用 GPT"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/12/astra-running-routes/
+publishedAt: 2026-09-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用 GPT-6 Astra 生成跑步路线，27 分钟跑通，但代码不可见暴露了 agent 透明度问题"
+broadcast: "有人让一个智能助手用公开地图数据，规划出从家出发的五公里和十公里环线，二十七分钟后拿到了可视化结果和可直接使用的路线文件。这说明智能助手已经能端到端完成多工具的地理任务。但作者抱怨看不到实际运行的代码，线程压缩后也取不回来，这提醒我们，做智能体系统时得保留压缩前的记录，否则开发者没法审计它的行为。"
+tags: [agent-transparency, geospatial, llm-tools, openstreetmap]
+---
+
+- Simon 让 ChatGPT Work 用 OSM 数据规划从家出发的 5K/10K 环线，27 分钟后拿到可视化、GPX 和 GeoJSON 文件。含义：agent 已能端到端完成多工具地理任务，输出可直接落地。
+- 它用 Nominatim 定位地址、Overpass 下载本地道路数据，再本地计算环线。含义：这类任务依赖公开地理 API 组合，工具链选型比模型本身更关键。
+- 他抱怨看不到实际运行的代码，且线程被压缩后无法再取回。含义：任何使用 compaction 的 LLM 系统都应保留压缩前文本并通过工具调用暴露，否则开发者无法审计 agent 行为。
+
+---
+
+> 原文：[Generating running routes with GPT-6 Astra and ChatGPT Work](https://simonwillison.net/2026/Sep/12/astra-running-routes/) · 作者 Simon Willison

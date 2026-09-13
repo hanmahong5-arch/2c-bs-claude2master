@@ -1,0 +1,23 @@
+---
+slug: 2026-09-12-claude-code-2-1-270
+title: "claude-code v2.1.270 — 修复长会话中只读 git 命令误报权限的回归问题"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.270
+publishedAt: 2026-09-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复长会话中只读 git 命令误报权限的回归问题"
+broadcast: "这次更新修了一个挺关键的问题：会话跑久了之后，Bash 里那些只读的 git 命令会莫名其妙弹权限请求，是上一版引入的回归。它提醒我们，权限判定一旦依赖会话里的可变状态，就会随时间漂移，只读命令的判定应该保持无状态、可复现。而且回归出现在相邻小版本，说明权限层得针对长会话持续测试，不能只验证冷启动。"
+insight: "这次 v2.1.270 修的是 2.1.269 引入的回归：长会话里只读 git 命令会误报权限。如果你已经在 2.1.269，建议直接升到 2.1.270，这是修 bug 而非加功能，升级成本低；还停在更早版本的话，可以按正常节奏跟进。现有 hook 配置不用改，问题出在权限判定依赖会话内可变状态，不是你的配置写错了。国内走 newapi.lurus.cn 代理的用户，本次改动不涉及代理链路，正常升级即可。"
+tags: [permissions, bash, git, regression-fix]
+---
+
+- 修复了会话运行一段时间后，Bash 中只读 git 命令意外请求权限的问题（2.1.269 引入的回归）。
+- 含义：权限判定若依赖会话内可变状态，会随时间漂移，harness 应让只读命令的判定保持无状态、可复现。
+- 含义：回归出现在相邻小版本，说明权限层需要针对长会话场景的持续测试，而非仅冷启动验证。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.270](https://github.com/anthropics/claude-code/releases/tag/v2.1.270)

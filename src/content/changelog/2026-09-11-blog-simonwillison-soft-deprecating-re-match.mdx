@@ -1,0 +1,23 @@
+---
+slug: 2026-09-11-blog-simonwillison-soft-deprecating-re-match
+title: "Soft-deprecating re.match() — Python 3.15 软弃用 re.match()，改用语义更清晰的 re.p"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/
+publishedAt: 2026-09-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Python 3.15 软弃用 re.match()，改用语义更清晰的 re.prefixmatch()"
+broadcast: "Python 新版本对那个老牌的正则匹配方法做了软弃用，意思是新代码别再用了，但存量项目不受影响，静态检查工具可以据此提醒你换新写法。新名字直接点明它只在字符串开头匹配，命名本身就是文档，省得反复查。作者还提醒，多数场景其实该用串中任意位置匹配或整串匹配，写代码生成工具也该优先选语义明确的那个。"
+tags: [python, regex, deprecation, api-design]
+---
+
+- Python 3.15 对 `re.match()` 做软弃用：只标记为「不应再用于新代码」，并不承诺未来移除。对工具链的含义是，静态检查或 lint 规则可以据此提示新代码改用新名字，而不必担心破坏存量项目。
+- 新名字 `re.prefixmatch()` 直接点明行为——只在字符串开头锚定、不锚定结尾。对写正则的开发者来说，命名即文档，能减少「match 到底匹不匹配整串」这类反复查文档的认知成本。
+- 作者提醒多数场景其实该用 `re.search()`（串中任意位置匹配）或 `re.fullmatch()`（整串匹配）。对 agent 与代码生成工具的含义是，生成正则相关代码时应优先选语义明确的那一个，而不是沿用历史默认的 `re.match()`。
+
+---
+
+> 原文：[Soft-deprecating re.match()](https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/) · 作者 Simon Willison
