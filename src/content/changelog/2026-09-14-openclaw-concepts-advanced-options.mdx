@@ -1,0 +1,23 @@
+---
+slug: 2026-09-14-openclaw-concepts-advanced-options
+title: "Advanced overrides and transcripts · Ope — OpenClaw 记忆子代理的隐藏开关与转录导出，调错会拖慢回复或泄露上下文"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/active-memory/advanced-options
+publishedAt: 2026-09-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OpenClaw 记忆子代理的隐藏开关与转录导出，调错会拖慢回复或泄露上下文"
+broadcast: "今天聊一个记忆子代理的隐藏开关。它默认关掉思考，因为记忆跑在回复路径上，多思考就直接变成用户能感觉到的延迟。还有个转录导出开关，只控制调试导出，产物里带着隐藏提示和召回的记忆，算敏感数据，别当常规日志留着。"
+insight: "Lurus 视角：这次改动对现有用户是配置层面的，不是升级问题。默认 thinking 为 off 别乱开，开了会直接拖慢回复；promptOverride 不推荐用，要加指令就走 promptAppend 并配好 toolsAllow。persistTranscripts 默认关着就行，调试导出的转录含隐藏提示和召回记忆，属于敏感数据，别当常规日志留着。国内走 newapi.lurus.cn 代理的用户，摘要里没提到代理受影响，按原样用即可。"
+tags: [active-memory, agent-harness, prompt-design, transcripts]
+---
+
+- `config.thinking` 覆盖子代理思考等级，默认 `"off"`，因为活跃记忆跑在回复路径上，额外思考直接变成用户可见延迟；harness 里任何阻塞式记忆调用都该默认关掉推理。
+- `config.promptAppend` 在默认提示后、对话上下文前插入操作指令，需配合自定义 `toolsAllow` 使用；而 `promptOverride` 会整体替换默认提示，文章明确不推荐，因为默认提示被调成只返回 NONE 或紧凑用户事实。
+- 阻塞子代理的转录默认在运行后从 SQLite 删除且不生成 JSONL，`persistTranscripts` 只控制调试导出，产物含隐藏提示上下文与召回记忆，繁忙会话会快速堆积；调试导出应视为敏感数据而非常规日志。
+
+---
+
+> 原文：[Advanced overrides and transcripts · OpenClaw](https://docs.openclaw.ai/concepts/active-memory/advanced-options)

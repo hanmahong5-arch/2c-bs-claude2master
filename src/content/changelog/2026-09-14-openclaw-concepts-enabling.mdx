@@ -1,0 +1,23 @@
+---
+slug: 2026-09-14-openclaw-concepts-enabling
+title: "Enabling active memory · OpenClaw — 跨会话记忆怎么开、边界在哪，一页说清默认值与隐私红线"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/active-memory/enabling
+publishedAt: 2026-09-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "跨会话记忆怎么开、边界在哪，一页说清默认值与隐私红线"
+broadcast: "这次讲的是跨会话记忆怎么开、边界在哪。它按每个智能体单独开关，个人安装默认开启，但只要做了私聊隔离就会自动关掉，说明记忆该是显式可覆盖的配置，而不是偷偷全局生效。隐私上只有私聊和持久会话能互相召回，群组频道既不进也不出，别的智能体记录永不入选。检索还是有界阻塞步骤，跑不成会明确告诉主模型，而不是悄悄给个空上下文。"
+insight: "现有 OpenClaw 用户不必急着改 prompt 或 hook，先确认自己的 memory.search.rememberAcrossConversations 是否被 DM 隔离配置关掉：个人安装默认开启，但 session.dmScope 一旦不是 main 或有 binding 覆盖就会默认关闭，跨会话记忆直接失效。走 newapi.lurus.cn 代理的国内用户不受影响，因为开关和隐私边界都在本地 agent 配置层，代理只转发请求。群组和频道本来就不在召回范围内，别指望靠改 prompt 绕过。"
+tags: [active-memory, agent-harness, retrieval, privacy-boundary]
+---
+
+- 开关是 per-agent 的 `memory.search.rememberAcrossConversations`：个人安装默认开启，但需 `session.dmScope` 未设或为 `main` 且无 binding 覆盖；任何 DM 隔离配置都会默认关闭它。含义：harness 的记忆能力应做成显式可覆盖的配置项，而非隐式全局行为。
+- 隐私边界固定：只有私聊与持久显式 UI 会话可互相召回，群组/频道既非来源也非目标，其他 agent 的 transcript 永不入选。含义：检索范围要在设计期写死，别留给 prompt 或模型自行判断。
+- 检索是有界阻塞步骤，无意图跳过或搜索不可用时不注入上下文，只加一条隐藏结果说明；超时与空结果沿用原行为。含义：召回失败要显式告知主模型“没跑成”，而不是静默降级成空上下文。
+
+---
+
+> 原文：[Enabling active memory · OpenClaw](https://docs.openclaw.ai/concepts/active-memory/enabling)

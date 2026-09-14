@@ -1,0 +1,23 @@
+---
+slug: 2026-09-14-openclaw-concepts-memory-tools
+title: "Memory tools · OpenClaw — Active Memory 的工具白名单怎么配，才既安全又不丢召回能力"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/active-memory/memory-tools
+publishedAt: 2026-09-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "Active Memory 的工具白名单怎么配，才既安全又不丢召回能力"
+broadcast: "今天聊一个记忆工具的安全配置问题。Active Memory 的工具白名单其实只是上限，不是授权，启动前还会用父级策略再过滤一遍，想放开得显式声明，而且这份权限会同时给到父级。另外它只认具体的记忆工具名，通配符和核心工具会被静默过滤掉。对做 agent 的人来说，这意味着召回权限必须继承父级、不能单独提权，而且召回失败要降级成无记忆上下文，别把主流程卡住。"
+insight: "现有用户不必急着改 prompt，但 hook 配置要动：toolsAllow 只是上限，插件注册的记忆工具可能被父 agent 的最终策略过滤掉，得用 tools.alsoAllow 显式放开，且这会同时给父 agent 访问权，等于继承父级策略、不能单独提权。通配符、group:* 和 read/exec/message/web_search 这类核心工具会被静默过滤，白名单只认具体记忆工具名。走 newapi.lurus.cn 代理不受影响，召回失败会降级跳过、主回复照常。"
+tags: [memory-tools, tool-policy, active-memory, agent-harness]
+---
+
+- `toolsAllow` 只是上限而非授权：Active Memory 启动前会用父 agent 的最终工具策略过滤这些名字，插件注册的工具可能被 profile 排除，需用 `tools.alsoAllow` 显式放开，且这些授权同时给父 agent 访问权。含义：harness 里召回子 agent 的权限必须继承父级策略，不能单独提权。
+- 只接受具体记忆工具名：通配符、`group:*` 和 `read`/`exec`/`message`/`web_search` 等核心工具会在子 agent 启动前被静默过滤。含义：prompt 里声明的工具集要在配置层做白名单校验，避免模型调用到不该有的工具。
+- 无可用工具或子 agent 运行失败时，该轮直接跳过召回、主回复继续；自定义召回工具的非空可见输出即算召回证据，除非结构化字段明确报告空结果或失败。含义：召回失败要降级为无记忆上下文，而不是阻塞主流程。
+
+---
+
+> 原文：[Memory tools · OpenClaw](https://docs.openclaw.ai/concepts/active-memory/memory-tools)

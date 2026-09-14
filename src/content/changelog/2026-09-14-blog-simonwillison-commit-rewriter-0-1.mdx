@@ -1,0 +1,23 @@
+---
+slug: 2026-09-14-blog-simonwillison-commit-rewriter-0-1
+title: "commit-rewriter 0.1 — 一个改 git 提交信息的小工具，解决 AI 编码代理留下的提交记录脏乱问题"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/14/commit-rewriter/
+publishedAt: 2026-09-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "一个改 git 提交信息的小工具，解决 AI 编码代理留下的提交记录脏乱问题"
+broadcast: "今天介绍一个改提交信息的小工具，专门解决 AI 编码代理留下的提交记录脏乱问题。作者发布安全版本时发现，初始提交里塞满了代理的冗余内容和私有仓库的引用，不适合公开，于是写了它。用法很简单，一条命令就能跑，改之前还会先建个带时间戳的分支兜底，然后从你编辑的那个提交一直重写到最新。对国内用 agent 写代码的开发者来说，这相当于给机器生成的提交加了一道人工清洗工序。"
+tags: [git, ai-assisted-programming, developer-tools, python]
+---
+
+- 作者为 Datasette 安全版本发布写了 commit-rewriter：初始提交里塞满了编码代理的冗余内容和私有仓库的 issue 引用，不适合公开。含义：agent 生成的提交信息需要一道人工清洗工序。
+- 用法是 `uvx commit-rewriter path/to/repo`，在仓库目录内可省略路径。含义：单命令启动的本地小工具，比写脚本更省事。
+- 提交修改时工具会先给当前仓库状态建一个带时间戳的分支以便回滚，然后从你编辑的第一个提交一直重写到最新提交。含义：批量改写历史有兜底，但影响范围是整条提交链，需谨慎。
+
+---
+
+> 原文：[commit-rewriter 0.1](https://simonwillison.net/2026/Sep/14/commit-rewriter/) · 作者 Simon Willison

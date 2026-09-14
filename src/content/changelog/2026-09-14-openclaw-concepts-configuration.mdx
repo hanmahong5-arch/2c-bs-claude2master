@@ -1,0 +1,23 @@
+---
+slug: 2026-09-14-openclaw-concepts-configuration
+title: "Configuration reference · OpenClaw — 一份把「主动记忆」拆成可调参数的配置清单，适合想给 agent 加记忆层的人对照"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/active-memory/configuration
+publishedAt: 2026-09-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "一份把「主动记忆」拆成可调参数的配置清单，适合想给 agent 加记忆层的人对照抄作业。"
+broadcast: "今天聊一份把主动记忆拆成可调参数的配置清单，想给 agent 加记忆层的开发者可以对照着抄作业。它把记忆检索默认设成按需升级的旁路，而不是每轮必跑的主路径，还给喂给检索模型的上下文显式设了上限，避免全量塞入。更关键的是，记忆调用必须带硬超时和熔断，连续超时就直接跳过，否则会拖垮主循环。"
+insight: "如果你已经在用 OpenClaw 的主动记忆层，这套配置值得对照检查一遍：默认 escalate 加 15 秒超时和 3 次熔断，说明记忆检索本就该是旁路而非主路径，现有 prompt 和 hook 不必大改，重点是把 queryMode 的轮数与字符上限显式收紧，别全量塞入。国内走 newapi.lurus.cn 代理的用户不受影响，这些参数都在本地配置里调，不涉及接口变更。"
+tags: [agent-memory, configuration, context-management, circuit-breaker]
+---
+
+- `config.mode` 控制阻塞式深度回忆子 agent 何时运行，取值 `escalate`/`always`/`off`，默认 `escalate`；含义：记忆检索默认应是按需升级的旁路，而非每轮必跑的主路径。
+- `config.queryMode` 决定子 agent 看到多少对话（`message`/`recent`/`full`），配合 `recentUserTurns`、`recentAssistantTurns` 等字段限制轮数与字符数；含义：喂给检索模型的上下文要显式设上限，别默认全量塞入。
+- `config.timeoutMs` 默认 15000ms，并有 `circuitBreakerMaxTimeouts`（默认 3）与 `circuitBreakerCooldownMs`（默认 60000）在连续超时后跳过回忆；含义：记忆调用必须带硬超时和熔断，否则会拖垮主循环。
+
+---
+
+> 原文：[Configuration reference · OpenClaw](https://docs.openclaw.ai/concepts/active-memory/configuration)

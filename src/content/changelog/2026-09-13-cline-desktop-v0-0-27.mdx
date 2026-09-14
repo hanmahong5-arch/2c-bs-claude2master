@@ -1,0 +1,23 @@
+---
+slug: 2026-09-13-cline-desktop-v0-0-27
+title: "cline desktop-v0.0.27 — 登录过期不再双重报错，凭证失败直接给修复按钮"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.27
+publishedAt: 2026-09-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "登录过期不再双重报错，凭证失败直接给修复按钮"
+broadcast: "这次桌面端更新主要修了登录过期和凭证失败的老毛病。以前登录一过期，界面会先弹个模糊气泡，再叠一层详细报错，现在只显示一次，详情到了原地升级。凭证失败也不再干报错，会直接给你一个修复按钮，比如重新登录或打开模型设置。对做 agent 的国内开发者来说，这提醒我们：错误提示要能去重、能升级，还得带上可执行的修复路径，别让用户干瞪眼。"
+insight: "这次 v0.0.27 主要是错误提示和登出逻辑的修复，不涉及模型或接口变更，现有用户没有必须升级的理由，但如果常被登录过期时的双重报错困扰，可以升。prompt 和 hook 配置不用改。国内走 newapi.lurus.cn 代理的用户不受影响，摘要里没有任何涉及代理或接口地址的改动。"
+tags: [error-handling, auth, provider-config, desktop]
+---
+
+- 登录过期错误只渲染一次：此前 hub 的无详情 `run.failed` 先弹气泡，send RPC 再覆盖错误横幅，导致模糊气泡叠详细横幅；现在失败只显示一次并在详情到达时原地升级。含义：harness 需对同一失败做去重与状态升级，避免多源错误覆盖。
+- 凭证失败带修复动作：Cline provider 显示 **Sign in to Cline**，其他显示 **Open model settings**，本地 CLI provider 仍指向其 CLI；启动失败的会话也获得同样提示。含义：错误应附带可执行修复路径，而非仅报错。
+- 登出现在真正生效：登出移除 provider 条目，但运行时每次命令都从经典扩展存储的凭证重新导入缺失 provider，导致看似又登录；Cline Pass 登出此前完全无效。含义：harness 需区分持久凭证来源，避免隐式重导入。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.27](https://github.com/cline/cline/releases/tag/desktop-v0.0.27)

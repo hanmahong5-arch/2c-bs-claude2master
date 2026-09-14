@@ -3,7 +3,7 @@
     "anthropics/claude-code": "v2.1.270",
     "openai/codex": "python-v0.154.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "desktop-v0.0.26",
+    "cline/cline": "desktop-v0.0.27",
     "block/goose": "v1.50.0",
     "sst/opencode": "v1.18.30",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -150,7 +150,8 @@
     "XiaoDuoYa/codex-with-chatgpt",
     "amagine-ai/Amagine3D",
     "EvoMap/AutoResearch",
-    "unstablebuild/rune"
+    "unstablebuild/rune",
+    "elliothux/open-compute"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -244,16 +245,22 @@
       "https://docs.openclaw.ai/concepts/typing-indicators",
       "https://docs.openclaw.ai/concepts/usage-tracking",
       "https://docs.openclaw.ai/concepts/user-model",
-      "https://docs.openclaw.ai/concepts/subagent-yield-handoff"
+      "https://docs.openclaw.ai/concepts/subagent-yield-handoff",
+      "https://docs.openclaw.ai/concepts/active-memory/advanced-options",
+      "https://docs.openclaw.ai/concepts/active-memory/configuration",
+      "https://docs.openclaw.ai/concepts/active-memory/enabling",
+      "https://docs.openclaw.ai/concepts/active-memory/how-it-works",
+      "https://docs.openclaw.ai/concepts/active-memory/memory-tools",
+      "https://docs.openclaw.ai/concepts/active-memory/recommended-setup"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-13",
+    "anthropic-engineering": "2026-09-14",
     "claude-code-docs": "2026-09-11",
     "openai-codex-blog": "2026-09-10",
-    "openclaw-concepts": "2026-09-07",
-    "hermes-guides": "2026-09-07"
+    "openclaw-concepts": "2026-09-14",
+    "hermes-guides": "2026-09-14"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -553,7 +560,11 @@
       "https://simonwillison.net/2026/Sep/12/sighting-399708714/",
       "https://simonwillison.net/2026/Sep/12/paul-ford/",
       "https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/",
-      "https://simonwillison.net/2026/Sep/11/wrapture/"
+      "https://simonwillison.net/2026/Sep/11/wrapture/",
+      "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+      "https://simonwillison.net/2026/Sep/13/shot-scraper/",
+      "https://simonwillison.net/2026/Sep/11/datasette-publish-fly/",
+      "https://simonwillison.net/2026/Sep/11/github-to-sqlite/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1247,23 +1258,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-13",
+    "simonwillison": "2026-09-14",
     "lilianweng": "2026-09-10",
-    "latentspace": "2026-09-13",
-    "interconnects": "2026-09-13",
-    "karpathy": "2026-09-11",
-    "raschka": "2026-09-11",
-    "eugeneyan": "2026-09-11",
+    "latentspace": "2026-09-14",
+    "interconnects": "2026-09-14",
+    "karpathy": "2026-09-14",
+    "raschka": "2026-09-14",
+    "eugeneyan": "2026-09-14",
     "chiphuyen": "2026-09-10",
-    "oneusefulthing": "2026-09-12",
+    "oneusefulthing": "2026-09-14",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-13",
-    "deepmind": "2026-09-12",
-    "hf-blog": "2026-09-12",
-    "anthropic-news": "2026-09-13",
-    "steipete": "2026-09-12",
-    "openclaw-blog": "2026-09-12"
+    "openai-news": "2026-09-14",
+    "deepmind": "2026-09-14",
+    "hf-blog": "2026-09-14",
+    "anthropic-news": "2026-09-14",
+    "steipete": "2026-09-14",
+    "openclaw-blog": "2026-09-14"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-14-openclaw-concepts-how-it-works
+title: "How active memory works · OpenClaw — 主动记忆只在持久对话里跑，一次性任务和后台运行一律跳过。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/active-memory/how-it-works
+publishedAt: 2026-09-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "主动记忆只在持久对话里跑，一次性任务和后台运行一律跳过。"
+broadcast: "主动记忆这套机制只在持久对话里跑，一次性任务和后台运行一律跳过。它先做便宜的确定性判断，命中就直接注入有界上下文，弱命中才去启动深度召回，把昂贵操作放在后面。对国内做智能体的开发者来说，这提醒我们记忆注入要按会话类型和投递来源做白名单，而不是全局默认开启，同时把是否召回做成可回退的开关。"
+insight: "现有用户不必急着改 prompt：主动记忆只在持久且面向用户的会话里跑，headless 一次性任务、心跳后台、内部命令和子代理一律跳过，所以一次性脚本类用法不受影响。走 newapi.lurus.cn 代理的国内用户同样不受影响，因为该机制是 OpenClaw 侧的会话类型与投递来源白名单，与代理链路无关。真要动的是配置：默认 escalate 加 allowedChatTypes 仅 direct 已够用，群组或频道场景再显式开启，deniedChatIds 始终优先，别急着上 always。"
+tags: [active-memory, agent-harness, context-injection, session-scoping]
+---
+
+- 触发分两条路：确定性可信触发命中就直接注入有界隐藏上下文；弱命中或空命中才检查召回意图，有意图才启动深度召回子代理，子代理只能调用已配置的记忆召回工具，无关联时返回 NONE，主回复照常进行。含义：把昂贵召回放在廉价判定之后，harness 应显式区分"直接注入"与"先判定再召回"两级。
+- 运行范围有硬边界：仅持久且面向用户的会话生效，headless 一次性运行、心跳/后台运行、内部命令路径、子代理执行都不跑；跨会话消息和子完成投递即使出现在可见对话里也按投递来源跳过。含义：记忆注入要按会话类型和投递来源白名单控制，而非全局默认开启。
+- 配置分层：config.mode 的 escalate（默认，仅召回意图且一级无强命中时跑）、always、off 控制何时启动阻塞子代理，off 仍保留确定性触发通道；allowedChatTypes 默认仅 direct，group/channel/explicit 需显式开启，allowedChatIds 收窄、deniedChatIds 始终优先。含义：把"是否召回"做成可回退的开关，denied 优先于 allowed 是安全默认。
+
+---
+
+> 原文：[How active memory works · OpenClaw](https://docs.openclaw.ai/concepts/active-memory/how-it-works)

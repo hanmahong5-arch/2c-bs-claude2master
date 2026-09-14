@@ -1,0 +1,23 @@
+---
+slug: 2026-09-11-blog-simonwillison-github-to-sqlite-2-9-1
+title: "github-to-sqlite 2.9.1 — Simon Willison 发布 github"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/11/github-to-sqlite/
+publishedAt: 2026-09-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 github-to-sqlite 2.9.1，修复与 sqlite-utils 4.x 的兼容问题"
+broadcast: "有个小工具刚更新了，它能帮你把 GitHub 上的数据抓下来，存进本地的 SQLite 数据库里。这次修的是它跟新版依赖库对不上的问题。为什么值得关注呢？因为对做 agent 和工具链的人来说，本地 SQLite 是成本很低、还能离线查询的结构化数据层。依赖库一大升级就容易把下游工具搞坏，所以这种兼容性修复，本身就是让工具能继续用下去的关键活儿。"
+tags: [github-to-sqlite, sqlite-utils, release, compatibility]
+---
+
+- 该版本为 github-to-sqlite 2.9.1，核心改动是修复与 sqlite-utils 4.x 的兼容性（对应 issue #85）：依赖库大版本升级常破坏下游工具，维护者需及时跟进上游变更。
+- 工具标签为 github 与 sqlite：它把 GitHub 数据抓取并落库到 SQLite，对 agent 与工具链而言，本地 SQLite 是低成本、可离线查询的结构化数据层。
+- 这是一次小版本补丁发布，而非新功能：说明在依赖生态快速演进时，兼容性修复本身就是维持工具可用性的关键工作。
+
+---
+
+> 原文：[github-to-sqlite 2.9.1](https://simonwillison.net/2026/Sep/11/github-to-sqlite/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-11-blog-simonwillison-datasette-publish-fly-1-4
+title: "datasette-publish-fly 1.4 — Datasette 发布到 Fly.io 的插件 1.4 版，修了 HTTPS "
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/11/datasette-publish-fly/
+publishedAt: 2026-09-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 发布到 Fly.io 的插件 1.4 版，修了 HTTPS 与卷丢失两个老问题"
+broadcast: "有个把数据发布工具部署到云端的插件更新了，这次默认帮你打开强制加密访问，不用再自己手动配。它还修好了之前卷找不到、导致数据库读不到的老毛病，并支持权限更小的部署令牌。对国内做自动发布和智能体流程的开发者来说，安全默认值和更小权限的凭证，能少踩不少坑。"
+tags: [datasette, fly-io, deployment, sqlite]
+---
+
+- 新版本在生成的 fly.toml 中默认写入 `force_https=true`，把强制 HTTPS 变成发布时的默认行为，而不是留给用户手动配置。对做数据发布工具链的人来说，安全默认值应当由工具承担，而非依赖使用者记得加。
+- 修复了 “Volume could not be found” 这个 bug（#32），此前该错误会打断把 Datasette 实例部署到 Fly.io 的流程。对依赖持久卷存放 SQLite 数据库的部署方式而言，卷挂载失败意味着数据不可达，属于必须优先修掉的阻塞性问题。
+- 兼容 app-scoped deploy tokens（#34），即作用域限定到单个应用的部署令牌。这让 CI 或自动化流程可以用权限更小的凭证完成发布，减少一个令牌泄露后波及全部应用的风险。
+
+---
+
+> 原文：[datasette-publish-fly 1.4](https://simonwillison.net/2026/Sep/11/datasette-publish-fly/) · 作者 Simon Willison
