@@ -1,0 +1,23 @@
+---
+slug: 2026-09-14-opencode-1-18-31
+title: "opencode v1.18.31 — ACP 会话恢复时模型与推理边界修复，影响 agent 状态持久化。"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.31
+publishedAt: 2026-09-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "ACP 会话恢复时模型与推理边界修复，影响 agent 状态持久化。"
+broadcast: "这次更新修了一个容易被忽略的问题：会话在加载、恢复或分叉时，模型、推理强度和模式会重新还原，推理分块边界也被当成会话状态保存下来。对做 agent 的国内开发者来说，这意味着恢复后的上下文切分不再错位，状态持久化更可靠。另外启动阶段如果远程配置鉴权失败，会直接报错退出，不再带病运行。"
+insight: "这次 v1.18.31 的核心是 ACP 会话恢复时重新还原 model、effort、mode 与 reasoning chunk 边界，属于状态持久化层面的修复。如果你在用 ACP 做会话加载、恢复或 fork，建议升级，否则恢复后上下文切分错位会直接影响 agent 表现；只跑普通对话可以观望。现有 prompt 和 hook 配置不用改，因为改动落在 harness 对推理分块边界的持久化上。国内走 newapi.lurus.cn 代理是否受影响，摘要里没有提到，暂时无法判断。"
+tags: [acp, session-resume, reasoning-boundaries, copilot]
+---
+
+- ACP 会话在加载、恢复或 fork 时重新还原 model、effort、mode 与 reasoning chunk 边界（@JacobNWolf）：harness 需把推理分块边界当作会话状态的一部分持久化，否则恢复后上下文切分错位。
+- TUI 启动阶段会显示远程配置认证错误并以失败状态退出：harness 的启动流程应把配置鉴权失败视为硬错误，避免带病运行。
+- 扩展层为 GitHub Copilot 模型请求摘要式自适应思考：harness 需支持按模型能力协商 thinking 摘要格式，而非统一推理输出。
+
+---
+
+> 原文 release：[sst/opencode v1.18.31](https://github.com/anomalyco/opencode/releases/tag/v1.18.31)

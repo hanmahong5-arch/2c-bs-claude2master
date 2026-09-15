@@ -1,0 +1,23 @@
+---
+slug: 2026-09-15-cline-sdk-sdk-v0-0-83
+title: "cline sdk/sdk/v0.0.83 — Hub 插件、流式重试与远程 SSH 会话：一次改动密集的 SDK 版本"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.83
+publishedAt: 2026-09-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Hub 插件、流式重试与远程 SSH 会话：一次改动密集的 SDK 版本"
+broadcast: "这次更新把插件加载集中到了 Hub，插件从固定目录发现和校验，工作区里的插件不再自动扫描，避免打开仓库就启动它控制的本地服务。流式输出中途出错最多重试三次，但已经吐出内容就不再重试，防止重复。对做 agent 的人来说，这意味着插件管理和流式稳定性都更可控了。"
+insight: "这次 v0.0.83 对现有用户值得升级：流式失败重试最多 3 次、SDK 级重试从 2 次升到 5 次，能减少瞬时 provider 错误导致的中断，且逐 chunk 事件不再转发给远程 onEvent hook，流式延迟更有保障。但要注意两点：插件加载已集中到 hub，从 ~/.agents/plugins/* 发现，工作区 .agents/plugins 不再扫描，原有本地插件配置需迁移；若你依赖远程 hook 接收逐 token 增量，需改用其余事件。国内走 newapi.lurus.cn 代理不受影响，摘要未涉及代理改动。"
+tags: [agent-plugins, streaming-retry, mcp, remote-sessions]
+---
+
+- Hub 托管 Agent Plugins：从 `~/.agents/plugins/*` 的 `plugin.json` 发现并校验插件，`skills/` 暴露为 `plugin-name:skill-name`，`mcp.json` 启动 stdio/HTTP/SSE 服务且不写 `cline_mcp_settings.json`；工作区 `.agents/plugins` 不扫描，避免打开仓库即启动仓库控制的 MCP 服务。含义：插件加载与启用状态集中到 hub，客户端不再自带 loader。
+- 流式失败重试：中途因瞬时 provider 错误断掉的模型回合最多重试 3 次并指数退避，但一旦已流出文本、推理、媒体或工具调用就不再重试，避免重复；模型调用 SDK 级重试从 2 次升到 5 次。含义：harness 需按“是否已产生可见输出”区分可重试边界。
+- 流式不再被 hook 转发拖慢：每 chunk 的文本、推理、工具增量不再转发给远程 `onEvent` hook，其余事件不变；hub 事件日志改为 `synchronous = NORMAL`。含义：把逐 token 事件排除出能力往返，是保住流式延迟的关键取舍。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.83](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.83)

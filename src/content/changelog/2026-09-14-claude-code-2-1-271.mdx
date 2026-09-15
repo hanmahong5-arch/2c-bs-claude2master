@@ -1,0 +1,23 @@
+---
+slug: 2026-09-14-claude-code-2-1-271
+title: "claude-code v2.1.271 — 权限、沙箱与子代理配置的细粒度收紧，是本次最值得看的信号。"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.271
+publishedAt: 2026-09-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "权限、沙箱与子代理配置的细粒度收紧，是本次最值得看的信号。"
+broadcast: "这次更新把权限、沙箱和子代理配置收得更细了。自动模式加沙箱下，命令的网络放行从整个会话下沉到按命令、按域名控制，只放行评审过的域名。子代理还能选择不加载用户和项目的说明文件，减少无关指令干扰。对国内做 agent 的开发者来说，这意味着上下文和网络权限都能按代理裁剪，长驻监听也必须显式续期，更不容易失控。"
+insight: "这次 v2.1.271 的收紧主要落在权限与沙箱层面：命令级 allowed_domains、子代理 omitClaudeMd、Monitor 强制截止时间，都属于配置语义变化而非新功能。现有用户如果依赖无超时的 persistent 监听，升级后必须改成显式续期，否则监听会到期中断；自定义子代理若依赖自动加载 CLAUDE.md，也要检查是否需要显式保留。走 newapi.lurus.cn 代理的国内用户，摘要未提及代理链路或鉴权改动，按现有配置继续用即可，无需为本次升级调整代理。"
+tags: [permissions, subagents, sandboxing, monitor]
+---
+
+- Bash/PowerShell/Monitor 在自动模式加沙箱下新增按命令的 `allowed_domains`：只放行该命令评审过的域名，其余拒绝。含义是 harness 的网络授权从会话级下沉到命令级。
+- 子代理 frontmatter 与 `--agents` JSON 新增 `omitClaudeMd`，可让自定义与插件子代理不加载用户、项目、本地 CLAUDE.md，托管策略文件仍加载。含义是上下文注入可按代理裁剪，减少无关指令干扰。
+- Monitor watches 取消无超时的 `persistent`，改为始终带截止时间（最长 30 分钟，单次 `-p` 为 10 分钟），到期通知 Claude 重新武装。含义是长驻监听需显式续期，避免失控挂起。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.271](https://github.com/anthropics/claude-code/releases/tag/v2.1.271)

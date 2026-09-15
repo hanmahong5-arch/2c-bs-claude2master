@@ -1,0 +1,23 @@
+---
+slug: 2026-09-15-cline-cli-v3-0-62
+title: "cline cli-v3.0.62 — Cline CLI v3.0.62：重试、插件、流式与默认模型大改"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.62
+publishedAt: 2026-09-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline CLI v3.0.62：重试、插件、流式与默认模型大改"
+broadcast: "这次更新主要改了重试、插件和流式输出。模型回合中断后最多重试三次并退避，但已经输出过的内容不再重试，避免重复；插件改由 Hub 统一管理，工作区里的插件目录故意不扫描，防止打开仓库就启动它控制的服务器；流式输出也不再节流，大目录不再卡住消息。对国内做 agent 的开发者来说，这些改动直接关系到稳定性和安全。"
+insight: "这次 CLI v3.0.62 值得现有用户升级：流中断重试最多 3 次且已输出回合不重试，能减少重复内容；流式输出不再经 Hub 节流，checkpoint 跳过未变文件，大目录下体验会明显改善。Agent Plugins 改由 Hub 管理后，MCP 服务器无需改 cline_mcp_settings.json，原有 hook 和 MCP 配置基本不用动。走 newapi.lurus.cn 代理的用户，摘要未提及代理相关改动，按现有方式继续用即可。"
+tags: [cline-cli, agent-plugins, streaming, model-catalog]
+---
+
+- 流中断的模型回合现在最多重试 3 次并退避，但已输出过的回合不重试，避免重复内容；harness 需区分「未产出」与「已产出」状态。
+- Agent Plugins 改由 Hub 管理，`~/.agents/plugins/*` 被校验并暴露为 `plugin-name:skill-name`，MCP 服务器无需改 `cline_mcp_settings.json`；工作区 `.agents/plugins` 故意不扫描，防止打开仓库就启动仓库控制的 MCP。
+- 流式输出不再经 Hub 节流，此前每个 token 都要带完整会话副本往返；同时 checkpoint 用持久快照索引跳过未变文件，避免大未跟踪目录阻塞消息。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.62](https://github.com/cline/cline/releases/tag/cli-v3.0.62)

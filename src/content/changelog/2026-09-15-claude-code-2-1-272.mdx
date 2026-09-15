@@ -1,0 +1,23 @@
+---
+slug: 2026-09-15-claude-code-2-1-272
+title: "claude-code v2.1.272 — 仅含笼统修复说明，无具体功能变更"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.272
+publishedAt: 2026-09-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "仅含笼统修复说明，无具体功能变更"
+broadcast: "这次更新只写了修复缺陷和提升稳定性，没有列出任何具体修了什么，也没提新功能、新接口或配置项，同样没说有破坏性变更。对国内做 agent 框架的开发者来说，这意味着不能据此调整依赖或行为假设，现有调用方式保持不动就好；升级风险看着不高，但还是建议自己跑一遍回归，并留好版本回退和灰度发布的能力。"
+insight: "这次 v2.1.272 只写了笼统的 Bug fixes and reliability improvements，没有具体修复项、新功能或破坏性变更，所以现有 prompt 和 hook 配置都不用改，保持现有调用方式即可。升级风险较低，但建议先灰度并保留回退能力，不必急着全量。国内走 newapi.lurus.cn 代理的用户，摘要里没有任何相关说明，按现有方式继续用即可，无需为此调整。"
+tags: [claude-code, release-notes, bug-fixes, reliability]
+---
+
+- 发布说明仅写“Bug fixes and reliability improvements”，未列出任何具体修复项，无法判断影响范围；对 agent harness 设计而言，这意味着不能据此调整依赖或行为假设。
+- 没有新增功能、API 或配置项描述，说明本版本不引入可被 harness 利用的新能力；集成方应保持现有调用方式不变。
+- 未提及破坏性变更或迁移要求，暗示升级风险较低，但仍需自行回归验证；harness 设计上应保留版本回退与灰度能力。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.272](https://github.com/anthropics/claude-code/releases/tag/v2.1.272)

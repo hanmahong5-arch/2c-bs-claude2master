@@ -1,0 +1,23 @@
+---
+slug: 2026-09-14-goose-1-50-1
+title: "goose v1.50.1 — 补丁版本回滚模型与 MCP 默认版本选择，稳定优先"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.50.1
+publishedAt: 2026-09-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "补丁版本回滚模型与 MCP 默认版本选择，稳定优先"
+broadcast: "这次发布的是一个补丁版本，只做修复不加新功能，重点是回滚了此前的模型更新，也把默认的 MCP 版本选择逻辑还原了。这说明模型升级会直接影响 agent 的运行行为，版本协商也是敏感环节。对国内做 agent 的开发者来说，把模型和 MCP 版本解耦成能独立回滚的配置项，才是稳妥做法。"
+insight: "这次 v1.50.1 只是补丁版本，回滚了模型更新和 MCP 默认版本选择，没有新功能，所以现有用户不必急着升级，除非你正被这两个变更影响。更值得留意的是，模型和 MCP 默认值都被回滚，说明它们会直接影响 harness 行为，建议把这两项当作可独立回滚的配置项来管理，而不是跟着版本走。国内走 newapi.lurus.cn 代理的用户，本次摘要未提及代理相关变化，按现有配置继续即可。"
+tags: [goose, mcp, model-rollback, patch-release]
+---
+
+- 回滚了模型更新：本次补丁版本撤销了此前的模型变更，说明模型升级会直接影响 harness 行为，需要可回退的版本策略。
+- 回滚 MCP 默认版本选择更新：默认版本选择逻辑被还原，意味着 MCP 版本协商是 agent harness 的敏感环节，默认值变更需谨慎灰度。
+- 定位为 patch release：仅做修复不做新功能，提示 harness 设计应把模型与 MCP 版本解耦为可独立回滚的配置项。
+
+---
+
+> 原文 release：[block/goose v1.50.1](https://github.com/aaif-goose/goose/releases/tag/v1.50.1)
