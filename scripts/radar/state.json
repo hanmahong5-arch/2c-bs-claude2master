@@ -1,13 +1,13 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.272",
+    "anthropics/claude-code": "v2.1.273",
     "openai/codex": "python-v0.154.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.62",
+    "cline/cline": "desktop-v0.0.28",
     "block/goose": "v1.50.1",
     "sst/opencode": "v1.18.31",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.59.0",
+    "google-gemini/gemini-cli": "v0.60.0",
     "openclaw/openclaw": "v2026.9.4",
     "zeroclaw-labs/zeroclaw": "v0.8.5",
     "NousResearch/hermes-agent": "v2026.9.11"
@@ -153,7 +153,8 @@
     "unstablebuild/rune",
     "elliothux/open-compute",
     "rakanki911/DLSS5-Swapper",
-    "crmne/spotifast"
+    "crmne/spotifast",
+    "qingjian-team/qingjian"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -258,7 +259,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-15",
+    "anthropic-engineering": "2026-09-16",
     "claude-code-docs": "2026-09-11",
     "openai-codex-blog": "2026-09-10",
     "openclaw-concepts": "2026-09-14",
@@ -569,7 +570,8 @@
       "https://simonwillison.net/2026/Sep/11/github-to-sqlite/",
       "https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/",
       "https://simonwillison.net/2026/Sep/14/influences/",
-      "https://simonwillison.net/2026/Sep/14/laurie-voss/"
+      "https://simonwillison.net/2026/Sep/14/laurie-voss/",
+      "https://simonwillison.net/2026/Sep/15/gemini-live/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -712,7 +714,8 @@
       "https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b",
       "https://www.latent.space/p/forward-deployed-engineer-best-practices",
       "https://www.latent.space/p/ainews-aef-1-standard-emerges-for",
-      "https://www.latent.space/p/recursive"
+      "https://www.latent.space/p/recursive",
+      "https://www.latent.space/p/good-start-labs"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1076,7 +1079,8 @@
       "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
       "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/",
       "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
-      "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/"
+      "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+      "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -1178,7 +1182,9 @@
       "https://huggingface.co/blog/ibm-research/real-time-intelligence",
       "https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series",
       "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
-      "https://huggingface.co/blog/gradio-workflow-1111"
+      "https://huggingface.co/blog/gradio-workflow-1111",
+      "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+      "https://huggingface.co/blog/asyncgrpo-lora-hfjobs"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -1266,23 +1272,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-15",
+    "simonwillison": "2026-09-16",
     "lilianweng": "2026-09-10",
-    "latentspace": "2026-09-15",
-    "interconnects": "2026-09-15",
+    "latentspace": "2026-09-16",
+    "interconnects": "2026-09-16",
     "karpathy": "2026-09-14",
     "raschka": "2026-09-14",
     "eugeneyan": "2026-09-14",
     "chiphuyen": "2026-09-10",
-    "oneusefulthing": "2026-09-14",
+    "oneusefulthing": "2026-09-16",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-15",
-    "deepmind": "2026-09-14",
-    "hf-blog": "2026-09-14",
-    "anthropic-news": "2026-09-15",
-    "steipete": "2026-09-14",
-    "openclaw-blog": "2026-09-14"
+    "openai-news": "2026-09-16",
+    "deepmind": "2026-09-16",
+    "hf-blog": "2026-09-16",
+    "anthropic-news": "2026-09-16",
+    "steipete": "2026-09-16",
+    "openclaw-blog": "2026-09-16"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

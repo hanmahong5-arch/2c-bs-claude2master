@@ -1,0 +1,23 @@
+---
+slug: 2026-09-15-blog-hf-blog-your-agent-aced-the-task-will-it-do
+title: "Your Agent Aced the Task. Will It Do It Again? — IBM 研究指出 agent 单次跑通任务不代表稳定复现，提出用一致性指标衡量可"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/ibm-research/altk-evolve-consistency
+publishedAt: 2026-09-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "IBM 研究指出 agent 单次跑通任务不代表稳定复现，提出用一致性指标衡量可靠性"
+broadcast: "IBM 的研究提醒我们，agent 单次把任务跑通，并不代表它下次还能稳定做到，同一个 agent 重复执行同一任务，结果可能不一样。所以他们提出用一致性来衡量可靠性，建议在评测和回归测试里加入多次重复运行。对国内做 agent 的开发者来说，这意味着可靠性指标该和准确率一样，成为上线的门槛。"
+tags: [agent-evaluation, reliability, consistency, ibm-research]
+---
+
+- IBM Research 在 Hugging Face 发文指出，agent 评测通常只看单次任务是否成功，但同一个 agent 在重复执行同一任务时结果可能不同，因此"通过"不等于"可靠"。对 agent 开发者而言，评测集需要加入多次重复运行的方差或通过率，而非单次 pass/fail。
+- 文章提出用一致性（consistency）作为衡量维度，关注 agent 在相同输入下能否稳定给出可接受的结果。这意味着工具链和 CI 流程里应把重复运行纳入回归测试，避免上线后行为漂移。
+- 该工作与 IBM 的 ALTK（Agent Lifecycle Toolkit）相关，指向 agent 生命周期中的评估与演化环节。对构建 agent 平台的团队来说，可靠性指标应和准确率一样进入发布门槛。
+
+---
+
+> 原文：[Your Agent Aced the Task. Will It Do It Again?](https://huggingface.co/blog/ibm-research/altk-evolve-consistency) · 作者 Hugging Face

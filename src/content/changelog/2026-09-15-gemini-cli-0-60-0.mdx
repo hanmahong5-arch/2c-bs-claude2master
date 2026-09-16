@@ -1,0 +1,23 @@
+---
+slug: 2026-09-15-gemini-cli-0-60-0
+title: "gemini-cli v0.60.0 — v0.60.0 几乎全是安全加固：路径边界、沙箱隔离、OAuth 与工具输出溯源"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0
+publishedAt: 2026-09-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "v0.60.0 几乎全是安全加固：路径边界、沙箱隔离、OAuth 与工具输出溯源"
+broadcast: "谷歌的命令行智能体工具发布了新版本，这次更新几乎全是安全加固。它收紧了工作区路径和符号链接的边界检查，还隔离了沙箱和配置目录，并对不可信的工具输出强制加上溯源信息。对国内做智能体的开发者来说，这意味着路径越界和配置共享这类风险被重点盯上了，值得对照检查自己的实现。"
+insight: "v0.60.0 几乎全是安全加固，属于底层行为收紧而非功能新增，现有用户值得升级，直接升到该版本即可，无需观望。但要注意：路径边界、symlink 解析和工具输出溯源都变了，如果你的 harness 或 hook 依赖字符串前缀匹配判断越界、或把临时目录与配置目录当共享资源，这些配置需要改，否则可能误判。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [sandbox, path-validation, mcp-oauth, tool-output]
+---
+
+- **路径与符号链接边界收紧**：命令安全与文件发现增强 workspace 路径边界检查及 symlink 解析，并处理 NTFS 8.3 短名（SFN）绕过；harness 不能只做字符串前缀匹配，需在解析真实路径后再判定是否越界。
+- **沙箱与配置隔离**：macOS Seatbelt 沙箱隔离临时目录，容器内隔离 settings 目录，系统级配置路径强制权限与属主校验；harness 应把临时目录与配置目录视为不可共享的每会话资源。
+- **工具输出与扩展可信度**：对不可信工具输出强制 envelope 元数据溯源，扩展加载器加固路径解析与边界校验，环境变更需用户同意并清理可改运行时的环境变量；harness 需区分可信与不可信输出，并让扩展的运行时改动显式获得授权。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.60.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0)

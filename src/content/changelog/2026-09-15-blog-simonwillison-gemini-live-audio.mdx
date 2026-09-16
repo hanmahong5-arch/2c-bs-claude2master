@@ -1,0 +1,23 @@
+---
+slug: 2026-09-15-blog-simonwillison-gemini-live-audio
+title: "Gemini Live audio — Simon Willison 用 AI 现场写了个零依赖网页 UI，试玩 Goo"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/15/gemini-live/
+publishedAt: 2026-09-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 用 AI 现场写了个零依赖网页 UI，试玩 Google 新发布的 Gemini 3.8 Live 语音模型"
+broadcast: "谷歌刚发布了两个语音对语音模型，能像真人一样实时对话，还支持打断。Simon Willison 直接让 AI 读完文档，现场生成了一个零依赖的网页界面来试玩。这对国内开发者意味着，实时双向语音正在成为主流模型的标配接口，而且浏览器原生能力已经够用，不用再额外引入开发包，做语音 agent 的门槛明显降低了。"
+tags: [gemini-live, speech-to-speech, websockets, web-audio-api]
+---
+
+- Google 发布 Gemini 3.8 Live 与 3.8 Live Extended Thinking 两个语音对语音模型，形态类似 OpenAI 的 GPT-Live 系列，支持打断模型说话。对 agent 的含义：实时双向语音正成为主流模型厂商的标配接口层。
+- 他用 GPT-6 Astra Extra High 读文档后直接生成一个试用网页，可选模型、语音预设、系统提示词，并在浏览器里发起语音对话。对开发者的含义：读文档写胶水代码这类工作已可整体外包给模型。
+- 实现不依赖任何库，直接连 WebSocket 端点（BidiGenerateContent），用 Web Audio API 的 AudioContext 同时做采集与播放。对工具链的含义：浏览器原生 API 已足够支撑实时语音 agent，无需引入 SDK。
+
+---
+
+> 原文：[Gemini Live audio](https://simonwillison.net/2026/Sep/15/gemini-live/) · 作者 Simon Willison

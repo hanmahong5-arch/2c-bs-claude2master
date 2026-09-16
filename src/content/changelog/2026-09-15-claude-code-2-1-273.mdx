@@ -1,0 +1,23 @@
+---
+slug: 2026-09-15-claude-code-2-1-273
+title: "claude-code v2.1.273 — 网关请求头、MCP 断连通知、会话分叉"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.273
+publishedAt: 2026-09-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "网关请求头、MCP 断连通知、会话分叉——三条影响 agent harness 的改动"
+broadcast: "这次更新有三处值得留意。一是新增了网关提示请求头，可以把请求分类和压缩状态透传给网关，方便做路由和限流。二是工具连接中途断开且重连失败时会有通知，提醒我们别静默降级，要给用户留个能发现的恢复入口。三是会话现在可以分叉，在本地作为后台会话运行，意味着会话状态得可复制、和前台控制解耦。"
+insight: "这次 v2.1.273 的三条改动都落在 harness 层，普通用户没有必须升级的硬理由，但如果你在用 MCP 工具或远程控制会话，建议升一下：MCP 断连通知能让你在 /mcp 里看到失败而不是静默降级，会话分叉也让状态可复制。网关请求头默认关闭，需要手动设 CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 才生效，走 newapi.lurus.cn 代理的用户不受影响，现有 prompt 和 hook 配置也无需改动。"
+tags: [gateway-headers, mcp-reconnect, session-forking, remote-control]
+---
+
+- 新增 `x-claude-code-request-class` 等网关提示请求头，需 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 开启：harness 可把请求分类与压缩状态透传给网关，便于路由与限流策略。
+- MCP 服务器会话中途断开且自动重连放弃时新增通知，指向 `/mcp`：harness 需为工具连接失败设计可发现的恢复入口，而非静默降级。
+- 支持从 Claude app 分叉 `--remote-control` 或 `/remote-control` 启动的会话，分叉在本地作为后台会话运行：harness 的会话状态需可复制且与前台控制解耦。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.273](https://github.com/anthropics/claude-code/releases/tag/v2.1.273)

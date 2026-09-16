@@ -1,0 +1,23 @@
+---
+slug: 2026-09-15-cline-desktop-v0-0-28
+title: "cline desktop-v0.0.28 — 后端慢启动不再卡死，中日文输入法回车不再误发消息"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.28
+publishedAt: 2026-09-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "后端慢启动不再卡死，中日文输入法回车不再误发消息"
+broadcast: "这次更新解决了一个挺烦人的问题：后端启动慢的时候，以前只问一次、大概十五秒就放弃了，现在改成每次重试都重新解析地址，不会轻易卡死。另外，中日文输入法打字时按回车和方向键，不会再误把消息发出去。对做智能体的开发者来说，这两点提醒我们，启动握手要设计成能重试，按键事件得分清是提交输入还是提交消息，临时错误可以重试，但已经出了内容就别再重试，免得重复。"
+insight: "这次 v0.0.28 修的是后端慢启动卡死和中日文输入法回车误发，属于体验层修复，不是能力升级。现有用户如果常遇到启动超时或中文输入误触，值得升；否则不急。prompt 和 hook 配置不用改，摘要里没提接口或配置变更。国内走 newapi.lurus.cn 代理的用户也不受影响，因为改动集中在重试解析和按键事件区分，与代理链路无关。"
+tags: [backend-retry, ime-handling, turn-retry, model-catalog]
+---
+
+- 后端地址改为每次重试都重新解析，不再只问一次并在约 15 秒后放弃；harness 的启动握手应设计成可重试而非一次性超时。
+- 中日文输入法组合期间 Enter 与方向键归输入法所有，不再触发发送；harness 需区分「提交组合」与「提交消息」两类按键事件。
+- 临时性 provider 错误（如网关转发的限流）最多重试三次，但已产生输出的回合不重试；重试策略必须以「是否已有输出」为边界，避免重复内容。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.28](https://github.com/cline/cline/releases/tag/desktop-v0.0.28)

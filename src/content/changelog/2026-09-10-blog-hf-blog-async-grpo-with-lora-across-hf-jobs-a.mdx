@@ -1,0 +1,23 @@
+---
+slug: 2026-09-10-blog-hf-blog-async-grpo-with-lora-across-hf-jobs-a
+title: "Async GRPO with LoRA across HF Jobs: a bucket, a proxy, — HF 用异步 GRPO 加 LoRA 跑分布式 RL，绕开 NCCL，靠桶和代理"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/asyncgrpo-lora-hfjobs
+publishedAt: 2026-09-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "HF 用异步 GRPO 加 LoRA 跑分布式 RL，绕开 NCCL，靠桶和代理协调。"
+broadcast: "给大家说个新方案：有人把异步的强化学习训练和轻量微调结合起来，放到云端任务上跨机器跑，而且不依赖那种专门的通信库。它靠一个存储桶加一个代理来协调，把多机训练的组网门槛降下来了。这对做智能体和工具链的开发者意味着，分布式强化学习可以搭得更轻，少依赖专用网络和通信库。"
+tags: [async-grpo, lora, hf-jobs, distributed-rl]
+---
+
+- 方案用异步 GRPO 配合 LoRA，在 HF Jobs 上跨节点训练，不依赖 NCCL 做通信。
+- 协调靠一个对象存储桶加一个代理，替代传统集合通信，降低多机 RL 的组网门槛。
+- 对 agent 与工具链的含义：分布式 RL 训练可以更轻量地搭建，减少对专用网络与通信库的依赖。
+
+---
+
+> 原文：[Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL](https://huggingface.co/blog/asyncgrpo-lora-hfjobs) · 作者 Hugging Face
