@@ -1,0 +1,23 @@
+---
+slug: 2026-09-16-blog-simonwillison-datasette-1-0a40
+title: "datasette 1.0a40 — Datasette 1.0a40 发布：同步安全修复，插件可跑后台任务，内部客户"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/16/datasette/
+publishedAt: 2026-09-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 1.0a40 发布：同步安全修复，插件可跑后台任务，内部客户端迁到 httpx2"
+broadcast: "Datasette 发布了新版本，这次把安全修复和一批功能改进一起带上了，升级时能一并拿到，但要注意正式版之前的行为变化。更值得关注的是，插件现在可以启动和管理后台任务了，像建索引、抓取这类耗时的异步活儿终于能跑起来。另外它内部的网络请求客户端也换了新实现，如果你有插件或自动化脚本依赖这个接口，记得先验证一下兼容性。"
+tags: [datasette, release-notes, plugins, httpx]
+---
+
+- 该版本包含与 0.65.5 相同的安全修复，并带来新功能与大量 bug 修复，其中不少来自为 1.0 稳定版做 issue 梳理的努力。对开发者的含义：升级时安全补丁与功能改进可一并拿到，但需留意 1.0 前的行为变化。
+- 插件现在可通过新的 `datasette.add_background_task()` 方法启动和管理后台任务（致谢 Alex Garcia）。对工具链的含义：插件生态从请求内同步逻辑扩展到长时任务，适合做索引、抓取等异步工作。
+- Datasette 已迁移到 httpx2，用于内部 `datasette.client.get()` 等方法。对 agent 的含义：内部 HTTP 客户端换代意味着依赖该接口的插件与自动化脚本需要验证兼容性。
+
+---
+
+> 原文：[datasette 1.0a40](https://simonwillison.net/2026/Sep/16/datasette/) · 作者 Simon Willison

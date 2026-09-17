@@ -1,0 +1,23 @@
+---
+slug: 2026-09-16-blog-simonwillison-datasette-0-65-5
+title: "datasette 0.65.5 — Datasette 0.65.5 修了一个权限绕过漏洞：表名尾部换行符能读到私有"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/16/datasette-2/
+publishedAt: 2026-09-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 0.65.5 修了一个权限绕过漏洞：表名尾部换行符能读到私有数据"
+broadcast: "有个叫 Datasette 的数据工具刚发了个安全补丁，修的是一个权限绕过漏洞：只要在请求的表名末尾加个换行符，就能绕过表级权限检查，读到本该私有的数据。这事值得国内开发者留意，因为它提醒我们，做数据访问层或者给 agent 接数据时，表名、路径这类标识符一定要先去掉空白、做规范化，再去鉴权，否则字符串比较很容易被绕过。用它当数据后端的项目建议尽快升级。"
+tags: [datasette, security, permissions, release]
+---
+
+- 该版本是安全修复发布，针对一个由 dpfkdlemtp 通过 GHSA-h547-rmjf-5m2m 报告的问题：请求的表名末尾带换行符时，可以绕过表级权限检查，暴露本应私有的行。含义：权限校验必须在规范化输入之后进行，否则字符串比较类检查极易被空白字符绕过。
+- 漏洞影响的是 Datasette 的表权限机制，而非查询或认证层，说明数据暴露面往往藏在最不起眼的参数解析环节。含义：给 agent 或工具链做数据访问层时，应把表名、路径等标识符先做 trim 与规范化再鉴权。
+- 修复以补丁版本 0.65.5 形式发布，并附有 GHSA 安全公告编号，便于使用者核对与升级。含义：依赖 Datasette 作为数据后端的项目应尽快升级，并把此类安全公告纳入依赖监控流程。
+
+---
+
+> 原文：[datasette 0.65.5](https://simonwillison.net/2026/Sep/16/datasette-2/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-14-hermes-agent-2026-9-14
+title: "hermes-agent v2026.9.14 — 远程会话刷新不再被误判重放，长驻进程也不再泄漏状态句柄。"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.14
+publishedAt: 2026-09-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "远程会话刷新不再被误判重放，长驻进程也不再泄漏状态句柄。"
+broadcast: "有个叫 Hermes Agent 的开源项目刚更新了。它修好了一个挺要命的问题：远程会话刷新时，并发请求可能把已经轮换过的令牌重复提交，结果整个会话被吊销。现在它把刷新请求做了合并去重，还加了宽限窗口，同时把刷新挪出主循环，慢的认证服务不再拖垮状态接口。对做 agent 的国内开发者来说，这提醒我们认证刷新和健康检查得解耦，读写句柄也要按角色分开管。"
+insight: "这次 Hermes Agent v0.21.3 的改动集中在会话刷新与句柄管理上，对现有用户来说值得升级：如果你的长驻进程或远程会话曾出现被误判重放、会话被吊销，或状态句柄泄漏，这个版本直接针对这些点。现有 prompt 和 hook 配置不需要改，因为改动落在网关刷新路径与读写句柄分离，不涉及调用约定。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理层变化，按现有方式使用即可，升级后重点观察刷新并发去重是否生效。"
+tags: [session-refresh, token-rotation, state-db, gateway]
+---
+
+- 网关两条刷新路径（cookie 与 Desktop bearer）现在合并携带同一轮换 refresh token 的并发请求，避免唤醒突发把已轮换 token 重放进 Portal 复用检测而吊销整个会话；对 harness 的含义是刷新必须做并发去重与宽限窗口，而非逐请求直通。
+- 刷新移出事件循环执行，慢身份提供方不再阻塞 /api/status；含义是认证路径要与状态接口解耦，避免单点拖垮健康检查。
+- gateway、dashboard/Desktop 后端、ACP 与 CLI 读取端改为只读挂载，进程内写入者共享注册表句柄，健康拓扑下不再出现重复 SessionDB 句柄；含义是读写句柄需按角色分离并集中管理。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.9.14](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.14)

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-16-cline-desktop-v0-0-29
+title: "cline desktop-v0.0.29 — 队列消息可在运行中按 Enter 转向，不必等整轮结束"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.29
+publishedAt: 2026-09-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "队列消息可在运行中按 Enter 转向，不必等整轮结束"
+broadcast: "这次更新让排队消息能在运行中直接按回车转向，不用等整轮任务跑完，而且转向失败会有提示，不会悄悄丢掉。对做 agent 的开发者来说，这意味着任务编排得留出明确的轮次边界当注入点，光靠任务级排队不够用，并发转向还得处理好原子状态和失败反馈。"
+insight: "这次 Desktop v0.0.29 的核心变化是队列消息可在运行中按 Enter 转向，且转向依赖显式 turn 边界作为注入点，队列头部原子领取、失败有 toast 反馈。对现有用户来说，如果你依赖任务级排队、等整轮结束再处理消息，升级后行为会变，值得升；但若你的 prompt 或 hook 假设消息只在任务结束后被拾取，需要相应调整。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [message-queue, turn-boundary, desktop, macos-dock]
+---
+
+- 运行中空输入框按 Enter 会把队列首条消息转向当前 turn，在下一个 turn 边界被拾取，而非等整个任务结束；含义是 harness 需要显式的 turn 边界作为注入点，而非仅支持任务级排队。
+- 队列头部原子领取，快速二次 Enter 不会转向已出队的消息，转向失败以 toast 提示而非静默失败；含义是并发转向需要原子状态与可观测的失败反馈。
+- macOS Dock 图标改为标准边距，内置与可选运行时图标（Classic、Chip、Hologram、Midnight）不再贴边，Windows 保持原样；含义是桌面端外观一致性属于发布质量项。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.29](https://github.com/cline/cline/releases/tag/desktop-v0.0.29)

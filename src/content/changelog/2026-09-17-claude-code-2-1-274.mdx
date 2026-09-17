@@ -1,0 +1,23 @@
+---
+slug: 2026-09-17-claude-code-2-1-274
+title: "claude-code v2.1.274 — MCP 启动等待可配置，会话卡死与内存告警修复"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.274
+publishedAt: 2026-09-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP 启动等待可配置，会话卡死与内存告警修复"
+broadcast: "这次更新给工具连接的启动等待时间做了可配置，能限制首轮等待，避免被慢服务器拖住。还修了会话卡死时无限重试的问题，损坏记录会自愈，否则明确报错并提示回退。内存紧张时也会给出可见警告和重启步骤。对做智能体的开发者来说，这说明工具就绪、错误终止和资源压力都得当成显式信号来处理。"
+insight: "这次 v2.1.274 值得现有用户升级，重点在会话卡死和内存告警的修复，以及新增的 CLAUDE_CODE_MCP_STARTUP_WAIT_MS 可配置项。如果你之前被慢 MCP 服务器拖住首轮、或遇到过 unexpected tool_use_id 400 无限重试，升级后能自愈或明确终止，不用再手动清 transcript。走 newapi.lurus.cn 代理的用户不受影响，这是客户端侧行为，照常升级即可；若你依赖慢 MCP，可顺手把等待时间显式设一下。"
+tags: [mcp-startup, session-recovery, memory-pressure, otel-tracing]
+---
+
+- 新增 `CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 限制首个非交互轮等待 MCP 连接的时间（0 为不等待）：harness 需把「工具就绪」与「首轮启动」解耦，避免被慢服务器拖住。
+- 修复会话陷入 `unexpected tool_use_id` 400 无限重试：损坏 transcript 自愈，否则以明确错误加 `/rewind` 提示终止循环，说明 harness 必须为工具调用错误设终止条件。
+- 内存临界时显示可见警告并给出释放或安全重启步骤，且后台命令仅在内存严重不足时才停止：资源压力应作为显式信号而非静默中断。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.274](https://github.com/anthropics/claude-code/releases/tag/v2.1.274)
