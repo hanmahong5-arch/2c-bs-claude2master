@@ -1,0 +1,23 @@
+---
+slug: 2026-09-17-cline-desktop-v0-0-30
+title: "cline desktop-v0.0.30 — Windows 更新失败与工作区劫持可执行文件，两个真实踩坑修复"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.30
+publishedAt: 2026-09-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Windows 更新失败与工作区劫持可执行文件，两个真实踩坑修复"
+broadcast: "一个桌面版编程助手刚修了三个真实踩坑。Windows 更新失败，是因为旧安装器按进程名判断占用，结果覆盖了还在被守护进程使用的文件；现在改成按谁持有文件来关进程。另外它不再从工作区执行同名程序，避免仓库里放个同名可执行文件就被跑起来。长会话压缩也改用真实 token 数，不再只靠字符估算。对做 agent 的人来说，这三点都值得对照检查自己的执行和上下文管理。"
+insight: "Desktop v0.0.30 修的是安装与执行层的真实坑，跟模型能力无关，但直接影响日常稳定性。现有用户值得升级：Windows 上更新报错、仓库里放个 rg.exe 就被执行、长会话被压到只剩几个输出 token，这三类问题旧版都躲不掉，直接装 v0.0.30 即可，不需要改 prompt 或 hook 配置。走 newapi.lurus.cn 代理的国内用户不受影响，这次改的是本地安装器和子进程解析逻辑，与代理链路无关。"
+tags: [windows-installer, process-isolation, context-compaction, agent-harness]
+---
+
+- **Windows 更新不再报 "Error opening file for writing"**：旧安装器用 32 位 NSIS，PowerShell 跑在 WOW64 下 `Get-Process` 拿不到 64 位进程路径，过滤永远匹配不到 sidecar，于是覆盖了仍被 Hub 守护进程占用的可执行文件。现改用 Windows Restart Manager 按文件占用关进程，与位数无关，且不影响并存的 Cline Beta。含义：harness 的安装/升级路径要按“谁持有文件”而非按进程名判断。
+- **不再从工作区执行同名程序**：Windows 先按子进程工作目录解析裸程序名再查 PATH，而 Cline 以工作区为 cwd 运行 `rg`、`git`、`powershell`，仓库里放个 `rg.exe` 就会被执行。现启动时禁用当前目录可执行搜索，所有子进程继承。含义：agent 的 shell 执行层必须显式关闭 cwd 优先解析。
+- **长会话压缩触发改用 provider 上报的 token 数**：原先按 ~3 字符/token 估算，反汇编、图片、压缩源码等密集内容会撑爆真实上下文而估算仍低于阈值，压缩不触发，回合被压到只剩几个输出 token。现同时参考真实 token 数，保留历史量按估算偏差缩放，摘要器输出预算翻倍。含义：上下文管理不能只靠字符估算。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.30](https://github.com/cline/cline/releases/tag/desktop-v0.0.30)

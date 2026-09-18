@@ -1,0 +1,23 @@
+---
+slug: 2026-09-17-claude-code-2-1-275
+title: "claude-code v2.1.275 — 网关登录确认、发送快捷键、技能同步"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.275
+publishedAt: 2026-09-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "网关登录确认、发送快捷键、技能同步——三条直接影响 agent harness 的改动"
+broadcast: "这次更新有三处值得注意。网关登录多了已登录账号确认，凭据保存前要用户点头，不再静默落盘。还加了发送快捷键，能中断当前回合并一次性发出所有排队消息，没送达前显示灰色。另外，网页端启用的技能和插件会同步到终端会话，也能关掉。对做 agent 的团队来说，凭据写入要加确认点，队列要区分已排队和已接收，能力集来源也不再只在本地了。"
+insight: "这次 v2.1.275 的三条改动都落在 harness 层，现有用户值得升级：网关登录多了显式确认点，凭据写入不再静默落盘，走 newapi.lurus.cn 代理的国内用户登录流程会多一步确认，但代理本身不受影响。send-now 键让排队消息有了可见状态，hook 配置里若依赖静默批量投递需要复核。skills 与 plugins 现在会从 claude.ai 同步到终端，本地覆盖优先级要重新确认，必要时用 syncClaudeAiSkills 或 syncClaudeAiPlugins 关掉。"
+tags: [claude-code, agent-harness, release-notes, plugin-sync]
+---
+
+- 网关登录新增已登录账号确认：凭据保存前需用户确认，`/status` 可见。含义：harness 的凭据写入路径应加入显式确认点，而非静默落盘。
+- 新增 send-now 键（ctrl+enter 或 ctrl+x ctrl+s）：中断当前回合并一次性发送所有排队消息，未送达前显示为灰色。含义：队列消息需要可见状态与批量投递语义，harness 应区分「已排队」与「已接收」。
+- claude.ai 账号启用的 skills 与 plugins 会同步到终端会话，可用 `syncClaudeAiSkills: false` 或 `syncClaudeAiPlugins: false` 退出。含义：harness 的能力集来源不再局限于本地，需设计远程同步与本地覆盖的优先级。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.275](https://github.com/anthropics/claude-code/releases/tag/v2.1.275)

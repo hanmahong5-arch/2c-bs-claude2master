@@ -1,0 +1,23 @@
+---
+slug: 2026-09-18-openclaw-2026-7-33
+title: "openclaw v2026.7.33 — 安全加固与消息完整性修复，126 个 PR 覆盖网关、插件与渠道。"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.7.33
+publishedAt: 2026-09-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "安全加固与消息完整性修复，126 个 PR 覆盖网关、插件与渠道。"
+broadcast: "这次更新主要做安全加固和消息完整性修复，一共一百多个改动，覆盖网关、插件和渠道。它收紧了安全边界，拒绝转义换行命令、注入的 Git 参数和畸形负载，还要求消息在重试、恢复和渠道关闭时保持完整。对国内做 agent 的开发者来说，这意味着命令解析和插件安装要加严格校验，消息持久化得做成幂等的，昂贵读取也要设上限。"
+insight: "这次 2026.7.33 的核心是安全加固与消息完整性，126 个 PR 覆盖网关、插件与渠道，收紧了对转义换行命令词、注入 Git 选项参数、畸形节点负载等的校验。对现有用户来说，值得升级，因为修复集中在输入校验和消息持久化、恢复机制上，属于底层稳定性改进。升级后建议检查 harness 的命令解析与插件安装路径是否做了严格输入校验，并确认消息持久化具备幂等性。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理层变动，按现有配置继续即可。"
+tags: [security-hardening, message-integrity, gateway-reliability, resource-bounds]
+---
+
+- 安全边界收紧：拒绝转义换行命令词、精确源不匹配、注入的 Git 选项参数、继承的密钥响应 ID 及畸形节点负载，意味着 harness 需在命令解析与插件安装路径上做严格输入校验。
+- 消息与会话完整性：保留重试、钩子、恢复及渠道生命周期中的排队、导入、流式与工具结果消息，提示 harness 应设计幂等的消息持久化与恢复机制。
+- 资源与生命周期安全：限制目录、历史、媒体、API 与提供者等待，停止取消的并行工具，排空渠道关闭，要求 harness 对昂贵读取设界并在关闭前完成清理。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.7.33](https://github.com/openclaw/openclaw/releases/tag/v2026.7.33)

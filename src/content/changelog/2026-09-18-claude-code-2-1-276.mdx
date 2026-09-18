@@ -1,0 +1,23 @@
+---
+slug: 2026-09-18-claude-code-2-1-276
+title: "claude-code v2.1.276 — 代理网关用户注意：2.1.275 引入的 400 报错已修复"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.276
+publishedAt: 2026-09-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "代理网关用户注意：2.1.275 引入的 400 报错已修复"
+broadcast: "用代理网关接 Claude Code 的开发者注意了，之前那个让所有请求都报 400 错误的回归问题，现在已经修好了。问题出在程序默认请求会直达官方端点，忽略了走代理的情况，新增的输入标签在代理链路上不兼容。这也提醒做 agent 的团队，自定义接入地址的场景要提前纳入验证。"
+insight: "如果你在用 newapi.lurus.cn 这类代理网关，2.1.275 引入的 400 报错会让所有请求直接失败，这个版本必须升，没有观望余地。升级后无需改动现有 prompt 或 hook 配置，问题出在 harness 对自定义 base URL 的兼容性上，不是你的配置。走代理的用户这次受影响最直接，建议尽快升到 2.1.276 恢复可用。"
+tags: [claude-code, proxy, regression-fix, base-url]
+---
+
+- 修复了当 `ANTHROPIC_BASE_URL` 指向代理或网关时，所有请求因 `400 … Input tag 'advisor_20260301'` 失败的问题，该问题为 2.1.275 引入的回归。
+- 含义：harness 不应假设请求会直达官方端点，任何新增的输入标签或字段都需在代理链路上保持兼容。
+- 含义：回归修复提示 harness 设计需把自定义 base URL 场景纳入发布前的验证路径。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.276](https://github.com/anthropics/claude-code/releases/tag/v2.1.276)

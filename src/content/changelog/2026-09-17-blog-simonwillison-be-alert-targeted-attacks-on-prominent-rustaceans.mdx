@@ -1,0 +1,23 @@
+---
+slug: 2026-09-17-blog-simonwillison-be-alert-targeted-attacks-on-prominent-rustaceans
+title: "Be alert: targeted attacks on prominent Rustaceans — Rust 生态正遭社工攻击：假面试骗你装恶意软件，再投毒 crate。"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/17/targeted-attacks-on-rustaceans/
+publishedAt: 2026-09-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Rust 生态正遭社工攻击：假面试骗你装恶意软件，再投毒 crate。"
+broadcast: "最近 Rust 生态出了件要紧事：有人假装给你工作或合同机会，视频通话里骗你装所谓缺失的音频组件，甚至直接往剪贴板塞命令让你执行，上个月的供应链攻击就是这么干的。对咱们国内开发者来说，能读剪贴板、自动装依赖的流程都可能被同样套路利用，发布凭证也成了高价值目标。眼下比较现实的防御是给依赖升级留几天冷却期，别急着拉最新版。"
+tags: [supply-chain, rust, security, dependency-cooldowns]
+---
+
+- 攻击者用视频通话伪装成工作、项目或合同机会，诱导目标安装所谓缺失的音频编解码器，或直接在剪贴板里放命令让目标执行。上月 arrayref 等 crate 的供应链攻击就用了这套手法。对 agent 工具链的含义：任何能读剪贴板、装依赖的自动化流程都可能被同一路径利用。
+- 警告来自 Adam Harvey 与 crates 安全团队，目标包括 rust-lang 成员和热门 crate 的所有者，目的是拿到发布权限后投毒。对开发者的含义：发布凭证等同于高价值攻击面，需要单独隔离与审计。
+- 作者认为当前最现实的防御是依赖冷却期，即新版本发布后等几天再升级，寄望他人先发现异常。对工具链的含义：依赖更新策略应默认引入延迟窗口，而非即时拉取最新版。
+
+---
+
+> 原文：[Be alert: targeted attacks on prominent Rustaceans](https://simonwillison.net/2026/Sep/17/targeted-attacks-on-rustaceans/) · 作者 Simon Willison

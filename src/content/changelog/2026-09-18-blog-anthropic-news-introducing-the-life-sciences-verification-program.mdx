@@ -1,0 +1,23 @@
+---
+slug: 2026-09-18-blog-anthropic-news-introducing-the-life-sciences-verification-program
+title: "Introducing the Life Sciences Verification Program — Anthropic 推出生命科学验证计划，为生物团队提供更宽松的模型访问，但需通"
+source: "Anthropic"
+sourceUrl: https://www.anthropic.com/news/life-sciences-verification-program
+publishedAt: 2026-09-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Anthropic"
+hook: "Anthropic 推出生命科学验证计划，为生物团队提供更宽松的模型访问，但需通过验证与监控。"
+broadcast: "Anthropic 推出了一个生命科学验证计划，生物团队通过机构验证后，就能用上解除生物任务封锁的更强模型，覆盖药物发现和临床开发。对国内做 agent 的开发者来说，这意味着在合规领域可以调用更强的能力，但代价是权限要分两级、项目要隔离，还得保留三十天数据接受离线监控，长时任务和集群行为也都要能被审计。"
+tags: [anthropic, life-sciences, ai-safety, agent-governance]
+---
+
+- LSVP 为生命科学团队提供 Mythos、Opus、Sonnet 模型，解除一般模型对生物任务的封锁，覆盖药物发现、临床开发等。对 agent 开发者意味着在合规领域可调用更强模型，但需通过机构验证。
+- 验证后分 Standard Use 和 High-risk Use 两类授权，后者移除所有生命科学防护，仅限单个项目且每半年续期。这提示工具链需支持细粒度权限与项目级隔离。
+- 安全策略从实时拦截转向离线监控，要求保留 30 天数据，并针对访问劫持、内部威胁和 agent 滥用设计共享责任模型。对 agent 系统而言，长时任务和 swarm 行为需纳入可审计范围。
+
+---
+
+> 原文：[Introducing the Life Sciences Verification Program](https://www.anthropic.com/news/life-sciences-verification-program) · 作者 Anthropic

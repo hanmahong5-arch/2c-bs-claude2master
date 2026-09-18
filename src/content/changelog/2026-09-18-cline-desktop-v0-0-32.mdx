@@ -1,0 +1,23 @@
+---
+slug: 2026-09-18-cline-desktop-v0-0-32
+title: "cline desktop-v0.0.32 — 0.0.31 启动即崩的根因：Hub 与 App 构建身份不一致"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.32
+publishedAt: 2026-09-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "0.0.31 启动即崩的根因：Hub 与 App 构建身份不一致"
+broadcast: "这次修复的是桌面版上一个启动就崩的问题：后台服务和主程序由同一份代码的不同副本构建，身份对不上，程序会把自己刚启动的服务关掉，最后卡在进不去工作区。现在两边改成加载同一份代码，并且每次改动都会在持续集成里真实启动一次后端。对做 agent 的国内开发者来说，这提醒我们自启子进程的版本校验必须和主进程同源。"
+insight: "这次 desktop-v0.0.32 修的是 0.0.31 启动即崩的问题，根因是 Hub 与应用构建身份不一致，导致应用关掉自己启动的 Hub 并报 No compatible hub runtime is available。判断很明确：仍停在 0.0.31 且进不去工作区选择器的用户，直接升到 0.0.32 即可，不用改任何 prompt 或 hook 配置。国内走 newapi.lurus.cn 代理的用户也不受影响，因为摘要里没有任何涉及代理链路或接口变更的内容。"
+tags: [cline, desktop, startup-failure, ci]
+---
+
+- 修复启动失败：0.0.31 中应用可能以 "desktop backend exited before publishing its endpoint" 退出，无法进入工作区选择器；原因是后台 Cline Hub 与应用由同一代码的不同副本构建，Hub 声明的构建身份与应用预期不符，应用会关掉自己刚启动的 Hub，最终超时报 "No compatible hub runtime is available"。含义：harness 中自启子进程的版本/身份校验必须与主进程同源，否则启动握手会自毁。
+- 两侧现在加载同一份代码：Hub 与应用不再各自持有代码副本。含义：多进程 harness 应把共享运行时收敛为单一构建产物，避免身份漂移。
+- CI 每次变更都端到端启动真实编译后端。含义：把启动握手纳入 CI 冒烟测试，才能防止两侧再次分叉。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.32](https://github.com/cline/cline/releases/tag/desktop-v0.0.32)

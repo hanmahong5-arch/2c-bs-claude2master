@@ -1,0 +1,23 @@
+---
+slug: 2026-09-17-goose-1-51-0
+title: "goose v1.51.0 — ACP 状态机接管桌面端，工具调用与思考流顺序被重新定义"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.51.0
+publishedAt: 2026-09-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "ACP 状态机接管桌面端，工具调用与思考流顺序被重新定义"
+broadcast: "这次更新让桌面端由一套状态机来接管流程，工具调用和思考流的先后顺序被重新定义了。对做 agent 的国内开发者来说，值得关注的是：界面事件源得和状态机解耦，别再两边同时写状态；流式思考必须按顺序缓冲，不能并行拼接；催促和退出码也要当成明确状态来处理，而不是隐式副作用。"
+insight: "这次 v1.51.0 的核心变化在 harness 侧：Desktop 走 ACP prompt meta 进状态机循环，thinking 必须保持在文本与工具调用之前，nudge 和退出码也变成显式状态。如果你现有 prompt 或 hook 依赖并行拼接流式输出、或把 nudge 当隐式副作用处理，升级后需要同步调整缓冲与状态解耦逻辑，否则容易出现双写状态。走 newapi.lurus.cn 代理的用户，摘要未提及代理层改动，按现有配置继续即可，重点先验证 harness 兼容性再决定是否升级。"
+tags: [acp, state-machine, thinking-stream, headless]
+---
+
+- Desktop 通过 ACP prompt meta 路由到状态机循环（#11247），harness 需把 UI 事件源与状态机解耦，避免双写状态。
+- 流式 thinking 现在保持在文本与工具调用之前（#11837），并修复 Anthropic 保留思考合规（#11836），harness 必须按序缓冲而非并行拼接。
+- 目标不再每次工具调用都重新催促（#11697），且中断的 headless 运行返回失败（#11938），harness 应把 nudge 与退出码当作显式状态而非隐式副作用。
+
+---
+
+> 原文 release：[block/goose v1.51.0](https://github.com/aaif-goose/goose/releases/tag/v1.51.0)

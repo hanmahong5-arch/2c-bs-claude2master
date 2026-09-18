@@ -1,0 +1,23 @@
+---
+slug: 2026-09-17-cline-desktop-v0-0-31
+title: "cline desktop-v0.0.31 — Cline 桌面版支持 SSH 远程主机，同一步子代理并行执行"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.31
+publishedAt: 2026-09-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline 桌面版支持 SSH 远程主机，同一步子代理并行执行"
+broadcast: "Cline 桌面版这次更新，最值得关注的是它支持连上 SSH 远程主机干活了。你只要在设置里添加并测试主机，就能从欢迎屏切换过去，连上之后 agent 的工具、工作区、Git 和会话都在远端跑，本地只留一条控制通道。另外同一步生成的子代理现在能并行执行，三个独立任务只花最慢那个的时间，调度器会区分哪些能并行、哪些必须按序。"
+insight: "这次桌面版 v0.0.31 的 SSH 远程主机和同一步子代理并行，对现有用户来说值得升级：远程执行面与本地 UI 解耦，本地只留控制通道，且首次连接自动部署 helper 到 ~/.cline/remote/，不需要 apt、npm、root 或公网端口，也不影响账户已有的 Cline CLI hub。现有 prompt 和 hook 配置无需改动，因为变化在调度与执行层。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [ssh-remote, subagents, parallel-execution, agent-harness]
+---
+
+- **SSH 远程主机**：在 Settings → Remote 添加并测试主机，从欢迎屏环境选择器切换；连接后 agent 工具、工作区发现、Git 元数据、会话持久化都在远端运行，仅经认证的 Cline Hub 协议隧道回传审批与实时事件。含义：harness 需把执行面与 UI 面解耦，本地只保留控制通道。
+- **首次连接自动部署 helper**：上传自包含 helper 到 `~/.cline/remote/` 并缓存，无需 apt、npm、root、全局 CLI 或公网端口，且不影响该账户已有的 Cline CLI hub。含义：远程引导应零依赖、可缓存、不破坏既有环境。
+- **同一步子代理并行**：同一步生成的子代理同时运行而非串行，三个独立任务耗时等于最慢者；必须按序的工具仍按序，仅相邻并行调用重叠。含义：调度器需区分可并行与有依赖的调用。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.31](https://github.com/cline/cline/releases/tag/desktop-v0.0.31)

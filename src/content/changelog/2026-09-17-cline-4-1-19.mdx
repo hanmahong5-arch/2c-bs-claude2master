@@ -1,0 +1,23 @@
+---
+slug: 2026-09-17-cline-4-1-19
+title: "cline v4.1.19 — Cline v4.1.19 修了压缩失效、Windows 提权、静默覆盖文件三类"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.19
+publishedAt: 2026-09-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline v4.1.19 修了压缩失效、Windows 提权、静默覆盖文件三类硬伤"
+broadcast: "有个叫 Cline 的编程助手刚更新了一版，修了三个挺要命的毛病。长任务压缩现在改用真实 token 数来算，不再靠字符数瞎估；Windows 上启动时也不再优先跑工作区里的可执行文件，避免被本地程序劫持；写文件遇到已存在的路径会直接报错，不再悄悄覆盖。对做 agent 的人来说，这提醒我们上下文计数、可执行文件解析和写操作报错，都得按真实情况来。"
+insight: "Cline v4.1.19 修的三类问题都属硬伤，现有用户值得升级：长任务压缩改用 provider 上报的 token 数，能避免上下文被错误截断；Windows 下不再优先执行工作区内的 rg.exe/git.exe，安全性提升；apply_patch 不再静默覆盖已有文件，写操作更可控。这些改动不涉及 prompt 或 hook 配置，无需额外调整。国内用户经 newapi.lurus.cn 代理使用不受影响，正常升级即可。"
+tags: [context-compaction, windows-security, tool-safety, patch-apply]
+---
+
+- 长任务压缩触发改用 provider 上报的 token 数，并按估算偏差缩放保留历史：harness 不能只靠字符数估算上下文，需以真实 token 计数为准。
+- Windows 启动时设置 `NoDefaultCurrentDirectoryInExePath`，工作区内的 `rg.exe`/`git.exe` 不再被优先执行：工具解析可执行文件必须走 PATH，而非工作目录。
+- `apply_patch` 对已存在路径的 "Add File" 不再静默覆盖，`run_commands` 后台子进程不再挂住管道：写操作需显式报错，进程管理需正确关闭输出句柄。
+
+---
+
+> 原文 release：[cline/cline v4.1.19](https://github.com/cline/cline/releases/tag/v4.1.19)

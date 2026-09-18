@@ -1,0 +1,23 @@
+---
+slug: 2026-09-17-codex-rust-v0-155-0
+title: "codex rust-v0.155.0 — 语音对话、Touch ID 验证 MCP、守护进程更新调度，Codex 0.15"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.155.0
+publishedAt: 2026-09-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "语音对话、Touch ID 验证 MCP、守护进程更新调度，Codex 0.155.0 把交互与安全边界都往前推了一步"
+broadcast: "这次更新把语音对话做成了实验功能，能实时转录、控制麦克风，需要在实验选项里手动开启。更关键的是，本地会话里调用外部工具时可以用指纹验证，敏感操作多了一层原生身份确认。守护进程的更新也能定时调度，重启后已保存的线程和任务目标还能恢复。对做 agent 的国内开发者来说，语音输入、身份验证和状态持久化，正在变成框架层面默认要考虑的事。"
+insight: "Lurus 视角：Codex 0.155.0 的更新对现有用户来说，升级价值取决于你是否用得到新能力。语音对话和 Touch ID 验证 MCP 都需手动开启，属于实验性或平台限定功能，日常 prompt 和 hook 配置无需改动。守护进程更新调度与线程恢复是默认契约层面的变化，长时任务用户建议升级。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变动，可正常升级，不受影响。"
+tags: [voice, mcp, daemon, tui]
+---
+
+- 新增实验性 `/voice` 语音对话，带实时转录与麦克风控制，需通过 `/experimental` 开启；对 agent harness 的含义是语音输入成为可插拔的会话通道，而非独立应用。
+- 本地 TUI 会话中 MCP 请求支持 Touch ID 验证（限支持的 Mac）；含义是敏感工具调用可在 harness 层插入原生身份确认，而不只依赖 token。
+- 守护进程更新可配置调度，并新增 `codex app-server daemon update`，重启后已保存线程与活跃目标可恢复；含义是长时任务的状态持久化成为 harness 的默认契约。
+
+---
+
+> 原文 release：[openai/codex rust-v0.155.0](https://github.com/openai/codex/releases/tag/rust-v0.155.0)
