@@ -1,0 +1,23 @@
+---
+slug: 2026-09-18-blog-simonwillison-quoting-thariq-shihipar
+title: "Quoting Thariq Shihipar — Claude Code 开始兼容 AGENTS.md，跨工具的项目指令约定正在成"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/18/thariq-shihipar/
+publishedAt: 2026-09-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Claude Code 开始兼容 AGENTS.md，跨工具的项目指令约定正在成形"
+broadcast: "最近有个变化值得国内做 agent 的开发者留意：Claude Code 现在如果没有找到自己的项目指令文件，会自动去读通用的 AGENTS.md。这意味着同一份项目指令能被多个编码工具复用，不用再为每个工具重复维护配置。更关键的是，这套支持是靠即将推出的可插拔机制实现的，指令加载逻辑可以审查、可以替换，配置行为不再是黑盒。"
+tags: [claude-code, agents-md, coding-agents, mods]
+---
+
+- Claude Code 2.1.277 起，若目录中没有 CLAUDE.md，会自动查找并使用 AGENTS.md。含义：同一份项目指令文件可被多个编码 agent 复用，减少为每个工具重复维护配置。
+- 该支持基于 Claude Code mods 实现，mods 是即将推出的 harness 自定义机制，AGENTS.md 只是内置 mod 之一。含义：项目指令层正从硬编码行为变成可插拔模块，开发者可自行构建定制版本。
+- Thariq Shihipar 给出了该 mod 的源码，并指向更多 mods 的集合。含义：指令加载逻辑可被审查和替换，工具链的配置行为不再是黑盒。
+
+---
+
+> 原文：[Quoting Thariq Shihipar](https://simonwillison.net/2026/Sep/18/thariq-shihipar/) · 作者 Simon Willison

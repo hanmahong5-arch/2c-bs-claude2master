@@ -1,6 +1,6 @@
 ---
 slug: 2026-09-10-openclaw-2026-6-35
-title: "openclaw v2026.6.35 — 六月 LTS 收官版：边界收紧、长任务不丢活"
+title: "openclaw v2026.6.35 — 六月 LTS 收官版：166 个 PR 全在补边界与恢复"
 source: openclaw/openclaw
 sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.6.35
 publishedAt: 2026-09-10
@@ -8,15 +8,15 @@ authored: llm
 model: deepseek-chat
 verified: pending
 kind: changelog
-hook: "六月 LTS 收官版：边界收紧、长任务不丢活"
-broadcast: "这次更新是六月长期支持版的收官版本，重点在边界收紧和长任务不丢活。它给响应和内存设了上限，恶意大请求没法再拖垮进程；投递和运行时恢复也做了调整，失败时能保留正确结果。对国内做智能体的开发者来说，这意味着读前限流、区分可重放操作、把输入校验前置到工具入口，都该当成默认做法，而不是事后补救。"
-insight: "这次 2026.6.35 是六月 LTS 收官版，重点在边界收紧和长任务不丢活。现有用户值得升级，尤其是跑长任务和 channel 集成的场景，因为响应与内存上限、投递与运行时恢复都直接关系到 agent run 不被恶意大 payload 或预期失败打断。升级后建议把「读前限流」和输入校验前置到工具调用入口当作默认配置，而不是事后截断。走 newapi.lurus.cn 代理的国内用户，摘要里没有提到代理相关变化，按现有方式继续用即可。"
-tags: [lts-release, agent-harness, input-validation, retry-recovery]
+hook: "六月 LTS 收官版：166 个 PR 全在补边界与恢复"
+broadcast: "这次更新是六月长期支持版的收官，一百多个改动全在补边界和恢复能力。它给各类响应体设了上限，恶意的大数据包没法再撑爆进程内存；长任务遇到取消、重试或部分失败也不会丢结果，还不会重放已经产生副作用的操作。对国内做 agent 的开发者来说，这意味着调度前要先做输入校验和限流，把边界当成默认设置，而不是等出错再补救。"
+insight: "这版是六月 LTS 收官，166 个 PR 全在补边界与恢复，属于稳定性收尾而非功能跃迁。现有用户值得升级，重点是把 harness 的响应体先限流再解析、重试层区分可重放与已产生副作用、调度前做输入门禁这三条对齐，prompt 本身不用改。国内走 newapi.lurus.cn 代理的用户不受影响，摘要未提及任何代理或接口变更。"
+tags: [lts-release, agent-harness, input-validation, retry-safety]
 ---
 
-- **响应与内存上限**：provider、搜索、embedding、媒体与 channel 集成在读取成功或错误响应前先设上限，恶意大 payload 无法耗尽进程内存；harness 侧应把「读前限流」当作默认，而非事后截断。
-- **投递与运行时恢复**：出站重试时序、channel 生命周期、abort 处理、进程 I/O 与持久状态恢复在预期失败下保留正确操作结果；harness 需区分「可安全重放」与「不可重放」的操作。
-- **工具与工作区输入校验**：浏览器自动化、本地工具、工作区读取与插件元数据在畸形或超大输入进入前即拒绝，避免打断进行中的 agent run；输入校验应前置到工具调用入口。
+- **响应体设上限**：provider、搜索、嵌入、媒体与 channel 集成在读取成功或错误响应前先限流，恶意大 payload 无法再耗尽进程内存；harness 需把「先限流再解析」当作默认边界。
+- **长任务不丢结果**：agent、gateway、retry 与 channel 路径现在正确处理取消、重试、部分发送和进程流失败，不重放不安全操作；harness 的重试层要区分「可重放」与「已产生副作用」。
+- **插件与工具输入前置校验**：本地模型、浏览器、媒体、协作插件对畸形 payload、超时和上游抖动可干净恢复，浏览器自动化与 workspace 读取在昂贵操作前拒绝畸形或超大输入；harness 应在调度前做输入门禁，而非事后捕获。
 
 ---
 

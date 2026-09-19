@@ -1,0 +1,23 @@
+---
+slug: 2026-09-18-codex-rust-v0-155-1
+title: "codex rust-v0.155.1 — TUI 默认关闭推理摘要，修复不支持的供应商拒绝请求"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.155.1
+publishedAt: 2026-09-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "TUI 默认关闭推理摘要，修复不支持的供应商拒绝请求"
+broadcast: "OpenAI 的编程助手 Codex 刚更新了一个小版本，改动看着不起眼，但挺值得国内做 agent 的同行留意。它把本地终端会话里的推理摘要默认关掉了，因为有些供应商根本不支持这个能力，一开就直接拒绝请求。显式配置过的用户不受影响，改动也只限新会话。这提醒我们，工具默认值应该先保证兼容，而不是先追求信息量。"
+insight: "这次 0.155.1 的改动值得升级，但不必急着改配置：新本地 TUI 会话默认关闭 reasoning summaries，只是把默认值调向兼容性，你显式写过的 reasoning-summary 配置仍会被尊重，不会被覆盖。所以现有 prompt 和 hook 基本不用动，除非你此前依赖默认开启摘要。国内走 newapi.lurus.cn 代理的用户，摘要里没有提到代理链路受影响，按现有事实看可以照常使用。"
+tags: [codex, tui, reasoning-summary, defaults]
+---
+
+- 新本地 TUI 会话默认关闭 reasoning summaries，修复了不支持该能力的供应商直接拒绝请求的问题。含义：harness 的默认值应偏向最大兼容性，而非最大信息量。
+- 显式设置的 reasoning-summary 配置仍然被尊重，不会被默认值覆盖。含义：默认值只应作用于未表态的场景，用户显式意图必须优先。
+- 该改动仅针对新本地 TUI 会话，范围收窄到具体入口。含义：修复可以按会话类型分层，避免全局改动带来的回归风险。
+
+---
+
+> 原文 release：[openai/codex rust-v0.155.1](https://github.com/openai/codex/releases/tag/rust-v0.155.1)

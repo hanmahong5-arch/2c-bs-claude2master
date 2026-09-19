@@ -1,6 +1,6 @@
 ---
 slug: 2026-08-04-openclaw-2026-7-1-2
-title: "openclaw v2026.7.1-2 — npm 插件元数据兼容修复，确保官方插件可正常安装更新。"
+title: "openclaw v2026.7.1-2 — npm 插件更新兼容性修复，影响官方插件安装"
 source: openclaw/openclaw
 sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-2
 publishedAt: 2026-08-04
@@ -8,15 +8,15 @@ authored: llm
 model: deepseek-chat
 verified: pending
 kind: changelog
-hook: "npm 插件元数据兼容修复，确保官方插件可正常安装更新。"
-broadcast: "这次更新修复了npm插件元数据的兼容问题，让官方插件能正常安装和更新。对开发者来说，这意味着插件管理更稳定，版本追踪更准确，agent开发环境也更可靠。"
-insight: "这次修复对国内用户影响不大，但如果你在用官方插件且之前遇到安装或更新失败，建议升级到 v2026.7.1-2。升级后插件元数据兼容性增强，能更稳定地追踪版本。若你通过 newapi.lurus.cn 代理使用，代理本身不受影响，但插件更新走代理时可能仍需验证。现有 hook 配置无需改动，除非你自定义了 npm 插件管理逻辑。"
-tags: [npm-plugin, metadata, bugfix]
+hook: "npm 插件更新兼容性修复，影响官方插件安装"
+broadcast: "这次更新修的是插件安装和更新的兼容问题。新版 npm 客户端返回的元数据格式变了，多包了一层数组，导致官方插件装不上、也更新不了，现在解析逻辑已经能接受这种差异。对做 agent 的开发者来说，插件更新链路一旦因为这种格式差异断掉，整个跟踪机制就跟着失效，所以把这类解析容错放进更新流程里，是必须考虑的事。"
+insight: "这次 v2026.7.1-2 只修了 npm 插件更新时对单元素数组元数据的解析，让官方插件能正常安装和更新到修正版本。判断很直接：如果你在用官方插件，值得升，因为不升更新链路可能中断；如果没装官方插件，这次改动对你没影响，prompt 和 hook 配置都不用动。走 newapi.lurus.cn 代理的国内用户，摘要里没提代理相关变化，按现有方式升级即可。"
+tags: [npm-plugins, plugin-updates, metadata-compat, release-fix]
 ---
 
-- 修复 npm 插件更新：接受新版 npm 客户端的单例数组元数据，使官方插件能安装和更新到修正版本。
-- 对 agent harness 设计的影响：需兼容不同 npm 客户端返回的元数据格式，避免插件管理失败。
-- 确保插件版本追踪准确，提升 harness 的插件生态稳定性。
+- 修复 npm 插件更新：接受新版 npm 客户端返回的单元素数组元数据，使官方插件能正常安装和更新到修正版本 (#108336)。
+- 对 agent harness 的含义：插件元数据解析需容忍 npm 客户端格式差异，避免因数组包装导致更新链路中断。
+- 对 agent harness 的含义：官方插件跟踪机制依赖元数据兼容，harness 应把此类解析容错纳入更新流程。
 
 ---
 

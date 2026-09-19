@@ -1,6 +1,6 @@
 ---
 slug: 2026-09-03-openclaw-2026-9-1
-title: "openclaw v2026.9.1 — OpenClaw 2026.9.1：Mermaid 渲染、快速安装、个人技能库与"
+title: "openclaw v2026.9.1 — 更新失败可回滚、Gateway 崩溃自愈、审批直达聊天"
 source: openclaw/openclaw
 sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.1
 publishedAt: 2026-09-03
@@ -8,17 +8,15 @@ authored: llm
 model: deepseek-chat
 verified: pending
 kind: changelog
-hook: "OpenClaw 2026.9.1：Mermaid 渲染、快速安装、个人技能库与更稳的更新流程"
-broadcast: "OpenClaw 这次更新，把聊天里的图表代码直接变成能放大看的图，对咱们做智能体输出可视化特别有帮助。新装的时候能自动识别你现有的登录，上手更快。还加了个人技能库，能按身份分开管理技能，方便复用。更新也更稳了，出问题能回滚，网关跑久了也不容易崩，值得试试。"
-insight: "这次更新对现有用户更偏体验优化而非功能革命。若你已在用旧版且网关运行稳定，不必急着升，但若常被 Mermaid 输出或更新中断困扰，值得升级并利用回滚机制降低风险。个人技能库按身份隔离对共享网关是实用增强，可考虑整理现有 prompt 为技能复用。国内走 newapi.lurus.cn 代理不受影响，更新流程本身更稳，建议择机升级并保留配置。"
-tags: [mermaid, quick-start, skills-library, update-reliability]
+hook: "更新失败可回滚、Gateway 崩溃自愈、审批直达聊天——这版把稳定性当主线。"
+broadcast: "这次更新把稳定性当成了主线。升级失败时能自动回滚，配置和密钥引用都保留下来；网关在负载大、代理名单长的情况下也能恢复启动，一条脏数据不会拖垮整个运行时。更关键的是，代理提议改配置或重启网关时，审批卡片会直接回到发起对话的频道里，避免代理静默卡死。对国内做代理的开发者来说，这意味着运行时更抗折腾，升级和审批都更可控。"
+insight: "这版把稳定性做成了主线，现有用户值得升级：openclaw update 在 Doctor 失败时会回滚 npm 候选版本并保留配置与密钥引用，Gateway 启动也能在脏 cron 行和 OOM 下降级自愈。升级方式就是走 openclaw update，不用改现有 prompt 或 hook 配置。国内走 newapi.lurus.cn 代理的用户，摘要里没有提到代理链路受影响，按现有方式升级即可。"
+tags: [release-notes, gateway-reliability, update-rollback, approval-flow]
 ---
 
-- 聊天中 Mermaid 代码块现在渲染为图表，支持放大预览和移动端重试，对 agent 输出可视化有直接帮助。
-- 新安装可检测现有 Claude Code/Codex 登录并快速启动，降低首次使用门槛，适合快速验证 agent 行为。
-- `openclaw skills library` 支持个人技能库与 ZIP 导入，便于在共享网关上按身份隔离技能，提升复用性。
-- `openclaw update` 增加回滚与配置保留机制，失败时由内置 triage agent 处理，减少更新中断风险。
-- 网关启动恢复能力增强，坏 cron 行隔离、内存优化，提升长时间运行的稳定性。
+- `openclaw update` 在更新后 Doctor 失败时回滚 npm 候选版本，并保留配置与密钥引用；含义是 harness 的升级路径必须自带失败回退，而不是让 agent 在坏版本上继续跑。
+- Gateway 启动在负载和大规模 agent 名单下可恢复，畸形 legacy cron 行被隔离而非阻塞启动，本地模型服务成为 OOM 首选牺牲对象；含义是 harness 的启动依赖应可降级，单条脏数据不应拖垮整个运行时。
+- 委派系统 agent 提议配置变更或 Gateway 重启时，审批卡片投递到原始频道（含 Telegram 主题）并带请求者标题；含义是审批流必须回到发起会话，否则 agent 会静默卡死。
 
 ---
 

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-19-openclaw-2026-9-5
+title: "openclaw v2026.9.5 — OpenClaw 2026.9.5 发布：64 次提交、4179 个 PR，但 "
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.5
+publishedAt: 2026-09-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "OpenClaw 2026.9.5 发布：64 次提交、4179 个 PR，但 Android APK 被跳过。"
+broadcast: "OpenClaw 发布了 2026.9.5 版本，这次有 64 次直接提交、四千多个 PR、五百多位贡献者，规模相当大。它还给 AI agent 准备了一份纯 Markdown 的更新日志，内容跟人类看的发布说明一样，只是格式更适合机器读。不过这次安卓安装包被跳过了，因为版本文件没跟上发布节奏，这也提醒做 agent 的团队，打标签前得先校验各平台版本是否一致。"
+insight: "OpenClaw 2026.9.5 这次 64 次提交、4179 个 PR 的规模，加上 Android APK 因 version.json 版本不一致被跳过，说明升级前必须先核对各平台版本文件是否对齐，否则会踩到同样的坑。现有 prompt 和 hook 配置不用改，但 harness 应优先消费官方提供的纯 Markdown changelog，而不是渲染页面。国内用户走 newapi.lurus.cn 代理是否受影响，摘要里没有提到，无法判断。"
+tags: [release-notes, agent-harness, changelog, versioning]
+---
+
+- 发布包含 64 次直接提交、4,179 个 PR、503 位贡献者，规模巨大，说明 harness 需要能处理高频合并与多贡献者协作的发布节奏。
+- 提供面向 AI agent 的纯 Markdown changelog，与人类可读的 release notes 内容相同但格式不同，意味着 agent harness 应优先消费结构化纯文本而非渲染页面。
+- Android APK 被跳过，因为 apps/android/version.json 为 2026.8.2 而发布列车是 2026.9.5，提示 harness 需在打 tag 前校验各平台版本文件一致性。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.5](https://github.com/openclaw/openclaw/releases/tag/v2026.9.5)

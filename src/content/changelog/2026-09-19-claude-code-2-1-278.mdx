@@ -1,0 +1,23 @@
+---
+slug: 2026-09-19-claude-code-2-1-278
+title: "claude-code v2.1.278 — 自动模式分类器改走服务端，不再计费，/status 可查"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.278
+publishedAt: 2026-09-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "自动模式分类器改走服务端，不再计费，/status 可查"
+broadcast: "这次更新把自动模式的分类判断挪到了服务端，而且这部分开销不再计费，你还能在状态里直接看到它到底跑在哪。对国内做 agent 的开发者来说，这意味着决策可以外移，成本和本地执行能拆开算，同时降级回计费路径时会明确提醒你，不会悄悄换掉。"
+insight: "这次 v2.1.278 对国内用户的实际影响不大，但值得留意：自动模式分类器默认改走服务端且不再计费，走 newapi.lurus.cn 代理的网关用户同样适用这一默认行为，无需额外配置。现有 prompt 和 hook 配置不用改。升级建议直接升，升完用 /status 确认 Auto mode server 行是否显示服务端运行；若因 Bedrock 等平台需要回退，记得用 CLAUDE_CODE_AUTO_MODE_SERVER=0，回退会触发计费警告，别忽略。"
+tags: [auto-mode, classifier, billing, status]
+---
+
+- 自动模式对 Claude API、Enterprise 及 Bedrock、Vertex、Foundry、网关用户默认改用服务端分类器，分类器开销不再计费；Bedrock 等平台可用 `CLAUDE_CODE_AUTO_MODE_SERVER=0` 退出，回退到计费路径时会给出警告。含义：harness 可把分类决策外移，成本模型与本地执行解耦。
+- `/status` 新增 `Auto mode server` 行，显示当前会话的自动模式分类器是否运行在服务端。含义：agent harness 需要把「决策在哪执行」作为可观测状态暴露给用户。
+- 计费回退会显式警告，而非静默切换。含义：harness 在降级路径上应保留提示，避免用户对成本来源失去感知。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.278](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)

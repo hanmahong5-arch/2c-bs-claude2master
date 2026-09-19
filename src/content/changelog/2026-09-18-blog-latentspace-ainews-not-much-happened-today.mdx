@@ -1,0 +1,25 @@
+---
+slug: 2026-09-18-blog-latentspace-ainews-not-much-happened-today
+title: "[AINews] not much happened today — 每日 AI 速览：Claude Code 多线程编排、Jev 分类器争议、Ant"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/ainews-not-much-happened-today-612
+publishedAt: 2026-09-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "每日 AI 速览：Claude Code 多线程编排、Jev 分类器争议、Anthropic 内部自动化数据"
+broadcast: "今天值得关注的是，Claude Code 把多会话编排做成了产品：一次对话能派生并行云会话、跨线程传上下文，你离开后它还在跑，往协调器方向走。同时社区把 Jev 当判别式小模型用，做评审和路由，让前沿模型专注难推理；但也有人提醒，拿它做逐行历史压缩会丢隐藏推理、还会让缓存失效，分类、记忆和推理保留得分开设计。"
+tags: [agent-runtime, claude-code, llm-routing, context-management]
+---
+
+- **Claude Code Projects 把多会话编排产品化**：单次对话可派生并行云会话、跨线程传递上下文，用户离开后仍继续运行；Anthropic 内部称其为更高层的 coordinator 抽象。含义：agent 工具链正从「聊天+工具」转向以协调器为中心的长时程运行时。
+- **Jev 被当作「AI if 语句」而非聊天模型**：社区用它做 LLM-as-judge、harness 路由、结构化输出，Cloudflare 已通过 AI Gateway 提供。含义：把高频低难决策下沉到小型判别式模型，可让前沿模型专注难推理。
+- **Theo 反驳用 Jev 做逐行历史压缩**：压缩不只是过滤，丢弃隐藏推理会损害模型，改写历史还会使缓存前缀失效。含义：分类、记忆管理与推理保留应在 agent 运行时设计中明确分离。
+
+原文：https://www.latent.space/p/ainews-not-much-happened-today-612（Latent Space）
+
+---
+
+> 原文：[[AINews] not much happened today](https://www.latent.space/p/ainews-not-much-happened-today-612) · 作者 Latent Space

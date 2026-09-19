@@ -1,6 +1,6 @@
 ---
 slug: 2026-08-08-openclaw-2026-6-34
-title: "openclaw v2026.6.34 — openclaw 2026.6.34 强化浏览器与网络边界安全，提升会话恢复与通"
+title: "openclaw v2026.6.34 — 维护版聚焦安全与可靠性修复，无新功能"
 source: openclaw/openclaw
 sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.6.34
 publishedAt: 2026-08-08
@@ -8,18 +8,15 @@ authored: llm
 model: deepseek-chat
 verified: pending
 kind: changelog
-hook: "openclaw 2026.6.34 强化浏览器与网络边界安全，提升会话恢复与通道稳定性，并预告插件 SDK 迁移。"
-broadcast: "最近开源的智能体框架更新了，重点加强了浏览器和网络的安全边界，防止不安全路径绕过沙箱。同时，会话恢复和通道稳定性也提升了，任务中断后能自动恢复，不会悄悄失败。这对国内开发者来说，意味着构建长任务智能体时，可以更放心地依赖底层框架的容错能力，减少自己处理异常的工作量。"
-insight: "本次更新对现有用户而言，建议升级以获取会话恢复与通道稳定性增强，尤其适合长任务场景。浏览器与网络边界的安全强化，意味着若你自定义了 hook 或路由配置，需检查是否涉及不安全路径，避免被新策略拦截。国内用户走 newapi.lurus.cn 代理不受影响，但升级后建议验证代理通道的幂等与背压行为，确保消息不丢失。"
-tags: [security, reliability, plugin-sdk, channel-stability]
+hook: "维护版聚焦安全与可靠性修复，无新功能"
+broadcast: "这次更新是个维护版，没有新功能，重点全在安全和可靠性上。它收紧了浏览器和网络的访问边界，把不安全路径直接挡在路由层；同时让智能体和模型调用更抗中断，流断了可以重试，不再静默终止任务。对国内做智能体框架的开发者来说，这意味着恢复逻辑得做成幂等，诊断输出也要默认脱敏。"
+insight: "这次 2026.6.34 是维护版，只修安全与可靠性，没有新功能，所以现有用户不必为了尝鲜升级，但如果你在用沙箱浏览器、自定义 origin 或 loopback provider 端点，建议尽快升，因为路由层白名单校验和拒绝不安全访问路径是实打实的边界收紧。现有 prompt 不用改，但 hook 配置值得检查：流中断现在应视为可重试状态而非终态，恢复逻辑要幂等，诊断输出默认脱敏。国内走 newapi.lurus.cn 代理不受影响，摘要未提及代理层变动。"
+tags: [openclaw, agent-harness, sandbox-security, reliability]
 ---
 
-- 浏览器路由、DNS 目标、自定义源及回环端点拒绝不安全访问路径，强化沙箱边界。
-  - 对 agent harness 设计：需在 harness 层统一实施访问控制，防止绕过沙箱。
-- 会话写入、provider 回退、流进度处理及 stdio 失败可恢复，不再静默终止任务。
-  - 对 agent harness 设计：harness 应内置重试与状态恢复机制，确保长任务韧性。
-- 待处理通道工作可恢复，确认幂等，Discord 网关突发流量有界。
-  - 对 agent harness 设计：通道层需支持幂等操作与背压控制，避免消息丢失或过载。
+- **浏览器与网络边界收紧**：沙箱浏览器路由、可信 DNS、自定义 origin 与 loopback provider 端点拒绝不安全访问路径。含义：harness 需在路由层做白名单校验，而非依赖调用方自律。
+- **agent 与 provider 运行更抗中断**：会话写入保留、provider fallback、流进度处理与 stdio 失败可恢复，不再静默终止任务。含义：harness 应把流中断视为可重试状态，而非终态。
+- **通道恢复与诊断加固**：待处理通道任务恢复后继续、ack 幂等、Discord 突发限流；命令与状态面保持 owner-only 并防止凭据泄漏到 URL。含义：harness 的恢复逻辑需幂等，诊断输出需默认脱敏。
 
 ---
 

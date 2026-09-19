@@ -1,0 +1,23 @@
+---
+slug: 2026-09-18-claude-code-2-1-277
+title: "claude-code v2.1.277 — AGENTS.md 兼容与一批稳定性修复，agent 会话恢复和缓存行为有实质变"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.277
+publishedAt: 2026-09-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "AGENTS.md 兼容与一批稳定性修复，agent 会话恢复和缓存行为有实质变化"
+broadcast: "这次更新里，项目指令文件不再只认一个固定名字，没有专属配置时会改读通用的代理说明文件，还能在配置里切换来源。另外修了两个坑：命令行和开发包会话出错后不再静默挂起，而是直接报错退出；恢复会话时也不再重复渲染工具定义、重放附件，避免把缓存打坏。对做智能体的人来说，失败要看得见、缓存别乱动，这两点直接影响稳定性。"
+insight: "这次 v2.1.277 值得升级，重点在会话恢复和缓存修复：重放历史附件不再破坏 prompt cache，恢复会话也不会重渲染 MCP 工具定义，对依赖长会话的 hook 和 prompt 配置是实质利好，原有配置无需改动。新增 AGENTS.md 支持只是多一个项目指令来源，没 CLAUDE.md 的仓库可去 /config 切换。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有方式升级即可。"
+tags: [agents-md, headless, prompt-cache, session-resume]
+---
+
+- 新增 AGENTS.md 支持：项目无 CLAUDE.md 时改读 AGENTS.md，可在 `/config` 的 Project instructions 切换（Bedrock/Vertex/Foundry 暂不支持）。含义：harness 需把项目指令来源抽象成可配置优先级，而非硬编码单一文件名。
+- 修复 `claude -p` 与 Agent SDK 会话在内部错误后无结果挂起，现改为报错并以退出码 1 结束。含义：headless harness 必须保证失败可观测，不能静默挂起。
+- 修复恢复会话时重渲染已加载的 MCP 工具定义、以及重放历史附件导致 prompt cache 失效。含义：会话持久化设计要区分「已发送内容」与「重放内容」，避免破坏缓存前缀。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.277](https://github.com/anthropics/claude-code/releases/tag/v2.1.277)

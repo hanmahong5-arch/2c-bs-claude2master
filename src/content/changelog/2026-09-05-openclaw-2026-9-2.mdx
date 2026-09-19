@@ -8,15 +8,15 @@ authored: llm
 model: deepseek-chat
 verified: pending
 kind: changelog
-hook: "GPT-6 Astra 支持、Swarm 默认开启、回复跨重启恢复，值得 30 秒了解。"
-broadcast: "这次更新带来了几个对开发者很实用的变化。首先，它支持了新一代的GPT-6 Astra模型，能处理文本和图像，还支持工具调用。其次，回复功能在服务重启后不会丢失，这对稳定性很重要。另外，多代理的并发编排现在默认开启，用起来更方便。这些改动都要求开发者在适配时注意新模型的接口和数据的持久化处理，值得花时间了解一下。"
-insight: "这次升级对现有用户价值有限，除非你重度依赖多代理并发或跨重启稳定性。Swarm 默认开启可能改变现有子代理行为，建议先显式退出或限制工具，观察聚合逻辑是否冲突。回复跨重启恢复需 harness 配合，若你自建了持久化层，务必检查恢复标记避免覆盖。国内走 newapi.lurus.cn 代理不受影响，GPT-6 Astra 支持属可选，非必需不急着适配。"
-tags: [gpt-6-astra, recovery, swarm, settings]
+hook: "GPT-6 Astra 接入、Swarm 默认开启、回复可跨重启恢复"
+broadcast: "这次更新接入了新一代的 GPT-6 模型，还能用文本和图像输入，但模型能不能用要按账号动态判断，不能写死清单。另外并发子 agent 编排默认打开了，回复在网关重启后也能恢复。对国内做 agent 的开发者来说，这意味着要提前处理多子 agent 的结构化结果和进度，还要把恢复标记按每条回复独立保存。"
+insight: "这次 v2026.9.2 值得现有用户升级：GPT-6 Astra 需按账号发现结果动态判断模型可用性，硬编码模型清单的 prompt 或 hook 配置要改；Swarm 默认开启，harness 要处理多子 agent 的结构化结果与实时进度，并保留逐项降级路径。走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有接入方式即可。"
+tags: [gpt-6-astra, swarm, gateway-restart, agent-harness]
 ---
 
-- GPT-6 Astra 模型支持：可选 `openai/gpt-6-astra`，支持文本/图像输入与工具调用。Agent harness 需适配新模型 API 及订阅发现逻辑。
-- 回复跨重启恢复：活动、排队、委派回复在 Gateway 重启后不丢失，且保留继续指令。Harness 需实现持久化恢复标记，避免并发回复互相覆盖。
-- Swarm 默认启用：并发子代理编排开箱即用，仍可显式退出或限制工具。Harness 需处理子代理生命周期与结果聚合，同时尊重既有限制。
+- **GPT-6 Astra 支持**：可用 OpenAI API-key 或符合条件的 ChatGPT/Codex 账号选择 `openai/gpt-6-astra`，支持文本图像输入与 Responses 工具调用；含义是 harness 需按账号发现结果动态决定模型可用性，而非硬编码模型清单。
+- **Swarm 默认开启**：并发子 agent 编排默认启用，保留显式退出、工具限制与独立的 Code Mode 开关；含义是 harness 默认要处理多子 agent 的结构化结果与实时进度，同时保留逐项降级路径。
+- **回复跨重启存活**：Gateway 重启后可恢复活跃、排队与委派的回复，且一条完成的回复不会丢弃另一条的恢复标记；含义是 harness 需把恢复标记做成按回复独立持久化，而非全局单点状态。
 
 ---
 

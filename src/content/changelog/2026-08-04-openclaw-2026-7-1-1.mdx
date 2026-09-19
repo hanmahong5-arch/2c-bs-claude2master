@@ -1,6 +1,6 @@
 ---
 slug: 2026-08-04-openclaw-2026-7-1-1
-title: "openclaw v2026.7.1-1 — 修复 Codex 中途停止、启动崩溃等关键问题，提升 agent 稳定性。"
+title: "openclaw v2026.7.1-1 — Codex 进度回复不再中断，启动修复避免网关重启循环"
 source: openclaw/openclaw
 sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-1
 publishedAt: 2026-08-04
@@ -8,22 +8,15 @@ authored: llm
 model: deepseek-chat
 verified: pending
 kind: changelog
-hook: "修复 Codex 中途停止、启动崩溃等关键问题，提升 agent 稳定性。"
-broadcast: "最近有个叫 OpenClaw 的智能体框架更新了，主要修复了几个关键问题。比如之前 Codex 在回复进度消息后可能会中途停止，现在能确保它给出最终答复；还有启动时可能崩溃的死循环也修好了。对国内开发者来说，这意味着用这个框架跑智能体任务会更稳定，升级和插件更新也更顺畅，值得关注。"
-insight: "这次更新主要修复稳定性问题，对现有用户而言，如果遇到 Codex 中途停止或启动崩溃，值得升级；否则可观望。prompt 和 hook 配置无需改动，修复集中在底层 harness 逻辑。国内用户走 newapi.lurus.cn 代理不受影响，因为更新不涉及网络层，但建议升级后验证 WSL 权限和插件更新是否正常。"
-tags: [bug-fixes, stability, codex, memory-core]
+hook: "Codex 进度回复不再中断，启动修复避免网关重启循环"
+broadcast: "这次更新修了几个容易踩坑的地方。一是代码助手在汇报进度后不再被误当成任务结束，能继续跑到真正的终止响应；二是启动时把旧索引和缓存的冲突分开处理，避免网关陷入反复重启的死循环；三是子系统里的权限检查按平台放宽了特定错误，但安全默认没丢。对做智能体的开发者来说，进度和终止信号要分清，可恢复冲突和不可恢复损坏也要分清。"
+insight: "这次 v2026.7.1-1 值得现有用户升级，重点在 Codex 进度回复不再中断和 Memory Core 启动修复避免 Gateway 重启循环，前者直接影响依赖 GPT/Codex 的 harness 行为，后者关系到服务能否稳定起来。升级后建议检查自己的 hook 配置是否把进度消息误当终止信号，若有需按新语义调整。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理层变动，按现有方式升级即可。"
+tags: [codex, memory-core, wsl, plugin-updates]
 ---
 
-- **Codex 进度回复**：进度消息后保持会话运行，确保 GPT/Codex 输出最终权威回复，避免中途停止。
-  - 含义：harness 需区分进度与最终响应，确保完整交互。
-- **Memory Core 启动修复**：恢复派生索引与缓存冲突，避免 Gateway 陷入致命重启循环，同时保留向量存储损坏重试。
-  - 含义：harness 需处理存储损坏与恢复，避免启动阻塞。
-- **WSL 权限容错**：仅当状态路径已私有时才容忍 EROFS，保持宽权限的 fail-closed 处理。
-  - 含义：harness 需精细处理权限错误，平衡安全与兼容。
-- **遗留迁移恢复**：使审查后的迁移残留非致命，不阻塞正常升级。
-  - 含义：harness 需容忍非关键迁移问题，保证升级流畅。
-- **托管插件更新**：恢复过期的 npm 锁元数据，使官方插件可干净更新。
-  - 含义：harness 需处理依赖元数据过期，确保插件可维护。
+- **Codex 进度回复**：交付进度消息后继续运行 app-server 轮次，让 GPT/Codex 走到权威终止响应而非中途停止。含义：harness 需区分进度消息与终止信号，不能把进度当结束。
+- **Memory Core 启动修复**：恢复派生旧索引与缓存 sidecar 冲突，避免 Gateway 陷入致命重启循环，同时保留结构性向量存储损坏的可重试性。含义：启动修复应区分可恢复冲突与不可恢复损坏。
+- **WSL 状态权限**：仅在现有状态路径已私有时容忍受保护 chmod 的 EROFS，保留对宽权限的 fail-closed 处理。含义：权限检查需按平台放宽特定错误，但不牺牲安全默认。
 
 ---
 
