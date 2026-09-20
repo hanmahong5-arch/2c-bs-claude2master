@@ -1,0 +1,22 @@
+---
+slug: 2026-09-20-trending-tamaratran-fast-jev-compaction
+title: "fast-jev-compaction — Claude Code 压缩插件，用 Jev 决策替换摘要，保留原文"
+source: tamaratran/fast-jev-compaction
+sourceUrl: https://github.com/tamaratran/fast-jev-compaction
+publishedAt: 2026-09-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: trending
+hook: "Claude Code 压缩插件，用 Jev 决策替换摘要，保留原文"
+broadcast: "给大家介绍一个给 Claude Code 用的压缩插件，它用一套决策评分机制替代了传统的摘要压缩。每次工具调用和结果都会被快速打分，过时的内容直接丢弃或截断，保留下来的则维持原文。这解决的是长会话里摘要容易丢细节的老问题，对做 agent 上下文管理的开发者来说，这种评分加截断的思路挺值得借鉴。"
+tags: [typescript, claude-code, plugin, context-management]
+---
+
+- 它是什么：Claude Code 插件，用 Jev 决策替代压缩摘要。每次工具调用和结果在一次快速请求中评分，过时的被丢弃或截断，保留的内容保持原文。
+- 为什么值得关注：解决长会话中压缩摘要丢失细节的问题，通过评分机制保留关键上下文，提升 Claude Code 的长期记忆准确性。
+- 对 agent / 工具链 / 后端开发者的参考价值：为 agent 上下文管理提供新思路，可借鉴评分与截断策略优化工具调用历史处理。
+
+---
+
+> 项目：[tamaratran/fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) · ⭐ 4459 · TypeScript

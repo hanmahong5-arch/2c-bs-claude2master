@@ -160,7 +160,9 @@
     "linguo2625469/workbuddy2api-panel",
     "browser-use/jev-ultrafast",
     "eternity4719/HowToLiveBetter",
-    "agentverse-os/AgentVerse-OS"
+    "agentverse-os/AgentVerse-OS",
+    "tamaratran/fast-jev-compaction",
+    "omacom/try-omarchy-windows"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -265,7 +267,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-19",
+    "anthropic-engineering": "2026-09-20",
     "claude-code-docs": "2026-09-18",
     "openai-codex-blog": "2026-09-17",
     "openclaw-concepts": "2026-09-14",
@@ -588,7 +590,9 @@
       "https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/",
       "https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/",
       "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
-      "https://simonwillison.net/2026/Sep/18/the-creative-spirit-of-who-framed-roger-rabbit/"
+      "https://simonwillison.net/2026/Sep/18/the-creative-spirit-of-who-framed-roger-rabbit/",
+      "https://simonwillison.net/2026/Sep/19/datasette-auth-github/",
+      "https://simonwillison.net/2026/Sep/19/sighting-401567341/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -775,7 +779,8 @@
       "https://www.interconnects.ai/p/latest-open-artifacts-24-motif-3",
       "https://www.interconnects.ai/p/when-will-average-people-feel-ais",
       "https://www.interconnects.ai/p/one-resignation-turned-the-embers",
-      "https://www.interconnects.ai/p/open-source-ai-reading-list"
+      "https://www.interconnects.ai/p/open-source-ai-reading-list",
+      "https://www.interconnects.ai/p/where-i-stand-on-rsi"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -860,7 +865,8 @@
       "https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos",
       "https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots",
       "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22",
-      "https://www.oneusefulthing.org/p/agency-and-agents"
+      "https://www.oneusefulthing.org/p/agency-and-agents",
+      "https://www.oneusefulthing.org/p/the-overhang"
     ],
     "importai": [
       "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
@@ -1302,27 +1308,28 @@
       "https://openclaw.ai/blog/extended-stable-releases-and-maturity-scorecards/",
       "https://openclaw.ai/blog/openclaw-2-accidentally/",
       "https://openclaw.ai/blog/macos-installer-windows-local-ai/",
-      "https://openclaw.ai/blog/where-to-find-openclaw-security-updates/"
+      "https://openclaw.ai/blog/where-to-find-openclaw-security-updates/",
+      "https://openclaw.ai/blog/shipping-openclaw-updates-that-dont-break/"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-19",
+    "simonwillison": "2026-09-20",
     "lilianweng": "2026-09-17",
-    "latentspace": "2026-09-19",
-    "interconnects": "2026-09-19",
-    "karpathy": "2026-09-17",
-    "raschka": "2026-09-17",
-    "eugeneyan": "2026-09-17",
+    "latentspace": "2026-09-20",
+    "interconnects": "2026-09-20",
+    "karpathy": "2026-09-20",
+    "raschka": "2026-09-20",
+    "eugeneyan": "2026-09-20",
     "chiphuyen": "2026-09-17",
-    "oneusefulthing": "2026-09-18",
+    "oneusefulthing": "2026-09-20",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-19",
-    "deepmind": "2026-09-18",
-    "hf-blog": "2026-09-18",
-    "anthropic-news": "2026-09-19",
-    "steipete": "2026-09-18",
-    "openclaw-blog": "2026-09-18"
+    "openai-news": "2026-09-20",
+    "deepmind": "2026-09-20",
+    "hf-blog": "2026-09-20",
+    "anthropic-news": "2026-09-20",
+    "steipete": "2026-09-20",
+    "openclaw-blog": "2026-09-20"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-18-blog-openclaw-blog-shipping-openclaw-updates-that-don-t-break-w
+title: "Shipping OpenClaw updates that don’t break w/ Jason Sy — OpenClaw 更新为何难做对，原子更新如何保住可用的 agent"
+source: "OpenClaw"
+sourceUrl: https://openclaw.ai/blog/shipping-openclaw-updates-that-dont-break/
+publishedAt: 2026-09-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "OpenClaw"
+hook: "OpenClaw 更新为何难做对，原子更新如何保住可用的 agent"
+broadcast: "今天聊一个做 agent 工具常被忽略的问题：更新本身很难做对。有开发者指出，升级路径其实就是产品的一部分，得当成功能来设计和测试。他们提出用原子更新来保住一个还能正常干活的 agent，要么完整成功，要么退回旧状态，而不是卡在半成品。目标就是让升级变得无缝，用户不用停机，也不用手工修。对国内做 agent 的团队来说，这套思路值得提前想清楚。"
+tags: [openclaw, atomic-updates, agent-tooling, release-engineering]
+---
+
+- Jason Sy 指出 OpenClaw 的更新一直很难做对，这是团队面对的实际问题，而非偶发故障。对 agent 工具链的含义：升级路径本身就是产品的一部分，需要像功能一样被设计和测试。
+- 文章提到原子更新（atomic updates）的作用是保住一个仍能正常工作的 agent，避免升级把可用状态弄坏。对开发者的含义：把更新做成要么完整成功、要么回退到旧状态，比中途半成品更安全。
+- 文中给出的目标是让升级变得无缝（seamless upgrades）。对 agent 维护者的含义：用户不该为版本切换付出停机或手工修复的代价，这应作为更新机制的设计指标。
+
+---
+
+> 原文：[Shipping OpenClaw updates that don’t break w/ Jason Sy](https://openclaw.ai/blog/shipping-openclaw-updates-that-dont-break/) · 作者 OpenClaw

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-19-blog-simonwillison-datasette-auth-github-1-0
+title: "datasette-auth-github 1.0 — Datasette 的 GitHub 登录插件升到 1.0，起因是一个 cook"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/19/datasette-auth-github/
+publishedAt: 2026-09-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 的 GitHub 登录插件升到 1.0，起因是一个 cookie 过期的小 bug。"
+broadcast: "有个给数据工具用的登录插件正式升到一点零版本了，起因其实是个小毛病：它设置登录凭证时漏了一个参数，导致会话很快就失效，在手机浏览器上尤其明显。作者修好之后顺手把它升到正式版，也提到自己正努力让稳定的插件更及时地发布正式版。这对我们做工具链和智能体的开发者是个提醒：长期停在零点几版本的依赖未必不稳定，但版本号确实会影响大家选型和信任。"
+tags: [datasette, github-auth, plugins, release]
+---
+
+- 作者在 agent.datasette.io 上运行该插件时发现登录会话持续不了多久，原因是插件设置 cookie 时没有带 Max-Age 参数，导致浏览器会话结束就失效，在 Mobile Safari 上尤其频繁。
+- 修复在 #80 中完成，作者借此把插件正式升到 1.0，理由是它已存在较长时间，且同时针对 Datasette 0.65.x 和 1.0ax 做过测试。
+- 作者提到自己正努力把稳定的插件更及时地提升到 1.0 版本。对维护工具链的开发者来说，这意味着长期停留在 0.x 的依赖未必不稳定，但版本号本身会影响使用者的信任与选型判断。
+
+---
+
+> 原文：[datasette-auth-github 1.0](https://simonwillison.net/2026/Sep/19/datasette-auth-github/) · 作者 Simon Willison
