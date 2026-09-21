@@ -162,7 +162,8 @@
     "eternity4719/HowToLiveBetter",
     "agentverse-os/AgentVerse-OS",
     "tamaratran/fast-jev-compaction",
-    "omacom/try-omarchy-windows"
+    "omacom/try-omarchy-windows",
+    "gylive/ccodex-sleep-state"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -262,16 +263,22 @@
       "https://docs.openclaw.ai/concepts/active-memory/enabling",
       "https://docs.openclaw.ai/concepts/active-memory/how-it-works",
       "https://docs.openclaw.ai/concepts/active-memory/memory-tools",
-      "https://docs.openclaw.ai/concepts/active-memory/recommended-setup"
+      "https://docs.openclaw.ai/concepts/active-memory/recommended-setup",
+      "https://docs.openclaw.ai/concepts/active-memory/session-controls",
+      "https://docs.openclaw.ai/concepts/active-memory/troubleshooting",
+      "https://docs.openclaw.ai/concepts/active-memory/tuning",
+      "https://docs.openclaw.ai/concepts/decision-models",
+      "https://docs.openclaw.ai/concepts/model-providers/control-ui-and-keys",
+      "https://docs.openclaw.ai/concepts/model-providers/custom-providers"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-20",
+    "anthropic-engineering": "2026-09-21",
     "claude-code-docs": "2026-09-18",
     "openai-codex-blog": "2026-09-17",
-    "openclaw-concepts": "2026-09-14",
-    "hermes-guides": "2026-09-14"
+    "openclaw-concepts": "2026-09-21",
+    "hermes-guides": "2026-09-21"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -592,7 +599,10 @@
       "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
       "https://simonwillison.net/2026/Sep/18/the-creative-spirit-of-who-framed-roger-rabbit/",
       "https://simonwillison.net/2026/Sep/19/datasette-auth-github/",
-      "https://simonwillison.net/2026/Sep/19/sighting-401567341/"
+      "https://simonwillison.net/2026/Sep/19/sighting-401567341/",
+      "https://simonwillison.net/2026/Sep/20/voxium/",
+      "https://simonwillison.net/2026/Sep/20/llm-keys-ui/",
+      "https://simonwillison.net/2026/Sep/20/datasette-explain/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1313,10 +1323,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-20",
+    "simonwillison": "2026-09-21",
     "lilianweng": "2026-09-17",
-    "latentspace": "2026-09-20",
-    "interconnects": "2026-09-20",
+    "latentspace": "2026-09-21",
+    "interconnects": "2026-09-21",
     "karpathy": "2026-09-20",
     "raschka": "2026-09-20",
     "eugeneyan": "2026-09-20",
@@ -1324,10 +1334,10 @@
     "oneusefulthing": "2026-09-20",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-20",
+    "openai-news": "2026-09-21",
     "deepmind": "2026-09-20",
     "hf-blog": "2026-09-20",
-    "anthropic-news": "2026-09-20",
+    "anthropic-news": "2026-09-21",
     "steipete": "2026-09-20",
     "openclaw-blog": "2026-09-20"
   },

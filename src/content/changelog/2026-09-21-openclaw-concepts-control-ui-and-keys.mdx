@@ -1,0 +1,23 @@
+---
+slug: 2026-09-21-openclaw-concepts-control-ui-and-keys
+title: "Control UI and API keys · OpenClaw — OpenClaw 把密钥存储、模型目录刷新和用量统计拆成独立步骤，这个设计值得借"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/model-providers/control-ui-and-keys
+publishedAt: 2026-09-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OpenClaw 把密钥存储、模型目录刷新和用量统计拆成独立步骤，这个设计值得借鉴。"
+broadcast: "OpenClaw 把密钥存储、模型目录刷新和用量统计拆成了独立步骤。保存密钥和刷新目录互不影响，刷新失败时密钥仍然保留，只需按提示恢复。它还只在遇到限流时才轮换密钥，非限流错误直接失败，并且把各家服务商的差异下沉到插件里。对国内做 agent 的开发者来说，这种按错误分类重试、凭证写入与状态同步各自独立的思路，很值得借鉴。"
+insight: "这次 OpenClaw 的改动对国内用户影响有限，走 newapi.lurus.cn 代理的现有配置不用动，因为摘要里只提到密钥存储、目录刷新和用量统计的拆分，没有涉及代理链路。真正值得跟的是它的重试思路：只在 429、quota、ThrottlingException 这类限流响应时才轮换下一个 key，非限流错误直接失败，这比无差别重试更省额度。如果你现在还在用一把 key 硬扛限流，建议按这个优先级把备用 key 配上，改动成本不高。"
+tags: [api-key-rotation, provider-plugins, credential-store, failover]
+---
+
+- 密钥写入与目录刷新解耦：保存 key 和刷新 catalog 是两个独立结果，刷新失败时已保存的 key 仍然保留，只需按提示执行恢复步骤。对 harness 的启示是凭证写入与状态同步应各自独立，避免一次失败回滚全部操作。
+- 密钥轮换只在限流时触发：按 OPENCLAW_LIVE_<PROVIDER>_KEY、<PROVIDER>_API_KEYS、<PROVIDER>_API_KEY、编号列表的优先级选 key 并去重，仅对 429、quota、ThrottlingException 等限流响应换下一个 key，非限流错误立即失败。含义是重试策略应按错误分类，而非无差别重试。
+- Provider 逻辑下沉到插件：registerProvider(...) 承担 onboarding、模型目录、环境变量映射、工具 schema 清理、故障分类、OAuth 刷新等，核心只保留通用推理循环。对 prompt/harness 设计的含义是 provider 差异应通过显式钩子暴露，而非共享逻辑里的静态能力标记。
+
+---
+
+> 原文：[Control UI and API keys · OpenClaw](https://docs.openclaw.ai/concepts/model-providers/control-ui-and-keys)

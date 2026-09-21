@@ -1,0 +1,23 @@
+---
+slug: 2026-09-21-openclaw-concepts-session-controls
+title: "Session controls · OpenClaw — 会话级开关加 verbose/trace，让隐藏的记忆注入第一次变得可观测"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/active-memory/session-controls
+publishedAt: 2026-09-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "会话级开关加 verbose/trace，让隐藏的记忆注入第一次变得可观测"
+broadcast: "这次更新给会话加了几个开关，能只切当前会话，不动全局配置，把临时状态和持久配置分开写。更关键的是，它让隐藏的记忆注入第一次变得可观测，打开详细模式就能看到状态和摘要信息。对做 agent 的国内开发者来说，这种把诊断信息分级暴露、默认不落盘的设计，很值得借鉴。"
+insight: "这次 Session controls 的改动值得现有用户关注：/active-memory status|off|on 只切当前会话，不动全局 config.enabled，调试时不会污染部署配置，升级后建议把临时开关和持久配置分开用。想看清隐藏的记忆注入，开 /verbose on 或 /trace on 即可，只有 /trace raw 才暴露原始前缀，现有 prompt 和 hook 配置不必改。国内走 newapi.lurus.cn 代理不受影响，这些是会话级命令，与代理链路无关。"
+tags: [session-controls, active-memory, observability, prompt-injection]
+---
+
+- 用 `/active-memory status|off|on` 只切换当前会话，不动 `plugins.entries.active-memory.config.enabled` 等全局配置；全局形式需 owner 或 operator.admin，且只写 config.enabled 而保留插件 enabled，以便之后还能开回来。含义：harness 应把「本次会话临时状态」与「持久配置」分成两条写入路径，避免调试动作污染部署配置。
+- 默认注入的是隐藏的 untrusted prompt prefix，正常回复里看不到；开 `/verbose on` 会在回复后追加状态行（status、elapsed、query、summary 字符数），`/trace on` 追加 debug 摘要，`/trace raw` 才显示原始 `<active_memory_plugin>` 前缀。含义：诊断信息作为 follow-up 追加而非前置气泡，且按粒度分级暴露，是 prompt 注入类功能可观测性的可复用设计。
+- 阻塞式子 agent 的 transcript 默认在运行结束后删除，需参考 Transcript persistence 才能保留。含义：临时中间上下文默认不落盘，harness 要把「可回放」做成显式选项而非默认行为。
+
+---
+
+> 原文：[Session controls · OpenClaw](https://docs.openclaw.ai/concepts/active-memory/session-controls)

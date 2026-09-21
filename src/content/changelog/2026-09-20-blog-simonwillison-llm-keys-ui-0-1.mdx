@@ -1,0 +1,23 @@
+---
+slug: 2026-09-20-blog-simonwillison-llm-keys-ui-0-1
+title: "llm-keys-ui 0.1 — 为手机远程跑编码 agent 时安全注入 API key 的小插件，解决密钥不进"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/20/llm-keys-ui/
+publishedAt: 2026-09-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "为手机远程跑编码 agent 时安全注入 API key 的小插件，解决密钥不进聊天窗口的问题"
+broadcast: "给大家介绍一个叫密钥界面小工具的新插件。作者在手机上远程操控多台机器跑编码智能体，但不想把接口密钥直接粘进对话窗口，因为会话日志本身就可能泄露密钥。这个插件会在本地开一个网页界面让你保存密钥，之后智能体用一条命令行就能取用。对国内开发者来说，它把密钥注入和对话内容分开了，更安全也更好审计。"
+tags: [llm-keys, coding-agents, codex, secrets-management]
+---
+
+- 作者用 Codex Remote 在手机上操控多台机器跑编码 agent，偶尔需要配置 API key，但他不愿把密钥直接粘进 agent 会话或 ChatGPT 应用里，于是写了 llm-keys-ui 这个插件。对开发者的含义：agent 会话日志本身就是泄露面，密钥注入需要独立通道。
+- 用法是让 Codex 执行 `uvx --with llm-keys-ui llm keys-ui --all`，插件会返回一个可访问的 URL（含局域网或 Tailscale 设备 IP），在浏览器界面里保存 API key。含义：把密钥写入做成一次性本地 Web UI，比在对话里传明文更可控。
+- 之后 agent 可在 shell 命令中用 `llm keys get anthropic` 取用密钥。含义：密钥读取被收敛成一条 CLI 调用，便于在工具链里统一审计和替换，而不用把值硬编码进提示词。
+
+---
+
+> 原文：[llm-keys-ui 0.1](https://simonwillison.net/2026/Sep/20/llm-keys-ui/) · 作者 Simon Willison

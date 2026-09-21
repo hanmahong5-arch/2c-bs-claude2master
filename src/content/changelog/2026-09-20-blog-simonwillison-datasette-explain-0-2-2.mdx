@@ -1,0 +1,23 @@
+---
+slug: 2026-09-20-blog-simonwillison-datasette-explain-0-2-2
+title: "datasette-explain 0.2.2 — Datasette 查询解释插件更新，让只读存储查询页也能看执行计划"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/20/datasette-explain/
+publishedAt: 2026-09-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 查询解释插件更新，让只读存储查询页也能看执行计划"
+broadcast: "有个叫 datasette-explain 的查询解释插件更新了，现在只读的存储查询页面也能直接看执行计划。对做数据工具链的开发者来说，这意味着查询性能诊断不再依赖可写实例，只读部署也能自查 SQL。对 agent 和自动化工具而言，这种结构化诊断输出比让模型猜 SQL 慢在哪更可靠，可以当成工具调用的一环。"
+tags: [datasette, sqlite, explain-plan, dev-tools]
+---
+
+- datasette-explain 发布 0.2.2，核心变化是 explain plan 现在能在只读的 stored-query 页面上工作：作者把 datasette.simonwillison.net 升级到 Datasette 1.0a40 后顺手发了这版。对做数据工具链的开发者来说，这意味着查询性能诊断不再依赖可写实例，只读部署也能自查 SQL。
+- 插件围绕 SQLite 的 EXPLAIN 能力做封装，把执行计划直接暴露在 Datasette 界面里。对 agent 和自动化工具而言，这类结构化诊断输出比让模型猜 SQL 慢在哪更可靠，可作为工具调用的一环。
+- 版本号只到 0.2.2，说明这是小步迭代而非大改，升级动机来自上游 Datasette 1.0a40 的兼容性。含义是：依赖 Datasette 生态的工具需要跟上 alpha 版本节奏，插件作者往往先于用户发现并修复这类边界问题。
+
+---
+
+> 原文：[datasette-explain 0.2.2](https://simonwillison.net/2026/Sep/20/datasette-explain/) · 作者 Simon Willison

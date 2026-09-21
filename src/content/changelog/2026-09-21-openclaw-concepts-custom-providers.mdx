@@ -1,0 +1,23 @@
+---
+slug: 2026-09-21-openclaw-concepts-custom-providers
+title: "Custom providers and local runtimes · Op — 自定义 provider 与本地运行时怎么配，看这篇就够"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/model-providers/custom-providers
+publishedAt: 2026-09-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "自定义 provider 与本地运行时怎么配，看这篇就够"
+broadcast: "今天聊自定义模型提供方和本地运行时怎么配。简单说，你可以覆盖接口地址、请求头和模型列表，但只在需要偏离默认目录时才显式声明。这里有个关键点：如果自定义模型要接受图片，必须显式声明支持文本和图片，否则聊天界面和附件会退化成纯文本引用。对国内开发者来说，这意味着多模态能力不能靠推断，得在模型元数据层写清楚，别名、注册和策略限制也是三个独立的层，设计时别混在一起。"
+insight: "这次 OpenClaw 的 provider 配置说明对国内开发者有实际影响：如果你已经在用自定义 provider 或本地运行时，建议按 models.providers.<id> 只对偏离默认目录的端点显式声明 baseUrl/headers，别把默认配置也写一遍；多模态模型务必补上 input: [\"text\", \"image\"]，否则 WebChat 和节点附件会退化成纯文本。走 newapi.lurus.cn 代理的用户，只要代理端点本身没变，这次改动不影响你现有接入，prompt 和 hook 配置也无需调整。"
+tags: [model-providers, custom-endpoints, multimodal-input, agent-config]
+---
+
+- 用 `models.providers.<id>` 覆盖 baseUrl/headers/模型列表，仅在需要偏离默认目录时才显式声明；含义：harness 应把 provider 能力从插件继承，只对已验证的端点写 compat。
+- 自定义模型若接受图片，必须在该模型上设 `input: ["text", "image"]`，否则 WebChat 与节点附件会退化为纯文本引用；含义：多模态输入需在模型元数据层显式声明，不能靠推断。
+- `agents.defaults.models["provider/model"]` 只管别名与元数据，不注册运行时模型也不限制覆盖；含义：别名、模型注册、策略限制是三个独立层，prompt 设计别把它们混为一谈。
+
+---
+
+> 原文：[Custom providers and local runtimes · OpenClaw](https://docs.openclaw.ai/concepts/model-providers/custom-providers)
