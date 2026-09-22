@@ -1,0 +1,23 @@
+---
+slug: 2026-09-21-hermes-agent-2026-9-21
+title: "hermes-agent v2026.9.21 — 1800 个 PR 打包成稳定 tag，但真正的功能清单要等 v0.22.0"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.21
+publishedAt: 2026-09-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "1800 个 PR 打包成稳定 tag，但真正的功能清单要等 v0.22.0"
+broadcast: "这次发布的是一个稳定补丁版本，把之前积累的一千八百多个合并请求打包成正式标签，方便下游镜像和云服务锁定复现。不过要注意，它只是稳定基线，不是功能基线，完整说明要等下一个版本。对国内开发者来说，更值得关注的是它新增了结构化输出和并发上限，这两点正是让外部编排器能顺利接入的前提。"
+insight: "这个 tag 是补丁版本，把约 1812 个已合并 PR 汇总成稳定 tag，完整说明推迟到 v0.22.0，所以别把它当功能基线。现有用户如果只是要复现环境，可以锁定此 tag；但想拿新功能，建议等 v0.22.0 再升级。现有 prompt 和 hook 配置不用改，摘要里没有破坏性变更。国内走 newapi.lurus.cn 代理的用户不受影响，因为这次只是打包稳定 tag，没有提到代理或接口变化。"
+tags: [release-notes, agent-harness, gateway, cli]
+---
+
+- 这是补丁版本，把 v0.21.3 以来的约 1812 个已合并 PR 汇总成稳定 tag，供 Docker 镜像、Hermes Cloud 等下游消费；完整整理版说明推迟到 v0.22.0。含义：下游 harness 可锁定此 tag 复现，但别把它当功能基线。
+- 窗口内新增 host 级 gateway 单例锁与 rendezvous 记录，Desktop 改为附着到已运行的后端而非再起一个。含义：多入口 harness 需要显式所有权与发现机制，避免重复进程争抢状态。
+- CLI 新增 `--format stream-json` 结构化 JSONL 输出，另有 `mcp.discovery_concurrency` 限制 MCP 发现连接数。含义：可编程输出与并发上限是 harness 被外部编排器集成的两个前提。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.9.21](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.21)

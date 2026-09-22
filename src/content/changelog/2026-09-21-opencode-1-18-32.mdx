@@ -1,0 +1,23 @@
+---
+slug: 2026-09-21-opencode-1-18-32
+title: "opencode v1.18.32 — Bedrock 图片附件不再乱塞，模型适配更精准"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.32
+publishedAt: 2026-09-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Bedrock 图片附件不再乱塞，模型适配更精准"
+broadcast: "这次更新主要修了两个挺实际的问题。一是图片附件现在只发给真正支持它的模型，不支持的就不会再收到无效内容，开发者接入时得按模型能力做过滤。二是流式用量统计修好了，token 计数更准，做成本和限流判断就更靠谱。另外社区还补进了两个新模型，模型目录能动态更新，对做 agent 的人来说，白名单维护会更省心。"
+insight: "这次 v1.18.32 对国内用户的实际影响有限，走 newapi.lurus.cn 代理的调用方式不受影响，无需调整接入配置。真正值得动手的是 Bedrock 用户：如果你的 harness 之前把图片附件无差别塞给所有模型，现在应改为按模型能力过滤，只对 Claude、Nova、Llama 4 提升，否则不支持的模型仍会收到无效附件。另外模型白名单建议改成可动态更新，以便及时纳入 DeepSeek V4.1 Flash 和 Grok 4.7。"
+tags: [bedrock, together-ai, model-routing, usage-reporting]
+---
+
+- Bedrock 图片附件现在只对 Claude、Nova、Llama 4 模型提升，避免不支持的模型收到无效附件，harness 需按模型能力过滤输入。
+- Together AI 流式用量上报修复，token 统计更可靠，harness 应依赖准确的 usage 做成本与限流判断。
+- 社区贡献新增 DeepSeek V4.1 Flash 与 Grok 4.7 到 Zen/Go，模型目录扩展，harness 需维护可动态更新的模型白名单。
+
+---
+
+> 原文 release：[sst/opencode v1.18.32](https://github.com/anomalyco/opencode/releases/tag/v1.18.32)

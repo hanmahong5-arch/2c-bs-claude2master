@@ -1,0 +1,23 @@
+---
+slug: 2026-09-21-blog-simonwillison-cloudflare-python-workers-are-now-generally-available
+title: "Cloudflare Python Workers are now generally available — Cloudflare Python Workers 正式 GA：Python 经"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/
+publishedAt: 2026-09-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Cloudflare Python Workers 正式 GA：Python 经 Pyodide 编译成 Wasm 跑在 V8 里，本地开发也全栈模拟。"
+broadcast: "Cloudflare 的 Python Workers 结束两年预览，正式成为平台一等公民，做法是把 Python 编译成 WebAssembly 跑在边缘运行时里。对国内开发者来说，这意味着边缘函数可以直接用 Python 生态，不必为 JavaScript 重写，agent 工具链也更好接。但要注意，多进程和多线程在虚拟机里都用不了，依赖这些的库没法直接迁移。"
+tags: [cloudflare, python, webassembly, pyodide]
+---
+
+- 结束两年预览，Cloudflare 把 Python 列为 Workers 平台一等公民；实现方式是 Pyodide 把 Python 编译为 WebAssembly，跑在基于 V8 的 workerd 运行时上。对 agent 工具链的含义：边缘函数可直接用 Python 生态，无需为 JS 重写。
+- 代价明确：官方文档列出限制，多进程与多线程在 Wasm 虚拟机中均不可用。对开发者的含义：依赖 threading/multiprocessing 的库（部分数据与并发框架）在边缘侧不可直接迁移。
+- 本地开发用 pywrangler（PyPI 上包名为 workers-py），在本地完整模拟整套栈，包括在 V8 里用 Pyodide 执行代码，落到一个 123MB 的 workerd 二进制。对工具链的含义：本地与线上行为一致性提高，但镜像体积与依赖管理需重新评估。
+
+---
+
+> 原文：[Cloudflare Python Workers are now generally available](https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/) · 作者 Simon Willison

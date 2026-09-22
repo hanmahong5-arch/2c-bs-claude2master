@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-cline-cli-v3-0-63
+title: "cline cli-v3.0.63 — 长会话被静默截断的根因找到了：摘要器没跟着刷新 token"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.63
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "长会话被静默截断的根因找到了：摘要器没跟着刷新 token"
+broadcast: "这次更新修了一个很隐蔽的问题：长会话被悄悄截断，根因是摘要器还在用会话启动时的旧凭证，主循环刷新后它就认证失败，失败又被兜底逻辑吞掉，看起来像正常结束。现在摘要器会跟着当前凭证和模型走，压缩触发也改用真实用量来算。对做 agent 的国内开发者来说，这提醒我们压缩路径的凭证必须和主循环同源，否则降级会伪装成成功。"
+insight: "这次 CLI v3.0.63 值得升级，核心是修掉了长会话被静默截断的根因：摘要器此前沿用会话启动时的 access token，主循环刷新后 token 轮换导致 401，失败又被截断兜底吞掉，OAuth 与 cline-free/* 模型上最明显。如果你常用这两类模型跑长会话，建议直接升；走 newapi.lurus.cn 代理的用户不受影响，因为问题出在摘要器凭证没跟主循环同源，与代理链路无关。另外子代理工具调用改并发后，审批仍按序，但多个子进程可能抢同一 stdin，一次 y 可能批准多个待定操作，现有 hook 配置建议按并发模型重新检查。"
+tags: [context-compaction, subagents, token-accounting, cli]
+---
+
+- 上下文压缩不再静默退化为截断：摘要器此前沿用会话启动时解析的 access token，主循环每轮刷新后 token 轮换导致 401，失败被截断兜底吞掉，OAuth 与 cline-free/* 模型上最明显；摘要器现在跟随会话当前凭证与模型。含义：压缩路径的凭证与模型必须与主循环同源，否则降级会伪装成成功。
+- 压缩触发改用 provider 实际 token 用量而非字符估算，并给摘要器更大输出预算。含义：密集内容（反汇编、图片转储、压缩源码）token 密度远高于估算，估算型阈值会让会话撞上真实上限却不触发压缩。
+- 子代理工具调用改为并发执行，审批与 hook 仍按序，父级仍等全部结果；已批准委派后子代理不再重复请求审批。含义：并发会让多个子进程同时抢同一 stdin，一次 y 可能批准多个待定操作，审批必须与并发模型一起重新设计。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.63](https://github.com/cline/cline/releases/tag/cli-v3.0.63)

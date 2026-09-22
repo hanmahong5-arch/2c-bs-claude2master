@@ -1,0 +1,23 @@
+---
+slug: 2026-09-21-blog-latentspace-jev-system-one-models-for-prod-not-god
+title: "Jev: System One models for Prod, not God — with Diogo — InstructGPT 作者 Diogo Almeida 推出 Jev，主张用 "
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/jev
+publishedAt: 2026-09-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "InstructGPT 作者 Diogo Almeida 推出 Jev，主张用 RLCD 替代 RLHF/RLVR，做能嵌入软件、可校准决策的 System One 模型。"
+broadcast: "InstructGPT 的作者 Diogo Almeida 推出了一个新模型叫 Jev，主张用「校准决策强化学习」替代 RLHF 和 RLVR，让模型在 System One 任务上给出带认知诚实概率的答案。为什么值得关注？因为它面向的不是聊天，而是嵌进软件里、像正则一样不起眼地工作，可靠性来自校准概率而不是人类打分。对国内 agent 开发者来说，这意味着先把 AI 工作流拆成小而可测量的决策，再谈模型规模。"
+tags: [jev, rlcd, system-one, coding-agents]
+---
+
+- **RLCD 是 Jev 的核心**：Diogo 认为 RLHF 带来幻觉、谄媚和永久依赖人类，RLVR 只解决可验证任务且加剧能力参差；他提出 Reinforcement Learning for Calibrated Decisions，优化「System One 任务上带认知诚实概率的答案」。对 agent 的含义：可靠性应来自校准概率，而非人类打分。
+- **「最苦教训」：任务与数据胜过算力**：他称 ML 最重要的部分不是 ML，选对北极星（如被集成进工具调用而非用户点赞）会让其余环节自然对齐。对工具链的含义：先定义可测量的小决策，再谈模型规模。
+- **Jev 面向软件而非聊天**：目标是「消失在背景里」，像 regex 一样不起眼；官方指南覆盖 coding agent、linting、压缩工具调用，并强调结构化状态替代巨型 prompt。对开发者的含义：把 AI 工作流拆成小、可测量的决策，而非单一模型架构。
+
+---
+
+> 原文：[Jev: System One models for Prod, not God — with Diogo Almeida, CEO, TypeSafe AI](https://www.latent.space/p/jev) · 作者 Latent Space

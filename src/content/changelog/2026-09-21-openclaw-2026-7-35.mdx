@@ -1,0 +1,23 @@
+---
+slug: 2026-09-21-openclaw-2026-7-35
+title: "openclaw v2026.7.35 — 7月LTS线首个正式版，含安全加固与模型扩展"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.7.35
+publishedAt: 2026-09-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "7月LTS线首个正式版，含安全加固与模型扩展"
+broadcast: "这次更新是这条长期支持线的第一个正式版，重点做了安全加固和模型扩展。它修好了插件注册表，重启后浏览器、语音、文件传输这些默认能力不会丢；同时收紧了命令和浏览器操作的校验，还保证消息在重试和恢复中不丢失。对做 agent 的国内开发者来说，这意味着工具调用和消息投递要按可恢复事务来设计。"
+insight: "这次 2026.7.35 是 7 月 LTS 线首个正式版，现有用户值得升级：Doctor 注册表修复能保住 Browser、Canvas、Talk 等内置插件，还能从 2026.7.34 的部分注册表恢复，安全边界也收紧了命令词、origin 和 Git 参数校验。如果你之前靠自定义 hook 或 prompt 绕过这些校验，升级后要重新检查，参数级校验会在解析前拦下转义换行和注入选项。国内走 newapi.lurus.cn 代理的调用方式不受影响，摘要未提及代理或鉴权变更。"
+tags: [extended-stable, plugin-registry, security-hardening, message-integrity]
+---
+
+- **Doctor 插件注册表修复**：Doctor 创建或修复注册表状态时保留完整内置插件清单，重启后 Browser、Canvas、配对、文件传输、电话控制、Talk 语音、Bonjour 等默认插件仍可用；状态迁移发现还能从 2026.7.34 写入的部分注册表恢复，同时保留外部插件安装记录。含义：harness 的插件发现层需区分内置清单与外部安装记录，避免修复操作误删默认能力。
+- **安全边界收紧**：拒绝转义换行的命令词、精确 origin 不匹配、注入的 Git 选项参数、继承的密钥响应标识、不安全的浏览器变更以及畸形或超大节点负载。含义：工具调用与浏览器操作需在解析前做参数级校验，而非仅依赖上层策略。
+- **消息与会话完整性**：在重试、钩子、恢复和通道生命周期转换中保留排队、导入、流式和工具结果消息；修复 Discord、Matrix、Telegram、Slack 等通道可能丢失或损坏消息的边界情况。含义：harness 需把消息投递视为可恢复事务，重试延迟与转录修复要显式建模。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.7.35](https://github.com/openclaw/openclaw/releases/tag/v2026.7.35)

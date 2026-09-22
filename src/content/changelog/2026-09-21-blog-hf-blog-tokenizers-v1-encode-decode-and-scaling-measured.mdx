@@ -1,0 +1,23 @@
+---
+slug: 2026-09-21-blog-hf-blog-tokenizers-v1-encode-decode-and-scaling-measured
+title: "tokenizers v1: encode, decode and scaling, measured — Hugging Face 发布 tokenizers v1，实测编码解码与扩展性"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/tokenizers-v1
+publishedAt: 2026-09-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 发布 tokenizers v1，实测编码解码与扩展性能"
+broadcast: "Hugging Face 发布了分词库的一版大更新，这次重点讲编码、解码和扩展能力，而且给出了实测数据，不只是列功能。对做智能体工具链的团队来说，分词是上下文预算和成本估算的底层依赖，所以版本升级要先确认行为有没有变化。如果你在维护检索增强、批量推理或本地模型服务，建议把它放进依赖升级的评估清单里。"
+tags: [tokenizers, huggingface, nlp, performance]
+---
+
+- tokenizers 库发布 v1 版本，聚焦 encode、decode 与 scaling 三个方向，并给出实测数据而非仅功能描述。对 agent 工具链而言，tokenizer 是上下文预算与成本估算的底层依赖，版本升级需关注行为是否变化。
+- 文章标题强调 "measured"，说明性能与扩展性以测量结果呈现。开发者在做长上下文或高并发推理时，可据此判断是否值得升级或替换现有分词方案。
+- 作为 Hugging Face 官方博客，该文是 tokenizers 生态的权威更新入口。维护 RAG、批量推理或本地模型服务的团队应将其纳入依赖升级评估清单。
+
+---
+
+> 原文：[tokenizers v1: encode, decode and scaling, measured](https://huggingface.co/blog/tokenizers-v1) · 作者 Hugging Face

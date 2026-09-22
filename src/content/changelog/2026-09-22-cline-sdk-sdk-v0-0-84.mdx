@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-cline-sdk-sdk-v0-0-84
+title: "cline sdk/sdk/v0.0.84 — Cline SDK v0.0.84：修并发竞态、Windows 可执行劫持、压缩"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.84
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline SDK v0.0.84：修并发竞态、Windows 可执行劫持、压缩触发失真"
+broadcast: "这次更新修了三个挺关键的问题：同账号并发请求现在会共享同一个在途请求，失败也能正常重试；Windows 上新增了防护，阻止工作区里伪造的可执行文件在审批前被跑起来；压缩触发改用实际用量来判断，不再只靠估算。对做 agent 的国内开发者来说，这些直接关系到稳定性和安全，值得留意。"
+insight: "这次 v0.0.84 值得升级，重点在 Windows 安全修复：新增的 disableCurrentDirectoryExecutableSearch() 能阻止工作区伪造 rg.exe 在审批前被执行，建议宿主在任何 spawn 之前调用。压缩触发改用 provider 上报的实际 token 数并取 max(估算, 实际)，摘要预算从 4096 提到 8192，密集内容下更准。并发轮询共享在途请求、切换账号不再等旧请求，对走 newapi.lurus.cn 代理的国内用户是纯收益，prompt 和 hook 配置无需改动。"
+tags: [cline-sdk, agent-harness, windows-security, context-compaction]
+---
+
+- 同账号并发 feature-flag 轮询现在共享同一在途请求，失败会传播以便重试，切换账号不再等待旧请求；含义：harness 的缓存新鲜度必须在网络完成后才标记，否则竞态调用会读到默认值。
+- Windows 上新增 `disableCurrentDirectoryExecutableSearch()`，在进程启动时设置 `NoDefaultCurrentDirectoryInExePath`，阻止工作区里伪造的 `rg.exe` 等在审批前被执行；含义：宿主应在任何 spawn 之前调用，覆盖所有子进程。
+- 压缩触发改用 provider 上报的输入 token 数，取 `max(估算, 实际)`，默认摘要输出预算从 4096 提到 8192；含义：密集内容下估算会低估真实占用，harness 需以实际用量为触发依据。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.84](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.84)

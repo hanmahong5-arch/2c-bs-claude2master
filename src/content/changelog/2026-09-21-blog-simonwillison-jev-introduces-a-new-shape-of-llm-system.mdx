@@ -1,0 +1,23 @@
+---
+slug: 2026-09-21-blog-simonwillison-jev-introduces-a-new-shape-of-llm-system
+title: "Jev introduces a new shape of LLM - System One, aka — Simon Willison 解读 Jev：只输出概率分数的决策模型，比 GPT"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/21/jev/
+publishedAt: 2026-09-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 解读 Jev：只输出概率分数的决策模型，比 GPT-5 Nano 还便宜，但更黑箱。"
+broadcast: "最近有个叫 Jev 的新模型，它不生成文字，只输出一个概率分数，比如是或否的置信度、选项分布或者评分。它按输入计费，输出免费，比 GPT-5 Nano 还便宜。对做 agent 的开发者来说，分类、打标、排序这类决策步骤，以后可以换成极低成本的一次函数调用，而且一次能并行问很多问题，几乎不增加延迟。但它也更黑箱，只给一个数字，没法要求解释，所以评测和结构化实验会变得更关键。"
+tags: [jev, decision-models, llm-evals, ai-bias]
+---
+
+- TypeSafe AI 发布 Jev，输入文本、输出浮点数（是/否置信度、选项分布、评分），按输入计费 $0.042/百万 token，输出免费，比 GPT-5 Nano 更便宜。对 agent 的含义：分类、打标、排序这类决策步骤可以换成极低成本函数调用，而非生成式 LLM。
+- Jev 支持一次提交一个 state 加任意多问题，问题并行评估，多问几乎不增加延迟。对工具链的含义：检索重排（如 BM25 召回 100 条后逐条打分）这类批量判断可以塞进单次调用。
+- Simon 指出 Jev 是更彻底的黑箱：只返回一个数字，无法要求解释，偏见更难拆解（他测试湾区城市“好城市”评分，Cupertino 最高、East Palo Alto 最低）。对开发者的含义：评测与结构化实验比普通 LLM 项目更关键，好在成本低到可跑上千次实验。
+
+---
+
+> 原文：[Jev introduces a new shape of LLM - System One, aka Decision Models](https://simonwillison.net/2026/Sep/21/jev/) · 作者 Simon Willison

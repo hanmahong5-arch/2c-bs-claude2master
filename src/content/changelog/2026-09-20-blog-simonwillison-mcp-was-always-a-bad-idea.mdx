@@ -1,0 +1,23 @@
+---
+slug: 2026-09-20-blog-simonwillison-mcp-was-always-a-bad-idea
+title: "MCP was always a bad idea? — 回应「MCP 从来就是坏主意」：全权限终端 agent 不需要它，但受控场景离不"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/20/hn-49779718/
+publishedAt: 2026-09-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "回应「MCP 从来就是坏主意」：全权限终端 agent 不需要它，但受控场景离不开它"
+broadcast: "有人质疑模型上下文协议从来就是个坏主意，理由是像全权限终端智能体那样能随便联网，直接调接口就行，根本用不上它。但作者提醒，一旦你想收敛权限，就需要精确控制能访问哪些外部服务、不让智能体直接碰密钥、给用户合理的授权界面，还要有完整审计日志。所以别因为最激进的形态用不上，就判定它过时。"
+tags: [mcp, ai-agents, tooling, security]
+---
+
+- 作者指出，如果你跑的是 Claude Code、Codex 这类拥有无限制网络访问的完整终端 agent，确实几乎没理由用 MCP——直接让它调 API 就行。含义：MCP 的价值不在「能不能调工具」，而在权限受限的部署形态。
+- 一旦你想做得比「YOLO 式全权限」更收敛，就会需要四样东西：精确控制 agent 能访问哪些外部服务、不让 agent 直接接触 API key 的认证方式、让用户连接并授权更多服务的合理 UI、以及完整的审计日志。含义：这些正是企业级 agent 工具链的刚需，MCP 让它们更容易实现。
+- 作者认为，因为完整编码 agent 用不上 MCP 就判定它过时，忽略了人们可能想构建的其他东西。含义：评估协议价值时，别只盯着最激进的 agent 形态。
+
+---
+
+> 原文：[MCP was always a bad idea?](https://simonwillison.net/2026/Sep/20/hn-49779718/) · 作者 Simon Willison

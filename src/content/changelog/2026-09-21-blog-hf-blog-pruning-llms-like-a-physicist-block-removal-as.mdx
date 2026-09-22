@@ -1,0 +1,23 @@
+---
+slug: 2026-09-21-blog-hf-blog-pruning-llms-like-a-physicist-block-removal-as
+title: "Pruning LLMs Like a Physicist: Block Removal as an — 把大模型剪枝当成伊辛模型求解，物理视角看块删除"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an
+publishedAt: 2026-09-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "把大模型剪枝当成伊辛模型求解，物理视角看块删除"
+broadcast: "有篇新文章提出，把大模型的块删除剪枝当成物理学里的伊辛模型来求解，每个块看作一个自旋，保留还是删掉就是两种状态，目标是找到让损失最小的组合。这样一来，剪枝就从逐层贪心搜索变成了全局能量最小化，理论上能避开局部最优。对国内开发者来说，模型压缩可能多出一条可复现的数学路径，未来的剪枝工具也许直接暴露能量函数接口，而不只是给层重要性分数。"
+tags: [llm-pruning, ising-model, model-compression, quantum-optimization]
+---
+
+- 文章把 LLM 的块删除（block removal）形式化为伊辛优化问题：每个块相当于一个自旋变量，保留或删除对应两种状态，目标是寻找使损失最小的组合。对 agent 工具链的含义是，模型压缩可以借用统计物理里成熟的组合优化求解器，而不必只依赖启发式剪枝。
+- 这种映射让剪枝从逐层贪心搜索变成全局能量最小化问题，理论上能避免局部最优。对开发者的含义是，部署端的小模型选型可能多一条可复现的数学路径。
+- 作者来自 Multiverse Computing，属于用量子/物理方法做 AI 优化的方向。对工具链的含义是，未来剪枝工具可能直接暴露能量函数接口，而非只给层重要性分数。
+
+---
+
+> 原文：[Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem](https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an) · 作者 Hugging Face
