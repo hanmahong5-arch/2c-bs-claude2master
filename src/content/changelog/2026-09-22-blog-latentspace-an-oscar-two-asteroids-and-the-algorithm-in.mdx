@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-blog-latentspace-an-oscar-two-asteroids-and-the-algorithm-in
+title: "🔬 An Oscar, Two Asteroids, and the Algorithm in Your — 谷歌 ERA 用 Gemini 自动搜索可打分科学问题的最优解，已产出十篇论文并"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/john-platt
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "谷歌 ERA 用 Gemini 自动搜索可打分科学问题的最优解，已产出十篇论文并破解气候建模难题。"
+broadcast: "谷歌有个叫ERA的系统，用Gemini把科研做成一棵可以搜索的树，自动去找能打分的科学问题的最优解，已经产出十篇论文，还破解了困扰团队两年的气候建模难题。对咱们做agent的人来说，关键有两点：一是把探索、评估、复用做成显式搜索结构，比单轮提示更接近可复用的自动化科研循环；二是打分函数既是瓶颈也是风险点，评测集得防过拟合，不然赢了指标却解决不了真问题。"
+tags: [ai-for-science, agent-architecture, reward-hacking, gemini]
+---
+
+- **ERA 把科研变成可搜索的树**：Gemini 维护实验笔记本树，用 UCB 规则挑选最有希望的节点变异，类似蒙特卡洛树搜索，分支间共享历史。对 agent 的含义：把「探索-评估-复用」做成显式搜索结构，比单轮提示更接近可复用的自动化科研循环。
+- **打分函数是瓶颈，也是风险点**：John 强调问题要先写成 scoreable task，但优化器只给预测模型，是否描述真实由科学家判断；他引用 Goodhart 定律警告 reward hacking。对工具链的含义：agent 评测集必须防过拟合，否则会像 Kaggle 选手靠标签半像素误差取胜一样，赢指标不解决问题。
+- **从 Gemini 2.0 到 2.5 出现质变**：ERA 从「完全不行」变成「效果极好」，并解决了困扰团队两年的 contrail 反照率建模问题。对开发者的含义：底层模型能力跃迁会直接决定上层 agent 架构是否可行，选型时值得为下一代模型留出重构空间。
+
+---
+
+> 原文：[🔬 An Oscar, Two Asteroids, and the Algorithm in Your sklearn: John Platt on AI for Science](https://www.latent.space/p/john-platt) · 作者 Latent Space

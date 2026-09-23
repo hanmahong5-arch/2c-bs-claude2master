@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-blog-simonwillison-llm-anthropic-0-29
+title: "llm-anthropic 0.29 — Simon Willison 发布 llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/22/llm-anthropic/
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 llm-anthropic 0.29，新增对 Claude Opus 5.5 的支持"
+broadcast: "有个小更新值得留意：一款命令行工具新加了最新 Claude 模型的支持，装好插件就能直接调用，不用改代码。它的意义在于，模型迭代和工具链解耦了，新模型上线只要更新对应插件就行。不过这次只给了模型名和调用示例，性能和价格都没提，升级前最好自己先验证一下实际效果。"
+tags: [llm, anthropic, claude, cli]
+---
+
+- 该版本为 llm 命令行工具新增 Claude Opus 5.5 模型支持，可直接用 `llm -m claude-opus-5.5 "prompt goes here"` 调用。对开发者的含义是：无需改代码即可在 CLI 中切换最新模型，模型迭代与工具链解耦。
+- 发布内容同时标注了 llm 与 anthropic 两个标签，说明这是 llm 生态下针对 Anthropic 的插件更新。对工具链的含义是：多模型接入以插件形式维护，新模型上线只需更新对应插件。
+- 全文为简短的版本发布说明，只给出模型名与调用示例，未涉及性能、价格或评测数据。对开发者的含义是：升级前需自行验证新模型在自身场景下的表现。
+
+---
+
+> 原文：[llm-anthropic 0.29](https://simonwillison.net/2026/Sep/22/llm-anthropic/) · 作者 Simon Willison

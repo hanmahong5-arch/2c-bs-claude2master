@@ -1,9 +1,9 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.278",
-    "openai/codex": "rust-v0.155.1",
+    "anthropics/claude-code": "v2.1.280",
+    "openai/codex": "rust-v0.156.1",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.63",
+    "cline/cline": "desktop-v0.0.34",
     "block/goose": "v1.51.0",
     "sst/opencode": "v1.18.32",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -164,7 +164,8 @@
     "tamaratran/fast-jev-compaction",
     "omacom/try-omarchy-windows",
     "gylive/ccodex-sleep-state",
-    "zai-org/ZCode"
+    "zai-org/ZCode",
+    "unreallabsai/unreal-agent"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -275,7 +276,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-22",
+    "anthropic-engineering": "2026-09-23",
     "claude-code-docs": "2026-09-18",
     "openai-codex-blog": "2026-09-17",
     "openclaw-concepts": "2026-09-21",
@@ -606,7 +607,12 @@
       "https://simonwillison.net/2026/Sep/20/datasette-explain/",
       "https://simonwillison.net/2026/Sep/21/jev/",
       "https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/",
-      "https://simonwillison.net/2026/Sep/20/hn-49779718/"
+      "https://simonwillison.net/2026/Sep/20/hn-49779718/",
+      "https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/",
+      "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
+      "https://simonwillison.net/2026/Sep/22/llm/",
+      "https://simonwillison.net/2026/Sep/22/therealcornpop/",
+      "https://simonwillison.net/2026/Sep/22/llm-anthropic/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -757,7 +763,8 @@
       "https://www.latent.space/p/ainews-here-are-6-clones-of-jev-in",
       "https://www.latent.space/p/ainews-not-much-happened-today-612",
       "https://www.latent.space/p/ainews-xiaomi-mimo-v26-pro-1t-a42b",
-      "https://www.latent.space/p/jev"
+      "https://www.latent.space/p/jev",
+      "https://www.latent.space/p/john-platt"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -797,7 +804,8 @@
       "https://www.interconnects.ai/p/one-resignation-turned-the-embers",
       "https://www.interconnects.ai/p/open-source-ai-reading-list",
       "https://www.interconnects.ai/p/where-i-stand-on-rsi",
-      "https://www.interconnects.ai/p/the-current-balance-of-power-in-open"
+      "https://www.interconnects.ai/p/the-current-balance-of-power-in-open",
+      "https://www.interconnects.ai/p/debating-rsi-the-us-china-gap-and"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -1092,7 +1100,11 @@
       "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
       "https://openai.com/index/building-standards-next-phase-ai",
       "https://openai.com/index/expanding-openai-academy-with-new-learning-paths",
-      "https://openai.com/index/v7"
+      "https://openai.com/index/v7",
+      "https://openai.com/index/better-prompt-caching-for-gpt-6",
+      "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+      "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+      "https://openai.com/index/priorities-principles-third-party-assessments"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1338,21 +1350,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-22",
+    "simonwillison": "2026-09-23",
     "lilianweng": "2026-09-17",
-    "latentspace": "2026-09-22",
-    "interconnects": "2026-09-22",
-    "karpathy": "2026-09-20",
-    "raschka": "2026-09-20",
-    "eugeneyan": "2026-09-20",
+    "latentspace": "2026-09-23",
+    "interconnects": "2026-09-23",
+    "karpathy": "2026-09-23",
+    "raschka": "2026-09-23",
+    "eugeneyan": "2026-09-23",
     "chiphuyen": "2026-09-17",
     "oneusefulthing": "2026-09-22",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-22",
+    "openai-news": "2026-09-23",
     "deepmind": "2026-09-22",
     "hf-blog": "2026-09-22",
-    "anthropic-news": "2026-09-22",
+    "anthropic-news": "2026-09-23",
     "steipete": "2026-09-22",
     "openclaw-blog": "2026-09-22"
   },

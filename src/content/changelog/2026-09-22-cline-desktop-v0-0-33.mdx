@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-cline-desktop-v0-0-33
+title: "cline desktop-v0.0.33 — 桌面版新增 git worktree 隔离任务，并修复长期失效的自动压缩"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.33
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "桌面版新增 git worktree 隔离任务，并修复长期失效的自动压缩"
+broadcast: "桌面版这次更新里，新任务可以选工作树模式，从当前分支切出独立分支运行，智能体不再动你的工作树，删任务时还会一并清理干净。另外它修好了一个长期失效的自动压缩，之前长会话会直接把上下文耗尽。对做智能体的人来说，这两点提醒我们：隔离执行环境可以做成会话默认选项，而可选功能必须在每个宿主端显式接线，否则会静默失效。"
+insight: "桌面版 v0.0.33 值得现有用户升级：自动压缩此前从未真正生效，长会话会直接耗尽上下文，这是硬伤修复。新线程的 Worktree 模式在 ~/.cline/worktrees/ 下运行，agent 不再改动你的工作树，习惯手动 stash 的用户可以改用会话级隔离。本次更新未涉及接口或代理层，国内用户走 newapi.lurus.cn 不受影响，prompt 与 hook 配置也无需改动。"
+tags: [git-worktree, auto-compaction, agent-harness, context-management]
+---
+
+- 新线程可选 Worktree 模式：从当前分支切出 `cline/<id>` 分支并在 `~/.cline/worktrees/` 下运行，agent 不再改动你的工作树；删除任务会一并清理 worktree 与分支。含义：harness 可把「隔离执行环境」做成会话级默认选项，而非依赖用户手动 stash。
+- 桌面端自动压缩此前从未真正生效（sidecar 只注册了 checkpoint 未注册 compaction），长会话直接耗尽上下文。含义：opt-in 特性需要在每个宿主端显式接线，否则静默失效。
+- 模型输出 token 触顶且未发起工具调用时，改为最多重试 3 次并提示简洁，大输出上限模型获得更大默认预算。含义：harness 应把「无工具调用的截断」视为可恢复状态而非终止条件。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.33](https://github.com/cline/cline/releases/tag/desktop-v0.0.33)

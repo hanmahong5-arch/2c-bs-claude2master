@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-cline-4-1-20
+title: "cline v4.1.20 — 子代理并行、输出预算按模型上限放大、hook 上下文回归修复"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.20
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "子代理并行、输出预算按模型上限放大、hook 上下文回归修复"
+broadcast: "一个叫 cline 的编程代理更新了。它现在能让同一步骤里的子代理并行干活，父代理等所有结果回来再汇总；同时按模型能力动态放大输出预算，大模型默认给到上限的三成。对国内做 agent 的开发者来说，这意味着调度层要区分哪些工具能并行、哪些必须串行，还要接受更长响应带来的成本和延迟。"
+insight: "这次 v4.1.20 值得现有用户升级：子代理工具调用改为并行、hook 上下文回归修复，都是实打实的调度与注入改进。如果你在用 UserPromptSubmit 或 TaskStart hook 的 contextModification，升级后要确认注入内容以 <hook_context> 块出现且不回灌下一轮提示，原有 hook 配置逻辑不用大改。走 newapi.lurus.cn 代理的用户，摘要未提及代理层变化，按现有方式升级即可。大输出模型预算改为上限 30%，长响应成本和延迟会上升，需留意。"
+tags: [sub-agents, output-budget, hooks, model-catalog]
+---
+
+- 同一步骤内生成的子代理工具调用改为并行执行，父代理仍等待全部结果；对 harness 意味着调度层要区分可并行与必须串行的工具，并保留结果聚合屏障。
+- 声明大输出上限的模型默认预算改为上限的 30%（不低于 32k）；harness 需按模型能力动态分配预算，并接受更长响应带来的单轮成本与延迟。
+- UserPromptSubmit/TaskStart hook 的 `contextModification` 恢复注入，以 `<hook_context>` 块出现在首次请求且不渲染到记录中；harness 需保证 hook 注入内容不回灌为下一轮提示。
+
+---
+
+> 原文 release：[cline/cline v4.1.20](https://github.com/cline/cline/releases/tag/v4.1.20)

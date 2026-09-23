@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-cline-sdk-sdk-v0-0-85
+title: "cline sdk/sdk/v0.0.85 — 输出超限不再直接失败，SDK 会自动重试并调整默认额度"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.85
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "输出超限不再直接失败，SDK 会自动重试并调整默认额度"
+broadcast: "这次更新解决了一个很实际的痛点：当模型输出超限、又没来得及调用工具时，运行不再直接失败，而是最多自动重试三次，并提醒模型精简回复、拆分大任务。默认输出额度也改成随模型能力自适应，大模型单轮成本和延迟可能上升。对国内做 agent 的开发者来说，这意味着要把「模型没来得及行动」和「任务真失败」区分开，同时留意默认模型可能发生漂移。"
+insight: "这次 v0.0.85 值得升级，重点是输出超限不再直接失败、最多重试 3 次，以及默认输出额度随模型缩放（128,000 token 模型从 32,000 升到 38,400）。现有 prompt 和 hook 配置建议同步调整：harness 要区分「模型没来得及行动」与「任务失败」，并保证 turn-finished 在每次恢复迭代前发出以配对事件。国内用户走 newapi.lurus.cn 代理不受影响，但未固定默认模型的调用方需预期默认模型漂移，单轮成本与延迟也可能上升。"
+tags: [cline-sdk, output-token-limit, retry-policy, model-catalog]
+---
+
+- 命中输出 token 上限且未产生可用工具调用时，运行不再直接失败，而是最多连续重试 3 次，并追加提醒要求精简回复、拆分大任务；计数在工具调用有进展或每次运行开始时重置，耗尽后仍报原有错误。含义：harness 需把「模型没来得及行动」与「任务失败」区分开，并保证 turn-finished 在每次恢复迭代前发出以配对事件。
+- 默认输出额度改为随模型缩放：无请求上限与调用方默认值时用 max(32000, floor(maxOutputTokens*0.3))，只升不降，约 106,667 token 以下模型无变化，128,000 token 模型从 32,000 升到 38,400。含义：harness 的默认预算应随模型能力自适应，同时预期大输出模型单轮成本与延迟上升。
+- 模型目录刷新：provider 仍为 209，模型从 6,188 增至 6,237；Cline Pass 新增 mimo-v2.6-flash 与 mimo-v2.6-pro，10 个未在 builtins.ts 固定默认模型的 provider 默认模型变更。含义：未固定模型的调用方需预期默认模型漂移。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.85](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.85)

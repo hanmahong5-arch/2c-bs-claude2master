@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-blog-simonwillison-claude-opus-5-5-gpt-6-sol-gpt
+title: "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price — 一天内三家发新模型，价格战打到每百万 token 一毛钱，但 Opus 5.5 "
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "一天内三家发新模型，价格战打到每百万 token 一毛钱，但 Opus 5.5 的 max 档会思考到崩溃。"
+broadcast: "一天之内三家发新模型，价格战直接打到每百万字一毛钱，对做智能体的开发者来说，高频调用和长链推理的成本明显降下来了。更值得留意的是，有模型把缓存读取降了六成，持续运行的智能体工具链受益最直接。不过最高思考档实测会推理到崩溃，选模型别只看它宣称的上限。"
+tags: [llm-pricing, claude-opus, gpt-6, agent-tooling]
+---
+
+- GPT-6 Sol/Luna 定价是上一代的一半：Luna 输入 $0.10/M、输出 $0.50/M，成为 OpenAI 最便宜梯队之一。对 agent 开发者意味着高频调用与长链推理的边际成本大幅下降，可以更大胆地做多轮工具调用。
+- Claude Opus 5.5 降价 20%（$4/$20），缓存读取降 60%。作者指出长 agentic 对话里 90% 以上输入走缓存价，这一项对持续运行的 agent 工具链影响最直接。
+- Opus 5.5 在 max 思考档跑「鹈鹕骑自行车」SVG 测试时，因推理耗尽 128k 输出上限而两次失败，各花 $2.56、近 20 分钟。作者据此认为 max 档实际不可用，选模型时不能只看最高推理档的宣称能力。
+
+---
+
+> 原文：[Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war](https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/) · 作者 Simon Willison

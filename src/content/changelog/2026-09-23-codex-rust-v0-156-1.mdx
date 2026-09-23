@@ -1,0 +1,23 @@
+---
+slug: 2026-09-23-codex-rust-v0-156-1
+title: "codex rust-v0.156.1 — Codex 模型选择器新增 GPT"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.156.1
+publishedAt: 2026-09-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 模型选择器新增 GPT-6 Sol 与 Luna"
+broadcast: "这次更新是在模型选择器里加了两个新模型，一个叫 Sol，一个叫 Luna，属于一次小修补，只动了模型目录。值得关注的是，它提醒做 agent 的团队，模型清单最好做成可扩展的配置，别写死在代码里，连限流降级时推荐哪个模型也要能按模型动态调整，这样以后热修才快。"
+insight: "这次 0.156.1 只是模型目录的 hotfix，核心逻辑没动，现有用户不必急着升级，除非你要用 GPT-6 Sol 或 Luna。真正要改的是 prompt 和 hook 配置：模型选择器多了两个选项，限流降级推荐也从原来的项换成了 GPT-6 Luna，硬编码模型名的地方得改成可扩展配置。国内走 newapi.lurus.cn 代理的话，摘要没提代理层变动，模型清单更新不影响接入方式。"
+tags: [codex, model-picker, gpt-6, hotfix]
+---
+
+- 模型选择器新增 GPT-6 Sol 和 GPT-6 Luna 两个可选模型，agent harness 需要把模型目录做成可扩展配置而非硬编码。
+- 限流切换提示现在推荐 GPT-6 Luna，说明 harness 的降级策略要能按模型维度动态调整推荐项。
+- 本次为 0.156.0 的 hotfix，仅更新模型目录，harness 应把模型清单变更与核心逻辑解耦以便快速热修。
+
+---
+
+> 原文 release：[openai/codex rust-v0.156.1](https://github.com/openai/codex/releases/tag/rust-v0.156.1)

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-claude-code-2-1-280
+title: "claude-code v2.1.280 — Opus 5.5 成为默认模型，1M 上下文，同时修复大量 agent 会话与子"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.280
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Opus 5.5 成为默认模型，1M 上下文，同时修复大量 agent 会话与子代理缓存问题"
+broadcast: "这次更新里，一个更强的模型成了默认选择，上下文能装到一百万，价格也更友好，缓存读取尤其便宜。对国内做 agent 的团队来说，这意味着可以少做主动截断，把更长的对话直接交给它。同时修好了子代理的工具列表复用和消息落盘问题，缓存命中更稳，后台任务的结果也不会再悄悄丢掉。"
+insight: "这次 v2.1.280 把 Opus 5.5 设为默认 Opus 模型，1M 上下文加缓存读取 $0.20/Mtok，现有用户值得直接升级，尤其是重度用子代理和 agent 会话的，因为修复了 fork 子代理工具列表重建导致的 prompt 缓存失效，以及后台子代理消息被静默丢弃的问题。升级后建议检查依赖子代理缓存的 hook 配置，确认初始工具集能持久化。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理层变化，按现有方式升级即可。"
+tags: [claude-code, opus-5-5, subagents, prompt-cache]
+---
+
+- 新增 `claude-opus-5-5` 并设为默认 Opus 模型：1M 上下文、$4/$20 per Mtok、缓存读取 $0.20/Mtok。含义：harness 可默认假设更长上下文，减少主动截断策略。
+- 修复恢复的 fork 子代理重建工具列表而非复用首次列表，导致该代理 prompt 缓存失效。含义：子代理需持久化初始工具集以保住缓存命中。
+- 修复后台子代理在无头与 SDK 会话中收尾时消息被静默丢弃，以及启动它的对话被压缩后报告丢失。含义：子代理消息与报告需独立于父对话生命周期落盘。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.280](https://github.com/anthropics/claude-code/releases/tag/v2.1.280)

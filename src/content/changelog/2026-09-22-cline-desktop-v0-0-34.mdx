@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-cline-desktop-v0-0-34
+title: "cline desktop-v0.0.34 — Composio 工具不再只加载前 20 个，Mac 间 SSH 远程也能连了"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.34
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Composio 工具不再只加载前 20 个，Mac 间 SSH 远程也能连了"
+broadcast: "这次桌面端更新里，有个变化挺关键：连接器现在会把全部工具都拉出来，而不是只加载前二十个，缓存也会及时刷新。对做 agent 的人来说，这意味着模型看到的能力清单是完整的，不会在缺斤少两的工具集里做选择。另外苹果电脑之间现在能通过远程连接互通，会话里的报错也会一直留在记录里，切换会话或换客户端打开都不会丢。"
+insight: "这次 v0.0.34 对国内用户的实际影响集中在两点。Composio 工具从只加载前 20 个改为全量拉取并刷新缓存，如果你在 Cline 里挂了 Composio 连接器，之前被截断的工具清单会一次性展开，prompt 和 hook 里若有依赖固定工具数量的假设需要重新核对。Mac 间 SSH 远程连接属于新增能力，走 newapi.lurus.cn 代理的调用链路不涉及这一改动，代理侧不受影响，现有用户按需升级即可。"
+tags: [composio-tools, ssh-remote, session-errors, agent-harness]
+---
+
+- Composio 连接器现在拉取全部工具而非前 20 个，工具缓存会刷新而非永久陈旧；对 agent harness 的含义是工具清单必须按真实全量暴露，否则模型会在被截断的能力空间里做选择。
+- Mac 桌面端现在可 SSH 连接到 Mac 主机，使用自带签名后端作为 helper，覆盖 Apple Silicon 与 Intel；含义是远程执行后端需按宿主平台提供匹配的 helper，而非依赖通用目标。
+- 会话错误现在会留在 transcript 中，跨会话切换或换客户端打开都不丢失，重试耗尽后的失败也会记录，且这些纯错误条目不参与压缩；含义是错误状态应作为持久上下文的一部分，避免 agent 在恢复会话时丢失失败历史。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.34](https://github.com/cline/cline/releases/tag/desktop-v0.0.34)

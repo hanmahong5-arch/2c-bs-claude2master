@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-codex-rust-v0-156-0
+title: "codex rust-v0.156.0 — 全屏 TUI、语音默认开启、用量面板，三条都改交互层"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.156.0
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "全屏 TUI、语音默认开启、用量面板，三条都改交互层"
+broadcast: "这次更新把交互层动了三处。新增可选的全屏界面，支持转录搜索、鼠标选择和右键复制；语音对话默认开启，按 F8 就能切换，还多了语音设置项；另外加了用量面板，能看到账户用量、token 总量和插件技能活动。对做 agent 的人来说，这意味着转录渲染要和输入选择解耦，语音得当成一等会话通道，用量统计也要在每轮对话里持续记录归属。"
+insight: "这次 0.156.0 三条改动全在交互层：全屏 TUI、语音默认开启、/usage 面板，都不涉及模型或协议，所以走 newapi.lurus.cn 代理的国内用户不受影响，无需为升级调整代理配置。现有用户值得升，但升级后要留意两点：语音默认开启且 Linux/Windows 打包了音频运行时，若不想用语音，升级后记得用 F8 或 /voice settings 关掉；/usage 面板依赖 turn 元数据里的模型、插件与技能归属，如果你有自定义 hook 或插件，建议确认这些归属信息是否被正确记录，否则面板可能没数据。现有 prompt 本身不用改。"
+tags: [codex, tui, voice, usage-analytics]
+---
+
+- `/tui` 可选全屏界面，支持转录搜索、鼠标选择与右键复制（#46732/#46883/#46895）。含义：harness 需把转录渲染与输入选择解耦，才能同时支撑内联与全屏两种视图。
+- 语音对话默认开启，F8 切换，新增 `/voice settings`，Linux/Windows 打包音频运行时（#44921/#46071/#44714）。含义：音频运行时随包分发意味着 harness 要把语音当作一等会话通道，而非可选插件。
+- 新增 `/usage` 分析面板，展示账户用量、token 总量与插件/技能活动（#45764/#45769）。含义：harness 需在 turn 元数据里持续记录模型、插件与技能归属，否则面板无数据可聚合。
+
+---
+
+> 原文 release：[openai/codex rust-v0.156.0](https://github.com/openai/codex/releases/tag/rust-v0.156.0)

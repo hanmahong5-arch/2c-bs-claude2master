@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-cline-cli-v3-0-64
+title: "cline cli-v3.0.64 — 输出超限不再直接终止，重试三次并提示精简"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.64
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "输出超限不再直接终止，重试三次并提示精简"
+broadcast: "这次更新改了一个很关键的细节：当模型在调用工具前把输出额度用光，程序不再直接报错结束，而是最多重试三次，并提醒它精简表达、拆成多次工具调用，三次之后才算失败。对做 agent 的国内开发者来说，这意味着输出上限应该被当成可恢复的状态，而不是终止条件；同时大额度模型的默认预算也改成按上限比例动态计算，默认模型也有调整，值得留意。"
+insight: "这次 CLI v3.0.64 值得现有用户升级：输出超限改为重试三次并提示精简，比直接终止更实用；大输出模型预算从固定 32,000 提升到上限的 30%，约 107k 输出 token 以下的模型不受影响，prompt 和 hook 配置无需改动。但模型目录更新到 6,237，10 个 provider 默认模型变更、六个改为 MiMo V2.6 Flash，未固定模型的用户默认行为会变，建议显式固定模型。走 newapi.lurus.cn 代理不受影响。"
+tags: [output-token-limit, retry-policy, model-catalog, default-model]
+---
+
+- 模型回合在调用工具前耗尽输出额度时，不再直接报错结束，而是最多重试三次，并附带“精简表达、拆分到多次工具调用”的提醒，三次后才判定失败。含义：harness 应把输出上限视为可恢复状态，而非终止条件。
+- 输出上限较大的模型默认预算从固定 32,000 提升为上限的 30%（取较大者），约 107k 输出 token 以下的模型不受影响。含义：预算策略需按模型能力动态计算，并接受更长响应带来的单轮成本与延迟。
+- 模型目录由 6,188 更新至 6,237，覆盖同一批 209 个 provider；Cline Pass 新增 MiMo V2.6 Flash 与 Pro，10 个 provider 的默认模型变更（六个改为 MiMo V2.6 Flash）。含义：未固定模型的用户默认行为会变，harness 需明确默认模型来源与可覆盖性。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.64](https://github.com/cline/cline/releases/tag/cli-v3.0.64)
