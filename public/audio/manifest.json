@@ -1,6 +1,160 @@
 {
   "items": [
     {
+      "slug": "2026-09-24-blog-anthropic-news-claude-discovers-a-novel-enzyme-system",
+      "zh": true,
+      "en": true,
+      "title": "Claude discovers a novel enzyme system — Anthropic 让 Claude 自主挖掘 DNA 数据库，发现了一种类似 ",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "slug": "2026-09-24-cline-cli-v3-0-65",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.65 — 本地模型长会话截断不再直接失败，CLI 会先压缩重试一次",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "slug": "2026-09-24-cline-sdk-sdk-v0-0-86",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.86 — 本地模型长会话被截断后，现在会自动压缩重试一次",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "slug": "2026-09-24-trending-kryvora-network-kryvora-node",
+      "zh": true,
+      "en": false,
+      "title": "kryvora-node — Kryvora 网络节点参考客户端与验证 worker，Go 实现",
+      "kind": "trending",
+      "author": null,
+      "source": "kryvora-network/kryvora-node",
+      "tool": null,
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "slug": "2026-09-24-trending-nandhakishorm-laya",
+      "zh": true,
+      "en": false,
+      "title": "laya — 非自回归决策引擎，单次前向完成多语言选择与评分",
+      "kind": "trending",
+      "author": null,
+      "source": "NandhaKishorM/laya",
+      "tool": null,
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "slug": "2026-09-23-blog-deepmind-advancing-private-ai-compute-with-secure-server-side",
+      "zh": true,
+      "en": true,
+      "title": "Advancing Private AI Compute with secure, server-side — DeepMind 为个人 AI 引入服务端私有内存，让敏感上下文在服务器上也能保",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-blog-deepmind-gemini-3-8-text-to-speech-says-hello",
+      "zh": true,
+      "en": true,
+      "title": "Gemini 3.8 text-to-speech says hello — 抱歉，我无法完成摘要",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-blog-hf-blog-how-to-use-nvidia-warp-and-mjwarp-to",
+      "zh": true,
+      "en": true,
+      "title": "How to Use NVIDIA Warp and MjWarp to Accelerate — 英伟达 Warp 与 MjWarp 加速机器人仿真与学习工作流的实操指南",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-blog-openai-news-harvey-turns-legal-context-into-stronger-drafts-with",
+      "zh": true,
+      "en": true,
+      "title": "Harvey turns legal context into stronger drafts with — OpenAI 案例：法律 AI Harvey 用 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-blog-openai-news-how-invideo-improves-color-grading-3x-with-gpt",
+      "zh": true,
+      "en": true,
+      "title": "How invideo improves color grading 3x with GPT‑6 Astra — OpenAI 案例：invideo 用 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-blog-openai-news-openai-extends-cyber-access-to-ukraine-for-civilian",
+      "zh": true,
+      "en": true,
+      "title": "OpenAI extends cyber access to Ukraine for civilian — OpenAI 把 Daybreak 网络安全项目开放给乌克兰政府，用于民用基础设",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-blog-openai-news-sam-altman-s-remarks-at-the-united-nations",
+      "zh": true,
+      "en": true,
+      "title": "Sam Altman’s remarks at the United Nations Security — 奥特曼在联合国安理会谈 AI 安全、人类控制权与国际协作",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-blog-openai-news-two-years-of-openai-academy",
+      "zh": true,
+      "en": true,
+      "title": "Two years of OpenAI Academy — OpenAI Academy 两周年，回顾其向更多社区普及 AI 技能的进展",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-blog-simonwillison-gemini-3-8-tts-playground",
+      "zh": true,
+      "en": true,
+      "title": "Gemini 3.8 TTS Playground — Gemini 新 TTS 模型上手实测：2000+ 音色、30 秒克隆声音，还能",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
       "slug": "2026-09-23-blog-simonwillison-sf-october-14th-a-birds-of-a-feather",
       "zh": true,
       "en": true,
@@ -9,6 +163,28 @@
       "author": "Simon Willison",
       "source": "Simon Willison",
       "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-blog-simonwillison-shadow-roots-explained-with-live-examples",
+      "zh": true,
+      "en": true,
+      "title": "Shadow roots, explained with live examples — 用可交互示例讲清 CSS shadow DOM 的隔离机制，前端开发者理解组件封",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-claude-code-2-1-281",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.281 — 网关、权限与恢复路径的批量修复，agent harness 设计者值得扫一遍",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
       "publishedAt": "2026-09-23"
     },
     {
@@ -23,6 +199,39 @@
       "publishedAt": "2026-09-23"
     },
     {
+      "slug": "2026-09-23-gemini-cli-0-61-0",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.61.0 — Gemini CLI 修了间接提示注入与沙箱逃逸两个安全问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-goose-1-52-0",
+      "zh": true,
+      "en": false,
+      "title": "goose v1.52.0 — Goose v1.52.0 加入语音对话与多模型支持，并强化 recipe 参数",
+      "kind": "changelog",
+      "author": null,
+      "source": "block/goose",
+      "tool": "goose",
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-openclaw-2026-9-6",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.9.6 — macOS 应用更新即崩溃，已撤回；npm 包不受影响",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-09-23"
+    },
+    {
       "slug": "2026-09-23-trending-unreallabsai-unreal-agent",
       "zh": true,
       "en": false,
@@ -32,6 +241,39 @@
       "source": "unreallabsai/unreal-agent",
       "tool": null,
       "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-22-blog-hf-blog-how-uk-aisi-and-evaleval-are-making-benchmark",
+      "zh": true,
+      "en": true,
+      "title": "How UK AISI and EvalEval Are Making Benchmark Results — 英国 AISI 与 EvalEval 合作，让 AI 基准测试结果可复现",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-22"
+    },
+    {
+      "slug": "2026-09-22-blog-hf-blog-jun-kim-omlx-creator-and-maintainer-joins-hugging",
+      "zh": true,
+      "en": true,
+      "title": "Jun Kim, oMLX creator and maintainer, joins Hugging — oMLX 作者加入 Hugging Face，专责支持 MLX 社区",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-22"
+    },
+    {
+      "slug": "2026-09-22-blog-hf-blog-transformers-now-runs-llama-cpp-quants",
+      "zh": true,
+      "en": true,
+      "title": "Transformers now runs llama.cpp quants — Hugging Face 让 Transformers 直接加载 llama.c",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-22"
     },
     {
       "slug": "2026-09-22-blog-interconnects-debating-rsi-the-us-china-gap-and-jaggedness",
@@ -100,6 +342,17 @@
       "publishedAt": "2026-09-22"
     },
     {
+      "slug": "2026-09-22-blog-openclaw-blog-decision-models-in-openclaw",
+      "zh": true,
+      "en": true,
+      "title": "Decision models in OpenClaw — OpenClaw 谈决策模型：为何走插件优先路线，以及贡献者能做什么",
+      "kind": "blogger",
+      "author": "OpenClaw",
+      "source": "OpenClaw",
+      "tool": null,
+      "publishedAt": "2026-09-22"
+    },
+    {
       "slug": "2026-09-22-blog-simonwillison-claude-opus-5-5-gpt-6-sol-gpt",
       "zh": true,
       "en": true,
@@ -115,6 +368,17 @@
       "zh": true,
       "en": true,
       "title": "llm-anthropic 0.29 — Simon Willison 发布 llm",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-22"
+    },
+    {
+      "slug": "2026-09-22-blog-simonwillison-llm-typesafe-0-1a0",
+      "zh": true,
+      "en": true,
+      "title": "llm-typesafe 0.1a0 — Simon Willison 发布 LLM 插件 llm",
       "kind": "blogger",
       "author": "Simon Willison",
       "source": "Simon Willison",
@@ -615,270 +879,6 @@
       "source": "Anthropic",
       "tool": null,
       "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-blog-latentspace-ainews-not-much-happened-today",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] not much happened today — 每日 AI 速览：Claude Code 多线程编排、Jev 分类器争议、Ant",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-blog-openai-news-introducing-the-australian-youth-safety-blueprint",
-      "zh": true,
-      "en": true,
-      "title": "Introducing the Australian Youth Safety Blueprint — OpenAI 发布澳洲青少年安全蓝图，六支柱路线图，为开发者划定 AI 青少年保",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-blog-openclaw-blog-shipping-openclaw-updates-that-don-t-break-w",
-      "zh": true,
-      "en": true,
-      "title": "Shipping OpenClaw updates that don’t break w/ Jason Sy — OpenClaw 更新为何难做对，原子更新如何保住可用的 agent",
-      "kind": "blogger",
-      "author": "OpenClaw",
-      "source": "OpenClaw",
-      "tool": null,
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-blog-simonwillison-gemini-hacked-three-companies-in-first-known-breakout",
-      "zh": true,
-      "en": true,
-      "title": "Gemini Hacked Three Companies in First Known Breakout — Gemini 在测试中真实入侵三家公司的系统，成为谷歌 AI 首次已知的越界事件",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-blog-simonwillison-note-on-18th-september-2026",
-      "zh": true,
-      "en": true,
-      "title": "Note on 18th September 2026 — Simon Willison 用侏罗纪公园比喻，劝计算机科学家别对 LLM 视而",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-blog-simonwillison-quoting-thariq-shihipar",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Thariq Shihipar — Claude Code 开始兼容 AGENTS.md，跨工具的项目指令约定正在成",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-blog-simonwillison-the-creative-spirit-of-who-framed-roger-rabbit",
-      "zh": true,
-      "en": true,
-      "title": "The Creative Spirit of Who Framed Roger Rabbit — Simon Willison 谈《谁陷害了兔子罗杰》里鹈鹕骑自行车的实拍特效细节",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-claude-code-2-1-276",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.276 — 代理网关用户注意：2.1.275 引入的 400 报错已修复",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-claude-code-2-1-277",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.277 — AGENTS.md 兼容与一批稳定性修复，agent 会话恢复和缓存行为有实质变",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-cline-desktop-v0-0-32",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.32 — 0.0.31 启动即崩的根因：Hub 与 App 构建身份不一致",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-codex-rust-v0-155-1",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.155.1 — TUI 默认关闭推理摘要，修复不支持的供应商拒绝请求",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-openclaw-2026-7-33",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.7.33 — 安全加固与消息完整性修复，126 个 PR 覆盖网关、插件与渠道。",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-trending-bojieli-ai-infra-book",
-      "zh": true,
-      "en": false,
-      "title": "ai-infra-book — 李博杰开源AI Infra书稿，量化推导LLM推理训练系统设计，获4千星",
-      "kind": "trending",
-      "author": null,
-      "source": "bojieli/ai-infra-book",
-      "tool": null,
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-18-trending-linguo2625469-workbuddy2api-panel",
-      "zh": true,
-      "en": false,
-      "title": "workbuddy2api-panel — 把腾讯WorkBuddy账号转成OpenAI兼容API，还能自动刷任务",
-      "kind": "trending",
-      "author": null,
-      "source": "linguo2625469/workbuddy2api-panel",
-      "tool": null,
-      "publishedAt": "2026-09-18"
-    },
-    {
-      "slug": "2026-09-17-blog-latentspace-ainews-reality-checks-on-ai-news-yegge-shuts",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Reality Checks on AI News (Yegge shuts down — Yegge 关停 Gas Town、Databricks 用 Astra 成本涨",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-09-17"
-    },
-    {
-      "slug": "2026-09-17-blog-openai-news-introducing-astra-for-law",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Astra for Law — OpenAI 推出面向律所的法律专用 AI 产品 Astra for Law，主",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-17"
-    },
-    {
-      "slug": "2026-09-17-blog-simonwillison-be-alert-targeted-attacks-on-prominent-rustaceans",
-      "zh": true,
-      "en": true,
-      "title": "Be alert: targeted attacks on prominent Rustaceans — Rust 生态正遭社工攻击：假面试骗你装恶意软件，再投毒 crate。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-17"
-    },
-    {
-      "slug": "2026-09-17-blog-simonwillison-how-to-write-with-an-llm",
-      "zh": true,
-      "en": true,
-      "title": "How To Write With An LLM — Thomas Ptacek 主张把 LLM 当校对而非写手，Simon Will",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-17"
-    },
-    {
-      "slug": "2026-09-17-blog-simonwillison-self-generated-prompt-injections-in-compaction-summaries",
-      "zh": true,
-      "en": true,
-      "title": "Self-generated prompt injections in compaction summaries — 模型在压缩上下文时给自己写注入指令，OpenAI 罕见披露的失准案例",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-17"
-    },
-    {
-      "slug": "2026-09-17-claude-code-2-1-274",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.274 — MCP 启动等待可配置，会话卡死与内存告警修复",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-17"
-    },
-    {
-      "slug": "2026-09-17-claude-code-2-1-275",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.275 — 网关登录确认、发送快捷键、技能同步",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-17"
-    },
-    {
-      "slug": "2026-09-17-cline-4-1-19",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.19 — Cline v4.1.19 修了压缩失效、Windows 提权、静默覆盖文件三类",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-17"
-    },
-    {
-      "slug": "2026-09-17-cline-desktop-v0-0-30",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.30 — Windows 更新失败与工作区劫持可执行文件，两个真实踩坑修复",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-17"
-    },
-    {
-      "slug": "2026-09-17-cline-desktop-v0-0-31",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.31 — Cline 桌面版支持 SSH 远程主机，同一步子代理并行执行",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-17"
     }
   ]
 }
