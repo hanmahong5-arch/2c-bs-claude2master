@@ -1,0 +1,23 @@
+---
+slug: 2026-09-23-blog-simonwillison-gemini-3-8-tts-playground
+title: "Gemini 3.8 TTS Playground — Gemini 新 TTS 模型上手实测：2000+ 音色、30 秒克隆声音，还能"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/23/gemini-tts-playground/
+publishedAt: 2026-09-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Gemini 新 TTS 模型上手实测：2000+ 音色、30 秒克隆声音，还能让多角色对话"
+broadcast: "谷歌新出的语音合成模型，内置两千多种音色，还能用三十秒录音克隆你自己的声音。对做语音智能体的团队来说，声音定制的门槛被压到了一段录音。更关键的是，接口能直接定义多角色对话，每个角色配不同音色，做多说话人播客和配音智能体不用再自己拼接多次调用。有人实测一分多钟音频约二十秒生成，成本不到三美分。"
+tags: [text-to-speech, gemini, voice-cloning, api]
+---
+
+- Google 发布 gemini-3.8-flash-tts 与 flash-lite-tts，内置 2000+ 音色，并支持用 30 秒音频样本创建自定义声音。对做语音 agent 的团队来说，声音定制门槛被压到一段录音。
+- API 可直接定义多角色对话，每个角色配不同音色和风格指令。这意味着多说话人播客、配音类 agent 不必再自己拼接多个 TTS 调用。
+- 作者用 GPT-6 Astra 凭 API 的开放 CORS 策略 vibe code 出 BYOK 试玩页；1 分 18 秒音频约 20 秒生成，成本 2.74 美分。对工具链的含义是：前端直连模型 API 已足够便宜可行。
+
+---
+
+> 原文：[Gemini 3.8 TTS Playground](https://simonwillison.net/2026/Sep/23/gemini-tts-playground/) · 作者 Simon Willison

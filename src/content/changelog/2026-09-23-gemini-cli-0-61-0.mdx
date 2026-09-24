@@ -1,0 +1,23 @@
+---
+slug: 2026-09-23-gemini-cli-0-61-0
+title: "gemini-cli v0.61.0 — Gemini CLI 修了间接提示注入与沙箱逃逸两个安全问题"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0
+publishedAt: 2026-09-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Gemini CLI 修了间接提示注入与沙箱逃逸两个安全问题"
+broadcast: "谷歌的命令行智能体工具最近更新，修掉了两个安全问题：一个是间接提示注入，攻击者能借构建文件和不可信参数下手；另一个是沙箱逃逸，文件边界和运行时状态被加固了。这对国内做 agent 的团队是个提醒：构建配置和外部参数也得当成不可信输入，执行环境的文件可见范围要默认隔离，别只盯着用户对话。"
+insight: "这次 v0.61.0 修的是间接提示注入和沙箱逃逸两个安全问题，属于该升的版本，现有用户建议直接升到 v0.61.0，走 newapi.lurus.cn 代理不受影响。如果你的 prompt 或 hook 里依赖了带版本的 Flash 模型 ID，升级后不会被覆盖，配置不用改；但要注意构建配置和外部 flag 现在被当作不可信输入，相关 hook 逻辑最好自查一遍。"
+tags: [prompt-injection, sandbox-isolation, gemini-cli, model-config]
+---
+
+- **修复间接提示注入**：阻止通过构建文件修改和不可信 flag 触发的间接 prompt injection。含义：harness 需把构建配置与外部参数当作不可信输入，而非仅校验用户对话。
+- **加固沙箱边界**：强化文件系统边界并隔离运行时状态。含义：agent 执行环境的文件可见范围与运行时状态应默认隔离，避免跨任务污染。
+- **保留显式版本化 Flash 模型 ID**：不再覆盖用户指定的带版本模型标识。含义：模型选择层应尊重显式配置，避免隐式回退导致行为漂移。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.61.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0)

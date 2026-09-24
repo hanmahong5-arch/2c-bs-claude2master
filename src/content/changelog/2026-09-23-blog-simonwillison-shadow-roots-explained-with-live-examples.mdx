@@ -1,0 +1,23 @@
+---
+slug: 2026-09-23-blog-simonwillison-shadow-roots-explained-with-live-examples
+title: "Shadow roots, explained with live examples — 用可交互示例讲清 CSS shadow DOM 的隔离机制，前端开发者理解组件封"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/23/shadow-roots/
+publishedAt: 2026-09-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用可交互示例讲清 CSS shadow DOM 的隔离机制，前端开发者理解组件封装的好材料"
+broadcast: "今天聊一个前端话题：影子根节点，也就是让组件样式真正自包含的隔离机制。有篇文章用可交互示例把它讲清楚了，外部选择器默认穿不过那道边界，做组件和嵌入式界面的开发者不用再靠命名约定防冲突。更值得注意的是，这些示例是让模型直接生成的可运行页面，比纯文字更好验证，也提醒我们做自动化测试时要显式处理这道边界。"
+tags: [css, shadow-dom, web-components, interactive-demo]
+---
+
+- 文章用可交互示例解释 shadow roots：shadow DOM 内部的样式与外部文档相互隔离，外部选择器默认无法穿透边界。对做 Web Components 或嵌入式 UI 的开发者来说，这意味着组件样式可以真正自包含，不必再靠命名约定防冲突。
+- 示例是借助 Fable 5.1 生成的可交互 artifact，把抽象概念变成可点开、可观察的演示。这提示 agent 工具链的一个实用模式：让模型直接产出可运行的交互式教学页面，比纯文字解释更易验证正确性。
+- 文章聚焦 CSS 层面的 shadow roots 行为，而非框架封装细节。对工具链的含义是，涉及 DOM 隔离的调试与自动化测试需要显式处理 shadow boundary，普通选择器查询会失效。
+
+---
+
+> 原文：[Shadow roots, explained with live examples](https://simonwillison.net/2026/Sep/23/shadow-roots/) · 作者 Simon Willison

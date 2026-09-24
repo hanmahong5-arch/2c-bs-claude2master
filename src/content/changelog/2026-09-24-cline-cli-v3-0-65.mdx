@@ -1,0 +1,23 @@
+---
+slug: 2026-09-24-cline-cli-v3-0-65
+title: "cline cli-v3.0.65 — 本地模型长会话截断不再直接失败，CLI 会先压缩重试一次"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.65
+publishedAt: 2026-09-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "本地模型长会话截断不再直接失败，CLI 会先压缩重试一次"
+broadcast: "本地模型跑长会话时，一旦输出预算耗尽，过去整轮就直接失败了。现在命令行工具会先把对话压缩一下，再重试这一轮，不行才退回原来的精简重试，实在不行也保留部分回答。这对国内做智能体的开发者挺关键，因为上下文耗尽其实是可以恢复的状态，不该当成终点。另外启动失败会给出具体原因，等待时间也按冷启动实测放宽了。"
+insight: "这次 CLI v3.0.65 对国内用户的实际影响有限，走 newapi.lurus.cn 代理的链路不受影响，因为改动集中在本地模型截断重试、hub 启动超时和会话恢复三处。真正值得动手的是本地模型用户：长会话截断现在会先压缩重试一次，如果你之前靠调小上下文或手动清历史来绕开失败，这套 prompt 和 hook 配置可以放宽了。hub 冷启动等待从 8 秒延到 15 秒，Windows 首次启动慢的机器不用再改超时参数。升级即可，无需额外迁移。"
+tags: [local-models, context-compaction, session-resume, cli]
+---
+
+- 本地模型（llama.cpp/Ollama/LM Studio）在输出预算耗尽时会截断回答并导致整轮失败；现在 CLI 先压缩对话并重试该轮一次，再退回原有 concise-retry，仍失败则保留部分回答。含义：harness 需把「上下文耗尽」当作可恢复状态而非终态。
+- hub 启动失败现在给出具体原因，且等待新启动的 hub 从 8 秒延长到 15 秒（Windows 首次启动约需 8–13 秒）。含义：启动超时应按冷启动实测值设定，并暴露失败原因便于诊断。
+- 会话恢复时保留错误消息，包括重试耗尽后的报错，且不发送给模型、不计入压缩；`cline history update --title/--prompt` 对 hub 管理的会话持久化，不再丢失 pinned 等键。含义：transcript 与模型上下文应分离，元数据更新需合并而非覆盖。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.65](https://github.com/cline/cline/releases/tag/cli-v3.0.65)

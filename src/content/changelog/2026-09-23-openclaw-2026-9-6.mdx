@@ -1,0 +1,23 @@
+---
+slug: 2026-09-23-openclaw-2026-9-6
+title: "openclaw v2026.9.6 — macOS 应用更新即崩溃，已撤回；npm 包不受影响"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.6
+publishedAt: 2026-09-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "macOS 应用更新即崩溃，已撤回；npm 包不受影响"
+broadcast: "这次更新出了个麻烦：macOS 应用升级到最新版后，一启动就崩溃，官方已经把更新撤回，正在做热修复。值得留意的是，同一个版本号下的命令行安装包没受影响，还能正常用。对国内做 agent 的团队来说，这提醒我们客户端自更新得留好回滚闸门，不同产物也要分开验证、分开放行。"
+insight: "这次 macOS 应用 2026.9.6 更新即崩溃、已从 Sparkle 撤回，但 npm/Gateway 包不受影响，所以国内走 newapi.lurus.cn 代理的用户不必担心，照常安装即可；只有用 macOS 应用内更新的用户要等 2026.9.7 热修复，别手动升到 2026.9.6。现有 prompt 和 hook 配置无需改动，因为问题出在客户端分发通道，与运行时包无关。"
+tags: [release-notes, macos-crash, update-channel, release-gating]
+---
+
+- macOS 应用 2026.9.6 在应用内更新后每次启动都会崩溃（#156861），已从 Sparkle 更新源撤回，2026.9.7 热修复进行中；对 harness 的含义是分发通道与运行时包必须解耦，客户端自更新需要可回滚的版本闸门。
+- npm/Gateway 包 2026.9.6 不受该问题影响，仍可正常发布与安装；含义是同一 tag 下不同产物需独立验证与独立放行。
+- 本版发布中稳定 soak 与 Operator 通道被操作者豁免，部分 CI 失败被标记为 advisory，但产物、安装冒烟、升级存活与 pack 预算仍为必需；含义是 harness 的发布门禁应区分硬性证据与可豁免通道，并显式记录豁免理由。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.6](https://github.com/openclaw/openclaw/releases/tag/v2026.9.6)

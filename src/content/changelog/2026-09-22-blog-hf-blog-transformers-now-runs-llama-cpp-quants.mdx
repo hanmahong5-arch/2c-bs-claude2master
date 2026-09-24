@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-blog-hf-blog-transformers-now-runs-llama-cpp-quants
+title: "Transformers now runs llama.cpp quants — Hugging Face 让 Transformers 直接加载 llama.c"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/transformers-llama-cpp-quants
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 让 Transformers 直接加载 llama.cpp 量化权重，本地推理少一道转换。"
+broadcast: "Hugging Face 让 Transformers 现在能直接加载 llama.cpp 的量化权重了，不用先转回原始精度再加载。这意味着同一份量化产物既能给 llama.cpp 用，也能进 Transformers 生态，省去重复转换和存储。对做 agent 和工具链的人来说，本地部署的模型选择更灵活，量化模型可以直接接进基于 Transformers 的推理和评测流程。"
+tags: [hugging-face, llama-cpp, quantization, transformers]
+---
+
+- Transformers 现在可以直接运行 llama.cpp 的量化格式权重，无需先转回原始精度再加载。
+- 这意味着同一份 GGUF 量化产物既能给 llama.cpp 用，也能进 Transformers 生态，减少重复转换与存储。
+- 对 agent 与工具链而言，本地部署的模型选择更灵活，量化模型可直接接入基于 Transformers 的推理与评测流程。
+
+---
+
+> 原文：[Transformers now runs llama.cpp quants](https://huggingface.co/blog/transformers-llama-cpp-quants) · 作者 Hugging Face

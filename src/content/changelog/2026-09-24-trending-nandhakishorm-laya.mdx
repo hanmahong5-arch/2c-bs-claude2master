@@ -1,0 +1,22 @@
+---
+slug: 2026-09-24-trending-nandhakishorm-laya
+title: "laya — 非自回归决策引擎，单次前向完成多语言选择与评分"
+source: NandhaKishorM/laya
+sourceUrl: https://github.com/NandhaKishorM/laya
+publishedAt: 2026-09-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: trending
+hook: "非自回归决策引擎，单次前向完成多语言选择与评分"
+broadcast: "今天介绍一个叫 laya 的非自回归决策引擎，它能在单次前向传播里对任意文本完成类型化选择、评分和是或否判断，覆盖一百多种语言，还能通过路由器为每个请求挑合适的检查点。它值得关注，是因为把决策任务从生成式推理里剥离出来，做到低延迟、高吞吐，适合快速分类、打分或二值决策。对做 agent 和工具链的开发者来说，可以把它当成轻量决策层嵌进流程，替代部分大模型调用，从而降低延迟。"
+tags: [python, decision-engine, non-autoregressive, multilingual]
+---
+
+- 这是一个非自回归的 System 1 决策引擎，能在单次前向传播中对任意文本完成类型化选择、评分和是/否判断，覆盖 100 多种语言，并通过路由器为每个请求挑选合适的检查点。
+- 它值得关注是因为将决策任务从生成式推理中剥离，用非自回归方式实现低延迟、高吞吐的轻量判断，适合需要快速分类、打分或二值决策的场景，且多语言支持与动态路由设计提升了泛化能力。
+- 对 agent 和工具链开发者而言，可作为轻量决策层嵌入流程，替代部分 LLM 调用以降低延迟；后端开发者可参考其路由机制与单次前向的部署优化思路。
+
+---
+
+> 项目：[NandhaKishorM/laya](https://github.com/NandhaKishorM/laya) · ⭐ 21264 · Python

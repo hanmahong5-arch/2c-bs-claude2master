@@ -1,0 +1,23 @@
+---
+slug: 2026-09-23-goose-1-52-0
+title: "goose v1.52.0 — Goose v1.52.0 加入语音对话与多模型支持，并强化 recipe 参数"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.52.0
+publishedAt: 2026-09-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.52.0 加入语音对话与多模型支持，并强化 recipe 参数限制与安全配置。"
+broadcast: "一个叫 Goose 的开源智能体桌面工具刚更新了，这次加上了实时语音对话，还支持多个模型后端。对国内做 agent 的开发者来说，值得留意的是它开始强制限制配方参数的数量和体积，加载前就要校验，避免资源被滥用；同时它把模型接口抽象出来，方便接不同后端和流式工具调用。"
+insight: "Goose v1.52.0 这次改动对现有用户来说，升级优先级中等偏上：语音对话和多模型支持属于新增能力，不改也能用，但 recipe 参数限制（32 参数、200 选项、128 KiB）是硬校验，如果你的 recipe 超限，升级后可能直接加载失败，建议先自查再升。现有 prompt 和 hook 配置本身不受影响，无需改动。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理层变化，按现有方式继续使用即可。"
+tags: [voice, recipe-limits, provider-abstraction, streaming-tools]
+---
+
+- 桌面应用新增实时语音对话（#12093），意味着 agent harness 需处理音频流输入输出，可能需扩展会话状态管理。
+- Recipe 参数限制强制执行（最多 32 参数、200 选项、128 KiB，#12259），要求 harness 在加载 recipe 时做前置校验，避免资源滥用。
+- 新增 Decisions provider crate 及 Z.AI Coding Plan 流式工具调用（#12418, #12205），提示 harness 应抽象 provider 接口以支持多后端和流式工具调用。
+
+---
+
+> 原文 release：[block/goose v1.52.0](https://github.com/aaif-goose/goose/releases/tag/v1.52.0)

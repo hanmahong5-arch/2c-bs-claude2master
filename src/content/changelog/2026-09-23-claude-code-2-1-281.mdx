@@ -1,0 +1,23 @@
+---
+slug: 2026-09-23-claude-code-2-1-281
+title: "claude-code v2.1.281 — 网关、权限与恢复路径的批量修复，agent harness 设计者值得扫一遍"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.281
+publishedAt: 2026-09-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "网关、权限与恢复路径的批量修复，agent harness 设计者值得扫一遍"
+broadcast: "这次更新主要修的是网关、权限和会话恢复这几块。网关新增了跨账号凭证和请求级护栏，意味着上游合规策略可以从 agent 侧下沉到网关，做 harness 的同学不用再自己实现跨账号和护栏逻辑。另外会话恢复也修了重发被改写历史导致推理丢失的问题，持久化得保存可重放的原始形态。"
+insight: "这次 v2.1.281 对国内走 newapi.lurus.cn 代理的用户影响不大，网关侧新增的 Bedrock assume_role、guardrail 和 telemetry 都是上游凭证与合规能力，代理链路本身不受影响，不必为此改配置。真正要动的是 hook 与 prompt 相关设置：新增的 attribution:false 会被旧版 CLI 跳过，如果你的 harness 依赖旧客户端，就别急着把该键写进 settings，否则配置可能被整体忽略。会话恢复语义的修复也值得关注，但属于内部行为，现有 prompt 无需改动。"
+tags: [claude-code, agent-harness, session-resume, gateway]
+---
+
+- Claude apps gateway 新增 Bedrock `assume_role` 与 `guardrail: {id, version}`，并支持 `telemetry.resource_attributes`：上游凭证与合规策略从 agent 侧下沉到网关，harness 不必再自己实现跨账号 STS 与请求级护栏。
+- 新增 `"attribution": false` 隐藏 commit/PR 署名，且旧版 CLI 会跳过含该键的 settings 文件：配置格式的向后兼容需要 harness 显式处理，不能假设旧客户端会忽略未知字段。
+- 修复恢复会话时重发被改写的历史（并行工具调用、MCP 输入、工具搜索结果）导致 API 丢弃先前推理，以及恢复中断于工具调用的会话时告知结果未知：会话持久化必须保存可重放的原始形态，恢复语义要显式区分“未完成”。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.281](https://github.com/anthropics/claude-code/releases/tag/v2.1.281)

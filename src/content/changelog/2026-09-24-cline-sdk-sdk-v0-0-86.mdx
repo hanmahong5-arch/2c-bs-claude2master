@@ -1,0 +1,23 @@
+---
+slug: 2026-09-24-cline-sdk-sdk-v0-0-86
+title: "cline sdk/sdk/v0.0.86 — 本地模型长会话被截断后，现在会自动压缩重试一次"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.86
+publishedAt: 2026-09-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "本地模型长会话被截断后，现在会自动压缩重试一次"
+broadcast: "本地模型跑长会话被截断，现在会自动压缩重试一次，工具调用的轮次不重放。这对做 agent 的国内开发者很关键：上下文上限的恢复路径得单独设计，不能只靠请求参数。另外启动失败原因不再被吞掉，等待时间也延长了，排查问题会更容易。"
+insight: "这次 v0.0.86 对国内用户的实际影响主要在本地模型长会话：被截断后会自动压缩重试一次，含工具调用的轮次不重放，所以走 newapi.lurus.cn 代理的现有配置不用改，但如果你用本地 OpenAI 兼容服务跑长上下文，建议升级并确认 harness 的上下文上限恢复路径，别只依赖 max_tokens。另外 hub 等待从 8 秒延长到 15 秒，冷启动慢的机器升级后启动失败会少一些，且错误原因不再被吞掉，排查更省事。"
+tags: [agent-harness, context-compaction, local-models, session-state]
+---
+
+- 文本轮次在输出 token 上限被截断时，每次运行获得一次 compact-and-retry，再走原有 nudge-and-retry；含工具调用的轮次不重放。含义：harness 需为本地 OpenAI 兼容服务的上下文上限单独设计恢复路径，而非只依赖请求的 max_tokens。
+- Hub 启动失败原因不再被吞掉，`ensureCompatibleLocalHubUrl` 会附加 cause，新 hub 等待从 8 秒延长到 15 秒。含义：harness 的启动超时应按平台冷启动实测值设定，并保留可诊断的错误链。
+- 会话重命名改为 `session.update` 独立传 `title`，不再整体替换 metadata；终端错误作为仅展示的历史条目持久化，且不进入压缩与模型上下文。含义：harness 需区分展示态与模型可见态，避免 UI 状态污染上下文。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.86](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.86)

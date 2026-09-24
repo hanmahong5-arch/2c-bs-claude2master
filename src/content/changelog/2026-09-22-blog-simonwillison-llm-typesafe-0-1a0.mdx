@@ -1,0 +1,23 @@
+---
+slug: 2026-09-22-blog-simonwillison-llm-typesafe-0-1a0
+title: "llm-typesafe 0.1a0 — Simon Willison 发布 LLM 插件 llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/22/llm-typesafe/
+publishedAt: 2026-09-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 LLM 插件 llm-typesafe，接入 TypeSafe AI 的 Jev 模型做结构化判定"
+broadcast: "最近有个新插件，把一款专门做结构化判定的模型接进了常用的大模型工具链，装好填上密钥就能用。它能把是或否的判断、多选分类和打分变成固定格式的结果，比如判断一条消息是不是明确要求退款，还会给出置信度。对国内做智能体的开发者来说，这很适合当前置路由或者风控闸门，让判断更稳、更容易复现。"
+tags: [llm, typesafe, structured-output, simon-willison]
+---
+
+- 新插件 `llm-typesafe` 为 LLM 工具链加入 TypeSafe AI 的 Jev 模型，安装后设置 API key 即可调用，把「是/否」判定、多选分类、打分三类问题变成结构化输出。
+- 判定类问题返回形如 `{"type": "noul", "noul": 0.99}` 的置信度结果，例如判断某条消息是否明确要求退款，适合做 agent 的前置路由或风控闸门。
+- 选择与打分问题通过 `-o answer_type choice/score` 加 `-o criteria` 传入候选类别或评分标准，可把工单分派、报告可复现性评估等判断交给模型并拿到受约束的答案。
+
+---
+
+> 原文：[llm-typesafe 0.1a0](https://simonwillison.net/2026/Sep/22/llm-typesafe/) · 作者 Simon Willison
