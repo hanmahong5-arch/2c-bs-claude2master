@@ -1,6 +1,72 @@
 {
   "items": [
     {
+      "slug": "2026-09-25-blog-latentspace-ainews-the-future-of-latent-space",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] The Future of Latent Space — Latent Space 宣布 AINews 改版、迁移平台并重启赞助，同时汇总",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-25"
+    },
+    {
+      "slug": "2026-09-25-blog-latentspace-runway-s-worldprompt-and-the-engineering-of-real",
+      "zh": true,
+      "en": true,
+      "title": "Runway’s WorldPrompt and the Engineering of Real-Time — Runway 的 WorldPrompt 把视频生成变成可实时交互的世界，值得关",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-25"
+    },
+    {
+      "slug": "2026-09-25-codex-rust-v0-157-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.157.0 — GPT",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-09-25"
+    },
+    {
+      "slug": "2026-09-25-trending-crmne-zapfast",
+      "zh": true,
+      "en": false,
+      "title": "zapfast — Rust + egui 写的原生 WhatsApp 客户端，833 星",
+      "kind": "trending",
+      "author": null,
+      "source": "crmne/zapfast",
+      "tool": null,
+      "publishedAt": "2026-09-25"
+    },
+    {
+      "slug": "2026-09-25-trending-jaredpalmer-kev",
+      "zh": true,
+      "en": false,
+      "title": "kev — 基于 Qwen3.5/3.8 的可自训练决策模型家族",
+      "kind": "trending",
+      "author": null,
+      "source": "jaredpalmer/kev",
+      "tool": null,
+      "publishedAt": "2026-09-25"
+    },
+    {
+      "slug": "2026-09-25-trending-yetone-magpie",
+      "zh": true,
+      "en": false,
+      "title": "magpie — 菜单栏统一调度各家模型，让 Codex 跑 DeepSeek、Claude Co",
+      "kind": "trending",
+      "author": null,
+      "source": "yetone/magpie",
+      "tool": null,
+      "publishedAt": "2026-09-25"
+    },
+    {
       "slug": "2026-09-24-blog-anthropic-news-claude-discovers-a-novel-enzyme-system",
       "zh": true,
       "en": true,
@@ -12,10 +78,87 @@
       "publishedAt": "2026-09-24"
     },
     {
+      "slug": "2026-09-24-blog-latentspace-ainews-meta-connect-2026-muse-glasses-voice-video",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Meta Connect 2026: Muse glasses, voice, video, — Meta Connect 2026 把 Muse 个人 agent 塞进眼镜、邮",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "slug": "2026-09-24-blog-latentspace-foundries-vs-navigators-lowering-the-cost-of-science",
+      "zh": true,
+      "en": true,
+      "title": "Foundries vs Navigators: Lowering the Cost of Science — AI 让思考变便宜但实验没变快，生物科技正分化为「铸造厂」与「导航者」两条路。",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "slug": "2026-09-24-blog-simonwillison-commit-rewriter-0-2",
+      "zh": true,
+      "en": true,
+      "title": "commit-rewriter 0.2 — Simon Willison 发布 commit",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "slug": "2026-09-24-blog-simonwillison-datasette-1-0a41",
+      "zh": true,
+      "en": true,
+      "title": "datasette 1.0a41 — Datasette 1.0a41 加入 OpenTelemetry 支持，并把模",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "slug": "2026-09-24-claude-code-2-1-282",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.282 — 会话恢复丢思考、权限规则被静默忽略，这版在补 harness 的坑",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "slug": "2026-09-24-cline-4-1-21",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.1.21 — 默认模型静默变更，本地模型长回复不再中断任务",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-24"
+    },
+    {
       "slug": "2026-09-24-cline-cli-v3-0-65",
       "zh": true,
       "en": false,
       "title": "cline cli-v3.0.65 — 本地模型长会话截断不再直接失败，CLI 会先压缩重试一次",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "slug": "2026-09-24-cline-desktop-v0-0-35",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.35 — Cline 桌面版上 Linux，插件斜杠命令真正执行，诊断导出可安全贴 iss",
       "kind": "changelog",
       "author": null,
       "source": "cline/cline",
@@ -31,6 +174,17 @@
       "author": null,
       "source": "cline/cline",
       "tool": "cline",
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "slug": "2026-09-24-hermes-agent-2026-9-24",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v2026.9.24 — 补丁版打包 460 个 PR，稳定标签供下游镜像与云部署使用",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
       "publishedAt": "2026-09-24"
     },
     {
@@ -89,6 +243,39 @@
       "publishedAt": "2026-09-23"
     },
     {
+      "slug": "2026-09-23-blog-openai-news-airbnb-widens-access-to-gpt-6-astra-and",
+      "zh": true,
+      "en": true,
+      "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier — Airbnb 把 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-blog-openai-news-chatgpt-ads-expands-to-southeast-asia-and-taiwan",
+      "zh": true,
+      "en": true,
+      "title": "ChatGPT Ads expands to Southeast Asia and Taiwan — ChatGPT 广告扩至东南亚与台湾，覆盖 60 多国，开发者需关注变现与分发变",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-blog-openai-news-grab-and-openai-bring-practical-ai-skills-to",
+      "zh": true,
+      "en": true,
+      "title": "Grab and OpenAI bring practical AI skills to Southeast — OpenAI 与 Grab 合作，为东南亚 3 万伙伴提供实用 AI 技能培训。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
       "slug": "2026-09-23-blog-openai-news-harvey-turns-legal-context-into-stronger-drafts-with",
       "zh": true,
       "en": true,
@@ -111,10 +298,32 @@
       "publishedAt": "2026-09-23"
     },
     {
+      "slug": "2026-09-23-blog-openai-news-introducing-mentalhealthbench",
+      "zh": true,
+      "en": true,
+      "title": "Introducing MentalHealthBench — OpenAI 发布心理健康对话评测基准，关注 AI 在敏感场景中的有用性与安全性",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
       "slug": "2026-09-23-blog-openai-news-openai-extends-cyber-access-to-ukraine-for-civilian",
       "zh": true,
       "en": true,
       "title": "OpenAI extends cyber access to Ukraine for civilian — OpenAI 把 Daybreak 网络安全项目开放给乌克兰政府，用于民用基础设",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
+      "slug": "2026-09-23-blog-openai-news-ringg-s-ai-agents-resolve-up-to-65",
+      "zh": true,
+      "en": true,
+      "title": "Ringg’s AI agents resolve up to 65% of customer calls — Ringg 用 GPT",
       "kind": "blogger",
       "author": "OpenAI",
       "source": "OpenAI",
@@ -670,215 +879,6 @@
       "source": "openclaw-concepts",
       "tool": null,
       "publishedAt": "2026-09-21"
-    },
-    {
-      "slug": "2026-09-21-openclaw-concepts-session-controls",
-      "zh": true,
-      "en": true,
-      "title": "Session controls · OpenClaw — 会话级开关加 verbose/trace，让隐藏的记忆注入第一次变得可观测",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-09-21"
-    },
-    {
-      "slug": "2026-09-21-opencode-1-18-32",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.32 — Bedrock 图片附件不再乱塞，模型适配更精准",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-09-21"
-    },
-    {
-      "slug": "2026-09-21-trending-gylive-ccodex-sleep-state",
-      "zh": true,
-      "en": false,
-      "title": "ccodex-sleep-state — Go 写的本地工具，一键改善 Codex 限流与连接体验",
-      "kind": "trending",
-      "author": null,
-      "source": "gylive/ccodex-sleep-state",
-      "tool": null,
-      "publishedAt": "2026-09-21"
-    },
-    {
-      "slug": "2026-09-20-blog-simonwillison-datasette-explain-0-2-2",
-      "zh": true,
-      "en": true,
-      "title": "datasette-explain 0.2.2 — Datasette 查询解释插件更新，让只读存储查询页也能看执行计划",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-20"
-    },
-    {
-      "slug": "2026-09-20-blog-simonwillison-llm-keys-ui-0-1",
-      "zh": true,
-      "en": true,
-      "title": "llm-keys-ui 0.1 — 为手机远程跑编码 agent 时安全注入 API key 的小插件，解决密钥不进",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-20"
-    },
-    {
-      "slug": "2026-09-20-blog-simonwillison-mcp-was-always-a-bad-idea",
-      "zh": true,
-      "en": true,
-      "title": "MCP was always a bad idea? — 回应「MCP 从来就是坏主意」：全权限终端 agent 不需要它，但受控场景离不",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-20"
-    },
-    {
-      "slug": "2026-09-20-blog-simonwillison-quoting-voxium",
-      "zh": true,
-      "en": true,
-      "title": "Quoting voxium — 一位工程师爆料：大公司里从 L1 到 L7 全在用 Claude Code 生成",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-20"
-    },
-    {
-      "slug": "2026-09-20-trending-omacom-try-omarchy-windows",
-      "zh": true,
-      "en": false,
-      "title": "try-omarchy-windows — 在 Windows 上一键体验 Omarchy Linux，无需折腾双系统",
-      "kind": "trending",
-      "author": null,
-      "source": "omacom/try-omarchy-windows",
-      "tool": null,
-      "publishedAt": "2026-09-20"
-    },
-    {
-      "slug": "2026-09-20-trending-tamaratran-fast-jev-compaction",
-      "zh": true,
-      "en": false,
-      "title": "fast-jev-compaction — Claude Code 压缩插件，用 Jev 决策替换摘要，保留原文",
-      "kind": "trending",
-      "author": null,
-      "source": "tamaratran/fast-jev-compaction",
-      "tool": null,
-      "publishedAt": "2026-09-20"
-    },
-    {
-      "slug": "2026-09-19-blog-anthropic-news-partnering-with-accenture-on-embedded-evaluation",
-      "zh": true,
-      "en": true,
-      "title": "Partnering with Accenture on embedded evaluation — Anthropic 与 Accenture 合作，将独立评估员嵌入公司内部，监督",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-09-19"
-    },
-    {
-      "slug": "2026-09-19-blog-interconnects-why-i-still-haven-t-bought-into-true",
-      "zh": true,
-      "en": true,
-      "title": "Why I still haven’t bought into true RSI — Nathan Lambert 解释为何他不相信真正的递归自我改进，认为当前焦虑多",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-09-19"
-    },
-    {
-      "slug": "2026-09-19-blog-simonwillison-california-sea-lion-brandt-s-cormorant",
-      "zh": true,
-      "en": true,
-      "title": "California Sea Lion, Brandt's Cormorant — 一张海狮与鸬鹚的随手拍，暗藏一只罕见北鲣鸟，作者事后才发现",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-19"
-    },
-    {
-      "slug": "2026-09-19-blog-simonwillison-datasette-auth-github-1-0",
-      "zh": true,
-      "en": true,
-      "title": "datasette-auth-github 1.0 — Datasette 的 GitHub 登录插件升到 1.0，起因是一个 cook",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-19"
-    },
-    {
-      "slug": "2026-09-19-claude-code-2-1-278",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.278 — 自动模式分类器改走服务端，不再计费，/status 可查",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-19"
-    },
-    {
-      "slug": "2026-09-19-openclaw-2026-9-5",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.9.5 — OpenClaw 2026.9.5 发布：64 次提交、4179 个 PR，但 ",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-09-19"
-    },
-    {
-      "slug": "2026-09-19-trending-agentverse-os-agentverse-os",
-      "zh": true,
-      "en": false,
-      "title": "AgentVerse-OS — Rust 写的个人云 OS，单服务器跑 AI 代理，浏览器即桌面",
-      "kind": "trending",
-      "author": null,
-      "source": "agentverse-os/AgentVerse-OS",
-      "tool": null,
-      "publishedAt": "2026-09-19"
-    },
-    {
-      "slug": "2026-09-19-trending-browser-use-jev-ultrafast",
-      "zh": true,
-      "en": false,
-      "title": "jev-ultrafast — browser",
-      "kind": "trending",
-      "author": null,
-      "source": "browser-use/jev-ultrafast",
-      "tool": null,
-      "publishedAt": "2026-09-19"
-    },
-    {
-      "slug": "2026-09-19-trending-eternity4719-howtolivebetter",
-      "zh": true,
-      "en": false,
-      "title": "HowToLiveBetter — 5347 星的循证生活指南，把长寿、理财、法律、育儿按性价比排序",
-      "kind": "trending",
-      "author": null,
-      "source": "eternity4719/HowToLiveBetter",
-      "tool": null,
-      "publishedAt": "2026-09-19"
-    },
-    {
-      "slug": "2026-09-18-blog-anthropic-news-introducing-the-life-sciences-verification-program",
-      "zh": true,
-      "en": true,
-      "title": "Introducing the Life Sciences Verification Program — Anthropic 推出生命科学验证计划，为生物团队提供更宽松的模型访问，但需通",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-09-18"
     }
   ]
 }
