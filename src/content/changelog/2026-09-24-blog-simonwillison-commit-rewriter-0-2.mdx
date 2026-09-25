@@ -1,0 +1,23 @@
+---
+slug: 2026-09-24-blog-simonwillison-commit-rewriter-0-2
+title: "commit-rewriter 0.2 — Simon Willison 发布 commit"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/24/commit-rewriter/
+publishedAt: 2026-09-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 commit-rewriter 0.2，新增对非默认分支的支持"
+broadcast: "有个叫 commit-rewriter 的小工具更新了，现在它不光能改默认分支，还能指定其他分支来重写提交，也就是说你在功能分支上就能直接动手，不用先切回主分支。它通过 uvx 调用，不用预先安装就能跑，本地或 CI 里试一次成本很低。对做 agent 的人来说，这种小而明确的命令行能力，很容易被包装成一个可调用的 git 操作步骤。"
+tags: [git, commit-rewriter, cli-tools, python]
+---
+
+- 该版本新增对默认分支以外分支的支持，可通过 `uvx commit-rewriter --branch other` 指定其他分支运行（#3）。对开发者的含义：在 feature 分支上也能直接使用该工具重写提交，不必先切回主分支。
+- 工具以 `uvx` 方式调用，说明它作为可即时运行的 Python 包分发。对工具链的含义：无需预先安装即可在 CI 或本地一次性执行，降低了试用与集成成本。
+- 变更记录以 issue 编号 #3 标注，标签为 git。对 agent 的含义：这类小而明确的 CLI 能力容易被 agent 包装成可调用的 git 操作步骤。
+
+---
+
+> 原文：[commit-rewriter 0.2](https://simonwillison.net/2026/Sep/24/commit-rewriter/) · 作者 Simon Willison

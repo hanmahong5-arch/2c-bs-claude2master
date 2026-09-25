@@ -1,0 +1,23 @@
+---
+slug: 2026-09-24-cline-4-1-21
+title: "cline v4.1.21 — 默认模型静默变更，本地模型长回复不再中断任务"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.21
+publishedAt: 2026-09-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "默认模型静默变更，本地模型长回复不再中断任务"
+broadcast: "这次更新里有个容易被忽略的变化：模型目录刷新后，有十九家服务商的默认模型被悄悄换掉了，其中十一家指向了同一个更强的模型。这意味着如果你不盯着默认模型的解析，用户可能在毫无感知的情况下换了模型。另外本地模型碰到输出上限时，现在会先压缩对话重试一次，失败才走原来的精简重试，还能保留部分回答，对做 agent 的人来说，这两点都值得留意。"
+insight: "这次 v4.1.21 最该注意的是默认模型静默变更：19 个未固定默认模型的 provider 默认值改变，11 个指向 Claude Opus 5.5，如果你没显式固定模型，升级后会在无感知下换模型，建议升级前先锁定默认模型再升。本地模型输出上限改为压缩对话重试一次，走 newapi.lurus.cn 代理的国内用户不受影响，但本地模型相关 prompt 和 hook 配置无需改动。js-yaml 升至 4.3.2 修复 frontmatter 解析安全问题，规则文件依赖建议一并纳入检查。"
+tags: [default-model-resolution, local-model-recovery, provider-catalog, frontmatter-security]
+---
+
+- 模型目录刷新至 209 个 provider、6386 个模型，19 个未固定默认模型的 provider 默认值改变，其中 11 个（含 GitHub Copilot、Vertex）指向 Claude Opus 5.5。含义：harness 需把「默认模型解析」当作可观测事件，否则用户会在无感知下换模型。
+- 本地模型（llama.cpp、Ollama、LM Studio）触及输出上限时改为压缩对话并重试一次，失败才走原有 concise-retry，且保留部分回答。含义：harness 应把「输出预算」与「服务端剩余上下文」解耦，并内置一次压缩重试路径。
+- 新增 ai& provider（OpenAI 兼容、日本开源权重模型）；js-yaml 最低版本升至 4.3.2 以修复 frontmatter 解析安全问题。含义：provider 接入成本低，但规则/技能文件的解析依赖需纳入供应链管理。
+
+---
+
+> 原文 release：[cline/cline v4.1.21](https://github.com/cline/cline/releases/tag/v4.1.21)

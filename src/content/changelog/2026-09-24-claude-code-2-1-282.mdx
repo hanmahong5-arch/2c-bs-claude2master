@@ -1,0 +1,23 @@
+---
+slug: 2026-09-24-claude-code-2-1-282
+title: "claude-code v2.1.282 — 会话恢复丢思考、权限规则被静默忽略，这版在补 harness 的坑"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.282
+publishedAt: 2026-09-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "会话恢复丢思考、权限规则被静默忽略，这版在补 harness 的坑"
+broadcast: "这次更新修的是会话恢复和权限配置里的几个坑。以前恢复历史会话时，早期思考内容可能被接口丢掉，切换工具后扩展思考也会丢失；现在要求恢复时上下文保持逐字节一致。另外，命令权限规则以前在配置文件里会被跳过，现在统一生效并给出匹配警告；托管设置里配置写错也不再整块失效，而是启动时点名提示。对做智能体的开发者来说，这些隐蔽风险被补上，调试会省心不少。"
+insight: "这版修的是 harness 的坑，不是加功能，所以判断很直接：如果你在用 --continue/--resume 做会话恢复，或者依赖 Bash 权限规则里的中段 :*，建议升级，因为旧版会丢早期 reasoning、权限规则被静默跳过，属于隐蔽风险。升级后注意两点：settings 里的权限规则现在会统一生效并给出匹配警告，之前只靠 --allowedTools 兜着的配置要复查一遍；托管设置拼错的布尔锁键会启动时点名，别再当它整块失效。国内走 newapi.lurus.cn 代理不受影响，照常升即可。"
+tags: [session-resume, permissions, managed-settings, context-integrity]
+---
+
+- 修复 `--continue`/`--resume` 重发历史消息导致 API 丢弃早期 reasoning，以及 `--tools` 变更后丢失 extended thinking；harness 需保证恢复时上下文逐字节一致。
+- Bash 权限规则中段 `:*` 此前在 settings 文件被跳过、仅 `--allowedTools` 生效，现统一生效并给出匹配警告；权限来源不一致是 harness 的隐蔽风险。
+- 托管设置中布尔锁键拼错、嵌套值非法此前会整块失效，现锁仍生效且启动时点名；配置校验失败应降级而非静默放行。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.282](https://github.com/anthropics/claude-code/releases/tag/v2.1.282)

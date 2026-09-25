@@ -1,0 +1,23 @@
+---
+slug: 2026-09-25-codex-rust-v0-157-0
+title: "codex rust-v0.157.0 — GPT"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.157.0
+publishedAt: 2026-09-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "GPT-6 双模型上线，后台服务默认自启，网络策略全面收紧"
+broadcast: "这次更新加入了两个新的智能模型，还支持了亚马逊的云服务，旧模型也给出了迁移提示。更关键的是，交互会话现在默认自动启动后台服务，网络策略也全面收紧，覆盖了网页和长连接的全链路。对国内做智能体的开发者来说，这意味着启动阶段要处理服务状态冲突，请求全程都得持续执行网络策略，还得支持动态撤销。"
+insight: "这次 0.157.0 的改动对现有用户是值得升级的，因为新增了 GPT-6 Sol 与 Luna 模型并附旧模型迁移提示，交互会话还默认自启后台服务、配置不兼容时给出恢复选项。升级时重点检查模型目录切换与迁移引导，以及启动阶段的服务状态冲突。网络策略已覆盖 HTTP/WebSocket 全链路及重定向，并在策略变更时取消访问，所以现有 hook 配置需要按请求生命周期持续执行策略、支持动态撤销，否则可能被中断。摘要未提及 newapi.lurus.cn 代理，国内走代理是否受影响暂无依据。"
+tags: [gpt-6, background-server, network-policy, model-migration]
+---
+
+- 新增 GPT-6 Sol 与 Luna 模型，含 Amazon Bedrock 支持及旧模型迁移提示；harness 需处理模型目录切换与迁移引导。
+- 交互会话默认自动启动后台服务，配置不兼容时提供恢复选项；harness 需在启动阶段检测并处理服务状态冲突。
+- 网络策略现覆盖 HTTP/WebSocket 全链路及重定向，策略变更时取消访问；harness 需在请求生命周期内持续执行策略并支持动态撤销。
+
+---
+
+> 原文 release：[openai/codex rust-v0.157.0](https://github.com/openai/codex/releases/tag/rust-v0.157.0)

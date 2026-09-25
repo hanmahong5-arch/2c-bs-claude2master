@@ -1,0 +1,23 @@
+---
+slug: 2026-09-25-blog-latentspace-ainews-the-future-of-latent-space
+title: "[AINews] The Future of Latent Space — Latent Space 宣布 AINews 改版、迁移平台并重启赞助，同时汇总"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/ainews-the-future-of-latent-space
+publishedAt: 2026-09-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Latent Space 宣布 AINews 改版、迁移平台并重启赞助，同时汇总一周前沿模型与 Agent 基础设施动态。"
+broadcast: "知名技术资讯栏目宣布改版，把资讯和社区任务合并到一起，探索新的分发方式。更值得关注的是，有人用强化学习训练出只输出带概率判断、不写推理过程的决策模型，单次判断成本极低、延迟很短，虽然准确率还落后，但低置信度时升级到更强模型就能保住准确率。这种廉价判断器很适合嵌进智能体做路由和重排，同时记忆、评测和检索也正成为智能体标配。"
+tags: [ai-news, agent-infrastructure, decision-models, retrieval]
+---
+
+- **AINews v3 与社区合并**：作者 swyx 三年每工作日亲写 AINews，订阅超 20 万，但 Discord 因自我推广垃圾信息变冷清；计划把 Discord 与 AINews 的「待办任务」合并，并探索迁移到 Beehiiv 和新主页。对开发者含义：技术资讯与社区正从分散渠道收敛为一体化分发。
+- **决策模型成新品类**：TypeSafe 的 Jev 用 RL 训练、返回带概率的类型化决策而非推理文本，论文称每 1K 次判断 0.044 美元、中位延迟 152ms，比 GPT-6 便宜约 277 倍，但 JudgeBench 落后 14.5 分；低置信度升级到 Astra 的级联可保住 99% 准确率、成本仅 57%。含义：廉价「System One」判断器适合嵌入 agent 工具链做路由与重排。
+- **Agent 基础设施更新**：LangChain 在 Interrupt 发布 Managed Deep Agents 0.8（用户与 agent 记忆、访问策略、沙箱文件 API）与 smithtune CLI（把 trace 转成后训练数据集）；Perplexity 的 Rust 检索引擎 Photon 把内部 p99 从约 800ms 降到约 65ms，机器少约 20%、每文档数据多 2.5 倍。含义：记忆、评测与检索正成为 agent 栈的标配组件。
+
+---
+
+> 原文：[[AINews] The Future of Latent Space](https://www.latent.space/p/ainews-the-future-of-latent-space) · 作者 Latent Space

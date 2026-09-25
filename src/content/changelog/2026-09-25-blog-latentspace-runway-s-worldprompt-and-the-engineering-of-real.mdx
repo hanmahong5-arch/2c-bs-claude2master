@@ -1,0 +1,23 @@
+---
+slug: 2026-09-25-blog-latentspace-runway-s-worldprompt-and-the-engineering-of-real
+title: "Runway’s WorldPrompt and the Engineering of Real-Time — Runway 的 WorldPrompt 把视频生成变成可实时交互的世界，值得关"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/runway
+publishedAt: 2026-09-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Runway 的 WorldPrompt 把视频生成变成可实时交互的世界，值得关注其工程取舍。"
+broadcast: "Runway 推出的 WorldPrompt，把视频生成变成了能实时交互的世界。它靠一种提示机制，固定首帧后就能用自然语言控制角色、镜头和环境，还能生成带时间戳的事件。对做 agent 的人来说，这意味着可以用自然语言驱动可交互的模拟，但它缺少脚本和状态控制，误差累积、长期记忆缺失这些工程难题也还没解决。"
+tags: [world-models, runway, real-time-generation, agent-simulation]
+---
+
+- WorldPrompt 是提示机制而非编程语言，可固定首帧并生成带时间戳事件，实时控制角色、镜头与环境；对 agent 意味着可用自然语言驱动可交互模拟，但缺少脚本与状态控制。
+- 实时性靠自回归扩散加蒸馏实现，输出 720p/24fps 视频与 48kHz 音频；对工具链意味着延迟与显存优化是核心工程约束。
+- 主要挑战是误差累积、无限生成时的上下文取舍与长期记忆缺失；对开发者意味着评估反事实结果和自动化可验证测试仍待解决。
+
+---
+
+> 原文：[Runway’s WorldPrompt and the Engineering of Real-Time Worlds](https://www.latent.space/p/runway) · 作者 Latent Space

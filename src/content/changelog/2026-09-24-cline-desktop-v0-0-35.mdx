@@ -1,0 +1,23 @@
+---
+slug: 2026-09-24-cline-desktop-v0-0-35
+title: "cline desktop-v0.0.35 — Cline 桌面版上 Linux，插件斜杠命令真正执行，诊断导出可安全贴 iss"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.35
+publishedAt: 2026-09-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Cline 桌面版上 Linux，插件斜杠命令真正执行，诊断导出可安全贴 issue"
+broadcast: "Cline 桌面版这次更新挺实在。它第一次支持 Linux，安装包按系统分开提供，更新也是后台下载、你点重启才装。更关键的是，插件里的斜杠命令不再当普通文字丢给模型，而是真正执行插件逻辑，坏插件也不会拖垮整个提示列表。另外设置里多了诊断导出，会自动去掉密钥和隐私路径，方便你安全贴到问题反馈里。"
+insight: "这次 desktop-v0.0.35 对现有用户值得升级：Linux 首发提供 x64 .deb 与 .rpm，更新走后台下载、点 Restart now 才安装，harness 需按平台拆分打包与更新路径。插件斜杠命令改为执行 handler 而非纯文本发给模型，命令路由要区分本地执行与模型轮次，坏插件不再拖垮所有斜杠提示，现有 prompt 或 hook 配置建议按此调整。Diagnostics 的 Export 会剥离 API key、凭证、prompt 与 home 路径，可安全贴 issue。摘要未提及 newapi.lurus.cn 代理，国内走该代理是否受影响无法判断。"
+tags: [cline-desktop, linux-support, slash-commands, diagnostics]
+---
+
+- Linux 首发：每版提供 x64 `.deb` 与 `.rpm`，Open folder 走原生 GTK 选择器，更新后台下载、点 Restart now 才安装，无 AppImage。含义：harness 需按平台拆分打包与更新路径，避免安装时弹密码。
+- 插件斜杠命令不再当纯文本发给模型，而是执行插件 handler、显示回复，仅在命令要求时开启一轮；启用的命令进入斜杠菜单，skills/workflows 取自当前会话工作区（含 worktree），坏插件不再拖垮所有斜杠提示。含义：命令路由要区分「本地执行」与「模型轮次」。
+- 设置新增 Diagnostics 行，Export 把版本、系统、设置、近期 sidecar/hub 日志与所选会话 manifest 写成一个文本文件到 Downloads，并剥离 API key、凭证形态值、prompt 与 home 路径。含义：可观测性输出需内置脱敏，才能安全外发。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.35](https://github.com/cline/cline/releases/tag/desktop-v0.0.35)

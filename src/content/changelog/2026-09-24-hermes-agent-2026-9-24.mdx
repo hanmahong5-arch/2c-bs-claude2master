@@ -1,0 +1,23 @@
+---
+slug: 2026-09-24-hermes-agent-2026-9-24
+title: "hermes-agent v2026.9.24 — 补丁版打包 460 个 PR，稳定标签供下游镜像与云部署使用"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24
+publishedAt: 2026-09-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "补丁版打包 460 个 PR，稳定标签供下游镜像与云部署使用"
+broadcast: "Hermes Agent 发布了一个新的补丁版本，把上一个版本以来合并的约四百六十个改动打包成一个稳定标签，专门给下游的镜像和云端部署使用。它值得关注的地方在于，这个标签只负责可复现的构建，方便回滚和灰度，而完整的功能说明要等到下一个大版本才给出。对国内做 agent 的开发者来说，这意味着跟进节奏可以对齐下游消费，不必逐个改动去追。"
+insight: "这个补丁标签本质是给下游镜像和云部署用的稳定构建点，不是功能更新，所以现有用户没必要为它单独升级；如果你用 git 安装且当前版本能跑，等 v0.22.0 的完整整理版说明出来再动更划算，Docker 或云镜像用户则直接跟着该 tag 重建即可。prompt 和 hook 配置这次不用改，摘要里没提任何相关变更。国内走 newapi.lurus.cn 代理的用户也不受影响，因为该 tag 只承担可复现构建职责，不涉及接口或调用方式调整。"
+tags: [release-notes, patch-release, docker-images, versioning]
+---
+
+- 该 tag 汇总 v0.21.4 以来的约 460 个已合并 PR（1,610 个非合并提交、4,828 个文件变更），作为下游 Docker 镜像、Hermes Cloud 与托管部署的稳定发布点；含义是 harness 的版本边界应与下游消费节奏对齐，而非逐 PR 跟进。
+- 完整整理版说明被有意推迟到 v0.22.0，覆盖 v0.21.0 起的全部内容；含义是补丁标签只承担可复现构建职责，功能叙事需另设文档通道。
+- 更新方式为 `hermes update`（git 安装）或重跑安装脚本，Docker/云镜像从该 tag 构建；含义是 harness 需保证 tag 到镜像的确定性映射，便于回滚与灰度。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v2026.9.24](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24)

@@ -1,16 +1,16 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.281",
-    "openai/codex": "rust-v0.156.1",
+    "anthropics/claude-code": "v2.1.282",
+    "openai/codex": "rust-v0.157.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.65",
+    "cline/cline": "v4.1.21",
     "block/goose": "v1.52.0",
     "sst/opencode": "v1.18.32",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.61.0",
     "openclaw/openclaw": "v2026.9.6",
     "zeroclaw-labs/zeroclaw": "v0.8.5",
-    "NousResearch/hermes-agent": "v2026.9.21"
+    "NousResearch/hermes-agent": "v2026.9.24"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -167,7 +167,10 @@
     "zai-org/ZCode",
     "unreallabsai/unreal-agent",
     "NandhaKishorM/laya",
-    "kryvora-network/kryvora-node"
+    "kryvora-network/kryvora-node",
+    "jaredpalmer/kev",
+    "crmne/zapfast",
+    "yetone/magpie"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -278,8 +281,8 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-24",
-    "claude-code-docs": "2026-09-18",
+    "anthropic-engineering": "2026-09-25",
+    "claude-code-docs": "2026-09-25",
     "openai-codex-blog": "2026-09-24",
     "openclaw-concepts": "2026-09-21",
     "hermes-guides": "2026-09-21"
@@ -617,7 +620,9 @@
       "https://simonwillison.net/2026/Sep/22/llm-anthropic/",
       "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
       "https://simonwillison.net/2026/Sep/23/shadow-roots/",
-      "https://simonwillison.net/2026/Sep/22/llm-typesafe/"
+      "https://simonwillison.net/2026/Sep/22/llm-typesafe/",
+      "https://simonwillison.net/2026/Sep/24/commit-rewriter/",
+      "https://simonwillison.net/2026/Sep/24/datasette/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -771,7 +776,11 @@
       "https://www.latent.space/p/jev",
       "https://www.latent.space/p/john-platt",
       "https://www.latent.space/p/bio-security-is-an-ai-arms-race-eric",
-      "https://www.latent.space/p/ainews-claude-opus-55-the-new-default"
+      "https://www.latent.space/p/ainews-claude-opus-55-the-new-default",
+      "https://www.latent.space/p/ainews-the-future-of-latent-space",
+      "https://www.latent.space/p/runway",
+      "https://www.latent.space/p/foundries-vs-navigators-lowering",
+      "https://www.latent.space/p/ainews-meta-connect-2026-muse-glasses"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1116,7 +1125,12 @@
       "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
       "https://openai.com/index/sam-altman-un-security-council-remarks",
       "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
-      "https://openai.com/index/invideo-builds-with-gpt-6-astra"
+      "https://openai.com/index/invideo-builds-with-gpt-6-astra",
+      "https://openai.com/index/ringg",
+      "https://openai.com/index/introducing-mentalhealthbench",
+      "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
+      "https://openai.com/index/airbnb-gpt-6-astra",
+      "https://openai.com/index/grab-openai-ai-skills-southeast-asia"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1370,10 +1384,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-24",
+    "simonwillison": "2026-09-25",
     "lilianweng": "2026-09-24",
-    "latentspace": "2026-09-24",
-    "interconnects": "2026-09-24",
+    "latentspace": "2026-09-25",
+    "interconnects": "2026-09-25",
     "karpathy": "2026-09-23",
     "raschka": "2026-09-23",
     "eugeneyan": "2026-09-23",
@@ -1381,10 +1395,10 @@
     "oneusefulthing": "2026-09-24",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-24",
+    "openai-news": "2026-09-25",
     "deepmind": "2026-09-24",
     "hf-blog": "2026-09-24",
-    "anthropic-news": "2026-09-24",
+    "anthropic-news": "2026-09-25",
     "steipete": "2026-09-24",
     "openclaw-blog": "2026-09-24"
   },

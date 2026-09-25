@@ -1,0 +1,23 @@
+---
+slug: 2026-09-24-blog-simonwillison-datasette-1-0a41
+title: "datasette 1.0a41 — Datasette 1.0a41 加入 OpenTelemetry 支持，并把模"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/24/datasette/
+publishedAt: 2026-09-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 1.0a41 加入 OpenTelemetry 支持，并把模态对话框统一重构为可复用 Web Component。"
+broadcast: "Datasette 这个数据工具最近更新了，加入了 OpenTelemetry 支持，也就是说自建数据接口的开发者，现在可以用标准工具去追踪调用链和性能指标，排查慢查询多了一条通用路径。同时作者把所有弹窗重构成一个可复用的前端组件，插件作者不用再各自实现，交互层更统一了。这两项改动都还在测试版里，关注它插件生态的开发者得留意接口和前端组件的变动。"
+tags: [datasette, opentelemetry, web-components, release-notes]
+---
+
+- 本版本由 Alec Garcia 贡献，为 Datasette 加入 OpenTelemetry 支持，意味着数据服务的调用链与性能指标可以被标准可观测性工具采集，对自建数据 API 的开发者来说，排查慢查询多了一条通用路径。
+- 作者把 Datasette 里所有模态对话框重构成单个 Web Component，并为其补上文档，供其他插件复用；插件作者不必再各自实现弹窗，前端交互层因此更统一。
+- 这两项改动都落在 1.0a41 这个 alpha 版本里，说明 Datasette 1.0 仍在迭代中，关注其插件生态的开发者需要留意 API 与前端组件的变动。
+
+---
+
+> 原文：[datasette 1.0a41](https://simonwillison.net/2026/Sep/24/datasette/) · 作者 Simon Willison
