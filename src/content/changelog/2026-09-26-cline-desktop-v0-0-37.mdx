@@ -1,0 +1,24 @@
+---
+slug: 2026-09-26-cline-desktop-v0-0-37
+title: "cline desktop-v0.0.37 — 桌面端更新后新增关于页与更新后提示弹窗"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.37
+publishedAt: 2026-09-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "桌面端更新后新增关于页与更新后提示弹窗"
+broadcast: "桌面端这次更新，把版本信息、检查更新和问题反馈都集中到了一个新的关于页面，更新后还会弹一次新功能提示，能直接看到远程连接、并行子代理这些新能力。对国内做 agent 的开发者来说，这意味着运行时版本差异更好追踪，诊断入口也更短，排查故障更快，推理参数在代理路径下也更稳定了。"
+insight: "这次 desktop-v0.0.37 主要是体验层更新：About 页集中了版本、渠道、检查更新与 release notes，更新后还有一次性 What's new 弹窗，macOS 上 Help → Export Diagnostics 也缩短了诊断路径。对现有用户来说，这些都不涉及 prompt 或 hook 配置，没有必须改的理由，按 About 页的检查更新按钮升级即可。国内走 newapi.lurus.cn 代理的用户，摘要里只提到 Bedrock 经 inference profiles 访问 OpenAI 模型时 reasoning effort 不再报 Unknown parameter，代理链路本身未提及受影响，可正常升级。"
+tags: [cline-desktop, release-notes, agent-harness, diagnostics]
+---
+
+- 设置新增 About 页：显示版本与渠道，提供检查更新、重启更新按钮，并列出近期版本 release notes 与 GitHub 链接，还含报告问题入口。对 agent harness 的含义：更新与问题反馈路径集中，便于追踪运行时版本差异。
+- 更新后一次性 What's new 弹窗：首期覆盖 SSH remotes、worktrees、composer 中 PR 状态、并行 sub-agents，可在 About 页 Highlights 重看。对 agent harness 的含义：新能力通过内置提示暴露，降低发现成本。
+- macOS 上 Help → Export Diagnostics… 直接打开诊断导出，无需进设置查找。对 agent harness 的含义：诊断入口更短，故障排查更快。
+- Amazon Bedrock 上经 inference profiles 访问的 OpenAI 模型，设置 reasoning effort 时不再报 Unknown parameter: 'reasoningConfig'。对 agent harness 的含义：推理参数在代理路径下更稳定。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.37](https://github.com/cline/cline/releases/tag/desktop-v0.0.37)

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-25-claude-code-2-1-283
+title: "claude-code v2.1.283 — 网关提示头、模型白名单与提示审计，三条都指向 harness 可控性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.283
+publishedAt: 2026-09-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "网关提示头、模型白名单与提示审计，三条都指向 harness 可控性"
+broadcast: "这次更新有三件事值得留意。一是新增了网关提示头，网关可以按单条用户提示聚合请求，不用再自己建关联标识。二是模型可见性变成双向控制，既能精确钉住版本，也能单独封禁某个模型。三是新增了提示审计命令，检查项目里那些面向旧模型写的提示。对国内做 agent 的团队来说，这意味着提示资产和模型权限都开始被当成需要随版本迭代维护的配置。"
+insight: "这次 v2.1.283 的三条改动都落在 harness 可控性上，值得升级。现有用户重点看两处：一是提示资产，新增的 /doctor prompt-audit 会审计 CLAUDE.md、skills、agents 与 commands 里面向旧模型的写法，建议升级后跑一遍再决定要不要改 prompt；二是模型配置，availableModelsMatch: \"exact\" 与 deniedModels 把可见性变成可钉版本的双向控制，若你依赖默认放行新模型，需重新确认白名单。走 newapi.lurus.cn 代理的用户，网关提示头默认关闭，需显式设 CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 才生效，不改配置则不受影响。"
+tags: [gateway-headers, model-allowlist, prompt-audit, managed-settings]
+---
+
+- 新增 `x-claude-code-prompt-id` 网关提示头（需 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1`），网关可按单条用户提示聚合请求；harness 侧意味着请求分组不再依赖自建关联 ID。
+- 新增 `availableModelsMatch: "exact"` 与 `deniedModels` 托管设置，前者让未列出的新模型版本保持被阻断，后者可单独封禁模型；模型可见性从“允许列表”变成可精确钉版本的双向控制。
+- 新增 `/doctor prompt-audit`，审计 CLAUDE.md、skills、agents 与 commands 中面向旧模型的提示写法；提示资产开始被当作需要随模型迭代而迁移的配置。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.283](https://github.com/anthropics/claude-code/releases/tag/v2.1.283)

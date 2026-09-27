@@ -1,0 +1,23 @@
+---
+slug: 2026-09-26-codex-rust-v0-157-1
+title: "codex rust-v0.157.1 — Codex 0.157.1 补丁发布，但官方未给出任何变更说明"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.157.1
+publishedAt: 2026-09-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.157.1 补丁发布，但官方未给出任何变更说明"
+broadcast: "OpenAI 的 Codex 刚发了个补丁版本，但官方没给任何变更说明，发布说明里直说亮点无法确定，因为 PR 索引是空的，标签对比还返回了 404。这事值得国内做 agent 的开发者留意：如果你的流程靠发布说明自动生成摘要，就得为这种元数据缺失设计降级路径，别直接报错，也别把空说明当成没变更。"
+insight: "这次 Codex 0.157.1 只是补丁级发布，官方没给任何变更说明，PR 索引为空、标签对比还 404，光看 release notes 根本判断不出行为差异。所以现有用户没必要急着升级，真想升就回退到 diff 或提交历史去核对；现有 prompt 和 hook 配置也不用因为这次版本号变动就改。国内走 newapi.lurus.cn 代理是否受影响，摘要里没有任何相关信息，无法据此下结论。"
+tags: [codex, release-notes, versioning, agent-harness]
+---
+
+- 发布说明中明确写道：无法确定本次发布亮点，因为提供的 PR 索引为空，且 GitHub 标签对比返回 404。含义：harness 若依赖 release notes 自动生成摘要，需要为“元数据缺失”设计降级路径，而非直接失败。
+- 变更日志仅给出 rust-v0.157.0 到 rust-v0.157.1 的完整对比链接，未列出任何具体条目。含义：agent 无法从该版本推断行为差异，版本升级决策应回退到 diff 或提交历史。
+- 版本号从 0.157.0 递增到 0.157.1，属补丁级发布。含义：harness 的版本解析逻辑需容忍“有版本号但无内容”的发布，避免把空说明误判为无变更。
+
+---
+
+> 原文 release：[openai/codex rust-v0.157.1](https://github.com/openai/codex/releases/tag/rust-v0.157.1)

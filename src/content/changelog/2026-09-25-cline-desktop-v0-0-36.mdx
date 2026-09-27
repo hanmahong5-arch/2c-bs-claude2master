@@ -1,0 +1,23 @@
+---
+slug: 2026-09-25-cline-desktop-v0-0-36
+title: "cline desktop-v0.0.36 — 代理环境、小屏缩放、插件命令加载，三个启动期坑被修"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.36
+publishedAt: 2026-09-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "代理环境、小屏缩放、插件命令加载，三个启动期坑被修"
+broadcast: "这次桌面版修了三个启动期的坑。本地连接检查不再走系统代理，用 Clash 或企业代理时不会再报错；主窗口超出屏幕会自动缩小居中，高缩放下设置控件不再被推出屏幕；插件斜杠命令改成工作区打开就加载，首次慢或失败会在后台重试，不再被当纯文本发给模型。对做 agent 的国内开发者来说，代理环境和命令注册这两个坑很常见，值得留意。"
+insight: "这次 v0.0.36 修的都是启动期体验问题，对国内用户实际影响不小：本地连接检查不再走系统代理，Clash、v2ray 或企业代理环境下不会再报 hub runtime 不可用，走 newapi.lurus.cn 代理的开发者升级后自检环节会更稳。判断很直接：如果你现在被代理报错或 1080p 150% 缩放下控件跑出屏幕困扰，值得升；插件斜杠命令改为工作区打开即加载，属于行为修正，原有 prompt 和 hook 配置不需要跟着改。"
+tags: [proxy-bypass, window-sizing, slash-commands, bedrock]
+---
+
+- 本地连接检查不再走系统 HTTP(S) 代理，Clash/v2ray/企业代理下不再报 "No compatible hub runtime is available"，已有豁免保留：harness 应把本地回环流量与外部请求分流，避免自检被代理劫持。
+- 主窗口超出屏幕时自动缩小到可用区域并居中，1080p 150% 缩放下设置与账户控件不再被推出屏幕：harness 的窗口尺寸计算需以缩放后的可用工作区为准。
+- 插件斜杠命令（如 `/goal`）改为工作区打开时即加载，首次加载慢或失败会在后台重试，不再被当纯文本发给模型：命令注册应在会话初始化阶段完成，而非首次输入时惰性触发。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.36](https://github.com/cline/cline/releases/tag/desktop-v0.0.36)

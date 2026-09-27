@@ -1,9 +1,9 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.282",
-    "openai/codex": "rust-v0.157.0",
+    "anthropics/claude-code": "v2.1.283",
+    "openai/codex": "rust-v0.157.1",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "v4.1.21",
+    "cline/cline": "desktop-v0.0.37",
     "block/goose": "v1.52.0",
     "sst/opencode": "v1.18.32",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -170,7 +170,8 @@
     "kryvora-network/kryvora-node",
     "jaredpalmer/kev",
     "crmne/zapfast",
-    "yetone/magpie"
+    "yetone/magpie",
+    "tobi/disktree"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -281,7 +282,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-25",
+    "anthropic-engineering": "2026-09-27",
     "claude-code-docs": "2026-09-25",
     "openai-codex-blog": "2026-09-24",
     "openclaw-concepts": "2026-09-21",
@@ -622,7 +623,11 @@
       "https://simonwillison.net/2026/Sep/23/shadow-roots/",
       "https://simonwillison.net/2026/Sep/22/llm-typesafe/",
       "https://simonwillison.net/2026/Sep/24/commit-rewriter/",
-      "https://simonwillison.net/2026/Sep/24/datasette/"
+      "https://simonwillison.net/2026/Sep/24/datasette/",
+      "https://simonwillison.net/2026/Sep/26/kakapo-party/",
+      "https://simonwillison.net/2026/Sep/25/john-gruber/",
+      "https://simonwillison.net/2026/Sep/25/sighting-403293902/",
+      "https://simonwillison.net/2026/Sep/24/harder/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -780,7 +785,8 @@
       "https://www.latent.space/p/ainews-the-future-of-latent-space",
       "https://www.latent.space/p/runway",
       "https://www.latent.space/p/foundries-vs-navigators-lowering",
-      "https://www.latent.space/p/ainews-meta-connect-2026-muse-glasses"
+      "https://www.latent.space/p/ainews-meta-connect-2026-muse-glasses",
+      "https://www.latent.space/p/openrouter"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1130,7 +1136,8 @@
       "https://openai.com/index/introducing-mentalhealthbench",
       "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
       "https://openai.com/index/airbnb-gpt-6-astra",
-      "https://openai.com/index/grab-openai-ai-skills-southeast-asia"
+      "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+      "https://openai.com/index/proaction"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1179,7 +1186,8 @@
       "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
       "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
       "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
-      "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/"
+      "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+      "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -1289,7 +1297,8 @@
       "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
       "https://huggingface.co/blog/evaleval-aisi",
       "https://huggingface.co/blog/transformers-llama-cpp-quants",
-      "https://huggingface.co/blog/omlx"
+      "https://huggingface.co/blog/omlx",
+      "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -1380,27 +1389,28 @@
       "https://openclaw.ai/blog/where-to-find-openclaw-security-updates/",
       "https://openclaw.ai/blog/shipping-openclaw-updates-that-dont-break/",
       "https://openclaw.ai/blog/openclaw-trail-of-bits-engagement-recap/",
-      "https://openclaw.ai/blog/decision-models-in-openclaw/"
+      "https://openclaw.ai/blog/decision-models-in-openclaw/",
+      "https://openclaw.ai/blog/microsoft-autopilot-openclaw/"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-25",
+    "simonwillison": "2026-09-27",
     "lilianweng": "2026-09-24",
-    "latentspace": "2026-09-25",
-    "interconnects": "2026-09-25",
-    "karpathy": "2026-09-23",
-    "raschka": "2026-09-23",
-    "eugeneyan": "2026-09-23",
+    "latentspace": "2026-09-27",
+    "interconnects": "2026-09-27",
+    "karpathy": "2026-09-27",
+    "raschka": "2026-09-27",
+    "eugeneyan": "2026-09-27",
     "chiphuyen": "2026-09-24",
-    "oneusefulthing": "2026-09-24",
+    "oneusefulthing": "2026-09-27",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-25",
-    "deepmind": "2026-09-24",
-    "hf-blog": "2026-09-24",
-    "anthropic-news": "2026-09-25",
-    "steipete": "2026-09-24",
-    "openclaw-blog": "2026-09-24"
+    "openai-news": "2026-09-27",
+    "deepmind": "2026-09-27",
+    "hf-blog": "2026-09-27",
+    "anthropic-news": "2026-09-27",
+    "steipete": "2026-09-27",
+    "openclaw-blog": "2026-09-27"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

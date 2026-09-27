@@ -1,0 +1,23 @@
+---
+slug: 2026-09-24-blog-hf-blog-accelerating-vision-language-models-with-lfm2-5-vl
+title: "Accelerating vision-language models with — Hugging Face 发布 LFM2.5"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark
+publishedAt: 2026-09-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 发布 LFM2.5-VL-DSpark，用投机解码加速视觉语言模型推理"
+broadcast: "Hugging Face 发布了一个叫 LFM2.5-VL-DSpark 的方案，把投机解码用到了视觉语言模型上，专门降低推理延迟。它针对视觉语言模型的特点做了适配，不是直接套用纯文本那套。对做 agent 的开发者来说，多模态推理提速意味着图像理解类工具链响应更快，而且模型和实现已经发布，可以直接拿来在现有管线里试。"
+tags: [vision-language, speculative-decoding, inference-speed, huggingface]
+---
+
+- 文章介绍 LFM2.5-VL-DSpark，将投机解码（speculative decoding）用于视觉语言模型，以降低推理延迟。对 agent 开发者而言，多模态推理提速意味着图像理解类工具链的响应更快。
+- 该方案针对 VL 模型的特点做了适配，而非直接套用纯文本的投机解码。这提示工具链在接入多模态模型时，需关注推理后端是否支持此类优化。
+- 模型与实现发布在 Hugging Face 上，可直接取用。对开发者来说，这意味着无需自研即可在现有管线中尝试该加速方案。
+
+---
+
+> 原文：[Accelerating vision-language models with LFM2.5-VL-DSpark](https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark) · 作者 Hugging Face

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-26-blog-simonwillison-k-k-p-party
+title: "Kākāpō Party — 用 Claude 生成像素动画，再用 Playwright 自动录成视频当演讲收"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/26/kakapo-party/
+publishedAt: 2026-09-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用 Claude 生成像素动画，再用 Playwright 自动录成视频当演讲收尾页"
+broadcast: "有人把三张鹦鹉照片丢给 Claude，一句提示词就生成了一段能直接运行的像素动画，二十多只鹦鹉蹦跳撒彩纸。接着他又让本地的 Claude Code 把页面自动录成十五秒视频，用 Playwright 按时间表点击并录屏，脚本只有几十行。对国内开发者来说，这意味着前端原型和浏览器自动化这类多步任务，交给 agent 已经能省下大量手写脚本的功夫。"
+tags: [claude-code, playwright, pixel-art, agent-workflow]
+---
+
+- Simon Willison 把三张鸮鹦鹉照片丢给 Claude Opus 5.5，用一句提示词让它生成 HTML5 canvas 像素动画：20 多只鸮鹦鹉蹦跳开派对、撒彩纸。含义：单条提示词就能产出可直接运行的 canvas 动画，前端原型成本被压到极低。
+- 他下载 HTML 后，让本地 Claude Code 会话把页面录成 15 秒视频，要求第 3 秒才开始点击、点击分散在可点区域。含义：把「浏览器操作 + 录屏」这类多步任务交给 agent，比手写脚本更省事。
+- Claude Code 用 Playwright 完成，脚本只有几十行：按时间表在中心、四角、边缘依次 mouse.click，并用 record_video_dir 录制。含义：agent 生成的自动化脚本可读、可复用，是工具链里可审查的中间产物。
+
+---
+
+> 原文：[Kākāpō Party](https://simonwillison.net/2026/Sep/26/kakapo-party/) · 作者 Simon Willison
