@@ -1,0 +1,23 @@
+---
+slug: 2026-09-28-openclaw-concepts-operator-flow
+title: "Operator flow · OpenClaw — OpenClaw 的 QA 操作台如何把 agent 端到端测试做成可复现的流水"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/qa-e2e-automation/operator-flow
+publishedAt: 2026-09-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OpenClaw 的 QA 操作台如何把 agent 端到端测试做成可复现的流水线"
+broadcast: "OpenClaw 把 agent 的端到端测试做成了一条可复现的流水线：左边控制台跑 agent，右边面板展示对话和场景计划，任务的成功失败都能回放。它还有个关键设计，配置解析一旦遇到不兼容就直接报错，绝不悄悄退回默认，免得问题被掩盖。对国内做 agent 的团队来说，这提醒我们把哪些链路必须存在、哪些内容绝不能外泄，都写成可测的断言。"
+insight: "Lurus 视角：这次 OpenClaw 的 QA 操作台更新，对现有用户来说，升级价值主要在可观测性契约上——trace 必须含 openclaw.run、harness.run、context.assembled 等 span，且 OTLP 载荷不得外泄密钥。如果你在用 newapi.lurus.cn 代理，这层代理不受影响，但你的 prompt 和 hook 配置建议按 fail closed 原则改：未知或空显式选择应直接报错，而不是静默回退默认套件。升级时优先跑 pnpm qa:lab:up 验证双栏回放，再决定是否全量切换。"
+tags: [qa-automation, agent-harness, observability, e2e-testing]
+---
+
+- 用 `pnpm qa:lab:up` 起双栏 QA 站点：左栏 Gateway 控制台跑 agent，右栏 QA Lab 展示 Slack 式对话与场景计划，操作员或自动化循环可下发任务并记录成功/失败/阻塞。含义：harness 应把「执行环境」与「观察面板」分离，让 prompt 调试有可回放的证据面。
+- 配置里 Provider lane、模型、Execution channel、Channel driver、Runtime pair 相互独立，服务端在启动前解析 taxonomy 成员资格与执行类型；未知、空显式、profile 或 lane 不兼容的选择一律 fail closed，而不是回退到默认套件。含义：prompt/harness 的配置解析要显式失败，避免静默降级掩盖问题。
+- 可观测性 smoke 断言 trace 必须含 `openclaw.run`、`openclaw.harness.run`、GenAI 语义约定 model-call span、`openclaw.context.assembled`、`openclaw.message.delivery`，且原始 OTLP 载荷不得含固定标记、密钥或场景派生 session key。含义：把「哪些 span 必须存在、哪些内容绝不能外泄」写成断言，是 prompt 与上下文组装的可测契约。
+
+---
+
+> 原文：[Operator flow · OpenClaw](https://docs.openclaw.ai/concepts/qa-e2e-automation/operator-flow)

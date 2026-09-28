@@ -1,0 +1,23 @@
+---
+slug: 2026-09-28-openclaw-concepts-channel-qa-reference
+title: "Channel QA reference · OpenClaw — OpenClaw 如何用真实传输层跑频道 QA，而不是靠 mock 糊弄过去。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/qa-e2e-automation/channel-qa-reference
+publishedAt: 2026-09-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "OpenClaw 如何用真实传输层跑频道 QA，而不是靠 mock 糊弄过去。"
+broadcast: "今天聊一个叫 OpenClaw 的项目，它做频道测试时坚持跑真实传输层，而不是用模拟数据糊弄过去。它把传输正确性和模型行为分开验证，还统一了各频道的接入参数，降低新增频道的成本。对做 agent 评测的国内开发者来说，这意味着测试产物更结构化、可审计，而且默认失败就是失败，能防止静默通过。"
+insight: "这次 OpenClaw 的频道 QA 思路值得国内开发者参考：把传输正确性和模型行为分层验证，Buzz 用 mock-openai 只测真实 Nostr 中继，Telegram 固定走 convex 凭据源跑真实群组，失败默认非零退出。如果你现有的 prompt 或 hook 配置把传输和模型耦合在一起，建议按这套 CLI 契约拆开，先保证传输层可审计再谈模型表现。走 newapi.lurus.cn 代理的用户不受影响，摘要未涉及代理链路改动。"
+tags: [qa-automation, e2e-testing, agent-harness, channel-transport]
+---
+
+- 各频道 QA 共用一套 CLI 契约：`--scenario`、`--output-dir`、`--provider-mode`、`--credential-source` 等标志统一注册，QA Lab 作为套件宿主。含义：harness 设计应把传输插件与套件宿主解耦，用统一参数面降低新增频道的接入成本。
+- Buzz 默认用 `mock-openai` 提供者，只验证真实 Nostr 中继传输，不依赖模型凭据；Telegram 固定 `--credential-source convex`，用 Test Server 的独立 TDLib 授权跑真实群组。含义：prompt/harness 应把“传输正确性”与“模型行为”分层验证，避免凭据耦合掩盖传输缺陷。
+- 每次运行输出 `qa-suite-report.md`、`qa-suite-summary.json`、`qa-evidence.json`，报告记录真实中继路径但省略凭据值；失败场景默认非零退出，`--allow-failures` 仅写产物。含义：agent 评测的产物应结构化、可审计，且默认失败即失败，防止静默通过。
+
+---
+
+> 原文：[Channel QA reference · OpenClaw](https://docs.openclaw.ai/concepts/qa-e2e-automation/channel-qa-reference)

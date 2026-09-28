@@ -1,11 +1,11 @@
 {
   "lastSeen": {
     "anthropics/claude-code": "v2.1.283",
-    "openai/codex": "rust-v0.157.1",
+    "openai/codex": "rust-v0.158.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "desktop-v0.0.37",
     "block/goose": "v1.52.0",
-    "sst/opencode": "v1.18.32",
+    "sst/opencode": "v1.18.33",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.61.0",
     "openclaw/openclaw": "v2026.9.6",
@@ -171,7 +171,9 @@
     "jaredpalmer/kev",
     "crmne/zapfast",
     "yetone/magpie",
-    "tobi/disktree"
+    "tobi/disktree",
+    "jev-chat/jev-chat-jarvis",
+    "jackwener/wx-cli-again"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -277,16 +279,22 @@
       "https://docs.openclaw.ai/concepts/active-memory/tuning",
       "https://docs.openclaw.ai/concepts/decision-models",
       "https://docs.openclaw.ai/concepts/model-providers/control-ui-and-keys",
-      "https://docs.openclaw.ai/concepts/model-providers/custom-providers"
+      "https://docs.openclaw.ai/concepts/model-providers/custom-providers",
+      "https://docs.openclaw.ai/concepts/model-providers/official-provider-plugins",
+      "https://docs.openclaw.ai/concepts/model-providers/quick-rules",
+      "https://docs.openclaw.ai/concepts/qa-e2e-automation/channel-qa-reference",
+      "https://docs.openclaw.ai/concepts/qa-e2e-automation/command-surface",
+      "https://docs.openclaw.ai/concepts/qa-e2e-automation/extending-the-stack",
+      "https://docs.openclaw.ai/concepts/qa-e2e-automation/operator-flow"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-27",
+    "anthropic-engineering": "2026-09-28",
     "claude-code-docs": "2026-09-25",
     "openai-codex-blog": "2026-09-24",
-    "openclaw-concepts": "2026-09-21",
-    "hermes-guides": "2026-09-21"
+    "openclaw-concepts": "2026-09-28",
+    "hermes-guides": "2026-09-28"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -627,7 +635,12 @@
       "https://simonwillison.net/2026/Sep/26/kakapo-party/",
       "https://simonwillison.net/2026/Sep/25/john-gruber/",
       "https://simonwillison.net/2026/Sep/25/sighting-403293902/",
-      "https://simonwillison.net/2026/Sep/24/harder/"
+      "https://simonwillison.net/2026/Sep/24/harder/",
+      "https://simonwillison.net/2026/Sep/28/muse-ai-agent/",
+      "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
+      "https://simonwillison.net/2026/Sep/27/hn-49871741/",
+      "https://simonwillison.net/2026/Sep/27/bluesky-bot-check/",
+      "https://simonwillison.net/2026/Sep/23/hn-49823961/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1394,10 +1407,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-27",
+    "simonwillison": "2026-09-28",
     "lilianweng": "2026-09-24",
-    "latentspace": "2026-09-27",
-    "interconnects": "2026-09-27",
+    "latentspace": "2026-09-28",
+    "interconnects": "2026-09-28",
     "karpathy": "2026-09-27",
     "raschka": "2026-09-27",
     "eugeneyan": "2026-09-27",
@@ -1405,10 +1418,10 @@
     "oneusefulthing": "2026-09-27",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-27",
+    "openai-news": "2026-09-28",
     "deepmind": "2026-09-27",
     "hf-blog": "2026-09-27",
-    "anthropic-news": "2026-09-27",
+    "anthropic-news": "2026-09-28",
     "steipete": "2026-09-27",
     "openclaw-blog": "2026-09-27"
   },

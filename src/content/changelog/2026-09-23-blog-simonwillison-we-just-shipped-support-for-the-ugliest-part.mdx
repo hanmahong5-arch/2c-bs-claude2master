@@ -1,0 +1,23 @@
+---
+slug: 2026-09-23-blog-simonwillison-we-just-shipped-support-for-the-ugliest-part
+title: "We just shipped support for the ugliest part of HTTP: — Cloudflare 终于支持 Vary 头，Simon Willison 谈他"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/23/hn-49823961/
+publishedAt: 2026-09-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Cloudflare 终于支持 Vary 头，Simon Willison 谈他为何仍不用内容协商"
+broadcast: "Cloudflare 终于支持 Vary 请求头了，这个改动解决了缓存层长期忽略内容协商的老问题。但 Simon Willison 说，他等了很多年，功能上线后仍然不打算用。他更愿意让网址本身决定返回格式，比如加个后缀来提供 JSON，因为这样更好调试、缓存和测试，对 agent 调用接口也更友好。"
+tags: [http, cloudflare, caching, content-negotiation]
+---
+
+- Cloudflare 多年来在缓存时忽略图片以外请求的 Vary 头，导致按 `accept: text/html` 返回 HTML、否则返回 JSON 的站点可能把 JSON 缓存后喂给要 HTML 的访客。含义：依赖内容协商的 API 在 CDN 后面长期不可靠，缓存层对 Vary 的支持是工具链里容易被忽略的坑。
+- 作者表示自己等这个 Cloudflare 功能等了很多年，但即便功能上线，他仍决定不用这种模式。含义：基础设施补齐能力不等于最佳实践改变，开发者对可预测性的偏好可能独立于工具限制。
+- 他更倾向让 URL 明确决定返回格式，在自己的应用里加 `.json` 后缀来提供 JSON。含义：显式 URL 约定比隐式请求头协商更易调试、缓存和测试，对 agent 调用接口也更友好。
+
+---
+
+> 原文：[We just shipped support for the ugliest part of HTTP: Vary](https://simonwillison.net/2026/Sep/23/hn-49823961/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-27-blog-simonwillison-bluesky-reply-bot-checker
+title: "Bluesky reply bot checker — 用 Opus 5.5 写了个 Bluesky 回复机器人检测工具，靠发帖时间差和"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/27/bluesky-bot-check/
+publishedAt: 2026-09-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用 Opus 5.5 写了个 Bluesky 回复机器人检测工具，靠发帖时间差和账号行为模式识别自动回复号。"
+broadcast: "有人在 Bluesky 上用大模型写了个小工具，专门识别自动回复机器人，靠的是回复和发帖只隔几秒、账号从不发原创只回复大号、回复里带问号这些行为特征。值得关注的是，Bluesky 有免费开放的接口，才让这种调查做得起来，说明开放接口不只是方便开发，也是平台能被审计的基础。对国内做 agent 的人来说，这类纯行为规则很轻量，而且模型已经能让个人开发者快速做出针对具体平台的小工具。"
+tags: [bluesky, reply-bots, vibe-coding, api]
+---
+
+- 作者观察到 Bluesky 上也开始出现大量自动回复机器人，和 Twitter 一样烦人；但 Bluesky 有免费可用的 API，这让调查机器人变得可行。含义：开放 API 不只是开发便利，也是平台可审计性的基础。
+- 工具检测的信号包括：回复与同一账号发帖间隔仅数秒、账号从不发原创内容/图片/链接而只回复高粉丝用户、以及回复中带问号。含义：这些是纯行为特征，不依赖内容语义，适合做成轻量规则型 agent 检测器。
+- 该工具由 Opus 5.5 以 vibe coding 方式生成。含义：模型能力已足以让个人开发者快速产出针对具体平台 API 的小工具，检测与反检测的对抗成本都在下降。
+
+---
+
+> 原文：[Bluesky reply bot checker](https://simonwillison.net/2026/Sep/27/bluesky-bot-check/) · 作者 Simon Willison

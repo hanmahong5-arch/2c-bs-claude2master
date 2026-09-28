@@ -1,0 +1,24 @@
+---
+slug: 2026-09-28-codex-rust-v0-158-0
+title: "codex rust-v0.158.0 — Codex 0.158.0 把 TUI 剪贴板、MCP OAuth 与沙箱权限都"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.158.0
+publishedAt: 2026-09-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.158.0 把 TUI 剪贴板、MCP OAuth 与沙箱权限都动了"
+broadcast: "这次更新把全屏界面的剪贴板做成可配置的，选中就能复制、右键就能粘贴，复制出来的内容还保留原来的排版格式。同时开始支持需要密钥的模型接入方式，提权命令也默认走终端审批，只授权一次和长期授权被区分开了。对做智能体工具的开发者来说，凭据管理和权限边界这两块，接下来得认真对待了。"
+insight: "Codex 0.158.0 的改动集中在 TUI 剪贴板、MCP OAuth 密钥凭据和沙箱权限三块，属于配置语义层面的调整。现有用户值得升级，但升级后要检查两处：一是 harness 里若把剪贴板行为写死，需改成可配置项；二是 MCP 接入若涉及预注册 client secret，要能承载密钥型凭据。提权审批现在区分持久授权与单次运行时授权，相关 hook 逻辑建议同步调整。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，暂无法判断。"
+tags: [codex, tui, mcp-oauth, sandbox]
+---
+
+- 全屏 TUI 新增可配置的选中即复制与右键粘贴，复制转录内容保留 Markdown 格式；harness 需把剪贴板行为当作可配置项而非硬编码。
+- 支持需要预注册 OAuth client secret 的 MCP 服务器，并可用 `codex mcp add --oauth-client-secret` 配置；harness 的 MCP 接入要能承载密钥型凭据。
+- 提权命令默认启用终端输入审批，仅运行时授权不再触发多余审查；harness 应区分持久授权与单次运行时授权。
+- 修复 Windows 沙箱路径与凭据、Linux 嵌套可写根启动，并保留 Git 元数据保护；跨平台沙箱语义需显式建模。
+
+---
+
+> 原文 release：[openai/codex rust-v0.158.0](https://github.com/openai/codex/releases/tag/rust-v0.158.0)

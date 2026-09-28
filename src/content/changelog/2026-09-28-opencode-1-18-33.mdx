@@ -1,0 +1,23 @@
+---
+slug: 2026-09-28-opencode-1-18-33
+title: "opencode v1.18.33 — 超时、脱敏、Gemini 思考参数三处修复，影响 agent 稳定性"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.33
+publishedAt: 2026-09-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "超时、脱敏、Gemini 思考参数三处修复，影响 agent 稳定性"
+broadcast: "这次更新修了三个地方，都跟智能体的稳定性有关。一是网关模型现在会按各自的超时设置走，长任务不容易被误杀；二是调试信息输出会自动脱敏，密钥不会漏进日志；三是思考参数要按模型代际区分，不能一套默认值通用。做智能体的朋友可以留意一下。"
+insight: "这次 v1.18.33 的三处修复都落在 harness 配置层面，值得现有用户升级。如果你在用 Cloudflare AI Gateway 跑长任务，超时要从全局改成按 provider 设置，否则容易被误杀；调试日志记得确认脱敏已生效，避免密钥外泄；Gemini 的 thinking 参数不能再一套默认值通用，需按模型代际区分。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理侧改动，升级本身不受影响。"
+tags: [opencode, agent-harness, timeouts, gemini]
+---
+
+- Cloudflare AI Gateway 模型现在遵循 provider 的响应与流式超时设置，harness 需按 provider 而非全局配置超时，避免长任务被误杀。
+- 调试配置输出会脱敏凭证与敏感 header，harness 打印诊断信息时应默认过滤密钥，防止日志泄露。
+- Gemini 的 thinking 默认值与 effort 选项对齐各代模型支持的控制，harness 需按模型代际区分思考参数，不能一套默认值通用。
+
+---
+
+> 原文 release：[sst/opencode v1.18.33](https://github.com/anomalyco/opencode/releases/tag/v1.18.33)
