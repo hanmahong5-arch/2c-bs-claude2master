@@ -1,6 +1,116 @@
 {
   "items": [
     {
+      "slug": "2026-09-28-blog-simonwillison-quoting-muse-ai-agent",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Muse AI Agent — 一个 AI 代理替主人处理快递取件，却谎报主人在家，导致差评",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-codex-rust-v0-158-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.158.0 — Codex 0.158.0 把 TUI 剪贴板、MCP OAuth 与沙箱权限都",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-openclaw-concepts-channel-qa-reference",
+      "zh": true,
+      "en": true,
+      "title": "Channel QA reference · OpenClaw — OpenClaw 如何用真实传输层跑频道 QA，而不是靠 mock 糊弄过去。",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-openclaw-concepts-operator-flow",
+      "zh": true,
+      "en": true,
+      "title": "Operator flow · OpenClaw — OpenClaw 的 QA 操作台如何把 agent 端到端测试做成可复现的流水",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-opencode-1-18-33",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.33 — 超时、脱敏、Gemini 思考参数三处修复，影响 agent 稳定性",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-trending-jackwener-wx-cli-again",
+      "zh": true,
+      "en": false,
+      "title": "wx-cli-again — Rust 写的微信本地数据命令行工具，可查询、解密、导出",
+      "kind": "trending",
+      "author": null,
+      "source": "jackwener/wx-cli-again",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-trending-jev-chat-jev-chat-jarvis",
+      "zh": true,
+      "en": false,
+      "title": "jev-chat-jarvis — 手机上的对话副驾，在QQ/X/飞书里给候选回复，一键填入输入框",
+      "kind": "trending",
+      "author": null,
+      "source": "jev-chat/jev-chat-jarvis",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-27-blog-simonwillison-2026-in-llms-so-far",
+      "zh": true,
+      "en": true,
+      "title": "2026 in LLMs (so far) — Simon Willison 回顾 2026 年 LLM 大事记：编码代理从能用",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-27"
+    },
+    {
+      "slug": "2026-09-27-blog-simonwillison-bluesky-reply-bot-checker",
+      "zh": true,
+      "en": true,
+      "title": "Bluesky reply bot checker — 用 Opus 5.5 写了个 Bluesky 回复机器人检测工具，靠发帖时间差和",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-27"
+    },
+    {
+      "slug": "2026-09-27-blog-simonwillison-s3-is-the-future-s3-is-the-past",
+      "zh": true,
+      "en": true,
+      "title": "S3 Is the Future, S3 Is the Past — S3 十年未降价，Simon Willison 用价格史点出云存储格局已变",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-27"
+    },
+    {
       "slug": "2026-09-27-trending-tobi-disktree",
       "zh": true,
       "en": false,
@@ -540,6 +650,17 @@
       "publishedAt": "2026-09-23"
     },
     {
+      "slug": "2026-09-23-blog-simonwillison-we-just-shipped-support-for-the-ugliest-part",
+      "zh": true,
+      "en": true,
+      "title": "We just shipped support for the ugliest part of HTTP: — Cloudflare 终于支持 Vary 头，Simon Willison 谈他",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-23"
+    },
+    {
       "slug": "2026-09-23-claude-code-2-1-281",
       "zh": true,
       "en": false,
@@ -758,127 +879,6 @@
       "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-claude-code-2-1-280",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.280 — Opus 5.5 成为默认模型，1M 上下文，同时修复大量 agent 会话与子",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-cline-4-1-20",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.20 — 子代理并行、输出预算按模型上限放大、hook 上下文回归修复",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-cline-cli-v3-0-63",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.63 — 长会话被静默截断的根因找到了：摘要器没跟着刷新 token",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-cline-cli-v3-0-64",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.64 — 输出超限不再直接终止，重试三次并提示精简",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-cline-desktop-v0-0-33",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.33 — 桌面版新增 git worktree 隔离任务，并修复长期失效的自动压缩",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-cline-desktop-v0-0-34",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.34 — Composio 工具不再只加载前 20 个，Mac 间 SSH 远程也能连了",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-cline-sdk-sdk-v0-0-84",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.84 — Cline SDK v0.0.84：修并发竞态、Windows 可执行劫持、压缩",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-cline-sdk-sdk-v0-0-85",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.85 — 输出超限不再直接失败，SDK 会自动重试并调整默认额度",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-codex-rust-v0-156-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.156.0 — 全屏 TUI、语音默认开启、用量面板，三条都改交互层",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-trending-zai-org-zcode",
-      "zh": true,
-      "en": false,
-      "title": "ZCode — Z.ai 开源的编码 agent 框架，TypeScript 实现，已近 6k ",
-      "kind": "trending",
-      "author": null,
-      "source": "zai-org/ZCode",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-21-blog-hf-blog-pruning-llms-like-a-physicist-block-removal-as",
-      "zh": true,
-      "en": true,
-      "title": "Pruning LLMs Like a Physicist: Block Removal as an — 把大模型剪枝当成伊辛模型求解，物理视角看块删除",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-09-21"
     }
   ]
 }
