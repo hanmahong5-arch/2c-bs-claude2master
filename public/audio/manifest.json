@@ -1,6 +1,171 @@
 {
   "items": [
     {
+      "slug": "2026-09-29-blog-latentspace-ainews-amd-buys-world-labs-for-8-2b",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] AMD buys World Labs for $8.2B, as Atlas solves — AMD 以 82 亿美元收购 World Labs，其 Atlas 模型解决了稀",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-blog-latentspace-ainews-opus-5-5-is-good-at-explainer",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Opus 5.5 is good at explainer videos — Opus 5.5 本周发布，社区反响热烈，尤其擅长用代码生成讲解视频，同时一批决",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-blog-latentspace-claude-code-s-next-era-thariq-shihipar-anthropic",
+      "zh": true,
+      "en": true,
+      "title": "Claude Code’s Next Era — Thariq Shihipar, Anthropic — Anthropic 的 Thariq 讲 Claude Code 下一阶段：可变",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-cline-sdk-sdk-v0-0-87",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.87 — Windows 代理下 hub 启动失败、token 重复计数等 agent 基",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-openclaw-2026-8-33",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.8.33 — LTS 线补上旗舰模型与安全修复，看 agent 运行时如何跨模型保持推理连续性",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-trending-human-agent-society-reef",
+      "zh": true,
+      "en": false,
+      "title": "reef — 为持续自我改进的 agent 提供基础设施，7千星新项目",
+      "kind": "trending",
+      "author": null,
+      "source": "Human-Agent-Society/reef",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-trending-ollaya-dev-ollaya",
+      "zh": true,
+      "en": false,
+      "title": "ollaya — 本地跑决策模型，Ollama 式拉取与推理服务",
+      "kind": "trending",
+      "author": null,
+      "source": "ollaya-dev/ollaya",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-28-blog-hf-blog-holo4-powering-generalist-computer-use-agents",
+      "zh": true,
+      "en": true,
+      "title": "Holo4: powering generalist computer-use agents — Hugging Face 介绍 Holo4，一个面向通用计算机操作智能体的新模型",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-blog-openai-news-are-you-a-codex-original",
+      "zh": true,
+      "en": true,
+      "title": "Are you a Codex Original? — OpenAI 征集 Codex 真实使用故事，入选 Codex Original",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-blog-openai-news-basis-completes-a-tax-workbook-2x-faster-with",
+      "zh": true,
+      "en": true,
+      "title": "Basis completes a tax workbook 2x faster with GPT-6 — GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-blog-openai-news-how-we-will-do-better-for-australia",
+      "zh": true,
+      "en": true,
+      "title": "How we will do better for Australia — OpenAI 为澳洲政府网站事件致歉，并说明将如何加强防护",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-blog-openai-news-the-lenfest-institute-grows-landmark-program-with-expanded",
+      "zh": true,
+      "en": true,
+      "title": "The Lenfest Institute grows landmark program with — OpenAI 追加千万美元级投入，支持地方新闻业用 AI 做新闻。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-blog-openai-news-towards-safety-cases-for-frontier-ai-training",
+      "zh": true,
+      "en": true,
+      "title": "Towards safety cases for frontier AI training — OpenAI 提出前沿训练安全案例框架，覆盖技术防护、运营实践与失准事件调查",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-blog-simonwillison-claude-sonnet-5-5",
+      "zh": true,
+      "en": true,
+      "title": "Claude Sonnet 5.5 — Anthropic 新 Sonnet 5.5 更快更便宜，还成了 claude.",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-blog-simonwillison-quoting-joedaroo",
+      "zh": true,
+      "en": true,
+      "title": "Quoting @joedaroo — OpenAI 安全人员承认模型能力突跳让公司措手不及，谈组织如何应对意外",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
       "slug": "2026-09-28-blog-simonwillison-quoting-muse-ai-agent",
       "zh": true,
       "en": true,
@@ -9,6 +174,17 @@
       "author": "Simon Willison",
       "source": "Simon Willison",
       "tool": null,
+      "publishedAt": "2026-09-28"
+    },
+    {
+      "slug": "2026-09-28-claude-code-2-1-284",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.284 — Sonnet 5.5 成默认模型，1M 上下文与缓存降价，agent harne",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
       "publishedAt": "2026-09-28"
     },
     {
@@ -703,182 +879,6 @@
       "source": "block/goose",
       "tool": "goose",
       "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-openclaw-2026-9-6",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.9.6 — macOS 应用更新即崩溃，已撤回；npm 包不受影响",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-trending-unreallabsai-unreal-agent",
-      "zh": true,
-      "en": false,
-      "title": "unreal-agent — Go 写的异步优先 agent 框架，一周冲上 1200 星",
-      "kind": "trending",
-      "author": null,
-      "source": "unreallabsai/unreal-agent",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-22-blog-hf-blog-how-uk-aisi-and-evaleval-are-making-benchmark",
-      "zh": true,
-      "en": true,
-      "title": "How UK AISI and EvalEval Are Making Benchmark Results — 英国 AISI 与 EvalEval 合作，让 AI 基准测试结果可复现",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-hf-blog-jun-kim-omlx-creator-and-maintainer-joins-hugging",
-      "zh": true,
-      "en": true,
-      "title": "Jun Kim, oMLX creator and maintainer, joins Hugging — oMLX 作者加入 Hugging Face，专责支持 MLX 社区",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-hf-blog-transformers-now-runs-llama-cpp-quants",
-      "zh": true,
-      "en": true,
-      "title": "Transformers now runs llama.cpp quants — Hugging Face 让 Transformers 直接加载 llama.c",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-interconnects-debating-rsi-the-us-china-gap-and-jaggedness",
-      "zh": true,
-      "en": true,
-      "title": "Debating RSI, the US-China Gap, and Jaggedness with JS — Epoch AI 的 JS Denain 与 Nathan Lambert 辩论",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-latentspace-an-oscar-two-asteroids-and-the-algorithm-in",
-      "zh": true,
-      "en": true,
-      "title": "🔬 An Oscar, Two Asteroids, and the Algorithm in Your — 谷歌 ERA 用 Gemini 自动搜索可打分科学问题的最优解，已产出十篇论文并",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-openai-news-better-prompt-caching-for-gpt-6",
-      "zh": true,
-      "en": true,
-      "title": "Better prompt caching for GPT-6 — GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-openai-news-introducing-gpt-6-sol-and-luna",
-      "zh": true,
-      "en": true,
-      "title": "Introducing GPT-6 Sol and Luna — OpenAI 发布 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-openai-news-parallel-cut-research-time-and-cost-in-half",
-      "zh": true,
-      "en": true,
-      "title": "Parallel cut research time and cost in half with GPT‑6 — Parallel 用 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-openai-news-priorities-and-principles-for-effective-third-party-assessments",
-      "zh": true,
-      "en": true,
-      "title": "Priorities and principles for effective third party — OpenAI 谈前沿模型第三方安全评估的原则与优先级",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-openclaw-blog-decision-models-in-openclaw",
-      "zh": true,
-      "en": true,
-      "title": "Decision models in OpenClaw — OpenClaw 谈决策模型：为何走插件优先路线，以及贡献者能做什么",
-      "kind": "blogger",
-      "author": "OpenClaw",
-      "source": "OpenClaw",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-simonwillison-claude-opus-5-5-gpt-6-sol-gpt",
-      "zh": true,
-      "en": true,
-      "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price — 一天内三家发新模型，价格战打到每百万 token 一毛钱，但 Opus 5.5 ",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-simonwillison-llm-anthropic-0-29",
-      "zh": true,
-      "en": true,
-      "title": "llm-anthropic 0.29 — Simon Willison 发布 llm",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-simonwillison-llm-typesafe-0-1a0",
-      "zh": true,
-      "en": true,
-      "title": "llm-typesafe 0.1a0 — Simon Willison 发布 LLM 插件 llm",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-22"
-    },
-    {
-      "slug": "2026-09-22-blog-simonwillison-quoting-therealcornpop",
-      "zh": true,
-      "en": true,
-      "title": "Quoting @therealcornpop — 一位 TikTok 创作者指出：AI 写的脚本最致命的破绽不是套路句式，而是作者",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-22"
     }
   ]
 }
