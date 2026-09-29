@@ -1,0 +1,23 @@
+---
+slug: 2026-09-28-blog-simonwillison-claude-sonnet-5-5
+title: "Claude Sonnet 5.5 — Anthropic 新 Sonnet 5.5 更快更便宜，还成了 claude."
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/
+publishedAt: 2026-09-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic 新 Sonnet 5.5 更快更便宜，还成了 claude.ai 免费档的模型，Simon 用骑自行车鹈鹕实测。"
+broadcast: "Anthropic 出了新的 Sonnet 模型，官方说运行快了三成以上，多数任务成本最多降三成，价格没变但各项基准更好，意味着 agent 工作流的单位推理成本可能直接下降。不过它在最高思考档下复现了同一个 bug，想了十二万多个 token 还是没输出结果，说明高思考预算不等于可靠产出。另外它现在是 claude.ai 免费档的模型，对做免费层工具链的人来说，能力基准变了。"
+tags: [claude, llm-release, anthropic, agent-cost]
+---
+
+- 官方称 Sonnet 5.5 运行快 30%+、多数任务成本最多降 30%，定价与 Sonnet 5 相同却在各项基准上更好，意味着 agent 工作流的单位推理成本可能直接下降。
+- 它复现了 Opus 5.5 的同一 bug："max" 思考档下鹈鹕想了 128,000 token（花 1.28 美元）后耗尽 token，没能输出 SVG，说明高思考预算不等于可靠产出。
+- 最值得注意的是 Sonnet 5.5 现为 claude.ai 免费档所用模型，而 ChatGPT 免费档用 Luna 5.6，作者实测免费档能生成 WebGL 三维鹈鹕页面，对做免费层工具链的人是能力基准变化。
+
+---
+
+> 原文：[Claude Sonnet 5.5](https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/) · 作者 Simon Willison

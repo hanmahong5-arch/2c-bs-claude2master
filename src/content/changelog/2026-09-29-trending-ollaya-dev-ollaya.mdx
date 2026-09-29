@@ -1,0 +1,22 @@
+---
+slug: 2026-09-29-trending-ollaya-dev-ollaya
+title: "ollaya — 本地跑决策模型，Ollama 式拉取与推理服务"
+source: ollaya-dev/ollaya
+sourceUrl: https://github.com/ollaya-dev/ollaya
+publishedAt: 2026-09-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: trending
+hook: "本地跑决策模型，Ollama 式拉取与推理服务"
+broadcast: "最近有个用 Rust 写的本地决策模型运行时挺值得留意，它像给决策模型做了个本地管家，能拉取并服务好几类决策模型，还对外提供类型安全的兼容接口。对做 agent 和工具链的开发者来说，这意味着可以把决策能力从云端搬到本地，省去自建推理栈的麻烦，直接接进现有流程。"
+tags: [rust, local-inference, decision-models, ollama]
+---
+
+- 它是什么：Rust 写的本地决策模型运行时，可拉取并服务 Laya、decider、NLI、GLiClass，对外暴露 TypeSafe 兼容 API，定位是决策模型版的 Ollama。
+- 为什么值得关注：把决策类模型从云端搬到本地，省去自建推理栈；Rust 实现，906 star 说明本地化决策模型需求正在起量。
+- 参考价值：对 agent 与工具链开发者，TypeSafe 兼容 API 便于把本地决策能力接进现有流程；后端可参考其模型拉取与本地服务的设计。
+
+---
+
+> 项目：[ollaya-dev/ollaya](https://github.com/ollaya-dev/ollaya) · ⭐ 906 · Rust

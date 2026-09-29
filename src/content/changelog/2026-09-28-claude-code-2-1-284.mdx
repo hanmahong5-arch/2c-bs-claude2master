@@ -1,0 +1,23 @@
+---
+slug: 2026-09-28-claude-code-2-1-284
+title: "claude-code v2.1.284 — Sonnet 5.5 成默认模型，1M 上下文与缓存降价，agent harne"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.284
+publishedAt: 2026-09-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Sonnet 5.5 成默认模型，1M 上下文与缓存降价，agent harness 需重估上下文预算。"
+broadcast: "Anthropic 把最新的 Sonnet 模型设成了默认，上下文扩到一百万，缓存读取也大幅降价。这意味着做 agent 的团队可以放宽单次注入的上下文上限，但要重新校准缓存命中策略，才能吃到低价。另外权限提示新增了只授权一次、下次再问的选项，默认权限姿态也更宽松，做 harness 的要把一次性许可和显式配置覆盖这两件事处理好。"
+insight: "Sonnet 5.5 成为默认模型，1M 上下文加缓存读降到 $0.20/Mtok，现有用户值得升级：走 newapi.lurus.cn 代理的国内用户不受影响，直接切到 claude-sonnet-5-5 即可。但 prompt 和 hook 配置要改——上下文预算可放宽，缓存命中策略需重新校准才能吃到低价读；同时 auto 模式默认启动、权限提示新增一次性授权，harness 的审批状态机要支持单次许可，并确保 permissions.defaultMode 能压过默认值。"
+tags: [sonnet-5-5, context-window, permission-mode, agent-harness]
+---
+
+- 新增 `claude-sonnet-5-5` 并设为 Anthropic API 默认 Sonnet：1M 上下文、$2/$10 每 Mtok、缓存读 $0.20/Mtok。含义：harness 可放宽单次注入的上下文上限，但需重新校准缓存命中策略以吃到低价读。
+- 自动模式在读取工作目录外文件时新增“Yes, but ask again next time”选项。含义：权限提示可按单次授权而非永久放行，harness 的审批状态机要支持一次性许可。
+- 交互终端与 VS Code 在未配置权限模式时默认以 auto 模式启动，`permissions.defaultMode` 仍可覆盖。含义：默认权限姿态更宽松，harness 需确保显式配置能可靠压过默认值。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)

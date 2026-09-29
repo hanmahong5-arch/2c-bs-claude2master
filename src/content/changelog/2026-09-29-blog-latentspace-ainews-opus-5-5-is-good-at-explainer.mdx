@@ -1,0 +1,23 @@
+---
+slug: 2026-09-29-blog-latentspace-ainews-opus-5-5-is-good-at-explainer
+title: "[AINews] Opus 5.5 is good at explainer videos — Opus 5.5 本周发布，社区反响热烈，尤其擅长用代码生成讲解视频，同时一批决"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/ainews-opus-55-is-good-at-explainer
+publishedAt: 2026-09-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Opus 5.5 本周发布，社区反响热烈，尤其擅长用代码生成讲解视频，同时一批决策模型和 Agent 基础设施集中亮相。"
+broadcast: "本周有个新模型发布，社区反响很热烈，它特别擅长用代码生成讲解视频。更值得关注的是，它的推理预算存在拐点，调到最高档效果反而下降，所以做 agent 的开发者不能默认把参数拉满，得按任务实测成本和效果。同时还有一批决策模型和 agent 基础设施集中亮相，值得留意。"
+tags: [opus-5-5, decision-models, agent-infra, retrieval]
+---
+
+- **Opus 5.5 的推理预算有拐点**：在 Terminal-Bench-Science 上，低 effort 24%、xhigh 62%、max 反而降到 59%，@theo 建议避开 max，因为它强制最低推理预算。对 agent 开发者意味着调参时不能默认拉满，成本与效果需按任务实测。
+- **Jev 把「判断」做成廉价结构化输出**：论文称每 1K 次判断 $0.044、中位延迟 152ms，比 GPT-6 便宜约 277 倍，RewardBench 差距 3 分内但 JudgeBench 落后 14.5 分；低置信度升级到 Astra 的级联可保住 99% 准确率、只花 57% 成本。这提示工具链可把高频判断下沉到小模型，只对难例调用大模型。
+- **Perplexity Photon 用 agent 重写检索栈**：Rust 检索排序引擎由小团队加数百 agent、约 30 万美元 token 建成，内部 p99 从约 800ms 降到约 65ms，机器少约 20%、单文档数据量 2.5 倍。对 RAG 与搜索基础设施来说，agent 辅助工程化已能直接压延迟和成本。
+
+---
+
+> 原文：[[AINews] Opus 5.5 is good at explainer videos](https://www.latent.space/p/ainews-opus-55-is-good-at-explainer) · 作者 Latent Space

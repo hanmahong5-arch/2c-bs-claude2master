@@ -1,0 +1,23 @@
+---
+slug: 2026-09-29-cline-sdk-sdk-v0-0-87
+title: "cline sdk/sdk/v0.0.87 — Windows 代理下 hub 启动失败、token 重复计数等 agent 基"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.87
+publishedAt: 2026-09-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Windows 代理下 hub 启动失败、token 重复计数等 agent 基础设施修复"
+broadcast: "这次更新修了几个 agent 基础设施的老毛病。Windows 上开代理时，本地守护进程会因为回环地址没被豁免而启动失败，现在每次探测前都会显式把回环写进代理绕过列表。另外输出 token 不再把推理部分重复计入，展示和计费口径被分开了。对国内做 agent 的开发者来说，这些坑很常见，值得留意。"
+insight: "这次 v0.0.87 值得升级，重点在 Windows 代理下 hub 启动失败和 token 重复计数两个基础设施修复。如果你在 Windows 上通过代理跑 Cline，升级后回环地址会自动写入 NO_PROXY，不用再手动改 hook 或环境变量；token 计数修正只影响展示口径，计费口径不变，现有 prompt 无需调整。走 newapi.lurus.cn 代理的用户不受影响，摘要里没有涉及代理端点变更。"
+tags: [agent-harness, proxy-bypass, token-usage, provider-config]
+---
+
+- **Windows 代理绕过**：新增 `ensureLoopbackProxyBypass()`，在每次探测、drain、shutdown 前把回环地址写入 `NO_PROXY`。含义：harness 的本地守护进程发现逻辑不能假设环境无代理，需显式声明回环豁免。
+- **Token 计数修正**：`outputTokens` 不再包含 reasoning tokens，避免会话总量与遥测重复统计，成本仍按完整总量计算。含义：harness 的用量归一化层要区分「计费口径」与「展示口径」。
+- **网关模型协议保留**：配置模型不再丢失 per-model `apiProtocol`，避免回退到 provider 默认 API。含义：多端点 provider 的模型覆盖必须保留协议字段，否则路由会静默降级。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.87](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.87)
