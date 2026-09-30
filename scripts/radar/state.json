@@ -1,14 +1,14 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.284",
-    "openai/codex": "rust-v0.158.0",
+    "anthropics/claude-code": "v2.1.285",
+    "openai/codex": "rust-v0.159.2",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "sdk/sdk/v0.0.87",
+    "cline/cline": "v4.1.22",
     "block/goose": "v1.52.0",
     "sst/opencode": "v1.18.33",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.61.0",
-    "openclaw/openclaw": "v2026.8.33",
+    "google-gemini/gemini-cli": "v0.62.0",
+    "openclaw/openclaw": "v2026.9.7",
     "zeroclaw-labs/zeroclaw": "v0.8.5",
     "NousResearch/hermes-agent": "v2026.9.24"
   },
@@ -175,7 +175,8 @@
     "jev-chat/jev-chat-jarvis",
     "jackwener/wx-cli-again",
     "Human-Agent-Society/reef",
-    "ollaya-dev/ollaya"
+    "ollaya-dev/ollaya",
+    "OnlistTeam/ai-manager"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -292,7 +293,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-09-29",
+    "anthropic-engineering": "2026-09-30",
     "claude-code-docs": "2026-09-25",
     "openai-codex-blog": "2026-09-24",
     "openclaw-concepts": "2026-09-28",
@@ -644,7 +645,10 @@
       "https://simonwillison.net/2026/Sep/27/bluesky-bot-check/",
       "https://simonwillison.net/2026/Sep/23/hn-49823961/",
       "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
-      "https://simonwillison.net/2026/Sep/28/joedaroo/"
+      "https://simonwillison.net/2026/Sep/28/joedaroo/",
+      "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/",
+      "https://simonwillison.net/2026/Sep/29/hn-49898129/",
+      "https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -806,7 +810,8 @@
       "https://www.latent.space/p/openrouter",
       "https://www.latent.space/p/ainews-amd-buys-world-labs-for-82b",
       "https://www.latent.space/p/ainews-opus-55-is-good-at-explainer",
-      "https://www.latent.space/p/thariq"
+      "https://www.latent.space/p/thariq",
+      "https://www.latent.space/p/ainews-openai-devday-2026-dots-61"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -881,7 +886,8 @@
       "https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms",
       "https://magazine.sebastianraschka.com/p/ai-detector-from-scratch",
       "https://magazine.sebastianraschka.com/p/claude-watermarking",
-      "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and"
+      "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+      "https://magazine.sebastianraschka.com/p/classifier-history-and-jev"
     ],
     "eugeneyan": [
       "https://eugeneyan.com//writing/working-with-ai/",
@@ -1162,7 +1168,10 @@
       "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
       "https://openai.com/index/lenfest-ai-collaborative-expansion",
       "https://openai.com/index/basis-tax-workbook-with-astra",
-      "https://openai.com/form/codex-originals"
+      "https://openai.com/form/codex-originals",
+      "https://openai.com/index/introducing-gpt-6-1-sol",
+      "https://openai.com/index/devday-2026-recap",
+      "https://openai.com/index/introducing-dots"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1420,21 +1429,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-09-29",
+    "simonwillison": "2026-09-30",
     "lilianweng": "2026-09-24",
-    "latentspace": "2026-09-29",
-    "interconnects": "2026-09-29",
-    "karpathy": "2026-09-27",
-    "raschka": "2026-09-27",
-    "eugeneyan": "2026-09-27",
+    "latentspace": "2026-09-30",
+    "interconnects": "2026-09-30",
+    "karpathy": "2026-09-30",
+    "raschka": "2026-09-30",
+    "eugeneyan": "2026-09-30",
     "chiphuyen": "2026-09-24",
     "oneusefulthing": "2026-09-29",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-09-29",
+    "openai-news": "2026-09-30",
     "deepmind": "2026-09-29",
     "hf-blog": "2026-09-29",
-    "anthropic-news": "2026-09-29",
+    "anthropic-news": "2026-09-30",
     "steipete": "2026-09-29",
     "openclaw-blog": "2026-09-29"
   },

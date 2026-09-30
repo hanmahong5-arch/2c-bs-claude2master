@@ -1,0 +1,23 @@
+---
+slug: 2026-09-29-codex-rust-v0-159-2
+title: "codex rust-v0.159.2 — Windows 上后台进程不再闪黑框，小修复但影响体感"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.159.2
+publishedAt: 2026-09-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Windows 上后台进程不再闪黑框，小修复但影响体感"
+broadcast: "这次更新修的是 Windows 上一个很影响体感的小毛病：以前启动后台进程和沙箱命令时，控制台窗口会不停闪黑框，打断你的视线，现在默认把它隐藏了。它被单独放进补丁版本，说明这类体验问题值得当回归项管理。对做 agent 的国内开发者来说，跨平台启动子进程时，得按平台分别处理窗口可见性，别指望一个默认值通吃。"
+insight: "这次 0.159.2 只修了 Windows 下后台进程和沙箱命令的控制台闪黑框，属于体感类补丁，没有新功能或行为改动。国内用户如果本来就在 Windows 上用 Codex，值得直接升到 0.159.2，升级方式沿用你现有的版本更新流程即可；prompt 和 hook 配置不用动，因为变更不涉及这些。走 newapi.lurus.cn 代理的用户也不受影响，摘要里没有任何与代理或网络相关的改动。"
+tags: [windows, subprocess, sandbox, patch-release]
+---
+
+- 修复 Windows 下 Codex 启动后台进程与沙箱命令时控制台窗口闪烁的问题（#49385）。含义：harness 派生子进程时应默认隐藏控制台，避免每次工具调用都打断用户视线。
+- 该修复以 backport 形式进入 0.159.2 补丁版本。含义：稳定分支的体验类修复值得单独发版，harness 应把进程启动的 UI 副作用当作可回归项管理。
+- 变更仅涉及 Windows 控制台抑制，未提及新功能或行为改动。含义：跨平台 harness 需按平台分别处理子进程可见性，而非依赖统一默认值。
+
+---
+
+> 原文 release：[openai/codex rust-v0.159.2](https://github.com/openai/codex/releases/tag/rust-v0.159.2)

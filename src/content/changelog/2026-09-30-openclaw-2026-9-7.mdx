@@ -1,0 +1,23 @@
+---
+slug: 2026-09-30-openclaw-2026-9-7
+title: "openclaw v2026.9.7 — 更新前自动备份状态与数据库，失败可回滚；Gateway 主线程卸载重活，聊天不再"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.7
+publishedAt: 2026-09-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "更新前自动备份状态与数据库，失败可回滚；Gateway 主线程卸载重活，聊天不再互相卡顿。"
+broadcast: "这次更新做了三件对开发者挺实在的事。一是升级前会自动备份状态和数据库，出问题能回滚，快照清理失败就停下不改结构。二是把写记录、读文件这些重活挪出主线程，多个会话同时跑不再互相卡。三是重启后正在进行的任务和编辑还能保住，配置重载也不打断。对做 agent 的人来说，这三点正好是可回滚、并发隔离和状态持久化的参考。"
+insight: "这次 openclaw 2026.9.7 的更新点很实在：迁移前自动备份状态与 agent 数据库、失败可回滚，Gateway 把 transcript 写入和文件读取等重活移出主线程，重启后进行中的 worker turn 还能存活。对国内用户来说，走 newapi.lurus.cn 代理的接入方式不受影响，因为改动都在 harness 内部。现有用户值得升级，尤其是多会话并发场景；升级前建议确认备份与回滚链路可用，prompt 和 hook 配置本身无需改动。"
+tags: [release-notes, gateway, update-safety, agent-harness]
+---
+
+- 更新安全：迁移前备份所有状态与 agent 数据库，回滚时恢复；快照清理失败则停止 schema 变更。含义：harness 升级路径需内置可回滚检查点，而非只做前向迁移。
+- Gateway 响应性：transcript 写入、历史准备、文件读取等移出主线程，忙碌会话不再阻塞其他会话。含义：agent harness 应把长耗时 I/O 与投影计算隔离到工作线程，保证多会话并发。
+- 重启连续性：进行中的 worker turn 及其编辑在 Gateway 重启后存活，配置重载不打断活跃 turn。含义：harness 需持久化 turn 状态并支持热重载，避免重启即丢工作。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.7](https://github.com/openclaw/openclaw/releases/tag/v2026.9.7)

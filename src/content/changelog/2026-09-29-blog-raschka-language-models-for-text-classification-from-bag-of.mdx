@@ -1,0 +1,23 @@
+---
+slug: 2026-09-29-blog-raschka-language-models-for-text-classification-from-bag-of
+title: "Language Models for Text Classification: From — 从词袋到 Jev：一篇梳理文本分类演进、帮你判断 Jev 热度是否名副其实的技术"
+source: "Sebastian Raschka"
+sourceUrl: https://magazine.sebastianraschka.com/p/classifier-history-and-jev
+publishedAt: 2026-09-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Sebastian Raschka"
+hook: "从词袋到 Jev：一篇梳理文本分类演进、帮你判断 Jev 热度是否名副其实的技术长文"
+broadcast: "今天聊一篇梳理文本分类演进的技术长文。作者提醒我们，词袋这类老办法虽然丢了词序，但便宜好用，仍是每个分类任务的首选起点，轻量判定环节不必上大模型。他还谈到一个叫 Jev 的新方案，比通用大模型更快更便宜、又比专用分类器更通用，但窄问题上未必更优，选型要按速度、成本和通用性权衡。"
+tags: [text-classification, bag-of-words, word-embeddings, jev]
+---
+
+- 作者回顾前 transformer 时代：词袋表示把变长文本转成定长向量，配合朴素贝叶斯、逻辑回归、XGBoost 即可做垃圾邮件过滤等任务，但丢失词序（"狗咬人"与"人咬狗"向量相同）。含义：这类廉价基线仍是每个分类问题的首选起点，agent 工具链里的轻量判定环节不必上大模型。
+- 词袋的替代方案是词嵌入：把单个词表示为稠密学习向量，再交给 CNN、RNN 等能保留词序的架构。含义：理解表示方式的取舍，是判断某类分类任务该用专用模型还是通用模型的前提。
+- 作者对 Jev 的看法从"分类器是我的老本行，我自己也能搭"转为"效果比预想好"：它比 GPT 与开源权重 LLM 更快更便宜，又比任务专用分类器更通用，但窄而明确的问题上未必更优。含义：选型应按速度、成本、通用性三者权衡，而非默认套用最大模型。
+
+---
+
+> 原文：[Language Models for Text Classification: From Bag-of-Words to Jev](https://magazine.sebastianraschka.com/p/classifier-history-and-jev) · 作者 Sebastian Raschka

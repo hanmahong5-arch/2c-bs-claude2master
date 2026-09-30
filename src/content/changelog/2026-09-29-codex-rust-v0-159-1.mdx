@@ -1,0 +1,23 @@
+---
+slug: 2026-09-29-codex-rust-v0-159-1
+title: "codex rust-v0.159.1 — Codex 0.159.1 把 GPT"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.159.1
+publishedAt: 2026-09-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.159.1 把 GPT-6.1 Sol 设为默认模型"
+broadcast: "Codex 刚发布了一个小版本，把默认模型换成了 GPT-6.1 Sol，同时亚马逊云那边的模型目录也同步加上了它。这意味着走云平台部署的团队可以省掉自定义模型映射，但要注意区域可用性。如果你依赖默认模型名，记得确认路由和计费假设还成立。这次只是小范围回迁，没有其他功能变更，适合小步验证。"
+insight: "这次 0.159.1 是 0.159 分支的 backport，升级面窄，现有用户值得升，当作小步验证即可。真正要动的是配置：默认模型已改为 GPT-6.1 Sol，如果你的 harness 依赖默认模型名，升级后要确认路由与计费假设仍成立；走 Bedrock 的部署可省去自定义模型映射，但要核对区域可用性。摘要未提及代理侧变化，国内走 newapi.lurus.cn 的用户按此判断不受影响。"
+tags: [codex, gpt-6-1-sol, bedrock, release]
+---
+
+- 内置模型目录的默认项改为 GPT-6.1 Sol（#49323）：harness 若依赖默认模型名，需确认路由与计费假设仍成立。
+- Amazon Bedrock Mantle 与 Runtime 目录同步加入 GPT-6.1 Sol（#49342）：走 Bedrock 的部署可省去自定义模型映射，但需核对区域可用性。
+- 本次为 0.159 分支的 backport 发布，无其他功能变更：升级面窄，适合作为小步验证。
+
+---
+
+> 原文 release：[openai/codex rust-v0.159.1](https://github.com/openai/codex/releases/tag/rust-v0.159.1)

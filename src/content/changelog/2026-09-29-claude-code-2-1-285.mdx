@@ -1,0 +1,23 @@
+---
+slug: 2026-09-29-claude-code-2-1-285
+title: "claude-code v2.1.285 — 插件配置、权限模式、超时重试"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.285
+publishedAt: 2026-09-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件配置、权限模式、超时重试——这版把 agent harness 的边界条件补了一遍。"
+broadcast: "这次更新把智能体运行框架的几个边界条件补齐了。它新增了开关，可以关掉网页抓取、限制机器能用的接口提供方，还修好了子代理不继承父会话权限模式的问题，避免权限被静默绕过或误拒。另外，非流式回退请求的超时重试有了上限，并和原请求共享重试预算。对国内做智能体的开发者来说，这些改动提醒我们，工具开关、权限继承和重试预算都得在启动期就定好，不能留到运行时临时判断。"
+insight: "这版把工具开关、provider 白名单和子代理权限继承都改成了启动期策略，现有 hook 与权限配置里若还靠运行时临时判断，建议按新语义核对一遍，尤其是 fork 子代理的 plan/dontAsk 继承。走 newapi.lurus.cn 代理的用户不受影响，摘要未涉及代理链路变化；但若用到非流式回退，需留意新增的重试上限，避免流式失败后回退再放大请求量。"
+tags: [claude-code, agent-harness, permissions, retry-budget]
+---
+
+- 新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 与 `allowedProviders` 托管设置，可分别关闭 WebFetch、限制机器可用的 API provider；harness 需把工具开关与 provider 白名单当作启动期策略，而非运行时临时判断。
+- 修复 fork 子代理不继承父会话的 plan/dontAsk 权限模式，以及 `claude -p --permission-prompt-tool` 下后台子代理权限请求被自动拒绝；子代理的权限上下文必须显式继承，否则会静默绕过或误拒。
+- 非流式回退请求超时重试新增 `CLAUDE_CODE_NONSTREAMING_TIMEOUT_RETRIES` 上限，并让回退共享原请求的重试预算；重试预算应统一核算，避免流式失败后回退再放大请求量。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.285](https://github.com/anthropics/claude-code/releases/tag/v2.1.285)

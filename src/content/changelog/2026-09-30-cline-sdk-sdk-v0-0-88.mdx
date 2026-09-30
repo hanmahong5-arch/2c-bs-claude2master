@@ -1,0 +1,23 @@
+---
+slug: 2026-09-30-cline-sdk-sdk-v0-0-88
+title: "cline sdk/sdk/v0.0.88 — Stop 丢失、内容过滤误报、会话恢复失败都在这一版修了"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.88
+publishedAt: 2026-09-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Stop 丢失、内容过滤误报、会话恢复失败都在这一版修了"
+broadcast: "这次更新修了三个挺要命的问题：取消操作不再丢失，内容被过滤时也不再被当成空回复，而是明确告诉你被拦了、建议改写；之前被守卫挡住、恢复不了的会话现在也能正常恢复了。对做智能体的开发者来说，取消意图和运行实例得分开存，过滤原因要透传到事件层，幂等判断也得区分新建和恢复。"
+insight: "这版修的是 Stop 丢失、内容过滤误报和会话恢复失败三个实打实的坑，其中会话恢复是 0.0.87 引入的回归，卡住桌面和 TUI，属于必须升的类型。如果你在用 0.0.87 且依赖恢复已有会话，建议直接升到 0.0.88；hook 和 prompt 配置不用改，因为改动都在运行时和事件层，finish reason 只是多透出一个状态。国内走 newapi.lurus.cn 代理不受影响，摘要里没有涉及代理链路的变更。"
+tags: [agent-runtime, abort-handling, finish-reason, session-resume]
+---
+
+- Stop 不再丢失：`LocalRuntimeHost` 在 run 建立后补发 abort，并在新 turn 开始时清除残留的 between-turns abort 标记，避免上一轮的取消误杀下一轮提示。含义：harness 需把「取消意图」与「运行实例」解耦存储，否则准备阶段的取消必然丢失。
+- 内容过滤不再被当成空响应：新增 `AgentModelFinishReason` 的 `content-filter`，AI SDK 与 ApiHandler 适配器都做映射，run 失败时给出被过滤提示并建议改写，`sdk.error` 事件携带 finish reason。含义：harness 应把 finish reason 作为一等状态透传到事件层，而不是折叠成空文本。
+- 会话恢复恢复可用：0.0.87 引入的重复启动守卫会以「session already exists」拒绝已有 session ID，阻断桌面与 TUI 恢复，现已回退，云端控制器改为把初始 thinking 与 reasoning-effort 偏好存进 session metadata。含义：幂等守卫要区分「重复创建」与「恢复已有会话」。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.88](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.88)

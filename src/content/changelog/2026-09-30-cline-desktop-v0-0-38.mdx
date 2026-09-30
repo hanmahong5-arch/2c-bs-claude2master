@@ -1,0 +1,23 @@
+---
+slug: 2026-09-30-cline-desktop-v0-0-38
+title: "cline desktop-v0.0.38 — 桌面端修了 Stop 失效、云会话丢工作区等 agent 控制面问题"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.38
+publishedAt: 2026-09-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "桌面端修了 Stop 失效、云会话丢工作区等 agent 控制面问题"
+broadcast: "这次桌面端更新主要修的是 agent 控制面上的几个老问题。以前在回合刚启动时按停止会被忽略，agent 还在后台改文件，现在能真正中断了；挂起的云会话恢复后，文件、历史和推理设置也都保留下来。对国内做 agent 的开发者来说，这提醒我们中断信号要覆盖整个生命周期，会话状态得和执行环境解耦，模型拒绝也该当成可路由的事件来处理。"
+insight: "这次 desktop-v0.0.38 修的是 agent 控制面：Stop 在回合初始化阶段不再被忽略，云会话恢复后工作区不丢，Anthropic 直连还加了拒绝回退。判断上，现有桌面端用户值得升，尤其依赖 Stop 中断和云会话续跑的人；prompt 和 hook 配置不用改，这些是 harness 行为修复，不涉及接口变更。国内走 newapi.lurus.cn 代理的用户，摘要只提到直连 Anthropic 的 refusal fallback 与 OpenRouter、Cline 的故障转移，未涉及代理链路，按现有事实看不出受影响。"
+tags: [agent-harness, interrupt-handling, session-persistence, provider-fallback]
+---
+
+- **Stop 现在能真正中断回合**：此前在回合初始化阶段按 Stop 会被忽略，agent 继续后台改文件，回滚还会报“等待所有回合结束”。含义：中断信号必须在 harness 的整个生命周期内可取消，而非只在稳定态生效。
+- **云 agent 会话保留工作区**：挂起的云会话恢复后文件、历史与推理设置不变。含义：会话状态需与执行环境解耦持久化，恢复即续跑。
+- **Anthropic 请求启用拒绝回退**：直连走 Anthropic 的 refusal fallback，OpenRouter 与 Cline 上可故障转移到其他上游。含义：harness 应把模型拒绝当作可路由事件，而非直接失败。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.38](https://github.com/cline/cline/releases/tag/desktop-v0.0.38)

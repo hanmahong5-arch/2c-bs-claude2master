@@ -1,0 +1,23 @@
+---
+slug: 2026-09-30-cline-cli-v3-0-66
+title: "cline cli-v3.0.66 — CLI 换 Bun 1.4.2 构建，修掉 macOS 27 启动被杀与无 AV"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.66
+publishedAt: 2026-09-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "CLI 换 Bun 1.4.2 构建，修掉 macOS 27 启动被杀与无 AVX2 的 x64 运行问题"
+broadcast: "这次命令行工具更新，把二进制改用新的构建方式，解决了苹果新系统一启动就被杀，以及老款处理器跑不起来的问题。它还修好了在开着代理的电脑上连不上本地服务，以及发出指令后立刻按取消键停不下来的毛病。对做智能体的开发者来说，这些提醒我们，别把运行环境当成理所当然，停止信号也得全程都能收到。"
+insight: "这次 CLI v3.0.66 值得现有用户升级：macOS 27 启动被杀、无 AVX2 的 x64 跑不起来，都是硬性阻断，不升就没法用。Windows 上挂 Clash、v2ray 或企业代理的用户尤其要升，否则本地发现流量被代理劫持，会一直报 No compatible hub runtime is available。prompt 和 hook 配置本身不用改，但如果你在 Windows 代理环境下走 newapi.lurus.cn，升级后本地发现能正常绕过代理，代理链路不受影响。Esc 停止也终于能在轮次初始化阶段生效了。"
+tags: [bun-runtime, windows-proxy, stop-signal, bedrock]
+---
+
+- 二进制改用 Bun 1.4.2 构建：macOS 27 不再启动即杀进程，x64 版本可在无 AVX2 的 CPU 上运行。含义是 harness 的运行时基线要跟着工具链走，别把宿主 CPU 特性当默认前提。
+- Hub 在 Windows 系统代理（Clash、v2ray、企业代理）下可启动：此前 loopback 发现请求被走代理，健康 hub 被判不可达并报 "No compatible hub runtime is available"。含义是本地发现流量必须显式绕过代理，否则健康检查会误判。
+- 发送 prompt 后立刻按 Esc 现在能停止该轮：此前在轮次初始化阶段到达的 stop 被忽略，agent 继续后台工作。含义是停止信号要在整个生命周期内可接收，不能只在稳定态生效。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.66](https://github.com/cline/cline/releases/tag/cli-v3.0.66)

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-29-blog-simonwillison-quoting-anthropic-frontier-red-team
+title: "Quoting Anthropic Frontier Red Team — Anthropic 红队测试显示 GLM"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/
+publishedAt: 2026-09-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic 红队测试显示 GLM-5.3 已能完成完整控制流劫持，开源模型攻破安全边界。"
+broadcast: "Anthropic 的红队测试发现，一个开源模型已经能在部分任务里完成完整的控制流劫持，也就是真正攻破安全边界，而更早的版本一次都没成功。这说明自动化漏洞利用能力跨过了关键门槛，而且不再只看模型规模。对国内做 agent 的开发者来说，模型升级可能突然带来新的攻击面，红队测试得进发布流程，并且默认模型具备双重用途。"
+tags: [ai-security, red-teaming, llm-agents, glm]
+---
+
+- Anthropic 前沿红队用内部二进制漏洞利用基准的 100 个随机任务评估多个模型，GLM-5.3 在 4% 的试验中实现了完整的控制流劫持，Claude Mythos Preview 为 6%。这意味着自动化漏洞利用能力已跨过关键门槛，agent 安全评估不能再只看模型规模。
+- 更早的模型如 Claude Opus 4.6 和 GLM-5.2 在这些任务中一次都没成功，说明能力跃升发生在近期版本之间，而非渐进积累。对工具链而言，模型版本升级可能突然带来新的攻击面，需要把红队测试纳入发布流程。
+- 该结果来自 Anthropic 前沿红队关于 GLM-5.3 与高级网络能力扩散的引用，指向一个现实：先进攻防能力正在多个模型家族间扩散，开发者构建 agent 时必须默认模型具备潜在的双重用途。
+
+---
+
+> 原文：[Quoting Anthropic Frontier Red Team](https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/) · 作者 Simon Willison

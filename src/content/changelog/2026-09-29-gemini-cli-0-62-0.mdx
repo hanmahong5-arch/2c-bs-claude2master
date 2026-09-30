@@ -1,0 +1,23 @@
+---
+slug: 2026-09-29-gemini-cli-0-62-0
+title: "gemini-cli v0.62.0 — v0.62.0 集中修 PTY 生命周期与 ACP 权限时序，agent 执行层"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.62.0
+publishedAt: 2026-09-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "v0.62.0 集中修 PTY 生命周期与 ACP 权限时序，agent 执行层更稳"
+broadcast: "谷歌的命令行智能体工具发布了新版本，这次主要修的是终端会话的生命周期问题，比如文件句柄清理和进程退出，还调整了权限请求的时序，让工具调用事件先于授权请求到达客户端。对国内做智能体的开发者来说，这意味着长时间运行的命令行任务会更稳定，权限流程和界面状态也更容易对齐。"
+insight: "这次 v0.62.0 的改动集中在 PTY 生命周期和 ACP 权限时序，属于 agent 执行层的稳定性修复，不涉及模型或接口变化。对现有用户来说，如果你在用 gemini-cli 跑长时 shell 会话，值得升级，能减少句柄泄漏和竞态；prompt 和 hook 配置不用改，因为工具调用标题结构化只是展示层调整。国内走 newapi.lurus.cn 代理的用户不受影响，升级后照常使用即可。"
+tags: [gemini-cli, pty-lifecycle, acp, mcp-tools]
+---
+
+- **PTY 生命周期加固**：多个 PR 改进文件描述符清理、同步 ConPTY 进程退出、强化输出收尾。含义：长时 shell 会话的句柄泄漏与竞态是 harness 稳定性的关键，需显式管理进程退出与输出终结。
+- **ACP 权限时序调整**：在 request_permission 之前先发出 tool_call 更新。含义：工具调用事件应先于授权请求到达客户端，保证 UI 状态与权限流一致。
+- **MCP 工具标题结构化**：工具调用标题改为结构化签名，解释内容分离。含义：harness 应把工具标识与人类可读说明拆开，便于机器解析与展示。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.62.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.62.0)

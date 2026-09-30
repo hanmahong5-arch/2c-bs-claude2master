@@ -1,0 +1,23 @@
+---
+slug: 2026-09-29-codex-rust-v0-159-0
+title: "codex rust-v0.159.0 — Codex 0.159 让新输入可打断模型响应，并收紧沙箱与命令审批边界。"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.159.0
+publishedAt: 2026-09-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.159 让新输入可打断模型响应，并收紧沙箱与命令审批边界。"
+broadcast: "这版更新让新输入能直接打断模型的响应，不用再等它把当前这轮跑完，对做 agent 的人来说，中断得当成一等状态来设计。另外，审批过的命令仍然保留原有的文件系统拒绝，可写目录下的密钥配置默认受保护，说明批准一次执行不等于放宽权限边界。它还去掉了自动提示建议和内置技能，把控制权交回用户显式配置。"
+insight: "Codex 0.159 值得升级，重点在 instant_interrupt 这个 opt-in 开关：它让新输入能抢占模型响应，agent harness 得把中断当成一等状态处理，而不是等 turn 结束。现有 hook 配置要改，因为审批后命令仍保留文件系统拒绝、可写根下 .aws 默认受保护，沙箱策略必须按路径叠加而非覆盖。另外自动后续提示建议和 tui.prompt_suggestions 被移除，隐式注入的提示与技能减少，控制权交回显式配置，国内用户走 newapi.lurus.cn 代理不受影响。"
+tags: [codex, agent-harness, sandbox, interrupt]
+---
+
+- 新增 opt-in `instant_interrupt`：模型响应或长时 code-mode 调用期间，新输入可抢占并转向（#48135、#48141）。对 agent harness 的含义是：中断需成为一等状态，而非等当前 turn 结束。
+- 审批后的命令仍保留显式文件系统拒绝，且可写根下的 `.aws` 目录默认受保护（#48155、#48176）。含义是：批准一次执行不等于放宽既有权限边界，沙箱策略要按路径叠加而非覆盖。
+- 移除自动后续提示建议及 `tui.prompt_suggestions` 设置，并移除内置 `plugin-creator` skill（#48621、#48604）。含义是：harness 应减少隐式注入的提示与技能，把控制权交回用户显式配置。
+
+---
+
+> 原文 release：[openai/codex rust-v0.159.0](https://github.com/openai/codex/releases/tag/rust-v0.159.0)
