@@ -1,6 +1,83 @@
 {
   "items": [
     {
+      "slug": "2026-09-30-blog-latentspace-ainews-openai-devday-2026-dots-6-1-sol",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] OpenAI DevDay 2026: Dots, 6.1 Sol, Ultrafast, — OpenAI DevDay 2026发布Dots代理、GPT",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-cline-4-1-22",
+      "zh": true,
+      "en": false,
+      "title": "cline v4.1.22 — Anthropic 拒答可自动换上游，内容过滤不再报空响应",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-cline-cli-v3-0-66",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.66 — CLI 换 Bun 1.4.2 构建，修掉 macOS 27 启动被杀与无 AV",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-cline-desktop-v0-0-38",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.38 — 桌面端修了 Stop 失效、云会话丢工作区等 agent 控制面问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-cline-sdk-sdk-v0-0-88",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.88 — Stop 丢失、内容过滤误报、会话恢复失败都在这一版修了",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-openclaw-2026-9-7",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.9.7 — 更新前自动备份状态与数据库，失败可回滚；Gateway 主线程卸载重活，聊天不再",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-trending-onlistteam-ai-manager",
+      "zh": true,
+      "en": false,
+      "title": "ai-manager — Rust 写的 AI 编码工具桌面管理器，星标破千",
+      "kind": "trending",
+      "author": null,
+      "source": "OnlistTeam/ai-manager",
+      "tool": null,
+      "publishedAt": "2026-09-30"
+    },
+    {
       "slug": "2026-09-29-blog-latentspace-ainews-amd-buys-world-labs-for-8-2b",
       "zh": true,
       "en": true,
@@ -34,6 +111,94 @@
       "publishedAt": "2026-09-29"
     },
     {
+      "slug": "2026-09-29-blog-openai-news-devday-2026-recap",
+      "zh": true,
+      "en": true,
+      "title": "DevDay 2026 Recap — OpenAI DevDay 2026 发布 20+ 项更新，覆盖模型、API 与",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-blog-openai-news-introducing-dots",
+      "zh": true,
+      "en": true,
+      "title": "Introducing dots — OpenAI 发布 dots，一种能跨复杂项目与日常任务持续推进工作的主动式助手",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-blog-openai-news-introducing-gpt-6-1-sol",
+      "zh": true,
+      "en": true,
+      "title": "Introducing GPT-6.1 Sol — OpenAI 发布 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-blog-raschka-language-models-for-text-classification-from-bag-of",
+      "zh": true,
+      "en": true,
+      "title": "Language Models for Text Classification: From — 从词袋到 Jev：一篇梳理文本分类演进、帮你判断 Jev 热度是否名副其实的技术",
+      "kind": "blogger",
+      "author": "Sebastian Raschka",
+      "source": "Sebastian Raschka",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-blog-simonwillison-gpt-6-1-sol-near-astra-intelligence-for",
+      "zh": true,
+      "en": true,
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the — Simon Willison 点评 GPT 6.1 Sol：以五分之一价格逼近 ",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-blog-simonwillison-openai-devday-2026-live-blog",
+      "zh": true,
+      "en": true,
+      "title": "OpenAI DevDay 2026 live blog — Simon Willison 在 OpenAI DevDay 2026 现场直播",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-blog-simonwillison-quoting-anthropic-frontier-red-team",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Anthropic Frontier Red Team — Anthropic 红队测试显示 GLM",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-claude-code-2-1-285",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.285 — 插件配置、权限模式、超时重试",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-09-29"
+    },
+    {
       "slug": "2026-09-29-cline-sdk-sdk-v0-0-87",
       "zh": true,
       "en": false,
@@ -42,6 +207,50 @@
       "author": null,
       "source": "cline/cline",
       "tool": "cline",
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-codex-rust-v0-159-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.159.0 — Codex 0.159 让新输入可打断模型响应，并收紧沙箱与命令审批边界。",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-codex-rust-v0-159-1",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.159.1 — Codex 0.159.1 把 GPT",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-codex-rust-v0-159-2",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.159.2 — Windows 上后台进程不再闪黑框，小修复但影响体感",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-gemini-cli-0-62-0",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.62.0 — v0.62.0 集中修 PTY 生命周期与 ACP 权限时序，agent 执行层",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
       "publishedAt": "2026-09-29"
     },
     {
@@ -669,215 +878,6 @@
       "author": "Google DeepMind",
       "source": "Google DeepMind",
       "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-hf-blog-how-to-use-nvidia-warp-and-mjwarp-to",
-      "zh": true,
-      "en": true,
-      "title": "How to Use NVIDIA Warp and MjWarp to Accelerate — 英伟达 Warp 与 MjWarp 加速机器人仿真与学习工作流的实操指南",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-openai-news-airbnb-widens-access-to-gpt-6-astra-and",
-      "zh": true,
-      "en": true,
-      "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier — Airbnb 把 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-openai-news-chatgpt-ads-expands-to-southeast-asia-and-taiwan",
-      "zh": true,
-      "en": true,
-      "title": "ChatGPT Ads expands to Southeast Asia and Taiwan — ChatGPT 广告扩至东南亚与台湾，覆盖 60 多国，开发者需关注变现与分发变",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-openai-news-grab-and-openai-bring-practical-ai-skills-to",
-      "zh": true,
-      "en": true,
-      "title": "Grab and OpenAI bring practical AI skills to Southeast — OpenAI 与 Grab 合作，为东南亚 3 万伙伴提供实用 AI 技能培训。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-openai-news-harvey-turns-legal-context-into-stronger-drafts-with",
-      "zh": true,
-      "en": true,
-      "title": "Harvey turns legal context into stronger drafts with — OpenAI 案例：法律 AI Harvey 用 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-openai-news-how-invideo-improves-color-grading-3x-with-gpt",
-      "zh": true,
-      "en": true,
-      "title": "How invideo improves color grading 3x with GPT‑6 Astra — OpenAI 案例：invideo 用 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-openai-news-introducing-mentalhealthbench",
-      "zh": true,
-      "en": true,
-      "title": "Introducing MentalHealthBench — OpenAI 发布心理健康对话评测基准，关注 AI 在敏感场景中的有用性与安全性",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-openai-news-openai-extends-cyber-access-to-ukraine-for-civilian",
-      "zh": true,
-      "en": true,
-      "title": "OpenAI extends cyber access to Ukraine for civilian — OpenAI 把 Daybreak 网络安全项目开放给乌克兰政府，用于民用基础设",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-openai-news-ringg-s-ai-agents-resolve-up-to-65",
-      "zh": true,
-      "en": true,
-      "title": "Ringg’s AI agents resolve up to 65% of customer calls — Ringg 用 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-openai-news-sam-altman-s-remarks-at-the-united-nations",
-      "zh": true,
-      "en": true,
-      "title": "Sam Altman’s remarks at the United Nations Security — 奥特曼在联合国安理会谈 AI 安全、人类控制权与国际协作",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-openai-news-two-years-of-openai-academy",
-      "zh": true,
-      "en": true,
-      "title": "Two years of OpenAI Academy — OpenAI Academy 两周年，回顾其向更多社区普及 AI 技能的进展",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-simonwillison-gemini-3-8-tts-playground",
-      "zh": true,
-      "en": true,
-      "title": "Gemini 3.8 TTS Playground — Gemini 新 TTS 模型上手实测：2000+ 音色、30 秒克隆声音，还能",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-simonwillison-sf-october-14th-a-birds-of-a-feather",
-      "zh": true,
-      "en": true,
-      "title": "SF October 14th: A Birds of a Feather Session on — Simon Willison 与 Jesse Vincent 办一场 codin",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-simonwillison-shadow-roots-explained-with-live-examples",
-      "zh": true,
-      "en": true,
-      "title": "Shadow roots, explained with live examples — 用可交互示例讲清 CSS shadow DOM 的隔离机制，前端开发者理解组件封",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-simonwillison-we-just-shipped-support-for-the-ugliest-part",
-      "zh": true,
-      "en": true,
-      "title": "We just shipped support for the ugliest part of HTTP: — Cloudflare 终于支持 Vary 头，Simon Willison 谈他",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-claude-code-2-1-281",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.281 — 网关、权限与恢复路径的批量修复，agent harness 设计者值得扫一遍",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-codex-rust-v0-156-1",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.156.1 — Codex 模型选择器新增 GPT",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-gemini-cli-0-61-0",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.61.0 — Gemini CLI 修了间接提示注入与沙箱逃逸两个安全问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-goose-1-52-0",
-      "zh": true,
-      "en": false,
-      "title": "goose v1.52.0 — Goose v1.52.0 加入语音对话与多模型支持，并强化 recipe 参数",
-      "kind": "changelog",
-      "author": null,
-      "source": "block/goose",
-      "tool": "goose",
       "publishedAt": "2026-09-23"
     }
   ]
