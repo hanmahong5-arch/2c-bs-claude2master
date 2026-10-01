@@ -1,0 +1,23 @@
+---
+slug: 2026-09-30-blog-openai-news-disrupting-a-coordinated-model-distillation-campaign
+title: "Disrupting a coordinated model-distillation campaign — OpenAI 披露一起协同蒸馏攻击，说明模型推理能力正被系统性窃取"
+source: "OpenAI"
+sourceUrl: https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign
+publishedAt: 2026-09-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "OpenAI"
+hook: "OpenAI 披露一起协同蒸馏攻击，说明模型推理能力正被系统性窃取"
+broadcast: "OpenAI 最近披露，他们阻断了一场协同的模型蒸馏行动，对方想提取的是受保护的模型推理内容，而不只是复制输出结果。这件事值得国内开发者和做 agent 的团队留意：通过接口暴露出来的推理链路，本身就可能成为被攻击的资产，所以选第三方模型时，得把供应商的防蒸馏策略也算进依赖风险里。"
+tags: [model-distillation, openai, ai-security, agent-tooling]
+---
+
+- OpenAI 称其阻断了一场协同的模型蒸馏行动，该行动的目标是提取受保护的模型推理内容，而非仅复制输出结果。对 agent 开发者而言，这意味着通过 API 暴露的推理链路本身就是可被攻击的资产。
+- 文章将此类行为定性为对抗性蒸馏，并强调正在加强相应防御。这提示依赖第三方模型构建工具链的团队，需要把供应商的防蒸馏策略纳入依赖风险评估。
+- 披露本身也说明模型能力保护已从训练阶段延伸到服务阶段。做 agent 产品时，若核心价值建立在调用他人推理能力之上，护城河判断需要重新校准。
+
+---
+
+> 原文：[Disrupting a coordinated model-distillation campaign](https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign) · 作者 OpenAI

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-30-cline-desktop-v0-0-40
+title: "cline desktop-v0.0.40 — 自定义 provider 修复、MCP 输出可翻页、模型目录刷新"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.40
+publishedAt: 2026-09-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "自定义 provider 修复、MCP 输出可翻页、模型目录刷新"
+broadcast: "这次更新修好了自定义模型接入的问题，之前添加的模型只能在列表里看到，一跑任务就报错，现在能正常用了。另外工具输出太长时不再直接截断，而是给一段预览加翻页链接，内容不会丢。对国内做 agent 的开发者来说，这两点提醒我们，配置注册和运行时解析得走同一份，大输出也该当成可寻址的资源来管。"
+insight: "这次 v0.0.40 值得升级，重点在自定义 provider 修复：之前 Add Provider 添加的 provider 只在选择器出现、跑任务报 Unknown or disabled provider，现在能正常执行，靠 Add Provider 接第三方模型的用户建议直接升。MCP 超长输出改为预览加可翻页链接，大输出不再一次性塞进上下文，长输出场景的 prompt 和 hook 配置可以少做截断兜底。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关改动，按现有配置继续用即可。"
+tags: [mcp, custom-providers, context-window, model-catalog]
+---
+
+- **自定义 provider 可用**：通过 Add Provider 添加的 provider 之前只在选择器里出现，跑任务时报 `Unknown or disabled provider`，现在能正常执行。harness 需保证注册表与运行时解析走同一份配置，而非两套。
+- **MCP 超长输出可分页**：工具输出超出上下文时，agent 拿到预览加可翻页链接，截断后的内容不再丢失。设计上应把大输出当作可寻址资源，而不是一次性塞进上下文。
+- **MCP 设置路径统一**：设置 `CLINE_MCP_SETTINGS_PATH`、`CLINE_DATA_DIR` 或 `CLINE_DIR` 时，读取、保存、OAuth 登录与打开设置都指向同一文件。多入口读写必须收敛到单一路径解析逻辑。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.40](https://github.com/cline/cline/releases/tag/desktop-v0.0.40)

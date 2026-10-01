@@ -1,0 +1,23 @@
+---
+slug: 2026-09-30-opencode-1-18-34
+title: "opencode v1.18.34 — 模型请求新增会话身份头，macOS 签名修复"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.34
+publishedAt: 2026-09-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "模型请求新增会话身份头，macOS 签名修复"
+broadcast: "这次更新有两个点值得留意。一是模型请求现在会带上会话身份头，能帮框架把子 agent 的调用归到正确的会话里，方便审计和限流。二是 macOS 上的签名问题修好了，本地编译的二进制重新签名后能在新系统上稳定运行，命令行发布版也改用正式签名，安装脚本可以直接做校验，不用再绕过系统拦截。"
+insight: "这次 v1.18.34 的改动对国内用户的实际影响有限：模型请求新增的 session 与 parent-session 身份头属于 harness 侧的会话归属能力，如果你在用 newapi.lurus.cn 代理，请求头会照常透传，代理链路不受影响，无需为此调整配置。macOS 签名修复只针对本地编译二进制和 CLI 发布包，纯 API 调用方感受不到。判断是：现有用户不必急着升级，除非你在 macOS 27+ 上跑本地构建的 agent，或依赖子 agent 会话审计与限流，那再升。"
+tags: [session-headers, macos-signing, cli-release, agent-harness]
+---
+
+- 模型请求现在携带命名空间的 session 与 parent-session 身份头，harness 可据此把子 agent 调用归属到正确会话，便于审计与限流。
+- 本地编译的 macOS 二进制会重新签名，确保在 macOS 27+ 上可靠运行，本地构建的 agent 运行时不再因签名失效被系统拦截。
+- macOS CLI 发布二进制改用 Developer ID 签名，分发链路更稳定，harness 安装脚本可依赖签名校验而非绕过 Gatekeeper。
+
+---
+
+> 原文 release：[sst/opencode v1.18.34](https://github.com/anomalyco/opencode/releases/tag/v1.18.34)

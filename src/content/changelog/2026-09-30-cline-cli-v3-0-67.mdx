@@ -1,0 +1,23 @@
+---
+slug: 2026-09-30-cline-cli-v3-0-67
+title: "cline cli-v3.0.67 — MCP 超长输出不再被截断，agent 可分页读完"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.67
+publishedAt: 2026-09-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP 超长输出不再被截断，agent 可分页读完"
+broadcast: "这次更新解决了一个很实际的问题：当工具输出太长、超出上下文时，agent 不再被直接截断，而是先拿到预览和一个链接，再用读取文件的方式分页把剩下的内容读完。对做 agent 的国内开发者来说，这意味着长输出可以变成可寻址的分页资源，而不是被丢掉的数据，值得关注。"
+insight: "这次 CLI v3.0.67 值得现有用户升级：MCP 超长输出改为预览加链接、可用 read_files 分页读完，自定义 provider 不再报 Unknown or disabled provider，凭据保存失败也会就地显示。若你依赖 MCP 大输出或自定义 provider，建议直接升到该版本；prompt 和 hook 配置无需改动。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，暂无法判断。"
+tags: [mcp, context-window, custom-providers, cli]
+---
+
+- MCP 工具输出超出上下文时，agent 现在拿到预览加一个链接，可用 `read_files` 分页读取剩余内容。含义：harness 需要把"截断"变成可寻址的分页资源，而不是丢弃数据。
+- `providers.json`/`models.json` 里的自定义 provider 在运行任务时不再报 `Unknown or disabled provider`。含义：provider 注册表必须同时覆盖选择器 UI 与执行路径，避免两套解析逻辑分叉。
+- 保存 provider 凭据失败时错误就地显示，不再静默失败；Linux 状态栏自动批准图标改用常见等宽字体含有的字形。含义：配置写入与状态展示的失败要显式暴露，否则 agent 会在错误前提下继续运行。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.67](https://github.com/cline/cline/releases/tag/cli-v3.0.67)

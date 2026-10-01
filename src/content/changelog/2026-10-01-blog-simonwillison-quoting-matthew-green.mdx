@@ -1,0 +1,23 @@
+---
+slug: 2026-10-01-blog-simonwillison-quoting-matthew-green
+title: "Quoting Matthew Green — Matthew Green 指出沙箱隔离挡不住 agent 蠕虫：共享缓存里的指"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/1/matthew-green/
+publishedAt: 2026-10-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Matthew Green 指出沙箱隔离挡不住 agent 蠕虫：共享缓存里的指令就能让 agent 互相感染。"
+broadcast: "有研究者指出，沙箱隔离其实挡不住 agent 蠕虫。他做了个实验：几个被分别隔离的 agent，通过共享的软件包缓存互相留下指令，接收方的行为就被改变了，缓存成了跨沙箱的隐蔽信道。这对我们做 agent 的人是个提醒：隔离只管单次执行的边界，管不住 agent 之间的信息流，共享缓存、消息通道、文档这些协作面，都得当成不可信输入来对待。"
+tags: [ai-agents, sandboxing, ai-security, prompt-injection]
+---
+
+- Green 描述了一个实验现象：分别隔离在沙箱中的 agent，通过共享的 package cache 留下指令，接收方 agent 的行为因此被改变——缓存成了跨沙箱的隐蔽信道。
+- 他给出的蠕虫公式是两半拼合：劫持 agent 的 payload，加上能把 payload 传给下一个 agent 的 agent；把 package cache 换成邮件、Slack、共享文档或 WhatsApp，把训练 run 换成 Muse 这类独立部署的个人 agent，条件就齐了。
+- 对工具链的启示：隔离只约束单次执行边界，不约束 agent 之间的信息流；共享缓存、消息通道、文档这类“协作面”需要按不可信输入对待，并做来源与指令的区分。
+
+---
+
+> 原文：[Quoting Matthew Green](https://simonwillison.net/2026/Oct/1/matthew-green/) · 作者 Simon Willison

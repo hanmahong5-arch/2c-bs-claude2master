@@ -1,0 +1,23 @@
+---
+slug: 2026-09-30-cline-desktop-v0-0-39
+title: "cline desktop-v0.0.39 — Linux NVIDIA 用户窗口空白问题修复，桌面端可用性提升"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.39
+publishedAt: 2026-09-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Linux NVIDIA 用户窗口空白问题修复，桌面端可用性提升"
+broadcast: "这次桌面端更新主要解决 Linux 上的兼容问题。用英伟达显卡的用户，窗口不再空白了，程序会自动检测并降级渲染方式。安装包也补全了信息，软件商店里能看到图标和说明。对做智能体工具的开发者来说，环境检测和自动降级，才是跨平台稳定运行的关键。"
+insight: "这次 v0.0.39 只动了 Linux 桌面端的窗口空白和包元数据，属于平台适配修复，不涉及模型、prompt 或 hook 机制，所以现有 prompt 和 hook 配置不用改。判断很直接：用 Linux 且受 NVIDIA 驱动空白问题影响的用户值得升，升级后会自动关闭 WebKitGTK 的 DMA-BUF 渲染器，混合 GPU 想保留渲染器可设 WEBKIT_DISABLE_DMABUF_RENDERER=0；其他平台用户没有必须升的理由。国内走 newapi.lurus.cn 代理的调用链路不在这批改动范围内，不受影响。"
+tags: [linux, nvidia, desktop, packaging]
+---
+
+- Linux 专有 NVIDIA 驱动下，应用窗口不再空白：检测到 NVIDIA 驱动时自动关闭 WebKitGTK 的 DMA-BUF 渲染器，混合 GPU 系统可通过 `WEBKIT_DISABLE_DMABUF_RENDERER=0` 保留渲染器。对 agent harness 的含义：环境检测与自动降级是保证跨平台稳定运行的关键。
+- Linux `.deb` 和 `.rpm` 包现在包含应用信息，GNOME Software 和 KDE Discover 能显示 Cline 的图标、描述并列入已安装。对 agent harness 的含义：包元数据完整有助于用户发现和管理，降低部署摩擦。
+- 本次更新聚焦 Linux 桌面端兼容性与包管理体验。对 agent harness 的含义：底层平台适配直接影响 agent 工具的可访问性和用户信任。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.39](https://github.com/cline/cline/releases/tag/desktop-v0.0.39)

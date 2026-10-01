@@ -1,0 +1,23 @@
+---
+slug: 2026-09-30-cline-sdk-sdk-v0-0-89
+title: "cline sdk/sdk/v0.0.89 — 超大工具结果不再丢失，可缓存分页读取"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.89
+publishedAt: 2026-09-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "超大工具结果不再丢失，可缓存分页读取"
+broadcast: "这次更新解决了一个很实际的问题：工具返回的结果太大时，不再被直接截断丢失。系统会把超限内容按会话缓存起来，只给模型发一个有界预览，需要时再按行分页读取。对做 agent 的开发者来说，这意味着工具输出该设计成溢出到可寻址存储，而不是简单砍掉，缓存策略也能按工具单独配置。"
+insight: "这次 v0.0.89 的核心变化是超大工具结果不再被截断，而是缓存为 cline://cache/... URI 供 read_files 分页读取，自定义工具还能用 resultPolicy: \"cache-oversized\" 主动启用。对现有用户来说，如果你常跑 MCP 或 Composio 这类容易吐大结果的工具，值得升级，但不必急着改 prompt；真正要动的是自定义工具配置，按需加上该策略。走 newapi.lurus.cn 代理的用户不受影响，缓存和分页都在会话内完成，不涉及额外网络路径。注意每会话 16 MiB 上限和五次迭代未读即过期。"
+tags: [mcp, tool-output, caching, agent-harness]
+---
+
+- 超大 MCP/Composio 工具结果现可完整恢复：核心按会话内存缓存超限输出，向模型发送有界预览加 `cline://cache/...` URI，`read_files` 可按行范围分页读取。含义：harness 需为工具输出设计溢出到可寻址存储的路径，而非截断。
+- 自定义工具可通过 `createTool` 上的 `resultPolicy: "cache-oversized"` 选择启用。含义：缓存策略应作为工具级可配置项，让 harness 统一处理大小边界。
+- 条目在五次模型迭代未读取后过期，每会话上限 16 MiB，原始输出仍保留在历史与工具事件中。含义：harness 的缓存需有 TTL 与容量上限，同时保持审计可追溯。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.89](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.89)

@@ -1,0 +1,23 @@
+---
+slug: 2026-09-30-codex-rust-v0-159-3
+title: "codex rust-v0.159.3 — Codex 0.159.3 为 ChatGPT 登录的本地会话加入可选账号安全提"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.159.3
+publishedAt: 2026-09-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.159.3 为 ChatGPT 登录的本地会话加入可选账号安全提醒"
+broadcast: "OpenAI 的 Codex 刚更新了一个小版本，给用 ChatGPT 登录的本地会话加了一个可选的账号安全提醒。它只在符合条件的会话里出现，而且可以跳过，不会打断 agent 正在跑的主任务。对国内做 agent 的开发者来说，这提醒我们：提示逻辑要能区分会话的认证来源，也要做成可跳过的旁路，还得能随补丁版本回移到既有发布线。"
+insight: "这次 0.159.3 只是给 ChatGPT 登录的本地会话加了个可选的账号安全提醒，属于 backport，不涉及强制流程。对国内用户来说，走 newapi.lurus.cn 代理的会话认证来源可能不同，是否触发提示要看 harness 怎么区分认证来源，代理链路本身不受影响。现有用户没必要为这个提示专门升级，现有 prompt 和 hook 配置也不用改，等下次常规升级顺带带上即可。"
+tags: [codex, account-security, chatgpt-auth, release-notes]
+---
+
+- 新增功能：使用 ChatGPT 登录的合格本地会话，现在可显示可选的账号安全设置完成提醒（#49744）。含义：harness 需区分会话的认证来源，才能只在符合条件的会话上触发提示。
+- 该提醒为可选，并非强制流程。含义：设计上应把安全提示做成可跳过的旁路，避免打断 agent 主任务循环。
+- 本次为 0.159.3 的 backport（#49744）。含义：提示逻辑需能随补丁版本回移到既有发布线，harness 的提示开关应保持版本无关。
+
+---
+
+> 原文 release：[openai/codex rust-v0.159.3](https://github.com/openai/codex/releases/tag/rust-v0.159.3)

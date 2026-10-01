@@ -1,0 +1,23 @@
+---
+slug: 2026-09-29-blog-simonwillison-photo-scrubber-local-face-blur-metadata-removal
+title: "Photo Scrubber — local face blur & metadata removal — 用浏览器本地模糊人脸并清除照片元数据，不依赖云端处理"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/29/photo-scrubber/
+publishedAt: 2026-09-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用浏览器本地模糊人脸并清除照片元数据，不依赖云端处理"
+broadcast: "有人做了个浏览器里就能用的小工具，能自动把照片里的人脸模糊掉，还能顺手清掉照片的元数据，全程在本地完成，不用把图片传到云端。它靠的是编译成网页可执行格式的人脸检测模型，说明浏览器端跑本地模型已经可行。对国内开发者来说，这意味着隐私处理可以做成小而专的工具，也能被智能体直接调用，减少敏感数据外流。"
+tags: [privacy, webassembly, face-detection, local-first]
+---
+
+- 作者拍下抗议者照片后，不愿分享陌生人可识别的面孔，于是让 GPT-6 Astra 构建了这个实验性工具，自动检测并模糊人脸。对开发者的含义：隐私需求常来自具体场景，小而专的工具比通用方案更实用。
+- 实现依赖 Google 的 MediaPipe C++ 库，通过 @mediapipe/tasks-vision 编译为 WebAssembly，并使用 BlazeFace 人脸检测模型。对工具链的含义：WASM 让浏览器端跑本地模型成为可行路径，无需上传图片到服务器。
+- 工具同时处理元数据移除，人脸模糊与元数据清理在本地一次完成。对 agent 的含义：这类端侧处理能力可被 agent 直接调用，减少敏感数据外流。
+
+---
+
+> 原文：[Photo Scrubber — local face blur & metadata removal](https://simonwillison.net/2026/Sep/29/photo-scrubber/) · 作者 Simon Willison

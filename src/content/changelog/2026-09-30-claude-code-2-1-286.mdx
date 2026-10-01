@@ -1,0 +1,23 @@
+---
+slug: 2026-09-30-claude-code-2-1-286
+title: "claude-code v2.1.286 — 权限提示加计数、会话恢复修丢轮、密钥脱敏补漏，三条都关乎 agent 可靠性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.286
+publishedAt: 2026-09-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "权限提示加计数、会话恢复修丢轮、密钥脱敏补漏，三条都关乎 agent 可靠性"
+broadcast: "这次更新有三处改动，都跟智能体的可靠性有关。一是权限提示加上了排队计数，多个请求堆在一起时能看出自己排在第几个。二是修好了会话恢复的丢轮问题，之前并行调用工具崩溃后，整轮记录会全部丢失。三是补上了密钥脱敏的漏洞，凭证和网址里的密码不再漏出。对做智能体的开发者来说，会话恢复和脱敏这两点尤其值得留意。"
+insight: "这次 v2.1.286 三条修复都指向 agent 可靠性，值得升级。权限提示的 \"2 of 5\" 计数和 --resume 丢轮修复直接影响长会话体验，密钥脱敏补漏则关系到凭证安全，建议现有用户尽快升到该版本。升级后 prompt 和 hook 配置无需改动，这些是运行时行为修复，不涉及接口变更。国内用户走 newapi.lurus.cn 代理不受影响，代理层只转发请求，与本地会话持久化和脱敏逻辑无关。"
+tags: [permission-prompt, session-resume, secret-redaction, mcp]
+---
+
+- 权限提示新增 "2 of 5" 计数：多个权限请求堆叠时能看出队列位置，harness 需为并发审批提供可见的排队状态。
+- 修复 `--resume`/`--continue` 在并行工具调用后崩溃时丢失全部轮次：会话持久化必须按轮次原子落盘，否则恢复语义不可信。
+- 修复 MCP 错误信息、日志与 transcript 中 Bearer/Basic 凭证及 URL 密码脱敏不全：脱敏要在写入前对结构化字段统一处理，而非事后正则。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.286](https://github.com/anthropics/claude-code/releases/tag/v2.1.286)

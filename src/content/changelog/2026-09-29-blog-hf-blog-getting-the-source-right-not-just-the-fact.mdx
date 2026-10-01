@@ -1,0 +1,23 @@
+---
+slug: 2026-09-29-blog-hf-blog-getting-the-source-right-not-just-the-fact
+title: "Getting the Source Right, Not Just the Fact: — MCP agent 验证不能只看事实对不对，还得看来源对不对"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source
+publishedAt: 2026-09-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "MCP agent 验证不能只看事实对不对，还得看来源对不对"
+broadcast: "今天聊一个关于智能体验证的话题：有文章指出，现在很多智能体在核对信息时，只关心事实对不对，却忽略了来源可不可靠，结果可能把不可信来源的内容当成依据。作者提出，验证时应该同时追踪并校验信息的出处，来源可信度要作为独立信号参与决策。对国内开发者来说，设计工具返回结构时最好显式带上来源字段，方便下游验证。"
+tags: [mcp, agent-verification, source-attribution, tool-use]
+---
+
+- 文章指出 MCP agent 的验证环节常只核对事实本身，而忽略了信息来源是否可靠，这会让 agent 在调用外部工具时把不可信来源的内容当成依据。对工具链的含义是：验证层需要把来源元数据纳入判断，而不只是做事实比对。
+- 作者提出 source-aware verification 的思路，即让 agent 在确认一条信息时同时追踪并校验它的出处，而非仅判断结论真假。对开发者的含义是：设计 MCP 工具返回结构时，应显式携带来源字段，方便下游验证。
+- 文章强调来源正确与事实正确是两件事，只做后者会留下被污染来源误导的风险。对 agent 的含义是：检索与工具调用链路里，来源可信度应作为独立信号参与决策。
+
+---
+
+> 原文：[Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents](https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source) · 作者 Hugging Face
