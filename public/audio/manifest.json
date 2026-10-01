@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "slug": "2026-10-01-blog-simonwillison-quoting-matthew-green",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Matthew Green — Matthew Green 指出沙箱隔离挡不住 agent 蠕虫：共享缓存里的指",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-01"
+    },
+    {
+      "slug": "2026-09-30-blog-deepmind-gemini-4-argon-our-next-era-of-frontier",
+      "zh": true,
+      "en": true,
+      "title": "Gemini 4 Argon: our next era of frontier intelligence — 无法摘要：该链接正文为空，无内容可读",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-blog-deepmind-introducing-synthid-bio",
+      "zh": true,
+      "en": true,
+      "title": "Introducing SynthID Bio — DeepMind 尝试给 AI 生成的蛋白质加水印，同时不破坏其生物功能。",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-blog-hf-blog-open-tts-leaderboard-scalable-evaluation-for-multilingual-text",
+      "zh": true,
+      "en": true,
+      "title": "Open TTS Leaderboard: Scalable Evaluation for — Hugging Face 推出开放 TTS 排行榜，为多语言语音合成与声音克隆提",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-30"
+    },
+    {
       "slug": "2026-09-30-blog-latentspace-ainews-openai-devday-2026-dots-6-1-sol",
       "zh": true,
       "en": true,
@@ -9,6 +53,61 @@
       "author": "Latent Space",
       "source": "Latent Space",
       "tool": null,
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-blog-latentspace-why-dwarkesh-is-wrong-about-computer-use-how",
+      "zh": true,
+      "en": true,
+      "title": "Why Dwarkesh is Wrong about Computer Use + How OpenAI — OpenAI 一周内复刻 Jev，Computer Use 已与数月前完全不同",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-blog-openai-news-disrupting-a-coordinated-model-distillation-campaign",
+      "zh": true,
+      "en": true,
+      "title": "Disrupting a coordinated model-distillation campaign — OpenAI 披露一起协同蒸馏攻击，说明模型推理能力正被系统性窃取",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-blog-openai-news-helping-small-businesses-put-ai-to-work",
+      "zh": true,
+      "en": true,
+      "title": "Helping small businesses put AI to work — OpenAI 联合 SBDC 为小企业提供 AI 培训，并发布小团队使用 AI ",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-blog-simonwillison-he-built-this-city",
+      "zh": true,
+      "en": true,
+      "title": "He Built This City — Simon Willison 参观纽约城市博物馆的乔·麦肯模型展，一座用轻木和纸",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-claude-code-2-1-286",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.286 — 权限提示加计数、会话恢复修丢轮、密钥脱敏补漏，三条都关乎 agent 可靠性",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
       "publishedAt": "2026-09-30"
     },
     {
@@ -34,10 +133,43 @@
       "publishedAt": "2026-09-30"
     },
     {
+      "slug": "2026-09-30-cline-cli-v3-0-67",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.67 — MCP 超长输出不再被截断，agent 可分页读完",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-30"
+    },
+    {
       "slug": "2026-09-30-cline-desktop-v0-0-38",
       "zh": true,
       "en": false,
       "title": "cline desktop-v0.0.38 — 桌面端修了 Stop 失效、云会话丢工作区等 agent 控制面问题",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-cline-desktop-v0-0-39",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.39 — Linux NVIDIA 用户窗口空白问题修复，桌面端可用性提升",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-cline-desktop-v0-0-40",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.40 — 自定义 provider 修复、MCP 输出可翻页、模型目录刷新",
       "kind": "changelog",
       "author": null,
       "source": "cline/cline",
@@ -56,6 +188,28 @@
       "publishedAt": "2026-09-30"
     },
     {
+      "slug": "2026-09-30-cline-sdk-sdk-v0-0-89",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.89 — 超大工具结果不再丢失，可缓存分页读取",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-codex-rust-v0-159-3",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.159.3 — Codex 0.159.3 为 ChatGPT 登录的本地会话加入可选账号安全提",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-09-30"
+    },
+    {
       "slug": "2026-09-30-openclaw-2026-9-7",
       "zh": true,
       "en": false,
@@ -64,6 +218,17 @@
       "author": null,
       "source": "openclaw/openclaw",
       "tool": "openclaw",
+      "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-30-opencode-1-18-34",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.34 — 模型请求新增会话身份头，macOS 签名修复",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
       "publishedAt": "2026-09-30"
     },
     {
@@ -76,6 +241,28 @@
       "source": "OnlistTeam/ai-manager",
       "tool": null,
       "publishedAt": "2026-09-30"
+    },
+    {
+      "slug": "2026-09-29-blog-hf-blog-getting-the-source-right-not-just-the-fact",
+      "zh": true,
+      "en": true,
+      "title": "Getting the Source Right, Not Just the Fact: — MCP agent 验证不能只看事实对不对，还得看来源对不对",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-blog-hf-blog-nvidia-kumo-tabular-sets-a-new-accuracy-efficiency",
+      "zh": true,
+      "en": true,
+      "title": "NVIDIA Kumo Tabular Sets a New Accuracy-Efficiency — 英伟达 Kumo Tabular 在表格预测上刷新精度与效率边界，值得关注其工程",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-09-29"
     },
     {
       "slug": "2026-09-29-blog-latentspace-ainews-amd-buys-world-labs-for-8-2b",
@@ -144,6 +331,17 @@
       "publishedAt": "2026-09-29"
     },
     {
+      "slug": "2026-09-29-blog-openclaw-blog-openclaw-enterprise-the-open-agent-platform",
+      "zh": true,
+      "en": true,
+      "title": "OpenClaw Enterprise - The Open Agent Platform — OpenClaw 发布企业版，用开源中立平台管理敏感环境中的常驻 agent",
+      "kind": "blogger",
+      "author": "OpenClaw",
+      "source": "OpenClaw",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
       "slug": "2026-09-29-blog-raschka-language-models-for-text-classification-from-bag-of",
       "zh": true,
       "en": true,
@@ -170,6 +368,17 @@
       "zh": true,
       "en": true,
       "title": "OpenAI DevDay 2026 live blog — Simon Willison 在 OpenAI DevDay 2026 现场直播",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-09-29"
+    },
+    {
+      "slug": "2026-09-29-blog-simonwillison-photo-scrubber-local-face-blur-metadata-removal",
+      "zh": true,
+      "en": true,
+      "title": "Photo Scrubber — local face blur & metadata removal — 用浏览器本地模糊人脸并清除照片元数据，不依赖云端处理",
       "kind": "blogger",
       "author": "Simon Willison",
       "source": "Simon Willison",
@@ -670,215 +879,6 @@
       "source": "jaredpalmer/kev",
       "tool": null,
       "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-25-trending-yetone-magpie",
-      "zh": true,
-      "en": false,
-      "title": "magpie — 菜单栏统一调度各家模型，让 Codex 跑 DeepSeek、Claude Co",
-      "kind": "trending",
-      "author": null,
-      "source": "yetone/magpie",
-      "tool": null,
-      "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-24-blog-anthropic-news-claude-discovers-a-novel-enzyme-system",
-      "zh": true,
-      "en": true,
-      "title": "Claude discovers a novel enzyme system — Anthropic 让 Claude 自主挖掘 DNA 数据库，发现了一种类似 ",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-blog-deepmind-introducing-gemini-3-8-live-with-live-avatar",
-      "zh": true,
-      "en": true,
-      "title": "Introducing Gemini 3.8 Live with Live Avatar — 无法摘要：该文章正文为空，仅有标题与链接，无可核实内容。",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-blog-hf-blog-accelerating-vision-language-models-with-lfm2-5-vl",
-      "zh": true,
-      "en": true,
-      "title": "Accelerating vision-language models with — Hugging Face 发布 LFM2.5",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-blog-latentspace-ainews-meta-connect-2026-muse-glasses-voice-video",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Meta Connect 2026: Muse glasses, voice, video, — Meta Connect 2026 把 Muse 个人 agent 塞进眼镜、邮",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-blog-latentspace-foundries-vs-navigators-lowering-the-cost-of-science",
-      "zh": true,
-      "en": true,
-      "title": "Foundries vs Navigators: Lowering the Cost of Science — AI 让思考变便宜但实验没变快，生物科技正分化为「铸造厂」与「导航者」两条路。",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-blog-simonwillison-commit-rewriter-0-2",
-      "zh": true,
-      "en": true,
-      "title": "commit-rewriter 0.2 — Simon Willison 发布 commit",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-blog-simonwillison-datasette-1-0a41",
-      "zh": true,
-      "en": true,
-      "title": "datasette 1.0a41 — Datasette 1.0a41 加入 OpenTelemetry 支持，并把模",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-blog-simonwillison-note-on-24th-september-2026",
-      "zh": true,
-      "en": true,
-      "title": "Note on 24th September 2026 — Simon Willison 认为编码 agent 让软件工程更难，而非更简单。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-claude-code-2-1-282",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.282 — 会话恢复丢思考、权限规则被静默忽略，这版在补 harness 的坑",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-cline-4-1-21",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.21 — 默认模型静默变更，本地模型长回复不再中断任务",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-cline-cli-v3-0-65",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.65 — 本地模型长会话截断不再直接失败，CLI 会先压缩重试一次",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-cline-desktop-v0-0-35",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.35 — Cline 桌面版上 Linux，插件斜杠命令真正执行，诊断导出可安全贴 iss",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-cline-sdk-sdk-v0-0-86",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.86 — 本地模型长会话被截断后，现在会自动压缩重试一次",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-hermes-agent-2026-9-24",
-      "zh": true,
-      "en": false,
-      "title": "hermes-agent v2026.9.24 — 补丁版打包 460 个 PR，稳定标签供下游镜像与云部署使用",
-      "kind": "changelog",
-      "author": null,
-      "source": "NousResearch/hermes-agent",
-      "tool": "hermes",
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-trending-kryvora-network-kryvora-node",
-      "zh": true,
-      "en": false,
-      "title": "kryvora-node — Kryvora 网络节点参考客户端与验证 worker，Go 实现",
-      "kind": "trending",
-      "author": null,
-      "source": "kryvora-network/kryvora-node",
-      "tool": null,
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-24-trending-nandhakishorm-laya",
-      "zh": true,
-      "en": false,
-      "title": "laya — 非自回归决策引擎，单次前向完成多语言选择与评分",
-      "kind": "trending",
-      "author": null,
-      "source": "NandhaKishorM/laya",
-      "tool": null,
-      "publishedAt": "2026-09-24"
-    },
-    {
-      "slug": "2026-09-23-blog-deepmind-advancing-private-ai-compute-with-secure-server-side",
-      "zh": true,
-      "en": true,
-      "title": "Advancing Private AI Compute with secure, server-side — DeepMind 为个人 AI 引入服务端私有内存，让敏感上下文在服务器上也能保",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-09-23"
-    },
-    {
-      "slug": "2026-09-23-blog-deepmind-gemini-3-8-text-to-speech-says-hello",
-      "zh": true,
-      "en": true,
-      "title": "Gemini 3.8 text-to-speech says hello — 抱歉，我无法完成摘要",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-09-23"
     }
   ]
 }
