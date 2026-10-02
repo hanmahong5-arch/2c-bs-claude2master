@@ -1,6 +1,105 @@
 {
   "items": [
     {
+      "slug": "2026-10-02-blog-latentspace-academia-is-for-ambition-alex-zhang-mit",
+      "zh": true,
+      "en": true,
+      "title": "Academia is for Ambition — Alex Zhang, MIT — MIT 博士生 Alex Zhang 谈递归语言模型与 agent 编排，为何现",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-blog-latentspace-ainews-pi-1-0-pi-durable-and-aie",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Pi 1.0, Pi Durable, and AIE NYC — Pi 1.0 与 Pi Durable 发布，把 agent 状态做成可崩溃恢复",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-cline-cli-v3-0-68",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.68 — 团队状态不再每块重存，长会话提速并自动压缩旧库",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-cline-desktop-v0-0-41",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.41 — 草稿不再丢、连接器可搜索、团队会话提速",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-cline-sdk-sdk-v0-0-90",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.90 — 团队状态写入从 1.66GB 降到增量批写，长会话不再越跑越慢",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-openclaw-2026-8-34",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.8.34 — LTS 级网关补丁：113 项修复，重点在升级与恢复不丢状态",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-trending-robbietilton-compositor",
+      "zh": true,
+      "en": false,
+      "title": "Compositor — Mac 上的 Photoshop 替代品，Swift 原生，一周冲上 6.8k ",
+      "kind": "trending",
+      "author": null,
+      "source": "robbietilton/Compositor",
+      "tool": null,
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-01-blog-anthropic-news-barclays-scales-claude-to-upgrade-operations-and-improve",
+      "zh": true,
+      "en": true,
+      "title": "Barclays scales Claude to upgrade operations and — 巴克莱银行把 Claude 铺进全行，2027 年多数工程师将用上 Claude",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-10-01"
+    },
+    {
+      "slug": "2026-10-01-blog-openai-news-how-albertsons-companies-is-reimagining-retail-from-the",
+      "zh": true,
+      "en": true,
+      "title": "How Albertsons Companies is reimagining retail from the — 艾伯森用 ChatGPT Enterprise 与 OpenAI API 提速团",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-01"
+    },
+    {
       "slug": "2026-10-01-blog-simonwillison-quoting-matthew-green",
       "zh": true,
       "en": true,
@@ -736,149 +835,6 @@
       "source": "cline/cline",
       "tool": "cline",
       "publishedAt": "2026-09-26"
-    },
-    {
-      "slug": "2026-09-26-codex-rust-v0-157-1",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.157.1 — Codex 0.157.1 补丁发布，但官方未给出任何变更说明",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-09-26"
-    },
-    {
-      "slug": "2026-09-25-blog-latentspace-ainews-the-future-of-latent-space",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] The Future of Latent Space — Latent Space 宣布 AINews 改版、迁移平台并重启赞助，同时汇总",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-25-blog-latentspace-openrouter-from-seed-to-stripe-with-openrouter-s",
-      "zh": true,
-      "en": true,
-      "title": "OpenRouter: from Seed to Stripe — with OpenRouter’s — OpenRouter 从被嘲\"只是套壳\"到日处理 10 万亿 token，被 S",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-25-blog-latentspace-runway-s-worldprompt-and-the-engineering-of-real",
-      "zh": true,
-      "en": true,
-      "title": "Runway’s WorldPrompt and the Engineering of Real-Time — Runway 的 WorldPrompt 把视频生成变成可实时交互的世界，值得关",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-25-blog-openai-news-proaction-boosts-sales-60-and-saves-75-hours",
-      "zh": true,
-      "en": true,
-      "title": "Proaction boosts sales 60% and saves 75+ hours with — Proaction 用 Codex 等模型做车队管理，销售提升 60%、省下 7",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-25-blog-openclaw-blog-microsoft-autopilot-is-built-on-openclaw-the-contributions",
-      "zh": true,
-      "en": true,
-      "title": "Microsoft Autopilot is built on OpenClaw. The — 微软 Autopilot 基于 OpenClaw 构建，贡献双向流动，Windo",
-      "kind": "blogger",
-      "author": "OpenClaw",
-      "source": "OpenClaw",
-      "tool": null,
-      "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-25-blog-simonwillison-northern-gannet-great-blue-heron-california-brown-pelican",
-      "zh": true,
-      "en": true,
-      "title": "Northern Gannet, Great Blue Heron, California Brown — Simon Willison 用新镜头拍下蒙特雷湾三种海鸟，顺带记录港口观鸟点。",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-25-blog-simonwillison-quoting-john-gruber",
-      "zh": true,
-      "en": true,
-      "title": "Quoting John Gruber — Gruber 警告 Meta 的 Muse 看似可爱吉祥物，实为能持久运行在你 ",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-25-claude-code-2-1-283",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.283 — 网关提示头、模型白名单与提示审计，三条都指向 harness 可控性",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-25-cline-desktop-v0-0-36",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.36 — 代理环境、小屏缩放、插件命令加载，三个启动期坑被修",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-25-codex-rust-v0-157-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.157.0 — GPT",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-25-trending-crmne-zapfast",
-      "zh": true,
-      "en": false,
-      "title": "zapfast — Rust + egui 写的原生 WhatsApp 客户端，833 星",
-      "kind": "trending",
-      "author": null,
-      "source": "crmne/zapfast",
-      "tool": null,
-      "publishedAt": "2026-09-25"
-    },
-    {
-      "slug": "2026-09-25-trending-jaredpalmer-kev",
-      "zh": true,
-      "en": false,
-      "title": "kev — 基于 Qwen3.5/3.8 的可自训练决策模型家族",
-      "kind": "trending",
-      "author": null,
-      "source": "jaredpalmer/kev",
-      "tool": null,
-      "publishedAt": "2026-09-25"
     }
   ]
 }
