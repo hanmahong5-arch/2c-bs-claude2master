@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-cline-sdk-sdk-v0-0-90
+title: "cline sdk/sdk/v0.0.90 — 团队状态写入从 1.66GB 降到增量批写，长会话不再越跑越慢"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.90
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "团队状态写入从 1.66GB 降到增量批写，长会话不再越跑越慢"
+broadcast: "有个开发工具更新了它的团队状态存储方式，以前长会话越跑越慢，现在改成只写变化的部分，每三百毫秒合并提交一次，团队数据也从一点六G降下来了。这对做 agent 的国内开发者挺有参考价值，因为它把展示和持久化分开，还内置了迁移和保留策略，长会话终于不会越跑越卡。"
+insight: "这次 SDK v0.0.90 的改动集中在团队状态存储，对国内用户走 newapi.lurus.cn 代理没有影响，代理链路不涉及本地 SQLite 写入逻辑。真正值得动手的是长会话场景：如果你现在跑多轮长任务越跑越慢，升级后增量批写和 2 秒心跳不落盘能直接缓解，建议升。但要注意 schema v2 会一次性迁移压缩旧数据，升级前先备份团队库，且 team_events 每团队上限 2000 行/30 天，历史事件会被裁掉，依赖旧 transcript 的 prompt 或 hook 配置需要改成只读摘要。"
+tags: [agent-teams, state-persistence, sqlite-schema, streaming]
+---
+
+- 流式 chunk 与 2 秒心跳不再持久化，只推给实时 UI；含义是 harness 应把「展示态」与「持久态」分离，避免高频事件污染存储。
+- 仅写入变更实体并每约 300ms 批量提交一个事务，run 记录只存摘要而非完整 transcript；含义是状态存储需按实体粒度做脏标记与合并写。
+- SQLite 团队存储升级到 schema v2 并一次性迁移压缩旧数据，team_events 每团队上限 2000 行/30 天，失败写入改为重试；含义是 harness 需内置迁移、保留策略与写失败重试。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.90](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.90)

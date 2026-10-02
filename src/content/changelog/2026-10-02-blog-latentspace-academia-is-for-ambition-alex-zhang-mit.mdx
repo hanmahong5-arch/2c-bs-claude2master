@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-blog-latentspace-academia-is-for-ambition-alex-zhang-mit
+title: "Academia is for Ambition — Alex Zhang, MIT — MIT 博士生 Alex Zhang 谈递归语言模型与 agent 编排，为何现"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/rlm
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "MIT 博士生 Alex Zhang 谈递归语言模型与 agent 编排，为何现有系统浪费了模型能力"
+broadcast: "MIT 有位博士生提出了一种叫递归语言模型的思路，用代码执行、递归子 agent 和共享内存来卸载上下文，据说这套编排方案最接近解决某个高难度推理测试。对咱们做 agent 的人来说，关键信号是：编排层的设计可能比模型本身更决定上限，而且工具链的抽象方式是可以复用的工程资产。他还提到，现在前沿模型存在明显的能力过剩，让工具执行和生成重叠起来，延迟优化和并行编排可能是下一个被低估的收益点。"
+tags: [recursive-language-models, agent-harness, multi-agent, capability-overhang]
+---
+
+- **RLM 与上下文卸载**：Alex Zhang 提出的 Recursive Language Models 通过代码执行、递归子 agent 和共享内存来卸载上下文，其 harness 据称是首个接近解决 ARC-AGI-3 的方案。对 agent 开发者的含义是：编排层设计可能比模型本身更决定上限。
+- **harness 即组合泛化器**：他认为 Claude Code、Codex、Pi 在结构上比看起来更相似，harness 设计能跨任务改善组合泛化。这意味着工具链的抽象方式是可复用的工程资产，而非一次性胶水代码。
+- **能力过剩与推测式工具调用**：他判断当前前沿模型已存在较大 capability overhang，并提出 speculative programmatic tool calling，让工具执行与生成重叠。对开发者的含义是：延迟优化和并行调用编排可能是下一个被低估的收益点。
+
+---
+
+> 原文：[Academia is for Ambition — Alex Zhang, MIT](https://www.latent.space/p/rlm) · 作者 Latent Space

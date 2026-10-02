@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-openclaw-2026-8-34
+title: "openclaw v2026.8.34 — LTS 级网关补丁：113 项修复，重点在升级与恢复不丢状态"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.8.34
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "LTS 级网关补丁：113 项修复，重点在升级与恢复不丢状态"
+broadcast: "这次更新是一个长期支持级别的网关补丁，一口气回移了一百一十三项审计修复，覆盖升级、认证、会话、通道、插件和沙箱这些环节。最值得国内开发者留意的是，它把状态迁移当成一等公民：凭据、智能体状态、插件清单和会话记录在重启和修复后都能保留下来，同时权限和身份按作用域收紧。也就是说，做智能体的人得把持久化边界和所有权写清楚，别让修复流程误删数据。"
+insight: "这次 v2026.8.34 是 LTS 级网关补丁，113 项修复集中在升级与恢复不丢状态，凭据、agent 状态、插件清单、transcript 在重启和 Doctor 修复后都能保留。现有用户值得升级，尤其是依赖会话与插件持久化的场景，建议直接跟进。现有 prompt 和 hook 配置不需要改，因为本次没有涉及提示词或 hook 语义变更。国内用户走 newapi.lurus.cn 代理不受影响，摘要未提及代理或通道入口调整。"
+tags: [extended-stable, upgrade-safety, auth-migration, sandbox-boundary]
+---
+
+- 回移 113 个审计修复单元，覆盖升级、Doctor、认证、会话、通道、插件、沙箱与模型运行时；含义是 harness 需把状态迁移当作一等公民而非事后补丁。
+- 升级与恢复加固：凭据、agent 状态、插件清单、transcript、调度与服务归属在重启和 Doctor 修复后保留；含义是持久化边界要显式声明所有权，避免修复流程误删。
+- 边界收紧：远程文件系统变更、插件与技能扫描、浏览器认证、通道回复身份、私有技能入口与运行时作用域；含义是权限与身份需按作用域隔离，跨重启仍可验证。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.8.34](https://github.com/openclaw/openclaw/releases/tag/v2026.8.34)

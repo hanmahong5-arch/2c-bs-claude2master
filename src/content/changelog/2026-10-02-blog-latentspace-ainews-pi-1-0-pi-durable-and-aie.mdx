@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-blog-latentspace-ainews-pi-1-0-pi-durable-and-aie
+title: "[AINews] Pi 1.0, Pi Durable, and AIE NYC — Pi 1.0 与 Pi Durable 发布，把 agent 状态做成可崩溃恢复"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Pi 1.0 与 Pi Durable 发布，把 agent 状态做成可崩溃恢复、可热插拔的持久层"
+broadcast: "今天聊一个叫 Pi 的新版本，它把 agent 的状态做成了可以崩溃恢复的持久层。简单说，每一步都会记下检查点，进程挂了或者重启，agent 和子 agent 都能从上次的精确状态接着跑，不用从头重试。它还支持会话中途换工具、换提示，甚至多人同时操作同一个 agent。对国内做 agent 的开发者来说，这意味着可靠性思路从反复重试转向断点续跑，值得关注。"
+tags: [agent-runtime, durable-execution, mcp, typescript]
+---
+
+- **Pi 1.0 新增 Codemode 与延迟工具加载**：原生支持 MCP、Jev 和图像模型，并支持虚拟模型扩展、Anthropic 缓存预热、对话中途插入系统消息。对工具链的含义是：prompt 与工具集可以在会话进行中动态调整，而不必重启 agent。
+- **Pi Durable 把 Pi 移植到 TypeScript 并外置全部有状态组件**：每一步都记录为带检查点的任务，进程失败或重启后 agent 与子 agent 从上次精确状态自动恢复；可运行在 Node、Bun、Cloudflare 等 JS 运行时，存储后端可插拔（Memory、SQLite、JSONL）。含义是 agent 的可靠性从「重试」转向「断点续跑」。
+- **并发、多人协作与热插拔**：单个 harness 可并行运行分支对话；应用状态（如待办列表）与对话记录存在同一文档中，多个用户或 UI 可同时观察和操控同一 agent；工具与扩展代码可在运行时更新，下一次调用即生效。含义是 agent 正从单人 CLI 走向可共享、可在线升级的服务形态。
+
+---
+
+> 原文：[[AINews] Pi 1.0, Pi Durable, and AIE NYC](https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc) · 作者 Latent Space

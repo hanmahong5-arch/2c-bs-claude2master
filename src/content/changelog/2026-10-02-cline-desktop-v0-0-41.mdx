@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-cline-desktop-v0-0-41
+title: "cline desktop-v0.0.41 — 草稿不再丢、连接器可搜索、团队会话提速"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.41
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "草稿不再丢、连接器可搜索、团队会话提速"
+broadcast: "这次桌面端更新解决了一个很实际的痛点：没发出去的草稿，切换会话后还能保留，侧栏点新建会回到草稿，只有用快捷键才真正开新会话。另外连接器现在可以搜索和刷新，还能看到它为会话新增了多少工具。对做 agent 的国内开发者来说，这提醒我们，草稿状态要跟会话生命周期解耦，工具发现要可检索、可预览增量，团队协作还得内置状态压缩，不然长会话会越来越慢。"
+insight: "这次 v0.0.41 的改动对现有用户是值得升级的：草稿在切换会话后保留、Cmd/Ctrl+N 才开新会话，能直接减少误丢 prompt 的返工；Connectors 可搜索并显示新增工具数，方便你核对上下文预算。现有 prompt 和 hook 配置无需改动，因为摘要未提及破坏性变更。国内走 newapi.lurus.cn 代理的用户，摘要也未提到代理或鉴权受影响，可正常升级。"
+tags: [agent-harness, session-state, connectors, agent-teams]
+---
+
+- 未发送的 prompt 在切换会话后保留，侧栏 New 回到草稿，Cmd/Ctrl+N 才开新会话：harness 需把草稿状态与会话生命周期解耦，而非绑定当前视图。
+- Customize → Connectors 加入搜索、刷新、Installed 与 Suggested 组合，并显示连接器为会话新增的工具数：工具发现与安装应可检索、可预览增量，避免按目录总数误导上下文预算。
+- Agent teams 在长会话与队友流式输出时保持速度，首次打开自动压缩既有团队数据：多 agent harness 需内置状态压缩与流式并发路径，否则长会话会拖慢协作。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.41](https://github.com/cline/cline/releases/tag/desktop-v0.0.41)

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-cline-cli-v3-0-68
+title: "cline cli-v3.0.68 — 团队状态不再每块重存，长会话提速并自动压缩旧库"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.68
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "团队状态不再每块重存，长会话提速并自动压缩旧库"
+broadcast: "这次更新解决了一个长会话的老毛病：以前每来一小段内容就要把整个团队状态重存一遍，结果会话越跑越慢，本地数据库能涨到几个G。现在改成只存增量，老数据打开时还会自动压缩，不用手动迁移。对做 agent 的国内开发者来说，这提醒我们状态持久化要按增量来设计，默认模型也别写死，留出可配置的口子。"
+insight: "这次 CLI v3.0.68 值得升级，尤其是跑长会话的团队：流式分块不再重存整个团队状态，teams.db 不会再膨胀到 GB 级，首次打开还会自动压缩旧库，无需手动迁移。现有 prompt 和 hook 配置不用改，升级后直接受益。国内用户走 newapi.lurus.cn 代理不受影响，模型目录刷新只是默认模型更新，代理链路照常可用。"
+tags: [agent-teams, state-persistence, model-catalog, cli]
+---
+
+- 流式分块不再重存整个团队状态：此前每个 chunk 都触发全量保存，导致长会话越跑越慢、teams.db 膨胀到 GB 级；对 harness 的含义是状态持久化粒度应绑定增量而非事件频率。
+- 已有团队数据首次打开时自动压缩：无需手动迁移即可回收磁盘；对 harness 的含义是 schema 变更要内置一次性就地迁移路径。
+- 模型目录刷新，DigitalOcean、GMI Cloud、NanoGPT、Nvidia、Ofox 的默认模型更新；对 harness 的含义是默认模型需可配置化，避免硬编码。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.68](https://github.com/cline/cline/releases/tag/cli-v3.0.68)

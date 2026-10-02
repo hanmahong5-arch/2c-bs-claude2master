@@ -1,0 +1,23 @@
+---
+slug: 2026-10-01-codex-rust-v0-160-0
+title: "codex rust-v0.160.0 — Guardian 审查可回溯历史指令，子代理环境不再丢失"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.160.0
+publishedAt: 2026-10-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Guardian 审查可回溯历史指令，子代理环境不再丢失"
+broadcast: "这次更新里，审查机制现在能翻出更早的用户指令，并把它带进代理交接的上下文里，也就是说跨会话的历史状态得当成正式输入来对待。另外，子代理启动时不再把还没准备好的环境直接丢掉，而是保留下来并接收失败信息。对做代理的国内开发者来说，会话恢复也得跟服务端默认值对齐，不能只靠本地覆盖。"
+insight: "这次 0.160.0 对现有用户值得升级，重点在 Guardian 审查开始把跨会话历史与 handoff 状态当一等输入，子代理也不再丢弃启动中的环境。如果你在用审查型 harness 或依赖子代理 spawn，建议升级后同步检查 prompt 与 hook 配置，把历史上下文和初始化状态显式传入，别沿用旧的本地覆盖逻辑。国内走 newapi.lurus.cn 代理是否受影响，摘要里没有提到，无法判断。"
+tags: [guardian-review, subagent-lifecycle, session-resume, tui-settings]
+---
+
+- Guardian 审查新增可选能力：可检索更早的用户指令，并纳入 agent 交接的上下文（#49036、#49057），意味着审查型 harness 需要把跨会话历史与 handoff 状态作为一等输入。
+- 子代理现在会保留仍在启动中的环境，并收到配置或准备失败信息（#49075），说明 spawn 流程不能把未就绪环境当作失败丢弃，需显式传递初始化状态。
+- TUI 保留服务端 provider、reasoning-summary 与 verbosity 设置，并在 resume/fork 历史中显示正确会话（#49144、#49161、#49171），提示 harness 的会话恢复必须与服务端默认值对齐，而非本地覆盖。
+
+---
+
+> 原文 release：[openai/codex rust-v0.160.0](https://github.com/openai/codex/releases/tag/rust-v0.160.0)

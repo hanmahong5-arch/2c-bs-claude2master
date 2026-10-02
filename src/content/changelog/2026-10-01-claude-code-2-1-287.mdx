@@ -1,0 +1,23 @@
+---
+slug: 2026-10-01-claude-code-2-1-287
+title: "claude-code v2.1.287 — Claude Mods 让插件改深层行为，侧代理帮你查漏"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.287
+publishedAt: 2026-10-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Claude Mods 让插件改深层行为，侧代理帮你查漏"
+broadcast: "这次更新加了一个叫 Claude Mods 的机制，让插件能改到更深层的行为，还内置了一个侧代理帮你盯着会话、标记遗漏。对国内做 agent 的团队来说，这意味着框架得给插件留出更深的介入点，还要支持旁路观察。另外会话视图多了按名字和任务过滤，遥测里也补了提示词文本字段，方便后端处理。"
+insight: "这次 v2.1.287 对国内用户的实际影响有限：新增的 Claude Mods 和 you-should-know 侧代理属于可选能力，不开启就不改变现有行为，因此现有 prompt 和 hook 配置无需改动，也没必要为它专门升级。走 newapi.lurus.cn 代理的用户同样不受影响，摘要里没有任何涉及代理链路或鉴权的变更。真正值得留意的是 OpenTelemetry 的 user_prompt 事件新增了 prompt_text 字段，若你在用遥测，需确认后端已按与 prompt 同等的规则做丢弃或掩码，避免提示词内容外泄。"
+tags: [claude-code, plugins, agent-harness, telemetry]
+---
+
+- 新增 Claude Mods：插件可修改更深层行为，并内置 `you-should-know` 侧代理监视会话、标记遗漏，用 `/plugin enable cc-plugin-you-should-know@builtin` 开启。含义：harness 需为插件开放更深介入点，并支持旁路观察代理。
+- agents 视图新增 `n:<text>` 过滤，匹配会话名与任务，折叠区也显示命中，Enter 打开首个匹配。含义：多会话 harness 需可检索的会话元数据与键盘导航。
+- OpenTelemetry `user_prompt` 事件新增 `prompt_text`，供嵌套点号键的后端使用，需与 `prompt` 同等地丢弃或掩码。含义：遥测字段设计要兼顾后端键结构差异与隐私脱敏一致性。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.287](https://github.com/anthropics/claude-code/releases/tag/v2.1.287)
