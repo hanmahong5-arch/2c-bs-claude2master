@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "slug": "2026-10-03-openclaw-2026-9-8",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.9.8 — 58 次提交、43 个 PR，但发布说明本身只讲流程与验证",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-10-03"
+    },
+    {
+      "slug": "2026-10-03-trending-viceverse-cz-serein",
+      "zh": true,
+      "en": false,
+      "title": "Serein — Rust 写的 Discord 原生客户端，轻量高性能",
+      "kind": "trending",
+      "author": null,
+      "source": "ViceVerse-cz/Serein",
+      "tool": null,
+      "publishedAt": "2026-10-03"
+    },
+    {
+      "slug": "2026-10-02-blog-hf-blog-autosynthdata-generating-training-data-for-enterprise-agents",
+      "zh": true,
+      "en": true,
+      "title": "AutoSynthData: Generating Training Data for Enterprise — 企业 agent 训练数据难获取，Hugging Face 介绍自动合成方案",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-blog-hf-blog-open-sourcing-astabrief-the-fast-report-generation-model",
+      "zh": true,
+      "en": true,
+      "title": "Open-sourcing AstaBrief, the fast report-generation — AI2 开源 AstaBrief，一个专为快速生成研究报告而训练的模型，并公开了",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-10-02"
+    },
+    {
       "slug": "2026-10-02-blog-latentspace-academia-is-for-ambition-alex-zhang-mit",
       "zh": true,
       "en": true,
@@ -20,6 +64,61 @@
       "author": "Latent Space",
       "source": "Latent Space",
       "tool": null,
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-blog-latentspace-inside-out-ai-rebuilding-airbnb-behind-the-scenes",
+      "zh": true,
+      "en": true,
+      "title": "Inside-Out AI: Rebuilding Airbnb Behind the Scenes and — Airbnb CTO 谈如何用 AI 重构内部研发与客服，60% 代码已由 AI",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-blog-openai-news-a-model-guide-for-the-gpt-6-family",
+      "zh": true,
+      "en": true,
+      "title": "A model guide for the GPT-6 family — OpenAI 给 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-blog-openai-news-chatham-scales-its-capital-markets-expertise-with-openai",
+      "zh": true,
+      "en": true,
+      "title": "Chatham scales its capital markets expertise with OpenAI — Chatham 用 Codex 与 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-blog-openclaw-blog-tencent-aig-joins-clawscan",
+      "zh": true,
+      "en": true,
+      "title": "Tencent AIG joins ClawScan — 腾讯 AIG 加入 ClawScan，为 ClawHub 上每个技能与插件做安全",
+      "kind": "blogger",
+      "author": "OpenClaw",
+      "source": "OpenClaw",
+      "tool": null,
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-claude-code-2-1-288",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.288 — 一次发布修掉几十个 agent 会话恢复与权限边界问题，值得看",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
       "publishedAt": "2026-10-02"
     },
     {
@@ -45,6 +144,28 @@
       "publishedAt": "2026-10-02"
     },
     {
+      "slug": "2026-10-02-cline-desktop-v0-0-42",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.42 — 新增 /compact 命令压缩对话释放上下文，连接器浏览独立成页",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-cline-desktop-v0-0-43",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.43 — 老用户会看到一次性 Connectors 引导弹窗，可重播",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-10-02"
+    },
+    {
       "slug": "2026-10-02-cline-sdk-sdk-v0-0-90",
       "zh": true,
       "en": false,
@@ -56,10 +177,32 @@
       "publishedAt": "2026-10-02"
     },
     {
+      "slug": "2026-10-02-goose-1-53-0",
+      "zh": true,
+      "en": false,
+      "title": "goose v1.53.0 — Goose v1.53 把 agent 循环搬上 wasm，还修了工具调用与上下",
+      "kind": "changelog",
+      "author": null,
+      "source": "block/goose",
+      "tool": "goose",
+      "publishedAt": "2026-10-02"
+    },
+    {
       "slug": "2026-10-02-openclaw-2026-8-34",
       "zh": true,
       "en": false,
       "title": "openclaw v2026.8.34 — LTS 级网关补丁：113 项修复，重点在升级与恢复不丢状态",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-openclaw-2026-8-35",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.8.35 — extended",
       "kind": "changelog",
       "author": null,
       "source": "openclaw/openclaw",
@@ -89,10 +232,43 @@
       "publishedAt": "2026-10-01"
     },
     {
+      "slug": "2026-10-01-blog-oneusefulthing-the-dot-and-the-swarm",
+      "zh": true,
+      "en": true,
+      "title": "The Dot and the Swarm — 作者承认自己此前判断错了：管理 AI 智能体不需要人类精心设计组织架构，模型自己",
+      "kind": "blogger",
+      "author": "Ethan Mollick",
+      "source": "Ethan Mollick",
+      "tool": null,
+      "publishedAt": "2026-10-01"
+    },
+    {
       "slug": "2026-10-01-blog-openai-news-how-albertsons-companies-is-reimagining-retail-from-the",
       "zh": true,
       "en": true,
       "title": "How Albertsons Companies is reimagining retail from the — 艾伯森用 ChatGPT Enterprise 与 OpenAI API 提速团",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-01"
+    },
+    {
+      "slug": "2026-10-01-blog-openai-news-the-den-frees-up-10-15-hours-a",
+      "zh": true,
+      "en": true,
+      "title": "The Den frees up 10-15 hours a week to grow with — OpenAI 客户案例：社交俱乐部 The Den 用 ChatGPT Work",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-01"
+    },
+    {
+      "slug": "2026-10-01-blog-openai-news-the-eternal-complement",
+      "zh": true,
+      "en": true,
+      "title": "The eternal complement — OpenAI 谈 AI 的真正价值：不在灵感，而在把想法落地的日常执行",
       "kind": "blogger",
       "author": "OpenAI",
       "source": "OpenAI",
@@ -108,6 +284,28 @@
       "author": "Simon Willison",
       "source": "Simon Willison",
       "tool": null,
+      "publishedAt": "2026-10-01"
+    },
+    {
+      "slug": "2026-10-01-claude-code-2-1-287",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.287 — Claude Mods 让插件改深层行为，侧代理帮你查漏",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-10-01"
+    },
+    {
+      "slug": "2026-10-01-codex-rust-v0-160-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.160.0 — Guardian 审查可回溯历史指令，子代理环境不再丢失",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
       "publishedAt": "2026-10-01"
     },
     {
@@ -681,160 +879,6 @@
       "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-blog-simonwillison-quoting-muse-ai-agent",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Muse AI Agent — 一个 AI 代理替主人处理快递取件，却谎报主人在家，导致差评",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-claude-code-2-1-284",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.284 — Sonnet 5.5 成默认模型，1M 上下文与缓存降价，agent harne",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-codex-rust-v0-158-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.158.0 — Codex 0.158.0 把 TUI 剪贴板、MCP OAuth 与沙箱权限都",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-openclaw-concepts-channel-qa-reference",
-      "zh": true,
-      "en": true,
-      "title": "Channel QA reference · OpenClaw — OpenClaw 如何用真实传输层跑频道 QA，而不是靠 mock 糊弄过去。",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-openclaw-concepts-operator-flow",
-      "zh": true,
-      "en": true,
-      "title": "Operator flow · OpenClaw — OpenClaw 的 QA 操作台如何把 agent 端到端测试做成可复现的流水",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-opencode-1-18-33",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.33 — 超时、脱敏、Gemini 思考参数三处修复，影响 agent 稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-trending-jackwener-wx-cli-again",
-      "zh": true,
-      "en": false,
-      "title": "wx-cli-again — Rust 写的微信本地数据命令行工具，可查询、解密、导出",
-      "kind": "trending",
-      "author": null,
-      "source": "jackwener/wx-cli-again",
-      "tool": null,
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-trending-jev-chat-jev-chat-jarvis",
-      "zh": true,
-      "en": false,
-      "title": "jev-chat-jarvis — 手机上的对话副驾，在QQ/X/飞书里给候选回复，一键填入输入框",
-      "kind": "trending",
-      "author": null,
-      "source": "jev-chat/jev-chat-jarvis",
-      "tool": null,
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-27-blog-simonwillison-2026-in-llms-so-far",
-      "zh": true,
-      "en": true,
-      "title": "2026 in LLMs (so far) — Simon Willison 回顾 2026 年 LLM 大事记：编码代理从能用",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-27"
-    },
-    {
-      "slug": "2026-09-27-blog-simonwillison-bluesky-reply-bot-checker",
-      "zh": true,
-      "en": true,
-      "title": "Bluesky reply bot checker — 用 Opus 5.5 写了个 Bluesky 回复机器人检测工具，靠发帖时间差和",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-27"
-    },
-    {
-      "slug": "2026-09-27-blog-simonwillison-s3-is-the-future-s3-is-the-past",
-      "zh": true,
-      "en": true,
-      "title": "S3 Is the Future, S3 Is the Past — S3 十年未降价，Simon Willison 用价格史点出云存储格局已变",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-27"
-    },
-    {
-      "slug": "2026-09-27-trending-tobi-disktree",
-      "zh": true,
-      "en": false,
-      "title": "disktree — Rust 写的磁盘空间树图工具，帮你在 Omarchy 上找出并删掉占空间的文件",
-      "kind": "trending",
-      "author": null,
-      "source": "tobi/disktree",
-      "tool": null,
-      "publishedAt": "2026-09-27"
-    },
-    {
-      "slug": "2026-09-26-blog-simonwillison-k-k-p-party",
-      "zh": true,
-      "en": true,
-      "title": "Kākāpō Party — 用 Claude 生成像素动画，再用 Playwright 自动录成视频当演讲收",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-26"
-    },
-    {
-      "slug": "2026-09-26-cline-desktop-v0-0-37",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.37 — 桌面端更新后新增关于页与更新后提示弹窗",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-26"
     }
   ]
 }
