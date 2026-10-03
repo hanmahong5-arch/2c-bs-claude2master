@@ -1,14 +1,14 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.287",
+    "anthropics/claude-code": "v2.1.288",
     "openai/codex": "rust-v0.160.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "desktop-v0.0.41",
-    "block/goose": "v1.52.0",
+    "cline/cline": "desktop-v0.0.43",
+    "block/goose": "v1.53.0",
     "sst/opencode": "v1.18.34",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.62.0",
-    "openclaw/openclaw": "v2026.8.34",
+    "openclaw/openclaw": "v2026.9.8",
     "zeroclaw-labs/zeroclaw": "v0.8.5",
     "NousResearch/hermes-agent": "v2026.9.24"
   },
@@ -177,7 +177,8 @@
     "Human-Agent-Society/reef",
     "ollaya-dev/ollaya",
     "OnlistTeam/ai-manager",
-    "robbietilton/Compositor"
+    "robbietilton/Compositor",
+    "ViceVerse-cz/Serein"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -294,7 +295,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-10-02",
+    "anthropic-engineering": "2026-10-03",
     "claude-code-docs": "2026-10-02",
     "openai-codex-blog": "2026-10-01",
     "openclaw-concepts": "2026-09-28",
@@ -819,7 +820,8 @@
       "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
       "https://www.latent.space/p/devday-2026",
       "https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc",
-      "https://www.latent.space/p/rlm"
+      "https://www.latent.space/p/rlm",
+      "https://www.latent.space/p/airbnb"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -947,7 +949,8 @@
       "https://www.oneusefulthing.org/p/the-twilight-of-the-chatbots",
       "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22",
       "https://www.oneusefulthing.org/p/agency-and-agents",
-      "https://www.oneusefulthing.org/p/the-overhang"
+      "https://www.oneusefulthing.org/p/the-overhang",
+      "https://www.oneusefulthing.org/p/the-dot-and-the-swarm"
     ],
     "importai": [
       "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
@@ -1184,7 +1187,9 @@
       "https://openai.com/index/helping-small-businesses-put-ai-to-work",
       "https://openai.com/index/the-eternal-complement",
       "https://openai.com/index/albertsons-reimagining-retail",
-      "https://openai.com/index/the-den-family-social"
+      "https://openai.com/index/the-den-family-social",
+      "https://openai.com/index/practical-guide-building-gpt-6",
+      "https://openai.com/index/chatham-financial"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1351,7 +1356,9 @@
       "https://huggingface.co/blog/Hcompany/holo4",
       "https://huggingface.co/blog/open-tts-leaderboard",
       "https://huggingface.co/blog/nvidia/kumo-tabular",
-      "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source"
+      "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+      "https://huggingface.co/blog/allenai/astabrief",
+      "https://huggingface.co/blog/ServiceNow-AI/autosynthdata"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -1406,7 +1413,8 @@
       "https://www.anthropic.com/news/life-sciences-verification-program",
       "https://www.anthropic.com/news/accenture-embedded-evaluation",
       "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "https://www.anthropic.com/news/barclays-scales-claude"
+      "https://www.anthropic.com/news/barclays-scales-claude",
+      "https://www.anthropic.com/news/claude-frontier-academy"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -1445,27 +1453,28 @@
       "https://openclaw.ai/blog/openclaw-trail-of-bits-engagement-recap/",
       "https://openclaw.ai/blog/decision-models-in-openclaw/",
       "https://openclaw.ai/blog/microsoft-autopilot-openclaw/",
-      "https://openclaw.ai/blog/openclaw-enterprise/"
+      "https://openclaw.ai/blog/openclaw-enterprise/",
+      "https://openclaw.ai/blog/tencent-aig-joins-clawscan/"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-10-02",
+    "simonwillison": "2026-10-03",
     "lilianweng": "2026-10-01",
-    "latentspace": "2026-10-02",
-    "interconnects": "2026-10-02",
-    "karpathy": "2026-09-30",
-    "raschka": "2026-09-30",
-    "eugeneyan": "2026-09-30",
+    "latentspace": "2026-10-03",
+    "interconnects": "2026-10-03",
+    "karpathy": "2026-10-03",
+    "raschka": "2026-10-03",
+    "eugeneyan": "2026-10-03",
     "chiphuyen": "2026-10-01",
-    "oneusefulthing": "2026-10-01",
+    "oneusefulthing": "2026-10-03",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-10-02",
-    "deepmind": "2026-10-01",
-    "hf-blog": "2026-10-01",
-    "anthropic-news": "2026-10-02",
-    "steipete": "2026-10-01",
-    "openclaw-blog": "2026-10-01"
+    "openai-news": "2026-10-03",
+    "deepmind": "2026-10-03",
+    "hf-blog": "2026-10-03",
+    "anthropic-news": "2026-10-03",
+    "steipete": "2026-10-03",
+    "openclaw-blog": "2026-10-03"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

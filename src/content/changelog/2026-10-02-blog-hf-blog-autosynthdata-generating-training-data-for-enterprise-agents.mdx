@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-blog-hf-blog-autosynthdata-generating-training-data-for-enterprise-agents
+title: "AutoSynthData: Generating Training Data for Enterprise — 企业 agent 训练数据难获取，Hugging Face 介绍自动合成方案"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/ServiceNow-AI/autosynthdata
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "企业 agent 训练数据难获取，Hugging Face 介绍自动合成方案"
+broadcast: "企业级 agent 的训练数据一直很难搞，真实场景的数据又稀缺又敏感，还不好标注。现在有团队提出了一套自动合成训练数据的方案，专门面向企业内部工具和业务流程来生成样本，而不是通用对话数据。这对 agent 开发者来说意味着，不必完全依赖人工标注，可以用合成数据先把训练流程跑起来，但也要注意合成数据和真实分布之间的差距。"
+tags: [synthetic-data, enterprise-agents, training-data, hugging-face]
+---
+
+- 文章提出 AutoSynthData，用于为企业级 agent 自动生成训练数据，解决真实企业场景数据稀缺、敏感、难以标注的问题。对 agent 开发者意味着：不必完全依赖人工标注，可用合成数据启动训练流程。
+- 方案面向企业 agent 场景，强调数据生成需贴合企业内部工具与业务流程，而非通用对话数据。对工具链的含义是：合成数据管线需要接入企业系统 schema 与权限上下文，才能产出可用样本。
+- 该工作由 ServiceNow AI 团队发布在 Hugging Face 博客，属于面向落地的工程实践分享。对开发者的含义是：可参考其思路搭建自己的数据合成环节，但需评估合成数据与真实分布的差距。
+
+---
+
+> 原文：[AutoSynthData: Generating Training Data for Enterprise Agents](https://huggingface.co/blog/ServiceNow-AI/autosynthdata) · 作者 Hugging Face

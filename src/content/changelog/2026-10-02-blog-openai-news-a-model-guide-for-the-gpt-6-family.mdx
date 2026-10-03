@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-blog-openai-news-a-model-guide-for-the-gpt-6-family
+title: "A model guide for the GPT-6 family — OpenAI 给 GPT"
+source: "OpenAI"
+sourceUrl: https://openai.com/index/practical-guide-building-gpt-6
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "OpenAI"
+hook: "OpenAI 给 GPT-6 家族的选型与调优实操指南，面向要把模型推上生产的团队。"
+broadcast: "OpenAI 出了一份面向生产团队的模型选型指南，讲的是怎么给具体任务挑合适的模型，而不是默认上最强的那一档。它还提到推理强度可以按任务难度来调，提示词和工具调用也要一起打磨。对国内做 agent 的开发者来说，这意味着模型路由、成本控制和延迟预算得提前写进架构里，可靠性更多靠提示工程和工具编排，而不是单次调用。"
+tags: [gpt-6, model-selection, reasoning-effort, agent-tooling]
+---
+
+- 选型先看任务：文章建议按具体场景在 GPT-6 家族中挑模型，而不是默认用最强的一档；对 agent 工具链意味着模型路由和成本控制应写进架构，而非事后优化。
+- 推理强度可调：文中把 reasoning effort 当作可调参数，提示开发者按任务难度分配算力；这直接影响 agent 的延迟预算与多步规划策略。
+- 提示与技能、工具协同：文章强调改进 prompt 与 skills、协调工具调用，并为生产环境准备 workflow；含义是 agent 的可靠性更多来自提示工程与工具编排，而不是单次模型调用。
+
+---
+
+> 原文：[A model guide for the GPT-6 family](https://openai.com/index/practical-guide-building-gpt-6) · 作者 OpenAI

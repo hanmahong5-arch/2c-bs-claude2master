@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-cline-desktop-v0-0-43
+title: "cline desktop-v0.0.43 — 老用户会看到一次性 Connectors 引导弹窗，可重播"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.43
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "老用户会看到一次性 Connectors 引导弹窗，可重播"
+broadcast: "这次桌面版更新加了一个一次性的新功能引导弹窗，老用户第一次打开会看到，里面介绍连接器，带图标、可点击的示例提示词和一个打开按钮。值得关注的是，它把引导入口放到了会话之外，还允许在设置里重新播放，说明新能力的发现和重置可以独立设计，能力发布和引导发布也能解耦，这对做 agent 的国内开发者挺有参考价值。"
+insight: "这次 desktop-v0.0.43 对现有用户来说没有必须升级的硬理由，核心变化只是一次性 What's new 弹窗和 Settings → About → Show what's new 的重播入口，Connectors 本身的功能细节并未提及。所以现有 prompt 和 hook 配置不用改，国内走 newapi.lurus.cn 代理也不受影响。想提前看引导入口的可以升，否则等 Connectors 能力说明补齐再升更划算。"
+tags: [connectors, onboarding, whats-new, desktop]
+---
+
+- 现有用户首次收到一次性 **What's new** 弹窗，介绍 Connectors，含连接器 logo、可点击示例 prompt 和 **Open Connectors** 按钮；对 harness 的含义是引导入口可放在会话外，降低新能力发现成本。
+- 弹窗可从 **Settings → About → Show what's new** 重播；对 harness 的含义是引导状态需可重置，便于用户回看而不必依赖首次触发。
+- 该版本未提及 Connectors 本身的功能细节，仅涉及引导弹窗；对 harness 的含义是能力发布与引导发布可解耦，先做可发现性再补能力说明。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.43](https://github.com/cline/cline/releases/tag/desktop-v0.0.43)

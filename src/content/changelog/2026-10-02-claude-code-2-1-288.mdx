@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-claude-code-2-1-288
+title: "claude-code v2.1.288 — 一次发布修掉几十个 agent 会话恢复与权限边界问题，值得看"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.288
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "一次发布修掉几十个 agent 会话恢复与权限边界问题，值得看"
+broadcast: "这次更新修掉了几十个智能体会话恢复和权限边界的问题，挺值得关注。比如恢复会话时不再丢上下文和末尾回复，中途接口超时也能从部分响应接着写，权限上危险删除命令不再静默放行，匹配失败就直接拦下。对做智能体的人来说，这意味着恢复要当成可重放的状态机，失败默认该拒绝而不是放行。"
+insight: "这次 v2.1.288 修的是会话恢复和权限边界，属于底层可靠性问题，不是新功能。现有用户值得升级：--resume 不再丢压缩后的文件和上下文，长对话零 token 时自动压缩而非报错，这些直接影响日常使用。但要注意权限收紧——PreToolUse 匹配失败会直接阻断调用，bash -c 里的危险 rm 也不再静默放行，所以现有 hook 配置需要检查一遍匹配规则是否够全，否则可能被误拦。走 newapi.lurus.cn 代理的用户不受影响，本次改动都在客户端侧。"
+tags: [agent-harness, session-resume, permissions, release-notes]
+---
+
+- 会话恢复更可靠：`--resume` 不再丢压缩刚恢复的文件与上下文，也不再漏存回合末尾回复；含义是 harness 需把「恢复」当作可重放的状态机，而非一次性读取。
+- 超时与长对话处理变化：中途 API 超时改为从部分响应继续，thinking-only 响应重试；长对话在零 token 用量时改为自动压缩而非报错。含义是 harness 应区分「可续写」与「必须重试」的失败类型。
+- 权限与安全边界收紧：`bash -c`/`sh -c` 内的危险 `rm` 不再静默放行，PreToolUse 匹配失败时直接阻断调用。含义是 harness 的默认失败姿态应是拒绝而非放行。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.288](https://github.com/anthropics/claude-code/releases/tag/v2.1.288)

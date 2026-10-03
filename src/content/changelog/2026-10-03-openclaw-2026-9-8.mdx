@@ -1,0 +1,23 @@
+---
+slug: 2026-10-03-openclaw-2026-9-8
+title: "openclaw v2026.9.8 — 58 次提交、43 个 PR，但发布说明本身只讲流程与验证"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.8
+publishedAt: 2026-10-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "58 次提交、43 个 PR，但发布说明本身只讲流程与验证"
+broadcast: "这次发布有58次提交、43个PR，但发布说明本身只讲流程和验证。它把变更日志做成两种格式，一种给人看，一种给AI agent读，还完整列出校验链路，让agent能自己做供应链校验。不过Telegram集成检查和安卓包都被跳过了，这提醒我们做agent时要显式记录被跳过的验证项。"
+insight: "这次 v2026.9.8 的发布说明只讲流程与验证，没有提到任何 hook 或 prompt 层面的改动，所以现有 prompt 和 hook 配置不需要动。国内用户走 newapi.lurus.cn 代理是否受影响，摘要里同样没有提及，无法据此判断。真正值得注意的是验证链路被完整列出，包括 npm 包、registry tarball、integrity 哈希、release SHA 和 CI run 链接，而 Telegram 集成检查被豁免、Android APK 因版本号不匹配被跳过，说明升级前应显式记录这些被跳过的验证项，而不是只看标签。是否升级取决于你是否依赖 Telegram 集成或 Android 侧，若依赖，建议等这些验证补齐再升。"
+tags: [release-notes, supply-chain, ci-verification, agent-harness]
+---
+
+- 发布说明与 changelog 同源双格式：面向人用可展开页面，面向 AI agent 用纯 Markdown，说明 harness 需要能消费结构化变更日志而非只读渲染页。
+- 验证链路被完整列出：npm 包、registry tarball、integrity 哈希、release SHA 与多条 CI run 链接，意味着 agent 可据此做供应链校验而非信任标签。
+- Telegram 集成检查被发布负责人豁免（source QA、Package Acceptance、published-package E2E 未运行），Android APK 因版本号 2026.8.2 与发布列车 2026.9.8 不匹配而跳过，提示 harness 应显式记录被跳过的验证项。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.8](https://github.com/openclaw/openclaw/releases/tag/v2026.9.8)

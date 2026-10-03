@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-cline-desktop-v0-0-42
+title: "cline desktop-v0.0.42 — 新增 /compact 命令压缩对话释放上下文，连接器浏览独立成页"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.42
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "新增 /compact 命令压缩对话释放上下文，连接器浏览独立成页"
+broadcast: "这次更新加了一个压缩对话的命令，能把当前对话总结掉来释放上下文，而且总结走的是你自己的模型设置，不会当成提示词再发给模型。另外连接器浏览独立成了一页，在配置里就能直接搜索查看完整目录，不用再跳去市场找。对做 agent 的国内开发者来说，这两点都挺实用：本地摘要能省调用、少污染上下文，连接器发现内置进配置流程，跳转更少。"
+insight: "这次 Desktop v0.0.42 的 /compact 是本地摘要、不走模型调用，对现有用户来说值得升级，尤其是长对话容易爆上下文的场景，升完直接用斜杠命令即可，不需要改现有 prompt 或 hook 配置。国内用户走 newapi.lurus.cn 代理也不受影响，因为摘要用的是会话自身的 provider 设置，不额外发起请求。Connectors 独立成页只是配置入口变化，不影响已有连接器使用。"
+tags: [slash-command, context-management, connectors, customize]
+---
+
+- 新增 `/compact` 斜杠命令：总结当前对话以释放上下文，摘要使用会话的 provider 设置且不作为 prompt 发送给模型。含义：harness 需支持本地摘要路径，避免额外模型调用与上下文污染。
+- **Customize** 中 **Connectors** 成为首个默认标签，新增 **Browse** 区块以两列展示完整连接器目录并支持搜索，无需再进 Marketplace 查找。含义：连接器发现应内置于配置流程，减少跨页面跳转。
+- 连接器在 Customize 与 Marketplace 行中显示品牌 logo；不可用时显示原因（未登录显示登录卡，无 beta 权限显示 rollout 通知与 **Check again**）。含义：harness 需对能力不可用给出明确状态与重试入口。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.42](https://github.com/cline/cline/releases/tag/desktop-v0.0.42)

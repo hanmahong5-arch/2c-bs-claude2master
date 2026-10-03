@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-goose-1-53-0
+title: "goose v1.53.0 — Goose v1.53 把 agent 循环搬上 wasm，还修了工具调用与上下"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.53.0
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Goose v1.53 把 agent 循环搬上 wasm，还修了工具调用与上下文保持"
+broadcast: "有个叫 Goose 的开源 agent 项目刚更新了，这次它把 agent 循环搬到了 wasm 上跑，核心逻辑能脱离原生运行时部署，扩展和沙箱边界更灵活。同时修了工具调用和上下文保持的问题，还让自动压缩落在工具边界触发。对国内做 agent 的开发者来说，这提示我们工具消息顺序、上下文生命周期和压缩时机，都得当成硬约束来设计。"
+insight: "Goose v1.53 把 agent 循环编译到 wasm32，并修复了工具结果连续性与跨 reply 的 session context 保持，还把 auto-compact 绑定在工具边界。对现有用户来说，这次改动直接影响 harness 行为，值得升级；升级后建议检查自己的 prompt 与 hook 配置，确认工具消息顺序和上下文生命周期没被旧写法破坏。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理层变化，按现有方式使用即可。"
+tags: [goose, agent-harness, wasm, tool-calling]
+---
+
+- **GDK agent loop 跑在 wasm32**：agent 循环可编译到 wasm32 目标，意味着 harness 核心逻辑可脱离原生运行时部署，扩展与沙箱边界更灵活。
+- **工具结果连续性与上下文保持修复**：OpenAI 兼容工具图片输出时保持 tool results 连续，且跨 reply 生命周期保留 session context，说明 harness 需把工具消息顺序与上下文生命周期当作硬约束。
+- **自动压缩落在工具边界**：unrolled agent loop 在工具边界触发 auto-compact，提示压缩策略应绑定工具调用点而非任意 token 位置，避免截断正在进行的工具链。
+
+---
+
+> 原文 release：[block/goose v1.53.0](https://github.com/aaif-goose/goose/releases/tag/v1.53.0)

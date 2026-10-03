@@ -1,0 +1,23 @@
+---
+slug: 2026-10-02-openclaw-2026-8-35
+title: "openclaw v2026.8.35 — extended"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.8.35
+publishedAt: 2026-10-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "extended-stable 分支补丁：GPT-6.1 Sol 接入与 agent 交付可靠性修复"
+broadcast: "这次更新有两点值得留意。一是接入了一个新的推理模型，而且是在路由、推理、执行等多个层面统一支持，不只是改个路由表那么简单。二是修了一批代理交付问题，比如保留完整的子代理答案、恢复定时任务输出，还阻止失败请求覆盖之前的问题。对国内做 agent 的开发者来说，这意味着失败路径和已排队输入要隔离，升级也要能回滚、不隐式扩权。"
+insight: "这次 2026.8.35 是 extended-stable 分支补丁，核心是 GPT-6.1 Sol 在路由、推理、harness 与 Reef guard-model 边界统一接入，以及 agent 交付可靠性修复。我的判断是：现有用户值得升级，因为失败路径与已排队输入的隔离、cron 输出恢复、挂起子槽位释放都直接影响日常交付稳定性；升级时注意迁移会保留插件清单与不兼容插件设置、避免重复 Gateway，且权限快照不隐式扩权，可回滚。现有 prompt 与 hook 配置无需改动。国内用户走 newapi.lurus.cn 代理不受影响，本次未涉及代理链路变更。"
+tags: [extended-stable, gpt-6-1-sol, agent-harness, secret-rotation]
+---
+
+- **GPT-6.1 Sol 支持**：在 OpenAI 路由、发现、推理、harness 与 Reef guard-model 边界统一接入该模型（#161400、#162955）。含义：harness 需把新模型当作跨层一等公民，而非仅改路由表。
+- **agent 交付完整性**：保留完整 CLI 子代理答案、恢复 cron 输出、释放挂起子槽位，并阻止失败请求用 steer 覆盖先前问题（#162843、#160520、#162368、#162439）。含义：harness 应把失败路径与已排队输入隔离，避免状态互相污染。
+- **更新与安全加固**：迁移中保留插件清单与不兼容插件设置、避免重复 Gateway、轮换时保持 secret 类型稳定、修复陈旧自动工具快照但不放宽显式 allowlist（#160344、#161485、#160926、#162432）。含义：升级与权限快照需可回滚且不隐式扩权。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.8.35](https://github.com/openclaw/openclaw/releases/tag/v2026.8.35)
