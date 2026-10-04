@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "slug": "2026-10-03-blog-latentspace-ainews-not-much-happened-today",
+      "zh": false,
+      "en": true,
+      "title": "[AINews] not much happened today — 本期 AI 新闻盘点模型价格战、Agent 评测与多 harness 强化学习，",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-03"
+    },
+    {
+      "slug": "2026-10-03-blog-simonwillison-september-sponsors-only-newsletter",
+      "zh": true,
+      "en": true,
+      "title": "September sponsors-only newsletter — Simon Willison 九月赞助者通讯目录：模型、价格战、数学与安全事件",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-03"
+    },
+    {
+      "slug": "2026-10-03-blog-simonwillison-we-re-going-to-need-default-hard-budget",
+      "zh": true,
+      "en": true,
+      "title": "We're going to need default hard budget caps on pretty — Simon Willison 呼吁按量付费服务默认设置硬性预算上限，防止 age",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-03"
+    },
+    {
+      "slug": "2026-10-03-claude-code-2-1-289",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.289 — 插件与沙箱权限修复密集，agent 隔离边界更清晰",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-10-03"
+    },
+    {
       "slug": "2026-10-03-openclaw-2026-9-8",
       "zh": true,
       "en": false,
@@ -107,6 +151,17 @@
       "kind": "blogger",
       "author": "OpenClaw",
       "source": "OpenClaw",
+      "tool": null,
+      "publishedAt": "2026-10-02"
+    },
+    {
+      "slug": "2026-10-02-blog-simonwillison-rex-s-dino-store",
+      "zh": true,
+      "en": true,
+      "title": "Rex's Dino Store — 布鲁克林地铁站里一家恐龙开的纪念品店，看它如何把恐龙双关梗堆到极致",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-10-02"
     },
@@ -791,94 +846,6 @@
       "source": "ollaya-dev/ollaya",
       "tool": null,
       "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-28-blog-hf-blog-holo4-powering-generalist-computer-use-agents",
-      "zh": true,
-      "en": true,
-      "title": "Holo4: powering generalist computer-use agents — Hugging Face 介绍 Holo4，一个面向通用计算机操作智能体的新模型",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-blog-openai-news-are-you-a-codex-original",
-      "zh": true,
-      "en": true,
-      "title": "Are you a Codex Original? — OpenAI 征集 Codex 真实使用故事，入选 Codex Original",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-blog-openai-news-basis-completes-a-tax-workbook-2x-faster-with",
-      "zh": true,
-      "en": true,
-      "title": "Basis completes a tax workbook 2x faster with GPT-6 — GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-blog-openai-news-how-we-will-do-better-for-australia",
-      "zh": true,
-      "en": true,
-      "title": "How we will do better for Australia — OpenAI 为澳洲政府网站事件致歉，并说明将如何加强防护",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-blog-openai-news-the-lenfest-institute-grows-landmark-program-with-expanded",
-      "zh": true,
-      "en": true,
-      "title": "The Lenfest Institute grows landmark program with — OpenAI 追加千万美元级投入，支持地方新闻业用 AI 做新闻。",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-blog-openai-news-towards-safety-cases-for-frontier-ai-training",
-      "zh": true,
-      "en": true,
-      "title": "Towards safety cases for frontier AI training — OpenAI 提出前沿训练安全案例框架，覆盖技术防护、运营实践与失准事件调查",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-blog-simonwillison-claude-sonnet-5-5",
-      "zh": true,
-      "en": true,
-      "title": "Claude Sonnet 5.5 — Anthropic 新 Sonnet 5.5 更快更便宜，还成了 claude.",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-28"
-    },
-    {
-      "slug": "2026-09-28-blog-simonwillison-quoting-joedaroo",
-      "zh": true,
-      "en": true,
-      "title": "Quoting @joedaroo — OpenAI 安全人员承认模型能力突跳让公司措手不及，谈组织如何应对意外",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-28"
     }
   ]
 }
