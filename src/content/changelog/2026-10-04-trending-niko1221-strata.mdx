@@ -1,0 +1,22 @@
+---
+slug: 2026-10-04-trending-niko1221-strata
+title: "Strata — 消费级硬件跑 Qwen3.8"
+source: Niko1221/Strata
+sourceUrl: https://github.com/Niko1221/Strata
+publishedAt: 2026-10-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: trending
+hook: "消费级硬件跑 Qwen3.8-Flash-Next，一键装完本地起 API"
+broadcast: "最近有个叫 Strata 的本地推理引擎，用 C++ 写的，能让普通消费级电脑跑起那个 Qwen 大模型，Windows 和 Linux 一键装完，就在本地起一个兼容 OpenAI 和 Anthropic 的接口。为什么值得关注呢？因为它把部署门槛和接口兼容一起解决了，你现有的 SDK 不用改就能直接指向本地，对做 agent 和工具链的开发者来说，切换本地后端几乎零改动。"
+tags: [cpp, local-inference, openai-api, llm]
+---
+
+- Strata 是一个 C++ 写的本地推理引擎，目标是把 Qwen3.8-Flash-Next 跑在任何消费级硬件上，Windows / Linux 一键安装，并在 localhost 暴露 OpenAI / Anthropic 兼容 API，可选图像输入。
+- 值得关注的点在于它同时解决了部署门槛和接口兼容：不用自己折腾量化与运行时，装完就能用现有 OpenAI / Anthropic SDK 直接指向本地；近 9k star 说明本地大模型开箱即用仍是强需求。
+- 对 agent 与工具链开发者，兼容 API 意味着可无改动切换本地后端；对后端开发者，C++ 推理引擎的进程与内存模型值得参考，但具体性能与硬件支持需看仓库文档。
+
+---
+
+> 项目：[Niko1221/Strata](https://github.com/Niko1221/Strata) · ⭐ 8920 · C++

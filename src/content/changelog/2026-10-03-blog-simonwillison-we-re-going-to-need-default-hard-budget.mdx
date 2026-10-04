@@ -1,0 +1,23 @@
+---
+slug: 2026-10-03-blog-simonwillison-we-re-going-to-need-default-hard-budget
+title: "We're going to need default hard budget caps on pretty — Simon Willison 呼吁按量付费服务默认设置硬性预算上限，防止 age"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/
+publishedAt: 2026-10-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 呼吁按量付费服务默认设置硬性预算上限，防止 agent 失控烧钱。"
+broadcast: "有开发者提出，按量付费的服务应该默认带上硬性预算上限，花超了就切断并报错，而不是只发封警告邮件。这对做 agent 的人挺关键，因为自动调用付费接口很容易失控烧钱，成本风险得靠平台兜底。他还建议，选托管服务时可以把有没有硬预算上限当成一个实际指标，甚至让 agent 主动推荐带这个上限的供应商。"
+tags: [budget-caps, coding-agents, cloud-costs, aws]
+---
+
+- 作者主张 pay-by-usage 服务应默认提供**硬性预算上限**：超过 $X/月就切断并返回错误，而非只发警告邮件的软上限。对 agent 工具链的含义是，自动拉起付费 API 或托管服务的成本风险需要平台层兜底，不能只靠开发者自觉。
+- 他点名最希望 AWS 提供该功能，并提到 AWS 已在 9 月 16 日推出每月 spend limit，超限后项目当月暂停；Google Cloud 也在 7 月推出 Spend Caps。对开发者的含义是，选型时可把“是否有硬预算上限”作为评估托管服务的实际指标。
+- 作者认为理想情况下 agent 应主动推荐带硬预算上限的供应商，并警告新手不要部署无上限服务。对 agent 设计的含义是，成本安全可以成为 agent 推荐与风险提示的一部分，而不只是事后告警。
+
+---
+
+> 原文：[We're going to need default hard budget caps on pretty much everything](https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/) · 作者 Simon Willison

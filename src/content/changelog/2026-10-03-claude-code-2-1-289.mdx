@@ -1,0 +1,23 @@
+---
+slug: 2026-10-03-claude-code-2-1-289
+title: "claude-code v2.1.289 — 插件与沙箱权限修复密集，agent 隔离边界更清晰"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.289
+publishedAt: 2026-10-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件与沙箱权限修复密集，agent 隔离边界更清晰"
+broadcast: "这次更新主要修了一批插件和沙箱权限的问题。以前命令前面加了环境变量前缀，沙箱可能会直接放行，绕过权限判断，现在改成解析完命令再判定，隔离边界清楚多了。另外插件事件和 agent 生命周期统一到同一个标识下，还能看到空闲和等待状态，插件渲染出错也不会再拖垮整个会话。对做 agent 的国内开发者来说，权限和隔离这块更可靠了。"
+insight: "这次 v2.1.289 的修复集中在权限判定和插件隔离，对现有用户来说值得升级：Bash deny/ask 规则此前会被环境变量前缀绕过，属于安全边界问题，建议尽快升到该版本。现有 hook 配置本身不用改，但如果你依赖插件 hook 事件，新增的 agent.spawn 与共享 agent id 意味着可以按需调整观测逻辑。国内走 newapi.lurus.cn 代理的用户不受影响，升级路径和调用方式不变。"
+tags: [claude-code, plugin-isolation, sandbox-permissions, agent-lifecycle]
+---
+
+- 修复 Bash deny/ask 规则在环境变量前缀（如 `TZ="$HOME" rm -rf build`）或裸赋值前置时被沙箱自动放行跳过；含义是权限判定需在命令解析后、变量展开后执行，而非仅匹配字面前缀。
+- 新增 `agent.spawn` 供 teammates 使用，插件 hook 事件共享同一 agent id，`$.agent.list()` 暴露 idle 与 waiting 状态；含义是 harness 需把 agent 生命周期与插件事件流统一到可观测的单一标识下。
+- 修复用户安装插件可改写组织托管 MCP 服务器登录工具描述，以及 mod 的 `ui.render` 抛错导致会话以不可恢复接口错误终止；含义是插件渲染与元数据写入必须与宿主状态隔离，失败应局部化并上报 `ui.fault`。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.289](https://github.com/anthropics/claude-code/releases/tag/v2.1.289)

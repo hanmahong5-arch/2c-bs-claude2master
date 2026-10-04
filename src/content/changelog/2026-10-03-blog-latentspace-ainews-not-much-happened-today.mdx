@@ -1,0 +1,23 @@
+---
+slug: 2026-10-03-blog-latentspace-ainews-not-much-happened-today
+title: "[AINews] not much happened today — 本期 AI 新闻盘点模型价格战、Agent 评测与多 harness 强化学习，"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/ainews-not-much-happened-today-cee
+publishedAt: 2026-10-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "本期 AI 新闻盘点模型价格战、Agent 评测与多 harness 强化学习，适合快速了解一周工具链动向"
+broadcast: "今天这期盘点里，最值得留意的是模型价格和评测得一起看。有个新模型比之前便宜了八成多，中位成本很低，但单看榜单排名容易误判。另外，同一个模型换个运行框架，得分能从六成多掉到三成，说明做智能体训练和评测必须固定框架，否则结果没法比。还有编排工具开始默认支持多模型调度，对国内开发者来说，选型和搭工具链都得更谨慎。"
+tags: [ai-news, agent-evals, rl-training, dev-tooling]
+---
+
+- **模型价格与评测**：OpenAI 发布 GPT-6.1 Sol，定价 $2/$10 每百万 token，比 Astra 便宜 81%，在 Agent Arena 以 $0.56 中位成本进入第 5 名；Sonnet 5.5 排第 3 但每任务 $2.74 高于 Opus 5.5，未进 Pareto 前沿。含义：agent 选型时成本与得分需一起看，单看榜单排名会误判。
+- **多 harness 强化学习**：Hugging Face 发现同一模型权重在不同 harness 下得分从 62% 掉到 33%；其方法用代理兼容 OpenAI/Anthropic/Gemini API 格式记录 token 与 logprob，LFM2.5-2.6B 从 42% 提升到 54%，工具调用减少 31%。含义：agent 训练与评测必须固定 harness，否则结果不可比。
+- **开发者工具链**：T3 Code 编排器重写合并，823 次提交覆盖 1,912 个文件，新增跨 provider delegate_task、线程分叉与中途切换模型；OpenAI Agents API 加入一次调用浏览器操作，声称 99.97% 轮次可靠性。含义：编排层正把多模型、多工具调度变成默认能力。
+
+---
+
+> 原文：[[AINews] not much happened today](https://www.latent.space/p/ainews-not-much-happened-today-cee) · 作者 Latent Space
