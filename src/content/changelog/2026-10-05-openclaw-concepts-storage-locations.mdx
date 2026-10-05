@@ -1,0 +1,23 @@
+---
+slug: 2026-10-05-openclaw-concepts-storage-locations
+title: "Storage locations · OpenClaw — 存储位置配置错了会静默丢数据，这篇讲清了初始化、加密与命名空间隔离的边界"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/storage-locations
+publishedAt: 2026-10-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "存储位置配置错了会静默丢数据，这篇讲清了初始化、加密与命名空间隔离的边界"
+broadcast: "今天聊一个容易被忽略的坑：存储位置配置错了，数据会静默丢失。这套方案讲清了初始化和加密的边界，比如它从不自动创建根目录，必须你先建好再显式初始化；加密用的口令一旦丢失，已有数据就再也读不出来。对做 agent 的国内开发者来说，这意味着持久化层要把声明和副作用分开，多设备共享存储时还得显式划分命名空间，否则保留策略会互相覆盖。"
+insight: "现有用户不必急着升级，但配置存储位置前务必先用绝对路径建好根目录再执行 storage init，否则会静默丢数据。改 passphrase 不会重加密已有数据，丢失 passphrase 或位置标记对象就不可读，所以密钥和状态标记要单独保管。多安装共享同一位置时记得用 backups/<namespace>/ 划分命名空间，避免设备 ID 冲突互相覆盖。走 newapi.lurus.cn 代理不受影响，因为这是本地持久化层配置，与代理链路无关。"
+tags: [storage-locations, encryption, backup-namespace, agent-harness]
+---
+
+- 配置存储位置不会自动备份或迁移数据，且 OpenClaw 从不创建配置的根目录，必须先用绝对路径建好目录再 `storage init`。含义：harness 的持久化层要把「声明」与「副作用」分开，初始化应是显式动作而非隐式兜底。
+- 加密用 passphrase 时，核心层在 provider 收到对象前加密、读取时解密；改 passphrase 不会重加密已有数据，丢失 passphrase 或位置标记都会导致对象不可读。含义：prompt/harness 设计里密钥与状态标记属于不可再生资源，需在流程外单独保管。
+- 多安装共享同一位置时用 `backups/<namespace>/`，首次上传写入 owner.json 声明设备 ID，不同设备 ID 会拒绝备份；恢复是只读的，不改变声明。含义：多 agent 共享存储要显式划分命名空间，避免 hostname 冲突导致保留策略互相覆盖。
+
+---
+
+> 原文：[Storage locations · OpenClaw](https://docs.openclaw.ai/concepts/storage-locations)

@@ -181,7 +181,9 @@
     "ViceVerse-cz/Serein",
     "Niko1221/Strata",
     "chasmlol/2010-rust-rewrite-mashup",
-    "MichaelKinsy/PiG"
+    "MichaelKinsy/PiG",
+    "cdyforever/how-to-live-better",
+    "egoist/mygo"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -293,16 +295,21 @@
       "https://docs.openclaw.ai/concepts/qa-e2e-automation/channel-qa-reference",
       "https://docs.openclaw.ai/concepts/qa-e2e-automation/command-surface",
       "https://docs.openclaw.ai/concepts/qa-e2e-automation/extending-the-stack",
-      "https://docs.openclaw.ai/concepts/qa-e2e-automation/operator-flow"
+      "https://docs.openclaw.ai/concepts/qa-e2e-automation/operator-flow",
+      "https://docs.openclaw.ai/concepts/qa-e2e-automation/qa-reporting",
+      "https://docs.openclaw.ai/concepts/qa-e2e-automation/scenario-coverage",
+      "https://docs.openclaw.ai/concepts/qa-e2e-automation/slack-qa",
+      "https://docs.openclaw.ai/concepts/qa-e2e-automation/whatsapp-and-credentials",
+      "https://docs.openclaw.ai/concepts/storage-locations"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-10-04",
+    "anthropic-engineering": "2026-10-05",
     "claude-code-docs": "2026-10-02",
     "openai-codex-blog": "2026-10-01",
-    "openclaw-concepts": "2026-09-28",
-    "hermes-guides": "2026-09-28"
+    "openclaw-concepts": "2026-10-05",
+    "hermes-guides": "2026-10-05"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -1365,7 +1372,8 @@
       "https://huggingface.co/blog/nvidia/kumo-tabular",
       "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
       "https://huggingface.co/blog/allenai/astabrief",
-      "https://huggingface.co/blog/ServiceNow-AI/autosynthdata"
+      "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+      "https://huggingface.co/blog/microsoft/thinkingbox"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -1465,23 +1473,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-10-04",
+    "simonwillison": "2026-10-05",
     "lilianweng": "2026-10-01",
-    "latentspace": "2026-10-04",
-    "interconnects": "2026-10-04",
+    "latentspace": "2026-10-05",
+    "interconnects": "2026-10-05",
     "karpathy": "2026-10-03",
     "raschka": "2026-10-03",
     "eugeneyan": "2026-10-03",
     "chiphuyen": "2026-10-01",
-    "oneusefulthing": "2026-10-03",
+    "oneusefulthing": "2026-10-05",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-10-04",
-    "deepmind": "2026-10-03",
-    "hf-blog": "2026-10-03",
-    "anthropic-news": "2026-10-04",
-    "steipete": "2026-10-03",
-    "openclaw-blog": "2026-10-03"
+    "openai-news": "2026-10-05",
+    "deepmind": "2026-10-05",
+    "hf-blog": "2026-10-05",
+    "anthropic-news": "2026-10-05",
+    "steipete": "2026-10-05",
+    "openclaw-blog": "2026-10-05"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

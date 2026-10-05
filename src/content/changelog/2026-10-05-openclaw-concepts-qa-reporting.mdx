@@ -1,0 +1,23 @@
+---
+slug: 2026-10-05-openclaw-concepts-qa-reporting
+title: "QA reporting · OpenClaw — QA 报告怎么把「跑过了」变成「可审计的通过」"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/qa-e2e-automation/qa-reporting
+publishedAt: 2026-10-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "QA 报告怎么把「跑过了」变成「可审计的通过」——证据、重试与证明要求的设计细节"
+broadcast: "今天聊一个挺关键的设计：QA 报告怎么把「跑过了」变成「可审计的通过」。它每次跑完都会产出证据文件、汇总和报告，把证据当成一等产物，而不是只留日志。重试时保留原始观测，通过判定绑定到一次完整运行，避免挑着成功。还要求证明不足和产品失败分开记，这对国内做 agent 评测的人来说，是最容易搞混的一环。"
+insight: "这次 OpenClaw 的 QA 报告设计对国内开发者最实际的影响在 prompt 和 harness 配置上：通过判定必须绑定到一次完整 attempt，不能跨 attempt 拼凑通过行，所以现有那些按行挑成功的 prompt 逻辑要改。证据文件已是一等产物，缺失或错误 proof class 只记「证明不足」而非失败，评测脚本里这两类结果也要分开编码。走 newapi.lurus.cn 代理的调用方式本身不受影响，无需调整接入。"
+tags: [qa-evidence, agent-evaluation, test-harness, proof-requirements]
+---
+
+- 每次 `qa suite` 都产出 `qa-evidence.json`、`qa-suite-summary.json`、`qa-suite-report.md`；`execution.kind: script` 的场景由生产者自己写 evidence 再被导入。含义：harness 应把「证据文件」当作一等产物，而不是只留日志。
+- 重试保留原始观测与工件，由「被选中的 attempt」决定有效计数与覆盖，且选择作用于整个 attempt，不能混用不同 attempt 的通过行。含义：prompt/harness 的通过判定要绑定到一次完整运行，避免挑选性成功。
+- `proofRequirements` 要求一个绑定 receipt 满足某个备选，不能跨无关观测拼凑事实；缺失或错误 proof class 记为「证明不足」而非产品失败。含义：把「没证据」和「失败」分开编码，是 agent 评测里最容易搞混的一环。
+
+---
+
+> 原文：[QA reporting · OpenClaw](https://docs.openclaw.ai/concepts/qa-e2e-automation/qa-reporting)
