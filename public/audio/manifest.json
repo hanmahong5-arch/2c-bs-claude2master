@@ -1,8 +1,96 @@
 {
   "items": [
     {
+      "slug": "2026-10-05-openclaw-concepts-qa-reporting",
+      "zh": true,
+      "en": true,
+      "title": "QA reporting · OpenClaw — QA 报告怎么把「跑过了」变成「可审计的通过」",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-10-05"
+    },
+    {
+      "slug": "2026-10-05-openclaw-concepts-storage-locations",
+      "zh": true,
+      "en": true,
+      "title": "Storage locations · OpenClaw — 存储位置配置错了会静默丢数据，这篇讲清了初始化、加密与命名空间隔离的边界",
+      "kind": "practice",
+      "author": null,
+      "source": "openclaw-concepts",
+      "tool": null,
+      "publishedAt": "2026-10-05"
+    },
+    {
+      "slug": "2026-10-05-trending-cdyforever-how-to-live-better",
+      "zh": true,
+      "en": false,
+      "title": "how-to-live-better — 528条生活指南单页版，零依赖可离线，星标破7500",
+      "kind": "trending",
+      "author": null,
+      "source": "cdyforever/how-to-live-better",
+      "tool": null,
+      "publishedAt": "2026-10-05"
+    },
+    {
+      "slug": "2026-10-05-trending-egoist-mygo",
+      "zh": true,
+      "en": false,
+      "title": "mygo — 用 Go 写桌面应用，Web 前端或原生 UI 都行",
+      "kind": "trending",
+      "author": null,
+      "source": "egoist/mygo",
+      "tool": null,
+      "publishedAt": "2026-10-05"
+    },
+    {
+      "slug": "2026-10-04-trending-chasmlol-2010-rust-rewrite-mashup",
+      "zh": true,
+      "en": false,
+      "title": "2010-rust-rewrite-mashup — 用 Rust 把 MW2、Skate 3 和 Minecraft 塞进同一个游戏",
+      "kind": "trending",
+      "author": null,
+      "source": "chasmlol/2010-rust-rewrite-mashup",
+      "tool": null,
+      "publishedAt": "2026-10-04"
+    },
+    {
+      "slug": "2026-10-04-trending-michaelkinsy-pig",
+      "zh": true,
+      "en": false,
+      "title": "PiG — TypeScript 编码代理 Pi 被忠实移植到 Go，430 星",
+      "kind": "trending",
+      "author": null,
+      "source": "MichaelKinsy/PiG",
+      "tool": null,
+      "publishedAt": "2026-10-04"
+    },
+    {
+      "slug": "2026-10-04-trending-niko1221-strata",
+      "zh": true,
+      "en": false,
+      "title": "Strata — 消费级硬件跑 Qwen3.8",
+      "kind": "trending",
+      "author": null,
+      "source": "Niko1221/Strata",
+      "tool": null,
+      "publishedAt": "2026-10-04"
+    },
+    {
+      "slug": "2026-10-03-blog-hf-blog-the-agent-said-it-was-done-the-database",
+      "zh": true,
+      "en": true,
+      "title": "The Agent Said It Was Done. The Database Disagreed. — 微软在 Hugging Face 博客介绍 ThinkingBox：让 agen",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-10-03"
+    },
+    {
       "slug": "2026-10-03-blog-latentspace-ainews-not-much-happened-today",
-      "zh": false,
+      "zh": true,
       "en": true,
       "title": "[AINews] not much happened today — 本期 AI 新闻盘点模型价格战、Agent 评测与多 harness 强化学习，",
       "kind": "blogger",
@@ -790,61 +878,6 @@
       "author": null,
       "source": "openai/codex",
       "tool": "codex",
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-codex-rust-v0-159-2",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.159.2 — Windows 上后台进程不再闪黑框，小修复但影响体感",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-gemini-cli-0-62-0",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.62.0 — v0.62.0 集中修 PTY 生命周期与 ACP 权限时序，agent 执行层",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-openclaw-2026-8-33",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.8.33 — LTS 线补上旗舰模型与安全修复，看 agent 运行时如何跨模型保持推理连续性",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-trending-human-agent-society-reef",
-      "zh": true,
-      "en": false,
-      "title": "reef — 为持续自我改进的 agent 提供基础设施，7千星新项目",
-      "kind": "trending",
-      "author": null,
-      "source": "Human-Agent-Society/reef",
-      "tool": null,
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-trending-ollaya-dev-ollaya",
-      "zh": true,
-      "en": false,
-      "title": "ollaya — 本地跑决策模型，Ollama 式拉取与推理服务",
-      "kind": "trending",
-      "author": null,
-      "source": "ollaya-dev/ollaya",
-      "tool": null,
       "publishedAt": "2026-09-29"
     }
   ]
