@@ -1,0 +1,23 @@
+---
+slug: 2026-10-05-codex-rust-v0-160-1
+title: "codex rust-v0.160.1 — Windows 远程 MCP 启动环境变量被覆盖的 bug 已修复"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.160.1
+publishedAt: 2026-10-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Windows 远程 MCP 启动环境变量被覆盖的 bug 已修复"
+broadcast: "最近有个修复挺值得国内做 agent 的同学留意：在 Windows 上启动远程 MCP 服务器时，如果显式配置了环境变量，系统必需的基础变量会被覆盖，导致进程起不来，现在这个问题已经修好了。它提醒我们，跨平台注入环境变量时应该做合并而不是替换，并且要区分宿主环境和用户配置这两层。"
+insight: "这次 0.160.1 修的是 Windows 远程 stdio MCP 启动时 SYSTEMROOT、TEMP、TMP 被覆盖的问题，属于补丁级回移，说明环境变量丢失会直接让 MCP 进程起不来。判断很明确：只要你在 Unix 主机连 Windows executor、且显式配了远程环境变量，就值得升到 0.160.1，直接升补丁版即可，不用动现有 prompt 或 hook 配置。走 newapi.lurus.cn 代理的用户不受影响，代理层不涉及本地 MCP 启动环境。"
+tags: [mcp, env-vars, windows, bugfix]
+---
+
+- 修复：显式配置远程环境变量时，启动远程 stdio MCP 服务器会保留 `SYSTEMROOT`、`TEMP`、`TMP`，不再被覆盖。含义：harness 注入远程 env 时应做合并而非替换，避免抹掉执行器启动所需的基础变量。
+- 场景：Unix 主机连接 Windows executor 时，Windows 侧启动环境得以保留。含义：跨平台 harness 需区分「宿主环境」与「用户配置环境」两层。
+- 版本：该修复通过 #51121 回移到 0.160。含义：补丁级回移说明环境变量丢失会直接导致 MCP 进程启动失败，属于高优先级修复。
+
+---
+
+> 原文 release：[openai/codex rust-v0.160.1](https://github.com/openai/codex/releases/tag/rust-v0.160.1)

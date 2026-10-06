@@ -1,0 +1,23 @@
+---
+slug: 2026-10-05-claude-code-2-1-290
+title: "claude-code v2.1.290 — hook 事件新增字段，权限与工具调用可被精确区分"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.290
+publishedAt: 2026-10-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "hook 事件新增字段，权限与工具调用可被精确区分"
+broadcast: "这次更新给 hook 事件加了几个新字段，让权限和工具调用能被更精确地区分。比如工具检查事件现在能分辨是子代理还是主会话发起的，还能读到组织要求的审批级别，不用自己硬编码策略。对做 agent 的开发者来说，这意味着记账和权限裁决都能按来源分开处理，控制粒度更细了。"
+insight: "这次 v2.1.290 的改动集中在 hook 事件字段：tool.check 新增 agentId 和 ceiling，turn.step 新增 serverToolUses。如果你现有 hook 依赖 tool.check 做权限裁决，建议升级后把 agentId 纳入判断，避免 subagent 与主会话混用同一套逻辑；ceiling 则让 hook 能对齐组织审批上限，不必再硬编码策略。走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，升级本身不受影响。"
+tags: [claude-code, plugin-hooks, permissions, agent-harness]
+---
+
+- `turn.step` 结果新增 `serverToolUses`，列出 API 自身（advisor）执行的工具调用及其 id、名称、输入与起止时间；harness 可据此把模型发起的调用与服务端调用分开记账。
+- 插件 hook 的 `tool.check` 事件新增 `agentId`，可区分 subagent 与主会话的权限检查；同一 hook 能按来源做不同裁决。
+- `tool.check` 读取的问题与裁决新增 `ceiling`，标明组织对该工具要求的审批级别；hook 可在不硬编码策略的情况下对齐组织上限。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.290](https://github.com/anthropics/claude-code/releases/tag/v2.1.290)

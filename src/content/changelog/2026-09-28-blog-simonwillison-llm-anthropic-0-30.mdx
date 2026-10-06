@@ -1,0 +1,23 @@
+---
+slug: 2026-09-28-blog-simonwillison-llm-anthropic-0-30
+title: "llm-anthropic 0.30 — Simon Willison 发布 llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Sep/28/llm-anthropic/
+publishedAt: 2026-09-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 llm-anthropic 0.30，新增模型列表刷新与免费 token 计数命令"
+broadcast: "有个叫 Simon Willison 的开发者更新了他那个接入 Anthropic 的命令行工具。这次加了两个命令，一个能直接从官方接口拉取最新模型列表，以后新模型发布不用再等插件更新；另一个能在发送之前先算出这段提示会消耗多少 token，方便提前控制成本和上下文长度。对国内做 agent 的开发者来说，模型接入和用量预估都收在同一个入口里，写脚本会更省事。"
+tags: [llm, anthropic, cli, token-counting]
+---
+
+- 新增 `llm anthropic refresh`，可直接从 Anthropic API 拉取最新模型列表，因此新模型发布后无需再发新版插件即可支持。对工具链的含义是：把模型清单从硬编码改为运行时同步，能显著降低维护成本。
+- 新增 `llm anthropic count`，调用 Anthropic 免费的 token 计数 API，在发送 prompt 之前先返回该 prompt 将消耗的 token 数。对 agent 开发者的含义是：可在调用前做成本与上下文预算控制，避免超限或超支。
+- 该版本同时加入对 Claude Sonnet 5.5 的支持，属于 llm 生态下 Anthropic 接入层的常规迭代。对开发者的含义是：模型接入与用量预估被收敛到同一 CLI 入口，便于脚本化。
+
+---
+
+> 原文：[llm-anthropic 0.30](https://simonwillison.net/2026/Sep/28/llm-anthropic/) · 作者 Simon Willison

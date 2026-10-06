@@ -1,7 +1,7 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.289",
-    "openai/codex": "rust-v0.160.0",
+    "anthropics/claude-code": "v2.1.291",
+    "openai/codex": "rust-v0.160.1",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "desktop-v0.0.43",
     "block/goose": "v1.53.0",
@@ -183,7 +183,9 @@
     "chasmlol/2010-rust-rewrite-mashup",
     "MichaelKinsy/PiG",
     "cdyforever/how-to-live-better",
-    "egoist/mygo"
+    "egoist/mygo",
+    "storytold/photocraft",
+    "penso/herdr-gpui"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -305,7 +307,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-10-05",
+    "anthropic-engineering": "2026-10-06",
     "claude-code-docs": "2026-10-02",
     "openai-codex-blog": "2026-10-01",
     "openclaw-concepts": "2026-10-05",
@@ -666,7 +668,11 @@
       "https://simonwillison.net/2026/Sep/29/photo-scrubber/",
       "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
       "https://simonwillison.net/2026/Oct/3/newsletter/",
-      "https://simonwillison.net/2026/Oct/2/rex-s-dino-store/"
+      "https://simonwillison.net/2026/Oct/2/rex-s-dino-store/",
+      "https://simonwillison.net/2026/Oct/5/felix-rieseberg/",
+      "https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/",
+      "https://simonwillison.net/2026/Oct/1/pwasm/",
+      "https://simonwillison.net/2026/Sep/28/llm-anthropic/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -835,7 +841,8 @@
       "https://www.latent.space/p/ainews-pi-10-pi-durable-and-aie-nyc",
       "https://www.latent.space/p/rlm",
       "https://www.latent.space/p/airbnb",
-      "https://www.latent.space/p/ainews-not-much-happened-today-cee"
+      "https://www.latent.space/p/ainews-not-much-happened-today-cee",
+      "https://www.latent.space/p/ainews-reflection-beam-501b-a23b"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1203,7 +1210,9 @@
       "https://openai.com/index/albertsons-reimagining-retail",
       "https://openai.com/index/the-den-family-social",
       "https://openai.com/index/practical-guide-building-gpt-6",
-      "https://openai.com/index/chatham-financial"
+      "https://openai.com/index/chatham-financial",
+      "https://openai.com/index/eu-text-provenance",
+      "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1473,21 +1482,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-10-05",
+    "simonwillison": "2026-10-06",
     "lilianweng": "2026-10-01",
-    "latentspace": "2026-10-05",
-    "interconnects": "2026-10-05",
-    "karpathy": "2026-10-03",
-    "raschka": "2026-10-03",
-    "eugeneyan": "2026-10-03",
+    "latentspace": "2026-10-06",
+    "interconnects": "2026-10-06",
+    "karpathy": "2026-10-06",
+    "raschka": "2026-10-06",
+    "eugeneyan": "2026-10-06",
     "chiphuyen": "2026-10-01",
     "oneusefulthing": "2026-10-05",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-10-05",
+    "openai-news": "2026-10-06",
     "deepmind": "2026-10-05",
     "hf-blog": "2026-10-05",
-    "anthropic-news": "2026-10-05",
+    "anthropic-news": "2026-10-06",
     "steipete": "2026-10-05",
     "openclaw-blog": "2026-10-05"
   },

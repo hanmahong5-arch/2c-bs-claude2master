@@ -1,0 +1,23 @@
+---
+slug: 2026-10-06-claude-code-2-1-291
+title: "claude-code v2.1.291 — 两个回归修复，都关乎会话数据不丢"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.291
+publishedAt: 2026-10-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "两个回归修复，都关乎会话数据不丢"
+broadcast: "这次更新只做了一件事，修两个回归问题，但都跟会话数据会不会丢有关。一个是云端会话可能丢掉权限提示的回答，另一个是退出时最后几条消息可能没保存。对做 agent 的国内开发者来说，这提醒我们权限应答和尾部消息都属于必须持久化的状态，恢复和关闭流程要当成一次完整提交来对待，也值得纳入回归测试。"
+insight: "这次 v2.1.291 是纯回归修复，没有新功能，但修的两个问题都直接关系到会话数据不丢：权限提示回答和退出时最后几条消息。如果你已经在 2.1.288 或 2.1.290 上跑，建议直接升到 2.1.291，别停在中间版本；prompt 和 hook 配置本身不用改，因为改动只在持久化路径。国内走 newapi.lurus.cn 代理的用户，升级方式不变，代理层不受影响。"
+tags: [claude-code, regression-fix, session-persistence, permission-prompts]
+---
+
+- 修复 2.1.290 引入的回归：云端会话可能丢失权限提示的回答。对 agent harness 而言，权限应答属于控制流状态，必须与消息流一样持久化，否则恢复后行为不可预测。
+- 修复 2.1.288 引入的回归：退出会话时最后几条消息可能丢失。这意味着退出路径需要显式 flush 待写消息，harness 的关闭流程应视为一次事务提交而非直接断开。
+- 两条均为回归修复，未新增功能。含义是版本迭代中状态持久化最易被破坏，harness 应把权限应答与尾部消息纳入回归测试覆盖。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.291](https://github.com/anthropics/claude-code/releases/tag/v2.1.291)

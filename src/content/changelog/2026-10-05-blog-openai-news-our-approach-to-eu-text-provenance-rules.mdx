@@ -1,0 +1,23 @@
+---
+slug: 2026-10-05-blog-openai-news-our-approach-to-eu-text-provenance-rules
+title: "Our approach to EU text provenance rules — OpenAI 谈欧盟文本溯源规则下的水印方案与检测机制"
+source: "OpenAI"
+sourceUrl: https://openai.com/index/eu-text-provenance
+publishedAt: 2026-10-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "OpenAI"
+hook: "OpenAI 谈欧盟文本溯源规则下的水印方案与检测机制"
+broadcast: "OpenAI 最近谈了欧盟文本溯源规则下的水印方案，说水印不是覆盖所有输出，适用范围有明确边界，检测也有特定前提，不是随便一段文本都能验证。对国内做 agent 和内容管线的团队来说，这意味着不能默认生成内容都带可检测标记，溯源校验得当成可选环节，还得接受检测失败是正常结果。而且检测能力先只对研究人员开放，短期内很难直接接进生产流程，最好提前留好替代方案。"
+tags: [openai, text-watermarking, eu-regulation, provenance]
+---
+
+- OpenAI 说明其在欧盟文本溯源规则下对文本水印的定位：水印并非覆盖所有输出，而是有明确适用范围，具体边界由官方界定。对开发者的含义是，接入时不能默认所有生成文本都带可检测标记，需按场景确认。
+- 检测机制方面，文章强调水印的识别方式有特定前提，而非任意文本都能被验证。这意味着工具链中的溯源校验应设计为可选环节，并接受检测失败为正常结果。
+- 访问权限上，OpenAI 表示检测能力首先向研究人员开放，而非面向所有开发者或公众。对做 agent 与内容管线的团队而言，短期内难以把官方检测直接嵌入生产流程，需预留替代方案。
+
+---
+
+> 原文：[Our approach to EU text provenance rules](https://openai.com/index/eu-text-provenance) · 作者 OpenAI

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-01-blog-simonwillison-pwasm-0-2a0
+title: "pwasm 0.2a0 — 用 Claude Opus 5.5 重写自己 1 月的纯 Python WebA"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/1/pwasm/
+publishedAt: 2026-10-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用 Claude Opus 5.5 重写自己 1 月的纯 Python WebAssembly 引擎，42 次提交后几乎支持全部 WASM 规范"
+broadcast: "有个叫 pwasm 的纯 Python WebAssembly 引擎，作者一月写完就闲置了十个月，这次交给新模型继续开发，只补了少量提示就产生四十二次提交，如今几乎覆盖整个规范。值得关注的是，它说明老项目能当新模型的回归测试场，衡量模型迭代的真实增量；同时发布包已内置多种语言运行时，降低了嵌入门槛，但作者也强调这版完全不可信，仍保留 alpha，提醒我们 AI 生成代码的速度和可信度之间还有落差。"
+tags: [webassembly, python, vibe-coding, ai-agents]
+---
+
+- pwasm 是作者 1 月凭「vibe-coding」写出的纯 Python WebAssembly 引擎，闲置十个月后交给 Claude Opus 5.5 继续开发，仅少量追加提示就产生 42 次提交，如今几乎覆盖整个 WASM 规范。含义：老项目可作为新模型的回归测试场，衡量模型迭代带来的实际增量。
+- PyPI 上的 wheel 现在打包了可用的 MicroPython、QuickJS 和 Micro QuickJS 的 WASM 构建，把此前研究仓库里的实验搬进了正式发布物。含义：Python 生态里嵌入多语言运行时的门槛被进一步压低。
+- 作者明确表示这个版本完全不可信，因此保留 alpha 版本号。含义：AI 生成代码的产出速度与可信度之间仍有明显落差，工具链集成时需保留人工验证环节。
+
+---
+
+> 原文：[pwasm 0.2a0](https://simonwillison.net/2026/Oct/1/pwasm/) · 作者 Simon Willison

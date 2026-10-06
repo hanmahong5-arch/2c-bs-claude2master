@@ -1,0 +1,23 @@
+---
+slug: 2026-10-06-blog-latentspace-ainews-reflection-beam-501b-a23b-american-open-model
+title: "[AINews] Reflection Beam - 501B-A23B American Open Model — Reflection 发布 501B 开源模型 Beam，以及订阅价值、Agen"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/ainews-reflection-beam-501b-a23b
+publishedAt: 2026-10-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Reflection 发布 501B 开源模型 Beam，以及订阅价值、Agent 工具链的一周动态"
+broadcast: "美国又出了一个从零训练的开源大模型，总参数五百多亿，权重本月放出，官方说在代码修复测试上拿了八十分出头，不过独立分析认为它大概只跟国产某个模型持平。对国内开发者来说，开源权重多了一个选择，但更值得注意的是，同一套权重换个工具环境跑，成绩能从六成掉到三成，说明评测结果高度依赖工具链，比较模型能力前得先把环境固定下来。"
+tags: [open-weights, agent-harness, rl-environments, model-evaluation]
+---
+
+- **Beam 开源模型**：Reflection 发布 501B 总参数 / 23B 激活的 MoE 模型 Beam，Apache 2.0 权重本月放出，宣称 SWE-bench Verified 80.9 分。对开发者意味着美国本土从零训练的开源权重又多了一个选项，但独立分析认为其水平大致在 GLM-5.2 附近。
+- **订阅价值对比**：SemiAnalysis 测试发现 Claude 订阅提供的 API 等价价值是 OpenAI 方案的 5 倍以上，按任务成本调整后收窄到 1.3–2.9 倍。这提示工具链选型时不能只看标价，要按模型与 token 类型的实际 credit 成本核算。
+- **多 harness RL**：Hugging Face 用捕获代理把 10 个未修改的 harness 变成 RL 环境，同一权重在 Mini-SWE-Agent 下得 62%、Claude Code 下仅 33%。说明 agent 评测结果高度依赖 harness，开发者需要固定环境才能比较模型真实能力。
+
+---
+
+> 原文：[[AINews] Reflection Beam - 501B-A23B American Open Model](https://www.latent.space/p/ainews-reflection-beam-501b-a23b) · 作者 Latent Space

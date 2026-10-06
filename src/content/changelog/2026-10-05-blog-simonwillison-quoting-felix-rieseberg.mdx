@@ -1,0 +1,23 @@
+---
+slug: 2026-10-05-blog-simonwillison-quoting-felix-rieseberg
+title: "Quoting Felix Rieseberg — Anthropic 的 Cowork 把本地 VM 搬上云端，每会话独立沙箱，文"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/5/felix-rieseberg/
+publishedAt: 2026-10-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic 的 Cowork 把本地 VM 搬上云端，每会话独立沙箱，文件访问交回桌面端。"
+broadcast: "Anthropic 的 Cowork 最近把原本跑在本地虚拟机里的工具调用整个搬到了云端，每个会话都拿到自己独立的沙箱，不再互相共享状态。这意味着多会话并行时不会再彼此污染，会话级隔离开始成为 agent 运行时的默认设计。而当沙箱需要你设备上的文件时，改由桌面应用来负责访问，权限边界落回了客户端。对国内做 agent 的开发者来说，这种把隔离和文件权限分开处理的思路，值得留意。"
+tags: [claude-cowork, anthropic, agent-sandbox, tool-calls]
+---
+
+- 旧版 Cowork 在云端跑模型推理，但工具调用在本地 Anthropic 提供的 VM 里执行，只为显式加入会话的数据做映射。含义：本地 VM 带来能力与安全隔离，却把磁盘、电量、性能成本转嫁给用户。
+- 新版把推理和 VM 都放到云端，每个会话拿到自己的沙箱，不与其他会话共享状态。含义：会话级隔离成为 agent 运行时的默认设计，多会话并行不再互相污染。
+- 当 VM 需要用户设备上的文件时，由桌面应用负责该文件访问的工具调用。含义：本地与云端之间需要一个受控的文件访问通道，权限边界落在客户端而非沙箱内。
+
+---
+
+> 原文：[Quoting Felix Rieseberg](https://simonwillison.net/2026/Oct/5/felix-rieseberg/) · 作者 Simon Willison

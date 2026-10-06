@@ -1,0 +1,23 @@
+---
+slug: 2026-10-04-blog-simonwillison-qwen3-8-27b-addition-in-words
+title: "Qwen3.8 27B addition in words — 用本地 DGX Spark 复现 GPT"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/
+publishedAt: 2026-10-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用本地 DGX Spark 复现 GPT-4o 的「用文字做大数加法」实验，看 Qwen3.8 27B 表现如何"
+broadcast: "有人在本地的小型设备上，把两年前用云端大模型做过的文字加法实验重新跑了一遍，这次换成了一个能本地部署的中文开源模型，全程不依赖云端。对国内开发者来说，这说明本地量化的模型已经能扛起这类可复现的评测任务。实验还发现，开启推理后耗时明显变长，虽然一次性测试里一百六十九次答对了一百六十七次，但单次样本的结论稳定性仍然有限。"
+tags: [local-llms, llm-reasoning, qwen, evaluation]
+---
+
+- 博主受 Colin Frasier 两年前 GPT-4o 实验启发，在本地 DGX Spark 上用 Qwen3.8-27B-Q4_K_M.gguf 重跑同一实验，全程可控、不依赖云端。对开发者的含义：本地量化模型已能承担这类可复现的评测任务。
+- 关闭推理时，每个组合跑 30 次生成热力图；开启推理后耗时大增，改为每格只跑一次，结果非 100% 即 0%。含义：推理模式显著拉长延迟，评测设计需在样本量与成本间取舍。
+- 开启推理的一次性测试中 169 次里答对 167 次，报告还附带了逐位对齐、进位的大数加法推理轨迹。含义：显式思维链让模型把算术拆成可检查步骤，但单次样本的结论稳定性有限。
+
+---
+
+> 原文：[Qwen3.8 27B addition in words](https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/) · 作者 Simon Willison
