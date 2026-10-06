@@ -1,6 +1,105 @@
 {
   "items": [
     {
+      "slug": "2026-10-06-blog-latentspace-ainews-reflection-beam-501b-a23b-american-open-model",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Reflection Beam - 501B-A23B American Open Model — Reflection 发布 501B 开源模型 Beam，以及订阅价值、Agen",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-06"
+    },
+    {
+      "slug": "2026-10-06-claude-code-2-1-291",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.291 — 两个回归修复，都关乎会话数据不丢",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-10-06"
+    },
+    {
+      "slug": "2026-10-06-trending-penso-herdr-gpui",
+      "zh": true,
+      "en": false,
+      "title": "herdr-gpui — Rust + GPUI 打造的 Herdr 原生客户端，跨三平台",
+      "kind": "trending",
+      "author": null,
+      "source": "penso/herdr-gpui",
+      "tool": null,
+      "publishedAt": "2026-10-06"
+    },
+    {
+      "slug": "2026-10-06-trending-storytold-photocraft",
+      "zh": true,
+      "en": false,
+      "title": "photocraft — 纯 Rust 重写 Photoshop，开源清洁室实现",
+      "kind": "trending",
+      "author": null,
+      "source": "storytold/photocraft",
+      "tool": null,
+      "publishedAt": "2026-10-06"
+    },
+    {
+      "slug": "2026-10-05-blog-openai-news-building-advertising-for-the-way-people-use-ai",
+      "zh": true,
+      "en": true,
+      "title": "Building advertising for the way people use AI — OpenAI 在 ChatGPT 里上线视觉广告新格式，并补齐归因与品牌适配工具",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-05"
+    },
+    {
+      "slug": "2026-10-05-blog-openai-news-our-approach-to-eu-text-provenance-rules",
+      "zh": true,
+      "en": true,
+      "title": "Our approach to EU text provenance rules — OpenAI 谈欧盟文本溯源规则下的水印方案与检测机制",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-05"
+    },
+    {
+      "slug": "2026-10-05-blog-simonwillison-quoting-felix-rieseberg",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Felix Rieseberg — Anthropic 的 Cowork 把本地 VM 搬上云端，每会话独立沙箱，文",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-05"
+    },
+    {
+      "slug": "2026-10-05-claude-code-2-1-290",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.290 — hook 事件新增字段，权限与工具调用可被精确区分",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-10-05"
+    },
+    {
+      "slug": "2026-10-05-codex-rust-v0-160-1",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.160.1 — Windows 远程 MCP 启动环境变量被覆盖的 bug 已修复",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-10-05"
+    },
+    {
       "slug": "2026-10-05-openclaw-concepts-qa-reporting",
       "zh": true,
       "en": true,
@@ -43,6 +142,17 @@
       "source": "egoist/mygo",
       "tool": null,
       "publishedAt": "2026-10-05"
+    },
+    {
+      "slug": "2026-10-04-blog-simonwillison-qwen3-8-27b-addition-in-words",
+      "zh": true,
+      "en": true,
+      "title": "Qwen3.8 27B addition in words — 用本地 DGX Spark 复现 GPT",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-04"
     },
     {
       "slug": "2026-10-04-trending-chasmlol-2010-rust-rewrite-mashup",
@@ -419,6 +529,17 @@
       "publishedAt": "2026-10-01"
     },
     {
+      "slug": "2026-10-01-blog-simonwillison-pwasm-0-2a0",
+      "zh": true,
+      "en": true,
+      "title": "pwasm 0.2a0 — 用 Claude Opus 5.5 重写自己 1 月的纯 Python WebA",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-01"
+    },
+    {
       "slug": "2026-10-01-blog-simonwillison-quoting-matthew-green",
       "zh": true,
       "en": true,
@@ -757,127 +878,6 @@
       "author": "OpenAI",
       "source": "OpenAI",
       "tool": null,
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-blog-openai-news-introducing-gpt-6-1-sol",
-      "zh": true,
-      "en": true,
-      "title": "Introducing GPT-6.1 Sol — OpenAI 发布 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-blog-openclaw-blog-openclaw-enterprise-the-open-agent-platform",
-      "zh": true,
-      "en": true,
-      "title": "OpenClaw Enterprise - The Open Agent Platform — OpenClaw 发布企业版，用开源中立平台管理敏感环境中的常驻 agent",
-      "kind": "blogger",
-      "author": "OpenClaw",
-      "source": "OpenClaw",
-      "tool": null,
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-blog-raschka-language-models-for-text-classification-from-bag-of",
-      "zh": true,
-      "en": true,
-      "title": "Language Models for Text Classification: From — 从词袋到 Jev：一篇梳理文本分类演进、帮你判断 Jev 热度是否名副其实的技术",
-      "kind": "blogger",
-      "author": "Sebastian Raschka",
-      "source": "Sebastian Raschka",
-      "tool": null,
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-blog-simonwillison-gpt-6-1-sol-near-astra-intelligence-for",
-      "zh": true,
-      "en": true,
-      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the — Simon Willison 点评 GPT 6.1 Sol：以五分之一价格逼近 ",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-blog-simonwillison-openai-devday-2026-live-blog",
-      "zh": true,
-      "en": true,
-      "title": "OpenAI DevDay 2026 live blog — Simon Willison 在 OpenAI DevDay 2026 现场直播",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-blog-simonwillison-photo-scrubber-local-face-blur-metadata-removal",
-      "zh": true,
-      "en": true,
-      "title": "Photo Scrubber — local face blur & metadata removal — 用浏览器本地模糊人脸并清除照片元数据，不依赖云端处理",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-blog-simonwillison-quoting-anthropic-frontier-red-team",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Anthropic Frontier Red Team — Anthropic 红队测试显示 GLM",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-claude-code-2-1-285",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.285 — 插件配置、权限模式、超时重试",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-cline-sdk-sdk-v0-0-87",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.87 — Windows 代理下 hub 启动失败、token 重复计数等 agent 基",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-codex-rust-v0-159-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.159.0 — Codex 0.159 让新输入可打断模型响应，并收紧沙箱与命令审批边界。",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-09-29"
-    },
-    {
-      "slug": "2026-09-29-codex-rust-v0-159-1",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.159.1 — Codex 0.159.1 把 GPT",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
       "publishedAt": "2026-09-29"
     }
   ]
