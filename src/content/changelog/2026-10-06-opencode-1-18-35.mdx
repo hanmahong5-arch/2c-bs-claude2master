@@ -1,0 +1,23 @@
+---
+slug: 2026-10-06-opencode-1-18-35
+title: "opencode v1.18.35 — xAI 工具结果图片支持与 agent 可读统计格式"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.18.35
+publishedAt: 2026-10-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "xAI 工具结果图片支持与 agent 可读统计格式"
+broadcast: "这次更新给 agent 加上了能直接读懂的统计输出，用结构化的数据格式替代过去容易出错的解析方式。同时，xAI 的工具结果现在能带上图片了，不支持的格式会自动跳过，靠的是底层依赖版本对齐来保证整条链路稳定。对国内做 agent 的开发者来说，这意味着多模态工具调用时，得在调度层自己做好格式校验和降级处理。"
+insight: "这次 v1.18.35 的核心变化是 xAI 工具结果开始支持图片、并新增 JSON/Markdown 结构化统计格式，属于 harness 层的能力增强。如果你在用 xAI 多模态工具调用，建议升级，因为图片传递依赖 @ai-sdk/xai 3.0.139 的修复，版本不对齐链路会不稳。现有 prompt 和 hook 配置本身不用大改，但消费统计的 harness 应优先读结构化输出。走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有方式使用即可。"
+tags: [xai, tool-results, multimodal, agent-stats]
+---
+
+- 新增 canonical redirects 与 JSON/Markdown 数据格式，让 agent 能直接读取统计信息。含义：harness 应优先消费结构化输出，减少解析歧义。
+- xAI 工具结果现包含受支持的图片，不支持的格式会被跳过。含义：多模态工具调用需在 harness 层做格式校验与降级。
+- 升级 @ai-sdk/xai 至 3.0.139 以修复图片传递。含义：依赖版本对齐是保证多模态链路稳定的前提。
+
+---
+
+> 原文 release：[sst/opencode v1.18.35](https://github.com/anomalyco/opencode/releases/tag/v1.18.35)

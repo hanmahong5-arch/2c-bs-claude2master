@@ -1,0 +1,23 @@
+---
+slug: 2026-10-06-blog-simonwillison-llm-mistral-0-16
+title: "llm-mistral 0.16 — Simon Willison 发布 llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/6/llm-mistral/
+publishedAt: 2026-10-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 llm-mistral 0.16，为 LLM 工具链加入 Mistral 推理模型支持。"
+broadcast: "Simon Willison 更新了他的命令行工具插件，这次给工具链加上了对 Mistral 推理模型的支持。也就是说，开发者不用自己适配接口，在原有的工作流里就能直接调用带推理能力的模型。对国内做 agent 的开发者来说，多了一个统一的测试入口，方便对比不同模型的推理表现。"
+tags: [llm, mistral, llm-reasoning, tooling]
+---
+
+- 该版本新增对推理模型（reasoning models）的支持，例如同期发布的 Mistral Large 4。含义：通过 LLM 插件即可直接调用带推理能力的 Mistral 模型，无需自行适配接口。
+- 这是 llm-mistral 插件的一次版本更新（0.16），属于 Simon Willison 的 llm 命令行工具生态。含义：开发者可在既有 LLM 工作流中无缝切换到 Mistral 推理模型。
+- 文章标注的标签为 llm、mistral、llm-reasoning，说明本次改动的核心是推理模型接入。含义：关注多模型推理能力对比的开发者可借此统一测试入口。
+
+---
+
+> 原文：[llm-mistral 0.16](https://simonwillison.net/2026/Oct/6/llm-mistral/) · 作者 Simon Willison

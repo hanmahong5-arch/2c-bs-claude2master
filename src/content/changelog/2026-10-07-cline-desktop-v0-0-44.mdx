@@ -1,0 +1,23 @@
+---
+slug: 2026-10-07-cline-desktop-v0-0-44
+title: "cline desktop-v0.0.44 — 本地模型不再报错，Mermaid 图可交互，断线自动重连"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.44
+publishedAt: 2026-10-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "本地模型不再报错，Mermaid 图可交互，断线自动重连"
+broadcast: "这次更新解决了一个很实际的问题：以前用本地或自建的模型服务，每轮都会报缺少密钥，现在终于能正常用了。另外连接中断后会自动重连，最多等一分钟，排队消息也会补发；在 Windows 上启动相关服务，默认等待时间也从三秒延长到十秒，不再被悄悄丢掉。对做 agent 的开发者来说，这意味着要把无密钥当成合法配置，把重连和消息队列纳入会话状态，而不是一出错就抛异常。"
+insight: "这次 v0.0.44 对国内用户的实际价值主要在本地模型和稳定性：如果你用 LM Studio、Ollama、vLLM 这类无 API key 的自托管 provider，之前每轮报 Missing API key，现在恢复可用，值得升级；走 newapi.lurus.cn 代理的云端调用不受影响，无需改配置。Windows 上用 npx/uvx 启动 MCP server 的，超时从 3 秒提到 10 秒，之前被静默丢弃的可以重试。现有 prompt 不用动，hook 里若把无密钥当错误分支，需要改成合法配置。"
+tags: [mcp, local-models, reconnect, mermaid]
+---
+
+- 无 API key 的本地/自托管 provider（LM Studio、Ollama、vLLM 等）恢复可用，此前每轮都报 "Missing API key"；harness 需把"无密钥"视为合法配置而非错误分支。
+- Hub 连接中断后自动重连最多一分钟，排队消息在恢复后补发，失败则以提示结束该轮；harness 应把连接恢复与消息队列纳入会话状态机，而非直接抛错。
+- Windows 上 `npx`/`uvx` 启动的 MCP server 默认超时从 3 秒提到 10 秒，此前常被静默丢弃；harness 的进程启动超时应按平台与包管理器差异调优，并避免静默失败。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.44](https://github.com/cline/cline/releases/tag/desktop-v0.0.44)

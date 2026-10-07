@@ -1,0 +1,23 @@
+---
+slug: 2026-10-06-blog-simonwillison-llm-openai-decisions-0-1a0
+title: "llm-openai-decisions 0.1a0 — Simon Willison 用 GPT"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/6/llm-openai-decisions/
+publishedAt: 2026-10-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 用 GPT-6 Astra 读文档，为 OpenAI 新 Decisions API 造了个 llm 插件"
+broadcast: "OpenAI 发布了一个新的决策接口，Simon Willison 让模型读完官方文档，就自动生成了一个能用的插件，这说明让模型读文档直接产出工具，已经是跑得通的 agent 工作流。新接口还支持图像输入，只对输入计费，输出带概率的结构化结果，方便直接接进 agent 的判断分支。"
+tags: [llm, openai, coding-agents, api]
+---
+
+- OpenAI 发布 Jev 风格的 Decisions API，Simon 让 GPT-6 Astra 读官方文档后自动生成 `llm-openai-decisions` 插件，参考已有的 `llm-typesafe`。含义：让模型读 API 文档直接产出可用的工具插件，已是可行的 agent 工作流。
+- 与 Jev 不同，新的 `gpt-6-luna` 决策模型除文本外还支持图像输入；两者都只对输入计费，OpenAI 为每百万输入 token 10 美分，Jev 为 4.2 美分。含义：多模态决策调用成本结构简单，选型时主要看输入侧单价。
+- API 形态与 Jev 概念上高度相似，同样支持 yes/no、choices、scores 三类问题；示例中传入图片并提问是否含哺乳动物，返回带 probability 的 JSON。含义：结构化概率输出便于直接接入 agent 的判断分支。
+
+---
+
+> 原文：[llm-openai-decisions 0.1a0](https://simonwillison.net/2026/Oct/6/llm-openai-decisions/) · 作者 Simon Willison

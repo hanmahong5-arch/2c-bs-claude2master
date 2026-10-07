@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.291",
+    "anthropics/claude-code": "v2.1.292",
     "openai/codex": "rust-v0.160.1",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "desktop-v0.0.43",
+    "cline/cline": "v4.1.23",
     "block/goose": "v1.53.0",
-    "sst/opencode": "v1.18.34",
+    "sst/opencode": "v1.18.35",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.62.0",
     "openclaw/openclaw": "v2026.9.8",
@@ -185,7 +185,12 @@
     "cdyforever/how-to-live-better",
     "egoist/mygo",
     "storytold/photocraft",
-    "penso/herdr-gpui"
+    "penso/herdr-gpui",
+    "storytold/filmcraft",
+    "storytold/lightcraft",
+    "storytold/printcraft",
+    "storytold/vectorcraft",
+    "mizorewww/x_gift_bot"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -307,7 +312,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-10-06",
+    "anthropic-engineering": "2026-10-07",
     "claude-code-docs": "2026-10-02",
     "openai-codex-blog": "2026-10-01",
     "openclaw-concepts": "2026-10-05",
@@ -672,7 +677,12 @@
       "https://simonwillison.net/2026/Oct/5/felix-rieseberg/",
       "https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/",
       "https://simonwillison.net/2026/Oct/1/pwasm/",
-      "https://simonwillison.net/2026/Sep/28/llm-anthropic/"
+      "https://simonwillison.net/2026/Sep/28/llm-anthropic/",
+      "https://simonwillison.net/2026/Oct/7/jake-boggan/",
+      "https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/",
+      "https://simonwillison.net/2026/Oct/6/victoria-kim/",
+      "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/",
+      "https://simonwillison.net/2026/Oct/6/llm-mistral/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -842,7 +852,8 @@
       "https://www.latent.space/p/rlm",
       "https://www.latent.space/p/airbnb",
       "https://www.latent.space/p/ainews-not-much-happened-today-cee",
-      "https://www.latent.space/p/ainews-reflection-beam-501b-a23b"
+      "https://www.latent.space/p/ainews-reflection-beam-501b-a23b",
+      "https://www.latent.space/p/ainews-quasi-riemann-hypothesis-openai"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -883,7 +894,8 @@
       "https://www.interconnects.ai/p/open-source-ai-reading-list",
       "https://www.interconnects.ai/p/where-i-stand-on-rsi",
       "https://www.interconnects.ai/p/the-current-balance-of-power-in-open",
-      "https://www.interconnects.ai/p/debating-rsi-the-us-china-gap-and"
+      "https://www.interconnects.ai/p/debating-rsi-the-us-china-gap-and",
+      "https://www.interconnects.ai/p/the-cyber-risk-discourse-is-broken"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -1212,7 +1224,11 @@
       "https://openai.com/index/practical-guide-building-gpt-6",
       "https://openai.com/index/chatham-financial",
       "https://openai.com/index/eu-text-provenance",
-      "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
+      "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+      "https://openai.com/index/jump-trading",
+      "https://openai.com/index/sharing-ai-progress-in-mathematics",
+      "https://openai.com/index/advancing-computer-use-with-ironclad",
+      "https://openai.com/index/atlassian-partnership"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1264,7 +1280,8 @@
       "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
       "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
       "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
-      "https://deepmind.google/blog/introducing-synthid-bio/"
+      "https://deepmind.google/blog/introducing-synthid-bio/",
+      "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -1382,7 +1399,9 @@
       "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
       "https://huggingface.co/blog/allenai/astabrief",
       "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
-      "https://huggingface.co/blog/microsoft/thinkingbox"
+      "https://huggingface.co/blog/microsoft/thinkingbox",
+      "https://huggingface.co/blog/tiiuae/falcon-emirati",
+      "https://huggingface.co/blog/rl-environments"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -1438,7 +1457,8 @@
       "https://www.anthropic.com/news/accenture-embedded-evaluation",
       "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
       "https://www.anthropic.com/news/barclays-scales-claude",
-      "https://www.anthropic.com/news/claude-frontier-academy"
+      "https://www.anthropic.com/news/claude-frontier-academy",
+      "https://www.anthropic.com/news/cyber-verification-program"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -1482,23 +1502,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-10-06",
+    "simonwillison": "2026-10-07",
     "lilianweng": "2026-10-01",
-    "latentspace": "2026-10-06",
-    "interconnects": "2026-10-06",
+    "latentspace": "2026-10-07",
+    "interconnects": "2026-10-07",
     "karpathy": "2026-10-06",
     "raschka": "2026-10-06",
     "eugeneyan": "2026-10-06",
     "chiphuyen": "2026-10-01",
-    "oneusefulthing": "2026-10-05",
+    "oneusefulthing": "2026-10-07",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-10-06",
-    "deepmind": "2026-10-05",
-    "hf-blog": "2026-10-05",
-    "anthropic-news": "2026-10-06",
-    "steipete": "2026-10-05",
-    "openclaw-blog": "2026-10-05"
+    "openai-news": "2026-10-07",
+    "deepmind": "2026-10-07",
+    "hf-blog": "2026-10-07",
+    "anthropic-news": "2026-10-07",
+    "steipete": "2026-10-07",
+    "openclaw-blog": "2026-10-07"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

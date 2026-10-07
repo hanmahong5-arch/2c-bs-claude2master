@@ -1,0 +1,23 @@
+---
+slug: 2026-10-07-cline-sdk-sdk-v0-0-91
+title: "cline sdk/sdk/v0.0.91 — 未知结束原因不再算成功，agent 会带隐藏消息重试一次"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.91
+publishedAt: 2026-10-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "未知结束原因不再算成功，agent 会带隐藏消息重试一次"
+broadcast: "这次更新改了一个很关键的地方：以前结束原因缺失或者识别不出来，系统会当成成功，现在不会了，而是先保留已有内容，补一条隐藏消息重试一次，第二次还不行才算失败。对做 agent 的国内开发者来说，这意味着完成信号和内容产出要分开处理，重试也得设硬上限。另外排队消息的注入点提前到了每次请求之前，启动超时预算也从三秒提到十秒。"
+insight: "这次 SDK v0.0.91 对现有用户值得升级：结束原因未知不再算成功、会带隐藏消息重试一次，队列消息改为每个请求边界消费，Stdio MCP 初始化预算也从 3s 提到 10s。若你的 prompt 或 hook 依赖旧的“未知即成功”行为，需要相应调整，避免重试逻辑误判。走 newapi.lurus.cn 代理的用户不受影响，升级后反而能减少 Windows 上 npx/uvx 启动超时丢会话的问题。"
+tags: [agent-harness, finish-reason, mcp-stdio, provider-compat]
+---
+
+- 结束原因缺失或无法识别时不再当作成功完成，`AgentModelFinishReason` 新增 `unknown`；无工具活动时保留部分响应并追加一条隐藏用户消息重试一次，第二次仍未知则判定失败。含义：harness 需把「完成信号」与「内容产出」解耦，并给重试设硬上限。
+- 队列中的用户消息现在在每个请求边界消费，包括首次迭代。含义：消息注入点从轮次末尾前移到每次请求前，避免首轮排队消息被吞。
+- Stdio MCP 服务器默认初始化预算从 3s 提到 10s，显式 `timeout` 仍可覆盖。含义：Windows 上经 cmd.exe 启动 npx/uvx 常需 3-6s，过短超时会静默丢会话，启动预算应按最慢启动路径设定。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.91](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.91)

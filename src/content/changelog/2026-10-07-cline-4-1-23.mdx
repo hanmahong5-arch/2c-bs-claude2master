@@ -1,0 +1,23 @@
+---
+slug: 2026-10-07-cline-4-1-23
+title: "cline v4.1.23 — 模型目录大换血，未收尾响应改为追问一次"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.23
+publishedAt: 2026-10-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "模型目录大换血，未收尾响应改为追问一次"
+broadcast: "这次更新里，模型响应如果没给出明确的结束原因，它会再追问一次继续，而不是直接当成完成，这对做 agent 的人来说挺关键，因为未收尾应该被当成可恢复状态。另外模型目录也大换血，推荐和免费列表都有增删，十几家提供商的默认模型变了，所以别假设默认模型是稳定的。生成提交信息现在也会遵守项目规则。"
+insight: "这次 v4.1.23 值得现有用户升级：未收尾响应改为追问一次，能减少误判完成；Generate Commit Message 开始遵循 .clinerules，项目规则终于覆盖生成类子任务。但模型目录大换血，18 家提供商默认模型变更、Vultr 模型 id 重命名，若你的 prompt 或 hook 里写死了默认模型，需要改成不依赖固定模型，否则会漂移。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理层变化，升级本身不受影响。"
+tags: [model-catalog, finish-reason, clinerules, mcp-output]
+---
+
+- 模型响应缺少可识别 finish reason 时，Cline 改为追问一次继续，而非直接判定完成；harness 需把「未收尾」当作可恢复状态，而非终态。
+- 模型目录刷新：推荐列表加入 GPT-6.1 Sol，免费列表加入 Solar Mini 4、移除 DeepSeek V4.1 Flash 与 space-bunny-alpha，18 家提供商默认模型变更，Vultr 模型 id 上游重命名需重选；harness 不能假设默认模型稳定，需支持未固定模型的漂移。
+- Generate Commit Message 现在遵循 .clinerules，语言、格式、工单引用等约定同样生效；harness 应把项目规则注入所有生成类子任务，而非仅主对话。
+
+---
+
+> 原文 release：[cline/cline v4.1.23](https://github.com/cline/cline/releases/tag/v4.1.23)

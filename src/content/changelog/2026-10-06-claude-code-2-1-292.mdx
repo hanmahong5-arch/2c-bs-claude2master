@@ -1,0 +1,23 @@
+---
+slug: 2026-10-06-claude-code-2-1-292
+title: "claude-code v2.1.292 — 插件安装、子代理 effort、529 重试延迟与一批沙箱安全修复"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.292
+publishedAt: 2026-10-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件安装、子代理 effort、529 重试延迟与一批沙箱安全修复"
+broadcast: "这次更新里，插件安装多了一个指定来源的选项，能把来源解析、策略校验和安装合成一步完成。子代理也新增了强度档位，编排层可以按任务难度分配算力，不再只能继承默认值。另外重试退避可以设更长基数，还修了几个沙箱读权限被绕过的问题，值得国内做 agent 编排的开发者留意。"
+insight: "这次 v2.1.292 的改动对国内用户的实际影响有限：插件安装的 --marketplace 和子代理 effort 参数属于编排层能力，普通用户不升级也不影响现有 prompt 和 hook 配置。真正值得动手的是 529 重试，新增的 CLAUDE_CODE_OVERLOADED_RETRY_BASE_DELAY_MS 可显式调大退避基数，走 newapi.lurus.cn 代理时遇到限流会更稳，建议按需设置。沙箱读权限绕过等安全修复也建议一并升级。"
+tags: [plugin-install, subagent-effort, retry-backoff, sandbox-security]
+---
+
+- `claude plugin install` 新增 `--marketplace <source>`：必要时先加市场（走与 `marketplace add` 相同的策略检查）再装插件，harness 可把「来源解析 + 策略校验 + 安装」收敛为单步。
+- Agent 工具新增 `effort` 参数，可按指定档位运行子代理；子代理不再只能继承默认强度，编排层可按任务难度分配算力。
+- 新增 `CLAUDE_CODE_OVERLOADED_RETRY_BASE_DELAY_MS`，为 529 重试设置更长退避基数；同时修复沙箱命令可读 `/ultrareview` 暂存副本、UNC 路径绕过读权限提示等安全问题，重试与隔离策略都需要显式配置。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.292](https://github.com/anthropics/claude-code/releases/tag/v2.1.292)
