@@ -1,6 +1,72 @@
 {
   "items": [
     {
+      "slug": "2026-10-08-blog-latentspace-ainews-claude-haiku-5-5-better-than-gpt",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Claude Haiku 5.5 — better than GPT-6 Luna at — Anthropic 发布 Haiku 5.5，价格对齐 GPT",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-claude-code-2-1-294",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.294 — hook 指令式写法被修正，别再误放行",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-cline-cli-v3-0-70",
+      "zh": true,
+      "en": false,
+      "title": "cline cli-v3.0.70 — CLI 修掉静默丢 header、静默不投递等隐蔽 bug，并清理无效参数",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-cline-desktop-v0-0-45",
+      "zh": true,
+      "en": false,
+      "title": "cline desktop-v0.0.45 — SSH 远程连接修复，模型目录刷新，默认模型大调整",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-cline-sdk-sdk-v0-0-92",
+      "zh": true,
+      "en": false,
+      "title": "cline sdk/sdk/v0.0.92 — 推理关闭不再一律发禁用参数，模型能力差异被显式处理",
+      "kind": "changelog",
+      "author": null,
+      "source": "cline/cline",
+      "tool": "cline",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-trending-storytold-pdfcraft",
+      "zh": true,
+      "en": false,
+      "title": "pdfcraft — 纯 Rust 重写 Adobe Acrobat，开源 PDF 工具集",
+      "kind": "trending",
+      "author": null,
+      "source": "storytold/pdfcraft",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
       "slug": "2026-10-07-blog-latentspace-ainews-quasi-riemann-hypothesis-openai-publishes-722-math",
       "zh": true,
       "en": true,
@@ -8,6 +74,72 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-07"
+    },
+    {
+      "slug": "2026-10-07-blog-openai-news-gpt-6-and-intelligent-ui-for-everyone",
+      "zh": false,
+      "en": true,
+      "title": "GPT-6 and Intelligent UI for everyone — OpenAI 发布 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-07"
+    },
+    {
+      "slug": "2026-10-07-blog-openai-news-helping-teens-learn-plan-and-shape-the-future",
+      "zh": true,
+      "en": true,
+      "title": "Helping teens learn, plan, and shape the future of AI — OpenAI 为青少年推出大学申请规划、闪卡测验与青少年 AI 顾问团",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-07"
+    },
+    {
+      "slug": "2026-10-07-blog-openai-news-radisson-hotel-group-brings-hotel-discovery-into-chatgpt",
+      "zh": true,
+      "en": true,
+      "title": "Radisson Hotel Group brings hotel discovery into ChatGPT — 丽笙酒店接入 ChatGPT，酒店搜索与预订进入对话式入口",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-07"
+    },
+    {
+      "slug": "2026-10-07-blog-simonwillison-anti-patterns-in-software-blogging",
+      "zh": true,
+      "en": true,
+      "title": "Anti-Patterns in Software Blogging — Michael Lynch 的博客写作反模式清单，Simon Willison ",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-07"
+    },
+    {
+      "slug": "2026-10-07-blog-simonwillison-claude-haiku-5-5",
+      "zh": true,
+      "en": true,
+      "title": "Claude Haiku 5.5 — Anthropic 发布低价快速模型 Haiku 5.5，作者实测价格、分词器与",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-07"
+    },
+    {
+      "slug": "2026-10-07-blog-simonwillison-quoting-ben-affleck",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Ben Affleck — 本·阿弗莱克谈自己写 Python 脚本、用卷积网络做特效，一个演员的机器学习实",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-10-07"
     },
@@ -20,6 +152,17 @@
       "author": "Simon Willison",
       "source": "Simon Willison",
       "tool": null,
+      "publishedAt": "2026-10-07"
+    },
+    {
+      "slug": "2026-10-07-claude-code-2-1-293",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.293 — Haiku 5.5 成为默认模型，1M 上下文；另有大量 subagent 与工",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
       "publishedAt": "2026-10-07"
     },
     {
@@ -53,6 +196,17 @@
       "author": null,
       "source": "cline/cline",
       "tool": "cline",
+      "publishedAt": "2026-10-07"
+    },
+    {
+      "slug": "2026-10-07-codex-rust-v0-161-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.161.0 — GPT",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
       "publishedAt": "2026-10-07"
     },
     {
@@ -168,7 +322,7 @@
     {
       "slug": "2026-10-06-blog-openai-news-advancing-computer-use-with-ironclad",
       "zh": true,
-      "en": false,
+      "en": true,
       "title": "Advancing computer use with Ironclad — OpenAI 与 Ironclad 合作，用合同工作流训练和评测 AI agen",
       "kind": "blogger",
       "author": "OpenAI",
@@ -178,7 +332,7 @@
     },
     {
       "slug": "2026-10-06-blog-openai-news-atlassian-and-openai-expand-partnership-to-turn-enterprise",
-      "zh": false,
+      "zh": true,
       "en": true,
       "title": "Atlassian and OpenAI expand partnership to turn — OpenAI 与 Atlassian 扩大合作，把前沿模型接入企业知识库，让团队",
       "kind": "blogger",
@@ -210,6 +364,28 @@
       "publishedAt": "2026-10-06"
     },
     {
+      "slug": "2026-10-06-blog-simonwillison-embeddinggemma-2",
+      "zh": true,
+      "en": true,
+      "title": "EmbeddingGemma 2 — 为什么嵌入模型必须开源：闭源托管模型停服后，存量向量重算代价高昂",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-06"
+    },
+    {
+      "slug": "2026-10-06-blog-simonwillison-introducing-mistral-large-4-le-chonk",
+      "zh": true,
+      "en": true,
+      "title": "Introducing Mistral Large 4: Le chonk — Mistral 发布万亿参数 Large 4 预览版，重回前沿约半年差距",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-06"
+    },
+    {
       "slug": "2026-10-06-blog-simonwillison-llm-mistral-0-16",
       "zh": true,
       "en": true,
@@ -223,7 +399,7 @@
     {
       "slug": "2026-10-06-blog-simonwillison-llm-openai-decisions-0-1a0",
       "zh": true,
-      "en": false,
+      "en": true,
       "title": "llm-openai-decisions 0.1a0 — Simon Willison 用 GPT",
       "kind": "blogger",
       "author": "Simon Willison",
@@ -240,6 +416,39 @@
       "author": null,
       "source": "anthropics/claude-code",
       "tool": "claude-code",
+      "publishedAt": "2026-10-06"
+    },
+    {
+      "slug": "2026-10-06-claude-code-2-1-292",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.292 — 插件安装、子代理 effort、529 重试延迟与一批沙箱安全修复",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-10-06"
+    },
+    {
+      "slug": "2026-10-06-gemini-cli-0-63-0",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.63.0 — 长跑 agent 循环的内存与工具输出终于被限界",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
+      "publishedAt": "2026-10-06"
+    },
+    {
+      "slug": "2026-10-06-opencode-1-18-35",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.18.35 — xAI 工具结果图片支持与 agent 可读统计格式",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
       "publishedAt": "2026-10-06"
     },
     {
@@ -670,193 +879,6 @@
       "source": "openclaw/openclaw",
       "tool": "openclaw",
       "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-openclaw-2026-8-35",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.8.35 — extended",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-trending-robbietilton-compositor",
-      "zh": true,
-      "en": false,
-      "title": "Compositor — Mac 上的 Photoshop 替代品，Swift 原生，一周冲上 6.8k ",
-      "kind": "trending",
-      "author": null,
-      "source": "robbietilton/Compositor",
-      "tool": null,
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-01-blog-anthropic-news-barclays-scales-claude-to-upgrade-operations-and-improve",
-      "zh": true,
-      "en": true,
-      "title": "Barclays scales Claude to upgrade operations and — 巴克莱银行把 Claude 铺进全行，2027 年多数工程师将用上 Claude",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-10-01"
-    },
-    {
-      "slug": "2026-10-01-blog-oneusefulthing-the-dot-and-the-swarm",
-      "zh": true,
-      "en": true,
-      "title": "The Dot and the Swarm — 作者承认自己此前判断错了：管理 AI 智能体不需要人类精心设计组织架构，模型自己",
-      "kind": "blogger",
-      "author": "Ethan Mollick",
-      "source": "Ethan Mollick",
-      "tool": null,
-      "publishedAt": "2026-10-01"
-    },
-    {
-      "slug": "2026-10-01-blog-openai-news-how-albertsons-companies-is-reimagining-retail-from-the",
-      "zh": true,
-      "en": true,
-      "title": "How Albertsons Companies is reimagining retail from the — 艾伯森用 ChatGPT Enterprise 与 OpenAI API 提速团",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-01"
-    },
-    {
-      "slug": "2026-10-01-blog-openai-news-the-den-frees-up-10-15-hours-a",
-      "zh": true,
-      "en": true,
-      "title": "The Den frees up 10-15 hours a week to grow with — OpenAI 客户案例：社交俱乐部 The Den 用 ChatGPT Work",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-01"
-    },
-    {
-      "slug": "2026-10-01-blog-openai-news-the-eternal-complement",
-      "zh": true,
-      "en": true,
-      "title": "The eternal complement — OpenAI 谈 AI 的真正价值：不在灵感，而在把想法落地的日常执行",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-01"
-    },
-    {
-      "slug": "2026-10-01-blog-simonwillison-pwasm-0-2a0",
-      "zh": true,
-      "en": true,
-      "title": "pwasm 0.2a0 — 用 Claude Opus 5.5 重写自己 1 月的纯 Python WebA",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-01"
-    },
-    {
-      "slug": "2026-10-01-blog-simonwillison-quoting-matthew-green",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Matthew Green — Matthew Green 指出沙箱隔离挡不住 agent 蠕虫：共享缓存里的指",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-01"
-    },
-    {
-      "slug": "2026-10-01-claude-code-2-1-287",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.287 — Claude Mods 让插件改深层行为，侧代理帮你查漏",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-01"
-    },
-    {
-      "slug": "2026-10-01-codex-rust-v0-160-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.160.0 — Guardian 审查可回溯历史指令，子代理环境不再丢失",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-10-01"
-    },
-    {
-      "slug": "2026-09-30-blog-deepmind-gemini-4-argon-our-next-era-of-frontier",
-      "zh": true,
-      "en": true,
-      "title": "Gemini 4 Argon: our next era of frontier intelligence — 无法摘要：该链接正文为空，无内容可读",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-09-30"
-    },
-    {
-      "slug": "2026-09-30-blog-deepmind-introducing-synthid-bio",
-      "zh": true,
-      "en": true,
-      "title": "Introducing SynthID Bio — DeepMind 尝试给 AI 生成的蛋白质加水印，同时不破坏其生物功能。",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-09-30"
-    },
-    {
-      "slug": "2026-09-30-blog-hf-blog-open-tts-leaderboard-scalable-evaluation-for-multilingual-text",
-      "zh": true,
-      "en": true,
-      "title": "Open TTS Leaderboard: Scalable Evaluation for — Hugging Face 推出开放 TTS 排行榜，为多语言语音合成与声音克隆提",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-09-30"
-    },
-    {
-      "slug": "2026-09-30-blog-latentspace-ainews-openai-devday-2026-dots-6-1-sol",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] OpenAI DevDay 2026: Dots, 6.1 Sol, Ultrafast, — OpenAI DevDay 2026发布Dots代理、GPT",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-09-30"
-    },
-    {
-      "slug": "2026-09-30-blog-latentspace-why-dwarkesh-is-wrong-about-computer-use-how",
-      "zh": true,
-      "en": true,
-      "title": "Why Dwarkesh is Wrong about Computer Use + How OpenAI — OpenAI 一周内复刻 Jev，Computer Use 已与数月前完全不同",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-09-30"
-    },
-    {
-      "slug": "2026-09-30-blog-openai-news-disrupting-a-coordinated-model-distillation-campaign",
-      "zh": true,
-      "en": true,
-      "title": "Disrupting a coordinated model-distillation campaign — OpenAI 披露一起协同蒸馏攻击，说明模型推理能力正被系统性窃取",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-09-30"
     }
   ]
 }
