@@ -1,0 +1,23 @@
+---
+slug: 2026-10-06-blog-simonwillison-introducing-mistral-large-4-le-chonk
+title: "Introducing Mistral Large 4: Le chonk — Mistral 发布万亿参数 Large 4 预览版，重回前沿约半年差距"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/6/le-chonk/
+publishedAt: 2026-10-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Mistral 发布万亿参数 Large 4 预览版，重回前沿约半年差距"
+broadcast: "Mistral 发布了万亿参数的 Large 4 预览版，目前只能通过 API 调用，开放权重承诺月底放出，所以短期集成只能走接口，部署节奏得提前规划。它只提供两档推理级别，粒度偏粗，成本和质量怎么权衡得自己在调用层做路由。评测得分略低于国产的 DeepSeek 4.1 Flash，但比前代强很多，已经回到落后前沿约半年的可用区间，值得作为中端备选评估。"
+tags: [mistral, llm-release, ai, model-benchmarks]
+---
+
+- Mistral Large 4 预览版为 1 万亿参数、490 亿激活参数，在自家 3800 块 NVIDIA Grace Blackwell GPU 集群上训练，目前仅通过 API 提供，开放权重承诺月底放出。对开发者的含义：短期只能走 API 集成，权重发布节奏需纳入部署规划。
+- 模型只支持 "none" 和 "high" 两档推理级别，且 "high" 档输出 2717 token 反而少于 "none" 档的 3275。对 agent 工具链的含义：推理档位粒度粗，成本与质量权衡空间有限，需自行在调用层做路由。
+- Artificial Analysis 得分 38，略低于 552B 的 DeepSeek 4.1 Flash，但远超前代 Large 3 的 9 分。对开发者的含义：它并非前沿级模型，但已回到落后前沿约六个月的可用区间，值得作为中端备选评估。
+
+---
+
+> 原文：[Introducing Mistral Large 4: Le chonk](https://simonwillison.net/2026/Oct/6/le-chonk/) · 作者 Simon Willison

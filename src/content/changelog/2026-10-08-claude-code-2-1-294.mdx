@@ -1,0 +1,23 @@
+---
+slug: 2026-10-08-claude-code-2-1-294
+title: "claude-code v2.1.294 — hook 指令式写法被修正，别再误放行"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.294
+publishedAt: 2026-10-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "hook 指令式写法被修正，别再误放行"
+broadcast: "这次更新修了一个挺关键的问题：用自然语言写拦截指令的钩子，以前会把本该拦下的操作放行，现在判定层和声明层对齐了，说拦就真拦。另外，负责判断任务该不该停的钩子也改进了，模型不再那么容易提前收工。对做 agent 的国内开发者来说，这意味着指令式配置终于能产生确定的行为，语义边界可预测，才敢往生产环境里放。"
+insight: "这次 v2.1.294 修的是 hook 判定层与声明层不对齐的问题：用自然语言写 prompt 或 agent hook 时，本该拦截的操作曾被放行，Stop 与 SubagentStop 上的 prompt hook 也更容易提前停止。判断很明确：如果你现在用指令式写法配置 hook，就该升级，因为旧版本会静默放行你本想拦的命令，属于安全边界失效，不是体验问题。升级后建议顺手复查一遍现有 prompt hook 配置，确认拦截与继续行为符合预期。摘要未提及代理层改动，走 newapi.lurus.cn 的国内用户不受影响。"
+tags: [claude-code, hooks, agent-harness, release-notes]
+---
+
+- `prompt` 与 `agent` hook 以自然语言指令书写（如“Block commands that...”）时曾放行本应拦截的操作，现已修复：harness 不能把策略文本当软建议，判定层需与声明层对齐。
+- Stop 与 SubagentStop 上的 `prompt` hook 判定改进，Claude 更不易提前停止：终止条件属于控制流，应显式求值而非交给模型自由裁量。
+- 两处改动都指向同一件事：hook 的语义边界要可预测，指令式配置必须产生确定的拦截与继续行为。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.294](https://github.com/anthropics/claude-code/releases/tag/v2.1.294)

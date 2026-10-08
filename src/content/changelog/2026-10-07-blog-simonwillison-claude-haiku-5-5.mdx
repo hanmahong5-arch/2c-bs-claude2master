@@ -1,0 +1,23 @@
+---
+slug: 2026-10-07-blog-simonwillison-claude-haiku-5-5
+title: "Claude Haiku 5.5 — Anthropic 发布低价快速模型 Haiku 5.5，作者实测价格、分词器与"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/
+publishedAt: 2026-10-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic 发布低价快速模型 Haiku 5.5，作者实测价格、分词器与推理档位，并解读订阅送 API 额度的新政策"
+broadcast: "Anthropic 发布了低价快速模型 Haiku 5.5，价格对标 GPT-6 Luna，但超过十万 token 后涨到五倍，加上新分词器让长 prompt 的 token 数变多，长上下文工作负载的成本模型得重新算。它的推理档位无法关闭，默认中档，延迟和成本随档位剧烈变化，需要按任务分级配置。订阅用户每月还能获赠等额 API 额度，订阅和 API 的边界被进一步打通。"
+tags: [claude-haiku, llm-pricing, anthropic, llm-release]
+---
+
+- **价格对标 GPT-6 Luna，但藏着隐性涨价**：Haiku 5.5 定价 $0.10/$0.50，与 Luna 相同，但超过 10 万 token 后涨到 5 倍（$0.50/$2.50），而 Luna 到 27.2 万 token 才涨到 $0.20/$0.75；同时新分词器让同一段长 prompt 的 token 数约为 Haiku 4.5 的 1.25 倍。对 agent 开发者意味着：长上下文工作负载的成本模型要重新算，短 prompt 场景才真正划算。
+- **推理档位无法关闭，默认 medium**：作者用 llm-anthropic 插件跑「骑自行车的鹈鹕」SVG 测试，low 档花 0.0936 美分、7 秒；max 档耗时 5 分 9 秒、花费 3.3826 美分。对工具链的含义是：延迟与成本随 thinking_effort 档位剧烈变化，需要按任务分级配置而非统一默认。
+- **订阅用户每月获赠等额 API 额度**：Max 5x 每月 $100、Max 20x $200、Team 最高 $500 池化共享，额度不结转，且可关闭 API 自动充值以避免余额耗尽后的意外账单。对开发者的含义是：订阅与 API 的边界被进一步打通，但重度 API 用户仍可对比 OpenAI Codex 订阅的性价比。
+
+---
+
+> 原文：[Claude Haiku 5.5](https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/) · 作者 Simon Willison

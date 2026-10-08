@@ -1,0 +1,23 @@
+---
+slug: 2026-10-07-codex-rust-v0-161-0
+title: "codex rust-v0.161.0 — GPT"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.161.0
+publishedAt: 2026-10-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "GPT-6.1 Sol 成默认模型，Daybreak 改为显式 opt-in"
+broadcast: "OpenAI 的 Codex 更新了，默认模型换成了 GPT-6.1 Sol，还支持多智能体和更强的推理模式。对国内做 agent 的开发者来说，有两点值得注意：一是路由别再硬编码模型名，要按目录能力来判断；二是权限要绑定到单次对话轮次，而不是整个会话，后台任务也得沿用原来的授权范围。"
+insight: "这次 0.161.0 的改动对现有用户是值得升级的：默认模型已换成 GPT-6.1 Sol，且 harness 需按目录能力而非硬编码模型名路由，继续沿用旧配置容易踩坑。现有 prompt 和 hook 配置要改两处，一是 Daybreak 必须显式写 --enable cli_daybreak 或 features.cli_daybreak=true，仅 daybreak=true 无效；二是权限授予已绑定到发起 turn，后台任务保留原 turn 权限，会话级假设不再成立。国内用户走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [model-catalog, feature-flags, permissions, bedrock]
+---
+
+- 默认模型换成 GPT-6.1 Sol，Bedrock 目录同步并支持 multi-agent V2 与 Ultra reasoning：harness 需按目录能力而非硬编码模型名路由。
+- Daybreak 必须显式 `--enable cli_daybreak` 或 `features.cli_daybreak=true`，仅 `daybreak=true` 无效，默认隐藏控件与自动 Cyber 路由：特性开关应区分“配置存在”与“已启用”，避免隐式激活。
+- 权限授予绑定到发起 turn，后台任务保留原 turn 权限，已批准的文件系统提权可放宽写入但保留拒绝读与网络限制：harness 的权限模型需以 turn 为作用域，而非会话级。
+
+---
+
+> 原文 release：[openai/codex rust-v0.161.0](https://github.com/openai/codex/releases/tag/rust-v0.161.0)

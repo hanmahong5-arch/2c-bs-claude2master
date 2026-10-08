@@ -1,0 +1,23 @@
+---
+slug: 2026-10-08-blog-latentspace-ainews-claude-haiku-5-5-better-than-gpt
+title: "[AINews] Claude Haiku 5.5 — better than GPT-6 Luna at — Anthropic 发布 Haiku 5.5，价格对齐 GPT"
+source: "Latent Space"
+sourceUrl: https://www.latent.space/p/ainews-claude-haiku-55-better-than
+publishedAt: 2026-10-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Anthropic 发布 Haiku 5.5，价格对齐 GPT-6 Luna，主打高并发低成本子代理场景"
+broadcast: "Anthropic 发布了新的小模型，定位是给主力模型打配合的子代理，专门干摘要、压缩、查数据库这类高并发低成本的活。它价格对齐了同一天的另一款竞品，但独立评测发现，它虽然更聪明一点，每任务消耗的输出量却差不多是对方的三倍。所以对做 agent 的国内开发者来说，便宜不等于省，多步循环里上下文怎么管，直接决定账单。"
+tags: [claude-haiku, anthropic, agent-cost, llm-benchmarks]
+---
+
+- **定位是子代理而非主力**：Anthropic 把 Haiku 5.5 定位为搭配 Opus 5.5 / Sonnet 5.5 的 subagent，负责摘要、压缩、数据库查询等高并发低成本任务，官方说法是「Opus 做重思考，Haiku 做高吞吐」。对 agent 工具链意味着分层调用可以更激进地拆模型。
+- **分层定价与成本信号**：100K token 以下输入/输出为 $0.10/$0.50 每百万 token，超过后跳到 $0.50/$2.50；同日 Sonnet 5.5 缓存读取价减半。对开发者的含义是 prompt 长度本身成了成本变量，上下文管理直接影响账单。
+- **独立评测暴露 token 消耗**：Artificial Analysis 给出 Intelligence Index 43，略高于 GPT-6 Luna 的 38，但 max effort 下每任务约 162k 输出 token，约为 Luna 的三倍。对 agent 的含义是「更便宜」不等于「更省」，多步循环里 token 效率可能抵消单价优势。
+
+---
+
+> 原文：[[AINews] Claude Haiku 5.5 — better than GPT-6 Luna at the same pricing](https://www.latent.space/p/ainews-claude-haiku-55-better-than) · 作者 Latent Space

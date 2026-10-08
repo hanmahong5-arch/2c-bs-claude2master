@@ -1,0 +1,24 @@
+---
+slug: 2026-10-08-cline-desktop-v0-0-45
+title: "cline desktop-v0.0.45 — SSH 远程连接修复，模型目录刷新，默认模型大调整"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.45
+publishedAt: 2026-10-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SSH 远程连接修复，模型目录刷新，默认模型大调整"
+broadcast: "这次桌面版更新修好了远程连接报错的问题，之前因为一个字符解析错误，整个会话都会被卡住。同时远程分支的轮询频率也降了下来，从几秒一次改成半分钟一次，但切换分支依然即时更新。另外模型目录刷新后，多个服务商的默认模型都换成了一个更轻量的版本，这意味着做 agent 的开发者最好显式指定模型，别依赖默认值。"
+insight: "这次 v0.0.45 对国内用户值得升级：SSH 远程连接自 0.0.38 起的 SyntaxError 报错已恢复，远程分支轮询也从每 5 秒两次登录降到每 30 秒一次，走 newapi.lurus.cn 代理的远程会话会明显更稳。但要注意多个 provider 默认模型已改为 Claude Haiku 5.5，如果你的 prompt 或 hook 依赖旧默认模型，建议显式固定模型名，别依赖 provider 默认值，同时按模型能力动态裁剪 reasoning 参数，避免 400。"
+tags: [ssh-remote, model-catalog, polling, default-models]
+---
+
+- SSH 远程连接自 0.0.38 起因 `SyntaxError: Invalid character` 失败，现已恢复；harness 需对远程环境初始化做容错，避免单点解析错误阻断整个会话。
+- SSH 环境下 git 分支标签轮询从每 5 秒两次登录改为每 30 秒一次，切换分支仍即时更新；说明高频远程探测应降频并保留事件驱动的即时反馈。
+- 关闭 reasoning 不再在 GPT-6 Astra、Claude Fable 5 等模型上报 400；harness 需按模型能力动态裁剪参数，而非统一开关。
+- 模型目录刷新新增 Claude Haiku 5.5，多个 provider 默认模型改为它；默认值变更意味着 harness 应显式固定模型而非依赖 provider 默认。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.45](https://github.com/cline/cline/releases/tag/desktop-v0.0.45)

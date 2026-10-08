@@ -1,0 +1,23 @@
+---
+slug: 2026-10-08-cline-sdk-sdk-v0-0-92
+title: "cline sdk/sdk/v0.0.92 — 推理关闭不再一律发禁用参数，模型能力差异被显式处理"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.92
+publishedAt: 2026-10-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "推理关闭不再一律发禁用参数，模型能力差异被显式处理"
+broadcast: "这次更新改的是推理开关的处理方式：以前关闭推理会一律给模型发禁用参数，现在改成按模型能力区别对待，对关不掉推理的模型就不再硬发了。对做 agent 的国内开发者来说，这意味着依赖版本得对齐，不然参数行为会不一致；另外子进程断连现在当成可恢复错误处理，不会再让宿主进程直接退出。"
+insight: "这次 v0.0.92 的核心变化是推理关闭参数按模型能力差异化下发，不再全局统一。如果你现有 prompt 或 hook 里依赖全局禁用推理参数，建议按模型能力对齐调整，否则 GPT-6 Astra、Claude Fable 5 等模型的行为可能和预期不一致。依赖包也要统一到 ai 7.0.120 与 provider-utils 5.0.50，避免混用导致参数行为不一致。走 newapi.lurus.cn 代理的国内用户，摘要未提及代理层变动，按现有配置升级即可。"
+tags: [ai-sdk, reasoning-control, mcp-stdio, model-catalog]
+---
+
+- AI SDK 统一到 `ai` 7.0.120 与 `@ai-sdk/provider-utils` 5.0.50，替代此前逐个升级的方式；harness 需按包版本对齐依赖，避免混用导致的参数行为不一致。
+- 关闭推理时不再向无法关闭的 OpenAI 模型（GPT-6 Astra、GPT-6.1 Sol）发送 `reasoning.effort: "none"`，Claude Fable 5、Opus 5.5 也不再收到 `thinking: {type: "disabled"}`；harness 应按模型能力决定是否下发禁用参数，而非全局统一。
+- Stdio MCP 客户端处理服务器提前退出导致的 EPIPE，SAP AI Core provider 不再安装 winston 的进程级 `uncaughtException` 处理器；harness 应把子进程断连当作可恢复错误，而非让宿主进程退出。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.92](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.92)

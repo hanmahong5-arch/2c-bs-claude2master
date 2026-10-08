@@ -1,0 +1,23 @@
+---
+slug: 2026-10-08-cline-cli-v3-0-70
+title: "cline cli-v3.0.70 — CLI 修掉静默丢 header、静默不投递等隐蔽 bug，并清理无效参数"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.70
+publishedAt: 2026-10-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "CLI 修掉静默丢 header、静默不投递等隐蔽 bug，并清理无效参数"
+broadcast: "这次命令行工具更新，主要修掉几个很隐蔽的坑。以前添加配置时会悄悄丢掉认证头，定时任务也可能保存了却永远发不出去，现在都会提前校验、拒绝无效设置。对做智能体的开发者来说，这意味着凭据不会静默丢失，任务不会假装成功，调试起来更省心。"
+insight: "这次 CLI v3.0.70 修的是静默丢 header、静默不投递这类隐蔽 bug，还清理了从未生效的假参数。判断很明确：现有用户值得升级，尤其是用 cline mcp add 配过 Authorization 头、或用 schedule 建过投递任务的人，旧版本可能一直在悄悄丢凭据或永不发送。升级后要检查两处：一是重新跑一遍 mcp add 向导确认 header 真的写进去了，二是 schedule 配置补上 --delivery-thread 这类必填项，否则现在会直接报错。另外 history --page、--autonomous 这些假参数要删掉，别再留在脚本里。走 newapi.lurus.cn 代理的用户不受影响，这次改动都在 CLI 本地校验逻辑，不涉及代理链路。"
+tags: [cli, mcp, scheduling, config-migration]
+---
+
+- `cline mcp add` 向导现在保留 `--header` 值并逐条校验，此前接受预填答案会丢掉 `Authorization` 等头；harness 配置迁移必须保证凭据不静默丢失。
+- `cline schedule create/update/import` 拒绝无法投递的 delivery（如缺 `--delivery-thread`），此前会保存但结果永不发送；调度类工具应在写入前校验可达性。
+- 移除从未生效的选项（`history --page`、schedule 的 `--autonomous` 等），现在报 unknown option；harness 应删掉假参数而非静默接受。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.70](https://github.com/cline/cline/releases/tag/cli-v3.0.70)

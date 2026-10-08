@@ -1,0 +1,23 @@
+---
+slug: 2026-10-07-claude-code-2-1-293
+title: "claude-code v2.1.293 — Haiku 5.5 成为默认模型，1M 上下文；另有大量 subagent 与工"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.293
+publishedAt: 2026-10-07
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Haiku 5.5 成为默认模型，1M 上下文；另有大量 subagent 与工具注册修复"
+broadcast: "这次更新里，一个叫 Haiku 的轻量模型成了默认选项，上下文拉到一百万，价格还压得很低，长任务可以默认交给它跑。另外，子代理的状态信息能区分类型了，工具注册也多了个开关，能让工具一开始就摆在提示词里，不用模型先去搜。对做 agent 的国内开发者来说，这意味着成本和调用往返都有机会往下压。"
+insight: "这次 v2.1.293 的默认模型换成 claude-haiku-5-5，1M 上下文加更低单价，对现有用户来说升级价值主要在长上下文任务上，值得升。但要注意：如果你在 hook 或 subagent 配置里写死了旧 Haiku 模型名，升级后需要改成 claude-haiku-5-5，否则可能仍走旧模型。另外 tool.register 的 isDeferred 是新增可选参数，不设不影响现有工具注册，prompt 无需改动。国内走 newapi.lurus.cn 代理的用户，本次改动只是模型与参数层面，代理链路不受影响，可正常升级。"
+tags: [claude-code, subagent, tool-registry, haiku]
+---
+
+- 新增 `claude-haiku-5-5` 并设为 Anthropic API 默认 Haiku 模型：1M 上下文，$0.10/$0.50 每 Mtok（超 100K 提示词为 $0.50/$2.50）。含义：harness 可把长上下文任务默认下放给更便宜的模型层。
+- `subagentStatusLine` 载荷新增 `agentType`，脚本可区分自定义 subagent 类型。含义：状态栏与监控脚本能按 agent 类型做差异化展示或路由。
+- `$.tool.register` 新增 `isDeferred`：设为 `false` 时工具 schema 从一开始就列在提示词中，而非藏在工具搜索后。含义：mod 作者可显式控制工具可见性，减少模型先搜索再调用的往返。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.293](https://github.com/anthropics/claude-code/releases/tag/v2.1.293)

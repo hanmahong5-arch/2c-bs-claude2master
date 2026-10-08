@@ -1,0 +1,23 @@
+---
+slug: 2026-10-06-blog-simonwillison-embeddinggemma-2
+title: "EmbeddingGemma 2 — 为什么嵌入模型必须开源：闭源托管模型停服后，存量向量重算代价高昂"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/6/hn-49983751/
+publishedAt: 2026-10-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "为什么嵌入模型必须开源：闭源托管模型停服后，存量向量重算代价高昂"
+broadcast: "最近有个叫 EmbeddingGemma 2 的嵌入模型，用的是 Apache 2.0 开源许可，这点很关键。因为嵌入模型算出来的向量要长期存着，一旦供应商停掉闭源模型，这些存量向量就得全部付费重算。对国内做 agent 和 RAG 的开发者来说，选型时要把停服后能不能自建当成硬性评估项，别只指望厂商的善意承诺。"
+tags: [embeddings, open-weights, gemma, vector-db]
+---
+
+- Simon Willison 指出 EmbeddingGemma 2 采用 Apache 2.0 许可很关键：嵌入模型的典型用法是算出成千上万甚至上百万条向量并长期存储，一旦供应商停掉某个闭源模型，这些存量向量就得全部付费重算。对 agent 与 RAG 工具链的含义是，向量库的长期可迁移性取决于模型权重是否开放。
+- 他提到 2024 年 4 月 OpenAI 曾提出替用户承担用新模型重新嵌入内容的费用，但他认为不能指望每家供应商都这么做。对开发者的含义是，选型时要把“停服后能否自建”当作硬性评估项，而不是依赖厂商的善意承诺。
+- 他本人并不想自己托管模型，更愿意付费使用托管服务，前提是万一对方停止托管，自己还能跑开源权重版本或换一家能跑的供应商。对工具链的含义是，托管便利与开源兜底可以并存，关键是保留退路。
+
+---
+
+> 原文：[EmbeddingGemma 2](https://simonwillison.net/2026/Oct/6/hn-49983751/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-06-gemini-cli-0-63-0
+title: "gemini-cli v0.63.0 — 长跑 agent 循环的内存与工具输出终于被限界"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.63.0
+publishedAt: 2026-10-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "长跑 agent 循环的内存与工具输出终于被限界"
+broadcast: "谷歌的命令行智能体工具刚更新了一版，重点给长时间运行的智能体循环加上了工具输出大小上限，还优化了内存回收。这意味着以后写智能体框架，不能假设单次工具返回的内容是可控的，得在循环层自己做截断和回收。另外它还留了显式关闭截断的开关，并且让非交互模式下能自主执行计划，无人值守的场景要单独处理权限和状态。"
+insight: "这次 v0.63.0 的核心变化是给长跑 agent 循环的工具输出加了大小上限并优化内存生命周期，还保留了 maxChars<=0 时关闭截断的开关。如果你在用 gemini-cli 跑长时间无人值守任务，建议升级，因为旧版本在循环层没有输出截断和回收，容易吃内存。现有 prompt 和 hook 配置不用改，但非交互模式现在能自主执行计划，走 newapi.lurus.cn 代理的国内用户需注意无人值守路径的权限与状态处理要单独确认。整体值得升。"
+tags: [agent-loop, tool-output, memory-lifecycle, non-interactive]
+---
+
+- `fix(core)` 为长时运行的 agent 循环加上工具输出大小上限并优化内存生命周期，意味着 harness 不能假设单次工具返回可控，需在循环层做输出截断与回收。
+- `fix(core)` 在 `formatTruncatedToolOutput` 中当 `maxChars <= 0` 时禁用截断，说明截断策略需保留显式关闭开关，避免误伤需要完整输出的场景。
+- `fix(core)` 让非交互模式下可自主执行计划，harness 需区分交互与非交互路径，并为无人值守执行准备独立的权限与状态处理。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.63.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.63.0)
