@@ -1,0 +1,23 @@
+---
+slug: 2026-10-09-blog-simonwillison-ttok-1-0
+title: "ttok 1.0 — ttok 1.0 发布：默认分词器从 GPT"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/9/ttok/
+publishedAt: 2026-10-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "ttok 1.0 发布：默认分词器从 GPT-4 切到 GPT-5/6，并附上社区对 GPT-6 分词器一致性的实测证据"
+broadcast: "有个叫 ttok 的工具刚发了 1.0 版，作者发现默认还在用老一代的分词器，就把它切到了新一代模型家族。这事值得关注，因为做 token 预算和上下文裁剪的工具，默认值选错就会算错数。不过官方还没确认新旧模型共用分词器，所以做 agent 的别把它当稳定契约，最好自己建一套回归测试来验证。"
+tags: [tokenization, openai, llm-tooling, ttok]
+---
+
+- Simon Willison 发布 ttok 1.0：起因是他升级到 0.4 后发现默认仍用 GPT-4 分词器，于是把默认切到 GPT-5/GPT-6 家族，并借此机会正式发 1.0。对做 token 预算、上下文裁剪的工具链来说，默认值选错会直接导致计数偏差。
+- OpenAI 尚未官方确认 GPT-6 与 GPT-5 家族共用分词器，社区还有相关 issue 在争论。这意味着依赖 token 计数的 agent 框架不能把「同家族同分词器」当成稳定契约。
+- 他引用 William Liu 的一次实验提交：7 个 GPT 模型（5.5、5.6 Sol/Terra/Luna、6 Astra/Sol/Luna）在该语料上均报 44,794 tokens，31 个 fixture 全部互相匹配，GPT-6 未带来输入计数变化。这为默认值切换提供了可复现的验证方式，也提示开发者应自建 fixture 回归测试而非只信文档。
+
+---
+
+> 原文：[ttok 1.0](https://simonwillison.net/2026/Oct/9/ttok/) · 作者 Simon Willison

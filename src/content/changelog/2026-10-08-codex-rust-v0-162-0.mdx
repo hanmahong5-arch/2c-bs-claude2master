@@ -1,0 +1,23 @@
+---
+slug: 2026-10-08-codex-rust-v0-162-0
+title: "codex rust-v0.162.0 — Codex 0.162.0 加入托管 Git worktree 与任务钉选，TU"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.162.0
+publishedAt: 2026-10-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.162.0 加入托管 Git worktree 与任务钉选，TUI 交互与沙箱安全同步收紧。"
+broadcast: "OpenAI 的 Codex 刚更新了一版，这次加了个托管 Git worktree 工具，能在受信任的本地项目里创建和列出工作区，还支持把任务钉选到共享分组里。对国内做 agent 的开发者来说，这意味着工作区生命周期和跨会话的任务优先级，得由工具层自己管起来，而不是靠外部脚本拼凑，交互和沙箱安全也一起收紧了。"
+insight: "Codex 0.162.0 这次改动集中在托管 Git worktree、任务钉选和 TUI 交互三块，对现有用户来说值得升级，尤其是常用 worktree 工作流的开发者，升级后工作区生命周期由工具层接管，不必再靠外部脚本。现有 prompt 和 hook 配置无需改动，本次没有涉及相关接口变更。国内走 newapi.lurus.cn 代理的用户也不受影响，摘要中未提及任何代理或鉴权层面的调整，可以照常升级。"
+tags: [codex, git-worktree, tui, agent-harness]
+---
+
+- 新增托管 Git worktree 工具，可在受信任本地项目中创建和列出 worktree（#50148）：agent harness 需把工作区生命周期纳入工具层，而非依赖外部脚本。
+- 命令中心支持用 `p` 钉选任务并归入共享 Pinned 组（#51500）：harness 需维护跨会话的任务优先级状态，并考虑服务端同步。
+- TUI 支持 `/copy`、`Ctrl+Insert` 复制选区，鼠标滚轮速度可通过 `tui.mouse_scroll_speed` 调节（#50434、#50215、#50209）：harness 的交互层应把复制与滚动视为可配置的一等能力。
+
+---
+
+> 原文 release：[openai/codex rust-v0.162.0](https://github.com/openai/codex/releases/tag/rust-v0.162.0)

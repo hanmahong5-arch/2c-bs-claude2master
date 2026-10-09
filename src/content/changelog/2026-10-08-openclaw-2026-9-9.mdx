@@ -1,0 +1,23 @@
+---
+slug: 2026-10-08-openclaw-2026-9-9
+title: "openclaw v2026.9.9 — 185 commits 的发布，重点在发布流程本身的可验证性"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.9
+publishedAt: 2026-10-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "185 commits 的发布，重点在发布流程本身的可验证性"
+broadcast: "这次发布有一百八十多个提交，重点不在功能，而在发布流程本身能不能被验证。它把同一份说明分别给人看和给智能体看，还完整列出校验信息和构建记录，让智能体自己核对来源。同时它明确标出哪些检查被跳过，提醒我们做智能体流程时，得区分通过和没执行，别把缺失当成成功。"
+insight: "这次 2026.9.9 的 185 个 commit 主要改的是发布流程本身，对现有用户日常使用影响有限，不必为升级而升级；但如果你在 CI 或 agent 里依赖 changelog 和产物校验，值得跟进，因为机器可读产物被当成一等公民，integrity、release SHA 和 CI 链接都完整列出。现有 prompt 和 hook 配置无需改动。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [release-notes, agent-harness, verification, changelog]
+---
+
+- 发布说明与 changelog 双格式：同一内容分别面向人和 AI agent 提供，changelog 为纯 Markdown。含义：harness 应把机器可读产物当作一等公民，而非事后转换。
+- 发布验证信息完整列出：npm 包、tarball、integrity、release SHA 及多条 CI 运行链接。含义：agent 可据此自行校验产物来源，无需人工转述。
+- 部分检查被显式跳过或豁免：Telegram 集成检查由发布负责人豁免未运行，Android APK 因版本号不匹配跳过。含义：harness 需能区分“通过”与“未执行”，避免把缺失当成功。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.9](https://github.com/openclaw/openclaw/releases/tag/v2026.9.9)

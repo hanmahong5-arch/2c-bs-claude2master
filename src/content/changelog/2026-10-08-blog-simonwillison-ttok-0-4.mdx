@@ -1,0 +1,23 @@
+---
+slug: 2026-10-08-blog-simonwillison-ttok-0-4
+title: "ttok 0.4 — Simon Willison 发布 ttok 0.4，一款基于 tiktoken"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/8/ttok/
+publishedAt: 2026-10-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 ttok 0.4，一款基于 tiktoken 的命令行 token 计数工具，时隔两年终于更新。"
+broadcast: "有个叫 ttok 的命令行小工具更新了，它能帮你数一段文本里到底有多少个 token，底层用的是 OpenAI 开源的计数库。这次隔了两年终于发新版，修了警告、更新了持续集成，还新增了列出可用模型的命令。对做 agent 的国内开发者来说，它现在能免安装直接跑，很适合塞进脚本里快速估算 token 预算。"
+tags: [tokenization, cli-tools, tiktoken, llm-tooling]
+---
+
+- ttok 是作者用 OpenAI 开源 tiktoken 库写的 CLI token 计数工具，沉寂两年后发布 0.4 版本，修复了 Click 警告并更新了 CI——对依赖长期维护工具链的开发者来说，这类小工具的持续维护值得关注。
+- 新增 `--list-models` 命令，可直接列出可用模型，方便确认当前支持的模型范围。
+- 支持通过 `uvx` 直接运行，例如 `cat file.txt | uvx ttok` 即可统计文件 token 数，无需预先安装，适合快速嵌入 agent 或脚本的 token 预算估算流程。
+
+---
+
+> 原文：[ttok 0.4](https://simonwillison.net/2026/Oct/8/ttok/) · 作者 Simon Willison

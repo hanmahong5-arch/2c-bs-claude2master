@@ -1,0 +1,23 @@
+---
+slug: 2026-10-06-blog-simonwillison-using-parseable-with-datasette-for-opentelemetry-traces
+title: "Using Parseable with Datasette for OpenTelemetry traces — Simon Willison 用 Codex 把 Datasette 的 Ope"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/6/datasette-parseable-opentelemetry/
+publishedAt: 2026-10-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 用 Codex 把 Datasette 的 OpenTelemetry 追踪接到新可观测平台 Parseable 上"
+broadcast: "有个新出的开源可观测平台，整个后端就是一个一百多兆的二进制文件，自己部署的门槛降到了单文件级别。有人把应用框架新加的链路追踪接了进去，还让编码助手先去试跑这套陌生基础设施，再由人来整理结论。对国内开发者来说，这意味着自建可观测栈更省事，后端也能随时替换，而且让 agent 探路、人来收尾，是套能复用的流程。"
+tags: [opentelemetry, datasette, observability, parseable]
+---
+
+- Parseable 是 Show HN 上出现的新可观测平台，开源版为 AGPL 的 Rust 实现，单个约 180MB 二进制，另有企业版和云托管选项；对开发者的含义是自托管可观测栈的部署门槛已降到单文件级别。
+- Datasette 1.0a41 由 Alex Garcia 加入 OpenTelemetry 支持，作者借此把 Datasette 的 trace 喂给 Parseable；对工具链的含义是应用侧接入 OTel 后，后端可观测平台可自由替换。
+- 作者用 Codex 摸索出运行 Parseable 并接收 Datasette trace 的可行模式，并写成人工撰写的 TIL；对 agent 的含义是让编码 agent 试跑陌生基础设施、再由人整理结论，是一种可复用的探索流程。
+
+---
+
+> 原文：[Using Parseable with Datasette for OpenTelemetry traces](https://simonwillison.net/2026/Oct/6/datasette-parseable-opentelemetry/) · 作者 Simon Willison

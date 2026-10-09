@@ -1,0 +1,23 @@
+---
+slug: 2026-10-08-claude-code-2-1-295
+title: "claude-code v2.1.295 — hook 失败不再放行：onFailure"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.295
+publishedAt: 2026-10-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "hook 失败不再放行：onFailure:block 把安全边界从默认放行改为默认阻断"
+broadcast: "这次更新里有个安全策略的变化值得注意：当命令或网络钩子启动失败、超时或异常退出时，现在可以直接阻断动作，而不是像以前那样默认放行。对做 agent 的国内开发者来说，这意味着安全类钩子可以显式声明为失败即阻断，边界更稳。另外还加了终端状态显示和上游首字节超时控制，方便外部监控和编排。"
+insight: "这次 v2.1.295 最该动手的是 hook 配置：新增的 onFailure:block 把失败策略从默认放行改成可显式阻断，安全类 hook 建议直接改成 fail-closed，其余 hook 按需评估，不必全量跟。timeouts.upstream_ttfb_ms 是新增项，走 newapi.lurus.cn 代理的国内用户可留意上游首字节延迟，但摘要未提及代理侧行为变化，现有接入方式无需调整。OSC 7501 属终端显示能力，不影响升级决策。"
+tags: [hook-failure-policy, osc-7501, upstream-timeout, fail-closed]
+---
+
+- 新增 `onFailure: "block"`：命令与 HTTP hook 无法启动、超时或异常退出时直接阻断动作，而非放行。含义：harness 的失败策略应可显式声明为 fail-closed，安全类 hook 必须默认阻断。
+- 新增 OSC 7501 程序状态协议：支持的终端可显示 Claude Code 正在工作、等待输入或已完成。含义：harness 可把内部状态外化为终端可读信号，便于外部监控与自动化编排。
+- 新增 `timeouts.upstream_ttfb_ms`：限制云上游流式响应开始前的等待时长，超时后故障转移或返回 502。含义：harness 需为上游首字节延迟设独立超时，避免慢启动拖垮整条链路。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.295](https://github.com/anthropics/claude-code/releases/tag/v2.1.295)

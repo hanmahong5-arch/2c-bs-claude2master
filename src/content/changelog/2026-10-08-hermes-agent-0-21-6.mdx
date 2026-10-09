@@ -1,0 +1,23 @@
+---
+slug: 2026-10-08-hermes-agent-0-21-6
+title: "hermes-agent v0.21.6 — 补丁版汇总2100个PR，重点修了四个安全漏洞"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.6
+publishedAt: 2026-10-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "补丁版汇总2100个PR，重点修了四个安全漏洞"
+broadcast: "这次更新是个补丁版，汇总了两千多个提交，重点修了四个安全漏洞。它加固了仪表盘的认证，比如伪造代理头能重置登录限流、未认证请求能无限写审计日志；还修了自动调用 git 时可能执行不可信仓库配置的问题，以及邮件网关里发件人显示名可被冒充的漏洞。对做 agent 的国内开发者来说，这提醒我们认证边界和仓库配置都得当成不可信输入来对待。"
+insight: "这次 v0.21.6 修的是仪表盘认证、git filter 和邮件网关发件人三处安全边界，属于补丁版，不涉及功能变更。我的判断是：现有用户值得升级，尤其是把 hermes-agent 暴露在反向代理后面、或让它自动读取不可信仓库的团队，伪造 X-Forwarded-For 重置限流和仓库 filter 在首个提示前执行这两点风险是实打实的。现有 prompt 和 hook 配置不用改，升级本身不破坏兼容。国内走 newapi.lurus.cn 代理的用户不受影响，代理层不涉及这些认证与 git 调用路径。"
+tags: [security-fixes, auth-hardening, git-filters, agent-harness]
+---
+
+- 仪表盘认证加固：伪造 `X-Forwarded-For` 可重置登录限流、未认证请求可无限写审计日志、`/auth/` 无请求体大小限制、原生登录可重定向到非回环地址导致会话劫持。含义：agent harness 的认证边界必须把代理头和重定向目标当作不可信输入。
+- git filter 加固：自动 git 调用（工作区快照、子代理 worktree、kanban、`hermes -w`）会在首个提示前执行不可信仓库配置里的 `clean`/`smudge`/`process` 程序。含义：harness 在读取用户仓库前应先隔离或禁用仓库自定义 filter。
+- 邮件网关发件人加固：`From` 头里的带引号显示名可让攻击者邮件冒充白名单发件人。含义：白名单校验应基于解析后的地址而非原始头字符串。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.21.6](https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.6)

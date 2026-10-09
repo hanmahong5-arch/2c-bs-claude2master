@@ -1,0 +1,23 @@
+---
+slug: 2026-10-08-goose-1-54-0
+title: "goose v1.54.0 — 扩展调用改为租约制，会话导出可交互"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.54.0
+publishedAt: 2026-10-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "扩展调用改为租约制，会话导出可交互"
+broadcast: "这次更新把扩展调用改成了租约制，每次推理都要按租约解析扩展，生命周期得跟单次推理绑在一起，避免跨会话的状态泄漏。另外前台子代理进了状态机循环，调度时要显式处理它的阻塞和让出。还新增了可交互的会话导出查看器，首次配置会提示选择模式。对做 agent 的国内开发者来说，这些改动直接影响扩展管理和调度逻辑，值得跟进。"
+insight: "这次 v1.54.0 对现有用户来说值得升级，但重点不在功能，而在 harness 适配：扩展操作统一走 lease，意味着你原有的 hook 配置和扩展生命周期绑定方式要改，必须把扩展生命周期与单次推理绑定，否则可能跨会话状态泄漏；前台子代理进入状态机循环，调度循环也要显式建模阻塞与让出。会话导出与初始化模式选择属于新增能力，不影响存量配置。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [extension-lease, subagent-loop, session-export, first-run-config]
+---
+
+- 所有扩展操作统一走 lease（#12723、#12161），每次推理按租约解析扩展，harness 需把扩展生命周期与单次推理绑定，避免跨会话状态泄漏。
+- 前台子代理进入状态机循环（#12632），子代理不再是旁路，harness 的调度循环要显式建模其阻塞与让出。
+- 新增 HTML 会话导出与交互式查看器（#11977），首次配置时提示选择 goose 模式（#12629），harness 需支持可回放的会话产物与初始化模式选择。
+
+---
+
+> 原文 release：[block/goose v1.54.0](https://github.com/aaif-goose/goose/releases/tag/v1.54.0)
