@@ -1,6 +1,61 @@
 {
   "items": [
     {
+      "slug": "2026-10-09-blog-simonwillison-ttok-1-0",
+      "zh": true,
+      "en": true,
+      "title": "ttok 1.0 — ttok 1.0 发布：默认分词器从 GPT",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-09"
+    },
+    {
+      "slug": "2026-10-09-trending-mhtsec-artex",
+      "zh": true,
+      "en": false,
+      "title": "ARTEX — 百度 agent+ 攻防挑战赛冠军，AI 自主渗透测试系统",
+      "kind": "trending",
+      "author": null,
+      "source": "mhtsec/ARTEX",
+      "tool": null,
+      "publishedAt": "2026-10-09"
+    },
+    {
+      "slug": "2026-10-08-blog-anthropic-news-2026-usage-policy-update",
+      "zh": true,
+      "en": true,
+      "title": "2026 Usage Policy update — Anthropic 更新使用政策，细化 Claude 自主行动与高风险场景规则",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-blog-anthropic-news-building-on-our-commitment-to-american-scientific-discovery",
+      "zh": true,
+      "en": true,
+      "title": "Building on our commitment to American scientific — Anthropic 三年投 1.5 亿美元，把 Claude 送进 NASA、N",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-blog-hf-blog-the-model-that-didn-t-exist-so-you",
+      "zh": true,
+      "en": true,
+      "title": "The model that didn't exist, so you made it yourself — Hugging Face 讲如何用 ML Intern 自建缺失的模型",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
       "slug": "2026-10-08-blog-latentspace-ainews-claude-haiku-5-5-better-than-gpt",
       "zh": true,
       "en": true,
@@ -12,10 +67,109 @@
       "publishedAt": "2026-10-08"
     },
     {
+      "slug": "2026-10-08-blog-latentspace-ainews-not-much-happened-today",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] not much happened today — OpenAI 解雇三名安全研究员，以及一批模型发布与 agent 安全评测更新",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-blog-latentspace-synthesis-superintelligence-from-semiconductors-to-superconductors-periodic-labs",
+      "zh": true,
+      "en": true,
+      "title": "Synthesis Superintelligence: from Semiconductors to — Periodic Labs 两位创始人谈为何造 AI 科学家必须让模型动手做实验",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-blog-openai-news-disrupting-ai-enabled-false-front-operations",
+      "zh": true,
+      "en": true,
+      "title": "Disrupting AI-enabled “false front” operations — OpenAI 披露两起用假记者与假智库做地缘宣传的 AI 影响行动",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-blog-openai-news-how-oracle-turns-days-of-work-into-minutes",
+      "zh": true,
+      "en": true,
+      "title": "How Oracle turns days of work into minutes with ChatGPT — 甲骨文用 ChatGPT 与 Codex 把招聘、工程、运营的专家经验变成分钟级",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-blog-openai-news-legalon-halves-codex-costs-while-maintaining-development-speed",
+      "zh": true,
+      "en": true,
+      "title": "LegalOn halves Codex costs while maintaining — LegalOn 按任务难度分配 Codex 模型，日成本降 65% 而不牺牲开发",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-blog-openai-news-pollo-ai-turns-creative-ideas-into-campaigns-with",
+      "zh": true,
+      "en": true,
+      "title": "Pollo AI turns creative ideas into campaigns with OpenAI — Pollo AI 用 OpenAI 模型把创意想法直接变成图像与电影感广告片",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-blog-simonwillison-quoting-carson-gross",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Carson Gross — Carson Gross 论编程本质：解决问题与控制复杂度，AI 时代仍是可行职",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-blog-simonwillison-ttok-0-4",
+      "zh": true,
+      "en": true,
+      "title": "ttok 0.4 — Simon Willison 发布 ttok 0.4，一款基于 tiktoken",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-08"
+    },
+    {
       "slug": "2026-10-08-claude-code-2-1-294",
       "zh": true,
       "en": false,
       "title": "claude-code v2.1.294 — hook 指令式写法被修正，别再误放行",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-claude-code-2-1-295",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.295 — hook 失败不再放行：onFailure",
       "kind": "changelog",
       "author": null,
       "source": "anthropics/claude-code",
@@ -56,6 +210,50 @@
       "publishedAt": "2026-10-08"
     },
     {
+      "slug": "2026-10-08-codex-rust-v0-162-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.162.0 — Codex 0.162.0 加入托管 Git worktree 与任务钉选，TU",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-goose-1-54-0",
+      "zh": true,
+      "en": false,
+      "title": "goose v1.54.0 — 扩展调用改为租约制，会话导出可交互",
+      "kind": "changelog",
+      "author": null,
+      "source": "block/goose",
+      "tool": "goose",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-hermes-agent-0-21-6",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v0.21.6 — 补丁版汇总2100个PR，重点修了四个安全漏洞",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
+      "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-08-openclaw-2026-9-9",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.9.9 — 185 commits 的发布，重点在发布流程本身的可验证性",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-10-08"
+    },
+    {
       "slug": "2026-10-08-trending-storytold-pdfcraft",
       "zh": true,
       "en": false,
@@ -65,6 +263,39 @@
       "source": "storytold/pdfcraft",
       "tool": null,
       "publishedAt": "2026-10-08"
+    },
+    {
+      "slug": "2026-10-07-blog-hf-blog-introducing-falcon-asr",
+      "zh": true,
+      "en": true,
+      "title": "Introducing Falcon ASR — Falcon ASR 发布：Hugging Face 上的新语音识别模型，值得关",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-10-07"
+    },
+    {
+      "slug": "2026-10-07-blog-hf-blog-multimodal-open-d1-decision-models-for-the-edge",
+      "zh": true,
+      "en": true,
+      "title": "Multimodal open d1 decision models for the edge — Liquid AI 发布开源多模态决策模型 d1，面向边缘设备，值得关注端侧 a",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-10-07"
+    },
+    {
+      "slug": "2026-10-07-blog-hf-blog-one-model-family-two-gold-level-results-fine",
+      "zh": true,
+      "en": true,
+      "title": "One Model Family, Two Gold-Level Results: Fine-Tuning — 英伟达用同一 Nemotron 模型家族微调，在 IOI 与 IMO 两项竞赛中",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-10-07"
     },
     {
       "slug": "2026-10-07-blog-latentspace-ainews-quasi-riemann-hypothesis-openai-publishes-722-math",
@@ -79,7 +310,7 @@
     },
     {
       "slug": "2026-10-07-blog-openai-news-gpt-6-and-intelligent-ui-for-everyone",
-      "zh": false,
+      "zh": true,
       "en": true,
       "title": "GPT-6 and Intelligent UI for everyone — OpenAI 发布 GPT",
       "kind": "blogger",
@@ -408,6 +639,28 @@
       "publishedAt": "2026-10-06"
     },
     {
+      "slug": "2026-10-06-blog-simonwillison-mistral-large-4",
+      "zh": true,
+      "en": true,
+      "title": "Mistral Large 4 — Simon 用一句荒诞提示词实测 Mistral Large 4，顺手对比四大前",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-06"
+    },
+    {
+      "slug": "2026-10-06-blog-simonwillison-using-parseable-with-datasette-for-opentelemetry-traces",
+      "zh": true,
+      "en": true,
+      "title": "Using Parseable with Datasette for OpenTelemetry traces — Simon Willison 用 Codex 把 Datasette 的 Ope",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-06"
+    },
+    {
       "slug": "2026-10-06-claude-code-2-1-291",
       "zh": true,
       "en": false,
@@ -626,259 +879,6 @@
       "source": "Hugging Face",
       "tool": null,
       "publishedAt": "2026-10-03"
-    },
-    {
-      "slug": "2026-10-03-blog-latentspace-ainews-not-much-happened-today",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] not much happened today — 本期 AI 新闻盘点模型价格战、Agent 评测与多 harness 强化学习，",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-03"
-    },
-    {
-      "slug": "2026-10-03-blog-simonwillison-september-sponsors-only-newsletter",
-      "zh": true,
-      "en": true,
-      "title": "September sponsors-only newsletter — Simon Willison 九月赞助者通讯目录：模型、价格战、数学与安全事件",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-03"
-    },
-    {
-      "slug": "2026-10-03-blog-simonwillison-we-re-going-to-need-default-hard-budget",
-      "zh": true,
-      "en": true,
-      "title": "We're going to need default hard budget caps on pretty — Simon Willison 呼吁按量付费服务默认设置硬性预算上限，防止 age",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-03"
-    },
-    {
-      "slug": "2026-10-03-claude-code-2-1-289",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.289 — 插件与沙箱权限修复密集，agent 隔离边界更清晰",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-03"
-    },
-    {
-      "slug": "2026-10-03-openclaw-2026-9-8",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.9.8 — 58 次提交、43 个 PR，但发布说明本身只讲流程与验证",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-10-03"
-    },
-    {
-      "slug": "2026-10-03-trending-viceverse-cz-serein",
-      "zh": true,
-      "en": false,
-      "title": "Serein — Rust 写的 Discord 原生客户端，轻量高性能",
-      "kind": "trending",
-      "author": null,
-      "source": "ViceVerse-cz/Serein",
-      "tool": null,
-      "publishedAt": "2026-10-03"
-    },
-    {
-      "slug": "2026-10-02-blog-hf-blog-autosynthdata-generating-training-data-for-enterprise-agents",
-      "zh": true,
-      "en": true,
-      "title": "AutoSynthData: Generating Training Data for Enterprise — 企业 agent 训练数据难获取，Hugging Face 介绍自动合成方案",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-blog-hf-blog-open-sourcing-astabrief-the-fast-report-generation-model",
-      "zh": true,
-      "en": true,
-      "title": "Open-sourcing AstaBrief, the fast report-generation — AI2 开源 AstaBrief，一个专为快速生成研究报告而训练的模型，并公开了",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-blog-latentspace-academia-is-for-ambition-alex-zhang-mit",
-      "zh": true,
-      "en": true,
-      "title": "Academia is for Ambition — Alex Zhang, MIT — MIT 博士生 Alex Zhang 谈递归语言模型与 agent 编排，为何现",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-blog-latentspace-ainews-pi-1-0-pi-durable-and-aie",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Pi 1.0, Pi Durable, and AIE NYC — Pi 1.0 与 Pi Durable 发布，把 agent 状态做成可崩溃恢复",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-blog-latentspace-inside-out-ai-rebuilding-airbnb-behind-the-scenes",
-      "zh": true,
-      "en": true,
-      "title": "Inside-Out AI: Rebuilding Airbnb Behind the Scenes and — Airbnb CTO 谈如何用 AI 重构内部研发与客服，60% 代码已由 AI",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-blog-openai-news-a-model-guide-for-the-gpt-6-family",
-      "zh": true,
-      "en": true,
-      "title": "A model guide for the GPT-6 family — OpenAI 给 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-blog-openai-news-chatham-scales-its-capital-markets-expertise-with-openai",
-      "zh": true,
-      "en": true,
-      "title": "Chatham scales its capital markets expertise with OpenAI — Chatham 用 Codex 与 GPT",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-blog-openclaw-blog-tencent-aig-joins-clawscan",
-      "zh": true,
-      "en": true,
-      "title": "Tencent AIG joins ClawScan — 腾讯 AIG 加入 ClawScan，为 ClawHub 上每个技能与插件做安全",
-      "kind": "blogger",
-      "author": "OpenClaw",
-      "source": "OpenClaw",
-      "tool": null,
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-blog-simonwillison-rex-s-dino-store",
-      "zh": true,
-      "en": true,
-      "title": "Rex's Dino Store — 布鲁克林地铁站里一家恐龙开的纪念品店，看它如何把恐龙双关梗堆到极致",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-claude-code-2-1-288",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.288 — 一次发布修掉几十个 agent 会话恢复与权限边界问题，值得看",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-cline-cli-v3-0-68",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.68 — 团队状态不再每块重存，长会话提速并自动压缩旧库",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-cline-desktop-v0-0-41",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.41 — 草稿不再丢、连接器可搜索、团队会话提速",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-cline-desktop-v0-0-42",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.42 — 新增 /compact 命令压缩对话释放上下文，连接器浏览独立成页",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-cline-desktop-v0-0-43",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.43 — 老用户会看到一次性 Connectors 引导弹窗，可重播",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-cline-sdk-sdk-v0-0-90",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.0.90 — 团队状态写入从 1.66GB 降到增量批写，长会话不再越跑越慢",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-goose-1-53-0",
-      "zh": true,
-      "en": false,
-      "title": "goose v1.53.0 — Goose v1.53 把 agent 循环搬上 wasm，还修了工具调用与上下",
-      "kind": "changelog",
-      "author": null,
-      "source": "block/goose",
-      "tool": "goose",
-      "publishedAt": "2026-10-02"
-    },
-    {
-      "slug": "2026-10-02-openclaw-2026-8-34",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.8.34 — LTS 级网关补丁：113 项修复，重点在升级与恢复不丢状态",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-10-02"
     }
   ]
 }
