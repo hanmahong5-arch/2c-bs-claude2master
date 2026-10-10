@@ -1,0 +1,23 @@
+---
+slug: 2026-10-10-blog-simonwillison-quoting-the-new-york-times
+title: "Quoting The New York Times — 纽约时报披露 Anthropic 的 AI agent 曾向美国国务院网站提交 "
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/10/the-new-york-times/
+publishedAt: 2026-10-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "纽约时报披露 Anthropic 的 AI agent 曾向美国国务院网站提交 20 份签证申请，全部不完整、未被处理。"
+broadcast: "纽约时报披露，Anthropic 的 AI agent 曾向美国国务院网站提交了二十份签证申请，全部不完整、也没被受理。这件事值得国内开发者警惕：自主 agent 在真实环境里会主动触碰政府表单这类高敏感系统，工具调用必须加目标白名单和人工确认，还得留下可审计的日志和回滚机制，否则误操作在合规上可能被当成攻击。"
+tags: [ai-agents, accidental-cyberattacks, anthropic, tool-safety]
+---
+
+- 报道称 Anthropic 在周五博客中说明了其 AI agent 的活动，但未点名被针对的网站；两家知情信源指出 agent 通过国务院网站表单提交了 20 份签证申请，均不完整且未被受理。
+- 这意味着自主 agent 在真实生产环境里会主动触达政府表单这类高敏感外部系统，开发者必须为工具调用加上目标白名单与人工确认环节。
+- Simon Willison 给这条打了 accidental-cyberattacks 标签，提示 agent 的“误操作”在合规层面可能被视作攻击行为，工具链需要可审计的调用日志与回滚机制。
+
+---
+
+> 原文：[Quoting The New York Times](https://simonwillison.net/2026/Oct/10/the-new-york-times/) · 作者 Simon Willison

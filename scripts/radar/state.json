@@ -1,7 +1,7 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.295",
-    "openai/codex": "rust-v0.162.0",
+    "anthropics/claude-code": "v2.1.296",
+    "openai/codex": "rust-v0.162.1",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "desktop-v0.0.45",
     "block/goose": "v1.54.0",
@@ -192,7 +192,8 @@
     "storytold/vectorcraft",
     "mizorewww/x_gift_bot",
     "storytold/pdfcraft",
-    "mhtsec/ARTEX"
+    "mhtsec/ARTEX",
+    "jiwoochris/artex-ko"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -314,7 +315,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-10-09",
+    "anthropic-engineering": "2026-10-10",
     "claude-code-docs": "2026-10-09",
     "openai-codex-blog": "2026-10-08",
     "openclaw-concepts": "2026-10-05",
@@ -694,7 +695,11 @@
       "https://simonwillison.net/2026/Oct/8/ttok/",
       "https://simonwillison.net/2026/Oct/8/carson-gross/",
       "https://simonwillison.net/2026/Oct/6/datasette-parseable-opentelemetry/",
-      "https://simonwillison.net/2026/Oct/6/hn-49982139/"
+      "https://simonwillison.net/2026/Oct/6/hn-49982139/",
+      "https://simonwillison.net/2026/Oct/10/the-new-york-times/",
+      "https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/",
+      "https://simonwillison.net/2026/Oct/9/matthew-green/",
+      "https://simonwillison.net/2026/Oct/9/built-using-my-voice/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -869,7 +874,9 @@
       "https://www.latent.space/p/ainews-claude-haiku-55-better-than",
       "https://www.latent.space/p/stacklok",
       "https://www.latent.space/p/ainews-not-much-happened-today-60f",
-      "https://www.latent.space/p/periodic"
+      "https://www.latent.space/p/periodic",
+      "https://www.latent.space/p/ainews-typesafejev-at-100m-arr-75b",
+      "https://www.latent.space/p/biohub-deepmind"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -911,7 +918,8 @@
       "https://www.interconnects.ai/p/where-i-stand-on-rsi",
       "https://www.interconnects.ai/p/the-current-balance-of-power-in-open",
       "https://www.interconnects.ai/p/debating-rsi-the-us-china-gap-and",
-      "https://www.interconnects.ai/p/the-cyber-risk-discourse-is-broken"
+      "https://www.interconnects.ai/p/the-cyber-risk-discourse-is-broken",
+      "https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -1251,7 +1259,9 @@
       "https://openai.com/index/oracle",
       "https://openai.com/index/pollo-ai",
       "https://openai.com/index/legalon-halves-codex-costs",
-      "https://openai.com/index/disrupting-ai-enabled-false-front-operations"
+      "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
+      "https://openai.com/index/sophos",
+      "https://openai.com/index/asana-browser-agent"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1532,10 +1542,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-10-09",
+    "simonwillison": "2026-10-10",
     "lilianweng": "2026-10-08",
-    "latentspace": "2026-10-09",
-    "interconnects": "2026-10-09",
+    "latentspace": "2026-10-10",
+    "interconnects": "2026-10-10",
     "karpathy": "2026-10-09",
     "raschka": "2026-10-09",
     "eugeneyan": "2026-10-09",
@@ -1543,10 +1553,10 @@
     "oneusefulthing": "2026-10-09",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-10-09",
+    "openai-news": "2026-10-10",
     "deepmind": "2026-10-09",
     "hf-blog": "2026-10-09",
-    "anthropic-news": "2026-10-09",
+    "anthropic-news": "2026-10-10",
     "steipete": "2026-10-09",
     "openclaw-blog": "2026-10-09"
   },

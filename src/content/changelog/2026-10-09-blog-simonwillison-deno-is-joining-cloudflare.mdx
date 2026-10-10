@@ -1,0 +1,23 @@
+---
+slug: 2026-10-09-blog-simonwillison-deno-is-joining-cloudflare
+title: "Deno is joining Cloudflare — Cloudflare 收购 Deno，但 Deno 运行时只再维护一年，重心转向"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/
+publishedAt: 2026-10-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Cloudflare 收购 Deno，但 Deno 运行时只再维护一年，重心转向 celld 与 Workers 模型"
+broadcast: "Cloudflare 收购了 Deno，但 Deno 运行时只再维护一年，之后停止开发，重心转向一个叫 celld 的开源项目。这意味着 Workers 那套编程模型可能不再绑死在 Cloudflare 平台上，能自己托管运行。对做 agent 工具链的国内开发者来说，这提示差异化更可能来自新的服务端抽象，而不是继续兼容旧运行时。"
+tags: [deno, cloudflare, durable-objects, runtime]
+---
+
+- Cloudflare 收购 Deno，目标是基于 Deno 团队 8 月开源的 celld（Cloudflare Workers Durable Objects 模式的开源实现），让 workerd 自托管成为一等支持的 Workers 应用运行方式。对 agent 工具链而言，这意味着 Workers 编程模型可能脱离 Cloudflare 平台本身运行。
+- Deno 运行时只再获一年支持，含月度 bug 修复与安全更新，之后 Cloudflare 停止开发；Deno 保持开源，欢迎他人接手。开发者若把 Deno 作为长期运行时依赖，需要评估迁移路径。
+- Ryan Dahl 在 Hacker News 解释称这是共同决定，他认为 Deno 被 Node 兼容性引力捕获、被迫与 Node 行为一致，边际性能或体验收益不足，而 celld 只依赖对象存储做协调与持久化，是全新的服务端开发模型。这提示 agent 基础设施的差异化更可能来自新抽象而非兼容层。
+
+---
+
+> 原文：[Deno is joining Cloudflare](https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/) · 作者 Simon Willison

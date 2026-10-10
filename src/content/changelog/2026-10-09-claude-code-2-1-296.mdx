@@ -1,0 +1,23 @@
+---
+slug: 2026-10-09-claude-code-2-1-296
+title: "claude-code v2.1.296 — 子代理可独立提前压缩上下文，工作流模型可统一指定"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.296
+publishedAt: 2026-10-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "子代理可独立提前压缩上下文，工作流模型可统一指定"
+broadcast: "这次更新让子代理能比主对话更早自动压缩上下文，还能统一指定工作流代理用同一个模型，另外读取工具在上下文有余量时可以一次读入超限的大文件。对国内做 agent 的开发者来说，这意味着上下文窗口和模型路由不再只能全局统一，而是可以按代理粒度分别配置，大小限制也从硬约束变成了可协商的调用参数。"
+insight: "这次 v2.1.296 的三个改动都落在 harness 侧：子代理粒度的 autoCompactWindow、workflow 与普通子代理分开的模型路由、以及 Read 的 allow_large 参数。如果你现有 prompt 或 hook 里写死了全局上下文窗口、统一子代理模型或硬性文件大小限制，建议跟着改，否则新能力用不上。走 newapi.lurus.cn 代理的用户不受影响，这些是本地 harness 行为，与代理链路无关，正常升级即可。"
+tags: [subagent, context-window, model-routing, read-tool]
+---
+
+- 子代理 frontmatter 新增 `autoCompactWindow`，可让子代理比主对话更早自动压缩；harness 需支持按代理粒度配置上下文窗口，而非全局统一。
+- 新增 `CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL`，让所有 workflow agent 跑在同一模型上，其他子代理保持各自模型；harness 需区分 workflow 与普通子代理的模型路由。
+- Read 工具新增 `allow_large` 选项，可在上下文有余量时一次读取超限文本文件；harness 需把大小限制从硬约束改为可协商的调用参数。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.296](https://github.com/anthropics/claude-code/releases/tag/v2.1.296)

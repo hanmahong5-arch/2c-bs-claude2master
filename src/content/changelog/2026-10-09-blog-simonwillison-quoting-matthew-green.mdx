@@ -1,0 +1,23 @@
+---
+slug: 2026-10-09-blog-simonwillison-quoting-matthew-green
+title: "Quoting Matthew Green — 密码学家 Matthew Green 给出概率判断：AI 发现意外漏洞的速度远超"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/9/matthew-green/
+publishedAt: 2026-10-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "密码学家 Matthew Green 给出概率判断：AI 发现意外漏洞的速度远超标准更新速度。"
+broadcast: "有位密码学家给出一个概率判断：我们可能有百分之一的概率身处公钥加密根本不可能存在的世界，还有百分之十五的概率会实质性失去对现有公钥加密算法的信心。他提醒，AI 制造意外发现的速度，比人类替换标准的速度快好几个数量级，所以加密假设一旦被推翻，依赖它的整条链路都要重估。对开发者来说，加密敏捷性应该成为架构默认项，而不是事后补救。"
+tags: [cryptography, ai-security, standards, post-quantum]
+---
+
+- Green 估计有 1% 概率我们身处 Minicrypt（Impagliazzo 设想中公钥加密不可能存在的世界），另有 15% 概率会实质性地对现有公钥加密算法失去信心。对 agent 与工具链的含义：加密假设一旦被推翻，依赖 TLS、签名、密钥交换的整条链路都要重估，而不是只换一个库。
+- 他指出 AI 制造意外发现的速度，与人类替换标准的速度（即便有最好的 AI 辅助）相差好几个数量级。含义：agent 能加速攻击面探索，但标准制定、审计、迁移仍是人力瓶颈，工具链的自动化收益会被流程拖住。
+- 他的结论是：只有提前做好准备，才能从这类意外中恢复。含义：对开发者而言，加密敏捷性（可替换算法、可轮换密钥、可快速迁移）应作为架构默认项，而非事后补救。
+
+---
+
+> 原文：[Quoting Matthew Green](https://simonwillison.net/2026/Oct/9/matthew-green/) · 作者 Simon Willison

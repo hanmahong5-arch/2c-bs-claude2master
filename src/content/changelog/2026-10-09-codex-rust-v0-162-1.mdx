@@ -1,0 +1,23 @@
+---
+slug: 2026-10-09-codex-rust-v0-162-1
+title: "codex rust-v0.162.1 — Codex 修了两个稳定性坑：TUI 多行提问崩溃与后台服务启动失败。"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.162.1
+publishedAt: 2026-10-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 修了两个稳定性坑：TUI 多行提问崩溃与后台服务启动失败。"
+broadcast: "Codex 刚修了两个稳定性问题：一是终端界面遇到多行提问不再崩溃，换行和完整链接都能保留；二是后台服务启动失败，原因是运行中的功能设置和命令行默认值不一致。这对做 agent 的国内开发者挺重要，因为它提醒我们，输入层要把多行当一等公民，配置上也要分清显式覆盖和默认值，否则长期运行的服务和短命命令行会互相误判。"
+insight: "这次 0.162.1 修的是 TUI 多行提问崩溃和后台服务启动失败两个稳定性问题，属于补丁级更新。如果你在用 Codex 且经常输入多行内容，或者跑长期后台服务，建议直接升到 0.162.1，能省掉崩溃和启动失败的麻烦；只做单行短提问的可以缓一缓。另外摘要提到兼容性检查现在只针对显式命令行 feature 覆盖，说明 harness 要区分显式覆盖和默认值，如果你有自定义 feature 配置或 hook，值得顺手检查一下是否依赖了旧的默认值行为。走 newapi.lurus.cn 代理的用户不受影响，照常升级即可。"
+tags: [tui, startup, feature-flags, compatibility]
+---
+
+- TUI 异步问题含多行时不再崩溃，换行与完整超链接目标被保留；harness 需把多行输入当一等公民，避免渲染层截断或丢失链接元数据。
+- 启动失败源于后台服务运行中的 feature 设置与 CLI 默认值不一致；兼容性检查现仅针对显式命令行 feature 覆盖。
+- 含义：harness 应区分“显式覆盖”与“默认值”，否则长期运行的服务与短命 CLI 之间会互相误判。
+
+---
+
+> 原文 release：[openai/codex rust-v0.162.1](https://github.com/openai/codex/releases/tag/rust-v0.162.1)
