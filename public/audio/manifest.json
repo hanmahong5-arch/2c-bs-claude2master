@@ -1,6 +1,94 @@
 {
   "items": [
     {
+      "slug": "2026-10-10-blog-latentspace-why-alphafold-didn-t-solve-protein-folding-pushmeet",
+      "zh": true,
+      "en": true,
+      "title": "Why AlphaFold Didn't Solve Protein Folding — Pushmeet — DeepMind 与 Biohub 对谈：AlphaFold 只是起点，生物学远",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-10"
+    },
+    {
+      "slug": "2026-10-10-blog-simonwillison-quoting-the-new-york-times",
+      "zh": true,
+      "en": true,
+      "title": "Quoting The New York Times — 纽约时报披露 Anthropic 的 AI agent 曾向美国国务院网站提交 ",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-10"
+    },
+    {
+      "slug": "2026-10-10-trending-jiwoochris-artex-ko",
+      "zh": true,
+      "en": false,
+      "title": "artex-ko — ARTEX 韩语本地化版，AI 自主渗透测试框架",
+      "kind": "trending",
+      "author": null,
+      "source": "jiwoochris/artex-ko",
+      "tool": null,
+      "publishedAt": "2026-10-10"
+    },
+    {
+      "slug": "2026-10-09-blog-interconnects-i-expect-rapid-progress-but-not-towards-general",
+      "zh": true,
+      "en": true,
+      "title": "I expect rapid progress but not towards general — AI 工程能力将爆发式提速，但作者认为这不会通向通用超级智能",
+      "kind": "blogger",
+      "author": "Nathan Lambert",
+      "source": "Nathan Lambert",
+      "tool": null,
+      "publishedAt": "2026-10-09"
+    },
+    {
+      "slug": "2026-10-09-blog-openai-news-asana-cuts-model-costs-76x-in-browser-tests",
+      "zh": true,
+      "en": true,
+      "title": "Asana cuts model costs 76x in browser tests with — Asana 用 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-09"
+    },
+    {
+      "slug": "2026-10-09-blog-openai-news-sophos-cuts-threat-investigation-time-by-96-with",
+      "zh": true,
+      "en": true,
+      "title": "Sophos cuts threat investigation time by 96% with — Sophos 用 OpenAI Daybreak 把威胁调查时间砍掉 96%，并",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-09"
+    },
+    {
+      "slug": "2026-10-09-blog-simonwillison-deno-is-joining-cloudflare",
+      "zh": true,
+      "en": true,
+      "title": "Deno is joining Cloudflare — Cloudflare 收购 Deno，但 Deno 运行时只再维护一年，重心转向",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-09"
+    },
+    {
+      "slug": "2026-10-09-blog-simonwillison-quoting-matthew-green",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Matthew Green — 密码学家 Matthew Green 给出概率判断：AI 发现意外漏洞的速度远超",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-09"
+    },
+    {
       "slug": "2026-10-09-blog-simonwillison-ttok-1-0",
       "zh": true,
       "en": true,
@@ -9,6 +97,28 @@
       "author": "Simon Willison",
       "source": "Simon Willison",
       "tool": null,
+      "publishedAt": "2026-10-09"
+    },
+    {
+      "slug": "2026-10-09-claude-code-2-1-296",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.296 — 子代理可独立提前压缩上下文，工作流模型可统一指定",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-10-09"
+    },
+    {
+      "slug": "2026-10-09-codex-rust-v0-162-1",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.162.1 — Codex 修了两个稳定性坑：TUI 多行提问崩溃与后台服务启动失败。",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
       "publishedAt": "2026-10-09"
     },
     {
@@ -769,116 +879,6 @@
       "source": "anthropics/claude-code",
       "tool": "claude-code",
       "publishedAt": "2026-10-05"
-    },
-    {
-      "slug": "2026-10-05-codex-rust-v0-160-1",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.160.1 — Windows 远程 MCP 启动环境变量被覆盖的 bug 已修复",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-10-05"
-    },
-    {
-      "slug": "2026-10-05-openclaw-concepts-qa-reporting",
-      "zh": true,
-      "en": true,
-      "title": "QA reporting · OpenClaw — QA 报告怎么把「跑过了」变成「可审计的通过」",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-10-05"
-    },
-    {
-      "slug": "2026-10-05-openclaw-concepts-storage-locations",
-      "zh": true,
-      "en": true,
-      "title": "Storage locations · OpenClaw — 存储位置配置错了会静默丢数据，这篇讲清了初始化、加密与命名空间隔离的边界",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-10-05"
-    },
-    {
-      "slug": "2026-10-05-trending-cdyforever-how-to-live-better",
-      "zh": true,
-      "en": false,
-      "title": "how-to-live-better — 528条生活指南单页版，零依赖可离线，星标破7500",
-      "kind": "trending",
-      "author": null,
-      "source": "cdyforever/how-to-live-better",
-      "tool": null,
-      "publishedAt": "2026-10-05"
-    },
-    {
-      "slug": "2026-10-05-trending-egoist-mygo",
-      "zh": true,
-      "en": false,
-      "title": "mygo — 用 Go 写桌面应用，Web 前端或原生 UI 都行",
-      "kind": "trending",
-      "author": null,
-      "source": "egoist/mygo",
-      "tool": null,
-      "publishedAt": "2026-10-05"
-    },
-    {
-      "slug": "2026-10-04-blog-simonwillison-qwen3-8-27b-addition-in-words",
-      "zh": true,
-      "en": true,
-      "title": "Qwen3.8 27B addition in words — 用本地 DGX Spark 复现 GPT",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-04"
-    },
-    {
-      "slug": "2026-10-04-trending-chasmlol-2010-rust-rewrite-mashup",
-      "zh": true,
-      "en": false,
-      "title": "2010-rust-rewrite-mashup — 用 Rust 把 MW2、Skate 3 和 Minecraft 塞进同一个游戏",
-      "kind": "trending",
-      "author": null,
-      "source": "chasmlol/2010-rust-rewrite-mashup",
-      "tool": null,
-      "publishedAt": "2026-10-04"
-    },
-    {
-      "slug": "2026-10-04-trending-michaelkinsy-pig",
-      "zh": true,
-      "en": false,
-      "title": "PiG — TypeScript 编码代理 Pi 被忠实移植到 Go，430 星",
-      "kind": "trending",
-      "author": null,
-      "source": "MichaelKinsy/PiG",
-      "tool": null,
-      "publishedAt": "2026-10-04"
-    },
-    {
-      "slug": "2026-10-04-trending-niko1221-strata",
-      "zh": true,
-      "en": false,
-      "title": "Strata — 消费级硬件跑 Qwen3.8",
-      "kind": "trending",
-      "author": null,
-      "source": "Niko1221/Strata",
-      "tool": null,
-      "publishedAt": "2026-10-04"
-    },
-    {
-      "slug": "2026-10-03-blog-hf-blog-the-agent-said-it-was-done-the-database",
-      "zh": true,
-      "en": true,
-      "title": "The Agent Said It Was Done. The Database Disagreed. — 微软在 Hugging Face 博客介绍 ThinkingBox：让 agen",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-10-03"
     }
   ]
 }
