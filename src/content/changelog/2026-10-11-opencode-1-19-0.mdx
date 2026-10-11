@@ -1,0 +1,23 @@
+---
+slug: 2026-10-11-opencode-1-19-0
+title: "opencode v1.19.0 — 升级入口变了：自动更新取消，改由 /update 手动触发"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.19.0
+publishedAt: 2026-10-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "升级入口变了：自动更新取消，改由 /update 手动触发"
+broadcast: "这次更新把升级入口改了：自动更新取消，改由命令手动触发，想升到下一代大版本也得走显式命令。对做 agent 的国内开发者来说，这意味着版本变更交还用户确认，不会静默改动运行环境；同时资源探测前要先完成鉴权，并支持按服务层级调度。"
+insight: "这次 v1.19.0 最该注意的是升级方式变了：自动更新取消，改由 /update 手动触发，升 OpenCode 2 还要显式跑 opencode upgrade --major。所以现有用户别等静默更新，想升就自己确认，不升也不受影响。现有 prompt 和 hook 配置无需改动，因为本次只涉及升级入口、ultrafast 服务层级和 PTY 鉴权顺序，跟你的配置无关。国内走 newapi.lurus.cn 代理同样不受影响，摘要里没有任何涉及代理链路的改动。"
+tags: [opencode, upgrade-flow, tui, pty-security]
+---
+
+- 核心新增 `opencode upgrade --major`，用于升级到 OpenCode 2；harness 需把大版本迁移做成显式命令，而非隐式路径。
+- TUI 改用 `/update` 安装更新或升级到 OpenCode 2，更新不再自动安装；harness 应把版本变更交还用户确认，避免静默改动运行环境。
+- 修复允许 OpenAI `ultrafast` 服务层级，并在检查 PTY 是否存在前先校验连接来源与 ticket；harness 需在资源探测前完成鉴权，并支持按服务层级调度。
+
+---
+
+> 原文 release：[sst/opencode v1.19.0](https://github.com/anomalyco/opencode/releases/tag/v1.19.0)

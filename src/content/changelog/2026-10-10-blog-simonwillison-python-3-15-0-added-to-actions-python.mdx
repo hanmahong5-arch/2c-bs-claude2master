@@ -1,0 +1,23 @@
+---
+slug: 2026-10-10-blog-simonwillison-python-3-15-0-added-to-actions-python
+title: "Python 3.15.0 added to actions/python-versions — Simon Willison 等了两天的 GitHub Actions 小更新："
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/10/python-actions/
+publishedAt: 2026-10-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 等了两天的 GitHub Actions 小更新：Python 3.15 终于可用了"
+broadcast: "有个小更新值得国内做 Python 多版本兼容的开发者留意：GitHub Actions 的版本仓库终于加入了最新的 Python 3.15，现在测试矩阵里可以直接写 3.15 来跑新版本测试了。作者等了好几天，甚至让 ChatGPT 每小时去拉一次仓库，合并后才通知他。这说明工具链能不能用，常常卡在上游仓库的合并动作上，而不是语言本身发布。"
+tags: [github-actions, python, ci, tooling]
+---
+
+- `actions/python-versions` 仓库已加入 Python 3.15.0，现在可以在 GitHub Actions 的测试矩阵里直接写 `"3.15"` 来跑新版本测试。对维护多版本兼容库的开发者来说，CI 覆盖新 Python 的等待时间从「等官方镜像」变成「等这个仓库合并」。
+- 作者提到自己等了好几天，甚至让 ChatGPT 每小时 clone 并 pull 一次该仓库，直到稳定的 3.15 被加入再通知他。这展示了把「轮询外部状态变化」这类琐事外包给 LLM 的实用模式，但本质仍是定时脚本加条件判断。
+- 这条更新本身很窄，只影响用 GitHub Actions 做 Python 多版本测试的人。它的价值在于提醒：工具链的「可用性」往往卡在某个上游仓库的合并动作上，而非语言本身发布。
+
+---
+
+> 原文：[Python 3.15.0 added to actions/python-versions](https://simonwillison.net/2026/Oct/10/python-actions/) · 作者 Simon Willison

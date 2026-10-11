@@ -1,0 +1,23 @@
+---
+slug: 2026-10-10-openclaw-2026-10-1
+title: "openclaw v2026.10.1 — 发布说明本身没有功能变更，只有发布元数据与验证信息"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.10.1
+publishedAt: 2026-10-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "发布说明本身没有功能变更，只有发布元数据与验证信息"
+broadcast: "这次发布本身没有功能变更，只有发布元数据和验证信息，所以别指望从它看出行为变化。不过它明确给了两种同内容格式，一份给人看，一份是纯 Markdown 的变更日志，方便机器直接解析，对做 agent 的团队能省下不少抓取成本。另外还附了包、校验值和构建链接，但安卓安装包这次被跳过了。"
+insight: "这次 openclaw 2026.10.1 的发布说明没有任何功能变更、修复或 API 改动，所以现有用户没有升级的硬理由，prompt 和 hook 配置也不用动。国内走 newapi.lurus.cn 代理的用户同样不受影响，因为版本本身没带来行为变化。真要跟进，建议直接抓它提供的纯 Markdown changelog 做机器解析，并顺手用 npm 包、tarball、integrity 和 release SHA 做产物校验；注意 Android APK 因版本号不匹配被跳过，别把它当成可发布产物。"
+tags: [release-notes, changelog, npm, verification]
+---
+
+- 该 release notes 未列出任何功能变更、修复或 API 改动，仅包含提交/PR/贡献者统计与致谢名单。对 agent harness 的含义：不能从这条推断任何行为变化，需另取 changelog 才能评估影响。
+- 明确提供两种同内容格式：面向人的 release notes 与面向 AI agent/tools 的纯 Markdown changelog。对 agent harness 的含义：可优先抓取 changelog 链接做机器解析，减少 HTML 解析成本。
+- 给出 npm 包、tarball、integrity、release SHA 及多条 CI 运行链接，并注明 Android APK 被跳过（版本号不匹配）。对 agent harness 的含义：可据此做产物校验与版本门控，但需自行处理 Android 未发布的情况。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.10.1](https://github.com/openclaw/openclaw/releases/tag/v2026.10.1)
