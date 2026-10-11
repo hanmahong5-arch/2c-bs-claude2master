@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "slug": "2026-10-11-blog-simonwillison-dwarf-fortress-uses-version-control-now",
+      "zh": true,
+      "en": true,
+      "title": "Dwarf Fortress uses version control now — Dwarf Fortress 作者坚持不用版本控制近二十年，最终在 2023 年",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-11"
+    },
+    {
+      "slug": "2026-10-11-opencode-1-19-0",
+      "zh": true,
+      "en": false,
+      "title": "opencode v1.19.0 — 升级入口变了：自动更新取消，改由 /update 手动触发",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-10-11"
+    },
+    {
+      "slug": "2026-10-11-trending-storytold-wordcraft",
+      "zh": true,
+      "en": false,
+      "title": "wordcraft — 纯 Rust 重写微软 Word，开源清洁室实现，已获 3.5k 星",
+      "kind": "trending",
+      "author": null,
+      "source": "storytold/wordcraft",
+      "tool": null,
+      "publishedAt": "2026-10-11"
+    },
+    {
+      "slug": "2026-10-10-blog-latentspace-subscriber-exclusive-nyc-subscriber-meetups",
+      "zh": true,
+      "en": true,
+      "title": "[Subscriber Exclusive] NYC Subscriber Meetups! — Latent Space 向付费订阅者致谢，并预告纽约线下见面会",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-10"
+    },
+    {
       "slug": "2026-10-10-blog-latentspace-why-alphafold-didn-t-solve-protein-folding-pushmeet",
       "zh": true,
       "en": true,
@@ -8,6 +52,17 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-10"
+    },
+    {
+      "slug": "2026-10-10-blog-simonwillison-python-3-15-0-added-to-actions-python",
+      "zh": true,
+      "en": true,
+      "title": "Python 3.15.0 added to actions/python-versions — Simon Willison 等了两天的 GitHub Actions 小更新：",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-10-10"
     },
@@ -23,6 +78,17 @@
       "publishedAt": "2026-10-10"
     },
     {
+      "slug": "2026-10-10-openclaw-2026-10-1",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.10.1 — 发布说明本身没有功能变更，只有发布元数据与验证信息",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-10-10"
+    },
+    {
       "slug": "2026-10-10-trending-jiwoochris-artex-ko",
       "zh": true,
       "en": false,
@@ -32,6 +98,17 @@
       "source": "jiwoochris/artex-ko",
       "tool": null,
       "publishedAt": "2026-10-10"
+    },
+    {
+      "slug": "2026-10-09-blog-hf-blog-impactful-scheduling-for-gpu-clusters",
+      "zh": true,
+      "en": true,
+      "title": "Impactful scheduling for GPU clusters — AI2 分享 GPU 集群调度经验，讲如何让大规模训练任务更高效地排队与抢占。",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-10-09"
     },
     {
       "slug": "2026-10-09-blog-interconnects-i-expect-rapid-progress-but-not-towards-general",
@@ -802,83 +879,6 @@
       "source": "google-gemini/gemini-cli",
       "tool": "gemini-cli",
       "publishedAt": "2026-10-06"
-    },
-    {
-      "slug": "2026-10-06-opencode-1-18-35",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.18.35 — xAI 工具结果图片支持与 agent 可读统计格式",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-10-06"
-    },
-    {
-      "slug": "2026-10-06-trending-penso-herdr-gpui",
-      "zh": true,
-      "en": false,
-      "title": "herdr-gpui — Rust + GPUI 打造的 Herdr 原生客户端，跨三平台",
-      "kind": "trending",
-      "author": null,
-      "source": "penso/herdr-gpui",
-      "tool": null,
-      "publishedAt": "2026-10-06"
-    },
-    {
-      "slug": "2026-10-06-trending-storytold-photocraft",
-      "zh": true,
-      "en": false,
-      "title": "photocraft — 纯 Rust 重写 Photoshop，开源清洁室实现",
-      "kind": "trending",
-      "author": null,
-      "source": "storytold/photocraft",
-      "tool": null,
-      "publishedAt": "2026-10-06"
-    },
-    {
-      "slug": "2026-10-05-blog-openai-news-building-advertising-for-the-way-people-use-ai",
-      "zh": true,
-      "en": true,
-      "title": "Building advertising for the way people use AI — OpenAI 在 ChatGPT 里上线视觉广告新格式，并补齐归因与品牌适配工具",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-05"
-    },
-    {
-      "slug": "2026-10-05-blog-openai-news-our-approach-to-eu-text-provenance-rules",
-      "zh": true,
-      "en": true,
-      "title": "Our approach to EU text provenance rules — OpenAI 谈欧盟文本溯源规则下的水印方案与检测机制",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-05"
-    },
-    {
-      "slug": "2026-10-05-blog-simonwillison-quoting-felix-rieseberg",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Felix Rieseberg — Anthropic 的 Cowork 把本地 VM 搬上云端，每会话独立沙箱，文",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-05"
-    },
-    {
-      "slug": "2026-10-05-claude-code-2-1-290",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.290 — hook 事件新增字段，权限与工具调用可被精确区分",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-05"
     }
   ]
 }
