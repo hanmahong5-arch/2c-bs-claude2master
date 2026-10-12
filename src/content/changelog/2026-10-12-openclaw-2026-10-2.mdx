@@ -1,0 +1,23 @@
+---
+slug: 2026-10-12-openclaw-2026-10-2
+title: "openclaw v2026.10.2 — 升级不再回滚，缓存前缀不再失效，密钥不再泄漏"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.10.2
+publishedAt: 2026-10-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "升级不再回滚，缓存前缀不再失效，密钥不再泄漏"
+broadcast: "这次更新最值得留意的是升级终于能干净完成了，在视窗系统、克隆文件系统和私有运行环境路径下都不会再卡住或回滚。另外，两家主流模型接口的密钥路由默认改用提供方原生的上下文压缩，主认证配置冷却时压缩还能恢复，对话检查点在重放和重启后也保持字节一致。对国内做智能体的开发者来说，这意味着更新流程和缓存稳定性被当成正经事来对待了。"
+insight: "从 2026.10.1 升级到 2026.10.2 可以干净完成，Windows、克隆文件系统与私有 Node 路径不再回滚，现有用户值得直接升。Anthropic 检查点、工具结果与会话来源在重放、Gateway 重启和子代理完成时保持字节一致，说明 prompt-cache 前缀稳定性有了保障，原有 prompt 与 hook 配置不需要为此改动。摘要未提及 newapi.lurus.cn 代理，国内走代理是否受影响暂无依据。"
+tags: [release-notes, prompt-cache, compaction, secret-redaction]
+---
+
+- 首次从 2026.10.1 升级可干净完成，Windows、克隆文件系统与私有 Node 路径不再卡住或回滚（#168849 等）。含义：harness 的更新流程需把失败路径当作一等公民，避免半完成状态。
+- OpenAI 与 Anthropic API-key 路由默认使用 provider-native compaction，且主认证 profile 冷却时压缩可恢复（#168164、#166459）。含义：上下文压缩应下沉到 provider 层，harness 只做降级编排。
+- Anthropic 对话检查点、增强用户提示、工具结果与会话间来源在后续轮、重放、Gateway 重启与子代理完成时保持字节一致（#168042 等）。含义：prompt-cache 稳定性要求 harness 对序列化做确定性约束。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.10.2](https://github.com/openclaw/openclaw/releases/tag/v2026.10.2)

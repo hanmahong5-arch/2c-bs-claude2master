@@ -8,9 +8,9 @@
     "sst/opencode": "v1.19.0",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.63.0",
-    "openclaw/openclaw": "v2026.10.1",
+    "openclaw/openclaw": "v2026.10.2",
     "zeroclaw-labs/zeroclaw": "v0.8.5",
-    "NousResearch/hermes-agent": "v0.21.6"
+    "NousResearch/hermes-agent": "v0.21.7"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -194,7 +194,10 @@
     "storytold/pdfcraft",
     "mhtsec/ARTEX",
     "jiwoochris/artex-ko",
-    "storytold/wordcraft"
+    "storytold/wordcraft",
+    "storytold/effectcraft",
+    "storytold/gridcraft",
+    "Hinln/ARTEX"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -311,16 +314,17 @@
       "https://docs.openclaw.ai/concepts/qa-e2e-automation/scenario-coverage",
       "https://docs.openclaw.ai/concepts/qa-e2e-automation/slack-qa",
       "https://docs.openclaw.ai/concepts/qa-e2e-automation/whatsapp-and-credentials",
-      "https://docs.openclaw.ai/concepts/storage-locations"
+      "https://docs.openclaw.ai/concepts/storage-locations",
+      "https://docs.openclaw.ai/concepts/recommended-models"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-10-11",
+    "anthropic-engineering": "2026-10-12",
     "claude-code-docs": "2026-10-09",
     "openai-codex-blog": "2026-10-08",
-    "openclaw-concepts": "2026-10-05",
-    "hermes-guides": "2026-10-05"
+    "openclaw-concepts": "2026-10-12",
+    "hermes-guides": "2026-10-12"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -1548,21 +1552,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-10-11",
+    "simonwillison": "2026-10-12",
     "lilianweng": "2026-10-08",
-    "latentspace": "2026-10-11",
-    "interconnects": "2026-10-11",
-    "karpathy": "2026-10-09",
-    "raschka": "2026-10-09",
-    "eugeneyan": "2026-10-09",
+    "latentspace": "2026-10-12",
+    "interconnects": "2026-10-12",
+    "karpathy": "2026-10-12",
+    "raschka": "2026-10-12",
+    "eugeneyan": "2026-10-12",
     "chiphuyen": "2026-10-08",
     "oneusefulthing": "2026-10-11",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-10-11",
+    "openai-news": "2026-10-12",
     "deepmind": "2026-10-11",
     "hf-blog": "2026-10-11",
-    "anthropic-news": "2026-10-11",
+    "anthropic-news": "2026-10-12",
     "steipete": "2026-10-11",
     "openclaw-blog": "2026-10-11"
   },

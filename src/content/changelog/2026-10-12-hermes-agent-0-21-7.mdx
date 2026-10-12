@@ -1,0 +1,23 @@
+---
+slug: 2026-10-12-hermes-agent-0-21-7
+title: "hermes-agent v0.21.7 — 源码安装改为跟随 tag 更新，推理状态可跨 resume 保留"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.7
+publishedAt: 2026-10-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "源码安装改为跟随 tag 更新，推理状态可跨 resume 保留"
+broadcast: "这次更新把源码安装的更新方式改了，默认只跟已发布的稳定版本走，不再追每一次代码提交，想追新可以手动切回主分支。桌面端也把更新通道做成了开关，稳定版和每次提交随你选。更关键的是，会话恢复时推理内容能保留下来，恢复对话不再被拒。对做智能体的开发者来说，这意味着版本更可复现，长会话也更稳。"
+insight: "这次 v0.21.7 把源码安装的默认更新通道从追 main 改成跟随 tagged release，已更新的安装不会被回退，想继续追 commit 得手动执行 hermes update --set-channel main。国内用户如果走 newapi.lurus.cn 代理，升级路径本身不受影响，但建议先确认当前通道再决定要不要切回 main。现有用户值得升级，主要收益是 resume 后签名 thinking 能重放，Bedrock Converse 推理模型恢复会话不再被拒，prompt 和 hook 配置无需改动。"
+tags: [update-channel, release-tagging, session-resume, reasoning-replay]
+---
+
+- **更新默认跟随 tagged release**：源码安装从追 main 每个 commit 改为只更新到最新 `vX.Y.Z`，已更新的安装不会被回退；想继续追 commit 需 `hermes update --set-channel main`。含义：harness 的版本基线从「最新代码」变成「已发布快照」，可复现性优先于新鲜度。
+- **桌面端可选更新通道**：Settings ▸ About ▸ Updates 新增 Stable releases / Every commit 开关，更新弹窗显示当前通道。含义：把升级策略暴露为运行时配置，而非写死在安装脚本里。
+- **推理内容在 resume 后保留**：签名 thinking 在 `hermes chat --resume` 和下一次 gateway turn 时重放，Bedrock Converse 推理模型在恢复会话时不再被拒。含义：会话恢复需持久化并校验推理块，而不只是消息历史。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.21.7](https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.7)
