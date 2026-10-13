@@ -1,0 +1,23 @@
+---
+slug: 2026-10-12-blog-simonwillison-web-edit-0-1a0
+title: "web-edit 0.1a0 — 为让 agent 代跑服务、自己用手机改文件，他做了个 Tailscale 上的"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/12/web-edit/
+publishedAt: 2026-10-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "为让 agent 代跑服务、自己用手机改文件，他做了个 Tailscale 上的网页编辑器。"
+broadcast: "有人为了让智能体帮自己跑服务、自己用手机改文件，做了个跑在内网通道上的网页编辑器。起因是他想改一份凭据文件，又不愿让敏感内容经模型中转，于是让智能体生成了这个工具，由智能体启动服务后，他从手机直接编辑。这提醒我们，敏感数据绕开模型上下文、用内网做安全通道，是智能体工作流里值得单独设计的环节。"
+tags: [agent-tooling, tailscale, code-editor, mobile-workflow]
+---
+
+- 起因是他在手机上用 Codex Remote 干活，想改一份凭据文件，却不愿把凭据经 LLM 中转一遍，于是让 Codex 和 GPT-6 Astra Extra High 生成了这个 Python Web 应用。含义：敏感数据绕开模型上下文，是 agent 工作流里值得单独设计的环节。
+- 应用提供文件夹内文件的浏览与编辑界面，设计上跑在 Tailscale 内网，由 agent 启动服务后，他从手机经 Tailscale 直接编辑文件。含义：把内网作为 agent 与个人设备之间的安全通道，比暴露公网端口更省事。
+- 编辑器选用 CodeMirror 6，他原本想用 Monaco，但后者目前的移动端体验仍不够好。含义：面向手机操作的 agent 配套工具，选型时移动端可用性往往比功能丰富度更关键。
+
+---
+
+> 原文：[web-edit 0.1a0](https://simonwillison.net/2026/Oct/12/web-edit/) · 作者 Simon Willison

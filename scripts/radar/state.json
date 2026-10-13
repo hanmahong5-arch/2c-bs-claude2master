@@ -197,7 +197,8 @@
     "storytold/wordcraft",
     "storytold/effectcraft",
     "storytold/gridcraft",
-    "Hinln/ARTEX"
+    "Hinln/ARTEX",
+    "Ebony-Vinyl/dsh-our-free-model"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -320,7 +321,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-10-12",
+    "anthropic-engineering": "2026-10-13",
     "claude-code-docs": "2026-10-09",
     "openai-codex-blog": "2026-10-08",
     "openclaw-concepts": "2026-10-12",
@@ -706,7 +707,10 @@
       "https://simonwillison.net/2026/Oct/9/matthew-green/",
       "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
       "https://simonwillison.net/2026/Oct/11/dwarf-fortress/",
-      "https://simonwillison.net/2026/Oct/10/python-actions/"
+      "https://simonwillison.net/2026/Oct/10/python-actions/",
+      "https://simonwillison.net/2026/Oct/12/python-3-15/",
+      "https://simonwillison.net/2026/Oct/12/web-edit/",
+      "https://simonwillison.net/2026/Oct/12/datasette-ports/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -885,7 +889,8 @@
       "https://www.latent.space/p/ainews-typesafejev-at-100m-arr-75b",
       "https://www.latent.space/p/biohub-deepmind",
       "https://www.latent.space/p/nyc2026",
-      "https://www.latent.space/p/standard-bots"
+      "https://www.latent.space/p/standard-bots",
+      "https://www.latent.space/p/claude-dynamic-workflows"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1552,23 +1557,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-10-12",
+    "simonwillison": "2026-10-13",
     "lilianweng": "2026-10-08",
-    "latentspace": "2026-10-12",
-    "interconnects": "2026-10-12",
+    "latentspace": "2026-10-13",
+    "interconnects": "2026-10-13",
     "karpathy": "2026-10-12",
     "raschka": "2026-10-12",
     "eugeneyan": "2026-10-12",
     "chiphuyen": "2026-10-08",
-    "oneusefulthing": "2026-10-11",
+    "oneusefulthing": "2026-10-13",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-10-12",
-    "deepmind": "2026-10-11",
-    "hf-blog": "2026-10-11",
-    "anthropic-news": "2026-10-12",
-    "steipete": "2026-10-11",
-    "openclaw-blog": "2026-10-11"
+    "openai-news": "2026-10-13",
+    "deepmind": "2026-10-13",
+    "hf-blog": "2026-10-13",
+    "anthropic-news": "2026-10-13",
+    "steipete": "2026-10-13",
+    "openclaw-blog": "2026-10-13"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

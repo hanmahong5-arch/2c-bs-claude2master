@@ -1,0 +1,23 @@
+---
+slug: 2026-10-12-blog-simonwillison-datasette-ports-0-4
+title: "datasette-ports 0.4 — Datasette 插件更新：列出本机所有实例并显示 PID，便于接 Pytho"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/12/datasette-ports/
+publishedAt: 2026-10-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 插件更新：列出本机所有实例并显示 PID，便于接 Python 3.15 分析器"
+broadcast: "有个本地开发小工具更新了，它能列出你机器上跑着的所有数据服务实例，现在还多显示每个实例的进程号，找目标进程不用再靠猜。作者说这么做是为了方便把新版 Python 的分析器挂到指定进程上，观测方式从应用内埋点转向按进程外部接入。对做 agent 和工具链的人来说，这种小而专的探测插件，往往比大而全的监控更快解决具体问题。"
+tags: [datasette, python, profiling, devtools]
+---
+
+- datasette-ports 0.4 能检测并列出当前机器上运行的所有 Datasette 实例，新版本兼容最新 Datasette，并额外显示每个实例的 PID。对本地多实例调试的开发者来说，定位目标进程不再靠猜。
+- 作者点明显示 PID 的实际用途：更方便地把 Python 3.15 的新 profiler 挂到目标进程上。这意味着工具链的观测能力正从「应用内埋点」转向「按进程外部接入」。
+- 该插件定位是本地开发辅助而非生产监控，功能边界清晰。对 agent 与工具链的启示是：小而专的探测型插件，往往比大而全的监控方案更快解决具体问题。
+
+---
+
+> 原文：[datasette-ports 0.4](https://simonwillison.net/2026/Oct/12/datasette-ports/) · 作者 Simon Willison
