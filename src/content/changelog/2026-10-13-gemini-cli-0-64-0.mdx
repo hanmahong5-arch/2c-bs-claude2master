@@ -1,0 +1,23 @@
+---
+slug: 2026-10-13-gemini-cli-0-64-0
+title: "gemini-cli v0.64.0 — 文件写入原子化、Ctrl+C 真正中断、状态损坏可恢复"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0
+publishedAt: 2026-10-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "文件写入原子化、Ctrl+C 真正中断、状态损坏可恢复——这版在补 agent 的可靠性底座"
+broadcast: "谷歌的命令行智能体工具发布了新版本，这次重点在补可靠性的底座。它把文件写入改成了原子操作，并发操作会排队，不再留下残缺文件；操作进行中按中断键也能真正停下来，状态损坏还能从备份恢复。对国内做智能体的开发者来说，这提醒我们，工具层的副作用一致性和取消路径，得由框架自己兜住，不能甩给模型。"
+insight: "这版 gemini-cli 补的是可靠性底座：文件写入原子化、Ctrl+C 能真正中断、状态损坏可从备份恢复，都是底层行为修正，不涉及 API 或模型能力变化。国内用户走 newapi.lurus.cn 代理不受影响，现有 prompt 和 hook 配置也无需改动。判断是：如果你已经在用 gemini-cli 跑 agent 任务，值得升级，主要收益是并发写文件和中断操作时不再留下残缺状态；如果只是偶尔试用，可以等下次顺手更新。"
+tags: [atomic-writes, cancellation, state-recovery, tool-serialization]
+---
+
+- **文件工具串行化且写入原子化**（core）：并发文件操作被序列化，写入不再半途留下残缺文件。对 harness 的含义：工具层要自己保证副作用的一致性，别把并发控制甩给模型。
+- **Ctrl+C 紧急中止能触达取消处理器**（cli）：操作进行中按 Ctrl+C 不再被吞掉。对 harness 的含义：取消信号必须是一条贯通执行栈的路径，而不是只在空闲态生效。
+- **状态原子持久化并在损坏时从备份恢复**（cli）：本地状态写入改为原子操作，损坏后可回退备份。对 harness 的含义：会话状态是长期资产，需要崩溃安全与自愈，而非尽力而为。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.64.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0)

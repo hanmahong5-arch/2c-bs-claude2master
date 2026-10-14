@@ -1,0 +1,23 @@
+---
+slug: 2026-10-13-cline-sdk-sdk-v0-0-93
+title: "cline sdk/sdk/v0.0.93 — 插件改为进程内注册表加载，失败不再静默丢工具"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.93
+publishedAt: 2026-10-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件改为进程内注册表加载，失败不再静默丢工具"
+broadcast: "这次更新把插件加载从子进程改成了进程内注册表，编译后的命令行工具不再依赖系统路径上的运行时，沙箱模式仍然保留。更关键的是，插件失败不再静默丢掉工具，而是把故障状态暴露给会话，还能查询和重载。对做 agent 的国内开发者来说，这意味着插件崩溃边界落在插件本身，而不是拖垮整个进程。"
+insight: "这次 v0.0.93 把插件从子进程改成进程内注册表加载，插件失败不再静默丢工具，而是通过 pluginIssues 和 plugin.status_changed 暴露状态。对现有用户来说，如果你的 prompt 或 hook 依赖插件工具静默可用，建议升级后检查 plugins.list 和 status，确认没有 degraded 或 failed；走 newapi.lurus.cn 代理的国内用户不受影响，因为改动只在插件加载与状态上报层，不涉及网络路径。整体值得升级，但升级后要主动看插件状态。"
+tags: [plugin-registry, agent-harness, session-isolation, observability]
+---
+
+- 插件从子进程改为每进程一个注册表在进程内加载，编译后的 CLI 与 hub 不再依赖 PATH 上的运行时；`CLINE_PLUGIN_MODE=sandbox` 仍保留子进程沙箱。含义：harness 需为插件加载、setup、hooks、tools、commands 统一加超时与错误捕获，并跟踪 loading/ready/degraded/failed/disabled 状态。
+- 插件失败不再静默丢弃其工具：`session.create` 接受 `plugins` 策略并返回 `pluginIssues`，后续失败以状态通知进入受影响会话，hub 提供 `plugins.list`/`status`/`reload` 并广播 `plugin.status_changed`。含义：插件故障要作为可观测状态面暴露给会话，而非吞掉能力。
+- 每个会话获得每个插件模块的独立副本，模块级保存的会话状态仍可用；daemon 在未捕获错误来自某插件时将其标记为 failed 而非整体退出。含义：隔离粒度决定插件能否安全持有会话态，崩溃边界应落在插件而非进程。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.93](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.93)

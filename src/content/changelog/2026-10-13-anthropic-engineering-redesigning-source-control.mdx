@@ -1,0 +1,23 @@
+---
+slug: 2026-10-13-anthropic-engineering-redesigning-source-control
+title: "Redesigning source control at Anthropic — 当 agent 每天合并 3 万次代码，git 成了瓶颈：Anthropic 自"
+source: anthropic-engineering
+sourceUrl: https://www.anthropic.com/engineering/redesigning-source-control
+publishedAt: 2026-10-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "当 agent 每天合并 3 万次代码，git 成了瓶颈：Anthropic 自研 Scion 的取舍值得看。"
+broadcast: "Anthropic 把源码管理重新做了一遍，因为当智能体每天要合并三万次代码时，传统那套工具就成了瓶颈。他们的新方案假设客户端永远在线，把历史、合并这些重活全放到服务端，本地只留有界缓存，工作副本还能按需稀疏拉取。这对国内做智能体的开发者是个提醒：把重计算和全局查询收敛到服务端，能省掉大量准备成本，让工具调用更轻。"
+insight: "Scion 目前只是 Anthropic 内部自研，摘要里没有任何开源或可接入的信号，所以现有用户不必升级，也没有 prompt 或 hook 需要改。国内走 newapi.lurus.cn 代理同样不受影响，因为这套东西还没进入你能用的工具链。真正值得留意的是它把重计算和全局查询收敛到服务端、客户端只留有界缓存和稀疏工作副本这个方向，如果你在自建 agent harness，可以按这个思路先省掉 checkout、把 diff 和 merge base 交给服务端 API，降低沙箱 I/O 成本。"
+tags: [source-control, agent-harness, monorepo, scalability]
+---
+
+- 客户端永远在线：Scion 假设 agent 与任务始终可连服务端，按需拉取数据，而非像 git 那样要求完整离线副本。对 harness 的含义：可以放心把状态与历史放在远端，本地只保留有界缓存。
+- 客户端-服务端不对称：服务端负责历史、blame、commit、merge/rebase，客户端只做缓存、工作区布局与文件监控。对 prompt/工具设计的含义：把重计算与全局查询收敛到服务端 API，工具调用更轻。
+- 工作副本可选且稀疏：CI 可直接向服务端要 diff 或 merge base，写操作也能纯 API 完成，虚拟化 checkout 按需物化文件。对 harness 的含义：能省掉 checkout 就省掉，减少 agent 沙箱的 I/O 与准备成本。
+
+---
+
+> 原文：[Redesigning source control at Anthropic](https://www.anthropic.com/engineering/redesigning-source-control)

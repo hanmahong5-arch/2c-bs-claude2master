@@ -1,16 +1,16 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.296",
+    "anthropics/claude-code": "v2.1.299",
     "openai/codex": "rust-v0.162.1",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "desktop-v0.0.45",
+    "cline/cline": "desktop-v0.0.46",
     "block/goose": "v1.54.0",
     "sst/opencode": "v1.19.0",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.63.0",
-    "openclaw/openclaw": "v2026.10.2",
+    "google-gemini/gemini-cli": "v0.64.0",
+    "openclaw/openclaw": "v2026.10.3",
     "zeroclaw-labs/zeroclaw": "v0.8.5",
-    "NousResearch/hermes-agent": "v0.21.7"
+    "NousResearch/hermes-agent": "v0.22.0"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -198,7 +198,9 @@
     "storytold/effectcraft",
     "storytold/gridcraft",
     "Hinln/ARTEX",
-    "Ebony-Vinyl/dsh-our-free-model"
+    "Ebony-Vinyl/dsh-our-free-model",
+    "jiwoochris/artex-global",
+    "trhhubsd/ARTEXX"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -226,7 +228,8 @@
       "https://www.anthropic.com/engineering/managed-agents",
       "https://www.anthropic.com/engineering/multi-agent-research-system",
       "https://www.anthropic.com/engineering/swe-bench-sonnet",
-      "https://www.anthropic.com/engineering/writing-tools-for-agents"
+      "https://www.anthropic.com/engineering/writing-tools-for-agents",
+      "https://www.anthropic.com/engineering/redesigning-source-control"
     ],
     "claude-code-docs": [],
     "openai-codex-blog": [
@@ -321,7 +324,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-10-13",
+    "anthropic-engineering": "2026-10-14",
     "claude-code-docs": "2026-10-09",
     "openai-codex-blog": "2026-10-08",
     "openclaw-concepts": "2026-10-12",
@@ -710,7 +713,12 @@
       "https://simonwillison.net/2026/Oct/10/python-actions/",
       "https://simonwillison.net/2026/Oct/12/python-3-15/",
       "https://simonwillison.net/2026/Oct/12/web-edit/",
-      "https://simonwillison.net/2026/Oct/12/datasette-ports/"
+      "https://simonwillison.net/2026/Oct/12/datasette-ports/",
+      "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
+      "https://simonwillison.net/2026/Oct/13/llm-gemini/",
+      "https://simonwillison.net/2026/Oct/13/geoffrey-huntley/",
+      "https://simonwillison.net/2026/Oct/13/web-edit/",
+      "https://simonwillison.net/2026/Oct/12/llm-meta-ai/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -890,7 +898,10 @@
       "https://www.latent.space/p/biohub-deepmind",
       "https://www.latent.space/p/nyc2026",
       "https://www.latent.space/p/standard-bots",
-      "https://www.latent.space/p/claude-dynamic-workflows"
+      "https://www.latent.space/p/claude-dynamic-workflows",
+      "https://www.latent.space/p/ainews-ai-engineer-nyc-gemini-4-argon",
+      "https://www.latent.space/p/dyna",
+      "https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1275,7 +1286,8 @@
       "https://openai.com/index/legalon-halves-codex-costs",
       "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
       "https://openai.com/index/sophos",
-      "https://openai.com/index/asana-browser-agent"
+      "https://openai.com/index/asana-browser-agent",
+      "https://openai.com/index/higgsfield-longer-videos-voice"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1557,10 +1569,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-10-13",
+    "simonwillison": "2026-10-14",
     "lilianweng": "2026-10-08",
-    "latentspace": "2026-10-13",
-    "interconnects": "2026-10-13",
+    "latentspace": "2026-10-14",
+    "interconnects": "2026-10-14",
     "karpathy": "2026-10-12",
     "raschka": "2026-10-12",
     "eugeneyan": "2026-10-12",
@@ -1568,10 +1580,10 @@
     "oneusefulthing": "2026-10-13",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-10-13",
+    "openai-news": "2026-10-14",
     "deepmind": "2026-10-13",
     "hf-blog": "2026-10-13",
-    "anthropic-news": "2026-10-13",
+    "anthropic-news": "2026-10-14",
     "steipete": "2026-10-13",
     "openclaw-blog": "2026-10-13"
   },

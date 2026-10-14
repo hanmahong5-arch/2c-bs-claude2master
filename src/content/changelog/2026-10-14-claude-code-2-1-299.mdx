@@ -1,0 +1,23 @@
+---
+slug: 2026-10-14-claude-code-2-1-299
+title: "claude-code v2.1.299 — 空闲自动压缩与文件提及瘦身，两条改动直接影响 agent harness 的上下"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.299
+publishedAt: 2026-10-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "空闲自动压缩与文件提及瘦身，两条改动直接影响 agent harness 的上下文成本"
+broadcast: "这次更新有两个改动直接影响智能体的上下文成本。一是文件提及不再把内容塞进上下文，只把路径交给模型按需读取；二是终端新增空闲压缩，长会话闲置约五十四分钟后、在缓存过期前自动压缩，阈值还能调。对国内做智能体的开发者来说，这意味着上下文管理和缓存时机的配合，得重新算一算了。"
+insight: "这次 v2.1.299 的两条改动都指向上下文成本，值得升级。现有用户建议直接升到该版本，并评估开启 CLAUDE_CODE_DISABLE_FILE_MENTIONS，把 @ 文件提及从注入内容改为按需读取，能省下不少 token。空闲压缩默认在 200K+ 会话闲置约 54 分钟、一小时 prompt cache 过期前触发，如果你的 harness 依赖缓存生命周期，需要重新核对压缩时机，必要时用 CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS 调阈值或设 idleCompaction: false 关闭。走 newapi.lurus.cn 代理的用户不受影响，这些开关都在本地生效。现有 prompt 与 hook 配置本身不必改，但用到 prompt.submit 钩子的受管 mod 可以开始接入新增的附件字节与会话身份扩展点。"
+tags: [context-compaction, file-mentions, mod-hooks, prompt-cache]
+---
+
+- 新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`：`@` 文件提及只把路径交给 Claude 用文件工具读取，不再注入文件内容，harness 可据此把提及解析从上下文注入改为按需读取。
+- 终端新增空闲压缩：200K+ token 会话闲置约 54 分钟后、在一小时 prompt cache 过期前压缩；`CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS` 调阈值，`idleCompaction: false` 关闭，harness 需考虑压缩时机与缓存生命周期的耦合。
+- 新增 `$.prompt.media` 与 `$.session.identity()`：受管 mod 的 `prompt.submit` 钩子可读附件字节，会话身份可查登录方式与组织邮箱，扩展点从文本扩展到二进制与身份上下文。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.299](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)

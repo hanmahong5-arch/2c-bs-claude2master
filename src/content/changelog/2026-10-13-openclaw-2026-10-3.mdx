@@ -1,0 +1,23 @@
+---
+slug: 2026-10-13-openclaw-2026-10-3
+title: "openclaw v2026.10.3 — 90 次提交、99 位贡献者，但发布说明本身只讲了一件事：给 AI agent "
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.10.3
+publishedAt: 2026-10-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "90 次提交、99 位贡献者，但发布说明本身只讲了一件事：给 AI agent 准备纯 Markdown 变更日志。"
+broadcast: "这次更新有九十次提交、九十九位贡献者，但发布说明只讲了一件事：给 AI agent 准备纯 Markdown 的变更日志。也就是说，工具可以直接抓取结构化变更，不用再解析网页。另外发布验证链路被明确列出，agent 能据此校验产物来源，而不是只信任摘要。对国内做 agent 的开发者来说，这提醒我们多产物发布还得先过版本一致性这道门禁。"
+insight: "这次 v2026.10.3 的核心变化是给 AI agent 准备了纯 Markdown changelog，harness 可直接抓取结构化变更，不用再解析 HTML。如果你在用 openclaw 做 agent 集成，建议升级并让 harness 改抓这份 Markdown 源，现有 prompt 和 hook 配置本身不受影响。国内走 newapi.lurus.cn 代理的用户同样不受影响，因为发布验证链路仍列出 npm 包、registry tarball、integrity 哈希和 release SHA，代理侧照常校验即可。Android APK 因版本未 pin 被跳过，移动端用户先别急。"
+tags: [release-notes, agent-harness, changelog, release-verification]
+---
+
+- 发布说明与 changelog 内容相同但分两种格式：人类可读的 release notes 和面向 AI agent 与工具的纯 Markdown changelog，harness 可直接抓取结构化变更而不必解析 HTML。
+- 发布验证链路被显式列出：npm 包、registry tarball、integrity 哈希、release SHA 与多条 CI 运行链接，agent 可据此校验产物来源而非信任摘要。
+- Android APK 被跳过，原因是 apps/android/version.json 停留在 2026.8.2 而发布列车为 2026.10.3，需先跑版本 pin 命令，说明多产物发布需版本一致性门禁。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.10.3](https://github.com/openclaw/openclaw/releases/tag/v2026.10.3)

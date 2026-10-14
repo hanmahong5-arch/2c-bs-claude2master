@@ -1,0 +1,23 @@
+---
+slug: 2026-10-14-hermes-agent-0-22-0
+title: "hermes-agent v0.22.0 — 首次启动即对话、连接器免账号、一键本地模型，门槛被拆掉了"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0
+publishedAt: 2026-10-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "首次启动即对话、连接器免账号、一键本地模型，门槛被拆掉了"
+broadcast: "这次更新把上手门槛拆掉了：第一次打开就是一段引导式对话，不用填表、不用密钥，直接聊起来。连接外部工具也不用先注册账号，同一轮登录就能用。对国内开发者来说，本地模型还能一键装好并按你的显卡自动挑最合适的版本，硬件探测和运行时选择都由它自己扛，省去大量折腾。"
+insight: "这次 v0.22.0 的门槛拆解对国内用户是实打实的利好：首启引导对话跑在免费试用模型 nous/welcome 上、无需 API key，Connectors 首次使用自动创建免费身份，本地模型还能自动装 llama.cpp 并按 GPU 内存选版本，这些都不依赖外部账号体系，走 newapi.lurus.cn 代理的现有用户不受影响。判断上，现有用户值得升级，但不必急着改 prompt 或 hook 配置——摘要里没有任何涉及 prompt 或 hook 变更的内容，升级后按引导走一遍即可。"
+tags: [onboarding, connectors, local-models, agent-harness]
+---
+
+- 桌面首启改为引导式设置对话，跑在免费试用模型 `nous/welcome` 上（每 OS 用户一次），无需 API key；含义是 harness 可把「配置」变成一次可被 agent 驱动的会话，而非静态表单。
+- 新增 Connectors：Gmail、Linear、Notion 等托管应用经 Nous 工具网关接入，首次使用自动创建免费 connectors-only 身份，支持同一应用多命名账号；含义是工具接入从「先建账号再配 MCP」变为「同轮内登录即可用」。
+- 本地模型一键化：自动安装并维护 llama.cpp（CPU/CUDA/Metal/Vulkan/ROCm），按 GPU 与内存给目录模型打分并选最高质量可容纳版本，支持 Hugging Face GGUF 断点续传；含义是 harness 需把硬件探测与运行时选择纳入自身职责，而非交给用户。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.22.0](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0)

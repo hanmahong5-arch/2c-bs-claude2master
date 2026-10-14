@@ -1,0 +1,24 @@
+---
+slug: 2026-10-13-cline-desktop-v0-0-46
+title: "cline desktop-v0.0.46 — 会话导航、插件报错可见性与定时任务修复"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.46
+publishedAt: 2026-10-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "会话导航、插件报错可见性与定时任务修复"
+broadcast: "这次更新给长对话加了左侧大纲，每条提问都能悬停预览、点击跳转，不用再靠滚动找位置。插件出错也会在聊天里直接显示插件名和错误，不再悄悄丢掉工具。定时任务修好了排队卡住的问题，模型下线会标成失败并给出原因。对做 agent 的国内开发者来说，工具注册失败必须让模型看得见，否则会静默降级。"
+insight: "这次 v0.0.46 的改动对现有用户是值得升级的：定时任务不再永久 pending、模型下线会标 failed，插件报错也在聊天里可见，长会话还能靠对话大纲跳转。现有 prompt 和 hook 配置基本不用改，因为改动集中在会话导航、错误可见性和定时任务修复，没有提到 prompt 或 hook 格式变化。国内走 newapi.lurus.cn 代理的用户，摘要里没有提到代理相关调整，按现有方式继续用即可。"
+tags: [agent-harness, plugin-errors, scheduled-routines, token-estimation]
+---
+
+- 左侧新增对话大纲，列出每条已发送 prompt，悬停预览、点击跳转；长会话定位不再靠滚动，harness 需维护可索引的 prompt 时间线。
+- 插件加载或运行出错时在聊天中显示状态行，标明插件名与错误，不再静默丢失其工具；工具注册失败必须对 agent 可见，否则会静默降级。
+- 定时任务修复：排队运行不再永久 pending，模型调用失败（如模型下线）标记为 failed 并带错误，停机后只跑最近一次错过的执行；routine 编辑器只列当前可用模型。
+- 截图等图片不再计入 token 估算，避免自动压缩过早触发；自动压缩在目录无上下文窗口时改用所选模型的窗口。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.46](https://github.com/cline/cline/releases/tag/desktop-v0.0.46)

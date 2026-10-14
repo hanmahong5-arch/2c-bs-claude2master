@@ -1,0 +1,23 @@
+---
+slug: 2026-10-13-blog-simonwillison-quoting-geoffrey-huntley
+title: "Quoting Geoffrey Huntley — Geoffrey Huntley 谈用 pre"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/13/geoffrey-huntley/
+publishedAt: 2026-10-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Geoffrey Huntley 谈用 pre-commit 钩子把 agent 逼回正轨：与其写文档，不如让提交直接失败"
+broadcast: "给大家分享一个约束 AI 编程助手的新思路。有人发现，光靠写说明文档让 agent 守规矩并不可靠，因为它未必会读，读了也未必照做。于是他改用提交前的检查钩子，一旦发现代码绕过了该走的模块，就直接让提交失败，并在报错里告诉它该怎么改。这对国内做 agent 的开发者挺有启发：与其写文档，不如把约束变成会失败的检查。"
+tags: [coding-agents, pre-commit-hooks, agentic-engineering, developer-tooling]
+---
+
+- 作者指出，靠 AGENTS.md 之类的说明文件约束 agent 会不断漂移，因为文档和实际代码之间始终存在差距，agent 未必会读、读了也未必照做。对工具链的含义是：把规范写进文档属于软约束，可靠性依赖模型每次的自觉。
+- 他的替代方案是写一个 pre-commit 钩子，检查 git diff 里是否出现绕过自家 diagnostics 模块、直接调用 observability 模块的代码。对开发者的含义是：把架构约束下沉到 CI/钩子层，用可执行的检查代替自然语言说明。
+- 一旦命中，钩子直接让提交失败，并在报错信息里注入提示，告诉 agent 应该改用 diagnostics 库。作者称效果立刻从不及格变成满分，含义是给 agent 的反馈要出现在它必然看到的位置——失败的命令输出里。
+
+---
+
+> 原文：[Quoting Geoffrey Huntley](https://simonwillison.net/2026/Oct/13/geoffrey-huntley/) · 作者 Simon Willison

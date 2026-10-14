@@ -1,0 +1,23 @@
+---
+slug: 2026-10-13-blog-simonwillison-llm-gemini-0-35
+title: "llm-gemini 0.35 — Simon Willison 发布 llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/13/llm-gemini/
+publishedAt: 2026-10-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 llm-gemini 0.35，接入 Gemini 4 Argon，并算了一笔 agent 成本账"
+broadcast: "谷歌新出的一个叫 Argon 的模型，刚被接进一个常用的命令行工具里，作者实测画图能力依旧出色。更值得关注的是成本：它跑完一套基准要两千四百多美元，比 OpenAI、Anthropic 和 Meta 的最新模型都便宜，但下个月起价格翻倍。这提醒做 agent 的国内开发者，真正决定成本的是完成任务要烧多少 token，而不是单价。"
+tags: [llm-pricing, gemini, agent-cost, llm-release]
+---
+
+- 新版本为 llm-gemini 加入 Gemini 4 Argon 支持，该模型当天通过 Gemini API 及每月 100 美元订阅计划开放；作者照例用「鹈鹕骑自行车」SVG 测试，认为输出依旧出色，并指出 Gemini 是少数专门投入 SVG 能力的实验室。对开发者的含义：多模态生成类任务仍值得把 Gemini 纳入候选。
+- 定价方面，Argon 上线价为输入 2 美元、输出 10 美元每百万 token，与 GPT-6 Sol 持平，是 Claude Opus 5.5 的一半；但 12 月 1 日起价格翻倍。含义：按 token 单价选型会很快失效，需要关注调价窗口。
+- 作者引用 Artificial Analysis 的基准总成本：Argon 跑完为 2407 美元，接近 GLM-5.3，明显低于 OpenAI、Anthropic、Meta 最新模型，涨价后仍略便宜于 GPT-6 Astra。含义：在 agent harness 里，完成目标所需 token 量比单价更能决定真实成本。
+
+---
+
+> 原文：[llm-gemini 0.35](https://simonwillison.net/2026/Oct/13/llm-gemini/) · 作者 Simon Willison

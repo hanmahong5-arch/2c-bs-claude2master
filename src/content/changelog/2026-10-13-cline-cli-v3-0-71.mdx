@@ -1,0 +1,23 @@
+---
+slug: 2026-10-13-cline-cli-v3-0-71
+title: "cline cli-v3.0.71 — 插件改在 hub 内加载，不再依赖 PATH 上的 JS 运行时"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.71
+publishedAt: 2026-10-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件改在 hub 内加载，不再依赖 PATH 上的 JS 运行时"
+broadcast: "这次更新把插件加载从独立子进程挪进了 hub，不再依赖系统里的 JavaScript 运行时，插件加载失败也会明确报出名字和错误，还能查状态、重新加载。对国内做 agent 的开发者来说，插件失败从悄悄丢工具变成看得见的状态，意味着得把插件生命周期纳入统一进程和状态管理。另外推理开关现在在 ACP 模式下也能生效，图片不再计入 token 估算，自动压缩改用所选模型的窗口。"
+insight: "这次 CLI v3.0.71 值得升级：插件加载移入 hub 后不再依赖 PATH 上的 JS 运行时，失败会明确打印插件名和错误，还能用 cline hub plugins 查状态并 --reload，比过去静默丢工具好排查得多。如果你之前配过插件或 hook，建议升级后跑一次 cline hub plugins 确认状态，必要时 --reload。走 newapi.lurus.cn 代理的用户不受影响，本次改动只涉及本地插件加载与 token 估算，不涉及接口链路。"
+tags: [plugin-loading, acp-thinking, token-estimation, auto-compaction]
+---
+
+- 插件加载从独立 node/bun 子进程移入 hub，CLI 不再需要 PATH 上的 JavaScript 运行时；加载失败会打印插件名与错误，`cline config tools --json` 标记为 `plugin_failure`，`cline hub plugins` 可查状态与最后错误并支持 `--reload`。含义：插件失败从静默丢工具变为可观测状态，harness 需把插件生命周期纳入统一进程与状态面。
+- `--thinking` 现在在 ACP 模式（`--acp`）生效，此前 ACP 会话始终关闭推理。含义：推理开关需按会话模式统一传递，而非只在交互 TUI 路径生效。
+- 截图等图片不再计入 token 估算，此前会提前触发自动压缩；自动压缩在目录无上下文窗口时改用所选模型的窗口。含义：token 估算应区分文本与图像负载，压缩阈值需绑定真实模型窗口。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.71](https://github.com/cline/cline/releases/tag/cli-v3.0.71)

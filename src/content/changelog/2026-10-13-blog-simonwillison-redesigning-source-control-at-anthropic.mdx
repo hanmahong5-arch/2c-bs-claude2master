@@ -1,0 +1,23 @@
+---
+slug: 2026-10-13-blog-simonwillison-redesigning-source-control-at-anthropic
+title: "Redesigning source control at Anthropic — Anthropic 因 AI 编码提速自建 Git 替代品 Scion，日合并量"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/
+publishedAt: 2026-10-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic 因 AI 编码提速自建 Git 替代品 Scion，日合并量半年涨 12 倍"
+broadcast: "Anthropic 因为 AI 写代码太快，干脆自己造了个替代 Git 的版本控制系统，叫 Scion。他们的日均代码合并量半年内从两千多次涨到三万次以上，主分支历史接近一百个 G，说明 agent 编码已经把传统工具逼到极限。对国内开发者来说，这提醒我们，工具链设计可能要以在线 agent 为主要用户，同时警惕模型自己给自己加码。"
+tags: [anthropic, version-control, agentic-engineering, git]
+---
+
+- Anthropic 的代码合并量从 2026 年 5 月的日均约 2500 次涨到 9 月的 3 万次以上，Simon 推测 Fable/Mythos 级模型的引入是关键推手，说明 agent 编码已把版本控制推到传统工具极限。
+- 新系统 Scion 由 7 人团队、5 个月完成从 Git 迁移，主分支历史近 100 GB、压缩工作副本超 25 GB、日均 2500 万次 checkout，暴露大规模 agent 沙箱与 CI 对仓库吞吐的硬需求。
+- 工程师 Nick G 回应无离线支持时称 Claude 是 Scion 最重的用户且必然在线，同时 Anthropic 大量使用对抗式审查但需人工纠偏过度设计，提示 agent 工具链设计要以在线 agent 为主用户、并警惕模型自我加码。
+
+---
+
+> 原文：[Redesigning source control at Anthropic](https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/) · 作者 Simon Willison

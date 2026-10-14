@@ -1,0 +1,23 @@
+---
+slug: 2026-10-13-cline-4-1-24
+title: "cline v4.1.24 — 默认模型换代、推理开关修复、图片不再虚增 token，这版改动直接影响 agen"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.24
+publishedAt: 2026-10-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "默认模型换代、推理开关修复、图片不再虚增 token，这版改动直接影响 agent 的上下文预算与错误可读性。"
+broadcast: "Cline 刚更新了一版，改动挺实在。没选模型时，它和 OpenRouter 会默认走 Claude Sonnet 5.5，还放在推荐首位；另外关掉推理开关不再报错，截图这类图片也不再计入 token 估算，自动压缩不会提前触发。对国内做 agent 的开发者来说，这提醒我们默认路由要显式声明，推理开关得按模型能力降级，token 计量也要区分文本和附件。"
+insight: "这版值得升级，重点是默认模型换代和推理开关修复。如果你依赖未选模型时的默认路由，升级后 Cline 与 OpenRouter 会静默走 Claude Sonnet 5.5，建议在配置里显式声明模型，别让它随目录刷新。关闭 reasoning 不再报 400，说明推理开关要按模型能力降级，现有 hook 里统一透传参数的写法该改。图片不再虚增 token，自动压缩阈值更贴近真实上下文，prompt 压缩策略可相应放宽。国内走 newapi.lurus.cn 代理不受影响，照常升级即可。"
+tags: [default-model, reasoning-toggle, token-estimation, auto-compaction]
+---
+
+- 未选模型时 Cline 与 OpenRouter 默认走 Claude Sonnet 5.5，且 Cline 把它放在推荐列表首位；含义是 harness 的默认路由应显式声明，避免用户静默继承一个会随目录刷新的模型。
+- 关闭 reasoning 不再在 GPT-6 Astra、Claude Fable 5 等模型上返回 400，level-only Gemini 也不再因 thinking budget 报错；含义是推理开关要按模型能力降级处理，而不是统一透传参数。
+- 截图等图片不再计入 token 估算，自动压缩因此不会在远未接近上限时提前触发，且目录缺 context window 时改用所选模型的值；含义是 token 计量必须区分文本与附件，压缩阈值要绑定真实上下文窗口。
+
+---
+
+> 原文 release：[cline/cline v4.1.24](https://github.com/cline/cline/releases/tag/v4.1.24)
