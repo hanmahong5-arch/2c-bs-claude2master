@@ -1,0 +1,23 @@
+---
+slug: 2026-10-14-blog-deepmind-google-deepmind-and-singapore-government-collaborate-to-build
+title: "Google DeepMind and Singapore Government collaborate to — DeepMind 与新加坡政府用端侧 Gemma 模型在私聊中拦截诈骗，数据不出"
+source: "Google DeepMind"
+sourceUrl: https://deepmind.google/blog/on-device-ai-scam-detection-mddi/
+publishedAt: 2026-10-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Google DeepMind"
+hook: "DeepMind 与新加坡政府用端侧 Gemma 模型在私聊中拦截诈骗，数据不出设备。"
+broadcast: "谷歌DeepMind和新加坡政府合作，做了一个专门在手机本地识别诈骗的轻量模型，能在私聊里实时判断对话是不是骗局，聊天内容完全不出设备。这对国内开发者挺有启发：敏感场景的推理可以整个跑在本地，隐私合规从选模型那一步就得想清楚。而且他们没去调大模型接口，而是用轻量模型加领域微调，说明垂直风控这类任务，小模型反而更适配端侧的算力和延迟。"
+tags: [on-device-ai, gemma, scam-detection, privacy]
+---
+
+- DeepMind 与新加坡 GovTech 合作，基于轻量级 Gemma 模型微调出端侧诈骗检测模型，在私密聊天中实时识别对话式诈骗。对 agent 的含义：敏感场景的推理可以完全跑在本地，不必把原始对话上传云端。
+- 方案强调零云端数据外泄（zero cloud data egress），用户聊天内容不离开设备。对工具链的含义：隐私合规不再是事后加壳，而是从模型选型阶段就决定部署边界。
+- 选择 Gemma 这类轻量模型做微调，而非调用大模型 API。对开发者的含义：垂直风控任务上，小模型 + 领域微调可能比通用大模型更适配端侧算力与延迟约束。
+
+---
+
+> 原文：[Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection](https://deepmind.google/blog/on-device-ai-scam-detection-mddi/) · 作者 Google DeepMind

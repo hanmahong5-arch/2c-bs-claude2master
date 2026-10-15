@@ -1,0 +1,23 @@
+---
+slug: 2026-10-14-hermes-agent-0-22-1
+title: "hermes-agent v0.22.1 — 补丁版把会话权威、worker 持久化与网关准入全部收口到 canonical "
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.1
+publishedAt: 2026-10-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "补丁版把会话权威、worker 持久化与网关准入全部收口到 canonical 路径"
+broadcast: "这次更新是个补丁版，但改动挺关键。它把会话的创建和恢复统一收口到网关这一条权威路径上，客户端只负责传输；同时给后台任务的持久化加了栅栏，进程被杀后还能被收养恢复；外部触发的入口也改成先落盘再回执，重复投递会自动去重。对做智能体的开发者来说，这提醒我们：会话身份要集中管理，长任务要有可重放的持久化边界，外部入口要默认幂等。"
+insight: "这次 v0.22.1 是补丁版，核心是把会话权威、worker 持久化和网关准入统一收口到 canonical 路径，属于内部架构收口，不是新功能。对现有用户来说，如果你在用 --resume 或 -c 做会话恢复，值得升，因为解析已挪到网关侧，行为更一致；现有 prompt 和 hook 配置不用改。国内走 newapi.lurus.cn 代理的用户，摘要里没提到代理链路有变化，按现有方式继续用即可。"
+tags: [session-authority, worker-persistence, durable-admission, gateway]
+---
+
+- **会话权威统一**：CLI、Desktop、Ink、ACP、API 的会话创建与恢复都改走 gateway 的 canonical authority，`--resume <title>` 与 `-c <title>` 在网关侧解析。含义：harness 应把会话身份与生命周期集中到单一权威，客户端只做传输。
+- **worker 持久化加栅栏**：worker 的压缩、轮换、委派写入都带 receipt 与 sequence/epoch 栅栏，owner 被杀后可被收养恢复。含义：长任务 harness 需要可重放的持久化边界，而非内存态。
+- **准入先于确认**：webhook、relay、cron、API 运行都先经 durable FIFO 准入再回执，重复投递按 receipt 去重。含义：外部触发入口应默认幂等，ack 只发生在持久化之后。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.22.1](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.1)

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-14-claude-code-2-1-300
+title: "claude-code v2.1.300 — mod 钩子能改写 agent 的 prompt 和 model，插件系统从只读"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.300
+publishedAt: 2026-10-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "mod 钩子能改写 agent 的 prompt 和 model，插件系统从只读变可写"
+broadcast: "这次更新让 mod 钩子能改写 agent 的提示词和模型，以前只能拒绝，现在插件系统从只读变可写了。对做 agent 的国内开发者来说，这意味着拦截和改写要放在中间态，还得区分用户键入和程序性变更，否则审计会把改写当成用户输入。另外缓存计量也按寿命拆开了。"
+insight: "这次 v2.1.300 对现有用户的实际影响集中在 hook 配置上：agent.spawn 从只能拒绝变成能改写 prompt 和 model，prompt.change 又新增了非键入编辑的触发点，如果你之前靠拒绝式钩子做拦截，现在得重新梳理改写逻辑，否则审计和遥测容易把程序性变更记成用户输入。走 newapi.lurus.cn 代理的用户不受影响，摘要里没有涉及代理或鉴权变更，升级可以照常进行。"
+tags: [mod-hooks, agent-spawn, opentelemetry, prompt-lifecycle]
+---
+
+- `agent.spawn` mod 钩子现在可重写 workflow agent 的 `prompt` 和 `model`，此前只能拒绝：harness 需把 agent 生成参数暴露为可拦截、可改写的中间态，而非一次性构造。
+- 新增 `prompt.change` 钩子，在历史召回、清空、撤销或插件填充等非键入编辑时触发：harness 要区分「用户键入」与「程序性变更」，否则审计与遥测会把改写当成用户输入。
+- OpenTelemetry `api_request` 事件新增 `cache_creation_5m_tokens` 与 `cache_creation_1h_tokens`，按缓存寿命拆分写入：harness 的缓存策略需按 TTL 分层计量，才能判断长短期缓存的实际收益。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.300](https://github.com/anthropics/claude-code/releases/tag/v2.1.300)

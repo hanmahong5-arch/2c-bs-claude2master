@@ -1,0 +1,23 @@
+---
+slug: 2026-10-14-blog-simonwillison-tree-appreciator
+title: "Tree Appreciator — Claude 用 3 小时生成一款赏树小游戏，验证一句「确保好玩」的提示词有多管"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/14/tree-appreciator/
+publishedAt: 2026-10-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Claude 用 3 小时生成一款赏树小游戏，验证一句「确保好玩」的提示词有多管用"
+broadcast: "有人只用聊天界面，让 Claude 花了三个多小时，做出一个赏树小游戏，两棵树并排摆着，玩法就是欣赏它们的差别，还带音乐、动画和成就系统。有意思的是，他只在提示词里加了一句「确保它好玩」，效果却出奇地好。这说明模糊的高层目标反而能逼着 agent 自己做设计取舍，而且复杂前端原型已经不用依赖专门的编码工具了。"
+tags: [vibe-coding, claude, three-js, game-design]
+---
+
+- 作者用 Claude iPhone 默认聊天模式（非 Claude Code）让 Opus 5.5 Max 构建 Three.js 游戏「Tree Appreciator」：并排展示两棵算法生成的树，玩法是欣赏它们的差异。含义：复杂前端游戏原型已可在纯对话界面里完成，不必依赖专门的编码 agent。
+- 提示词里只加了一句「确保它好玩」，作者坦言这招「有效得令人不安」。含义：对 agent 而言，模糊的高层目标（fun）比逐条规格更能驱动它自行做设计取舍。
+- Claude 连续运算 3 小时 7 分钟后，交出一个带音乐、动画和成就系统的找不同游戏，可玩性相当高。含义：长时推理换来的是完整成品而非片段代码，工具链需要为小时级任务准备进度与中断恢复。
+
+---
+
+> 原文：[Tree Appreciator](https://simonwillison.net/2026/Oct/14/tree-appreciator/) · 作者 Simon Willison
