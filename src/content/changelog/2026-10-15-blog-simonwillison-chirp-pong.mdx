@@ -1,0 +1,23 @@
+---
+slug: 2026-10-15-blog-simonwillison-chirp-pong
+title: "Chirp Pong — 用手机麦克风传声当网络，Simon 让两台手机跑起双人 Pong"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/15/chirp-pong/
+publishedAt: 2026-10-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用手机麦克风传声当网络，Simon 让两台手机跑起双人 Pong"
+broadcast: "有人做了个挺有意思的实验：两台手机各自打开网页，完全不连网络，靠麦克风互相发声音来同步游戏状态，居然真跑起了双人乒乓球。这说明浏览器本身已经能支撑不用配对、不用服务器的近场通信玩法。更值得留意的是，整个项目是让编码智能体端到端完成的，这种先验证可行性再谈产品的小实验，正在成为检验智能体交付能力的常见场景。"
+tags: [claude-code, generative-ai, game-design, web-audio]
+---
+
+- 他做了一个实验：两台手机各自运行静态 HTML，不靠网络，而是用麦克风收发的「chirp」声波在设备间同步游戏状态，验证了可行性。含义：浏览器 API 已能支撑无服务器、无配对的近场通信玩法。
+- 游戏不是简单复刻 Pong，而是加入图形与玩法上的变化，让两名玩家把手机靠近时互动更交织、更有趣。含义：底层通信一旦跑通，产品差异就落在交互设计而非协议。
+- 整个项目由 Claude Opus 5.5 Extra 在 Claude Code 中完成，作者把它归入 game-design、generative-ai、llms 等标签。含义：这类「先验证可行性」的小实验，正成为检验编码 agent 端到端交付能力的常见场景。
+
+---
+
+> 原文：[Chirp Pong](https://simonwillison.net/2026/Oct/15/chirp-pong/) · 作者 Simon Willison

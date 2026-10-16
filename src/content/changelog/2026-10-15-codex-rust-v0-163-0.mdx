@@ -1,0 +1,23 @@
+---
+slug: 2026-10-15-codex-rust-v0-163-0
+title: "codex rust-v0.163.0 — 并行只读工具与可搜索 /config，Codex 0.163.0 强化 harn"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.163.0
+publishedAt: 2026-10-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "并行只读工具与可搜索 /config，Codex 0.163.0 强化 harness 控制面"
+broadcast: "这次更新让只读类的工具，比如技能、记忆和会话历史查询，可以并行执行了，但前提是框架得能分清哪些调用只读、哪些有副作用，才能安全地并发调度。另外配置项现在支持跨类别搜索，能热改的会立刻生效，需要重启的也会标出来。对做 agent 的国内开发者来说，这几点直接关系到并发调度和取消信号怎么设计。"
+insight: "这次 0.163.0 的改动集中在 harness 控制面：只读工具可并行、/config 可搜索并热改、取消信号要沿嵌套调用树传播。对现有用户来说，如果自定义了 hook 或依赖工具串行执行，建议先检查只读与有副作用的调用是否被正确区分，否则并发调度可能出问题；/config 热改也要求你确认哪些配置仍需重启。走 newapi.lurus.cn 代理的用户，摘要未提及代理层变化，按现有方式升级即可。"
+tags: [codex, agent-harness, tool-orchestration, config]
+---
+
+- 只读工具（skill、memory、会话历史查询）可并行执行，harness 需区分只读与有副作用调用以安全并发调度。
+- `/config` 支持跨类别搜索偏好并即时应用可热改设置，harness 需标注哪些配置变更需重启。
+- 中断一个 turn 会同时停止活跃 Code Mode cell 及其嵌套工具调用，harness 需把取消信号沿嵌套调用树传播。
+
+---
+
+> 原文 release：[openai/codex rust-v0.163.0](https://github.com/openai/codex/releases/tag/rust-v0.163.0)

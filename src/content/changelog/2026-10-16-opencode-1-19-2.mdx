@@ -1,0 +1,23 @@
+---
+slug: 2026-10-16-opencode-1-19-2
+title: "opencode v1.19.2 — 1.x 用户不再被自动推 2.x，升级路径被显式隔离"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.19.2
+publishedAt: 2026-10-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "1.x 用户不再被自动推 2.x，升级路径被显式隔离"
+broadcast: "这次更新把升级路径做了显式隔离，一点几版本的用户不会再被自动推到二点零。想升大版本，只能走专门的更新入口或升级命令。对国内做 agent 的开发者来说，这意味着版本发现逻辑得区分同线补丁和跨大版本迁移，破坏性升级要作为独立动作暴露，同时还得按不同包管理器分别处理渠道和可用性。"
+insight: "这次 v1.19.2 对国内 1.x 用户是个明确信号：自动更新不会再把你推到 2.x，升级路径被显式隔离，所以现有 prompt 和 hook 配置暂时不用动，继续留在 1.x 是安全的。想升 2 只能主动走 /update 的 2.0 入口或 opencode upgrade --major，属于破坏性动作，建议先单独验证再切。走 newapi.lurus.cn 代理的用户不受影响，因为更新检查只读 npm opencode-ai 的 latest，代理链路照常。"
+tags: [version-pinning, upgrade-path, package-managers, release-channel]
+---
+
+- 更新检查只读 npm `opencode-ai` 的 latest，1.x 安装不再收到 2.x 常规更新；含义是 harness 的版本发现逻辑需要区分「同线补丁」与「跨大版本迁移」。
+- 升 2 只能走 `/update` 的 2.0 入口或 `opencode upgrade --major`；含义是破坏性升级应作为独立动作暴露，而非混入自动更新流。
+- 修复 yarn 管理的升级，Homebrew Core 安装跳过 1.x 更新并先检查 tap 与 Chocolatey，安装脚本拒绝装 2.x；含义是 harness 需按包管理器分别处理渠道与可用性。
+
+---
+
+> 原文 release：[sst/opencode v1.19.2](https://github.com/anomalyco/opencode/releases/tag/v1.19.2)

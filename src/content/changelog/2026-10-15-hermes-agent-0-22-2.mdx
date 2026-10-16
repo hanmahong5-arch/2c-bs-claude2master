@@ -1,0 +1,23 @@
+---
+slug: 2026-10-15-hermes-agent-0-22-2
+title: "hermes-agent v0.22.2 — v0.22.1 发错提交，0.22.2 是它本该是的样子"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2
+publishedAt: 2026-10-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "v0.22.1 发错提交，0.22.2 是它本该是的样子"
+broadcast: "这次更新修的是上一版发错的提交，现在才是它本该有的样子。最值得关注的是网关重启后的存活判断：以前只看进程号，重启后可能把号分给无关进程，导致网关被误判为已在运行而拒绝启动，现在改成绑定只有活网关持有的锁。另外本地长对话在笔记本上更稳了，机器睡眠不再被当成服务挂掉，超时和熔断开始区分这两种情况。"
+insight: "这次 0.22.2 是 0.22.1 发错提交后的修正版，判断很直接：已经在用 0.22.1 的，值得升，因为网关重启后起不来、本地长轮次被熔断这两个坑都修了，笔记本跑本地模型的人收益最明显。但升级前要留意已知问题——在 0.22.1 网关下跑过的会话，升到 0.22.2 后删不掉，所以别急着把旧会话当垃圾清，先确认清理路径。至于国内走 newapi.lurus.cn 代理，摘要里没提代理相关改动，按现有配置继续用即可，prompt 和 hook 也不用动。"
+tags: [gateway-liveness, local-models, pid-reuse, release-fix]
+---
+
+- **网关重启后能再启动**：Linux 重启后可能把早期 PID 分给无关进程，网关误判为已在运行，导致 systemd/launchd/Docker 监管的网关拒绝启动。现在记录启动的 boot epoch，无法判断时改问只有活网关持有的 host lock。含义：harness 的存活探测不能只靠 PID，需绑定可验证的持有者。
+- **笔记本上长本地模型轮次能撑住**：本地请求始终流式并显示 prompt 读取进度，stall 计时跳过机器睡眠时间，恢复的本地服务器会重试而非永久熔断，压缩不再在服务器仍读长对话时超时。含义：超时与熔断策略要区分「机器睡了」和「服务挂了」。
+- **已知问题**：在 0.22.1 网关下跑过的会话，在 0.22.2 中无法删除。含义：跨版本状态迁移需预留清理路径。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.22.2](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2)

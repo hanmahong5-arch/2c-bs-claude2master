@@ -1,0 +1,23 @@
+---
+slug: 2026-10-16-openclaw-2026-10-4
+title: "openclaw v2026.10.4 — Gateway 睡眠后不再重启，手动 /compact 不再丢请求"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.10.4
+publishedAt: 2026-10-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Gateway 睡眠后不再重启，手动 /compact 不再丢请求"
+broadcast: "这次更新修了三个挺关键的地方。网关在电脑睡眠或者系统时钟跳变之后还能继续跑，不会再因为心跳过期就重启；手动压缩上下文也会先把当前任务结算完再压缩，不会把待处理的请求丢掉。对做智能体的开发者来说，这意味着长任务不能只靠墙上时间判断存活，压缩也该当成一个可以等待的步骤，而不是中断信号。"
+insight: "这次 2026.10.4 值得现有用户升级，重点在 Gateway 睡眠或时钟跳变后不再重启，以及手动 /compact 先结算当前 run 再压缩、不再丢请求，长时任务和压缩流程的稳定性直接受益。升级后建议检查依赖墙钟时间的存活判断和把压缩当可等待结算步骤的 hook 配置。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [gateway-stability, compaction, ownership, release-notes]
+---
+
+- Gateway 在电脑睡眠或系统时钟跳变后继续运行，不再因心跳过期而重启（#170790）。对 agent harness 的含义：长时任务不应把墙钟时间当作唯一存活依据。
+- 手动 `/compact` 会先结算当前 run 再压缩，而不是中止并丢弃待处理请求（#166163）。对 agent harness 的含义：压缩上下文应作为可等待的结算步骤，而非中断信号。
+- Tlon 群组 DM 不再把其他参与者当作 owner，关闭了冒充 owner 的路径（#165801）。对 agent harness 的含义：多参与者会话中 owner 判定必须基于明确身份，而非消息作者。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.10.4](https://github.com/openclaw/openclaw/releases/tag/v2026.10.4)

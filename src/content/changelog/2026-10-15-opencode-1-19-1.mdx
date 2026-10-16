@@ -1,0 +1,26 @@
+---
+slug: 2026-10-15-opencode-1-19-1
+title: "opencode v1.19.1 — 会话分享功能被彻底移除，旧链接和导入全部失效"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.19.1
+publishedAt: 2026-10-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "会话分享功能被彻底移除，旧链接和导入全部失效"
+broadcast: "有个工具最新版本把会话分享功能彻底删掉了，旧的分享链接和导入命令全都失效，而且没有给出替代方案。这意味着如果你之前靠它把会话状态托管在外部链接上做协作或调试，现在这条路走不通了。对国内做 agent 的开发者来说，得赶紧把会话持久化和迁移放到本地或自己的存储里，别把核心能力绑在单一厂商的分享机制上。"
+insight: "这次 v1.19.1 是破坏性移除，会话分享彻底没了，旧链接和导入全部失效，也没给替代方案。如果你在用 share 链接做协作或调试，升级前必须先自建导出通道，否则流程直接断。现有 prompt 和 hook 配置本身不受影响，不用改。国内走 newapi.lurus.cn 代理的用户，摘要里没提到代理层有变化，升级与否取决于你是否依赖分享功能，不依赖可以正常升。"
+tags: [session-sharing, breaking-change, opencode, session-persistence]
+---
+
+- 会话分享已停止服务：现有 share 链接与 session-sharing 命令不再可用。
+  含义：harness 不能把会话状态托管在外部可访问的 URL 上，需自建导出通道。
+- 从 share URL 导入会话不再被支持。
+  含义：跨环境迁移会话的路径被切断，agent harness 应把会话持久化与可移植性放在本地或自有存储。
+- 该变更属于破坏性移除，未提供替代方案。
+  含义：依赖分享做协作或调试的流程需重新设计，避免把核心能力绑定在单一厂商的分享机制上。
+
+---
+
+> 原文 release：[sst/opencode v1.19.1](https://github.com/anomalyco/opencode/releases/tag/v1.19.1)

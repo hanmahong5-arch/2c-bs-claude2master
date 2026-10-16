@@ -1,0 +1,23 @@
+---
+slug: 2026-10-16-cline-cli-v3-0-72
+title: "cline cli-v3.0.72 — 插件改走 worker 沙箱，流中断自动重试 3 次"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.72
+publishedAt: 2026-10-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件改走 worker 沙箱，流中断自动重试 3 次"
+broadcast: "这次更新把插件从主进程里挪进了独立的执行环境，如果当前构建跑不了插件，命令行和会话启动时都会明确提示，而不是悄悄在后台执行。另外，流式响应被中断时最多会自动重试三次才判定失败，失败的请求也会记下上游的请求编号。对做 agent 的国内开发者来说，这意味着插件隔离、中断恢复和跨系统追踪，都得在架构里提前留好位置。"
+insight: "这次 CLI v3.0.72 把插件执行从 hub 进程挪到 worker 沙箱，并让流中断自动重试 3 次，属于底层 harness 行为变化，不是新功能。现有用户值得升级，因为插件隔离和降级提示能避免静默失败；升级后建议检查原有 hook 配置是否依赖旧的在 hub 内执行假设，必要时调整。国内走 newapi.lurus.cn 代理的用户不受影响，摘要未提及代理链路改动，可照常使用。"
+tags: [plugin-sandbox, stream-retry, provider-errors, cli-hub]
+---
+
+- 插件不再直接跑在 hub 进程内，改为 worker 执行；若当前构建无法运行插件，`cline config tools`、`cline hub plugins` 和会话启动警告会明示，而非静默在 hub 内执行。含义：harness 需把插件执行环境与主进程隔离，并显式暴露降级状态。
+- provider 错误中断流式响应时，Cline 最多重试 3 次才判定该轮失败。含义：harness 的流式管道要支持可恢复的中断重试，而非直接终止 turn。
+- 失败的模型请求会记录 provider 的 request id。含义：harness 的日志层应透传上游请求标识，便于跨系统追踪。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.72](https://github.com/cline/cline/releases/tag/cli-v3.0.72)

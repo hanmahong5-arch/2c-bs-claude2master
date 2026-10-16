@@ -1,0 +1,23 @@
+---
+slug: 2026-10-15-openclaw-2026-9-33
+title: "openclaw v2026.9.33 — 网关 LTS 更新：状态保留、重启续跑、新模型支持"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.33
+publishedAt: 2026-10-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "网关 LTS 更新：状态保留、重启续跑、新模型支持"
+broadcast: "这次网关长期支持版更新，重点在状态保留和重启续跑：插件数据不会丢，中断的自动化回合和被引导的会话在重启后能恢复，执行状态被外置到可恢复存储里。对做 agent 的国内开发者来说，这意味着长任务不用怕重启中断，同时新增了按模型动态路由思考参数的能力，接新模型时更省心。"
+insight: "这次 openclaw 2026.9.33 是网关 LTS 更新，核心变化在状态保留、重启续跑和新模型路由。现有用户值得升级，尤其是依赖中断恢复和云 worker 的场景，升级后执行状态会外置到可恢复存储，重启不再丢回合。现有 prompt 和 hook 配置不需要改，但 harness 要区分可恢复与不可恢复的写入来源，并支持按模型动态路由思考参数。国内走 newapi.lurus.cn 代理的用户不受影响，摘要未提及代理层变动。"
+tags: [gateway, lts, model-support, restart-recovery]
+---
+
+- 更新保留状态与插件数据，拒绝自动恢复未归属的 Doctor 写入；harness 设计需区分可恢复与不可恢复的写入来源。
+- 中断的自动化回合、被引导会话、云 worker 声明在网关重启后恢复或持久化；harness 应把执行状态外置到可恢复存储。
+- 新增 Meta Muse Wonder 与 MiniMax M3.1 思考等级路由，LM Studio 刷新可发现新加载模型；harness 需支持按模型动态路由思考参数。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.33](https://github.com/openclaw/openclaw/releases/tag/v2026.9.33)

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-15-claude-code-2-1-301
+title: "claude-code v2.1.301 — 无人值守重试新增用量上限等待开关，避免卡在远期重置"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.301
+publishedAt: 2026-10-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "无人值守重试新增用量上限等待开关，避免卡在远期重置"
+broadcast: "这次更新解决的是无人值守运行里一个很实际的坑：重试模式碰到重置时间太远的用量限制，以前会一直等下去，现在可以设一个放弃阈值，到点就直接结束，不会静默挂起。另外权限决策和工具调用的状态也做了区分，自动模式为什么放行或拦截、步骤是真跳过还是被误判成拒绝，都能看清楚了。对做 agent 编排的国内开发者来说，这些状态可区分、可观测，直接决定了上层能不能正确判断执行结果。"
+insight: "这次 v2.1.301 值得升级，重点在无人值守场景：新增的 CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS 能让重试遇到远期重置时直接结束，不再静默挂起，跑 agent harness 的话建议配上放弃阈值。同时 tool_decision 新增 classifier_verdict 等字段，权限决策链路可观测性变强，相关 hook 配置可以按需补上这些字段。走 newapi.lurus.cn 代理不受影响，摘要未提及代理层变化。"
+tags: [retry-watchdog, opentelemetry, permission-mode, agent-harness]
+---
+
+- 新增 `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS`：无人值守重试模式遇到重置时间过远的用量限制时直接结束请求，而非无限等待。对 agent harness 的含义是长时间无人值守运行需要可配置的放弃阈值，否则会静默挂起。
+- OpenTelemetry 的 `tool_decision` 事件新增 `classifier_verdict`、`permission_mode` 和 `classifier_category`，可区分自动模式分类器决策与权限规则。含义是权限决策链路需要可观测性，才能定位自动模式为何放行或拦截。
+- 修复工作流 agent 读到 harness 说明后有时跳过步骤却仍报告成功；以及消息中途打断权限检查时工具调用被误报为用户拒绝。含义是 harness 必须让跳过与拒绝在状态上可区分，否则上层编排会误判执行结果。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.301](https://github.com/anthropics/claude-code/releases/tag/v2.1.301)
