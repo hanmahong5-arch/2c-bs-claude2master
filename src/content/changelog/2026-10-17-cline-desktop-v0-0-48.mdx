@@ -1,0 +1,23 @@
+---
+slug: 2026-10-17-cline-desktop-v0-0-48
+title: "cline desktop-v0.0.48 — 修复 GPT"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.48
+publishedAt: 2026-10-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复 GPT-6 请求被拒的参数问题，并更新默认模型与供应商目录"
+broadcast: "这次桌面端更新修了一个很实际的问题：对接兼容接口时改用新的参数名，GPT-6 系列请求不再被拒，这意味着做 agent 的团队不能把参数名写死，得按模型族切换。另外默认模型恢复为 Claude Sonnet 5.5，模型目录也新增了两家供应商并调整了多家默认模型，提醒我们供应商和默认模型最好做成可热更新的配置。"
+insight: "这次 v0.0.48 对现有用户值得升级：如果你用 GPT-6 系列（如 gpt-6-sol）走 OpenAI/Azure 兼容端点，旧版会因 max_tokens 被拒，升级后改用 max_completion_tokens 即可恢复。但要注意 harness 需按模型族切换 token 参数名，不能全局硬编码，现有 prompt 或 hook 配置里若有写死 max_tokens 的地方要相应调整。默认模型恢复为 Claude Sonnet 5.5，会影响新会话初始路由。摘要未提及 newapi.lurus.cn 代理，国内走代理是否受影响无法据此判断。"
+tags: [model-catalog, openai-compat, default-model, provider-config]
+---
+
+- OpenAI/Azure 兼容端点改用 `max_completion_tokens` 而非 `max_tokens`，GPT-6 系列（如 `gpt-6-sol`）不再被拒；harness 需按模型族切换 token 参数名，而非全局硬编码。
+- Cline provider 默认模型恢复为 Claude Sonnet 5.5，重回推荐榜首；默认模型属于 harness 配置面，变更会影响新会话的初始路由。
+- 模型目录刷新，新增 CommandCode、Reflection 供应商，并调整 302.AI、Eden AI、CoreWeave、Scaleway 等默认模型；harness 应把供应商与默认模型做成可热更新数据，而非写死。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.48](https://github.com/cline/cline/releases/tag/desktop-v0.0.48)

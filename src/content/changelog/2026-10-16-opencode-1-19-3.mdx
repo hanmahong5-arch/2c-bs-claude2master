@@ -1,0 +1,23 @@
+---
+slug: 2026-10-16-opencode-1-19-3
+title: "opencode v1.19.3 — 模型推理选项改为生成式变体，影响 agent 的推理配置方式"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.19.3
+publishedAt: 2026-10-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "模型推理选项改为生成式变体，影响 agent 的推理配置方式"
+broadcast: "这次更新把模型推理选项改成了生成式变体，不再依赖原来固定的目录。对做 agent 的国内开发者来说，这意味着推理配置要按配置动态生成，而不是查表。已经设置好的用户覆盖会被保留，所以设计上要分清默认值和用户覆盖，避免冲突。改动只换了变体来源，没提新模型或新接口，解析层保持向后兼容就行。"
+insight: "这次 v1.19.3 只把推理变体来源从固定目录换成生成式，已配置的 variant overrides 仍会保留，因此现有用户不必急着升级，等确认 harness 的变体解析层向后兼容后再跟进即可。现有 prompt 和 hook 配置也无需改动，因为摘要未提及接口或模型变化。国内走 newapi.lurus.cn 代理的用户同样不受影响，摘要中没有涉及代理或接口调整。"
+tags: [reasoning-variants, model-config, agent-harness]
+---
+
+- 模型推理选项现在会生成 reasoning variants，替代原有 catalog variants；harness 需按配置动态生成变体，而非依赖固定目录。
+- 用户已配置的 variant overrides 会被保留；harness 设计上要区分“生成默认值”与“用户覆盖”，避免覆盖冲突。
+- 该改动只涉及推理变体的来源切换，未提及新增模型或接口；harness 的变体解析层应保持向后兼容。
+
+---
+
+> 原文 release：[sst/opencode v1.19.3](https://github.com/anomalyco/opencode/releases/tag/v1.19.3)

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-16-claude-code-2-1-302
+title: "claude-code v2.1.302 — 自动模式分类器可选模型，空闲压缩可关闭，子代理默认后台运行"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.302
+publishedAt: 2026-10-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "自动模式分类器可选模型，空闲压缩可关闭，子代理默认后台运行"
+broadcast: "这次更新给自动模式的分类器单独配了模型，能把分类判断和主推理模型分开，按成本各自选型。配置里还多了空闲压缩开关，压缩不再固定执行。另外，子代理默认后台运行，主会话和子代理内部的调用层级不同，做 agent 的开发者要留意并发和阻塞的差别。"
+insight: "这次 v2.1.302 对现有用户来说值得升级，但不必急着改 prompt：新增的 CLAUDE_CODE_AUTO_MODE_MODEL 只影响客户端自动模式分类器，不动服务端自动模式，原有 prompt 逻辑不受影响。真正需要动配置的是 hook 与 harness 侧——把上下文压缩改成可配置策略，并按层级区分 fork 子代理的并发与阻塞语义，必要时用 CLAUDE_CODE_FORK_SUBAGENT=0 关闭。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有方式使用即可。"
+tags: [auto-mode, compaction, subagents, agent-sdk]
+---
+
+- 新增 `CLAUDE_CODE_AUTO_MODE_MODEL`，仅控制客户端自动模式分类器所用模型，不影响服务端自动模式；harness 可把分类判定与主推理模型解耦，按成本单独选型。
+- `/config` 新增 Idle compaction 开关，空闲压缩后的提示会说明如何关闭；harness 应把上下文压缩做成可配置策略，而非固定行为。
+- fork 子代理在 `claude -p`、Agent SDK、桌面端与 VS Code 默认开启，可用 `CLAUDE_CODE_FORK_SUBAGENT=0` 关闭；主会话子代理固定后台运行，子代理自身的 Agent 调用默认前台，harness 需按层级区分并发与阻塞语义。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.302](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)

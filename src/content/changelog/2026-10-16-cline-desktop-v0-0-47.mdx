@@ -1,0 +1,23 @@
+---
+slug: 2026-10-16-cline-desktop-v0-0-47
+title: "cline desktop-v0.0.47 — 插件加载修复与流中断重试，直接影响 agent 稳定性"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.47
+publishedAt: 2026-10-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件加载修复与流中断重试，直接影响 agent 稳定性"
+broadcast: "这次桌面版更新主要修了两件事：一是插件加载失败的问题，之前打包漏了依赖导致模块找不到，现在能正常加载了；二是流式响应中途遇到服务商报错时，最多重试三次再判定失败，不再直接中断。这两点都直接关系到 agent 跑起来稳不稳，对做 agent 开发的国内朋友来说，打包产物完整性和流式重试机制值得对照检查一下自己的实现。"
+insight: "这次 v0.0.47 值得升级，重点是两处稳定性修复：0.0.46 因打包缺 @cline/sdk 导致插件 Cannot find module，现已可正常加载；流式响应遇 provider 错误会最多重试 3 次再判失败，不再直接终止回合。现有 prompt 和 hook 配置无需改动，升级后即可受益。国内走 newapi.lurus.cn 代理的用户不受影响，摘要未涉及代理或接口变更。"
+tags: [plugin-loading, retry-policy, model-catalog, default-model]
+---
+
+- 修复 Marketplace 插件加载：0.0.46 打包未含 `@cline/sdk` 导致 `Cannot find module`，现可正常加载。含义：插件运行时依赖必须随包分发，harness 需校验打包产物完整性。
+- 流式响应中途遇 provider 错误时最多重试 3 次再判定失败。含义：harness 需在流式状态机上支持可恢复重试，而非直接终止回合。
+- 移除 Settings 中的 Cloud sessions 开关，可用处默认开启；Cline 默认模型改为 Gemini 4 Argon，模型目录新增 Boundless、Standard Compute 等 provider。含义：配置面收敛、默认值集中管理，减少 harness 的分支判断。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.47](https://github.com/cline/cline/releases/tag/desktop-v0.0.47)

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-16-blog-simonwillison-quoting-addy-osmani-morgan-westlee-lunt-and-qing
+title: "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang — Claude Code 团队把代码评审从人工关卡改成持续自动检查，人类只处理高风"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/16/code-review/
+publishedAt: 2026-10-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Claude Code 团队把代码评审从人工关卡改成持续自动检查，人类只处理高风险问题"
+broadcast: "Claude Code 团队把代码评审从人工关卡改成了持续自动检查，人类只处理高风险问题。过去要等写完代码、开合并请求再等同事看，现在评审像拼写检查一样嵌进编辑和提交环节，多数改动在人类查看前已被自动审过一遍。对国内做 agent 的开发者来说，这意味着评审流程要按风险类型分流，自动检查兜住基线质量，人专注判断和取舍。"
+tags: [code-review, claude-code, coding-agents, agentic-engineering]
+---
+
+- 文章认为「有没有人读过代码」只是粗略的替代指标，真正该问的是「这次改动可能出什么问题、该由自动检查还是人来兜底」。对 agent 工具链的含义：评审流程要按风险类型分流，而不是统一走人工。
+- 评审时机前移：过去是写完代码、开 PR、等同事，现在像写作时的拼写检查一样持续运行。对开发者的含义：反馈回路缩短，但需要把检查嵌进编辑与提交环节。
+- 多数改动在人类查看前已被 Claude 至少审过一遍，常规错误被自动拦下，团队注意力留给更高层的问题。对 agent 设计的含义：自动评审承担基线质量，人类负责判断与取舍。
+
+---
+
+> 原文：[Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang](https://simonwillison.net/2026/Oct/16/code-review/) · 作者 Simon Willison

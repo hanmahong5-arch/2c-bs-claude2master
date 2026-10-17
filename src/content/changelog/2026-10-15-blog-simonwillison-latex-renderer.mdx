@@ -1,0 +1,23 @@
+---
+slug: 2026-10-15-blog-simonwillison-latex-renderer
+title: "LaTeX renderer — 受 Tiny Little Office 启发，用 Claude Code 做出"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/15/latex/
+publishedAt: 2026-10-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "受 Tiny Little Office 启发，用 Claude Code 做出一个把 LaTeX 存进 URL 片段、可分享可渲染的小工具"
+broadcast: "有个新工具把 LaTeX 源码直接放进链接的片段里，打开链接就能渲染，文档可以书签化、也能分享。对做 agent 的人来说，这意味着状态能编码进链接，不用后端存储；它还用了专为 LaTeX 优化的压缩字典来绕开链接长度限制，渲染放在沙箱里，沿用已有的安全防护。LLM 生成的前端代码，还是得靠这些老办法兜底。"
+tags: [latex, url-fragment, claude-code, xss-sandbox]
+---
+
+- 工具把 LaTeX 源码放进 URL 的 `#fragment`，打开链接即渲染，文档因此可书签化、可分享；对 agent 的含义是：状态可编码进链接，无需后端存储。
+- 支持前缀标记，表示 LaTeX 已用专为 LaTeX 优化的自定义压缩字典压缩；对工具链的含义是：URL 长度限制可用领域专用压缩绕开。
+- 渲染放在 `<iframe sandbox="...">` 中，沿用作者 SVG in Markdown 工具的 XSS 防护，并复用其从 Gist/URL 加载内容的功能；对开发者的含义是：LLM 生成的前端代码仍需沿用既有安全模式。
+
+---
+
+> 原文：[LaTeX renderer](https://simonwillison.net/2026/Oct/15/latex/) · 作者 Simon Willison

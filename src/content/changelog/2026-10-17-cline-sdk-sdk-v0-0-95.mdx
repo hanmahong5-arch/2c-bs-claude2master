@@ -1,0 +1,23 @@
+---
+slug: 2026-10-17-cline-sdk-sdk-v0-0-95
+title: "cline sdk/sdk/v0.0.95 — GPT"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.95
+publishedAt: 2026-10-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "GPT-6 参数兼容与 hub 启动来源追踪，影响多模型路由设计"
+broadcast: "这次更新里有个细节值得注意：OpenAI 兼容请求对 GPT-6 系列改用另一个参数名，而 Azure 的老模型还得用原来的写法，所以做多模型路由时得按模型 id 分支选择，不能写死。另外 hub 现在会记录是哪个客户端启动的，远程场景也能追溯来源，排查问题更方便。默认模型和供应商列表也变了，硬编码默认值容易踩坑。"
+insight: "这次 SDK v0.0.95 对现有用户来说值得跟进升级，重点不在新功能而在兼容性：GPT-6 系列改用 max_completion_tokens、Azure gpt-35-turbo 仍用 max_tokens，如果你的 harness 或 prompt 里写死了参数名，需要按模型 id 分支处理；默认模型回到 Claude Sonnet 5.5、供应商目录扩到 7,041，也说明不该硬编码默认值。走 newapi.lurus.cn 代理的用户，摘要未提及代理层改动，按现有配置继续即可，但升级后建议先验证多模型路由的参数选择是否正常。"
+tags: [openai-compat, telemetry, model-catalog, hub-daemon]
+---
+
+- OpenAI 兼容请求对 GPT-6 系列改用 `max_completion_tokens`，Azure 的 `gpt-35-turbo` 仍用 `max_tokens`：harness 需按模型 id 分支选择参数名，而非统一写死。
+- hub daemon 记录启动它的客户端信息（`CLINE_HUB_LAUNCHER_CLIENT`/`VERSION`/`TRANSPORT`）并作为 OTel 资源属性上报，SSH 远程 hub 标记 transport 为 `ssh`：多客户端场景下可追溯来源，便于定位问题。
+- 模型目录从 6,952 增至 7,041，新增 CommandCode 与 Reflection 供应商，`cline` 默认模型回到 Claude Sonnet 5.5：默认模型与供应商列表变动意味着 harness 不应硬编码默认值。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.0.95](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.95)

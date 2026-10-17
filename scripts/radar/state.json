@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.301",
+    "anthropics/claude-code": "v2.1.302",
     "openai/codex": "rust-v0.163.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.72",
-    "block/goose": "v1.54.0",
-    "sst/opencode": "v1.19.2",
+    "cline/cline": "desktop-v0.0.48",
+    "block/goose": "v1.55.0",
+    "sst/opencode": "v1.19.3",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.64.0",
     "openclaw/openclaw": "v2026.10.4",
@@ -200,7 +200,9 @@
     "Hinln/ARTEX",
     "Ebony-Vinyl/dsh-our-free-model",
     "jiwoochris/artex-global",
-    "trhhubsd/ARTEXX"
+    "trhhubsd/ARTEXX",
+    "trhhubsd/ARTEX",
+    "feder-cr/git-ai"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -324,7 +326,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-10-16",
+    "anthropic-engineering": "2026-10-17",
     "claude-code-docs": "2026-10-16",
     "openai-codex-blog": "2026-10-15",
     "openclaw-concepts": "2026-10-12",
@@ -723,7 +725,9 @@
       "https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/",
       "https://simonwillison.net/2026/Oct/12/python-3-15-web-edit-profiling/",
       "https://simonwillison.net/2026/Oct/15/chirp-pong/",
-      "https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/"
+      "https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/",
+      "https://simonwillison.net/2026/Oct/16/code-review/",
+      "https://simonwillison.net/2026/Oct/15/latex/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1304,7 +1308,10 @@
       "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
       "https://openai.com/index/introducing-the-rosalind-academic-plan",
       "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
-      "https://openai.com/index/sullivan-cromwell"
+      "https://openai.com/index/sullivan-cromwell",
+      "https://openai.com/index/itau-generative-ai",
+      "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "https://openai.com/index/benefit-street-partners"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1361,7 +1368,8 @@
       "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
       "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
       "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
-      "https://deepmind.google/blog/introducing-gemini-4-argon/"
+      "https://deepmind.google/blog/introducing-gemini-4-argon/",
+      "https://deepmind.google/blog/accelerating-antimicrobial-discovery/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -1488,7 +1496,12 @@
       "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
       "https://huggingface.co/blog/allenai/impactful-scheduling",
       "https://huggingface.co/blog/allenai/hiro-acev2",
-      "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b"
+      "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+      "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
+      "https://huggingface.co/blog/reflection-beam",
+      "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+      "https://huggingface.co/blog/meta-muse-spark-open",
+      "https://huggingface.co/blog/flux-3"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -1591,27 +1604,28 @@
       "https://openclaw.ai/blog/decision-models-in-openclaw/",
       "https://openclaw.ai/blog/microsoft-autopilot-openclaw/",
       "https://openclaw.ai/blog/openclaw-enterprise/",
-      "https://openclaw.ai/blog/tencent-aig-joins-clawscan/"
+      "https://openclaw.ai/blog/tencent-aig-joins-clawscan/",
+      "https://openclaw.ai/blog/pj-small-business-openclaw/"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-10-16",
+    "simonwillison": "2026-10-17",
     "lilianweng": "2026-10-15",
-    "latentspace": "2026-10-16",
-    "interconnects": "2026-10-16",
+    "latentspace": "2026-10-17",
+    "interconnects": "2026-10-17",
     "karpathy": "2026-10-15",
     "raschka": "2026-10-15",
     "eugeneyan": "2026-10-15",
     "chiphuyen": "2026-10-15",
-    "oneusefulthing": "2026-10-15",
+    "oneusefulthing": "2026-10-17",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-10-16",
-    "deepmind": "2026-10-15",
-    "hf-blog": "2026-10-15",
-    "anthropic-news": "2026-10-16",
-    "steipete": "2026-10-15",
-    "openclaw-blog": "2026-10-15"
+    "openai-news": "2026-10-17",
+    "deepmind": "2026-10-17",
+    "hf-blog": "2026-10-17",
+    "anthropic-news": "2026-10-17",
+    "steipete": "2026-10-17",
+    "openclaw-blog": "2026-10-17"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

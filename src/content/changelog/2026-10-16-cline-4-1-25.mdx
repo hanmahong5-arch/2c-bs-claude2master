@@ -1,0 +1,23 @@
+---
+slug: 2026-10-16-cline-4-1-25
+title: "cline v4.1.25 — 云端沙箱任务与本地模型超时修复，直接影响 harness 的会话与重试设计"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.25
+publishedAt: 2026-10-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "云端沙箱任务与本地模型超时修复，直接影响 harness 的会话与重试设计"
+broadcast: "这次更新最值得说的是云端沙箱任务：任务能跑在你指定的仓库分支上，关掉编辑器也继续执行，状态和完成通知都会保留下来。对做 agent 的人来说，这意味着任务生命周期要和编辑器进程解耦。另外，流式响应中断后最多重试三次，本地模型长请求也不再因为五分钟没动静就报错，重试和超时的边界都得重新设计。"
+insight: "现有用户值得升级到 v4.1.25：流中断最多重试 3 次、LM Studio/Ollama 长请求不再 5 分钟静默报 BodyTimeoutError，这两项直接改善本地推理体验。但默认模型已改为 Gemini 4 Argon，未固定模型的用户升级后可能被切换，建议升级前在配置里显式固定模型，harness 也应从模型目录动态解析而非硬编码。Cline Cloud 会话仍是灰度，暂不影响现有 prompt 或 hook 配置。摘要未提及 newapi.lurus.cn 代理，无法判断其是否受影响。"
+tags: [cloud-sandbox, model-catalog, retry-policy, local-models]
+---
+
+- **Cline Cloud 会话（灰度）**：可在自选 GitHub 仓库与分支的托管沙箱中跑任务，关闭编辑器后仍继续运行，并在 Recent/History 显示状态、完成时通知。含义：harness 需把任务生命周期与编辑器进程解耦，状态与通知要能跨会话持久化。
+- **默认模型改为 Gemini 4 Argon**：未选模型时 Cline provider 走该模型，模型目录新增 Boundless、Standard Compute，多家 provider 默认模型变更。含义：harness 不应硬编码默认模型，需从目录动态解析并提示未固定模型的用户。
+- **流中断重试与本地模型超时修复**：provider 错误中断流式响应时最多重试 3 次；LM Studio/Ollama 长请求不再因 5 分钟静默报 BodyTimeoutError。含义：重试需限定在流中断边界内，本地推理要放宽静默超时而非整体超时。
+
+---
+
+> 原文 release：[cline/cline v4.1.25](https://github.com/cline/cline/releases/tag/v4.1.25)

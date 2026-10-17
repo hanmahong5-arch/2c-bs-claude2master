@@ -1,0 +1,23 @@
+---
+slug: 2026-10-16-blog-hf-blog-scaling-indic-pretraining-2-8-trillion-tokens-and
+title: "Scaling Indic Pretraining: 2.8 Trillion Tokens and an — Hugging Face 与 NVIDIA 公开 2.8 万亿 token 的 "
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/nvidia/scaling-indic-pretraining
+publishedAt: 2026-10-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 与 NVIDIA 公开 2.8 万亿 token 的 Indic 预训练数据生成流水线"
+broadcast: "Hugging Face 和 NVIDIA 公开了一条数据生成流水线，做出了约两万八千亿 token 的 Indic 语言预训练语料。值得关注的是，它把清洗、过滤到合成的步骤都开放了，开发者可以直接拿来当模板，做其他低资源语言的自建语料，启动成本会低不少。对 agent 工具链来说，数据生成也能像流水线一样脚本化、可复现。"
+tags: [indic-nlp, pretraining-data, data-pipeline, multilingual]
+---
+
+- 文章给出约 2.8 万亿 token 的 Indic 语言预训练语料规模，说明多语言大模型的数据瓶颈正被工程化流水线而非人工标注解决；对 agent 工具链意味着数据生成环节可以像 CI 一样被脚本化、可复现。
+- 作者强调这是一条开放的“数据生成流水线”，即从原始语料清洗、过滤到合成的步骤被公开；对开发者而言，这类 pipeline 可直接复用为其他低资源语言的模板，降低自建语料的启动成本。
+- 该工作由 Hugging Face 与 NVIDIA 合作发布，属于开放发布而非闭源模型权重；对工具链的含义是数据与流程的开放比模型本身更影响下游微调与评测的可比性。
+
+---
+
+> 原文：[Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline](https://huggingface.co/blog/nvidia/scaling-indic-pretraining) · 作者 Hugging Face

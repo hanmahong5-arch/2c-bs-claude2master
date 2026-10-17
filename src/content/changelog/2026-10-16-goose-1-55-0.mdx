@@ -1,0 +1,23 @@
+---
+slug: 2026-10-16-goose-1-55-0
+title: "goose v1.55.0 — 追踪上下文贯通 ACP 到 MCP，子代理继承父级策略，旧 agent loop"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.55.0
+publishedAt: 2026-10-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "追踪上下文贯通 ACP 到 MCP，子代理继承父级策略，旧 agent loop 被删除"
+broadcast: "这次更新把追踪上下文从提示一路贯通到工具调用，跨层调用终于能串起来看了。子代理现在直接继承父级的钩子、模式和审批策略，不再单独配置。同时旧的多重执行循环被删掉，后台子代理和编排器也一并移除，执行路径收敛成单一循环。对做 agent 的国内开发者来说，这意味着权限和追踪要当成可继承的会话上下文来设计，并行编排分支也该收一收了。"
+insight: "这次 v1.55.0 把执行路径收敛成单一循环，并删掉旧 agent loop、后台子代理与 orchestrator，现有用户值得升级，但升级前要先确认自己的 harness 没有依赖被移除的并行编排分支。子代理现在继承父级 hooks、mode 与 approvals，原先给子代理单独写的 hook 配置应当合并到父级会话上下文，否则会失效。trace context 从 ACP 贯通到 MCP，prompt 与工具边界需透传 trace 头。国内走 newapi.lurus.cn 代理不受影响，摘要未涉及代理层变更。"
+tags: [trace-context, subagent-policy, agent-loop, mcp]
+---
+
+- **W3C trace context 从 ACP prompt 传播到 MCP tool call**：跨层调用可串联追踪，harness 设计需在 prompt 与工具边界透传 trace 头。
+- **子代理绑定父级的 hooks、mode 与 approvals**：子代理不再独立配置策略，harness 需把权限与钩子作为可继承的会话上下文。
+- **删除旧 agent loop，移除后台子代理与 orchestrator**：执行路径收敛为单一循环，harness 设计应减少并行编排分支，降低状态分叉。
+
+---
+
+> 原文 release：[block/goose v1.55.0](https://github.com/aaif-goose/goose/releases/tag/v1.55.0)

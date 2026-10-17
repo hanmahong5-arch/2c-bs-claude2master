@@ -1,0 +1,23 @@
+---
+slug: 2026-10-17-cline-cli-v3-0-73
+title: "cline cli-v3.0.73 — GPT"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.73
+publishedAt: 2026-10-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "GPT-6 在 OpenAI/Azure 端点因参数名错误被拒，现已修复"
+broadcast: "Cline 命令行工具刚更新了一版，修了个挺关键的问题：之前接 GPT-6 系列模型时，因为参数名写错，所有请求都被 OpenAI 和 Azure 端点拒掉，现在已修复。这提醒做 agent 的同行，token 上限的参数名得按模型族切换，硬编码一个字段就会直接卡住新模型接入。另外它没选模型时默认回到 Claude Sonnet 5.5，还新增了两个服务商。"
+insight: "这次 CLI v3.0.73 的核心修复是 GPT-6 系列在 OpenAI/Azure 端点因 max_tokens 参数名错误被拒，现已改为 max_completion_tokens。如果你在用 gpt-6-sol 或 gpt-6.1-sol，之前请求全被拒，值得升级；不涉及这些模型的用户升级收益有限。prompt 和 hook 配置无需改动，本次只涉及请求参数名与默认模型策略。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理层变化，按现有配置继续即可。"
+tags: [model-catalog, openai-compat, default-model, provider-config]
+---
+
+- 修复 GPT-6 模型（如 `gpt-6-sol`、`gpt-6.1-sol`）在 OpenAI 与 Azure OpenAI 兼容端点上的请求：此前 Cline 发送 `max_tokens` 而非 `max_completion_tokens`，导致所有请求被拒。含义：harness 需按模型族切换 token 上限参数名，硬编码单一字段会直接阻断新模型接入。
+- 未选择模型时，Cline provider 默认回到 Claude Sonnet 5.5，并重新位列推荐榜首。含义：默认模型策略应可随推荐列表更新，而非固定写死。
+- 刷新模型目录，新增 CommandCode 与 Reflection 两个 provider，并调整 302.AI、Eden AI、Prime Inference、CoreWeave、NanoGPT、Pioneer、Scaleway 的默认模型。含义：provider 与默认模型需作为可更新配置管理，避免与代码耦合。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.73](https://github.com/cline/cline/releases/tag/cli-v3.0.73)
