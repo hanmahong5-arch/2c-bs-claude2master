@@ -9,7 +9,7 @@
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.64.0",
     "openclaw/openclaw": "v2026.10.4",
-    "zeroclaw-labs/zeroclaw": "v0.8.5",
+    "zeroclaw-labs/zeroclaw": "v0.8.6",
     "NousResearch/hermes-agent": "v0.22.2"
   },
   "trendingSeen": [
@@ -202,7 +202,8 @@
     "jiwoochris/artex-global",
     "trhhubsd/ARTEXX",
     "trhhubsd/ARTEX",
-    "feder-cr/git-ai"
+    "feder-cr/git-ai",
+    "wheresryan22/anatomy"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -326,7 +327,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-10-17",
+    "anthropic-engineering": "2026-10-18",
     "claude-code-docs": "2026-10-16",
     "openai-codex-blog": "2026-10-15",
     "openclaw-concepts": "2026-10-12",
@@ -727,7 +728,9 @@
       "https://simonwillison.net/2026/Oct/15/chirp-pong/",
       "https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/",
       "https://simonwillison.net/2026/Oct/16/code-review/",
-      "https://simonwillison.net/2026/Oct/15/latex/"
+      "https://simonwillison.net/2026/Oct/15/latex/",
+      "https://simonwillison.net/2026/Oct/17/document-currentscript/",
+      "https://simonwillison.net/2026/Oct/17/web-edit/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -914,7 +917,8 @@
       "https://www.latent.space/p/crossing-the-threshold",
       "https://www.latent.space/p/lab-in-the-loop-at-compute-speed",
       "https://www.latent.space/p/ainews-agents-disprove-polysemanticity",
-      "https://www.latent.space/p/ainews-modals-1b-arr-16b-series-d"
+      "https://www.latent.space/p/ainews-modals-1b-arr-16b-series-d",
+      "https://www.latent.space/p/ainews-high-taste-testers-ep-1"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -957,7 +961,8 @@
       "https://www.interconnects.ai/p/the-current-balance-of-power-in-open",
       "https://www.interconnects.ai/p/debating-rsi-the-us-china-gap-and",
       "https://www.interconnects.ai/p/the-cyber-risk-discourse-is-broken",
-      "https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards"
+      "https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards",
+      "https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -1609,21 +1614,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-10-17",
+    "simonwillison": "2026-10-18",
     "lilianweng": "2026-10-15",
-    "latentspace": "2026-10-17",
-    "interconnects": "2026-10-17",
-    "karpathy": "2026-10-15",
-    "raschka": "2026-10-15",
-    "eugeneyan": "2026-10-15",
+    "latentspace": "2026-10-18",
+    "interconnects": "2026-10-18",
+    "karpathy": "2026-10-18",
+    "raschka": "2026-10-18",
+    "eugeneyan": "2026-10-18",
     "chiphuyen": "2026-10-15",
     "oneusefulthing": "2026-10-17",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-10-17",
+    "openai-news": "2026-10-18",
     "deepmind": "2026-10-17",
     "hf-blog": "2026-10-17",
-    "anthropic-news": "2026-10-17",
+    "anthropic-news": "2026-10-18",
     "steipete": "2026-10-17",
     "openclaw-blog": "2026-10-17"
   },

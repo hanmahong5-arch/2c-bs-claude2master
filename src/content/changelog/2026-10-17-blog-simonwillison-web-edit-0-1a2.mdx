@@ -1,0 +1,23 @@
+---
+slug: 2026-10-17-blog-simonwillison-web-edit-0-1a2
+title: "web-edit 0.1a2 — Simon Willison 给自建文件编辑器加了复制到剪贴板功能，起因是用手机"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/17/web-edit/
+publishedAt: 2026-10-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 给自建文件编辑器加了复制到剪贴板功能，起因是用手机远程跑模型提示词。"
+broadcast: "有个叫 web-edit 的轻量网页小工具，能让你在不同机器上浏览和编辑文件夹里的文件，这次它新增了文本和图片的复制到剪贴板功能。起因挺真实：作者在笔记本上跑模型提示词，却用手机操作，得把日志方便地贴到外部服务里。对做 agent 的人来说，这类小工具的价值就是把模型输出到剪贴板再到外部服务这段搬运打通，少点手工复制粘贴的摩擦。"
+tags: [web-edit, simon-willison, clipboard, tailscale]
+---
+
+- web-edit 是他用来通过 Tailscale 在不同机器上浏览和编辑文件夹内文件的轻量 Web 应用，这次 0.1a2 版本新增了文本与图片数据的「复制到剪贴板」选项。
+- 触发需求的具体场景：他在笔记本上跑 pelican prompts，却用手机操作，需要把生成的日志方便地贴进 Gist，说明远程跨设备操作正在成为日常开发流的一部分。
+- 对 agent 与工具链的含义：这类小工具的价值在于打通「模型输出 → 剪贴板 → 外部服务」的搬运环节，减少手工复制粘贴的摩擦。
+
+---
+
+> 原文：[web-edit 0.1a2](https://simonwillison.net/2026/Oct/17/web-edit/) · 作者 Simon Willison

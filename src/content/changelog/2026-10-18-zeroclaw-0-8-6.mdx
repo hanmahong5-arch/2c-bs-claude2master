@@ -1,0 +1,23 @@
+---
+slug: 2026-10-18-zeroclaw-0-8-6
+title: "zeroclaw v0.8.6 — 插件宿主进 CLI，OIDC 身份与守护进程接管实时状态，多项安全默认值收紧"
+source: zeroclaw-labs/zeroclaw
+sourceUrl: https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.6
+publishedAt: 2026-10-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件宿主进 CLI，OIDC 身份与守护进程接管实时状态，多项安全默认值收紧"
+broadcast: "这次更新把插件宿主直接做进了命令行工具，内置七个六十四位归档，可按名安装十三个渠道或工具包，不用再装 Rust 工具链。同时身份权限明显收紧，配对码默认三十二位，还要 owner 管理令牌；守护进程也接管了实时状态，配置以原子修订发布并回报是否生效。对做 agent 的国内开发者来说，插件安装、授权和配置变更都得当成生命周期里的事来管，不能再假设工具集是静态的。"
+insight: "从现有用户角度看，v0.8.6 值得升级：插件宿主随 CLI 发布，无需 Rust 工具链即可按名安装渠道/工具包；OIDC 主体贯通 RPC、会话、工具与记忆，配对码默认 32 位且需 owner 管理令牌，安全默认值明显收紧。现有 prompt 或 hook 配置不必改动，但 harness 需把插件安装、egress 授权与加载校验纳入生命周期，并把主体解析与授权收拢到统一入口。摘要未提及 newapi.lurus.cn 代理，国内用户走代理是否受影响暂无依据。"
+tags: [wasm-plugins, oidc, daemon-runtime, breaking-changes]
+---
+
+- **插件随 CLI 发布**：七个 64 位归档内置 WASM 插件宿主，可按名安装 13 个渠道/工具包，无需 Rust 工具链；含义是 harness 需把插件安装、egress 授权与加载校验纳入生命周期，而非假设工具集静态。
+- **身份与权限收紧**：OIDC 主体贯通 RPC、会话、工具与记忆，配对码默认 32 位且需 owner 管理令牌；含义是 harness 设计应把主体解析与授权放在统一入口，避免各通道各自鉴权。
+- **守护进程持有实时状态**：配置以原子修订发布并回报各运行目标是否应用，事件与 agent 生命周期集中管理；含义是 harness 应把配置变更视为可观测的发布事务，而非进程内即时改写。
+
+---
+
+> 原文 release：[zeroclaw-labs/zeroclaw v0.8.6](https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.6)

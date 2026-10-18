@@ -1,0 +1,23 @@
+---
+slug: 2026-10-17-blog-simonwillison-inline-rendering-with-document-currentscript
+title: "Inline rendering with document​.currentScript — 用 document.currentScript 让内联脚本原地替换自身，实现极"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/17/document-currentscript/
+publishedAt: 2026-10-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用 document.currentScript 让内联脚本原地替换自身，实现极简模板渲染"
+broadcast: "有个很轻的技巧值得留意：内联脚本能借浏览器原生能力，在页面加载时用替换节点的方式把自身换掉，比如直接输出当前年份。把它封装一下，就成了一种极小的模板语法，不用引入模板引擎，也能在静态页面里插入少量动态值。对做 agent 和工具链的人来说，生成页面片段时可以用它做零依赖的动态占位符，不过它只适合轻量场景，采用前得自己评估安全策略等约束。"
+tags: [javascript, dom, templating, web-development]
+---
+
+- Lean Rada 发现 `document.currentScript` 可让内联 `<script>` 在页面加载时用 `replaceWith()` 把自身替换成任意节点，例如直接输出当前年份。对 agent 与工具链的含义：生成 HTML 片段时可用这种自替换脚本做零依赖的动态占位符。
+- 把 `replaceWith` 封装成 `$=(...n)=>document.currentScript.replaceWith(...n)` 后，`<script>$(new Date().getFullYear())</script>` 就成了一种极小的模板语法。对开发者的含义：无需引入模板引擎即可在静态页面里插入少量动态值。
+- 该技巧完全基于浏览器原生 API，文章只给出这一种用法示例，没有讨论性能、安全或兼容性细节。对工具链的含义：适合轻量场景，但采用前需自行评估 CSP 等约束。
+
+---
+
+> 原文：[Inline rendering with document​.currentScript](https://simonwillison.net/2026/Oct/17/document-currentscript/) · 作者 Simon Willison
