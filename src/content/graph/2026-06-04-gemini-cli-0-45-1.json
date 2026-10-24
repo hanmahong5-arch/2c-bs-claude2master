@@ -1,0 +1,72 @@
+{
+  "center": "gemini-cli v0.45.1 紧急修复",
+  "branches": [
+    {
+      "label": "修复补丁",
+      "detail": "将提交 665228e 拣选到发布分支，修补 v0.45.0",
+      "children": [
+        "提交 665228e",
+        "拣选到发布分支"
+      ]
+    },
+    {
+      "label": "创建新版本",
+      "detail": "基于修补后的代码创建 v0.45.1",
+      "children": [
+        "版本 v0.45.1"
+      ]
+    },
+    {
+      "label": "更新日志",
+      "detail": "完整记录 v0.45.0 到 v0.45.1 的所有变更",
+      "children": [
+        "从 v0.45.0 到 v0.45.1"
+      ]
+    }
+  ],
+  "flow": [
+    "拣选提交 665228e",
+    "修补 v0.45.0",
+    "创建 v0.45.1",
+    "记录更新日志"
+  ],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "v0.45.0",
+      "type": "product"
+    },
+    {
+      "name": "v0.45.1",
+      "type": "product"
+    },
+    {
+      "name": "665228e",
+      "type": "concept"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "665228e",
+      "to": "v0.45.0",
+      "label": "修补"
+    },
+    {
+      "from": "v0.45.0",
+      "to": "v0.45.1",
+      "label": "升级为"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "v0.45.1",
+      "label": "发布"
+    }
+  ]
+}

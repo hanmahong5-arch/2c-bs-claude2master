@@ -1,0 +1,112 @@
+{
+  "center": "Anthropic 选举安全防护",
+  "branches": [
+    {
+      "label": "政治偏见治理",
+      "detail": "通过角色训练与系统提示，让 Claude 对各方政治观点同等深度回应",
+      "children": [
+        "Opus 4.7 与 Sonnet 4.6 偏见评测得分 95%…",
+        "已开源评测方法与数据集供复现"
+      ]
+    },
+    {
+      "label": "政策与防御测试",
+      "detail": "Usage Policy 禁止选举滥用，用分类器与威胁情报团队实时检测",
+      "children": [
+        "600 条提示测试：300 恶意 + 300 合法",
+        "Opus 4.7 与 Sonnet 4.6 合规率 100% 与 99.…",
+        "影响行动测试中两者正确回应率 94% 与 90%"
+      ]
+    },
+    {
+      "label": "自主影响行动测试",
+      "detail": "首次测试模型能否无人工提示自主执行多步影响行动",
+      "children": [
+        "有防护时最新模型几乎拒绝所有任务",
+        "无防护时仅 Mythos Preview 与 Opus 4.7 完…"
+      ]
+    },
+    {
+      "label": "选举资源与实时信息",
+      "detail": "通过选举横幅与联网搜索，向用户提供可靠且最新的投票信息",
+      "children": [
+        "美国中期选举横幅指向 TurboVote",
+        "巴西选举将上线类似横幅",
+        "Opus 4.7 与 Sonnet 4.6 搜索触发率 92% 与…"
+      ]
+    }
+  ],
+  "flow": [
+    "角色训练植入中立原则",
+    "系统提示强化政治中立",
+    "发布前偏见与安全评测",
+    "分类器与威胁情报实时检测",
+    "选举横幅与联网搜索提供信息"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Claude Opus 4.7",
+      "type": "model"
+    },
+    {
+      "name": "Claude Sonnet 4.6",
+      "type": "model"
+    },
+    {
+      "name": "Mythos Preview",
+      "type": "model"
+    },
+    {
+      "name": "TurboVote",
+      "type": "product"
+    },
+    {
+      "name": "Democracy Works",
+      "type": "company"
+    },
+    {
+      "name": "Usage Policy",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Opus 4.7",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Sonnet 4.6",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Mythos Preview",
+      "label": "发布"
+    },
+    {
+      "from": "Claude",
+      "to": "TurboVote",
+      "label": "指向"
+    },
+    {
+      "from": "TurboVote",
+      "to": "Democracy Works",
+      "label": "属于"
+    }
+  ]
+}

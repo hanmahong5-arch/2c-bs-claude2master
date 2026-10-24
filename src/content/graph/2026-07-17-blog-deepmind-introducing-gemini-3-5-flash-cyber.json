@@ -1,0 +1,118 @@
+{
+  "center": "Gemini 3.5 Flash Cyber 网络安…",
+  "branches": [
+    {
+      "label": "模型定位",
+      "detail": "基于 3.5 Flash 微调的轻量网络安全模型，专攻漏洞发现、验证与修复",
+      "children": [
+        "比主线 Flash 模型更擅长安全任务",
+        "成本低、可扩展，替代大型昂贵安全模型"
+      ]
+    },
+    {
+      "label": "部署策略",
+      "detail": "因技术双用途，先通过 CodeMender 限量开放给政府和可信伙伴",
+      "children": [
+        "限量试点计划，后续逐步扩大",
+        "CodeMender 基础能力另经 Gemini Enterprise…"
+      ]
+    },
+    {
+      "label": "技术优势",
+      "detail": "轻量模型适合大代码库扫描，CodeMender 可多次调用生成高质量报告",
+      "children": [
+        "单次昂贵大模型调用易成瓶颈",
+        "可集成到频繁扫描、提交扫描流水线"
+      ]
+    },
+    {
+      "label": "基准表现",
+      "detail": "在 CyberGym、Big Sleep 评估和 Chrome 生产提交扫描中表现优异",
+      "children": [
+        "V8 引擎发现 55 个唯一确认问题，超 3.5 Flash…",
+        "Big Sleep 评估显著超越主线 3.5 Flash 和 3.…"
+      ]
+    },
+    {
+      "label": "实际应用",
+      "detail": "已在 Google 内部代码库发现并修复漏洞，包括 Chrome、Android、Cloud 等",
+      "children": [
+        "Cloud 团队 2 小时发现远程代码执行漏洞并生成…",
+        "绕过 ASLR 和 W^X 缓解措施"
+      ]
+    }
+  ],
+  "flow": [
+    "CodeMender 调用 3.5 Flash…",
+    "扫描大代码库分析代码路径",
+    "多次调用发现并验证漏洞",
+    "子代理生成单一高质量报告",
+    "修复漏洞并集成到扫描流水线"
+  ],
+  "entities": [
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Gemini 3.5 Flash Cyber",
+      "type": "model"
+    },
+    {
+      "name": "CodeMender",
+      "type": "product"
+    },
+    {
+      "name": "Gemini 3.5 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "type": "model"
+    },
+    {
+      "name": "CyberGym",
+      "type": "concept"
+    },
+    {
+      "name": "Big Sleep",
+      "type": "technique"
+    },
+    {
+      "name": "OSV.dev",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemini 3.5 Flash Cyber",
+      "to": "Gemini 3.5 Flash",
+      "label": "基于微调"
+    },
+    {
+      "from": "CodeMender",
+      "to": "Gemini 3.5 Flash Cyber",
+      "label": "调用"
+    },
+    {
+      "from": "Google",
+      "to": "Gemini 3.5 Flash Cyber",
+      "label": "推出"
+    },
+    {
+      "from": "Gemini 3.5 Flash Cyber",
+      "to": "CyberGym",
+      "label": "测试于"
+    },
+    {
+      "from": "Gemini 3.5 Flash Cyber",
+      "to": "Big Sleep",
+      "label": "评估于"
+    },
+    {
+      "from": "Google",
+      "to": "OSV.dev",
+      "label": "运营"
+    }
+  ]
+}

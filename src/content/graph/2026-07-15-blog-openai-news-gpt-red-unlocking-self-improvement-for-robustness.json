@@ -1,0 +1,94 @@
+{
+  "center": "GPT-Red 自博弈红队",
+  "branches": [
+    {
+      "label": "自博弈机制",
+      "detail": "两个GPT模型对抗：一个生成攻击提示，一个尝试防御，迭代提升鲁棒性",
+      "children": [
+        "攻击方生成对抗提示",
+        "防御方尝试抵御攻击",
+        "迭代循环提升鲁棒性"
+      ]
+    },
+    {
+      "label": "安全效果",
+      "detail": "在提示注入、越狱攻击等场景中显著降低攻击成功率",
+      "children": [
+        "越狱成功率从80%降至5%",
+        "有效发现并修补模型弱点",
+        "提升部署安全性"
+      ]
+    },
+    {
+      "label": "自动化优势",
+      "detail": "无需人类标注，仅依赖模型自身生成对抗样本，可扩展至多种安全任务",
+      "children": [
+        "减少人工红队成本",
+        "可复用自动化安全评估框架",
+        "适用于工具链开发者"
+      ]
+    }
+  ],
+  "flow": [
+    "生成攻击提示",
+    "尝试防御",
+    "迭代提升鲁棒性"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-Red",
+      "type": "model"
+    },
+    {
+      "name": "GPT",
+      "type": "model"
+    },
+    {
+      "name": "自博弈",
+      "type": "technique"
+    },
+    {
+      "name": "红队",
+      "type": "concept"
+    },
+    {
+      "name": "提示注入",
+      "type": "concept"
+    },
+    {
+      "name": "越狱攻击",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-Red",
+      "label": "开发"
+    },
+    {
+      "from": "GPT-Red",
+      "to": "自博弈",
+      "label": "采用"
+    },
+    {
+      "from": "自博弈",
+      "to": "GPT",
+      "label": "使用"
+    },
+    {
+      "from": "GPT-Red",
+      "to": "提示注入",
+      "label": "防御"
+    },
+    {
+      "from": "GPT-Red",
+      "to": "越狱攻击",
+      "label": "防御"
+    }
+  ]
+}

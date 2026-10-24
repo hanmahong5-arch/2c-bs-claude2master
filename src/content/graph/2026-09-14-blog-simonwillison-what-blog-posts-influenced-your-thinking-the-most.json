@@ -1,0 +1,92 @@
+{
+  "center": "塑造技术思维的三篇博客",
+  "branches": [
+    {
+      "label": "抽象泄漏定律",
+      "detail": "Joel Spolsky 让他习惯理解底层机制，不盲信封装 API",
+      "children": [
+        "早期职业生涯即受影响",
+        "对 agent 与工具链开发者：需清楚底层行为"
+      ]
+    },
+    {
+      "label": "迁移是日常技能",
+      "detail": "Will Larson 认为迁移是软件工程日常技能，应主动练好",
+      "children": [
+        "换服务、换数据库等迁移",
+        "工具链应把迁移当常规能力设计，而非一次性项目"
+      ]
+    },
+    {
+      "label": "工程管理钟摆",
+      "detail": "Charity Majors 指出开发者可在工程与管理间多次切换且两边变强",
+      "children": [
+        "许多成功开发者会多次切换",
+        "职业路径不必单向，来回切换不损害发展"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Joel Spolsky",
+      "type": "person"
+    },
+    {
+      "name": "Will Larson",
+      "type": "person"
+    },
+    {
+      "name": "Charity Majors",
+      "type": "person"
+    },
+    {
+      "name": "The Law of Leaky Abstractions",
+      "type": "concept"
+    },
+    {
+      "name": "Migrations: the sole scalable fix to tech debt",
+      "type": "concept"
+    },
+    {
+      "name": "The Engineer/Manager Pendulum",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "The Law of Leaky Abstractions",
+      "label": "受其影响"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Migrations: the sole scalable fix to tech debt",
+      "label": "受其影响"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "The Engineer/Manager Pendulum",
+      "label": "受其影响"
+    },
+    {
+      "from": "Joel Spolsky",
+      "to": "The Law of Leaky Abstractions",
+      "label": "撰写"
+    },
+    {
+      "from": "Will Larson",
+      "to": "Migrations: the sole scalable fix to tech debt",
+      "label": "撰写"
+    },
+    {
+      "from": "Charity Majors",
+      "to": "The Engineer/Manager Pendulum",
+      "label": "撰写"
+    }
+  ]
+}

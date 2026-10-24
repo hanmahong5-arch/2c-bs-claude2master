@@ -1,0 +1,65 @@
+{
+  "center": "claude-code v2.1.172 更新",
+  "branches": [
+    {
+      "label": "子代理嵌套5层",
+      "detail": "子代理现可嵌套至5层，增强层次化任务分解能力",
+      "children": [
+        "支持多层子代理嵌套",
+        "提升复杂任务分解能力"
+      ]
+    },
+    {
+      "label": "修复上下文卡死",
+      "detail": "修复1M上下文会话无额度时永久卡死，自动压缩回标准限制",
+      "children": [
+        "无额度时自动压缩",
+        "会话不再永久卡死"
+      ]
+    },
+    {
+      "label": "修复目录误读",
+      "detail": "修复后台代理可能误读其他目录项目设置，环境隔离更可靠",
+      "children": [
+        "预热worker上执行",
+        "环境隔离更可靠"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "子代理",
+      "type": "concept"
+    },
+    {
+      "name": "上下文压缩",
+      "type": "technique"
+    },
+    {
+      "name": "环境隔离",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "子代理",
+      "label": "支持嵌套"
+    },
+    {
+      "from": "claude-code",
+      "to": "上下文压缩",
+      "label": "引入"
+    },
+    {
+      "from": "claude-code",
+      "to": "环境隔离",
+      "label": "修复"
+    }
+  ]
+}

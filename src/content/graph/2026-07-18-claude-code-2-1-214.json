@@ -1,0 +1,74 @@
+{
+  "center": "Claude Code v2.1.214 权限修复",
+  "branches": [
+    {
+      "label": "权限绕过修复",
+      "detail": "修复多项可绕过权限检查的漏洞，失败时默认拒绝",
+      "children": [
+        "超长命令（>10000字符）曾被自动执行",
+        "zsh 变量下标误判、help/man 绕过检查"
+      ]
+    },
+    {
+      "label": "路径匹配修正",
+      "detail": "dir/** 曾误匹配任意目录，现仅匹配 <cwd>/dir",
+      "children": [
+        "hook 条件同理，深度匹配需用 **/dir/**"
+      ]
+    },
+    {
+      "label": "新增结束对话工具",
+      "detail": "EndConversation 让 Claude 主动结束与恶意用户的会话",
+      "children": [
+        "Agent 自我保护，防滥用或越狱"
+      ]
+    },
+    {
+      "label": "设计含义",
+      "detail": "权限路径严格限定工作目录，分析器覆盖所有 shell 语法变体",
+      "children": [
+        "避免意外授权，失败默认拒绝"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "EndConversation",
+      "type": "product"
+    },
+    {
+      "name": "zsh",
+      "type": "product"
+    },
+    {
+      "name": "权限绕过",
+      "type": "concept"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "EndConversation",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "权限绕过",
+      "label": "修复"
+    },
+    {
+      "from": "EndConversation",
+      "to": "Agent",
+      "label": "用于"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "center": "goose v1.43.0 更新",
+  "branches": [
+    {
+      "label": "会话恢复",
+      "detail": "桌面 ACP 会话支持休眠与断线后自动重连",
+      "children": [
+        "提升 agent 长任务可靠性"
+      ]
+    },
+    {
+      "label": "用量统计",
+      "detail": "新增每消息用量统计 UI，便于监控调用成本",
+      "children": [
+        "token、成本、TTFT、tok/s"
+      ]
+    },
+    {
+      "label": "多模型支持",
+      "detail": "新增多家提供商，扩展 agent 模型选择",
+      "children": [
+        "OllamaCloudProvider 动态模型发现",
+        "iFlytek、Astron、Fireworks AI"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "goose",
+      "type": "product"
+    },
+    {
+      "name": "ACP",
+      "type": "concept"
+    },
+    {
+      "name": "OllamaCloudProvider",
+      "type": "product"
+    },
+    {
+      "name": "iFlytek",
+      "type": "company"
+    },
+    {
+      "name": "Astron",
+      "type": "product"
+    },
+    {
+      "name": "Fireworks AI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "goose",
+      "to": "ACP",
+      "label": "支持"
+    },
+    {
+      "from": "goose",
+      "to": "OllamaCloudProvider",
+      "label": "集成"
+    },
+    {
+      "from": "goose",
+      "to": "iFlytek",
+      "label": "接入"
+    },
+    {
+      "from": "goose",
+      "to": "Astron",
+      "label": "接入"
+    },
+    {
+      "from": "goose",
+      "to": "Fireworks AI",
+      "label": "接入"
+    }
+  ]
+}

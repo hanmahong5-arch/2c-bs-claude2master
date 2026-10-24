@@ -1,0 +1,110 @@
+{
+  "center": "Mermaid 转 ASCII 艺术工具",
+  "branches": [
+    {
+      "label": "核心功能",
+      "detail": "把 Mermaid 图表语法转成 ASCII 与 Unicode 制表符艺术",
+      "children": [
+        "支持带标签边的流程图与子图",
+        "支持带注释的序列图与控制流片段",
+        "支持颜色定义"
+      ]
+    },
+    {
+      "label": "运行方式",
+      "detail": "Go 库编译为 WebAssembly，完全在浏览器内渲染",
+      "children": [
+        "无需服务端，浏览器本地渲染",
+        "可自定义 padding 与输出选项"
+      ]
+    },
+    {
+      "label": "项目由来",
+      "detail": "作者先基于 Grok Build 的 Rust 代码做了同类工具",
+      "children": [
+        "后得知更早且功能更全的 Go 库…",
+        "用 Claude Fable 5 把该 Go 库也编译成…"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 7 月 16 日发布，归类为 Tool",
+      "children": [
+        "标签：go、tools、webassembly、mermaid"
+      ]
+    }
+  ],
+  "flow": [
+    "编写 Mermaid 图表语法",
+    "Go 库解析图表结构",
+    "编译为 WebAssembly 在浏览器…",
+    "渲染为 ASCII/Unicode 艺术",
+    "自定义 padding 与输出选项"
+  ],
+  "entities": [
+    {
+      "name": "mermaid-ascii",
+      "type": "product"
+    },
+    {
+      "name": "Mermaid",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "Go",
+      "type": "technique"
+    },
+    {
+      "name": "AlexanderGrooff/mermaid-ascii",
+      "type": "product"
+    },
+    {
+      "name": "Grok Build",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "mermaid-ascii",
+      "to": "Mermaid",
+      "label": "转换"
+    },
+    {
+      "from": "mermaid-ascii",
+      "to": "WebAssembly",
+      "label": "编译为"
+    },
+    {
+      "from": "mermaid-ascii",
+      "to": "Go",
+      "label": "基于"
+    },
+    {
+      "from": "AlexanderGrooff/mermaid-ascii",
+      "to": "Go",
+      "label": "基于"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "AlexanderGrooff/mermaid-ascii",
+      "label": "编译"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "mermaid-ascii",
+      "label": "发布"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "center": "OpenClaw 托管 worktree",
+  "branches": [
+    {
+      "label": "独立分支与目录",
+      "detail": "每个 Agent 任务拥有独立 git 分支与检出，不污染源码仓库",
+      "children": [
+        "记录在共享状态数据库",
+        "移除前快照已跟踪与未忽略文件"
+      ]
+    },
+    {
+      "label": "沙箱会话隔离",
+      "detail": "沙箱项目会话使用私有 source-only 检出执行，worktree 保留已接受变更",
+      "children": [
+        "Docker 与 Podman 支持本地投影",
+        "不挂载宿主仓库共享 Git 元数据"
+      ]
+    },
+    {
+      "label": "存储位置配置",
+      "detail": "默认存于 state-dir/worktrees，可用 worktreeRoot 指定其他磁盘",
+      "children": [
+        "仅接受绝对路径或 ~ 开头路径",
+        "只影响新分配，已有 worktree 保留原路径"
+      ]
+    },
+    {
+      "label": "文件系统加速",
+      "detail": "新 worktree 自动使用原生快照加速，可用 worktreeAcceleration 关闭",
+      "children": [
+        "Linux Btrfs、macOS APFS、Windows ReFS",
+        "不支持的文件系统回退普通 Git 检出"
+      ]
+    },
+    {
+      "label": "稀疏源配置",
+      "detail": "创建 worktree 时可用 --source-profile 选择仓库自有稀疏源",
+      "children": [
+        "列表存于 .openclaw/worktree-profiles/<…",
+        "多个 profile 按排序并集组合"
+      ]
+    }
+  ],
+  "flow": [
+    "创建 Agent 任务 worktree",
+    "分配独立分支与检出",
+    "记录到共享状态数据库",
+    "执行任务并接受变更",
+    "移除前快照内容",
+    "清理并恢复原路径"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Git",
+      "type": "technique"
+    },
+    {
+      "name": "Docker",
+      "type": "product"
+    },
+    {
+      "name": "Podman",
+      "type": "product"
+    },
+    {
+      "name": "Btrfs",
+      "type": "technique"
+    },
+    {
+      "name": "APFS",
+      "type": "technique"
+    },
+    {
+      "name": "ReFS",
+      "type": "technique"
+    },
+    {
+      "name": "worktreeRoot",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Git",
+      "label": "管理…"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Btrfs",
+      "label": "使用快照"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "APFS",
+      "label": "使用克隆"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "ReFS",
+      "label": "使用块克隆"
+    },
+    {
+      "from": "Docker",
+      "to": "OpenClaw",
+      "label": "支持投影"
+    },
+    {
+      "from": "Podman",
+      "to": "OpenClaw",
+      "label": "支持投影"
+    }
+  ]
+}

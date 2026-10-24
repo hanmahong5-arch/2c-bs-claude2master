@@ -1,0 +1,64 @@
+{
+  "center": "Julia Evans 的写作秘诀",
+  "branches": [
+    {
+      "label": "核心主张",
+      "detail": "写作时只为一个具体的人写，而不是面向模糊的群体",
+      "children": [
+        "想象一个具体的人，然后只为他写"
+      ]
+    },
+    {
+      "label": "具体对象",
+      "detail": "这个具体的人常是「三年前的自己」或一位好朋友",
+      "children": [
+        "「me, but 3 years ago」",
+        "或一位好朋友"
+      ]
+    },
+    {
+      "label": "出处",
+      "detail": "该观点由 Julia Evans 提出，Simon Willison 在博客中引用",
+      "children": [
+        "Simon Willison's Weblog 收录",
+        "发布于 2026 年 6 月 15 日"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Julia Evans",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison's Weblog",
+      "type": "product"
+    },
+    {
+      "name": "write for 1 person",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Simon Willison's Weblog",
+      "label": "运营"
+    },
+    {
+      "from": "Simon Willison's Weblog",
+      "to": "Julia Evans",
+      "label": "引用"
+    },
+    {
+      "from": "Julia Evans",
+      "to": "write for 1 person",
+      "label": "提出"
+    }
+  ]
+}

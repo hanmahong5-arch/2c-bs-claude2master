@@ -1,0 +1,77 @@
+{
+  "center": "OpenAI致信德州州长",
+  "branches": [
+    {
+      "label": "致信对象",
+      "detail": "OpenAI 向德州州长 Greg Abbott 致信",
+      "children": [
+        "强调负责任 AI 基础设施"
+      ]
+    },
+    {
+      "label": "核心承诺",
+      "detail": "在德州建设负责任 AI 基础设施，增长可靠透明",
+      "children": [
+        "惠及德州民众",
+        "兼顾安全与公共利益"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "开发者需关注合规与伦理",
+      "children": [
+        "适应更严格监管要求"
+      ]
+    },
+    {
+      "label": "行业信号",
+      "detail": "AI 公司积极与地方政府合作塑造政策环境",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Greg Abbott",
+      "type": "person"
+    },
+    {
+      "name": "Texas",
+      "type": "concept"
+    },
+    {
+      "name": "AI 基础设施",
+      "type": "concept"
+    },
+    {
+      "name": "负责任 AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Greg Abbott",
+      "label": "致信"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Texas",
+      "label": "建设于"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AI 基础设施",
+      "label": "承诺建设"
+    },
+    {
+      "from": "AI 基础设施",
+      "to": "负责任 AI",
+      "label": "遵循"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "center": "OpenClaw 跨会话记忆",
+  "branches": [
+    {
+      "label": "开启方式",
+      "detail": "用 per-agent 设置 rememberAcrossConversations 开启跨会话回忆",
+      "children": [
+        "personal 安装默认开启",
+        "需 session.dmScope 未设或为 main",
+        "显式 true/false 始终优先"
+      ]
+    },
+    {
+      "label": "隐私边界",
+      "detail": "回忆范围固定，不合并转录、不改会话键",
+      "children": [
+        "仅私聊与持久 UI 会话可互忆",
+        "群组和频道不可作来源或目标",
+        "其他 agent 转录永不入选"
+      ]
+    },
+    {
+      "label": "检索机制",
+      "detail": "回复前跑 Active Memory 检索，读同 agent 其他私聊摘录",
+      "children": [
+        "排除当前正在回答的会话",
+        "检索增加有界阻塞步骤",
+        "无意图跳过或搜索不可用加隐藏说明"
+      ]
+    },
+    {
+      "label": "Provider 支持",
+      "detail": "内置 memory provider 支持受保护转录回忆路径",
+      "children": [
+        "其他 provider 不自动获得私聊转录授权",
+        "openclaw doctor 报告不支持或缺失工具"
+      ]
+    },
+    {
+      "label": "高级配置",
+      "detail": "active-memory 插件可设 mode、agents、allowedChatTypes 等",
+      "children": [
+        "mode: escalate 仅对无强命中意图深回忆",
+        "allowedChatTypes: direct 限定私聊",
+        "plugins.entries 免重启自动重载"
+      ]
+    }
+  ],
+  "flow": [
+    "开启…",
+    "索引 agent 会话转录",
+    "回复前跑 Active Memory 检索",
+    "读取其他私聊相关摘录",
+    "排除当前会话后注入"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Active Memory",
+      "type": "concept"
+    },
+    {
+      "name": "rememberAcrossConversations",
+      "type": "concept"
+    },
+    {
+      "name": "session.dmScope",
+      "type": "concept"
+    },
+    {
+      "name": "openclaw doctor",
+      "type": "product"
+    },
+    {
+      "name": "MEMORY.md",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Active Memory",
+      "label": "内置"
+    },
+    {
+      "from": "Active Memory",
+      "to": "rememberAcrossConversations",
+      "label": "依赖"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Active Memory",
+      "label": "提供插件"
+    },
+    {
+      "from": "openclaw doctor",
+      "to": "Active Memory",
+      "label": "检查"
+    },
+    {
+      "from": "Active Memory",
+      "to": "MEMORY.md",
+      "label": "不影响"
+    }
+  ]
+}

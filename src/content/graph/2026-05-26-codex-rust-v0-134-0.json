@@ -1,0 +1,83 @@
+{
+  "center": "Codex rust-v0.134.0 更新",
+  "branches": [
+    {
+      "label": "本地历史搜索",
+      "detail": "新增本地对话历史搜索，支持不区分大小写匹配与结果预览",
+      "children": [
+        "帮助 agent 快速回顾上下文",
+        "提升交互连贯性"
+      ]
+    },
+    {
+      "label": "统一配置管理",
+      "detail": "--profile 成为 CLI、TUI 与沙盒流程的主要配置选择器",
+      "children": [
+        "旧配置通过迁移指南更新",
+        "简化 agent 环境管理"
+      ]
+    },
+    {
+      "label": "MCP 工具可靠性",
+      "detail": "保留本地 $ref/$defs 结构并压缩过大模式，稳定工具模式",
+      "children": [
+        "只读工具可并发执行",
+        "优化 agent 工具调用效率"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "--profile",
+      "type": "concept"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "发布"
+    },
+    {
+      "from": "Codex",
+      "to": "MCP",
+      "label": "提升可靠性"
+    },
+    {
+      "from": "Codex",
+      "to": "--profile",
+      "label": "统一配置"
+    },
+    {
+      "from": "--profile",
+      "to": "CLI",
+      "label": "配置选择"
+    },
+    {
+      "from": "--profile",
+      "to": "TUI",
+      "label": "配置选择"
+    }
+  ]
+}

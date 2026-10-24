@@ -1,0 +1,98 @@
+{
+  "center": "datasette-apps 0.2a0 发布",
+  "branches": [
+    {
+      "label": "新增调试工具",
+      "detail": "app_debug() 让 AI 代理隐形打开并测试应用",
+      "children": [
+        "用 opacity:0 iframe 隐藏应用",
+        "pointer-events:none 禁止交互",
+        "在沙箱内执行代理提供的 JavaScript"
+      ]
+    },
+    {
+      "label": "应用列表工具",
+      "detail": "app_list() 列出用户有权限编辑的应用",
+      "children": [
+        "便于代理找到并编辑目标应用"
+      ]
+    },
+    {
+      "label": "底层机制",
+      "detail": "依赖 datasette-agent 0.4a0 的 context.browser_task()",
+      "children": [
+        "由 Simon Willison 发布"
+      ]
+    },
+    {
+      "label": "测试能力",
+      "detail": "代理可对应用做冒烟测试",
+      "children": [
+        "可测量元素尺寸等属性"
+      ]
+    }
+  ],
+  "flow": [
+    "代理调用 app_debug()",
+    "在隐藏 iframe 中加载应用",
+    "执行代理提供的 JavaScript",
+    "返回测试结果"
+  ],
+  "entities": [
+    {
+      "name": "datasette-apps",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Datasette Agent",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "app_debug()",
+      "type": "technique"
+    },
+    {
+      "name": "app_list()",
+      "type": "technique"
+    },
+    {
+      "name": "context.browser_task()",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "datasette-apps",
+      "to": "Datasette",
+      "label": "运行于"
+    },
+    {
+      "from": "Datasette Agent",
+      "to": "datasette-apps",
+      "label": "编辑"
+    },
+    {
+      "from": "app_debug()",
+      "to": "Datasette Agent",
+      "label": "依赖"
+    },
+    {
+      "from": "app_debug()",
+      "to": "context.browser_task()",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "datasette-apps",
+      "label": "发布"
+    }
+  ]
+}

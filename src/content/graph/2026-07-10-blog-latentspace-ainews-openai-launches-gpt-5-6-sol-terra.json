@@ -1,0 +1,112 @@
+{
+  "center": "OpenAI 发布 GPT-5.6 三模型",
+  "branches": [
+    {
+      "label": "三档模型",
+      "detail": "GPT-5.6 分 Sol/Terra/Luna 三档，对应性能与价格阶梯",
+      "children": [
+        "Sol 旗舰最高上限，Terra 中档，Luna 最快最便宜",
+        "API 定价 Sol $5/$30、Terra $2.5/$15…"
+      ]
+    },
+    {
+      "label": "推理档位",
+      "detail": "新增 max 与 ultra 档，ultra 默认并行协调四个 agent",
+      "children": [
+        "档位含 Light/Medium/High/Extra High/Ultra",
+        "ultra 以更高 token 换更快更强结果"
+      ]
+    },
+    {
+      "label": "基准表现",
+      "detail": "多项基准领先，成本约为竞品四分之一",
+      "children": [
+        "Agents' Last Exam 53.6，超 Fable 5 达 13…",
+        "Coding Agent Index 80 居首…"
+      ]
+    },
+    {
+      "label": "产品整合",
+      "detail": "Codex 与 ChatGPT 合并为桌面超级应用",
+      "children": [
+        "推出 ChatGPT Work 与 Sites beta",
+        "Responses API 支持程序化工具调用与多 agent…"
+      ]
+    },
+    {
+      "label": "第三方评测",
+      "detail": "独立评测确认接近前沿，但仍有短板",
+      "children": [
+        "Intelligence Index 59，仅低于 Fable 5 一分",
+        "ParseBench 图表与版式仍弱，幻觉率高于 GPT-5…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "Sol",
+      "type": "model"
+    },
+    {
+      "name": "Terra",
+      "type": "model"
+    },
+    {
+      "name": "Luna",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Sol",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Terra",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Luna",
+      "label": "包含"
+    },
+    {
+      "from": "Codex",
+      "to": "ChatGPT Work",
+      "label": "合并为"
+    },
+    {
+      "from": "Sol",
+      "to": "Claude Fable 5",
+      "label": "超越"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "center": "NVIDIA Cosmos 3 与 Nemotron 3…",
+  "branches": [
+    {
+      "label": "Cosmos 3 世界模型",
+      "detail": "统一语言图像视频音频动作的开放世界模型，Mixture-of-Transformers 架构",
+      "children": [
+        "Nano 16B：8B 推理塔 + 8B 生成塔",
+        "Super 64B：32B 推理塔 + 32B 生成塔",
+        "Text2Image 与 Image2Video 微调版为开放权重…"
+      ]
+    },
+    {
+      "label": "Nemotron 3 Ultra",
+      "detail": "550B-A55B 高效开放权重 LLM，被称为美国新 SOTA",
+      "children": [
+        "部分设置下服务速度 300+ tok/s",
+        "激活比例约 10%，高于 Kimi K2 / DeepSeek…"
+      ]
+    },
+    {
+      "label": "RTX Spark 超芯片",
+      "detail": "1 petaflop 个人电脑超级芯片，微软等为发布伙伴",
+      "children": [
+        "面向个人 AI 代理、创作者工作流与 RTX 游戏",
+        "与 Microsoft、OpenClaw、Hermes Agent 合作"
+      ]
+    },
+    {
+      "label": "开放生态与联盟",
+      "detail": "Cosmos 3 为全栈发布，含权重、代码、数据集与微调配方",
+      "children": [
+        "成立 Cosmos Coalition，Runway 等为伙伴",
+        "采用 OpenMDW 框架，fal 等平台集成"
+      ]
+    },
+    {
+      "label": "其他开放模型",
+      "detail": "MiniMax M3、Qwen3.7-Plus、JetBrains Mellum2 同期发布",
+      "children": [
+        "MiniMax M3：1M 上下文多模态代理模型",
+        "Qwen3.7-Plus：统一 GUI 与 CLI 的混合代理",
+        "Mellum2：12B MoE，2.5B 激活，面向低延迟"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Cosmos 3",
+      "type": "model"
+    },
+    {
+      "name": "Nemotron 3 Ultra",
+      "type": "model"
+    },
+    {
+      "name": "RTX Spark",
+      "type": "product"
+    },
+    {
+      "name": "MiniMax M3",
+      "type": "model"
+    },
+    {
+      "name": "Qwen3.7-Plus",
+      "type": "model"
+    },
+    {
+      "name": "JetBrains Mellum2",
+      "type": "model"
+    },
+    {
+      "name": "Cosmos Coalition",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "Cosmos 3",
+      "label": "发布"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron 3 Ultra",
+      "label": "发布"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "RTX Spark",
+      "label": "预览"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Cosmos Coalition",
+      "label": "成立"
+    },
+    {
+      "from": "Cosmos Coalition",
+      "to": "Cosmos 3",
+      "label": "构建生态"
+    }
+  ]
+}

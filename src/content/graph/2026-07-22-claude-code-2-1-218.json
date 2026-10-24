@@ -1,0 +1,62 @@
+{
+  "center": "Claude Code v2.1.218 更新",
+  "branches": [
+    {
+      "label": "代码审查后台化",
+      "detail": "/code-review 改为后台子代理运行，不再填充对话",
+      "children": [
+        "仍以堆叠的斜杠命令为审查目标"
+      ]
+    },
+    {
+      "label": "自动模式更智能",
+      "detail": "危险操作不再弹权限对话框，改由自动模式分类器裁决",
+      "children": [
+        "涉及 rm、后台 &、可疑 Windows 路径"
+      ]
+    },
+    {
+      "label": "修复稳定性",
+      "detail": "修复 Windows 路径 \\u 前缀段被错误转换为 CJK 字符的问题",
+      "children": [
+        "该 bug 曾导致文件不可访问"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "code-review",
+      "type": "technique"
+    },
+    {
+      "name": "自动模式分类器",
+      "type": "concept"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "code-review",
+      "label": "包含"
+    },
+    {
+      "from": "Claude Code",
+      "to": "自动模式分类器",
+      "label": "使用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Windows",
+      "label": "修复兼容"
+    }
+  ]
+}

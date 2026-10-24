@@ -1,0 +1,121 @@
+{
+  "center": "Fable 5 出口管制下架复盘",
+  "branches": [
+    {
+      "label": "事件时间线",
+      "detail": "6月12日出口管制致Fable 5与Mythos 5全球停用，6月30日管制解除",
+      "children": [
+        "6月9日发布Fable 5与Mythos 5",
+        "7月1日Fable 5全球恢复",
+        "Mythos 5仅恢复部分美国机构"
+      ]
+    },
+    {
+      "label": "触发原因",
+      "detail": "Amazon研究员发现绕过Fable 5安全防护、识别软件漏洞的方法",
+      "children": [
+        "模型曾生成漏洞利用演示代码",
+        "测试显示Opus 4.8、GPT-5.5等也能做到"
+      ]
+    },
+    {
+      "label": "安全分类器",
+      "detail": "训练新分类器拦截报告所述行为，拦截率超99%",
+      "children": [
+        "被拦截请求转交Opus 4.8",
+        "代价是误报良性请求增多",
+        "采用安全边际与纵深防御策略"
+      ]
+    },
+    {
+      "label": "行业框架",
+      "detail": "与Amazon、Microsoft、Google等Glasswing伙伴共建越狱严重性评估标准",
+      "children": [
+        "统一判断jailbreak严重程度",
+        "便于向政府与业界沟通风险"
+      ]
+    },
+    {
+      "label": "政府协作",
+      "detail": "加强与美国政府发布前测试、信息共享与研究合作",
+      "children": [
+        "CAISI测试并认可新防护",
+        "6月26日政府批准恢复Mythos 5"
+      ]
+    }
+  ],
+  "flow": [
+    "6月9日发布两模型",
+    "6月12日出口管制停用",
+    "Amazon报告绕过方法",
+    "训练新安全分类器",
+    "6月30日管制解除",
+    "7月1日Fable 5恢复"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "Amazon",
+      "type": "company"
+    },
+    {
+      "name": "Glasswing",
+      "type": "concept"
+    },
+    {
+      "name": "安全分类器",
+      "type": "technique"
+    },
+    {
+      "name": "jailbreak",
+      "type": "concept"
+    },
+    {
+      "name": "CAISI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Mythos 5",
+      "label": "发布"
+    },
+    {
+      "from": "Amazon",
+      "to": "Claude Fable 5",
+      "label": "发现绕过"
+    },
+    {
+      "from": "Anthropic",
+      "to": "安全分类器",
+      "label": "训练"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Glasswing",
+      "label": "合作"
+    },
+    {
+      "from": "CAISI",
+      "to": "安全分类器",
+      "label": "测试"
+    }
+  ]
+}

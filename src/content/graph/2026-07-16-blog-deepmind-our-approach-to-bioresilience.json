@@ -1,0 +1,90 @@
+{
+  "center": "AI 提升生物安全韧性",
+  "branches": [
+    {
+      "label": "生物威胁类型",
+      "detail": "生物威胁涵盖自然爆发、意外泄露与故意滥用三类",
+      "children": [
+        "自然爆发",
+        "意外泄露",
+        "故意滥用"
+      ]
+    },
+    {
+      "label": "AI 加速应对",
+      "detail": "AI 通过预测蛋白质结构加速疫苗与疗法开发",
+      "children": [
+        "预测蛋白质结构",
+        "加速疫苗开发",
+        "加速疗法开发"
+      ]
+    },
+    {
+      "label": "模型识别病原体",
+      "detail": "深度学习与 AlphaFold 快速识别病原体特征，缩短应对窗口",
+      "children": [
+        "深度学习",
+        "AlphaFold",
+        "缩短发现到应对时间"
+      ]
+    },
+    {
+      "label": "开放与安全平衡",
+      "detail": "负责任开放 AI 模型与数据，同时建立安全护栏",
+      "children": [
+        "开放模型与数据",
+        "建立安全护栏",
+        "平衡创新与风险"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "AlphaFold",
+      "type": "model"
+    },
+    {
+      "name": "深度学习",
+      "type": "concept"
+    },
+    {
+      "name": "生物安全韧性",
+      "type": "concept"
+    },
+    {
+      "name": "生物威胁",
+      "type": "concept"
+    },
+    {
+      "name": "蛋白质结构预测",
+      "type": "technique"
+    },
+    {
+      "name": "安全护栏",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AlphaFold",
+      "to": "蛋白质结构预测",
+      "label": "用于"
+    },
+    {
+      "from": "深度学习",
+      "to": "生物威胁",
+      "label": "识别特征"
+    },
+    {
+      "from": "蛋白质结构预测",
+      "to": "生物安全韧性",
+      "label": "提升"
+    },
+    {
+      "from": "安全护栏",
+      "to": "生物安全韧性",
+      "label": "保障"
+    }
+  ]
+}

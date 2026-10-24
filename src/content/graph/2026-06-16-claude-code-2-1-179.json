@@ -1,0 +1,77 @@
+{
+  "center": "Claude Code v2.1.179 修复",
+  "branches": [
+    {
+      "label": "流式中断保留",
+      "detail": "流式连接中断时保留部分响应，不再显示原始错误",
+      "children": [
+        "运行工具时加载动画不再卡住",
+        "网络波动下体验更连贯"
+      ]
+    },
+    {
+      "label": "WSL2 滚动修复",
+      "detail": "修复 Windows Terminal 与 VS Code 中 WSL2 鼠标滚动回归问题",
+      "children": [
+        "混合环境界面交互恢复顺畅"
+      ]
+    },
+    {
+      "label": "权限检查优化",
+      "detail": "修复沙盒通配符覆盖大型目录树导致会话不可用的问题",
+      "children": [
+        "denyRead/allowRead 通配符曾使 Bash 工具描…",
+        "防止配置错误引发前端性能崩溃"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "WSL2",
+      "type": "concept"
+    },
+    {
+      "name": "Windows Terminal",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "denyRead",
+      "type": "concept"
+    },
+    {
+      "name": "allowRead",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "WSL2",
+      "label": "修复兼容"
+    },
+    {
+      "from": "WSL2",
+      "to": "Windows Terminal",
+      "label": "运行于"
+    },
+    {
+      "from": "WSL2",
+      "to": "VS Code",
+      "label": "运行于"
+    },
+    {
+      "from": "denyRead",
+      "to": "allowRead",
+      "label": "并列配置"
+    }
+  ]
+}

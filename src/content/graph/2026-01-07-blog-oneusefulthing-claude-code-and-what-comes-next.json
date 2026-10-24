@@ -1,0 +1,119 @@
+{
+  "center": "Claude Code 与 AI 编程新阶段",
+  "branches": [
+    {
+      "label": "自主建站实验",
+      "detail": "博主给一句指令，Claude Code 独立工作 74 分钟建出可售网站",
+      "children": [
+        "自动生成 500 条提示词、定价 39 美元",
+        "产出数百个代码文件，最后给一个运行文件",
+        "网站含虚假营销内容，销售链接真实可用"
+      ]
+    },
+    {
+      "label": "能力跃升原因",
+      "detail": "不是单一突破，而是自主纠错与智能体工具架的组合",
+      "children": [
+        "最新 AI 能长时间自主工作并自我纠错",
+        "agentic harness 提供工具与新解法",
+        "METR 显示 AI 可完成任务时长指数增长"
+      ]
+    },
+    {
+      "label": "上下文压缩",
+      "detail": "上下文写满时先做笔记再清空，靠笔记继续推进",
+      "children": [
+        "上下文窗口约 15 万词，很快被填满",
+        "AI 无真正长期记忆，长任务易遗忘",
+        "类比《记忆碎片》主角靠纹身记事"
+      ]
+    },
+    {
+      "label": "Skills 机制",
+      "detail": "AI 自行决定何时加载的指令加工具包",
+      "children": [
+        "如网站、Excel 技能各自带说明与工具",
+        "Jesse Vincent 发布覆盖完整开发流程的技能列表",
+        "技能用自然语言写，AI 也能帮你创建"
+      ]
+    },
+    {
+      "label": "面向程序员",
+      "detail": "新工具为程序员设计，界面像 1980 年代机房",
+      "children": [
+        "假设用户懂 Python 与编程最佳实践",
+        "对各类知识工作者其实广泛有用",
+        "竞品有 OpenAI Codex、Google Antigravity"
+      ]
+    }
+  ],
+  "flow": [
+    "输入一句建站指令",
+    "AI 反问三个选择题",
+    "独立工作 74 分钟",
+    "生成数百代码文件",
+    "交付单个运行文件",
+    "部署可售网站"
+  ],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Opus 4.5",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI Codex",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Google Antigravity",
+      "type": "product"
+    },
+    {
+      "name": "Gemini 3",
+      "type": "model"
+    },
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "agentic harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Opus 4.5",
+      "label": "由驱动"
+    },
+    {
+      "from": "OpenAI Codex",
+      "to": "GPT-5.2",
+      "label": "由驱动"
+    },
+    {
+      "from": "Google Antigravity",
+      "to": "Gemini 3",
+      "label": "由驱动"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "Claude Code",
+      "label": "测试"
+    },
+    {
+      "from": "Claude Code",
+      "to": "agentic harness",
+      "label": "使用"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "center": "苹果 WWDC 2026 发布 Siri AI",
+  "branches": [
+    {
+      "label": "Siri AI 新特性",
+      "detail": "苹果发布新 Siri AI，作者持「眼见为实」态度",
+      "children": [
+        "授权定制 Gemini 衍生模型",
+        "运行于自有 Private Cloud Compute"
+      ]
+    },
+    {
+      "label": "视觉大模型方案",
+      "detail": "用视觉 LLM 从用户屏幕提取信息",
+      "children": [
+        "绕过应用需自带集成代码的问题",
+        "2024 年 6 月视觉 LLM 尚不成熟"
+      ]
+    },
+    {
+      "label": "Core AI 库",
+      "detail": "让开发者用苹果硬件跑自己的模型",
+      "children": [
+        "集成 Meta 开源 PyTorch 生态",
+        "coreai-torch 桥接 PyTorch 与 Core AI",
+        "将 torch.export 模型转为 AIProgram"
+      ]
+    },
+    {
+      "label": "PCC 扩展至谷歌云",
+      "detail": "PCC Gemini 模型跑在 Google Cloud 的 NVIDIA GPU 上",
+      "children": [
+        "与 Google、NVIDIA 合作扩展 PCC",
+        "沿用分层安全架构与隔离 VM",
+        "所有二进制文件公开供审查"
+      ]
+    },
+    {
+      "label": "开发者可试用",
+      "detail": "iOS 27 开发者 Beta 今日可装，但需排队",
+      "children": [
+        "新 Siri AI 访问需等待名单",
+        "MacRumors 记者已通过等待名单"
+      ]
+    }
+  ],
+  "flow": [
+    "授权定制 Gemini 模型",
+    "部署至 Private Cloud Compute",
+    "视觉 LLM 读取屏幕信息",
+    "Core AI 运行开发者模型",
+    "开发者 Beta 排队试用"
+  ],
+  "entities": [
+    {
+      "name": "Apple",
+      "type": "company"
+    },
+    {
+      "name": "Siri AI",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "Private Cloud Compute",
+      "type": "concept"
+    },
+    {
+      "name": "Core AI",
+      "type": "product"
+    },
+    {
+      "name": "PyTorch",
+      "type": "product"
+    },
+    {
+      "name": "Google Cloud",
+      "type": "product"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Apple",
+      "to": "Siri AI",
+      "label": "发布"
+    },
+    {
+      "from": "Siri AI",
+      "to": "Gemini",
+      "label": "基于"
+    },
+    {
+      "from": "Siri AI",
+      "to": "Private Cloud Compute",
+      "label": "运行于"
+    },
+    {
+      "from": "Core AI",
+      "to": "PyTorch",
+      "label": "集成"
+    },
+    {
+      "from": "Private Cloud Compute",
+      "to": "Google Cloud",
+      "label": "扩展至"
+    },
+    {
+      "from": "Google Cloud",
+      "to": "NVIDIA",
+      "label": "使用"
+    }
+  ]
+}

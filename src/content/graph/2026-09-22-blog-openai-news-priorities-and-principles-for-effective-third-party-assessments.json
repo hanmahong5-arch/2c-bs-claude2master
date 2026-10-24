@@ -1,0 +1,85 @@
+{
+  "center": "OpenAI 谈第三方安全评估",
+  "branches": [
+    {
+      "label": "评估对象",
+      "detail": "针对前沿模型及其防护措施，而非仅模型本身",
+      "children": [
+        "安全评测需覆盖模型之外的防护与编排层"
+      ]
+    },
+    {
+      "label": "核心原则",
+      "detail": "第三方评估应兼顾严谨、安全与独立",
+      "children": [
+        "独立性与严格性是前沿模型评估核心"
+      ]
+    },
+    {
+      "label": "开发者含义",
+      "detail": "外部可验证评测结果或成选型与合规参考",
+      "children": [
+        "评估标准与流程或成集成与审计环节"
+      ]
+    },
+    {
+      "label": "内容边界",
+      "detail": "聚焦优先级与原则框架，未给具体技术方案或指标",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "第三方安全评估",
+      "type": "concept"
+    },
+    {
+      "name": "前沿模型",
+      "type": "concept"
+    },
+    {
+      "name": "agent 工具链",
+      "type": "concept"
+    },
+    {
+      "name": "防护措施",
+      "type": "concept"
+    },
+    {
+      "name": "编排层",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "第三方安全评估",
+      "label": "提出原则"
+    },
+    {
+      "from": "第三方安全评估",
+      "to": "前沿模型",
+      "label": "评估对象"
+    },
+    {
+      "from": "第三方安全评估",
+      "to": "防护措施",
+      "label": "需覆盖"
+    },
+    {
+      "from": "第三方安全评估",
+      "to": "agent 工具链",
+      "label": "影响"
+    },
+    {
+      "from": "防护措施",
+      "to": "编排层",
+      "label": "包含"
+    }
+  ]
+}

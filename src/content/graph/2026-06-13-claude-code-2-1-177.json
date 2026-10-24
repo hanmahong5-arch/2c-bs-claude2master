@@ -1,0 +1,53 @@
+{
+  "center": "Claude Code v2.1.177 更新",
+  "branches": [
+    {
+      "label": "文件大小限制",
+      "detail": "新增 MAX_FILE_SIZE 环境变量，限制处理文件大小以避免内存溢出",
+      "children": [
+        "要求 agent harness 设计考虑资源边界"
+      ]
+    },
+    {
+      "label": "自动重试机制",
+      "detail": "引入自动重试处理临时网络错误，提高容错性",
+      "children": [
+        "要求 harness 包含错误恢复策略"
+      ]
+    },
+    {
+      "label": "路径处理修复",
+      "detail": "修复文件路径处理中的边缘情况，确保跨平台兼容性",
+      "children": [
+        "要求严格测试路径逻辑"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MAX_FILE_SIZE",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "MAX_FILE_SIZE",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "agent harness",
+      "label": "要求设计"
+    }
+  ]
+}

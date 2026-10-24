@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw 内置记忆引擎",
+  "branches": [
+    {
+      "label": "核心能力",
+      "detail": "零依赖内置记忆后端，按 agent 存 SQLite，开箱即用",
+      "children": [
+        "FTS5 关键词搜索（BM25 打分）",
+        "向量搜索 + 混合搜索",
+        "MMR 多样性排序，默认开启"
+      ]
+    },
+    {
+      "label": "检索架构",
+      "detail": "sqlite-vec 原生查询跑在独立只读进程，避免阻塞 Gateway",
+      "children": [
+        "每库复用进程，最多两个存活",
+        "空闲 30 分钟或需容量时退出",
+        "取消搜索即终止查询进程，不重试"
+      ]
+    },
+    {
+      "label": "索引机制",
+      "detail": "索引 MEMORY.md、USER.md、memory/*.md，分块 400 token 重叠 80",
+      "children": [
+        "每块带 importance 与 trigger 元数据",
+        "provenance 记录来源与信任等级",
+        "文件变更触发 1.5s 防抖重建"
+      ]
+    },
+    {
+      "label": "Embedding 提供方",
+      "detail": "默认 OpenAI text-embedding-3-small，可切换多家",
+      "children": [
+        "支持 Bedrock、Gemini、Mistral、Voyage 等",
+        "本地可用 llama.cpp GGUF",
+        "无提供方时仅关键词搜索"
+      ]
+    },
+    {
+      "label": "超时与降级",
+      "detail": "语义检索 30 秒超时后返回部分结果并警告",
+      "children": [
+        "会话记录命中需新鲜校验，排除在恢复外",
+        "部分响应不触发全库冷却",
+        "无最终回复时警告含超时时长"
+      ]
+    }
+  ],
+  "flow": [
+    "索引记忆文件分块",
+    "存入 per-agent SQLite",
+    "关键词与向量混合检索",
+    "MMR 多样性重排",
+    "返回结果或部分警告"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "FTS5",
+      "type": "technique"
+    },
+    {
+      "name": "sqlite-vec",
+      "type": "product"
+    },
+    {
+      "name": "MMR",
+      "type": "technique"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "llama.cpp",
+      "type": "product"
+    },
+    {
+      "name": "Honcho",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "SQLite",
+      "label": "存储于"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "FTS5",
+      "label": "使用"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "sqlite-vec",
+      "label": "可选加速"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "MMR",
+      "label": "默认启用"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "OpenAI",
+      "label": "默认嵌入"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "llama.cpp",
+      "label": "支持本地"
+    }
+  ]
+}

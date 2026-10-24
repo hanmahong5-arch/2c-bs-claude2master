@@ -1,0 +1,91 @@
+{
+  "center": "Claude Code 构建 WebAssembly…",
+  "branches": [
+    {
+      "label": "工具功能",
+      "detail": "浏览器内用 FFmpeg WebAssembly 压缩视频，本地处理不上传",
+      "children": [
+        "上传视频生成多档质量与体积版本",
+        "对比后下载满足需求的最小文件",
+        "全部处理在本地完成，无外部服务器上传"
+      ]
+    },
+    {
+      "label": "构建方式",
+      "detail": "Simon Willison 用 Claude Code 的 Claude Fable 5.1 生成该工具",
+      "children": [
+        "使用 FFMPEG 的 WebAssembly 构建版本",
+        "在 Claude Code for web 中完成构建"
+      ]
+    },
+    {
+      "label": "起因",
+      "detail": "为博客发布手机录制的 Equal Earth 动画优化版",
+      "children": [
+        "手机录制了 Equal Earth 动画短片",
+        "想用 FFMPEG 发布优化版本到博客"
+      ]
+    }
+  ],
+  "flow": [
+    "手机录制 Equal Earth 动画",
+    "用 Claude Code 构建工具",
+    "浏览器上传视频",
+    "FFmpeg WebAssembly 本地编码",
+    "对比多版本体积",
+    "下载最小满足文件"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable 5.1",
+      "type": "model"
+    },
+    {
+      "name": "FFmpeg",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "Video compressor",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Claude Code",
+      "label": "使用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude Fable 5.1",
+      "label": "调用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Video compressor",
+      "label": "构建"
+    },
+    {
+      "from": "Video compressor",
+      "to": "FFmpeg",
+      "label": "基于"
+    },
+    {
+      "from": "FFmpeg",
+      "to": "WebAssembly",
+      "label": "编译为"
+    }
+  ]
+}

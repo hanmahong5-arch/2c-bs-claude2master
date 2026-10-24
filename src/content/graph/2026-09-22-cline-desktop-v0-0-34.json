@@ -1,0 +1,83 @@
+{
+  "center": "Cline Desktop v0.0.34 更新",
+  "branches": [
+    {
+      "label": "Composio 全量工具",
+      "detail": "连接器改为拉取全部工具，不再只加载前 20 个",
+      "children": [
+        "工具缓存会刷新，不再永久陈旧",
+        "模型需在真实全量能力空间中选择"
+      ]
+    },
+    {
+      "label": "Mac SSH 远程",
+      "detail": "Mac 桌面端可 SSH 连接 Mac 主机，自带签名后端作 helper",
+      "children": [
+        "覆盖 Apple Silicon 与 Intel",
+        "远程执行后端需匹配宿主平台"
+      ]
+    },
+    {
+      "label": "错误持久化",
+      "detail": "会话错误留在 transcript 中，切换会话或客户端都不丢失",
+      "children": [
+        "重试耗尽的失败也会记录",
+        "纯错误条目不参与压缩"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline Desktop",
+      "type": "product"
+    },
+    {
+      "name": "Composio",
+      "type": "product"
+    },
+    {
+      "name": "Apple Silicon",
+      "type": "concept"
+    },
+    {
+      "name": "Intel",
+      "type": "company"
+    },
+    {
+      "name": "SSH",
+      "type": "technique"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline Desktop",
+      "to": "Composio",
+      "label": "集成"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "SSH",
+      "label": "支持"
+    },
+    {
+      "from": "SSH",
+      "to": "Apple Silicon",
+      "label": "覆盖"
+    },
+    {
+      "from": "SSH",
+      "to": "Intel",
+      "label": "覆盖"
+    },
+    {
+      "from": "Composio",
+      "to": "agent harness",
+      "label": "影响"
+    }
+  ]
+}

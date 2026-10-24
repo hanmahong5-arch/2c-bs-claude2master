@@ -1,0 +1,85 @@
+{
+  "center": "Nano Banana 2 Lite 图像模型",
+  "branches": [
+    {
+      "label": "模型定位",
+      "detail": "Google 称其为最快最便宜的 Gemini 图像模型，主打速度与规模",
+      "children": [
+        "API 名称 gemini-3.1-flash-lite-image",
+        "别名 Gemini 3.1 Flash Lite Image"
+      ]
+    },
+    {
+      "label": "实测效果",
+      "detail": "Simon Willison 在 AI Studio 用寻宝图提示词测试，效果优于其他 Nano Banana 模型",
+      "children": [
+        "提示词：找拿着业余无线电的浣熊",
+        "比 4 月测试的其他 Nano Banana 结果更好"
+      ]
+    },
+    {
+      "label": "拼写缺陷",
+      "detail": "生成图中 Forest Festival 一词被拼错两次",
+      "children": [
+        "两处不同拼写错误"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "由 Simon Willison 于 2026 年 6 月 30 日在博客链接帖中发布",
+      "children": [
+        "来源：Simon Willison's Weblog",
+        "标签含 google、gemini、text-to-image"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Nano Banana 2 Lite",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.1 Flash Lite Image",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "AI Studio",
+      "type": "product"
+    },
+    {
+      "name": "text-to-image",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google",
+      "to": "Nano Banana 2 Lite",
+      "label": "发布"
+    },
+    {
+      "from": "Nano Banana 2 Lite",
+      "to": "Gemini 3.1 Flash Lite Image",
+      "label": "又名"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "AI Studio",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Nano Banana 2 Lite",
+      "label": "测试"
+    }
+  ]
+}

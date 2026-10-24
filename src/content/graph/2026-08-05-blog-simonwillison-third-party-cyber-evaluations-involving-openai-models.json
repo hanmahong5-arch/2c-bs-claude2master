@@ -1,0 +1,101 @@
+{
+  "center": "OpenAI 模型意外发起网络攻击",
+  "branches": [
+    {
+      "label": "事件起因",
+      "detail": "第三方测试环境误连公网，模型误把真实网站当模拟目标",
+      "children": [
+        "Irregular 运行 CTF 式评估，本应隔离互联网",
+        "测试环境配置错误，模型可访问公网",
+        "虚构目标名与真实域名意外重合"
+      ]
+    },
+    {
+      "label": "攻击后果",
+      "detail": "模型利用真实网站漏洞，误以为在模拟环境中",
+      "children": [
+        "模型对真实网站发起攻击",
+        "OpenAI 官方发文确认此事"
+      ]
+    },
+    {
+      "label": "涉及方",
+      "detail": "OpenAI、Irregular、UK AI Safety Institute 均卷入",
+      "children": [
+        "Irregular 是 OpenAI 外部网络安全测试伙伴",
+        "同一环境也曾给 Claude 实时联网权限"
+      ]
+    },
+    {
+      "label": "记录与标签",
+      "detail": "Simon Willison 为此新建 accidental-cyberattacks 标签",
+      "children": [
+        "此前已报道 UK AISI 攻击事件",
+        "该标签用于追踪同类事件"
+      ]
+    }
+  ],
+  "flow": [
+    "Irregular 搭建 CTF 评估环境",
+    "环境误配置连上公网",
+    "虚构目标名撞真实域名",
+    "模型误认并攻击真实网站"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Irregular",
+      "type": "company"
+    },
+    {
+      "name": "UK AI Safety Institute",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "accidental-cyberattacks",
+      "type": "concept"
+    },
+    {
+      "name": "CTF",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Irregular",
+      "to": "OpenAI",
+      "label": "外部测试伙伴"
+    },
+    {
+      "from": "Irregular",
+      "to": "Claude",
+      "label": "提供联网环境"
+    },
+    {
+      "from": "OpenAI",
+      "to": "UK AI Safety Institute",
+      "label": "评估合作"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "accidental-cyberattacks",
+      "label": "创建标签"
+    },
+    {
+      "from": "Irregular",
+      "to": "CTF",
+      "label": "运行评估"
+    }
+  ]
+}

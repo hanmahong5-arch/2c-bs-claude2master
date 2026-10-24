@@ -1,0 +1,64 @@
+{
+  "center": "Pacifica 码头被鹈鹕占领",
+  "branches": [
+    {
+      "label": "码头关闭",
+      "detail": "Pacifica 码头因混凝土步道裂缝存在安全隐患，于六月初关闭",
+      "children": [
+        "裂缝使进入码头不再安全"
+      ]
+    },
+    {
+      "label": "鹈鹕占领",
+      "detail": "关闭后码头完全被加州褐鹈鹕占据",
+      "children": [
+        "加州褐鹈鹕",
+        "地点：加州 San Mateo 县"
+      ]
+    },
+    {
+      "label": "目击记录",
+      "detail": "Simon Willison 于 2026 年 9 月 12 日记录此次目击",
+      "children": [
+        "发布于个人博客",
+        "时间：下午 2:16"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Pacifica Pier",
+      "type": "concept"
+    },
+    {
+      "name": "California Brown Pelican",
+      "type": "concept"
+    },
+    {
+      "name": "San Mateo County",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "California Brown Pelican",
+      "label": "记录目击"
+    },
+    {
+      "from": "California Brown Pelican",
+      "to": "Pacifica Pier",
+      "label": "占领"
+    },
+    {
+      "from": "Pacifica Pier",
+      "to": "San Mateo County",
+      "label": "位于"
+    }
+  ]
+}

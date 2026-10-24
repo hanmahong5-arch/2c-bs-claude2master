@@ -1,0 +1,85 @@
+{
+  "center": "gemini-cli v0.53.1 修复补丁冲突",
+  "branches": [
+    {
+      "label": "版本发布",
+      "detail": "gemini-cli 发布 v0.53.1，定位为修复补丁冲突的稳定性小版本",
+      "children": [
+        "基于 v0.53.0 分支"
+      ]
+    },
+    {
+      "label": "冲突来源",
+      "detail": "冲突源于将 f47d6c6 提交合并到 v0.53.0 分支时产生",
+      "children": [
+        "提交 f47d6c6",
+        "合并至 v0.53.0"
+      ]
+    },
+    {
+      "label": "修复价值",
+      "detail": "对 agent harness 设计而言，修复保证版本分支干净合并",
+      "children": [
+        "减少冲突导致的构建失败风险"
+      ]
+    },
+    {
+      "label": "集成建议",
+      "detail": "集成此版本时建议检查相关补丁兼容性",
+      "children": [
+        "保持 harness 稳定运行"
+      ]
+    }
+  ],
+  "flow": [
+    "合并 f47d6c6 至 v0.53.0",
+    "产生补丁冲突",
+    "发布 v0.53.1 修复",
+    "检查补丁兼容性",
+    "集成并稳定运行"
+  ],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "v0.53.0",
+      "type": "concept"
+    },
+    {
+      "name": "v0.53.1",
+      "type": "concept"
+    },
+    {
+      "name": "f47d6c6",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "gemini-cli",
+      "to": "v0.53.1",
+      "label": "发布"
+    },
+    {
+      "from": "v0.53.1",
+      "to": "v0.53.0",
+      "label": "基于"
+    },
+    {
+      "from": "f47d6c6",
+      "to": "v0.53.0",
+      "label": "合并至"
+    },
+    {
+      "from": "v0.53.1",
+      "to": "agent harness",
+      "label": "保障稳定"
+    }
+  ]
+}

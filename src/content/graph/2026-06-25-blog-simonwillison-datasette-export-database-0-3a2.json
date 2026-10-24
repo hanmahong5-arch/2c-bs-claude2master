@@ -1,0 +1,69 @@
+{
+  "center": "datasette-export-database…",
+  "branches": [
+    {
+      "label": "版本兼容修复",
+      "detail": "pyproject.toml 原先锁定 datasette==1.0a27，导致插件与其他版本不兼容",
+      "children": [
+        "改为 datasette>=1.0a27"
+      ]
+    },
+    {
+      "label": "插件功能",
+      "detail": "按需导出可变 SQLite 数据库的副本",
+      "children": []
+    },
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 6 月 25 日发布，自称极小的更新",
+      "children": [
+        "2026-06-25 发布"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "datasette-export-database",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "pyproject.toml",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "datasette-export-database",
+      "label": "发布"
+    },
+    {
+      "from": "datasette-export-database",
+      "to": "Datasette",
+      "label": "是插件"
+    },
+    {
+      "from": "datasette-export-database",
+      "to": "SQLite",
+      "label": "导出"
+    },
+    {
+      "from": "pyproject.toml",
+      "to": "Datasette",
+      "label": "锁定版本"
+    }
+  ]
+}

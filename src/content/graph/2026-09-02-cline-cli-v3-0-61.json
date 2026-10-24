@@ -1,0 +1,107 @@
+{
+  "center": "Cline CLI v3.0.61 更新",
+  "branches": [
+    {
+      "label": "旧 Hub 升级",
+      "detail": "升级前提示影响会话数，先排空再替换，避免中断任务",
+      "children": [
+        "排空进行中会话",
+        "替换旧 Hub"
+      ]
+    },
+    {
+      "label": "MCP 超时与签名",
+      "detail": "远程 MCP 10 秒超时不再导致启动失败；Windows 二进制加签名",
+      "children": [
+        "10 秒超时",
+        "Authenticode 签名",
+        "策略拦截给可操作错误"
+      ]
+    },
+    {
+      "label": "模型目录刷新",
+      "detail": "新增 10 个提供商，57 个默认模型变更，Anthropic 默认改 Claude Fable 5.1",
+      "children": [
+        "新增 10 提供商",
+        "57 个默认模型变更",
+        "Anthropic 默认 Claude Fable 5.1"
+      ]
+    },
+    {
+      "label": "修复与追踪",
+      "detail": "修复 Dify 工具调用禁用、图片丢失；Langfuse 追踪修复类名混淆",
+      "children": [
+        "Dify 工具调用静默禁用",
+        "图片丢失",
+        "Langfuse 类名混淆"
+      ]
+    },
+    {
+      "label": "规则与恢复",
+      "detail": "全局规则支持 ~/Cline/Rules；检查点恢复拒绝有后续提交时执行",
+      "children": [
+        "~/Cline/Rules",
+        "适配 WSL 和无头安装",
+        "防丢失提交"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Dify",
+      "type": "product"
+    },
+    {
+      "name": "Langfuse",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5.1",
+      "type": "model"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Dify",
+      "label": "修复集成"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Langfuse",
+      "label": "修复追踪"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5.1",
+      "label": "发布"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Claude Fable 5.1",
+      "label": "设为默认"
+    }
+  ]
+}

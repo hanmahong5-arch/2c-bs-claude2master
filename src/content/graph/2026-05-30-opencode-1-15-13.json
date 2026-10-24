@@ -1,0 +1,75 @@
+{
+  "center": "opencode v1.15.13 更新",
+  "branches": [
+    {
+      "label": "修复推理显示",
+      "detail": "网关保留总结性思考内容，不再返回空块",
+      "children": [
+        "针对 Anthropic Opus 4.7+",
+        "推理过程对 Agent 设计可见"
+      ]
+    },
+    {
+      "label": "会话元数据",
+      "detail": "通过 API/SDK 为会话存储自定义元数据",
+      "children": [
+        "便于 Agent 携带上下文",
+        "支持复杂工作流"
+      ]
+    },
+    {
+      "label": "配置加载优化",
+      "detail": "配置从打开位置向上加载，顺序更可预测",
+      "children": [
+        "目录级设置更明确",
+        "供应商策略应用更稳定",
+        "利于多环境 Agent 管理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic Opus 4.7+",
+      "type": "model"
+    },
+    {
+      "name": "API",
+      "type": "concept"
+    },
+    {
+      "name": "SDK",
+      "type": "concept"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Anthropic Opus 4.7+",
+      "label": "修复显示"
+    },
+    {
+      "from": "opencode",
+      "to": "API",
+      "label": "支持"
+    },
+    {
+      "from": "opencode",
+      "to": "SDK",
+      "label": "支持"
+    },
+    {
+      "from": "Agent",
+      "to": "opencode",
+      "label": "使用"
+    }
+  ]
+}

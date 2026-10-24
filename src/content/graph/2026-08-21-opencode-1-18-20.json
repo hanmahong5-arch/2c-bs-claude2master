@@ -1,0 +1,74 @@
+{
+  "center": "opencode v1.18.20 稳定性修复",
+  "branches": [
+    {
+      "label": "子代理失败可恢复",
+      "detail": "子代理工具调用失败时返回可恢复的 task_id，便于重试或恢复",
+      "children": [
+        "失败返回 task_id",
+        "支持重试与恢复"
+      ]
+    },
+    {
+      "label": "网络错误重试",
+      "detail": "对 finish_reason: network_error 及更多网络错误变体进行重试",
+      "children": [
+        "覆盖 network_error",
+        "减少临时故障影响"
+      ]
+    },
+    {
+      "label": "保留输出上限",
+      "detail": "保留 Cerebras 的 max_completion_tokens，避免额外输出上限",
+      "children": [
+        "Cerebras max_completion_tokens",
+        "确保模型行为符合预期"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Cerebras",
+      "type": "company"
+    },
+    {
+      "name": "task_id",
+      "type": "concept"
+    },
+    {
+      "name": "network_error",
+      "type": "concept"
+    },
+    {
+      "name": "max_completion_tokens",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "task_id",
+      "label": "返回"
+    },
+    {
+      "from": "opencode",
+      "to": "network_error",
+      "label": "重试"
+    },
+    {
+      "from": "opencode",
+      "to": "Cerebras",
+      "label": "保留配置"
+    },
+    {
+      "from": "Cerebras",
+      "to": "max_completion_tokens",
+      "label": "使用"
+    }
+  ]
+}

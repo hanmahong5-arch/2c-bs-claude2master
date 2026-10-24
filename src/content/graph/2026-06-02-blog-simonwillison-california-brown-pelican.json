@@ -1,0 +1,74 @@
+{
+  "center": "Build 大会旁的加州褐鹈鹕",
+  "branches": [
+    {
+      "label": "现场地点",
+      "detail": "微软 Build 大会在旧金山 Fort Mason 举办",
+      "children": [
+        "Simon Willison 当天在场"
+      ]
+    },
+    {
+      "label": "意外景象",
+      "detail": "加州褐鹈鹕就在会场正后方水域潜水捕食",
+      "children": [
+        "California Brown Pelican",
+        "Fort Mason, CA, US"
+      ]
+    },
+    {
+      "label": "时间",
+      "detail": "记录于 2026 年 6 月 2 日上午 11:17",
+      "children": [
+        "发布于当天下午 6:17"
+      ]
+    },
+    {
+      "label": "隐含提醒",
+      "detail": "AI 开发者与野生动物共享同一片水域",
+      "children": [
+        "技术应与自然共存"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Microsoft Build",
+      "type": "concept"
+    },
+    {
+      "name": "Fort Mason",
+      "type": "concept"
+    },
+    {
+      "name": "California Brown Pelican",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "San Francisco",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Microsoft Build",
+      "to": "Fort Mason",
+      "label": "举办于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Microsoft Build",
+      "label": "参加"
+    },
+    {
+      "from": "California Brown Pelican",
+      "to": "Fort Mason",
+      "label": "出现于"
+    }
+  ]
+}

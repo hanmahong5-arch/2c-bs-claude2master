@@ -1,0 +1,102 @@
+{
+  "center": "Cline SDK v0.0.85 输出超限重试",
+  "branches": [
+    {
+      "label": "超限自动重试",
+      "detail": "命中输出 token 上限且无可用工具调用时不再直接失败，最多连续重试 3 次",
+      "children": [
+        "重试时追加提醒：精简回复、拆分大任务",
+        "工具调用有进展或每次运行开始时重置计数",
+        "耗尽后仍报原有错误"
+      ]
+    },
+    {
+      "label": "harness 需区分",
+      "detail": "需把「模型没来得及行动」与「任务失败」区分开",
+      "children": [
+        "保证 turn-finished 在每次恢复迭代前发出以配…"
+      ]
+    },
+    {
+      "label": "默认额度缩放",
+      "detail": "默认输出额度改为随模型缩放，只升不降",
+      "children": [
+        "公式 max(32000, floor(maxOutputTokens*0.…",
+        "约 106,667 token 以下模型无变化",
+        "128,000 token 模型从 32,000 升至 38,400"
+      ]
+    },
+    {
+      "label": "模型目录刷新",
+      "detail": "provider 仍为 209，模型从 6,188 增至 6,237",
+      "children": [
+        "Cline Pass 新增 mimo-v2.6-flash 与 mimo-…",
+        "10 个未固定默认模型的 provider 默认模型变更"
+      ]
+    }
+  ],
+  "flow": [
+    "命中输出 token 上限",
+    "无可用工具调用",
+    "追加精简提醒并重试",
+    "最多连续重试 3 次",
+    "计数重置或耗尽报错"
+  ],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "Cline Pass",
+      "type": "product"
+    },
+    {
+      "name": "mimo-v2.6-flash",
+      "type": "model"
+    },
+    {
+      "name": "mimo-v2.6-pro",
+      "type": "model"
+    },
+    {
+      "name": "builtins.ts",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "turn-finished",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "harness",
+      "label": "要求区分"
+    },
+    {
+      "from": "Cline Pass",
+      "to": "mimo-v2.6-flash",
+      "label": "新增"
+    },
+    {
+      "from": "Cline Pass",
+      "to": "mimo-v2.6-pro",
+      "label": "新增"
+    },
+    {
+      "from": "harness",
+      "to": "turn-finished",
+      "label": "需发出"
+    },
+    {
+      "from": "builtins.ts",
+      "to": "Cline SDK",
+      "label": "固定默认模型"
+    }
+  ]
+}

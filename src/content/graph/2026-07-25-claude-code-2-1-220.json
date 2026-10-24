@@ -1,0 +1,49 @@
+{
+  "center": "Claude Code v2.1.220 修复 bug",
+  "branches": [
+    {
+      "label": "修复已知 bug",
+      "detail": "修复若干已知 bug，减少意外崩溃与错误输出",
+      "children": [
+        "减少意外崩溃",
+        "减少错误输出"
+      ]
+    },
+    {
+      "label": "提升可靠性",
+      "detail": "整体可靠性提升，agent 长时间任务更稳定",
+      "children": [
+        "长时间任务更稳定"
+      ]
+    },
+    {
+      "label": "改进错误处理",
+      "detail": "降低异常中断导致任务失败的概率",
+      "children": [
+        "降低任务失败概率"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "v2.1.220",
+      "type": "product"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "v2.1.220",
+      "label": "发布版本"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "center": "OpenAI Habitat 存储扩容",
+  "branches": [
+    {
+      "label": "规模与负载",
+      "detail": "Habitat 支撑 ChatGPT 超 10 亿用户、峰值每秒 2200 万请求",
+      "children": [
+        "10 亿用户",
+        "22M 请求/秒"
+      ]
+    },
+    {
+      "label": "从库到平台",
+      "detail": "Habitat 最初只是 Python 库，后演进为全球分布式存储平台",
+      "children": [
+        "起点：Python 库",
+        "终点：全球分布式平台"
+      ]
+    },
+    {
+      "label": "分阶段改造",
+      "detail": "文章以第一部分形式讲述扩容，说明是分阶段工程而非一次性重构",
+      "children": [
+        "按阶段推进",
+        "非一步到位"
+      ]
+    },
+    {
+      "label": "架构面向全球",
+      "detail": "同时承载 10 亿用户与千万级请求，架构必须全球分布而非单点扩展",
+      "children": [
+        "跨区域设计",
+        "高并发前置考虑"
+      ]
+    },
+    {
+      "label": "对 agent 的启示",
+      "detail": "大规模工具链的瓶颈往往在存储层而非模型层",
+      "children": [
+        "瓶颈在存储层",
+        "后端需提前规划"
+      ]
+    }
+  ],
+  "flow": [
+    "Python 库起步",
+    "演进为分布式平台",
+    "分阶段扩容",
+    "支撑 10 亿用户",
+    "峰值 22M 请求/秒"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Habitat",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Python",
+      "type": "technique"
+    },
+    {
+      "name": "全球分布式存储",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Habitat",
+      "label": "改造"
+    },
+    {
+      "from": "Habitat",
+      "to": "ChatGPT",
+      "label": "支撑"
+    },
+    {
+      "from": "Habitat",
+      "to": "Python",
+      "label": "源于"
+    },
+    {
+      "from": "Habitat",
+      "to": "全球分布式存储",
+      "label": "演进为"
+    },
+    {
+      "from": "agent",
+      "to": "全球分布式存储",
+      "label": "依赖"
+    }
+  ]
+}

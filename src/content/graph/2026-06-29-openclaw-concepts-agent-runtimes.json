@@ -1,0 +1,122 @@
+{
+  "center": "OpenClaw 的 Agent Runtime 分层",
+  "branches": [
+    {
+      "label": "四层概念区分",
+      "detail": "Provider 管认证与模型发现，Model 是选中的模型，Runtime 是执行循环，Channel 是消息出入口",
+      "children": [
+        "Provider 例：anthropic、openai…",
+        "Runtime 例：claude-cli、codex、copilot…",
+        "Channel 例：Discord、Slack、Telegram"
+      ]
+    },
+    {
+      "label": "两类 Runtime",
+      "detail": "Embedded harness 跑在 OpenClaw 循环内，CLI backend 跑本地 CLI 进程但保持模型引用规范",
+      "children": [
+        "Embedded：内置 openclaw，插件 codex…",
+        "CLI：如 claude-cli 执行 Anthropic 模型",
+        "claude-cli 不是 embedded harness id"
+      ]
+    },
+    {
+      "label": "Codex 多面性",
+      "detail": "Codex 名称对应多个独立表面：原生 app-server、OAuth、ACP 适配器、/codex 命令、OpenAI API",
+      "children": [
+        "订阅常用：openai/* 模型 + codex runtime",
+        "ACP 仅在明确要求时使用",
+        "codex-cli/* 旧引用已移除"
+      ]
+    },
+    {
+      "label": "Runtime 所有权",
+      "detail": "不同 runtime 拥有循环的不同部分：模型循环、线程状态、工具、上下文、压缩",
+      "children": [
+        "OpenClaw embedded：OpenClaw 拥有模型循环…",
+        "Codex app-server：Codex 拥有线程状态与原生…",
+        "设计规则：谁拥有表面谁提供 hook"
+      ]
+    },
+    {
+      "label": "配置与修复",
+      "detail": "公开配置用 agentRuntime.id，旧的全 agent runtime 键被忽略，doctor --fix 可修复",
+      "children": [
+        "openclaw doctor --fix 清理旧 runtime 固定",
+        "自动选 Codex 需兼容路由",
+        "openai/* 前缀本身不选 Codex"
+      ]
+    }
+  ],
+  "flow": [
+    "接收 prompt",
+    "驱动模型输出",
+    "处理原生工具调用",
+    "返回完成回合给 OpenClaw"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "claude-cli",
+      "type": "technique"
+    },
+    {
+      "name": "copilot",
+      "type": "product"
+    },
+    {
+      "name": "ACP",
+      "type": "concept"
+    },
+    {
+      "name": "agentRuntime.id",
+      "type": "concept"
+    },
+    {
+      "name": "openclaw doctor --fix",
+      "type": "technique"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Codex",
+      "label": "集成"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "claude-cli",
+      "label": "支持"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "copilot",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "ACP",
+      "label": "可经"
+    },
+    {
+      "from": "openclaw doctor --fix",
+      "to": "agentRuntime.id",
+      "label": "修复"
+    },
+    {
+      "from": "Claude Code",
+      "to": "ACP",
+      "label": "使用"
+    }
+  ]
+}

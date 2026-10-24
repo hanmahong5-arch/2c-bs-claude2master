@@ -1,0 +1,96 @@
+{
+  "center": "AI 代理开发：从提示到循环设计",
+  "branches": [
+    {
+      "label": "范式转变",
+      "detail": "从手动提示单个代理转向设计自主循环系统，移除人类瓶颈",
+      "children": [
+        "Steipete、Boris 等实践者强调此转变",
+        "开发者重心转向系统架构设计"
+      ]
+    },
+    {
+      "label": "自动化研究",
+      "detail": "Recursive SI 和微软 Arbor 展示 AI 在优化和研究任务中自动改进",
+      "children": [
+        "代理系统分化为快速迭代调优和长周期假设管理",
+        "工具链需支持不同粒度任务编排与评估"
+      ]
+    },
+    {
+      "label": "数据瓶颈",
+      "detail": "多模态和机器人技术发展使杂乱数据管道成为主要瓶颈",
+      "children": [
+        "Macrodata Labs 解决数据可观测性和处理流程",
+        "数据基础设施应视为一等公民"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Latent Space",
+      "type": "company"
+    },
+    {
+      "name": "Steipete",
+      "type": "person"
+    },
+    {
+      "name": "Boris",
+      "type": "person"
+    },
+    {
+      "name": "Recursive SI",
+      "type": "product"
+    },
+    {
+      "name": "微软 Arbor",
+      "type": "product"
+    },
+    {
+      "name": "Macrodata Labs",
+      "type": "company"
+    },
+    {
+      "name": "AI 代理",
+      "type": "concept"
+    },
+    {
+      "name": "数据基础设施",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Latent Space",
+      "to": "AI 代理",
+      "label": "探讨"
+    },
+    {
+      "from": "Steipete",
+      "to": "AI 代理",
+      "label": "强调设计"
+    },
+    {
+      "from": "Boris",
+      "to": "AI 代理",
+      "label": "强调设计"
+    },
+    {
+      "from": "Recursive SI",
+      "to": "AI 代理",
+      "label": "展示自动化"
+    },
+    {
+      "from": "微软 Arbor",
+      "to": "AI 代理",
+      "label": "展示自动化"
+    },
+    {
+      "from": "Macrodata Labs",
+      "to": "数据基础设施",
+      "label": "解决瓶颈"
+    }
+  ]
+}

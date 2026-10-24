@@ -1,0 +1,65 @@
+{
+  "center": "claude-code v2.1.219 更新",
+  "branches": [
+    {
+      "label": "Opus 5 默认",
+      "detail": "Claude Opus 5 成为默认 Opus 模型，支持 1M 上下文",
+      "children": [
+        "快速模式定价 $10/$50 每百万 token",
+        "Agent 设计需考虑更大上下文窗口对工具调用和记…"
+      ]
+    },
+    {
+      "label": "沙箱白名单强化",
+      "detail": "新增 sandbox.network.strictAllowlist 设置，拒绝非白名单主机连接且不提示",
+      "children": [
+        "Agent 沙箱网络策略更严格",
+        "需提前规划允许的外部服务"
+      ]
+    },
+    {
+      "label": "子代理嵌套深度增至 3",
+      "detail": "子代理嵌套深度从 1 增至 3（默认），可通过环境变量禁用",
+      "children": [
+        "Agent 编排能力增强，支持更深层任务分解",
+        "需注意深度增加带来的延迟和错误传播"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Claude Opus 5",
+      "type": "model"
+    },
+    {
+      "name": "sandbox.network.strictAllowlist",
+      "type": "concept"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "Claude Opus 5",
+      "label": "默认使用"
+    },
+    {
+      "from": "claude-code",
+      "to": "sandbox.network.strictAllowlist",
+      "label": "新增设置"
+    },
+    {
+      "from": "claude-code",
+      "to": "Agent",
+      "label": "支持编排"
+    }
+  ]
+}

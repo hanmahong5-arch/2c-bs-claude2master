@@ -1,0 +1,79 @@
+{
+  "center": "NetNewsWire 退休后保持活力",
+  "branches": [
+    {
+      "label": "创始人退休",
+      "detail": "Brent Simmons 一年前退休，把精力投入一款软件",
+      "children": [
+        "无商业压力，只求把软件做好"
+      ]
+    },
+    {
+      "label": "软件定位",
+      "detail": "NetNewsWire 是开源 RSS 阅读器，像播客但用于阅读",
+      "children": [
+        "2002 年首发",
+        "2018 年开源"
+      ]
+    },
+    {
+      "label": "作者体验",
+      "detail": "Simon Willison 在 Mac 和 iPhone 上用了数年",
+      "children": [
+        "称其不可或缺"
+      ]
+    },
+    {
+      "label": "开源活力",
+      "detail": "退休后仍持续维护，被视为鼓舞人心的案例",
+      "children": [
+        "Simon Willison 认为值得关注"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NetNewsWire",
+      "type": "product"
+    },
+    {
+      "name": "Brent Simmons",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "RSS",
+      "type": "concept"
+    },
+    {
+      "name": "开源",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Brent Simmons",
+      "to": "NetNewsWire",
+      "label": "退休后维护"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "NetNewsWire",
+      "label": "长期使用"
+    },
+    {
+      "from": "NetNewsWire",
+      "to": "RSS",
+      "label": "基于"
+    },
+    {
+      "from": "NetNewsWire",
+      "to": "开源",
+      "label": "属于"
+    }
+  ]
+}

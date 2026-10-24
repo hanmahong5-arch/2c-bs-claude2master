@@ -1,0 +1,114 @@
+{
+  "center": "物理 AI 仿真现状综述",
+  "branches": [
+    {
+      "label": "为何需要仿真",
+      "detail": "物理 AI 缺互联网级数据，仿真可低成本生成海量机器人经验",
+      "children": [
+        "真实数据采集慢、贵、危险甚至不可行",
+        "GPU 并行可生成数千小时机器人经验",
+        "仿真已进入模型开发闭环"
+      ]
+    },
+    {
+      "label": "三计算机范式",
+      "detail": "训练、仿真、机载三类计算机各司其职",
+      "children": [
+        "训练计算机：GPU 集群训练基础模型",
+        "仿真计算机：GPU 加速物理与 RTX 渲染",
+        "机载计算机：Jetson AGX Thor 类边缘设备"
+      ]
+    },
+    {
+      "label": "引擎选型问题",
+      "detail": "开发者需按合成数据、强化学习、传感器等需求选引擎",
+      "children": [
+        "是否需要可扩展合成数据工作流",
+        "是否需要强化学习",
+        "传感器与 3D 资产格式支持"
+      ]
+    },
+    {
+      "label": "主流引擎概览",
+      "detail": "MuJoCo、MuJoCo Warp、Isaac Sim、Isaac Lab 各有侧重",
+      "children": [
+        "MuJoCo：开源、精确接触动力学",
+        "MJWarp：GPU 批量并行强化学习",
+        "Isaac Sim：基于 Omniverse 与 OpenUSD"
+      ]
+    }
+  ],
+  "flow": [
+    "仿真中遥操作采集数据",
+    "GPU 并行扩展生成经验",
+    "训练强化学习策略",
+    "仿真中基准与对抗测试",
+    "部署到机载计算机"
+  ],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Isaac Sim",
+      "type": "product"
+    },
+    {
+      "name": "Isaac Lab",
+      "type": "product"
+    },
+    {
+      "name": "MuJoCo",
+      "type": "product"
+    },
+    {
+      "name": "MuJoCo Warp",
+      "type": "product"
+    },
+    {
+      "name": "Omniverse",
+      "type": "product"
+    },
+    {
+      "name": "OpenUSD",
+      "type": "technique"
+    },
+    {
+      "name": "数字孪生",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "Isaac Sim",
+      "label": "开发"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Isaac Lab",
+      "label": "开发"
+    },
+    {
+      "from": "Isaac Sim",
+      "to": "Omniverse",
+      "label": "基于"
+    },
+    {
+      "from": "Isaac Sim",
+      "to": "OpenUSD",
+      "label": "采用"
+    },
+    {
+      "from": "Isaac Lab",
+      "to": "Isaac Sim",
+      "label": "解耦"
+    },
+    {
+      "from": "MuJoCo Warp",
+      "to": "MuJoCo",
+      "label": "GPU 加速"
+    }
+  ]
+}

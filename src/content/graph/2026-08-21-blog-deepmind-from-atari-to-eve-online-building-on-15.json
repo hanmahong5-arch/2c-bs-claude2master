@@ -1,0 +1,83 @@
+{
+  "center": "DeepMind 15年游戏AI研究",
+  "branches": [
+    {
+      "label": "研究历程",
+      "detail": "回顾DeepMind从Atari到EVE Online的15年游戏AI研究",
+      "children": [
+        "起点：Atari游戏",
+        "终点：EVE Online"
+      ]
+    },
+    {
+      "label": "游戏即平台",
+      "detail": "强调游戏作为AI测试平台的重要性",
+      "children": []
+    },
+    {
+      "label": "产业合作",
+      "detail": "与游戏工作室合作，将AI技术原型化并应用于真实游戏环境",
+      "children": [
+        "加速复杂决策与策略规划进步"
+      ]
+    },
+    {
+      "label": "现实迁移",
+      "detail": "游戏AI研究可迁移至现实世界任务",
+      "children": [
+        "资源管理",
+        "多智能体协作",
+        "工具链智能自动化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Atari",
+      "type": "product"
+    },
+    {
+      "name": "EVE Online",
+      "type": "product"
+    },
+    {
+      "name": "游戏AI",
+      "type": "concept"
+    },
+    {
+      "name": "多智能体协作",
+      "type": "concept"
+    },
+    {
+      "name": "策略规划",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DeepMind",
+      "to": "Atari",
+      "label": "研究起点"
+    },
+    {
+      "from": "DeepMind",
+      "to": "EVE Online",
+      "label": "研究延伸"
+    },
+    {
+      "from": "游戏AI",
+      "to": "多智能体协作",
+      "label": "迁移至"
+    },
+    {
+      "from": "游戏AI",
+      "to": "策略规划",
+      "label": "推动"
+    }
+  ]
+}

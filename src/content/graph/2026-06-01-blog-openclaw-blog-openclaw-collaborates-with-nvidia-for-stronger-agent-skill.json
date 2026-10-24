@@ -1,0 +1,110 @@
+{
+  "center": "OpenClaw 与 NVIDIA 合作扫描…",
+  "branches": [
+    {
+      "label": "ClawScan 流水线",
+      "detail": "技能发布前经三道扫描，由 Codex Agent 综合判定",
+      "children": [
+        "输入：静态分析、VirusTotal、NVIDIA…",
+        "输出 Skill Card 与 Clean/Suspicious/…"
+      ]
+    },
+    {
+      "label": "NVIDIA 两项新组件",
+      "detail": "Skill Cards 与 SkillSpector 均出自此次合作",
+      "children": [
+        "Skill Card 为开放信任规范，随技能发布",
+        "SkillSpector 结合静态检查与 AI 语义分析"
+      ]
+    },
+    {
+      "label": "扫描器几乎不重叠",
+      "detail": "三扫描器两两一致率均不超过 10.4%",
+      "children": [
+        "仅 468 个技能（0.69%）被三者同时标记",
+        "81.9% 的阳性发现只来自单一扫描器"
+      ]
+    },
+    {
+      "label": "开源扫描数据集",
+      "detail": "在 Hugging Face 发布 67,453 条扫描结果",
+      "children": [
+        "数据集名 OpenClaw/clawhub-security-signals",
+        "每日用 GPT-5.5 跑全量 ClawScan"
+      ]
+    }
+  ],
+  "flow": [
+    "发布新技能版本",
+    "三扫描器并行检测",
+    "Codex Agent 汇总评估",
+    "生成 Skill Card 与结论",
+    "通过验证后上架"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "company"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "ClawHub",
+      "type": "product"
+    },
+    {
+      "name": "ClawScan",
+      "type": "technique"
+    },
+    {
+      "name": "SkillSpector",
+      "type": "product"
+    },
+    {
+      "name": "VirusTotal",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Skill Card",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "NVIDIA",
+      "label": "合作"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "ClawHub",
+      "label": "运营"
+    },
+    {
+      "from": "ClawScan",
+      "to": "SkillSpector",
+      "label": "集成"
+    },
+    {
+      "from": "ClawScan",
+      "to": "VirusTotal",
+      "label": "集成"
+    },
+    {
+      "from": "ClawScan",
+      "to": "GPT-5.5",
+      "label": "调用"
+    },
+    {
+      "from": "ClawHub",
+      "to": "Skill Card",
+      "label": "发布"
+    }
+  ]
+}

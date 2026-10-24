@@ -1,0 +1,97 @@
+{
+  "center": "Codex 桌面应用捆绑开源工具",
+  "branches": [
+    {
+      "label": "发现经过",
+      "detail": "Simon Willison 用 OmniDiskSweeper 翻 ~/.cache 时发现异常占用",
+      "children": [
+        "Codex 桌面应用已改名 ChatGPT",
+        "缓存目录 codex-primary-runtime 占 1.7GB"
+      ]
+    },
+    {
+      "label": "捆绑内容",
+      "detail": "运行时内含多套完整环境与原生二进制",
+      "children": [
+        "完整 Python 与 Node.js 安装",
+        "Poppler、git 原生二进制",
+        "LibreOffice 办公套件"
+      ]
+    },
+    {
+      "label": "用途机制",
+      "detail": "documents 目录下的 skills 指导 Codex 定位并调用这些二进制",
+      "children": [
+        "路径：plugins/documents",
+        "LibreOffice 2010 年从 OpenOffice.org 分叉"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI Codex",
+      "type": "product"
+    },
+    {
+      "name": "LibreOffice",
+      "type": "product"
+    },
+    {
+      "name": "Poppler",
+      "type": "product"
+    },
+    {
+      "name": "git",
+      "type": "product"
+    },
+    {
+      "name": "Python",
+      "type": "product"
+    },
+    {
+      "name": "Node.js",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "OpenOffice.org",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI Codex",
+      "to": "LibreOffice",
+      "label": "捆绑"
+    },
+    {
+      "from": "OpenAI Codex",
+      "to": "Poppler",
+      "label": "捆绑"
+    },
+    {
+      "from": "OpenAI Codex",
+      "to": "git",
+      "label": "捆绑"
+    },
+    {
+      "from": "OpenAI Codex",
+      "to": "Python",
+      "label": "捆绑"
+    },
+    {
+      "from": "OpenAI Codex",
+      "to": "Node.js",
+      "label": "捆绑"
+    },
+    {
+      "from": "LibreOffice",
+      "to": "OpenOffice.org",
+      "label": "分叉自"
+    }
+  ]
+}

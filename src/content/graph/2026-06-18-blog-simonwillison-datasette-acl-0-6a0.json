@@ -1,0 +1,90 @@
+{
+  "center": "datasette-acl 0.6a0 权限升级",
+  "branches": [
+    {
+      "label": "版本发布",
+      "detail": "datasette-acl 发布 0.6a0，定位为 Datasette 的高级权限管理插件",
+      "children": [
+        "2026 年 6 月 18 日发布",
+        "作者 Simon Willison 的博客"
+      ]
+    },
+    {
+      "label": "核心变化",
+      "detail": "从仅支持表级权限，扩展为通用资源共享系统",
+      "children": [
+        "不再局限于 table-only 权限",
+        "面向通用资源授权"
+      ]
+    },
+    {
+      "label": "主要贡献者",
+      "detail": "Alex Garcia 完成了本次发布的大部分工作",
+      "children": [
+        "Alex Garcia 主导开发"
+      ]
+    },
+    {
+      "label": "目标场景",
+      "detail": "为多用户 Datasette 实例提供细粒度资源访问控制",
+      "children": [
+        "多用户实例",
+        "细粒度控制谁能访问哪些资源"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "datasette-acl",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Alex Garcia",
+      "type": "person"
+    },
+    {
+      "name": "权限管理",
+      "type": "concept"
+    },
+    {
+      "name": "资源共享系统",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "datasette-acl",
+      "to": "Datasette",
+      "label": "是插件"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "datasette-acl",
+      "label": "发布"
+    },
+    {
+      "from": "Alex Garcia",
+      "to": "datasette-acl",
+      "label": "主要开发"
+    },
+    {
+      "from": "datasette-acl",
+      "to": "权限管理",
+      "label": "提供"
+    },
+    {
+      "from": "datasette-acl",
+      "to": "资源共享系统",
+      "label": "演进为"
+    }
+  ]
+}

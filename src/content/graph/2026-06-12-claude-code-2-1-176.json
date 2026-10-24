@@ -1,0 +1,90 @@
+{
+  "center": "Claude Code v2.1.176 更新",
+  "branches": [
+    {
+      "label": "会话标题多语言",
+      "detail": "会话标题按对话语言自动生成，可用 language 设置固定语言",
+      "children": [
+        "language 设置可固定特定语言",
+        "界面适配不同语言用户"
+      ]
+    },
+    {
+      "label": "页脚链接正则",
+      "detail": "新增 footerLinksRegexes 设置，用正则配置页脚链接徽章",
+      "children": [
+        "支持界面自定义",
+        "便于外部工具集成"
+      ]
+    },
+    {
+      "label": "模型选择修复",
+      "detail": "修复别名模型可能绕过 availableModels 限制的问题",
+      "children": [
+        "增强多模型环境安全性"
+      ]
+    },
+    {
+      "label": "远程控制修复",
+      "detail": "修复远程控制连接时静默切换会话模型等问题",
+      "children": [
+        "断开连接提示更友好",
+        "多账户登录时未断开连接已修复"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "availableModels",
+      "type": "concept"
+    },
+    {
+      "name": "footerLinksRegexes",
+      "type": "concept"
+    },
+    {
+      "name": "language",
+      "type": "concept"
+    },
+    {
+      "name": "远程控制",
+      "type": "concept"
+    },
+    {
+      "name": "会话标题",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "会话标题",
+      "label": "支持多语言"
+    },
+    {
+      "from": "Claude Code",
+      "to": "footerLinksRegexes",
+      "label": "新增设置"
+    },
+    {
+      "from": "Claude Code",
+      "to": "availableModels",
+      "label": "修复绕过"
+    },
+    {
+      "from": "Claude Code",
+      "to": "远程控制",
+      "label": "修复问题"
+    },
+    {
+      "from": "language",
+      "to": "会话标题",
+      "label": "固定语言"
+    }
+  ]
+}

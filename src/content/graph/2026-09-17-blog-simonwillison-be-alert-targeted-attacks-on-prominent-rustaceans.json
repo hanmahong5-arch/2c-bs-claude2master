@@ -1,0 +1,101 @@
+{
+  "center": "Rust 生态遭社工攻击",
+  "branches": [
+    {
+      "label": "攻击目标",
+      "detail": "针对 rust-lang 成员与热门 crate 维护者，意图控制设备与账号",
+      "children": [
+        "目标是发布恶意软件",
+        "上月 arrayref crate 供应链攻击得手"
+      ]
+    },
+    {
+      "label": "攻击手法",
+      "detail": "以面试、项目、合同等正面名义约视频通话，再借机植入恶意程序",
+      "children": [
+        "诱导安装所谓缺失的音频编解码器",
+        "通过剪贴板放置命令让目标执行"
+      ]
+    },
+    {
+      "label": "风险根源",
+      "detail": "几乎所有软件都依赖开源，依赖网络中每个有发布权的人都是潜在攻击面",
+      "children": [
+        "发布权限即攻击入口",
+        "开源依赖链难以完全审计"
+      ]
+    },
+    {
+      "label": "防御建议",
+      "detail": "采用依赖冷却期，新版本发布后等几天再升级，寄望他人先发现攻击",
+      "children": [
+        "dependency cooldowns",
+        "延迟升级以留出发现窗口"
+      ]
+    }
+  ],
+  "flow": [
+    "约视频通话",
+    "诱导安装软件",
+    "或执行剪贴板命令",
+    "控制设备账号",
+    "发布恶意 crate"
+  ],
+  "entities": [
+    {
+      "name": "Rust",
+      "type": "concept"
+    },
+    {
+      "name": "crates.io",
+      "type": "product"
+    },
+    {
+      "name": "Adam Harvey",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "arrayref",
+      "type": "product"
+    },
+    {
+      "name": "supply chain attack",
+      "type": "concept"
+    },
+    {
+      "name": "dependency cooldowns",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Adam Harvey",
+      "to": "Rust",
+      "label": "警告"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Adam Harvey",
+      "label": "转述"
+    },
+    {
+      "from": "supply chain attack",
+      "to": "arrayref",
+      "label": "攻击"
+    },
+    {
+      "from": "dependency cooldowns",
+      "to": "supply chain attack",
+      "label": "缓解"
+    },
+    {
+      "from": "crates.io",
+      "to": "Rust",
+      "label": "属于"
+    }
+  ]
+}

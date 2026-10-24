@@ -1,0 +1,97 @@
+{
+  "center": "opencode v1.18.32 更新",
+  "branches": [
+    {
+      "label": "Bedrock 附件过滤",
+      "detail": "图片附件只对支持的模型下发，避免无效输入",
+      "children": [
+        "仅 Claude、Nova、Llama 4 提升图片",
+        "harness 需按模型能力过滤输入"
+      ]
+    },
+    {
+      "label": "用量上报修复",
+      "detail": "Together AI 流式 token 统计更可靠",
+      "children": [
+        "修复流式用量上报",
+        "harness 依赖准确 usage 判断成本与限流"
+      ]
+    },
+    {
+      "label": "模型目录扩展",
+      "detail": "社区贡献新增两个模型到 Zen/Go",
+      "children": [
+        "新增 DeepSeek V4.1 Flash",
+        "新增 Grok 4.7",
+        "harness 需维护动态模型白名单"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Nova",
+      "type": "model"
+    },
+    {
+      "name": "Llama 4",
+      "type": "model"
+    },
+    {
+      "name": "Together AI",
+      "type": "company"
+    },
+    {
+      "name": "DeepSeek V4.1 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Grok 4.7",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Bedrock",
+      "to": "Claude",
+      "label": "支持"
+    },
+    {
+      "from": "Bedrock",
+      "to": "Nova",
+      "label": "支持"
+    },
+    {
+      "from": "Bedrock",
+      "to": "Llama 4",
+      "label": "支持"
+    },
+    {
+      "from": "opencode",
+      "to": "Together AI",
+      "label": "修复用量"
+    },
+    {
+      "from": "opencode",
+      "to": "DeepSeek V4.1 Flash",
+      "label": "新增支持"
+    },
+    {
+      "from": "opencode",
+      "to": "Grok 4.7",
+      "label": "新增支持"
+    }
+  ]
+}

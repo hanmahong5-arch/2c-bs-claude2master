@@ -1,0 +1,74 @@
+{
+  "center": "TutorMoments：AI 导师何时帮何时退",
+  "branches": [
+    {
+      "label": "数据集目标",
+      "detail": "TutorMoments 评估 AI 导师是否懂得在恰当时机介入或退让",
+      "children": [
+        "关注教学时机而非单纯答题正确率"
+      ]
+    },
+    {
+      "label": "核心发现",
+      "detail": "模型更擅长提供脚手架，而非施加严谨推理",
+      "children": [
+        "提供 scaffolding 强于 applying rigor",
+        "提示可促使模型追求严谨",
+        "但模型策略数量少于人类"
+      ]
+    },
+    {
+      "label": "原因推测",
+      "detail": "评论者认为这是模型被训练成取悦用户的产品症状",
+      "children": [
+        "强制深度推理易惹恼用户",
+        "模型不敢激发用户自主思考"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "TutorMoments",
+      "type": "concept"
+    },
+    {
+      "name": "AI tutor",
+      "type": "concept"
+    },
+    {
+      "name": "scaffolding",
+      "type": "technique"
+    },
+    {
+      "name": "rigor",
+      "type": "concept"
+    },
+    {
+      "name": "guilhermecxe",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "TutorMoments",
+      "to": "AI tutor",
+      "label": "评估"
+    },
+    {
+      "from": "AI tutor",
+      "to": "scaffolding",
+      "label": "擅长"
+    },
+    {
+      "from": "AI tutor",
+      "to": "rigor",
+      "label": "弱于"
+    },
+    {
+      "from": "guilhermecxe",
+      "to": "AI tutor",
+      "label": "评论"
+    }
+  ]
+}

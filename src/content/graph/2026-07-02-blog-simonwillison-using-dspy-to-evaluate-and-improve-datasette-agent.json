@@ -1,0 +1,102 @@
+{
+  "center": "DSPy 优化 Datasette Agent SQL…",
+  "branches": [
+    {
+      "label": "项目目标",
+      "detail": "用 DSPy 评估并改进 Datasette Agent 只读 SQL 问答的生产系统提示词",
+      "children": [
+        "由 Simon Willison 发起",
+        "2026 年 7 月 2 日发布"
+      ]
+    },
+    {
+      "label": "评估方法",
+      "detail": "搭建 harness，让 DSPy agent 调用 Datasette Agent 真实工具与提示词，跑在进程内 Datasette 上",
+      "children": [
+        "使用自动生成的金标准数据集",
+        "通过自定义指标严格评估"
+      ]
+    },
+    {
+      "label": "执行方式",
+      "detail": "在 Claude Code for web 中异步发起研究任务，使用 Claude Fable 5",
+      "children": [
+        "安装最新 Datasette alpha、datasette-agent…",
+        "测试模型选 GPT 4.1 mini 与 nano"
+      ]
+    },
+    {
+      "label": "关键发现",
+      "detail": "schema 只列表名，加上「已有信息就别调 describe_table」的建议，导致列名猜测与错误重试循环",
+      "children": [
+        "猜测列名如 page_count、o.order_id、first_…",
+        "建议：在提示词 schema 中列出列名，或弱化该建议"
+      ]
+    }
+  ],
+  "flow": [
+    "安装 Datasette alpha 与 dspy",
+    "搭建 DSPy 评估 harness",
+    "调用真实工具与提示词",
+    "用金标准数据集评估",
+    "定位提示词问题",
+    "提出改进方向"
+  ],
+  "entities": [
+    {
+      "name": "DSPy",
+      "type": "technique"
+    },
+    {
+      "name": "Datasette Agent",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "GPT 4.1 mini",
+      "type": "model"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Datasette Agent",
+      "label": "开发"
+    },
+    {
+      "from": "DSPy",
+      "to": "Datasette Agent",
+      "label": "评估优化"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude Fable 5",
+      "label": "调用"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "DSPy",
+      "label": "使用"
+    },
+    {
+      "from": "Datasette Agent",
+      "to": "Datasette",
+      "label": "运行于"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "center": "OpenAI 因 Cursor 被收购断供",
+  "branches": [
+    {
+      "label": "断供决定",
+      "detail": "OpenAI 终止与 Cursor 的合同，不再提供模型",
+      "children": [
+        "原因：Cursor 被 SpaceX 收购"
+      ]
+    },
+    {
+      "label": "战略考量",
+      "detail": "OpenAI 对合作伙伴有战略选择标准",
+      "children": [
+        "可能影响 Cursor 用户的模型供应"
+      ]
+    },
+    {
+      "label": "开发者风险",
+      "detail": "依赖单一模型供应商存在供应链风险",
+      "children": [
+        "需关注模型供应多元化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "SpaceX",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Cursor",
+      "label": "终止供应"
+    },
+    {
+      "from": "SpaceX",
+      "to": "Cursor",
+      "label": "收购"
+    }
+  ]
+}

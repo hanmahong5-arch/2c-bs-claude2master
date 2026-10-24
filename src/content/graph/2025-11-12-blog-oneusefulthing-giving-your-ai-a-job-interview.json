@@ -1,0 +1,103 @@
+{
+  "center": "用面试替代AI基准测试",
+  "branches": [
+    {
+      "label": "基准测试的缺陷",
+      "detail": "公开题库易被训练污染，题目含义不明且未校准，无法衡量写作、共情等能力",
+      "children": [
+        "MMLU-Pro 题目如智人头骨容量，难以说明能力",
+        "分数从84%到85%与40%到41%难度未知",
+        "ARC-AGI、METR 等高质量基准仍偏数学推理"
+      ]
+    },
+    {
+      "label": "凭感觉测试",
+      "detail": "用个人化小任务观察模型世界模型与风格，但主观且不可复现",
+      "children": [
+        "Simon Willison 让模型画骑自行车的鹈鹕",
+        "Ethan Mollick 让模型画飞机上的水獭",
+        "写作实验：仅剩47词的新生儿父亲段落"
+      ]
+    },
+    {
+      "label": "真实世界面试",
+      "detail": "像招聘一样用真实任务严格评估，OpenAI GDPval 是范例",
+      "children": [
+        "专家平均14年经验，任务耗时4-7小时",
+        "AI与人类专家同做任务，第三方盲评",
+        "最佳模型在软件开发、财务顾问上胜过人类"
+      ]
+    },
+    {
+      "label": "模型表现差异",
+      "detail": "不同模型在不同领域强弱分明，需按自身需求选择",
+      "children": [
+        "Claude 4.5 Sonnet 写作强，Gemini 2.5 Pro…",
+        "GPT-5 Thinking 文风狂野，Kimi K2 Thinking…",
+        "ChatGPT 更适销售经理，Claude 更适财务顾问"
+      ]
+    }
+  ],
+  "flow": [
+    "收集真实专家任务",
+    "AI与人类同做任务",
+    "第三方盲评打分",
+    "分析模型强弱领域"
+  ],
+  "entities": [
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GDPval",
+      "type": "concept"
+    },
+    {
+      "name": "MMLU-Pro",
+      "type": "concept"
+    },
+    {
+      "name": "Claude 4.5 Sonnet",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 2.5 Pro",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5 Thinking",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K2 Thinking",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ethan Mollick",
+      "to": "GDPval",
+      "label": "引用"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GDPval",
+      "label": "发布"
+    },
+    {
+      "from": "Claude 4.5 Sonnet",
+      "to": "GPT-5 Thinking",
+      "label": "对比"
+    },
+    {
+      "from": "Gemini 2.5 Pro",
+      "to": "Kimi K2 Thinking",
+      "label": "对比"
+    }
+  ]
+}

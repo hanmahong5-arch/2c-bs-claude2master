@@ -1,0 +1,60 @@
+{
+  "center": "opencode v1.17.4 更新",
+  "branches": [
+    {
+      "label": "MCP 支持工作目录",
+      "detail": "本地 MCP 服务器新增 cwd 参数，可从工作区相对目录启动",
+      "children": [
+        "简化本地工具集成"
+      ]
+    },
+    {
+      "label": "快照性能优化",
+      "detail": "快照创建复用 Git 对象，避免对大仓库重新哈希",
+      "children": [
+        "大仓库性能显著提升"
+      ]
+    },
+    {
+      "label": "修复 Gemini 兼容",
+      "detail": "修复 Gemini 工具模式兼容性，多类型字段工具可继续工作",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "Git",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "opencode",
+      "to": "Gemini",
+      "label": "修复兼容"
+    },
+    {
+      "from": "opencode",
+      "to": "Git",
+      "label": "复用对象"
+    }
+  ]
+}

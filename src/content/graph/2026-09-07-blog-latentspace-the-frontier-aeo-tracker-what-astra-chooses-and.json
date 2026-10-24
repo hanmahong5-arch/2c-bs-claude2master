@@ -1,0 +1,111 @@
+{
+  "center": "前沿 AEO 追踪器：模型推荐偏好",
+  "branches": [
+    {
+      "label": "追踪器是什么",
+      "detail": "Latent Space 发布前沿 AEO 追踪器，衡量各模型在品类中的推荐偏好",
+      "children": [
+        "覆盖 7 个模型、161 个品类、6 种提示变体",
+        "Astra 负责答案抽取并计算专有 AEO 分数"
+      ]
+    },
+    {
+      "label": "评分与偏见",
+      "detail": "AEO 分数奖励首选、备选与提及，惩罚反推荐；模型存在软偏见",
+      "children": [
+        "Claude 系偏好 Claude Code，Sol/Astra 偏好…",
+        "GPT 模型会推荐 Claude，属非偏见案例",
+        "161 个品类中 28 个有全模型一致的首选"
+      ]
+    },
+    {
+      "label": "代际翻转",
+      "detail": "同实验室新老模型间出现重大推荐偏好翻转",
+      "children": [
+        "分别有 Opus→Fable 与 Sol→Astra 总结页",
+        "对部分翻转给出竞品做法的中立分析"
+      ]
+    },
+    {
+      "label": "效率与来源",
+      "detail": "Astra 更自信高效，引用来源更少且不易因改写而改主意",
+      "children": [
+        "来源中位数：Sol 9、Astra 5、Opus 11、Fable…",
+        "AEO 价值随选择随机性下降而上升",
+        "markdown 内容协商等 AEO 实践真实有效，失败…"
+      ]
+    },
+    {
+      "label": "开放与玩法",
+      "detail": "所有提示与答案对可查，并提供趣味互动",
+      "children": [
+        "可查看顶级天使投资人榜单与 Family Feud 游戏",
+        "Gemini、GLM、DeepSeek 因错误与限流未纳入首轮"
+      ]
+    }
+  ],
+  "flow": [
+    "设计 6 种提示变体",
+    "在 7 个模型上开启搜索",
+    "覆盖 161 个品类提问",
+    "Astra 抽取答案",
+    "计算专有 AEO 分数",
+    "分析引用来源与失败"
+  ],
+  "entities": [
+    {
+      "name": "Latent Space",
+      "type": "company"
+    },
+    {
+      "name": "Astra",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "AEO",
+      "type": "concept"
+    },
+    {
+      "name": "Opus",
+      "type": "model"
+    },
+    {
+      "name": "Fable",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Latent Space",
+      "to": "Astra",
+      "label": "发布"
+    },
+    {
+      "from": "Astra",
+      "to": "AEO",
+      "label": "计算分数"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Opus",
+      "label": "被偏好"
+    },
+    {
+      "from": "Codex",
+      "to": "Astra",
+      "label": "被偏好"
+    }
+  ]
+}

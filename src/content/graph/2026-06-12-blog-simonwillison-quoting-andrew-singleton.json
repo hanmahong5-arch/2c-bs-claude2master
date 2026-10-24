@@ -1,0 +1,83 @@
+{
+  "center": "AI 投资虚假繁荣讽刺寓言",
+  "branches": [
+    {
+      "label": "荒诞资本循环",
+      "detail": "John 投资 Jenny 火葬场，钱被烧掉再买丙烷，形成虚假营收",
+      "children": [
+        "John 投 200 亿换 5% 股份",
+        "Jenny 烧 100 亿再花 100 亿买丙烷",
+        "John 宣称 AI 投资创收 100 亿"
+      ]
+    },
+    {
+      "label": "虚假估值",
+      "detail": "John 自称拥有价值 1000 亿业务的 5%",
+      "children": [
+        "估值基于烧钱循环而非真实产出"
+      ]
+    },
+    {
+      "label": "媒体失焦",
+      "detail": "Forbes 记者报道偏重八卦，忽略财务细节",
+      "children": [
+        "记者与 John、Jenny 发展三人恋情",
+        "最终形成多边普通法婚姻",
+        "报道光鲜但财务细节缺失"
+      ]
+    },
+    {
+      "label": "讽刺来源",
+      "detail": "Andrew Singleton 的《AI Economics for Dummies》",
+      "children": [
+        "由 Simon Willison 博客引用"
+      ]
+    }
+  ],
+  "flow": [
+    "John 投资 Jenny 200 亿",
+    "Jenny 烧掉 100 亿",
+    "Jenny 花 100 亿买丙烷",
+    "John 报告 100 亿营收",
+    "记者报道忽略细节"
+  ],
+  "entities": [
+    {
+      "name": "Andrew Singleton",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Forbes",
+      "type": "company"
+    },
+    {
+      "name": "AI Economics for Dummies",
+      "type": "concept"
+    },
+    {
+      "name": "AI 投资",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Andrew Singleton",
+      "to": "AI Economics for Dummies",
+      "label": "作者"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Andrew Singleton",
+      "label": "引用"
+    },
+    {
+      "from": "Forbes",
+      "to": "Andrew Singleton",
+      "label": "报道"
+    }
+  ]
+}

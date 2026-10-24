@@ -1,0 +1,104 @@
+{
+  "center": "新晋 Principal Tech IC 建议",
+  "branches": [
+    {
+      "label": "角色定位转变",
+      "detail": "核心工作变成愿景、设计反馈、赞助与连接，写代码成为副线",
+      "children": [
+        "L7+ 核心是让别人更高效",
+        "仍要写代码保持手感",
+        "不同 Principal 风格不同"
+      ]
+    },
+    {
+      "label": "影响力与说服",
+      "detail": "正确只占一小半，还要说服他人关心并行动",
+      "children": [
+        "建立势头、找赞助人",
+        "主动示范而非等委员会",
+        "10 份文档约 3 份被采纳"
+      ]
+    },
+    {
+      "label": "做只有你能做的事",
+      "detail": "聚焦你真正在意且擅长的交叉领域，随职业变深变窄",
+      "children": [
+        "快速原型并向上推销",
+        "跨组织搭桥",
+        "制定三年愿景"
+      ]
+    },
+    {
+      "label": "通过他人规模化",
+      "detail": "花时间教练与培养接替者，把工作真正交给别人",
+      "children": [
+        "每周 1-2 小时辅导",
+        "让工作成为他们的",
+        "允许不同做法"
+      ]
+    },
+    {
+      "label": "会议与存在感",
+      "detail": "为他人创造发言空间，不必总证明价值",
+      "children": [
+        "用提问留空间",
+        "拉入未参与者",
+        "沉默即隐性认可"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Amazon",
+      "type": "company"
+    },
+    {
+      "name": "Principal Tech IC",
+      "type": "concept"
+    },
+    {
+      "name": "L7+",
+      "type": "concept"
+    },
+    {
+      "name": "eugeneyan",
+      "type": "person"
+    },
+    {
+      "name": "Sr SDE",
+      "type": "concept"
+    },
+    {
+      "name": "PE",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "eugeneyan",
+      "to": "Amazon",
+      "label": "任职于"
+    },
+    {
+      "from": "Principal Tech IC",
+      "to": "Amazon",
+      "label": "常见于"
+    },
+    {
+      "from": "L7+",
+      "to": "Principal Tech IC",
+      "label": "对应级别"
+    },
+    {
+      "from": "PE",
+      "to": "Principal Tech IC",
+      "label": "简称"
+    },
+    {
+      "from": "Sr SDE",
+      "to": "PE",
+      "label": "被辅导"
+    }
+  ]
+}

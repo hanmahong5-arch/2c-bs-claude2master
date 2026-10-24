@@ -1,0 +1,120 @@
+{
+  "center": "Fal H3 Max 实时视频生成",
+  "branches": [
+    {
+      "label": "突破实时壁垒",
+      "detail": "Fal 后训练 Minimax H3，视频生成速度首次超过观看速度",
+      "children": [
+        "官方端点 35x 加速",
+        "比原版快约 50x",
+        "生成含提示增强仍快于播放"
+      ]
+    },
+    {
+      "label": "技术路径",
+      "detail": "对 Minimax H3 做成本与质量后训练，再针对自研推理引擎优化",
+      "children": [
+        "后训练提升成本与质量",
+        "自研推理引擎优化",
+        "每帧实时按需生成"
+      ]
+    },
+    {
+      "label": "产品化落地",
+      "detail": "从单次生成扩展为无限直播流，聊天即导演",
+      "children": [
+        "H3 Max Live 无限广播",
+        "输入 !prompt 数秒上屏",
+        "Twitch 无限流被平台封禁"
+      ]
+    },
+    {
+      "label": "社区反响",
+      "detail": "Ethan Mollick 等率先验证，开发者迅速搭建衍生应用",
+      "children": [
+        "Ethan Mollick 实测确认实时",
+        "levelsio 搭建 Infinite Slop",
+        "Fal 自建直播服务"
+      ]
+    },
+    {
+      "label": "行业意义",
+      "detail": "证明快于实时的可用视频已可行，当前画质仍粗糙",
+      "children": [
+        "当前为最差版本",
+        "内容无剧情、画质低",
+        "面向未来的存在性证明"
+      ]
+    }
+  ],
+  "flow": [
+    "Minimax 发布 H3",
+    "Fal 后训练提质量降本",
+    "自研推理引擎优化 35x",
+    "生成快于实时",
+    "接入无限直播流",
+    "聊天提示实时导演"
+  ],
+  "entities": [
+    {
+      "name": "Fal",
+      "type": "company"
+    },
+    {
+      "name": "Minimax H3",
+      "type": "model"
+    },
+    {
+      "name": "H3 Max Live",
+      "type": "product"
+    },
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "levelsio",
+      "type": "person"
+    },
+    {
+      "name": "Infinite Slop",
+      "type": "product"
+    },
+    {
+      "name": "Twitch",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Fal",
+      "to": "Minimax H3",
+      "label": "后训练"
+    },
+    {
+      "from": "Fal",
+      "to": "H3 Max Live",
+      "label": "发布"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "H3 Max Live",
+      "label": "实测"
+    },
+    {
+      "from": "levelsio",
+      "to": "Infinite Slop",
+      "label": "搭建"
+    },
+    {
+      "from": "Infinite Slop",
+      "to": "Minimax H3",
+      "label": "基于"
+    },
+    {
+      "from": "Twitch",
+      "to": "Fal",
+      "label": "封禁"
+    }
+  ]
+}

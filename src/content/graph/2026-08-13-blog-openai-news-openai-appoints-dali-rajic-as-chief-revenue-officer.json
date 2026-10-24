@@ -1,0 +1,112 @@
+{
+  "center": "OpenAI任命Dali Rajic为CRO",
+  "branches": [
+    {
+      "label": "人事任命",
+      "detail": "Dali Rajic出任首席营收官，领导OpenAI全球营收组织",
+      "children": [
+        "Dali Rajic任Chief Revenue Officer",
+        "负责全球营收组织"
+      ]
+    },
+    {
+      "label": "业务规模",
+      "detail": "OpenAI产品周活超10亿，企业客户超200万，同比翻倍",
+      "children": [
+        "周活跃用户超10亿",
+        "企业客户超200万，为去年两倍"
+      ]
+    },
+    {
+      "label": "前任离任",
+      "detail": "Denise Dresser在过渡期后离开，此前搭建团队与商业基础",
+      "children": [
+        "Denise Dresser将离职",
+        "过渡期协助支持客户"
+      ]
+    },
+    {
+      "label": "新任背景",
+      "detail": "Dali曾任Wiz总裁兼COO，此前任职Zscaler和AppDynamics",
+      "children": [
+        "Wiz总裁兼COO（已被Google收购）",
+        "Zscaler总裁兼COO",
+        "AppDynamics首席客户与营收官"
+      ]
+    },
+    {
+      "label": "战略合作",
+      "detail": "OpenAI与Chad Peets及RPT Partners建立战略合作",
+      "children": [
+        "支持打造世界级GTM团队"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Dali Rajic",
+      "type": "person"
+    },
+    {
+      "name": "Denise Dresser",
+      "type": "person"
+    },
+    {
+      "name": "Wiz",
+      "type": "company"
+    },
+    {
+      "name": "Zscaler",
+      "type": "company"
+    },
+    {
+      "name": "AppDynamics",
+      "type": "company"
+    },
+    {
+      "name": "Greg Brockman",
+      "type": "person"
+    },
+    {
+      "name": "RPT Partners",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Dali Rajic",
+      "to": "OpenAI",
+      "label": "出任CRO"
+    },
+    {
+      "from": "Denise Dresser",
+      "to": "OpenAI",
+      "label": "离职"
+    },
+    {
+      "from": "Dali Rajic",
+      "to": "Wiz",
+      "label": "曾任总裁兼COO"
+    },
+    {
+      "from": "Dali Rajic",
+      "to": "Zscaler",
+      "label": "曾任总裁兼COO"
+    },
+    {
+      "from": "Dali Rajic",
+      "to": "AppDynamics",
+      "label": "曾任首席客户…"
+    },
+    {
+      "from": "OpenAI",
+      "to": "RPT Partners",
+      "label": "建立战略合作"
+    }
+  ]
+}

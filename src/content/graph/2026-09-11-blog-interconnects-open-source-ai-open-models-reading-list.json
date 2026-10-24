@@ -1,0 +1,98 @@
+{
+  "center": "开源模型全景阅读清单",
+  "branches": [
+    {
+      "label": "开源模型基础",
+      "detail": "开源模型的定义、发布动机、商业战略与风险",
+      "children": [
+        "Zuckerberg 称开源是前进之路",
+        "开源与闭源是梯度而非二元",
+        "开源模型将用于企业定制智能体"
+      ]
+    },
+    {
+      "label": "中美竞争",
+      "detail": "中国在开源模型上领先，美国需投资开源研发",
+      "children": [
+        "中国实验室自2024年起领先开源",
+        "西方公司转向中国开源模型省钱",
+        "美国议员调查 DoorDash、Airbnb 等"
+      ]
+    },
+    {
+      "label": "技术差距",
+      "detail": "开源与闭源性能差距约4-6个月",
+      "children": [
+        "领先开源模型均来自中国实验室",
+        "开源模型处于成本帕累托前沿",
+        "蒸馏帮助中国实验室追赶"
+      ]
+    },
+    {
+      "label": "安全与风险",
+      "detail": "开源模型的安全风险与监管讨论",
+      "children": [
+        "闭源模型护栏常被绕过",
+        "开源权重安全路径",
+        "开放数据减少阻碍研究"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Interconnects",
+      "type": "product"
+    },
+    {
+      "name": "Llama 3",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek R1",
+      "type": "model"
+    },
+    {
+      "name": "Qwen",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "Interconnects",
+      "label": "撰写于"
+    },
+    {
+      "from": "DeepSeek R1",
+      "to": "Qwen",
+      "label": "同属中国开源"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "Kimi K3",
+      "label": "同属中国开源"
+    },
+    {
+      "from": "Llama 3",
+      "to": "OpenAI",
+      "label": "竞争"
+    }
+  ]
+}

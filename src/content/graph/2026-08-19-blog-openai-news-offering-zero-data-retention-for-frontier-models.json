@@ -1,0 +1,65 @@
+{
+  "center": "OpenAI 零数据保留",
+  "branches": [
+    {
+      "label": "零数据保留",
+      "detail": "OpenAI 重申对符合条件的 API 客户提供零数据保留，数据不被存储",
+      "children": [
+        "面向符合条件的 API 客户",
+        "确保数据不被存储"
+      ]
+    },
+    {
+      "label": "私有安全处理",
+      "detail": "预览 Private Safety Processing，在不牺牲隐私前提下做高级 AI 安全审查",
+      "children": [
+        "兼顾数据隐私",
+        "进行高级安全审查"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "调用前沿模型时可更放心处理敏感数据，同时获得安全保证",
+      "children": [
+        "可处理敏感数据",
+        "获得安全保证"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Zero Data Retention",
+      "type": "concept"
+    },
+    {
+      "name": "Private Safety Processing",
+      "type": "concept"
+    },
+    {
+      "name": "API",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Zero Data Retention",
+      "label": "提供"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Private Safety Processing",
+      "label": "预览"
+    },
+    {
+      "from": "Zero Data Retention",
+      "to": "API",
+      "label": "适用于"
+    }
+  ]
+}

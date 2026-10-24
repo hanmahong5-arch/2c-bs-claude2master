@@ -1,0 +1,117 @@
+{
+  "center": "AI 编码代理与代码行数指标",
+  "branches": [
+    {
+      "label": "行数指标仍有意义",
+      "detail": "Simon Willison 认为行数可作生产力指标，前提是代码质量一致",
+      "children": [
+        "过去工程师日产 50-60 行，200 行已算极好",
+        "代理可产出千行已调试代码，是实质提升",
+        "前提：可维护、有测试、质量相同"
+      ]
+    },
+    {
+      "label": "认知容量成新瓶颈",
+      "detail": "代理让产出快百倍，但人无法同时掌控百倍代码量",
+      "children": [
+        "单人可做远超以往的工程量",
+        "仍需团队来分摊认知负荷",
+        "单人团队设计很差（bus factor）"
+      ]
+    },
+    {
+      "label": "概念完整性受损",
+      "detail": "代理让加功能成本极低，软件长出各种奇怪凸起",
+      "children": [
+        "概念完整性出自《人月神话》",
+        "好软件无意外、领域契合、自洽",
+        "五分钟就能加一个功能"
+      ]
+    },
+    {
+      "label": "温彻斯特神秘屋类比",
+      "detail": "Claire Giordano 用不断加盖的房间比喻失控的软件",
+      "children": [
+        "140 个房间，40 年不断扩建",
+        "加房间成本太低就停不下来",
+        "完整性崩塌后更难做决策"
+      ]
+    },
+    {
+      "label": "纪律靠时间强制",
+      "detail": "过去时间成本自然约束需求，如今一小时就能实现",
+      "children": [
+        "以前疯狂功能要一周，会放弃",
+        "现在只要一小时，更容易被采纳",
+        "一切最终回到纪律问题"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claire Giordano",
+      "type": "person"
+    },
+    {
+      "name": "Talking Postgres",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "coding agents",
+      "type": "concept"
+    },
+    {
+      "name": "conceptual integrity",
+      "type": "concept"
+    },
+    {
+      "name": "The Mythical Man-Month",
+      "type": "concept"
+    },
+    {
+      "name": "Winchester Mystery House",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Talking Postgres",
+      "label": "做客"
+    },
+    {
+      "from": "Claire Giordano",
+      "to": "Talking Postgres",
+      "label": "主持"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude",
+      "label": "用其整理"
+    },
+    {
+      "from": "coding agents",
+      "to": "conceptual integrity",
+      "label": "削弱"
+    },
+    {
+      "from": "conceptual integrity",
+      "to": "The Mythical Man-Month",
+      "label": "出自"
+    },
+    {
+      "from": "Claire Giordano",
+      "to": "Winchester Mystery House",
+      "label": "类比"
+    }
+  ]
+}

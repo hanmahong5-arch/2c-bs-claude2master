@@ -1,0 +1,118 @@
+{
+  "center": "前沿后训练配方演进：从…",
+  "branches": [
+    {
+      "label": "MOPD 成新范式",
+      "detail": "2026 前沿配方转向多教师在线策略蒸馏，取代单一 RL 阶段",
+      "children": [
+        "训练 N 个领域专家教师，各自 SFT 后做 RL",
+        "学生采样自身轨迹，逐 token 最小化对教师的反…",
+        "MiMo Flash v2 首创，DeepSeek V4 扩到 10+…"
+      ]
+    },
+    {
+      "label": "历史配方四阶段",
+      "detail": "从单管道走向多阶段 RL，再到大规模 RL 为中心",
+      "children": [
+        "2022 InstructGPT：SFT → 奖励模型 → PPO",
+        "2024 Llama 3：奖励模型 → 拒绝采样 → SFT →…",
+        "2025 DeepSeek R1：冷启动 SFT → 推理 RL →…"
+      ]
+    },
+    {
+      "label": "2026 各家配方",
+      "detail": "MOPD 并非唯一路线，多阶段 RL 与分阶段 RL 并存",
+      "children": [
+        "Nemotron 3 Ultra：两轮 MOPD，>10 教师",
+        "MAI-Thinking-1：3 次专家 RL + 轨迹蒸馏…",
+        "GLM-5：SFT → 推理 RL → 智能体 RL → 通用 RL"
+      ]
+    },
+    {
+      "label": "MOPD 兴起原因",
+      "detail": "RL 昂贵且能力冲突，专家便宜可并行，在线蒸馏成熟",
+      "children": [
+        "单次 RL 混合数学/代码/智能体会互相权衡",
+        "单领域 SFT+RL 易理解、可并行、组织可扩展",
+        "RLVR 复兴推动在线策略蒸馏know-how积累"
+      ]
+    },
+    {
+      "label": "DeepSeek 演进线",
+      "detail": "从 V3 到 V4 展示配方快速迭代路径",
+      "children": [
+        "V3：SFT + GRPO RL",
+        "V3.2：6 专家 RL → SFT 蒸馏 → 混合 GRPO",
+        "V4：10+ 领域专家 → MOPD"
+      ]
+    }
+  ],
+  "flow": [
+    "SFT 冷启动",
+    "训练领域专家教师",
+    "学生采样自身轨迹",
+    "逐 token 反向 KL 蒸馏",
+    "合并为最终模型"
+  ],
+  "entities": [
+    {
+      "name": "InstructGPT",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek R1",
+      "type": "model"
+    },
+    {
+      "name": "MiMo Flash v2",
+      "type": "model"
+    },
+    {
+      "name": "MOPD",
+      "type": "technique"
+    },
+    {
+      "name": "RLHF",
+      "type": "concept"
+    },
+    {
+      "name": "Finbarr Timbers",
+      "type": "person"
+    },
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "OLMo 3",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "MiMo Flash v2",
+      "to": "MOPD",
+      "label": "首创"
+    },
+    {
+      "from": "DeepSeek R1",
+      "to": "RLHF",
+      "label": "以 RL 为中心"
+    },
+    {
+      "from": "Finbarr Timbers",
+      "to": "OLMo 3",
+      "label": "参与构建"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "OLMo 3",
+      "label": "参与构建"
+    },
+    {
+      "from": "DeepSeek R1",
+      "to": "MOPD",
+      "label": "演进至"
+    }
+  ]
+}

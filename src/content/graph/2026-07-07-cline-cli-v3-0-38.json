@@ -1,0 +1,65 @@
+{
+  "center": "Cline CLI v3.0.38 更新",
+  "branches": [
+    {
+      "label": "模式调色板",
+      "detail": "新增 plan/act 模式配色，act 蓝色、plan 琥珀色，用于对话框与模型选择器",
+      "children": [
+        "优化浅色主题对比度",
+        "Agent 状态视觉区分更清晰"
+      ]
+    },
+    {
+      "label": "聊天输入框重设计",
+      "detail": "极简边框、全宽水平线、加粗提示符号，用户消息气泡更紧凑",
+      "children": [
+        "输入区域更简洁",
+        "减少视觉干扰"
+      ]
+    },
+    {
+      "label": "read_files 容错",
+      "detail": "容忍弱模型格式错误的输入，将独立数组项的行范围条目合并回文件路径",
+      "children": [
+        "提升对弱模型的鲁棒性",
+        "减少输入格式导致的失败"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "plan 模式",
+      "type": "concept"
+    },
+    {
+      "name": "act 模式",
+      "type": "concept"
+    },
+    {
+      "name": "read_files",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "plan 模式",
+      "label": "新增配色"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "act 模式",
+      "label": "新增配色"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "read_files",
+      "label": "增强容错"
+    }
+  ]
+}

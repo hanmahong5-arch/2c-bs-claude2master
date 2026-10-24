@@ -1,0 +1,107 @@
+{
+  "center": "Claude 反思功能：审视 AI 使用",
+  "branches": [
+    {
+      "label": "功能定位",
+      "detail": "Anthropic 推出 beta 版反思功能，帮用户理解如何把 AI 融入日常",
+      "children": [
+        "入口在网页版或桌面版 Settings",
+        "回答该用多少 AI、何时该交给人"
+      ]
+    },
+    {
+      "label": "使用洞察",
+      "detail": "反思面板汇总使用主题、模式与常见任务类型",
+      "children": [
+        "可回看 1/3/6/12 个月聊天记录",
+        "展示使用高峰与所花时间",
+        "将新增使用时长视图"
+      ]
+    },
+    {
+      "label": "自我审视",
+      "detail": "定期抛出问题，邀请用户思考 Claude 在生活中的角色",
+      "children": [
+        "如「哪件事你想自己做」",
+        "可设安静时段或休息提醒"
+      ]
+    },
+    {
+      "label": "4D 能力框架",
+      "detail": "用 Delegation、Description、Discernment、Diligence 四维度评估协作",
+      "children": [
+        "报告给出各维度活动摘要",
+        "建议如用 Project 免重复解释背景"
+      ]
+    },
+    {
+      "label": "隐私边界",
+      "detail": "反思不取用隐身聊天与已连工具的底层文件",
+      "children": [
+        "健康集成相关对话完全排除",
+        "洞察仅留在反思内不作他用",
+        "与 MIT Media Lab 等机构合作"
+      ]
+    }
+  ],
+  "flow": [
+    "开启 Memory",
+    "进入 Settings 选反思",
+    "生成使用报告",
+    "查看四维摘要",
+    "按建议调整用法"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "4D AI Fluency Framework",
+      "type": "concept"
+    },
+    {
+      "name": "MIT Media Lab",
+      "type": "company"
+    },
+    {
+      "name": "Memory",
+      "type": "concept"
+    },
+    {
+      "name": "Project",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "推出"
+    },
+    {
+      "from": "Claude",
+      "to": "4D AI Fluency Framework",
+      "label": "采用"
+    },
+    {
+      "from": "Anthropic",
+      "to": "MIT Media Lab",
+      "label": "合作"
+    },
+    {
+      "from": "Claude",
+      "to": "Memory",
+      "label": "依赖"
+    },
+    {
+      "from": "Claude",
+      "to": "Project",
+      "label": "建议使用"
+    }
+  ]
+}

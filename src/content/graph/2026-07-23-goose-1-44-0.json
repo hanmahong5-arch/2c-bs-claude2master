@@ -1,0 +1,65 @@
+{
+  "center": "Goose v1.44 更新",
+  "branches": [
+    {
+      "label": "新增模型支持",
+      "detail": "agent 可接入更多 LLM 后端",
+      "children": [
+        "Gemini",
+        "GPT-5.6",
+        "Muse Spark 1.1"
+      ]
+    },
+    {
+      "label": "会话编辑",
+      "detail": "新增 --edit 标志，可在分支前编辑对话",
+      "children": [
+        "提升 agent 交互灵活性"
+      ]
+    },
+    {
+      "label": "多语言支持",
+      "detail": "新增 8 种桌面语言",
+      "children": [
+        "法语",
+        "德语"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "Muse Spark 1.1",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "Gemini",
+      "label": "新增支持"
+    },
+    {
+      "from": "Goose",
+      "to": "GPT-5.6",
+      "label": "新增支持"
+    },
+    {
+      "from": "Goose",
+      "to": "Muse Spark 1.1",
+      "label": "新增支持"
+    }
+  ]
+}

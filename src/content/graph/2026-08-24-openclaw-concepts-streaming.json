@@ -1,0 +1,118 @@
+{
+  "center": "OpenClaw 双流式层设计",
+  "branches": [
+    {
+      "label": "双流式层",
+      "detail": "OpenClaw 有块流与预览流两个独立流式层，无真正 token-delta 流式",
+      "children": [
+        "块流：按完成块发普通频道消息",
+        "预览流：更新临时预览消息（Telegram/Discord/…"
+      ]
+    },
+    {
+      "label": "块流控制",
+      "detail": "agents.defaults 下配置块流开关、断点、分块与合并",
+      "children": [
+        "blockStreamingDefault 默认 off",
+        "blockStreamingBreak：text_end / message…",
+        "textChunkLimit 硬上限默认 4000"
+      ]
+    },
+    {
+      "label": "分块算法",
+      "detail": "EmbeddedBlockChunker 按上下界与断点偏好切分",
+      "children": [
+        "低界 minChars，高界 maxChars",
+        "断点链：段落→换行→句子→空白→硬断",
+        "代码围栏内不切，强制时闭合重开"
+      ]
+    },
+    {
+      "label": "合并与节奏",
+      "detail": "合并连续块减少刷屏，并加入类人随机停顿",
+      "children": [
+        "Coalescing 按 idleMs 空闲后刷新",
+        "Discord/Signal/Slack 默认 minChars 1500…",
+        "humanDelay natural 800-2500ms 随机"
+      ]
+    },
+    {
+      "label": "媒体去重",
+      "detail": "块流提前发媒体后，最终载荷重复媒体会被剥离",
+      "children": [
+        "媒体须用 mediaUrl/mediaUrls 结构化字段",
+        "重复最终载荷被抑制，新文本仍发送",
+        "避免 Telegram 重复语音或文件"
+      ]
+    }
+  ],
+  "flow": [
+    "模型输出 text_delta/events",
+    "chunker 按上下界分块",
+    "按 breakPreference 选择断点",
+    "频道发送块回复",
+    "可选合并与类人停顿"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "EmbeddedBlockChunker",
+      "type": "technique"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "blockStreamingBreak",
+      "type": "concept"
+    },
+    {
+      "name": "humanDelay",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "EmbeddedBlockChunker",
+      "label": "实现"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Telegram",
+      "label": "支持预览流"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Discord",
+      "label": "支持预览流"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Slack",
+      "label": "支持预览流"
+    },
+    {
+      "from": "blockStreamingBreak",
+      "to": "OpenClaw",
+      "label": "控制块流"
+    },
+    {
+      "from": "humanDelay",
+      "to": "OpenClaw",
+      "label": "控制节奏"
+    }
+  ]
+}

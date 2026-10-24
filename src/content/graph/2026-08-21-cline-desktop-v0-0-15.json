@@ -1,0 +1,101 @@
+{
+  "center": "Cline 桌面版 v0.0.15 更新",
+  "branches": [
+    {
+      "label": "更名与品牌",
+      "detail": "应用更名为 Cline，品牌与图标更新，设置和会话数据保留",
+      "children": [
+        "品牌与图标更新",
+        "设置和会话数据保留"
+      ]
+    },
+    {
+      "label": "插件中心整合",
+      "detail": "插件、MCP 服务器和技能统一为插件中心，新增 Marketplace 页面",
+      "children": [
+        "统一插件、MCP 服务器和技能",
+        "新增 Marketplace 页面"
+      ]
+    },
+    {
+      "label": "模型选择器优化",
+      "detail": "按推荐和免费分层，显示名称和描述，不再显示原始 ID",
+      "children": [
+        "按推荐和免费分层",
+        "显示名称和描述",
+        "不再显示原始 ID"
+      ]
+    },
+    {
+      "label": "代理能力增强",
+      "detail": "代理可创建持久化待办和一次性/定期日程",
+      "children": [
+        "持久化待办",
+        "一次性/定期日程"
+      ]
+    },
+    {
+      "label": "关键 bug 修复",
+      "detail": "修复检查点恢复、会话状态、耗时统计、复制消息、代码块折叠等问题",
+      "children": [
+        "检查点恢复",
+        "会话状态",
+        "耗时统计"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Marketplace",
+      "type": "product"
+    },
+    {
+      "name": "AMD",
+      "type": "company"
+    },
+    {
+      "name": "Arcee",
+      "type": "company"
+    },
+    {
+      "name": "PowerShell",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "MCP",
+      "label": "整合"
+    },
+    {
+      "from": "Cline",
+      "to": "Marketplace",
+      "label": "新增"
+    },
+    {
+      "from": "Cline",
+      "to": "AMD",
+      "label": "新增提供商"
+    },
+    {
+      "from": "Cline",
+      "to": "Arcee",
+      "label": "新增提供商"
+    },
+    {
+      "from": "Cline",
+      "to": "PowerShell",
+      "label": "修复命令"
+    }
+  ]
+}

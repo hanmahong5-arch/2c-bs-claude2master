@@ -31,7 +31,13 @@ function resolveKind(c: ChangelogItem): ChangelogKind {
   if (c.kind === "practice") return "practice";
   if (c.kind === "trending") return "trending";
   if (c.kind === "blogger") return "blogger";
+  if (c.kind === "community") return "community";
   return "changelog";
+}
+
+// 官方博客 (模型实验室 / AI 公司) 与个人观点分开展示; 旧条目无 category 视为个人
+function isOfficial(c: ChangelogItem): boolean {
+  return c.category === "lab" || c.category === "company";
 }
 
 const TOOL_NAMES = toolListCopy("full");
@@ -53,6 +59,11 @@ function ChangelogCard({ c }: { c: ChangelogItem }) {
           <span className="pill text-[10px]">
             {k === "blogger" ? (c.author ?? c.source) : c.source}
           </span>
+          {c.hasGraph && (
+            <span className="pill text-[10px] bg-[var(--c2m-accent-soft)] text-[var(--c2m-accent-deep)]">
+              🧭 一图看懂
+            </span>
+          )}
         </div>
         <h3 className="text-xl font-semibold text-[var(--lt-ink)] group-hover:text-[var(--c2m-accent-deep)] transition-colors">
           {c.title}
@@ -75,7 +86,11 @@ function ChangelogCard({ c }: { c: ChangelogItem }) {
           </span>
           <span className="inline-flex items-center gap-1.5">
             <Github size={12} />
-            {k === "practice" || k === "blogger" ? "原文" : "原文 release"}
+            {k === "community"
+              ? "讨论原帖"
+              : k === "practice" || k === "blogger"
+                ? "原文"
+                : "原文 release"}
           </span>
         </div>
       </Link>
@@ -158,13 +173,24 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
       raw === "practice" ||
       raw === "trending" ||
       raw === "blogger" ||
+      raw === "official" ||
+      raw === "community" ||
       !!toolForKey(raw),
     "all",
   );
 
   // items 已按 publishedAt 倒序(getChangelog),组内顺序天然倒序。
-  const { byKey, other, practices, trending, bloggers, bloggersByAuthor } =
-    useMemo(() => {
+  const {
+    byKey,
+    other,
+    practices,
+    trending,
+    bloggers,
+    bloggersByAuthor,
+    officials,
+    officialsByAuthor,
+    community,
+  } = useMemo(() => {
       const byKey = new Map<string, ChangelogItem[]>();
       const other: ChangelogItem[] = [];
       const practices: ChangelogItem[] = [];
@@ -172,6 +198,10 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
       const bloggers: ChangelogItem[] = [];
       // 「观点」段二级分组: author → 该博主条目 (保持 date-desc 插入序)
       const bloggersByAuthor = new Map<string, ChangelogItem[]>();
+      // 「官方博客」段: 按 author 分组 (与「观点」段同构)
+      const officials: ChangelogItem[] = [];
+      const officialsByAuthor = new Map<string, ChangelogItem[]>();
+      const community: ChangelogItem[] = [];
       for (const c of items) {
         const k = resolveKind(c);
         if (k === "practice") {
@@ -182,12 +212,18 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
           trending.push(c);
           continue;
         }
+        if (k === "community") {
+          community.push(c);
+          continue;
+        }
         if (k === "blogger") {
-          bloggers.push(c);
           const author = c.author ?? c.source;
-          const arr = bloggersByAuthor.get(author) ?? [];
+          const official = isOfficial(c);
+          (official ? officials : bloggers).push(c);
+          const groups = official ? officialsByAuthor : bloggersByAuthor;
+          const arr = groups.get(author) ?? [];
           arr.push(c);
-          bloggersByAuthor.set(author, arr);
+          groups.set(author, arr);
           continue;
         }
         const tool = toolForSource(c.source);
@@ -199,7 +235,17 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
           other.push(c);
         }
       }
-      return { byKey, other, practices, trending, bloggers, bloggersByAuthor };
+      return {
+        byKey,
+        other,
+        practices,
+        trending,
+        bloggers,
+        bloggersByAuthor,
+        officials,
+        officialsByAuthor,
+        community,
+      };
     }, [items]);
 
   // pill 只显示有内容的工具,避免点进去空白。
@@ -209,6 +255,12 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
     ...toolFilters.map((t) => ({ value: t.key, label: t.name })),
     ...(trending.length > 0
       ? [{ value: "trending", label: "🔥 热门" }]
+      : []),
+    ...(community.length > 0
+      ? [{ value: "community", label: "💭 热议" }]
+      : []),
+    ...(officials.length > 0
+      ? [{ value: "official", label: "🏢 官方博客" }]
       : []),
     ...(bloggers.length > 0
       ? [{ value: "blogger", label: "💬 观点" }]
@@ -353,6 +405,27 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
               </section>
             );
           })()}
+          {community.length > 0 && (
+            <ToolSection name="💭 社区热议 · 一线开发者和大佬怎么看" version={null} items={community} />
+          )}
+          {officials.length > 0 && (
+            <section className="mb-10">
+              <h2 className="text-lg font-semibold text-[var(--lt-ink)] inline-flex items-center gap-2 mb-4">
+                <span className="text-[var(--lt-info)]">●</span>
+                🏢 官方博客 · 实验室与 AI 原生公司
+              </h2>
+              <div className="pl-1">
+                {[...officialsByAuthor.entries()].map(([author, group]) => (
+                  <ToolSection
+                    key={`official-${author}`}
+                    name={author}
+                    version={null}
+                    items={group}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
           {trending.length > 0 && (
             <ToolSection name="🔥 热门项目" version={null} items={trending} />
           )}
@@ -396,6 +469,18 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
       ) : filter === "blogger" ? (
         <ul className="space-y-4">
           {bloggers.map((c) => (
+            <ChangelogCard key={c.slug} c={c} />
+          ))}
+        </ul>
+      ) : filter === "official" ? (
+        <ul className="space-y-4">
+          {officials.map((c) => (
+            <ChangelogCard key={c.slug} c={c} />
+          ))}
+        </ul>
+      ) : filter === "community" ? (
+        <ul className="space-y-4">
+          {community.map((c) => (
             <ChangelogCard key={c.slug} c={c} />
           ))}
         </ul>

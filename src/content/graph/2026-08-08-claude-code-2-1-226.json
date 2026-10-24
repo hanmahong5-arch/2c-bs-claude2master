@@ -1,0 +1,47 @@
+{
+  "center": "Claude Code v2.1.226 更新",
+  "branches": [
+    {
+      "label": "修复 bug",
+      "detail": "修复若干 bug，提升整体稳定性",
+      "children": []
+    },
+    {
+      "label": "可靠性提升",
+      "detail": "可靠性改进，减少意外中断",
+      "children": []
+    },
+    {
+      "label": "对 agent harness 影响",
+      "detail": "依赖更稳的 CLI 工具链，减少重试和错误处理成本",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "CLI",
+      "label": "依赖"
+    },
+    {
+      "from": "agent harness",
+      "to": "CLI",
+      "label": "依赖"
+    }
+  ]
+}

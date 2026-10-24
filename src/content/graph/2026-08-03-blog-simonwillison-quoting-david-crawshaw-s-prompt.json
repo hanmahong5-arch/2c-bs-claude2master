@@ -1,0 +1,102 @@
+{
+  "center": "David Crawshaw 的 nightly…",
+  "branches": [
+    {
+      "label": "核心提示词",
+      "detail": "用 nightly cron 自动拉取上游改动并 rebase 本地修改",
+      "children": [
+        "fetch upstream changes 到 <software>",
+        "rebase all local changes on top of…",
+        "检查软件是否正常工作并替换当前版本"
+      ]
+    },
+    {
+      "label": "出处与作者",
+      "detail": "David Crawshaw 提出，Simon Willison 博客引用",
+      "children": [
+        "出自 Devtools must be open source",
+        "Simon Willison 于 2026-08-03 收录"
+      ]
+    },
+    {
+      "label": "执行方式",
+      "detail": "以 nightly cron job 定时自动执行该提示词",
+      "children": [
+        "每晚定时运行",
+        "无需人工介入"
+      ]
+    },
+    {
+      "label": "适用场景",
+      "detail": "面向开源开发工具的持续同步与验证",
+      "children": [
+        "标签：open-source、coding-agents",
+        "强调 devtools 必须开源"
+      ]
+    }
+  ],
+  "flow": [
+    "nightly cron 触发",
+    "拉取上游改动",
+    "rebase 本地修改",
+    "验证软件可用",
+    "替换当前版本"
+  ],
+  "entities": [
+    {
+      "name": "David Crawshaw",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "nightly cron",
+      "type": "technique"
+    },
+    {
+      "name": "rebase",
+      "type": "technique"
+    },
+    {
+      "name": "prompt-engineering",
+      "type": "concept"
+    },
+    {
+      "name": "open-source",
+      "type": "concept"
+    },
+    {
+      "name": "coding-agents",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "David Crawshaw",
+      "to": "nightly cron",
+      "label": "提出"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "David Crawshaw",
+      "label": "引用"
+    },
+    {
+      "from": "nightly cron",
+      "to": "rebase",
+      "label": "执行"
+    },
+    {
+      "from": "rebase",
+      "to": "open-source",
+      "label": "服务"
+    },
+    {
+      "from": "prompt-engineering",
+      "to": "coding-agents",
+      "label": "关联"
+    }
+  ]
+}

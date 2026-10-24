@@ -1,0 +1,113 @@
+{
+  "center": "llm-anthropic 0.26 发布",
+  "branches": [
+    {
+      "label": "新增模型",
+      "detail": "插件支持三款 Claude 5 系列新模型",
+      "children": [
+        "claude-fable-5",
+        "claude-sonnet-5",
+        "claude-opus-5"
+      ]
+    },
+    {
+      "label": "服务端工具",
+      "detail": "新增 WebSearch、WebFetch、CodeExecution、AnthropicMCP 四类服务端工具",
+      "children": [
+        "通过 -T 接口或 Python tools= 调用",
+        "移除旧 -o web_search* 选项"
+      ]
+    },
+    {
+      "label": "流式事件",
+      "detail": "升级至 llm>=0.32，推理与工具结果以类型化事件流式输出",
+      "children": [
+        "CLI 推理默认输出到 stderr",
+        "可用 -R 隐藏推理"
+      ]
+    },
+    {
+      "label": "思考配置简化",
+      "detail": "扩展思考简化为 thinking 与 thinking_effort 两个选项",
+      "children": [
+        "effort 取值 low/medium/high/xhigh/max",
+        "Claude 5 默认思考，-o thinking 0 可关闭",
+        "Fable 5 始终思考"
+      ]
+    },
+    {
+      "label": "移除旧选项",
+      "detail": "清理过时的思考相关参数",
+      "children": [
+        "移除 thinking_budget、thinking_display…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "llm-anthropic",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "claude-fable-5",
+      "type": "model"
+    },
+    {
+      "name": "claude-sonnet-5",
+      "type": "model"
+    },
+    {
+      "name": "claude-opus-5",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "llm-anthropic",
+      "to": "LLM",
+      "label": "依赖"
+    },
+    {
+      "from": "llm-anthropic",
+      "to": "Anthropic",
+      "label": "接入"
+    },
+    {
+      "from": "llm-anthropic",
+      "to": "claude-fable-5",
+      "label": "新增支持"
+    },
+    {
+      "from": "llm-anthropic",
+      "to": "claude-sonnet-5",
+      "label": "新增支持"
+    },
+    {
+      "from": "llm-anthropic",
+      "to": "claude-opus-5",
+      "label": "新增支持"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "llm-anthropic",
+      "label": "发布"
+    }
+  ]
+}

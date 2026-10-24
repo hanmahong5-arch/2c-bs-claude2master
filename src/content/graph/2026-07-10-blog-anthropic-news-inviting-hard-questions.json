@@ -1,0 +1,116 @@
+{
+  "center": "Anthropic 征集 AI 硬核问题",
+  "branches": [
+    {
+      "label": "公众提问倡议",
+      "detail": "Anthropic 公开邀请公众提交关于 AI 的最难问题，并承诺公开回应",
+      "children": [
+        "问题涵盖就业、社会、家庭、科学医学",
+        "将公开追踪并报告具体行动",
+        "承认可能达不到既定目标"
+      ]
+    },
+    {
+      "label": "公众既有调研",
+      "detail": "已通过多种方式收集数万人的 AI 观点",
+      "children": [
+        "Anthropic Public Record 首轮调查 5.2 万美…",
+        "Anthropic Interviewer 调查 159 国 8.1 万…",
+        "数十场线下焦点小组"
+      ]
+    },
+    {
+      "label": "公众的希望与担忧",
+      "detail": "人们对 AI 既期待其潜力，也担忧其风险",
+      "children": [
+        "希望：减轻劳动、加速科研、解决医疗问题",
+        "担忧：失业、创意贬值、人类自主性",
+        "担忧能力落入坏人之手"
+      ]
+    },
+    {
+      "label": "Anthropic 公益行动",
+      "detail": "作为公益公司，已投入多项举措保障 AI 公共利益",
+      "children": [
+        "投资 AI 安全防护减少滥用",
+        "研究模型行为与内部机制以对齐目标",
+        "免费向科学家提供模型、设立 fellowship"
+      ]
+    },
+    {
+      "label": "治理与监督机构",
+      "detail": "设立内部研究机构与独立监督信托",
+      "children": [
+        "Anthropic Institute 研究 AI 社会挑战",
+        "Long-Term Benefit Trust 提供公正监督"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic Public Record",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic Interviewer",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic Institute",
+      "type": "company"
+    },
+    {
+      "name": "Long-Term Benefit Trust",
+      "type": "company"
+    },
+    {
+      "name": "AI 安全防护",
+      "type": "concept"
+    },
+    {
+      "name": "AI 对齐",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Anthropic Public Record",
+      "label": "发起"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Anthropic Interviewer",
+      "label": "发起"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Anthropic Institute",
+      "label": "设立"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Long-Term Benefit Trust",
+      "label": "受监督"
+    },
+    {
+      "from": "Anthropic",
+      "to": "AI 对齐",
+      "label": "研究"
+    }
+  ]
+}

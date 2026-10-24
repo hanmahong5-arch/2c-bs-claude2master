@@ -1,0 +1,81 @@
+{
+  "center": "Gemini CLI 多工具并行调用",
+  "branches": [
+    {
+      "label": "并行工具调用",
+      "detail": "多个工具可同时执行，减少等待时间",
+      "children": [
+        "需处理并发结果合并与冲突解决"
+      ]
+    },
+    {
+      "label": "工具结果缓存",
+      "detail": "新增缓存避免重复调用，提升性能",
+      "children": [
+        "需考虑缓存失效策略与一致性"
+      ]
+    },
+    {
+      "label": "错误处理改进",
+      "detail": "提供更详细的工具错误信息",
+      "children": [
+        "需增强错误恢复与重试机制"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Gemini CLI",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "并行工具调用",
+      "type": "technique"
+    },
+    {
+      "name": "工具结果缓存",
+      "type": "technique"
+    },
+    {
+      "name": "错误处理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemini CLI",
+      "to": "并行工具调用",
+      "label": "新增"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "工具结果缓存",
+      "label": "新增"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "错误处理",
+      "label": "改进"
+    },
+    {
+      "from": "并行工具调用",
+      "to": "agent harness",
+      "label": "影响设计"
+    },
+    {
+      "from": "工具结果缓存",
+      "to": "agent harness",
+      "label": "影响设计"
+    },
+    {
+      "from": "错误处理",
+      "to": "agent harness",
+      "label": "影响设计"
+    }
+  ]
+}

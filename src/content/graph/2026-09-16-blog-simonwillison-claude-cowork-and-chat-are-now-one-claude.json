@@ -1,0 +1,102 @@
+{
+  "center": "Claude Cowork 与聊天合并",
+  "branches": [
+    {
+      "label": "合并内容",
+      "detail": "Claude Cowork 与聊天合并为单一 Claude，用户无需再区分两者",
+      "children": [
+        "提问或交付报告都由 Claude 接手",
+        "关闭笔记本后任务仍继续"
+      ]
+    },
+    {
+      "label": "推送节奏",
+      "detail": "先在 Pro 和 Max 套餐推出，随后数周内覆盖网页、桌面与移动端",
+      "children": [
+        "面向现有及新用户",
+        "Claude app 全平台"
+      ]
+    },
+    {
+      "label": "定位变化",
+      "detail": "Simon Willison 认为 Claude 正成为独立的通用智能体",
+      "children": [
+        "呼应 OpenAI 将 Codex 桌面应用改名 ChatGPT"
+      ]
+    },
+    {
+      "label": "作者反应",
+      "detail": "省去梳理 Cowork 与普通 Claude 边界的工作，但理解实际功能仍需投入",
+      "children": [
+        "原计划写 Understanding ChatGPT Work 续篇"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Claude Cowork",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Cowork",
+      "label": "推出"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "合并为"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "Claude",
+      "label": "并入"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude",
+      "label": "评论"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "改名"
+    },
+    {
+      "from": "Codex",
+      "to": "ChatGPT",
+      "label": "更名为"
+    }
+  ]
+}

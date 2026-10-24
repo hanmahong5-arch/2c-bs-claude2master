@@ -1,0 +1,74 @@
+{
+  "center": "vLLM 后端加速 Transformers 推理",
+  "branches": [
+    {
+      "label": "核心变化",
+      "detail": "Hugging Face 为 Transformers 引入 vLLM 建模后端，实现原生速度推理",
+      "children": [
+        "模型定义与执行图分离",
+        "运行时重写模型代码"
+      ]
+    },
+    {
+      "label": "技术手段",
+      "detail": "运行时用融合 kernel 替换原有模块以提升执行效率",
+      "children": [
+        "模块被 fused kernels 替换",
+        "推理图与源码不再同一产物"
+      ]
+    },
+    {
+      "label": "溯源影响",
+      "detail": "部署证据需同时保留源模型身份与转换/运行时路径",
+      "children": [
+        "保留 source model identity",
+        "记录 transformation/runtime path"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "vLLM",
+      "type": "product"
+    },
+    {
+      "name": "Transformers",
+      "type": "product"
+    },
+    {
+      "name": "fused kernels",
+      "type": "technique"
+    },
+    {
+      "name": "inference graph",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "vLLM",
+      "label": "推出后端"
+    },
+    {
+      "from": "vLLM",
+      "to": "Transformers",
+      "label": "作为后端"
+    },
+    {
+      "from": "vLLM",
+      "to": "fused kernels",
+      "label": "使用"
+    },
+    {
+      "from": "vLLM",
+      "to": "inference graph",
+      "label": "重写"
+    }
+  ]
+}

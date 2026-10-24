@@ -1,0 +1,97 @@
+{
+  "center": "Travelers 部署 AI 理赔助手",
+  "branches": [
+    {
+      "label": "全国部署",
+      "detail": "Travelers 与 OpenAI 合作，将 AI 理赔助手推广至全国",
+      "children": [
+        "覆盖全美理赔流程",
+        "基于 OpenAI 技术"
+      ]
+    },
+    {
+      "label": "自动化引导",
+      "detail": "助手逐步指导客户完成报案，减少人工介入",
+      "children": [
+        "标准化复杂流程",
+        "降低运营成本"
+      ]
+    },
+    {
+      "label": "全天候支持",
+      "detail": "提供 24/7 即时响应，满足峰值需求",
+      "children": [
+        "任何时间获得帮助",
+        "扩展服务能力"
+      ]
+    },
+    {
+      "label": "弹性扩展",
+      "detail": "系统在需求高峰自动调整资源，保持稳定",
+      "children": [
+        "确保可扩展性",
+        "保障可靠性"
+      ]
+    }
+  ],
+  "flow": [
+    "客户发起理赔",
+    "AI 助手引导报案",
+    "自动处理请求",
+    "人工介入减少",
+    "完成理赔"
+  ],
+  "entities": [
+    {
+      "name": "Travelers",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AI 理赔助手",
+      "type": "product"
+    },
+    {
+      "name": "自动化理赔引导",
+      "type": "concept"
+    },
+    {
+      "name": "全天候支持",
+      "type": "concept"
+    },
+    {
+      "name": "弹性扩展",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Travelers",
+      "to": "OpenAI",
+      "label": "合作"
+    },
+    {
+      "from": "Travelers",
+      "to": "AI 理赔助手",
+      "label": "部署"
+    },
+    {
+      "from": "AI 理赔助手",
+      "to": "自动化理赔引导",
+      "label": "实现"
+    },
+    {
+      "from": "AI 理赔助手",
+      "to": "全天候支持",
+      "label": "提供"
+    },
+    {
+      "from": "AI 理赔助手",
+      "to": "弹性扩展",
+      "label": "支持"
+    }
+  ]
+}

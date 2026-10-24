@@ -1,0 +1,61 @@
+{
+  "center": "claude-code v2.1.173 修复",
+  "branches": [
+    {
+      "label": "Fable 5 后缀修复",
+      "detail": "带 [1m] 后缀的模型名未标准化，现自动剥离",
+      "children": [
+        "Fable 5 默认包含 1M 上下文",
+        "agent harness 需注意后缀隐式含义"
+      ]
+    },
+    {
+      "label": "Windows 沙盒误报",
+      "detail": "修复启用沙盒时虚假的依赖缺失启动警告",
+      "children": [
+        "警告文案：sandbox dependencies missing",
+        "环境检测需区分真实缺失与误报"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Windows",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "沙盒",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "Fable 5",
+      "label": "修复后缀"
+    },
+    {
+      "from": "claude-code",
+      "to": "Windows",
+      "label": "修复误报"
+    },
+    {
+      "from": "agent harness",
+      "to": "Fable 5",
+      "label": "处理标识"
+    }
+  ]
+}

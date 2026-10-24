@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw 重试策略",
+  "branches": [
+    {
+      "label": "重试原则",
+      "detail": "按单个 HTTP 请求重试，而非整个多步流程",
+      "children": [
+        "只重试当前步骤以保持消息顺序",
+        "避免重复执行非幂等操作",
+        "复合流程不重试已完成的步骤"
+      ]
+    },
+    {
+      "label": "默认参数",
+      "detail": "频道发送默认尝试 3 次，抖动 10%",
+      "children": [
+        "最小延迟 400ms，Discord 为 500ms",
+        "最大延迟上限 30s，Discord REST 为 300s",
+        "Discord 网关重连独立：最多 50 次，无抖动"
+      ]
+    },
+    {
+      "label": "模型恢复",
+      "detail": "自动恢复限流、过载和临时故障",
+      "children": [
+        "限流最多 10 次尝试，其他故障 8 次重试",
+        "90 秒重试窗口，成功响应可清除窗口",
+        "退避从约 1 秒指数增长并加抖动"
+      ]
+    },
+    {
+      "label": "恢复行为",
+      "detail": "继续现有对话，保留已完成工作",
+      "children": [
+        "恢复时检查中断操作再决定是否重复",
+        "不重新提交原始用户请求",
+        "仅最终失败保留错误，恢复不留持久错误"
+      ]
+    },
+    {
+      "label": "特殊场景",
+      "detail": "Git、Discord、Telegram 等有独立策略",
+      "children": [
+        "Git 临时 fetch 失败延迟 1 秒重试一次",
+        "Discord/Telegram 使用 retry_after 或指数…",
+        "SDK 长等待注入 x-should-retry: false"
+      ]
+    }
+  ],
+  "flow": [
+    "发起请求",
+    "检测临时错误",
+    "计算退避延迟",
+    "重试当前步骤",
+    "成功则清除窗口",
+    "失败则回退或报错"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Retry-After",
+      "type": "concept"
+    },
+    {
+      "name": "指数退避",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Discord",
+      "label": "重试发送"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Telegram",
+      "label": "重试发送"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Anthropic",
+      "label": "调用 SDK"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "OpenAI",
+      "label": "调用 SDK"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "ChatGPT",
+      "label": "处理 SSE"
+    },
+    {
+      "from": "指数退避",
+      "to": "Retry-After",
+      "label": "结合使用"
+    }
+  ]
+}

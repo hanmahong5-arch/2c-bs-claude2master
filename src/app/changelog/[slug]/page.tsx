@@ -4,7 +4,16 @@ import { ArrowLeft, Calendar, ExternalLink } from "lucide-react";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { getChangelog, getChangelogBySlug } from "@/lib/content";
+import {
+  getArticleGraph,
+  getChangelog,
+  getChangelogBySlug,
+  getConceptGraph,
+  getGraphDocs,
+} from "@/lib/content";
+import { relatedByGraph } from "@/lib/graph";
+import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
+import ArticleGraphPanel from "@/components/graph/ArticleGraphPanel";
 import {
   KIND_LABEL,
   type ChangelogKind,
@@ -67,15 +76,26 @@ export default async function ChangelogDetail({
   const item = await getChangelogBySlug(slug);
   if (!item) notFound();
 
+  const [graph, concept, graphDocs] = await Promise.all([
+    getArticleGraph(item.slug),
+    getConceptGraph(),
+    getGraphDocs(),
+  ]);
+  const knownConcepts = new Set(concept.nodes.map((n) => n.key));
+  const related = relatedByGraph(item.slug, graphDocs, 4);
+  const askPrompt = `请用通俗中文帮我讲透这篇：「${item.title}」。要点：${item.hook}。它对国内开发者有什么实际影响？我该怎么用上？`;
+
   const jsonLd = changelogJsonLd(item);
   const pageUrl = `https://claude2master.com/changelog/${item.slug}`;
   // 原文链接文案随 kind 变化: release→"原文 release", 热门→"项目主页", 实践/观点→"原文"
   const sourceLabel =
     item.kind === "trending"
       ? "项目主页"
-      : item.kind === "practice" || item.kind === "blogger"
-        ? "原文"
-        : "原文 release";
+      : item.kind === "community"
+        ? "讨论原帖"
+        : item.kind === "practice" || item.kind === "blogger"
+          ? "原文"
+          : "原文 release";
 
   return (
     <article className="max-w-3xl mx-auto px-6 py-12 md:py-16">
@@ -94,14 +114,7 @@ export default async function ChangelogDetail({
 
       <div className="flex items-center gap-2 mb-3 flex-wrap">
         {(() => {
-          const k: ChangelogKind =
-            item.kind === "practice"
-              ? "practice"
-              : item.kind === "trending"
-                ? "trending"
-                : item.kind === "blogger"
-                  ? "blogger"
-                  : "changelog";
+          const k: ChangelogKind = item.kind ?? "changelog";
           const meta = KIND_LABEL[k];
           return (
             <span className={`pill text-[10px] ${meta.className}`}>
@@ -149,6 +162,8 @@ export default async function ChangelogDetail({
         为准。
       </div>
 
+      {graph && <ArticleGraphPanel graph={graph} knownConcepts={knownConcepts} />}
+
       <div className="tutorial-md">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.body}</ReactMarkdown>
       </div>
@@ -158,6 +173,60 @@ export default async function ChangelogDetail({
           <p className="eyebrow mb-2">Lurus 视角</p>
           <p>{item.insight}</p>
         </aside>
+      )}
+
+      <div className="mt-10 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-elevated)] p-5 flex flex-col sm:flex-row gap-3 sm:items-center justify-between">
+        <p className="text-sm text-[var(--color-text-secondary)]">
+          还没吃透？把这篇丢给 AI 助手，让它结合你的场景讲清楚。
+        </p>
+        <div className="flex gap-2 shrink-0">
+          <TrackedLink
+            href={`/chat?ask=${encodeURIComponent(askPrompt)}`}
+            event="radar_ask_ai"
+            data={{ slug: item.slug }}
+            className="btn btn-primary text-sm"
+          >
+            带着这篇去问 AI
+          </TrackedLink>
+          <TrackedLink
+            href={buildOutbound("newapi", OUTBOUND_CAMPAIGN.radarArticle)}
+            event="outbound_newapi"
+            data={{ campaign: OUTBOUND_CAMPAIGN.radarArticle, slug: item.slug }}
+            external
+            className="btn btn-secondary text-sm"
+          >
+            国内直连这些模型
+          </TrackedLink>
+        </div>
+      </div>
+
+      {related.length > 0 && (
+        <section className="mt-12 pt-8 border-t border-[var(--color-border)]">
+          <h2 className="text-lg font-semibold text-[var(--lt-ink)] mb-4">🕸 顺着图谱继续读</h2>
+          <ul className="grid gap-3 md:grid-cols-2">
+            {related.map(({ doc, shared }) => (
+              <li key={doc.slug}>
+                <Link
+                  href={`/changelog/${doc.slug}`}
+                  className="card group flex flex-col gap-2 h-full"
+                >
+                  <span className="text-sm font-semibold text-[var(--lt-ink)] group-hover:text-[var(--c2m-accent-deep)] transition-colors line-clamp-2">
+                    {doc.title}
+                  </span>
+                  <span className="text-xs text-[var(--color-text-muted)]">
+                    {doc.publishedAt} · 共同涉及 {shared.slice(0, 3).join("、")}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <Link
+            href="/graph"
+            className="inline-flex items-center gap-1 mt-4 text-sm text-[var(--c2m-accent-deep)] hover:underline"
+          >
+            打开全站 AI 知识图谱 →
+          </Link>
+        </section>
       )}
 
       <ShareButtons

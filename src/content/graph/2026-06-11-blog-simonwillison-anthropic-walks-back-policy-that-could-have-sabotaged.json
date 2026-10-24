@@ -1,0 +1,105 @@
+{
+  "center": "Anthropic 撤回隐形安全策略",
+  "branches": [
+    {
+      "label": "政策争议",
+      "detail": "Claude Fable/Mythos 被指暗中限制前沿 LLM 开发请求且不告知用户",
+      "children": [
+        "政策藏在系统卡中，社区强烈反对",
+        "被批可能『破坏』AI 研究者工作"
+      ]
+    },
+    {
+      "label": "官方回应",
+      "detail": "Anthropic 承认做错权衡并道歉，改为可见的安全措施",
+      "children": [
+        "『我们做了错误的权衡』",
+        "Wired 记者 Maxwell Zeff 独家报道"
+      ]
+    },
+    {
+      "label": "具体改动",
+      "detail": "被标记请求将可见地回退到 Opus 4.8，与网络安全和生物安全措施一致",
+      "children": [
+        "API 返回拒绝原因",
+        "本周起每次触发用户都能看到"
+      ]
+    },
+    {
+      "label": "权衡原因",
+      "detail": "为快速安全上线 Fable 5 曾选隐形措施，因可见措施需可探测、更耗时",
+      "children": [
+        "隐形措施可更窄定位、误报少",
+        "官方承认这是错误取舍"
+      ]
+    }
+  ],
+  "flow": [
+    "系统卡隐藏限制政策",
+    "社区强烈反对",
+    "Anthropic 承认错误",
+    "改为可见回退 Opus 4.8",
+    "API 返回拒绝原因"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Mythos",
+      "type": "model"
+    },
+    {
+      "name": "Maxwell Zeff",
+      "type": "person"
+    },
+    {
+      "name": "Wired",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Fable 5",
+      "label": "撤回政策"
+    },
+    {
+      "from": "Fable 5",
+      "to": "Opus 4.8",
+      "label": "回退至"
+    },
+    {
+      "from": "Maxwell Zeff",
+      "to": "Wired",
+      "label": "供职于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Anthropic",
+      "label": "报道"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    }
+  ]
+}

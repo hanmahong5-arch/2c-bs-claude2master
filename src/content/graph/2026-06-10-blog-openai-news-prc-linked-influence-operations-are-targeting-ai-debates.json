@@ -1,0 +1,93 @@
+{
+  "center": "OpenAI 报告：中国关联组织用 AI…",
+  "branches": [
+    {
+      "label": "操作目标",
+      "detail": "针对 AI、数据中心选址、对华关税等美国科技政策议题",
+      "children": [
+        "散布关于 ChatGPT 的虚假声明",
+        "试图在多个政策层面植入叙事"
+      ]
+    },
+    {
+      "label": "操作手段",
+      "detail": "利用生成式 AI 生成文本，可能创建虚假账号或自动化发布",
+      "children": [
+        "AI 生成文本内容",
+        "可能用于虚假社交媒体账号",
+        "可能自动化内容发布"
+      ]
+    },
+    {
+      "label": "核心意图",
+      "detail": "影响美国技术监管、产业发展和国际竞争的公共讨论氛围",
+      "children": [
+        "塑造科技辩论",
+        "影响舆论氛围"
+      ]
+    },
+    {
+      "label": "应对挑战",
+      "detail": "对内容审核和事实核查工具提出新挑战，需更复杂识别机制",
+      "children": [
+        "内容审核挑战",
+        "事实核查挑战",
+        "需识别 AI 增强的舆论影响"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "生成式 AI",
+      "type": "concept"
+    },
+    {
+      "name": "影响力操作",
+      "type": "concept"
+    },
+    {
+      "name": "内容审核",
+      "type": "concept"
+    },
+    {
+      "name": "事实核查",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "开发"
+    },
+    {
+      "from": "OpenAI",
+      "to": "影响力操作",
+      "label": "报告"
+    },
+    {
+      "from": "影响力操作",
+      "to": "生成式 AI",
+      "label": "利用"
+    },
+    {
+      "from": "影响力操作",
+      "to": "内容审核",
+      "label": "挑战"
+    },
+    {
+      "from": "影响力操作",
+      "to": "事实核查",
+      "label": "挑战"
+    }
+  ]
+}

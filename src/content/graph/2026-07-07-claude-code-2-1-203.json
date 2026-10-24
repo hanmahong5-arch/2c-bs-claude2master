@@ -1,0 +1,91 @@
+{
+  "center": "claude-code v2.1.203 修复与优化",
+  "branches": [
+    {
+      "label": "后台会话稳定性",
+      "detail": "修复后台会话卡死、无响应与认证中断问题",
+      "children": [
+        "新增登录过期警告，避免认证失效中断",
+        "修复macOS低内存误判卡死15-20秒",
+        "修复守护进程令牌过期永久无响应，现自动恢复"
+      ]
+    },
+    {
+      "label": "子代理状态保留",
+      "detail": "修复返回claude agents时子代理被静默终止",
+      "children": [
+        "子代理工作得以保留，状态需持久化"
+      ]
+    },
+    {
+      "label": "性能与资源优化",
+      "detail": "减少二进制大小和启动内存各约7MB",
+      "children": [
+        "修复上下文指示器每轮全量重分析导致内存CPU回归",
+        "延迟加载优化资源占用"
+      ]
+    },
+    {
+      "label": "环境与配置修复",
+      "detail": "修复后台代理继承过时PATH及忽略effortLevel变更",
+      "children": [
+        "Windows上工具缺失问题修复，环境变量从调度…",
+        "后台会话现实时响应effortLevel设置变更"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "macOS",
+      "type": "concept"
+    },
+    {
+      "name": "Windows",
+      "type": "concept"
+    },
+    {
+      "name": "claude agents",
+      "type": "product"
+    },
+    {
+      "name": "effortLevel",
+      "type": "concept"
+    },
+    {
+      "name": "PATH",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "macOS",
+      "label": "修复于"
+    },
+    {
+      "from": "claude-code",
+      "to": "Windows",
+      "label": "修复于"
+    },
+    {
+      "from": "claude-code",
+      "to": "claude agents",
+      "label": "修复"
+    },
+    {
+      "from": "claude-code",
+      "to": "effortLevel",
+      "label": "响应"
+    },
+    {
+      "from": "claude-code",
+      "to": "PATH",
+      "label": "继承"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "center": "Simon Willison 2026年5月月报",
+  "branches": [
+    {
+      "label": "AI 成本飙升",
+      "detail": "本月 AI 使用成本明显上升，Anthropic 表现亮眼",
+      "children": [
+        "Anthropic 度过了一个非常好的月份"
+      ]
+    },
+    {
+      "label": "模型发布平淡",
+      "detail": "本月的模型发布整体令人有些失望",
+      "children": []
+    },
+    {
+      "label": "Datasette 进展",
+      "detail": "Simon 发布 Datasette Agent 并推进 Datasette 开发",
+      "children": [
+        "推出 Datasette Agent"
+      ]
+    },
+    {
+      "label": "会议与播客",
+      "detail": "本月参与了会议和播客活动",
+      "children": []
+    },
+    {
+      "label": "工具使用清单",
+      "detail": "分享 2026 年 5 月自己在用的工具",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Datasette Agent",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "开发"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Datasette Agent",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "LLM",
+      "label": "关注"
+    }
+  ]
+}

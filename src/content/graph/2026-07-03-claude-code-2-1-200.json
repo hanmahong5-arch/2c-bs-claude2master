@@ -1,0 +1,84 @@
+{
+  "center": "claude-code v2.1.200 更新",
+  "branches": [
+    {
+      "label": "权限改 Manual",
+      "detail": "默认权限模式改为 Manual，CLI、VS Code、JetBrains 三端统一",
+      "children": [
+        "未获许可时 agent 不能自动执行操作",
+        "需显式请求权限"
+      ]
+    },
+    {
+      "label": "提问不再自动继续",
+      "detail": "AskUserQuestion 对话框默认不再自动继续",
+      "children": [
+        "可通过 /config 设置空闲超时",
+        "agent 需更明确等待用户输入",
+        "设计需考虑用户响应延迟"
+      ]
+    },
+    {
+      "label": "修复会话与锁问题",
+      "detail": "修复后台会话睡眠/唤醒后静默停止、崩溃后 daemon.lock 阻塞重启",
+      "children": [
+        "崩溃后 daemon.lock 导致 agent 无法重启",
+        "harness 需更健壮处理进程生命周期与锁文件"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "AskUserQuestion",
+      "type": "concept"
+    },
+    {
+      "name": "Manual",
+      "type": "concept"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "JetBrains",
+      "type": "product"
+    },
+    {
+      "name": "daemon.lock",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "AskUserQuestion",
+      "label": "调整行为"
+    },
+    {
+      "from": "claude-code",
+      "to": "Manual",
+      "label": "默认设为"
+    },
+    {
+      "from": "claude-code",
+      "to": "VS Code",
+      "label": "统一权限"
+    },
+    {
+      "from": "claude-code",
+      "to": "JetBrains",
+      "label": "统一权限"
+    },
+    {
+      "from": "claude-code",
+      "to": "daemon.lock",
+      "label": "修复阻塞"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "center": "claude-code v2.1.168 更新",
+  "branches": [
+    {
+      "label": "修复已知错误",
+      "detail": "提升代码生成与编辑过程的稳定性",
+      "children": [
+        "修复若干已知错误"
+      ]
+    },
+    {
+      "label": "可靠性改进",
+      "detail": "增强工具在不同环境下的表现一致性",
+      "children": [
+        "多环境表现更一致"
+      ]
+    },
+    {
+      "label": "系统维护更新",
+      "detail": "为后续功能迭代奠定更坚实基础",
+      "children": [
+        "整体系统维护"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "v2.1.168",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "v2.1.168",
+      "to": "claude-code",
+      "label": "版本更新"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "center": "cline cli v3.0.35 更新",
+  "branches": [
+    {
+      "label": "ClinePass 全量开放",
+      "detail": "ClinePass 面向所有 CLI 用户开放，无需额外配置即可使用",
+      "children": [
+        "无需额外配置",
+        "覆盖所有 CLI 用户"
+      ]
+    },
+    {
+      "label": "修复首轮截断",
+      "detail": "修复高输出模型首条消息被自动压缩截断的问题",
+      "children": [
+        "涉及 MiniMax M3 等高输出模型",
+        "确保初始任务完整传递"
+      ]
+    },
+    {
+      "label": "新增提供商",
+      "detail": "新增 Tencent TokenHub 提供商，扩展模型接入选项",
+      "children": [
+        "Tencent TokenHub"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "MiniMax M3",
+      "type": "model"
+    },
+    {
+      "name": "Tencent TokenHub",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "ClinePass",
+      "label": "开放"
+    },
+    {
+      "from": "Cline",
+      "to": "Tencent TokenHub",
+      "label": "接入"
+    },
+    {
+      "from": "ClinePass",
+      "to": "MiniMax M3",
+      "label": "支持"
+    }
+  ]
+}

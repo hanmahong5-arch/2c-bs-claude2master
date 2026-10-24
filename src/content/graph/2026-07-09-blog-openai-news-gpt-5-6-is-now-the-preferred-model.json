@@ -1,0 +1,82 @@
+{
+  "center": "GPT-5.6 成 M365 首选模型",
+  "branches": [
+    {
+      "label": "Word 文档",
+      "detail": "GPT-5.6 提供更精准的文档生成与编辑建议，减少修改时间",
+      "children": [
+        "AI 助手从辅助工具转向核心生产力引擎"
+      ]
+    },
+    {
+      "label": "Excel 数据",
+      "detail": "模型理解复杂数据查询，自动生成公式与图表",
+      "children": [
+        "降低数据分析门槛",
+        "非技术用户也能高效处理数据"
+      ]
+    },
+    {
+      "label": "PowerPoint 演示",
+      "detail": "根据主题自动设计幻灯片布局与内容，加速演示制作",
+      "children": [
+        "AI 重塑创意工作流程",
+        "重复性任务自动化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Microsoft 365 Copilot",
+      "type": "product"
+    },
+    {
+      "name": "Word",
+      "type": "product"
+    },
+    {
+      "name": "Excel",
+      "type": "product"
+    },
+    {
+      "name": "PowerPoint",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6",
+      "label": "开发"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Microsoft 365 Copilot",
+      "label": "成为首选模型"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Word",
+      "label": "集成于"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Excel",
+      "label": "集成于"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "PowerPoint",
+      "label": "集成于"
+    }
+  ]
+}

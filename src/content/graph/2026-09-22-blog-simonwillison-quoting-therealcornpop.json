@@ -1,0 +1,75 @@
+{
+  "center": "AI 写脚本最致命破绽",
+  "branches": [
+    {
+      "label": "破绽不在句式",
+      "detail": "AI-isms 只是表面特征，不是最致命的问题",
+      "children": [
+        "「不是 X，而是 Y」套路",
+        "三段式 rule of three",
+        "断奏式碎句与堆砌标点"
+      ]
+    },
+    {
+      "label": "真正缺的是观点",
+      "detail": "创作者指出 AI 脚本缺少对话题的真实看法",
+      "children": [
+        "听起来很深，其实不是",
+        "没有明确的声音锋芒"
+      ]
+    },
+    {
+      "label": "观众一眼看穿",
+      "detail": "观众能判断作者对所说内容没有观点",
+      "children": [
+        "TikTok 与 YouTube 脚本场景",
+        "由 @therealcornpop 提出"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "@therealcornpop",
+      "type": "person"
+    },
+    {
+      "name": "TikTok",
+      "type": "product"
+    },
+    {
+      "name": "YouTube",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "AI 脚本",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "@therealcornpop",
+      "to": "TikTok",
+      "label": "发布观点"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "@therealcornpop",
+      "label": "引用"
+    },
+    {
+      "from": "AI 脚本",
+      "to": "TikTok",
+      "label": "用于"
+    },
+    {
+      "from": "AI 脚本",
+      "to": "YouTube",
+      "label": "用于"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "center": "DPO 超越聊天机器人",
+  "branches": [
+    {
+      "label": "DPO 核心机制",
+      "detail": "直接优化模型偏好以对齐人类反馈，替代 RLHF",
+      "children": [
+        "避开 RLHF 的复杂性与不稳定性",
+        "更高效、低成本训练符合价值观的模型"
+      ]
+    },
+    {
+      "label": "适用任务广泛",
+      "detail": "DPO 可用于代码生成、推理和创意写作等多种任务",
+      "children": [
+        "展示在 AGI 对齐中的前景",
+        "需支持多样化偏好数据与任务格式"
+      ]
+    },
+    {
+      "label": "降低对齐门槛",
+      "detail": "简化流程让更多研究者和企业参与对齐技术",
+      "children": [
+        "预示更多开源对齐模型与工具涌现",
+        "工具链开发者需构建通用微调框架"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "DPO",
+      "type": "technique"
+    },
+    {
+      "name": "RLHF",
+      "type": "technique"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "AGI",
+      "type": "concept"
+    },
+    {
+      "name": "Dharma-AI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DPO",
+      "to": "RLHF",
+      "label": "替代"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "DPO",
+      "label": "发布文章"
+    },
+    {
+      "from": "Dharma-AI",
+      "to": "DPO",
+      "label": "相关"
+    }
+  ]
+}

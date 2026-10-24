@@ -1,0 +1,117 @@
+{
+  "center": "明智使用 AI，保持人类思考",
+  "branches": [
+    {
+      "label": "AI 写作泛滥",
+      "detail": "社交媒体、学术论文、新闻评论充斥 AI 生成内容，读者难以分辨",
+      "children": [
+        "AI 写作千篇一律，缺乏人类意义",
+        "频繁使用 AI 者更易识别 AI 写作",
+        "低质 AI 写作是“意义形状的注意力吸血鬼”"
+      ]
+    },
+    {
+      "label": "写作能力受损",
+      "detail": "过度依赖 AI 写作会跳过形成个人风格所需的艰苦练习",
+      "children": [
+        "作者数十年写作才形成风格",
+        "AI 可辅助好作家，但不应默认使用",
+        "无脑使用 AI 会削弱思考与学习"
+      ]
+    },
+    {
+      "label": "教育实验对比",
+      "detail": "两篇论文显示：AI 给答案削弱学习，AI 定制辅导提升学习",
+      "children": [
+        "土耳其实验：用 ChatGPT 做作业者考试低于无 AI…",
+        "台北实验：AI 定制问题序列使考试高 0.15 标准差",
+        "相当于多 6-9 个月教育，无额外教学时间"
+      ]
+    },
+    {
+      "label": "认知投降风险",
+      "detail": "人们倾向于停止思考，直接接受 AI 答案，即使 AI 错误",
+      "children": [
+        "Wharton 同事称之为“认知投降”",
+        "BCG 实验：758 顾问，AI 组在 AI 会失败的任务…",
+        "Anthropic 研究：让 AI 解释或部分使用可避免…"
+      ]
+    },
+    {
+      "label": "工具与使用建议",
+      "detail": "三大 AI 公司提供学习模式，但不易发现，需主动选择",
+      "children": [
+        "Gemini：+ 选 Guided Learning",
+        "ChatGPT：输入 /learn",
+        "Claude：+ 选 use style 再选 learning"
+      ]
+    }
+  ],
+  "flow": [
+    "识别 AI 默认使用风险",
+    "选择学习模式而非直接答案",
+    "让 AI 推动自己解决问题",
+    "避免认知投降，保持思考"
+  ],
+  "entities": [
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Wharton",
+      "type": "company"
+    },
+    {
+      "name": "BCG",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "认知投降",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ethan Mollick",
+      "to": "Wharton",
+      "label": "任职于"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "认知投降",
+      "label": "可能导致"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "BCG",
+      "to": "ChatGPT",
+      "label": "实验使用"
+    },
+    {
+      "from": "Gemini",
+      "to": "认知投降",
+      "label": "可避免"
+    }
+  ]
+}

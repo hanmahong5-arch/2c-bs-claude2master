@@ -1,0 +1,112 @@
+{
+  "center": "AI 代理让漏洞传闻秒变利用",
+  "branches": [
+    {
+      "label": "补丁即被探测",
+      "detail": "OCaml 项目补丁公开讨论后约十分钟就出现自动化探测",
+      "children": [
+        "探测 percent-encoded 路径穿越序列",
+        "自动化爬虫持续监控公开仓库"
+      ]
+    },
+    {
+      "label": "代理找洞能力",
+      "detail": "编码代理凭一点线索即可定位真实漏洞",
+      "children": [
+        "Anil 用自家代理复现",
+        "Claude Fable 拒绝后改用 DeepSeek V4 Pro"
+      ]
+    },
+    {
+      "label": "rclone 披露暴增",
+      "detail": "前十年约 20 起，最近一月超 40 起",
+      "children": [
+        "约 75% 披露含真实问题",
+        "AI 辅助分诊仍耗大量时间"
+      ]
+    },
+    {
+      "label": "CVE 流程拥堵",
+      "detail": "GitHub 分配 CVE 从 2-3 天拉长到 3-4 周",
+      "children": [
+        "发布只能标注 CVE-PENDING"
+      ]
+    },
+    {
+      "label": "禁运惯例失效",
+      "detail": "现有开源漏洞禁运流程与发现速度不兼容",
+      "children": [
+        "需建立新流程保护社区"
+      ]
+    }
+  ],
+  "flow": [
+    "补丁公开讨论",
+    "自动化监控探测",
+    "代理定位漏洞",
+    "生成利用尝试",
+    "维护者分诊修复",
+    "等待 CVE 分配"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Anil Madhavapeddy",
+      "type": "person"
+    },
+    {
+      "name": "Nick Craig-Wood",
+      "type": "person"
+    },
+    {
+      "name": "OCaml",
+      "type": "product"
+    },
+    {
+      "name": "rclone",
+      "type": "product"
+    },
+    {
+      "name": "DeepSeek V4 Pro",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable",
+      "type": "model"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anil Madhavapeddy",
+      "to": "OCaml",
+      "label": "维护"
+    },
+    {
+      "from": "Nick Craig-Wood",
+      "to": "rclone",
+      "label": "维护"
+    },
+    {
+      "from": "Anil Madhavapeddy",
+      "to": "DeepSeek V4 Pro",
+      "label": "使用"
+    },
+    {
+      "from": "Anil Madhavapeddy",
+      "to": "Claude Fable",
+      "label": "尝试"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Anil Madhavapeddy",
+      "label": "引用"
+    }
+  ]
+}

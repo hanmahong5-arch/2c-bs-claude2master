@@ -1,0 +1,90 @@
+{
+  "center": "ZeroClaw v0.8.4 更新",
+  "branches": [
+    {
+      "label": "记忆与检索增强",
+      "detail": "新增可选缓存、重排、类型化事实提取与审计追踪，需显式启用",
+      "children": [
+        "可选缓存",
+        "重排",
+        "类型化事实提取"
+      ]
+    },
+    {
+      "label": "SOP 控制强化",
+      "detail": "引入准入策略与仲裁审批，支持检查点编辑，需多级审批流程",
+      "children": [
+        "准入策略",
+        "仲裁审批",
+        "检查点编辑"
+      ]
+    },
+    {
+      "label": "安全加固",
+      "detail": "Linux Landlock 限制移至子进程，修复漏洞，桌面端移除 shell 权限",
+      "children": [
+        "Landlock 移至子进程",
+        "修复多个安全漏洞",
+        "桌面端移除 shell 权限"
+      ]
+    },
+    {
+      "label": "破坏性变更",
+      "detail": "移除 ClawHub 技能源，Nextcloud Talk 需签名 Bot API，webhook 需 secret",
+      "children": [
+        "移除 ClawHub 技能源",
+        "Nextcloud Talk 需签名 Bot API",
+        "通用 webhook 必须配置 secret"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "ZeroClaw",
+      "type": "product"
+    },
+    {
+      "name": "ClawHub",
+      "type": "product"
+    },
+    {
+      "name": "Nextcloud Talk",
+      "type": "product"
+    },
+    {
+      "name": "Linux Landlock",
+      "type": "technique"
+    },
+    {
+      "name": "SOP",
+      "type": "concept"
+    },
+    {
+      "name": "Bot API",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "ZeroClaw",
+      "to": "ClawHub",
+      "label": "移除技能源"
+    },
+    {
+      "from": "ZeroClaw",
+      "to": "Nextcloud Talk",
+      "label": "需签名 API"
+    },
+    {
+      "from": "ZeroClaw",
+      "to": "Linux Landlock",
+      "label": "限制移至子进程"
+    },
+    {
+      "from": "ZeroClaw",
+      "to": "SOP",
+      "label": "强化控制"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "center": "cline sdk v0.0.65 更新",
+  "branches": [
+    {
+      "label": "SDK 体积缩减",
+      "detail": "Claude Code 与 Codex 提供者 SDK 改为可选对等依赖并按需加载",
+      "children": [
+        "安装体积大幅减小",
+        "harness 需确保依赖声明正确"
+      ]
+    },
+    {
+      "label": "子 agent 权限收紧",
+      "detail": "团队运行中 spawn 工具不再暴露给队友 agent",
+      "children": [
+        "harness 需调整权限模型",
+        "限制子 agent 工具访问"
+      ]
+    },
+    {
+      "label": "错误状态更准确",
+      "detail": "团队运行中出错的任务现在报告为失败而非完成",
+      "children": [
+        "harness 需更新状态处理逻辑",
+        "区分失败与成功"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline sdk",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "spawn",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline sdk",
+      "to": "Claude Code",
+      "label": "按需加载"
+    },
+    {
+      "from": "cline sdk",
+      "to": "Codex",
+      "label": "按需加载"
+    },
+    {
+      "from": "agent harness",
+      "to": "spawn",
+      "label": "限制访问"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "center": "Agentic Resource Discovery 规范",
+  "branches": [
+    {
+      "label": "解决什么问题",
+      "detail": "现有 MCP、Skills、A2A 都假设用户已知所需能力，发现与维护仍靠人工",
+      "children": [
+        "install-first 模式难扩展到上千工具",
+        "全量塞进上下文受预算限制",
+        "描述太薄难以消歧"
+      ]
+    },
+    {
+      "label": "ARD 是什么",
+      "detail": "由 Microsoft、Google、GoDaddy、Hugging Face 等共建的开放发现层草案规范",
+      "children": [
+        "不是产品或市场，而是共享标准",
+        "把选择移出 LLM，改为意图搜索",
+        "支持联邦注册表跨服务检索"
+      ]
+    },
+    {
+      "label": "规范定义",
+      "detail": "静态清单加动态注册表 API 两部分",
+      "children": [
+        "ai-catalog.json 托管于 well-known URL",
+        "POST /search 提供实时排序发现",
+        "媒体类型驱动，可承载任意协议"
+      ]
+    },
+    {
+      "label": "HF 参考实现",
+      "detail": "Hugging Face Discover Tool 把 Hub 语义搜索包装成 ARD 目录条目",
+      "children": [
+        "仅返回 RUNNING 状态的 Space",
+        "支持 ai-skill、mcp-server、space 三种媒体…",
+        "agents.md 包装为 SKILL.md 技能"
+      ]
+    },
+    {
+      "label": "使用方式",
+      "detail": "内置 hf CLI，也可用 REST API 或 MCP 端点直接搜索",
+      "children": [
+        "hf discover search \"Fine tune a…",
+        "--kind mcp 过滤 MCP Server",
+        "--registry-url 搜索其他注册表"
+      ]
+    }
+  ],
+  "flow": [
+    "发布 ai-catalog.json",
+    "注册表抓取索引",
+    "Agent 按意图搜索",
+    "验证发布者身份",
+    "通过 MCP/A2A 连接"
+  ],
+  "entities": [
+    {
+      "name": "Agentic Resource Discovery",
+      "type": "concept"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Microsoft",
+      "type": "company"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "A2A",
+      "type": "concept"
+    },
+    {
+      "name": "Hugging Face Discover Tool",
+      "type": "product"
+    },
+    {
+      "name": "ai-catalog.json",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Agentic Resource Discovery",
+      "label": "共同制定"
+    },
+    {
+      "from": "Microsoft",
+      "to": "Agentic Resource Discovery",
+      "label": "共同制定"
+    },
+    {
+      "from": "Google",
+      "to": "Agentic Resource Discovery",
+      "label": "共同制定"
+    },
+    {
+      "from": "Hugging Face Discover Tool",
+      "to": "Agentic Resource Discovery",
+      "label": "参考实现"
+    },
+    {
+      "from": "Agentic Resource Discovery",
+      "to": "MCP",
+      "label": "发现层前置"
+    },
+    {
+      "from": "Agentic Resource Discovery",
+      "to": "ai-catalog.json",
+      "label": "定义清单"
+    }
+  ]
+}

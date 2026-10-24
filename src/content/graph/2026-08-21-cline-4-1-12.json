@@ -1,0 +1,79 @@
+{
+  "center": "cline v4.1.12 修复 MCP 与工具…",
+  "branches": [
+    {
+      "label": "企业 MCP 控制",
+      "detail": "远程配置的 MCP 管控现已覆盖 Customize 市场",
+      "children": [
+        "禁用市场时 MCP 条目被隐藏",
+        "配置 allowlist 时仅显示允许的服务器"
+      ]
+    },
+    {
+      "label": "自定义模型工具调用",
+      "detail": "修复 OpenAI 兼容模型能力列表为空时无法调用工具",
+      "children": [
+        "能力列表缺失时工具调用失效",
+        "修复后工具调用恢复稳定"
+      ]
+    },
+    {
+      "label": "harness 设计启示",
+      "detail": "文章给出两条对 agent harness 的设计建议",
+      "children": [
+        "市场与远程配置需同步，避免泄露未授权工具",
+        "需处理能力列表缺失的兼容性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Customize 市场",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "MCP",
+      "label": "修复控制"
+    },
+    {
+      "from": "cline",
+      "to": "Customize 市场",
+      "label": "管控"
+    },
+    {
+      "from": "MCP",
+      "to": "Customize 市场",
+      "label": "应用于"
+    },
+    {
+      "from": "cline",
+      "to": "OpenAI",
+      "label": "兼容"
+    },
+    {
+      "from": "agent harness",
+      "to": "MCP",
+      "label": "需同步"
+    }
+  ]
+}

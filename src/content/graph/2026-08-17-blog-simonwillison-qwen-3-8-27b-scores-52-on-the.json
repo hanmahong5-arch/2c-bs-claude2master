@@ -1,0 +1,83 @@
+{
+  "center": "Qwen 3.8 27B 追平 GPT",
+  "branches": [
+    {
+      "label": "评测得分",
+      "detail": "Artificial Analysis 智能指数得 52 分",
+      "children": [
+        "与 GPT-5.6 Luna (max) 同分",
+        "落后 GLM-5.2 (max) 与 DeepSeek V4 Pro…"
+      ]
+    },
+    {
+      "label": "参数对比",
+      "detail": "27B 小模型对标数百 B 至 T 级大模型",
+      "children": [
+        "GLM-5.2 为 753B 参数",
+        "DeepSeek V4 Pro 0813 为 1.7T 参数",
+        "GPT-5.6 Luna 规模未知但远大于 27B"
+      ]
+    },
+    {
+      "label": "作者评价",
+      "detail": "Simon Willison 称其为真正惊人的模型",
+      "children": [
+        "发布于 2026 年 8 月 17 日链接博客"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Qwen 3.8 27B",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek V4 Pro 0813",
+      "type": "model"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Qwen 3.8 27B",
+      "to": "GPT-5.6 Luna",
+      "label": "同分"
+    },
+    {
+      "from": "Qwen 3.8 27B",
+      "to": "GLM-5.2",
+      "label": "落后1分"
+    },
+    {
+      "from": "Qwen 3.8 27B",
+      "to": "DeepSeek V4 Pro 0813",
+      "label": "落后1分"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Qwen 3.8 27B",
+      "label": "评价"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "Qwen 3.8 27B",
+      "label": "评测"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "center": "Claude Science 科研工作台",
+  "branches": [
+    {
+      "label": "产品定位",
+      "detail": "Anthropic 推出的 AI 科研工作台，整合科研工具链",
+      "children": [
+        "集成 PubMed、Jupyter、R 等常用工具",
+        "输出可审计、可复现的科研产物",
+        "支持 macOS、Linux、SSH、HPC 登录节点"
+      ]
+    },
+    {
+      "label": "核心能力",
+      "detail": "通用协调 agent 调度 60+ 技能与连接器",
+      "children": [
+        "覆盖基因组学、单细胞、蛋白质组学等",
+        "reviewer agent 检查引用与计算错误",
+        "支持用户自建 specialist agent"
+      ]
+    },
+    {
+      "label": "可复现产物",
+      "detail": "图表与手稿附带生成代码与环境",
+      "children": [
+        "原生渲染 3D 蛋白结构、基因组轨道",
+        "自然语言编辑图表并自动改代码",
+        "保留完整消息历史便于验证"
+      ]
+    },
+    {
+      "label": "计算管理",
+      "detail": "自动规划并提交计算任务到本地或集群",
+      "children": [
+        "支持 SSH 连接 HPC 或 Modal 按需算力",
+        "单 GPU 扩展至数百 GPU",
+        "数据留在本地，仅发送必要上下文"
+      ]
+    },
+    {
+      "label": "生态集成",
+      "detail": "预配置 60+ 科学数据库与 BioNeMo 工具包",
+      "children": [
+        "连接 UniProt、PDB、Ensembl 等",
+        "接入 Evo 2、Boltz-2、OpenFold3",
+        "可保存自定义 pipeline 为可复用技能"
+      ]
+    }
+  ],
+  "flow": [
+    "自然语言提问",
+    "协调 agent 调度技能",
+    "查询数据库与模型",
+    "生成可复现产物",
+    "reviewer agent 校验",
+    "提交计算任务"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Science",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "BioNeMo",
+      "type": "product"
+    },
+    {
+      "name": "Evo 2",
+      "type": "model"
+    },
+    {
+      "name": "Boltz-2",
+      "type": "model"
+    },
+    {
+      "name": "OpenFold3",
+      "type": "model"
+    },
+    {
+      "name": "Manifold Bio",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Science",
+      "label": "推出"
+    },
+    {
+      "from": "Claude Science",
+      "to": "MCP",
+      "label": "使用"
+    },
+    {
+      "from": "Claude Science",
+      "to": "BioNeMo",
+      "label": "集成"
+    },
+    {
+      "from": "BioNeMo",
+      "to": "Evo 2",
+      "label": "包含"
+    },
+    {
+      "from": "BioNeMo",
+      "to": "Boltz-2",
+      "label": "包含"
+    },
+    {
+      "from": "BioNeMo",
+      "to": "OpenFold3",
+      "label": "包含"
+    }
+  ]
+}

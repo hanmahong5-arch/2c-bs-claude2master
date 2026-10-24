@@ -1,0 +1,72 @@
+{
+  "center": "Cline SDK v0.0.66 更新",
+  "branches": [
+    {
+      "label": "修复压缩 bug",
+      "detail": "Agentic compaction 设为默认，修复回退 basic 的问题",
+      "children": [
+        "确保使用模型真实上下文窗口",
+        "修复工具密集对话无切割点",
+        "assistant 消息可作切割边界"
+      ]
+    },
+    {
+      "label": "新增免费模型",
+      "detail": "新增 cline-free 免费模型，定价为零",
+      "children": [
+        "超限返回专用错误含重置时间",
+        "适合低成本测试场景"
+      ]
+    },
+    {
+      "label": "默认压缩策略",
+      "detail": "Agentic compaction 成为默认压缩策略",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "cline-free",
+      "type": "model"
+    },
+    {
+      "name": "Agentic compaction",
+      "type": "technique"
+    },
+    {
+      "name": "basic compaction",
+      "type": "technique"
+    },
+    {
+      "name": "OpenAI Compatible",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "cline-free",
+      "label": "新增"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Agentic compaction",
+      "label": "默认采用"
+    },
+    {
+      "from": "Agentic compaction",
+      "to": "basic compaction",
+      "label": "替代"
+    },
+    {
+      "from": "Agentic compaction",
+      "to": "OpenAI Compatible",
+      "label": "修复回退"
+    }
+  ]
+}

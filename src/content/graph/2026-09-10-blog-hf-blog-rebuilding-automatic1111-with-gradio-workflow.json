@@ -1,0 +1,114 @@
+{
+  "center": "Gradio Workflow 重造…",
+  "branches": [
+    {
+      "label": "核心做法",
+      "detail": "用 Gradio Workflow 的图结构在单画布上重建 Automatic1111 式工作室",
+      "children": [
+        "Space 名：Workflow1111 Diffusion Studio",
+        "一张 gr.Workflow 画布承载全部流程"
+      ]
+    },
+    {
+      "label": "节点类型",
+      "detail": "fn、model、space 三类节点混排在同一画布上",
+      "children": [
+        "fn 节点写普通 Python 自定义逻辑",
+        "model 节点直接调用模型",
+        "space 节点复用已有 Space"
+      ]
+    },
+    {
+      "label": "免费并行",
+      "detail": "图结构自带并行，无需额外编排代码",
+      "children": [
+        "prompt-matrix 示例",
+        "interrogate 示例"
+      ]
+    },
+    {
+      "label": "对比 ComfyUI",
+      "detail": "既有 Python 自定义节点的灵活，又免费得到 REST/MCP 端点",
+      "children": [
+        "零代码 REST/MCP 端点",
+        "社区提问：画布超过 73 节点会怎样"
+      ]
+    },
+    {
+      "label": "相关模型",
+      "detail": "文中列出的 8 个模型与 4 个 Space",
+      "children": [
+        "FastH3 Preview：4 步 MiniMax-H3 视频+配乐",
+        "BRIA RMBG 2.0 抠图、AuraSR-v2 4× 放大"
+      ]
+    }
+  ],
+  "flow": [
+    "拖拽节点到画布",
+    "连接 fn/model/space",
+    "运行工作流",
+    "自动并行执行",
+    "暴露 REST/MCP 端点"
+  ],
+  "entities": [
+    {
+      "name": "Gradio Workflow",
+      "type": "product"
+    },
+    {
+      "name": "AUTOMATIC1111",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face Spaces",
+      "type": "product"
+    },
+    {
+      "name": "ComfyUI",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "FastH3 Preview",
+      "type": "model"
+    },
+    {
+      "name": "BRIA RMBG 2.0",
+      "type": "model"
+    },
+    {
+      "name": "AuraSR-v2",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gradio Workflow",
+      "to": "AUTOMATIC1111",
+      "label": "重造"
+    },
+    {
+      "from": "Gradio Workflow",
+      "to": "Hugging Face Spaces",
+      "label": "部署于"
+    },
+    {
+      "from": "Gradio Workflow",
+      "to": "ComfyUI",
+      "label": "对比"
+    },
+    {
+      "from": "Gradio Workflow",
+      "to": "MCP",
+      "label": "暴露"
+    },
+    {
+      "from": "FastH3 Preview",
+      "to": "Hugging Face Spaces",
+      "label": "托管于"
+    }
+  ]
+}

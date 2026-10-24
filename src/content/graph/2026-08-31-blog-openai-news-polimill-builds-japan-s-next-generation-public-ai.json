@@ -1,0 +1,99 @@
+{
+  "center": "Polimill 用 OpenAI 模型助日本市政",
+  "branches": [
+    {
+      "label": "核心用途",
+      "detail": "Polimill 帮日本市政机构搜索和利用行政知识",
+      "children": [
+        "面向公共行政知识管理"
+      ]
+    },
+    {
+      "label": "所用模型",
+      "detail": "平台基于 OpenAI 的 GPT 模型和 Codex 构建",
+      "children": [
+        "GPT 模型",
+        "Codex"
+      ]
+    },
+    {
+      "label": "效率提升",
+      "detail": "市政工作人员更快获取信息，减少手动检索时间",
+      "children": [
+        "加速开发流程",
+        "提升信息检索效率"
+      ]
+    },
+    {
+      "label": "行业意义",
+      "detail": "显示 AI 在公共行政的应用潜力，推动政府服务数字化",
+      "children": [
+        "优化知识管理",
+        "政府服务数字化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Polimill",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "model"
+    },
+    {
+      "name": "日本市政机构",
+      "type": "concept"
+    },
+    {
+      "name": "行政知识",
+      "type": "concept"
+    },
+    {
+      "name": "政府服务数字化",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Polimill",
+      "to": "OpenAI",
+      "label": "采用"
+    },
+    {
+      "from": "Polimill",
+      "to": "GPT",
+      "label": "使用"
+    },
+    {
+      "from": "Polimill",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "Polimill",
+      "to": "日本市政机构",
+      "label": "服务"
+    },
+    {
+      "from": "日本市政机构",
+      "to": "行政知识",
+      "label": "检索"
+    },
+    {
+      "from": "Polimill",
+      "to": "政府服务数字化",
+      "label": "推动"
+    }
+  ]
+}

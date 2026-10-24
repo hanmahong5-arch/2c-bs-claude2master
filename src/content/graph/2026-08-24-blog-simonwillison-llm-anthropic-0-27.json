@@ -1,0 +1,102 @@
+{
+  "center": "llm-anthropic 0.27 发布",
+  "branches": [
+    {
+      "label": "核心变更",
+      "detail": "为兼容 anthropic v1.0.0 Python 库，从 httpx 切换到 httpx2",
+      "children": [
+        "anthropic v1.0.0 改用 httpx2",
+        "OpenAI v3.0.0 两周前同样切换"
+      ]
+    },
+    {
+      "label": "升级方式",
+      "detail": "用 Claude Code 中的 Fable 5 按官方迁移指南完成升级并跑通测试",
+      "children": [
+        "提示词：升级到 anthropic>=1 并读 MIGRATION…",
+        "结果产出 PR"
+      ]
+    },
+    {
+      "label": "插件定位",
+      "detail": "LLM 的 Anthropic 插件，提供对 Claude 系列等模型的访问",
+      "children": [
+        "LLM 是 Simon Willison 的工具",
+        "支持 Claude 系列模型"
+      ]
+    }
+  ],
+  "flow": [
+    "读取官方迁移指南",
+    "升级依赖至 anthropic>=1",
+    "切换 httpx 到 httpx2",
+    "跑通测试",
+    "提交 PR"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm-anthropic",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "httpx",
+      "type": "technique"
+    },
+    {
+      "name": "httpx2",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm-anthropic",
+      "label": "发布"
+    },
+    {
+      "from": "llm-anthropic",
+      "to": "LLM",
+      "label": "是插件"
+    },
+    {
+      "from": "llm-anthropic",
+      "to": "Anthropic",
+      "label": "对接"
+    },
+    {
+      "from": "llm-anthropic",
+      "to": "Claude",
+      "label": "访问"
+    },
+    {
+      "from": "llm-anthropic",
+      "to": "httpx2",
+      "label": "切换到"
+    },
+    {
+      "from": "Claude Code",
+      "to": "llm-anthropic",
+      "label": "辅助升级"
+    }
+  ]
+}

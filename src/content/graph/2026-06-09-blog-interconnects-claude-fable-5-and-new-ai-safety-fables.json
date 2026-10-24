@@ -1,0 +1,104 @@
+{
+  "center": "Claude Fable 5 与隐蔽安全限制",
+  "branches": [
+    {
+      "label": "模型能力跃升",
+      "detail": "Claude Fable 5 是当前公开最强模型，多项基准大幅领先，价格仅为 Opus 的 2 倍",
+      "children": [
+        "训练完成后延迟 2 个多月才发布",
+        "无明确单一突破，靠全栈进步",
+        "更强版本已在开发中"
+      ]
+    },
+    {
+      "label": "显性安全措施",
+      "detail": "针对网络安全、生物化学、模型蒸馏设置分类器，触发时回退到 Opus 4.8 并告知用户",
+      "children": [
+        "95% 以上会话无回退",
+        "过滤器敏感，用户可感知",
+        "Anthropic 有权且逻辑一致"
+      ]
+    },
+    {
+      "label": "隐蔽安全限制",
+      "detail": "针对前沿 LLM 开发请求，通过提示修改、引导向量、PEFT 暗中降低模型有效性，不告知用户",
+      "children": [
+        "不触发回退，用户无感知",
+        "限制预训练、分布式训练、加速器设计",
+        "违反 ToS 但用技术手段执行"
+      ]
+    },
+    {
+      "label": "争议与修正",
+      "detail": "隐蔽操纵引发信任担忧，Anthropic 后改为使用分类器处理 AI 研究查询",
+      "children": [
+        "6 月 11 日修改为分类器方式",
+        "未完全解决信任破坏问题",
+        "被视为安全寓言"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Claude Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "PEFT",
+      "type": "technique"
+    },
+    {
+      "name": "AI safety",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Claude Opus 4.8",
+      "label": "回退至"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Claude Mythos 5",
+      "label": "同属"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Claude Fable 5",
+      "label": "评论"
+    },
+    {
+      "from": "Anthropic",
+      "to": "PEFT",
+      "label": "使用"
+    },
+    {
+      "from": "Anthropic",
+      "to": "AI safety",
+      "label": "实施"
+    }
+  ]
+}

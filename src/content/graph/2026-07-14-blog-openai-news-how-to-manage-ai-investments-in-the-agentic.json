@@ -1,0 +1,123 @@
+{
+  "center": "OpenAI 谈 AI 投资管理",
+  "branches": [
+    {
+      "label": "看用量与花费",
+      "detail": "Admin Console 提供按用户、产品、模型的用量与花费视图",
+      "children": [
+        "GPT-4 到 GPT-5.4 每百万 token 价格降 97%",
+        "GPT-5.6 输出 token 少 54%、耗时少 57%",
+        "从工作区、团队、产品三层看趋势"
+      ]
+    },
+    {
+      "label": "按结果算 ROI",
+      "detail": "最低 token 价不等于最低总成本，应按可接受结果计成本",
+      "children": [
+        "用真实任务与边界案例做 evals",
+        "追踪 cost per accepted outcome",
+        "简单任务用小模型，复杂任务用前沿模型"
+      ]
+    },
+    {
+      "label": "先治理再扩展",
+      "detail": "治理决定哪些 AI 工作可以规模化",
+      "children": [
+        "定义可用上下文、工具、动作与审批人",
+        "插件、连接器、Computer Use 需集中管控",
+        "Zero Data Retention 支持高信任场景"
+      ]
+    },
+    {
+      "label": "投可复利流程",
+      "detail": "把 AI 投资当组合管理，按成熟度给钱",
+      "children": [
+        "探索、验证、生产三阶段分别资助",
+        "身份、连接器、评估等共享能力集中投入",
+        "优先高重复、有明确负责人、可衡量的流程"
+      ]
+    },
+    {
+      "label": "容量匹配需求",
+      "detail": "流程验证价值后，用合适产品与容量结构承接",
+      "children": [
+        "Guaranteed Capacity 保生产系统确定性",
+        "Scale Tier 与 Batch API 对应不同负载",
+        "OpenAI Frontier 支持大型战略部署"
+      ]
+    }
+  ],
+  "flow": [
+    "看清用量与花费",
+    "按结果评估模型 ROI",
+    "先治理高风险流程",
+    "按成熟度分配资金",
+    "容量匹配已验证需求"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "Admin Console",
+      "type": "product"
+    },
+    {
+      "name": "Computer Use",
+      "type": "technique"
+    },
+    {
+      "name": "Zero Data Retention",
+      "type": "concept"
+    },
+    {
+      "name": "Guaranteed Capacity",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI Frontier",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "提供"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6",
+      "label": "发布"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "Admin Console",
+      "label": "集成"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "Computer Use",
+      "label": "支持"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Zero Data Retention",
+      "label": "提供"
+    },
+    {
+      "from": "OpenAI",
+      "to": "OpenAI Frontier",
+      "label": "推出"
+    }
+  ]
+}

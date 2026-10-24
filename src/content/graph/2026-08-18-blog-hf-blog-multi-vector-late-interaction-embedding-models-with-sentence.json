@@ -1,0 +1,92 @@
+{
+  "center": "多向量嵌入模型提升检索精度",
+  "branches": [
+    {
+      "label": "多向量嵌入原理",
+      "detail": "用多个向量表示一段文本，保留更细粒度语义信息，提升检索精度",
+      "children": [
+        "Late Interaction 延迟交互机制",
+        "相比单向量嵌入表达更丰富"
+      ]
+    },
+    {
+      "label": "Sentence Transformers",
+      "detail": "支持多向量嵌入模型的训练与微调，是主要实现工具",
+      "children": [
+        "提供训练与微调多向量嵌入模型的能力",
+        "配套多模态嵌入与重排序模型训练"
+      ]
+    },
+    {
+      "label": "模型与数据集",
+      "detail": "文章提及 10 个模型、3 个数据集、1 个集合，含 BEIR 小型版本",
+      "children": [
+        "BEIR 小型数据集：50 查询、最多 10K 文档",
+        "模型规模从 0.1B 到 8B 不等"
+      ]
+    },
+    {
+      "label": "应用场景",
+      "detail": "覆盖句子相似度、特征提取与视觉文档检索等任务",
+      "children": [
+        "Sentence Similarity 句子相似度",
+        "Feature Extraction 特征提取",
+        "Visual Document Retrieval 视觉文档检索"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Sentence Transformers",
+      "type": "product"
+    },
+    {
+      "name": "Multi-Vector Embedding",
+      "type": "concept"
+    },
+    {
+      "name": "Late Interaction",
+      "type": "technique"
+    },
+    {
+      "name": "BEIR",
+      "type": "concept"
+    },
+    {
+      "name": "Visual Document Retrieval",
+      "type": "concept"
+    },
+    {
+      "name": "Sentence Similarity",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sentence Transformers",
+      "to": "Multi-Vector Embedding",
+      "label": "训练微调"
+    },
+    {
+      "from": "Multi-Vector Embedding",
+      "to": "Late Interaction",
+      "label": "采用"
+    },
+    {
+      "from": "Multi-Vector Embedding",
+      "to": "BEIR",
+      "label": "评测于"
+    },
+    {
+      "from": "Multi-Vector Embedding",
+      "to": "Visual Document Retrieval",
+      "label": "应用于"
+    },
+    {
+      "from": "Multi-Vector Embedding",
+      "to": "Sentence Similarity",
+      "label": "应用于"
+    }
+  ]
+}

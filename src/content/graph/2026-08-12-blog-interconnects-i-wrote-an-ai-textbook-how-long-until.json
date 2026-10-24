@@ -1,0 +1,109 @@
+{
+  "center": "AI长文写作停滞与科研质疑",
+  "branches": [
+    {
+      "label": "长文写作停滞",
+      "detail": "模型能写好单句，却难以组织整章，错误层层累积",
+      "children": [
+        "组织混乱、措辞含糊、概念出错",
+        "写作能力与编码数学进步脱节",
+        "写作好的模型多为旧款：GPT 4.5、Kimi K2"
+      ]
+    },
+    {
+      "label": "对AI科研的质疑",
+      "detail": "连既有科学都难以组织呈现，遑论自主解决开放科学难题",
+      "children": [
+        "组织知识即压缩，压缩才产生洞见",
+        "当前LLM在长文中增加熵",
+        "AI科研或止步于低垂果实与跨领域连接"
+      ]
+    },
+    {
+      "label": "模型能力差异",
+      "detail": "GPT擅长查错，Claude更像有品味的编辑",
+      "children": [
+        "GPT 5.5 Pro在200-300页书稿找出深层笔误",
+        "Claude理解任务心智模型，建议更有趣",
+        "RLVR在数学代码中有效，写作未受益"
+      ]
+    },
+    {
+      "label": "作者写作实践",
+      "detail": "用Claude Code逐条处理编辑批注，AI句子占比不足1%",
+      "children": [
+        "用\\editor{}标记批注，逐条打印上下文",
+        "AI建议仅在第二轮全稿审阅时少量采纳",
+        "作者坚持Interconnects不用AI输出"
+      ]
+    }
+  ],
+  "flow": [
+    "写RLHF教科书",
+    "用LLM辅助LaTeX与图表",
+    "Claude Code处理编辑批注",
+    "人工判断采纳AI句子",
+    "反思模型长文能力"
+  ],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "GPT 4.5",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K2",
+      "type": "model"
+    },
+    {
+      "name": "GPT 5.5 Pro",
+      "type": "model"
+    },
+    {
+      "name": "RLHF",
+      "type": "concept"
+    },
+    {
+      "name": "RLVR",
+      "type": "technique"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "RLHF",
+      "label": "撰写教科书"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Claude Code",
+      "label": "用于编辑"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "GPT 5.5 Pro",
+      "label": "用于查错"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "开发"
+    },
+    {
+      "from": "RLVR",
+      "to": "RLHF",
+      "label": "相关技术"
+    }
+  ]
+}

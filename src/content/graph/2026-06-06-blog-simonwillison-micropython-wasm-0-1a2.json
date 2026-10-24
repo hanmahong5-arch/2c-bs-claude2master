@@ -1,0 +1,90 @@
+{
+  "center": "micropython-wasm 0.1a2 发布",
+  "branches": [
+    {
+      "label": "新版本发布",
+      "detail": "Simon Willison 发布 micropython-wasm 0.1a2 版本",
+      "children": [
+        "发布时间：2026年6月6日"
+      ]
+    },
+    {
+      "label": "新增 CLI",
+      "detail": "为 micropython-wasm 添加了命令行界面",
+      "children": [
+        "对应 issue #7",
+        "灵感来自博客初稿"
+      ]
+    },
+    {
+      "label": "核心用途",
+      "detail": "用 WebAssembly 运行 MicroPython 沙箱的 Python 库",
+      "children": [
+        "Python library",
+        "MicroPython sandbox",
+        "WebAssembly"
+      ]
+    },
+    {
+      "label": "写作契机",
+      "detail": "意识到 CLI 很适合展示「Try it yourself」章节",
+      "children": [
+        "用于博客示例"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "micropython-wasm",
+      "type": "product"
+    },
+    {
+      "name": "MicroPython",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "Python",
+      "type": "concept"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "micropython-wasm",
+      "label": "发布"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "MicroPython",
+      "label": "运行"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "WebAssembly",
+      "label": "基于"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "CLI",
+      "label": "新增"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "Python",
+      "label": "属于"
+    }
+  ]
+}

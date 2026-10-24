@@ -1,0 +1,69 @@
+{
+  "center": "AI 打破岗位边界",
+  "branches": [
+    {
+      "label": "跨职能任务增加",
+      "detail": "使用 ChatGPT 的员工更常承担原本不属于自己岗位的工作",
+      "children": [
+        "工程师参与市场分析",
+        "岗位职责边界变模糊"
+      ]
+    },
+    {
+      "label": "企业需重新设计",
+      "detail": "企业需调整岗位描述与绩效评估以适应角色模糊化",
+      "children": [
+        "重写岗位描述",
+        "更新绩效评估"
+      ]
+    },
+    {
+      "label": "开发者机会",
+      "detail": "构建支持跨职能协作的 AI 工具是提升组织效率的关键",
+      "children": [
+        "AI 工具支持协作",
+        "提升组织效率"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    },
+    {
+      "name": "跨职能协作",
+      "type": "concept"
+    },
+    {
+      "name": "岗位描述",
+      "type": "concept"
+    },
+    {
+      "name": "绩效评估",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "ChatGPT",
+      "to": "跨职能协作",
+      "label": "促进"
+    },
+    {
+      "from": "AI",
+      "to": "岗位描述",
+      "label": "冲击"
+    },
+    {
+      "from": "AI",
+      "to": "绩效评估",
+      "label": "冲击"
+    }
+  ]
+}

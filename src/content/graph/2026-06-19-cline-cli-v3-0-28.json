@@ -1,0 +1,68 @@
+{
+  "center": "cline cli-v3.0.28 更新",
+  "branches": [
+    {
+      "label": "ClinePass 引导",
+      "detail": "新增 ClinePass 引导流程与模型选择，并改进错误处理",
+      "children": [
+        "配置代理入门体验更顺畅"
+      ]
+    },
+    {
+      "label": "Hub 面板",
+      "detail": "新增 Hub 原始目录与定制化面板，仪表板设计更新",
+      "children": [
+        "便于管理复用核心组件"
+      ]
+    },
+    {
+      "label": "工具结果截断",
+      "detail": "默认截断大型工具结果，控制 MCP 及自定义工具输出长度",
+      "children": [
+        "确保上下文不超限",
+        "优化代理预算管理"
+      ]
+    },
+    {
+      "label": "多工具并行",
+      "detail": "强化多工具并行执行能力",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli-v3.0.28",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "Hub",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli-v3.0.28",
+      "to": "ClinePass",
+      "label": "新增"
+    },
+    {
+      "from": "cline cli-v3.0.28",
+      "to": "Hub",
+      "label": "新增"
+    },
+    {
+      "from": "cline cli-v3.0.28",
+      "to": "MCP",
+      "label": "截断输出"
+    }
+  ]
+}

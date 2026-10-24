@@ -1,0 +1,54 @@
+{
+  "center": "Codex Rust v0.144.5 安全更新",
+  "branches": [
+    {
+      "label": "危险命令检测增强",
+      "detail": "扩展危险命令检测规则，覆盖更多强制 rm 形式",
+      "children": [
+        "覆盖更多强制 rm 形式"
+      ]
+    },
+    {
+      "label": "拒绝理由更清晰",
+      "detail": "命令被拒绝时提供更明确的拒绝原因，便于调试",
+      "children": [
+        "便于调试"
+      ]
+    },
+    {
+      "label": "对 agent harness 的启示",
+      "detail": "需同步更新安全策略，并利用清晰拒绝信息优化用户反馈",
+      "children": [
+        "同步更新安全策略",
+        "优化用户反馈"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex Rust",
+      "type": "product"
+    },
+    {
+      "name": "rm",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex Rust",
+      "to": "rm",
+      "label": "检测"
+    },
+    {
+      "from": "Codex Rust",
+      "to": "agent harness",
+      "label": "影响"
+    }
+  ]
+}

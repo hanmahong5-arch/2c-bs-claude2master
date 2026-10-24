@@ -1,0 +1,89 @@
+{
+  "center": "高质量人类数据与模型训练",
+  "branches": [
+    {
+      "label": "人类标注流程",
+      "detail": "数据质量取决于任务设计、标注员培训、收集聚合与质量保证等操作步骤",
+      "children": [
+        "任务设计需清晰降低复杂度",
+        "筛选并培训匹配技能的标注员",
+        "定期反馈与校准会议"
+      ]
+    },
+    {
+      "label": "群体智慧",
+      "detail": "1907年Nature论文Vox populi发现人群估计中位数接近真实值",
+      "children": [
+        "Callison-Burch 2009用AMT做机器翻译评估",
+        "非专家可创建金参考翻译",
+        "需加权方案降低垃圾标注影响"
+      ]
+    },
+    {
+      "label": "标注者一致性",
+      "detail": "通过多数投票、原始一致率、Cohen's Kappa等聚合多标注者标签",
+      "children": [
+        "MACE模型识别垃圾标注者",
+        "概率图模型建模任务难度与标注者偏差",
+        "EM或VB优化边际似然"
+      ]
+    },
+    {
+      "label": "数据质量与训练",
+      "detail": "影响函数、训练中预测变化、噪声交叉验证等方法连接数据质量与模型训练",
+      "children": [
+        "影响函数评估单样本影响",
+        "噪声交叉验证处理标签噪声"
+      ]
+    }
+  ],
+  "flow": [
+    "任务设计",
+    "筛选与培训标注员",
+    "收集与聚合数据",
+    "质量保证",
+    "模型训练"
+  ],
+  "entities": [
+    {
+      "name": "Amazon Mechanical Turk",
+      "type": "product"
+    },
+    {
+      "name": "MACE",
+      "type": "model"
+    },
+    {
+      "name": "Cohen's Kappa",
+      "type": "concept"
+    },
+    {
+      "name": "Vox populi",
+      "type": "concept"
+    },
+    {
+      "name": "Callison-Burch",
+      "type": "person"
+    },
+    {
+      "name": "RLHF",
+      "type": "technique"
+    },
+    {
+      "name": "影响函数",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Callison-Burch",
+      "to": "Amazon Mechanical Turk",
+      "label": "使用"
+    },
+    {
+      "from": "MACE",
+      "to": "Cohen's Kappa",
+      "label": "相关"
+    }
+  ]
+}

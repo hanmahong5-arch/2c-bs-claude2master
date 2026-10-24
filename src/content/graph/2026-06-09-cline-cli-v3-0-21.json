@@ -1,0 +1,71 @@
+{
+  "center": "cline cli v3.0.21 更新",
+  "branches": [
+    {
+      "label": "全局自动更新开关",
+      "detail": "新增全局设置，用户可控制 CLI 启动时的自动更新行为",
+      "children": [
+        "为 agent harness 提供更灵活的环境配置管理"
+      ]
+    },
+    {
+      "label": "Vertex AI ADC 支持",
+      "detail": "工具调用现支持 Vertex AI 应用默认凭证",
+      "children": [
+        "简化 agent 在 Google Cloud 上的身份验证集成"
+      ]
+    },
+    {
+      "label": "修复会话与消息问题",
+      "detail": "改进连接器线程会话路由与 Bedrock 空消息处理",
+      "children": [
+        "增强 agent 多会话场景下的可靠性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "Vertex AI",
+      "type": "product"
+    },
+    {
+      "name": "ADC",
+      "type": "concept"
+    },
+    {
+      "name": "Google Cloud",
+      "type": "company"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli",
+      "to": "Vertex AI",
+      "label": "支持"
+    },
+    {
+      "from": "Vertex AI",
+      "to": "ADC",
+      "label": "使用"
+    },
+    {
+      "from": "Vertex AI",
+      "to": "Google Cloud",
+      "label": "属于"
+    },
+    {
+      "from": "cline cli",
+      "to": "Bedrock",
+      "label": "修复"
+    }
+  ]
+}

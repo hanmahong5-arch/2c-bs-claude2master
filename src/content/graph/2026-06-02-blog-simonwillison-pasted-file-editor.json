@@ -1,0 +1,98 @@
+{
+  "center": "Simon Willison 的粘贴文件编辑器",
+  "branches": [
+    {
+      "label": "灵感来源",
+      "detail": "模仿 claude.ai 把大段粘贴自动转成文件附件的体验",
+      "children": [
+        "claude.ai 桌面/移动端均支持",
+        "Codex 桌面应用做原型"
+      ]
+    },
+    {
+      "label": "核心功能",
+      "detail": "粘贴 1000 字以上文本自动转为附件，草稿文字不变",
+      "children": [
+        "阈值 1000 字符",
+        "草稿内容保持原样"
+      ]
+    },
+    {
+      "label": "附件管理",
+      "detail": "支持预览、删除与多种添加方式",
+      "children": [
+        "模态框预览",
+        "拖拽/选择/粘贴删除",
+        "可直接打开图片显示缩略图"
+      ]
+    },
+    {
+      "label": "技术标签",
+      "detail": "归类为 JavaScript 工具，属 AI 辅助编程实践",
+      "children": [
+        "javascript 标签 764 篇",
+        "ai-assisted-programming 407 篇"
+      ]
+    }
+  ],
+  "flow": [
+    "粘贴大段文本",
+    "检测超过 1000 字符",
+    "转为文件附件",
+    "草稿文字保持不变",
+    "预览或删除附件"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Pasted File Editor",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "claude.ai",
+      "type": "product"
+    },
+    {
+      "name": "JavaScript",
+      "type": "technique"
+    },
+    {
+      "name": "AI-assisted programming",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Pasted File Editor",
+      "label": "构建"
+    },
+    {
+      "from": "Pasted File Editor",
+      "to": "Codex",
+      "label": "由其构建"
+    },
+    {
+      "from": "Pasted File Editor",
+      "to": "claude.ai",
+      "label": "模仿"
+    },
+    {
+      "from": "Pasted File Editor",
+      "to": "JavaScript",
+      "label": "使用"
+    },
+    {
+      "from": "Pasted File Editor",
+      "to": "AI-assisted programming",
+      "label": "属于"
+    }
+  ]
+}

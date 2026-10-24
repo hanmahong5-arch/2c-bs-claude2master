@@ -1,0 +1,109 @@
+{
+  "center": "GPU 闲置成本与调度",
+  "branches": [
+    {
+      "label": "闲置即浪费",
+      "detail": "GPU 空转不产生价值，却持续计费，成为新的成本黑洞",
+      "children": [
+        "闲置 GPU 被比作新的「沉没成本」",
+        "利用率直接决定单位算力成本"
+      ]
+    },
+    {
+      "label": "动态分配共享",
+      "detail": "通过动态分配与共享策略，把空闲算力借给其他任务",
+      "children": [
+        "同一集群靠调整顺序提升 33 点利用率",
+        "刚性切分会降低利用率"
+      ]
+    },
+    {
+      "label": "隔离是前提",
+      "detail": "CPU 式隔离与 GPU 沙箱让不相关负载可安全同卡共存",
+      "children": [
+        "Kata Containers 等 GPU 沙箱方案",
+        "隔离扩大调度器可选的放置空间"
+      ]
+    },
+    {
+      "label": "调度是瓶颈",
+      "detail": "决定哪个负载在何时、以何优先级跑在哪张卡上",
+      "children": [
+        "各负载对显存、延迟、时长需求不同",
+        "Agent 集群让调度问题更尖锐"
+      ]
+    },
+    {
+      "label": "Agent 集群压力",
+      "detail": "实时推理、批处理、重训、评测都突发，争抢同一算力池",
+      "children": [
+        "按 token 计费随业务线性增长",
+        "大企业倾向把模型搬回自建"
+      ]
+    }
+  ],
+  "flow": [
+    "识别闲置 GPU",
+    "安全隔离共存",
+    "按需求匹配负载",
+    "动态分配与共享",
+    "智能调度排程"
+  ],
+  "entities": [
+    {
+      "name": "GPU",
+      "type": "concept"
+    },
+    {
+      "name": "Kata Containers",
+      "type": "product"
+    },
+    {
+      "name": "GPU scheduling",
+      "type": "concept"
+    },
+    {
+      "name": "GPU sandboxing",
+      "type": "technique"
+    },
+    {
+      "name": "agent fleet",
+      "type": "concept"
+    },
+    {
+      "name": "Dharma-AI",
+      "type": "company"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Kata Containers",
+      "to": "GPU sandboxing",
+      "label": "实现"
+    },
+    {
+      "from": "GPU sandboxing",
+      "to": "GPU",
+      "label": "隔离"
+    },
+    {
+      "from": "GPU scheduling",
+      "to": "GPU",
+      "label": "调度"
+    },
+    {
+      "from": "agent fleet",
+      "to": "GPU scheduling",
+      "label": "加剧"
+    },
+    {
+      "from": "Dharma-AI",
+      "to": "GPU scheduling",
+      "label": "研究"
+    }
+  ]
+}

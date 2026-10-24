@@ -1,0 +1,69 @@
+{
+  "center": "Funes：编码代理自持记忆",
+  "branches": [
+    {
+      "label": "发布方",
+      "detail": "Hugging Face 发布 Funes，为编码代理提供长期记忆",
+      "children": [
+        "标题：Give Your Coding Agents a Memory…"
+      ]
+    },
+    {
+      "label": "核心主张",
+      "detail": "记忆由用户自己持有，而非托管在厂商侧",
+      "children": [
+        "关键词：可自持（You Own）"
+      ]
+    },
+    {
+      "label": "面向对象",
+      "detail": "目标是编码代理（coding agents）的长期记忆能力",
+      "children": [
+        "长期记忆 Long-term Memory"
+      ]
+    },
+    {
+      "label": "性质",
+      "detail": "属于 announcement 类开源社区发布",
+      "children": [
+        "标签：announcement、open-source、community"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Funes",
+      "type": "product"
+    },
+    {
+      "name": "coding agents",
+      "type": "concept"
+    },
+    {
+      "name": "长期记忆",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Funes",
+      "label": "发布"
+    },
+    {
+      "from": "Funes",
+      "to": "coding agents",
+      "label": "提供记忆"
+    },
+    {
+      "from": "Funes",
+      "to": "长期记忆",
+      "label": "实现"
+    }
+  ]
+}

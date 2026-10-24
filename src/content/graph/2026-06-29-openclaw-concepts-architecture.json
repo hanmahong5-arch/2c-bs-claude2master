@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw 网关架构",
+  "branches": [
+    {
+      "label": "单一网关",
+      "detail": "每台主机仅一个常驻 Gateway，独占所有消息面连接",
+      "children": [
+        "WhatsApp 经 Baileys，Telegram 经 grammY",
+        "Slack、Discord、Signal、iMessage、WebChat",
+        "默认绑定 127.0.0.1:18789"
+      ]
+    },
+    {
+      "label": "客户端与节点分离",
+      "detail": "控制面客户端与设备节点走同一 WS，但角色不同",
+      "children": [
+        "客户端：macOS app、CLI、web UI、自动化",
+        "节点声明 role: node 并带 caps/commands",
+        "节点提供 camera.*、screen.record…"
+      ]
+    },
+    {
+      "label": "严格类型化协议",
+      "detail": "TypeBox 定义协议，逐层生成 JSON Schema 与 Swift 模型",
+      "children": [
+        "首帧必须是 connect，否则硬关闭",
+        "请求 req/res，事件 event 带 seq",
+        "副作用方法需幂等键，服务端短期去重"
+      ]
+    },
+    {
+      "label": "配对与信任",
+      "detail": "所有连接带设备身份，新设备需配对批准",
+      "children": [
+        "本机回环可自动批准，tailnet/LAN 需显式批准",
+        "必须签名 connect.challenge nonce",
+        "重连固定配对元数据，变更需重新配对"
+      ]
+    },
+    {
+      "label": "远程访问",
+      "detail": "优先 Tailscale 或 VPN，备选 SSH 隧道",
+      "children": [
+        "ssh -N -L 18789:127.0.0.1:18789",
+        "远程 WS 可启用 TLS 与证书固定",
+        "auth 对所有连接生效，含本地"
+      ]
+    }
+  ],
+  "flow": [
+    "客户端发 req:connect",
+    "Gateway 返回 hello-ok 快照",
+    "推送 presence 与 tick 事件",
+    "客户端发 req:agent",
+    "Gateway 流式回 event:agent",
+    "返回 final 结果"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Gateway",
+      "type": "concept"
+    },
+    {
+      "name": "WebSocket",
+      "type": "technique"
+    },
+    {
+      "name": "Baileys",
+      "type": "product"
+    },
+    {
+      "name": "grammY",
+      "type": "product"
+    },
+    {
+      "name": "TypeBox",
+      "type": "technique"
+    },
+    {
+      "name": "Tailscale",
+      "type": "product"
+    },
+    {
+      "name": "WebChat",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Gateway",
+      "label": "采用"
+    },
+    {
+      "from": "Gateway",
+      "to": "WebSocket",
+      "label": "暴露"
+    },
+    {
+      "from": "Gateway",
+      "to": "Baileys",
+      "label": "连接"
+    },
+    {
+      "from": "Gateway",
+      "to": "grammY",
+      "label": "连接"
+    },
+    {
+      "from": "TypeBox",
+      "to": "Gateway",
+      "label": "定义协议"
+    },
+    {
+      "from": "Gateway",
+      "to": "Tailscale",
+      "label": "支持远程"
+    }
+  ]
+}

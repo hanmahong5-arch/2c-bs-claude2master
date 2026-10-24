@@ -1,0 +1,119 @@
+{
+  "center": "OpenClaw 上下文窗口构成与优化",
+  "branches": [
+    {
+      "label": "上下文构成",
+      "detail": "模型单次运行收到的全部内容，受上下文窗口 token 上限约束",
+      "children": [
+        "系统提示词、对话历史、工具调用与结果、附件",
+        "Provider 隐藏包装头也计入",
+        "上下文≠记忆：记忆存磁盘，上下文只在当前窗口"
+      ]
+    },
+    {
+      "label": "系统提示词",
+      "detail": "OpenClaw 每次运行重建，含工具列表、技能列表、工作区与时间",
+      "children": [
+        "示例：38,412 字符约 9,603 token",
+        "Project Context 注入 AGENTS.md 等文件",
+        "单文件默认上限 20000 字符，总上限 60000"
+      ]
+    },
+    {
+      "label": "工具双重成本",
+      "detail": "工具既占提示词文本，又占 JSON schema token",
+      "children": [
+        "示例 schema 共 31,988 字符约 7,997 token",
+        "browser schema 9,812 字符约 2,453 token",
+        "技能仅注入名称与描述，按需读 SKILL.md"
+      ]
+    },
+    {
+      "label": "检查命令",
+      "detail": "用斜杠命令查看上下文占用与明细",
+      "children": [
+        "/context list 看注入文件与大小",
+        "/context detail 看工具 schema 与技能占用",
+        "/context map 生成树状图，/compact 压缩历史"
+      ]
+    },
+    {
+      "label": "持久化机制",
+      "detail": "历史、压缩、剪枝三种方式对上下文影响不同",
+      "children": [
+        "Compaction 把旧历史总结成摘要条目",
+        "Pruning 只从内存提示词丢弃旧工具结果",
+        "完整历史仍可在磁盘检查"
+      ]
+    }
+  ],
+  "flow": [
+    "构建系统提示词",
+    "注入工作区文件",
+    "附加对话与工具结果",
+    "模型运行消耗 token",
+    "压缩或剪枝释放窗口"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "上下文窗口",
+      "type": "concept"
+    },
+    {
+      "name": "系统提示词",
+      "type": "concept"
+    },
+    {
+      "name": "Compaction",
+      "type": "technique"
+    },
+    {
+      "name": "Pruning",
+      "type": "technique"
+    },
+    {
+      "name": "SKILL.md",
+      "type": "concept"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "上下文窗口",
+      "label": "受限于"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "系统提示词",
+      "label": "每次重建"
+    },
+    {
+      "from": "系统提示词",
+      "to": "SKILL.md",
+      "label": "按需读取"
+    },
+    {
+      "from": "Compaction",
+      "to": "上下文窗口",
+      "label": "释放空间"
+    },
+    {
+      "from": "Pruning",
+      "to": "上下文窗口",
+      "label": "释放空间"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "AGENTS.md",
+      "label": "注入"
+    }
+  ]
+}

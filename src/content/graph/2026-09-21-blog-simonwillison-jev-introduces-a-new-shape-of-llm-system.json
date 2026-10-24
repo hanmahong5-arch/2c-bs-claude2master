@@ -1,0 +1,116 @@
+{
+  "center": "Jev：只输出概率的决策模型",
+  "branches": [
+    {
+      "label": "新模型形态",
+      "detail": "TypeSafe AI 发布 Jev，输入文本、输出浮点概率而非文本",
+      "children": [
+        "自称 System One models，Simon 更认同…",
+        "输出对应类别、是非题、评分及置信度"
+      ]
+    },
+    {
+      "label": "三类提问",
+      "detail": "Noul 是非题、Choice 选项题、Score 评分题",
+      "children": [
+        "Noul 源自 Bernoulli 分布，返回 0-1 置信度",
+        "Choice 返回选项概率分布",
+        "Score 在给定数值区间返回分数"
+      ]
+    },
+    {
+      "label": "极快且便宜",
+      "detail": "只按输入计费，输出免费，输入 $0.042/百万 token",
+      "children": [
+        "比 GPT-5 Nano 的 $0.05/百万更便宜",
+        "多问题并行评估，耗时接近单问"
+      ]
+    },
+    {
+      "label": "黑盒与偏见",
+      "detail": "只返回数字，无法解释判断依据，偏见风险突出",
+      "children": [
+        "Simon 测试湾区城市评分：Cupertino 最高…",
+        "不擅长数字、日期与对抗性内容",
+        "evals 与结构化实验更重要"
+      ]
+    },
+    {
+      "label": "社区玩法",
+      "detail": "发布一周内涌现大量创意项目与开源复刻",
+      "children": [
+        "jevchat、jev-leftpad、jev-2048",
+        "Kev 用 Qwen 3.5 复刻 0.8B/4B/9B",
+        "llm-typesafe 插件接入 LLM CLI"
+      ]
+    }
+  ],
+  "flow": [
+    "构造 state 对象",
+    "附带一个或多个问题",
+    "调用 Jev API",
+    "并行评估问题",
+    "返回概率与置信度"
+  ],
+  "entities": [
+    {
+      "name": "Jev",
+      "type": "model"
+    },
+    {
+      "name": "TypeSafe AI",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GPT-5 Nano",
+      "type": "model"
+    },
+    {
+      "name": "Qwen 3.5",
+      "type": "model"
+    },
+    {
+      "name": "Kev",
+      "type": "model"
+    },
+    {
+      "name": "llm-typesafe",
+      "type": "product"
+    },
+    {
+      "name": "decision models",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "TypeSafe AI",
+      "to": "Jev",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Jev",
+      "label": "解读"
+    },
+    {
+      "from": "Kev",
+      "to": "Qwen 3.5",
+      "label": "基于"
+    },
+    {
+      "from": "llm-typesafe",
+      "to": "Jev",
+      "label": "接入"
+    },
+    {
+      "from": "Jev",
+      "to": "decision models",
+      "label": "属于"
+    }
+  ]
+}

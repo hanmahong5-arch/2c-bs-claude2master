@@ -1,0 +1,103 @@
+{
+  "center": "OpenAI CFO谈AI原生财务",
+  "branches": [
+    {
+      "label": "自动化预测",
+      "detail": "AI模型自动生成财务预测，减少人工干预并提升准确性",
+      "children": [
+        "需关注模型可解释性与数据质量"
+      ]
+    },
+    {
+      "label": "强化控制",
+      "detail": "AI实时监控财务交易，识别异常并增强合规性",
+      "children": [
+        "需设计可审计、透明可追溯的系统"
+      ]
+    },
+    {
+      "label": "AI投资回报",
+      "detail": "衡量ROI需兼顾效率提升与风险降低，而非仅看成本节约",
+      "children": [
+        "应建立多维评估框架，避免短视"
+      ]
+    },
+    {
+      "label": "跨部门协作",
+      "detail": "财务与工程团队紧密合作才能成功部署AI",
+      "children": [
+        "开发者需理解业务需求，构建跨职能团队"
+      ]
+    },
+    {
+      "label": "持续学习",
+      "detail": "AI模型需定期更新以适应业务变化",
+      "children": [
+        "应建立模型迭代机制，保持系统敏捷"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AI原生财务",
+      "type": "concept"
+    },
+    {
+      "name": "自动化预测",
+      "type": "technique"
+    },
+    {
+      "name": "强化控制",
+      "type": "technique"
+    },
+    {
+      "name": "AI投资回报",
+      "type": "concept"
+    },
+    {
+      "name": "跨部门协作",
+      "type": "concept"
+    },
+    {
+      "name": "持续学习",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AI原生财务",
+      "label": "构建"
+    },
+    {
+      "from": "AI原生财务",
+      "to": "自动化预测",
+      "label": "包含"
+    },
+    {
+      "from": "AI原生财务",
+      "to": "强化控制",
+      "label": "包含"
+    },
+    {
+      "from": "AI原生财务",
+      "to": "AI投资回报",
+      "label": "包含"
+    },
+    {
+      "from": "AI原生财务",
+      "to": "跨部门协作",
+      "label": "包含"
+    },
+    {
+      "from": "AI原生财务",
+      "to": "持续学习",
+      "label": "包含"
+    }
+  ]
+}

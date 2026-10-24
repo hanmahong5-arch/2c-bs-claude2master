@@ -16,7 +16,7 @@ export interface ContentItemBase {
 
 export type Verified = "tested" | "pending";
 
-export type ChangelogKind = "changelog" | "practice" | "trending" | "blogger";
+export type ChangelogKind = "changelog" | "practice" | "trending" | "blogger" | "community";
 
 export interface ChangelogItem extends ContentItemBase {
   channel: "changelog";
@@ -31,7 +31,20 @@ export interface ChangelogItem extends ContentItemBase {
   kind?: ChangelogKind;
   /** 博主条目署名 (kind: blogger); release/practice/trending 不设 */
   author?: string;
+  /** 博主条目来源类别 (kind: blogger): 模型实验室 / AI 公司 / 个人; 旧条目缺省视为 person */
+  category?: SourceCategory;
+  /** 是否有知识图谱 (src/content/graph/<slug>.json) → 列表卡片显示「一图看懂」 */
+  hasGraph?: boolean;
 }
+
+export type SourceCategory = "lab" | "company" | "person" | "community";
+
+export const CATEGORY_LABEL: Record<SourceCategory, string> = {
+  lab: "🧪 实验室",
+  company: "🏢 AI 公司",
+  person: "👤 个人",
+  community: "💭 社区",
+};
 
 export interface DigestItem extends ContentItemBase {
   channel: "digest";
@@ -93,6 +106,10 @@ export const KIND_LABEL: Record<
   blogger: {
     label: "💬 观点",
     className: "bg-[rgba(45,74,138,0.12)] text-[var(--lt-info)]",
+  },
+  community: {
+    label: "💭 热议",
+    className: "bg-[rgba(179,57,43,0.10)] text-[var(--lt-err)]",
   },
 };
 

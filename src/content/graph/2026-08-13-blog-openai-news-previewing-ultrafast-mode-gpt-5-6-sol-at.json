@@ -1,0 +1,115 @@
+{
+  "center": "OpenAI 推出 GPT-5.6 Sol…",
+  "branches": [
+    {
+      "label": "Ultrafast 模式",
+      "detail": "新服务层级，比标准处理快最多 14 倍，先在 OpenAI API 上线",
+      "children": [
+        "由 Cerebras 提供算力",
+        "最高 750 输出 token/秒",
+        "限受邀客户预览"
+      ]
+    },
+    {
+      "label": "速度不牺牲智能",
+      "detail": "以往实时速度需换小模型，Ultrafast 让前沿智能保持高速",
+      "children": [
+        "GPT-5.6 全栈效率提升",
+        "每秒完成更多有用工作"
+      ]
+    },
+    {
+      "label": "典型应用场景",
+      "detail": "面向对时间敏感的业务环节，让 AI 进入实时工作流",
+      "children": [
+        "故障响应：实时读日志、查变更、备修复",
+        "金融研究：实时分析信号与可疑交易",
+        "客服语音：多步查询不打断对话"
+      ]
+    },
+    {
+      "label": "早期客户反馈",
+      "detail": "Jane Street、Podium、Basis、Rogo 等参与测试",
+      "children": [
+        "Jane Street：开发者更专注高效",
+        "Podium：语音通话体验彻底改变",
+        "Rogo：金融研究变成实时交互"
+      ]
+    },
+    {
+      "label": "OpenAI 内部用法",
+      "detail": "内部开发者测试实时前沿智能的工作流",
+      "children": [
+        "故障响应：缩短观察、验证、行动间隔",
+        "研究：实验从隔夜批处理变为当天多轮迭代"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Ultrafast",
+      "type": "product"
+    },
+    {
+      "name": "Cerebras",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI API",
+      "type": "product"
+    },
+    {
+      "name": "Jane Street",
+      "type": "company"
+    },
+    {
+      "name": "Podium",
+      "type": "company"
+    },
+    {
+      "name": "Rogo",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Sol",
+      "label": "发布"
+    },
+    {
+      "from": "Ultrafast",
+      "to": "GPT-5.6 Sol",
+      "label": "运行"
+    },
+    {
+      "from": "Cerebras",
+      "to": "Ultrafast",
+      "label": "提供算力"
+    },
+    {
+      "from": "Ultrafast",
+      "to": "OpenAI API",
+      "label": "首发于"
+    },
+    {
+      "from": "Jane Street",
+      "to": "Ultrafast",
+      "label": "测试"
+    },
+    {
+      "from": "Rogo",
+      "to": "Ultrafast",
+      "label": "测试"
+    }
+  ]
+}

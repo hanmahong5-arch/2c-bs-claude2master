@@ -1,0 +1,101 @@
+{
+  "center": "Cline 桌面版 v0.0.17 大改",
+  "branches": [
+    {
+      "label": "统一 Customize 中心",
+      "detail": "插件、MCP、技能、规则、钩子、工具合并为一个配置中心",
+      "children": [
+        "带标签页与实时计数",
+        "目录浏览与安装项同页",
+        "移除独立 Marketplace 页"
+      ]
+    },
+    {
+      "label": "模型页重设计",
+      "detail": "提供商按已连接/热门/全部分组，OAuth 支持浏览器登录",
+      "children": [
+        "显式连接/断开操作",
+        "认证状态更清晰",
+        "减少 API key 管理负担"
+      ]
+    },
+    {
+      "label": "语音独立设置",
+      "detail": "语音输入移至独立页，仅显示已连接且支持转录的提供商",
+      "children": [
+        "预选默认模型",
+        "麦克风按钮配置后才出现"
+      ]
+    },
+    {
+      "label": "会话搜索升级",
+      "detail": "搜索改为对话框，覆盖全部历史而非仅侧边栏已加载项",
+      "children": [
+        "全局搜索提升检索效率",
+        "适合长会话管理"
+      ]
+    },
+    {
+      "label": "移除 todo 工具",
+      "detail": "移除 agent 的 todo 工具和 Agenda 面板，定时任务不受影响",
+      "children": [
+        "简化工具集减少维护面",
+        "需确保替代方案"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Customize",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "OAuth",
+      "type": "technique"
+    },
+    {
+      "name": "Marketplace",
+      "type": "product"
+    },
+    {
+      "name": "Agenda",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Customize",
+      "label": "新增"
+    },
+    {
+      "from": "Cline",
+      "to": "MCP",
+      "label": "整合"
+    },
+    {
+      "from": "Cline",
+      "to": "OAuth",
+      "label": "支持"
+    },
+    {
+      "from": "Cline",
+      "to": "Marketplace",
+      "label": "移除"
+    },
+    {
+      "from": "Cline",
+      "to": "Agenda",
+      "label": "移除"
+    }
+  ]
+}

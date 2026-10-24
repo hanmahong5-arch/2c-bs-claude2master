@@ -1,0 +1,97 @@
+{
+  "center": "蒸馏攻击术语误用与政策风险",
+  "branches": [
+    {
+      "label": "术语误用危害",
+      "detail": "将API滥用称为蒸馏攻击，会污名化蒸馏这一核心技术",
+      "children": [
+        "蒸馏是行业标准后训练技术",
+        "误用会关联研究与犯罪"
+      ]
+    },
+    {
+      "label": "蒸馏的合法用途",
+      "detail": "蒸馏广泛用于构建更小、更便宜的模型及数据引擎",
+      "children": [
+        "前沿实验室蒸馏自家模型",
+        "用于数学推理、编码等技能转移",
+        "olmOCR等专用模型案例"
+      ]
+    },
+    {
+      "label": "灰色地带与滥用",
+      "detail": "闭源API蒸馏长期处于服务条款灰色地带，但滥用涉及越狱",
+      "children": [
+        "中国实验室越狱API获取推理数据",
+        "xAI被指蒸馏OpenAI",
+        "应称越狱而非蒸馏"
+      ]
+    },
+    {
+      "label": "政策风险",
+      "detail": "仓促监管可能损害美国AI生态，且无法阻止中国行为",
+      "children": [
+        "国会法案、行政令、监督行动",
+        "可能变相禁止开源权重模型",
+        "监管俘获或过度监管"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "xAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "olmOCR",
+      "type": "model"
+    },
+    {
+      "name": "distillation",
+      "type": "technique"
+    },
+    {
+      "name": "jailbreaking",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "distillation",
+      "label": "误称为攻击"
+    },
+    {
+      "from": "xAI",
+      "to": "OpenAI",
+      "label": "被指蒸馏"
+    },
+    {
+      "from": "jailbreaking",
+      "to": "distillation",
+      "label": "应区分"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "distillation",
+      "label": "撰文剖析"
+    }
+  ]
+}

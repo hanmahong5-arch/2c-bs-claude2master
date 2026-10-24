@@ -88,25 +88,30 @@ blogs:
     type: rss
     url: https://openai.com/news/rss.xml
     pollDays: 1
+    category: lab
 
   - author: Google DeepMind
     handle: deepmind
     type: rss
     url: https://deepmind.google/blog/rss.xml
     pollDays: 2
+    category: lab
 
   - author: Hugging Face
     handle: hf-blog
     type: rss
     url: https://huggingface.co/blog/feed.xml
     pollDays: 2
+    category: company
 
+  # 2026-09-23: newsroom 已服务端渲染 (curl 可见文章链接) → lightpanda 改 html, CI 不再起浏览器。
   - author: Anthropic
     handle: anthropic-news
-    type: lightpanda
+    type: html
     url: https://www.anthropic.com/news
-    itemSelector: 'a[href*="/news/"]'
+    linkPattern: '^/news/[a-z0-9-]+$'
     pollDays: 1
+    category: lab
 
   # ── Agent 运行时专区 观点源 (品类 agent-runtime; RSS 经 2026-06-29 逐个 fetch 验证) ──
   # OpenClaw 作者 Peter Steinberger 个人博客 — 注: 可用路径是 /rss.xml (/feed /atom.xml 均 404)。
@@ -122,3 +127,179 @@ blogs:
     type: rss
     url: https://openclaw.ai/rss.xml
     pollDays: 2
+    category: company
+
+  # ══ 2026-09-23 扩源: AI 原生公司 / 框架 / 模型厂官方博客 ══════════════════════
+  # 全部经本日逐个探测 (HTTP 200 + 真 feed 含 item/entry + 最新条目日期)。
+  # category: lab = 模型实验室 · company = AI 原生公司/框架 · person = 个人 (缺省)
+  # include: 全站 feed 只收 AI 相关 (标题+正文正则, 不区分大小写); 不相关的标 seen 不出稿。
+  # html 源: SSR 列表页无 feed → linkPattern 筛文章链接, 文章页须能取到发布日期才收。
+
+  # ── 模型实验室 ──
+  - author: Mistral AI
+    handle: mistral
+    type: rss
+    url: https://mistral.ai/rss.xml
+    pollDays: 1
+    category: lab
+
+  - author: xAI
+    handle: xai-news
+    type: html
+    url: https://x.ai/news
+    linkPattern: '^/news/[a-z0-9-]+$'
+    pollDays: 1
+    category: lab
+
+  - author: DeepSeek
+    handle: deepseek-news
+    type: html
+    url: https://api-docs.deepseek.com/news/news260910
+    linkPattern: '^/news/news\d+$'
+    urlDate: 'news(\d{2})(\d{2})(\d{2})'
+    pollDays: 2
+    category: lab
+
+  - author: Microsoft Research
+    handle: msr
+    type: rss
+    url: https://www.microsoft.com/en-us/research/feed/
+    include: '\b(AI|LLMs?|agents?|agentic|language models?|GPT|reasoning|multimodal)\b'
+    pollDays: 2
+    category: lab
+
+  # ── Agent 框架 / 开发工具 ──
+  - author: LangChain
+    handle: langchain
+    type: rss
+    url: https://www.langchain.com/blog/rss.xml
+    pollDays: 1
+    category: company
+
+  - author: LlamaIndex
+    handle: llamaindex
+    type: html
+    url: https://www.llamaindex.ai/blog
+    linkPattern: '^/blog/[a-z0-9-]+$'
+    pollDays: 2
+    category: company
+
+  - author: Cursor
+    handle: cursor-blog
+    type: html
+    url: https://cursor.com/blog
+    linkPattern: '^/blog/[a-z0-9-]+$'
+    pollDays: 1
+    category: company
+
+  - author: Cursor
+    handle: cursor-changelog
+    type: rss
+    url: https://cursor.com/changelog/rss.xml
+    pollDays: 1
+    category: company
+
+  - author: Cognition (Devin)
+    handle: cognition
+    type: rss
+    url: https://devin.ai/rss.xml
+    pollDays: 1
+    category: company
+
+  - author: GitHub
+    handle: github-ai
+    type: rss
+    url: https://github.blog/ai-and-ml/feed/
+    pollDays: 1
+    category: company
+
+  - author: Vercel
+    handle: vercel
+    type: rss
+    url: https://vercel.com/atom
+    include: '\b(AI|LLMs?|agents?|agentic|GPT|Claude|Gemini|MCP|v0|AI SDK|AI Gateway|models?)\b'
+    pollDays: 1
+    category: company
+
+  - author: Replit
+    handle: replit
+    type: rss
+    url: https://blog.replit.com/feed.xml
+    pollDays: 3
+    category: company
+
+  - author: Lovable
+    handle: lovable
+    type: rss
+    url: https://lovable.dev/blog/rss.xml
+    pollDays: 2
+    category: company
+
+  - author: Supabase
+    handle: supabase
+    type: rss
+    url: https://supabase.com/rss.xml
+    include: '\b(AI|LLMs?|agents?|agentic|MCP|embeddings?|vectors?|pgvector|RAG|Claude|GPT|Gemini)\b'
+    pollDays: 2
+    category: company
+
+  # ── 企业级 Agent 应用 ──
+  - author: Sierra
+    handle: sierra
+    type: rss
+    url: https://sierra.ai/rss.xml
+    pollDays: 2
+    category: company
+
+  - author: Harvey
+    handle: harvey
+    type: html
+    url: https://www.harvey.ai/blog
+    linkPattern: '^/blog/[a-z0-9-]+$'
+    pollDays: 3
+    category: company
+
+  - author: Cohere
+    handle: cohere
+    type: html
+    url: https://cohere.com/blog
+    linkPattern: '^/blog/[a-z0-9-]+$'
+    pollDays: 2
+    category: company
+
+  # ── 推理 / 基础设施 ──
+  - author: Together AI
+    handle: together
+    type: rss
+    url: https://www.together.ai/blog/rss.xml
+    pollDays: 2
+    category: company
+
+  - author: Fireworks AI
+    handle: fireworks
+    type: html
+    url: https://fireworks.ai/blog
+    linkPattern: '^/blog/[a-z0-9-]+$'
+    pollDays: 3
+    category: company
+
+  - author: Modal
+    handle: modal
+    type: rss
+    url: https://modal.com/blog/atom.xml
+    pollDays: 3
+    category: company
+
+  - author: Anyscale
+    handle: anyscale
+    type: rss
+    url: https://www.anyscale.com/rss.xml
+    pollDays: 3
+    category: company
+
+  - author: Weaviate
+    handle: weaviate
+    type: rss
+    url: https://weaviate.io/blog/rss.xml
+    pollDays: 3
+    category: company

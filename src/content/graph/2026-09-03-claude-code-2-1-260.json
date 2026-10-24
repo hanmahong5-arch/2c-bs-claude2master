@@ -1,0 +1,91 @@
+{
+  "center": "Claude Code v2.1.260 更新",
+  "branches": [
+    {
+      "label": "diff 面板",
+      "detail": "新增 /diff 全屏并排显示未提交更改，便于观察 agent 编辑过程",
+      "children": [
+        "全屏模式并排显示",
+        "观察 agent 编辑过程"
+      ]
+    },
+    {
+      "label": "缓存诊断",
+      "detail": "/cost 与状态行提示缓存未命中原因，帮助优化 token 成本",
+      "children": [
+        "工具定义或系统提示变更",
+        "超过 TTL"
+      ]
+    },
+    {
+      "label": "权限与安全修复",
+      "detail": "修复路径含括号权限规则失效、正则错误、zsh 命令替换绕过 Bash 权限检查",
+      "children": [
+        "路径含括号规则失效",
+        "zsh 命令替换绕过检查"
+      ]
+    },
+    {
+      "label": "回滚与输出改进",
+      "detail": "修复 /rewind 误报成功与残留文件读取跟踪，改进结构化输出与自动压缩",
+      "children": [
+        "拒绝无法满足的 JSON Schema",
+        "优化 1M 上下文自动压缩时机"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "diff 面板",
+      "type": "concept"
+    },
+    {
+      "name": "缓存未命中",
+      "type": "concept"
+    },
+    {
+      "name": "Bash 权限检查",
+      "type": "concept"
+    },
+    {
+      "name": "JSON Schema",
+      "type": "concept"
+    },
+    {
+      "name": "1M 上下文模型",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "diff 面板",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "缓存未命中",
+      "label": "诊断"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Bash 权限检查",
+      "label": "修复绕过"
+    },
+    {
+      "from": "Claude Code",
+      "to": "JSON Schema",
+      "label": "改进输出"
+    },
+    {
+      "from": "Claude Code",
+      "to": "1M 上下文模型",
+      "label": "优化压缩"
+    }
+  ]
+}

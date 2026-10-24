@@ -1,0 +1,78 @@
+{
+  "center": "OpenAI 重塑网络安全防御",
+  "branches": [
+    {
+      "label": "AI 改变攻防规则",
+      "detail": "AI 同时提升攻击者与防御者能力，安全团队需重估威胁模型",
+      "children": [
+        "将 AI 能力纳入防御体系",
+        "威胁模型需重新评估"
+      ]
+    },
+    {
+      "label": "自动化检测响应",
+      "detail": "用 AI 自动化威胁检测与响应，匹配 AI 攻击速度",
+      "children": [
+        "工具链需集成 AI 原生安全组件"
+      ]
+    },
+    {
+      "label": "数据与模型安全",
+      "detail": "关注数据安全与模型行为监控，防止 AI 系统被滥用",
+      "children": [
+        "AI 应用内置安全审计机制"
+      ]
+    }
+  ],
+  "flow": [
+    "重估威胁模型",
+    "纳入 AI 防御能力",
+    "集成 AI 原生组件",
+    "自动化检测响应",
+    "内置安全审计"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AI 原生安全组件",
+      "type": "concept"
+    },
+    {
+      "name": "威胁模型",
+      "type": "concept"
+    },
+    {
+      "name": "安全审计机制",
+      "type": "concept"
+    },
+    {
+      "name": "模型行为监控",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "威胁模型",
+      "label": "建议重估"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AI 原生安全组件",
+      "label": "建议集成"
+    },
+    {
+      "from": "OpenAI",
+      "to": "安全审计机制",
+      "label": "建议内置"
+    },
+    {
+      "from": "OpenAI",
+      "to": "模型行为监控",
+      "label": "建议关注"
+    }
+  ]
+}

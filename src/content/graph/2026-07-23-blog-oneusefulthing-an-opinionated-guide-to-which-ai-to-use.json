@@ -1,0 +1,118 @@
+{
+  "center": "AI 代理系统使用指南",
+  "branches": [
+    {
+      "label": "代理系统时代",
+      "detail": "AI 从聊天机器人升级为能自主规划、使用工具、完成数小时人类工作的代理系统",
+      "children": [
+        "GPT-5 到 GPT-5.6 Sol 不到一年，游戏生成效…",
+        "代理系统本质是给 AI 一台电脑使用"
+      ]
+    },
+    {
+      "label": "模型与思考等级",
+      "detail": "需同时选择模型和思考等级，高风险问题用最强模型",
+      "children": [
+        "高风险用 Claude Opus/Fable 或 GPT-5.6 Sol…",
+        "低风险免费模型即可，选喜欢的"
+      ]
+    },
+    {
+      "label": "公司提供的电脑",
+      "detail": "ChatGPT Work 和 Claude Cowork 使用公司虚拟电脑，可连接应用、定时任务",
+      "children": [
+        "可连接 Gmail、Google Drive 等应用",
+        "从手机启动长任务，稍后查看结果"
+      ]
+    },
+    {
+      "label": "自己的电脑",
+      "detail": "下载 ChatGPT 或 Claude 应用，用 Codex 或 Claude Code 模式访问本地文件",
+      "children": [
+        "Codex/Claude Code 展示文件修改、命令运行等…",
+        "用 GPT-5.6 Sol 在 Codex 中检查书稿，30 分…"
+      ]
+    },
+    {
+      "label": "权限与风险",
+      "detail": "权限设置至关重要，默认应要求批准，防范提示注入",
+      "children": [
+        "ChatGPT 曾未经批准发送邮件，因之前授权",
+        "提示注入：恶意文本试图欺骗代理转发文件"
+      ]
+    }
+  ],
+  "flow": [
+    "选择模型和思考等级",
+    "选择代理模式（Work/Cowork 或…",
+    "连接应用或访问本地文件",
+    "设置权限（默认需批准）",
+    "下达任务并等待结果"
+  ],
+  "entities": [
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Opus",
+      "type": "model"
+    },
+    {
+      "name": "Fable",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ethan Mollick",
+      "to": "ChatGPT",
+      "label": "对比"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "Claude",
+      "label": "对比"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "GPT-5.6 Sol",
+      "label": "使用"
+    },
+    {
+      "from": "Claude",
+      "to": "Opus",
+      "label": "使用"
+    },
+    {
+      "from": "Claude",
+      "to": "Fable",
+      "label": "使用"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "Codex",
+      "label": "包含"
+    }
+  ]
+}

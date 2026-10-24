@@ -1,0 +1,98 @@
+{
+  "center": "Cline CLI v3.0.50 更新",
+  "branches": [
+    {
+      "label": "TUI 换肤",
+      "detail": "新增主题选择，支持 11 种内置主题",
+      "children": [
+        "/theme 或设置切换",
+        "CLINE_THEME 环境变量可覆盖"
+      ]
+    },
+    {
+      "label": "Plan 模式硬拦截",
+      "detail": "拦截文件编辑命令，仅允许只读命令",
+      "children": [
+        "拦截 sed -i、重定向等",
+        "增强安全性"
+      ]
+    },
+    {
+      "label": "空响应重试",
+      "detail": "空模型响应在所有 provider 上重试",
+      "children": [
+        "不再直接失败",
+        "提高鲁棒性"
+      ]
+    },
+    {
+      "label": "上下文自动压缩",
+      "detail": "上下文耗尽时自动压缩并重试一次",
+      "children": [
+        "而非报错",
+        "处理长对话"
+      ]
+    },
+    {
+      "label": "其他修复",
+      "detail": "修复 Telegram 斜杠命令、竞态连接、Bedrock 缓存等问题",
+      "children": [
+        "避免静默失败"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "CLI v3.0.50",
+      "type": "product"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "Plan 模式",
+      "type": "concept"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "CLI v3.0.50",
+      "label": "发布"
+    },
+    {
+      "from": "CLI v3.0.50",
+      "to": "TUI",
+      "label": "新增主题"
+    },
+    {
+      "from": "CLI v3.0.50",
+      "to": "Plan 模式",
+      "label": "硬拦截"
+    },
+    {
+      "from": "CLI v3.0.50",
+      "to": "Telegram",
+      "label": "修复集成"
+    },
+    {
+      "from": "CLI v3.0.50",
+      "to": "Bedrock",
+      "label": "修复缓存"
+    }
+  ]
+}

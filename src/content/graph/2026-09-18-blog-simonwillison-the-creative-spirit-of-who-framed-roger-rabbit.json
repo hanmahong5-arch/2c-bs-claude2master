@@ -1,0 +1,83 @@
+{
+  "center": "《谁陷害了兔子罗杰》鹈鹕骑车特效",
+  "branches": [
+    {
+      "label": "实拍与动画结合",
+      "detail": "鹈鹕是动画，自行车是真实道具，两者合成一个镜头",
+      "children": [
+        "鹈鹕动画，自行车实拍"
+      ]
+    },
+    {
+      "label": "车轮注水增稳",
+      "detail": "为让自行车稳定行驶，剧组往车轮里灌水增加重量",
+      "children": [
+        "车轮注水"
+      ]
+    },
+    {
+      "label": "缆绳引导行驶",
+      "detail": "自行车被设定好路线后，用缆绳牵引控制方向",
+      "children": [
+        "缆绳引导"
+      ]
+    },
+    {
+      "label": "Simon Willison 推荐",
+      "detail": "Simon Willison 在博客中分享该片段，Cypress Frankenfeld 提供细节",
+      "children": [
+        "Cypress Frankenfeld 指出片段"
+      ]
+    }
+  ],
+  "flow": [
+    "车轮注水增稳",
+    "设定自行车路线",
+    "缆绳引导行驶",
+    "动画鹈鹕合成"
+  ],
+  "entities": [
+    {
+      "name": "Who Framed Roger Rabbit",
+      "type": "product"
+    },
+    {
+      "name": "Robert Zemeckis",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Cypress Frankenfeld",
+      "type": "person"
+    },
+    {
+      "name": "pelican riding a bicycle",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Robert Zemeckis",
+      "to": "Who Framed Roger Rabbit",
+      "label": "执导"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Who Framed Roger Rabbit",
+      "label": "推荐"
+    },
+    {
+      "from": "Cypress Frankenfeld",
+      "to": "pelican riding a bicycle",
+      "label": "提供细节"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Cypress Frankenfeld",
+      "label": "引用"
+    }
+  ]
+}

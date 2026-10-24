@@ -1,0 +1,111 @@
+{
+  "center": "复现2200篇ICML论文",
+  "branches": [
+    {
+      "label": "大规模复现",
+      "detail": "用AI agent批量复现ICML 2026全部218篇论文",
+      "children": [
+        "覆盖ICML 2026全部218篇",
+        "每篇配交互式日志与代码追踪"
+      ]
+    },
+    {
+      "label": "复现案例",
+      "detail": "涉及鲁棒分页、DiT量化、QKV变体、持续学习等方向",
+      "children": [
+        "RobuQ：DiT W1.58A2激活量化",
+        "LLM裁判难测对抗鲁棒性",
+        "自蒸馏实现持续学习"
+      ]
+    },
+    {
+      "label": "工具链",
+      "detail": "agent复现依赖日志追踪与溯源工具",
+      "children": [
+        "Trackio / W&B 代码插桩",
+        "roar-cli 被动捕获溯源",
+        "自动生成 AI-BOM"
+      ]
+    },
+    {
+      "label": "社区协作",
+      "detail": "Hugging Face评论区交流互补复现实验",
+      "children": [
+        "ReproducibleAIList.org 复现代码库",
+        "AlphaXiv OpenResearch + OpenCode",
+        "2× RTX 3090 本地跑实验"
+      ]
+    },
+    {
+      "label": "意义与局限",
+      "detail": "agent复现有望成为ML会议可信度标准",
+      "children": [
+        "暴露agent成功与失败之处",
+        "改进人机协作方式"
+      ]
+    }
+  ],
+  "flow": [
+    "选取ICML论文",
+    "agent读取论文",
+    "运行代码与实验",
+    "记录日志与溯源",
+    "生成复现报告"
+  ],
+  "entities": [
+    {
+      "name": "ICML",
+      "type": "concept"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "roar-cli",
+      "type": "product"
+    },
+    {
+      "name": "Trackio",
+      "type": "product"
+    },
+    {
+      "name": "W&B",
+      "type": "product"
+    },
+    {
+      "name": "ReproducibleAIList.org",
+      "type": "product"
+    },
+    {
+      "name": "AlphaXiv",
+      "type": "product"
+    },
+    {
+      "name": "OpenCode",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "roar-cli",
+      "to": "Trackio",
+      "label": "替代"
+    },
+    {
+      "from": "ReproducibleAIList.org",
+      "to": "roar-cli",
+      "label": "使用"
+    },
+    {
+      "from": "AlphaXiv",
+      "to": "OpenCode",
+      "label": "集成"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "ICML",
+      "label": "复现"
+    }
+  ]
+}

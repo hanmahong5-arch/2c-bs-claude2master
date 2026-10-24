@@ -1,0 +1,93 @@
+{
+  "center": "openclaw 2026.9.3 更新",
+  "branches": [
+    {
+      "label": "隔离彩排更新",
+      "detail": "更新先在隔离候选状态彩排核心与插件变更，验证通过才激活",
+      "children": [
+        "失败可回滚，不中断 Gateway",
+        "支持 2026.9.2 迁移与废弃更新记录恢复"
+      ]
+    },
+    {
+      "label": "Node 版本门槛",
+      "detail": "运行时要求提升到 24.16.0+ 或 26.1.0+",
+      "children": [
+        "Node 22/25 及更早 24.x/26.x 不再支持",
+        "理由是避免 SQLite 文本截断"
+      ]
+    },
+    {
+      "label": "SDK 破坏性变更",
+      "detail": "多个助手迁移到新契约，插件需按新接口迁移",
+      "children": [
+        "exec-mode 与 comparator 迁至 execPolicy",
+        "approval 迁至 approval-native-runtime",
+        "搜索与目录回调改读 details.content /…"
+      ]
+    }
+  ],
+  "flow": [
+    "隔离候选状态彩排",
+    "验证核心与插件变更",
+    "通过后激活",
+    "失败则回滚"
+  ],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "Gateway",
+      "type": "concept"
+    },
+    {
+      "name": "Node",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "execPolicy",
+      "type": "concept"
+    },
+    {
+      "name": "approval-native-runtime",
+      "type": "concept"
+    },
+    {
+      "name": "LsToolDetails",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "Gateway",
+      "label": "不中断"
+    },
+    {
+      "from": "openclaw",
+      "to": "Node",
+      "label": "要求版本"
+    },
+    {
+      "from": "Node",
+      "to": "SQLite",
+      "label": "避免截断"
+    },
+    {
+      "from": "openclaw",
+      "to": "execPolicy",
+      "label": "迁移至"
+    },
+    {
+      "from": "openclaw",
+      "to": "approval-native-runtime",
+      "label": "迁移至"
+    }
+  ]
+}

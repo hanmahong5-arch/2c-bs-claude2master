@@ -1,0 +1,103 @@
+{
+  "center": "Moonshot 发布 Kimi K3",
+  "branches": [
+    {
+      "label": "模型规格",
+      "detail": "Moonshot 放出 2.8 万亿参数 Kimi K3 权重",
+      "children": [
+        "Hugging Face 上体积 1.56TB",
+        "此前本月已预告发布"
+      ]
+    },
+    {
+      "label": "许可证收紧",
+      "detail": "K3 许可证不再自称 modified MIT，限制更严",
+      "children": [
+        "K2 曾要求超 1 亿 MAU 或 2000 万美元月收入者…",
+        "K3 要求大型 Model as a Service 业务另签协议",
+        "12 个月累计收入超 2000 万美元须单独签约"
+      ]
+    },
+    {
+      "label": "官方措辞",
+      "detail": "Kimi 自称 open weight 而非 open source",
+      "children": [
+        "官方材料一致使用 open weight 一词"
+      ]
+    },
+    {
+      "label": "上线渠道",
+      "detail": "OpenRouter 已由 7 家提供商提供 K3",
+      "children": [
+        "多数定价与 Moonshot 一致：输入 $3/百万、输…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Moonshot",
+      "type": "company"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K2",
+      "type": "model"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "product"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "Model as a Service",
+      "type": "concept"
+    },
+    {
+      "name": "open weight",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Moonshot",
+      "to": "Kimi K3",
+      "label": "发布"
+    },
+    {
+      "from": "Moonshot",
+      "to": "Kimi K2",
+      "label": "曾发布"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "Hugging Face",
+      "label": "托管于"
+    },
+    {
+      "from": "OpenRouter",
+      "to": "Kimi K3",
+      "label": "提供"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "Model as a Service",
+      "label": "限制"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Kimi K3",
+      "label": "报道"
+    }
+  ]
+}

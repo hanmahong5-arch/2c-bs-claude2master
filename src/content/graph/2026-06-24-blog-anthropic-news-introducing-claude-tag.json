@@ -1,0 +1,109 @@
+{
+  "center": "Claude Tag 团队协作",
+  "branches": [
+    {
+      "label": "产品定位",
+      "detail": "Claude 以团队成员身份加入 Slack，可被 @ 委派任务",
+      "children": [
+        "先在 Slack 上线，Beta 面向 Enterprise 与…",
+        "被视为 Claude Code 的演进方向",
+        "Anthropic 产品团队 65% 代码由其内部版生成"
+      ]
+    },
+    {
+      "label": "四大新优势",
+      "detail": "多人共享、持续学习、主动提醒、异步执行",
+      "children": [
+        "一个频道共用一个 Claude，任何人可接续对话",
+        "随频道积累上下文，无需反复解释",
+        "开启 ambient 后主动跟进未解决线程"
+      ]
+    },
+    {
+      "label": "权限与管控",
+      "detail": "管理员按频道配置工具与数据访问，记忆相互隔离",
+      "children": [
+        "不同用途的 Claude 身份记忆不互通",
+        "可设组织与频道级 token 花费上限",
+        "可查看 @Claude 全部操作及请求人日志"
+      ]
+    },
+    {
+      "label": "上手方式",
+      "detail": "Enterprise 与 Team 客户今日起可用 Beta",
+      "children": [
+        "四步：配对 Slack、授权工具、设月度限额、私密…",
+        "取代原 Claude in Slack 应用，30 天内可迁移",
+        "支持 Opus 4.8，也支持私信私密回复"
+      ]
+    }
+  ],
+  "flow": [
+    "配对 Slack 工作区",
+    "授权工具与数据",
+    "设置月度花费上限",
+    "私密频道测试验证"
+  ],
+  "entities": [
+    {
+      "name": "Claude Tag",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Claude Enterprise",
+      "type": "product"
+    },
+    {
+      "name": "Claude in Slack",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Tag",
+      "label": "推出"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "Slack",
+      "label": "运行于"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "Claude Code",
+      "label": "演进自"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "Opus 4.8",
+      "label": "基于"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "Claude in Slack",
+      "label": "取代"
+    },
+    {
+      "from": "Claude Enterprise",
+      "to": "Claude Tag",
+      "label": "可使用"
+    }
+  ]
+}

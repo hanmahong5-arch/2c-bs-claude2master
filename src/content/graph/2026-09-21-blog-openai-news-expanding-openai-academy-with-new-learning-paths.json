@@ -1,0 +1,119 @@
+{
+  "center": "OpenAI Academy 扩展学习路径",
+  "branches": [
+    {
+      "label": "按角色分路径",
+      "detail": "面向员工、开发者、领导者、教育者与学生提供角色化课程",
+      "children": [
+        "新增开发者、领导者、教育者、大学生课程",
+        "与 Apply AI at Work 基础路径并列"
+      ]
+    },
+    {
+      "label": "用 AI 学 AI",
+      "detail": "课程核心是让学习者在真实任务中练习使用 AI",
+      "children": [
+        "练习给指令、补充上下文、审查结果",
+        "通过课程评估可获 OpenAI Academy 徽章"
+      ]
+    },
+    {
+      "label": "开发者与团队",
+      "detail": "Build with AI 面向使用 Codex 或 OpenAI API 的技术团队",
+      "children": [
+        "覆盖软件开发生命周期的规划与实施",
+        "涵盖方案设计、评估、agents、检索与生产运维"
+      ]
+    },
+    {
+      "label": "领导者与教育",
+      "detail": "AI Leadership 与教育者、学生课程覆盖战略与教学场景",
+      "children": [
+        "AI Leadership 帮助定义所有权、治理与路线图",
+        "AI for Educators 用授权材料备课与评估",
+        "AI for College Students 覆盖学习计划与求职…"
+      ]
+    },
+    {
+      "label": "组织落地支持",
+      "detail": "提供部署指南帮助组织引入课程并跟踪进展",
+      "children": [
+        "企业可用于入职、技术团队与高管项目",
+        "院校可组合 AI Foundations 与教育课程"
+      ]
+    }
+  ],
+  "flow": [
+    "选择角色学习路径",
+    "在真实任务中练习",
+    "复用为可重复工作流",
+    "通过课程评估",
+    "获得 Academy 徽章"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI Academy",
+      "type": "product"
+    },
+    {
+      "name": "Apply AI at Work",
+      "type": "product"
+    },
+    {
+      "name": "Build with AI",
+      "type": "product"
+    },
+    {
+      "name": "Lead AI Adoption",
+      "type": "product"
+    },
+    {
+      "name": "AI for Educators",
+      "type": "product"
+    },
+    {
+      "name": "AI for College Students",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "OpenAI Academy",
+      "label": "扩展"
+    },
+    {
+      "from": "OpenAI Academy",
+      "to": "Apply AI at Work",
+      "label": "包含"
+    },
+    {
+      "from": "OpenAI Academy",
+      "to": "Build with AI",
+      "label": "包含"
+    },
+    {
+      "from": "OpenAI Academy",
+      "to": "Lead AI Adoption",
+      "label": "包含"
+    },
+    {
+      "from": "OpenAI Academy",
+      "to": "AI for Educators",
+      "label": "包含"
+    },
+    {
+      "from": "OpenAI Academy",
+      "to": "AI for College Students",
+      "label": "包含"
+    }
+  ]
+}

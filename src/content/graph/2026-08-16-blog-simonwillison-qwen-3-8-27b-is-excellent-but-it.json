@@ -1,0 +1,113 @@
+{
+  "center": "Qwen 3.8 27B 本地模型评测",
+  "branches": [
+    {
+      "label": "默认过度思考",
+      "detail": "模型默认 xhigh 推理级别，简单问题也消耗大量 token",
+      "children": [
+        "画圆用 22,276 推理 token，耗时 21 分钟",
+        "LM Studio 默认 8,192 上下文被思考占满",
+        "建议改用 low 或关闭推理"
+      ]
+    },
+    {
+      "label": "本地运行配置",
+      "detail": "在 MacBook Pro 与 DGX Spark 上通过 LM Studio 运行",
+      "children": [
+        "17GB Q4_K_M 量化版本",
+        "128GB M5 Max MacBook Pro",
+        "NVIDIA DGX Spark 也试了 llama-server"
+      ]
+    },
+    {
+      "label": "视觉能力出色",
+      "detail": "能准确返回照片中鹈鹕的边界框",
+      "children": [
+        "0-1000 坐标尺度输出 JSON",
+        "边界框与照片高度吻合",
+        "还用它生成了标注工具页面"
+      ]
+    },
+    {
+      "label": "性能与对比",
+      "detail": "自报基准超过前代与闭源 Qwen 3.7-Plus",
+      "children": [
+        "Apache 2 许可，27B 参数",
+        "对比 Qwen 3.6 27B 有提升",
+        "更大模型 Qwen 3.8 2.4T-A95B 可生成动画 SVG"
+      ]
+    }
+  ],
+  "flow": [
+    "下载 Qwen 3.8 27B 量化模型",
+    "在 LM Studio 加载并调大上下文",
+    "将 reasoning_effort 设为…",
+    "输入提示词测试生成或视觉任务"
+  ],
+  "entities": [
+    {
+      "name": "Qwen 3.8 27B",
+      "type": "model"
+    },
+    {
+      "name": "Alibaba",
+      "type": "company"
+    },
+    {
+      "name": "LM Studio",
+      "type": "product"
+    },
+    {
+      "name": "NVIDIA DGX Spark",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Qwen 3.6 27B",
+      "type": "model"
+    },
+    {
+      "name": "Qwen 3.7-Plus",
+      "type": "model"
+    },
+    {
+      "name": "reasoning_effort",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Alibaba",
+      "to": "Qwen 3.8 27B",
+      "label": "发布"
+    },
+    {
+      "from": "Qwen 3.8 27B",
+      "to": "Qwen 3.6 27B",
+      "label": "超越"
+    },
+    {
+      "from": "Qwen 3.8 27B",
+      "to": "Qwen 3.7-Plus",
+      "label": "超越"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Qwen 3.8 27B",
+      "label": "评测"
+    },
+    {
+      "from": "LM Studio",
+      "to": "Qwen 3.8 27B",
+      "label": "运行"
+    },
+    {
+      "from": "Qwen 3.8 27B",
+      "to": "reasoning_effort",
+      "label": "支持"
+    }
+  ]
+}

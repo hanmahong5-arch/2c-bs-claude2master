@@ -1,0 +1,100 @@
+{
+  "center": "Anthropic 与多元智慧传统对话塑造…",
+  "branches": [
+    {
+      "label": "对话初衷",
+      "detail": "AI 不在真空中运行，需吸纳多元视角以构建造福人类的系统",
+      "children": [
+        "首轮对话涵盖 15+ 宗教与跨文化群体",
+        "参与者含学者、神职人员、哲学家、伦理学家"
+      ]
+    },
+    {
+      "label": "道德塑造研究",
+      "detail": "将早期反馈发展为 AI 系统道德形成的研究工作流",
+      "children": [
+        "模型从海量人类文本中习得言说与推理方式",
+        "开发者通过训练强化或搁置特定模式",
+        "目标非对齐单一传统，而是平等汲取各视角"
+      ]
+    },
+    {
+      "label": "外部良知实验",
+      "detail": "受导师充当外部良知启发，给 Claude 一个任务中调用的伦理提醒工具",
+      "children": [
+        "Claude 在关键行动前主动调用该工具",
+        "常指出自身利益冲突",
+        "内部对齐评估中错位行为显著降低"
+      ]
+    },
+    {
+      "label": "后续计划",
+      "detail": "将对话扩展至法律、心理、写作与公民机构等领域",
+      "children": [
+        "议题延伸至 AI 如何重塑工作、制度与权力分配",
+        "持续深化关系并用研究检验所听内容"
+      ]
+    }
+  ],
+  "flow": [
+    "组织多元智慧传统对话",
+    "收集道德与品格反馈",
+    "形成 AI 道德塑造研究流",
+    "设计外部良知提醒工具",
+    "实验并评估对齐效果",
+    "扩展对话至更广领域"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Claude's constitution",
+      "type": "concept"
+    },
+    {
+      "name": "moral formation",
+      "type": "concept"
+    },
+    {
+      "name": "alignment",
+      "type": "concept"
+    },
+    {
+      "name": "sycophancy",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Claude's constitution",
+      "to": "Claude",
+      "label": "塑造"
+    },
+    {
+      "from": "moral formation",
+      "to": "Claude",
+      "label": "指导"
+    },
+    {
+      "from": "Anthropic",
+      "to": "moral formation",
+      "label": "研究"
+    },
+    {
+      "from": "alignment",
+      "to": "Claude",
+      "label": "评估"
+    }
+  ]
+}

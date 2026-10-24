@@ -1,0 +1,73 @@
+{
+  "center": "datasette-apps 0.1a2 发布",
+  "branches": [
+    {
+      "label": "CSP 权限管控",
+      "detail": "自定义网络/CSP 源新增 apps-set-csp 权限保护",
+      "children": [
+        "支持 allowed_csp_origins 插件白名单",
+        "Datasette Agent 创建工具执行同样规则"
+      ]
+    },
+    {
+      "label": "存储查询选择器",
+      "detail": "支持键盘导航，聚焦时显示最近三条可访问查询",
+      "children": []
+    },
+    {
+      "label": "链接与弹窗修复",
+      "detail": "应用内 #fragment 链接不再被外链确认弹窗拦截",
+      "children": []
+    },
+    {
+      "label": "全屏模式修复",
+      "detail": "修复 ?full=1 全屏下链接确认弹窗与日志面板",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "datasette-apps",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Datasette Agent",
+      "type": "product"
+    },
+    {
+      "name": "CSP",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "datasette-apps",
+      "label": "发布"
+    },
+    {
+      "from": "datasette-apps",
+      "to": "Datasette",
+      "label": "运行于"
+    },
+    {
+      "from": "Datasette Agent",
+      "to": "datasette-apps",
+      "label": "创建应用"
+    },
+    {
+      "from": "datasette-apps",
+      "to": "CSP",
+      "label": "管控"
+    }
+  ]
+}

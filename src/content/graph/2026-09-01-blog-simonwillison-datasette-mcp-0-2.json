@@ -1,0 +1,72 @@
+{
+  "center": "datasette-mcp 0.2 发布",
+  "branches": [
+    {
+      "label": "核心变更",
+      "detail": "execute_sql 返回的 rows 由数组的数组改为对象数组",
+      "children": [
+        "帮助弱模型避免列位置错位",
+        "对应 issue #1"
+      ]
+    },
+    {
+      "label": "MCP 服务",
+      "detail": "为任意 Datasette 实例添加 /-/mcp MCP 服务器",
+      "children": [
+        "依赖 mcp>=2.1.1"
+      ]
+    },
+    {
+      "label": "版本状态",
+      "detail": "首个非 alpha 正式版，作者自用后确认可用",
+      "children": [
+        "发布于 2026-09-01"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "datasette-mcp",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "execute_sql",
+      "type": "technique"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "datasette-mcp",
+      "to": "Datasette",
+      "label": "扩展"
+    },
+    {
+      "from": "datasette-mcp",
+      "to": "MCP",
+      "label": "实现"
+    },
+    {
+      "from": "datasette-mcp",
+      "to": "execute_sql",
+      "label": "修改返回格式"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "datasette-mcp",
+      "label": "发布"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "center": "Cline桌面版v0.0.12更新",
+  "branches": [
+    {
+      "label": "工具调用独立展示",
+      "detail": "每个工具调用在转录中独立成行，带图标、状态和可展开详情",
+      "children": [
+        "命令输出和编辑diff内联显示",
+        "便于调试和审计"
+      ]
+    },
+    {
+      "label": "状态视觉反馈",
+      "detail": "运行中工具行高亮紫色，完成后变灰，错误保持红色",
+      "children": [
+        "diff渲染器遵循应用主题",
+        "主题一致性提升"
+      ]
+    },
+    {
+      "label": "修复Claude Code provider",
+      "detail": "会话锚定工作区，加载~/.claude设置，允许工作区内文件编辑",
+      "children": [
+        "agentic工作流更可靠",
+        "权限控制更合理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Claude Code",
+      "label": "修复provider"
+    }
+  ]
+}

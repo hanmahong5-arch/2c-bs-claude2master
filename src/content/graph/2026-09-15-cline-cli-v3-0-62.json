@@ -1,0 +1,88 @@
+{
+  "center": "Cline CLI v3.0.62 更新",
+  "branches": [
+    {
+      "label": "重试机制",
+      "detail": "流中断的模型回合最多重试 3 次并退避，已输出回合不重试",
+      "children": [
+        "最多重试 3 次并退避",
+        "已输出过的回合不重试，避免重复内容",
+        "harness 需区分「未产出」与「已产出」状态"
+      ]
+    },
+    {
+      "label": "插件管理",
+      "detail": "Agent Plugins 改由 Hub 管理，暴露为 plugin-name:skill-name",
+      "children": [
+        "~/.agents/plugins/* 被校验并暴露为 plugin…",
+        "MCP 服务器无需改 cline_mcp_settings.json",
+        "工作区 .agents/plugins 故意不扫描，防止打开…"
+      ]
+    },
+    {
+      "label": "流式输出",
+      "detail": "流式输出不再经 Hub 节流，此前每个 token 都要带完整会话副本往返",
+      "children": [
+        "不再经 Hub 节流",
+        "此前每个 token 都要带完整会话副本往返"
+      ]
+    },
+    {
+      "label": "checkpoint 优化",
+      "detail": "checkpoint 用持久快照索引跳过未变文件，避免大未跟踪目录阻塞消息",
+      "children": [
+        "用持久快照索引跳过未变文件",
+        "避免大未跟踪目录阻塞消息"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "Agent Plugins",
+      "type": "concept"
+    },
+    {
+      "name": "Hub",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "cline_mcp_settings.json",
+      "type": "product"
+    },
+    {
+      "name": "checkpoint",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Agent Plugins",
+      "to": "Hub",
+      "label": "由管理"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Agent Plugins",
+      "label": "支持"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "MCP",
+      "label": "集成"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "checkpoint",
+      "label": "使用"
+    }
+  ]
+}

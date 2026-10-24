@@ -1,0 +1,94 @@
+{
+  "center": "uv 0.12.0 默认项目结构变更",
+  "branches": [
+    {
+      "label": "默认改 src 布局",
+      "detail": "uv init 不再在项目根目录生成 main.py，改为 src/ 包结构",
+      "children": [
+        "uv init uv-init 生成 src/uv_init/",
+        "main() 位于 src/uv_init/__init__.py"
+      ]
+    },
+    {
+      "label": "集成构建后端",
+      "detail": "默认配置 uv_build 后端，用于构建 wheel 与 .tar.gz 分发包",
+      "children": [
+        "uv build 使用 uv_build 后端"
+      ]
+    },
+    {
+      "label": "脚本别名",
+      "detail": "自动设置 uv-init 脚本别名，可通过 uv run uv-init 执行",
+      "children": [
+        "uv run uv-init 调用 main()"
+      ]
+    },
+    {
+      "label": "作者态度",
+      "detail": "Simon Willison 表示自己因惯性一直未用 src 布局，认为该切换了",
+      "children": [
+        "并猜测 uv 何时发布 1.0"
+      ]
+    }
+  ],
+  "flow": [
+    "运行 uv init",
+    "生成 src/ 包结构",
+    "配置 uv_build 后端",
+    "设置 uv-init 脚本别名",
+    "uv run uv-init 执行 main()"
+  ],
+  "entities": [
+    {
+      "name": "uv",
+      "type": "product"
+    },
+    {
+      "name": "uv init",
+      "type": "technique"
+    },
+    {
+      "name": "uv_build",
+      "type": "product"
+    },
+    {
+      "name": "src layout",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "uv init",
+      "to": "src layout",
+      "label": "默认采用"
+    },
+    {
+      "from": "uv init",
+      "to": "uv_build",
+      "label": "配置后端"
+    },
+    {
+      "from": "uv_build",
+      "to": "uv",
+      "label": "属于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "uv",
+      "label": "评论"
+    },
+    {
+      "from": "GitHub",
+      "to": "uv init",
+      "label": "快照输出"
+    }
+  ]
+}

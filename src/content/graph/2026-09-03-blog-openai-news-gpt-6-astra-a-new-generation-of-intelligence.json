@@ -1,0 +1,73 @@
+{
+  "center": "OpenAI发布GPT-6 Astra",
+  "branches": [
+    {
+      "label": "最强模型",
+      "detail": "OpenAI称GPT-6 Astra是迄今最智能且对齐的模型",
+      "children": [
+        "强调对齐，行为更符合人类意图"
+      ]
+    },
+    {
+      "label": "四大能力",
+      "detail": "覆盖电脑操作、编程、网络安全与科学领域",
+      "children": [
+        "计算机使用",
+        "编程",
+        "网络安全"
+      ]
+    },
+    {
+      "label": "对齐意义",
+      "detail": "对开发者可减少AI失控风险，提升自动化任务安全性",
+      "children": [
+        "降低失控风险",
+        "自动化更安全"
+      ]
+    },
+    {
+      "label": "通用智能体",
+      "detail": "AI正从单一任务向通用智能体演进",
+      "children": [
+        "工具链或整合此类模型",
+        "处理复杂工作流"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "对齐",
+      "type": "concept"
+    },
+    {
+      "name": "通用智能体",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Astra",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "对齐",
+      "label": "强调"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "通用智能体",
+      "label": "演进为"
+    }
+  ]
+}

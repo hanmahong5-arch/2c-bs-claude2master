@@ -1,0 +1,117 @@
+{
+  "center": "Anthropic 发布 Fable 5 与…",
+  "branches": [
+    {
+      "label": "双模型发布",
+      "detail": "Fable 5 面向大众，Mythos 5 面向网络安全防御者",
+      "children": [
+        "Fable 5 为 Mythos 级模型，已做安全化处理",
+        "Mythos 5 与 Fable 5 同源，部分领域解除限制",
+        "Mythos 5 经 Project Glasswing 与美国政府…"
+      ]
+    },
+    {
+      "label": "能力与基准",
+      "detail": "几乎全部测试基准达 SOTA，任务越长越复杂领先越大",
+      "children": [
+        "Stripe：5000 万行 Ruby 代码库迁移一天完成",
+        "Cognition FrontierCode 评测中最高分",
+        "Hebbia 金融基准与 IMC 交易分析评测领先"
+      ]
+    },
+    {
+      "label": "视觉与记忆",
+      "detail": "视觉任务新 SOTA，长上下文可跨百万 token 保持专注",
+      "children": [
+        "仅凭截图重建 Web 应用源码",
+        "用纯视觉通关 Pokémon FireRed",
+        "Slay the Spire 中文件记忆提升 3 倍"
+      ]
+    },
+    {
+      "label": "科研应用",
+      "detail": "在药物设计、分子生物学与基因组学产出新成果",
+      "children": [
+        "Mythos 5 将药物设计流程加速约 10 倍",
+        "14 个蛋白靶点中 9 个获强候选",
+        "基因组研究模型比 Science 论文模型小 100 倍…"
+      ]
+    },
+    {
+      "label": "安全与定价",
+      "detail": "保守护栏，部分查询转由 Opus 4.8 回答",
+      "children": [
+        "护栏平均触发率低于 5% 会话",
+        "定价：输入 $10 / 输出 $50 每百万 token",
+        "价格不到 Mythos Preview 一半"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Project Glasswing",
+      "type": "concept"
+    },
+    {
+      "name": "Stripe",
+      "type": "company"
+    },
+    {
+      "name": "Cognition",
+      "type": "company"
+    },
+    {
+      "name": "Hebbia",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Mythos 5",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Mythos 5",
+      "to": "Claude Fable 5",
+      "label": "同源模型"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Claude Opus 4.8",
+      "label": "护栏转接"
+    },
+    {
+      "from": "Claude Mythos 5",
+      "to": "Project Glasswing",
+      "label": "部署于"
+    },
+    {
+      "from": "Stripe",
+      "to": "Claude Fable 5",
+      "label": "测试使用"
+    }
+  ]
+}

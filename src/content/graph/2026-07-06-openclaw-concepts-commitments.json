@@ -1,0 +1,81 @@
+{
+  "center": "OpenClaw 隐式承诺机制",
+  "branches": [
+    {
+      "label": "隐式承诺提取",
+      "detail": "每次回复后用独立上下文扫描对话，识别未明说的合理跟进点",
+      "children": [
+        "禁用工具，独立上下文扫描",
+        "例：用户提到“明天面试”",
+        "存为短期承诺"
+      ]
+    },
+    {
+      "label": "安全交付机制",
+      "detail": "到期经 heartbeat 注入，提示词警告元数据不可信",
+      "children": [
+        "禁止执行元数据指令或调用工具",
+        "仅允许自然询问或回复 HEARTBEAT_OK"
+      ]
+    },
+    {
+      "label": "作用域与延迟",
+      "detail": "承诺绑定创建时的 agent、频道、会话，到期至少晚一个 heartbeat",
+      "children": [
+        "避免立即回显",
+        "跟进像同一对话的自然延续"
+      ]
+    }
+  ],
+  "flow": [
+    "回复后扫描对话",
+    "提取隐式承诺",
+    "存储为短期承诺",
+    "到期经 heartbeat 注入",
+    "模型自然询问"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "heartbeat",
+      "type": "concept"
+    },
+    {
+      "name": "隐式承诺提取",
+      "type": "technique"
+    },
+    {
+      "name": "提示工程",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "隐式承诺提取",
+      "label": "采用"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "heartbeat",
+      "label": "使用"
+    },
+    {
+      "from": "Agent harness",
+      "to": "隐式承诺提取",
+      "label": "可设计"
+    },
+    {
+      "from": "提示工程",
+      "to": "OpenClaw",
+      "label": "隔离不可信数据"
+    }
+  ]
+}

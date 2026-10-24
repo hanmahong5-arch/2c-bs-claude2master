@@ -1,0 +1,124 @@
+{
+  "center": "语音代理处理中英混合语音评测",
+  "branches": [
+    {
+      "label": "评测背景",
+      "detail": "企业客服中双语用户常中英混说，ASR 转录错误会传导至下游",
+      "children": [
+        "覆盖西英、法英、加法英、德英四语对",
+        "场景为 HR 与 ITSM 支持请求",
+        "数据经语言学家审核，共 918 条"
+      ]
+    },
+    {
+      "label": "评测指标",
+      "detail": "用 WER、SWER、AER 三个指标衡量转录准确与语义保留",
+      "children": [
+        "WER 衡量词级准确率",
+        "SWER 用 Gemma-4-31B 判断语义错误",
+        "AER 用下游问答测错误传导"
+      ]
+    },
+    {
+      "label": "数据构建",
+      "detail": "从内部语料出发，用 LLM 生成混合文本并合成音频",
+      "children": [
+        "筛选 12–40 词、至少 3 个可切换实词",
+        "用 GPT-5 生成混合文本",
+        "ElevenLabs Multilingual V2 合成音频"
+      ]
+    },
+    {
+      "label": "模型表现",
+      "detail": "ElevenLabs Scribe V2 综合最佳，Gemini 3 Flash 语义指标突出",
+      "children": [
+        "Scribe V2 与 AssemblyAI 词级准确率领先",
+        "Gemini 3 Flash 在 AER 上反超 AssemblyAI",
+        "Whisper Large V3 Turbo 垫底，WER 0.16–0.61"
+      ]
+    },
+    {
+      "label": "关键发现",
+      "detail": "代码切换的代价因语对和模型而异，语义指标可反转排名",
+      "children": [
+        "Whisper 无语言参数时默认翻译成英文",
+        "Nvidia Parakeet 在德英上缩小差距",
+        "开源与前沿模型差距明显"
+      ]
+    }
+  ],
+  "flow": [
+    "筛选双语平行语料",
+    "GPT-5 生成混合文本",
+    "LLM 口语化并合成音频",
+    "语言学家审核",
+    "运行 ASR 模型评测",
+    "计算 WER/SWER/AER"
+  ],
+  "entities": [
+    {
+      "name": "ServiceNow-AI",
+      "type": "company"
+    },
+    {
+      "name": "ElevenLabs Scribe V2",
+      "type": "model"
+    },
+    {
+      "name": "Google Gemini 3 Flash",
+      "type": "model"
+    },
+    {
+      "name": "AssemblyAI Universal 3-Pro",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI Whisper Large V3 Turbo",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5",
+      "type": "model"
+    },
+    {
+      "name": "AU-Harness",
+      "type": "product"
+    },
+    {
+      "name": "code-switching",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "ServiceNow-AI",
+      "to": "AU-Harness",
+      "label": "发布"
+    },
+    {
+      "from": "ServiceNow-AI",
+      "to": "code-switching",
+      "label": "评测"
+    },
+    {
+      "from": "GPT-5",
+      "to": "code-switching",
+      "label": "生成"
+    },
+    {
+      "from": "ElevenLabs Scribe V2",
+      "to": "code-switching",
+      "label": "处理"
+    },
+    {
+      "from": "Google Gemini 3 Flash",
+      "to": "code-switching",
+      "label": "处理"
+    },
+    {
+      "from": "AssemblyAI Universal 3-Pro",
+      "to": "code-switching",
+      "label": "处理"
+    }
+  ]
+}

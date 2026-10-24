@@ -1,0 +1,115 @@
+{
+  "center": "hf CLI 面向 AI 代理优化",
+  "branches": [
+    {
+      "label": "代理流量激增",
+      "detail": "2026年4月起追踪代理流量，Claude Code 与 Codex 用户最多",
+      "children": [
+        "Claude Code 约 4 万用户、近 4900 万请求",
+        "通过环境变量识别代理并打 agent/<name> 标签"
+      ]
+    },
+    {
+      "label": "双模式输出",
+      "detail": "同一命令自动为人类和代理渲染不同格式",
+      "children": [
+        "人类：对齐表格、截断、ANSI 颜色、提示",
+        "代理：TSV、完整 ID 与 ISO 时间戳、无截断",
+        "支持 --format human|agent|json|quiet"
+      ]
+    },
+    {
+      "label": "下一步提示",
+      "detail": "命令结束给出预填 ID 的下一步命令，错误也给出修复方法",
+      "children": [
+        "hf jobs run 后提示 hf jobs logs <id>",
+        "提示与错误走 stderr，数据走 stdout"
+      ]
+    },
+    {
+      "label": "非阻塞可重试",
+      "detail": "代理模式下破坏性命令快速失败并提示 --yes，操作可安全重复",
+      "children": [
+        "hf repos create --exist-ok 幂等",
+        "数据移动命令支持 --dry-run 预览"
+      ]
+    },
+    {
+      "label": "Token 效率",
+      "detail": "复杂多步任务中，无 CLI 基线比 hf CLI 多用最多 6 倍 token",
+      "children": [
+        "代理可处理更密集输出，保持紧凑结构化"
+      ]
+    }
+  ],
+  "flow": [
+    "检测代理环境变量",
+    "切换代理模式输出",
+    "执行命令并返回结构化数据",
+    "附加下一步命令提示",
+    "破坏性操作快速失败或 --yes",
+    "支持 --dry-run 预览"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "hf CLI",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "huggingface_hub",
+      "type": "product"
+    },
+    {
+      "name": "AI_AGENT",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "hf CLI",
+      "label": "开发"
+    },
+    {
+      "from": "hf CLI",
+      "to": "huggingface_hub",
+      "label": "基于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "hf CLI",
+      "label": "使用"
+    },
+    {
+      "from": "Codex",
+      "to": "hf CLI",
+      "label": "使用"
+    },
+    {
+      "from": "Cursor",
+      "to": "hf CLI",
+      "label": "使用"
+    },
+    {
+      "from": "hf CLI",
+      "to": "AI_AGENT",
+      "label": "检测"
+    }
+  ]
+}

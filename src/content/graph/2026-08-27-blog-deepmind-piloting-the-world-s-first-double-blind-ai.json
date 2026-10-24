@@ -1,0 +1,110 @@
+{
+  "center": "首个双盲 AI 评估试点",
+  "branches": [
+    {
+      "label": "为什么做",
+      "detail": "模型提前见过考题会虚高分数，即基准污染，评测结果不可信",
+      "children": [
+        "政策制定者、研究者、企业需信任基准",
+        "高敏感评测如网络安全、政府机构尤为关键"
+      ]
+    },
+    {
+      "label": "怎么做",
+      "detail": "用 Google Cloud 机密计算中的 Confidential Space，密码学验证双方数据互不可见",
+      "children": [
+        "评估方看不到 Gemini 模型权重",
+        "Google 看不到评估方的测试提示词"
+      ]
+    },
+    {
+      "label": "合作方",
+      "detail": "与新加坡 AI Safety Institute、OpenMined、AVERI、MLCommons 合作",
+      "children": [
+        "测试对象为 Gemini Flash Lite 模型",
+        "在隐私保护环境中对机密基准测试"
+      ]
+    },
+    {
+      "label": "解决旧权衡",
+      "detail": "过去要么交出提示词，要么交出模型权重，双盲评估消除这一妥协",
+      "children": [
+        "零日志协议与合同保障仍保留",
+        "新增技术与密码学保障"
+      ]
+    }
+  ],
+  "flow": [
+    "外部评估方提供机密基准",
+    "模型权重与提示词分别加密",
+    "在 Confidential Space 中运…",
+    "密码学验证双方数据隔离",
+    "输出可信评测结果"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemini Flash Lite",
+      "type": "model"
+    },
+    {
+      "name": "Confidential Space",
+      "type": "product"
+    },
+    {
+      "name": "Google Cloud",
+      "type": "product"
+    },
+    {
+      "name": "Singapore AI Safety Institute",
+      "type": "company"
+    },
+    {
+      "name": "OpenMined",
+      "type": "company"
+    },
+    {
+      "name": "AVERI",
+      "type": "company"
+    },
+    {
+      "name": "MLCommons",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini Flash Lite",
+      "label": "评估"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Confidential Space",
+      "label": "使用"
+    },
+    {
+      "from": "Confidential Space",
+      "to": "Google Cloud",
+      "label": "属于"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Singapore AI Safety Institute",
+      "label": "合作"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "OpenMined",
+      "label": "合作"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "MLCommons",
+      "label": "合作"
+    }
+  ]
+}

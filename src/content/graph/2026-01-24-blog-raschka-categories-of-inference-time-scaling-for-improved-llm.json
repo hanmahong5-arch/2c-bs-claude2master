@@ -1,0 +1,110 @@
+{
+  "center": "LLM 推理时扩展技术分类",
+  "branches": [
+    {
+      "label": "推理时扩展定义",
+      "detail": "推理阶段投入更多算力与时间提升模型表现，不改权重",
+      "children": [
+        "又称 inference-compute scaling…",
+        "经典机器学习集成方法可视为早期例子",
+        "OpenAI o1 博客图使其再度流行"
+      ]
+    },
+    {
+      "label": "训练与推理双旋钮",
+      "detail": "提升 LLM 可加训练资源或推理资源，两者同时用效果更好",
+      "children": [
+        "训练侧：更多数据、更大模型、更长训练",
+        "推理侧：本文聚焦的训练无关技术"
+      ]
+    },
+    {
+      "label": "六大方法类别",
+      "detail": "文章按类别梳理推理时扩展的主流技术路线",
+      "children": [
+        "Chain-of-Thought Prompting",
+        "Self-Consistency",
+        "Best-of-N Ranking"
+      ]
+    },
+    {
+      "label": "作者实践与效果",
+      "detail": "Sebastian Raschka 为写书章节亲自实验这些方法",
+      "children": [
+        "超参调优后累计数千次运行",
+        "章节从基础模型约 15% 提升到约 52% 准确率",
+        "章节因内容过多拆成两章，已进早期访问"
+      ]
+    },
+    {
+      "label": "最新论文与展望",
+      "detail": "文章还汇总近几个月新论文，含 Recursive Language Models",
+      "children": [
+        "计划在 GitHub 补充更多代码实现",
+        "含专有 LLM 使用哪些方法的讨论"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Sebastian Raschka",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "o1",
+      "type": "model"
+    },
+    {
+      "name": "Chain-of-Thought Prompting",
+      "type": "technique"
+    },
+    {
+      "name": "Self-Consistency",
+      "type": "technique"
+    },
+    {
+      "name": "Best-of-N Ranking",
+      "type": "technique"
+    },
+    {
+      "name": "Rejection Sampling with a Verifier",
+      "type": "technique"
+    },
+    {
+      "name": "Self-Refinement",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sebastian Raschka",
+      "to": "Chain-of-Thought Prompting",
+      "label": "梳理"
+    },
+    {
+      "from": "Sebastian Raschka",
+      "to": "Self-Consistency",
+      "label": "梳理"
+    },
+    {
+      "from": "Sebastian Raschka",
+      "to": "Best-of-N Ranking",
+      "label": "梳理"
+    },
+    {
+      "from": "Sebastian Raschka",
+      "to": "Rejection Sampling with a Verifier",
+      "label": "梳理"
+    },
+    {
+      "from": "Sebastian Raschka",
+      "to": "Self-Refinement",
+      "label": "梳理"
+    }
+  ]
+}

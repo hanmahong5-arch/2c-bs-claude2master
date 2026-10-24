@@ -1,0 +1,123 @@
+{
+  "center": "Claude for Teachers 发布",
+  "branches": [
+    {
+      "label": "产品定位",
+      "detail": "Anthropic 为美国 K-12 教师提供免费高级 Claude 能力",
+      "children": [
+        "需验证身份的 K-12 教育者",
+        "2027 年 6 月 30 日前注册免费用一年",
+        "仅限教师，遵循 18 岁以上政策"
+      ]
+    },
+    {
+      "label": "课程对接",
+      "detail": "接入 Learning Commons，对齐全美 50 州学术标准",
+      "children": [
+        "含 OpenSciEd、IM v.360 等课程资源",
+        "标准下细分学习能力与学习顺序",
+        "备课自动对齐教学标准"
+      ]
+    },
+    {
+      "label": "生态集成",
+      "detail": "连接一整套 K-12 教学工具生态",
+      "children": [
+        "ASSISTments、Brisk Teaching、Canva…",
+        "Diffit、Eedi、MagicSchool、Snorkl、TeachFX",
+        "Coteach 生成数学图表"
+      ]
+    },
+    {
+      "label": "核心功能",
+      "detail": "备课、差异化教学与自动化任务",
+      "children": [
+        "按州标准起草教案与学生材料",
+        "按熟练度分层生成差异化材料",
+        "含 Claude Code 与 Cowork，可定时执行任务"
+      ]
+    },
+    {
+      "label": "隐私与推广",
+      "detail": "K-12 数据保护并推动教师 AI 素养",
+      "children": [
+        "教师对话不用于训练，FERPA 对齐保护",
+        "与 AFT 合作制定隐私金标准",
+        "与 Teach For America 合办 AI 素养课程"
+      ]
+    }
+  ],
+  "flow": [
+    "验证教师身份",
+    "接入 Learning Commons",
+    "按标准起草教案",
+    "生成差异化材料",
+    "定时执行重复任务"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude for Teachers",
+      "type": "product"
+    },
+    {
+      "name": "Learning Commons",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "American Federation of Teachers",
+      "type": "company"
+    },
+    {
+      "name": "Teach For America",
+      "type": "company"
+    },
+    {
+      "name": "Gates Foundation",
+      "type": "company"
+    },
+    {
+      "name": "FERPA",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude for Teachers",
+      "label": "推出"
+    },
+    {
+      "from": "Claude for Teachers",
+      "to": "Learning Commons",
+      "label": "接入"
+    },
+    {
+      "from": "Claude for Teachers",
+      "to": "Claude Code",
+      "label": "包含"
+    },
+    {
+      "from": "Anthropic",
+      "to": "American Federation of Teachers",
+      "label": "合作"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Teach For America",
+      "label": "合作"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Gates Foundation",
+      "label": "合作"
+    }
+  ]
+}

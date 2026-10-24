@@ -1,0 +1,124 @@
+{
+  "center": "Mantis Slack 桌面 QA 方案",
+  "branches": [
+    {
+      "label": "三层存储模型",
+      "detail": "Provider image、warm lease state、Mantis artifacts 分层隔离",
+      "children": [
+        "Provider image 由 Crabbox 拥有，含 Chrome…",
+        "Warm lease 可保留登录态与 pnpm 缓存",
+        "禁止把密钥、cookie、node_modules 烤进镜像"
+      ]
+    },
+    {
+      "label": "两种 hydrate 模式",
+      "detail": "source 最慢但证明最强，prehydrated 仅限受控 warm lease",
+      "children": [
+        "source 在 VM 内跑 pnpm install 与 build",
+        "prehydrated 要求已有 node_modules 和 dist/",
+        "GitHub Actions 总是先准备候选 checkout"
+      ]
+    },
+    {
+      "label": "运行与证据产出",
+      "detail": "workflow 产出 artifact、PR 内联评论与截图视频",
+      "children": [
+        "candidate_ref 受限：main 祖先、release…",
+        "PR 评论用隐藏 marker 原地更新",
+        "产物含 png/mp4/gif 与 summary/report"
+      ]
+    },
+    {
+      "label": "审批 UI 证明",
+      "detail": "--approval-checkpoints 与 --gateway-setup 互斥",
+      "children": [
+        "从真实 Slack API 消息写 checkpoint JSON",
+        "渲染 pending/resolved 截图，缺失即失败",
+        "冷 lease 无 cookie，应信任 checkpoint 图"
+      ]
+    },
+    {
+      "label": "失败排查与计时",
+      "detail": "按阶段计时定位瓶颈，保留 lease 可 VNC 救援",
+      "children": [
+        "accepted 表示 pass-with-explanation",
+        "warmup 慢则优化 provider image",
+        "登录过期在 VNC 修复后用 --lease-id 重跑"
+      ]
+    }
+  ],
+  "flow": [
+    "dispatch workflow",
+    "Crabbox 预热 VM",
+    "Convex 租借凭证",
+    "VM 内 install/build",
+    "启动 gateway 与浏览器",
+    "截图录像并回传"
+  ],
+  "entities": [
+    {
+      "name": "Mantis",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Crabbox",
+      "type": "product"
+    },
+    {
+      "name": "Convex",
+      "type": "product"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "product"
+    },
+    {
+      "name": "VNC",
+      "type": "technique"
+    },
+    {
+      "name": "warm lease",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Mantis",
+      "to": "Crabbox",
+      "label": "使用"
+    },
+    {
+      "from": "Mantis",
+      "to": "Convex",
+      "label": "租借凭证"
+    },
+    {
+      "from": "Mantis",
+      "to": "Slack",
+      "label": "测试 UI"
+    },
+    {
+      "from": "Mantis",
+      "to": "GitHub Actions",
+      "label": "发布证据"
+    },
+    {
+      "from": "Crabbox",
+      "to": "VNC",
+      "label": "提供访问"
+    },
+    {
+      "from": "Mantis",
+      "to": "OpenClaw",
+      "label": "属于"
+    }
+  ]
+}

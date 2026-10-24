@@ -1,0 +1,75 @@
+{
+  "center": "condense-json 1.1 发布",
+  "branches": [
+    {
+      "label": "非字符串替换",
+      "detail": "Replacements 对象现可包含非字符串值，被识别为结构性替换",
+      "children": [
+        "condense_json 与 uncondense_json 均支持",
+        "对应 issue #8"
+      ]
+    },
+    {
+      "label": "对象合并",
+      "detail": "相近对象可作合并基础，存储键的更新或删除指令",
+      "children": [
+        "condense_json 识别近似对象",
+        "uncondense_json 应用合并"
+      ]
+    },
+    {
+      "label": "往返测试",
+      "detail": "新增基于 Hypothesis 属性测试库的 round-trip 测试",
+      "children": [
+        "Hypothesis 属性测试"
+      ]
+    },
+    {
+      "label": "集成 LLM",
+      "detail": "1.0 发布后作者将其集成进 LLM，由此发现新需求",
+      "children": [
+        "作者 Simon Willison"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "condense-json",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "LLM",
+      "type": "product"
+    },
+    {
+      "name": "Hypothesis",
+      "type": "product"
+    },
+    {
+      "name": "uncondense_json",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "condense-json",
+      "label": "发布"
+    },
+    {
+      "from": "condense-json",
+      "to": "LLM",
+      "label": "集成进"
+    },
+    {
+      "from": "condense-json",
+      "to": "Hypothesis",
+      "label": "使用测试"
+    }
+  ]
+}

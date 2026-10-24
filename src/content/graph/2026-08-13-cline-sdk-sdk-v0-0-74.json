@@ -1,0 +1,99 @@
+{
+  "center": "cline sdk v0.0.74 修复",
+  "branches": [
+    {
+      "label": "Claude Code 集成",
+      "detail": "provider 声明原生工具并锚定工作目录，编辑自动批准",
+      "children": [
+        "加载用户权限配置",
+        "命令执行仍受 Claude 设置约束"
+      ]
+    },
+    {
+      "label": "工具调用修复",
+      "detail": "JSON 截断不再误修而是拒绝，避免参数错误",
+      "children": [
+        "修复流式索引非连续崩溃",
+        "更新 AI SDK 包"
+      ]
+    },
+    {
+      "label": "Hub 守护进程",
+      "detail": "升级方向性避免互相淘汰，旧版本仍被替换",
+      "children": [
+        "修复关闭时未处理拒绝",
+        "退出码干净"
+      ]
+    },
+    {
+      "label": "遥测与事件",
+      "detail": "Token 遥测分桶报告，流式增量不再镜像",
+      "children": [
+        "降低约 5 倍膨胀",
+        "减少 97% 事件量",
+        "run.started 携带 requestId 和 clientId"
+      ]
+    },
+    {
+      "label": "登出报告",
+      "detail": "非自愿登出（刷新令牌被拒）现在报告",
+      "children": [
+        "临时网络失败不再算登出"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline sdk",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "AI SDK",
+      "type": "product"
+    },
+    {
+      "name": "Hub",
+      "type": "product"
+    },
+    {
+      "name": "Token 遥测",
+      "type": "concept"
+    },
+    {
+      "name": "工具调用",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline sdk",
+      "to": "Claude Code",
+      "label": "集成"
+    },
+    {
+      "from": "cline sdk",
+      "to": "AI SDK",
+      "label": "更新"
+    },
+    {
+      "from": "cline sdk",
+      "to": "Hub",
+      "label": "升级"
+    },
+    {
+      "from": "cline sdk",
+      "to": "Token 遥测",
+      "label": "改进"
+    },
+    {
+      "from": "cline sdk",
+      "to": "工具调用",
+      "label": "修复"
+    }
+  ]
+}

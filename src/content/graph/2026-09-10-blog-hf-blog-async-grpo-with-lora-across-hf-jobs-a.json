@@ -1,0 +1,103 @@
+{
+  "center": "异步 GRPO + LoRA 分布式 RL",
+  "branches": [
+    {
+      "label": "LoRA 适配 RL",
+      "detail": "LoRA 在策略梯度 RL 中可媲美全量微调，rank 1 也够用",
+      "children": [
+        "优势函数每回合仅约 O(1) 比特信息",
+        "rank-1 适配器容量足以吸收该信号",
+        "来源：Thinking Machines 的 LoRA Without…"
+      ]
+    },
+    {
+      "label": "训练推理分离",
+      "detail": "训练与推理分置不同机器，只传小适配器而非整个模型",
+      "children": [
+        "更新后仅传几 MB，而非几 GB",
+        "带宽与迭代速度显著改善"
+      ]
+    },
+    {
+      "label": "桶 + 代理架构",
+      "detail": "用 bucket 与 proxy 承载通信，绕开 NCCL",
+      "children": [
+        "把通信边界缩小到易管理的适配器",
+        "简化分布式基础设施"
+      ]
+    },
+    {
+      "label": "HF Jobs 承载",
+      "detail": "整套异步 GRPO 流程跑在 HF Jobs 上",
+      "children": [
+        "2B 模型，更新于 2025-02-24"
+      ]
+    },
+    {
+      "label": "规模待验证",
+      "detail": "评论关注推理 worker 与并发 rollout 增多后的表现",
+      "children": [
+        "是否有明显权衡尚待更多细节"
+      ]
+    }
+  ],
+  "flow": [
+    "推理 worker 生成 rollout",
+    "计算优势并更新 LoRA",
+    "适配器写入 bucket",
+    "proxy 分发新适配器",
+    "推理端加载继续采样"
+  ],
+  "entities": [
+    {
+      "name": "LoRA",
+      "type": "technique"
+    },
+    {
+      "name": "GRPO",
+      "type": "technique"
+    },
+    {
+      "name": "HF Jobs",
+      "type": "product"
+    },
+    {
+      "name": "NCCL",
+      "type": "technique"
+    },
+    {
+      "name": "TRL",
+      "type": "product"
+    },
+    {
+      "name": "Thinking Machines",
+      "type": "company"
+    },
+    {
+      "name": "LoRA Without Regret",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "LoRA",
+      "to": "GRPO",
+      "label": "适配于"
+    },
+    {
+      "from": "HF Jobs",
+      "to": "GRPO",
+      "label": "承载"
+    },
+    {
+      "from": "Thinking Machines",
+      "to": "LoRA Without Regret",
+      "label": "发布"
+    },
+    {
+      "from": "TRL",
+      "to": "LoRA",
+      "label": "支持"
+    }
+  ]
+}

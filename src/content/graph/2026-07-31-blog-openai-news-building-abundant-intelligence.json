@@ -1,0 +1,71 @@
+{
+  "center": "OpenAI全栈方法",
+  "branches": [
+    {
+      "label": "全栈优化",
+      "detail": "从芯片到模型再到应用全面优化AI系统",
+      "children": [
+        "提升性能并降低成本"
+      ]
+    },
+    {
+      "label": "垂直整合",
+      "detail": "通过垂直整合使高级AI更易获取",
+      "children": [
+        "推动实际场景广泛应用"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "为开发者提供更高效工具链和更低部署门槛",
+      "children": [
+        "加速AI集成到现有工作流"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "全栈方法",
+      "type": "concept"
+    },
+    {
+      "name": "垂直整合",
+      "type": "concept"
+    },
+    {
+      "name": "AI系统",
+      "type": "concept"
+    },
+    {
+      "name": "开发者",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "全栈方法",
+      "label": "提出"
+    },
+    {
+      "from": "OpenAI",
+      "to": "垂直整合",
+      "label": "采用"
+    },
+    {
+      "from": "全栈方法",
+      "to": "AI系统",
+      "label": "优化"
+    },
+    {
+      "from": "垂直整合",
+      "to": "开发者",
+      "label": "惠及"
+    }
+  ]
+}

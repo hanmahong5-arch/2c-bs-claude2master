@@ -1,0 +1,114 @@
+{
+  "center": "AGI时代AI治理开启",
+  "branches": [
+    {
+      "label": "政府强制下架",
+      "detail": "美政府要求Anthropic停用Claude 5 Mythos/Fable，禁止外国人访问",
+      "children": [
+        "周五盘后政府联系Anthropic",
+        "禁止任何外国国民或海外用户访问",
+        "事件仍在发酵，可能重新发布"
+      ]
+    },
+    {
+      "label": "亚马逊告密",
+      "detail": "Anthropic最大财务与技术伙伴Amazon向白宫提示风险",
+      "children": [
+        "Amazon直接向白宫报告",
+        "引发政府强制行动"
+      ]
+    },
+    {
+      "label": "出口禁令争议",
+      "detail": "对模型权重出口禁令将是美国长期负面政策",
+      "children": [
+        "开源与闭源模型均受影响",
+        "开源模型更可能被进口禁令"
+      ]
+    },
+    {
+      "label": "Anthropic自食其果",
+      "detail": "多年恐惧营销加速了政府强监管时刻到来",
+      "children": [
+        "将AI比作核武器等言论",
+        "否则治理可能晚6-12个月"
+      ]
+    },
+    {
+      "label": "AGI治理新常态",
+      "detail": "政府内部认为已进入AGI时代，需快速行动夺回时间",
+      "children": [
+        "从ChatGPT时代转向智能体推理",
+        "欧洲、中东、中国开始重视主权AI",
+        "开源社区庆祝但未准备好被针对"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude 5 Mythos/Fable",
+      "type": "model"
+    },
+    {
+      "name": "Amazon",
+      "type": "company"
+    },
+    {
+      "name": "White House",
+      "type": "concept"
+    },
+    {
+      "name": "AGI",
+      "type": "concept"
+    },
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Dario",
+      "type": "person"
+    },
+    {
+      "name": "open-source AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "White House",
+      "to": "Anthropic",
+      "label": "强制下架"
+    },
+    {
+      "from": "Amazon",
+      "to": "White House",
+      "label": "提示风险"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude 5 Mythos/Fable",
+      "label": "开发"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Anthropic",
+      "label": "评论"
+    },
+    {
+      "from": "White House",
+      "to": "AGI",
+      "label": "认为进入"
+    },
+    {
+      "from": "open-source AI",
+      "to": "AGI",
+      "label": "关注"
+    }
+  ]
+}

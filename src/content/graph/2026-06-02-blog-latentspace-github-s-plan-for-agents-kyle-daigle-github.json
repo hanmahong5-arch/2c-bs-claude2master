@@ -1,0 +1,124 @@
+{
+  "center": "GitHub 的 Agent 计划",
+  "branches": [
+    {
+      "label": "提交量暴增",
+      "detail": "AI 代理让代码提交量激增，GitHub 基础设施承压",
+      "children": [
+        "2026 年代理代码增长 1400%",
+        "2025 年 10 亿次提交，现每周 2.75 亿次",
+        "Actions 从 2023 年 5 亿分钟/周增至 2025 年…"
+      ]
+    },
+    {
+      "label": "内部 AI 工作流",
+      "detail": "Kyle 用 micro-skills、WorkIQ、MCP 等工具将 AI 融入日常工作",
+      "children": [
+        "从 mega-skills 转向原子化 micro-skills",
+        "用 Slack、Teams、email 作为公司上下文",
+        "周六运行 15 个代理的工作流"
+      ]
+    },
+    {
+      "label": "开源协作挑战",
+      "detail": "AI 生成的低质贡献冲击开源，需新信任机制",
+      "children": [
+        "slop forks 与 vendoring 问题",
+        "prompt requests 与 AI 审查",
+        "vouching 机制维护信任"
+      ]
+    },
+    {
+      "label": "Copilot 演进",
+      "detail": "Copilot 从代码补全扩展为 CLI、桌面应用、云代理和 SDK",
+      "children": [
+        "新增 Copilot 桌面应用",
+        "云代理与后台代理",
+        "上下文、记忆、规则让 GitHub 按 Kyle 意愿行动"
+      ]
+    },
+    {
+      "label": "平台可靠性",
+      "detail": "GitHub 经历最艰难时期，14 倍增长考验可用性",
+      "children": [
+        "数据库、monorepos 与可用性压力",
+        "Actions 成为通用计算层",
+        "公开的 uptime 事件"
+      ]
+    }
+  ],
+  "flow": [
+    "代理大量生成代码",
+    "提交量激增 1400%",
+    "基础设施承压",
+    "GitHub 扩展 Actions 与数据库",
+    "引入 micro-skills 与 MCP",
+    "Copilot 演进为代理平台"
+  ],
+  "entities": [
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "Kyle Daigle",
+      "type": "person"
+    },
+    {
+      "name": "Copilot",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "WorkIQ",
+      "type": "product"
+    },
+    {
+      "name": "micro-skills",
+      "type": "concept"
+    },
+    {
+      "name": "GitHub Spark",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Kyle Daigle",
+      "to": "GitHub",
+      "label": "担任 COO"
+    },
+    {
+      "from": "GitHub",
+      "to": "Copilot",
+      "label": "开发"
+    },
+    {
+      "from": "GitHub",
+      "to": "GitHub Actions",
+      "label": "提供"
+    },
+    {
+      "from": "Kyle Daigle",
+      "to": "MCP",
+      "label": "使用"
+    },
+    {
+      "from": "Kyle Daigle",
+      "to": "WorkIQ",
+      "label": "使用"
+    },
+    {
+      "from": "GitHub",
+      "to": "GitHub Spark",
+      "label": "推出"
+    }
+  ]
+}

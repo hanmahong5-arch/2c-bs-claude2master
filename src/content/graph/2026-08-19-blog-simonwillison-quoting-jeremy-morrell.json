@@ -1,0 +1,80 @@
+{
+  "center": "LLM 时代可扩展软件新机遇",
+  "branches": [
+    {
+      "label": "核心论点",
+      "detail": "Jeremy Morrell 提出 Web 可扩展软件迎来新机会",
+      "children": [
+        "LLM 大幅降低编写扩展的成本",
+        "现代沙箱原语降低部署成本并提供安全边界"
+      ]
+    },
+    {
+      "label": "架构思路",
+      "detail": "把应用做成稳固可问责的核心，让用户安全扩展",
+      "children": [
+        "核心保持 accountable",
+        "LLM 填补缺失部分，用户多方向扩展"
+      ]
+    },
+    {
+      "label": "用户收益",
+      "detail": "让用户获得超能力",
+      "children": [
+        "用户可安全地自行扩展应用"
+      ]
+    },
+    {
+      "label": "来源",
+      "detail": "Simon Willison 博客收录的引用，2026-08-19 发布",
+      "children": [
+        "标签：sandboxing、ai、llms"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Jeremy Morrell",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "Extensible Software",
+      "type": "concept"
+    },
+    {
+      "name": "sandboxing",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Jeremy Morrell",
+      "to": "Extensible Software",
+      "label": "提出观点"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Jeremy Morrell",
+      "label": "引用"
+    },
+    {
+      "from": "LLM",
+      "to": "Extensible Software",
+      "label": "降低成本"
+    },
+    {
+      "from": "sandboxing",
+      "to": "Extensible Software",
+      "label": "提供安全边界"
+    }
+  ]
+}

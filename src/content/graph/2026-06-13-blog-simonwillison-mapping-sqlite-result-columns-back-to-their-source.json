@@ -1,0 +1,110 @@
+{
+  "center": "SQLite 结果列溯源",
+  "branches": [
+    {
+      "label": "问题背景",
+      "detail": "Datasette 希望为任意 SQL 查询结果标注每列来自哪张表",
+      "children": [
+        "示例：users.name 与 orders.total 的 join…",
+        "需处理 join、CTE 等复杂语法"
+      ]
+    },
+    {
+      "label": "SQLite 原生支持",
+      "detail": "SQLite 内部已计算来源，通过列元数据 API 暴露",
+      "children": [
+        "需编译时启用 SQLITE_ENABLE_COLUMN_METADATA",
+        "对应 C 函数 sqlite3_column_table_name()"
+      ]
+    },
+    {
+      "label": "Python 访问方案",
+      "detail": "标准 sqlite3 模块不暴露该信息，但有替代途径",
+      "children": [
+        "apsw 库：cursor.description_full 直接获取",
+        "ctypes 桥接：column_provenance.py 调用 C…",
+        "EXPLAIN 输出解析"
+      ]
+    },
+    {
+      "label": "实验方式",
+      "detail": "Simon Willison 让 Claude Code 探索该问题",
+      "children": [
+        "使用 Opus 4.8 模型",
+        "找到三种可行方案"
+      ]
+    }
+  ],
+  "flow": [
+    "编写任意 SQL 查询",
+    "启用列元数据编译选项",
+    "调用列元数据 API",
+    "映射结果列到 table.column"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "apsw",
+      "type": "product"
+    },
+    {
+      "name": "SQLITE_ENABLE_COLUMN_METADATA",
+      "type": "concept"
+    },
+    {
+      "name": "ctypes",
+      "type": "technique"
+    },
+    {
+      "name": "EXPLAIN",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "创建"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Code",
+      "label": "使用"
+    },
+    {
+      "from": "Datasette",
+      "to": "SQLite",
+      "label": "基于"
+    },
+    {
+      "from": "apsw",
+      "to": "SQLite",
+      "label": "封装"
+    },
+    {
+      "from": "ctypes",
+      "to": "SQLite",
+      "label": "调用"
+    },
+    {
+      "from": "SQLITE_ENABLE_COLUMN_METADATA",
+      "to": "SQLite",
+      "label": "编译选项"
+    }
+  ]
+}

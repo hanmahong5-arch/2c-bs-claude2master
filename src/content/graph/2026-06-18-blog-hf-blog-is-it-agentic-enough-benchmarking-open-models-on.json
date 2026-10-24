@@ -1,0 +1,119 @@
+{
+  "center": "开源模型工具调用能力基准",
+  "branches": [
+    {
+      "label": "评估目标",
+      "detail": "不只看最终答案，更看 agent 完成任务所花的功夫",
+      "children": [
+        "用 transformers 作案例研究",
+        "关注 turns、tokens、耗时与失败路径"
+      ]
+    },
+    {
+      "label": "三种测试层级",
+      "detail": "agent 接触 transformers 的三种方式，互不嵌套",
+      "children": [
+        "bare：仅 pip install transformers",
+        "clone：克隆完整源码到工作目录",
+        "skill：打包的 CLI 文档与任务示例"
+      ]
+    },
+    {
+      "label": "评分维度",
+      "detail": "每次运行从多个轴打分，适配不同规模模型",
+      "children": [
+        "match %：最终答案是否含预期结果",
+        "median time / tokens（新增、缓存、生成）",
+        "error % 与 marker adoption"
+      ]
+    },
+    {
+      "label": "运行方式",
+      "detail": "每个 (model × revision × task) 独立跑一个 HF Job",
+      "children": [
+        "全部并行于相同硬件，保证公平",
+        "结果与 trace 存入 Hugging Face Bucket"
+      ]
+    },
+    {
+      "label": "模型分类",
+      "detail": "不同规模模型关注点不同",
+      "children": [
+        "大开源模型：完成率近 100%，看 effort",
+        "本地模型：match % 更能反映能力差异"
+      ]
+    }
+  ],
+  "flow": [
+    "定义任务与层级",
+    "每个组合跑一个 HF Job",
+    "采集 trace 与指标",
+    "生成报告对比"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "transformers",
+      "type": "product"
+    },
+    {
+      "name": "pi coding agent",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face Jobs",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face Bucket",
+      "type": "product"
+    },
+    {
+      "name": "hf CLI",
+      "type": "product"
+    },
+    {
+      "name": "Skill",
+      "type": "concept"
+    },
+    {
+      "name": "Lysandre",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "transformers",
+      "label": "维护"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Hugging Face Jobs",
+      "label": "提供"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Hugging Face Bucket",
+      "label": "提供"
+    },
+    {
+      "from": "pi coding agent",
+      "to": "transformers",
+      "label": "驱动使用"
+    },
+    {
+      "from": "Skill",
+      "to": "transformers",
+      "label": "封装文档"
+    },
+    {
+      "from": "Lysandre",
+      "to": "Hugging Face",
+      "label": "任职于"
+    }
+  ]
+}

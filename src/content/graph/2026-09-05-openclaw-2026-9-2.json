@@ -1,0 +1,99 @@
+{
+  "center": "openclaw v2026.9.2 更新",
+  "branches": [
+    {
+      "label": "GPT-6 Astra 接入",
+      "detail": "可用 OpenAI API-key 或符合条件的 ChatGPT/Codex 账号选择该模型",
+      "children": [
+        "模型名 openai/gpt-6-astra",
+        "支持文本图像输入与 Responses 工具调用",
+        "harness 按账号发现动态决定可用性"
+      ]
+    },
+    {
+      "label": "Swarm 默认开启",
+      "detail": "并发子 agent 编排默认启用，保留显式退出与工具限制",
+      "children": [
+        "Code Mode 为独立开关",
+        "harness 需处理多子 agent 结构化结果",
+        "保留逐项降级路径"
+      ]
+    },
+    {
+      "label": "回复跨重启存活",
+      "detail": "Gateway 重启后可恢复活跃、排队与委派的回复",
+      "children": [
+        "完成的回复不丢弃另一条恢复标记",
+        "恢复标记按回复独立持久化",
+        "非全局单点状态"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Swarm",
+      "type": "technique"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "Code Mode",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "GPT-6 Astra",
+      "label": "接入"
+    },
+    {
+      "from": "openclaw",
+      "to": "Swarm",
+      "label": "默认开启"
+    },
+    {
+      "from": "openclaw",
+      "to": "Gateway",
+      "label": "重启恢复"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "OpenAI",
+      "label": "由提供"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "ChatGPT",
+      "label": "账号可选"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Codex",
+      "label": "账号可选"
+    }
+  ]
+}

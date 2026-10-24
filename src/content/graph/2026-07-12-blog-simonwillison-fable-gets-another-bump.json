@@ -1,0 +1,92 @@
+{
+  "center": "Anthropic 延长 Fable 访问…",
+  "branches": [
+    {
+      "label": "Anthropic 再延期",
+      "detail": "Anthropic 再次延长 Claude Fable 5 在所有付费计划上的访问期限",
+      "children": [
+        "延长至 7 月 19 日",
+        "Claude Code 每周速率限制保持高 50%",
+        "每周用量上限的一半可用于 Fable 5"
+      ]
+    },
+    {
+      "label": "延期原因",
+      "detail": "Anthropic 最初因算力限制而限制访问，需评估需求与算力",
+      "children": [
+        "想先了解需求与算力可用性",
+        "再决定是否长期对订阅者保持低价"
+      ]
+    },
+    {
+      "label": "OpenAI 取消限制",
+      "detail": "OpenAI 对 GPT-5.6 信心十足，无需同样限制访问",
+      "children": [
+        "临时取消 Plus、Business、Pro 的 5 小时用量…",
+        "GPT-5.6 Sol 效率提升，用量更省",
+        "活跃用户达 600 万，并将重置用量"
+      ]
+    },
+    {
+      "label": "作者观点",
+      "detail": "Simon Willison 认为 Anthropic 应改变策略，永久保留 Fable",
+      "children": [
+        "OpenAI 因 Fable 访问不确定性而赢得用户",
+        "建议永久在付费计划上提供 Fable"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Thibault Sottiaux",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5",
+      "label": "延长访问"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Sol",
+      "label": "取消限制"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Anthropic",
+      "label": "建议"
+    },
+    {
+      "from": "Thibault Sottiaux",
+      "to": "OpenAI",
+      "label": "任职于"
+    }
+  ]
+}

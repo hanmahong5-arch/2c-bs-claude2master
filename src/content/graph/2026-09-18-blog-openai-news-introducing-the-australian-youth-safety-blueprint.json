@@ -1,0 +1,69 @@
+{
+  "center": "OpenAI 澳洲青少年安全蓝图",
+  "branches": [
+    {
+      "label": "蓝图发布",
+      "detail": "OpenAI 发布澳大利亚青少年安全蓝图，提出六支柱路线图",
+      "children": [
+        "目标是让年轻人在 AI 体验中既受保护又被赋能"
+      ]
+    },
+    {
+      "label": "安全前置",
+      "detail": "把青少年保护作为产品与政策设计的明确目标，而非事后补救",
+      "children": []
+    },
+    {
+      "label": "开发者影响",
+      "detail": "面向未成年用户的产品需在安全机制与赋能体验间做显式设计取舍",
+      "children": [
+        "需关注区域合规框架的落地"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "澳大利亚青少年安全蓝图",
+      "type": "concept"
+    },
+    {
+      "name": "六支柱路线图",
+      "type": "concept"
+    },
+    {
+      "name": "青少年保护",
+      "type": "concept"
+    },
+    {
+      "name": "区域合规框架",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "澳大利亚青少年安全蓝图",
+      "label": "发布"
+    },
+    {
+      "from": "澳大利亚青少年安全蓝图",
+      "to": "六支柱路线图",
+      "label": "包含"
+    },
+    {
+      "from": "澳大利亚青少年安全蓝图",
+      "to": "青少年保护",
+      "label": "聚焦"
+    },
+    {
+      "from": "青少年保护",
+      "to": "区域合规框架",
+      "label": "关联"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "center": "opencode v1.18.21 修复",
+  "branches": [
+    {
+      "label": "模型结束处理",
+      "detail": "未知 finish reason 时不再提前停止，继续响应",
+      "children": [
+        "harness 需对结束状态更鲁棒",
+        "不能依赖单一结束信号"
+      ]
+    },
+    {
+      "label": "Vertex AI 路由",
+      "detail": "eu 和 us 多区域 Gemini 请求改走 REP 端点",
+      "children": [
+        "配置云模型需考虑区域路由差异",
+        "确保请求到达正确端点"
+      ]
+    },
+    {
+      "label": "桌面端修复",
+      "detail": "修复文件搜索加载期间结果消失，统一归档会话命令",
+      "children": [
+        "保持 UI 状态一致性",
+        "命令注册完整性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Vertex AI",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "REP",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Vertex AI",
+      "to": "Gemini",
+      "label": "托管"
+    },
+    {
+      "from": "opencode",
+      "to": "Vertex AI",
+      "label": "集成"
+    },
+    {
+      "from": "opencode",
+      "to": "harness",
+      "label": "依赖"
+    }
+  ]
+}

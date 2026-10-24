@@ -1,0 +1,72 @@
+{
+  "center": "Google DeepMind 印度 AI 教学助手",
+  "branches": [
+    {
+      "label": "产品定位",
+      "detail": "ATL Saathi 基于 Gemini，面向印度学校机器人实验室教师",
+      "children": [
+        "提供实时教学支持",
+        "解答学生问题、生成课程计划"
+      ]
+    },
+    {
+      "label": "降低门槛",
+      "detail": "自然语言交互让非专业教师也能指导 STEM 实践",
+      "children": [
+        "暗示 AI 可缩小教育资源差距"
+      ]
+    },
+    {
+      "label": "赋能而非替代",
+      "detail": "项目强调增强人类能力，而非自动化取代教师",
+      "children": [
+        "对教育科技开发者有重要启示"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "印度政府",
+      "type": "company"
+    },
+    {
+      "name": "ATL Saathi",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "STEM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "印度政府",
+      "label": "联合推出"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "ATL Saathi",
+      "label": "推出"
+    },
+    {
+      "from": "ATL Saathi",
+      "to": "Gemini",
+      "label": "基于"
+    },
+    {
+      "from": "ATL Saathi",
+      "to": "STEM",
+      "label": "支持"
+    }
+  ]
+}

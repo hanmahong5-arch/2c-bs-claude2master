@@ -1,0 +1,114 @@
+{
+  "center": "Claude Fable 5 一键生成…",
+  "branches": [
+    {
+      "label": "项目背景",
+      "detail": "2022 年 GPT-3 与 DALL-E 生成的推文概念，四年后用 Claude Fable 5 实现",
+      "children": [
+        "2022 年 8 月 5 日推文：GPT-3 写游戏描述…",
+        "2026 年 8 月 5 日四周年实验：用推文内容生成…"
+      ]
+    },
+    {
+      "label": "开发流程",
+      "detail": "在 Claude Code for web 中给 Fable 5 提示词，配合 GitHub Pages 预览",
+      "children": [
+        "提示词要求：3D 浏览器游戏、移动端友好、用…",
+        "要求独立工作、频繁提交、写 notes.md 记录",
+        "用 GitHub Pages 从分支部署，30 秒内可预览"
+      ]
+    },
+    {
+      "label": "Fable 5 执行",
+      "detail": "Fable 5 自主完成技术选型、纹理生成、测试与迭代",
+      "children": [
+        "选用 Three.js，编写 gen_textures.py 生成…",
+        "用 Playwright 在 Chromium 中截图自测，修复…",
+        "用 gpt-image-2 生成标题画面，添加巡逻狗等玩法"
+      ]
+    },
+    {
+      "label": "关键工具",
+      "detail": "Claude Code for web、GitHub Pages、OpenAI 图像 API、Playwright",
+      "children": [
+        "Claude Code for web 在 iPhone/桌面/浏览器…",
+        "OpenAI API 提供 gpt-image-2 生成纹理和标题图",
+        "Playwright 用于自动化截图和视觉检查"
+      ]
+    }
+  ],
+  "flow": [
+    "创建 GitHub 仓库",
+    "启动 Claude Code 会话",
+    "输入提示词与概念图",
+    "Fable 生成 index.html",
+    "配置 GitHub Pages 预览",
+    "Fable 迭代并提交"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code for web",
+      "type": "product"
+    },
+    {
+      "name": "GPT-3",
+      "type": "model"
+    },
+    {
+      "name": "DALL-E",
+      "type": "model"
+    },
+    {
+      "name": "GitHub Pages",
+      "type": "product"
+    },
+    {
+      "name": "Three.js",
+      "type": "technique"
+    },
+    {
+      "name": "Playwright",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Claude Fable 5",
+      "label": "使用"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Claude Code for web",
+      "label": "运行于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-3",
+      "label": "曾使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "DALL-E",
+      "label": "曾使用"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Three.js",
+      "label": "选用"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Playwright",
+      "label": "用于测试"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "center": "聊天机器人时代终结，智能体接管工作",
+  "branches": [
+    {
+      "label": "能力超指数增长",
+      "detail": "AI 可自主完成的人类工时以超指数速度上升",
+      "children": [
+        "Opus 4.7 自主 14 小时完成 2-17 周工程量…",
+        "Fable 自主 9 小时完成团队一周以上项目",
+        "METR、UK AISI、GDPval 评估均超指数增长"
+      ]
+    },
+    {
+      "label": "中美双曲线",
+      "detail": "美国闭源前沿模型领先，中国开源权重模型落后 6-12 个月",
+      "children": [
+        "前沿模型来自 Anthropic、OpenAI、Google",
+        "中国开源模型便宜，AA-Briefcase 上自成指数曲线",
+        "开源模型实际表现常不如基准所示"
+      ]
+    },
+    {
+      "label": "用法转向智能体",
+      "detail": "从与聊天机器人协作转向把任务派给自主智能体",
+      "children": [
+        "智能体需 harness 与 Claude Code、Codex 等…",
+        "OpenAI 四分之一员工每周同时跑 4 个以上智能体",
+        "法律、HR 等非技术岗采用速度接近程序员"
+      ]
+    },
+    {
+      "label": "专家胜过职业",
+      "detail": "决定智能体使用成效的是领域经验而非职业身份",
+      "children": [
+        "Claude Code 用户中软件工程师与其他职业成功率…",
+        "领域经验越多，每次提示产出越有用"
+      ]
+    },
+    {
+      "label": "指数体感冲击",
+      "detail": "身处指数曲线内部，能力翻倍被感知为一连串突变",
+      "children": [
+        "2025 冬前 AI 计划只敢设想数小时工作",
+        "数月后单次提示可获 16 小时以上工作",
+        "机构按人的速度运转，跟不上曲线，动荡持续"
+      ]
+    }
+  ],
+  "flow": [
+    "向智能体派发任务",
+    "harness 提供工具与环境",
+    "智能体长时间自主执行",
+    "自我纠错并交付成果",
+    "人转为管理者角色"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Opus 4.7",
+      "type": "model"
+    },
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "智能体",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "推出"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "推出"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Opus 4.7",
+      "label": "发布"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "智能体",
+      "label": "研究"
+    },
+    {
+      "from": "Claude Code",
+      "to": "智能体",
+      "label": "承载"
+    }
+  ]
+}

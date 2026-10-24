@@ -1,0 +1,108 @@
+{
+  "center": "Mermaid 转 Unicode 终端图",
+  "branches": [
+    {
+      "label": "工具功能",
+      "detail": "把 Mermaid 语法渲染成终端风格 Unicode 字符画",
+      "children": [
+        "支持流程图/时序/状态/类/ER 图",
+        "其他类型回退为带框源码"
+      ]
+    },
+    {
+      "label": "浏览器运行",
+      "detail": "通过 WebAssembly 完全在浏览器内渲染",
+      "children": [
+        "可调输出宽度",
+        "可复制为文本或生成分享链接"
+      ]
+    },
+    {
+      "label": "技术来源",
+      "detail": "源自 Grok CLI 代码库中的 Rust 渲染器",
+      "children": [
+        "xai-grok-markdown/src/mermaid.rs",
+        "自包含终端 Mermaid 渲染器"
+      ]
+    },
+    {
+      "label": "制作方式",
+      "detail": "作者用 Claude Code for web 提示词生成",
+      "children": [
+        "Simon Willison 发布于 2026-07-16"
+      ]
+    }
+  ],
+  "flow": [
+    "读取 Mermaid 语法",
+    "Rust 渲染器解析",
+    "WASM 在浏览器执行",
+    "输出 Unicode 字符画"
+  ],
+  "entities": [
+    {
+      "name": "grok-mermaid",
+      "type": "product"
+    },
+    {
+      "name": "Mermaid",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "Rust",
+      "type": "technique"
+    },
+    {
+      "name": "Grok CLI",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "xai-grok-markdown",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "grok-mermaid",
+      "to": "Mermaid",
+      "label": "转换"
+    },
+    {
+      "from": "grok-mermaid",
+      "to": "WebAssembly",
+      "label": "基于"
+    },
+    {
+      "from": "grok-mermaid",
+      "to": "Rust",
+      "label": "用"
+    },
+    {
+      "from": "xai-grok-markdown",
+      "to": "Grok CLI",
+      "label": "属于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Code",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "grok-mermaid",
+      "label": "创建"
+    }
+  ]
+}

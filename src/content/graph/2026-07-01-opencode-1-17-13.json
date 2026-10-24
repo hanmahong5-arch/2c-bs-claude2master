@@ -1,0 +1,56 @@
+{
+  "center": "opencode v1.17.13 修复与改进",
+  "branches": [
+    {
+      "label": "推理模式修复",
+      "detail": "强制 OpenAI 兼容推理模型的推理模式，保证自定义部署下设置生效",
+      "children": [
+        "推理模型与普通模型需明确区分",
+        "推理设置应独立管理"
+      ]
+    },
+    {
+      "label": "Copilot ID 重放",
+      "detail": "停止重放过时的 GitHub Copilot 响应 ID，避免后续请求失败",
+      "children": [
+        "agent 应维护请求 ID 唯一性",
+        "避免状态污染"
+      ]
+    },
+    {
+      "label": "桌面 UI 改进",
+      "detail": "问题提示可最小化恢复，会话页故障仅影响当前标签",
+      "children": [
+        "UI 组件需支持独立状态管理",
+        "错误隔离到最小单元"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GitHub Copilot",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "OpenAI",
+      "label": "兼容"
+    },
+    {
+      "from": "opencode",
+      "to": "GitHub Copilot",
+      "label": "修复重放"
+    }
+  ]
+}

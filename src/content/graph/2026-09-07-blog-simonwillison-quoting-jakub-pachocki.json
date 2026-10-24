@@ -1,0 +1,81 @@
+{
+  "center": "OpenAI 谈加速训练更强模型",
+  "branches": [
+    {
+      "label": "核心论点",
+      "detail": "Jakub Pachocki 认为需尽快训练更聪明模型以构建防御系统",
+      "children": [
+        "防御对象是其他 AI 带来的危险",
+        "最强论据来自防御需求"
+      ]
+    },
+    {
+      "label": "防御用途",
+      "detail": "强大且对齐的 AI 用于保护基础设施与实时对抗 rogue agents",
+      "children": [
+        "保护基础设施安全",
+        "实时防御 rogue agents",
+        "发明全新防护手段"
+      ]
+    },
+    {
+      "label": "OpenAI 部署重点",
+      "detail": "防御系统建设将成为 OpenAI 部署工作的主要焦点",
+      "children": [
+        "Pachocki 为 OpenAI 首席科学家"
+      ]
+    },
+    {
+      "label": "反对鲁莽",
+      "detail": "AI 进展不确定不能成为鲁莽的借口，不计代价竞赛很荒谬",
+      "children": [
+        "需正视风险的严重性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Jakub Pachocki",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "rogue agents",
+      "type": "concept"
+    },
+    {
+      "name": "aligned AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Jakub Pachocki",
+      "to": "OpenAI",
+      "label": "任职于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Jakub Pachocki",
+      "label": "引用"
+    },
+    {
+      "from": "OpenAI",
+      "to": "aligned AI",
+      "label": "部署"
+    },
+    {
+      "from": "aligned AI",
+      "to": "rogue agents",
+      "label": "防御"
+    }
+  ]
+}

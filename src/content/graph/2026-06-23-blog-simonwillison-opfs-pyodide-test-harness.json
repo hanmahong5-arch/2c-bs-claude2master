@@ -1,0 +1,98 @@
+{
+  "center": "OPFS + Pyodide 浏览器持久化…",
+  "branches": [
+    {
+      "label": "项目目标",
+      "detail": "探索 Datasette Lite 能否编辑用户电脑上的持久化 SQLite 文件",
+      "children": [
+        "Datasette Lite 用 Pyodide 与 WebAssembly…",
+        "持久化依赖 OPFS（Origin Private File…"
+      ]
+    },
+    {
+      "label": "测试工具",
+      "detail": "一个交互式 OPFS + Pyodide 测试台，跨桌面与移动浏览器验证",
+      "children": [
+        "创建、读取、删除 OPFS 中的文件",
+        "对文件系统中的 SQLite 数据库执行 SQL 查询",
+        "刷新页面验证持久性，含活动日志与能力检测面板"
+      ]
+    },
+    {
+      "label": "构建方式",
+      "detail": "作者让 Claude Code for web 生成这个 playground UI 用于多浏览器试验",
+      "children": [
+        "发布者 Simon Willison，2026 年 6 月 23 日"
+      ]
+    }
+  ],
+  "flow": [
+    "在浏览器打开测试台",
+    "创建或读取 OPFS 文件",
+    "对 SQLite 执行 SQL 查询",
+    "刷新页面验证持久性",
+    "查看活动日志与能力检测"
+  ],
+  "entities": [
+    {
+      "name": "OPFS",
+      "type": "concept"
+    },
+    {
+      "name": "Pyodide",
+      "type": "product"
+    },
+    {
+      "name": "Datasette Lite",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "Claude Code for web",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Datasette Lite",
+      "to": "Pyodide",
+      "label": "基于"
+    },
+    {
+      "from": "Datasette Lite",
+      "to": "WebAssembly",
+      "label": "运行于"
+    },
+    {
+      "from": "Pyodide",
+      "to": "OPFS",
+      "label": "读写"
+    },
+    {
+      "from": "OPFS",
+      "to": "SQLite",
+      "label": "存储"
+    },
+    {
+      "from": "Claude Code for web",
+      "to": "OPFS",
+      "label": "构建测试台"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Datasette Lite",
+      "label": "作者"
+    }
+  ]
+}

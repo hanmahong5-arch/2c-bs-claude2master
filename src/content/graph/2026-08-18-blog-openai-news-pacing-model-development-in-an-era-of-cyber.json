@@ -1,0 +1,92 @@
+{
+  "center": "OpenAI 把控前沿模型开发节奏",
+  "branches": [
+    {
+      "label": "安全措施升级",
+      "detail": "OpenAI 加强监控、对齐与安全措施，应对网络关键能力风险",
+      "children": [
+        "监控、对齐、安全三方面强化",
+        "针对网络关键能力风险"
+      ]
+    },
+    {
+      "label": "安全指导节奏",
+      "detail": "新保障措施直接指导模型开发节奏，安全与能力同步",
+      "children": [
+        "安全性提升与能力提升同步",
+        "保障措施决定开发节奏"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "未来模型发布更谨慎，安全评估成为迭代关键环节",
+      "children": [
+        "模型发布可能更谨慎",
+        "安全评估成迭代关键"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "前沿 AI 模型",
+      "type": "concept"
+    },
+    {
+      "name": "监控",
+      "type": "concept"
+    },
+    {
+      "name": "对齐",
+      "type": "concept"
+    },
+    {
+      "name": "安全措施",
+      "type": "concept"
+    },
+    {
+      "name": "网络关键能力风险",
+      "type": "concept"
+    },
+    {
+      "name": "安全评估",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "前沿 AI 模型",
+      "label": "开发"
+    },
+    {
+      "from": "OpenAI",
+      "to": "监控",
+      "label": "加强"
+    },
+    {
+      "from": "OpenAI",
+      "to": "对齐",
+      "label": "加强"
+    },
+    {
+      "from": "OpenAI",
+      "to": "安全措施",
+      "label": "加强"
+    },
+    {
+      "from": "安全措施",
+      "to": "前沿 AI 模型",
+      "label": "指导节奏"
+    },
+    {
+      "from": "安全评估",
+      "to": "前沿 AI 模型",
+      "label": "成为关键环节"
+    }
+  ]
+}

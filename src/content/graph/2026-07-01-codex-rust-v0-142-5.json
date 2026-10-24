@@ -1,0 +1,54 @@
+{
+  "center": "codex rust-v0.142.5 修复日志泄露",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "修复完整 Responses WebSocket 请求负载被写入跟踪日志的问题",
+      "children": [
+        "Responses WebSocket 请求负载不再进日志",
+        "版本 codex rust-v0.142.5"
+      ]
+    },
+    {
+      "label": "安全影响",
+      "detail": "敏感数据不再被意外记录，提升安全性",
+      "children": [
+        "避免敏感数据泄露到日志"
+      ]
+    },
+    {
+      "label": "设计启示",
+      "detail": "agent harness 需确保 WebSocket 请求体不被日志系统捕获",
+      "children": [
+        "WebSocket 通信请求体应排除在日志外"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex",
+      "type": "product"
+    },
+    {
+      "name": "Responses WebSocket",
+      "type": "technique"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex",
+      "to": "Responses WebSocket",
+      "label": "修复日志泄露"
+    },
+    {
+      "from": "agent harness",
+      "to": "Responses WebSocket",
+      "label": "需避免日志捕获"
+    }
+  ]
+}

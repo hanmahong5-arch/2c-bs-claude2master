@@ -1,0 +1,111 @@
+{
+  "center": "Reve 2 与 Ideogram 4 布局突破",
+  "branches": [
+    {
+      "label": "同日发布",
+      "detail": "Reve 2.0 与 Ideogram 4.0 同日推出，均强调布局与标注突破",
+      "children": [
+        "Reve 2.0 号称全球最佳 4K 图像模型",
+        "Ideogram 4.0 号称全球最佳开源图像模型"
+      ]
+    },
+    {
+      "label": "布局技术",
+      "detail": "用边界框与区域描述训练，把图像生成转为下一 token 预测",
+      "children": [
+        "Ideogram 4.0 用边界框绑定区域描述",
+        "Reve 2.0 用精确布局生成与编辑图像",
+        "Taesung Park：布局化降低扩散模型算力"
+      ]
+    },
+    {
+      "label": "开源与本地",
+      "detail": "Gemma 4 12B、Ideogram 4.0、Miso One 等开源模型推动本地部署",
+      "children": [
+        "Gemma 4 12B：Apache 2.0，约 16GB VRAM",
+        "Ideogram 4.0 开源权重，Arena 开源第一",
+        "Miso One：8B 开源 TTS，110ms 延迟"
+      ]
+    },
+    {
+      "label": "微软发布",
+      "detail": "MAI-Thinking-1 技术报告与 Frontier Tuning 企业定制",
+      "children": [
+        "MAI-Thinking-1：AIME 2025 97%，SWE-Bench…",
+        "无第三方蒸馏，零合成数据",
+        "Frontier Tuning 内部 Excel 模型达 GPT-5.4…"
+      ]
+    },
+    {
+      "label": "Agent 趋势",
+      "detail": "从框架转向执行层，多智能体 DAG 与技能优化",
+      "children": [
+        "Jerry Liu：框架时代结束，抽象上移至技能与上…",
+        "CMU/LTI MACU：多智能体 DAG，提速 1.5 倍",
+        "微软 SkillOpt：多模态提取技能 0.73→0.93"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Reve 2.0",
+      "type": "model"
+    },
+    {
+      "name": "Ideogram 4.0",
+      "type": "model"
+    },
+    {
+      "name": "Gemma 4 12B",
+      "type": "model"
+    },
+    {
+      "name": "MAI-Thinking-1",
+      "type": "model"
+    },
+    {
+      "name": "Microsoft",
+      "type": "company"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Miso One",
+      "type": "model"
+    },
+    {
+      "name": "Frontier Tuning",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Reve 2.0",
+      "to": "Ideogram 4.0",
+      "label": "同日发布"
+    },
+    {
+      "from": "Microsoft",
+      "to": "MAI-Thinking-1",
+      "label": "发布"
+    },
+    {
+      "from": "Google",
+      "to": "Gemma 4 12B",
+      "label": "发布"
+    },
+    {
+      "from": "Microsoft",
+      "to": "Frontier Tuning",
+      "label": "推出"
+    },
+    {
+      "from": "Ideogram 4.0",
+      "to": "Miso One",
+      "label": "同日开源"
+    }
+  ]
+}

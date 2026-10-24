@@ -1,0 +1,114 @@
+{
+  "center": "Paul Christiano 加入 OpenAI 基…",
+  "branches": [
+    {
+      "label": "任命内容",
+      "detail": "加入 OpenAI 基金会董事会，任 PBC 董事会无投票权观察员",
+      "children": [
+        "同时加入安全与安保委员会（SSC）",
+        "SSC 主席为 Zico Kolter",
+        "SSC 监管 OpenAI 全部安全实践"
+      ]
+    },
+    {
+      "label": "个人背景",
+      "detail": "对齐研究者，ARC 创始人，曾于 2017–2021 领导 OpenAI 对齐研究",
+      "children": [
+        "RLHF 基础工作的贡献者",
+        "现任 NIST 下属 CAISI 高级技术顾问",
+        "曾任职美国 AI 安全研究所"
+      ]
+    },
+    {
+      "label": "政府经验",
+      "detail": "跨两届政府，专注前沿模型评估与国家安全风险缓解",
+      "children": [
+        "评估具国家安全影响的前沿模型能力",
+        "研究安全与安保风险缓解方法"
+      ]
+    },
+    {
+      "label": "治理背景",
+      "detail": "任命延续 2025 年 10 月重组确立的治理结构",
+      "children": [
+        "加州与特拉华州总检察长为期一年的审查",
+        "基金会为非营利组织，控股 OpenAI Group PBC"
+      ]
+    },
+    {
+      "label": "任命意义",
+      "detail": "Bret Taylor 称其技术判断将强化董事会监督",
+      "children": [
+        "Christiano：对齐仍是困难技术问题",
+        "其独立立场被视为治理优势"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Paul Christiano",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI Foundation",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI Group PBC",
+      "type": "company"
+    },
+    {
+      "name": "Safety and Security Committee",
+      "type": "concept"
+    },
+    {
+      "name": "Alignment Research Center",
+      "type": "company"
+    },
+    {
+      "name": "RLHF",
+      "type": "technique"
+    },
+    {
+      "name": "NIST",
+      "type": "company"
+    },
+    {
+      "name": "Bret Taylor",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Paul Christiano",
+      "to": "OpenAI Foundation",
+      "label": "加入董事会"
+    },
+    {
+      "from": "Paul Christiano",
+      "to": "Safety and Security Committee",
+      "label": "加入"
+    },
+    {
+      "from": "Paul Christiano",
+      "to": "Alignment Research Center",
+      "label": "创立"
+    },
+    {
+      "from": "Paul Christiano",
+      "to": "RLHF",
+      "label": "贡献基础工作"
+    },
+    {
+      "from": "OpenAI Foundation",
+      "to": "OpenAI Group PBC",
+      "label": "控股"
+    },
+    {
+      "from": "Bret Taylor",
+      "to": "OpenAI Foundation",
+      "label": "担任主席"
+    }
+  ]
+}

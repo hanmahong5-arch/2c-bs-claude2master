@@ -1,0 +1,110 @@
+{
+  "center": "开源模型评估差距与基准局限",
+  "branches": [
+    {
+      "label": "开源模型密集发布",
+      "detail": "一个月内 DeepSeek、Google、Moonshot 等开源前沿实验室接连发布旗舰模型",
+      "children": [
+        "Gemma 4 改用 Apache 2.0 许可",
+        "DeepSeek V4 分 Pro 与 Flash 两档",
+        "Kimi K2.6 主打长时程任务"
+      ]
+    },
+    {
+      "label": "CAISI 评估结论",
+      "detail": "CAISI 用 IRT 算 Elo，认为开源模型落后美国前沿且差距在扩大",
+      "children": [
+        "V4 用了九个基准",
+        "CTF-Archive-Diamond 仅用子集并外推",
+        "PortBench 为 CAISI 私有基准"
+      ]
+    },
+    {
+      "label": "ECI 给出不同图景",
+      "detail": "Epoch AI 的 ECI 同样用 IRT，显示自 R1 起差距约 3-7 个月",
+      "children": [
+        "差距大致稳定在 3-7 个月",
+        "与 CAISI 结论不一致"
+      ]
+    },
+    {
+      "label": "基准测试的局限",
+      "detail": "两者都用标准化简单设置，未用模型训练时的 harness 与专属提示",
+      "children": [
+        "编码任务仅用 bash 与固定 token 预算",
+        "未用 Claude Code 或 OpenCode",
+        "Bun 已从 Zig 移植到 Rust 达百万行改动"
+      ]
+    },
+    {
+      "label": "作者观点分歧",
+      "detail": "Florian 认为开源真实性能更接近闭源，Nathan 认为闭源领先更多",
+      "children": [
+        "两人均认同基准不完美",
+        "后续内容将继续讨论"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "DeepSeek",
+      "type": "company"
+    },
+    {
+      "name": "DeepSeek V4",
+      "type": "model"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K2.6",
+      "type": "model"
+    },
+    {
+      "name": "CAISI",
+      "type": "company"
+    },
+    {
+      "name": "Epoch AI",
+      "type": "company"
+    },
+    {
+      "name": "IRT",
+      "type": "technique"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "CAISI",
+      "to": "DeepSeek V4",
+      "label": "评估"
+    },
+    {
+      "from": "Epoch AI",
+      "to": "DeepSeek V4",
+      "label": "评估"
+    },
+    {
+      "from": "CAISI",
+      "to": "IRT",
+      "label": "使用"
+    },
+    {
+      "from": "Epoch AI",
+      "to": "IRT",
+      "label": "使用"
+    },
+    {
+      "from": "DeepSeek",
+      "to": "DeepSeek V4",
+      "label": "发布"
+    }
+  ]
+}

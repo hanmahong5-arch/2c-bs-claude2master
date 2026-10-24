@@ -1,0 +1,77 @@
+{
+  "center": "Cline CLI v3.0.15 更新",
+  "branches": [
+    {
+      "label": "Cline Hub 监控",
+      "detail": "新增网页应用，可监控客户端、查看并驱动会话、流式传输助手输出",
+      "children": [
+        "支持本地 Hub 重启",
+        "房间密钥控制本地/局域网/隧道访问"
+      ]
+    },
+    {
+      "label": "全局 AGENTS 规则",
+      "detail": "智能体规则可应用于所有会话，不再局限于单个项目",
+      "children": [
+        "需处理跨会话规则优先级与冲突"
+      ]
+    },
+    {
+      "label": "插件动态规则",
+      "detail": "插件在沙箱安装时可贡献静态或动态规则内容",
+      "children": [
+        "需安全注入并管理动态内容生命周期"
+      ]
+    },
+    {
+      "label": "多会话管理增强",
+      "detail": "集中式可视化监控与远程会话管理成为 Agent Harness 设计要求",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Cline Hub",
+      "type": "product"
+    },
+    {
+      "name": "AGENTS 规则",
+      "type": "concept"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    },
+    {
+      "name": "插件沙箱",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Cline Hub",
+      "label": "新增"
+    },
+    {
+      "from": "Cline",
+      "to": "AGENTS 规则",
+      "label": "支持全局"
+    },
+    {
+      "from": "插件沙箱",
+      "to": "AGENTS 规则",
+      "label": "注入"
+    },
+    {
+      "from": "Cline Hub",
+      "to": "Agent Harness",
+      "label": "影响设计"
+    }
+  ]
+}

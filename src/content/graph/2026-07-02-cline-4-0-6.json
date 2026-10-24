@@ -1,0 +1,49 @@
+{
+  "center": "Cline v4.0.6 模型能力警告泛化",
+  "branches": [
+    {
+      "label": "警告逻辑泛化",
+      "detail": "模型能力警告不再绑定特定模型，改为通用逻辑",
+      "children": [
+        "覆盖更多模型与场景"
+      ]
+    },
+    {
+      "label": "减少误用",
+      "detail": "agent 在更多模型上会收到能力限制提示，避免误用",
+      "children": []
+    },
+    {
+      "label": "交互平衡",
+      "detail": "设计需权衡警告触发条件与用户交互体验",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "模型能力警告",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "模型能力警告",
+      "label": "泛化"
+    },
+    {
+      "from": "模型能力警告",
+      "to": "agent",
+      "label": "提示"
+    }
+  ]
+}

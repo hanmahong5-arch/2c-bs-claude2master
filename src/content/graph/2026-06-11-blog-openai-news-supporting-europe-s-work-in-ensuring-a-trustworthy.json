@@ -1,0 +1,71 @@
+{
+  "center": "OpenAI 支持欧盟 AI 透明度准则",
+  "branches": [
+    {
+      "label": "支持欧盟准则",
+      "detail": "OpenAI 公开承诺遵循欧盟《AI 内容透明度实践准则》框架",
+      "children": [
+        "为在欧开发者提供合规指引"
+      ]
+    },
+    {
+      "label": "推进溯源标准",
+      "detail": "投入资源发展标识与追踪 AI 生成内容来源的技术标准与工具",
+      "children": [
+        "对检测与验证机制至关重要"
+      ]
+    },
+    {
+      "label": "帮助公众识别",
+      "detail": "让用户更容易识别 AI 生成内容，在数字环境中做出明智判断",
+      "children": [
+        "回应社会对 AI 透明度的关切"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "欧盟",
+      "type": "concept"
+    },
+    {
+      "name": "AI 内容透明度实践准则",
+      "type": "concept"
+    },
+    {
+      "name": "内容溯源",
+      "type": "technique"
+    },
+    {
+      "name": "AI 生成内容",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AI 内容透明度实践准则",
+      "label": "支持"
+    },
+    {
+      "from": "OpenAI",
+      "to": "内容溯源",
+      "label": "推进"
+    },
+    {
+      "from": "AI 内容透明度实践准则",
+      "to": "欧盟",
+      "label": "由欧盟制定"
+    },
+    {
+      "from": "内容溯源",
+      "to": "AI 生成内容",
+      "label": "标识追踪"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "center": "codex rust-v0.150.1 图像预算",
+  "branches": [
+    {
+      "label": "远程压缩变更",
+      "detail": "远程压缩默认把保留图像计入 token 预算，超出即修剪旧图像",
+      "children": [
+        "保留图像纳入 token 预算",
+        "超预算自动修剪旧图像"
+      ]
+    },
+    {
+      "label": "对 agent 影响",
+      "detail": "远程会话中 agent 需更谨慎管理图像资源，避免超出预算",
+      "children": [
+        "远程会话图像资源更紧张"
+      ]
+    },
+    {
+      "label": "harness 设计建议",
+      "detail": "设计 harness 时应预留图像清理机制，或提示用户及时清理",
+      "children": [
+        "预留图像清理机制",
+        "提示用户及时清理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex rust-v0.150.1",
+      "type": "product"
+    },
+    {
+      "name": "远程压缩",
+      "type": "technique"
+    },
+    {
+      "name": "token 预算",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex rust-v0.150.1",
+      "to": "远程压缩",
+      "label": "默认启用"
+    },
+    {
+      "from": "远程压缩",
+      "to": "token 预算",
+      "label": "计入图像"
+    },
+    {
+      "from": "harness",
+      "to": "远程压缩",
+      "label": "需适配"
+    }
+  ]
+}

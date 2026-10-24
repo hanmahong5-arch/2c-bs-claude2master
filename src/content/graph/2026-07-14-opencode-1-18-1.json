@@ -1,0 +1,45 @@
+{
+  "center": "opencode v1.18.1 修复间距",
+  "branches": [
+    {
+      "label": "版本发布",
+      "detail": "opencode 发布 v1.18.1 小版本更新",
+      "children": [
+        "版本号 v1.18.1"
+      ]
+    },
+    {
+      "label": "修复内容",
+      "detail": "修复设置页模型提供商各部分之间的间距问题",
+      "children": [
+        "涉及设置页面",
+        "针对模型提供商区块"
+      ]
+    },
+    {
+      "label": "设计意义",
+      "detail": "UI 细节修复提升 agent harness 的用户体验",
+      "children": [
+        "配置界面更清晰易用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "agent harness",
+      "label": "用于"
+    }
+  ]
+}

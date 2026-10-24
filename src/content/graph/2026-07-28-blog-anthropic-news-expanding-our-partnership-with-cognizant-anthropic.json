@@ -1,0 +1,100 @@
+{
+  "center": "Anthropic 与 Cognizant 扩大合作",
+  "branches": [
+    {
+      "label": "合作升级",
+      "detail": "Cognizant 成为 Claude Partner Network 全球顶级合作伙伴",
+      "children": [
+        "将 Claude 嵌入自身业务与工程平台",
+        "扩展 Claude 认证员工队伍"
+      ]
+    },
+    {
+      "label": "内部落地",
+      "detail": "超 3 万名员工完成 Claude 培训，工程师日常使用",
+      "children": [
+        "Flowsource 平台让 Claude Code 与工程师协作",
+        "Spec-Driven Development 模块按规范评估输出"
+      ]
+    },
+    {
+      "label": "客户成果",
+      "detail": "已为制造、生物制药、保险等行业交付 Claude 方案",
+      "children": [
+        "全球制造商客户体验门户 6 个月上线",
+        "合同审查时间缩短 40%，提取准确率超 88%",
+        "核保工具将数小时工作缩至几分钟，每周省约 8 小时"
+      ]
+    },
+    {
+      "label": "合作逻辑",
+      "detail": "Cognizant 提供行业知识与工程规模，弥合企业吸收 AI 的差距",
+      "children": [
+        "CEO Ravi Kumar S：AI 能力增速快于企业吸收…",
+        "Anthropic 总裁 Daniela Amodei：把 Claude…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Cognizant",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Flowsource",
+      "type": "product"
+    },
+    {
+      "name": "Neuro AI Engineering",
+      "type": "product"
+    },
+    {
+      "name": "Claude Partner Network",
+      "type": "concept"
+    },
+    {
+      "name": "Ravi Kumar S",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Cognizant",
+      "label": "扩大合作"
+    },
+    {
+      "from": "Cognizant",
+      "to": "Claude",
+      "label": "嵌入平台"
+    },
+    {
+      "from": "Flowsource",
+      "to": "Claude Code",
+      "label": "集成运行"
+    },
+    {
+      "from": "Cognizant",
+      "to": "Claude Partner Network",
+      "label": "成为顶级伙伴"
+    },
+    {
+      "from": "Ravi Kumar S",
+      "to": "Cognizant",
+      "label": "担任 CEO"
+    }
+  ]
+}

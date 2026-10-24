@@ -1,0 +1,119 @@
+{
+  "center": "Quantization-Aware Healing 量…",
+  "branches": [
+    {
+      "label": "压缩再修复流程",
+      "detail": "先剪枝压缩架构，再量化到 4 bit，最后做 healing 恢复能力",
+      "children": [
+        "剪层/头/神经元降参数量",
+        "权重压到 4 bit 省内存算力",
+        "healing 在生产部署前恢复"
+      ]
+    },
+    {
+      "label": "能力退化问题",
+      "detail": "压缩加量化会系统性损害推理、数学与代码生成能力",
+      "children": [
+        "推理能力下降",
+        "数学解题变差",
+        "代码生成受损"
+      ]
+    },
+    {
+      "label": "QAH 核心主张",
+      "detail": "针对量化模型设计恢复过程，4-bit 可反超全精度版本",
+      "children": [
+        "量化不必牺牲质量",
+        "恢复过程需面向量化模型"
+      ]
+    },
+    {
+      "label": "GPT-OSS 实验结果",
+      "detail": "120B 压缩到 60B 的 MXFP4 模型在 9 项基准中 7 项胜出",
+      "children": [
+        "120B → 60B 压缩",
+        "7/9 基准超过 bfloat16 原版"
+      ]
+    },
+    {
+      "label": "业界采用情况",
+      "detail": "gpt-oss、Nemotron 家族、Hypernova 60B 均用压缩-修复路线",
+      "children": [
+        "NVIDIA Nemotron 家族",
+        "Hypernova 60B"
+      ]
+    }
+  ],
+  "flow": [
+    "压缩架构降参数",
+    "量化权重至 4 bit",
+    "执行 healing 恢复",
+    "部署上线"
+  ],
+  "entities": [
+    {
+      "name": "Quantization-Aware Healing",
+      "type": "technique"
+    },
+    {
+      "name": "GPT-OSS 120B",
+      "type": "model"
+    },
+    {
+      "name": "Hypernova 60B",
+      "type": "model"
+    },
+    {
+      "name": "Nemotron",
+      "type": "model"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "MXFP4",
+      "type": "technique"
+    },
+    {
+      "name": "量化",
+      "type": "concept"
+    },
+    {
+      "name": "healing",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Quantization-Aware Healing",
+      "to": "GPT-OSS 120B",
+      "label": "应用于"
+    },
+    {
+      "from": "Quantization-Aware Healing",
+      "to": "healing",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-OSS 120B",
+      "to": "MXFP4",
+      "label": "量化为"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron",
+      "label": "发布"
+    },
+    {
+      "from": "Hypernova 60B",
+      "to": "healing",
+      "label": "采用"
+    },
+    {
+      "from": "量化",
+      "to": "healing",
+      "label": "需配合"
+    }
+  ]
+}

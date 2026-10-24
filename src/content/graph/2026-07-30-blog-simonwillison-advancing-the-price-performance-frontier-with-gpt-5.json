@@ -1,0 +1,118 @@
+{
+  "center": "GPT-5.6 大幅降价",
+  "branches": [
+    {
+      "label": "降价幅度",
+      "detail": "OpenAI 今日对 GPT-5.6 系列大幅调价",
+      "children": [
+        "GPT-5.6 Terra 降价 20%",
+        "GPT-5.6 Luna 降价 80%"
+      ]
+    },
+    {
+      "label": "Luna 新价格",
+      "detail": "Luna 输入 $0.20/百万 token，输出 $1.20/百万",
+      "children": [
+        "比 Gemini 3.1 Flash-Lite 更便宜",
+        "输入价仅为 Claude Haiku 4.5 的 1/5"
+      ]
+    },
+    {
+      "label": "Sol 优化推理",
+      "detail": "用 GPT-5.6 Sol 优化前向传播与负载均衡",
+      "children": [
+        "预计算、避免或并行化冗余计算",
+        "配合 Codex 自动重写生产 kernel",
+        "用 Triton 和 Gluon 编写 GPU kernel"
+      ]
+    },
+    {
+      "label": "成本下降",
+      "detail": "kernel 优化使端到端服务成本降低 20%",
+      "children": [
+        "减少内存搬运与同步开销",
+        "避免 GPU 空闲"
+      ]
+    },
+    {
+      "label": "实际切换",
+      "detail": "Simon Willison 将 demo 从 Gemini 切到 Luna",
+      "children": [
+        "agent.datasette.io 原用 Gemini 3.1 Flash…"
+      ]
+    }
+  ],
+  "flow": [
+    "用 Sol 优化负载均衡",
+    "优化模型前向传播",
+    "找出可预计算/并行化工作",
+    "Codex 自动重写生产 kernel",
+    "端到端服务成本降 20%"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Terra",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Gemini 3.1 Flash-Lite",
+      "type": "model"
+    },
+    {
+      "name": "Claude Haiku 4.5",
+      "type": "model"
+    },
+    {
+      "name": "Triton",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Terra",
+      "label": "降价"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Luna",
+      "label": "降价"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "Codex",
+      "label": "配合使用"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "Triton",
+      "label": "编写 kernel"
+    },
+    {
+      "from": "GPT-5.6 Luna",
+      "to": "Gemini 3.1 Flash-Lite",
+      "label": "价格更低"
+    },
+    {
+      "from": "GPT-5.6 Luna",
+      "to": "Claude Haiku 4.5",
+      "label": "价格更低"
+    }
+  ]
+}

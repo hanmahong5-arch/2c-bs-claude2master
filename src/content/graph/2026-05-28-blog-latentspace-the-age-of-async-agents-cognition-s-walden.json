@@ -1,0 +1,118 @@
+{
+  "center": "异步智能体时代：Devin 与背景智能体",
+  "branches": [
+    {
+      "label": "三波演进",
+      "detail": "AI 编程从 Copilot 补全、本地智能体，走向异步背景智能体编排",
+      "children": [
+        "第一波：Copilot/Cursor 补全，开发者仍在环中",
+        "第二波：Claude Code、Windsurf 等本地智能体",
+        "第三波：异步智能体后台端到端开发"
+      ]
+    },
+    {
+      "label": "Devin 成绩",
+      "detail": "Cognition 的 Devin 合并 PR 增长 7 倍，提交占比从 16% 升至 80%",
+      "children": [
+        "企业使用量今年增长超 10 倍",
+        "年化收入达 4.92 亿美元",
+        "完成超 10 亿美元 D 轮融资，估值 260 亿"
+      ]
+    },
+    {
+      "label": "架构要点",
+      "detail": "背景智能体需分离大脑与机器，用完整 VM 而非仅 Docker",
+      "children": [
+        "harness 在盒内 vs 盒外",
+        "仓库设置是最难问题之一",
+        "作用域密钥、GitHub 机器人、Slack 集成"
+      ]
+    },
+    {
+      "label": "记忆与集成",
+      "detail": "记忆、MCP 局限、多智能体编排是当前关键挑战",
+      "children": [
+        "Devin 自动生成记忆，但记忆修剪困难",
+        "MCP 不足以支撑 Slack 等一等集成",
+        "检索问题仍未解决"
+      ]
+    },
+    {
+      "label": "spec-to-PR",
+      "detail": "2025 年 12 月模型拐点后，从规格到 PR 成为生产工作流",
+      "children": [
+        "PM 可从 Slack 直接发代码",
+        "视频验证与截图测试",
+        "失控 vibe coding 会使代码库退化到最差工程师…"
+      ]
+    }
+  ],
+  "flow": [
+    "给出任务与仓库",
+    "分配机器与 shell",
+    "智能体后台执行",
+    "测试与视频验证",
+    "提交 PR 并审查"
+  ],
+  "entities": [
+    {
+      "name": "Cognition",
+      "type": "company"
+    },
+    {
+      "name": "Devin",
+      "type": "product"
+    },
+    {
+      "name": "Walden Yan",
+      "type": "person"
+    },
+    {
+      "name": "Cole Murray",
+      "type": "person"
+    },
+    {
+      "name": "OpenInspect",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "上下文工程",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Walden Yan",
+      "to": "Cognition",
+      "label": "联合创办"
+    },
+    {
+      "from": "Cognition",
+      "to": "Devin",
+      "label": "开发"
+    },
+    {
+      "from": "Cole Murray",
+      "to": "OpenInspect",
+      "label": "创建"
+    },
+    {
+      "from": "Walden Yan",
+      "to": "上下文工程",
+      "label": "提出"
+    },
+    {
+      "from": "Devin",
+      "to": "MCP",
+      "label": "集成"
+    }
+  ]
+}

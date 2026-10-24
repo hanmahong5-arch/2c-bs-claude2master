@@ -1,0 +1,117 @@
+{
+  "center": "OpenClaw 命令队列机制",
+  "branches": [
+    {
+      "label": "为什么需要队列",
+      "detail": "自动回复运行昂贵且易冲突，串行化避免资源竞争与限流",
+      "children": [
+        "多消息并发时共享 session 状态、日志、CLI…",
+        "串行化降低上游 rate limit 风险"
+      ]
+    },
+    {
+      "label": "队列如何工作",
+      "detail": "lane-aware FIFO 队列按 lane 排空，可配置并发上限",
+      "children": [
+        "默认 lane 并发为 1，main 为 max(8, CPU*4)",
+        "CLI/embedded/Codex 共享 session:<key>…",
+        "子 agent 队列默认每 spawning session 8 个"
+      ]
+    },
+    {
+      "label": "四种队列模式",
+      "detail": "/queue 控制会话已有活跃运行时新消息的处理方式",
+      "children": [
+        "steer：注入活跃运行时，默认模式",
+        "followup：不 steer，当前运行结束后再处理",
+        "collect：静默窗口后合并为单个 followup"
+      ]
+    },
+    {
+      "label": "默认与配置",
+      "detail": "内置 500ms 防抖，cap 默认 20，drop 默认 summarize",
+      "children": [
+        "可按 channel 配置 byChannel 与…",
+        "drop 可选 summarize/old/new",
+        "优先级：会话 /queue > byChannel > 全局 >…"
+      ]
+    },
+    {
+      "label": "权限与取消",
+      "detail": "队列保留原始操作者权限，支持排队中取消",
+      "children": [
+        "chat.abort 带 runId 可取消排队中的 turn",
+        "无 runId 时先取消排队 turn 再中止活跃运行",
+        "排队等待不计入活跃运行超时语义"
+      ]
+    }
+  ],
+  "flow": [
+    "入站消息进入 lane-aware…",
+    "按 session:<key> lane 等待…",
+    "进入 main lane 或子 agent…",
+    "按 /queue 模式处理（steer/…",
+    "运行结束或取消后释放队列"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "steer",
+      "type": "concept"
+    },
+    {
+      "name": "followup",
+      "type": "concept"
+    },
+    {
+      "name": "collect",
+      "type": "concept"
+    },
+    {
+      "name": "interrupt",
+      "type": "concept"
+    },
+    {
+      "name": "lane-aware FIFO queue",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "lane-aware FIFO queue",
+      "label": "使用"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "steer",
+      "label": "默认模式"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Codex",
+      "label": "共享 lane"
+    },
+    {
+      "from": "Gateway",
+      "to": "OpenClaw",
+      "label": "转发消息"
+    },
+    {
+      "from": "steer",
+      "to": "followup",
+      "label": "回退为"
+    }
+  ]
+}

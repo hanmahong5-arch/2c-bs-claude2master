@@ -1,0 +1,122 @@
+{
+  "center": "Anthropic 发布 MHS 硬件标准",
+  "branches": [
+    {
+      "label": "MHS 是什么",
+      "detail": "让 AI 代理安全操作物理设备的共享规范，先向科研实验室与制造商开放研究预览",
+      "children": [
+        "可并行操作显微镜、液体处理器、机械臂等仪器",
+        "与 HHMI Janelia 合作起步",
+        "适用于任何有可编程接口的设备"
+      ]
+    },
+    {
+      "label": "解决集成痛点",
+      "detail": "设备间互不通信、需专人定制集成，MHS 把集成时间从数周数月缩短到小时或分钟",
+      "children": [
+        "标准化驱动用 read/write 等原语",
+        "设备以标准格式可被发现",
+        "支持全天候自主实验与实时调参"
+      ]
+    },
+    {
+      "label": "工作原理",
+      "detail": "MHS 驱动翻译操作系统与硬件，并自动生成设备参考文件供代理使用",
+      "children": [
+        "自然语言标签写入设备特性与安全限制",
+        "控制方式：MCP、命令行、代码文件 API",
+        "代理可串联命令执行长任务"
+      ]
+    },
+    {
+      "label": "Claude 实测表现",
+      "detail": "Claude 像科学家一样探索式操作硬件，调整激光后观察结果并重复",
+      "children": [
+        "把学到内容写成确定性脚本",
+        "激光对准可单条命令运行"
+      ]
+    },
+    {
+      "label": "早期合作案例",
+      "detail": "多家机构用 MHS 加速实验与设备操作",
+      "children": [
+        "Genentech：BCA 蛋白测定自动化",
+        "CMU：剂量反应实验快约三倍",
+        "QuEra：量子激光锁定控制"
+      ]
+    }
+  ],
+  "flow": [
+    "设备接入 MHS 驱动",
+    "自然语言标签描述设备",
+    "自动生成参考文件",
+    "代理经 MCP/CLI/API 控制",
+    "编排多设备执行任务"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Model Hardware Standard",
+      "type": "concept"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Model Context Protocol",
+      "type": "technique"
+    },
+    {
+      "name": "HHMI Janelia Research Campus",
+      "type": "company"
+    },
+    {
+      "name": "Genentech",
+      "type": "company"
+    },
+    {
+      "name": "QuEra Computing",
+      "type": "company"
+    },
+    {
+      "name": "Carnegie Mellon University",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Model Hardware Standard",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Model Hardware Standard",
+      "to": "Model Context Protocol",
+      "label": "兼容"
+    },
+    {
+      "from": "HHMI Janelia Research Campus",
+      "to": "Model Hardware Standard",
+      "label": "合作开发"
+    },
+    {
+      "from": "Genentech",
+      "to": "Model Hardware Standard",
+      "label": "试点应用"
+    },
+    {
+      "from": "QuEra Computing",
+      "to": "Model Hardware Standard",
+      "label": "试点应用"
+    }
+  ]
+}

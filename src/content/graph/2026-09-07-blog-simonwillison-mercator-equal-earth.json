@@ -1,0 +1,85 @@
+{
+  "center": "Mercator ↔ Equal Earth 投影动画",
+  "branches": [
+    {
+      "label": "作品是什么",
+      "detail": "用滑块或播放按钮在两种地图投影间平滑变形的交互式动画地图",
+      "children": [
+        "可混合两种投影观察地理属性差异"
+      ]
+    },
+    {
+      "label": "制作方式",
+      "detail": "Simon Willison 用 ChatGPT Work 中的 GPT-6 Astra (medium) 生成",
+      "children": [
+        "基于 D3 实现",
+        "属于 vibe-coding 尝试"
+      ]
+    },
+    {
+      "label": "起因",
+      "detail": "作者对刚在联合国投票的 Equal Earth 投影产生好奇",
+      "children": [
+        "Equal Earth 近期在 UN 被投票"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "D3",
+      "type": "product"
+    },
+    {
+      "name": "Equal Earth",
+      "type": "concept"
+    },
+    {
+      "name": "Mercator",
+      "type": "concept"
+    },
+    {
+      "name": "vibe-coding",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "GPT-6 Astra",
+      "label": "使用"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "ChatGPT Work",
+      "label": "运行于"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "D3",
+      "label": "生成代码"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Equal Earth",
+      "label": "好奇"
+    },
+    {
+      "from": "Mercator",
+      "to": "Equal Earth",
+      "label": "动画变形"
+    }
+  ]
+}

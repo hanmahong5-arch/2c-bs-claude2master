@@ -1,0 +1,82 @@
+{
+  "center": "Goose v1.46.0 大版本更新",
+  "branches": [
+    {
+      "label": "缓存安全组装",
+      "detail": "采用 append-only 轮次上下文并声明缓存语义，提升提示缓存命中率",
+      "children": [
+        "上下文构建与缓存策略解耦",
+        "避免可变状态破坏前缀缓存"
+      ]
+    },
+    {
+      "label": "流式 shell 输出",
+      "detail": "命令运行时实时显示结果",
+      "children": [
+        "事件驱动架构支持增量渲染与取消"
+      ]
+    },
+    {
+      "label": "用量统计 UI",
+      "detail": "每条消息显示 tokens、成本、TTFT、tok/s，并跟踪缓存 tokens",
+      "children": [
+        "消息级记录元数据并聚合会话总计",
+        "便于成本监控"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "提示缓存",
+      "type": "concept"
+    },
+    {
+      "name": "流式输出",
+      "type": "concept"
+    },
+    {
+      "name": "用量统计",
+      "type": "concept"
+    },
+    {
+      "name": "TTFT",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "提示缓存",
+      "label": "优化"
+    },
+    {
+      "from": "Goose",
+      "to": "流式输出",
+      "label": "新增"
+    },
+    {
+      "from": "Goose",
+      "to": "用量统计",
+      "label": "新增"
+    },
+    {
+      "from": "用量统计",
+      "to": "TTFT",
+      "label": "包含"
+    },
+    {
+      "from": "harness",
+      "to": "提示缓存",
+      "label": "需解耦"
+    }
+  ]
+}

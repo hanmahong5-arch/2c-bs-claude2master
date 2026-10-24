@@ -1,0 +1,74 @@
+{
+  "center": "Cline CLI v3.0.37 更新",
+  "branches": [
+    {
+      "label": "弱模型容错",
+      "detail": "格式错误的工具调用被优雅处理，不再崩溃",
+      "children": [
+        "参数类型错误、JSON 截断均可继续执行",
+        "提升对 DeepSeek 等低质量模型的容错性"
+      ]
+    },
+    {
+      "label": "模式切换透明",
+      "detail": "计划/行动模式切换对模型可见，模型能感知上下文切换",
+      "children": [
+        "修复模式通知在提示中被丢弃的问题",
+        "确保模式信息始终传递给模型"
+      ]
+    },
+    {
+      "label": "启动稳定性",
+      "detail": "修复空会话切换模式的竞态条件",
+      "children": [
+        "避免意外重启",
+        "提升 agent 启动稳定性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "DeepSeek",
+      "type": "model"
+    },
+    {
+      "name": "工具调用",
+      "type": "concept"
+    },
+    {
+      "name": "计划/行动模式",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "DeepSeek",
+      "label": "兼容"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "工具调用",
+      "label": "处理"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "计划/行动模式",
+      "label": "支持"
+    },
+    {
+      "from": "agent",
+      "to": "计划/行动模式",
+      "label": "感知"
+    }
+  ]
+}

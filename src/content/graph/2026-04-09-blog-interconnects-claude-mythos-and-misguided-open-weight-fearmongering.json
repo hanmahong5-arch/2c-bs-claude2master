@@ -1,0 +1,121 @@
+{
+  "center": "Claude Mythos 与开源权重恐慌",
+  "branches": [
+    {
+      "label": "恐慌论调",
+      "detail": "Mythos 网络安全能力引发新一轮反开源权重叙事",
+      "children": [
+        "称数字基础设施来不及应对开源版攻击",
+        "把多个未知问题合并成简单政策建议"
+      ]
+    },
+    {
+      "label": "历史重演",
+      "detail": "类似恐慌在 GPT-2 与 GPT-4 发布时都出现过",
+      "children": [
+        "2019 年 GPT-2 权重被扣留",
+        "2023 年 GPT-4 发布时再起争论",
+        "两波恐慌最终都消退"
+      ]
+    },
+    {
+      "label": "核心误判",
+      "detail": "把开源-闭源差距当作静态，并泛化到具体议题",
+      "children": [
+        "6-18 个月延迟是安全与生态的平衡",
+        "通用能力与网络安全技能应分开讨论"
+      ]
+    },
+    {
+      "label": "部署门槛",
+      "detail": "Mythos 级模型训练与推理成本极高，扩散受限",
+      "children": [
+        "领先模型约 3-5T 参数，开源最大约 1T",
+        "Mythos 预览定价为 Opus 的 5 倍",
+        "8T MoE 需约 O(100) 张 H100，日耗约 1 万美元"
+      ]
+    },
+    {
+      "label": "作者结论",
+      "detail": "现在叫停开源进展为时过早，需更多细节",
+      "children": [
+        "编码能力靠公开数据可较快追赶",
+        "网络安全是否红线仍存不确定性"
+      ]
+    }
+  ],
+  "flow": [
+    "Mythos 发布引发恐慌",
+    "回顾历史恐慌案例",
+    "拆解开源-闭源差距",
+    "估算训练与部署成本",
+    "评估实际网络安全风险",
+    "得出不宜叫停结论"
+  ],
+  "entities": [
+    {
+      "name": "Claude Mythos",
+      "type": "model"
+    },
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-2",
+      "type": "model"
+    },
+    {
+      "name": "GPT-4",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "type": "model"
+    },
+    {
+      "name": "open-weight models",
+      "type": "concept"
+    },
+    {
+      "name": "cybersecurity",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "Claude Mythos",
+      "label": "评论"
+    },
+    {
+      "from": "Claude Mythos",
+      "to": "cybersecurity",
+      "label": "擅长"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-2",
+      "label": "扣留权重"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-4",
+      "label": "发布"
+    },
+    {
+      "from": "open-weight models",
+      "to": "Claude Mythos",
+      "label": "追赶"
+    },
+    {
+      "from": "Claude Opus 4.6",
+      "to": "Claude Mythos",
+      "label": "定价对比"
+    }
+  ]
+}

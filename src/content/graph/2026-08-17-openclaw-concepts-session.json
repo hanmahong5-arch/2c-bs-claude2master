@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw 会话管理",
+  "branches": [
+    {
+      "label": "消息路由规则",
+      "detail": "按来源把入站消息分配到不同会话，状态由 gateway 统一持有",
+      "children": [
+        "DM 默认共享会话，群聊/房间按群隔离",
+        "Cron 每次运行新建会话，Webhook 按 hook 隔离",
+        "session.scope: global 不合并不同 agent 的…"
+      ]
+    },
+    {
+      "label": "DM 隔离配置",
+      "detail": "session.dmScope 控制私聊会话的隔离粒度",
+      "children": [
+        "main 全部共享，per-peer 按发送者隔离",
+        "per-channel-peer 按渠道+发送者（推荐）",
+        "Slack Agent/Assistant View DM 各自独立线程"
+      ]
+    },
+    {
+      "label": "群组路由",
+      "detail": "session.groupScope 决定非私聊对等方上下文存放位置",
+      "children": [
+        "per-group 默认按群/房间/渠道隔离",
+        "main 将群组并入 agent 主会话",
+        "route binding 可覆盖全局设置"
+      ]
+    },
+    {
+      "label": "隐身会话",
+      "detail": "仅 Control UI 新建线程可用，状态存内存不落盘",
+      "children": [
+        "创建后 24 小时或 Gateway 重启即过期",
+        "不写 transcript 归档，不触发自动记忆刷新",
+        "Codex 后端以 ephemeral 模式运行"
+      ]
+    },
+    {
+      "label": "会话生命周期",
+      "detail": "会话复用直到手动重置或启用自动重置策略",
+      "children": [
+        "none 默认不自动重置，daily 按本地小时重置",
+        "idle 按最后真实交互空闲时长重置",
+        "/new 或 /reset 手动重置，/new <model> 可…"
+      ]
+    }
+  ],
+  "flow": [
+    "入站消息按来源路由",
+    "分配或复用会话",
+    "gateway 持有会话状态",
+    "按策略重置或过期",
+    "清理会话与记录"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "gateway",
+      "type": "concept"
+    },
+    {
+      "name": "Control UI",
+      "type": "product"
+    },
+    {
+      "name": "session.dmScope",
+      "type": "concept"
+    },
+    {
+      "name": "session.groupScope",
+      "type": "concept"
+    },
+    {
+      "name": "Incognito sessions",
+      "type": "concept"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "MEMORY.md",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "gateway",
+      "label": "状态由持有"
+    },
+    {
+      "from": "Control UI",
+      "to": "gateway",
+      "label": "查询会话数据"
+    },
+    {
+      "from": "session.dmScope",
+      "to": "OpenClaw",
+      "label": "配置私聊隔离"
+    },
+    {
+      "from": "session.groupScope",
+      "to": "OpenClaw",
+      "label": "配置群组路由"
+    },
+    {
+      "from": "Incognito sessions",
+      "to": "Control UI",
+      "label": "仅限创建"
+    },
+    {
+      "from": "Codex",
+      "to": "Incognito sessions",
+      "label": "以…"
+    }
+  ]
+}

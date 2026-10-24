@@ -1,0 +1,76 @@
+{
+  "center": "AI Compass 伦理人格测试",
+  "branches": [
+    {
+      "label": "测试是什么",
+      "detail": "政治罗盘风格的 AI 伦理测验，29 题定位 30 种 AI 原型",
+      "children": [
+        "作者 bambamramfan",
+        "Simon Willison 自测为 The Garage Tinkerer"
+      ]
+    },
+    {
+      "label": "实现方式",
+      "detail": "单页 React 应用，用 script type=text/babel 免构建步骤",
+      "children": [
+        "代码已公开"
+      ]
+    },
+    {
+      "label": "发布来源",
+      "detail": "Simon Willison 的 Weblog 链接博客，2026 年 6 月 30 日",
+      "children": [
+        "标签：ai、generative-ai、llms、ai-ethics"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "The AI Compass",
+      "type": "product"
+    },
+    {
+      "name": "bambamramfan",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "The Garage Tinkerer",
+      "type": "concept"
+    },
+    {
+      "name": "React",
+      "type": "technique"
+    },
+    {
+      "name": "AI ethics",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "bambamramfan",
+      "to": "The AI Compass",
+      "label": "开发"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "The AI Compass",
+      "label": "推荐"
+    },
+    {
+      "from": "The AI Compass",
+      "to": "React",
+      "label": "基于"
+    },
+    {
+      "from": "The AI Compass",
+      "to": "AI ethics",
+      "label": "测试"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "center": "OpenAI与CodeAI合作培养AI素养",
+  "branches": [
+    {
+      "label": "合作目标",
+      "detail": "OpenAI与CodeAI建立合作，共同提升学生AI素养与批判性思维",
+      "children": [
+        "帮助学生批判性思考AI技术",
+        "强调负责任地应用AI"
+      ]
+    },
+    {
+      "label": "培养技能",
+      "detail": "项目旨在让学生掌握使用和塑造AI所需的技能",
+      "children": [
+        "掌握使用AI的技能",
+        "掌握塑造AI的技能"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "教育领域对AI工具链需求增长，将催生定制化工具与平台",
+      "children": [
+        "面向AI素养培养的定制化工具",
+        "更多相关平台出现"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "CodeAI",
+      "type": "company"
+    },
+    {
+      "name": "AI素养",
+      "type": "concept"
+    },
+    {
+      "name": "批判性思维",
+      "type": "concept"
+    },
+    {
+      "name": "AI工具链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "CodeAI",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AI素养",
+      "label": "提升"
+    },
+    {
+      "from": "CodeAI",
+      "to": "AI素养",
+      "label": "提升"
+    },
+    {
+      "from": "AI素养",
+      "to": "批判性思维",
+      "label": "包含"
+    },
+    {
+      "from": "AI素养",
+      "to": "AI工具链",
+      "label": "催生需求"
+    }
+  ]
+}

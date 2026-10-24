@@ -1,0 +1,114 @@
+{
+  "center": "OpenClaw 的 QA 体系",
+  "branches": [
+    {
+      "label": "QA 栈组成",
+      "detail": "用真实通道形态验证，单元测试做不到",
+      "children": [
+        "qa-channel：合成消息通道，含 DM/线程/表情/…",
+        "qa-lab：调试 UI、QA 总线、场景运行器、传输适…",
+        "qa/：仓库内种子资产与基线 QA 场景"
+      ]
+    },
+    {
+      "label": "按任务分页",
+      "detail": "QA 栈拆成八页文档，按读者任务索引",
+      "children": [
+        "命令面：qa 子命令与 profile 运行选择器",
+        "操作流程：启动 QA Lab 并跑 lane",
+        "场景覆盖：选择运行范围与 Multipass 套件"
+      ]
+    },
+    {
+      "label": "真实通道 lane",
+      "detail": "覆盖多个真实传输通道的端到端验证",
+      "children": [
+        "Slack：需配置工作区、应用与权限范围",
+        "WhatsApp：从 Convex 凭证池租用凭证",
+        "Matrix 实时 lane、Discord Mantis、Slack…"
+      ]
+    },
+    {
+      "label": "扩展与报告",
+      "detail": "支持新增种子资产、mock lane、适配器与通道",
+      "children": [
+        "扩展：provider mock lane、传输适配器、新通道",
+        "报告：QA 报告、证据文件、字符评估判定报告",
+        "旧单页锚点全部保留，链接仍可解析"
+      ]
+    }
+  ],
+  "flow": [
+    "启动 QA Lab",
+    "选择 profile 与 lane",
+    "注入入站消息",
+    "观察 transcript",
+    "导出 Markdown 报告"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "qa-channel",
+      "type": "product"
+    },
+    {
+      "name": "qa-lab",
+      "type": "product"
+    },
+    {
+      "name": "Mantis",
+      "type": "product"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "WhatsApp",
+      "type": "product"
+    },
+    {
+      "name": "Convex",
+      "type": "product"
+    },
+    {
+      "name": "QA 报告",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "qa-channel",
+      "label": "包含"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "qa-lab",
+      "label": "包含"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Mantis",
+      "label": "使用"
+    },
+    {
+      "from": "qa-lab",
+      "to": "Slack",
+      "label": "验证"
+    },
+    {
+      "from": "qa-lab",
+      "to": "WhatsApp",
+      "label": "验证"
+    },
+    {
+      "from": "WhatsApp",
+      "to": "Convex",
+      "label": "租用凭证"
+    }
+  ]
+}

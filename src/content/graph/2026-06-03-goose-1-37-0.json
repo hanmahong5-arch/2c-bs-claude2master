@@ -1,0 +1,108 @@
+{
+  "center": "goose v1.37.0 更新",
+  "branches": [
+    {
+      "label": "新增 8 个供应商",
+      "detail": "扩展模型选择范围，需更灵活的供应商抽象层",
+      "children": [
+        "含 xAI SuperGrok、Perplexity、Alibaba",
+        "共 8 个 AI 供应商"
+      ]
+    },
+    {
+      "label": "引入钩子系统",
+      "detail": "可在关键操作点注入自定义逻辑",
+      "children": [
+        "工具调用前拒绝钩子",
+        "需可扩展的事件拦截机制"
+      ]
+    },
+    {
+      "label": "强化本地推理",
+      "detail": "提升边缘计算与开发者体验",
+      "children": [
+        "Linux Vulkan 支持",
+        "更严格的 GGUF 检测"
+      ]
+    },
+    {
+      "label": "增强 TUI 功能",
+      "detail": "新增 TUI 差异查看器",
+      "children": [
+        "TUI 差异查看器"
+      ]
+    },
+    {
+      "label": "多代理协作",
+      "detail": "提升多代理协作能力",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "goose",
+      "type": "product"
+    },
+    {
+      "name": "xAI SuperGrok",
+      "type": "model"
+    },
+    {
+      "name": "Perplexity",
+      "type": "product"
+    },
+    {
+      "name": "Alibaba",
+      "type": "company"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    },
+    {
+      "name": "GGUF",
+      "type": "concept"
+    },
+    {
+      "name": "Vulkan",
+      "type": "concept"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "goose",
+      "to": "xAI SuperGrok",
+      "label": "新增支持"
+    },
+    {
+      "from": "goose",
+      "to": "Perplexity",
+      "label": "新增支持"
+    },
+    {
+      "from": "goose",
+      "to": "Alibaba",
+      "label": "新增支持"
+    },
+    {
+      "from": "goose",
+      "to": "GGUF",
+      "label": "检测"
+    },
+    {
+      "from": "goose",
+      "to": "Vulkan",
+      "label": "支持"
+    },
+    {
+      "from": "goose",
+      "to": "TUI",
+      "label": "增强"
+    }
+  ]
+}

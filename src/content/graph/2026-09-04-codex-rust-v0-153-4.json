@@ -1,0 +1,48 @@
+{
+  "center": "codex rust-v0.153.4 更新",
+  "branches": [
+    {
+      "label": "Astra 默认可见",
+      "detail": "Astra 模型在捆绑模型选择器中可见，并成为未显式配置时的默认模型",
+      "children": [
+        "harness 需考虑默认模型变更",
+        "确保与 Astra 兼容"
+      ]
+    },
+    {
+      "label": "异步问题条件",
+      "detail": "Astra 的指导仅在会话中工具可用时使用异步问题",
+      "children": [
+        "harness 需动态检查工具可用性",
+        "避免无效交互"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex rust-v0.153.4",
+      "type": "product"
+    },
+    {
+      "name": "Astra",
+      "type": "model"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex rust-v0.153.4",
+      "to": "Astra",
+      "label": "默认启用"
+    },
+    {
+      "from": "harness",
+      "to": "Astra",
+      "label": "需兼容"
+    }
+  ]
+}

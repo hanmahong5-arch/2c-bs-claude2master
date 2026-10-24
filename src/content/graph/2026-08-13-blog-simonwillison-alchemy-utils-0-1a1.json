@@ -1,0 +1,83 @@
+{
+  "center": "alchemy-utils 0.1a1 发布",
+  "branches": [
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 8 月 13 日发布 alchemy-utils 0.1a1",
+      "children": [
+        "版本号 0.1a1",
+        "发布于 2026-08-13"
+      ]
+    },
+    {
+      "label": "核心定位",
+      "detail": "基于 SQLAlchemy 构建的跨数据库 sqlite-utils",
+      "children": [
+        "跨数据库支持",
+        "构建于 SQLAlchemy 之上"
+      ]
+    },
+    {
+      "label": "性能优化",
+      "detail": "DuckDB 导出与 CSV 导入获得性能提升",
+      "children": [
+        "DuckDB 导出提速",
+        "CSV 导入提速"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "alchemy-utils",
+      "type": "product"
+    },
+    {
+      "name": "SQLAlchemy",
+      "type": "product"
+    },
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "DuckDB",
+      "type": "product"
+    },
+    {
+      "name": "CSV",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "alchemy-utils",
+      "label": "发布"
+    },
+    {
+      "from": "alchemy-utils",
+      "to": "SQLAlchemy",
+      "label": "基于"
+    },
+    {
+      "from": "alchemy-utils",
+      "to": "sqlite-utils",
+      "label": "对标"
+    },
+    {
+      "from": "alchemy-utils",
+      "to": "DuckDB",
+      "label": "支持导出"
+    },
+    {
+      "from": "alchemy-utils",
+      "to": "CSV",
+      "label": "支持导入"
+    }
+  ]
+}

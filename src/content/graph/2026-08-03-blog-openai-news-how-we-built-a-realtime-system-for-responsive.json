@@ -1,0 +1,121 @@
+{
+  "center": "GPT-Live 实时语音系统架构",
+  "branches": [
+    {
+      "label": "全双工语音模型",
+      "detail": "GPT-Live 语音模型可同时听与说，移除独立轮次检测器",
+      "children": [
+        "第三代语音系统 GPT-Live",
+        "无需 turn detector 判断何时说话"
+      ]
+    },
+    {
+      "label": "媒体与逻辑分离",
+      "detail": "音频走专用快路径，工具调用与业务逻辑走异步 RPC",
+      "children": [
+        "慢工具调用不会阻塞媒体流",
+        "媒体前端与推理用 Go 重写，替代 Python…",
+        "p95 延迟匹配旧系统 p50"
+      ]
+    },
+    {
+      "label": "有状态推理与切换",
+      "detail": "跨模型实例无缝交接，支持动态上下文压缩",
+      "children": [
+        "预热新实例并预填充当前会话上下文",
+        "并行推理后切换，不中断媒体",
+        "压缩会失效 KV cache，需重新 prefill"
+      ]
+    },
+    {
+      "label": "异步委托前沿模型",
+      "detail": "需要深度推理或工具时调用 GPT-5.5，不打断对话",
+      "children": [
+        "解耦“说话”与“思考”",
+        "委托路径需最小化路由、推理与工具调用延迟"
+      ]
+    },
+    {
+      "label": "WebRTC 传输基础",
+      "detail": "为低延迟媒体设计，可容忍丢包、时钟漂移与连接变化",
+      "children": [
+        "丢包时轻微拉伸音频防空隙",
+        "随后加速播放追回实时",
+        "端到端亚秒级响应"
+      ]
+    }
+  ],
+  "flow": [
+    "客户端音频流入",
+    "语音模型实时处理",
+    "异步委托前沿模型",
+    "工具调用与持久化",
+    "语音流回用户"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-Live",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT Voice",
+      "type": "product"
+    },
+    {
+      "name": "WebRTC",
+      "type": "technique"
+    },
+    {
+      "name": "Go",
+      "type": "technique"
+    },
+    {
+      "name": "KV cache",
+      "type": "concept"
+    },
+    {
+      "name": "Realtime API",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-Live",
+      "label": "构建"
+    },
+    {
+      "from": "GPT-Live",
+      "to": "GPT-5.5",
+      "label": "委托调用"
+    },
+    {
+      "from": "GPT-Live",
+      "to": "ChatGPT Voice",
+      "label": "支撑"
+    },
+    {
+      "from": "GPT-Live",
+      "to": "WebRTC",
+      "label": "使用"
+    },
+    {
+      "from": "GPT-Live",
+      "to": "Go",
+      "label": "用其重写"
+    },
+    {
+      "from": "GPT-Live",
+      "to": "KV cache",
+      "label": "依赖"
+    }
+  ]
+}

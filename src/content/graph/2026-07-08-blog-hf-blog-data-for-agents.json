@@ -1,0 +1,95 @@
+{
+  "center": "为 AI Agent 构建数据",
+  "branches": [
+    {
+      "label": "数据是核心",
+      "detail": "NVIDIA 与 Hugging Face 探讨为 AI Agent 构建高质量数据",
+      "children": [
+        "NVIDIA 发布 Nemotron 系列预训练数据集",
+        "Hugging Face 提供多语言合成人格数据集"
+      ]
+    },
+    {
+      "label": "Nemotron 数据集",
+      "detail": "Nemotron 模型家族使用的大规模预训练数据集",
+      "children": [
+        "15 个数据集，更新于 8 月 11 日",
+        "用于 Nemotron 系列模型预训练"
+      ]
+    },
+    {
+      "label": "合成人格数据",
+      "detail": "多语言、区域特定的合成人格数据集支持主权 AI",
+      "children": [
+        "覆盖多个国家和地区",
+        "10 个数据集，更新于 8 月 11 日"
+      ]
+    },
+    {
+      "label": "相关技术",
+      "detail": "NVIDIA 展示多说话人分离和低延迟语音 Agent 技术",
+      "children": [
+        "Nemotron 3 Diarization 实现实时多说话人 AI",
+        "Magpie TTS 支持低延迟多语言语音 Agent"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Nemotron",
+      "type": "model"
+    },
+    {
+      "name": "Nemotron 3 Diarization",
+      "type": "product"
+    },
+    {
+      "name": "Magpie TTS",
+      "type": "product"
+    },
+    {
+      "name": "合成人格数据集",
+      "type": "concept"
+    },
+    {
+      "name": "主权 AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron",
+      "label": "开发"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "合成人格数据集",
+      "label": "托管"
+    },
+    {
+      "from": "Nemotron",
+      "to": "Nemotron 3 Diarization",
+      "label": "包含"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Magpie TTS",
+      "label": "开发"
+    },
+    {
+      "from": "合成人格数据集",
+      "to": "主权 AI",
+      "label": "支持"
+    }
+  ]
+}

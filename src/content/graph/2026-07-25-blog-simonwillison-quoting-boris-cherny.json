@@ -1,0 +1,82 @@
+{
+  "center": "Opus 5 抗提示注入能力",
+  "branches": [
+    {
+      "label": "核心结论",
+      "detail": "Boris Cherny 称 Opus 5 是 Anthropic 迄今最难被提示注入的模型",
+      "children": [
+        "PI evals 与红队测试均难以成功注入",
+        "该结论写在系统卡第 73 页"
+      ]
+    },
+    {
+      "label": "信息出处",
+      "detail": "Simon Willison 博客于 2026 年 7 月 25 日收录该引述",
+      "children": [
+        "原文为 Boris Cherny 的发言",
+        "附有系统卡对应章节链接"
+      ]
+    },
+    {
+      "label": "作者态度",
+      "detail": "Boris Cherny 表示抗注入比各项评测分数更令他兴奋",
+      "children": [
+        "认为这点在系统卡中被埋没"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Opus 5",
+      "type": "model"
+    },
+    {
+      "name": "Boris Cherny",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "prompt injection",
+      "type": "concept"
+    },
+    {
+      "name": "System Card",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Opus 5",
+      "label": "发布"
+    },
+    {
+      "from": "Boris Cherny",
+      "to": "Opus 5",
+      "label": "评价"
+    },
+    {
+      "from": "Opus 5",
+      "to": "prompt injection",
+      "label": "抵御"
+    },
+    {
+      "from": "Opus 5",
+      "to": "System Card",
+      "label": "记录于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Boris Cherny",
+      "label": "引用"
+    }
+  ]
+}

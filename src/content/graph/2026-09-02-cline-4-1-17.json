@@ -1,0 +1,97 @@
+{
+  "center": "Cline v4.1.17 修复与模型更新",
+  "branches": [
+    {
+      "label": "修复内存泄漏",
+      "detail": "Hub 进程状态更新不再广播完整对话，只传状态快照",
+      "children": [
+        "长会话应避免全量状态广播",
+        "采用增量或快照控制内存"
+      ]
+    },
+    {
+      "label": "修复工具调用禁用",
+      "detail": "Dify、SAP AI Core 等模型目录能力列表为空被误读为禁用",
+      "children": [
+        "能力列表为空应视为未知",
+        "需显式声明不支持"
+      ]
+    },
+    {
+      "label": "修复恢复丢提交",
+      "detail": "恢复检查点后若之后有提交则拒绝恢复，避免静默丢失",
+      "children": [
+        "恢复操作需检查状态一致性",
+        "防止覆盖后续变更"
+      ]
+    },
+    {
+      "label": "更新模型目录",
+      "detail": "更新模型目录，涉及 Dify、SAP AI Core 等",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Dify",
+      "type": "product"
+    },
+    {
+      "name": "SAP AI Core",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "内存泄漏",
+      "type": "concept"
+    },
+    {
+      "name": "工具调用",
+      "type": "concept"
+    },
+    {
+      "name": "检查点",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "内存泄漏",
+      "label": "修复"
+    },
+    {
+      "from": "Cline",
+      "to": "工具调用",
+      "label": "修复"
+    },
+    {
+      "from": "Cline",
+      "to": "检查点",
+      "label": "修复"
+    },
+    {
+      "from": "Cline",
+      "to": "Dify",
+      "label": "更新目录"
+    },
+    {
+      "from": "Cline",
+      "to": "SAP AI Core",
+      "label": "更新目录"
+    },
+    {
+      "from": "agent harness",
+      "to": "内存泄漏",
+      "label": "设计避免"
+    }
+  ]
+}

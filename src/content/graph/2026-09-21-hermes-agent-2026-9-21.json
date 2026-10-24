@@ -1,0 +1,89 @@
+{
+  "center": "hermes-agent 稳定 tag 发布",
+  "branches": [
+    {
+      "label": "补丁版本定位",
+      "detail": "汇总 v0.21.3 以来约 1812 个已合并 PR 成稳定 tag，供下游消费",
+      "children": [
+        "Docker 镜像、Hermes Cloud 可锁定此 tag",
+        "完整说明推迟到 v0.22.0",
+        "别把它当功能基线"
+      ]
+    },
+    {
+      "label": "后端单例锁",
+      "detail": "新增 host 级 gateway 单例锁与 rendezvous 记录",
+      "children": [
+        "Desktop 附着到已运行后端",
+        "不再另起新进程",
+        "避免重复进程争抢状态"
+      ]
+    },
+    {
+      "label": "CLI 结构化输出",
+      "detail": "新增 --format stream-json 输出 JSONL",
+      "children": [
+        "便于外部编排器集成",
+        "mcp.discovery_concurrency 限制 MCP 发现连…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "hermes-agent",
+      "type": "product"
+    },
+    {
+      "name": "v0.21.3",
+      "type": "product"
+    },
+    {
+      "name": "v0.22.0",
+      "type": "product"
+    },
+    {
+      "name": "Hermes Cloud",
+      "type": "product"
+    },
+    {
+      "name": "Docker",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Desktop",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "hermes-agent",
+      "to": "v0.21.3",
+      "label": "汇总自"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "v0.22.0",
+      "label": "说明推迟至"
+    },
+    {
+      "from": "Hermes Cloud",
+      "to": "hermes-agent",
+      "label": "消费"
+    },
+    {
+      "from": "Docker",
+      "to": "hermes-agent",
+      "label": "消费"
+    },
+    {
+      "from": "Desktop",
+      "to": "hermes-agent",
+      "label": "附着"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "center": "MolmoMotion：语言引导 3D 动作预测",
+  "branches": [
+    {
+      "label": "核心任务",
+      "detail": "用自然语言引导预测 3D 人体动作",
+      "children": [
+        "3D 人体动作预测",
+        "语言作为引导条件"
+      ]
+    },
+    {
+      "label": "发布方",
+      "detail": "Hugging Face 上发布 MolmoMotion",
+      "children": [
+        "Hugging Face 介绍",
+        "含 5 项发布 artifacts"
+      ]
+    },
+    {
+      "label": "配套资源",
+      "detail": "文章提及 2 个数据集与 1 个 collection",
+      "children": [
+        "2 个数据集",
+        "1 个 collection"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "MolmoMotion",
+      "type": "model"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "3D 人体动作预测",
+      "type": "concept"
+    },
+    {
+      "name": "语言引导",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "MolmoMotion",
+      "label": "发布"
+    },
+    {
+      "from": "MolmoMotion",
+      "to": "3D 人体动作预测",
+      "label": "用于"
+    },
+    {
+      "from": "MolmoMotion",
+      "to": "语言引导",
+      "label": "采用"
+    }
+  ]
+}

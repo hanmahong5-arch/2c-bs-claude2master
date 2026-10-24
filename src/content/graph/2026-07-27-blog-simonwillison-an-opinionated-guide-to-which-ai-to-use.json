@@ -1,0 +1,111 @@
+{
+  "center": "Ethan Mollick 的 AI 使用指南",
+  "branches": [
+    {
+      "label": "从聊天转向 Agent",
+      "detail": "指南一年间从聊天模型转向能完成数小时人类工作的 Agent 系统",
+      "children": [
+        "一年前主打 ChatGPT、Claude、Gemini 聊天",
+        "当时模型为 o3、Claude 4 Opus、Gemini 2.5…",
+        "Deep Research 曾是实用替代模式"
+      ]
+    },
+    {
+      "label": "Gemini 掉出榜单",
+      "detail": "Google 在 Codex/ChatGPT Work/Cowork 类别仍无成熟产品",
+      "children": [
+        "Gemini Spark 尚未证明自己"
+      ]
+    },
+    {
+      "label": "云端电脑模式",
+      "detail": "用 AI 公司提供的电脑，ChatGPT 叫 Work，Claude 叫 Cowork",
+      "children": [
+        "命名混乱且不会变清晰"
+      ]
+    },
+    {
+      "label": "本机 Agent 模式",
+      "detail": "下载桌面应用并选模式，可访问你自己的电脑，能力更强",
+      "children": [
+        "ChatGPT 两个 Agent 模式：Work 与 Codex",
+        "Claude 两个模式：Cowork 与 Code",
+        "两套命名互不对应，难以记忆"
+      ]
+    },
+    {
+      "label": "移动端 Work 差异",
+      "detail": "移动端与桌面端 Work 行为差别极大，桌面端实为 Codex 的简化外壳",
+      "children": [
+        "移动端切到 Work 后 Code Interpreter 容器可…"
+      ]
+    }
+  ],
+  "flow": [
+    "下载 ChatGPT 或 Claude 应用",
+    "选择 Agent 模式（Work/Codex…",
+    "授权访问电脑或使用云端电脑",
+    "由 Agent 连续完成数小时工作"
+  ],
+  "entities": [
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Code Interpreter",
+      "type": "technique"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ethan Mollick",
+      "to": "ChatGPT",
+      "label": "推荐"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "Claude",
+      "label": "推荐"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Ethan Mollick",
+      "label": "评论"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "Codex",
+      "label": "包含模式"
+    },
+    {
+      "from": "Claude",
+      "to": "Code Interpreter",
+      "label": "无关"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "center": "AI出口管制威胁前沿模型经济",
+  "branches": [
+    {
+      "label": "前沿模型成本高",
+      "detail": "训练成本巨大，靠发布后几个月回收",
+      "children": [
+        "延迟一周就侵蚀回本窗口"
+      ]
+    },
+    {
+      "label": "窗口期后利润压缩",
+      "detail": "模型变次前沿，竞争出现，利润率下降",
+      "children": []
+    },
+    {
+      "label": "基建依赖全球市场",
+      "detail": "千亿美元数据中心需全球可寻址市场支撑",
+      "children": [
+        "David Sacks称基建对美国经济关键"
+      ]
+    },
+    {
+      "label": "管制限制市场",
+      "detail": "没人会为政府允许的100家公司建千亿数据中心",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Dean W. Ball",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "David Sacks",
+      "type": "person"
+    },
+    {
+      "name": "AI出口管制",
+      "type": "concept"
+    },
+    {
+      "name": "前沿模型",
+      "type": "concept"
+    },
+    {
+      "name": "AI基础设施",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Dean W. Ball",
+      "to": "AI出口管制",
+      "label": "批评"
+    },
+    {
+      "from": "AI出口管制",
+      "to": "前沿模型",
+      "label": "威胁"
+    },
+    {
+      "from": "AI基础设施",
+      "to": "前沿模型",
+      "label": "服务"
+    },
+    {
+      "from": "David Sacks",
+      "to": "AI基础设施",
+      "label": "称关键"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Dean W. Ball",
+      "label": "引用"
+    }
+  ]
+}

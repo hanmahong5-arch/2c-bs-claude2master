@@ -1,0 +1,92 @@
+{
+  "center": "Cline 桌面版 SSH 与并行子代理",
+  "branches": [
+    {
+      "label": "SSH 远程主机",
+      "detail": "Settings → Remote 添加测试主机，欢迎屏环境选择器切换",
+      "children": [
+        "agent 工具、工作区发现、Git 元数据、会话持久…",
+        "仅经认证的 Cline Hub 协议隧道回传审批与实时…",
+        "harness 执行面与 UI 面解耦，本地只保留控制通道"
+      ]
+    },
+    {
+      "label": "零依赖自动部署",
+      "detail": "首次连接自动上传自包含 helper 到 ~/.cline/remote/ 并缓存",
+      "children": [
+        "无需 apt、npm、root、全局 CLI 或公网端口",
+        "不影响该账户已有的 Cline CLI hub"
+      ]
+    },
+    {
+      "label": "子代理并行执行",
+      "detail": "同一步生成的子代理同时运行而非串行",
+      "children": [
+        "三个独立任务耗时等于最慢者",
+        "必须按序的工具仍按序，仅相邻并行调用重叠",
+        "调度器需区分可并行与有依赖的调用"
+      ]
+    }
+  ],
+  "flow": [
+    "Settings → Remote 添加主机",
+    "测试并保存连接",
+    "欢迎屏选择远程环境",
+    "自动部署 helper 并缓存",
+    "远端运行 agent 与会话",
+    "Hub 隧道回传审批事件"
+  ],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Cline Hub",
+      "type": "product"
+    },
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "SSH",
+      "type": "technique"
+    },
+    {
+      "name": "子代理",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "SSH",
+      "label": "支持"
+    },
+    {
+      "from": "Cline",
+      "to": "Cline Hub",
+      "label": "经隧道回传"
+    },
+    {
+      "from": "Cline",
+      "to": "子代理",
+      "label": "并行调度"
+    },
+    {
+      "from": "Cline",
+      "to": "harness",
+      "label": "解耦执行面"
+    },
+    {
+      "from": "Cline",
+      "to": "Cline CLI",
+      "label": "不破坏"
+    }
+  ]
+}

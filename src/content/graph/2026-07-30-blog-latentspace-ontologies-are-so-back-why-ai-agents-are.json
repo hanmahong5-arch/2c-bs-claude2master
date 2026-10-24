@@ -1,0 +1,118 @@
+{
+  "center": "本体论复兴：AI 代理的逻辑护栏",
+  "branches": [
+    {
+      "label": "本体论回归",
+      "detail": "AI 工程师重新发现本体论，为概率性代理提供确定性边界",
+      "children": [
+        "Frank Coyle 在 AIEWF 2026 演讲中重新引入本…",
+        "本体论即「数据作为图」，可追溯至亚里士多德",
+        "Neo4j CEO Emil Eifrem 提出三类本体论"
+      ]
+    },
+    {
+      "label": "神经符号 AI",
+      "detail": "概率代理与本体论结合，即神经网络与符号 AI 的融合",
+      "children": [
+        "Coyle 称其为 neurosymbolic AI",
+        "用本体论验证 LLM 推理，如 Claude 代理循环",
+        "OWL 公理是机器强制执行的规则"
+      ]
+    },
+    {
+      "label": "语义网遗产",
+      "detail": "Schema.org、FOAF、Dublin Core 等本体论已存在于 LLM 训练数据中",
+      "children": [
+        "RDFS 和 OWL 是增强技术",
+        "可直接提示 LLM 使用，无需从头重建",
+        "Coyle：利用已存在的东西"
+      ]
+    },
+    {
+      "label": "维护挑战",
+      "detail": "本体论维护和更新是历史难题，导致语义网未普及",
+      "children": [
+        "Prasenjit Sarkar 建议代理自行维护本体论",
+        "Neo4j 提出「薄代理」基于共享语义层",
+        "从手动连接数据源转向智能共享基底"
+      ]
+    },
+    {
+      "label": "循环与护栏",
+      "detail": "本体论作为护栏，约束无界循环，保持 LLM 诚实",
+      "children": [
+        "Coyle：有界规则集围绕无界循环",
+        "推理机可检查并保持 LLM 在轨",
+        "AIEWF 共识：需要护栏和人在回路"
+      ]
+    }
+  ],
+  "flow": [
+    "LLM 进行概率推理",
+    "代理执行工具调用",
+    "本体论验证推理结果",
+    "推理机检查并保持在轨",
+    "输出受控结果"
+  ],
+  "entities": [
+    {
+      "name": "Frank Coyle",
+      "type": "person"
+    },
+    {
+      "name": "Neo4j",
+      "type": "company"
+    },
+    {
+      "name": "Emil Eifrem",
+      "type": "person"
+    },
+    {
+      "name": "OWL",
+      "type": "technique"
+    },
+    {
+      "name": "RDFS",
+      "type": "technique"
+    },
+    {
+      "name": "Schema.org",
+      "type": "product"
+    },
+    {
+      "name": "neurosymbolic AI",
+      "type": "concept"
+    },
+    {
+      "name": "Kingsley Idehen",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Frank Coyle",
+      "to": "neurosymbolic AI",
+      "label": "提出"
+    },
+    {
+      "from": "Neo4j",
+      "to": "Emil Eifrem",
+      "label": "CEO 是"
+    },
+    {
+      "from": "Emil Eifrem",
+      "to": "Neo4j",
+      "label": "领导"
+    },
+    {
+      "from": "OWL",
+      "to": "RDFS",
+      "label": "相关于"
+    },
+    {
+      "from": "Kingsley Idehen",
+      "to": "OWL",
+      "label": "使用"
+    }
+  ]
+}

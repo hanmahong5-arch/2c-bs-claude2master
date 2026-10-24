@@ -1,0 +1,80 @@
+{
+  "center": "opencode v1.18.15 修复与增强",
+  "branches": [
+    {
+      "label": "消息排序修复",
+      "detail": "改用真实时间而非 ID 排序，导入或遗留乱序不再影响对话顺序",
+      "children": [
+        "回退/分叉操作更可靠"
+      ]
+    },
+    {
+      "label": "压缩清理修复",
+      "detail": "按文件时间戳删除过期文件，重复压缩保留早期工具调用历史",
+      "children": [
+        "避免结果丢失"
+      ]
+    },
+    {
+      "label": "桌面端增强",
+      "detail": "支持导出完整会话 JSON，新增多语言覆盖",
+      "children": [
+        "会话列表按活动时间排序更稳定"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "消息排序",
+      "type": "concept"
+    },
+    {
+      "name": "压缩清理",
+      "type": "concept"
+    },
+    {
+      "name": "桌面端",
+      "type": "product"
+    },
+    {
+      "name": "会话 JSON 导出",
+      "type": "technique"
+    },
+    {
+      "name": "多语言覆盖",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "消息排序",
+      "label": "修复"
+    },
+    {
+      "from": "opencode",
+      "to": "压缩清理",
+      "label": "修复"
+    },
+    {
+      "from": "opencode",
+      "to": "桌面端",
+      "label": "增强"
+    },
+    {
+      "from": "桌面端",
+      "to": "会话 JSON 导出",
+      "label": "支持"
+    },
+    {
+      "from": "桌面端",
+      "to": "多语言覆盖",
+      "label": "新增"
+    }
+  ]
+}

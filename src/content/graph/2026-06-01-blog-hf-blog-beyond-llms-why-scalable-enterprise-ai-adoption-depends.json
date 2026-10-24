@@ -1,0 +1,123 @@
+{
+  "center": "企业AI规模化落地靠Agent Logic",
+  "branches": [
+    {
+      "label": "核心论点",
+      "detail": "企业AI规模化不靠单纯LLM，而需Agent Logic引导",
+      "children": [
+        "Agent Logic指知识图谱、算法、程序分析库等软…",
+        "在agent harness内主动引导LLM、缩小上下文空间",
+        "带来更高质量、更低成本、更强用户信任"
+      ]
+    },
+    {
+      "label": "企业工作流挑战",
+      "detail": "企业工作流动态长时、API繁多、受合规约束",
+      "children": [
+        "需扩展模型上下文，但带来幻觉与token消耗",
+        "大量AI试点失败，需AI进入工作流核心"
+      ]
+    },
+    {
+      "label": "遗留代码理解",
+      "detail": "WCA4Z的App Insights agent用静态分析理解大型机代码",
+      "children": [
+        "预索引表示跨数百张关联表",
+        "支持百万行代码、千个程序",
+        "token消耗比纯LLM基线低约30倍"
+      ]
+    },
+    {
+      "label": "测试生成",
+      "detail": "Aster基于程序分析生成单元/集成/API测试",
+      "children": [
+        "已在75+ Java应用预生产运行",
+        "覆盖率提升20%-45%",
+        "token消耗低至15倍"
+      ]
+    },
+    {
+      "label": "事件响应与合规",
+      "detail": "知识图谱+可观测性驱动编排，及合规自动化",
+      "children": [
+        "Instana I3 agent比ReAct提升4.0倍",
+        "代码分析3.0倍、修复1.6倍，token更省",
+        "合规需多agent策略驱动自动化"
+      ]
+    }
+  ],
+  "flow": [
+    "识别企业工作流特征",
+    "构建Agent Logic原语",
+    "嵌入agent harness引导LLM",
+    "缩小上下文空间",
+    "多agent协同执行",
+    "降本增效提升信任"
+  ],
+  "entities": [
+    {
+      "name": "IBM",
+      "type": "company"
+    },
+    {
+      "name": "Agent Logic",
+      "type": "concept"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "IBM watsonx Code Assistant for Z",
+      "type": "product"
+    },
+    {
+      "name": "Aster",
+      "type": "product"
+    },
+    {
+      "name": "Instana",
+      "type": "product"
+    },
+    {
+      "name": "知识图谱",
+      "type": "concept"
+    },
+    {
+      "name": "ITBench",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "IBM",
+      "to": "IBM watsonx Code Assistant for Z",
+      "label": "推出"
+    },
+    {
+      "from": "IBM",
+      "to": "Aster",
+      "label": "开发"
+    },
+    {
+      "from": "IBM",
+      "to": "Instana",
+      "label": "拥有"
+    },
+    {
+      "from": "Agent Logic",
+      "to": "LLM",
+      "label": "引导"
+    },
+    {
+      "from": "Agent Logic",
+      "to": "知识图谱",
+      "label": "包含"
+    },
+    {
+      "from": "Instana",
+      "to": "ITBench",
+      "label": "测试于"
+    }
+  ]
+}

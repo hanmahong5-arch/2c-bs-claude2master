@@ -1,0 +1,59 @@
+{
+  "center": "openclaw npm 插件更新修复",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "接受新版 npm 客户端返回的单元素数组元数据，恢复官方插件安装与更新",
+      "children": [
+        "问题编号 #108336",
+        "修复后插件可更新到修正版本"
+      ]
+    },
+    {
+      "label": "问题根因",
+      "detail": "npm 客户端返回格式差异，元数据被数组包装导致解析失败",
+      "children": [
+        "新版 npm 返回单元素数组元数据"
+      ]
+    },
+    {
+      "label": "对 harness 的启示",
+      "detail": "插件元数据解析需容忍 npm 客户端格式差异，避免更新链路中断",
+      "children": [
+        "解析容错应纳入更新流程",
+        "官方插件跟踪机制依赖元数据兼容"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "npm",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "官方插件",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "npm",
+      "label": "兼容"
+    },
+    {
+      "from": "agent harness",
+      "to": "官方插件",
+      "label": "跟踪"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "center": "DOOMQL：SQLite 光线追踪游戏",
+  "branches": [
+    {
+      "label": "核心创意",
+      "detail": "让 SQLite 当游戏引擎，而非仅存数据",
+      "children": [
+        "SQL 负责移动、碰撞、敌人、战斗与像素",
+        "由 Peter Gostev 用 GPT-5.6 Sol 构建"
+      ]
+    },
+    {
+      "label": "技术实现",
+      "detail": "用递归 CTE 在 SQLite 中实现完整光线追踪",
+      "children": [
+        "Python 终端脚本运行游戏",
+        "生成 doomql.sqlite 数据库"
+      ]
+    },
+    {
+      "label": "运行方式",
+      "detail": "克隆仓库后用 uv 直接运行",
+      "children": [
+        "git clone petergpt/doomql",
+        "uv run host/doomql.py"
+      ]
+    },
+    {
+      "label": "Datasette 可视化",
+      "detail": "用 Datasette Apps 实时显示游戏画面",
+      "children": [
+        "frame_pixels 视图含 x,y,r,g,b 列",
+        "每秒刷新，并添加小地图"
+      ]
+    }
+  ],
+  "flow": [
+    "克隆 doomql 仓库",
+    "uv 运行终端游戏",
+    "生成 SQLite 数据库",
+    "Datasette 加载数据库",
+    "创建 Apps 显示画面",
+    "每秒刷新并显示小地图"
+  ],
+  "entities": [
+    {
+      "name": "DOOMQL",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Peter Gostev",
+      "type": "person"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Datasette Apps",
+      "type": "product"
+    },
+    {
+      "name": "递归 CTE",
+      "type": "technique"
+    },
+    {
+      "name": "光线追踪",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Peter Gostev",
+      "to": "DOOMQL",
+      "label": "构建"
+    },
+    {
+      "from": "DOOMQL",
+      "to": "SQLite",
+      "label": "基于"
+    },
+    {
+      "from": "DOOMQL",
+      "to": "递归 CTE",
+      "label": "使用"
+    },
+    {
+      "from": "DOOMQL",
+      "to": "光线追踪",
+      "label": "实现"
+    },
+    {
+      "from": "Peter Gostev",
+      "to": "GPT-5.6 Sol",
+      "label": "使用"
+    },
+    {
+      "from": "Datasette Apps",
+      "to": "Datasette",
+      "label": "插件"
+    }
+  ]
+}

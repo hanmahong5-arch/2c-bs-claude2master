@@ -1,0 +1,65 @@
+{
+  "center": "claude-code v2.1.204 修复钩子…",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "修复无头会话中 SessionStart 钩子事件不流式传输的问题",
+      "children": [
+        "版本号 v2.1.204",
+        "此前会导致远程 worker 在钩子执行期间因空闲被…"
+      ]
+    },
+    {
+      "label": "影响机制",
+      "detail": "钩子事件流式传输可确保远程 worker 保持活跃",
+      "children": [
+        "避免空闲超时中断关键初始化流程",
+        "防止 worker 被误回收影响任务连续性"
+      ]
+    },
+    {
+      "label": "设计启示",
+      "detail": "agent harness 设计需考虑钩子执行期间的连接保持机制",
+      "children": [
+        "钩子执行期间需维持连接",
+        "防止 worker 误回收"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "SessionStart",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "远程 worker",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "SessionStart",
+      "label": "修复"
+    },
+    {
+      "from": "SessionStart",
+      "to": "远程 worker",
+      "label": "影响"
+    },
+    {
+      "from": "agent harness",
+      "to": "SessionStart",
+      "label": "涉及"
+    }
+  ]
+}

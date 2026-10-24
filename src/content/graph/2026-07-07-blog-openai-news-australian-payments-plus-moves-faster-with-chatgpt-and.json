@@ -1,0 +1,121 @@
+{
+  "center": "AP+ 用 ChatGPT 与 Codex 加速支…",
+  "branches": [
+    {
+      "label": "落地成效",
+      "detail": "ChatGPT Enterprise 全公司推广，员工效率与工作质量明显提升",
+      "children": [
+        "77% 员工每周省 2 小时以上",
+        "80% 员工称创造力或质量提升",
+        "已建 300+ 自定义 GPT、1000+ Projects"
+      ]
+    },
+    {
+      "label": "技术排查",
+      "detail": "Codex 用于支付系统复杂问题定位，人工专家仍负责风险决策",
+      "children": [
+        "对账时间戳不一致排查从 4 小时降至 30 分钟",
+        "探索威胁建模、漏洞分析、告警分级"
+      ]
+    },
+    {
+      "label": "知识工作",
+      "detail": "ChatGPT 帮员工在规则与规范中快速定位信息并成稿",
+      "children": [
+        "导航 eftpos 规范与内部文档",
+        "会议记录转摘要、设计文档转方案概览",
+        "定位为思考陪练而非自动化"
+      ]
+    },
+    {
+      "label": "产品验证",
+      "detail": "用 ChatGPT 与 Codex 把静态原型升级为可运行模拟",
+      "children": [
+        "1 天构建可运行模拟，原需数天到数周",
+        "模拟支付旅程、认证流程、结账体验"
+      ]
+    },
+    {
+      "label": "治理经验",
+      "detail": "受监管机构规模化 AI 的四条实践",
+      "children": [
+        "让安全路径成为最便捷路径",
+        "治理团队作为发布伙伴",
+        "用内部案例与 AI 冠军推动落地"
+      ]
+    }
+  ],
+  "flow": [
+    "ChatGPT Enterprise 全公司…",
+    "Codex 进入工程与技术流程",
+    "模拟支付旅程与认证流程",
+    "排查对账与日志问题",
+    "专家复核并保留问责"
+  ],
+  "entities": [
+    {
+      "name": "Australian Payments Plus",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Enterprise",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Steve Reid",
+      "type": "person"
+    },
+    {
+      "name": "Jason Backhouse",
+      "type": "person"
+    },
+    {
+      "name": "Jo Pforr",
+      "type": "person"
+    },
+    {
+      "name": "eftpos",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Australian Payments Plus",
+      "to": "ChatGPT Enterprise",
+      "label": "部署"
+    },
+    {
+      "from": "Australian Payments Plus",
+      "to": "Codex",
+      "label": "采用"
+    },
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Enterprise",
+      "label": "提供"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "提供"
+    },
+    {
+      "from": "Codex",
+      "to": "eftpos",
+      "label": "辅助排查"
+    },
+    {
+      "from": "Steve Reid",
+      "to": "Australian Payments Plus",
+      "label": "任职于"
+    }
+  ]
+}

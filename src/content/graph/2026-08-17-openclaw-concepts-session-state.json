@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw 会话状态感知",
+  "branches": [
+    {
+      "label": "三件套机制",
+      "detail": "信号日志、观察者游标、对账三者协作检测状态变化",
+      "children": [
+        "信号日志记录会话状态变更事件",
+        "观察者持有游标接收合并后的过期通知",
+        "对账用 session_status 拉取精确增量"
+      ]
+    },
+    {
+      "label": "信号日志",
+      "detail": "会话实质变化时向共享库追加类型化事件",
+      "children": [
+        "事件含元数据与一行摘要，不含消息内容",
+        "human_direct_message、goal_changed 等会…",
+        "created、run_completed 等仅记录不通知"
+      ]
+    },
+    {
+      "label": "观察者来源",
+      "detail": "游标来自隐式派生边、环境组、显式订阅三种",
+      "children": [
+        "父会话派生子代理时自动播种游标",
+        "per-group 下主会话观察其隔离组",
+        "sessions_send 传 watch:true 显式订阅"
+      ]
+    },
+    {
+      "label": "防刷屏通知",
+      "detail": "每个观察者/目标对只保留一条待处理通知",
+      "children": [
+        "通知文本字节稳定，队列据此去重",
+        "游标冻结已通知位置，后续事件不重复通知",
+        "消费通知时确认，仅对交错工作重开"
+      ]
+    },
+    {
+      "label": "对账与存储",
+      "detail": "changesSince 返回该版本后的类型化事件",
+      "children": [
+        "最多返回 200 条，不推进任何游标",
+        "historyGap 为真时需刷新整个会话状态",
+        "历史存共享库，限 30 天与 5 万行"
+      ]
+    }
+  ],
+  "flow": [
+    "会话状态实质变化",
+    "追加类型化事件到日志",
+    "观察者游标落后则排队通知",
+    "下一回合收到单条系统通知",
+    "用 changesSince 拉取增量",
+    "对账后继续行动"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "session_status",
+      "type": "technique"
+    },
+    {
+      "name": "sessions_send",
+      "type": "technique"
+    },
+    {
+      "name": "session_state_events",
+      "type": "concept"
+    },
+    {
+      "name": "session_watch_cursors",
+      "type": "concept"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "model"
+    },
+    {
+      "name": "OpenCode",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "session_state_events",
+      "label": "追加事件"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "session_watch_cursors",
+      "label": "维护游标"
+    },
+    {
+      "from": "session_status",
+      "to": "session_state_events",
+      "label": "读取增量"
+    },
+    {
+      "from": "sessions_send",
+      "to": "session_watch_cursors",
+      "label": "注册观察"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Claude",
+      "label": "监控会话"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "OpenCode",
+      "label": "监控会话"
+    }
+  ]
+}

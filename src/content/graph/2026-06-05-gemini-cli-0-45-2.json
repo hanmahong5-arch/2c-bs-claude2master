@@ -1,0 +1,82 @@
+{
+  "center": "gemini-cli v0.45.2 紧急修复",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "将提交 f40498d 遴选到 release/v0.45.1 分支修复问题",
+      "children": [
+        "提交 f40498d",
+        "目标分支 release/v0.45.1"
+      ]
+    },
+    {
+      "label": "版本发布",
+      "detail": "基于修复后的代码创建新版本 v0.45.2",
+      "children": [
+        "版本号 v0.45.2"
+      ]
+    },
+    {
+      "label": "发布意义",
+      "detail": "体现项目快速响应与热修复能力，保障 Agent 工具链可靠可用",
+      "children": [
+        "确保稳定性",
+        "Agent 工具链持续可用"
+      ]
+    }
+  ],
+  "flow": [
+    "发现问题",
+    "遴选提交 f40498d",
+    "合入 release/v0.45.1",
+    "创建 v0.45.2"
+  ],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "v0.45.1",
+      "type": "concept"
+    },
+    {
+      "name": "v0.45.2",
+      "type": "concept"
+    },
+    {
+      "name": "f40498d",
+      "type": "concept"
+    },
+    {
+      "name": "release/v0.45.1",
+      "type": "concept"
+    },
+    {
+      "name": "Agent 工具链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "v0.45.2",
+      "to": "v0.45.1",
+      "label": "修复"
+    },
+    {
+      "from": "f40498d",
+      "to": "release/v0.45.1",
+      "label": "遴选至"
+    },
+    {
+      "from": "v0.45.2",
+      "to": "gemini-cli",
+      "label": "属于"
+    },
+    {
+      "from": "v0.45.1",
+      "to": "gemini-cli",
+      "label": "属于"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "center": "复现 1989 年 LeCun 手写数字识别…",
+  "branches": [
+    {
+      "label": "论文复现",
+      "detail": "Karpathy 用 PyTorch 复现 1989 年 LeCun 的端到端反向传播数字识别网络",
+      "children": [
+        "原始网络用 Lisp 实现，数据集 7291 张 16x16…",
+        "复现代码在 karpathy/lecun1989-repro 仓库"
+      ]
+    },
+    {
+      "label": "训练速度",
+      "detail": "现代硬件带来约 3000 倍加速，但小网络在 GPU 上反而更慢",
+      "children": [
+        "原训练 3 天（SUN-4/260），复现 90 秒（M1…",
+        "A100 因网络太小（9760 参数）训练更慢"
+      ]
+    },
+    {
+      "label": "性能对比",
+      "detail": "复现结果与原文接近但不完全一致，因数据集丢失和细节缺失",
+      "children": [
+        "原文测试误差 5.00%，复现 4.09%",
+        "数据集用 MNIST 降采样模拟，权重初始化等细节…"
+      ]
+    },
+    {
+      "label": "现代改进",
+      "detail": "用交叉熵、AdamW、数据增强等现代技巧将测试误差降至 2.19%",
+      "children": [
+        "交叉熵替换 MSE 后训练误差归零",
+        "AdamW + 数据增强（平移 1 像素）显著降低测试…"
+      ]
+    }
+  ],
+  "flow": [
+    "复现原始网络",
+    "训练并对比结果",
+    "替换损失函数",
+    "改用 AdamW",
+    "加入数据增强"
+  ],
+  "entities": [
+    {
+      "name": "Yann LeCun",
+      "type": "person"
+    },
+    {
+      "name": "Andrej Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "PyTorch",
+      "type": "product"
+    },
+    {
+      "name": "MNIST",
+      "type": "concept"
+    },
+    {
+      "name": "SGD",
+      "type": "technique"
+    },
+    {
+      "name": "AdamW",
+      "type": "technique"
+    },
+    {
+      "name": "交叉熵",
+      "type": "technique"
+    },
+    {
+      "name": "数据增强",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Andrej Karpathy",
+      "to": "PyTorch",
+      "label": "使用"
+    },
+    {
+      "from": "Andrej Karpathy",
+      "to": "Yann LeCun",
+      "label": "复现论文"
+    },
+    {
+      "from": "PyTorch",
+      "to": "MNIST",
+      "label": "用于模拟"
+    },
+    {
+      "from": "SGD",
+      "to": "AdamW",
+      "label": "被替换为"
+    },
+    {
+      "from": "交叉熵",
+      "to": "数据增强",
+      "label": "结合使用"
+    }
+  ]
+}

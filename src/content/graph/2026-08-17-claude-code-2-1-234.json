@@ -1,0 +1,76 @@
+{
+  "center": "Claude Code v2.1.234 更新",
+  "branches": [
+    {
+      "label": "新增环境变量",
+      "detail": "新增 CLAUDE_CODE_PROJECT_DIR_NAME，可自定义每会话配置目录短名称",
+      "children": [
+        "便于宿主管理配置目录"
+      ]
+    },
+    {
+      "label": "GitLab 徽章",
+      "detail": "新增 GitLab 合并请求徽章，显示 MR 状态",
+      "children": [
+        "草稿/待处理/通过"
+      ]
+    },
+    {
+      "label": "安全加固",
+      "detail": "拒绝 Windows NT 命名空间路径，防止 NTLM 凭据泄露",
+      "children": []
+    },
+    {
+      "label": "稳定性修复",
+      "detail": "修复自动模式长会话重复检查网络访问、会话级权限答案丢失",
+      "children": [
+        "selection:clear 键绑定可清除文本选择"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "GitLab",
+      "type": "product"
+    },
+    {
+      "name": "CLAUDE_CODE_PROJECT_DIR_NAME",
+      "type": "concept"
+    },
+    {
+      "name": "NTLM",
+      "type": "concept"
+    },
+    {
+      "name": "Windows NT 命名空间路径",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "GitLab",
+      "label": "集成徽章"
+    },
+    {
+      "from": "Claude Code",
+      "to": "CLAUDE_CODE_PROJECT_DIR_NAME",
+      "label": "新增变量"
+    },
+    {
+      "from": "Claude Code",
+      "to": "NTLM",
+      "label": "防止泄露"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Windows NT 命名空间路径",
+      "label": "拒绝路径"
+    }
+  ]
+}

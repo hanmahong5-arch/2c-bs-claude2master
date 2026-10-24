@@ -1,0 +1,79 @@
+{
+  "center": "Cline Desktop 队列消息转向",
+  "branches": [
+    {
+      "label": "运行中转向",
+      "detail": "空输入框按 Enter 将队列首条消息注入当前 turn",
+      "children": [
+        "在下一个 turn 边界被拾取",
+        "不必等整个任务结束"
+      ]
+    },
+    {
+      "label": "原子领取",
+      "detail": "队列头部原子领取，快速二次 Enter 不会转向已出队消息",
+      "children": [
+        "转向失败以 toast 提示",
+        "非静默失败"
+      ]
+    },
+    {
+      "label": "图标边距",
+      "detail": "macOS Dock 图标改为标准边距，不再贴边",
+      "children": [
+        "内置与可选运行时图标：Classic、Chip…",
+        "Windows 保持原样"
+      ]
+    }
+  ],
+  "flow": [
+    "运行中按 Enter",
+    "原子领取队列首条",
+    "下一个 turn 边界注入",
+    "失败 toast 提示"
+  ],
+  "entities": [
+    {
+      "name": "Cline Desktop",
+      "type": "product"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    },
+    {
+      "name": "turn 边界",
+      "type": "concept"
+    },
+    {
+      "name": "队列消息转向",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline Desktop",
+      "to": "队列消息转向",
+      "label": "支持"
+    },
+    {
+      "from": "队列消息转向",
+      "to": "turn 边界",
+      "label": "依赖"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "macOS",
+      "label": "适配"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "Windows",
+      "label": "适配"
+    }
+  ]
+}

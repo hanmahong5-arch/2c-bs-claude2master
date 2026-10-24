@@ -1,0 +1,83 @@
+{
+  "center": "Codex 助力黑洞模拟",
+  "branches": [
+    {
+      "label": "自动化代码生成",
+      "detail": "Codex 按自然语言描述生成复杂仿真代码，科学家专注物理问题",
+      "children": [
+        "自然语言直接生成仿真代码片段",
+        "减少繁琐编程细节"
+      ]
+    },
+    {
+      "label": "加速科研迭代",
+      "detail": "快速生成修改模拟代码，缩短理论假设到数值验证周期",
+      "children": [
+        "更快测试不同理论模型",
+        "探索黑洞极端引力环境"
+      ]
+    },
+    {
+      "label": "降低技术门槛",
+      "detail": "领域专家用专业语言与代码交互，无需精通底层编程",
+      "children": [
+        "天体物理学家直接与代码交互",
+        "自然语言成为核心接口"
+      ]
+    }
+  ],
+  "flow": [
+    "自然语言描述物理问题",
+    "Codex 生成仿真代码",
+    "修改测试理论模型",
+    "数值验证广义相对论"
+  ],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "陈志权",
+      "type": "person"
+    },
+    {
+      "name": "黑洞模拟",
+      "type": "concept"
+    },
+    {
+      "name": "广义相对论",
+      "type": "concept"
+    },
+    {
+      "name": "天体物理学",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "陈志权",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "Codex",
+      "to": "OpenAI",
+      "label": "属于"
+    },
+    {
+      "from": "Codex",
+      "to": "黑洞模拟",
+      "label": "生成代码"
+    },
+    {
+      "from": "黑洞模拟",
+      "to": "广义相对论",
+      "label": "验证"
+    }
+  ]
+}

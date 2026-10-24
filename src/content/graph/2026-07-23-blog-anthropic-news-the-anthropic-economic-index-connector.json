@@ -1,0 +1,92 @@
+{
+  "center": "Anthropic 经济指数连接器",
+  "branches": [
+    {
+      "label": "产品发布",
+      "detail": "Anthropic 为 Claude 推出经济指数连接器，用自然语言查询 AI 使用数据",
+      "children": [
+        "2026 年 7 月 22 日发布",
+        "在 claude.ai 连接器目录中启用",
+        "无需安装，任何 Claude 模型可用"
+      ]
+    },
+    {
+      "label": "数据来源",
+      "detail": "指数衡量 AI 在经济中的实际使用方式，反映 Claude 使用模式",
+      "children": [
+        "非整体劳动力市场数据",
+        "面向研究者、记者、政策制定者",
+        "完整数据集在官网免费开放"
+      ]
+    },
+    {
+      "label": "可问问题",
+      "detail": "用户可查询职业、地区、任务等维度的 AI 使用情况",
+      "children": [
+        "哪些职业使用 AI 最多",
+        "科罗拉多州人们如何用 Claude",
+        "教师用 Claude 做哪些任务"
+      ]
+    },
+    {
+      "label": "使用方式",
+      "detail": "约一分钟启用，像问同事一样提问，从宽泛到具体",
+      "children": [
+        "先问宽泛问题如行业情况",
+        "再深入具体细节",
+        "可要求展示答案背后的原始数据"
+      ]
+    }
+  ],
+  "flow": [
+    "打开 claude.ai 连接器菜单",
+    "在目录中找到经济指数",
+    "启用连接器",
+    "在对话中提问",
+    "查看答案与原始数据"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic Economic Index",
+      "type": "product"
+    },
+    {
+      "name": "claude.ai",
+      "type": "product"
+    },
+    {
+      "name": "connector",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Anthropic Economic Index",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic Economic Index",
+      "to": "Claude",
+      "label": "连接器接入"
+    },
+    {
+      "from": "Claude",
+      "to": "claude.ai",
+      "label": "运行于"
+    },
+    {
+      "from": "connector",
+      "to": "Anthropic Economic Index",
+      "label": "查询"
+    }
+  ]
+}

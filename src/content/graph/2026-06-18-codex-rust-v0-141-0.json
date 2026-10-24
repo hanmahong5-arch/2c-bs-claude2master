@@ -1,0 +1,85 @@
+{
+  "center": "codex rust-v0.141.0 更新",
+  "branches": [
+    {
+      "label": "远程执行安全",
+      "detail": "远程执行器改用加密 Noise 中继通道，代理间通信更可信",
+      "children": [
+        "加密 Noise 中继通道",
+        "提升数据传输隐私性"
+      ]
+    },
+    {
+      "label": "跨平台目录保持",
+      "detail": "远程执行保留原生工作目录与 Shell，跨服务器路径权限一致",
+      "children": [
+        "保留原生工作目录",
+        "保留原生 Shell",
+        "跨环境代理工作流更稳定"
+      ]
+    },
+    {
+      "label": "插件与 MCP 市场",
+      "detail": "插件可按线程激活 MCP 服务器，并新增插件市场",
+      "children": [
+        "按线程激活 MCP 服务器",
+        "新增插件市场",
+        "按认证模式动态加载工具"
+      ]
+    },
+    {
+      "label": "性能优化",
+      "detail": "大型会话中缓存工具搜索并减少内存复制，降低延迟与内存占用",
+      "children": [
+        "缓存工具搜索",
+        "减少内存复制",
+        "工具密集型任务更快"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex rust-v0.141.0",
+      "type": "product"
+    },
+    {
+      "name": "Noise",
+      "type": "technique"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Shell",
+      "type": "concept"
+    },
+    {
+      "name": "插件市场",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex rust-v0.141.0",
+      "to": "Noise",
+      "label": "采用"
+    },
+    {
+      "from": "codex rust-v0.141.0",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "codex rust-v0.141.0",
+      "to": "插件市场",
+      "label": "新增"
+    },
+    {
+      "from": "codex rust-v0.141.0",
+      "to": "Shell",
+      "label": "保留"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "center": "OpenAI 打击柬埔寨诈骗网络",
+  "branches": [
+    {
+      "label": "事件概述",
+      "detail": "OpenAI 封禁柬埔寨诈骗团伙的 ChatGPT 账号，该团伙用其支持投资、恋爱、赌博和冒充执法诈骗",
+      "children": [
+        "线索来自 WhatsApp 同行",
+        "账号很可能源自柬埔寨波贝",
+        "已与行业伙伴和当局共享威胁信号"
+      ]
+    },
+    {
+      "label": "诈骗手法",
+      "detail": "团伙同时开展多种诈骗，常混合不同骗局元素，遵循 ping-zing-sting 模式",
+      "children": [
+        "ping：用 ChatGPT 翻译生成对话，在 WhatsApp…",
+        "zing：情感施压，承诺保证回报、保密、紧急行动",
+        "sting：要求存款解锁奖励、支付激活费或虚假罚款"
+      ]
+    },
+    {
+      "label": "伪造材料",
+      "detail": "用 ChatGPT 生成假约会资料、假投资专家、假执法人设及伪造文件图片",
+      "children": [
+        "伪造护照、法律通知、股票购买确认",
+        "伪造赌博平台界面",
+        "AI 生成投资推广图"
+      ]
+    },
+    {
+      "label": "人口贩卖迹象",
+      "detail": "部分用户生成内容涉及人口贩卖或强迫劳动，包括招聘广告和工人管理记录",
+      "children": [
+        "在社交媒体发布波贝“chatter”招聘广告，承诺机…",
+        "记录员工债务、工资扣减、纪律罚款",
+        "对话提及拘留、逃跑企图和刑事责任"
+      ]
+    },
+    {
+      "label": "影响与趋势",
+      "detail": "OpenAI 封禁账号并共享指标，指出诈骗网络高度多样化且与人口贩卖界限模糊",
+      "children": [
+        "可能接触数百名目标，个别受害者损失数千美元",
+        "需同时打击面向受害者的诈骗和有组织犯罪集团"
+      ]
+    }
+  ],
+  "flow": [
+    "ping：联系目标",
+    "zing：建立情感信任",
+    "sting：提取钱财"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "WhatsApp",
+      "type": "product"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "Poipet",
+      "type": "concept"
+    },
+    {
+      "name": "ping-zing-sting",
+      "type": "technique"
+    },
+    {
+      "name": "human trafficking",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "开发"
+    },
+    {
+      "from": "OpenAI",
+      "to": "WhatsApp",
+      "label": "获线索"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "ping-zing-sting",
+      "label": "支持"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "human trafficking",
+      "label": "关联迹象"
+    },
+    {
+      "from": "Poipet",
+      "to": "human trafficking",
+      "label": "关联"
+    }
+  ]
+}

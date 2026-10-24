@@ -1,0 +1,73 @@
+{
+  "center": "openclaw v2026.8.2 更新",
+  "branches": [
+    {
+      "label": "Home 侧栏",
+      "detail": "可停靠右侧或底部，保留当前页面并预览或移除工作上下文快照",
+      "children": [
+        "快捷键 Cmd/Ctrl+Shift+H",
+        "上下文注入显式可见、可撤销"
+      ]
+    },
+    {
+      "label": "Linux 桌面端",
+      "detail": "新增 .deb/AppImage，可连本地或远程 Gateway，从托盘或 X11 快捷键打开 Quick Chat",
+      "children": [
+        "入口层与执行层解耦",
+        "客户端只需持有 Gateway 连接"
+      ]
+    },
+    {
+      "label": "回复收尾修复",
+      "detail": "工具执行结束后返回最终答案，已接受轮次后暴露失败，修复停在工具输出或初始确认的会话",
+      "children": [
+        "turn 终止由工具结算驱动",
+        "而非首个响应"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "Home 侧栏",
+      "type": "concept"
+    },
+    {
+      "name": "Linux 桌面端",
+      "type": "product"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "Quick Chat",
+      "type": "product"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Linux 桌面端",
+      "to": "Gateway",
+      "label": "连接"
+    },
+    {
+      "from": "Linux 桌面端",
+      "to": "Quick Chat",
+      "label": "打开"
+    },
+    {
+      "from": "Home 侧栏",
+      "to": "harness",
+      "label": "影响"
+    }
+  ]
+}

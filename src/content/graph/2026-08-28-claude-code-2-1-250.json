@@ -1,0 +1,49 @@
+{
+  "center": "claude-code v2.1.250 更新",
+  "branches": [
+    {
+      "label": "版本更新",
+      "detail": "发布 v2.1.250，修复若干 bug，提升可靠性",
+      "children": [
+        "建议更新以获取更佳体验"
+      ]
+    },
+    {
+      "label": "稳定性提升",
+      "detail": "修复 bug 后工具运行更稳定",
+      "children": []
+    },
+    {
+      "label": "对 agent harness 的意义",
+      "detail": "稳定的 CLI 工具是构建可靠自动化流程的基础",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "CLI",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "CLI",
+      "label": "属于"
+    },
+    {
+      "from": "CLI",
+      "to": "agent harness",
+      "label": "支撑"
+    }
+  ]
+}

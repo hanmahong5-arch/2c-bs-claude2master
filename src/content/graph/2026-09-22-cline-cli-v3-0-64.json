@@ -1,0 +1,77 @@
+{
+  "center": "Cline CLI 输出超限重试机制",
+  "branches": [
+    {
+      "label": "超限重试三次",
+      "detail": "模型回合耗尽输出额度时不再直接报错，最多重试三次并提示精简",
+      "children": [
+        "提醒精简表达、拆分到多次工具调用",
+        "三次后才判定失败",
+        "输出上限视为可恢复状态"
+      ]
+    },
+    {
+      "label": "动态输出预算",
+      "detail": "大输出上限模型默认预算从固定 32000 提升为上限的 30%",
+      "children": [
+        "取较大者",
+        "约 107k 输出 token 以下模型不受影响",
+        "接受更长响应的成本与延迟"
+      ]
+    },
+    {
+      "label": "模型目录更新",
+      "detail": "模型目录由 6188 更新至 6237，覆盖同一批 209 个 provider",
+      "children": [
+        "Cline Pass 新增 MiMo V2.6 Flash 与 Pro",
+        "10 个 provider 默认模型变更",
+        "六个改为 MiMo V2.6 Flash"
+      ]
+    }
+  ],
+  "flow": [
+    "模型回合耗尽输出额度",
+    "触发重试并提示精简",
+    "最多重试三次",
+    "三次后判定失败"
+  ],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "Cline Pass",
+      "type": "product"
+    },
+    {
+      "name": "MiMo V2.6 Flash",
+      "type": "model"
+    },
+    {
+      "name": "MiMo V2.6 Pro",
+      "type": "model"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "harness",
+      "label": "依赖"
+    },
+    {
+      "from": "Cline Pass",
+      "to": "MiMo V2.6 Flash",
+      "label": "新增"
+    },
+    {
+      "from": "Cline Pass",
+      "to": "MiMo V2.6 Pro",
+      "label": "新增"
+    }
+  ]
+}

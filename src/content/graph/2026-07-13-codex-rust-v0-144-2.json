@@ -1,0 +1,68 @@
+{
+  "center": "codex rust-v0.144.2 修复…",
+  "branches": [
+    {
+      "label": "版本修复内容",
+      "detail": "回滚导致 Guardian 自动审查异常的提示更新",
+      "children": [
+        "异常涉及审查策略、请求格式、工具行为",
+        "版本号 rust-v0.144.2"
+      ]
+    },
+    {
+      "label": "恢复旧策略",
+      "detail": "回滚后 Agent 审查行为更稳定",
+      "children": [
+        "避免提示变化引发意外决策"
+      ]
+    },
+    {
+      "label": "设计启示",
+      "detail": "设计 Agent Harness 需注意提示回归风险",
+      "children": [
+        "建立提示版本控制",
+        "建立回滚机制"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex",
+      "type": "product"
+    },
+    {
+      "name": "Guardian",
+      "type": "concept"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    },
+    {
+      "name": "提示回归",
+      "type": "concept"
+    },
+    {
+      "name": "提示版本控制",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex",
+      "to": "Guardian",
+      "label": "修复"
+    },
+    {
+      "from": "Guardian",
+      "to": "提示回归",
+      "label": "遭遇"
+    },
+    {
+      "from": "Agent Harness",
+      "to": "提示版本控制",
+      "label": "需要"
+    }
+  ]
+}

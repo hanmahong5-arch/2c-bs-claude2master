@@ -1,0 +1,106 @@
+{
+  "center": "GLM-5.2 开源文本大模型",
+  "branches": [
+    {
+      "label": "发布与规格",
+      "detail": "Z.ai 于 6 月 16 日以 MIT 协议开源 GLM-5.2 权重",
+      "children": [
+        "753B 参数、1.51TB，MoE 架构 40 个激活参数",
+        "仅文本输入，上下文窗口 100 万 token",
+        "此前 6 月 13 日先向编程订阅用户开放"
+      ]
+    },
+    {
+      "label": "基准表现",
+      "detail": "Artificial Analysis 智能指数 51 分，居开源权重模型首位",
+      "children": [
+        "领先 MiniMax-M3、DeepSeek V4 Pro（44）与…",
+        "Code Arena WebDev 榜第 2，仅次于 Claude…",
+        "每任务输出 43k token，高于 GLM-5.1 的 26k"
+      ]
+    },
+    {
+      "label": "价格与获取",
+      "detail": "OpenRouter 上 9 家提供商，输入 $1.40、输出 $4.40 每百万 token",
+      "children": [
+        "对比 GPT-5.5 的 $5/$30",
+        "对比 Claude Opus 4.5-4.8 的 $5/$25"
+      ]
+    },
+    {
+      "label": "实测效果",
+      "detail": "Simon Willison 测试：鹈鹕骑自行车 SVG 出色，负鼠滑板车退步",
+      "children": [
+        "鹈鹕为自带动画 SVG，动画无破损",
+        "负鼠未做动画，明显不如 GLM-5.1 版本"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Z.ai",
+      "type": "company"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5.1",
+      "type": "model"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Mixture of Experts",
+      "type": "technique"
+    },
+    {
+      "name": "MIT license",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Z.ai",
+      "to": "GLM-5.2",
+      "label": "发布"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "GLM-5.1",
+      "label": "升级自"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "Mixture of Experts",
+      "label": "采用"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "MIT license",
+      "label": "以之开源"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "GLM-5.2",
+      "label": "评测"
+    },
+    {
+      "from": "OpenRouter",
+      "to": "GLM-5.2",
+      "label": "提供"
+    }
+  ]
+}

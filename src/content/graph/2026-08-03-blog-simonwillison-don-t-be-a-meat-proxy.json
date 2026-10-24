@@ -1,0 +1,88 @@
+{
+  "center": "Don't be a meat proxy",
+  "branches": [
+    {
+      "label": "概念提出",
+      "detail": "Niklas Gruhn 提出 meat proxy，指盲目转发 AI 输出的人",
+      "children": [
+        "Simon Willison 在博客中推荐该术语",
+        "Frank Allenby 3 月已用类似说法"
+      ]
+    },
+    {
+      "label": "核心风险",
+      "detail": "直接复制粘贴 AI 输出给同事，等于放弃自身判断",
+      "children": [
+        "未读、未懂、未验证就转发",
+        "把 AI 输出当结论传递"
+      ]
+    },
+    {
+      "label": "正确做法",
+      "detail": "先读、理解、验证，再用自己的话写回复",
+      "children": [
+        "用自己的话重写是已做前置步骤的证明",
+        "这份努力本身就是你增加的价值"
+      ]
+    },
+    {
+      "label": "态度",
+      "detail": "鼓励用 AI 提示，但反对只做传声筒",
+      "children": [
+        "By all means, prompt AI",
+        "但不要只是 relay 输出"
+      ]
+    }
+  ],
+  "flow": [
+    "提示 AI",
+    "阅读输出",
+    "理解内容",
+    "验证准确性",
+    "用自己的话回复"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Niklas Gruhn",
+      "type": "person"
+    },
+    {
+      "name": "Frank Allenby",
+      "type": "person"
+    },
+    {
+      "name": "meat proxy",
+      "type": "concept"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Niklas Gruhn",
+      "to": "meat proxy",
+      "label": "提出"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "meat proxy",
+      "label": "推荐"
+    },
+    {
+      "from": "Frank Allenby",
+      "to": "meat proxy",
+      "label": "类似使用"
+    },
+    {
+      "from": "meat proxy",
+      "to": "LLM",
+      "label": "转发输出"
+    }
+  ]
+}

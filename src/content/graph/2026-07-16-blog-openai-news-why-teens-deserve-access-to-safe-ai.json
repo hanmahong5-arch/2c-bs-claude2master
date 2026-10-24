@@ -1,0 +1,123 @@
+{
+  "center": "OpenAI 青少年安全 AI 策略",
+  "branches": [
+    {
+      "label": "默认保护机制",
+      "detail": "系统预测用户未满 18 岁即自动启用适龄体验",
+      "children": [
+        "限制暴力、自残、危险挑战、身材焦虑内容",
+        "禁止危险或浪漫/性角色扮演",
+        "定位为学习创作工具，非现实关系替代"
+      ]
+    },
+    {
+      "label": "学习功能设计",
+      "detail": "鼓励主动参与与批判性思维，而非直接给答案",
+      "children": [
+        "Study Mode 由教师与学习科学家共同设计",
+        "家长可通过 Parental Controls 强制开启",
+        "互动数学科学体验周活 1800 万，覆盖 300+ 主题"
+      ]
+    },
+    {
+      "label": "家长控制与通知",
+      "detail": "帮助家庭共同管理青少年在线体验",
+      "children": [
+        "可设安静时段、关闭语音、管理图像生成",
+        "高风险情况（如自残迹象）向家长发通知",
+        "违规停用账号也会通知家长"
+      ]
+    },
+    {
+      "label": "四项核心承诺",
+      "detail": "指导青少年安全工作的原则",
+      "children": [
+        "青少年安全优先，即使与其他目标冲突",
+        "鼓励在需要时寻求现实世界支持",
+        "把青少年当青少年对待"
+      ]
+    },
+    {
+      "label": "外部合作与资源",
+      "detail": "与专家、教育者、监管者共同推进",
+      "children": [
+        "与 Moonshot 合作预防网络暴力",
+        "联合 AFT、APA 等机构",
+        "发布 50+ 语言的家庭指南与家长建议"
+      ]
+    }
+  ],
+  "flow": [
+    "系统预测用户年龄",
+    "自动启用适龄保护体验",
+    "家长链接账号并设控制",
+    "高风险时向家长发通知",
+    "持续与外部专家评估改进"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Study Mode",
+      "type": "product"
+    },
+    {
+      "name": "Parental Controls",
+      "type": "product"
+    },
+    {
+      "name": "Moonshot",
+      "type": "company"
+    },
+    {
+      "name": "American Federation of Teachers",
+      "type": "company"
+    },
+    {
+      "name": "American Psychological Association",
+      "type": "company"
+    },
+    {
+      "name": "age prediction",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "开发"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "Study Mode",
+      "label": "包含"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "Parental Controls",
+      "label": "包含"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Moonshot",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "American Federation of Teachers",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "American Psychological Association",
+      "label": "合作"
+    }
+  ]
+}

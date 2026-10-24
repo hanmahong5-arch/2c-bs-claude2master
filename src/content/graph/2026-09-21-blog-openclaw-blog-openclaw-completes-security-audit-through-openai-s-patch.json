@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw 完成 Trail of Bits 安…",
+  "branches": [
+    {
+      "label": "审计结果",
+      "detail": "Trail of Bits 提交 27 份私有仓库通告与 3 个加固 PR，全部已修复合并",
+      "children": [
+        "24 份评级：0 Critical、2 High、16 Medium…",
+        "23 份确认为漏洞，1 份提交前已修复",
+        "3 份为纵深防御发现，未跨信任边界"
+      ]
+    },
+    {
+      "label": "合作方式",
+      "detail": "OpenAI Patch the Planet 结合 AI 辅助研究与人工复核",
+      "children": [
+        "Trail of Bits 用 Codex 辅助工作流查找问题…",
+        "人工核查后再提交给 OpenClaw",
+        "通过私有 GitHub Security Advisories 协调…"
+      ]
+    },
+    {
+      "label": "权限须随请求",
+      "detail": "最常见问题是权限在步骤间丢失，后续工作不再受原限制",
+      "children": [
+        "修复方式：向前传递原始权限，或确认后续工作本不…",
+        "文件名生成器不需要工具权限",
+        "后续工作不能因丢失原始请求上下文而获得访问权"
+      ]
+    },
+    {
+      "label": "命名与检查一致",
+      "detail": "同一事物多个名称导致安全检查与实际使用不一致",
+      "children": [
+        "影响用户身份与功能名称",
+        "修复：先确定系统实际使用的名称再应用安全策略",
+        "检查须绑定最终使用的文件、身份或操作"
+      ]
+    },
+    {
+      "label": "运行中权限变更",
+      "detail": "部分功能只在启动时检查权限，运行中关闭配置不生效",
+      "children": [
+        "示例：运行中禁用内存访问，该次运行仍可继续读取",
+        "修复：工具每次执行时检查当前设置",
+        "耗时任务返回结果前可能需再次检查"
+      ]
+    }
+  ],
+  "flow": [
+    "Codex 辅助查找问题",
+    "人工复核发现",
+    "对照信任模型审查",
+    "修复并测试",
+    "私有通告协调披露",
+    "合并并随稳定版发布"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Trail of Bits",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Patch the Planet",
+      "type": "concept"
+    },
+    {
+      "name": "Codex",
+      "type": "model"
+    },
+    {
+      "name": "GitHub Security Advisories",
+      "type": "product"
+    },
+    {
+      "name": "Samuel Judson",
+      "type": "person"
+    },
+    {
+      "name": "Lucas Bourtoule",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Trail of Bits",
+      "to": "OpenClaw",
+      "label": "审计"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Patch the Planet",
+      "label": "发起"
+    },
+    {
+      "from": "Trail of Bits",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "Trail of Bits",
+      "to": "Patch the Planet",
+      "label": "参与"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "GitHub Security Advisories",
+      "label": "协调披露"
+    },
+    {
+      "from": "Samuel Judson",
+      "to": "Trail of Bits",
+      "label": "隶属"
+    }
+  ]
+}

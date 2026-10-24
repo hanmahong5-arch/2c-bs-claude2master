@@ -1,0 +1,77 @@
+{
+  "center": "aider v0.86.0 更新",
+  "branches": [
+    {
+      "label": "新增模型支持",
+      "detail": "扩展模型生态，支持 GPT-5、Grok-4 等主流模型",
+      "children": [
+        "支持 GPT-5、Grok-4",
+        "支持 Gemini 2.5 Flash Lite",
+        "需更灵活的模型适配层"
+      ]
+    },
+    {
+      "label": "命令交互优化",
+      "detail": "优化 /clear 和 /undo 命令的反馈与显示",
+      "children": [
+        "提升交互清晰度",
+        "提供明确状态确认",
+        "简洁历史视图"
+      ]
+    },
+    {
+      "label": "修复配置问题",
+      "detail": "修复模型设置更新与依赖兼容性问题",
+      "children": [
+        "确保配置实时生效",
+        "强调 SDK 兼容",
+        "需稳健配置管理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "aider",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5",
+      "type": "model"
+    },
+    {
+      "name": "Grok-4",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 2.5 Flash Lite",
+      "type": "model"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "aider",
+      "to": "GPT-5",
+      "label": "新增支持"
+    },
+    {
+      "from": "aider",
+      "to": "Grok-4",
+      "label": "新增支持"
+    },
+    {
+      "from": "aider",
+      "to": "Gemini 2.5 Flash Lite",
+      "label": "新增支持"
+    },
+    {
+      "from": "Agent Harness",
+      "to": "GPT-5",
+      "label": "适配"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "center": "cline cli v3.0.23 更新",
+  "branches": [
+    {
+      "label": "云服务配置修复",
+      "detail": "修复 Vertex AI 与 Azure Foundry 配置，保证 GCP、Azure 上 API 调用稳定",
+      "children": [
+        "Agent Harness 更无缝集成主流云服务"
+      ]
+    },
+    {
+      "label": "子代理工具化",
+      "detail": "支持把已配置的 Agent 作为工具嵌套调用",
+      "children": [
+        "支撑分层、模块化智能体工作流"
+      ]
+    },
+    {
+      "label": "OAuth 与推理修复",
+      "detail": "OAuth 管理集中到 SDK，并修复 Fable 5 推理错误",
+      "children": [
+        "统一身份验证管理",
+        "解决特定模型运行中断"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "Vertex AI",
+      "type": "product"
+    },
+    {
+      "name": "Azure Foundry",
+      "type": "product"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "SDK",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli",
+      "to": "Vertex AI",
+      "label": "修复配置"
+    },
+    {
+      "from": "cline cli",
+      "to": "Azure Foundry",
+      "label": "修复配置"
+    },
+    {
+      "from": "cline cli",
+      "to": "Agent Harness",
+      "label": "集成"
+    },
+    {
+      "from": "cline cli",
+      "to": "OAuth",
+      "label": "集中管理"
+    },
+    {
+      "from": "cline cli",
+      "to": "Fable 5",
+      "label": "修复推理"
+    }
+  ]
+}

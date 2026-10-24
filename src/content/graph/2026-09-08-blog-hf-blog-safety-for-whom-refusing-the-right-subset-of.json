@@ -1,0 +1,76 @@
+{
+  "center": "安全对齐的拒绝粒度问题",
+  "branches": [
+    {
+      "label": "核心主张",
+      "detail": "模型不应拒绝整个话题，而应只拒绝其中的危险子集",
+      "children": [
+        "标题：Safety for Whom? Refusing the…",
+        "讨论安全对齐的粒度问题"
+      ]
+    },
+    {
+      "label": "发布平台",
+      "detail": "该讨论以博客形式发布在 Hugging Face 社区",
+      "children": [
+        "Hugging Face 博客",
+        "社区博客板块 community_blogs"
+      ]
+    },
+    {
+      "label": "关联模型",
+      "detail": "文章提及两个 8B 文本生成模型",
+      "children": [
+        "8B 模型，2025-07-26 更新，12.7M 下载",
+        "8B 模型，2024-10-11 更新，46.1k 下载"
+      ]
+    },
+    {
+      "label": "关联论文",
+      "detail": "文章提及一篇论文，编号 2609.04482",
+      "children": [
+        "论文 2609.04482，发布于 20 天前"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "安全对齐",
+      "type": "concept"
+    },
+    {
+      "name": "拒绝粒度",
+      "type": "concept"
+    },
+    {
+      "name": "8B 模型",
+      "type": "model"
+    },
+    {
+      "name": "2609.04482",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "安全对齐",
+      "label": "讨论"
+    },
+    {
+      "from": "安全对齐",
+      "to": "拒绝粒度",
+      "label": "涉及"
+    },
+    {
+      "from": "8B 模型",
+      "to": "Hugging Face",
+      "label": "发布于"
+    }
+  ]
+}

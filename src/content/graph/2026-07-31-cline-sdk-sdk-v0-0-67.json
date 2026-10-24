@@ -1,0 +1,72 @@
+{
+  "center": "Cline SDK v0.0.67 更新",
+  "branches": [
+    {
+      "label": "推理控制",
+      "detail": "推理 effort/budget/开关由 models.dev 目录驱动并统一编码",
+      "children": [
+        "Anthropic 强制模式显式处理",
+        "越界预算自动钳制"
+      ]
+    },
+    {
+      "label": "MCP 超时",
+      "detail": "MCP 客户端遵循 per-server timeout 配置，替代硬编码限制",
+      "children": [
+        "默认 60s，范围 1-3600s"
+      ]
+    },
+    {
+      "label": "会话分叉",
+      "detail": "新增会话分叉与用户运行消息 API，支持编辑早期提示并恢复历史",
+      "children": [
+        "readLiveMessages 读取常驻会话内存转录"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "models.dev",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "readLiveMessages",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "models.dev",
+      "label": "依赖"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Anthropic",
+      "label": "适配"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "readLiveMessages",
+      "label": "新增"
+    }
+  ]
+}

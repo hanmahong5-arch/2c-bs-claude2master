@@ -1,0 +1,114 @@
+{
+  "center": "Gemini 3.5 Flash 计算机使用",
+  "branches": [
+    {
+      "label": "能力升级",
+      "detail": "computer use 从独立模型变为 3.5 Flash 内置工具",
+      "children": [
+        "此前仅为 Gemini 2.5 独立模型",
+        "现原生集成进主 Flash 模型",
+        "号称最佳 agentic 表现"
+      ]
+    },
+    {
+      "label": "跨端操控",
+      "detail": "agent 可看、推理并在浏览器、移动端、桌面行动",
+      "children": [
+        "覆盖 browser、mobile、desktop",
+        "支持长周期任务",
+        "用于持续软件测试与知识工作"
+      ]
+    },
+    {
+      "label": "接入方式",
+      "detail": "通过 Gemini API 与 Gemini Enterprise Agent Platform 使用",
+      "children": [
+        "Gemini API",
+        "Gemini Enterprise Agent Platform",
+        "Browserbase 提供演示环境"
+      ]
+    },
+    {
+      "label": "安全防护",
+      "detail": "针对提示注入做对抗训练并提供企业级保障",
+      "children": [
+        "敏感操作需用户显式确认",
+        "检测到间接注入自动停止任务",
+        "建议配合沙箱与人工复核"
+      ]
+    }
+  ],
+  "flow": [
+    "通过 API 接入 3.5 Flash",
+    "启用内置 computer use",
+    "agent 观察屏幕并推理",
+    "跨端执行操作",
+    "敏感动作请求确认"
+  ],
+  "entities": [
+    {
+      "name": "Gemini 3.5 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 2.5",
+      "type": "model"
+    },
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemini API",
+      "type": "product"
+    },
+    {
+      "name": "Gemini Enterprise Agent Platform",
+      "type": "product"
+    },
+    {
+      "name": "Browserbase",
+      "type": "product"
+    },
+    {
+      "name": "computer use",
+      "type": "technique"
+    },
+    {
+      "name": "prompt injection",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemini 3.5 Flash",
+      "to": "computer use",
+      "label": "内置"
+    },
+    {
+      "from": "Gemini 3.5 Flash",
+      "to": "Gemini API",
+      "label": "通过接入"
+    },
+    {
+      "from": "Gemini 3.5 Flash",
+      "to": "Gemini Enterprise Agent Platform",
+      "label": "通过接入"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini 3.5 Flash",
+      "label": "发布"
+    },
+    {
+      "from": "computer use",
+      "to": "prompt injection",
+      "label": "面临风险"
+    },
+    {
+      "from": "Browserbase",
+      "to": "Gemini 3.5 Flash",
+      "label": "提供演示"
+    }
+  ]
+}

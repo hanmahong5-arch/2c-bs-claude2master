@@ -1,0 +1,68 @@
+{
+  "center": "Cline 桌面版自动更新机制",
+  "branches": [
+    {
+      "label": "新增 latest.json",
+      "detail": "新增资源文件指向最新 desktop-vX.Y.Z 版本",
+      "children": [
+        "Agent 检查该文件即可自动更新",
+        "无需手动下载"
+      ]
+    },
+    {
+      "label": "滚动发布",
+      "detail": "该版本为滚动发布，支持桌面应用自动更新",
+      "children": [
+        "更新流程可完全自动化",
+        "提升部署效率"
+      ]
+    },
+    {
+      "label": "不可删除标记",
+      "detail": "标记为不可删除，确保更新链稳定",
+      "children": [
+        "更新源需持久可靠"
+      ]
+    }
+  ],
+  "flow": [
+    "Agent 检查 latest.json",
+    "获取最新 desktop-vX.Y.Z",
+    "自动完成更新"
+  ],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "latest.json",
+      "type": "concept"
+    },
+    {
+      "name": "desktop-vX.Y.Z",
+      "type": "concept"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Agent",
+      "to": "latest.json",
+      "label": "检查"
+    },
+    {
+      "from": "latest.json",
+      "to": "desktop-vX.Y.Z",
+      "label": "指向"
+    },
+    {
+      "from": "Cline",
+      "to": "latest.json",
+      "label": "新增"
+    }
+  ]
+}

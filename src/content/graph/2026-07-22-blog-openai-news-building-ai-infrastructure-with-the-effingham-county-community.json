@@ -1,0 +1,74 @@
+{
+  "center": "OpenAI佐治亚州建AI数据中心",
+  "branches": [
+    {
+      "label": "项目启动",
+      "detail": "OpenAI在Effingham县启动Project Camellia，建设AI数据中心",
+      "children": [
+        "选址佐治亚州Effingham县",
+        "强调与社区合作"
+      ]
+    },
+    {
+      "label": "社区承诺",
+      "detail": "承诺创造就业、投资教育，并提供Codex访问权限",
+      "children": [
+        "创造就业机会",
+        "投资当地教育",
+        "提供Codex访问"
+      ]
+    },
+    {
+      "label": "能源责任",
+      "detail": "使用清洁能源并参与电网规划，减少环境影响",
+      "children": [
+        "使用清洁能源",
+        "参与电网规划"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "Codex访问降低门槛，但需注意区域集中风险",
+      "children": [
+        "降低AI应用门槛",
+        "基础设施区域集中风险"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Project Camellia",
+      "type": "product"
+    },
+    {
+      "name": "Effingham County",
+      "type": "concept"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Project Camellia",
+      "label": "启动"
+    },
+    {
+      "from": "Project Camellia",
+      "to": "Effingham County",
+      "label": "位于"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "提供"
+    }
+  ]
+}

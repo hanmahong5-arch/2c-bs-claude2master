@@ -1,0 +1,67 @@
+{
+  "center": "claude-code v2.1.187 更新",
+  "branches": [
+    {
+      "label": "沙箱凭据隔离",
+      "detail": "新增 sandbox.credentials 设置，阻止沙箱命令读取凭据与秘密环境变量",
+      "children": [
+        "提升 agent 执行安全性"
+      ]
+    },
+    {
+      "label": "结构化输出修复",
+      "detail": "修复 --json-schema 与 agent({schema}) 中模型无限重调 StructuredOutput 的问题",
+      "children": [
+        "后续轮次可靠返回结构化输出",
+        "稳定 agent 工具调用链"
+      ]
+    },
+    {
+      "label": "远程会话加速",
+      "detail": "修复远程 MCP 工具调用无响应 5 分钟阻塞，改为可配置超时报错",
+      "children": [
+        "避免 agent 流程永久挂起"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "sandbox.credentials",
+      "type": "concept"
+    },
+    {
+      "name": "StructuredOutput",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "--json-schema",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "sandbox.credentials",
+      "label": "新增设置"
+    },
+    {
+      "from": "claude-code",
+      "to": "StructuredOutput",
+      "label": "修复重调"
+    },
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "修复阻塞"
+    }
+  ]
+}

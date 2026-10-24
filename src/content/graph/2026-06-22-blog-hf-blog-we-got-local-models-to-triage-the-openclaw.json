@@ -1,0 +1,78 @@
+{
+  "center": "本地模型自动分类开源仓库",
+  "branches": [
+    {
+      "label": "方案核心",
+      "detail": "用本地 Llama 3.1 8B 自动分类 OpenClaw 仓库的 PR 和 issue",
+      "children": [
+        "无需 API 费用，零成本运行",
+        "覆盖 PR 与 issue 两类内容"
+      ]
+    },
+    {
+      "label": "实现方式",
+      "detail": "通过 few-shot 提示让模型学习仓库的标签体系",
+      "children": [
+        "few-shot 提示注入标签体系",
+        "准确率接近人工水平"
+      ]
+    },
+    {
+      "label": "实际收益",
+      "detail": "减少维护者手动分类负担，提升维护效率",
+      "children": [
+        "降低社区维护门槛",
+        "开发者更专注核心代码"
+      ]
+    },
+    {
+      "label": "可推广性",
+      "detail": "该方案可迁移到其他开源项目",
+      "children": [
+        "适用于其他开源仓库"
+      ]
+    }
+  ],
+  "flow": [
+    "收集仓库 PR 与 issue",
+    "整理仓库标签体系",
+    "构造 few-shot 提示",
+    "本地 Llama 3.1 8B 推理",
+    "输出自动分类结果"
+  ],
+  "entities": [
+    {
+      "name": "Llama 3.1 8B",
+      "type": "model"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "few-shot 提示",
+      "type": "technique"
+    },
+    {
+      "name": "开源仓库分类",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Llama 3.1 8B",
+      "to": "OpenClaw",
+      "label": "分类"
+    },
+    {
+      "from": "few-shot 提示",
+      "to": "Llama 3.1 8B",
+      "label": "引导"
+    },
+    {
+      "from": "Llama 3.1 8B",
+      "to": "开源仓库分类",
+      "label": "应用于"
+    }
+  ]
+}

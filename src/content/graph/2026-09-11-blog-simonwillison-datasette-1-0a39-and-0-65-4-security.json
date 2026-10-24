@@ -1,0 +1,112 @@
+{
+  "center": "Datasette 安全补丁发布",
+  "branches": [
+    {
+      "label": "双版本发布",
+      "detail": "同时发布 1.0a39 与 0.65.4 两个安全补丁版本",
+      "children": [
+        "1.0a39 对应当前 alpha 系列",
+        "0.65.4 对应稳定 0.65.x 系列"
+      ]
+    },
+    {
+      "label": "适用场景",
+      "detail": "公网运行且混合公开与私有表的实例应尽快升级",
+      "children": [
+        "公网 Datasette 实例",
+        "同时含 public 与 private 表"
+      ]
+    },
+    {
+      "label": "前沿模型审计",
+      "detail": "用 Claude Fable 5.1、GPT-5.6、GPT-6 Astra 做全面审计",
+      "children": [
+        "发现多个非常隐蔽的 bug",
+        "今后开发将常态化引入模型安全审计"
+      ]
+    },
+    {
+      "label": "双人协作修复",
+      "detail": "Alex Garcia 提出分工法，两人共享私有仓库协作",
+      "children": [
+        "一人写自动化测试复现问题",
+        "另一人实现修复",
+        "每个问题至少两人加多模型 agent 复核"
+      ]
+    }
+  ],
+  "flow": [
+    "收到漏洞报告",
+    "前沿模型全面审计",
+    "共享仓库分工",
+    "一人写测试复现",
+    "另一人实现修复",
+    "发布补丁版本"
+  ],
+  "entities": [
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Alex Garcia",
+      "type": "person"
+    },
+    {
+      "name": "Sevban Dönmez",
+      "type": "person"
+    },
+    {
+      "name": "Claude Fable 5.1",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "安全审计",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "发布"
+    },
+    {
+      "from": "Alex Garcia",
+      "to": "Datasette",
+      "label": "协作修复"
+    },
+    {
+      "from": "Sevban Dönmez",
+      "to": "Datasette",
+      "label": "报告漏洞"
+    },
+    {
+      "from": "Claude Fable 5.1",
+      "to": "Datasette",
+      "label": "审计"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Datasette",
+      "label": "审计"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Datasette",
+      "label": "审计"
+    }
+  ]
+}

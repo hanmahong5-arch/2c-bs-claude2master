@@ -1,0 +1,90 @@
+{
+  "center": "OpenAI发布GeneBench-Pro",
+  "branches": [
+    {
+      "label": "基准定位",
+      "detail": "用复杂真实数据集评估AI在基因组学与科研中的表现",
+      "children": [
+        "覆盖基因预测、变异分析等任务",
+        "面向基因组学、生物学与科研场景"
+      ]
+    },
+    {
+      "label": "应用方向",
+      "detail": "推动AI在精准医学与药物发现中的落地",
+      "children": [
+        "精准医学",
+        "药物发现"
+      ]
+    },
+    {
+      "label": "开发者价值",
+      "detail": "提供更贴近实际需求的测试环境",
+      "children": [
+        "替代脱离真实数据的评测方式"
+      ]
+    },
+    {
+      "label": "工具链要求",
+      "detail": "模型需优化高维生物数据处理并提升可解释性",
+      "children": [
+        "处理高维生物数据的能力",
+        "可解释性以支持科学决策"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GeneBench-Pro",
+      "type": "product"
+    },
+    {
+      "name": "基因组学",
+      "type": "concept"
+    },
+    {
+      "name": "精准医学",
+      "type": "concept"
+    },
+    {
+      "name": "药物发现",
+      "type": "concept"
+    },
+    {
+      "name": "变异分析",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GeneBench-Pro",
+      "label": "发布"
+    },
+    {
+      "from": "GeneBench-Pro",
+      "to": "基因组学",
+      "label": "评估"
+    },
+    {
+      "from": "GeneBench-Pro",
+      "to": "变异分析",
+      "label": "涵盖"
+    },
+    {
+      "from": "GeneBench-Pro",
+      "to": "精准医学",
+      "label": "推动"
+    },
+    {
+      "from": "GeneBench-Pro",
+      "to": "药物发现",
+      "label": "推动"
+    }
+  ]
+}

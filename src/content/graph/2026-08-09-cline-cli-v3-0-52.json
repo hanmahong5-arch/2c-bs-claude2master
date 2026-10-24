@@ -1,0 +1,92 @@
+{
+  "center": "Cline CLI v3.0.52 修复更新",
+  "branches": [
+    {
+      "label": "MCP 管理增强",
+      "detail": "新增卸载命令并优化服务器初始化与渲染",
+      "children": [
+        "cline mcp uninstall 可移除已安装服务器",
+        "挂起服务器不再阻塞会话创建",
+        "stdio 服务器有 30 秒初始化预算"
+      ]
+    },
+    {
+      "label": "中断恢复更稳",
+      "detail": "中断后保留队列提示词与上下文，恢复状态一致",
+      "children": [
+        "队列中的提示词得以保留",
+        "会话上下文在中断后保持",
+        "恢复时状态一致，增强韧性"
+      ]
+    },
+    {
+      "label": "TUI 可读性提升",
+      "detail": "二进制负载不再被破坏，畸形负载不再崩溃",
+      "children": [
+        "二进制负载不再被破坏",
+        "畸形负载不再导致渲染崩溃"
+      ]
+    },
+    {
+      "label": "网络与代理修复",
+      "detail": "LiteLLM 改用 Chat Completions，网络中断自动重试",
+      "children": [
+        "LiteLLM 请求改用 Chat Completions",
+        "修复代理兼容性",
+        "模型输出前网络中断自动重试"
+      ]
+    },
+    {
+      "label": "配置负担降低",
+      "detail": "计划任务复用已保存的 provider 设置",
+      "children": [
+        "无需单独配置 provider"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "LiteLLM",
+      "type": "product"
+    },
+    {
+      "name": "Chat Completions",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "MCP",
+      "label": "管理"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "TUI",
+      "label": "优化"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "LiteLLM",
+      "label": "集成"
+    },
+    {
+      "from": "LiteLLM",
+      "to": "Chat Completions",
+      "label": "改用"
+    }
+  ]
+}

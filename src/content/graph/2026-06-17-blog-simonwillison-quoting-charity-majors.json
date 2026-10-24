@@ -1,0 +1,57 @@
+{
+  "center": "AI 颠覆代码经济学",
+  "branches": [
+    {
+      "label": "代码变免费即时",
+      "detail": "2025 年代码生产经济学被彻底翻转，生成代码从昂贵耗时变为近乎免费即时",
+      "children": [
+        "生成代码从难、耗时、昂贵变为免费即时"
+      ]
+    },
+    {
+      "label": "代码从珍藏到丢弃",
+      "detail": "代码行从被珍视、复用、精心维护，一夜之间变成一次性、可重新生成",
+      "children": [
+        "代码行从珍视复用变为一次性可重生成"
+      ]
+    },
+    {
+      "label": "要求更严纪律",
+      "detail": "Charity Majors 主张 AI 要求更多而非更少的工程纪律",
+      "children": [
+        "AI demands more engineering discipline.…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Charity Majors",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "AI-assisted programming",
+      "type": "concept"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Charity Majors",
+      "label": "引用"
+    },
+    {
+      "from": "Charity Majors",
+      "to": "AI-assisted programming",
+      "label": "评论"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "center": "Anthropic 650 亿美元 H 轮融资",
+  "branches": [
+    {
+      "label": "融资规模",
+      "detail": "H 轮融资 650 亿美元，投后估值 9650 亿美元",
+      "children": [
+        "由 Altimeter、Dragoneer、Greenoaks…",
+        "Capital Group、Coatue、GIC 等联合领投"
+      ]
+    },
+    {
+      "label": "资金用途",
+      "detail": "推进安全与可解释性研究、扩充算力、扩展产品与伙伴关系",
+      "children": [
+        "满足 Claude 的历史性需求",
+        "保持研究前沿地位"
+      ]
+    },
+    {
+      "label": "业务数据",
+      "detail": "年化收入本月突破 470 亿美元，企业采用持续增长",
+      "children": [
+        "自 2 月 G 轮以来全球企业客户增长",
+        "Claude Code 与 Cowork 等工具持续迭代"
+      ]
+    },
+    {
+      "label": "算力扩张",
+      "detail": "与多家厂商签署算力协议，Claude 登陆三大云平台",
+      "children": [
+        "Amazon 最高 5 吉瓦新容量",
+        "Google 与 Broadcom 5 吉瓦下一代 TPU",
+        "SpaceX 提供 Colossus 1/2 GPU 容量"
+      ]
+    },
+    {
+      "label": "投资方阵容",
+      "detail": "含 150 亿美元此前承诺投资，亚马逊出资 50 亿",
+      "children": [
+        "战略基础设施伙伴 Micron、Samsung、SK hynix",
+        "AWS 仍是主要云与训练伙伴"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Amazon",
+      "type": "company"
+    },
+    {
+      "name": "Google Cloud",
+      "type": "product"
+    },
+    {
+      "name": "Microsoft Azure",
+      "type": "product"
+    },
+    {
+      "name": "Sequoia Capital",
+      "type": "company"
+    },
+    {
+      "name": "Krishna Rao",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "推出"
+    },
+    {
+      "from": "Amazon",
+      "to": "Anthropic",
+      "label": "投资"
+    },
+    {
+      "from": "Sequoia Capital",
+      "to": "Anthropic",
+      "label": "领投"
+    },
+    {
+      "from": "Claude",
+      "to": "Google Cloud",
+      "label": "上架"
+    },
+    {
+      "from": "Claude",
+      "to": "Microsoft Azure",
+      "label": "上架"
+    }
+  ]
+}

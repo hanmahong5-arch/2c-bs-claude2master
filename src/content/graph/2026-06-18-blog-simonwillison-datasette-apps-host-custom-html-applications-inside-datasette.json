@@ -1,0 +1,114 @@
+{
+  "center": "Datasette Apps 沙箱插件",
+  "branches": [
+    {
+      "label": "核心机制",
+      "detail": "在受限 iframe 沙箱中托管自包含 HTML+JS 应用",
+      "children": [
+        "sandbox=\"allow-scripts allow-forms\" 隔离",
+        "注入 CSP 阻止外部 HTTP 请求",
+        "无法访问 cookie 与 localStorage"
+      ]
+    },
+    {
+      "label": "数据访问",
+      "detail": "通过 postMessage/MessageChannel 请求父窗口执行 SQL",
+      "children": [
+        "默认只读查询，白名单数据库",
+        "写操作需配置 stored queries",
+        "MessageChannel 页面跳转自动关闭"
+      ]
+    },
+    {
+      "label": "可见日志",
+      "detail": "查询与 CSP 错误回传父窗口显示",
+      "children": [
+        "CSP 拦截错误可定位",
+        "SQL 查询在页面底部可见"
+      ]
+    },
+    {
+      "label": "LLM 辅助",
+      "detail": "插件本身不依赖 LLM，但表单提供可复制提示词",
+      "children": [
+        "提示词含数据库 schema",
+        "可粘贴到 ChatGPT/Claude/Gemini 生成应用",
+        "Datasette Agent 可创建与编辑应用"
+      ]
+    }
+  ],
+  "flow": [
+    "创建 HTML+JS 应用",
+    "放入 iframe 沙箱",
+    "注入 CSP 限制外联",
+    "通过 MessageChannel 请求 SQL",
+    "父窗口校验白名单执行",
+    "结果与日志回传"
+  ],
+  "entities": [
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "datasette-apps",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Artifacts",
+      "type": "product"
+    },
+    {
+      "name": "Datasette Agent",
+      "type": "product"
+    },
+    {
+      "name": "CSP",
+      "type": "concept"
+    },
+    {
+      "name": "MessageChannel",
+      "type": "technique"
+    },
+    {
+      "name": "stored queries",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "创建"
+    },
+    {
+      "from": "datasette-apps",
+      "to": "Datasette",
+      "label": "是插件"
+    },
+    {
+      "from": "datasette-apps",
+      "to": "CSP",
+      "label": "使用"
+    },
+    {
+      "from": "datasette-apps",
+      "to": "MessageChannel",
+      "label": "使用"
+    },
+    {
+      "from": "datasette-apps",
+      "to": "stored queries",
+      "label": "依赖"
+    },
+    {
+      "from": "Datasette Agent",
+      "to": "datasette-apps",
+      "label": "可创建"
+    }
+  ]
+}

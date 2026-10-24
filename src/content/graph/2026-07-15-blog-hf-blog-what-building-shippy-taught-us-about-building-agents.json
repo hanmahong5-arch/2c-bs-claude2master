@@ -1,0 +1,113 @@
+{
+  "center": "Shippy 智能体构建经验",
+  "branches": [
+    {
+      "label": "三层架构",
+      "detail": "智能体由 soul、skills、config 三部分组成，soul 与 skills 打包进 Docker 镜像",
+      "children": [
+        "soul 是系统提示词，设定人格与行为边界",
+        "skills 用 markdown 加 frontmatter 编写",
+        "config 决定 harness 与 LLM，换模型无需重建"
+      ]
+    },
+    {
+      "label": "确定性工具",
+      "detail": "用专用 CLI 封装复杂 API，让不可控的模型只面对可预测接口",
+      "children": [
+        "早期让模型直接构造 API 调用，产生分页、几何编…",
+        "CLI 处理认证、分页与结构化输出",
+        "结果写入本地 JSON 文件，避免管道缓冲区问题"
+      ]
+    },
+    {
+      "label": "沙箱隔离",
+      "detail": "每个用户会话独立部署，数据与文件互不可见",
+      "children": [
+        "Mothership 为每个会话创建独立 Kubernetes…",
+        "运行时注入用户 JWT，API 调用限定其数据范围",
+        "沙箱网络仅开放必要服务"
+      ]
+    },
+    {
+      "label": "评估整个智能体",
+      "detail": "不评静态模型，而是评模型、技能与沙箱协同的真实工作流表现",
+      "children": [
+        "通用基准无法反映工具选择与实时数据查询",
+        "自建评估系统针对 Shippy 实际工作方式打分"
+      ]
+    }
+  ],
+  "flow": [
+    "用户提问",
+    "解析意图并匹配技能",
+    "CLI 调用 Skylight API",
+    "结果写入本地 JSON",
+    "生成带深链的答案"
+  ],
+  "entities": [
+    {
+      "name": "Shippy",
+      "type": "product"
+    },
+    {
+      "name": "Skylight",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "type": "model"
+    },
+    {
+      "name": "Mothership",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Global Fishing Watch",
+      "type": "company"
+    },
+    {
+      "name": "Kubernetes",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Shippy",
+      "to": "Skylight",
+      "label": "查询数据"
+    },
+    {
+      "from": "Shippy",
+      "to": "OpenClaw",
+      "label": "运行于"
+    },
+    {
+      "from": "Shippy",
+      "to": "Claude Opus 4.6",
+      "label": "使用模型"
+    },
+    {
+      "from": "Mothership",
+      "to": "Kubernetes",
+      "label": "基于"
+    },
+    {
+      "from": "Shippy",
+      "to": "Mothership",
+      "label": "托管于"
+    },
+    {
+      "from": "Shippy",
+      "to": "Global Fishing Watch",
+      "label": "引用数据"
+    }
+  ]
+}

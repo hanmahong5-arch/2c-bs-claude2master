@@ -1,0 +1,71 @@
+{
+  "center": "codex rust-v0.144.1 修复",
+  "branches": [
+    {
+      "label": "修复独立安装",
+      "detail": "兼容 GitHub 紧凑或重排序的发布元数据，避免安装中断",
+      "children": [
+        "元数据格式变化不再导致失败"
+      ]
+    },
+    {
+      "label": "macOS 组件暴露",
+      "detail": "包安装时 code-mode 主机与 codex 可执行文件一同暴露",
+      "children": [
+        "避免功能缺失"
+      ]
+    },
+    {
+      "label": "嵌入式运行时回退",
+      "detail": "配套主机二进制不可用时回退嵌入式运行时，保持代码模式工作",
+      "children": [
+        "依赖缺失仍提供核心功能"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex",
+      "type": "product"
+    },
+    {
+      "name": "code-mode",
+      "type": "concept"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "嵌入式运行时",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex",
+      "to": "code-mode",
+      "label": "包含"
+    },
+    {
+      "from": "codex",
+      "to": "GitHub",
+      "label": "依赖"
+    },
+    {
+      "from": "codex",
+      "to": "macOS",
+      "label": "支持"
+    },
+    {
+      "from": "code-mode",
+      "to": "嵌入式运行时",
+      "label": "回退至"
+    }
+  ]
+}

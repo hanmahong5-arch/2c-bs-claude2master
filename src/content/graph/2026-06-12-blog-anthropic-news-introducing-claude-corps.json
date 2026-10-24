@@ -1,0 +1,122 @@
+{
+  "center": "Anthropic 启动 Claude Corps",
+  "branches": [
+    {
+      "label": "项目概览",
+      "detail": "Anthropic 投入 1.5 亿美元，招募 1000 名早期职业者全职服务一年",
+      "children": [
+        "每人年薪 8.5 万美元加福利",
+        "至少 400 家非营利组织接收",
+        "覆盖全美 70 个社区"
+      ]
+    },
+    {
+      "label": "三方分工",
+      "detail": "Anthropic 出资与战略，CodePath 任雇主并负责培训，Social Finance 做评估",
+      "children": [
+        "Anthropic 提供 Claude 专业支持",
+        "CodePath 是最大高校计算机教育提供方",
+        "Social Finance 建长期融资工具"
+      ]
+    },
+    {
+      "label": "培养方式",
+      "detail": "12 个月奖学金，入职前密集培训，之后每周 5 小时持续学习",
+      "children": [
+        "配 CodePath 导师与 Anthropic 答疑",
+        "给充足 Claude token 额度",
+        "其余时间投入主办机构"
+      ]
+    },
+    {
+      "label": "落地机构",
+      "detail": "首批主办方涵盖教育、粮食、退伍军人、海洋保护等领域",
+      "children": [
+        "Braven、Code the Dream、Heartland Forward",
+        "Montgomery County Food Bank、Team RWB",
+        "REEF、SoundOff、YMCA of Greater Charlotte"
+      ]
+    },
+    {
+      "label": "政策背景",
+      "detail": "与应对 AI 就业影响的政策框架同步发布，投资受冲击的劳动者",
+      "children": [
+        "目标是让 AI 收益广泛共享",
+        "若成功将推广为更大模式"
+      ]
+    }
+  ],
+  "flow": [
+    "Anthropic 出资并制定战略",
+    "CodePath 招募并密集培训",
+    "匹配非营利组织并派驻",
+    "每周 5 小时持续学习",
+    "Social Finance 评估成效"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Corps",
+      "type": "product"
+    },
+    {
+      "name": "CodePath",
+      "type": "company"
+    },
+    {
+      "name": "Social Finance",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Braven",
+      "type": "company"
+    },
+    {
+      "name": "Team Red, White & Blue",
+      "type": "company"
+    },
+    {
+      "name": "REEF",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Corps",
+      "label": "发起"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "CodePath",
+      "to": "Claude Corps",
+      "label": "任雇主"
+    },
+    {
+      "from": "Social Finance",
+      "to": "Claude Corps",
+      "label": "负责评估"
+    },
+    {
+      "from": "Braven",
+      "to": "Claude Corps",
+      "label": "接收研究员"
+    },
+    {
+      "from": "REEF",
+      "to": "Claude Corps",
+      "label": "接收研究员"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "center": "OpenAI与APA合作青少年心理健康",
+  "branches": [
+    {
+      "label": "合作方",
+      "detail": "OpenAI与美国心理学会（APA）达成合作",
+      "children": [
+        "APA为美国心理学会"
+      ]
+    },
+    {
+      "label": "合作目标",
+      "detail": "为青少年心理健康与AI使用提供循证指导",
+      "children": [
+        "聚焦青少年群体",
+        "强调循证依据"
+      ]
+    },
+    {
+      "label": "具体举措",
+      "detail": "开发资源与保障措施，确保AI工具对青少年安全负责",
+      "children": [
+        "开发资源",
+        "制定保障措施"
+      ]
+    },
+    {
+      "label": "对开发者启示",
+      "detail": "AI伦理实践需与心理健康专家协作应对特定人群风险",
+      "children": [
+        "与心理健康专家协作",
+        "关注特定人群风险"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "APA",
+      "type": "company"
+    },
+    {
+      "name": "青少年心理健康",
+      "type": "concept"
+    },
+    {
+      "name": "AI负责任使用",
+      "type": "concept"
+    },
+    {
+      "name": "循证指导",
+      "type": "concept"
+    },
+    {
+      "name": "AI伦理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "APA",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "青少年心理健康",
+      "label": "关注"
+    },
+    {
+      "from": "APA",
+      "to": "青少年心理健康",
+      "label": "提供指导"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AI负责任使用",
+      "label": "推动"
+    },
+    {
+      "from": "APA",
+      "to": "AI负责任使用",
+      "label": "参与推动"
+    }
+  ]
+}

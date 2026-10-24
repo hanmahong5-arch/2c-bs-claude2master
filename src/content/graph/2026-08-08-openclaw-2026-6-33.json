@@ -1,0 +1,73 @@
+{
+  "center": "openclaw 2026.6.33 更新",
+  "branches": [
+    {
+      "label": "安全边界收紧",
+      "detail": "限制恶意响应大小，Telegram 凭据不再进入诊断信息",
+      "children": [
+        "provider 流、Discord 响应、浏览器抓取…",
+        "数据入口和日志出口统一过滤大小与敏感信息"
+      ]
+    },
+    {
+      "label": "长任务更可靠",
+      "detail": "发布、存活检查与看门狗能区分真实停滞与长模型调用",
+      "children": [
+        "超时与健康检查感知任务类型，避免误杀长操作"
+      ]
+    },
+    {
+      "label": "渠道投递增强",
+      "detail": "Discord 重连不丢队列消息或重复非幂等发送",
+      "children": [
+        "Telegram 机器人间及回复围栏处理保留线程与授…",
+        "消息投递需幂等与重连恢复机制"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "Discord",
+      "label": "投递增强"
+    },
+    {
+      "from": "openclaw",
+      "to": "Telegram",
+      "label": "凭据保护"
+    },
+    {
+      "from": "openclaw",
+      "to": "OAuth",
+      "label": "限制响应"
+    },
+    {
+      "from": "openclaw",
+      "to": "harness",
+      "label": "设计指导"
+    }
+  ]
+}

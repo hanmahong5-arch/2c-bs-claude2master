@@ -1,0 +1,61 @@
+{
+  "center": "Claude Code 强制模型可用性管理",
+  "branches": [
+    {
+      "label": "新增托管设置",
+      "detail": "enforceAvailableModels 启用后，白名单约束默认模型选择",
+      "children": [
+        "availableModels 白名单生效",
+        "托管设置由管理员控制"
+      ]
+    },
+    {
+      "label": "自动回退机制",
+      "detail": "默认模型被禁用时，自动回退到白名单首个允许模型",
+      "children": [
+        "防止配置错误导致模型不可用",
+        "提升系统鲁棒性"
+      ]
+    },
+    {
+      "label": "白名单不可扩展",
+      "detail": "用户或项目设置无法再扩展托管的 availableModels 列表",
+      "children": [
+        "管理员严格限制可用模型范围",
+        "强制执行合规与安全策略"
+      ]
+    }
+  ],
+  "flow": [
+    "启用 enforceAvailableModels",
+    "解析默认模型",
+    "检查是否在允许列表",
+    "不在则回退首个允许模型"
+  ],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "enforceAvailableModels",
+      "type": "concept"
+    },
+    {
+      "name": "availableModels",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "enforceAvailableModels",
+      "label": "新增"
+    },
+    {
+      "from": "enforceAvailableModels",
+      "to": "availableModels",
+      "label": "约束"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "center": "codex rust-v0.133.0 更新",
+  "branches": [
+    {
+      "label": "目标追踪默认开",
+      "detail": "目标系统默认启用，专用存储持久化，跨回合追踪进度",
+      "children": [
+        "智能体更可靠处理多步骤任务",
+        "目标跨活动回合追踪"
+      ]
+    },
+    {
+      "label": "权限配置增强",
+      "detail": "权限配置新增列表 API、继承与托管 requirements.toml，支持运行时刷新",
+      "children": [
+        "支持细粒度动态安全策略",
+        "运行时刷新权限"
+      ]
+    },
+    {
+      "label": "插件管理透明",
+      "detail": "插件列表输出可感知市场，显示已安装版本与远程集合",
+      "children": [
+        "简化插件生态集成与审计",
+        "支持远程集合"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex rust",
+      "type": "product"
+    },
+    {
+      "name": "目标系统",
+      "type": "concept"
+    },
+    {
+      "name": "权限配置",
+      "type": "concept"
+    },
+    {
+      "name": "requirements.toml",
+      "type": "technique"
+    },
+    {
+      "name": "插件列表",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex rust",
+      "to": "目标系统",
+      "label": "默认启用"
+    },
+    {
+      "from": "codex rust",
+      "to": "权限配置",
+      "label": "增强"
+    },
+    {
+      "from": "codex rust",
+      "to": "插件列表",
+      "label": "更新"
+    },
+    {
+      "from": "权限配置",
+      "to": "requirements.toml",
+      "label": "支持托管"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "center": "Richard Socher 谈自改进 AI",
+  "branches": [
+    {
+      "label": "Eureka Machine",
+      "detail": "终极发明机器：给定目标与环境即可自主发明，服务科学与工程",
+      "children": [
+        "同名新书 2026 年 9 月出版",
+        "覆盖物理、化学、生物、能源、材料"
+      ]
+    },
+    {
+      "label": "Recursive 成果",
+      "detail": "AI 研究系统两天内在优化任务上跑赢人类及其 agent",
+      "children": [
+        "NVIDIA GPU kernel 优化无需 CUDA 专家团队",
+        "早期结果含 NanoChat、NanoGPT",
+        "数千人年的研究或压缩到数周"
+      ]
+    },
+    {
+      "label": "公司与融资",
+      "detail": "Socher 从 You.com 分拆 Recursive，专注递归自我改进",
+      "children": [
+        "4.65B 美元种子轮，估值 5B",
+        "此前创办 You.com、AIX Ventures"
+      ]
+    },
+    {
+      "label": "安全与治理",
+      "detail": "主张监管具体应用而非智能本身，批评 Anthropic 宪法式对齐",
+      "children": [
+        "奖励黑客随智能提升更难设计目标",
+        "开源模型是地缘软实力与韧性",
+        "对齐 vs 个性化：AI 该服从谁的价值观"
+      ]
+    },
+    {
+      "label": "智能的边界",
+      "detail": "提出智能的三大组件与十个空间，讨论理论上限",
+      "children": [
+        "视觉、沟通、知识、计算的上限",
+        "元认知、创造性智能、AI 自设目标",
+        "对 world models 不如对 LLM 乐观"
+      ]
+    }
+  ],
+  "flow": [
+    "设定目标与环境",
+    "自改进 AI 搜索方案",
+    "优化 harness 与沙箱",
+    "跑赢人类基线",
+    "迁移到科学发明"
+  ],
+  "entities": [
+    {
+      "name": "Richard Socher",
+      "type": "person"
+    },
+    {
+      "name": "Recursive",
+      "type": "company"
+    },
+    {
+      "name": "You.com",
+      "type": "product"
+    },
+    {
+      "name": "Eureka Machine",
+      "type": "concept"
+    },
+    {
+      "name": "递归自我改进",
+      "type": "concept"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "AI Economist",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Richard Socher",
+      "to": "Recursive",
+      "label": "创办"
+    },
+    {
+      "from": "Richard Socher",
+      "to": "You.com",
+      "label": "创办"
+    },
+    {
+      "from": "Recursive",
+      "to": "递归自我改进",
+      "label": "专注"
+    },
+    {
+      "from": "Recursive",
+      "to": "Eureka Machine",
+      "label": "构建"
+    },
+    {
+      "from": "Richard Socher",
+      "to": "Anthropic",
+      "label": "批评"
+    },
+    {
+      "from": "Recursive",
+      "to": "NVIDIA",
+      "label": "优化"
+    }
+  ]
+}

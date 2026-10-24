@@ -1,0 +1,77 @@
+{
+  "center": "Hugging Face 模型页集成评估结果",
+  "branches": [
+    {
+      "label": "核心功能",
+      "detail": "Hugging Face 将社区评估结果直接集成到模型页面",
+      "children": [
+        "Every Eval Ever Results",
+        "提升模型透明度"
+      ]
+    },
+    {
+      "label": "社区互动",
+      "detail": "文章获得社区关注与讨论",
+      "children": [
+        "Upvote 54",
+        "支持评论与登录"
+      ]
+    },
+    {
+      "label": "相关资源",
+      "detail": "文章关联数据集与论文",
+      "children": [
+        "Datasets mentioned: 2",
+        "Papers mentioned: 1"
+      ]
+    },
+    {
+      "label": "博客动态",
+      "detail": "Hugging Face 博客近期发布多篇社区研究文章",
+      "children": [
+        "多语言 LLM 辩论竞赛",
+        "日语 LLM 开放排行榜"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Every Eval Ever Results",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "Open Leaderboard for Japanese LLMs",
+      "type": "product"
+    },
+    {
+      "name": "Multilingual LLM Debate Competition",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Every Eval Ever Results",
+      "label": "集成"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Open Leaderboard for Japanese LLMs",
+      "label": "发布"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Multilingual LLM Debate Competition",
+      "label": "举办"
+    }
+  ]
+}

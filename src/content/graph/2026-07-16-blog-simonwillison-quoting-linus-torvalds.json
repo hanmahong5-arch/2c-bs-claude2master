@@ -1,0 +1,85 @@
+{
+  "center": "Linus 表态 Linux 不反 AI",
+  "branches": [
+    {
+      "label": "核心立场",
+      "detail": "Linus 以顶级维护者身份明确 Linux 不是反 AI 项目",
+      "children": [
+        "愿在此事上绝对拍板",
+        "不认同者可 fork 或离开"
+      ]
+    },
+    {
+      "label": "AI 是工具",
+      "detail": "AI 与其他工具无异，且明显有用",
+      "children": [
+        "一年前或许不明显",
+        "如今已无争议"
+      ]
+    },
+    {
+      "label": "争议边界",
+      "detail": "AI 经济前景仍存疑，但有用性不再是问题",
+      "children": [
+        "质疑者显然没用过",
+        "出处：Linux Media Mailing List"
+      ]
+    },
+    {
+      "label": "收录来源",
+      "detail": "Simon Willison 博客引用，2026-07-16 发布",
+      "children": [
+        "标签：linux、open-source、ai、llms"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Linus Torvalds",
+      "type": "person"
+    },
+    {
+      "name": "Linux",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Linux Media Mailing List",
+      "type": "concept"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    },
+    {
+      "name": "open-source",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Linus Torvalds",
+      "to": "Linux",
+      "label": "维护"
+    },
+    {
+      "from": "Linus Torvalds",
+      "to": "AI",
+      "label": "表态支持"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Linus Torvalds",
+      "label": "引用"
+    },
+    {
+      "from": "Linux",
+      "to": "open-source",
+      "label": "属于"
+    }
+  ]
+}

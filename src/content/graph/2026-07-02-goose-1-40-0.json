@@ -1,0 +1,79 @@
+{
+  "center": "Goose v1.40 更新",
+  "branches": [
+    {
+      "label": "多语言支持",
+      "detail": "桌面应用新增 8 种语言，扩大全球用户覆盖",
+      "children": [
+        "含法语、德语等 8 种语言"
+      ]
+    },
+    {
+      "label": "新增 CLI 命令",
+      "detail": "新增斜杠命令提升交互效率",
+      "children": [
+        "/status",
+        "/model",
+        "/goal"
+      ]
+    },
+    {
+      "label": "钩子系统",
+      "detail": "引入 hooks 增强 Agent 行为控制",
+      "children": [
+        "PreToolUse 拒绝",
+        "阻塞 Stop 决策"
+      ]
+    },
+    {
+      "label": "更多 AI 提供商",
+      "detail": "新增更多 AI 提供商支持",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "hooks",
+      "type": "technique"
+    },
+    {
+      "name": "PreToolUse",
+      "type": "concept"
+    },
+    {
+      "name": "Stop",
+      "type": "concept"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "hooks",
+      "label": "引入"
+    },
+    {
+      "from": "hooks",
+      "to": "PreToolUse",
+      "label": "支持"
+    },
+    {
+      "from": "hooks",
+      "to": "Stop",
+      "label": "支持"
+    },
+    {
+      "from": "hooks",
+      "to": "Agent",
+      "label": "控制"
+    }
+  ]
+}

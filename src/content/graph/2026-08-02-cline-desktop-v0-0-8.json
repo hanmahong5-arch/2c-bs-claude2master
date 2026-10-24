@@ -1,0 +1,96 @@
+{
+  "center": "Cline 桌面版支持消息回滚",
+  "branches": [
+    {
+      "label": "编辑历史消息",
+      "detail": "可编辑任意历史消息，应用分叉会话并回滚工作区到检查点后重新执行",
+      "children": [
+        "恢复操作是事务性的",
+        "失败不会半回滚"
+      ]
+    },
+    {
+      "label": "检查点更可靠",
+      "detail": "检查点覆盖重启、压缩、恢复会话等场景，恢复时回滚整个工作区",
+      "children": [
+        "回滚整个工作区而非仅对话",
+        "确保恢复原子性"
+      ]
+    },
+    {
+      "label": "推理参数统一",
+      "detail": "推理控制来自共享模型目录，每个模型只显示其支持的选项",
+      "children": [
+        "effort、thinking budget",
+        "避免硬编码或猜测"
+      ]
+    },
+    {
+      "label": "harness 设计要求",
+      "detail": "要求 harness 具备细粒度状态快照、回滚能力及持久化工作区状态",
+      "children": [
+        "支持交互式调试和分支探索",
+        "避免部分恢复不一致"
+      ]
+    }
+  ],
+  "flow": [
+    "编辑历史消息",
+    "分叉会话",
+    "回滚工作区到检查点",
+    "重新执行"
+  ],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "检查点",
+      "type": "concept"
+    },
+    {
+      "name": "工作区回滚",
+      "type": "technique"
+    },
+    {
+      "name": "推理控制",
+      "type": "concept"
+    },
+    {
+      "name": "共享模型目录",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "agent harness",
+      "label": "要求"
+    },
+    {
+      "from": "Cline",
+      "to": "检查点",
+      "label": "创建"
+    },
+    {
+      "from": "Cline",
+      "to": "工作区回滚",
+      "label": "支持"
+    },
+    {
+      "from": "Cline",
+      "to": "推理控制",
+      "label": "配置"
+    },
+    {
+      "from": "推理控制",
+      "to": "共享模型目录",
+      "label": "来自"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "center": "AI 一周动态：脑机接口与 Agent 编排",
+  "branches": [
+    {
+      "label": "脑机接口突破",
+      "detail": "Meta 发布 Brain2Qwerty v2，非侵入式实时解码句子",
+      "children": [
+        "词准确率约 61%，最佳被试 78%",
+        "9 名志愿者数据，开源 v1/v2 训练代码",
+        "编码 Agent 参与 Auto Research 降低错误率"
+      ]
+    },
+    {
+      "label": "推理优化进展",
+      "detail": "DeepSeek DSpark 提升投机解码，vLLM 集成",
+      "children": [
+        "接受长度比 Eagle3 高 30.9%",
+        "已部署于 DeepSeek-V4-Flash/Pro 预览引擎",
+        "vLLM 支持四台 DGX Spark 服务 550B 模型"
+      ]
+    },
+    {
+      "label": "Agent 编排演进",
+      "detail": "从选模型转向 harness 工程与动态子 Agent",
+      "children": [
+        "Devin Fusion 混合模型降本 35%",
+        "LangChain 主 Agent 编写编排代码",
+        "LlamaIndex 推出 Retrieval Harness"
+      ]
+    },
+    {
+      "label": "开源模型商业化",
+      "detail": "Cline 推出月付通行证，打包多个开源模型",
+      "children": [
+        "9.99 美元/月访问 GLM 5.2、DeepSeek 等",
+        "美团 LongCat 2.0：1.6T 总参、1M 上下文",
+        "中国开源权重竞争加速"
+      ]
+    },
+    {
+      "label": "基础设施与评估",
+      "detail": "能源与数据中心成战略焦点，评估平台规模化",
+      "children": [
+        "Arena 年化收入达 1 亿美元",
+        "Snowflake Arctic RL 训练提速 3.5 倍",
+        "Trace Judge 成本仅为闭源模型 1/100"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Meta",
+      "type": "company"
+    },
+    {
+      "name": "Brain2Qwerty v2",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek",
+      "type": "company"
+    },
+    {
+      "name": "DSpark",
+      "type": "technique"
+    },
+    {
+      "name": "vLLM",
+      "type": "product"
+    },
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "GLM 5.2",
+      "type": "model"
+    },
+    {
+      "name": "Devin Fusion",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Meta",
+      "to": "Brain2Qwerty v2",
+      "label": "发布"
+    },
+    {
+      "from": "DeepSeek",
+      "to": "DSpark",
+      "label": "提出"
+    },
+    {
+      "from": "vLLM",
+      "to": "DSpark",
+      "label": "集成"
+    },
+    {
+      "from": "Cline",
+      "to": "GLM 5.2",
+      "label": "提供访问"
+    }
+  ]
+}

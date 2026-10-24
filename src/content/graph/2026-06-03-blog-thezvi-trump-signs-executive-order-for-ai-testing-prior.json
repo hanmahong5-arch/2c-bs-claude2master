@@ -1,0 +1,112 @@
+{
+  "center": "特朗普签署AI测试行政令",
+  "branches": [
+    {
+      "label": "行政令反转",
+      "detail": "特朗普先取消后签署，仅将90天窗口缩至30天",
+      "children": [
+        "原定周四签署，因担忧负担过重取消",
+        "周二签署，仅改一处：90天变30天"
+      ]
+    },
+    {
+      "label": "核心内容",
+      "detail": "第3条要求前沿模型发布前接受保密测试",
+      "children": [
+        "2个月内制定网络能力基准，界定覆盖模型",
+        "自愿框架下政府提前最多30天获取模型",
+        "被指实为事实上的强制许可与预审"
+      ]
+    },
+    {
+      "label": "各方反应",
+      "detail": "微软与Anthropic欢迎，议员呼吁国会立法",
+      "children": [
+        "Brad Smith称兼顾创新与安全",
+        "Anthropic称加强美国AI领导力",
+        "Lori Trahan要求国会立即行动"
+      ]
+    },
+    {
+      "label": "监管争议",
+      "detail": "规则保密引发质疑，被批先限制时代",
+      "children": [
+        "Dean Ball称保密或为掩盖无法设定阈值",
+        "Jessica Tillipman指与联邦做生意须参与"
+      ]
+    }
+  ],
+  "flow": [
+    "特朗普取消行政令",
+    "舆论压力转向",
+    "修改90天为30天",
+    "签署行政令",
+    "前沿模型发布前测试"
+  ],
+  "entities": [
+    {
+      "name": "Trump",
+      "type": "person"
+    },
+    {
+      "name": "Executive Order",
+      "type": "concept"
+    },
+    {
+      "name": "David Sacks",
+      "type": "person"
+    },
+    {
+      "name": "Elon Musk",
+      "type": "person"
+    },
+    {
+      "name": "Dean Ball",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Microsoft",
+      "type": "company"
+    },
+    {
+      "name": "Lori Trahan",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Trump",
+      "to": "Executive Order",
+      "label": "签署"
+    },
+    {
+      "from": "David Sacks",
+      "to": "Executive Order",
+      "label": "游说反对"
+    },
+    {
+      "from": "Elon Musk",
+      "to": "Executive Order",
+      "label": "游说反对"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Executive Order",
+      "label": "欢迎"
+    },
+    {
+      "from": "Microsoft",
+      "to": "Executive Order",
+      "label": "欢迎"
+    },
+    {
+      "from": "Lori Trahan",
+      "to": "Executive Order",
+      "label": "呼吁国会行动"
+    }
+  ]
+}

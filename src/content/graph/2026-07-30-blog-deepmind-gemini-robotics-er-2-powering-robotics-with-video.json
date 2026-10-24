@@ -1,0 +1,120 @@
+{
+  "center": "Gemini Robotics ER 2 机器人视…",
+  "branches": [
+    {
+      "label": "模型定位",
+      "detail": "充当机器人的高层大脑，负责推理与任务编排，把动作执行交给底层 VLA 模型",
+      "children": [
+        "支持实时空间推理与多步任务规划",
+        "可原生调用 Google Search 等工具",
+        "边执行边思考下一步"
+      ]
+    },
+    {
+      "label": "视频理解升级",
+      "detail": "通过连续视频流追踪任务进度，出错可实时调整，无需重启整个流程",
+      "children": [
+        "进度分类准确率 57.4%",
+        "关键时刻定位准确率 91.3%，平均误差 0.96s",
+        "执行速度达前代 4 倍"
+      ]
+    },
+    {
+      "label": "多机器人协作",
+      "detail": "不同形态机器人通过共享语义理解互相交接，完成单个机器人做不到的复杂任务",
+      "children": [
+        "Apptronik Apollo 2 与 Franka F3 Duo 协作…"
+      ]
+    },
+    {
+      "label": "低延迟编排",
+      "detail": "接入 Gemini Live API 双向流式端点，消除「停下再想」的卡顿",
+      "children": [
+        "与 Boston Dynamics Spot 合作演示取爆米花",
+        "代码已在 Github 开源"
+      ]
+    },
+    {
+      "label": "安全与空间能力",
+      "detail": "在安全指令遵循与人类接近检测上提升，检测到人靠近会暂停人形机器人",
+      "children": [
+        "成功/失败检测改用原始视频流",
+        "仪器读取扩展到 10 种类型",
+        "ERQA 空间问答提升"
+      ]
+    }
+  ],
+  "flow": [
+    "声明底层控制接口为工具",
+    "流式输入视频音频文本",
+    "模型推理并规划多步任务",
+    "调用 VLA 或导航 API 执行",
+    "视频追踪进度并纠错"
+  ],
+  "entities": [
+    {
+      "name": "Gemini Robotics ER 2",
+      "type": "model"
+    },
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemini API",
+      "type": "product"
+    },
+    {
+      "name": "Gemini Live API",
+      "type": "product"
+    },
+    {
+      "name": "Boston Dynamics",
+      "type": "company"
+    },
+    {
+      "name": "Apptronik",
+      "type": "company"
+    },
+    {
+      "name": "VLA",
+      "type": "concept"
+    },
+    {
+      "name": "Gemini Robotics ER 1.6",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini Robotics ER 2",
+      "label": "发布"
+    },
+    {
+      "from": "Gemini Robotics ER 2",
+      "to": "Gemini Robotics ER 1.6",
+      "label": "升级自"
+    },
+    {
+      "from": "Gemini Robotics ER 2",
+      "to": "Gemini API",
+      "label": "可通过"
+    },
+    {
+      "from": "Gemini Robotics ER 2",
+      "to": "Gemini Live API",
+      "label": "集成于"
+    },
+    {
+      "from": "Gemini Robotics ER 2",
+      "to": "VLA",
+      "label": "调度"
+    },
+    {
+      "from": "Gemini Robotics ER 2",
+      "to": "Boston Dynamics",
+      "label": "驱动"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "center": "opencode v1.18.22 修复更新",
+  "branches": [
+    {
+      "label": "登录认证修复",
+      "detail": "修复设备登录链接，支持相对 URL 与基础路径，保证认证流程可靠",
+      "children": [
+        "支持相对 URL 和基础路径"
+      ]
+    },
+    {
+      "label": "多提供商兼容",
+      "detail": "修复 textVerbosity 误发给不支持的 OpenAI 兼容提供商，并更新 Amazon Bedrock",
+      "children": [
+        "textVerbosity 不再误发",
+        "更新 Amazon Bedrock 提供商"
+      ]
+    },
+    {
+      "label": "UI 体验优化",
+      "detail": "桌面端模型选择器滚动时保持提供商头部可见",
+      "children": [
+        "滚动时提供商头部固定可见"
+      ]
+    },
+    {
+      "label": "移除过时信息",
+      "detail": "移除过时的 Go 首月折扣信息，避免误导用户",
+      "children": [
+        "删除 Go 首月折扣提示"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Amazon Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Go",
+      "type": "product"
+    },
+    {
+      "name": "textVerbosity",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Amazon Bedrock",
+      "label": "更新兼容"
+    },
+    {
+      "from": "opencode",
+      "to": "OpenAI",
+      "label": "修复兼容"
+    },
+    {
+      "from": "opencode",
+      "to": "Go",
+      "label": "移除折扣"
+    },
+    {
+      "from": "opencode",
+      "to": "textVerbosity",
+      "label": "修复误发"
+    }
+  ]
+}

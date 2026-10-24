@@ -1,0 +1,93 @@
+{
+  "center": "NVIDIA Magpie TTS 开源多语言语…",
+  "branches": [
+    {
+      "label": "模型概况",
+      "detail": "NVIDIA 开源的 0.3B 参数多语言 TTS 模型，用于构建低延迟语音智能体",
+      "children": [
+        "0.3B 参数量",
+        "更新于 14 天前",
+        "6.84k 下载 / 219 赞"
+      ]
+    },
+    {
+      "label": "核心能力",
+      "detail": "支持多语言语音合成，主打低延迟部署与完全控制",
+      "children": [
+        "低延迟部署",
+        "完全控制",
+        "多语言合成"
+      ]
+    },
+    {
+      "label": "配套资源",
+      "detail": "提供 Magpietts Demo 演示空间供体验",
+      "children": [
+        "Magpietts Demo",
+        "Spaces 演示"
+      ]
+    },
+    {
+      "label": "相关生态",
+      "detail": "同作者还有 Nemotron 3 Diarization、Cosmos-H-Dreams 等 NVIDIA 项目",
+      "children": [
+        "Nemotron 3 Diarization",
+        "Cosmos-H-Dreams"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Magpie TTS",
+      "type": "model"
+    },
+    {
+      "name": "Magpietts Demo",
+      "type": "product"
+    },
+    {
+      "name": "Nemotron 3 Diarization",
+      "type": "model"
+    },
+    {
+      "name": "Cosmos-H-Dreams",
+      "type": "model"
+    },
+    {
+      "name": "Text-to-Speech",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "Magpie TTS",
+      "label": "开源"
+    },
+    {
+      "from": "Magpie TTS",
+      "to": "Text-to-Speech",
+      "label": "属于"
+    },
+    {
+      "from": "Magpietts Demo",
+      "to": "Magpie TTS",
+      "label": "演示"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron 3 Diarization",
+      "label": "发布"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Cosmos-H-Dreams",
+      "label": "发布"
+    }
+  ]
+}

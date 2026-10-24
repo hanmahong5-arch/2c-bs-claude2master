@@ -1,0 +1,88 @@
+{
+  "center": "Omio 用 OpenAI 打造对话式旅行",
+  "branches": [
+    {
+      "label": "对话式旅行助手",
+      "detail": "基于 OpenAI API 构建，用户可用自然语言查询和预订交通",
+      "children": [
+        "支持火车、飞机等交通方式",
+        "自然语言查询与预订"
+      ]
+    },
+    {
+      "label": "开发周期缩短",
+      "detail": "集成 GPT 模型后，产品开发从数月缩短至数周",
+      "children": [
+        "快速迭代个性化推荐",
+        "实时客服功能"
+      ]
+    },
+    {
+      "label": "AI 优先文化",
+      "detail": "内部推行 AI 优先，培训员工使用 AI 工具",
+      "children": [
+        "AI 嵌入客服到运营各环节",
+        "全公司转型为 AI 原生公司"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Omio",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI API",
+      "type": "product"
+    },
+    {
+      "name": "对话式旅行助手",
+      "type": "product"
+    },
+    {
+      "name": "AI 优先文化",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Omio",
+      "to": "OpenAI API",
+      "label": "使用"
+    },
+    {
+      "from": "Omio",
+      "to": "GPT",
+      "label": "集成"
+    },
+    {
+      "from": "Omio",
+      "to": "对话式旅行助手",
+      "label": "构建"
+    },
+    {
+      "from": "Omio",
+      "to": "AI 优先文化",
+      "label": "推行"
+    },
+    {
+      "from": "OpenAI",
+      "to": "OpenAI API",
+      "label": "提供"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT",
+      "label": "开发"
+    }
+  ]
+}

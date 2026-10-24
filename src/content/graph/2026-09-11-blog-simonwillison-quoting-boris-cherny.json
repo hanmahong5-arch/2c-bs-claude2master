@@ -1,0 +1,93 @@
+{
+  "center": "AI 生产代码标准应更高",
+  "branches": [
+    {
+      "label": "核心主张",
+      "detail": "Claude 写的生产代码门槛应高于人类写的代码",
+      "children": [
+        "出自 Anthropic 的 Boris Cherny",
+        "否则会留下难以维护的烂摊子"
+      ]
+    },
+    {
+      "label": "质量护栏",
+      "detail": "Anthropic 内部部署多重自动化护栏保障代码质量",
+      "children": [
+        "大量 lint 规则与测试",
+        "Claude 驱动的端到端测试",
+        "Claude 驱动的模糊测试每日运行"
+      ]
+    },
+    {
+      "label": "自动化流程",
+      "detail": "代码审查、安全审查与重构均由自动化完成",
+      "children": [
+        "自动化代码审查",
+        "自动化安全审查",
+        "自动化代码重构"
+      ]
+    },
+    {
+      "label": "来源",
+      "detail": "该引述由 Simon Willison 收集并发布于其博客",
+      "children": [
+        "发布于 2026 年 9 月 11 日",
+        "标签含 ai-assisted-programming…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Boris Cherny",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "AI 辅助编程",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Boris Cherny",
+      "to": "Anthropic",
+      "label": "任职于"
+    },
+    {
+      "from": "Boris Cherny",
+      "to": "Claude",
+      "label": "主张标准"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "部署护栏"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Boris Cherny",
+      "label": "收集引述"
+    },
+    {
+      "from": "Claude",
+      "to": "Claude Code",
+      "label": "驱动"
+    }
+  ]
+}

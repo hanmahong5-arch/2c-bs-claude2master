@@ -1,0 +1,117 @@
+{
+  "center": "2026年中开源与闭源模型竞争预测",
+  "branches": [
+    {
+      "label": "能力差距现状",
+      "detail": "闭源模型未因算力优势拉开与开源模型的能力差距",
+      "children": [
+        "2025下半年至今差距未扩大",
+        "开源实验室在成熟基准上紧跟",
+        "闭源模型在难测品质上更稳健"
+      ]
+    },
+    {
+      "label": "经济决定长期",
+      "detail": "长期轨迹是经济问题而非能力问题，靠经济耐力与快速跟随",
+      "children": [
+        "中国开源实验室或今年先遇资金困难",
+        "资金困难3-9个月后反映在能力轨迹",
+        "只有真实AI收入才能带来更多投资"
+      ]
+    },
+    {
+      "label": "RL时代新变量",
+      "detail": "RL主导训练提升真实用例分布的重要性，闭源可借在线RL领先",
+      "children": [
+        "Claude Code、Codex等工具成关键场景",
+        "闭源可基于用户反馈做在线RL",
+        "这是闭源首个明确技术优势领域"
+      ]
+    },
+    {
+      "label": "开源采用趋势",
+      "detail": "开源模型在重复性自动化任务中份额上升，推动领域专用模型投资",
+      "children": [
+        "API市场重复任务份额增加",
+        "催生AI原生应用与后端自动化",
+        "带动高效领域专用开源模型投资"
+      ]
+    },
+    {
+      "label": "监管与治理",
+      "detail": "禁令呼吁难实施，安全冲击可能催生负担性监管",
+      "children": [
+        "算力阈值禁令难阻止他国训练发布",
+        "类似Claude Mythos反应引发监管",
+        "主权实体视开源为不同治理范式"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "Nemotron",
+      "type": "model"
+    },
+    {
+      "name": "Arcee AI",
+      "type": "company"
+    },
+    {
+      "name": "Claude Mythos",
+      "type": "model"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "Claude Code",
+      "label": "提及"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Codex",
+      "label": "提及"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Gemma 4",
+      "label": "举例"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Nemotron",
+      "label": "举例"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Arcee AI",
+      "label": "举例"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Claude Mythos",
+      "label": "提及"
+    }
+  ]
+}

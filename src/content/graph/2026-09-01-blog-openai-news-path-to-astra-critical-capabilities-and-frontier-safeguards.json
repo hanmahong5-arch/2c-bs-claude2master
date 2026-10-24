@@ -1,0 +1,65 @@
+{
+  "center": "OpenAI Astra 网络安全阈值",
+  "branches": [
+    {
+      "label": "首个达阈值",
+      "detail": "Astra 是 OpenAI 首个触及关键网络安全能力阈值的模型",
+      "children": [
+        "依据 Preparedness Framework 判定",
+        "能力可能被滥用"
+      ]
+    },
+    {
+      "label": "发布前防护",
+      "detail": "发布前经过更严格的安全评估与缓解措施",
+      "children": [
+        "防止被用于恶意网络活动",
+        "强化发布前防护"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "模型能力越强，越需要配套安全框架与治理机制",
+      "children": [
+        "避免潜在风险",
+        "安全框架需同步升级"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Astra",
+      "type": "model"
+    },
+    {
+      "name": "Preparedness Framework",
+      "type": "concept"
+    },
+    {
+      "name": "关键网络安全能力阈值",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Astra",
+      "label": "发布"
+    },
+    {
+      "from": "Astra",
+      "to": "Preparedness Framework",
+      "label": "依据"
+    },
+    {
+      "from": "Astra",
+      "to": "关键网络安全能力阈值",
+      "label": "达到"
+    }
+  ]
+}

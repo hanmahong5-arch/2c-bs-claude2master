@@ -1,0 +1,79 @@
+{
+  "center": "DeepMind AI 发现逆转细胞衰老靶点",
+  "branches": [
+    {
+      "label": "AI 找新靶点",
+      "detail": "Co-Scientist 分析海量遗传数据，识别传统方法易忽略的衰老相关基因",
+      "children": [
+        "从数据到假说加速",
+        "充当科学家副驾驶"
+      ]
+    },
+    {
+      "label": "细胞年轻化验证",
+      "detail": "基于 AI 发现，实验室验证基因干预可逆转人皮肤细胞衰老标志物",
+      "children": [
+        "假设具高度可验证性",
+        "直接推动实验生物学"
+      ]
+    },
+    {
+      "label": "赋能领域专家",
+      "detail": "工具非全自动，增强生物学家专业判断，聚焦高价值决策",
+      "children": [
+        "人机协作科研 Agent 范本"
+      ]
+    }
+  ],
+  "flow": [
+    "Co-Scientist 分析遗传数据",
+    "识别衰老相关基因靶点",
+    "生成可验证假设",
+    "实验室验证基因干预",
+    "皮肤细胞衰老标志物逆转"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Co-Scientist",
+      "type": "product"
+    },
+    {
+      "name": "细胞衰老",
+      "type": "concept"
+    },
+    {
+      "name": "基因靶点",
+      "type": "concept"
+    },
+    {
+      "name": "人机协作",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Co-Scientist",
+      "label": "开发"
+    },
+    {
+      "from": "Co-Scientist",
+      "to": "基因靶点",
+      "label": "识别"
+    },
+    {
+      "from": "基因靶点",
+      "to": "细胞衰老",
+      "label": "逆转"
+    },
+    {
+      "from": "Co-Scientist",
+      "to": "人机协作",
+      "label": "体现"
+    }
+  ]
+}

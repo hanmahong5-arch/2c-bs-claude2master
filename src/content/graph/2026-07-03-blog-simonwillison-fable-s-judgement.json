@@ -1,0 +1,115 @@
+{
+  "center": "让 AI 自主判断用哪个模型",
+  "branches": [
+    {
+      "label": "核心做法",
+      "detail": "让 Fable 自行判断任务该用哪个模型，而非人为指定",
+      "children": [
+        "提示词：用判断力选低功耗模型跑 subagent",
+        "Claude Code 存为 memory 文件复用"
+      ]
+    },
+    {
+      "label": "分工策略",
+      "detail": "写代码交给子代理，判断与审查留在主循环",
+      "children": [
+        "实质实现用 sonnet",
+        "琐碎机械改动用 haiku",
+        "设计、审计、数据综合留在主模型"
+      ]
+    },
+    {
+      "label": "动机",
+      "detail": "成本与效率：实现工作很少需要顶级模型",
+      "children": [
+        "Fable token 额度消耗变慢",
+        "涨价前省下宝贵额度"
+      ]
+    },
+    {
+      "label": "同类建议",
+      "detail": "测试等场景也应让模型自主判断而非硬性规定",
+      "children": [
+        "小改动不必跑测试",
+        "大功能才用自动化测试"
+      ]
+    },
+    {
+      "label": "来源",
+      "detail": "来自 Claude Code 团队 AIE 炉边谈话与 Jesse Vincent 提示",
+      "children": [
+        "Cat Wu 与 Thariq Shihipar 分享",
+        "Simon Willison 记录于 2026-07-03"
+      ]
+    }
+  ],
+  "flow": [
+    "提示 Fable 自主选模型",
+    "存为 memory 文件",
+    "识别编码任务",
+    "派发 subagent 执行",
+    "主循环审查结果",
+    "提交代码"
+  ],
+  "entities": [
+    {
+      "name": "Fable",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Cat Wu",
+      "type": "person"
+    },
+    {
+      "name": "Thariq Shihipar",
+      "type": "person"
+    },
+    {
+      "name": "Jesse Vincent",
+      "type": "person"
+    },
+    {
+      "name": "subagent",
+      "type": "concept"
+    },
+    {
+      "name": "Opus",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Fable",
+      "label": "提示使用"
+    },
+    {
+      "from": "Cat Wu",
+      "to": "Claude Code",
+      "label": "任职于"
+    },
+    {
+      "from": "Thariq Shihipar",
+      "to": "Claude Code",
+      "label": "任职于"
+    },
+    {
+      "from": "Fable",
+      "to": "subagent",
+      "label": "派发任务"
+    },
+    {
+      "from": "Jesse Vincent",
+      "to": "Simon Willison",
+      "label": "提供建议"
+    }
+  ]
+}

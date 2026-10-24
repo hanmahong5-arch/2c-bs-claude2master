@@ -1,0 +1,50 @@
+{
+  "center": "Datasette 1.0a37 发布",
+  "branches": [
+    {
+      "label": "权限系统优化",
+      "detail": "本次小版本聚焦权限系统的性能与文档改进",
+      "children": [
+        "性能提升",
+        "文档完善"
+      ]
+    },
+    {
+      "label": "回滚破坏性变更",
+      "detail": "回滚了一个外观性 API 变更，该变更曾导致几乎所有现有插件测试套件失败",
+      "children": [
+        "外观性 API 变更",
+        "插件测试套件大量失败"
+      ]
+    },
+    {
+      "label": "版本定位",
+      "detail": "Datasette 1.0a37 是一次小版本发布",
+      "children": [
+        "开源数据探索与发布工具"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "1.0a37",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "发布"
+    }
+  ]
+}

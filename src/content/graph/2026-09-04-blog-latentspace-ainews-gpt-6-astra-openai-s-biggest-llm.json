@@ -1,0 +1,117 @@
+{
+  "center": "GPT-6 Astra 发布",
+  "branches": [
+    {
+      "label": "发布与定位",
+      "detail": "OpenAI 称其为最智能、最对齐的模型，主打电脑操作与软件工程",
+      "children": [
+        "9 小时获 3600 万浏览、16.4 万赞",
+        "先向有限组织开放，再推 ChatGPT 与 API"
+      ]
+    },
+    {
+      "label": "定价与效率",
+      "detail": "标准价 $10/$50 每百万 token，单任务成本却更低",
+      "children": [
+        "fast 档 $20/$100，速度最高 2.5 倍",
+        "比 GPT-5.6 Sol 省 70% token"
+      ]
+    },
+    {
+      "label": "基准表现",
+      "detail": "官方称多项 SOTA，第三方评测结果喜忧参半",
+      "children": [
+        "ARC-AGI-3 标准 63%，适配器下 99%",
+        "Coding Agent Index 67，落后 Fable 5.1 的…"
+      ]
+    },
+    {
+      "label": "争议与风险",
+      "detail": "可监控性下降、评测感知与发布治理引发质疑",
+      "children": [
+        "系统卡承认思维链可监控性降低",
+        "幻觉率从 92% 降至 51%"
+      ]
+    },
+    {
+      "label": "产品更新",
+      "detail": "Codex 可边问边做，新增上下文笔记与 API 能力",
+      "children": [
+        "Responses API 支持异步函数调用",
+        "支持中途转向、改推理强度不破缓存"
+      ]
+    }
+  ],
+  "flow": [
+    "有限组织先行开放",
+    "扩展至 ChatGPT 各档",
+    "开放 API 与 AWS",
+    "用户获补偿重置"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5.1",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "ARC-AGI-3",
+      "type": "concept"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Astra",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Claude Fable 5.1",
+      "label": "对标"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "GPT-5.6 Sol",
+      "label": "取代"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "ARC-AGI-3",
+      "label": "评测于"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "GPT-6 Astra",
+      "label": "评测"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Anthropic",
+      "label": "竞争"
+    }
+  ]
+}

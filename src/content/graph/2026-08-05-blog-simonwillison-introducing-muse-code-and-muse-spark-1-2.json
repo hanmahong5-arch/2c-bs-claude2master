@@ -1,0 +1,107 @@
+{
+  "center": "Meta发布Muse Code与Spark 1.2",
+  "branches": [
+    {
+      "label": "核心看点",
+      "detail": "长序列agentic工具调用被视为当下模型最关键能力",
+      "children": [
+        "Meta亲自下场做编码agent",
+        "Simon Willison称其为又一佐证"
+      ]
+    },
+    {
+      "label": "模型升级",
+      "detail": "Muse Spark 1.2是面向编码的更新版，多项能力提升",
+      "children": [
+        "代码生成、复杂调试、代码库理解",
+        "端到端开发工作流",
+        "扩大编码训练算力与环境多样性"
+      ]
+    },
+    {
+      "label": "协同训练",
+      "detail": "与Muse Code联合训练以最大化配合表现",
+      "children": [
+        "拒绝采样harness轨迹",
+        "目标、压缩、子agent配方优化",
+        "集成Muse Code工具集"
+      ]
+    },
+    {
+      "label": "长程任务",
+      "detail": "大量训练于长周期编码任务",
+      "children": [
+        "整仓库生成",
+        "大型端到端项目",
+        "auto-research"
+      ]
+    },
+    {
+      "label": "双轨定价",
+      "detail": "同一模型两个ID，贡献数据可享大幅折扣",
+      "children": [
+        "muse-spark-1.2：$1.25/$4.25每百万token",
+        "contributor版：$0.10/$0.20",
+        "需同意Meta用数据改进产品"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Meta",
+      "type": "company"
+    },
+    {
+      "name": "Muse Code",
+      "type": "product"
+    },
+    {
+      "name": "Muse Spark 1.2",
+      "type": "model"
+    },
+    {
+      "name": "Muse Spark 1.1",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm-prices.com",
+      "type": "product"
+    },
+    {
+      "name": "agentic tool calling",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Meta",
+      "to": "Muse Code",
+      "label": "发布"
+    },
+    {
+      "from": "Meta",
+      "to": "Muse Spark 1.2",
+      "label": "发布"
+    },
+    {
+      "from": "Muse Spark 1.2",
+      "to": "Muse Spark 1.1",
+      "label": "升级自"
+    },
+    {
+      "from": "Muse Spark 1.2",
+      "to": "Muse Code",
+      "label": "联合训练"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "llm-prices.com",
+      "label": "更新"
+    }
+  ]
+}

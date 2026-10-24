@@ -1,0 +1,87 @@
+{
+  "center": "律所AI规模化部署治理",
+  "branches": [
+    {
+      "label": "CEO主导战略",
+      "detail": "AI采用被定位为CEO主导的战略举措，而非IT项目",
+      "children": [
+        "自上而下推动力与资源支持"
+      ]
+    },
+    {
+      "label": "严格治理框架",
+      "detail": "建立风险评估、使用指南和持续监控的治理框架",
+      "children": [
+        "平衡创新与合规"
+      ]
+    },
+    {
+      "label": "人类问责制",
+      "detail": "所有AI生成内容需经律师审核，确保专业责任",
+      "children": [
+        "保留律师判断力"
+      ]
+    },
+    {
+      "label": "组织配套变革",
+      "detail": "企业级AI成功部署需组织架构、流程和文化配套变革",
+      "children": [
+        "对开发者启示"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Gilbert + Tobin",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "CEO主导",
+      "type": "concept"
+    },
+    {
+      "name": "AI治理",
+      "type": "concept"
+    },
+    {
+      "name": "人类问责制",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gilbert + Tobin",
+      "to": "ChatGPT",
+      "label": "部署"
+    },
+    {
+      "from": "Gilbert + Tobin",
+      "to": "Codex",
+      "label": "部署"
+    },
+    {
+      "from": "Gilbert + Tobin",
+      "to": "AI治理",
+      "label": "建立"
+    },
+    {
+      "from": "AI治理",
+      "to": "人类问责制",
+      "label": "包含"
+    },
+    {
+      "from": "CEO主导",
+      "to": "Gilbert + Tobin",
+      "label": "推动"
+    }
+  ]
+}

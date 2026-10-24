@@ -1,0 +1,120 @@
+{
+  "center": "游戏训练能否迁移到真实工作",
+  "branches": [
+    {
+      "label": "核心发现",
+      "detail": "游戏中学到的技能能否迁移到真实工作，取决于训练设计而非游戏本身",
+      "children": [
+        "1830 铁路游戏训练 30B 模型",
+        "仅终端智能体设计提升 Finance-Agent 基准"
+      ]
+    },
+    {
+      "label": "实验设计",
+      "detail": "对比单轮问答与多轮终端智能体两种训练方式在金融研究任务上的表现",
+      "children": [
+        "单轮：给定游戏状态预测下一步",
+        "多轮：用工具探索、规划、实时调整",
+        "两者都提升游戏内目标，仅多轮迁移到金融"
+      ]
+    },
+    {
+      "label": "公司背景",
+      "detail": "Good Start Labs 由 Alex Duffy 和 Tyler Marques 创立，专注用游戏训练 AI",
+      "children": [
+        "2025 年 10 月从 Every 分拆",
+        "获 360 万美元融资",
+        "灵感来自 2025 年 Diplomacy Twitch 直播"
+      ]
+    },
+    {
+      "label": "训练环境设计",
+      "detail": "环境呈现方式决定模型学到什么，可用专家模型提供密集奖励",
+      "children": [
+        "同一游戏不同呈现方式学到不同技能",
+        "COS-PLAY 论文提出可学习技能库"
+      ]
+    },
+    {
+      "label": "前沿模型对比",
+      "detail": "新模型游戏表现更好，但在背叛、合作等性格维度上仍有分歧",
+      "children": [
+        "Claude Fable 5.1 和 GPT-6 Astra 已测试",
+        "Astra 减少思维链，更依赖直觉"
+      ]
+    }
+  ],
+  "flow": [
+    "选择可验证游戏",
+    "设计训练环境与工具",
+    "训练模型玩游戏",
+    "在真实任务上测试迁移",
+    "对比不同训练设计"
+  ],
+  "entities": [
+    {
+      "name": "Good Start Labs",
+      "type": "company"
+    },
+    {
+      "name": "Alex Duffy",
+      "type": "person"
+    },
+    {
+      "name": "1830",
+      "type": "product"
+    },
+    {
+      "name": "Diplomacy",
+      "type": "product"
+    },
+    {
+      "name": "Finance-Agent",
+      "type": "concept"
+    },
+    {
+      "name": "COS-PLAY",
+      "type": "concept"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5.1",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Good Start Labs",
+      "to": "Alex Duffy",
+      "label": "由...创立"
+    },
+    {
+      "from": "Good Start Labs",
+      "to": "1830",
+      "label": "训练于"
+    },
+    {
+      "from": "Good Start Labs",
+      "to": "Diplomacy",
+      "label": "灵感来自"
+    },
+    {
+      "from": "1830",
+      "to": "Finance-Agent",
+      "label": "迁移到"
+    },
+    {
+      "from": "Alex Duffy",
+      "to": "COS-PLAY",
+      "label": "合著"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Claude Fable 5.1",
+      "label": "对比"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "center": "扩散模型攻克小分子药物发现",
+  "branches": [
+    {
+      "label": "PEARL 模型突破",
+      "detail": "Genesis 旗舰模型 PEARL 能建模蛋白柔性，同时调整配体与蛋白构象",
+      "children": [
+        "PEARL 全称 Place Every Atom at the Right…",
+        "可处理 induced fit，传统对接方法难以建模",
+        "在 OpenBind 802 个未见复合物上零样本超越"
+      ]
+    },
+    {
+      "label": "扩散模型成新范式",
+      "detail": "LLM 架构多年无根本创新，3D 结构预测成扩散研究热土",
+      "children": [
+        "Sergey Edunov 曾领导 Llama 2 训练与 Llama…",
+        "Evan 称最创新的扩散研究在 3D 结构预测",
+        "Transformer 后架构少有概念性突破"
+      ]
+    },
+    {
+      "label": "基准危机：2Å 是垃圾",
+      "detail": "社区沿用 2Å RMSD 阈值，Evan 认为会误导药物化学家",
+      "children": [
+        "1Å RMSD 才是确保核心位置正确的阈值",
+        "氢键有效范围仅 0.6Å，2Å 无法准确解析",
+        "建议改用 lDDT 等新指标"
+      ]
+    },
+    {
+      "label": "智能体药物发现",
+      "detail": "模型精度过阈值后，SAPPHIRE 系统可像化学家一样迭代",
+      "children": [
+        "SAPPHIRE 能推理构象、读文献、生成候选分子",
+        "与 Incyte 合作自动化实验室",
+        "目标 24/7 运行发现与测试新分子"
+      ]
+    },
+    {
+      "label": "搜索空间与多目标优化",
+      "detail": "10^60 个类药小分子，且结合力与 ADMET 常相互矛盾",
+      "children": [
+        "好结合剂常油腻，但油腻分子难溶无法入血",
+        "多参数优化比大海捞针更难"
+      ]
+    }
+  ],
+  "flow": [
+    "理解蛋白与配体结构",
+    "扩散模型生成构象",
+    "建模 induced fit 调整",
+    "评估 RMSD 与 lDDT",
+    "智能体迭代候选分子",
+    "自动化实验室验证"
+  ],
+  "entities": [
+    {
+      "name": "Genesis Molecular AI",
+      "type": "company"
+    },
+    {
+      "name": "PEARL",
+      "type": "model"
+    },
+    {
+      "name": "Sergey Edunov",
+      "type": "person"
+    },
+    {
+      "name": "Evan Feinberg",
+      "type": "person"
+    },
+    {
+      "name": "SAPPHIRE",
+      "type": "product"
+    },
+    {
+      "name": "OpenBind",
+      "type": "concept"
+    },
+    {
+      "name": "Incyte",
+      "type": "company"
+    },
+    {
+      "name": "扩散模型",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Genesis Molecular AI",
+      "to": "PEARL",
+      "label": "开发"
+    },
+    {
+      "from": "Genesis Molecular AI",
+      "to": "SAPPHIRE",
+      "label": "开发"
+    },
+    {
+      "from": "Sergey Edunov",
+      "to": "Genesis Molecular AI",
+      "label": "任职"
+    },
+    {
+      "from": "Evan Feinberg",
+      "to": "Genesis Molecular AI",
+      "label": "联合创立"
+    },
+    {
+      "from": "PEARL",
+      "to": "OpenBind",
+      "label": "超越基准"
+    },
+    {
+      "from": "Genesis Molecular AI",
+      "to": "Incyte",
+      "label": "合作"
+    }
+  ]
+}

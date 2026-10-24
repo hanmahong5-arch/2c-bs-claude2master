@@ -1,0 +1,121 @@
+{
+  "center": "Meta 发布 Muse Glimmer 开源多…",
+  "branches": [
+    {
+      "label": "模型规格",
+      "detail": "30B 参数，2B 视觉编码器 + 28B 文本解码器",
+      "children": [
+        "2B ViT 式编码器，仿 Perception Encoder",
+        "统一处理图像与视频"
+      ]
+    },
+    {
+      "label": "架构设计",
+      "detail": "混合注意力与 GQA 兼顾长上下文与效率",
+      "children": [
+        "三层窗口注意力 + 一层全注意力",
+        "GQA 共享 KV 头降低显存",
+        "Q-K normalization"
+      ]
+    },
+    {
+      "label": "视觉编码流程",
+      "detail": "patchify 后经 50 层视觉塔，再像素重排压缩",
+      "children": [
+        "patch 形状 2×3×14×14",
+        "50 层 + GELU MLP",
+        "pixel shuffle 将图像 token 减少 4 倍"
+      ]
+    },
+    {
+      "label": "开源与生态",
+      "detail": "Apache 2.0 许可，首日多框架支持",
+      "children": [
+        "Transformers、llama.cpp、vLLM 集成",
+        "可本地部署，隐私与延迟更优"
+      ]
+    },
+    {
+      "label": "争议与质疑",
+      "detail": "发布时机被指与 Meta 儿童安全罚款相关",
+      "children": [
+        "新墨西哥州法官认定平台危害儿童",
+        "约 10 亿美元罚款",
+        "评论者称是廉价 API 转移代价"
+      ]
+    }
+  ],
+  "flow": [
+    "图像 patchify 为 2×3×14×14",
+    "线性投影并加绝对位置嵌入",
+    "送入 50 层视觉塔（窗口/全注意…",
+    "pixel shuffle 合并 2×2 相…",
+    "投影到文本解码器共享嵌入空间"
+  ],
+  "entities": [
+    {
+      "name": "Meta",
+      "type": "company"
+    },
+    {
+      "name": "Muse Glimmer",
+      "type": "model"
+    },
+    {
+      "name": "Perception Encoder",
+      "type": "model"
+    },
+    {
+      "name": "Transformers",
+      "type": "product"
+    },
+    {
+      "name": "llama.cpp",
+      "type": "product"
+    },
+    {
+      "name": "vLLM",
+      "type": "product"
+    },
+    {
+      "name": "Apache 2.0",
+      "type": "concept"
+    },
+    {
+      "name": "GQA",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Meta",
+      "to": "Muse Glimmer",
+      "label": "发布"
+    },
+    {
+      "from": "Muse Glimmer",
+      "to": "Perception Encoder",
+      "label": "借鉴架构"
+    },
+    {
+      "from": "Muse Glimmer",
+      "to": "Transformers",
+      "label": "集成"
+    },
+    {
+      "from": "Muse Glimmer",
+      "to": "llama.cpp",
+      "label": "集成"
+    },
+    {
+      "from": "Muse Glimmer",
+      "to": "vLLM",
+      "label": "集成"
+    },
+    {
+      "from": "Muse Glimmer",
+      "to": "Apache 2.0",
+      "label": "采用许可"
+    }
+  ]
+}

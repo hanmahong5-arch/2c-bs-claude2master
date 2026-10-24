@@ -1,0 +1,114 @@
+{
+  "center": "Claude 文本水印原理",
+  "branches": [
+    {
+      "label": "水印是什么",
+      "detail": "在模型随机选词的环节留下可检测的隐式模式，读者无法察觉",
+      "children": [
+        "不改文字、不加隐藏字符、不耗额外 token",
+        "需密钥才能检测，无法追溯到个人或组织"
+      ]
+    },
+    {
+      "label": "如何工作",
+      "detail": "把选词的随机数来源从随机数生成器换成密钥加前文",
+      "children": [
+        "选词仍是随机的，只是随机源不同",
+        "检测时看词序列是否与密钥一致，给出概率"
+      ]
+    },
+    {
+      "label": "对输出无影响",
+      "detail": "内部测试与 Google DeepMind 研究均未发现质量、创意或可读性差异",
+      "children": [
+        "SynthID-Text 论文：Gemini 流量点赞率无显著…",
+        "人类评分者对比水印与非水印答案无差别"
+      ]
+    },
+    {
+      "label": "采用的方法",
+      "detail": "基于 Google DeepMind 2024 年 Nature 论文的 SynthID-Text 方案",
+      "children": [
+        "设计原则可追溯到 Scott Aaronson 2022 年提案",
+        "只改变选词随机源，不改变模型偏好"
+      ]
+    },
+    {
+      "label": "局限与场景",
+      "detail": "短文本、事实性内容、校对和代码中水印稀疏或无法生效",
+      "children": [
+        "文本越长，判断 Claude 参与的信心越高",
+        "只作用于 Claude 自己选词，改人写文本时水印很少"
+      ]
+    }
+  ],
+  "flow": [
+    "模型逐词生成候选",
+    "遇低风险选词随机决定",
+    "用密钥与前文定随机源",
+    "留下隐式水印模式",
+    "持密钥者检测概率"
+  ],
+  "entities": [
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "SynthID-Text",
+      "type": "technique"
+    },
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "Scott Aaronson",
+      "type": "person"
+    },
+    {
+      "name": "EU AI Act",
+      "type": "concept"
+    },
+    {
+      "name": "watermarking",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude",
+      "to": "SynthID-Text",
+      "label": "采用"
+    },
+    {
+      "from": "SynthID-Text",
+      "to": "Google DeepMind",
+      "label": "由…发布"
+    },
+    {
+      "from": "SynthID-Text",
+      "to": "Gemini",
+      "label": "测试于"
+    },
+    {
+      "from": "SynthID-Text",
+      "to": "Scott Aaronson",
+      "label": "源于提案"
+    },
+    {
+      "from": "Claude",
+      "to": "watermarking",
+      "label": "使用"
+    },
+    {
+      "from": "watermarking",
+      "to": "EU AI Act",
+      "label": "为合规"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "center": "从零构建 AI 文本检测器",
+  "branches": [
+    {
+      "label": "项目目标",
+      "detail": "讲解 AI 检测器原理，并完成端到端 LLM 项目",
+      "children": [
+        "产出可用的 AI-detector API 与本地 UI",
+        "用检测器作为 verifier 训练小模型规避检测",
+        "研究 AI 检测器的局限性"
+      ]
+    },
+    {
+      "label": "检测方法",
+      "detail": "微调 DistilBERT 分类器，输出 0-100 的 AI 概率分",
+      "children": [
+        "方法类似 Pangram 模型（Substack 检测所用）",
+        "其他思路：扰动概率测试、困惑度、水印",
+        "分数是分类器对 AI 类的估计概率，非真实概率"
+      ]
+    },
+    {
+      "label": "应用场景",
+      "detail": "过滤垃圾内容，也可辅助润色而不被标记为 AI",
+      "children": [
+        "例：修语法同时保持 0% AI 生成分",
+        "过度润色可能被误判为 AI 内容"
+      ]
+    },
+    {
+      "label": "局限与风险",
+      "detail": "AI 检测是猫鼠游戏，存在误报",
+      "children": [
+        "新 LLM 可避开旧检测模式",
+        "人类文本可能被误标为 AI 生成"
+      ]
+    }
+  ],
+  "flow": [
+    "构建数据集",
+    "训练分类器",
+    "本地部署",
+    "RLVR 训练小模型",
+    "评估与迭代"
+  ],
+  "entities": [
+    {
+      "name": "Sebastian Raschka",
+      "type": "person"
+    },
+    {
+      "name": "Substack",
+      "type": "company"
+    },
+    {
+      "name": "DistilBERT",
+      "type": "model"
+    },
+    {
+      "name": "Pangram",
+      "type": "product"
+    },
+    {
+      "name": "AI detector",
+      "type": "concept"
+    },
+    {
+      "name": "RLVR",
+      "type": "technique"
+    },
+    {
+      "name": "SLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sebastian Raschka",
+      "to": "AI detector",
+      "label": "构建"
+    },
+    {
+      "from": "Substack",
+      "to": "Pangram",
+      "label": "使用"
+    },
+    {
+      "from": "AI detector",
+      "to": "DistilBERT",
+      "label": "微调"
+    },
+    {
+      "from": "AI detector",
+      "to": "RLVR",
+      "label": "用于"
+    },
+    {
+      "from": "RLVR",
+      "to": "SLM",
+      "label": "训练"
+    }
+  ]
+}

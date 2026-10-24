@@ -1,0 +1,106 @@
+{
+  "center": "Cursor 被 SpaceXAI 收购",
+  "branches": [
+    {
+      "label": "Cursor 被收购",
+      "detail": "Cursor 宣布加入 SpaceX，团队并入 SpaceXAI，交易规模 600 亿美元",
+      "children": [
+        "Cursor 团队加入 SpaceXAI",
+        "交易金额 600 亿美元"
+      ]
+    },
+    {
+      "label": "开源模型爆发",
+      "detail": "Z.ai、Qwen、DeepSeek、RedNote 集中发布新模型，形成中国开源生态",
+      "children": [
+        "GLM-5.3 基于 743B 基座后训练",
+        "Qwen3.8-27B 原生多模态 262K 上下文",
+        "DeepSeek V4-Pro 采用 MIT 许可"
+      ]
+    },
+    {
+      "label": "Agent 运行时",
+      "detail": "DeepSeek Harness 被视为可插拔 Agent 运行时，组件可热替换",
+      "children": [
+        "Agent 循环、工具、会话、文件系统均可替换",
+        "Cordis 提供生命周期管理与可逆效果",
+        "支持热替换运行时组件无需重启"
+      ]
+    },
+    {
+      "label": "评测与质疑",
+      "detail": "新评测针对真实失败模式，同时业界对厂商基准分数普遍怀疑",
+      "children": [
+        "Vals 推出逆向工程基准",
+        "OpenRouter 推出网页搜索基准",
+        "Vik Paruchuri 指出评分器 bug 可致 65% 变…"
+      ]
+    },
+    {
+      "label": "推理与成本",
+      "detail": "服务优化成为模型一等特性，Day-0 支持强调投机解码与量化",
+      "children": [
+        "Qwen 27B 单张 RTX 5090 达 206 tok/s",
+        "vLLM 支持 MTP 草稿头与 1M 上下文",
+        "Tim Dettmers 预告单 DGX Spark 约 7 tok/s…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "SpaceXAI",
+      "type": "company"
+    },
+    {
+      "name": "Z.ai",
+      "type": "company"
+    },
+    {
+      "name": "GLM-5.3",
+      "type": "model"
+    },
+    {
+      "name": "Qwen3.8-27B",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek V4-Pro",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek Harness",
+      "type": "product"
+    },
+    {
+      "name": "RedNote dots3-note",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "SpaceXAI",
+      "to": "Cursor",
+      "label": "收购"
+    },
+    {
+      "from": "Z.ai",
+      "to": "GLM-5.3",
+      "label": "发布"
+    },
+    {
+      "from": "Qwen3.8-27B",
+      "to": "DeepSeek V4-Pro",
+      "label": "同属开源"
+    },
+    {
+      "from": "DeepSeek Harness",
+      "to": "Cursor",
+      "label": "同为焦点"
+    }
+  ]
+}

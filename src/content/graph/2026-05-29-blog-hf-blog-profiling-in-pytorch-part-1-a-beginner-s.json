@@ -1,0 +1,90 @@
+{
+  "center": "PyTorch 性能分析入门",
+  "branches": [
+    {
+      "label": "系列文章",
+      "detail": "PyTorch 性能分析博客系列，从入门到进阶",
+      "children": [
+        "Part 1: 入门指南",
+        "Part 2: 从 nn.Linear 到融合 MLP",
+        "Part 3: Attention 分析"
+      ]
+    },
+    {
+      "label": "Trace 阅读",
+      "detail": "提供 Trace 阅读速查表，帮助理解性能数据",
+      "children": [
+        "读者反馈速查表非常有用"
+      ]
+    },
+    {
+      "label": "bias 维度影响",
+      "detail": "bias 设为 1D 可减少 cudaMemcpyAsync 和 kernel 启动",
+      "children": [
+        "2D bias 导致额外 cudaMemcpyAsync",
+        "1D bias 仅一个 relu 家族 kernel"
+      ]
+    },
+    {
+      "label": "同步操作",
+      "detail": "torch.cuda.synchronize() 可省略，上下文管理器已处理",
+      "children": [
+        "作者习惯额外同步以确保安全"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "PyTorch",
+      "type": "product"
+    },
+    {
+      "name": "torch.profiler",
+      "type": "technique"
+    },
+    {
+      "name": "CUDA",
+      "type": "concept"
+    },
+    {
+      "name": "nn.Linear",
+      "type": "model"
+    },
+    {
+      "name": "Aritra Roy Gosthipaty",
+      "type": "person"
+    },
+    {
+      "name": "Tolga Cangöz",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "PyTorch",
+      "to": "torch.profiler",
+      "label": "提供"
+    },
+    {
+      "from": "torch.profiler",
+      "to": "CUDA",
+      "label": "分析"
+    },
+    {
+      "from": "nn.Linear",
+      "to": "CUDA",
+      "label": "使用"
+    },
+    {
+      "from": "Aritra Roy Gosthipaty",
+      "to": "PyTorch",
+      "label": "撰写"
+    },
+    {
+      "from": "Tolga Cangöz",
+      "to": "PyTorch",
+      "label": "评论"
+    }
+  ]
+}

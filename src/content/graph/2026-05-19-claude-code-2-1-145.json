@@ -1,0 +1,85 @@
+{
+  "center": "claude-code v2.1.145 更新",
+  "branches": [
+    {
+      "label": "JSON 输出",
+      "detail": "新增 claude agents --json，以 JSON 列出活跃会话",
+      "children": [
+        "便于与 tmux-resurrect、状态栏集成"
+      ]
+    },
+    {
+      "label": "OTEL 追踪增强",
+      "detail": "为 claude_code.tool spans 添加 agent_id 与 parent_agent_id",
+      "children": [
+        "修复追踪父子关系",
+        "子 Agent spans 嵌套在调度 Agent 工具 span…"
+      ]
+    },
+    {
+      "label": "状态行上下文",
+      "detail": "状态行 JSON 输入新增 GitHub 仓库与 PR 信息",
+      "children": [
+        "为外部状态显示工具提供更丰富数据"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "claude agents --json",
+      "type": "technique"
+    },
+    {
+      "name": "OTEL",
+      "type": "concept"
+    },
+    {
+      "name": "agent_id",
+      "type": "concept"
+    },
+    {
+      "name": "parent_agent_id",
+      "type": "concept"
+    },
+    {
+      "name": "tmux-resurrect",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "claude agents --json",
+      "label": "新增"
+    },
+    {
+      "from": "claude-code",
+      "to": "OTEL",
+      "label": "增强"
+    },
+    {
+      "from": "OTEL",
+      "to": "agent_id",
+      "label": "添加属性"
+    },
+    {
+      "from": "OTEL",
+      "to": "parent_agent_id",
+      "label": "添加属性"
+    },
+    {
+      "from": "claude agents --json",
+      "to": "tmux-resurrect",
+      "label": "便于集成"
+    }
+  ]
+}

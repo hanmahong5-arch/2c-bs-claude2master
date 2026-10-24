@@ -1,0 +1,110 @@
+{
+  "center": "llm 0.32rc2 发布",
+  "branches": [
+    {
+      "label": "默认模型升级",
+      "detail": "未设默认的用户默认模型由 GPT-4o mini 换成 GPT-5.6 Luna",
+      "children": [
+        "Luna 更强更新但更贵：$0.20/$1.20 每百万…",
+        "4o mini 为 $0.15/$0.60",
+        "可切回 gpt-4o-mini 或改用更便宜的…"
+      ]
+    },
+    {
+      "label": "新增 endpoint 命令",
+      "detail": "llm openai endpoint 可对任意 OpenAI 兼容端点跑提示、聊天与模型列表",
+      "children": [
+        "无需预先配置模型",
+        "这些调用不会被记录日志",
+        "作者因缺少顺手 CLI 工具而自行添加"
+      ]
+    },
+    {
+      "label": "免安装试用",
+      "detail": "用 uvx 一行命令即可对 LM Studio 本地模型跑带工具的提示",
+      "children": [
+        "uvx --pre llm openai endpoint http://…",
+        "示例模型 google/gemma-4-31b",
+        "带 -T llm_version -T llm_time --td 工具…"
+      ]
+    },
+    {
+      "label": "修复依赖问题",
+      "detail": "RC2 紧接 RC1 发布，主要修复了一个依赖问题",
+      "children": []
+    }
+  ],
+  "flow": [
+    "安装或 uvx 运行 llm",
+    "指定 OpenAI 兼容端点 URL",
+    "选择目标模型",
+    "附加工具参数",
+    "执行提示并查看输出"
+  ],
+  "entities": [
+    {
+      "name": "llm",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "GPT-4o mini",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5 nano",
+      "type": "model"
+    },
+    {
+      "name": "LM Studio",
+      "type": "product"
+    },
+    {
+      "name": "uv",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI Chat Completions",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm",
+      "label": "发布"
+    },
+    {
+      "from": "llm",
+      "to": "GPT-5.6 Luna",
+      "label": "默认模型"
+    },
+    {
+      "from": "llm",
+      "to": "GPT-4o mini",
+      "label": "可切换回"
+    },
+    {
+      "from": "llm",
+      "to": "GPT-5 nano",
+      "label": "可切换至"
+    },
+    {
+      "from": "llm",
+      "to": "OpenAI Chat Completions",
+      "label": "兼容"
+    },
+    {
+      "from": "uv",
+      "to": "llm",
+      "label": "免安装运行"
+    }
+  ]
+}

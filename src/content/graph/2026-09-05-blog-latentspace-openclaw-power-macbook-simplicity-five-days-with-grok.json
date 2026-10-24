@@ -1,0 +1,124 @@
+{
+  "center": "Grok Bot 五天上手体验",
+  "branches": [
+    {
+      "label": "开箱即用",
+      "detail": "插件目录点选后浏览器登录即可接入，无需写代码或配 MCP",
+      "children": [
+        "登录方式与普通网站一致",
+        "无需安装 MCP server JSON 或粘贴 API 凭证",
+        "像开箱 MacBook，OpenClaw 更像 Linux"
+      ]
+    },
+    {
+      "label": "抽象层级",
+      "detail": "Bot 成为编程的原子单位，用英文描述意图即可组合",
+      "children": [
+        "Bot 可赋予角色、连接工具、组成 group chat",
+        "编程史从机器码到 Python 再到英文",
+        "技能从语法实现转向精确表达意图"
+      ]
+    },
+    {
+      "label": "人格化路由",
+      "detail": "Agentic Engineer Bot 按规则把任务分派给不同 CLI",
+      "children": [
+        "视觉/前端给 Claude Code",
+        "调试与读码给 Codex",
+        "简单任务给 Grok Build CLI"
+      ]
+    },
+    {
+      "label": "多账号与浏览器",
+      "detail": "支持同服务多账号，虚拟浏览器可自动化普通网站",
+      "children": [
+        "个人与工作 Google Calendar 合并视图",
+        "Freshdesk 经虚拟浏览器登录后每 15 分钟查工单",
+        "所有 Bot 共享同一台电脑，非安全边界"
+      ]
+    },
+    {
+      "label": "与 OpenClaw 对比",
+      "detail": "Grok Bot 是托管 agent 电脑，OpenClaw 是用户自有平台",
+      "children": [
+        "OpenClaw 2.0 可复用 Claude Code/Codex 登录",
+        "OpenClaw 提供用户自选 Gateway",
+        "Grok Bot 把机器作为产品一部分运营"
+      ]
+    }
+  ],
+  "flow": [
+    "打开插件目录搜索",
+    "点击插件弹出登录",
+    "浏览器完成登录",
+    "Bot 接入并运行",
+    "设定角色与路由规则",
+    "组合成 group chat"
+  ],
+  "entities": [
+    {
+      "name": "Grok Bot",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Freshdesk",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Dan McAteer",
+      "type": "person"
+    },
+    {
+      "name": "xAI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Grok Bot",
+      "to": "OpenClaw",
+      "label": "对比"
+    },
+    {
+      "from": "Grok Bot",
+      "to": "Claude Code",
+      "label": "可接入"
+    },
+    {
+      "from": "Grok Bot",
+      "to": "Codex",
+      "label": "可接入"
+    },
+    {
+      "from": "Grok Bot",
+      "to": "Freshdesk",
+      "label": "浏览器连接"
+    },
+    {
+      "from": "Dan McAteer",
+      "to": "Grok Bot",
+      "label": "体验"
+    },
+    {
+      "from": "xAI",
+      "to": "Grok Bot",
+      "label": "开发"
+    }
+  ]
+}

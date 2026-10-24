@@ -1,0 +1,99 @@
+{
+  "center": "Python 3.15 软弃用 re.match()",
+  "branches": [
+    {
+      "label": "软弃用含义",
+      "detail": "API 被标记为不应在新代码中使用，但不承诺未来移除",
+      "children": [
+        "Python 的 soft deprecation 概念",
+        "无移除承诺或威胁"
+      ]
+    },
+    {
+      "label": "替代方案",
+      "detail": "re.match() 现可用语义更清晰的 re.prefixmatch() 替代",
+      "children": [
+        "re.prefixmatch() 反映仅锚定字符串开头",
+        "不锚定结尾"
+      ]
+    },
+    {
+      "label": "推荐用法",
+      "detail": "多数场景应改用 re.search() 或 re.fullmatch()",
+      "children": [
+        "re.search() 匹配字符串任意位置",
+        "re.fullmatch() 匹配整个字符串"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "Python 3.15 发布经理 Hugo van Kemenade 介绍该变更",
+      "children": [
+        "即将发布的 3.15 版本",
+        "Simon Willison 链接博客 2026-09-11"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Python 3.15",
+      "type": "product"
+    },
+    {
+      "name": "re.match()",
+      "type": "technique"
+    },
+    {
+      "name": "re.prefixmatch()",
+      "type": "technique"
+    },
+    {
+      "name": "re.search()",
+      "type": "technique"
+    },
+    {
+      "name": "re.fullmatch()",
+      "type": "technique"
+    },
+    {
+      "name": "Hugo van Kemenade",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "soft deprecation",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Python 3.15",
+      "to": "re.match()",
+      "label": "软弃用"
+    },
+    {
+      "from": "re.prefixmatch()",
+      "to": "re.match()",
+      "label": "替代"
+    },
+    {
+      "from": "Hugo van Kemenade",
+      "to": "Python 3.15",
+      "label": "发布经理"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Python 3.15",
+      "label": "报道"
+    },
+    {
+      "from": "soft deprecation",
+      "to": "re.match()",
+      "label": "标记"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "center": "OpenClaw Active Memory 工具白…",
+  "branches": [
+    {
+      "label": "配置机制",
+      "detail": "config.toolsAllow 限定子代理可调用的具体记忆工具名",
+      "children": [
+        "默认值随记忆提供方变化",
+        "内置记忆默认 memory_search、memory_get",
+        "LanceDB 默认 memory_recall"
+      ]
+    },
+    {
+      "label": "权限边界",
+      "detail": "toolsAllow 是限制而非授权，需经父代理工具策略过滤",
+      "children": [
+        "插件注册的工具可能被父代理 profile 排除",
+        "用 tools.alsoAllow 扩展受限 profile",
+        "授权同时给父代理访问权，非仅召回"
+      ]
+    },
+    {
+      "label": "降级行为",
+      "detail": "部分工具可用时召回仍可运行，全部不可用则跳过",
+      "children": [
+        "memory_search 可在 Lossless Claw 工具被排…",
+        "无可用工具或子代理失败则跳过召回",
+        "主回复继续，无记忆上下文"
+      ]
+    },
+    {
+      "label": "命名限制",
+      "detail": "toolsAllow 仅接受具体记忆工具名",
+      "children": [
+        "通配符、group:* 被静默过滤",
+        "核心工具 read、exec、message、web_search…"
+      ]
+    },
+    {
+      "label": "Lossless Claw 示例",
+      "detail": "外部上下文引擎插件，需先设为上下文引擎再授权召回工具",
+      "children": [
+        "通过 alsoAllow 添加 lcm_grep…",
+        "不要添加 lcm_expand",
+        "保留 memory_search 以支持…"
+      ]
+    }
+  ],
+  "flow": [
+    "配置 toolsAllow 工具名",
+    "父代理策略过滤",
+    "启动隐藏子代理召回",
+    "返回召回证据或 NONE"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Active Memory",
+      "type": "concept"
+    },
+    {
+      "name": "LanceDB",
+      "type": "product"
+    },
+    {
+      "name": "Lossless Claw",
+      "type": "product"
+    },
+    {
+      "name": "memory_search",
+      "type": "technique"
+    },
+    {
+      "name": "memory_recall",
+      "type": "technique"
+    },
+    {
+      "name": "lcm_grep",
+      "type": "technique"
+    },
+    {
+      "name": "toolsAllow",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Active Memory",
+      "label": "包含"
+    },
+    {
+      "from": "Active Memory",
+      "to": "toolsAllow",
+      "label": "使用"
+    },
+    {
+      "from": "LanceDB",
+      "to": "memory_recall",
+      "label": "默认提供"
+    },
+    {
+      "from": "Lossless Claw",
+      "to": "lcm_grep",
+      "label": "提供"
+    },
+    {
+      "from": "toolsAllow",
+      "to": "memory_search",
+      "label": "可配置"
+    }
+  ]
+}

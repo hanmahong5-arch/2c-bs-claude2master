@@ -1,0 +1,64 @@
+{
+  "center": "Kenton Varda 禁用 AI 写变更描述",
+  "branches": [
+    {
+      "label": "禁令内容",
+      "detail": "Kenton Varda 宣布团队暂停使用 AI 撰写变更描述",
+      "children": [
+        "覆盖 PR、commit message、issue、ticket",
+        "由 Kenton Varda 本人宣布"
+      ]
+    },
+    {
+      "label": "禁用原因",
+      "detail": "AI 写的描述对代码审查者而言比无用更糟",
+      "children": [
+        "罗列代码里一眼可见的细节",
+        "缺失理解代码所需的高层框架"
+      ]
+    },
+    {
+      "label": "信息来源",
+      "detail": "该言论由 Simon Willison 收集并发布在博客上",
+      "children": [
+        "发布于 2026 年 7 月 8 日",
+        "标题为 Quoting Kenton Varda"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Kenton Varda",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    },
+    {
+      "name": "PR",
+      "type": "concept"
+    },
+    {
+      "name": "commit message",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Kenton Varda",
+      "to": "AI",
+      "label": "禁用写描述"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Kenton Varda",
+      "label": "引用"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "center": "alchemy-utils：数据库无关的…",
+  "branches": [
+    {
+      "label": "项目定位",
+      "detail": "基于 SQLAlchemy 复刻 sqlite-utils 核心 API，支持多数据库引擎",
+      "children": [
+        "保留 insert/upsert/insert_all/upsert_all…",
+        "含表结构 introspection 能力",
+        "以 ~/dev/sqlite-utils 为参考"
+      ]
+    },
+    {
+      "label": "构建方式",
+      "detail": "Simon Willison 用 Codex 与 GPT-5.6 Sol Ultra 做研究 spike",
+      "children": [
+        "一次洗澡时的灵感项目",
+        "少量后续提示即达 alpha 可发布状态",
+        "用 uv init 起项目，红绿 TDD + pytest"
+      ]
+    },
+    {
+      "label": "支持引擎",
+      "detail": "测试覆盖 PostgreSQL、SQLite 与 DuckDB",
+      "children": [
+        "PostgreSQL 测试参考 django-sql-dashboard",
+        "DuckDB 可自动建表匹配 CSV 文件"
+      ]
+    },
+    {
+      "label": "实际用法",
+      "detail": "uvx 一行命令即可查询或导入数据",
+      "children": [
+        "uvx --with 'alchemy-utils[postgresql]'…",
+        "curl CSV 管道导入 DuckDB 建 trees 表"
+      ]
+    },
+    {
+      "label": "性能优化",
+      "detail": "DuckDB 导入旧金山树木数据从近 1 小时降至约 35 秒",
+      "children": [
+        "由 Codex 完成优化",
+        "数据源为 sf-tree-history 的…"
+      ]
+    }
+  ],
+  "flow": [
+    "提出研究 spike 目标",
+    "用 Codex 与 GPT-5.6 生成代码",
+    "uv init 建项目",
+    "红绿 TDD + pytest 测试",
+    "对 PostgreSQL/SQLite/…",
+    "发布 0.1a0 alpha"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "alchemy-utils",
+      "type": "product"
+    },
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "SQLAlchemy",
+      "type": "technique"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6 Sol Ultra",
+      "type": "model"
+    },
+    {
+      "name": "PostgreSQL",
+      "type": "product"
+    },
+    {
+      "name": "DuckDB",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "alchemy-utils",
+      "label": "构建"
+    },
+    {
+      "from": "alchemy-utils",
+      "to": "sqlite-utils",
+      "label": "复刻 API"
+    },
+    {
+      "from": "alchemy-utils",
+      "to": "SQLAlchemy",
+      "label": "基于"
+    },
+    {
+      "from": "Codex",
+      "to": "alchemy-utils",
+      "label": "生成代码"
+    },
+    {
+      "from": "GPT-5.6 Sol Ultra",
+      "to": "alchemy-utils",
+      "label": "生成代码"
+    },
+    {
+      "from": "alchemy-utils",
+      "to": "DuckDB",
+      "label": "支持"
+    }
+  ]
+}

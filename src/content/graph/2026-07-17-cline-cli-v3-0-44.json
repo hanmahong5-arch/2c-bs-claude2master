@@ -1,0 +1,77 @@
+{
+  "center": "Cline CLI v3.0.44 修复与优化",
+  "branches": [
+    {
+      "label": "BOM头解析修复",
+      "detail": "修复 UTF-8 BOM 头导致的配置文件解析错误",
+      "children": [
+        "常见于 Windows 编辑器保存的文件",
+        "agent harness 需兼容 BOM 头避免加载失败"
+      ]
+    },
+    {
+      "label": "输出token优化",
+      "detail": "改进跨提供商的 max 输出 token 处理",
+      "children": [
+        "涉及网关路由、OpenAI 供应商",
+        "覆盖推理模型的 token 限制"
+      ]
+    },
+    {
+      "label": "harness适配",
+      "detail": "agent harness 需适配不同模型的 token 限制",
+      "children": [
+        "确保输出完整"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "BOM",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "max output token",
+      "type": "concept"
+    },
+    {
+      "name": "网关路由",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "BOM",
+      "label": "修复解析"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "max output token",
+      "label": "优化处理"
+    },
+    {
+      "from": "agent harness",
+      "to": "max output token",
+      "label": "适配限制"
+    },
+    {
+      "from": "网关路由",
+      "to": "OpenAI",
+      "label": "涉及"
+    }
+  ]
+}

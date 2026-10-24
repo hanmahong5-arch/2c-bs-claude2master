@@ -1,0 +1,100 @@
+{
+  "center": "claude-code v2.1.233 更新",
+  "branches": [
+    {
+      "label": "GitLab MR 支持",
+      "detail": "新增 GitLab MR URL 支持，跨平台协作更顺畅",
+      "children": [
+        "--worktree 与 agents 视图显示 !N"
+      ]
+    },
+    {
+      "label": "内存限制",
+      "detail": "新增环境变量限制工具内存，防止失控构建",
+      "children": [
+        "CLAUDE_CODE_TOOL_MEMORY_LIMIT",
+        "cgroup 限制"
+      ]
+    },
+    {
+      "label": "身份转发",
+      "detail": "网关可传递用户身份头，便于按用户计费",
+      "children": [
+        "forward_user_identity 设置"
+      ]
+    },
+    {
+      "label": "关键 bug 修复",
+      "detail": "修复 MCP 长连接超时与 Windows 凭据泄露",
+      "children": [
+        "MCP v2 长连接被服务器超时断开",
+        "Windows 路径绕过 UNC 验证 NTLM 泄露"
+      ]
+    },
+    {
+      "label": "Todo 工具变更",
+      "detail": "新模型上默认禁用 Todo 工具，需显式开启",
+      "children": [
+        "Opus 4.8 等新模型默认禁用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "GitLab",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    },
+    {
+      "name": "NTLM",
+      "type": "concept"
+    },
+    {
+      "name": "UNC",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "GitLab",
+      "label": "支持"
+    },
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "修复"
+    },
+    {
+      "from": "claude-code",
+      "to": "Opus 4.8",
+      "label": "适配"
+    },
+    {
+      "from": "Windows",
+      "to": "NTLM",
+      "label": "涉及"
+    },
+    {
+      "from": "Windows",
+      "to": "UNC",
+      "label": "涉及"
+    }
+  ]
+}

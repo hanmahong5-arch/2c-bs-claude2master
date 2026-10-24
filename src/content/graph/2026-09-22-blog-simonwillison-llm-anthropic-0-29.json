@@ -1,0 +1,71 @@
+{
+  "center": "llm-anthropic 0.29 发布",
+  "branches": [
+    {
+      "label": "版本更新",
+      "detail": "Simon Willison 发布 llm-anthropic 0.29，为 LLM 工具提供 Anthropic 模型访问",
+      "children": [
+        "支持 Claude 系列模型"
+      ]
+    },
+    {
+      "label": "新增模型",
+      "detail": "新增对 Claude Opus 5.5 的支持",
+      "children": [
+        "命令：llm -m claude-opus-5.5 \"prompt\""
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "2026 年 9 月 22 日发布于 Simon Willison 博客",
+      "children": [
+        "作者：Simon Willison"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm-anthropic",
+      "type": "product"
+    },
+    {
+      "name": "Claude Opus 5.5",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "LLM",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm-anthropic",
+      "label": "发布"
+    },
+    {
+      "from": "llm-anthropic",
+      "to": "Claude Opus 5.5",
+      "label": "支持"
+    },
+    {
+      "from": "llm-anthropic",
+      "to": "Anthropic",
+      "label": "接入"
+    },
+    {
+      "from": "llm-anthropic",
+      "to": "LLM",
+      "label": "属于"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "center": "OpenAI 密歇根 1GW 数据中心",
+  "branches": [
+    {
+      "label": "项目概况",
+      "detail": "OpenAI 在密歇根州破土动工 Stargate 1GW 数据中心",
+      "children": [
+        "名为 Stargate",
+        "1GW 规模"
+      ]
+    },
+    {
+      "label": "算力能源需求",
+      "detail": "为扩展 AI 能力，训练推理需前所未有算力与能源",
+      "children": [
+        "大型基础设施投资",
+        "支撑未来模型"
+      ]
+    },
+    {
+      "label": "就业与访问",
+      "detail": "扩大 AI 技术访问，建设运营阶段创造当地就业",
+      "children": [
+        "建设阶段就业",
+        "运营阶段就业"
+      ]
+    },
+    {
+      "label": "社区支持",
+      "detail": "强调支持当地社区发展，考虑社会影响",
+      "children": [
+        "区域经济提振",
+        "社会影响考量"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Stargate",
+      "type": "product"
+    },
+    {
+      "name": "密歇根州",
+      "type": "concept"
+    },
+    {
+      "name": "1GW 数据中心",
+      "type": "concept"
+    },
+    {
+      "name": "智能时代",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Stargate",
+      "label": "启动"
+    },
+    {
+      "from": "Stargate",
+      "to": "密歇根州",
+      "label": "位于"
+    },
+    {
+      "from": "Stargate",
+      "to": "1GW 数据中心",
+      "label": "属于"
+    },
+    {
+      "from": "OpenAI",
+      "to": "智能时代",
+      "label": "构建基础设施"
+    }
+  ]
+}

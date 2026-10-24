@@ -1,0 +1,87 @@
+{
+  "center": "Cline Desktop v0.0.7 更新",
+  "branches": [
+    {
+      "label": "系统托盘",
+      "detail": "新增托盘图标显示运行中代理会话数",
+      "children": [
+        "便于监控多会话状态"
+      ]
+    },
+    {
+      "label": "会话管理优化",
+      "detail": "历史分页每页10条，收藏并按最近活动排序",
+      "children": [
+        "状态点颜色统一",
+        "提升导航效率"
+      ]
+    },
+    {
+      "label": "子代理状态",
+      "detail": "子代理和队友运行结果在应用中展示",
+      "children": [
+        "支持追踪子任务状态"
+      ]
+    },
+    {
+      "label": "免费模型支持",
+      "detail": "免费模型标注(free)，达限显示重置时间",
+      "children": [
+        "降低使用门槛"
+      ]
+    },
+    {
+      "label": "问题修复",
+      "detail": "修复端点切换被忽略和行号导致工具调用失败",
+      "children": [
+        "确保区域路由正确",
+        "减少重试开销"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline Desktop",
+      "type": "product"
+    },
+    {
+      "name": "系统托盘",
+      "type": "concept"
+    },
+    {
+      "name": "子代理",
+      "type": "concept"
+    },
+    {
+      "name": "免费模型",
+      "type": "concept"
+    },
+    {
+      "name": "会话历史",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline Desktop",
+      "to": "系统托盘",
+      "label": "新增"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "子代理",
+      "label": "展示状态"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "免费模型",
+      "label": "支持"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "会话历史",
+      "label": "优化"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "center": "OlmoEarth 行星级地理空间推理",
+  "branches": [
+    {
+      "label": "平台定位",
+      "detail": "Ai2 为环境组织提供从微调到大规模推理的地理空间基础设施",
+      "children": [
+        "OlmoEarth 模型基于约 10TB 多模态卫星数据预…",
+        "应用于森林砍伐、粮食安全、野火风险"
+      ]
+    },
+    {
+      "label": "三阶段硬件分工",
+      "detail": "按任务匹配硬件，避免 GPU 做 CPU 的活",
+      "children": [
+        "CPU 高 I/O：获取、重投影、对齐、归一化影像",
+        "GPU：模型前向传播，输出直写存储",
+        "CPU：拼接窗口、掩膜、导出 Zarr/GeoTIFF/…"
+      ]
+    },
+    {
+      "label": "分区并行执行",
+      "detail": "OlmoEarth Run 把区域切成独立分区与窗口并行处理",
+      "children": [
+        "州级约百个分区，大陆级可达数千个",
+        "相邻分区重叠，组装时消除接缝",
+        "北美野火风险图峰值用 19,600 CPU 与 994 GPU"
+      ]
+    },
+    {
+      "label": "元数据索引",
+      "detail": "自建索引避免压垮外部 STAC 服务",
+      "children": [
+        "AWS Open Data 用 SNS 通知，无变更流则轮询",
+        "窗口化读取 COG/Zarr，只取所需字节",
+        "支持 Sentinel-1/2、Landsat、NISAR 标注"
+      ]
+    },
+    {
+      "label": "性能与权衡",
+      "detail": "大陆级推理约一天，成本每平方公里不到一美分",
+      "children": [
+        "4,737 小时串行计算压缩到 30.5 小时，155× 加速",
+        "并行度受云配额限制，是每次运行的旋钮",
+        "分辨率、模型大小、缓存各有取舍"
+      ]
+    }
+  ],
+  "flow": [
+    "确定区域与时间范围",
+    "查询自建元数据索引",
+    "窗口化读取影像",
+    "CPU 预处理与对齐",
+    "GPU 分区并行推理",
+    "CPU 拼接导出地图"
+  ],
+  "entities": [
+    {
+      "name": "Ai2",
+      "type": "company"
+    },
+    {
+      "name": "OlmoEarth",
+      "type": "model"
+    },
+    {
+      "name": "OlmoEarth Platform",
+      "type": "product"
+    },
+    {
+      "name": "OlmoEarth Run",
+      "type": "product"
+    },
+    {
+      "name": "STAC",
+      "type": "concept"
+    },
+    {
+      "name": "Sentinel-2",
+      "type": "product"
+    },
+    {
+      "name": "Zarr",
+      "type": "technique"
+    },
+    {
+      "name": "GeoTIFF",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ai2",
+      "to": "OlmoEarth Platform",
+      "label": "构建"
+    },
+    {
+      "from": "OlmoEarth Platform",
+      "to": "OlmoEarth",
+      "label": "运行"
+    },
+    {
+      "from": "OlmoEarth Platform",
+      "to": "OlmoEarth Run",
+      "label": "包含"
+    },
+    {
+      "from": "OlmoEarth Platform",
+      "to": "STAC",
+      "label": "依赖"
+    },
+    {
+      "from": "OlmoEarth Platform",
+      "to": "Sentinel-2",
+      "label": "读取"
+    },
+    {
+      "from": "OlmoEarth Platform",
+      "to": "Zarr",
+      "label": "导出"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "center": "Nathan Lambert 近期项目汇总",
+  "branches": [
+    {
+      "label": "ATOM 报告",
+      "detail": "发布开放语言模型生态技术报告，含 RAM 指标与中美模型分析",
+      "children": [
+        "论文 arXiv:2604.07190",
+        "RAM 分数 >1 预示同尺寸前 10 下载量",
+        "分析 GPT-OSS、Gemma 4、Moonshot、Z.ai…"
+      ]
+    },
+    {
+      "label": "RLHF 新书",
+      "detail": "RLHF Book 已完成编辑并交付 Manning 生产，开放预购",
+      "children": [
+        "2024 年 5 月 20 日启动",
+        "约 2 个月后印刷",
+        "Amazon 或 Manning 预购"
+      ]
+    },
+    {
+      "label": "后训练课程",
+      "detail": "基于新书制作免费 YouTube 讲座系列，含社区问答",
+      "children": [
+        "首批 4 讲已发布",
+        "涵盖 RLHF 基础、IFT、奖励建模、策略梯度",
+        "夏季扩展代码库与线下活动"
+      ]
+    },
+    {
+      "label": "近期研究",
+      "detail": "参与两篇论文，聚焦多轮对话与元强化学习智能体搜索",
+      "children": [
+        "TurnWise：单轮与多轮能力差距",
+        "Meta-RL 自反思用于智能体搜索",
+        "关注智能体多轮交互界面问题"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "ATOM Report",
+      "type": "product"
+    },
+    {
+      "name": "RLHF Book",
+      "type": "product"
+    },
+    {
+      "name": "Manning",
+      "type": "company"
+    },
+    {
+      "name": "GPT-OSS",
+      "type": "model"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "Moonshot",
+      "type": "company"
+    },
+    {
+      "name": "RAM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "ATOM Report",
+      "label": "发布"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "RLHF Book",
+      "label": "撰写"
+    },
+    {
+      "from": "RLHF Book",
+      "to": "Manning",
+      "label": "交付"
+    },
+    {
+      "from": "ATOM Report",
+      "to": "RAM",
+      "label": "使用"
+    },
+    {
+      "from": "ATOM Report",
+      "to": "GPT-OSS",
+      "label": "分析"
+    },
+    {
+      "from": "ATOM Report",
+      "to": "Gemma 4",
+      "label": "分析"
+    }
+  ]
+}

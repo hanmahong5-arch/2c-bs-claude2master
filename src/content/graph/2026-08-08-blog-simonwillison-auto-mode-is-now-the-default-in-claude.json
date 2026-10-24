@@ -1,0 +1,107 @@
+{
+  "center": "Claude Code 默认自动模式",
+  "branches": [
+    {
+      "label": "默认自动模式",
+      "detail": "Anthropic 将 Claude Code 自动模式设为多数套餐新会话默认",
+      "children": [
+        "8 月 14 日起生效",
+        "覆盖 Pro、Max、Team 套餐"
+      ]
+    },
+    {
+      "label": "人类测试结果",
+      "detail": "1,053 名付费测试者中仅 13.6% 拒绝危险命令",
+      "children": [
+        "自动模式可拦截 89% 危险操作",
+        "仍有 11% 未被阻止"
+      ]
+    },
+    {
+      "label": "注入评估",
+      "detail": "Trajectory Labs 测试 72 个间接提示注入场景",
+      "children": [
+        "720 次攻击均未突破 Fable 5、Opus 5、Sonnet…",
+        "Anthropic 称已基本缓解各类攻击"
+      ]
+    },
+    {
+      "label": "作者质疑",
+      "detail": "Simon Willison 希望看到更多独立验证",
+      "children": [
+        "举例恶意第三方包 fetch-model-files 窃取数据",
+        "认为自动模式难以防御此类攻击"
+      ]
+    },
+    {
+      "label": "安全建议",
+      "detail": "作者主张限制代理可访问的数据与工具",
+      "children": [
+        "确认疲劳使人工审批不可靠",
+        "提示注入比误删文件更令人担忧"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Trajectory Labs",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Opus 5",
+      "type": "model"
+    },
+    {
+      "name": "Sonnet 5",
+      "type": "model"
+    },
+    {
+      "name": "prompt injection",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "设为默认"
+    },
+    {
+      "from": "Trajectory Labs",
+      "to": "Claude Code",
+      "label": "评估"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Anthropic",
+      "label": "质疑"
+    },
+    {
+      "from": "Claude Code",
+      "to": "prompt injection",
+      "label": "防御"
+    },
+    {
+      "from": "Trajectory Labs",
+      "to": "Opus 5",
+      "label": "测试"
+    }
+  ]
+}

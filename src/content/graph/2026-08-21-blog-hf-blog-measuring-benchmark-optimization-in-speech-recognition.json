@@ -1,0 +1,101 @@
+{
+  "center": "Hugging Face 基准测试优化语音识别",
+  "branches": [
+    {
+      "label": "文章主题",
+      "detail": "Hugging Face 用基准测试衡量并优化语音识别模型",
+      "children": [
+        "标题：Measuring benchmark optimization…",
+        "目标：提升准确率与效率"
+      ]
+    },
+    {
+      "label": "涉及模型",
+      "detail": "文章提及 10 个模型，覆盖 ASR 与 TTS",
+      "children": [
+        "ASR 模型规模 0.8B 至 9B",
+        "含 10B Text-to-Speech 模型",
+        "最高下载量 4.71M"
+      ]
+    },
+    {
+      "label": "相关资源",
+      "detail": "文章关联数据集、Spaces 与论文",
+      "children": [
+        "Datasets mentioned: 3",
+        "Spaces mentioned: 3",
+        "Papers mentioned: 1（2608.19936）"
+      ]
+    },
+    {
+      "label": "社区反馈",
+      "detail": "文章获 67 次点赞，评论区两条正面留言",
+      "children": [
+        "评论：nice / nice paper",
+        "作者 Abc-123-Xy 于 Aug 22 发布"
+      ]
+    },
+    {
+      "label": "相关榜单",
+      "detail": "博客提及 Open ASR Leaderboard 与 Real World VoiceEQ",
+      "children": [
+        "Open ASR Leaderboard 新增 Global South…",
+        "Real World VoiceEQ 衡量语音 AI 人类感知质量"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Automatic Speech Recognition",
+      "type": "concept"
+    },
+    {
+      "name": "Text-to-Speech",
+      "type": "concept"
+    },
+    {
+      "name": "Open ASR Leaderboard",
+      "type": "product"
+    },
+    {
+      "name": "Real World VoiceEQ",
+      "type": "product"
+    },
+    {
+      "name": "Abc-123-Xy",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Open ASR Leaderboard",
+      "label": "维护"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Real World VoiceEQ",
+      "label": "发布"
+    },
+    {
+      "from": "Open ASR Leaderboard",
+      "to": "Automatic Speech Recognition",
+      "label": "评测"
+    },
+    {
+      "from": "Real World VoiceEQ",
+      "to": "Text-to-Speech",
+      "label": "评测"
+    },
+    {
+      "from": "Abc-123-Xy",
+      "to": "Hugging Face",
+      "label": "发布文章"
+    }
+  ]
+}

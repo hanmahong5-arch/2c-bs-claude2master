@@ -1,0 +1,123 @@
+{
+  "center": "Flue 2：为 Agent 引入 React…",
+  "branches": [
+    {
+      "label": "React 式 Agent Hooks",
+      "detail": "Flue 2 借鉴 React，用 Hooks 让 Agent 动态管理状态与能力",
+      "children": [
+        "16 个内置 hooks：useSkill、useTool…",
+        "Hooks 用 TypeScript 编写，支持自定义",
+        "Agent 是 JS 函数，每次模型调用前重新渲染"
+      ]
+    },
+    {
+      "label": "Harness 是核心",
+      "detail": "Schott 认为 harness 不是功能而是 Agent 的本质，无 harness 无 Agent",
+      "children": [
+        "Flue 构建于开源最小 harness Pi 之上",
+        "托管 Agent 用 Vite 构建",
+        "Pi 之于 Flue 如同 Vite 之于 Astro"
+      ]
+    },
+    {
+      "label": "从文件路由转向组合",
+      "detail": "早期照搬 Web 框架的文件路由，后发现大客户整个公司就是一个 Agent",
+      "children": [
+        "文件路由被 Schott 称为反模式",
+        "Flue 2 API 更接近 React 而非 Astro/Next.js",
+        "重点从路由转向如何组合 Agent"
+      ]
+    },
+    {
+      "label": "用编码 Agent 开发",
+      "detail": "Flue 起源于 Astro 仓库的 issue 分诊系统，后演变为可云端托管的 headless Claude Code",
+      "children": [
+        "Schott 称 Flue 像 Claude Code 但 100%…",
+        "官方 onboarding 让开发者把提示词交给编码…",
+        "文档全部支持 markdown"
+      ]
+    },
+    {
+      "label": "竞品与定位",
+      "detail": "最直接竞品是 Vercel 的 eve，两者都把 harness 作为基础",
+      "children": [
+        "OG 框架：Vercel AI SDK、Cloudflare…",
+        "Schott 认为 meta-harness 概念尚不清晰",
+        "Flue 坚持开源、可跨主机移植"
+      ]
+    }
+  ],
+  "flow": [
+    "定义 Agent 为 JS 函数",
+    "每轮模型调用前重新渲染",
+    "Hooks 动态管理状态与能力",
+    "运行时附加工具与子 Agent",
+    "在 harness 中自主驱动执行"
+  ],
+  "entities": [
+    {
+      "name": "Flue",
+      "type": "product"
+    },
+    {
+      "name": "Fred Schott",
+      "type": "person"
+    },
+    {
+      "name": "Astro",
+      "type": "product"
+    },
+    {
+      "name": "React",
+      "type": "technique"
+    },
+    {
+      "name": "Pi",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Vercel eve",
+      "type": "product"
+    },
+    {
+      "name": "Cloudflare",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Fred Schott",
+      "to": "Flue",
+      "label": "创建"
+    },
+    {
+      "from": "Fred Schott",
+      "to": "Astro",
+      "label": "创建"
+    },
+    {
+      "from": "Flue",
+      "to": "React",
+      "label": "借鉴"
+    },
+    {
+      "from": "Flue",
+      "to": "Pi",
+      "label": "构建于"
+    },
+    {
+      "from": "Flue",
+      "to": "Claude Code",
+      "label": "类比"
+    },
+    {
+      "from": "Vercel eve",
+      "to": "Flue",
+      "label": "竞争"
+    }
+  ]
+}

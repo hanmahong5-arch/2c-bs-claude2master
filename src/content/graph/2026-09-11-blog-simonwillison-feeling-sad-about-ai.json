@@ -1,0 +1,82 @@
+{
+  "center": "Simon Willison 谈 AI 编码焦虑",
+  "branches": [
+    {
+      "label": "焦虑普遍存在",
+      "detail": "许多开发者（包括作者几年前）都经历过 AI 编码带来的存在性危机",
+      "children": [
+        "编码 agent 一小时完成一周工作量",
+        "第一反应是极度沮丧"
+      ]
+    },
+    {
+      "label": "技能不再独特",
+      "detail": "把精确规格翻译成好代码已不再是独有技能，需接受这一现实",
+      "children": [
+        "接受后才能看到更大问题空间",
+        "软件工程师仍有大量工作可做"
+      ]
+    },
+    {
+      "label": "经验仍是优势",
+      "detail": "现有技能和经验让人能掌握新工具，产出远超仅用 agent 的新手",
+      "children": [
+        "提供价值并执行到更高水平",
+        "新手缺乏深度积累"
+      ]
+    },
+    {
+      "label": "变化是常态",
+      "detail": "软件工程史上工具和语言从未有超过约五年的稳定期",
+      "children": [
+        "变化只是稍快一些",
+        "选择软件开发即选择了频繁剧变"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Hacker News",
+      "type": "product"
+    },
+    {
+      "name": "AI 编码",
+      "type": "concept"
+    },
+    {
+      "name": "coding agent",
+      "type": "technique"
+    },
+    {
+      "name": "软件工程",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Hacker News",
+      "label": "评论于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "AI 编码",
+      "label": "谈论"
+    },
+    {
+      "from": "AI 编码",
+      "to": "coding agent",
+      "label": "依赖"
+    },
+    {
+      "from": "coding agent",
+      "to": "软件工程",
+      "label": "冲击"
+    }
+  ]
+}

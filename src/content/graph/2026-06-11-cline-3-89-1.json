@@ -1,0 +1,81 @@
+{
+  "center": "cline v3.89.1 兼容性修复",
+  "branches": [
+    {
+      "label": "修复 VS Code 兼容",
+      "detail": "解决 Anthropic 提供商在 VS Code 1.123+ 的中断问题",
+      "children": [
+        "Node 24 运行时破坏捆绑的 Anthropic SDK",
+        "核心 SDK 需与宿主运行时版本兼容"
+      ]
+    },
+    {
+      "label": "支持 DeepSeek V4",
+      "detail": "新增对 DeepSeek V4 推理输出格式的正确处理",
+      "children": [
+        "适配不同模型供应商的响应结构"
+      ]
+    },
+    {
+      "label": "多环境稳定性",
+      "detail": "聚焦特定环境下的中断修复，保障提供商稳定",
+      "children": [
+        "对底层依赖变化快速响应与隔离修复"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "DeepSeek V4",
+      "type": "model"
+    },
+    {
+      "name": "Node 24",
+      "type": "product"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "VS Code",
+      "label": "兼容"
+    },
+    {
+      "from": "cline",
+      "to": "DeepSeek V4",
+      "label": "支持"
+    },
+    {
+      "from": "cline",
+      "to": "Anthropic",
+      "label": "集成"
+    },
+    {
+      "from": "Node 24",
+      "to": "Anthropic",
+      "label": "破坏 SDK"
+    },
+    {
+      "from": "Agent Harness",
+      "to": "DeepSeek V4",
+      "label": "适配"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "center": "AI 圈动态：Fable 5 回归与多模型…",
+  "branches": [
+    {
+      "label": "Fable 5 回归",
+      "detail": "Anthropic 重新启用 Claude Fable 5，但带安全回退机制",
+      "children": [
+        "部分请求被路由至 Opus 4.8",
+        "Cursor 称其评估领先但每任务最贵",
+        "Devin、Perplexity 同步接入"
+      ]
+    },
+    {
+      "label": "多模型编排",
+      "detail": "开发者转向组合策略，不再依赖单一前沿模型",
+      "children": [
+        "Fable 5 仅用于高价值推理规划",
+        "实现与验证交给其他模型",
+        "端到端 PR 产出显著提升"
+      ]
+    },
+    {
+      "label": "GLM-5.2 生态",
+      "detail": "Z.ai 围绕 GLM-5.2 构建产品面，推出 ZCode",
+      "children": [
+        "ZCode 支持 BYOK 与跨平台",
+        "APEX-SWE 集成任务 55.3% Pass@1",
+        "vLLM 加入 DSpark 投机解码"
+      ]
+    },
+    {
+      "label": "Agent 记忆",
+      "detail": "Wiki 式记忆与记忆调和成为实用设计模式",
+      "children": [
+        "LangChain 发布 OpenWiki",
+        "Weaviate Engram 先调和再提交",
+        "企业记忆需权限感知与共享"
+      ]
+    },
+    {
+      "label": "安全与评估",
+      "detail": "Devin Security Swarm 用 Agentic MapReduce 找漏洞",
+      "children": [
+        "Fortune 500 试点修复超千个漏洞",
+        "Agent 评估成为独立子领域",
+        "FLARE-AI 标准化故障报告"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Z.ai",
+      "type": "company"
+    },
+    {
+      "name": "LangChain",
+      "type": "company"
+    },
+    {
+      "name": "OpenWiki",
+      "type": "product"
+    },
+    {
+      "name": "Devin Security Swarm",
+      "type": "product"
+    },
+    {
+      "name": "Agentic MapReduce",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5",
+      "label": "重新启用"
+    },
+    {
+      "from": "Z.ai",
+      "to": "GLM-5.2",
+      "label": "构建生态"
+    },
+    {
+      "from": "LangChain",
+      "to": "OpenWiki",
+      "label": "发布"
+    },
+    {
+      "from": "Devin Security Swarm",
+      "to": "Agentic MapReduce",
+      "label": "采用"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "center": "OpenAI 推出 ChatGPT for Teens",
+  "branches": [
+    {
+      "label": "产品定位",
+      "detail": "面向青少年，帮助学习、批判性思考与自信使用 AI",
+      "children": [
+        "ChatGPT for Teens",
+        "目标：学习与批判性思考"
+      ]
+    },
+    {
+      "label": "安全保护",
+      "detail": "内置更强保护措施与健康使用功能，应对青少年使用风险",
+      "children": [
+        "更强保护措施",
+        "健康使用功能"
+      ]
+    },
+    {
+      "label": "家长控制",
+      "detail": "新增家长控制选项，让家长参与监管",
+      "children": [
+        "家长控制选项"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "AI 工具面向未成年人合规设计成趋势，需年龄分级与内容过滤",
+      "children": [
+        "年龄分级",
+        "内容过滤",
+        "家长监管"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT for Teens",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "家长控制",
+      "type": "concept"
+    },
+    {
+      "name": "年龄分级",
+      "type": "concept"
+    },
+    {
+      "name": "内容过滤",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT for Teens",
+      "label": "推出"
+    },
+    {
+      "from": "ChatGPT for Teens",
+      "to": "ChatGPT",
+      "label": "基于"
+    },
+    {
+      "from": "ChatGPT for Teens",
+      "to": "家长控制",
+      "label": "包含"
+    },
+    {
+      "from": "ChatGPT for Teens",
+      "to": "年龄分级",
+      "label": "涉及"
+    },
+    {
+      "from": "ChatGPT for Teens",
+      "to": "内容过滤",
+      "label": "涉及"
+    }
+  ]
+}

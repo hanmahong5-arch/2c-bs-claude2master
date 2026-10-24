@@ -1,0 +1,104 @@
+{
+  "center": "AMD收购Taalas与AI模型新进展",
+  "branches": [
+    {
+      "label": "AMD收购Taalas",
+      "detail": "AMD收购专为模型定制推理芯片的Taalas，AI推理竞争升温",
+      "children": [
+        "Taalas称打造全球最快、最具成本效益的推理芯片",
+        "Lisa Su同意收购，此前Baseten曾质疑蚀刻LLM"
+      ]
+    },
+    {
+      "label": "Meta Muse Spark 1.2",
+      "detail": "Meta新模型快速进入前沿，价格性能激进，宣称奥赛金牌级推理",
+      "children": [
+        "Vals Index前五，$0.69/测试，比Kimi便宜3倍",
+        "五项STEM奥赛金牌，无工具，多智能体并行推理"
+      ]
+    },
+    {
+      "label": "OpenAI模型统一",
+      "detail": "GPT-5.6 Sol统一Instant与深度推理，免费层扩展，推出Agent插件",
+      "children": [
+        "Plus/Pro用户可用推理努力滑块，事实错误减少68%",
+        "免费用户无限文本聊天，GPT-5.6 Luna降价80%",
+        "Agent Plugins开放标准，Codex安全审查"
+      ]
+    },
+    {
+      "label": "Agent与MCP基建",
+      "detail": "Cloudflare推Kitesurf无状态浏览器，MCP成标配，多智能体产品化",
+      "children": [
+        "Kitesurf在Workers上运行，拆分脚本/DOM与渲染",
+        "Weaviate内置/v1/mcp端点，OpenAI插件支持MCP",
+        "Chollet称大推理harness为神经符号系统"
+      ]
+    },
+    {
+      "label": "推理路由与开源服务",
+      "detail": "Cursor Router按任务路由模型，开源模型多平台可用",
+      "children": [
+        "Cursor Router训练数百万交互，Grok 4.5日常…",
+        "Baseten成HF推理提供商，托管Kimi K3等"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "AMD",
+      "type": "company"
+    },
+    {
+      "name": "Taalas",
+      "type": "company"
+    },
+    {
+      "name": "Meta",
+      "type": "company"
+    },
+    {
+      "name": "Muse Spark 1.2",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Cloudflare",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AMD",
+      "to": "Taalas",
+      "label": "收购"
+    },
+    {
+      "from": "Meta",
+      "to": "Muse Spark 1.2",
+      "label": "发布"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Sol",
+      "label": "发布"
+    },
+    {
+      "from": "Cloudflare",
+      "to": "MCP",
+      "label": "支持"
+    }
+  ]
+}

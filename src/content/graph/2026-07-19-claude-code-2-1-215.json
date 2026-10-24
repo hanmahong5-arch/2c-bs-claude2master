@@ -1,0 +1,65 @@
+{
+  "center": "Claude Code 取消技能自动触发",
+  "branches": [
+    {
+      "label": "变更内容",
+      "detail": "/verify 与 /code-review 技能不再自动触发，改为手动调用",
+      "children": [
+        "agent 需显式请求验证或审查",
+        "减少不必要的自动执行"
+      ]
+    },
+    {
+      "label": "启用方式",
+      "detail": "用户通过 /verify 或 /code-review 命令主动启用",
+      "children": [
+        "设计更强调用户控制",
+        "仅在收到指令时执行任务"
+      ]
+    },
+    {
+      "label": "影响范围",
+      "detail": "工作流自动化程度发生变化",
+      "children": [
+        "agent harness 需支持命令触发机制",
+        "不再全自动执行"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "/verify",
+      "type": "technique"
+    },
+    {
+      "name": "/code-review",
+      "type": "technique"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "/verify",
+      "label": "取消自动触发"
+    },
+    {
+      "from": "Claude Code",
+      "to": "/code-review",
+      "label": "取消自动触发"
+    },
+    {
+      "from": "agent harness",
+      "to": "Claude Code",
+      "label": "支持命令触发"
+    }
+  ]
+}

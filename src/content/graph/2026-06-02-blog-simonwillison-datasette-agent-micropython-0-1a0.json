@@ -1,0 +1,85 @@
+{
+  "center": "MicroPython WASM 沙箱",
+  "branches": [
+    {
+      "label": "发布内容",
+      "detail": "Simon Willison 发布 datasette-agent-micropython 0.1a0 版本",
+      "children": [
+        "2026 年 6 月 2 日发布",
+        "Datasette Agent 的代码执行工具"
+      ]
+    },
+    {
+      "label": "核心目标",
+      "detail": "让 Datasette Agent 能安全地生成并执行 Python 代码",
+      "children": [
+        "用 MicroPython 在 WASM 沙箱中运行"
+      ]
+    },
+    {
+      "label": "安全验证",
+      "detail": "GPT-5.5 至今未能突破该沙箱",
+      "children": [
+        "作者称 alpha 阶段表现乐观"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "datasette-agent-micropython",
+      "type": "product"
+    },
+    {
+      "name": "Datasette Agent",
+      "type": "product"
+    },
+    {
+      "name": "MicroPython",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "datasette-agent-micropython",
+      "label": "发布"
+    },
+    {
+      "from": "datasette-agent-micropython",
+      "to": "Datasette Agent",
+      "label": "作为工具"
+    },
+    {
+      "from": "datasette-agent-micropython",
+      "to": "MicroPython",
+      "label": "基于"
+    },
+    {
+      "from": "datasette-agent-micropython",
+      "to": "WebAssembly",
+      "label": "运行于"
+    },
+    {
+      "from": "GPT-5.5",
+      "to": "datasette-agent-micropython",
+      "label": "未能突破"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "center": "Google 撤回人类在环承诺",
+  "branches": [
+    {
+      "label": "事件核心",
+      "detail": "404 Media 报道 Google 内部 AI 备忘录风波，引发外界关注",
+      "children": [
+        "Emanuel Maiberg 撰写报道",
+        "Google 员工内部分享吐槽 AI 的梗图"
+      ]
+    },
+    {
+      "label": "声明被改",
+      "detail": "文章发布后 Google 发言人要求发布修改版声明",
+      "children": [
+        "新版声明删去‘必须保持人类在环’表述"
+      ]
+    },
+    {
+      "label": "关键承诺",
+      "detail": "原声明强调‘维持人类在环至关重要’，修改后不再提及",
+      "children": [
+        "‘humans in the loop’ 被移除"
+      ]
+    },
+    {
+      "label": "来源与时间",
+      "detail": "内容由 Simon Willison 博客收录，发布于 2026 年 6 月 4 日",
+      "children": [
+        "标签：google、journalism、ai-ethics、404-…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "404 Media",
+      "type": "company"
+    },
+    {
+      "name": "Emanuel Maiberg",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "humans in the loop",
+      "type": "concept"
+    },
+    {
+      "name": "AI ethics",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Emanuel Maiberg",
+      "to": "404 Media",
+      "label": "供职于"
+    },
+    {
+      "from": "Emanuel Maiberg",
+      "to": "Google",
+      "label": "报道"
+    },
+    {
+      "from": "Google",
+      "to": "humans in the loop",
+      "label": "撤回承诺"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Emanuel Maiberg",
+      "label": "引用"
+    },
+    {
+      "from": "404 Media",
+      "to": "Google",
+      "label": "曝光"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "center": "llm 0.31.1 修复工具调用 JSON 错误",
+  "branches": [
+    {
+      "label": "版本与修复",
+      "detail": "llm 0.31.1 修复 OpenAI 兼容 API 中空参数工具调用引发的 JSON 错误",
+      "children": [
+        "问题编号 #1521",
+        "影响 OpenAI Chat Completion 端点"
+      ]
+    },
+    {
+      "label": "触发场景",
+      "detail": "工具调用参数为空时，部分提供商会返回 JSON 错误",
+      "children": [
+        "测试 llm-meta-ai 时发现"
+      ]
+    },
+    {
+      "label": "项目定位",
+      "detail": "llm 是 Simon Willison 开发的命令行访问大语言模型工具",
+      "children": [
+        "作者 Simon Willison",
+        "发布于 2026 年 7 月 9 日"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "llm",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI Chat Completion",
+      "type": "product"
+    },
+    {
+      "name": "llm-meta-ai",
+      "type": "product"
+    },
+    {
+      "name": "JSON",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm",
+      "label": "开发"
+    },
+    {
+      "from": "llm",
+      "to": "OpenAI Chat Completion",
+      "label": "兼容"
+    },
+    {
+      "from": "llm",
+      "to": "llm-meta-ai",
+      "label": "测试"
+    }
+  ]
+}

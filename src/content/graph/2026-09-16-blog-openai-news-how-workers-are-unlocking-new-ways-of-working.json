@@ -1,0 +1,105 @@
+{
+  "center": "AI 让工作跨岗扩展",
+  "branches": [
+    {
+      "label": "任务跨界",
+      "detail": "员工用 AI 做本职之外的任务，形成 task crossover",
+      "children": [
+        "分析 150 万条 ChatGPT 工作消息",
+        "数据来自 2026 年 4–7 月"
+      ]
+    },
+    {
+      "label": "跨界成常态",
+      "detail": "跨岗任务占比从 4 月 13.1% 升至 7 月 25.9%",
+      "children": [
+        "约 6200 名员工持续观察",
+        "跨岗任务被反复使用"
+      ]
+    },
+    {
+      "label": "提示词差异",
+      "detail": "做岗外任务时提示更短，少要解释，多给背景",
+      "children": [
+        "更常提供例子或背景",
+        "更常要求核查验证"
+      ]
+    },
+    {
+      "label": "留存率分化",
+      "detail": "不同任务次月回访率差异大，平均 18.5%",
+      "children": [
+        "客户沟通 54%",
+        "广告文案 44%",
+        "营销物料 37%"
+      ]
+    },
+    {
+      "label": "岗位先变宽",
+      "detail": "职责组合扩大，但职位名称可能不变",
+      "children": [
+        "工作设计应与工具获取并重"
+      ]
+    }
+  ],
+  "flow": [
+    "员工尝试岗外任务",
+    "发现 AI 有用",
+    "反复回来使用",
+    "任务进入常规流程",
+    "岗位职责变宽"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Work at the Frontier",
+      "type": "concept"
+    },
+    {
+      "name": "task crossover",
+      "type": "concept"
+    },
+    {
+      "name": "AI Jobs Transition Framework",
+      "type": "concept"
+    },
+    {
+      "name": "Economic Research",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "分析数据"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Economic Research",
+      "label": "发布"
+    },
+    {
+      "from": "Economic Research",
+      "to": "task crossover",
+      "label": "研究"
+    },
+    {
+      "from": "Work at the Frontier",
+      "to": "task crossover",
+      "label": "记录"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AI Jobs Transition Framework",
+      "label": "提出"
+    }
+  ]
+}

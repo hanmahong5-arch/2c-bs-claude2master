@@ -1,0 +1,99 @@
+{
+  "center": "opencode v1.18.19 更新",
+  "branches": [
+    {
+      "label": "AI Gateway 直连",
+      "detail": "新增 Cloudflare AI Gateway 模型的 OpenAI/Anthropic 原生直连",
+      "children": [
+        "简化集成流程"
+      ]
+    },
+    {
+      "label": "Codex 速率限制",
+      "detail": "速率限制更贴近 ChatGPT 订阅，需注意配额管理",
+      "children": []
+    },
+    {
+      "label": "Qwen 参数调整",
+      "detail": "移除 Qwen 默认采样参数，避免发送不支持设置",
+      "children": [
+        "确保兼容性"
+      ]
+    },
+    {
+      "label": "多项问题修复",
+      "detail": "修复 /connect 显示、畸形定价、WebSocket 超限回退等",
+      "children": [
+        "提升稳定性"
+      ]
+    },
+    {
+      "label": "桌面版改进",
+      "detail": "保留服务器详情可编辑，改善用户体验",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Cloudflare AI Gateway",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Qwen",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Cloudflare AI Gateway",
+      "label": "新增直连"
+    },
+    {
+      "from": "Cloudflare AI Gateway",
+      "to": "OpenAI",
+      "label": "原生直连"
+    },
+    {
+      "from": "Cloudflare AI Gateway",
+      "to": "Anthropic",
+      "label": "原生直连"
+    },
+    {
+      "from": "opencode",
+      "to": "Codex",
+      "label": "调整速率限制"
+    },
+    {
+      "from": "Codex",
+      "to": "ChatGPT",
+      "label": "贴近订阅"
+    },
+    {
+      "from": "opencode",
+      "to": "Qwen",
+      "label": "移除默认参数"
+    }
+  ]
+}

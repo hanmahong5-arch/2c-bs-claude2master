@@ -1,0 +1,85 @@
+{
+  "center": "Dario Amodei 谈 AI 信任危机",
+  "branches": [
+    {
+      "label": "信任危机根源",
+      "detail": "公众对 AI 的负面看法本质是信任危机，而非 AI 领袖的风险警告所致",
+      "children": [
+        "普通人不信任公司、政府和科技行业",
+        "总怀疑科技公司在算计他们",
+        "成因可追溯数十年，AI 只是最新一环"
+      ]
+    },
+    {
+      "label": "营销无用",
+      "detail": "光鲜的正面营销宣传无法赢回信任",
+      "children": [
+        "有人说 Anthropic 该做营销，Dario 不认同",
+        "「AI 能治愈癌症」已成陈词滥调",
+        "多数人认为这类说法是欺骗"
+      ]
+    },
+    {
+      "label": "兑现承诺",
+      "detail": "真正有效的是实际兑现承诺，而非宣传",
+      "children": [
+        "真正有用的是真的治愈癌症",
+        "AI 公司尚未兑现造福世界的重大承诺",
+        "这是对 AI 公司最准确的批评"
+      ]
+    },
+    {
+      "label": "批评方向",
+      "detail": "Dario 认为批评应针对未兑现承诺，而非信息传达与营销",
+      "children": [
+        "责任完全在 AI 公司自己",
+        "应批评承诺未兑现，而非 messaging"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Dario Amodei",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "AI 信任危机",
+      "type": "concept"
+    },
+    {
+      "name": "AI 营销",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Dario Amodei",
+      "to": "Anthropic",
+      "label": "任 CEO"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Dario Amodei",
+      "label": "引用"
+    },
+    {
+      "from": "Dario Amodei",
+      "to": "AI 信任危机",
+      "label": "评论"
+    },
+    {
+      "from": "Dario Amodei",
+      "to": "AI 营销",
+      "label": "否定"
+    }
+  ]
+}

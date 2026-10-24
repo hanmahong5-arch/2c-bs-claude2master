@@ -1,0 +1,83 @@
+{
+  "center": "Codex 新增 GPT-6-Astra 支持",
+  "branches": [
+    {
+      "label": "新增模型支持",
+      "detail": "Codex 在 Amazon Bedrock 模型选择器中加入 GPT-6-Astra",
+      "children": [
+        "支持 Mantle 与 Runtime 全球/美国路由",
+        "需更新模型列表确保可被选用"
+      ]
+    },
+    {
+      "label": "修正异步指引",
+      "detail": "修正 GPT-6-Astra 的异步澄清问题指引",
+      "children": [
+        "明确仅接受文本输入",
+        "需使用受支持的工具"
+      ]
+    },
+    {
+      "label": "harness 调整",
+      "detail": "agent harness 需配合新模型调整逻辑",
+      "children": [
+        "更新模型列表",
+        "避免发送非文本内容"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GPT-6-Astra",
+      "type": "model"
+    },
+    {
+      "name": "Amazon Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Mantle",
+      "type": "product"
+    },
+    {
+      "name": "Runtime",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "GPT-6-Astra",
+      "label": "新增支持"
+    },
+    {
+      "from": "Amazon Bedrock",
+      "to": "GPT-6-Astra",
+      "label": "提供选择"
+    },
+    {
+      "from": "GPT-6-Astra",
+      "to": "Mantle",
+      "label": "支持路由"
+    },
+    {
+      "from": "GPT-6-Astra",
+      "to": "Runtime",
+      "label": "支持路由"
+    },
+    {
+      "from": "agent harness",
+      "to": "GPT-6-Astra",
+      "label": "适配调用"
+    }
+  ]
+}

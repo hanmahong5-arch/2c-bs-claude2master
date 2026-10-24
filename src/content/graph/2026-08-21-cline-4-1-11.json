@@ -1,0 +1,67 @@
+{
+  "center": "Cline v4.1.11 更新",
+  "branches": [
+    {
+      "label": "图片生成支持",
+      "detail": "模型可在任务中生成图片并内联显示在对话中",
+      "children": [
+        "需处理图片消息渲染与存储",
+        "确保多模态交互流畅"
+      ]
+    },
+    {
+      "label": "关键 bug 修复",
+      "detail": "修复代码操作、文件提及、diff 视图等问题",
+      "children": [
+        "VS Code 1.134 命令未找到",
+        "含空格路径 @文件提及失效",
+        "CRLF 行尾多行编辑 diff"
+      ]
+    },
+    {
+      "label": "会话与配置修复",
+      "detail": "恢复任务保留存活会话，配置不再泄漏",
+      "children": [
+        "任务级设置覆盖不泄漏",
+        "LiteLLM token 限制不覆盖",
+        "Gemini 自定义 base URL 恢复"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "LiteLLM",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "VS Code",
+      "label": "兼容"
+    },
+    {
+      "from": "Cline",
+      "to": "LiteLLM",
+      "label": "集成"
+    },
+    {
+      "from": "Cline",
+      "to": "Gemini",
+      "label": "支持"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "center": "OpenAI资助14个AI政策项目",
+  "branches": [
+    {
+      "label": "资助规模",
+      "detail": "OpenAI宣布资助14个独立项目，探索智能时代AI政策新思路",
+      "children": [
+        "共14个独立项目",
+        "由独立研究机构主导"
+      ]
+    },
+    {
+      "label": "覆盖领域",
+      "detail": "项目覆盖教育、就业、治理等多个领域",
+      "children": [
+        "教育",
+        "就业",
+        "治理"
+      ]
+    },
+    {
+      "label": "核心目标",
+      "detail": "扩大经济机会并增强社会韧性",
+      "children": [
+        "扩大经济机会",
+        "增强社会韧性"
+      ]
+    },
+    {
+      "label": "政策主张",
+      "detail": "政策创新需与技术进步同步，强调包容性和适应性",
+      "children": [
+        "政策与技术进步同步",
+        "注重包容性",
+        "注重适应性"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "AI政策环境将更重包容与适应，工具链需考虑合规和社会影响",
+      "children": [
+        "工具链需考虑合规性",
+        "工具链需考虑社会影响"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Intelligence Age",
+      "type": "concept"
+    },
+    {
+      "name": "AI政策",
+      "type": "concept"
+    },
+    {
+      "name": "经济机会",
+      "type": "concept"
+    },
+    {
+      "name": "社会韧性",
+      "type": "concept"
+    },
+    {
+      "name": "独立研究机构",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "独立研究机构",
+      "label": "资助"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AI政策",
+      "label": "探索"
+    },
+    {
+      "from": "AI政策",
+      "to": "经济机会",
+      "label": "扩大"
+    },
+    {
+      "from": "AI政策",
+      "to": "社会韧性",
+      "label": "增强"
+    },
+    {
+      "from": "Intelligence Age",
+      "to": "AI政策",
+      "label": "催生"
+    }
+  ]
+}

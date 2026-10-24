@@ -1,0 +1,108 @@
+{
+  "center": "HTML table extractor 表格转换…",
+  "branches": [
+    {
+      "label": "核心功能",
+      "detail": "粘贴含表格的富文本，自动检测并预览每个表格",
+      "children": [
+        "支持 HTML、富文本、纯文本输入",
+        "可导出 HTML/Markdown/CSV/TSV/JSON"
+      ]
+    },
+    {
+      "label": "Wikipedia 导入",
+      "detail": "利用 Wikipedia 开放的 CORS API 搜索页面并自动导入表格",
+      "children": [
+        "由 Codex 添加该功能",
+        "可搜索页面标题直接导入"
+      ]
+    },
+    {
+      "label": "使用示例",
+      "detail": "选中 Wikipedia 旧金山湾区城镇列表页面全部内容粘贴即可试用",
+      "children": [
+        "List of cities and towns in the San…"
+      ]
+    },
+    {
+      "label": "相关工具",
+      "detail": "作者重建了 Rich text to markdown 工具，新增表格支持并改进 UI",
+      "children": [
+        "属于作者一系列粘贴转换工具之一"
+      ]
+    }
+  ],
+  "flow": [
+    "粘贴含表格内容",
+    "自动检测表格",
+    "预览每个表格",
+    "选择导出格式",
+    "导出结果"
+  ],
+  "entities": [
+    {
+      "name": "HTML table extractor",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Wikipedia",
+      "type": "product"
+    },
+    {
+      "name": "CORS API",
+      "type": "technique"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Rich text to markdown",
+      "type": "product"
+    },
+    {
+      "name": "Markdown",
+      "type": "concept"
+    },
+    {
+      "name": "JSON",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "HTML table extractor",
+      "label": "开发"
+    },
+    {
+      "from": "HTML table extractor",
+      "to": "Wikipedia",
+      "label": "导入表格"
+    },
+    {
+      "from": "Wikipedia",
+      "to": "CORS API",
+      "label": "提供"
+    },
+    {
+      "from": "Codex",
+      "to": "HTML table extractor",
+      "label": "添加功能"
+    },
+    {
+      "from": "HTML table extractor",
+      "to": "Markdown",
+      "label": "导出为"
+    },
+    {
+      "from": "HTML table extractor",
+      "to": "JSON",
+      "label": "导出为"
+    }
+  ]
+}

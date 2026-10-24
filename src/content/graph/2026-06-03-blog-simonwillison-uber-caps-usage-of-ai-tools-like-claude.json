@@ -1,0 +1,96 @@
+{
+  "center": "Uber 限制 AI 编码工具用量",
+  "branches": [
+    {
+      "label": "新政策内容",
+      "detail": "Uber 对员工使用 AI 编码工具设月度 token 支出上限",
+      "children": [
+        "每工具每月上限 $1,500",
+        "各工具预算互不影响",
+        "仅限 Cursor、Claude Code 等 agentic 编码…"
+      ]
+    },
+    {
+      "label": "出台背景",
+      "detail": "Uber 2026 年 AI 预算四个月即耗尽",
+      "children": [
+        "预算制定于 2025 年，未预见编码 agent 流行",
+        "近几个月开始实施限制"
+      ]
+    },
+    {
+      "label": "成本换算",
+      "detail": "按两工具估算，每工程师每年上限约 $36,000",
+      "children": [
+        "约为 Uber 软件工程师中位薪酬 $330,000 的 11%",
+        "Simon Willison 自身用量约 $1,000/月/家"
+      ]
+    },
+    {
+      "label": "作者评价",
+      "detail": "认为设上限比鼓励刷 token 的排行榜更合理",
+      "children": [
+        "个人订阅补贴价不再适用于 Uber 等大公司",
+        "作者若在 Uber 仍有约 $500/月余量"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Uber",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "coding agents",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Uber",
+      "to": "Claude Code",
+      "label": "限制用量"
+    },
+    {
+      "from": "Uber",
+      "to": "Cursor",
+      "label": "限制用量"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Anthropic",
+      "label": "属于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Code",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "OpenAI",
+      "label": "订阅"
+    }
+  ]
+}

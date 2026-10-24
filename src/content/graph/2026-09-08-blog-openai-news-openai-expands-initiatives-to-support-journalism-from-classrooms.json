@@ -1,0 +1,83 @@
+{
+  "center": "OpenAI 扩大新闻业支持",
+  "branches": [
+    {
+      "label": "覆盖四类对象",
+      "detail": "支持计划面向学生、教育者、记者和新闻机构四类人群",
+      "children": [
+        "学生",
+        "教育者",
+        "记者"
+      ]
+    },
+    {
+      "label": "三种支持形式",
+      "detail": "以工具、培训和合作资源三种形式提供支持",
+      "children": [
+        "工具",
+        "培训",
+        "合作资源"
+      ]
+    },
+    {
+      "label": "从课堂到编辑部",
+      "detail": "支持范围从课堂延伸到 newsroom，覆盖人才培养与生产环节",
+      "children": [
+        "课堂",
+        "newsroom"
+      ]
+    },
+    {
+      "label": "链条式布局",
+      "detail": "并非单点捐赠，而是面向人才培养与生产环节的链条式投入",
+      "children": []
+    },
+    {
+      "label": "开发者机会",
+      "detail": "新闻场景可能成为模型工具落地与集成的明确需求方",
+      "children": [
+        "agent 与工具链开发者"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "新闻业",
+      "type": "concept"
+    },
+    {
+      "name": "newsroom",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    },
+    {
+      "name": "工具链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "新闻业",
+      "label": "扩大支持"
+    },
+    {
+      "from": "OpenAI",
+      "to": "newsroom",
+      "label": "延伸至"
+    },
+    {
+      "from": "agent",
+      "to": "新闻业",
+      "label": "落地于"
+    }
+  ]
+}

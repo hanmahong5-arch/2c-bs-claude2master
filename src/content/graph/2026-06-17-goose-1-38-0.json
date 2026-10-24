@@ -1,0 +1,93 @@
+{
+  "center": "Goose v1.38.0 更新",
+  "branches": [
+    {
+      "label": "ACP 会话增强",
+      "detail": "新增会话摘要与筛选，便于 Agent 检索与上下文管理",
+      "children": [
+        "获取会话最后消息片段",
+        "按关键词和类型筛选会话列表"
+      ]
+    },
+    {
+      "label": "统一思考模式",
+      "detail": "跨提供商规范推理输出格式与 OTLP 遥测日志",
+      "children": [
+        "统一不同 AI 服务的推理输出",
+        "规范 OTLP 日志模式",
+        "支撑多模型稳定监控与切换"
+      ]
+    },
+    {
+      "label": "扩展提供商",
+      "detail": "新增多个声明式 AI 提供商，丰富模型选择",
+      "children": [
+        "Perplexity",
+        "Alibaba Qwen",
+        "xAI SuperGrok"
+      ]
+    },
+    {
+      "label": "工具能力增强",
+      "detail": "引入图像读取工具与工具输出大小限制配置",
+      "children": [
+        "新增图像读取工具",
+        "可配置工具输出大小上限"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "ACP",
+      "type": "concept"
+    },
+    {
+      "name": "OTLP",
+      "type": "concept"
+    },
+    {
+      "name": "Perplexity",
+      "type": "company"
+    },
+    {
+      "name": "Alibaba Qwen",
+      "type": "model"
+    },
+    {
+      "name": "xAI SuperGrok",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "ACP",
+      "label": "强化"
+    },
+    {
+      "from": "Goose",
+      "to": "OTLP",
+      "label": "统一"
+    },
+    {
+      "from": "Goose",
+      "to": "Perplexity",
+      "label": "新增支持"
+    },
+    {
+      "from": "Goose",
+      "to": "Alibaba Qwen",
+      "label": "新增支持"
+    },
+    {
+      "from": "Goose",
+      "to": "xAI SuperGrok",
+      "label": "新增支持"
+    }
+  ]
+}

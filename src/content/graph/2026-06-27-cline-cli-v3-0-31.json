@@ -1,0 +1,72 @@
+{
+  "center": "Cline CLI v3.0.31 更新",
+  "branches": [
+    {
+      "label": "订阅费用提示",
+      "detail": "请求费用由订阅覆盖时显示提示，明确成本归属",
+      "children": [
+        "积分耗尽提示切换 ClinePass",
+        "未订阅消息列出 ClinePass 功能"
+      ]
+    },
+    {
+      "label": "订阅入口优化",
+      "detail": "新增从 ClinePass 选项直接打开订阅页面的入口",
+      "children": [
+        "简化订阅流程"
+      ]
+    },
+    {
+      "label": "插件管理增强",
+      "detail": "支持市场卸载功能，并展示插件捆绑的技能",
+      "children": [
+        "市场卸载",
+        "展示插件捆绑技能"
+      ]
+    },
+    {
+      "label": "兼容性调整",
+      "detail": "单次模式要求引号包裹提示词；OpenAI 兼容提供商 MCP 工具名限 64 字符",
+      "children": [
+        "单次模式引号包裹提示词",
+        "MCP 工具名 ≤64 字符"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "ClinePass",
+      "label": "提示切换"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "MCP",
+      "label": "限制工具名"
+    },
+    {
+      "from": "MCP",
+      "to": "OpenAI",
+      "label": "兼容提供商"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "center": "claude-code v2.1.265 稳定性改进",
+  "branches": [
+    {
+      "label": "插件热加载",
+      "detail": "新增 --plugin-dir 指向文件夹时热加载子插件，支持运行时增删",
+      "children": [
+        "便于动态扩展插件"
+      ]
+    },
+    {
+      "label": "工具结果上限",
+      "detail": "工具结果落盘新增 1GB 上限，超限截断并在预览中提示",
+      "children": [
+        "需注意长输出管理"
+      ]
+    },
+    {
+      "label": "缓存修复",
+      "detail": "修复子代理恢复时工具列表和系统提示变化导致缓存失效",
+      "children": [
+        "提升恢复效率"
+      ]
+    },
+    {
+      "label": "会话与远程修复",
+      "detail": "修复后台会话空闲超时误终止，以及远程控制结束信号提前发送",
+      "children": []
+    },
+    {
+      "label": "安全修复",
+      "detail": "修复插件路径符号链接检查绕过漏洞",
+      "children": [
+        "增强安全性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "--plugin-dir",
+      "type": "concept"
+    },
+    {
+      "name": "插件热加载",
+      "type": "technique"
+    },
+    {
+      "name": "工具结果落盘",
+      "type": "concept"
+    },
+    {
+      "name": "子代理恢复",
+      "type": "concept"
+    },
+    {
+      "name": "缓存失效",
+      "type": "concept"
+    },
+    {
+      "name": "符号链接检查绕过",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "--plugin-dir",
+      "label": "新增"
+    },
+    {
+      "from": "--plugin-dir",
+      "to": "插件热加载",
+      "label": "支持"
+    },
+    {
+      "from": "claude-code",
+      "to": "工具结果落盘",
+      "label": "新增上限"
+    },
+    {
+      "from": "claude-code",
+      "to": "子代理恢复",
+      "label": "修复"
+    },
+    {
+      "from": "子代理恢复",
+      "to": "缓存失效",
+      "label": "导致"
+    },
+    {
+      "from": "claude-code",
+      "to": "符号链接检查绕过",
+      "label": "修复"
+    }
+  ]
+}

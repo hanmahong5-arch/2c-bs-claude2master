@@ -1,0 +1,99 @@
+{
+  "center": "Anthropic最强模型用户遇冷",
+  "branches": [
+    {
+      "label": "Fable 5 遇冷",
+      "detail": "成本过高导致 Anthropic 最强模型 Fable 5 用户占比偏低",
+      "children": [
+        "Ramp 数据：Fable 5 占 Anthropic 模型支出…",
+        "Opus 4.8 以 28.0% 居首，远超 Fable 5"
+      ]
+    },
+    {
+      "label": "Anthropic 营收",
+      "detail": "7 月年化营收达 650 亿美元，较 5 月的 470 亿明显增长",
+      "children": [
+        "预计 Q3 盈利，沿用 Q2 盈利口径",
+        "6000 家客户年支出超 10 万美元"
+      ]
+    },
+    {
+      "label": "OpenAI 表现",
+      "detail": "本季度年化营收涨 35%，已超 400 亿美元",
+      "children": [
+        "7 月发布 GPT 5.6 提振业绩",
+        "年初表现疲软后回升"
+      ]
+    },
+    {
+      "label": "Ramp AI 指数",
+      "detail": "用 7 万家企业的信用卡账单数据估算模型采用率",
+      "children": [
+        "Opus 5 于 7 月 24 日才发布，占比 3.5%",
+        "Sonnet 4.6 占 8.3%，Sonnet 5 占 3.6%"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Opus 5",
+      "type": "model"
+    },
+    {
+      "name": "GPT 5.6",
+      "type": "model"
+    },
+    {
+      "name": "Ramp AI index",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Fable 5",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Opus 5",
+      "label": "发布"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT 5.6",
+      "label": "发布"
+    },
+    {
+      "from": "Ramp AI index",
+      "to": "Fable 5",
+      "label": "统计支出"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Ramp AI index",
+      "label": "引用"
+    }
+  ]
+}

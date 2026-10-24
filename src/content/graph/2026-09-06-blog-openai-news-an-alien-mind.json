@@ -1,0 +1,118 @@
+{
+  "center": "OpenAI 反思 AI 对齐挑战",
+  "branches": [
+    {
+      "label": "推理模型崛起",
+      "detail": "2023 年 RLSlow 项目首次验证推理模型可规模化训练",
+      "children": [
+        "模型能操作电脑、协作并开展研究",
+        "正改变计算机安全格局，带来新危险"
+      ]
+    },
+    {
+      "label": "智能难以理解",
+      "detail": "AI 由算力驱动「生长」而非设计，整体行为难以完全解释",
+      "children": [
+        "深度学习研究本质是实验科学",
+        "易测能力比难量化能力进步更快"
+      ]
+    },
+    {
+      "label": "对齐是核心问题",
+      "detail": "机器智能默认不遵循人类原则，需解决对齐",
+      "children": [
+        "目标对齐：AI 是否努力完成既定目标",
+        "价值对齐：能否泛化高层原则、诚实爱人类"
+      ]
+    },
+    {
+      "label": "对齐的根本挑战",
+      "detail": "泛化：AI 进入训练外新环境时可能偏离人类价值",
+      "children": [
+        "需在无人类监督时仍坚持人类价值",
+        "生态快速变化，需与其他 AI 交互"
+      ]
+    },
+    {
+      "label": "现有对齐方法",
+      "detail": "主流做法是把对齐行为纳入目标导向强化学习",
+      "children": [
+        "由 AI 按偏好模型/规范评估并奖励",
+        "平均有效但脆弱，依赖训练覆盖"
+      ]
+    }
+  ],
+  "flow": [
+    "算力规模化训练",
+    "推理模型形成思维链",
+    "目标导向强化学习对齐",
+    "泛化到新环境",
+    "持续监控与防护"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Jakub Pachocki",
+      "type": "person"
+    },
+    {
+      "name": "RLSlow",
+      "type": "concept"
+    },
+    {
+      "name": "reasoning language models",
+      "type": "concept"
+    },
+    {
+      "name": "alignment",
+      "type": "concept"
+    },
+    {
+      "name": "value alignment",
+      "type": "concept"
+    },
+    {
+      "name": "goal alignment",
+      "type": "concept"
+    },
+    {
+      "name": "Ray Kurzweil",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Jakub Pachocki",
+      "to": "OpenAI",
+      "label": "任职于"
+    },
+    {
+      "from": "OpenAI",
+      "to": "RLSlow",
+      "label": "开展项目"
+    },
+    {
+      "from": "RLSlow",
+      "to": "reasoning language models",
+      "label": "验证训练"
+    },
+    {
+      "from": "alignment",
+      "to": "value alignment",
+      "label": "包含"
+    },
+    {
+      "from": "alignment",
+      "to": "goal alignment",
+      "label": "包含"
+    },
+    {
+      "from": "Ray Kurzweil",
+      "to": "reasoning language models",
+      "label": "预测"
+    }
+  ]
+}

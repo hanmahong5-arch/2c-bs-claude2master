@@ -1,0 +1,80 @@
+{
+  "center": "NVIDIA NeMo 微调视频图像模型",
+  "branches": [
+    {
+      "label": "核心方案",
+      "detail": "NVIDIA NeMo Automodel 与 Diffusers 结合，实现视频和图像模型的大规模微调",
+      "children": [
+        "覆盖 Text-to-Image、Text-to-Video、Image…",
+        "模型规模从 1B 到 32B"
+      ]
+    },
+    {
+      "label": "涉及模型",
+      "detail": "文章提及 6 个模型，涵盖文生图、文生视频与图生图",
+      "children": [
+        "Text-to-Image 20B、12B",
+        "Text-to-Video 1B、14B、8B",
+        "Image-to-Image 32B"
+      ]
+    },
+    {
+      "label": "数据集",
+      "detail": "文章提及 3 个数据集",
+      "children": []
+    },
+    {
+      "label": "相关资源",
+      "detail": "作者其他文章涉及 NVIDIA Nemotron 3 Diarization 与 Magpie TTS",
+      "children": [
+        "多说话人实时 AI",
+        "低延迟多语言语音代理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "NeMo Automodel",
+      "type": "product"
+    },
+    {
+      "name": "Diffusers",
+      "type": "product"
+    },
+    {
+      "name": "Nemotron 3 Diarization",
+      "type": "model"
+    },
+    {
+      "name": "Magpie TTS",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "NeMo Automodel",
+      "label": "推出"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron 3 Diarization",
+      "label": "推出"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Magpie TTS",
+      "label": "推出"
+    },
+    {
+      "from": "NeMo Automodel",
+      "to": "Diffusers",
+      "label": "结合"
+    }
+  ]
+}

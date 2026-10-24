@@ -1,0 +1,92 @@
+{
+  "center": "Hugging Face Hub 模型部署到机器…",
+  "branches": [
+    {
+      "label": "核心能力",
+      "detail": "Hugging Face 展示如何把 Hub 上的模型直接部署到机器人硬件",
+      "children": [
+        "Hub 模型可直接用于机器人控制",
+        "从模型到硬件打通部署链路"
+      ]
+    },
+    {
+      "label": "仿真到真机",
+      "detail": "仅改一个 kwarg，从 MuJoCo 仿真切到 mode=\"real\" 真机",
+      "children": [
+        "同一份 agent 代码无需改动",
+        "端到端沿用 LeRobotDataset 格式"
+      ]
+    },
+    {
+      "label": "生态协作",
+      "detail": "Arm Device Connect 团队表示期待合作，推动 agent 到硬件控制",
+      "children": [
+        "降低摩擦让机器人 agent 进入真实实验室",
+        "越开放则行业推进越快"
+      ]
+    },
+    {
+      "label": "相关模型",
+      "detail": "文章提及 5 个 Robotics 模型，参数从 0.5B 到 16B",
+      "children": [
+        "0.5B 模型 77k 下载、449 赞",
+        "16B 模型 141k 下载、363 赞",
+        "5B / 4B / 3B 模型下载 8.19k–110k"
+      ]
+    }
+  ],
+  "flow": [
+    "从 Hugging Face Hub 取模型",
+    "在 MuJoCo 仿真中训练/验证",
+    "改 kwarg 切到 mode=\"real\"",
+    "同一 agent 代码部署到真机"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face Hub",
+      "type": "product"
+    },
+    {
+      "name": "MuJoCo",
+      "type": "product"
+    },
+    {
+      "name": "LeRobotDataset",
+      "type": "concept"
+    },
+    {
+      "name": "Arm",
+      "type": "company"
+    },
+    {
+      "name": "Device Connect",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face Hub",
+      "to": "MuJoCo",
+      "label": "模型用于"
+    },
+    {
+      "from": "MuJoCo",
+      "to": "LeRobotDataset",
+      "label": "沿用格式"
+    },
+    {
+      "from": "Arm",
+      "to": "Device Connect",
+      "label": "拥有团队"
+    },
+    {
+      "from": "Arm",
+      "to": "Hugging Face",
+      "label": "期待合作"
+    }
+  ]
+}

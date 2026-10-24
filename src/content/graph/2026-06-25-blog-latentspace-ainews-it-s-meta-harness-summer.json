@@ -1,0 +1,107 @@
+{
+  "center": "Meta-Harness 架构之争",
+  "branches": [
+    {
+      "label": "元马具兴起",
+      "detail": "AI 基础设施从模型竞赛转向可插拔的元马具架构",
+      "children": [
+        "Conductor、Zed ACP、OpenInspect…",
+        "Databricks CTO Matei Zaharia 押注…",
+        "Omnigent 开源可插拔，统一接入编码与知识代理"
+      ]
+    },
+    {
+      "label": "OpenAI 自研芯片",
+      "detail": "OpenAI 推出首款自研推理芯片 Jalapeño，与 Broadcom 合作",
+      "children": [
+        "面向 ChatGPT、Codex、API 与未来代理产品",
+        "9 个月设计到流片，性能功耗比强",
+        "社区推测约 216GB HBM3E、10 PFLOPS FP4"
+      ]
+    },
+    {
+      "label": "代理 UX 转向同事",
+      "detail": "Claude 嵌入 Slack，代理从工具变为组织级同事",
+      "children": [
+        "Karpathy 称其为组织级 harness",
+        "代理拥有独立凭证，操作可审计可撤销",
+        "担忧权限扩展、锁定与提示注入风险"
+      ]
+    },
+    {
+      "label": "记忆成系统层",
+      "detail": "记忆成为代理差异化关键，被视为异步基础设施",
+      "children": [
+        "Weaviate Engram 提取、去重、协调记忆",
+        "LangSmith 睡眠时间计算离线写回记忆",
+        "论文主张记忆应作为完整数据管理层评估"
+      ]
+    },
+    {
+      "label": "开源模型追赶",
+      "detail": "GLM-5.2 等中国开源模型持续缩小差距",
+      "children": [
+        "GLM-5.2 在 Artificial Analysis 与 Agent…",
+        "对比 Opus 4.8 质量相近、约 3 倍便宜",
+        "ARC-AGI-2 上开源模型最强结果 22.8%"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Jalapeño",
+      "type": "product"
+    },
+    {
+      "name": "Omnigent",
+      "type": "product"
+    },
+    {
+      "name": "Databricks",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Qwen-AgentWorld",
+      "type": "model"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Jalapeño",
+      "label": "推出"
+    },
+    {
+      "from": "Databricks",
+      "to": "Omnigent",
+      "label": "押注"
+    },
+    {
+      "from": "Claude",
+      "to": "MCP",
+      "label": "集成"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "OpenAI",
+      "label": "对标"
+    }
+  ]
+}

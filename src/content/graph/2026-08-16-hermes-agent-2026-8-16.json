@@ -1,0 +1,103 @@
+{
+  "center": "Hermes Agent 补丁版更新",
+  "branches": [
+    {
+      "label": "桌面应用增强",
+      "detail": "新增多网关 Connections 注册表与 MCP 健康检查，提升多环境管理能力",
+      "children": [
+        "多网关 Connections 注册表",
+        "profile 作用域刷新",
+        "MCP 健康检查与 deep links"
+      ]
+    },
+    {
+      "label": "CLI 交互改进",
+      "detail": "Windows 更新探测、Kitty 键盘协议支持、chat -c 加固",
+      "children": [
+        "Windows 更新探测",
+        "Kitty 键盘协议支持",
+        "chat -c 加固"
+      ]
+    },
+    {
+      "label": "网关能力升级",
+      "detail": "持久化模型路由、/loop 完成、Telegram DM 主题与 prompt caching",
+      "children": [
+        "持久化模型路由",
+        "/loop 完成",
+        "Telegram DM 主题"
+      ]
+    },
+    {
+      "label": "安装器更健壮",
+      "detail": "Linux 和 Windows 安装流程优化，降低部署失败风险",
+      "children": [
+        "Linux 安装更健壮",
+        "Windows 安装更健壮"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "LiteLLM",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "prompt caching",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "MCP",
+      "label": "集成"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "CLI",
+      "label": "包含"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "Telegram",
+      "label": "支持"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "LiteLLM",
+      "label": "集成"
+    },
+    {
+      "from": "LiteLLM",
+      "to": "Claude",
+      "label": "调用"
+    },
+    {
+      "from": "Claude",
+      "to": "prompt caching",
+      "label": "启用"
+    }
+  ]
+}

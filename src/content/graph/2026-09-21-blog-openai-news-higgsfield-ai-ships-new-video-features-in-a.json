@@ -1,0 +1,78 @@
+{
+  "center": "Higgsfield AI 借 GPT-6 Astra…",
+  "branches": [
+    {
+      "label": "一天上线新功能",
+      "detail": "Higgsfield AI 利用 GPT-6 Astra 在一天内发布新视频功能",
+      "children": [
+        "模型能力压缩产品迭代周期"
+      ]
+    },
+    {
+      "label": "简化广告创作",
+      "detail": "新功能为小企业简化视频广告创作流程，降低创意门槛",
+      "children": [
+        "面向非专业用户的自动化创作"
+      ]
+    },
+    {
+      "label": "加速上市",
+      "detail": "Higgsfield AI 借此更快将新创意工具推向市场",
+      "children": [
+        "模型选型直接影响上市速度"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "工具链需支持快速集成与部署，评估模型生产可用性",
+      "children": [
+        "依赖多模态输入稳定理解"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Higgsfield AI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "视频广告创作",
+      "type": "concept"
+    },
+    {
+      "name": "agent 开发者",
+      "type": "person"
+    },
+    {
+      "name": "工具链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Higgsfield AI",
+      "to": "GPT-6 Astra",
+      "label": "利用"
+    },
+    {
+      "from": "Higgsfield AI",
+      "to": "视频广告创作",
+      "label": "简化"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Higgsfield AI",
+      "label": "压缩迭代周期"
+    },
+    {
+      "from": "agent 开发者",
+      "to": "工具链",
+      "label": "需支持"
+    }
+  ]
+}

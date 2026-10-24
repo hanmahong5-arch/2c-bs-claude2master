@@ -1,0 +1,119 @@
+{
+  "center": "Inkling 开源混合专家模型",
+  "branches": [
+    {
+      "label": "模型规格",
+      "detail": "Thinking Machines Lab 首个开源权重模型，MoE 架构",
+      "children": [
+        "975B 总参数，41B 激活参数",
+        "Apache-2.0 许可，多模态",
+        "训练数据 45 万亿 token"
+      ]
+    },
+    {
+      "label": "定位与用途",
+      "detail": "非前沿模型，主打可微调的开源基座",
+      "children": [
+        "官方称非最强模型",
+        "面向 Tinker 平台微调",
+        "强调多模态与高效思考"
+      ]
+    },
+    {
+      "label": "后续计划",
+      "detail": "Inkling-Small 仍在测试中",
+      "children": [
+        "276B 总参数，12B 激活",
+        "权重待测试完成后发布"
+      ]
+    },
+    {
+      "label": "数据透明度",
+      "detail": "模型卡与训练数据文档极简",
+      "children": [
+        "数据来自公开互联网与第三方",
+        "含可能受知识产权保护内容"
+      ]
+    },
+    {
+      "label": "生态意义",
+      "detail": "美国开源权重生态新增竞争者",
+      "children": [
+        "对标 NVIDIA Nemotron、Gemma 4",
+        "与中国开源模型竞争"
+      ]
+    }
+  ],
+  "flow": [
+    "发布 Inkling 开源权重",
+    "Apache-2.0 许可开放",
+    "Tinker 平台微调",
+    "后续发布 Inkling-Small"
+  ],
+  "entities": [
+    {
+      "name": "Thinking Machines Lab",
+      "type": "company"
+    },
+    {
+      "name": "Inkling",
+      "type": "model"
+    },
+    {
+      "name": "Inkling-Small",
+      "type": "model"
+    },
+    {
+      "name": "Tinker",
+      "type": "product"
+    },
+    {
+      "name": "Mira Murati",
+      "type": "person"
+    },
+    {
+      "name": "NVIDIA Nemotron",
+      "type": "model"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "Mixture-of-Experts",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Thinking Machines Lab",
+      "to": "Inkling",
+      "label": "发布"
+    },
+    {
+      "from": "Thinking Machines Lab",
+      "to": "Inkling-Small",
+      "label": "计划发布"
+    },
+    {
+      "from": "Mira Murati",
+      "to": "Thinking Machines Lab",
+      "label": "领导"
+    },
+    {
+      "from": "Inkling",
+      "to": "Tinker",
+      "label": "可微调于"
+    },
+    {
+      "from": "Inkling",
+      "to": "Mixture-of-Experts",
+      "label": "采用"
+    },
+    {
+      "from": "Inkling",
+      "to": "NVIDIA Nemotron",
+      "label": "竞争"
+    }
+  ]
+}

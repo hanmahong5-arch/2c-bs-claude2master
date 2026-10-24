@@ -1,0 +1,108 @@
+{
+  "center": "OpenClaw Agent 绑定路由",
+  "branches": [
+    {
+      "label": "绑定作用",
+      "detail": "为一部分流量指定由哪个 agent 应答，匹配后该 agent 拥有会话",
+      "children": [
+        "每个绑定含 agentId 与 match 条件",
+        "匹配通道事实：账号、peer、guild、team…"
+      ]
+    },
+    {
+      "label": "使用场景",
+      "detail": "需要稳定分流时使用，如按账号、收件箱、单聊群组或角色路由",
+      "children": [
+        "一个通道账号对应一个 agent",
+        "支持收件箱路由到 support 工作区",
+        "guild/team/Discord 角色单独分流"
+      ]
+    },
+    {
+      "label": "匹配与优先级",
+      "detail": "按具体程度优先，同层级按配置顺序，窄规则放前面",
+      "children": [
+        "必填 agentId 与 match.channel",
+        "accountId 省略只匹配默认账号，\"*\" 为通道级…",
+        "peer.kind 支持 direct/group/channel，用规…"
+      ]
+    },
+    {
+      "label": "无匹配与迁移",
+      "detail": "无绑定匹配时用调用方 owner、默认 owner 或唯一 agent，否则报错",
+      "children": [
+        "多 agent 下无可用则报…",
+        "旧 default: true 由 Doctor 迁移为显式绑定",
+        "不能与 agents.ownership: \"explicit\" 并用"
+      ]
+    },
+    {
+      "label": "常见错误",
+      "detail": "省略 accountId 不等于全账号；绑定不是访问控制",
+      "children": [
+        "绑定到未知 agent 不会回退",
+        "配对、dmPolicy、allowlist 是独立控制"
+      ]
+    }
+  ],
+  "flow": [
+    "消息到达通道",
+    "通道接受消息",
+    "按绑定规则匹配",
+    "选定 agentId",
+    "agent 拥有会话"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "agentId",
+      "type": "concept"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "AGENT_SELECTION_REQUIRED",
+      "type": "concept"
+    },
+    {
+      "name": "ACP",
+      "type": "concept"
+    },
+    {
+      "name": "Doctor",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "agentId",
+      "label": "使用"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Discord",
+      "label": "支持"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "ACP",
+      "label": "支持"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Doctor",
+      "label": "包含"
+    },
+    {
+      "from": "agentId",
+      "to": "AGENT_SELECTION_REQUIRED",
+      "label": "缺失时报错"
+    }
+  ]
+}

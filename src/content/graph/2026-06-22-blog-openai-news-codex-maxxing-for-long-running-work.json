@@ -1,0 +1,86 @@
+{
+  "center": "Codex 管理长期项目",
+  "branches": [
+    {
+      "label": "子任务拆分",
+      "detail": "将长期项目拆成多个子任务，每个子任务用独立 Codex 会话，避免上下文丢失",
+      "children": [
+        "模块化方法适用于任何 AI 辅助工具"
+      ]
+    },
+    {
+      "label": "记忆功能",
+      "detail": "利用 Codex 记忆功能，定期总结保存关键信息，让后续会话继续工作",
+      "children": [
+        "提示 AI 系统需更好长期记忆机制"
+      ]
+    },
+    {
+      "label": "代码与测试生成",
+      "detail": "用 Codex 生成代码骨架和测试用例，保证不同阶段一致性",
+      "children": [
+        "自动化减少手动错误，加速开发周期"
+      ]
+    }
+  ],
+  "flow": [
+    "拆分长期项目为子任务",
+    "为每个子任务开独立 Codex 会话",
+    "定期总结并保存关键信息",
+    "生成代码骨架与测试用例",
+    "后续会话继续推进"
+  ],
+  "entities": [
+    {
+      "name": "Jason Liu",
+      "type": "person"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "上下文工程",
+      "type": "concept"
+    },
+    {
+      "name": "长期记忆",
+      "type": "concept"
+    },
+    {
+      "name": "代码生成",
+      "type": "technique"
+    },
+    {
+      "name": "自动化测试",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Jason Liu",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "Codex",
+      "to": "长期记忆",
+      "label": "依赖"
+    },
+    {
+      "from": "Codex",
+      "to": "代码生成",
+      "label": "执行"
+    },
+    {
+      "from": "Codex",
+      "to": "自动化测试",
+      "label": "生成"
+    },
+    {
+      "from": "上下文工程",
+      "to": "Codex",
+      "label": "指导"
+    }
+  ]
+}

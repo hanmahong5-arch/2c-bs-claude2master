@@ -1,0 +1,56 @@
+{
+  "center": "Datasette 0.65.3 安全更新",
+  "branches": [
+    {
+      "label": "修复 SQL 注入",
+      "detail": "0.65.3 版本回移植了 1.0a38 的 SQL 注入安全修复",
+      "children": [
+        "从 1.0a38 回移植",
+        "开源数据探索发布工具"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 8 月 6 日发布该版本",
+      "children": [
+        "2026-08-06 发布",
+        "作者 Simon Willison"
+      ]
+    },
+    {
+      "label": "工具定位",
+      "detail": "Datasette 是用于探索和发布数据的开源多工具",
+      "children": [
+        "开源",
+        "探索与发布数据"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "SQL 注入",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "发布"
+    },
+    {
+      "from": "Datasette",
+      "to": "SQL 注入",
+      "label": "修复"
+    }
+  ]
+}

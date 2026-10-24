@@ -1,0 +1,117 @@
+{
+  "center": "Anthropic 发布 Claude Fable 5",
+  "branches": [
+    {
+      "label": "模型发布",
+      "detail": "首个 GA 的 Mythos 级模型，与 Mythos 5 同源，加装安全护栏",
+      "children": [
+        "Fable 5 面向公众，Mythos 5 仅限受限访问",
+        "规模至少为 Opus 的 2 倍",
+        "保留 1M token 上下文窗口"
+      ]
+    },
+    {
+      "label": "争议条款",
+      "detail": "强制 30 天数据保留，并暗中限制前沿 LLM 开发相关请求",
+      "children": [
+        "无 ZDR：所有流量保留 30 天",
+        "RSI 抑制：对预训练、分布式训练等请求降低效果",
+        "影响约 0.03% 流量，用户不可见"
+      ]
+    },
+    {
+      "label": "性能表现",
+      "detail": "多项基准领先，编码与长程智能体任务优势明显",
+      "children": [
+        "FrontierCode Diamond 从 13.4% 升至 29.3%",
+        "CursorBench SOTA 72.9%，领先 8 分",
+        "Terminal-Bench 2.1 达 88.0%"
+      ]
+    },
+    {
+      "label": "定价与可用性",
+      "detail": "API 价格约为 Opus 的 2 倍，订阅计划限时包含",
+      "children": [
+        "$10/百万输入 token，$50/百万输出 token",
+        "Pro、Max、Team、Enterprise 计划包含至 6 月…",
+        "之后需使用额度，因容量限制"
+      ]
+    },
+    {
+      "label": "使用建议",
+      "detail": "面向长时高投入任务，建议默认高努力并重写旧指令",
+      "children": [
+        "从给任务转向给目标/职责",
+        "默认 xhigh/high effort",
+        "多智能体编排，委派给更小模型"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "FrontierCode Diamond",
+      "type": "concept"
+    },
+    {
+      "name": "RSI suppression",
+      "type": "concept"
+    },
+    {
+      "name": "ZDR",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Mythos 5",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Claude Mythos 5",
+      "label": "同源"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Claude Opus 4.8",
+      "label": "回退至"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "GPT-5.5",
+      "label": "领先"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "RSI suppression",
+      "label": "受限于"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "center": "Open ASR 排行榜纳入南半球语言",
+  "branches": [
+    {
+      "label": "排行榜新突破",
+      "detail": "Open ASR Leaderboard 首次收录全球南方语言，推动语音识别技术普惠",
+      "children": [
+        "首次纳入南半球语言",
+        "聚焦技术普惠与语言多样性"
+      ]
+    },
+    {
+      "label": "涉及模型",
+      "detail": "文章提及多个开源 ASR 模型，参数从 0.8B 到 8B 不等",
+      "children": [
+        "3B 模型 4 月 7 日更新",
+        "8B 模型 3 月 9 日更新",
+        "0.8B 模型 2024 年 10 月更新"
+      ]
+    },
+    {
+      "label": "相关资源",
+      "detail": "文章关联 4 个模型、2 个数据集、1 个 Space 和 2 篇论文",
+      "children": [
+        "数据集 2 个",
+        "Space 1 个",
+        "论文 2 篇"
+      ]
+    },
+    {
+      "label": "社区与博客",
+      "detail": "博客涵盖语音基准优化与语音 AI 人类质量评估等主题",
+      "children": [
+        "语音基准优化测量",
+        "Real World VoiceEQ 介绍"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Open ASR Leaderboard",
+      "type": "product"
+    },
+    {
+      "name": "Automatic Speech Recognition",
+      "type": "concept"
+    },
+    {
+      "name": "Real World VoiceEQ",
+      "type": "product"
+    },
+    {
+      "name": "Global South",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Open ASR Leaderboard",
+      "to": "Global South",
+      "label": "首次纳入"
+    },
+    {
+      "from": "Open ASR Leaderboard",
+      "to": "Automatic Speech Recognition",
+      "label": "评估"
+    },
+    {
+      "from": "Real World VoiceEQ",
+      "to": "Automatic Speech Recognition",
+      "label": "测量"
+    }
+  ]
+}

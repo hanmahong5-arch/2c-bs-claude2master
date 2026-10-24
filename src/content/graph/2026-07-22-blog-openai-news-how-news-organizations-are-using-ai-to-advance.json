@@ -1,0 +1,92 @@
+{
+  "center": "新闻机构用 AI 强化报道运营",
+  "branches": [
+    {
+      "label": "报道与核查",
+      "detail": "AI 辅助事实核查和数据分析，提升报道准确性与深度",
+      "children": [
+        "工具链需强调可解释性",
+        "需保证数据源可信度"
+      ]
+    },
+    {
+      "label": "受众与推荐",
+      "detail": "AI 做个性化内容推荐与受众互动，扩大读者覆盖",
+      "children": [
+        "需精细用户画像",
+        "需优化推荐算法"
+      ]
+    },
+    {
+      "label": "商业运营",
+      "detail": "AI 优化广告投放与订阅策略，提高收入效率",
+      "children": [
+        "集成自动化营销模块",
+        "集成收益管理模块"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    },
+    {
+      "name": "事实核查",
+      "type": "concept"
+    },
+    {
+      "name": "个性化推荐",
+      "type": "concept"
+    },
+    {
+      "name": "用户画像",
+      "type": "concept"
+    },
+    {
+      "name": "广告投放",
+      "type": "concept"
+    },
+    {
+      "name": "订阅策略",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AI",
+      "label": "分享应用"
+    },
+    {
+      "from": "AI",
+      "to": "事实核查",
+      "label": "辅助"
+    },
+    {
+      "from": "AI",
+      "to": "个性化推荐",
+      "label": "支持"
+    },
+    {
+      "from": "个性化推荐",
+      "to": "用户画像",
+      "label": "依赖"
+    },
+    {
+      "from": "AI",
+      "to": "广告投放",
+      "label": "优化"
+    },
+    {
+      "from": "AI",
+      "to": "订阅策略",
+      "label": "优化"
+    }
+  ]
+}

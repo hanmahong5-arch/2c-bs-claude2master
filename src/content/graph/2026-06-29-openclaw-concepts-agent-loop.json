@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw Agent 循环生命周期",
+  "branches": [
+    {
+      "label": "运行序列",
+      "detail": "从 RPC 到嵌入式 agent 的串行执行流程",
+      "children": [
+        "agent RPC 校验参数、解析会话并立即返回 runId",
+        "runEmbeddedAgent 通过队列串行化运行并流式输出",
+        "agent.wait 等待终态结果 status/startedAt/…"
+      ]
+    },
+    {
+      "label": "队列与并发",
+      "detail": "按会话键串行化运行，防止工具与会话竞争",
+      "children": [
+        "会话通道 + 可选全局通道串行化",
+        "activeWriterRunId 声明防止过期提交",
+        "SQLite 写队列与 Gateway 状态目录锁"
+      ]
+    },
+    {
+      "label": "钩子系统",
+      "detail": "内部钩子与插件钩子两套进程内机制",
+      "children": [
+        "内部钩子：HOOK.md 脚本处理 command:new 等…",
+        "插件钩子：api.on(...) 如 before_tool_call",
+        "before_tool_call 的 block:true 为终态"
+      ]
+    },
+    {
+      "label": "流式与工具",
+      "detail": "助手增量、推理流与工具执行事件",
+      "children": [
+        "assistant/tool/lifecycle 三类流",
+        "工具结果在写入前做大小与图像净化",
+        "消息工具发送去重抑制重复确认"
+      ]
+    },
+    {
+      "label": "提示词组装",
+      "detail": "系统提示由基础提示、技能与上下文构成",
+      "children": [
+        "基础提示 + 技能提示 + 引导上下文",
+        "模型特定限制与压缩预留 token",
+        "工作区解析并可能重定向到沙箱"
+      ]
+    }
+  ],
+  "flow": [
+    "agent RPC 校验并解析会话",
+    "agentCommand 解析模型与默认值",
+    "runEmbeddedAgent 串行化并构…",
+    "流式输出助手与工具增量",
+    "执行工具并净化结果",
+    "组装最终回复载荷"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "agent RPC",
+      "type": "technique"
+    },
+    {
+      "name": "runEmbeddedAgent",
+      "type": "technique"
+    },
+    {
+      "name": "agent.wait",
+      "type": "technique"
+    },
+    {
+      "name": "Codex app-server",
+      "type": "product"
+    },
+    {
+      "name": "before_tool_call",
+      "type": "technique"
+    },
+    {
+      "name": "OpenAI Responses",
+      "type": "model"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "agent RPC",
+      "label": "提供入口"
+    },
+    {
+      "from": "agent RPC",
+      "to": "runEmbeddedAgent",
+      "label": "调用"
+    },
+    {
+      "from": "runEmbeddedAgent",
+      "to": "agent.wait",
+      "label": "等待终态"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "before_tool_call",
+      "label": "支持钩子"
+    },
+    {
+      "from": "Codex app-server",
+      "to": "OpenClaw",
+      "label": "兼容钩子"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "OpenAI Responses",
+      "label": "处理响应"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "center": "开源模型生态百花齐放",
+  "branches": [
+    {
+      "label": "整合未发生",
+      "detail": "训练成本虽暴涨，但更多公司投入训练并开源模型，整合预测落空",
+      "children": [
+        "2024年曾预测2026-2027年整合加速",
+        "更多公司投入数亿至数十亿美元",
+        "token需求极高且持续增长"
+      ]
+    },
+    {
+      "label": "重点新模型",
+      "detail": "本期盘点多款开源模型，涵盖中美欧韩多家公司",
+      "children": [
+        "Inkling：Thinking Machines首款975B-A41B…",
+        "Kimi-K3：Moonshot最大开源模型，非商用许可",
+        "Laguna-S-2.1：Poolside 118B-A8B，可跑在…"
+      ]
+    },
+    {
+      "label": "中国实验室",
+      "detail": "中国实验室持续高频发布，新玩家如小米仍在积累影响力",
+      "children": [
+        "Hy3：腾讯295B-A21B，改用Apache 2许可",
+        "LongCat-2.0：美团1.6T MoE，全程用昇腾910训练",
+        "DeepSeek-V4-Flash-0731：在帕累托前沿击败…"
+      ]
+    },
+    {
+      "label": "许可与政策",
+      "detail": "非商用许可可能成为美国政府限制中国开源模型使用的杠杆",
+      "children": [
+        "Kimi K3要求推理和微调商签商业协议",
+        "Kevin Xu与Graham Webster分析政策影响",
+        "美国公司需与Moonshot签约才能用Kimi K3"
+      ]
+    },
+    {
+      "label": "商业价值",
+      "detail": "构建token机器成为价值路径，更多公司会识别这一来源",
+      "children": [
+        "Thinking Machines微调服务年收入数亿美元",
+        "其开源权重模型领先NVIDIA Nemotron和Arcee…",
+        "Poolside采用OpenMDW许可，法律支持更好"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Thinking Machines",
+      "type": "company"
+    },
+    {
+      "name": "Inkling",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Moonshot",
+      "type": "company"
+    },
+    {
+      "name": "Laguna-S-2.1",
+      "type": "model"
+    },
+    {
+      "name": "Poolside",
+      "type": "company"
+    },
+    {
+      "name": "DeepSeek-V4-Flash-0731",
+      "type": "model"
+    },
+    {
+      "name": "LongCat-2.0",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Thinking Machines",
+      "to": "Inkling",
+      "label": "发布"
+    },
+    {
+      "from": "Moonshot",
+      "to": "Kimi K3",
+      "label": "发布"
+    },
+    {
+      "from": "Poolside",
+      "to": "Laguna-S-2.1",
+      "label": "发布"
+    }
+  ]
+}

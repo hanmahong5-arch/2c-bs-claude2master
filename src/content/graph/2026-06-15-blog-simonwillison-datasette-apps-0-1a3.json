@@ -1,0 +1,54 @@
+{
+  "center": "datasette-apps 0.1a3 发布",
+  "branches": [
+    {
+      "label": "权限漏洞修复",
+      "detail": "修复无 create-app 权限用户仍可创建应用的问题",
+      "children": [
+        "对应 issue #27"
+      ]
+    },
+    {
+      "label": "编辑权限修复",
+      "detail": "修复无法给非应用所有者授予编辑权限的问题",
+      "children": [
+        "对应 issue #29"
+      ]
+    },
+    {
+      "label": "权限规则统一",
+      "detail": "编辑/删除规则现与查看一致",
+      "children": [
+        "私有应用仅所有者可改",
+        "否则由 Datasette 权限系统控制"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "datasette-apps",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "datasette-apps",
+      "label": "发布"
+    },
+    {
+      "from": "datasette-apps",
+      "to": "Datasette",
+      "label": "运行于"
+    }
+  ]
+}

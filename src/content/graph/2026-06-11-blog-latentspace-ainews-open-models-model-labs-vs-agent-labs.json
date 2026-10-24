@@ -1,0 +1,110 @@
+{
+  "center": "开源模型与Agent Labs之争",
+  "branches": [
+    {
+      "label": "开源模型地位反转",
+      "detail": "从2024年极度看空到2026年因Cursor、Notion等采用而转向乐观",
+      "children": [
+        "2024年与Braintrust极度看空开源模型采用",
+        "2026年因Pmarca、Cursor、Notion等播客转向乐观"
+      ]
+    },
+    {
+      "label": "Agent Labs vs Model Labs",
+      "detail": "应用通过做不可训练的苦活赢得地位：整理私有现实、提供工具、改变客户工作方式",
+      "children": [
+        "翻译工作难以复制且永不结束",
+        "集成与维护伴随客户关系全程",
+        "需领域专家工程师贴近客户"
+      ]
+    },
+    {
+      "label": "免费可验证基准",
+      "detail": "Anthropic迅速采用FrontierCode，Sarah认同最热基准即将过时",
+      "children": [
+        "最热基准分数是即将失效的地图",
+        "预示谁将失去定义好坏的权利"
+      ]
+    },
+    {
+      "label": "意图最难训练",
+      "detail": "选择构建什么是最难的部分，模型无法告诉你什么值得指向",
+      "children": [
+        "模型只会执行指向的目标",
+        "无法基准化因此无法训练",
+        "意图比算力更稀缺"
+      ]
+    },
+    {
+      "label": "Fable 5争议与表现",
+      "detail": "Anthropic静默降级AI研究提示引发信任反弹，但模型在Agent与编码任务上表现强劲",
+      "children": [
+        "30天提示/数据保留且无退出选项",
+        "Agent Arena排名第一",
+        "SimpleBench 81.9%，CADGenBench第一"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Sarah Guo",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "DiffusionGemma",
+      "type": "model"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "vLLM",
+      "type": "product"
+    },
+    {
+      "name": "Agent Labs",
+      "type": "concept"
+    },
+    {
+      "name": "Model Labs",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sarah Guo",
+      "to": "Agent Labs",
+      "label": "提出"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Fable 5",
+      "label": "发布"
+    },
+    {
+      "from": "Google",
+      "to": "DiffusionGemma",
+      "label": "发布"
+    },
+    {
+      "from": "vLLM",
+      "to": "DiffusionGemma",
+      "label": "支持"
+    },
+    {
+      "from": "Agent Labs",
+      "to": "Model Labs",
+      "label": "对比"
+    }
+  ]
+}

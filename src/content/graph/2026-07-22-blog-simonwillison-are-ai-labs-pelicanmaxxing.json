@@ -1,0 +1,113 @@
+{
+  "center": "AI实验室是否刻意优化鹈鹕骑车",
+  "branches": [
+    {
+      "label": "研究结论",
+      "detail": "系统测试未发现AI实验室刻意优化鹈鹕骑车生成能力",
+      "children": [
+        "鹈鹕骑车图并未画得更好",
+        "实验室不更擅长画鹈鹕或自行车",
+        "调整难度后组合仍无优势"
+      ]
+    },
+    {
+      "label": "测试方法",
+      "detail": "Dylan Castillo用8动物×6交通工具共48提示词测试",
+      "children": [
+        "每个提示词运行三次",
+        "覆盖7个不同模型",
+        "用GPT-5.6 Luna和Gemini 3.1 Flash-Lite评估"
+      ]
+    },
+    {
+      "label": "测试模型",
+      "detail": "涵盖GPT-5.6 Terra、Claude Sonnet 5、Gemini 3.5 Flash等7个模型",
+      "children": [
+        "还包括Grok 4.5、Qwen3.7-Max",
+        "GLM-5.2、DeepSeek V4 Pro"
+      ]
+    },
+    {
+      "label": "GLM-5.2表现",
+      "detail": "GLM-5.2在鹈鹕骑车单元格提升最大但效应小不显著",
+      "children": [
+        "首个鹈鹕骑车样本引人注意",
+        "效应小且不显著，不宜过度解读"
+      ]
+    }
+  ],
+  "flow": [
+    "选取8种动物与6种交通工具",
+    "组合成48个提示词",
+    "每个提示词运行三次",
+    "在7个模型上生成图像",
+    "用GPT-5.6 Luna和Gemini 3.1…",
+    "分析是否存在刻意优化"
+  ],
+  "entities": [
+    {
+      "name": "Dylan Castillo",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GPT-5.6 Terra",
+      "type": "model"
+    },
+    {
+      "name": "Claude Sonnet 5",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.5 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Grok 4.5",
+      "type": "model"
+    },
+    {
+      "name": "Qwen3.7-Max",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Dylan Castillo",
+      "to": "GPT-5.6 Terra",
+      "label": "测试"
+    },
+    {
+      "from": "Dylan Castillo",
+      "to": "Claude Sonnet 5",
+      "label": "测试"
+    },
+    {
+      "from": "Dylan Castillo",
+      "to": "Gemini 3.5 Flash",
+      "label": "测试"
+    },
+    {
+      "from": "Dylan Castillo",
+      "to": "Grok 4.5",
+      "label": "测试"
+    },
+    {
+      "from": "Dylan Castillo",
+      "to": "Qwen3.7-Max",
+      "label": "测试"
+    },
+    {
+      "from": "Dylan Castillo",
+      "to": "GLM-5.2",
+      "label": "测试"
+    }
+  ]
+}

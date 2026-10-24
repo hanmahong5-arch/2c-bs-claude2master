@@ -1,0 +1,78 @@
+{
+  "center": "Claude Code v2.1.178 更新",
+  "branches": [
+    {
+      "label": "权限参数匹配",
+      "detail": "新增 Tool(param:value) 语法，按工具输入参数做细粒度权限控制",
+      "children": [
+        "支持通配符匹配参数值",
+        "可阻止特定模型的子代理"
+      ]
+    },
+    {
+      "label": "嵌套配置继承",
+      "detail": "嵌套 .claude/ 目录配置按层级覆盖，冲突时命名空间共存",
+      "children": [
+        "最接近工作目录的配置生效",
+        "重名技能以 <目录>:<名称> 共存"
+      ]
+    },
+    {
+      "label": "子代理安全检查",
+      "detail": "自动模式下子代理启动前先经分类器评估，前置拦截风险操作",
+      "children": [
+        "在生成阶段拦截被阻止的请求",
+        "填补安全审查漏洞"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Tool(param:value)",
+      "type": "technique"
+    },
+    {
+      "name": ".claude/",
+      "type": "concept"
+    },
+    {
+      "name": "子代理",
+      "type": "concept"
+    },
+    {
+      "name": "分类器",
+      "type": "technique"
+    },
+    {
+      "name": "权限规则",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "权限规则",
+      "label": "新增"
+    },
+    {
+      "from": "权限规则",
+      "to": "Tool(param:value)",
+      "label": "采用"
+    },
+    {
+      "from": "Claude Code",
+      "to": ".claude/",
+      "label": "优化"
+    },
+    {
+      "from": "分类器",
+      "to": "子代理",
+      "label": "启动前评估"
+    }
+  ]
+}

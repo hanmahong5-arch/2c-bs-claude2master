@@ -1,0 +1,74 @@
+{
+  "center": "opencode v1.17.14 更新",
+  "branches": [
+    {
+      "label": "代码模式MCP适配器",
+      "detail": "新增适配器，可对已连接工具运行受限编排脚本",
+      "children": [
+        "未启用代码模式时隐藏 execute 工具",
+        "受限编排脚本运行于连接的工具上"
+      ]
+    },
+    {
+      "label": "MCP工具目录修复",
+      "detail": "修复分页目录丢失元数据与输出模式验证问题",
+      "children": [
+        "确保工具调用可靠",
+        "解决分页场景下的元数据丢失"
+      ]
+    },
+    {
+      "label": "桌面UI大修",
+      "detail": "显示草稿服务器状态并统一提供商连接流程",
+      "children": [
+        "支持标签页重开与后台打开",
+        "优化模型搜索和终端体验"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "代码模式MCP适配器",
+      "type": "technique"
+    },
+    {
+      "name": "execute工具",
+      "type": "product"
+    },
+    {
+      "name": "桌面版",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "代码模式MCP适配器",
+      "label": "新增"
+    },
+    {
+      "from": "代码模式MCP适配器",
+      "to": "MCP",
+      "label": "适配"
+    },
+    {
+      "from": "opencode",
+      "to": "桌面版",
+      "label": "改进"
+    },
+    {
+      "from": "代码模式MCP适配器",
+      "to": "execute工具",
+      "label": "控制显示"
+    }
+  ]
+}

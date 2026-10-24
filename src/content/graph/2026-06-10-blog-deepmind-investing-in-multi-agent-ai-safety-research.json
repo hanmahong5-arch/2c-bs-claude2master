@@ -1,0 +1,104 @@
+{
+  "center": "多智能体 AI 安全研究资助",
+  "branches": [
+    {
+      "label": "千万美元资助",
+      "detail": "DeepMind 联合多家机构发起最高 1000 万美元的多智能体安全研究资助",
+      "children": [
+        "合作方：Schmidt Sciences、Cooperative AI…",
+        "面向全球学术与独立研究者征集提案",
+        "申请截止 2026 年 8 月 8 日，秋季公布结果"
+      ]
+    },
+    {
+      "label": "为何关注多智能体",
+      "detail": "数百万不同组织构建的 AI 智能体将跨数字环境交互，产生难以预测的涌现行为",
+      "children": [
+        "现有安全评估多孤立分析单个模型",
+        "交互智能体可能突然涌现集体能力",
+        "可能引发经济波动或新安全挑战"
+      ]
+    },
+    {
+      "label": "四大优先方向",
+      "detail": "资助聚焦沙盒测试、智能体网络科学、基础设施加固与监督控制",
+      "children": [
+        "沙盒与测试床：虚拟市场、模拟生态、多组织工作流",
+        "智能体网络科学：集体能力涌现与网络失效检测",
+        "基础设施：身份、声誉、承诺协议的跨平台压力测试"
+      ]
+    },
+    {
+      "label": "研究基础与紧迫性",
+      "detail": "2025 年已建立交互框架，AI Agent Traps 探索对抗环境漏洞，但复杂度正超越现有安全模型",
+      "children": [
+        "2025 年研究奠定多智能体交互理解框架",
+        "AI Agent Traps 揭示智能体对抗环境脆弱性",
+        "多智能体交互复杂度正超过现有安全模型"
+      ]
+    }
+  ],
+  "flow": [
+    "发起千万美元资助征集",
+    "研究者提交四方向提案",
+    "2026年8月8日截止申请",
+    "秋季公布获奖者"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Schmidt Sciences",
+      "type": "company"
+    },
+    {
+      "name": "Cooperative AI Foundation",
+      "type": "company"
+    },
+    {
+      "name": "ARIA",
+      "type": "company"
+    },
+    {
+      "name": "Google.org",
+      "type": "company"
+    },
+    {
+      "name": "AI Agent Traps",
+      "type": "concept"
+    },
+    {
+      "name": "multi-agent safety",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Schmidt Sciences",
+      "label": "联合资助"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Cooperative AI Foundation",
+      "label": "联合资助"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "ARIA",
+      "label": "联合资助"
+    },
+    {
+      "from": "Google.org",
+      "to": "Google DeepMind",
+      "label": "支持"
+    },
+    {
+      "from": "AI Agent Traps",
+      "to": "multi-agent safety",
+      "label": "研究"
+    }
+  ]
+}

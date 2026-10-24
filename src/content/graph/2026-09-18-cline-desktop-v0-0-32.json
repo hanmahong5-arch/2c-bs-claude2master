@@ -1,0 +1,92 @@
+{
+  "center": "Cline desktop 启动崩溃修复",
+  "branches": [
+    {
+      "label": "崩溃根因",
+      "detail": "Hub 与 App 由同一代码的不同副本构建，构建身份不一致",
+      "children": [
+        "应用关掉自己刚启动的 Hub",
+        "超时报 No compatible hub runtime is…",
+        "0.0.31 无法进入工作区选择器"
+      ]
+    },
+    {
+      "label": "修复方式",
+      "detail": "Hub 与应用不再各自持有代码副本，加载同一份代码",
+      "children": [
+        "共享运行时收敛为单一构建产物",
+        "避免身份漂移"
+      ]
+    },
+    {
+      "label": "CI 保障",
+      "detail": "CI 每次变更都端到端启动真实编译后端",
+      "children": [
+        "启动握手纳入 CI 冒烟测试",
+        "防止两侧再次分叉"
+      ]
+    },
+    {
+      "label": "经验教训",
+      "detail": "harness 自启子进程的版本/身份校验必须与主进程同源",
+      "children": [
+        "否则启动握手会自毁"
+      ]
+    }
+  ],
+  "flow": [
+    "App 启动 Hub 子进程",
+    "Hub 声明构建身份",
+    "App 校验身份不符",
+    "App 关闭 Hub",
+    "超时报错退出"
+  ],
+  "entities": [
+    {
+      "name": "Cline desktop",
+      "type": "product"
+    },
+    {
+      "name": "Cline Hub",
+      "type": "product"
+    },
+    {
+      "name": "0.0.31",
+      "type": "concept"
+    },
+    {
+      "name": "0.0.32",
+      "type": "concept"
+    },
+    {
+      "name": "CI",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline desktop",
+      "to": "Cline Hub",
+      "label": "启动"
+    },
+    {
+      "from": "0.0.31",
+      "to": "Cline desktop",
+      "label": "导致崩溃"
+    },
+    {
+      "from": "0.0.32",
+      "to": "Cline desktop",
+      "label": "修复"
+    },
+    {
+      "from": "CI",
+      "to": "Cline desktop",
+      "label": "端到端测试"
+    }
+  ]
+}

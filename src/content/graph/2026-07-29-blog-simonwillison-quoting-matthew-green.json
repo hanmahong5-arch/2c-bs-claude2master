@@ -1,0 +1,98 @@
+{
+  "center": "AI 与后量子密码学转型窗口",
+  "branches": [
+    {
+      "label": "历史性转型",
+      "detail": "密码学正从 EC 与 RSA 转向基于新问题的后量子算法",
+      "children": [
+        "EC 与 RSA 属传统公钥算法",
+        "后量子算法基于全新数学问题"
+      ]
+    },
+    {
+      "label": "标准涌现",
+      "detail": "新问题催生大量候选标准，如 HAWK 正在被考虑",
+      "children": [
+        "HAWK 是候选标准之一"
+      ]
+    },
+    {
+      "label": "AI 密码分析时机",
+      "detail": "Matthew Green 认为这是 AI 发展密码分析能力的绝佳窗口",
+      "children": [
+        "除非 AI 直接瓦解所有困难问题",
+        "或身处 Impagliazzo 的 Minicrypt 世界"
+      ]
+    },
+    {
+      "label": "最好结果",
+      "detail": "AI 若擅长密码分析，可增强对新问题的信心与文献稳健性",
+      "children": [
+        "对已识别问题获得真实信心",
+        "密码分析文献更稳健"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Matthew Green",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "RSA",
+      "type": "concept"
+    },
+    {
+      "name": "EC-based cryptography",
+      "type": "concept"
+    },
+    {
+      "name": "post-quantum algorithms",
+      "type": "concept"
+    },
+    {
+      "name": "HAWK",
+      "type": "concept"
+    },
+    {
+      "name": "Impagliazzo's Minicrypt",
+      "type": "concept"
+    },
+    {
+      "name": "cryptanalysis",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Matthew Green",
+      "to": "Anthropic",
+      "label": "评论其工作"
+    },
+    {
+      "from": "post-quantum algorithms",
+      "to": "RSA",
+      "label": "取代"
+    },
+    {
+      "from": "post-quantum algorithms",
+      "to": "EC-based cryptography",
+      "label": "取代"
+    },
+    {
+      "from": "HAWK",
+      "to": "post-quantum algorithms",
+      "label": "属于"
+    },
+    {
+      "from": "Anthropic",
+      "to": "cryptanalysis",
+      "label": "开展研究"
+    }
+  ]
+}

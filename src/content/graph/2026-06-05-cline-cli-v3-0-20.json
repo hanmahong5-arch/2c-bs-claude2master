@@ -1,0 +1,74 @@
+{
+  "center": "cline cli 插件命名更透明",
+  "branches": [
+    {
+      "label": "命名方式变更",
+      "detail": "插件包装器改用来源命名，替代原先的不透明哈希值",
+      "children": [
+        "命名依据：npm 包名、Git 仓库、远程文件名",
+        "旧方式：不透明哈希值"
+      ]
+    },
+    {
+      "label": "对插件管理的影响",
+      "detail": "插件管理界面可直接展示可读标识，提升调试与维护效率",
+      "children": [
+        "agent harness 设计受益",
+        "界面展示可读标识"
+      ]
+    },
+    {
+      "label": "对开发者的价值",
+      "detail": "快速追溯插件来源，简化多环境部署时的依赖追踪",
+      "children": [
+        "快速追溯插件来源",
+        "简化多环境依赖追踪"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "插件包装器",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "npm",
+      "type": "product"
+    },
+    {
+      "name": "Git",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli",
+      "to": "插件包装器",
+      "label": "包含"
+    },
+    {
+      "from": "插件包装器",
+      "to": "npm",
+      "label": "按来源命名"
+    },
+    {
+      "from": "插件包装器",
+      "to": "Git",
+      "label": "按来源命名"
+    },
+    {
+      "from": "agent harness",
+      "to": "插件包装器",
+      "label": "使用"
+    }
+  ]
+}

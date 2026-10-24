@@ -1,0 +1,91 @@
+{
+  "center": "AI狂热扭曲企业决策",
+  "branches": [
+    {
+      "label": "高管编造AI战略",
+      "detail": "有高管从未用过任何AI工具，却为20亿美元营收公司制定全AI战略",
+      "children": [
+        "匿名信源爆料，来自咨询顾问Nik Suresh",
+        "战略完全围绕AI，但本人零使用经验"
+      ]
+    },
+    {
+      "label": "员工刷AI指标保饭碗",
+      "detail": "公司设AI使用排行榜，工程师用AI重写代码库只为保住工作",
+      "children": [
+        "把Go仓库并行副本让AI改写成Zig",
+        "动机是维持排行榜位置，非真实需求"
+      ]
+    },
+    {
+      "label": "客户施压抑制真话",
+      "detail": "客户高管宣称100倍生产力，供应商若质疑会危及合同",
+      "children": [
+        "质疑被视为异端或攻击客户高管",
+        "可能导致企业合同取消，说真话会被解雇"
+      ]
+    },
+    {
+      "label": "销售话术推波助澜",
+      "detail": "夸张销售材料面向易兴奋受众，但非抑制诚实的主因",
+      "children": [
+        "主因是客户方荒谬言论形成压力",
+        "供应商被迫附和以保合同"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Nik Suresh",
+      "type": "person"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "AI Mania",
+      "type": "concept"
+    },
+    {
+      "name": "AI使用排行榜",
+      "type": "concept"
+    },
+    {
+      "name": "100x生产力",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Nik Suresh",
+      "label": "引用观点"
+    },
+    {
+      "from": "Nik Suresh",
+      "to": "AI Mania",
+      "label": "批评"
+    },
+    {
+      "from": "AI Mania",
+      "to": "ChatGPT",
+      "label": "围绕"
+    },
+    {
+      "from": "AI Mania",
+      "to": "AI使用排行榜",
+      "label": "催生"
+    },
+    {
+      "from": "AI Mania",
+      "to": "100x生产力",
+      "label": "鼓吹"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "center": "Circles 用 OpenAI 提升电信个性化",
+  "branches": [
+    {
+      "label": "业务成效",
+      "detail": "AI 原生电信体验直接改善关键指标",
+      "children": [
+        "ARPU 提升 22%",
+        "客户流失率降低 9%"
+      ]
+    },
+    {
+      "label": "技术路径",
+      "detail": "借助 OpenAI API 与 Codex 构建 AI 原生体验",
+      "children": [
+        "OpenAI API 集成",
+        "Codex 辅助开发"
+      ]
+    },
+    {
+      "label": "开发提效",
+      "detail": "Codex 加速软件交付周期",
+      "children": [
+        "提升开发效率",
+        "缩短交付周期"
+      ]
+    },
+    {
+      "label": "行业范式",
+      "detail": "为传统行业落地大模型提供参考",
+      "children": [
+        "电信垂直场景集成",
+        "开发者参考范式"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Circles",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI API",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "电信个性化",
+      "type": "concept"
+    },
+    {
+      "name": "ARPU",
+      "type": "concept"
+    },
+    {
+      "name": "客户流失率",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Circles",
+      "to": "OpenAI API",
+      "label": "使用"
+    },
+    {
+      "from": "Circles",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "OpenAI API",
+      "to": "电信个性化",
+      "label": "支撑"
+    },
+    {
+      "from": "Codex",
+      "to": "电信个性化",
+      "label": "加速开发"
+    },
+    {
+      "from": "电信个性化",
+      "to": "ARPU",
+      "label": "提升"
+    },
+    {
+      "from": "电信个性化",
+      "to": "客户流失率",
+      "label": "降低"
+    }
+  ]
+}

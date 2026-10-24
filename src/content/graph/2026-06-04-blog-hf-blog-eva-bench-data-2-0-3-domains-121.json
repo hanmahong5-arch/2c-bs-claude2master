@@ -1,0 +1,93 @@
+{
+  "center": "Hugging Face 发布 EVA-Bench 2.0",
+  "branches": [
+    {
+      "label": "数据集规模",
+      "detail": "覆盖办公、多媒体、编程三大领域，含 121 种工具与 213 个真实场景",
+      "children": [
+        "3 个领域",
+        "121 种工具",
+        "213 个场景"
+      ]
+    },
+    {
+      "label": "标准化评估",
+      "detail": "提供统一任务描述、工具调用规范与评估指标，减少评估不一致",
+      "children": [
+        "统一任务描述",
+        "工具调用规范",
+        "统一评估指标"
+      ]
+    },
+    {
+      "label": "开源协作",
+      "detail": "开源数据集鼓励社区在统一基准上测试、迭代与分享成果",
+      "children": [
+        "社区统一基准",
+        "共享测试成果"
+      ]
+    },
+    {
+      "label": "面向开发者",
+      "detail": "为 Agent 开发者提供更贴近实际的基准来检验和优化模型",
+      "children": [
+        "检验智能体能力",
+        "优化模型性能"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "EVA-Bench Data 2.0",
+      "type": "product"
+    },
+    {
+      "name": "AI 智能体",
+      "type": "concept"
+    },
+    {
+      "name": "办公",
+      "type": "concept"
+    },
+    {
+      "name": "多媒体",
+      "type": "concept"
+    },
+    {
+      "name": "编程",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "EVA-Bench Data 2.0",
+      "label": "发布"
+    },
+    {
+      "from": "EVA-Bench Data 2.0",
+      "to": "AI 智能体",
+      "label": "评估"
+    },
+    {
+      "from": "EVA-Bench Data 2.0",
+      "to": "办公",
+      "label": "覆盖"
+    },
+    {
+      "from": "EVA-Bench Data 2.0",
+      "to": "多媒体",
+      "label": "覆盖"
+    },
+    {
+      "from": "EVA-Bench Data 2.0",
+      "to": "编程",
+      "label": "覆盖"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "center": "Cline 桌面版 v0.0.18 更新",
+  "branches": [
+    {
+      "label": "侧栏排序回归",
+      "detail": "会话默认按时间排序，支持折叠分区与项目分组切换",
+      "children": [
+        "计划任务带时钟图标",
+        "列表自适应高度"
+      ]
+    },
+    {
+      "label": "Marketplace 独立",
+      "detail": "新增页面集中浏览插件、MCP 服务器和技能",
+      "children": [
+        "支持类型过滤和标签",
+        "Customize 仅显示已安装项"
+      ]
+    },
+    {
+      "label": "计划任务交互",
+      "detail": "计划卡片整卡可点击，详情页改为单滚动视图",
+      "children": [
+        "显示最近运行并可展开全部",
+        "Run now 直接进入会话"
+      ]
+    },
+    {
+      "label": "安装与计费修复",
+      "detail": "修复 Marketplace 安装失败，改为进程内安装无需 CLI",
+      "children": [
+        "订阅计费提供商不再显示成本估算"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Marketplace",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Customize",
+      "type": "product"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Marketplace",
+      "label": "新增"
+    },
+    {
+      "from": "Marketplace",
+      "to": "MCP",
+      "label": "浏览"
+    },
+    {
+      "from": "Cline",
+      "to": "Customize",
+      "label": "包含"
+    },
+    {
+      "from": "Marketplace",
+      "to": "CLI",
+      "label": "不再依赖"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "center": "混合模型预测哪些token更好",
+  "branches": [
+    {
+      "label": "核心发现",
+      "detail": "Olmo Hybrid在多数token上损失低于Olmo 3，但优势并非普遍存在",
+      "children": [
+        "内容词损失差约0.04，功能词约0.02",
+        "重复token上优势趋近于零",
+        "闭括号预测上优势消失"
+      ]
+    },
+    {
+      "label": "架构差异",
+      "detail": "Transformer用全注意力，混合模型保留少量注意力层，其余换为循环层",
+      "children": [
+        "注意力擅长精确召回早期token，但成本随输入增长…",
+        "循环层固定大小记忆，每token成本恒定，擅长跟踪…",
+        "循环记忆有损压缩，无法精确回取早期token"
+      ]
+    },
+    {
+      "label": "实验方法",
+      "detail": "对比Olmo 3与Olmo Hybrid在多种文本上逐token的损失差",
+      "children": [
+        "数据含文章、维基、书籍、论文及Python、HTML…",
+        "计算loss gap：正值为混合模型更好",
+        "用回归控制类别稀有度与重复频率"
+      ]
+    },
+    {
+      "label": "优势边界",
+      "detail": "混合模型在需理解语义和跟踪上下文的token上最强，在可查找的token上最弱",
+      "children": [
+        "代词指代等需跟随上下文的token优势明显",
+        "逐字重复的n-gram越长，混合优势越小",
+        "纯循环模型在重复token上落后于混合与…"
+      ]
+    },
+    {
+      "label": "结论与启示",
+      "detail": "单一总体损失太粗糙，应按token类型过滤损失来比较架构",
+      "children": [
+        "过滤token损失可在1B预训练早期暴露架构差异",
+        "混合模型在开放类词上的优势或与RNN状态跟踪能力…",
+        "下一步将把发现用于持续中的混合建模工作"
+      ]
+    }
+  ],
+  "flow": [
+    "选取匹配的Transformer与混合…",
+    "输入多类型文本并逐token评分",
+    "计算两模型逐token损失差",
+    "按类别聚合并回归校正",
+    "用过滤损失评估1B模型"
+  ],
+  "entities": [
+    {
+      "name": "Olmo Hybrid",
+      "type": "model"
+    },
+    {
+      "name": "Olmo 3",
+      "type": "model"
+    },
+    {
+      "name": "Allen Institute for AI",
+      "type": "company"
+    },
+    {
+      "name": "Transformer",
+      "type": "concept"
+    },
+    {
+      "name": "RNN",
+      "type": "concept"
+    },
+    {
+      "name": "attention",
+      "type": "technique"
+    },
+    {
+      "name": "loss gap",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Olmo Hybrid",
+      "to": "Olmo 3",
+      "label": "对比"
+    },
+    {
+      "from": "Allen Institute for AI",
+      "to": "Olmo Hybrid",
+      "label": "开发"
+    },
+    {
+      "from": "Allen Institute for AI",
+      "to": "Olmo 3",
+      "label": "开发"
+    },
+    {
+      "from": "Olmo Hybrid",
+      "to": "attention",
+      "label": "保留少量"
+    },
+    {
+      "from": "Olmo Hybrid",
+      "to": "RNN",
+      "label": "使用循环层"
+    },
+    {
+      "from": "loss gap",
+      "to": "Olmo Hybrid",
+      "label": "衡量优势"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "center": "Claude Code v2.1.275 更新",
+  "branches": [
+    {
+      "label": "网关登录确认",
+      "detail": "凭据保存前需用户显式确认，不再静默落盘",
+      "children": [
+        "已登录账号确认",
+        "/status 可见"
+      ]
+    },
+    {
+      "label": "send-now 快捷键",
+      "detail": "ctrl+enter 或 ctrl+x ctrl+s 中断当前回合并批量发送排队消息",
+      "children": [
+        "未送达消息显示为灰色",
+        "区分已排队与已接收"
+      ]
+    },
+    {
+      "label": "技能同步",
+      "detail": "claude.ai 账号的 skills 与 plugins 同步到终端会话",
+      "children": [
+        "syncClaudeAiSkills: false 退出",
+        "syncClaudeAiPlugins: false 退出"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "claude.ai",
+      "type": "product"
+    },
+    {
+      "name": "skills",
+      "type": "concept"
+    },
+    {
+      "name": "plugins",
+      "type": "concept"
+    },
+    {
+      "name": "syncClaudeAiSkills",
+      "type": "technique"
+    },
+    {
+      "name": "syncClaudeAiPlugins",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "claude.ai",
+      "label": "同步技能"
+    },
+    {
+      "from": "Claude Code",
+      "to": "skills",
+      "label": "支持"
+    },
+    {
+      "from": "Claude Code",
+      "to": "plugins",
+      "label": "支持"
+    },
+    {
+      "from": "syncClaudeAiSkills",
+      "to": "skills",
+      "label": "控制同步"
+    },
+    {
+      "from": "syncClaudeAiPlugins",
+      "to": "plugins",
+      "label": "控制同步"
+    }
+  ]
+}

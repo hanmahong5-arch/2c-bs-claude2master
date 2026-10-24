@@ -1,0 +1,107 @@
+{
+  "center": "30亿参数模型跑多智能体经济",
+  "branches": [
+    {
+      "label": "核心架构",
+      "detail": "伐木工、木匠、商人三角色，以千木币完成经济循环",
+      "children": [
+        "智能体间用结构化消息交互",
+        "千木币作为模拟货币"
+      ]
+    },
+    {
+      "label": "技术实现",
+      "detail": "LiteLLM 调模型，Pydantic 约束输出，Arena 可视化监控",
+      "children": [
+        "LiteLLM 管理模型调用",
+        "Pydantic 结构化智能体输出",
+        "Arena 做可视化与评估"
+      ]
+    },
+    {
+      "label": "评估与洞察",
+      "detail": "分析对话、交易日志与资源流动，验证经济系统稳定",
+      "children": [
+        "资源管理与简单规划表现可靠",
+        "复杂谈判场景存在局限"
+      ]
+    },
+    {
+      "label": "实践意义",
+      "detail": "证明小模型加精心提示词也能支撑复杂智能体协作",
+      "children": [
+        "面向资源受限场景的范例",
+        "轻量可复现的端到端技术栈"
+      ]
+    }
+  ],
+  "flow": [
+    "设计三角色经济环境",
+    "LiteLLM 调用 Qwen2.5-3B",
+    "Pydantic 结构化输出",
+    "结构化消息交互交易",
+    "Arena 监控与评估"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Qwen2.5-3B-Instruct",
+      "type": "model"
+    },
+    {
+      "name": "LiteLLM",
+      "type": "product"
+    },
+    {
+      "name": "Pydantic",
+      "type": "product"
+    },
+    {
+      "name": "Arena",
+      "type": "product"
+    },
+    {
+      "name": "千木币",
+      "type": "concept"
+    },
+    {
+      "name": "多智能体经济系统",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Qwen2.5-3B-Instruct",
+      "label": "使用"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "多智能体经济系统",
+      "label": "构建"
+    },
+    {
+      "from": "LiteLLM",
+      "to": "Qwen2.5-3B-Instruct",
+      "label": "调用"
+    },
+    {
+      "from": "Pydantic",
+      "to": "多智能体经济系统",
+      "label": "结构化输出"
+    },
+    {
+      "from": "Arena",
+      "to": "多智能体经济系统",
+      "label": "监控评估"
+    },
+    {
+      "from": "千木币",
+      "to": "多智能体经济系统",
+      "label": "作为货币"
+    }
+  ]
+}

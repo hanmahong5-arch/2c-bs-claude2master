@@ -1,0 +1,66 @@
+{
+  "center": "claude-code v2.1.159 内部改进",
+  "branches": [
+    {
+      "label": "无用户可见变化",
+      "detail": "本次发布仅做内部基础设施改进，用户侧无任何感知",
+      "children": [
+        "无新增功能",
+        "无界面调整"
+      ]
+    },
+    {
+      "label": "后端工程优化",
+      "detail": "更新专注后端优化，不改变现有功能行为",
+      "children": [
+        "纯粹工程优化",
+        "不影响现有功能"
+      ]
+    },
+    {
+      "label": "提升系统稳定性",
+      "detail": "底层系统更健壮，保障 agent harness 的可靠性",
+      "children": [
+        "为未来功能迭代打基础"
+      ]
+    },
+    {
+      "label": "重视技术债务",
+      "detail": "团队持续投入系统架构，确保长期可维护性",
+      "children": [
+        "持续投入系统架构"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "技术债务",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "claude-code",
+      "label": "发布"
+    },
+    {
+      "from": "claude-code",
+      "to": "agent harness",
+      "label": "包含"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "center": "Codex 0.153.0 更新",
+  "branches": [
+    {
+      "label": "Vim 撤销重做",
+      "detail": "Vim 模式新增 u 撤销与 Ctrl+R 重做，保留草稿、粘贴与附件",
+      "children": [
+        "撤销/重做需与底层状态同步",
+        "复杂输入不丢失"
+      ]
+    },
+    {
+      "label": "插件远程市场",
+      "detail": "插件 CLI 可从远程市场列出、安装、移除插件",
+      "children": [
+        "需插件来源策略与远程仓库管理",
+        "确保安全与可追溯"
+      ]
+    },
+    {
+      "label": "Guardian 与权限",
+      "detail": "Full Access 跳过 Guardian 审查，User approval 跳过后台评分",
+      "children": [
+        "敏感操作检查保留",
+        "审查历史在压缩、重启、分叉后保留",
+        "隔离子代理历史"
+      ]
+    },
+    {
+      "label": "上下文管理实验",
+      "detail": "新增默认关闭的 features.context_management.experimental_mode",
+      "children": [
+        "启用后激活 token 预算上下文",
+        "历史笔记与 new_context 工具",
+        "仅限特定 ChatGPT 会话"
+      ]
+    },
+    {
+      "label": "TUI 与用量",
+      "detail": "TUI 历史显示完整补丁、后台终端输入和单个完成命令",
+      "children": [
+        "tui.auto_recap=false 可禁用自动回顾",
+        "Plus/Team 用量不足一半时提前警告",
+        "断线后自动重连保留草稿"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Guardian",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "Vim",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "Guardian",
+      "label": "集成"
+    },
+    {
+      "from": "Codex",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "TUI",
+      "label": "包含"
+    },
+    {
+      "from": "Codex",
+      "to": "Vim",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "ChatGPT",
+      "label": "关联"
+    }
+  ]
+}

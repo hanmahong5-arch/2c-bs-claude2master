@@ -1,0 +1,109 @@
+{
+  "center": "推倒重写为何常失败",
+  "branches": [
+    {
+      "label": "重写失败循环",
+      "detail": "旧系统仍在跑核心业务，重写期间技术债继续累积",
+      "children": [
+        "旧系统是移动靶，仍需持续加功能",
+        "维护者只做最小改动，债越堆越高",
+        "新团队起步快但逐渐发现无人真正懂旧系统"
+      ]
+    },
+    {
+      "label": "双系统困境",
+      "detail": "新系统上线只覆盖部分功能，结果两套系统并存",
+      "children": [
+        "新系统80%代码闲置，等待最终替换",
+        "旧系统无人愿碰却顽固地继续工作",
+        "优先级变化后新系统可能被彻底放弃"
+      ]
+    },
+    {
+      "label": "推荐替代方案",
+      "detail": "Simon Willison 建议加固旧系统而非绿地重写",
+      "children": [
+        "先补尽可能多的自动化测试",
+        "再尝试定向重构达到目标形态",
+        "成功率通常高于绿地替换的诱惑"
+      ]
+    },
+    {
+      "label": "参考文章",
+      "detail": "Will Larson 的迁移方法论被视为负责任完成替换的最佳读物",
+      "children": [
+        "《Migrations: the sole scalable fix to…"
+      ]
+    }
+  ],
+  "flow": [
+    "宣布旧系统债台高筑",
+    "组建团队从头重写",
+    "旧系统继续承载业务",
+    "新系统只覆盖部分功能",
+    "两套系统并存",
+    "优先级变化后重写被弃"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Will Larson",
+      "type": "person"
+    },
+    {
+      "name": "Migrations: the sole scalable fix to tech debt",
+      "type": "concept"
+    },
+    {
+      "name": "technical debt",
+      "type": "concept"
+    },
+    {
+      "name": "greenfield replacement",
+      "type": "concept"
+    },
+    {
+      "name": "automated testing",
+      "type": "technique"
+    },
+    {
+      "name": "targeted refactors",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "greenfield replacement",
+      "label": "反对"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "automated testing",
+      "label": "建议"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "targeted refactors",
+      "label": "建议"
+    },
+    {
+      "from": "Will Larson",
+      "to": "Migrations: the sole scalable fix to tech debt",
+      "label": "撰写"
+    },
+    {
+      "from": "greenfield replacement",
+      "to": "technical debt",
+      "label": "加剧"
+    },
+    {
+      "from": "automated testing",
+      "to": "technical debt",
+      "label": "治理"
+    }
+  ]
+}

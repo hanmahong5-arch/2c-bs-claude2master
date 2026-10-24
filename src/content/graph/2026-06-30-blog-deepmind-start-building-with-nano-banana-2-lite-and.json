@@ -1,0 +1,121 @@
+{
+  "center": "Nano Banana 2 Lite 与 Gemini…",
+  "branches": [
+    {
+      "label": "图像模型发布",
+      "detail": "Nano Banana 2 Lite 是最快最省的 Gemini 图像模型，面向高吞吐场景",
+      "children": [
+        "4 秒出图，每张 1K 图 $0.034",
+        "模型名 gemini-3.1-flash-lite-image",
+        "替代旧版 Nano Banana（…"
+      ]
+    },
+    {
+      "label": "视频模型发布",
+      "detail": "Gemini Omni Flash 支持高质量视频生成与对话式编辑",
+      "children": [
+        "支持文本、图像、视频多模态输入",
+        "每秒视频输出 $0.10，与 Veo 3.1 Fast 同价",
+        "当前仅支持 10 秒视频生成"
+      ]
+    },
+    {
+      "label": "模型家族定位",
+      "detail": "Nano Banana 系列按速度与质量分层，覆盖不同开发需求",
+      "children": [
+        "Lite 主打速度，2 为通用主力，Pro 面向专业复…",
+        "Lite 已上线 AI Studio、Gemini API 与消费…"
+      ]
+    },
+    {
+      "label": "组合工作流",
+      "detail": "两模型可串联：Lite 生成图像，Omni Flash 将其转为视频",
+      "children": [
+        "用 Interactions API 保持会话历史，最多三次…",
+        "示例应用：Anywhere、Space Lift、Omni…"
+      ]
+    },
+    {
+      "label": "安全与限制",
+      "detail": "两模型均用 SynthID 水印，Omni 存在若干能力限制",
+      "children": [
+        "Omni 暂不支持音频参考与场景扩展",
+        "3 秒视频参考暂无法正确处理",
+        "换场景时角色一致性有限"
+      ]
+    }
+  ],
+  "flow": [
+    "用 Nano Banana 2 Lite 生成…",
+    "将图像作为参考传给 Omni Flash",
+    "Omni Flash 生成高质量视频",
+    "用 Interactions API 保持上…",
+    "支持最多三次连续编辑"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Nano Banana 2 Lite",
+      "type": "model"
+    },
+    {
+      "name": "Gemini Omni Flash",
+      "type": "model"
+    },
+    {
+      "name": "Gemini API",
+      "type": "product"
+    },
+    {
+      "name": "Google AI Studio",
+      "type": "product"
+    },
+    {
+      "name": "Interactions API",
+      "type": "product"
+    },
+    {
+      "name": "SynthID",
+      "type": "technique"
+    },
+    {
+      "name": "Veo 3.1 Fast",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Nano Banana 2 Lite",
+      "label": "发布"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini Omni Flash",
+      "label": "发布"
+    },
+    {
+      "from": "Nano Banana 2 Lite",
+      "to": "Gemini API",
+      "label": "上线于"
+    },
+    {
+      "from": "Gemini Omni Flash",
+      "to": "Gemini API",
+      "label": "上线于"
+    },
+    {
+      "from": "Nano Banana 2 Lite",
+      "to": "Gemini Omni Flash",
+      "label": "串联使用"
+    },
+    {
+      "from": "Gemini Omni Flash",
+      "to": "SynthID",
+      "label": "使用"
+    }
+  ]
+}

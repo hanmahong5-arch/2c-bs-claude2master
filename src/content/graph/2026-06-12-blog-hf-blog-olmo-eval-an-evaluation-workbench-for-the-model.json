@@ -1,0 +1,123 @@
+{
+  "center": "olmo-eval 模型评估工作台",
+  "branches": [
+    {
+      "label": "定位与动机",
+      "detail": "为模型开发循环打造的评估工作台，承接 OLMES 标准",
+      "children": [
+        "OLMES 2024 年推出，统一基准测试口径",
+        "解决开发中反复评估、结果不可比的问题"
+      ]
+    },
+    {
+      "label": "与 Harbor 差异",
+      "detail": "Harbor 面向发布 agent 基准，olmo-eval 面向日常开发",
+      "children": [
+        "olmo-eval 可选轻量直跑或容器隔离",
+        "默认轻量路径，仅在需要时用容器",
+        "支持逐题对比两个 checkpoint"
+      ]
+    },
+    {
+      "label": "四大组件",
+      "detail": "task/suite/harness 抽象、沙箱路由、实验 schema、结果查看器",
+      "children": [
+        "task 定义基准，harness 控制运行方式",
+        "异步沙箱规划器支持真实工具调用",
+        "归一化 schema 记录每次运行配置与结果"
+      ]
+    },
+    {
+      "label": "模块化设计",
+      "detail": "模型、工具、容器环境、辅助模型均可替换",
+      "children": [
+        "工具可用 @tool 装饰器跨任务复用",
+        "多轮循环由 scaffold 按 harness 选择",
+        "报告含标准误与最小可检测效应"
+      ]
+    },
+    {
+      "label": "使用方式",
+      "detail": "用 Python 定义 task 即可添加基准",
+      "children": [
+        "继承 Task 类并注册，指定 DataSource",
+        "支持 ExternalEval 包装已有基准",
+        "Docker 或 Modal 并行容器执行"
+      ]
+    }
+  ],
+  "flow": [
+    "定义 task 与数据源",
+    "配置 suite 与 harness",
+    "选择沙箱与工具",
+    "运行各 checkpoint",
+    "记录归一化结果",
+    "逐题对比分析"
+  ],
+  "entities": [
+    {
+      "name": "AllenAI",
+      "type": "company"
+    },
+    {
+      "name": "olmo-eval",
+      "type": "product"
+    },
+    {
+      "name": "OLMES",
+      "type": "concept"
+    },
+    {
+      "name": "Harbor",
+      "type": "product"
+    },
+    {
+      "name": "Olmo",
+      "type": "model"
+    },
+    {
+      "name": "Tulu",
+      "type": "model"
+    },
+    {
+      "name": "Tyler Murray",
+      "type": "person"
+    },
+    {
+      "name": "LLM-as-a-judge",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AllenAI",
+      "to": "olmo-eval",
+      "label": "发布"
+    },
+    {
+      "from": "olmo-eval",
+      "to": "OLMES",
+      "label": "基于"
+    },
+    {
+      "from": "olmo-eval",
+      "to": "Harbor",
+      "label": "对比"
+    },
+    {
+      "from": "OLMES",
+      "to": "Olmo",
+      "label": "评估"
+    },
+    {
+      "from": "OLMES",
+      "to": "Tulu",
+      "label": "评估"
+    },
+    {
+      "from": "Tyler Murray",
+      "to": "AllenAI",
+      "label": "任职于"
+    }
+  ]
+}

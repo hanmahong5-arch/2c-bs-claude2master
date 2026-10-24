@@ -1,0 +1,110 @@
+{
+  "center": "Cars24 用 OpenAI 规模化对话与开发",
+  "branches": [
+    {
+      "label": "AI 客服代理",
+      "detail": "用 OpenAI API 构建语音与聊天代理，覆盖买车卖车全流程",
+      "children": [
+        "每月处理超 100 万分钟对话",
+        "客服解决率提升 50%",
+        "关键服务流程周转时间减少 80%"
+      ]
+    },
+    {
+      "label": "挽回流失线索",
+      "detail": "AI 代理重新触达 10 天后流失的卖家线索并恢复意向",
+      "children": [
+        "挽回 12% 此前流失的卖家线索",
+        "重新确认意向并返回漏斗"
+      ]
+    },
+    {
+      "label": "Codex 嵌入研发",
+      "detail": "Codex 参与软件开发生命周期，从建票到修 bug 全流程",
+      "children": [
+        "产品经理用 Codex 创建和优化 Linear 工单",
+        "工程团队在 bug 报告中 @Codex 领取任务",
+        "Codex 汇总 GitHub 工作并发布更新，减少站会"
+      ]
+    },
+    {
+      "label": "全员 AI 工作流",
+      "detail": "ChatGPT Enterprise 与 Codex 推广至约 600 名员工",
+      "children": [
+        "日活跃使用率 85% 到 90%",
+        "财务用 Codex 做投资者报告与采购审批",
+        "团队自建 chief of staff 代理连接 Slack…"
+      ]
+    }
+  ],
+  "flow": [
+    "客户致电或聊天",
+    "AI 代理收集需求",
+    "推荐车辆并预约试驾",
+    "试驾前跟进确认",
+    "试驾后跟进转化",
+    "售后持续支持"
+  ],
+  "entities": [
+    {
+      "name": "Cars24",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Enterprise",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Linear",
+      "type": "product"
+    },
+    {
+      "name": "Vikram Chopra",
+      "type": "person"
+    },
+    {
+      "name": "Jayesh Gupta",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cars24",
+      "to": "OpenAI",
+      "label": "使用"
+    },
+    {
+      "from": "Cars24",
+      "to": "ChatGPT Enterprise",
+      "label": "部署"
+    },
+    {
+      "from": "Cars24",
+      "to": "Codex",
+      "label": "部署"
+    },
+    {
+      "from": "Codex",
+      "to": "Linear",
+      "label": "集成"
+    },
+    {
+      "from": "Vikram Chopra",
+      "to": "Cars24",
+      "label": "任职于"
+    },
+    {
+      "from": "Jayesh Gupta",
+      "to": "Cars24",
+      "label": "任职于"
+    }
+  ]
+}

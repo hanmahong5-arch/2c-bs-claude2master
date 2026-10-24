@@ -1,0 +1,104 @@
+{
+  "center": "Interconnects 博客中期运营思考",
+  "branches": [
+    {
+      "label": "博客定位",
+      "detail": "Interconnects 是作者 AI 使命的先锋，让读者进入前沿思考过程",
+      "children": [
+        "写作风格原始、技术性强，是思考地图",
+        "与核心读者建立强关系，含语音版听众",
+        "读者多为实验室研究员、投资人、政策制定者、学生"
+      ]
+    },
+    {
+      "label": "独立与利益披露",
+      "detail": "作者坚持独立声音，近期签署两份顾问协议",
+      "children": [
+        "顾问公司为 Arcee AI 和 Mercor",
+        "若无法直言会随时退出",
+        "披露声明更新在 about 页面"
+      ]
+    },
+    {
+      "label": "受众与收入",
+      "detail": "订阅数超 7 万，付费约 900，银行账户长期近零",
+      "children": [
+        "保护小众技术受众，不追求大规模扩张",
+        "收入再投资于博客和 AI 服务",
+        "目标今夏达 1000 付费订阅"
+      ]
+    },
+    {
+      "label": "运营调整",
+      "detail": "评论付费墙、更多付费文章、更多线下活动",
+      "children": [
+        "评论付费以过滤 AI 生成低质内容",
+        "更多文章将付费，依赖收入指标",
+        "线下活动小型化，配合新书发布"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Interconnects",
+      "type": "product"
+    },
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Ai2",
+      "type": "company"
+    },
+    {
+      "name": "Arcee AI",
+      "type": "company"
+    },
+    {
+      "name": "Mercor",
+      "type": "company"
+    },
+    {
+      "name": "Substack",
+      "type": "product"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "Interconnects",
+      "label": "撰写"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Ai2",
+      "label": "离职"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Arcee AI",
+      "label": "顾问"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Mercor",
+      "label": "顾问"
+    },
+    {
+      "from": "Interconnects",
+      "to": "Substack",
+      "label": "托管于"
+    },
+    {
+      "from": "Interconnects",
+      "to": "Discord",
+      "label": "运营社区"
+    }
+  ]
+}

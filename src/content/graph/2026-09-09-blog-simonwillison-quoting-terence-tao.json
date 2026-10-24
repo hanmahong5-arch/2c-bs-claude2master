@@ -1,0 +1,75 @@
+{
+  "center": "陶哲轩警告AI耗尽数学开放问题",
+  "branches": [
+    {
+      "label": "开放问题被耗尽",
+      "detail": "优质数学开放问题正被非可再生式开采，可能变得稀缺",
+      "children": [
+        "陶哲轩称开放问题被非可再生式开采",
+        "可能导致好问题变得稀缺"
+      ]
+    },
+    {
+      "label": "AI抢先碾压问题",
+      "detail": "仅有人研究某问题的传闻，就会触发大量AI算力抢先解决",
+      "children": [
+        "传闻即可触发大量AI算力",
+        "原研究项目来不及发挥潜力"
+      ]
+    },
+    {
+      "label": "科研转向保密",
+      "detail": "激励可能指向不再公开有前景的研究方向",
+      "children": [
+        "不再向社区分享有前景方向",
+        "将逆转数百年开放科学传统",
+        "对领域未来造成长期损害"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Terence Tao",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    },
+    {
+      "name": "开放科学",
+      "type": "concept"
+    },
+    {
+      "name": "数学开放问题",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Terence Tao",
+      "to": "数学开放问题",
+      "label": "警告"
+    },
+    {
+      "from": "AI",
+      "to": "数学开放问题",
+      "label": "耗尽"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Terence Tao",
+      "label": "引用"
+    },
+    {
+      "from": "AI",
+      "to": "开放科学",
+      "label": "威胁"
+    }
+  ]
+}

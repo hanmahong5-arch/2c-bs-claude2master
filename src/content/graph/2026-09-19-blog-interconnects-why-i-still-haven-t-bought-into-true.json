@@ -1,0 +1,113 @@
+{
+  "center": "Nathan Lambert 质疑真正 RSI",
+  "branches": [
+    {
+      "label": "核心立场",
+      "detail": "他不相信真正的递归自我改进，认为当前焦虑多来自文化放大",
+      "children": [
+        "提出替代概念 lossy self-improvement",
+        "焦虑到灭绝风险像宗教信仰"
+      ]
+    },
+    {
+      "label": "三大理由",
+      "detail": "自动化研究太窄、并行智能体收益递减、资源与政治瓶颈",
+      "children": [
+        "scaling laws 成本指数上升",
+        "算力与政治难被 AI 加速"
+      ]
+    },
+    {
+      "label": "推理算力加速",
+      "detail": "Noam Brown 播客让他意识到大规模推理算力带来短期加速",
+      "children": [
+        "数千智能体投入可测量问题",
+        "勿把推理扩展误认为 RSI 输出"
+      ]
+    },
+    {
+      "label": "技术现状",
+      "detail": "现有技术能解已知问题，但难泛化到未知更难问题",
+      "children": [
+        "数学进步是例外而非规则",
+        "RL、蒸馏、推理算力各有作用"
+      ]
+    },
+    {
+      "label": "时间线预测",
+      "detail": "三位研究者对远程工作者、10x 科研、ASI 给出不同年限",
+      "children": [
+        "远程白领：约 1–3 年",
+        "AI 研究员 10x：约 2–10 年",
+        "ASI：约 3–10 年"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "RSI",
+      "type": "concept"
+    },
+    {
+      "name": "lossy self-improvement",
+      "type": "concept"
+    },
+    {
+      "name": "Noam Brown",
+      "type": "person"
+    },
+    {
+      "name": "John Schulman",
+      "type": "person"
+    },
+    {
+      "name": "Beren Millidge",
+      "type": "person"
+    },
+    {
+      "name": "Charlie O'Neill",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "RSI",
+      "label": "质疑"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "lossy self-improvement",
+      "label": "提出"
+    },
+    {
+      "from": "Noam Brown",
+      "to": "RSI",
+      "label": "讨论"
+    },
+    {
+      "from": "John Schulman",
+      "to": "RSI",
+      "label": "讨论"
+    },
+    {
+      "from": "Beren Millidge",
+      "to": "RSI",
+      "label": "讨论"
+    },
+    {
+      "from": "Charlie O'Neill",
+      "to": "RSI",
+      "label": "讨论"
+    }
+  ]
+}

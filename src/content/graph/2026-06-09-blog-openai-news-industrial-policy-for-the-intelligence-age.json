@@ -1,0 +1,82 @@
+{
+  "center": "OpenAI 以人为本 AI 工业政策",
+  "branches": [
+    {
+      "label": "政策主张",
+      "detail": "面向超级智能时代，渐进式政策已不够，需一套以人为本的工业政策",
+      "children": [
+        "目标：扩大机会、共享繁荣、构建韧性制度",
+        "定位：早期探索性想法，非最终建议"
+      ]
+    },
+    {
+      "label": "征集反馈",
+      "detail": "通过邮箱征集意见，已收到 400 多份回复并停止收件",
+      "children": [
+        "邮箱 newindustrialpolicy@openai.com",
+        "正在审核潜在资助对象"
+      ]
+    },
+    {
+      "label": "资助计划",
+      "detail": "设立奖学金与研究资助试点，支持相关政策研究",
+      "children": [
+        "最高 10 万美元资助",
+        "最高 100 万美元 API 额度"
+      ]
+    },
+    {
+      "label": "线下活动",
+      "detail": "在华盛顿特区新开设的 OpenAI Workshop 举办讨论",
+      "children": [
+        "OpenAI Workshop 于 5 月在华盛顿特区开幕"
+      ]
+    }
+  ],
+  "flow": [
+    "发布政策想法文件",
+    "开放邮箱征集反馈",
+    "审核并筛选资助对象",
+    "发放资助与 API 额度",
+    "举办线下讨论"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Industrial Policy for the Intelligence Age",
+      "type": "concept"
+    },
+    {
+      "name": "OpenAI Workshop",
+      "type": "product"
+    },
+    {
+      "name": "superintelligence",
+      "type": "concept"
+    },
+    {
+      "name": "Washington, DC",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Industrial Policy for the Intelligence Age",
+      "label": "提出"
+    },
+    {
+      "from": "OpenAI",
+      "to": "OpenAI Workshop",
+      "label": "开设"
+    },
+    {
+      "from": "Industrial Policy for the Intelligence Age",
+      "to": "superintelligence",
+      "label": "面向"
+    }
+  ]
+}

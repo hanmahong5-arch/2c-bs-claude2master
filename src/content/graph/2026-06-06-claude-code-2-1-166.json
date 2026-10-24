@@ -1,0 +1,70 @@
+{
+  "center": "claude-code v2.1.166 更新",
+  "branches": [
+    {
+      "label": "后备模型链",
+      "detail": "可配置最多三个后备模型，主模型过载时按顺序尝试",
+      "children": [
+        "最多三个后备模型",
+        "主模型过载时按序降级"
+      ]
+    },
+    {
+      "label": "跨会话权限隔离",
+      "detail": "SendMessage 转发的消息不再携带用户权限",
+      "children": [
+        "接收方拒绝其权限请求",
+        "防止权限跨会话扩散"
+      ]
+    },
+    {
+      "label": "稳定性修复",
+      "detail": "修复远程会话启动卡死、后台进程CPU空转等问题",
+      "children": [
+        "远程会话启动卡死",
+        "后台进程CPU空转",
+        "PowerShell验证挂起"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "SendMessage",
+      "type": "technique"
+    },
+    {
+      "name": "PowerShell",
+      "type": "product"
+    },
+    {
+      "name": "模型降级重试",
+      "type": "concept"
+    },
+    {
+      "name": "跨会话权限隔离",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "模型降级重试",
+      "label": "新增"
+    },
+    {
+      "from": "claude-code",
+      "to": "跨会话权限隔离",
+      "label": "新增"
+    },
+    {
+      "from": "SendMessage",
+      "to": "跨会话权限隔离",
+      "label": "实现"
+    }
+  ]
+}

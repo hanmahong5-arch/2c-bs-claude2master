@@ -1,0 +1,87 @@
+{
+  "center": "openclaw v2026.7.1-1 修复",
+  "branches": [
+    {
+      "label": "Codex 进度不中断",
+      "detail": "交付进度消息后继续运行 app-server 轮次，走到权威终止响应",
+      "children": [
+        "harness 需区分进度消息与终止信号",
+        "不能把进度消息当作结束"
+      ]
+    },
+    {
+      "label": "Memory Core 启动修复",
+      "detail": "恢复派生旧索引与缓存 sidecar 冲突，避免 Gateway 致命重启循环",
+      "children": [
+        "保留结构性向量存储损坏的可重试性",
+        "启动修复区分可恢复冲突与不可恢复损坏"
+      ]
+    },
+    {
+      "label": "WSL 状态权限",
+      "detail": "仅在现有状态路径已私有时容忍受保护 chmod 的 EROFS",
+      "children": [
+        "保留对宽权限的 fail-closed 处理",
+        "权限检查按平台放宽特定错误"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GPT",
+      "type": "model"
+    },
+    {
+      "name": "Memory Core",
+      "type": "product"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "WSL",
+      "type": "concept"
+    },
+    {
+      "name": "app-server",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "app-server",
+      "label": "运行轮次"
+    },
+    {
+      "from": "Memory Core",
+      "to": "Gateway",
+      "label": "避免重启"
+    },
+    {
+      "from": "openclaw",
+      "to": "Codex",
+      "label": "修复"
+    },
+    {
+      "from": "openclaw",
+      "to": "Memory Core",
+      "label": "修复"
+    },
+    {
+      "from": "openclaw",
+      "to": "WSL",
+      "label": "修复"
+    }
+  ]
+}

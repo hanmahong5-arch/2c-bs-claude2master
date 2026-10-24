@@ -1,0 +1,124 @@
+{
+  "center": "FDE 岗位的兴起与正确定义",
+  "branches": [
+    {
+      "label": "FDE 定义混乱",
+      "detail": "同一个词被用来描述销售工程师、配额代表、咨询顾问等完全不同的岗位",
+      "children": [
+        "a16z 推出 FDE Fellowship，Vinoo 是…",
+        "SF 晚宴上 Snowflake、Anthropic 等 FDE 描…",
+        "有人问 FDE 团队如何与咨询公司划分范围"
+      ]
+    },
+    {
+      "label": "FDE 不是咨询",
+      "detail": "FDE 是产品团队的延伸，通过解决客户问题获取洞察来指导后续构建",
+      "children": [
+        "FDE 解决客户问题以赚取洞察，决定下一步建什么",
+        "Kepler 将 FDE 职能放在产品而非销售之下",
+        "在 Kepler，看似合理的错误答案比没有答案更糟"
+      ]
+    },
+    {
+      "label": "Project Frontline",
+      "detail": "Palantir 将软件工程师轮岗培养为 FDE 的项目，约 250 人参与",
+      "children": [
+        "参与者后来在 OpenAI、Anthropic、xAI…",
+        "Palantir 分为 Product Development 和…",
+        "PD 不直接接触客户，BD 不直接贡献核心平台"
+      ]
+    },
+    {
+      "label": "Phoenix 失败教训",
+      "detail": "2013 年交易存储 Phoenix 在银行部署时因真实数据空洞导致 OOM",
+      "children": [
+        "空时间戳落入 epoch，产生 230 万 keyspaces",
+        "Cassandra 每文件句柄约 5MB，重启需 14TB 内存",
+        "根因是没人站在客户楼里看系统跑生产数据"
+      ]
+    },
+    {
+      "label": "FDE 思维形成",
+      "detail": "Vinoo 被派去修复 Phoenix，首次直面用户，习得 FDE 思维",
+      "children": [
+        "用户是 Palantir 自己的 FDE，能用同语言沟通",
+        "Phoenix 后来成为平台，被用于网络安全、KYC…",
+        "迭代循环：解决客户问题→获取洞察→指导构建"
+      ]
+    }
+  ],
+  "flow": [
+    "PD 构建平台，BD 接触客户",
+    "二手需求导致 Phoenix 设计缺陷",
+    "银行部署暴露真实数据问题",
+    "Vinoo 被派去修复并直面用户",
+    "习得 FDE 思维：产品延伸",
+    "创建 Project Frontline 轮岗"
+  ],
+  "entities": [
+    {
+      "name": "Vinoo Ganesh",
+      "type": "person"
+    },
+    {
+      "name": "Palantir",
+      "type": "company"
+    },
+    {
+      "name": "Kepler",
+      "type": "company"
+    },
+    {
+      "name": "Project Frontline",
+      "type": "concept"
+    },
+    {
+      "name": "Phoenix",
+      "type": "product"
+    },
+    {
+      "name": "a16z",
+      "type": "company"
+    },
+    {
+      "name": "Citadel",
+      "type": "company"
+    },
+    {
+      "name": "FDE",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Vinoo Ganesh",
+      "to": "Palantir",
+      "label": "曾任职"
+    },
+    {
+      "from": "Vinoo Ganesh",
+      "to": "Kepler",
+      "label": "联合创立"
+    },
+    {
+      "from": "Vinoo Ganesh",
+      "to": "Project Frontline",
+      "label": "领导"
+    },
+    {
+      "from": "Project Frontline",
+      "to": "Palantir",
+      "label": "属于"
+    },
+    {
+      "from": "Phoenix",
+      "to": "Palantir",
+      "label": "属于"
+    },
+    {
+      "from": "Vinoo Ganesh",
+      "to": "Citadel",
+      "label": "曾任职"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "center": "codex rust-v0.144.3 版本更新",
+  "branches": [
+    {
+      "label": "无功能变更",
+      "detail": "本次发布仅递增版本号，未包含任何功能改动",
+      "children": [
+        "无合并 PR 变更",
+        "对 agent harness 设计无影响"
+      ]
+    },
+    {
+      "label": "仅发布流程调整",
+      "detail": "发布流程有调整，但不涉及代码功能",
+      "children": []
+    },
+    {
+      "label": "版本号递增",
+      "detail": "发布版本 rust-v0.144.3，仅版本号变化",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex",
+      "type": "product"
+    },
+    {
+      "name": "rust-v0.144.3",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex",
+      "to": "rust-v0.144.3",
+      "label": "发布"
+    }
+  ]
+}

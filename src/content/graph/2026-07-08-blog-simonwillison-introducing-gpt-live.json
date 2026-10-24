@@ -1,0 +1,83 @@
+{
+  "center": "OpenAI 发布 GPT-Live 语音模型",
+  "branches": [
+    {
+      "label": "语音模式升级",
+      "detail": "ChatGPT 语音模式底层模型从 GPT-4o 时代模型换成 GPT-Live",
+      "children": [
+        "旧模型知识截止约 2024 年",
+        "Simon Willison 曾因旧模型太弱弃用语音模式"
+      ]
+    },
+    {
+      "label": "后台委派 GPT-5.5",
+      "detail": "遇到联网搜索、深度推理等难题时后台交给 GPT-5.5 处理",
+      "children": [
+        "委派期间 GPT-Live 继续对话保持流畅",
+        "新前沿模型发布后会持续替换后台模型"
+      ]
+    },
+    {
+      "label": "实测体验",
+      "detail": "作者提前数周在 iPhone 应用试用，评价非常出色",
+      "children": [
+        "最长一次遛狗时连续对话整整一小时",
+        "曾遇模型打断并嘲笑非玩笑内容的 bug，反馈后已…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-Live",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-4o",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-Live",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-Live",
+      "to": "GPT-5.5",
+      "label": "委派任务"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "GPT-Live",
+      "label": "采用"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "GPT-4o",
+      "label": "曾采用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-Live",
+      "label": "试用"
+    }
+  ]
+}

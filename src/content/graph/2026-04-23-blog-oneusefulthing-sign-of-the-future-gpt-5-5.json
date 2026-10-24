@@ -1,0 +1,117 @@
+{
+  "center": "GPT-5.5 亲测：能力跃升",
+  "branches": [
+    {
+      "label": "模型能力跃升",
+      "detail": "GPT-5.5 系列在编码等任务上显著进步，Pro 版最强",
+      "children": [
+        "GPT-5.5 Pro 20 分钟完成 3D 港口城镇模拟…",
+        "仅 GPT-5.5 Pro 真正模拟了城镇演化，而非替换…",
+        "对比 o3、Kimi K2.6 等模型，GPT-5.5 Pro 全…"
+      ]
+    },
+    {
+      "label": "三要素框架",
+      "detail": "AI 应视为模型、应用、工具链三者结合",
+      "children": [
+        "模型如 Opus 4.7、Gemini 3.1、GPT-5.5",
+        "应用如 Claude Code、OpenAI Codex 桌面端",
+        "工具链让 AI 控制电脑、写代码、做研究"
+      ]
+    },
+    {
+      "label": "图像生成突破",
+      "detail": "新图像模型可渲染高质量文字和复杂图像",
+      "children": [
+        "GPT-imagegen-2 通过 Otter Test，生成水獭…",
+        "可生成学术论文首页、艺术画廊等带可读标签的图像",
+        "可用于制作 PPT、产品原型、示例网站"
+      ]
+    },
+    {
+      "label": "实际应用案例",
+      "detail": "用 Codex 和 GPT-5.5 完成学术论文与桌游设计",
+      "children": [
+        "四个提示词生成近博士二年级水平论文，文献和统计…",
+        "一个提示词生成 101 页可玩桌游 PDF，含插图和…",
+        "论文假设不够有趣，因果关系仍有标准担忧"
+      ]
+    },
+    {
+      "label": "能力边界仍存",
+      "detail": "长篇小说等创作仍有明显短板",
+      "children": [
+        "AI 写作常见问题：诡异感、复杂设定无回报、比喻…",
+        "对话角色语气雷同，名字常出现 Mara",
+        "能力前沿依然参差不齐"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.5 Pro",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "GPT-imagegen-2",
+      "type": "model"
+    },
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "Kimi K2.6",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.5",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-5.5",
+      "to": "GPT-5.5 Pro",
+      "label": "包含"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "开发"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "GPT-5.5",
+      "label": "测试"
+    },
+    {
+      "from": "GPT-5.5",
+      "to": "Codex",
+      "label": "驱动"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-imagegen-2",
+      "label": "发布"
+    }
+  ]
+}

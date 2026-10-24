@@ -1,0 +1,52 @@
+{
+  "center": "codex rust-v0.142.3 维护补丁",
+  "branches": [
+    {
+      "label": "版本性质",
+      "detail": "0.142.3 为维护性补丁，无用户可见功能变化",
+      "children": [
+        "仅含维护性修复"
+      ]
+    },
+    {
+      "label": "影响范围",
+      "detail": "对 agent harness 设计无直接影响",
+      "children": [
+        "仅内部代码清理",
+        "依赖更新"
+      ]
+    },
+    {
+      "label": "后续建议",
+      "detail": "建议关注后续版本以获取实际功能更新",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex",
+      "type": "product"
+    },
+    {
+      "name": "Rust",
+      "type": "technique"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex",
+      "to": "Rust",
+      "label": "以 Rust 实现"
+    },
+    {
+      "from": "codex",
+      "to": "agent harness",
+      "label": "用于"
+    }
+  ]
+}

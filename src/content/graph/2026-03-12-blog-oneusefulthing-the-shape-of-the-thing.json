@@ -1,0 +1,112 @@
+{
+  "center": "AI 从协作走向自主代理",
+  "branches": [
+    {
+      "label": "新阶段：管理AI",
+      "detail": "2025年底起，AI代理可承接数小时工作，几分钟返回结果，人从协作转向管理",
+      "children": [
+        "代表：Claude Code、OpenAI Codex、OpenClaw",
+        "此前阶段为 co-intelligence 人机来回提示"
+      ]
+    },
+    {
+      "label": "能力指数增长",
+      "detail": "多项基准显示AI能力快速上升，且未见放缓迹象",
+      "children": [
+        "GPQA：最佳AI达94%，研究生仅34%",
+        "GDPval：AI在82%任务上达到或超过顶尖人类",
+        "Otter Test 从2022到2025图像进步显著，视频…"
+      ]
+    },
+    {
+      "label": "工作方式剧变",
+      "detail": "StrongDM三人团队建 Software Factory，AI全自动写测发软件",
+      "children": [
+        "两条规则：代码不得由人写、不得由人审",
+        "每名工程师每天至少花1000美元AI token",
+        "测试代理自建模拟客户环境，与编码代理互相反馈"
+      ]
+    },
+    {
+      "label": "滚动式冲击",
+      "detail": "能力跨阈值即解锁新用例，组织实验与政策冲突频发",
+      "children": [
+        "Citrini Research 虚构情景引发华尔街股价波动",
+        "Block 宣布40%裁员，被指借AI之名",
+        "五角大楼与 Anthropic 就 Claude 政府使用规…"
+      ]
+    },
+    {
+      "label": "现实仍参差",
+      "detail": "AI能力锯齿状，多数组织采用仍处早期，变化有限",
+      "children": [
+        "基准测试各有缺陷",
+        "公司采用AI仍非常早期"
+      ]
+    }
+  ],
+  "flow": [
+    "人类写产品路线图",
+    "编码代理据路线图建软件",
+    "测试代理建模拟环境测试",
+    "代理互相反馈循环",
+    "人类审查成品",
+    "交付客户"
+  ],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "StrongDM",
+      "type": "company"
+    },
+    {
+      "name": "Software Factory",
+      "type": "concept"
+    },
+    {
+      "name": "METR Long Tasks",
+      "type": "concept"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "推出"
+    },
+    {
+      "from": "StrongDM",
+      "to": "Software Factory",
+      "label": "创建"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "推出"
+    },
+    {
+      "from": "METR Long Tasks",
+      "to": "Software Factory",
+      "label": "衡量能力"
+    }
+  ]
+}

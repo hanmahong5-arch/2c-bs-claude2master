@@ -1,0 +1,119 @@
+{
+  "center": "AI编码代理加速科学计算",
+  "branches": [
+    {
+      "label": "研究背景",
+      "detail": "科研软件长期落后于数据生成速度，维护困难拖慢发现",
+      "children": [
+        "多数工具源自论文附带代码，工程投入有限",
+        "流程慢且脆弱，需持续维护"
+      ]
+    },
+    {
+      "label": "实地报告",
+      "detail": "8个生命科学项目案例，5个用Codex，3个Codex+Claude Code",
+      "children": [
+        "涵盖维护、优化、语言迁移、GPU重写",
+        "小团队完成原本需更多工程支持的工作"
+      ]
+    },
+    {
+      "label": "角色转变",
+      "detail": "研究者从实现转向验证与编排，把控科学方向与质量标准",
+      "children": [
+        "定义目标、衡量正确性、决定何时交付",
+        "代理提供速度提升，人保留控制权"
+      ]
+    },
+    {
+      "label": "核心瓶颈",
+      "detail": "验证代理输出仍依赖人工判断，代理常自信却出错",
+      "children": [
+        "需外部参考或可测验收目标",
+        "分阶段迭代，最后一公里最耗时"
+      ]
+    },
+    {
+      "label": "长期维护",
+      "detail": "降低实现成本易致重写碎片化，需明确归属与维护计划",
+      "children": [
+        "MHCflurry、cyvcf2改动并入上游",
+        "rustar-aligner由社区接管"
+      ]
+    }
+  ],
+  "flow": [
+    "定义科学目标",
+    "拆解为小改动",
+    "代理快速实现",
+    "用基准测试验证",
+    "人工判断科学有效性",
+    "确定长期维护归属"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MHCflurry",
+      "type": "product"
+    },
+    {
+      "name": "cyvcf2",
+      "type": "product"
+    },
+    {
+      "name": "rustar-aligner",
+      "type": "product"
+    },
+    {
+      "name": "基因组学",
+      "type": "concept"
+    },
+    {
+      "name": "科学计算",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "发布"
+    },
+    {
+      "from": "Codex",
+      "to": "科学计算",
+      "label": "加速"
+    },
+    {
+      "from": "Claude Code",
+      "to": "科学计算",
+      "label": "加速"
+    },
+    {
+      "from": "Codex",
+      "to": "基因组学",
+      "label": "应用于"
+    },
+    {
+      "from": "MHCflurry",
+      "to": "OpenAI",
+      "label": "案例来自"
+    },
+    {
+      "from": "rustar-aligner",
+      "to": "科学计算",
+      "label": "属于"
+    }
+  ]
+}

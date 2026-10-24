@@ -1,0 +1,105 @@
+{
+  "center": "Goose v1.48.0 更新",
+  "branches": [
+    {
+      "label": "新增声明式 provider",
+      "detail": "新增 TrustedRouter、OpenCode Zen、Gondola 等多个声明式 provider",
+      "children": [
+        "支持自定义成本字段驱动成本追踪",
+        "需适配新 provider 的认证与计费"
+      ]
+    },
+    {
+      "label": "on_failure 钩子",
+      "detail": "PreToolUse 钩子新增 on_failure 块，工具调用失败可编程处理",
+      "children": [
+        "PreToolUseResult 提供稳定 tool_call_id",
+        "生命周期追踪更可靠"
+      ]
+    },
+    {
+      "label": "安全边界强化",
+      "detail": "大量安全修复，安全默认收紧",
+      "children": [
+        "权限拒绝优先",
+        "失败关闭于畸形工具可见性",
+        "敏感 OTLP 追踪抑制"
+      ]
+    },
+    {
+      "label": "harness 适配",
+      "detail": "需适配新 provider 认证计费、处理新事件、符合新安全约束",
+      "children": [
+        "事件循环中处理新事件",
+        "权限模型与数据脱敏需符合新约束"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "TrustedRouter",
+      "type": "product"
+    },
+    {
+      "name": "OpenCode Zen",
+      "type": "product"
+    },
+    {
+      "name": "Gondola",
+      "type": "product"
+    },
+    {
+      "name": "SayGM",
+      "type": "product"
+    },
+    {
+      "name": "Lynkr",
+      "type": "product"
+    },
+    {
+      "name": "PleumRouter",
+      "type": "product"
+    },
+    {
+      "name": "PreToolUse",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "TrustedRouter",
+      "label": "新增支持"
+    },
+    {
+      "from": "Goose",
+      "to": "OpenCode Zen",
+      "label": "新增支持"
+    },
+    {
+      "from": "Goose",
+      "to": "Gondola",
+      "label": "新增支持"
+    },
+    {
+      "from": "Goose",
+      "to": "SayGM",
+      "label": "新增支持"
+    },
+    {
+      "from": "Goose",
+      "to": "Lynkr",
+      "label": "新增支持"
+    },
+    {
+      "from": "Goose",
+      "to": "PleumRouter",
+      "label": "新增支持"
+    }
+  ]
+}

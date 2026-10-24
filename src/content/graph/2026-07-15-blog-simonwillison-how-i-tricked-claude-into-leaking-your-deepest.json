@@ -1,0 +1,100 @@
+{
+  "center": "Claude web_fetch 数据泄露漏洞",
+  "branches": [
+    {
+      "label": "漏洞原理",
+      "detail": "web_fetch 允许访问已抓取页面内嵌链接，形成嵌套跳转链",
+      "children": [
+        "原设计仅允许用户输入或 web_search 返回的精确…",
+        "攻击者用蜜罐站点诱导逐字母跳转外泄数据"
+      ]
+    },
+    {
+      "label": "攻击手法",
+      "detail": "伪造 Cloudflare 认证页面，诱导 AI 按字母浏览用户档案",
+      "children": [
+        "仅对含 Claude-User 的 UA 展示攻击页",
+        "通过 coffee.evil.com/a、/b 等嵌套链接外泄"
+      ]
+    },
+    {
+      "label": "泄露内容",
+      "detail": "成功提取用户姓名、所在城市与雇主名称",
+      "children": [
+        "攻击由 Ayush Paul 发现",
+        "属于 lethal trifecta 类攻击"
+      ]
+    },
+    {
+      "label": "官方响应",
+      "detail": "Anthropic 称已内部发现，未支付漏洞赏金",
+      "children": [
+        "已移除 web_fetch 访问自身抓取内容中链接的能力",
+        "漏洞现已关闭"
+      ]
+    }
+  ],
+  "flow": [
+    "攻击者搭建蜜罐站点",
+    "伪造认证提示诱导 AI",
+    "AI 逐字母访问嵌套链接",
+    "数据经 URL 外泄"
+  ],
+  "entities": [
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "web_fetch",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Ayush Paul",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "lethal trifecta",
+      "type": "concept"
+    },
+    {
+      "name": "prompt-injection",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Claude",
+      "to": "web_fetch",
+      "label": "集成"
+    },
+    {
+      "from": "Ayush Paul",
+      "to": "web_fetch",
+      "label": "发现漏洞"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Ayush Paul",
+      "label": "报道"
+    },
+    {
+      "from": "web_fetch",
+      "to": "lethal trifecta",
+      "label": "涉及"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "center": "claude-code v2.1.236 更新",
+  "branches": [
+    {
+      "label": "默认模型变量",
+      "detail": "新增 ANTHROPIC_DEFAULT_MODEL 环境变量，设置新会话默认模型",
+      "children": [
+        "/model 可覆盖并持久化",
+        "需区分默认与覆盖逻辑"
+      ]
+    },
+    {
+      "label": "跨会话通知",
+      "detail": "SendMessage 支持 notify_when_idle，另一会话空闲时通知",
+      "children": [
+        "一次性通知，无需轮询",
+        "需考虑异步通知与生命周期"
+      ]
+    },
+    {
+      "label": "沙箱通配符修复",
+      "detail": "macOS 上通配符读拒绝规则优先于允许区域",
+      "children": [
+        "覆盖目录内容",
+        "防重命名绕过"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "ANTHROPIC_DEFAULT_MODEL",
+      "type": "concept"
+    },
+    {
+      "name": "SendMessage",
+      "type": "technique"
+    },
+    {
+      "name": "notify_when_idle",
+      "type": "technique"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "ANTHROPIC_DEFAULT_MODEL",
+      "label": "新增"
+    },
+    {
+      "from": "claude-code",
+      "to": "SendMessage",
+      "label": "支持"
+    },
+    {
+      "from": "SendMessage",
+      "to": "notify_when_idle",
+      "label": "支持"
+    },
+    {
+      "from": "claude-code",
+      "to": "macOS",
+      "label": "修复沙箱"
+    }
+  ]
+}

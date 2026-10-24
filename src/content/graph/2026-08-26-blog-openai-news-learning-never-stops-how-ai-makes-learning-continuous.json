@@ -1,0 +1,71 @@
+{
+  "center": "ChatGPT 推动持续学习",
+  "branches": [
+    {
+      "label": "突破课堂",
+      "detail": "学生与教师用 ChatGPT 把学习延伸到课堂之外",
+      "children": [
+        "实现全天候持续学习支持"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "AI 工具应无缝融入日常学习场景",
+      "children": [
+        "而非仅限教育平台"
+      ]
+    },
+    {
+      "label": "教育者用法",
+      "detail": "教师借助 AI 进行个性化辅导",
+      "children": [
+        "提示需关注自适应学习系统"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "持续学习",
+      "type": "concept"
+    },
+    {
+      "name": "个性化辅导",
+      "type": "concept"
+    },
+    {
+      "name": "自适应学习系统",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "发布报告"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "持续学习",
+      "label": "支持"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "个性化辅导",
+      "label": "用于"
+    },
+    {
+      "from": "个性化辅导",
+      "to": "自适应学习系统",
+      "label": "提示需求"
+    }
+  ]
+}

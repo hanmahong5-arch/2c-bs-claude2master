@@ -1,0 +1,62 @@
+{
+  "center": "opencode v1.18.9 修复更新",
+  "branches": [
+    {
+      "label": "MCP 兼容性修复",
+      "detail": "恢复与旧版 MCP SDK 客户端的兼容性",
+      "children": [
+        "确保 agent 工具调用协议稳定"
+      ]
+    },
+    {
+      "label": "桌面崩溃修复",
+      "detail": "修复 Solid 清理崩溃，避免导航中断",
+      "children": [
+        "提升 agent 交互可靠性"
+      ]
+    },
+    {
+      "label": "新增 V2 侧边栏",
+      "detail": "opt-in 的 V2 桌面侧边栏，由捆绑 CLI 服务驱动",
+      "children": [
+        "为 agent 提供更灵活的本地服务集成"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Solid",
+      "type": "technique"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "MCP",
+      "label": "修复兼容性"
+    },
+    {
+      "from": "opencode",
+      "to": "Solid",
+      "label": "修复崩溃"
+    },
+    {
+      "from": "opencode",
+      "to": "CLI",
+      "label": "捆绑驱动"
+    }
+  ]
+}

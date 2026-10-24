@@ -1,0 +1,72 @@
+{
+  "center": "gemini-cli v0.44.1 紧急修复",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "将提交 bd53951 cherry-pick 到发布分支，解决合并冲突",
+      "children": [
+        "目标分支 release/v0.44.0-pr-27496",
+        "提交号 bd53951"
+      ]
+    },
+    {
+      "label": "发布流程",
+      "detail": "项目采用严格分支管理与自动化发布流程",
+      "children": [
+        "对版本控制与 CI 可靠性要求高"
+      ]
+    },
+    {
+      "label": "自动化运维",
+      "detail": "修复动作由机器人账号执行，体现高度自动化",
+      "children": [
+        "账号 @gemini-cli-robot"
+      ]
+    }
+  ],
+  "flow": [
+    "发现发布分支合并冲突",
+    "cherry-pick 提交 bd53951",
+    "机器人账号执行修复",
+    "发布 v0.44.1 紧急版本"
+  ],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "gemini-cli-robot",
+      "type": "product"
+    },
+    {
+      "name": "release/v0.44.0-pr-27496",
+      "type": "concept"
+    },
+    {
+      "name": "cherry-pick",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google",
+      "to": "gemini-cli",
+      "label": "发布"
+    },
+    {
+      "from": "gemini-cli-robot",
+      "to": "gemini-cli",
+      "label": "修复"
+    },
+    {
+      "from": "cherry-pick",
+      "to": "release/v0.44.0-pr-27496",
+      "label": "应用于"
+    }
+  ]
+}

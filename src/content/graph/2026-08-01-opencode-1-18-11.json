@@ -1,0 +1,80 @@
+{
+  "center": "opencode v1.18.11 修复",
+  "branches": [
+    {
+      "label": "MCP 重连修复",
+      "detail": "修复 MCP SSE 连接在服务器错误响应后陷入重连循环的问题",
+      "children": [
+        "提升 agent 与外部工具通信稳定性"
+      ]
+    },
+    {
+      "label": "推理字段解析",
+      "detail": "修复 provider 模型配置中交错推理字段的解析",
+      "children": [
+        "如 reasoning_text 等自定义字段正确生效"
+      ]
+    },
+    {
+      "label": "外链改用浏览器",
+      "detail": "桌面端外部链接改为系统浏览器打开",
+      "children": [
+        "避免应用内嵌浏览器干扰 agent 工作流"
+      ]
+    },
+    {
+      "label": "桌面端 UI 修复",
+      "detail": "修复多项桌面端界面问题，提升操作可靠性",
+      "children": [
+        "会话标签页状态过期",
+        "文件树标签裁剪",
+        "调试 gutter 标签错位"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "SSE",
+      "type": "technique"
+    },
+    {
+      "name": "reasoning_text",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "MCP",
+      "label": "修复重连"
+    },
+    {
+      "from": "MCP",
+      "to": "SSE",
+      "label": "使用"
+    },
+    {
+      "from": "opencode",
+      "to": "reasoning_text",
+      "label": "修复解析"
+    },
+    {
+      "from": "opencode",
+      "to": "agent",
+      "label": "支撑"
+    }
+  ]
+}

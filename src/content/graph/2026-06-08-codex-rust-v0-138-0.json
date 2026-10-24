@@ -1,0 +1,83 @@
+{
+  "center": "Codex rust-v0.138.0 更新",
+  "branches": [
+    {
+      "label": "桌面无缝切换",
+      "detail": "CLI 线程可直接移交 Codex Desktop，Windows 工作区启动直达桌面",
+      "children": [
+        "支持 macOS/Windows",
+        "无需手动确认",
+        "需跨进程传递上下文"
+      ]
+    },
+    {
+      "label": "图像路径可引用",
+      "detail": "本地图像附件与生成图像的保存路径可被模型读取",
+      "children": [
+        "后续编辑与文件引用更可靠",
+        "需解析系统路径元数据"
+      ]
+    },
+    {
+      "label": "推理快捷键更灵活",
+      "detail": "TUI 为缺失 Alt 键的终端提供备用快捷键",
+      "children": [
+        "推理级别按广告顺序流动",
+        "交互层需适配不同终端"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Codex Desktop",
+      "type": "product"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "CLI",
+      "to": "Codex Desktop",
+      "label": "移交线程"
+    },
+    {
+      "from": "Codex",
+      "to": "Codex Desktop",
+      "label": "集成"
+    },
+    {
+      "from": "agent harness",
+      "to": "CLI",
+      "label": "支持"
+    },
+    {
+      "from": "TUI",
+      "to": "Codex",
+      "label": "提供快捷键"
+    }
+  ]
+}

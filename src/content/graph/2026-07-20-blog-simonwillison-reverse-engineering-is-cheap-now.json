@@ -1,0 +1,81 @@
+{
+  "center": "AI 让逆向工程变廉价",
+  "branches": [
+    {
+      "label": "核心论点",
+      "detail": "编码智能体大幅降低写代码成本，改变了逆向工程的 ROI 计算",
+      "children": [
+        "Simon Willison 于 2026-07-20 发布的笔记",
+        "主题标签：reverse-engineering…"
+      ]
+    },
+    {
+      "label": "过去的问题",
+      "detail": "逆向家用设备本可行，但投入产出比不划算",
+      "children": [
+        "未文档化、不稳定的 API 可能随时变更或失效",
+        "需长期维护，形成令人沮丧的循环"
+      ]
+    },
+    {
+      "label": "智能体带来的变化",
+      "detail": "尝试与失败的成本都下降，维护心理负担减轻",
+      "children": [
+        "让简单自动化跑通的努力大幅减少",
+        "代码便宜后，丢弃重写也不再沉重"
+      ]
+    },
+    {
+      "label": "现象来源",
+      "detail": "作者持续听到人们用编码智能体逆向并自动化家中设备的轶事",
+      "children": [
+        "属于写代码成本下降影响的一个例证"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "coding agents",
+      "type": "concept"
+    },
+    {
+      "name": "reverse-engineering",
+      "type": "concept"
+    },
+    {
+      "name": "home devices",
+      "type": "concept"
+    },
+    {
+      "name": "ROI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "coding agents",
+      "label": "评论"
+    },
+    {
+      "from": "coding agents",
+      "to": "reverse-engineering",
+      "label": "降低成本"
+    },
+    {
+      "from": "reverse-engineering",
+      "to": "home devices",
+      "label": "应用于"
+    },
+    {
+      "from": "coding agents",
+      "to": "ROI",
+      "label": "改变"
+    }
+  ]
+}

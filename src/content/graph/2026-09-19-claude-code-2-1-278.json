@@ -1,0 +1,92 @@
+{
+  "center": "Claude Code 自动模式分类器改服务端",
+  "branches": [
+    {
+      "label": "改走服务端",
+      "detail": "自动模式分类器对 API、Enterprise 及云平台用户默认改用服务端执行",
+      "children": [
+        "覆盖 Claude API、Enterprise、Bedrock…",
+        "分类器开销不再计费"
+      ]
+    },
+    {
+      "label": "可退出回退",
+      "detail": "Bedrock 等平台可用环境变量退出服务端分类器",
+      "children": [
+        "CLAUDE_CODE_AUTO_MODE_SERVER=0",
+        "回退到计费路径时给出警告"
+      ]
+    },
+    {
+      "label": "status 可查",
+      "detail": "/status 新增 Auto mode server 行，显示分类器是否运行在服务端",
+      "children": [
+        "把「决策在哪执行」暴露为可观测状态"
+      ]
+    },
+    {
+      "label": "降级不静默",
+      "detail": "计费回退会显式警告，而非静默切换",
+      "children": [
+        "避免用户对成本来源失去感知"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Claude API",
+      "type": "product"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    },
+    {
+      "name": "Foundry",
+      "type": "product"
+    },
+    {
+      "name": "CLAUDE_CODE_AUTO_MODE_SERVER",
+      "type": "concept"
+    },
+    {
+      "name": "自动模式分类器",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "自动模式分类器",
+      "label": "默认改用"
+    },
+    {
+      "from": "自动模式分类器",
+      "to": "Claude API",
+      "label": "服务端运行"
+    },
+    {
+      "from": "CLAUDE_CODE_AUTO_MODE_SERVER",
+      "to": "自动模式分类器",
+      "label": "可退出"
+    },
+    {
+      "from": "agent harness",
+      "to": "自动模式分类器",
+      "label": "外移决策"
+    }
+  ]
+}

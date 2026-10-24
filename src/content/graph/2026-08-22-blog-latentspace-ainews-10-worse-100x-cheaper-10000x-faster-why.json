@@ -1,0 +1,114 @@
+{
+  "center": "模拟正在接管AI全流程",
+  "branches": [
+    {
+      "label": "核心论点",
+      "detail": "AI生产管线每年有一个环节从人造转为模型造，合成版10%更差但100倍便宜、万倍快",
+      "children": [
+        "2022起每年翻转一个环节",
+        "每个翻转都有patient zero论文或产品",
+        "合成数据、rubric、AI研究员本质都是人类模拟"
+      ]
+    },
+    {
+      "label": "奖励信号与数据",
+      "detail": "2022年评判先合成，2023年训练数据与教师也合成",
+      "children": [
+        "InstructGPT训练奖励模型替代人类偏好",
+        "Constitutional AI用RLAIF自我批判",
+        "Phi证明教科书级合成数据够用"
+      ]
+    },
+    {
+      "label": "课程与研究员",
+      "detail": "2024模型开始自定学习内容，2026模型自主做研究",
+      "children": [
+        "Self-Rewarding与SPIN让模型自出题自评判",
+        "AlphaEvolve进化出新算法",
+        "Karpathy autoresearch一夜700次实验留20项…"
+      ]
+    },
+    {
+      "label": "环境与人类模拟",
+      "detail": "2026 RL环境全合成，2025人类主体被数字孪生替代",
+      "children": [
+        "Z.ai GLM-5.3端到端合成环境、评判与验证",
+        "Ornith-1.5自称端到端自我改进",
+        "数字孪生复现人类回答准确率达85%"
+      ]
+    },
+    {
+      "label": "物理世界边界",
+      "detail": "实验受限问题无法靠智能替代，价值归于掌握实验闭环者",
+      "children": [
+        "Poolside区分智能受限与实验受限问题",
+        "无湿实验室十万聪明人也治不好癌症",
+        "CZ Biohub做虚拟细胞，比体内便宜快约1000倍"
+      ]
+    }
+  ],
+  "flow": [
+    "合成奖励信号",
+    "合成训练数据",
+    "模型当教师",
+    "模型定课程",
+    "模型做研究",
+    "合成RL环境"
+  ],
+  "entities": [
+    {
+      "name": "InstructGPT",
+      "type": "model"
+    },
+    {
+      "name": "Constitutional AI",
+      "type": "technique"
+    },
+    {
+      "name": "RLAIF",
+      "type": "technique"
+    },
+    {
+      "name": "Phi",
+      "type": "model"
+    },
+    {
+      "name": "AlphaEvolve",
+      "type": "product"
+    },
+    {
+      "name": "Andrej Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "GLM-5.3",
+      "type": "model"
+    },
+    {
+      "name": "Simile",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "InstructGPT",
+      "to": "RLAIF",
+      "label": "启发"
+    },
+    {
+      "from": "Constitutional AI",
+      "to": "RLAIF",
+      "label": "采用"
+    },
+    {
+      "from": "Andrej Karpathy",
+      "to": "AlphaEvolve",
+      "label": "延续思路"
+    },
+    {
+      "from": "GLM-5.3",
+      "to": "Simile",
+      "label": "同属合成"
+    }
+  ]
+}

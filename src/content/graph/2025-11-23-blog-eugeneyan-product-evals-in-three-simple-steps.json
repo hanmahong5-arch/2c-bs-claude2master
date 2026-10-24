@@ -1,0 +1,102 @@
+{
+  "center": "产品评估三步法",
+  "branches": [
+    {
+      "label": "标注数据",
+      "detail": "从LLM请求采样输入输出，用二元标签标注是否满足标准",
+      "children": [
+        "用电子表格记录输入、输出、元数据和标签",
+        "客观标准用pass/fail，主观标准用win/lose/tie",
+        "目标50-100个失败案例，总数200+"
+      ]
+    },
+    {
+      "label": "对齐评估器",
+      "detail": "为每个维度单独构建LLM评估器，用标注数据对齐",
+      "children": [
+        "按75/25划分开发集和测试集",
+        "避免单一God Evaluator，用简单启发式组合",
+        "win/lose需交换位置消除位置偏差"
+      ]
+    },
+    {
+      "label": "运行评估框架",
+      "detail": "将各评估器组合成评估框架，每次配置变更都运行",
+      "children": [
+        "框架接受输入输出对，并行运行评估器",
+        "聚合结果输出指标",
+        "以人类表现为基准，追求可扩展性"
+      ]
+    },
+    {
+      "label": "评估指标",
+      "detail": "用精确率、召回率和Cohen's Kappa评估评估器",
+      "children": [
+        "fail类优先召回率，兼顾精确率",
+        "Cohen's Kappa 0.4-0.6为显著一致，>0.7优秀",
+        "人类标注者Kappa可能低至0.2-0.3"
+      ]
+    }
+  ],
+  "flow": [
+    "采样输入输出",
+    "人工标注二元标签",
+    "划分开发/测试集",
+    "构建单维度评估器",
+    "对齐并评估评估器",
+    "运行评估框架"
+  ],
+  "entities": [
+    {
+      "name": "Eugene Yan",
+      "type": "person"
+    },
+    {
+      "name": "LLM evaluator",
+      "type": "concept"
+    },
+    {
+      "name": "Cohen's Kappa",
+      "type": "concept"
+    },
+    {
+      "name": "active learning",
+      "type": "technique"
+    },
+    {
+      "name": "God Evaluator",
+      "type": "concept"
+    },
+    {
+      "name": "position bias",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Eugene Yan",
+      "to": "LLM evaluator",
+      "label": "提出"
+    },
+    {
+      "from": "LLM evaluator",
+      "to": "Cohen's Kappa",
+      "label": "用其评估"
+    },
+    {
+      "from": "active learning",
+      "to": "LLM evaluator",
+      "label": "辅助构建"
+    },
+    {
+      "from": "God Evaluator",
+      "to": "LLM evaluator",
+      "label": "是反模式"
+    },
+    {
+      "from": "position bias",
+      "to": "LLM evaluator",
+      "label": "影响"
+    }
+  ]
+}

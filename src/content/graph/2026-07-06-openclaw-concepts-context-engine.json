@@ -1,0 +1,120 @@
+{
+  "center": "OpenClaw 上下文引擎插件化",
+  "branches": [
+    {
+      "label": "四个生命周期",
+      "detail": "引擎在每次模型运行的四个节点介入上下文构建",
+      "children": [
+        "Ingest：新消息入库或索引",
+        "Assemble：按 token 预算返回有序消息",
+        "Compact：窗口满或 /compact 时压缩旧历史"
+      ]
+    },
+    {
+      "label": "安装与切换",
+      "detail": "插件引擎按普通插件安装，配置槽位后重启网关",
+      "children": [
+        "openclaw plugins install @…",
+        "openclaw doctor 查看当前引擎",
+        "contextEngine 设为 legacy 即回退默认"
+      ]
+    },
+    {
+      "label": "内置 legacy 引擎",
+      "detail": "保留 OpenClaw 原有行为，默认自动启用",
+      "children": [
+        "Ingest 与 After turn 均为 no-op",
+        "Assemble 走 sanitize→validate→limit 直通",
+        "Compact 委托内置摘要压缩"
+      ]
+    },
+    {
+      "label": "子代理生命周期",
+      "detail": "两个可选钩子管理子代理的共享上下文",
+      "children": [
+        "准备钩子接收父子 session key、contextMode…",
+        "lightContext 且 isolated 时跳过准备钩子",
+        "spawn 失败可调用 rollback handle"
+      ]
+    },
+    {
+      "label": "系统提示注入",
+      "detail": "assemble 可返回 systemPromptAddition 字符串",
+      "children": [
+        "OpenClaw 将其前置到本次运行的系统提示",
+        "可注入动态召回指引与检索指令",
+        "无需静态工作区文件"
+      ]
+    }
+  ],
+  "flow": [
+    "安装插件引擎",
+    "配置 contextEngine 槽位",
+    "重启 gateway",
+    "Ingest 新消息",
+    "Assemble 组装上下文",
+    "Compact 压缩历史"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "ContextEngine",
+      "type": "concept"
+    },
+    {
+      "name": "lossless-claw",
+      "type": "product"
+    },
+    {
+      "name": "legacy engine",
+      "type": "concept"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "subagent lifecycle",
+      "type": "concept"
+    },
+    {
+      "name": "systemPromptAddition",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "ContextEngine",
+      "label": "内置接口"
+    },
+    {
+      "from": "lossless-claw",
+      "to": "ContextEngine",
+      "label": "注册实现"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "legacy engine",
+      "label": "默认使用"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Codex",
+      "label": "投影上下文"
+    },
+    {
+      "from": "ContextEngine",
+      "to": "systemPromptAddition",
+      "label": "可返回"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "subagent lifecycle",
+      "label": "调用钩子"
+    }
+  ]
+}

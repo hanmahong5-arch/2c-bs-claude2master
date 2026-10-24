@@ -1,0 +1,121 @@
+{
+  "center": "OpenAI Daybreak 安全工具集",
+  "branches": [
+    {
+      "label": "Daybreak 发布",
+      "detail": "OpenAI 推出 Daybreak，用 AI 规模化发现、验证并修复安全漏洞",
+      "children": [
+        "目标：从漏洞发现转向端到端补丁自动化",
+        "覆盖浏览器、网络设施、FreeBSD、Linux 内核"
+      ]
+    },
+    {
+      "label": "Codex Security",
+      "detail": "Codex Security 插件更新，把安全工程师能力嵌入开发流程",
+      "children": [
+        "已扫描 3000 万+ commit、3 万+ 代码库",
+        "7 万+ 发现被人工标记修复，50 万+ 自动判定修复",
+        "支持 SARIF、CodeQL，可导出漏洞管理系统"
+      ]
+    },
+    {
+      "label": "GPT-5.5-Cyber",
+      "detail": "完整版 GPT-5.5-Cyber 面向可信防御者限量发布",
+      "children": [
+        "CyberGym 达 85.6%，GPT-5.5 为 81.8%",
+        "ExploitGym 39.5% vs GPT-5.5 的 25.95%",
+        "SEC-bench Pro 69.8% vs GPT-5.5 的 63.1%"
+      ]
+    },
+    {
+      "label": "生态合作",
+      "detail": "Daybreak 网络合作伙伴计划与 Patch the Planet 倡议",
+      "children": [
+        "Patch the Planet 与 Trail of Bits 创立",
+        "30+ 开源项目参与，含 cURL、Go、Python…"
+      ]
+    },
+    {
+      "label": "瓶颈转移",
+      "detail": "AI 加速漏洞发现，防御者瓶颈从发现转为修补",
+      "children": [
+        "报告本身不保护任何人，价值在验证与修复",
+        "前沿防御能力不应集中在少数人手中"
+      ]
+    }
+  ],
+  "flow": [
+    "发现漏洞",
+    "验证可达性",
+    "生成补丁",
+    "测试验证",
+    "协调披露",
+    "部署修复"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Daybreak",
+      "type": "product"
+    },
+    {
+      "name": "Codex Security",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.5-Cyber",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Patch the Planet",
+      "type": "concept"
+    },
+    {
+      "name": "Trail of Bits",
+      "type": "company"
+    },
+    {
+      "name": "CyberGym",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Daybreak",
+      "label": "发布"
+    },
+    {
+      "from": "Daybreak",
+      "to": "Codex Security",
+      "label": "包含"
+    },
+    {
+      "from": "Daybreak",
+      "to": "GPT-5.5-Cyber",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-5.5-Cyber",
+      "to": "GPT-5.5",
+      "label": "超越"
+    },
+    {
+      "from": "GPT-5.5-Cyber",
+      "to": "CyberGym",
+      "label": "评测于"
+    },
+    {
+      "from": "Patch the Planet",
+      "to": "Trail of Bits",
+      "label": "联合创立"
+    }
+  ]
+}

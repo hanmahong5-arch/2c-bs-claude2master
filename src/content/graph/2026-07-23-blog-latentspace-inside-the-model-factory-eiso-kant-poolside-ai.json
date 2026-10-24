@@ -1,0 +1,123 @@
+{
+  "center": "Poolside 的 Model Factory",
+  "branches": [
+    {
+      "label": "Model Factory",
+      "detail": "端到端系统，把模型从预训练到发布压缩到八周",
+      "children": [
+        "不到 70 名研究员每月跑 1–2 万次实验",
+        "从六个月周期缩短到五周和八周发布",
+        "数据流式直送训练，加速实验迭代"
+      ]
+    },
+    {
+      "label": "Laguna S 2.1",
+      "detail": "118B 总参数 MoE，每 token 激活 8B，上下文达 1M",
+      "children": [
+        "有 thinking 与 no-thinking 两种模式",
+        "击败 Thinking Machines 近十倍体量的开源模型",
+        "从训练到发布仅用八周"
+      ]
+    },
+    {
+      "label": "工程化优先",
+      "detail": "Eiso 认为模型构建 90% 是工程",
+      "children": [
+        "不可变数据、版本化代码、可复现实验",
+        "低精度训练与网络瓶颈是下一步算力效率来源",
+        "95% 的模型构建可归结为更好的数据或算力效率"
+      ]
+    },
+    {
+      "label": "Agent 与 Harness",
+      "detail": "模型与 harness 协同设计，能力来源需重新审视",
+      "children": [
+        "Eiso 称 MCP 与传统工具调用“愚蠢”",
+        "未来 agent 写脚本而非选预定义工具",
+        "主张极简 harness、容器与模型自由"
+      ]
+    },
+    {
+      "label": "开放与路线",
+      "detail": "Poolside 拥抱开放权重与开放研究，从代码走向 AGI",
+      "children": [
+        "2015 年受 Karpathy RNN 启发开始做代码模型",
+        "曾花四年、1200 万美元在无人关心时坚持",
+        "已融资 5 亿美元，偏好 100 家基础模型公司而非…"
+      ]
+    }
+  ],
+  "flow": [
+    "流式数据直送训练",
+    "不可变数据与版本化代码",
+    "每月 1–2 万次可复现实验",
+    "30 分钟内评估新 checkpoint",
+    "八周完成训练到发布"
+  ],
+  "entities": [
+    {
+      "name": "Poolside",
+      "type": "company"
+    },
+    {
+      "name": "Eiso Kant",
+      "type": "person"
+    },
+    {
+      "name": "Laguna S 2.1",
+      "type": "model"
+    },
+    {
+      "name": "Model Factory",
+      "type": "concept"
+    },
+    {
+      "name": "Andrej Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "Thinking Machines",
+      "type": "company"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Eiso Kant",
+      "to": "Poolside",
+      "label": "联合创办"
+    },
+    {
+      "from": "Poolside",
+      "to": "Laguna S 2.1",
+      "label": "发布"
+    },
+    {
+      "from": "Poolside",
+      "to": "Model Factory",
+      "label": "构建"
+    },
+    {
+      "from": "Andrej Karpathy",
+      "to": "Eiso Kant",
+      "label": "启发"
+    },
+    {
+      "from": "Laguna S 2.1",
+      "to": "Thinking Machines",
+      "label": "击败"
+    },
+    {
+      "from": "Eiso Kant",
+      "to": "MCP",
+      "label": "批评"
+    }
+  ]
+}

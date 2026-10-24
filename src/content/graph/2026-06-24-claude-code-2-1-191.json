@@ -1,0 +1,80 @@
+{
+  "center": "Claude Code v2.1.191 修复",
+  "branches": [
+    {
+      "label": "MCP 可靠性",
+      "detail": "能力发现与 OAuth 请求自动重试瞬态网络错误",
+      "children": [
+        "提升 MCP 连接稳定性"
+      ]
+    },
+    {
+      "label": "性能优化",
+      "detail": "流式响应 CPU 使用率降低约 37%",
+      "children": [
+        "文本更新合并为 100ms 间隔"
+      ]
+    },
+    {
+      "label": "对话恢复",
+      "detail": "/rewind 支持从 /clear 之前恢复对话",
+      "children": [
+        "避免丢失上下文"
+      ]
+    },
+    {
+      "label": "后台 agent 修复",
+      "detail": "停止后台 agent 后不再复活",
+      "children": [
+        "任务面板停止操作永久生效"
+      ]
+    },
+    {
+      "label": "沙箱权限优化",
+      "detail": "沙箱网络权限对话框允许“是”后会话内不再重复提示",
+      "children": [
+        "减少干扰"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "/rewind",
+      "type": "product"
+    },
+    {
+      "name": "/clear",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "优化"
+    },
+    {
+      "from": "Claude Code",
+      "to": "OAuth",
+      "label": "重试"
+    },
+    {
+      "from": "/rewind",
+      "to": "/clear",
+      "label": "恢复"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "center": "AlphaGenome Atlas 预测全基因组…",
+  "branches": [
+    {
+      "label": "覆盖规模",
+      "detail": "对全基因组每个单碱基替换给出分子效应预测",
+      "children": [
+        "覆盖 90 亿个单字母 DNA 变异",
+        "从逐个实验验证变为可查询预测地图"
+      ]
+    },
+    {
+      "label": "预测非实验",
+      "detail": "输出分子效应预测值，不替代湿实验验证",
+      "children": [
+        "下游需区分预测与实测",
+        "数据管道保留置信度与来源标注"
+      ]
+    },
+    {
+      "label": "全基因组尺度",
+      "detail": "覆盖整个基因组的单字母变化，非单基因或单位点",
+      "children": [
+        "统一坐标与版本化参考基因组成基础设施",
+        "调用前须锁定基因组版本与坐标体系"
+      ]
+    },
+    {
+      "label": "对 agent 含义",
+      "detail": "亿级预测结果需要可检索、可批量查询的接口",
+      "children": [
+        "工具链要承载亿级记录检索与过滤"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "AlphaGenome Atlas",
+      "type": "product"
+    },
+    {
+      "name": "单碱基变异",
+      "type": "concept"
+    },
+    {
+      "name": "分子效应预测",
+      "type": "concept"
+    },
+    {
+      "name": "参考基因组",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DeepMind",
+      "to": "AlphaGenome Atlas",
+      "label": "发布"
+    },
+    {
+      "from": "AlphaGenome Atlas",
+      "to": "单碱基变异",
+      "label": "预测"
+    },
+    {
+      "from": "AlphaGenome Atlas",
+      "to": "分子效应预测",
+      "label": "输出"
+    },
+    {
+      "from": "AlphaGenome Atlas",
+      "to": "参考基因组",
+      "label": "依赖"
+    },
+    {
+      "from": "agent",
+      "to": "AlphaGenome Atlas",
+      "label": "查询"
+    }
+  ]
+}

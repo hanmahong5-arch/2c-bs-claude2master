@@ -1,0 +1,109 @@
+{
+  "center": "PyPI 支持发布 WASM wheels",
+  "branches": [
+    {
+      "label": "核心变化",
+      "detail": "Pyodide 314.0 起可直接向 PyPI 发布 PyEmscripten 平台 wheel 并在运行时安装",
+      "children": [
+        "基于 PEP 783 定义的 PyEmscripten 平台",
+        "PyPI 支持 PR 于 4 月 21 日合入"
+      ]
+    },
+    {
+      "label": "解决痛点",
+      "detail": "此前 Pyodide 维护者需自行构建托管 300+ 包，成为社区瓶颈",
+      "children": [
+        "每个新包都需人工审核",
+        "C/Rust 扩展编译成 WASM 后无分发渠道"
+      ]
+    },
+    {
+      "label": "实践案例",
+      "detail": "Simon Willison 用 Codex + GPT-5.5 打包 Luau 实验并发布 luau-wasm",
+      "children": [
+        "276KB 的 pyemscripten_2026_0_wasm32 wheel",
+        "用 micropip.install 安装后调用 execute"
+      ]
+    },
+    {
+      "label": "生态现状",
+      "detail": "通过 BigQuery 查询 PyPI 公开数据集统计采用情况",
+      "children": [
+        "目前 28 个包使用新 pyemscripten 标签",
+        "含 onnx、pydantic_core、yaml-rs 等"
+      ]
+    }
+  ],
+  "flow": [
+    "编写 C/Rust 扩展",
+    "用 cibuildwheel 构建 WASM…",
+    "GitHub Actions 发布到 PyPI",
+    "Pyodide 中 micropip 安装"
+  ],
+  "entities": [
+    {
+      "name": "Pyodide",
+      "type": "product"
+    },
+    {
+      "name": "PyPI",
+      "type": "product"
+    },
+    {
+      "name": "PEP 783",
+      "type": "concept"
+    },
+    {
+      "name": "luau-wasm",
+      "type": "product"
+    },
+    {
+      "name": "Luau",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "cibuildwheel",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Pyodide",
+      "to": "PyPI",
+      "label": "发布 wheel…"
+    },
+    {
+      "from": "PEP 783",
+      "to": "Pyodide",
+      "label": "定义平台"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "luau-wasm",
+      "label": "发布"
+    },
+    {
+      "from": "luau-wasm",
+      "to": "Luau",
+      "label": "封装"
+    },
+    {
+      "from": "cibuildwheel",
+      "to": "luau-wasm",
+      "label": "构建"
+    },
+    {
+      "from": "luau-wasm",
+      "to": "WebAssembly",
+      "label": "编译为"
+    }
+  ]
+}

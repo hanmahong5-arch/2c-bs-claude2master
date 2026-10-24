@@ -1,0 +1,78 @@
+{
+  "center": "Matt Webb 用 ChatGPT 学四元数",
+  "branches": [
+    {
+      "label": "AI 当导师",
+      "detail": "Matt Webb 没让 ChatGPT 写代码，而是让它教自己",
+      "children": [
+        "耐心、可交互的私人导师",
+        "此前读书和问数学家朋友都没学会"
+      ]
+    },
+    {
+      "label": "学会四元数",
+      "detail": "学到刚好够让 Galactic Compass 应用跑起来的程度",
+      "children": [
+        "1.0 版发布后需自己做旋转",
+        "四元数用于处理旋转"
+      ]
+    },
+    {
+      "label": "学习不停",
+      "detail": "把思考外包给 AI 不等于停止学习，反而推动学更多",
+      "children": [
+        "Matt Webb 称这是喜欢的结果"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Matt Webb",
+      "type": "person"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Galactic Compass",
+      "type": "product"
+    },
+    {
+      "name": "quaternions",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Matt Webb",
+      "to": "ChatGPT",
+      "label": "用作导师"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "Matt Webb",
+      "label": "教会"
+    },
+    {
+      "from": "Matt Webb",
+      "to": "quaternions",
+      "label": "学会"
+    },
+    {
+      "from": "quaternions",
+      "to": "Galactic Compass",
+      "label": "用于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Matt Webb",
+      "label": "引用"
+    }
+  ]
+}

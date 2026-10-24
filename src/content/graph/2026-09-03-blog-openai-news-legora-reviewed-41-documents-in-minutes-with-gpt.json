@@ -1,0 +1,117 @@
+{
+  "center": "Legora 用 GPT-6 Astra 审 41 份…",
+  "branches": [
+    {
+      "label": "核心成果",
+      "detail": "单次 Agent 运行几分钟内完成 41 份文件的财务对账",
+      "children": [
+        "财务对账工作流基准提升 40%",
+        "4 个植入错误全部被找出",
+        "含隐藏的 50 万英镑收入缺口"
+      ]
+    },
+    {
+      "label": "工作流痛点",
+      "detail": "财务对账需逐项核对草稿账目与试算表、合并表及上年账目",
+      "children": [
+        "人工核对常耗时整晚甚至数天",
+        "需处理大量复杂财务上下文"
+      ]
+    },
+    {
+      "label": "人机协作",
+      "detail": "Agent 负责穷尽式比对，法律专家保留最终判断权",
+      "children": [
+        "人类在环是平台核心设计",
+        "正从法律扩展至审计、税务、合规与风险"
+      ]
+    },
+    {
+      "label": "基准评测",
+      "detail": "通过 Legora BAR 基准评估端到端法律任务表现",
+      "children": [
+        "该财务工作流提升近 40%",
+        "BAR 全任务平均提升约 3%",
+        "比前代模型多完成约 50 项检查"
+      ]
+    },
+    {
+      "label": "平台规模",
+      "detail": "Legora 是面向法律与专业工作的智能体操作系统",
+      "children": [
+        "服务超 10 万专业人士",
+        "覆盖 1800+ 法务部门与律所",
+        "遍及 50 多个市场"
+      ]
+    }
+  ],
+  "flow": [
+    "导入 41 份财务文件",
+    "Agent 单次运行对账",
+    "逐项核对余额与附表",
+    "标记金额差异并记录",
+    "输出逐行明细供专家复核"
+  ],
+  "entities": [
+    {
+      "name": "Legora",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Legora BAR",
+      "type": "concept"
+    },
+    {
+      "name": "Percevale Perks",
+      "type": "person"
+    },
+    {
+      "name": "财务对账",
+      "type": "concept"
+    },
+    {
+      "name": "人类在环",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Legora",
+      "to": "GPT-6 Astra",
+      "label": "采用"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "OpenAI",
+      "label": "由开发"
+    },
+    {
+      "from": "Legora",
+      "to": "Legora BAR",
+      "label": "使用评测"
+    },
+    {
+      "from": "Percevale Perks",
+      "to": "Legora",
+      "label": "任职于"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "财务对账",
+      "label": "执行"
+    },
+    {
+      "from": "Legora",
+      "to": "人类在环",
+      "label": "坚持"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "center": "Goose v1.45 更新",
+  "branches": [
+    {
+      "label": "模型支持扩展",
+      "detail": "新增最新 Gemini 模型与 Opus5 自适应思考，增强推理能力",
+      "children": [
+        "支持最新 Gemini 模型",
+        "Opus5 自适应思考"
+      ]
+    },
+    {
+      "label": "工具调用改进",
+      "detail": "改进 ACP 工具调用处理，保留工具输出并修复链式摘要",
+      "children": [
+        "保留工具输出",
+        "修复链式摘要"
+      ]
+    },
+    {
+      "label": "离线文档",
+      "detail": "可配置 GOOSE_DOCS_ROOT 实现离线文档访问，适合隔离环境",
+      "children": [
+        "配置 GOOSE_DOCS_ROOT",
+        "隔离环境部署"
+      ]
+    },
+    {
+      "label": "事件追踪",
+      "detail": "新增稳定的事件消息标识，便于 agent 追踪和调试事件流",
+      "children": [
+        "稳定事件消息标识",
+        "追踪调试事件流"
+      ]
+    },
+    {
+      "label": "技能与修复",
+      "detail": "允许禁用内置技能，修复动态模型发现、DeepSeek v4 API 及 Grok 支持",
+      "children": [
+        "禁用内置技能",
+        "修复 DeepSeek v4 API",
+        "修复 Grok 支持"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "Opus5",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek v4",
+      "type": "model"
+    },
+    {
+      "name": "Grok",
+      "type": "model"
+    },
+    {
+      "name": "ACP",
+      "type": "technique"
+    },
+    {
+      "name": "GOOSE_DOCS_ROOT",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "Gemini",
+      "label": "支持"
+    },
+    {
+      "from": "Goose",
+      "to": "Opus5",
+      "label": "支持"
+    },
+    {
+      "from": "Goose",
+      "to": "DeepSeek v4",
+      "label": "修复支持"
+    },
+    {
+      "from": "Goose",
+      "to": "Grok",
+      "label": "修复支持"
+    },
+    {
+      "from": "Goose",
+      "to": "ACP",
+      "label": "改进"
+    },
+    {
+      "from": "Goose",
+      "to": "GOOSE_DOCS_ROOT",
+      "label": "配置"
+    }
+  ]
+}

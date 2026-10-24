@@ -1,0 +1,92 @@
+{
+  "center": "OpenAI 内部研究加速",
+  "branches": [
+    {
+      "label": "编码代理普及",
+      "detail": "2026 年 agentic engineering 在 OpenAI 全面铺开",
+      "children": [
+        "研究团队用编码代理做研究"
+      ]
+    },
+    {
+      "label": "研究支出激增",
+      "detail": "图表显示每位研究员的 AI 支出在 7 月底显著加速",
+      "children": [
+        "猜测与 GPT-6 Astra 内部开放有关"
+      ]
+    },
+    {
+      "label": "RSI 主题日",
+      "detail": "OpenAI 当天集中讨论递归自我改进（RSI）",
+      "children": [
+        "被称作新的 AGI 方向",
+        "文章不展开缩写"
+      ]
+    },
+    {
+      "label": "配套文章",
+      "detail": "首席科学家 Jakub Pachocki 发表《An Alien Mind》",
+      "children": [
+        "与本文同谈 RSI"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Jakub Pachocki",
+      "type": "person"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "coding agents",
+      "type": "technique"
+    },
+    {
+      "name": "Recursive Self-Improvement",
+      "type": "concept"
+    },
+    {
+      "name": "An Alien Mind",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "coding agents",
+      "label": "采用"
+    },
+    {
+      "from": "Jakub Pachocki",
+      "to": "An Alien Mind",
+      "label": "撰写"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Recursive Self-Improvement",
+      "label": "聚焦"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "OpenAI",
+      "label": "报道"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "OpenAI",
+      "label": "由…发布"
+    }
+  ]
+}

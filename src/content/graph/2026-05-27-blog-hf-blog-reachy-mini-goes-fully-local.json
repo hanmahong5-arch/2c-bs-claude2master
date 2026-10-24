@@ -1,0 +1,113 @@
+{
+  "center": "Reachy Mini 全本地语音对话",
+  "branches": [
+    {
+      "label": "全本地部署",
+      "detail": "音频不出本机，无云服务、无 API Key、无调用费用",
+      "children": [
+        "Hugging Face 的 speech-to-speech 库驱动",
+        "暴露 Realtime API 兼容的 /v1/realtime…"
+      ]
+    },
+    {
+      "label": "级联流水线",
+      "detail": "VAD → STT → LLM → TTS 四段级联，各段可自由替换",
+      "children": [
+        "Silero VAD v5：CPU 上运行，小而准",
+        "Parakeet-TDT 0.6B v3：流式友好、速度快",
+        "Qwen3-TTS：低延迟、多语言、支持自定义音色"
+      ]
+    },
+    {
+      "label": "LLM 三种跑法",
+      "detail": "本地 llama.cpp / vLLM，或 HF Inference Endpoints",
+      "children": [
+        "llama.cpp 跑 Gemma 4，64k 上下文、flash…",
+        "vLLM ≥ 0.21.0 支持 Responses API 与工具调…",
+        "MTP 投机解码可选，显著降低端到端延迟"
+      ]
+    },
+    {
+      "label": "延迟是关键",
+      "detail": "LLM 推理延迟是系统主要瓶颈，故解耦大脑与语音环",
+      "children": [
+        "Responses API 让 LLM 独立进程，HTTP 通信",
+        "对话场景建议关闭 thinking，思考 token 即静音"
+      ]
+    }
+  ],
+  "flow": [
+    "启动 llama.cpp 服务 LLM",
+    "安装并运行 speech-to-speech",
+    "本地模式终端试对话",
+    "启动 Reachy Mini 桌面应用",
+    "UI 中切换为本地连接",
+    "开始与机器人对话"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Reachy Mini",
+      "type": "product"
+    },
+    {
+      "name": "speech-to-speech",
+      "type": "product"
+    },
+    {
+      "name": "llama.cpp",
+      "type": "product"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "Silero VAD",
+      "type": "model"
+    },
+    {
+      "name": "Parakeet-TDT 0.6B v3",
+      "type": "model"
+    },
+    {
+      "name": "Qwen3-TTS",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Reachy Mini",
+      "label": "支持"
+    },
+    {
+      "from": "speech-to-speech",
+      "to": "Reachy Mini",
+      "label": "驱动"
+    },
+    {
+      "from": "llama.cpp",
+      "to": "Gemma 4",
+      "label": "部署"
+    },
+    {
+      "from": "speech-to-speech",
+      "to": "Silero VAD",
+      "label": "集成"
+    },
+    {
+      "from": "speech-to-speech",
+      "to": "Parakeet-TDT 0.6B v3",
+      "label": "集成"
+    },
+    {
+      "from": "speech-to-speech",
+      "to": "Qwen3-TTS",
+      "label": "集成"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "center": "Cline SDK 事件瘦身修复内存暴涨",
+  "branches": [
+    {
+      "label": "事件不再带全量对话",
+      "detail": "session.updated 等事件只含状态快照，不再携带完整对话记录",
+      "children": [
+        "快照含状态、用量、模型、工作区、检查点",
+        "避免每次事件传输大量数据"
+      ]
+    },
+    {
+      "label": "按需拉取消息",
+      "detail": "需要对话内容时改用 session.messages 命令主动获取",
+      "children": [
+        "从推送全量改为主动查询"
+      ]
+    },
+    {
+      "label": "内存暴涨修复",
+      "detail": "修复事件携带完整对话导致的内存膨胀问题",
+      "children": [
+        "曾出现 25GB 进程"
+      ]
+    },
+    {
+      "label": "对 harness 的影响",
+      "detail": "事件流更轻量，但需按需拉取消息",
+      "children": [
+        "agent harness 设计需适配按需拉取"
+      ]
+    }
+  ],
+  "flow": [
+    "事件触发",
+    "仅发送状态快照",
+    "需要对话时调用…",
+    "按需拉取消息"
+  ],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "session.updated",
+      "type": "concept"
+    },
+    {
+      "name": "session.messages",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "session.updated",
+      "label": "发出事件"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "session.messages",
+      "label": "提供命令"
+    },
+    {
+      "from": "session.updated",
+      "to": "agent harness",
+      "label": "影响设计"
+    }
+  ]
+}

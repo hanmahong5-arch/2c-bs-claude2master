@@ -1,0 +1,109 @@
+{
+  "center": "生成式 AI 应用五大陷阱",
+  "branches": [
+    {
+      "label": "别为用而用",
+      "detail": "很多问题用贪心调度或线性规划更便宜可靠，不必上生成式 AI",
+      "children": [
+        "用电优化案例：按电价排期即可省 30%",
+        "网络异常检测、话务预测、营养筛查均被误用"
+      ]
+    },
+    {
+      "label": "产品≠AI 差",
+      "detail": "用户讨厌产品常是 UX 问题，而非模型能力问题",
+      "children": [
+        "会议摘要用户只要自己的行动项",
+        "LinkedIn 要 helpful 而非 correct",
+        "Intuit 加建议问题降低输入门槛"
+      ]
+    },
+    {
+      "label": "别一上来就复杂",
+      "detail": "过早引入 agent 框架、向量库、微调、语义缓存会掩盖细节、引入 bug",
+      "children": [
+        "直接 API 调用够用就别上 agent 框架",
+        "term-based 检索够用就别上 vectordb",
+        "prompting 有效就别急着 finetune"
+      ]
+    },
+    {
+      "label": "别高估早期成功",
+      "detail": "0→80% 容易，80→95% 极难，需预留幻觉、延迟、合规等成本",
+      "children": [
+        "LinkedIn 1 个月到 80%，再 4 个月才过 95%",
+        "电商销售助手 0→80% 与 80→90% 耗时相同",
+        "UltraChat：0→60 易，60→100 极难"
+      ]
+    },
+    {
+      "label": "别放弃人工评估",
+      "detail": "自动评估（LLM-as-a-judge）不能完全替代人工判断",
+      "children": [
+        "AI-as-a-judge 是常见自动评估方案"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Chip Huyen",
+      "type": "person"
+    },
+    {
+      "name": "LinkedIn",
+      "type": "company"
+    },
+    {
+      "name": "Intuit",
+      "type": "company"
+    },
+    {
+      "name": "UltraChat",
+      "type": "product"
+    },
+    {
+      "name": "LLM-as-a-judge",
+      "type": "technique"
+    },
+    {
+      "name": "RAG",
+      "type": "concept"
+    },
+    {
+      "name": "finetuning",
+      "type": "technique"
+    },
+    {
+      "name": "vectordb",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Chip Huyen",
+      "to": "LLM-as-a-judge",
+      "label": "总结陷阱"
+    },
+    {
+      "from": "LinkedIn",
+      "to": "LLM-as-a-judge",
+      "label": "案例涉及"
+    },
+    {
+      "from": "Intuit",
+      "to": "LLM-as-a-judge",
+      "label": "案例涉及"
+    },
+    {
+      "from": "UltraChat",
+      "to": "LLM-as-a-judge",
+      "label": "引用数据"
+    },
+    {
+      "from": "finetuning",
+      "to": "vectordb",
+      "label": "同属过度复杂"
+    }
+  ]
+}

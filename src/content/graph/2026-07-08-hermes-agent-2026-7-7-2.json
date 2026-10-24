@@ -1,0 +1,69 @@
+{
+  "center": "hermes-agent 修复 WhatsApp 依赖",
+  "branches": [
+    {
+      "label": "依赖源变更",
+      "detail": "WhatsApp 桥接依赖从 git commit 改为 npm 发布的 7.0.0-rc13",
+      "children": [
+        "安装更可靠",
+        "避免固定 commit 导致构建失败"
+      ]
+    },
+    {
+      "label": "补丁范围",
+      "detail": "此补丁仅修复 WhatsApp 依赖，无其他功能变更",
+      "children": [
+        "紧急补丁聚焦单一问题",
+        "降低回归风险"
+      ]
+    },
+    {
+      "label": "版本发布",
+      "detail": "完整更新日志将在 v0.19.0 发布",
+      "children": [
+        "累积变更说明",
+        "减少碎片化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "hermes-agent",
+      "type": "product"
+    },
+    {
+      "name": "WhatsApp",
+      "type": "product"
+    },
+    {
+      "name": "npm",
+      "type": "product"
+    },
+    {
+      "name": "v0.19.0",
+      "type": "concept"
+    },
+    {
+      "name": "7.0.0-rc13",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "hermes-agent",
+      "to": "WhatsApp",
+      "label": "依赖"
+    },
+    {
+      "from": "WhatsApp",
+      "to": "npm",
+      "label": "依赖"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "v0.19.0",
+      "label": "将发布"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "center": "Eugene Yan 2025 年度回顾",
+  "branches": [
+    {
+      "label": "写作成果",
+      "detail": "完成 6 篇深度文章，聚焦 LLM 与推荐系统融合及评估",
+      "children": [
+        "LLM × RecSys 深度文章获 AI Engineer 邀请…",
+        "文章主题涵盖长上下文 QA 评估、产品评估三步法"
+      ]
+    },
+    {
+      "label": "原型开发",
+      "detail": "构建 4 个应用，包括 AI Reading Club 和 LLM-RecSys 混合模型",
+      "children": [
+        "AI Reading Club 受 Karpathy 推文启发，已…",
+        "LLM-RecSys 混合模型能根据自然语言推荐跨平台…"
+      ]
+    },
+    {
+      "label": "健康与手术",
+      "detail": "坚持每周 5 公里跑步，完成牙齿矫正和下颌手术",
+      "children": [
+        "静息心率和 VO2 max 有渐进改善",
+        "2 月开始戴牙套，11 月底手术，现恢复第三周"
+      ]
+    },
+    {
+      "label": "职业晋升",
+      "detail": "晋升为 Principal Applied Scientist，O1 签证获批",
+      "children": [
+        "撰写文章分享从导师和榜样学到的经验"
+      ]
+    },
+    {
+      "label": "旅行与数据",
+      "detail": "两次旅行：白马和拉斯维加斯；网站曝光增但点击降",
+      "children": [
+        "白马滑雪和美食体验最佳，拉斯维加斯推荐羚羊谷等",
+        "搜索曝光 +71%，点击 -25%，CTR 从 2.9% 降至…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Eugene Yan",
+      "type": "person"
+    },
+    {
+      "name": "AI Reading Club",
+      "type": "product"
+    },
+    {
+      "name": "LLM-RecSys Hybrid",
+      "type": "model"
+    },
+    {
+      "name": "Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "Kindle iOS",
+      "type": "product"
+    },
+    {
+      "name": "Apple Watch",
+      "type": "product"
+    },
+    {
+      "name": "O1 visa",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Eugene Yan",
+      "to": "AI Reading Club",
+      "label": "构建"
+    },
+    {
+      "from": "Eugene Yan",
+      "to": "LLM-RecSys Hybrid",
+      "label": "训练"
+    },
+    {
+      "from": "Karpathy",
+      "to": "AI Reading Club",
+      "label": "启发"
+    },
+    {
+      "from": "AI Reading Club",
+      "to": "Kindle iOS",
+      "label": "上线于"
+    },
+    {
+      "from": "Eugene Yan",
+      "to": "Apple Watch",
+      "label": "使用"
+    },
+    {
+      "from": "Eugene Yan",
+      "to": "O1 visa",
+      "label": "获批"
+    }
+  ]
+}

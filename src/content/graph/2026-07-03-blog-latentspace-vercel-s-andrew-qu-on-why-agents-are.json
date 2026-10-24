@@ -1,0 +1,118 @@
+{
+  "center": "Vercel 谈 agent 是新软件形态",
+  "branches": [
+    {
+      "label": "agent 是新软件",
+      "detail": "Andrew Qu 认为 agent 不像网页应用那样可预测，交互与输出更动态",
+      "children": [
+        "需要上下文、工具、可恢复性等新原语",
+        "基础设施相似但界面与输出不同"
+      ]
+    },
+    {
+      "label": "eve 框架由来",
+      "detail": "Vercel 在 v0 中踩坑后把解决方案沉淀为可复用库，最终组装成 eve",
+      "children": [
+        "痛点：切换模型、加 fallback、可恢复运行",
+        "内部数据 agent 沉淀出文件系统、技能、压缩…"
+      ]
+    },
+    {
+      "label": "技能与知识更新",
+      "detail": "技能是可移植的按需知识，用来纠正模型过时信息",
+      "children": [
+        "模型仍推荐已弃用的 Vercel Postgres",
+        "建议发布最新版技能并审计旧内容"
+      ]
+    },
+    {
+      "label": "面向 agent 的网页",
+      "detail": "机器人流量上升而人类流量停滞，网站需对 agent 可读",
+      "children": [
+        "Vercel 检测到 agent 请求时直接返回 Markdown",
+        "人类看视觉站点，agent 看结构化表示"
+      ]
+    },
+    {
+      "label": "自主与人在环",
+      "detail": "不是全自主也不是全人在环，而是按任务选择反馈周期",
+      "children": [
+        "任务明确可让循环跑到完成",
+        "精细工程需回查并引导模型"
+      ]
+    }
+  ],
+  "flow": [
+    "v0 中遇到模型切换等痛点",
+    "沉淀为可复用库",
+    "内部数据 agent 提炼实践",
+    "组装成 eve 框架",
+    "部署到 Vercel 获得可观测性"
+  ],
+  "entities": [
+    {
+      "name": "Vercel",
+      "type": "company"
+    },
+    {
+      "name": "Andrew Qu",
+      "type": "person"
+    },
+    {
+      "name": "eve",
+      "type": "product"
+    },
+    {
+      "name": "v0",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "skills.sh",
+      "type": "product"
+    },
+    {
+      "name": "Vercel Postgres",
+      "type": "product"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Andrew Qu",
+      "to": "Vercel",
+      "label": "任职于"
+    },
+    {
+      "from": "Andrew Qu",
+      "to": "eve",
+      "label": "主导开发"
+    },
+    {
+      "from": "Andrew Qu",
+      "to": "MCP",
+      "label": "构建库"
+    },
+    {
+      "from": "Andrew Qu",
+      "to": "skills.sh",
+      "label": "创建"
+    },
+    {
+      "from": "Vercel",
+      "to": "v0",
+      "label": "开发"
+    },
+    {
+      "from": "eve",
+      "to": "Vercel",
+      "label": "可部署于"
+    }
+  ]
+}

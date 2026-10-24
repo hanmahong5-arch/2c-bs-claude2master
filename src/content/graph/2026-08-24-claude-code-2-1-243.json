@@ -1,0 +1,105 @@
+{
+  "center": "Claude Code v2.1.243 更新",
+  "branches": [
+    {
+      "label": "循环用量分析",
+      "detail": "/usage 新增 Loops 分解，展示每轮循环运行次数与 token 消耗",
+      "children": [
+        "便于发现失控的循环任务",
+        "可监控子任务资源消耗"
+      ]
+    },
+    {
+      "label": "模型选择器定制",
+      "detail": "新增 modelPicker 设置，可定制 /model 选择器",
+      "children": [
+        "支持任意模型 ID",
+        "含 Vertex / Bedrock",
+        "可限制或推荐模型列表"
+      ]
+    },
+    {
+      "label": "缓存 TTL 设置",
+      "detail": "新增 promptCacheTtl 与 subagentPromptCacheTtl 两项设置",
+      "children": [
+        "分别控制主对话与子代理缓存时长",
+        "用于优化成本与延迟"
+      ]
+    },
+    {
+      "label": "成本与稳定性",
+      "detail": "新增 modelPricing 托管设置，并修复远程 MCP 断线问题",
+      "children": [
+        "按组织合同价计算成本",
+        "MCP 断线后自动重连或报告失败"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "modelPicker",
+      "type": "concept"
+    },
+    {
+      "name": "promptCacheTtl",
+      "type": "concept"
+    },
+    {
+      "name": "subagentPromptCacheTtl",
+      "type": "concept"
+    },
+    {
+      "name": "modelPricing",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "modelPicker",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "promptCacheTtl",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "subagentPromptCacheTtl",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "modelPricing",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "修复断线"
+    },
+    {
+      "from": "modelPicker",
+      "to": "Vertex",
+      "label": "支持"
+    }
+  ]
+}

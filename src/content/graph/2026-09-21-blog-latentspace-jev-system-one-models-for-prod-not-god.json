@@ -1,0 +1,123 @@
+{
+  "center": "Jev：面向生产的 System One 模型",
+  "branches": [
+    {
+      "label": "Jev 是什么",
+      "detail": "TypeSafe AI 推出的 System One 模型，为软件而非聊天设计",
+      "children": [
+        "核心是 RLCD：为校准决策做强化学习",
+        "目标是像 regex 一样消失在软件后台",
+        "发布视频播放量约 4000 万"
+      ]
+    },
+    {
+      "label": "为何弃 RLHF",
+      "detail": "RLHF 导致幻觉、谄媚与对人类永久依赖",
+      "children": [
+        "RLVR 解决 Navier Stokes 却加剧锯齿智能",
+        "三种 RLHF 分支均非正确北极星",
+        "Diogo 是 InstructGPT 论文作者之一"
+      ]
+    },
+    {
+      "label": "最苦教训",
+      "detail": "任务与数据比算力更重要，选对北极星是关键",
+      "children": [
+        "优化用户偏好 vs 集成进工具调用",
+        "TypeSafe 自认是数据实验室而非模型实验室",
+        "Diogo 称不会用 10 亿美元做预训练"
+      ]
+    },
+    {
+      "label": "构建方式",
+      "detail": "把 AI 工作流拆成小而可测量的决策",
+      "children": [
+        "用结构化状态替代巨型 prompt",
+        "Jev 提供编程原语映射到软件控制流",
+        "拒绝公开基准，优化每美元智能"
+      ]
+    },
+    {
+      "label": "应用与未来",
+      "detail": "暗数据、计算机使用、编码智能体是早期用例",
+      "children": [
+        "逆 SaaS 末日：AI 增强现有软件",
+        "编码智能体超越 KV 缓存与多智能体",
+        "System One 与 System Two 智能的边界"
+      ]
+    }
+  ],
+  "flow": [
+    "识别 System One 任务",
+    "拆解为小决策",
+    "用结构化状态替代 prompt",
+    "RLCD 输出校准概率",
+    "集成进软件控制流"
+  ],
+  "entities": [
+    {
+      "name": "Jev",
+      "type": "model"
+    },
+    {
+      "name": "TypeSafe AI",
+      "type": "company"
+    },
+    {
+      "name": "Diogo Almeida",
+      "type": "person"
+    },
+    {
+      "name": "RLCD",
+      "type": "technique"
+    },
+    {
+      "name": "RLHF",
+      "type": "technique"
+    },
+    {
+      "name": "RLVR",
+      "type": "technique"
+    },
+    {
+      "name": "InstructGPT",
+      "type": "model"
+    },
+    {
+      "name": "System One",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Diogo Almeida",
+      "to": "TypeSafe AI",
+      "label": "创立"
+    },
+    {
+      "from": "TypeSafe AI",
+      "to": "Jev",
+      "label": "推出"
+    },
+    {
+      "from": "Jev",
+      "to": "RLCD",
+      "label": "采用"
+    },
+    {
+      "from": "Diogo Almeida",
+      "to": "InstructGPT",
+      "label": "合著"
+    },
+    {
+      "from": "RLCD",
+      "to": "RLHF",
+      "label": "替代"
+    },
+    {
+      "from": "Jev",
+      "to": "System One",
+      "label": "属于"
+    }
+  ]
+}

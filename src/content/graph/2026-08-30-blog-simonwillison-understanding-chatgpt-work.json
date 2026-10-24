@@ -1,0 +1,115 @@
+{
+  "center": "Simon Willison 拆解 ChatGPT…",
+  "branches": [
+    {
+      "label": "两种形态",
+      "detail": "ChatGPT Work 实为两个产品：云端 Work Cloud 与本地 Work Local",
+      "children": [
+        "Work Cloud 经 chatgpt.com 或手机 App 访问",
+        "Work Local 来自原 Codex 桌面应用，可操作本…",
+        "桌面应用下拉框可选运行位置"
+      ]
+    },
+    {
+      "label": "仅限付费",
+      "detail": "两种形态目前只对 20 美元/月及以上订阅者开放",
+      "children": [
+        "免费用户与 8 美元/月 Go 用户不可用"
+      ]
+    },
+    {
+      "label": "独有功能",
+      "detail": "Work 相比 Chat 多出代码执行、浏览器、持久文件系统等能力",
+      "children": [
+        "可选 Luna、Terra 替代 Sol",
+        "带联网的代码执行环境",
+        "无头 Chrome 浏览器"
+      ]
+    },
+    {
+      "label": "模型选择",
+      "detail": "Work 可选 GPT-5.6 Sol/Luna/Terra 与 GPT-5.5，多档推理级别",
+      "children": [
+        "推理级别含 Light 到 Ultra",
+        "Chat 提供 5.6 Instant/Medium/High/Extra…",
+        "5.6 Pro 为 Chat 独有"
+      ]
+    },
+    {
+      "label": "关键能力",
+      "detail": "联网代码执行与无头浏览器是作者最看重的功能",
+      "children": [
+        "可克隆 GitHub 仓库并装依赖",
+        "默认允许访问所有域名",
+        "浏览器可运行 JS 抓取 DOM"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Work Cloud",
+      "type": "product"
+    },
+    {
+      "name": "Work Local",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT Chat",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Cloudflare Workers",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "发布"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "Work Cloud",
+      "label": "包含"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "Work Local",
+      "label": "包含"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "ChatGPT Work",
+      "label": "拆解"
+    },
+    {
+      "from": "Work Local",
+      "to": "Codex",
+      "label": "源自"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "Cloudflare Workers",
+      "label": "用于建站"
+    }
+  ]
+}

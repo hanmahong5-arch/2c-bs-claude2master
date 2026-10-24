@@ -1,0 +1,118 @@
+{
+  "center": "Claude Fable 5 主动调试前端 bug",
+  "branches": [
+    {
+      "label": "主动排查",
+      "detail": "仅凭截图和一句提示，Fable 5 自行定位依赖中的滚动条 bug",
+      "children": [
+        "提示：查看依赖找出横向滚动条原因",
+        "怀疑源头在 Datasette 依赖代码"
+      ]
+    },
+    {
+      "label": "自创截图法",
+      "detail": "用 Python 遍历窗口，配合 screencapture CLI 截取 Safari 窗口",
+      "children": [
+        "uv run --with pyobjc-framework-Quartz",
+        "screencapture -x -o -l 153551"
+      ]
+    },
+    {
+      "label": "注入触发代码",
+      "detail": "改 Datasette 模板注入 JS，模拟 / 键打开模态对话框",
+      "children": [
+        "window load 后 1.2 秒 dispatchEvent",
+        "KeyboardEvent keydown key '/'"
+      ]
+    },
+    {
+      "label": "自建 CORS 服务器",
+      "detail": "用 http.server 写本地服务，接收页面测量数据写入 /tmp/diag.json",
+      "children": [
+        "Access-Control-Allow-Origin: *",
+        "读取 textarea 的 scrollWidth 等"
+      ]
+    },
+    {
+      "label": "降级与修复",
+      "detail": "Fable 触发隐形护栏降级为 Opus，Opus 沿用技巧找到并验证修复",
+      "children": [
+        "Opus 生成 /tmp/automation-report.md",
+        "报告含可运行代码示例"
+      ]
+    }
+  ],
+  "flow": [
+    "截图加提示启动会话",
+    "排查依赖定位 bug",
+    "自创截图与注入法",
+    "自建 CORS 服务器取数",
+    "降级 Opus 验证修复"
+  ],
+  "entities": [
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Opus",
+      "type": "model"
+    },
+    {
+      "name": "Safari",
+      "type": "product"
+    },
+    {
+      "name": "Playwright",
+      "type": "product"
+    },
+    {
+      "name": "CORS",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Claude Fable 5",
+      "label": "测试"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Claude Code",
+      "label": "运行于"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Datasette",
+      "label": "调试"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Opus",
+      "label": "降级为"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Safari",
+      "label": "截图"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "CORS",
+      "label": "利用"
+    }
+  ]
+}

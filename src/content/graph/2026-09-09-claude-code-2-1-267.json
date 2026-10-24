@@ -1,0 +1,94 @@
+{
+  "center": "claude-code v2.1.267 更新",
+  "branches": [
+    {
+      "label": "缓存稳定性修复",
+      "detail": "围绕 prompt-cache 复用做大量修复，避免缓存失效",
+      "children": [
+        "MCP/插件工具中途加入不再重写工具列表",
+        "模型切换不再丢弃早期思考",
+        "/compact 后恢复会话不再重写工具列表"
+      ]
+    },
+    {
+      "label": "新增 effort 上限",
+      "detail": "新增 maxEffortLevel 设置，限制所有 provider 的 effort 上限",
+      "children": [
+        "可在顶层或 modelSettings 下按模型配置",
+        "用户仍可选更低级别",
+        "harness 需支持按模型覆盖的硬上限"
+      ]
+    },
+    {
+      "label": "系统提示快照开关",
+      "detail": "新增 --system-prompt-snapshot off，每次请求重新渲染系统提示",
+      "children": [
+        "默认复用会话记录中的提示快照",
+        "关闭后改为实时渲染",
+        "harness 需做成可切换路径便于迭代提示文本"
+      ]
+    },
+    {
+      "label": "harness 适配要求",
+      "detail": "工具定义与系统提示记录一次并稳定重放",
+      "children": [
+        "避免缓存失效",
+        "保留用户下调 effort 空间"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "prompt-cache",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "maxEffortLevel",
+      "type": "concept"
+    },
+    {
+      "name": "system-prompt-snapshot",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "prompt-cache",
+      "label": "修复复用"
+    },
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "支持工具"
+    },
+    {
+      "from": "claude-code",
+      "to": "maxEffortLevel",
+      "label": "新增设置"
+    },
+    {
+      "from": "claude-code",
+      "to": "system-prompt-snapshot",
+      "label": "新增开关"
+    },
+    {
+      "from": "harness",
+      "to": "prompt-cache",
+      "label": "稳定重放"
+    }
+  ]
+}

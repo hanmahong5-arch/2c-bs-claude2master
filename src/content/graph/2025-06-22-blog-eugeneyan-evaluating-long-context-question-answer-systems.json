@@ -1,0 +1,116 @@
+{
+  "center": "长上下文问答系统评估",
+  "branches": [
+    {
+      "label": "评估维度",
+      "detail": "忠实性与有用性两个正交维度",
+      "children": [
+        "忠实性：答案仅依赖源文档",
+        "有用性：相关、全面、简洁",
+        "引用准确性：引用支持答案"
+      ]
+    },
+    {
+      "label": "长上下文挑战",
+      "detail": "信息过载、位置差异、多跳推理等",
+      "children": [
+        "信息过载：无关细节干扰",
+        "位置差异：lost in the middle",
+        "多跳推理：整合分散证据"
+      ]
+    },
+    {
+      "label": "数据集构建",
+      "detail": "用LLM草拟问题，人工审核编辑",
+      "children": [
+        "精确提示引导生成自然问题",
+        "NarrativeQA基于叙事生成问题"
+      ]
+    },
+    {
+      "label": "评估方法",
+      "detail": "人工标注与LLM评估器",
+      "children": [
+        "人类标注：专家偏好全面忠实",
+        "LLM评估器：可扩展评估"
+      ]
+    },
+    {
+      "label": "基准测试",
+      "detail": "覆盖叙事、技术、多文档场景",
+      "children": [
+        "QASPER：评估引用准确性",
+        "NarrativeQA：叙事故事问答"
+      ]
+    }
+  ],
+  "flow": [
+    "定义评估维度",
+    "构建评估数据集",
+    "生成问题",
+    "人工标注或LLM评估",
+    "运行基准测试"
+  ],
+  "entities": [
+    {
+      "name": "Eugene Yan",
+      "type": "person"
+    },
+    {
+      "name": "NarrativeQA",
+      "type": "product"
+    },
+    {
+      "name": "QASPER",
+      "type": "product"
+    },
+    {
+      "name": "LLM-evaluators",
+      "type": "technique"
+    },
+    {
+      "name": "Faithfulness",
+      "type": "concept"
+    },
+    {
+      "name": "Helpfulness",
+      "type": "concept"
+    },
+    {
+      "name": "Xu et al. (2023)",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Eugene Yan",
+      "to": "NarrativeQA",
+      "label": "讨论"
+    },
+    {
+      "from": "Eugene Yan",
+      "to": "QASPER",
+      "label": "讨论"
+    },
+    {
+      "from": "NarrativeQA",
+      "to": "Faithfulness",
+      "label": "评估"
+    },
+    {
+      "from": "QASPER",
+      "to": "Faithfulness",
+      "label": "评估"
+    },
+    {
+      "from": "LLM-evaluators",
+      "to": "Helpfulness",
+      "label": "评估"
+    },
+    {
+      "from": "Xu et al. (2023)",
+      "to": "Helpfulness",
+      "label": "研究"
+    }
+  ]
+}

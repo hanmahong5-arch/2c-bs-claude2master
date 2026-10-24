@@ -1,0 +1,100 @@
+{
+  "center": "Cline 桌面版首发",
+  "branches": [
+    {
+      "label": "桌面版发布",
+      "detail": "首次公开发布 macOS 桌面应用，支持 Apple Silicon 与 Intel，已签名公证",
+      "children": [
+        "提供原生桌面环境，便于本地调试和监控 agent…"
+      ]
+    },
+    {
+      "label": "自动更新机制",
+      "detail": "启动时及每 2 小时检查更新，后台下载，一键重启",
+      "children": [
+        "确保用户始终使用最新版本，减少手动维护成本"
+      ]
+    },
+    {
+      "label": "分发简化",
+      "detail": "仅需首次从 GitHub 下载 DMG，后续版本自动推送",
+      "children": [
+        "简化分发流程，提升用户体验"
+      ]
+    }
+  ],
+  "flow": [
+    "首次从 GitHub 下载 DMG",
+    "安装 macOS 桌面应用",
+    "启动时检查更新",
+    "每 2 小时检查更新",
+    "后台下载新版本",
+    "一键重启完成更新"
+  ],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "cline desktop-v0.0.2",
+      "type": "product"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "Apple Silicon",
+      "type": "concept"
+    },
+    {
+      "name": "Intel",
+      "type": "company"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "DMG",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "cline desktop-v0.0.2",
+      "label": "发布"
+    },
+    {
+      "from": "cline desktop-v0.0.2",
+      "to": "macOS",
+      "label": "运行于"
+    },
+    {
+      "from": "cline desktop-v0.0.2",
+      "to": "Apple Silicon",
+      "label": "支持"
+    },
+    {
+      "from": "cline desktop-v0.0.2",
+      "to": "Intel",
+      "label": "支持"
+    },
+    {
+      "from": "cline desktop-v0.0.2",
+      "to": "GitHub",
+      "label": "下载自"
+    },
+    {
+      "from": "cline desktop-v0.0.2",
+      "to": "DMG",
+      "label": "使用"
+    }
+  ]
+}

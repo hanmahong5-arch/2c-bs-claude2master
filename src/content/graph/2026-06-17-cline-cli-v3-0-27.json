@@ -1,0 +1,74 @@
+{
+  "center": "cline cli v3.0.27 更新",
+  "branches": [
+    {
+      "label": "技能管理命令",
+      "detail": "新增 cline skill 命令，统一技能生态管理接口",
+      "children": [
+        "与插件、MCP 管理命令功能对齐",
+        "Agent 技能管理接口得到简化"
+      ]
+    },
+    {
+      "label": "MCP 安装优化",
+      "detail": "新增预填充的 MCP 安装向导命令，加速服务器设置",
+      "children": [
+        "降低 MCP 配置复杂度",
+        "提升开发者体验"
+      ]
+    },
+    {
+      "label": "错误处理改进",
+      "detail": "优化 OAuth 授权失败提示，明确未知命令报错",
+      "children": [
+        "插件 MCP OAuth 失败消息更清晰",
+        "未加引号多词输入不再误认为提示"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "cline skill",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli",
+      "to": "cline skill",
+      "label": "新增"
+    },
+    {
+      "from": "cline cli",
+      "to": "MCP",
+      "label": "优化安装"
+    },
+    {
+      "from": "cline cli",
+      "to": "OAuth",
+      "label": "改进错误处理"
+    },
+    {
+      "from": "cline skill",
+      "to": "Agent",
+      "label": "管理技能"
+    }
+  ]
+}

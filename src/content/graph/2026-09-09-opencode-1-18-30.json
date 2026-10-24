@@ -1,0 +1,96 @@
+{
+  "center": "opencode v1.18.30 更新",
+  "branches": [
+    {
+      "label": "GPT-6 提示词",
+      "detail": "新增 GPT-6 的 Astra 系统提示词，为 agent harness 提供更适配的指令基础",
+      "children": [
+        "Astra 系统提示词",
+        "面向 agent harness"
+      ]
+    },
+    {
+      "label": "Bedrock 修复",
+      "detail": "修复 Bedrock DeepSeek 模型 ID（含 ARN）保留问题，确保模型解析正确",
+      "children": [
+        "含 ARN 的模型 ID",
+        "对依赖 Bedrock 的 harness 更可靠"
+      ]
+    },
+    {
+      "label": "SDK 与配置",
+      "detail": "更新 Azure 和 OpenAI provider SDK，新增 GitLab 上 GPT/Claude 模型的推理努力变体",
+      "children": [
+        "Azure / OpenAI provider SDK",
+        "GitLab 推理努力变体"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "GPT-6",
+      "type": "model"
+    },
+    {
+      "name": "Astra",
+      "type": "concept"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "DeepSeek",
+      "type": "model"
+    },
+    {
+      "name": "Azure",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GitLab",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "GPT-6",
+      "label": "新增提示词"
+    },
+    {
+      "from": "opencode",
+      "to": "Bedrock",
+      "label": "修复模型 ID"
+    },
+    {
+      "from": "opencode",
+      "to": "Azure",
+      "label": "更新 SDK"
+    },
+    {
+      "from": "opencode",
+      "to": "OpenAI",
+      "label": "更新 SDK"
+    },
+    {
+      "from": "opencode",
+      "to": "GitLab",
+      "label": "新增变体"
+    },
+    {
+      "from": "GPT-6",
+      "to": "Astra",
+      "label": "使用"
+    }
+  ]
+}

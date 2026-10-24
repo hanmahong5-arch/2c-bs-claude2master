@@ -1,0 +1,105 @@
+{
+  "center": "现代 LLM 注意力变体图解",
+  "branches": [
+    {
+      "label": "注意力起源",
+      "detail": "注意力早于 Transformer，源于编码器-解码器 RNN 翻译的瓶颈问题",
+      "children": [
+        "RNN 隐藏状态无法存储无限上下文",
+        "注意力让解码器直接回看全部输入"
+      ]
+    },
+    {
+      "label": "多头注意力 MHA",
+      "detail": "标准 Transformer 做法，并行多组自注意力头再合并输出",
+      "children": [
+        "示例架构：GPT-2、OLMo 2 7B、OLMo 3 7B",
+        "Q/K/V 经 Wq、Wk、Wv 投影得到"
+      ]
+    },
+    {
+      "label": "自注意力内部",
+      "detail": "QK^T 得相关性分数，softmax 归一化为注意力矩阵 A，再作用于 V",
+      "children": [
+        "Q 表示要找什么，K 表示可匹配什么，V 是混合的…",
+        "因果掩码屏蔽未来位置，矩阵上三角被灰掉"
+      ]
+    },
+    {
+      "label": "架构图库",
+      "detail": "Raschka 整理 45 个 LLM 架构的可视化模型卡图库",
+      "children": [
+        "含海报版，Medium 尺寸 26.9 x 23.4 in",
+        "小尺寸文字过小，不推荐"
+      ]
+    }
+  ],
+  "flow": [
+    "输入嵌入 X",
+    "Wq/Wk/Wv 投影出 Q/K/V",
+    "QK^T 算相关性分数",
+    "softmax 归一化为 A",
+    "A 作用于 V 得输出 Z"
+  ],
+  "entities": [
+    {
+      "name": "Sebastian Raschka",
+      "type": "person"
+    },
+    {
+      "name": "Multi-Head Attention",
+      "type": "technique"
+    },
+    {
+      "name": "Self-Attention",
+      "type": "technique"
+    },
+    {
+      "name": "Transformer",
+      "type": "concept"
+    },
+    {
+      "name": "GPT-2",
+      "type": "model"
+    },
+    {
+      "name": "OLMo 2 7B",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek V4",
+      "type": "model"
+    },
+    {
+      "name": "LLM architecture gallery",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sebastian Raschka",
+      "to": "LLM architecture gallery",
+      "label": "创建"
+    },
+    {
+      "from": "Multi-Head Attention",
+      "to": "Self-Attention",
+      "label": "基于"
+    },
+    {
+      "from": "Transformer",
+      "to": "Multi-Head Attention",
+      "label": "采用"
+    },
+    {
+      "from": "GPT-2",
+      "to": "Multi-Head Attention",
+      "label": "使用"
+    },
+    {
+      "from": "OLMo 2 7B",
+      "to": "Multi-Head Attention",
+      "label": "使用"
+    }
+  ]
+}

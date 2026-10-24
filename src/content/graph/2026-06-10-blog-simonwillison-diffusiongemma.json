@@ -1,0 +1,101 @@
+{
+  "center": "Google 开源 DiffusionGemma",
+  "branches": [
+    {
+      "label": "模型发布",
+      "detail": "Google 将 Gemini Diffusion 研究转为开源权重 Gemma 模型",
+      "children": [
+        "模型名 google/diffusiongemma-26B-A4B-it",
+        "Apache 2 许可",
+        "26B 参数、A4B 激活"
+      ]
+    },
+    {
+      "label": "免费托管",
+      "detail": "NVIDIA 在 NIM 云 API 上免费托管该模型",
+      "children": [
+        "NVIDIA NIM cloud API"
+      ]
+    },
+    {
+      "label": "生成速度",
+      "detail": "Simon Willison 实测生成速度极快",
+      "children": [
+        "生成 2,409 tokens 耗时 4.4s",
+        "至少 500 tokens/秒",
+        "此前 Gemini Diffusion 预览达 857 tokens/秒"
+      ]
+    },
+    {
+      "label": "历史背景",
+      "detail": "去年 5 月 Google 曾短暂发布实验性 Gemini Diffusion 预览",
+      "children": [
+        "当时无后续公告",
+        "如今以开源权重回归"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "DiffusionGemma",
+      "type": "model"
+    },
+    {
+      "name": "Gemini Diffusion",
+      "type": "model"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "NIM cloud API",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Apache 2",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google",
+      "to": "DiffusionGemma",
+      "label": "开源"
+    },
+    {
+      "from": "Google",
+      "to": "Gemini Diffusion",
+      "label": "发布"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "DiffusionGemma",
+      "label": "托管"
+    },
+    {
+      "from": "NIM cloud API",
+      "to": "DiffusionGemma",
+      "label": "提供"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "DiffusionGemma",
+      "label": "实测"
+    },
+    {
+      "from": "DiffusionGemma",
+      "to": "Apache 2",
+      "label": "采用"
+    }
+  ]
+}

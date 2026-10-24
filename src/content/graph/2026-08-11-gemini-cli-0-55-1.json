@@ -1,0 +1,80 @@
+{
+  "center": "Gemini CLI 0.55.1 更新",
+  "branches": [
+    {
+      "label": "工具注册发现",
+      "detail": "新增工具注册发现机制，支持运行时动态扩展工具集",
+      "children": [
+        "harness 需支持运行时注册与发现"
+      ]
+    },
+    {
+      "label": "沙箱安全修复",
+      "detail": "修复敏感路径拦截大小写不敏感及符号链接目录逃逸",
+      "children": [
+        "严格校验路径",
+        "遵循最小权限"
+      ]
+    },
+    {
+      "label": "循环与注入修复",
+      "detail": "修复 ReAct 循环与提示注入导致的无限循环，过滤思考内容",
+      "children": [
+        "设计循环检测",
+        "上下文清理机制"
+      ]
+    },
+    {
+      "label": "评估覆盖率报告",
+      "detail": "新增评估覆盖率报告命令，支持本地报告",
+      "children": [
+        "集成评估工具量化测试覆盖"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Gemini CLI",
+      "type": "product"
+    },
+    {
+      "name": "ReAct",
+      "type": "technique"
+    },
+    {
+      "name": "提示注入",
+      "type": "concept"
+    },
+    {
+      "name": "沙箱",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemini CLI",
+      "to": "ReAct",
+      "label": "修复循环"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "提示注入",
+      "label": "修复漏洞"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "沙箱",
+      "label": "强化安全"
+    },
+    {
+      "from": "harness",
+      "to": "Gemini CLI",
+      "label": "集成工具"
+    }
+  ]
+}

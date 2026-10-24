@@ -1,0 +1,123 @@
+{
+  "center": "Gemini 3.8 Flash 双版本发布",
+  "branches": [
+    {
+      "label": "两个版本",
+      "detail": "同一基础智能，面向不同部署环境",
+      "children": [
+        "Gemini 3.8 Flash：通用高智能主力模型",
+        "Gemini 3.8 Flash Cyber：网络安全专用版",
+        "Cyber 仅通过 Fairwind Program 向可信防御者…"
+      ]
+    },
+    {
+      "label": "价格与速度",
+      "detail": "与 3.7 Flash 同价同速，性能大幅提升",
+      "children": [
+        "输入 $0.75 / 百万 token，输出 $3.75 / 百万…",
+        "六周内第三次 Flash 发布",
+        "复杂任务更肯下功夫，会多步推理并迭代调用工具"
+      ]
+    },
+    {
+      "label": "编码与智能体",
+      "detail": "面向长周期软件工程与自主智能体",
+      "children": [
+        "DeepSWE v1.1 上超越多数更大前沿模型",
+        "HLE-Verified 得分 54.9%",
+        "Vals Finance Agent V2、Harvey 法律基准领先"
+      ]
+    },
+    {
+      "label": "网络安全能力",
+      "detail": "漏洞发现与自动修补达前沿水平",
+      "children": [
+        "CyberGym 自主漏洞发现超越 3.5 Flash Cyber",
+        "内部基准覆盖 20 种语言，成功率超 70%",
+        "CWE-Bench pass@1 47.2%，成本显著更低"
+      ]
+    },
+    {
+      "label": "真实落地",
+      "detail": "已用于保护 Google 内部代码",
+      "children": [
+        "Chrome 安全团队正确补丁数为最佳商用模型 2.6 倍",
+        "Wiz 测试召回率高 7.5–9.7%，成本低 2.3–5.2 倍",
+        "Cloud 漏洞研究团队 2 小时内发现关键漏洞"
+      ]
+    }
+  ],
+  "flow": [
+    "长周期智能体循环递归评估",
+    "高强度网络安全领域训练",
+    "共享核心能力外溢至编码推理",
+    "按环境拆分 Flash 与 Cyber",
+    "Cyber 经 Fairwind 定向开放"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemini 3.8 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.8 Flash Cyber",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.7 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Fairwind Program",
+      "type": "product"
+    },
+    {
+      "name": "Google Antigravity",
+      "type": "product"
+    },
+    {
+      "name": "CyberGym",
+      "type": "concept"
+    },
+    {
+      "name": "CWE-Bench",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini 3.8 Flash",
+      "label": "发布"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini 3.8 Flash Cyber",
+      "label": "发布"
+    },
+    {
+      "from": "Gemini 3.8 Flash",
+      "to": "Gemini 3.7 Flash",
+      "label": "升级自"
+    },
+    {
+      "from": "Gemini 3.8 Flash Cyber",
+      "to": "Fairwind Program",
+      "label": "经其开放"
+    },
+    {
+      "from": "Gemini 3.8 Flash",
+      "to": "Google Antigravity",
+      "label": "用于构建"
+    },
+    {
+      "from": "Gemini 3.8 Flash Cyber",
+      "to": "CyberGym",
+      "label": "评测于"
+    }
+  ]
+}

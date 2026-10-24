@@ -1,0 +1,122 @@
+{
+  "center": "Farewell Ai2：非前沿模型的影响力",
+  "branches": [
+    {
+      "label": "离职回顾",
+      "detail": "Nathan Lambert 离开 Ai2，回顾在 Olmo 等开源模型上的工作与影响",
+      "children": [
+        "2023 年 10 月加入 Ai2",
+        "感谢 OE、法务、IT、传播等团队",
+        "仍将留在西雅图并继续开源生态工作"
+      ]
+    },
+    {
+      "label": "非前沿影响力",
+      "detail": "即使性能非前沿，开源模型仍能产生持久影响",
+      "children": [
+        "Olmo 系列开源模型",
+        "Tülu 3 击败 Llama 3 后训练",
+        "提出 RLVR 术语"
+      ]
+    },
+    {
+      "label": "个人成长路径",
+      "detail": "从电子工程到 AI 研究，经历 HuggingFace 再到 Ai2",
+      "children": [
+        "UC Berkeley EECS 博士（MEMS）",
+        "2022 年加入 HuggingFace",
+        "2023 年 ICML 遇见 Luca Soldaini"
+      ]
+    },
+    {
+      "label": "关键项目",
+      "detail": "在 Ai2 期间主导或参与多个有影响力的开源项目",
+      "children": [
+        "RewardBench 首个奖励模型评估",
+        "Tülu 2 首个公开 70B DPO 模型",
+        "Tülu 3 与 Olmo 2 后训练"
+      ]
+    },
+    {
+      "label": "未来方向",
+      "detail": "继续致力于开源生态的协调与实用化",
+      "children": [
+        "保持独立声音",
+        "AI 地缘政治与经济社会影响",
+        "联系邮箱 nathan@natolambert.com"
+      ]
+    }
+  ],
+  "flow": [
+    "加入 Ai2",
+    "参与 Olmo 与 Tülu 项目",
+    "提出 RLVR 与 RewardBench",
+    "离开 Ai2 继续开源工作"
+  ],
+  "entities": [
+    {
+      "name": "Ai2",
+      "type": "company"
+    },
+    {
+      "name": "Olmo",
+      "type": "model"
+    },
+    {
+      "name": "Tülu 3",
+      "type": "model"
+    },
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "HuggingFace",
+      "type": "company"
+    },
+    {
+      "name": "RLVR",
+      "type": "concept"
+    },
+    {
+      "name": "RewardBench",
+      "type": "product"
+    },
+    {
+      "name": "Luca Soldaini",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "Ai2",
+      "label": "离职"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Olmo",
+      "label": "参与开发"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Tülu 3",
+      "label": "主导"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "HuggingFace",
+      "label": "曾任职"
+    },
+    {
+      "from": "Tülu 3",
+      "to": "RLVR",
+      "label": "提出"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "RewardBench",
+      "label": "创建"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "center": "Playco用GPT-6 Astra做游戏原型",
+  "branches": [
+    {
+      "label": "核心成果",
+      "detail": "Playco用GPT-6 Astra将游戏原型手动修复减少50%",
+      "children": [
+        "手动修复量下降一半"
+      ]
+    },
+    {
+      "label": "实现方法",
+      "detail": "基于灰色盒基础，用GPT-6 Astra构建三个主题游戏原型",
+      "children": [
+        "灰色盒基础",
+        "三个主题原型"
+      ]
+    },
+    {
+      "label": "行业启示",
+      "detail": "更强模型能减少开发返工，提升原型迭代效率",
+      "children": [
+        "减少返工",
+        "加速创意验证"
+      ]
+    },
+    {
+      "label": "注意事项",
+      "detail": "AI辅助原型设计需平衡模型输出质量与人工审查",
+      "children": [
+        "人工审查不可少"
+      ]
+    }
+  ],
+  "flow": [
+    "搭建灰色盒基础",
+    "用GPT-6 Astra生成原型",
+    "构建三个主题游戏",
+    "人工审查与修复"
+  ],
+  "entities": [
+    {
+      "name": "Playco",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "灰色盒",
+      "type": "concept"
+    },
+    {
+      "name": "游戏原型",
+      "type": "concept"
+    },
+    {
+      "name": "AI辅助原型设计",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Playco",
+      "to": "GPT-6 Astra",
+      "label": "使用"
+    },
+    {
+      "from": "Playco",
+      "to": "游戏原型",
+      "label": "构建"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "游戏原型",
+      "label": "生成"
+    },
+    {
+      "from": "灰色盒",
+      "to": "游戏原型",
+      "label": "作为基础"
+    },
+    {
+      "from": "AI辅助原型设计",
+      "to": "游戏原型",
+      "label": "加速"
+    }
+  ]
+}

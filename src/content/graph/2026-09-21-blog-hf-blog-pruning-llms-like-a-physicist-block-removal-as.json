@@ -1,0 +1,98 @@
+{
+  "center": "LLM剪枝映射伊辛模型",
+  "branches": [
+    {
+      "label": "核心映射",
+      "detail": "把块删除形式化为伊辛优化问题",
+      "children": [
+        "每个块=一个自旋变量",
+        "保留/删除=两种自旋状态",
+        "目标：损失最小的组合"
+      ]
+    },
+    {
+      "label": "方法转变",
+      "detail": "剪枝从逐层贪心变为全局能量最小化",
+      "children": [
+        "避免局部最优",
+        "借用统计物理组合优化求解器",
+        "不再只依赖启发式剪枝"
+      ]
+    },
+    {
+      "label": "开发者含义",
+      "detail": "部署端小模型选型多一条可复现数学路径",
+      "children": [
+        "剪枝工具或暴露能量函数接口",
+        "而非只给层重要性分数"
+      ]
+    },
+    {
+      "label": "作者背景",
+      "detail": "作者来自 Multiverse Computing",
+      "children": [
+        "方向：用量子/物理方法做 AI 优化"
+      ]
+    }
+  ],
+  "flow": [
+    "块删除形式化",
+    "映射为伊辛自旋变量",
+    "构造能量函数",
+    "求解全局最小化",
+    "得到剪枝组合"
+  ],
+  "entities": [
+    {
+      "name": "Multiverse Computing",
+      "type": "company"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "block removal",
+      "type": "technique"
+    },
+    {
+      "name": "Ising model",
+      "type": "concept"
+    },
+    {
+      "name": "剪枝",
+      "type": "technique"
+    },
+    {
+      "name": "组合优化",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Multiverse Computing",
+      "to": "Ising model",
+      "label": "应用"
+    },
+    {
+      "from": "block removal",
+      "to": "Ising model",
+      "label": "映射为"
+    },
+    {
+      "from": "剪枝",
+      "to": "block removal",
+      "label": "包含"
+    },
+    {
+      "from": "Ising model",
+      "to": "组合优化",
+      "label": "属于"
+    },
+    {
+      "from": "LLM",
+      "to": "剪枝",
+      "label": "被压缩"
+    }
+  ]
+}

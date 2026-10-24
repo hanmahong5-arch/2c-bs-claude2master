@@ -1,0 +1,82 @@
+{
+  "center": "ChatGPT Ads 扩展欧洲",
+  "branches": [
+    {
+      "label": "市场扩张",
+      "detail": "ChatGPT Ads 覆盖 31 个欧洲市场，广告主可在用户决策时触达",
+      "children": [
+        "覆盖 31 个欧洲市场",
+        "触达探索、比较、决策阶段"
+      ]
+    },
+    {
+      "label": "广告形式",
+      "detail": "基于对话上下文，意图信号强",
+      "children": [
+        "对话上下文驱动",
+        "意图信号强"
+      ]
+    },
+    {
+      "label": "对 agent 影响",
+      "detail": "为 agent 工具链带来新用户触达和变现渠道",
+      "children": [
+        "新用户触达渠道",
+        "新变现渠道"
+      ]
+    },
+    {
+      "label": "开发者关注",
+      "detail": "需平衡广告与对话体验，并应对新合规要求",
+      "children": [
+        "广告与体验平衡",
+        "新合规要求"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Ads",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "欧洲市场",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Ads",
+      "label": "推出"
+    },
+    {
+      "from": "ChatGPT Ads",
+      "to": "ChatGPT",
+      "label": "集成于"
+    },
+    {
+      "from": "ChatGPT Ads",
+      "to": "欧洲市场",
+      "label": "扩展至"
+    },
+    {
+      "from": "ChatGPT Ads",
+      "to": "agent",
+      "label": "影响"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "center": "ChatGPT Work 数据 agent",
+  "branches": [
+    {
+      "label": "核心能力",
+      "detail": "用自然语言连接企业数据、挖掘洞察并生成交互式仪表盘",
+      "children": [
+        "连接企业数据",
+        "发现洞察",
+        "生成可交互 dashboard"
+      ]
+    },
+    {
+      "label": "面向对象",
+      "detail": "定位 everyone，非技术员工也能直接对数据提问",
+      "children": [
+        "无需 SQL/BI 客户端",
+        "入口转向自然语言"
+      ]
+    },
+    {
+      "label": "对开发者的含义",
+      "detail": "数据分析被包装成对话式 agent 的标准能力，而非独立 BI 工具",
+      "children": [
+        "数据接入层与可视化层或被同一 agent 打通",
+        "减少中间 ETL 与报表配置环节",
+        "权限与数据治理成新集成重点"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Data agent",
+      "type": "product"
+    },
+    {
+      "name": "自然语言",
+      "type": "concept"
+    },
+    {
+      "name": "BI 工具",
+      "type": "concept"
+    },
+    {
+      "name": "ETL",
+      "type": "technique"
+    },
+    {
+      "name": "数据治理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "推出"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "Data agent",
+      "label": "新增"
+    },
+    {
+      "from": "Data agent",
+      "to": "自然语言",
+      "label": "使用"
+    },
+    {
+      "from": "Data agent",
+      "to": "BI 工具",
+      "label": "替代"
+    },
+    {
+      "from": "Data agent",
+      "to": "ETL",
+      "label": "减少"
+    },
+    {
+      "from": "Data agent",
+      "to": "数据治理",
+      "label": "涉及"
+    }
+  ]
+}

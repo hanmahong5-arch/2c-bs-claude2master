@@ -1,0 +1,120 @@
+{
+  "center": "OpenEnv 开源智能体 RL 环境",
+  "branches": [
+    {
+      "label": "治理开放化",
+      "detail": "OpenEnv 由多机构委员会共同协调，托管于 huggingface/OpenEnv",
+      "children": [
+        "委员会含 Meta-PyTorch、Unsloth、Nvidia…",
+        "获 PyTorch Foundation、vLLM、SGLang…"
+      ]
+    },
+    {
+      "label": "定位为协议层",
+      "detail": "只做环境互操作层，不定义奖励与训练循环",
+      "children": [
+        "奖励定义、评分、训练逻辑交给专门库",
+        "OpenEnv 是各方共用的通用插座"
+      ]
+    },
+    {
+      "label": "统一接口与打包",
+      "detail": "环境暴露 Gymnasium 风格 API，客户端/服务器架构",
+      "children": [
+        "reset()、step()、state() 三个接口",
+        "HTTP/WebSocket 协议，Docker 打包",
+        "MCP 一等公民，仿真与生产行为一致"
+      ]
+    },
+    {
+      "label": "跨库互操作",
+      "detail": "可在 verifiers、harbor 等生态定义与消费环境",
+      "children": [
+        "训练器说 OpenEnv 即可驱动任意合规环境",
+        "不竞争，做底层部署与接口层"
+      ]
+    },
+    {
+      "label": "后续路线",
+      "detail": "外部奖励、数据集任务集、Harness 集成等",
+      "children": [
+        "RFC 006 外部奖励，RFC 007 数据集任务集",
+        "TRL、Unsloth、Miles 端到端示例",
+        "RFC 008 自动验证环境质量"
+      ]
+    }
+  ],
+  "flow": [
+    "定义环境接口",
+    "Docker 打包环境",
+    "HTTP/WebSocket 部署",
+    "训练器接入驱动",
+    "仿真与生产复用"
+  ],
+  "entities": [
+    {
+      "name": "OpenEnv",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Meta-PyTorch",
+      "type": "company"
+    },
+    {
+      "name": "Unsloth",
+      "type": "company"
+    },
+    {
+      "name": "Nvidia",
+      "type": "company"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Gymnasium",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "OpenEnv",
+      "label": "托管"
+    },
+    {
+      "from": "Meta-PyTorch",
+      "to": "OpenEnv",
+      "label": "共同协调"
+    },
+    {
+      "from": "Unsloth",
+      "to": "OpenEnv",
+      "label": "共同协调"
+    },
+    {
+      "from": "Nvidia",
+      "to": "OpenEnv",
+      "label": "共同协调"
+    },
+    {
+      "from": "OpenEnv",
+      "to": "MCP",
+      "label": "兼容"
+    },
+    {
+      "from": "OpenEnv",
+      "to": "Gymnasium",
+      "label": "采用接口"
+    }
+  ]
+}

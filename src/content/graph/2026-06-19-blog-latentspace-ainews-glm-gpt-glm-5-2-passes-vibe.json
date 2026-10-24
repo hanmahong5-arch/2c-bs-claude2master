@@ -1,0 +1,103 @@
+{
+  "center": "GLM-5.2 通过前沿模型检验",
+  "branches": [
+    {
+      "label": "GLM-5.2 突破",
+      "detail": "开源权重模型首次被多方认可为接近前沿水平",
+      "children": [
+        "Jeremy Howard 称其不逊 Opus 4.8 和 GPT 5.5",
+        "Artificial Analysis 知识工作基准高于 GPT…",
+        "新增 IndexShare 降低 1M token 推理成本"
+      ]
+    },
+    {
+      "label": "开源模型进展",
+      "detail": "多个开源模型发布，覆盖编码与长上下文",
+      "children": [
+        "Poolside Laguna M.1 采用 Apache 2.0…",
+        "Cohere North Mini Code 支持 4-bit 量化与…",
+        "GLM-5.2 免费通过 Hugging Face 提供"
+      ]
+    },
+    {
+      "label": "Agent 工具链",
+      "detail": "重心从模型转向模型+工具+记忆+版本控制",
+      "children": [
+        "Codex Record & Replay 演示一次生成技能",
+        "Cursor /automate 支持自然语言配置触发器",
+        "Devin Review 加入自动安全审查"
+      ]
+    },
+    {
+      "label": "基准与评估",
+      "detail": "新基准更贴近真实长周期知识工作",
+      "children": [
+        "AA-Briefcase 模拟多周项目与碎片输入",
+        "Fable 5 以 1587 Elo 领先，GLM-5.2 1266",
+        "顶级模型仅 3% 任务满足全部标准"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Z.ai",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Poolside Laguna M.1",
+      "type": "model"
+    },
+    {
+      "name": "Codex Record & Replay",
+      "type": "product"
+    },
+    {
+      "name": "AA-Briefcase",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Z.ai",
+      "to": "GLM-5.2",
+      "label": "发布"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "GPT-5.5",
+      "label": "基准超越"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "AA-Briefcase",
+      "label": "推出"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "AA-Briefcase",
+      "label": "领先"
+    },
+    {
+      "from": "Poolside Laguna M.1",
+      "to": "GLM-5.2",
+      "label": "同属开源"
+    }
+  ]
+}

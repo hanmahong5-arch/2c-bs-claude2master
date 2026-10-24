@@ -1,0 +1,35 @@
+{
+  "center": "cline desktop v0.0.6 更新",
+  "branches": [
+    {
+      "label": "队列消息可编辑",
+      "detail": "待处理请求支持展开编辑、立即发送或删除",
+      "children": [
+        "方便管理多条待处理请求"
+      ]
+    },
+    {
+      "label": "更新提示常驻",
+      "detail": "下载后侧边栏常驻图标，一键重启",
+      "children": [
+        "失败提示更明确",
+        "避免遗漏更新"
+      ]
+    },
+    {
+      "label": "启动无闪烁",
+      "detail": "首次渲染即匹配保存或系统主题",
+      "children": [
+        "提升视觉一致性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline desktop",
+      "type": "product"
+    }
+  ],
+  "relations": []
+}

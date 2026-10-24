@@ -1,0 +1,57 @@
+{
+  "center": "opencode v1.18.14 更新",
+  "branches": [
+    {
+      "label": "xAI 登录简化",
+      "detail": "xAI 登录改为单一设备码流程，更适合无头与远程环境",
+      "children": [
+        "减少交互步骤，利于自动化部署"
+      ]
+    },
+    {
+      "label": "错误重试增强",
+      "detail": "保留结构化流式错误，兼容提供商可重试，并增加瞬时错误重试",
+      "children": [
+        "提升鲁棒性，减少手动干预"
+      ]
+    },
+    {
+      "label": "远程工作区调整",
+      "detail": "远程工作区不再转发宿主目录，提示从远程根解析",
+      "children": [
+        "确保路径一致性，避免混淆"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "xAI",
+      "type": "company"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "设备码流程",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "xAI",
+      "label": "简化登录"
+    },
+    {
+      "from": "opencode",
+      "to": "agent harness",
+      "label": "优化设计"
+    }
+  ]
+}

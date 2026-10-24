@@ -1,0 +1,91 @@
+{
+  "center": "claude-code v2.1.160 更新",
+  "branches": [
+    {
+      "label": "安全写入提示",
+      "detail": "写入 shell 启动文件与 git 配置目录前增加确认，防止意外命令执行",
+      "children": [
+        "覆盖 shell 启动文件",
+        "覆盖 git 配置目录"
+      ]
+    },
+    {
+      "label": "编辑前检查优化",
+      "detail": "单文件 grep 命令现满足编辑前检查，简化操作流程",
+      "children": [
+        "单文件 grep 满足检查"
+      ]
+    },
+    {
+      "label": "会话恢复修复",
+      "detail": "修复会话恢复时丢失聊天历史并重跑原始提示的问题",
+      "children": [
+        "保留聊天历史",
+        "不再重跑原始提示"
+      ]
+    },
+    {
+      "label": "跨平台缺陷修复",
+      "detail": "修复 Windows/WSL 剪贴板、后台会话、UI 响应、链接解析等多项问题",
+      "children": [
+        "Windows/WSL 剪贴板",
+        "后台会话管理",
+        "UI 响应与链接解析"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    },
+    {
+      "name": "WSL",
+      "type": "product"
+    },
+    {
+      "name": "git",
+      "type": "product"
+    },
+    {
+      "name": "grep",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "claude-code",
+      "label": "发布"
+    },
+    {
+      "from": "claude-code",
+      "to": "Windows",
+      "label": "适配"
+    },
+    {
+      "from": "claude-code",
+      "to": "WSL",
+      "label": "适配"
+    },
+    {
+      "from": "claude-code",
+      "to": "git",
+      "label": "保护配置"
+    },
+    {
+      "from": "claude-code",
+      "to": "grep",
+      "label": "支持检查"
+    }
+  ]
+}

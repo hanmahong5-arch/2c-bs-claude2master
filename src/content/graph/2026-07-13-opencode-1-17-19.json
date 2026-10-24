@@ -1,0 +1,76 @@
+{
+  "center": "OpenCode v1.17.19 更新",
+  "branches": [
+    {
+      "label": "新增 OAuth 支持",
+      "detail": "为 Luna Responses Lite 加入 OAuth，简化认证流程",
+      "children": [
+        "Luna Responses Lite 支持 OAuth"
+      ]
+    },
+    {
+      "label": "OpenAI 推理模式",
+      "detail": "新增 OpenAI pro 推理模式，让 agent 具备更高级推理能力",
+      "children": [
+        "agent 可用更高级推理能力"
+      ]
+    },
+    {
+      "label": "xAI 存储调整",
+      "detail": "xAI Responses 默认禁用响应存储，减少数据持久化",
+      "children": [
+        "默认禁用响应存储"
+      ]
+    },
+    {
+      "label": "修复多项 Bug",
+      "detail": "本版本集中修复了多项已知 Bug",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenCode",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "xAI",
+      "type": "company"
+    },
+    {
+      "name": "Luna Responses Lite",
+      "type": "product"
+    },
+    {
+      "name": "OAuth",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenCode",
+      "to": "OpenAI",
+      "label": "支持"
+    },
+    {
+      "from": "OpenCode",
+      "to": "xAI",
+      "label": "调整"
+    },
+    {
+      "from": "OpenCode",
+      "to": "Luna Responses Lite",
+      "label": "新增支持"
+    },
+    {
+      "from": "Luna Responses Lite",
+      "to": "OAuth",
+      "label": "采用"
+    }
+  ]
+}

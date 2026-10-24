@@ -1,0 +1,119 @@
+{
+  "center": "Anthropic 与 Accenture 嵌入式…",
+  "branches": [
+    {
+      "label": "合作内容",
+      "detail": "Accenture 旗下 Faculty 主导，对 Anthropic 前沿模型做独立评估",
+      "children": [
+        "评估与红队测试模型",
+        "开展对齐评估",
+        "测试模型安全防护措施"
+      ]
+    },
+    {
+      "label": "投入规模",
+      "detail": "双方各自计划五年内至少投入 10 亿美元建设该领域能力",
+      "children": [
+        "Anthropic 至少 10 亿美元",
+        "Accenture 至少 10 亿美元",
+        "周期为未来五年"
+      ]
+    },
+    {
+      "label": "嵌入式评估",
+      "detail": "评估员进入 AI 公司内部，权限接近员工，属全新模式",
+      "children": [
+        "可观察模型训练成形过程",
+        "可追踪构建与部署决策",
+        "可直接与员工沟通"
+      ]
+    },
+    {
+      "label": "责任与标准",
+      "detail": "独立评估不减轻 Anthropic 责任，而是让问责更可验证",
+      "children": [
+        "模型安全仍由 Anthropic 负责",
+        "尚无评估员权限与报告标准",
+        "也无独立评估的成熟资助体系"
+      ]
+    },
+    {
+      "label": "资金与生态",
+      "detail": "当前由 Anthropic 直接资助 Accenture，长期主张池化或政府出资",
+      "children": [
+        "与 METR 等非营利评估方洽谈试点",
+        "合作非排他，将公布更多评估方",
+        "Accenture 也将服务其他 AI 开发者"
+      ]
+    }
+  ],
+  "flow": [
+    "嵌入评估员进入公司",
+    "观察模型训练与决策",
+    "开展评估与红队测试",
+    "进行对齐与安全测试",
+    "报告事件与风险"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Accenture",
+      "type": "company"
+    },
+    {
+      "name": "Faculty",
+      "type": "company"
+    },
+    {
+      "name": "METR",
+      "type": "company"
+    },
+    {
+      "name": "嵌入式评估",
+      "type": "concept"
+    },
+    {
+      "name": "红队测试",
+      "type": "technique"
+    },
+    {
+      "name": "对齐评估",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Accenture",
+      "label": "合作"
+    },
+    {
+      "from": "Accenture",
+      "to": "Faculty",
+      "label": "旗下主导"
+    },
+    {
+      "from": "Anthropic",
+      "to": "METR",
+      "label": "洽谈试点"
+    },
+    {
+      "from": "Faculty",
+      "to": "嵌入式评估",
+      "label": "负责实施"
+    },
+    {
+      "from": "嵌入式评估",
+      "to": "红队测试",
+      "label": "包含"
+    },
+    {
+      "from": "嵌入式评估",
+      "to": "对齐评估",
+      "label": "包含"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "center": "Reachy Mini 接入 MCP 工具",
+  "branches": [
+    {
+      "label": "两个 MCP Space",
+      "detail": "Hugging Face 上发布两个 MCP Space 供 Reachy Mini 调用",
+      "children": [
+        "Reachy Mini Search Tool：网页搜索",
+        "Reachy Mini Weather Tool：天气简报"
+      ]
+    },
+    {
+      "label": "tools.txt 配置",
+      "detail": "远程工具与内置机器人工具分开，按 profile 启用",
+      "children": [
+        "安装 Space 不等于激活",
+        "需在 tools.txt 写入工具 ID"
+      ]
+    },
+    {
+      "label": "多工具共存",
+      "detail": "同时使用多个远程工具时，激活步骤尤为关键",
+      "children": [
+        "远程工具独立于内置工具"
+      ]
+    },
+    {
+      "label": "社区提问",
+      "detail": "用户询问预装对话应用的无线版如何添加这些工具",
+      "children": [
+        "freinold 提问，暂无官方答复"
+      ]
+    }
+  ],
+  "flow": [
+    "安装 MCP Space",
+    "在 tools.txt 写入工具 ID",
+    "按 profile 启用工具",
+    "机器人调用远程工具"
+  ],
+  "entities": [
+    {
+      "name": "Reachy Mini",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Reachy Mini Search Tool",
+      "type": "product"
+    },
+    {
+      "name": "Reachy Mini Weather Tool",
+      "type": "product"
+    },
+    {
+      "name": "tools.txt",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Reachy Mini",
+      "to": "MCP",
+      "label": "接入"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Reachy Mini Search Tool",
+      "label": "发布"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Reachy Mini Weather Tool",
+      "label": "发布"
+    },
+    {
+      "from": "tools.txt",
+      "to": "MCP",
+      "label": "配置"
+    },
+    {
+      "from": "Reachy Mini",
+      "to": "Reachy Mini Search Tool",
+      "label": "调用"
+    },
+    {
+      "from": "Reachy Mini",
+      "to": "Reachy Mini Weather Tool",
+      "label": "调用"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "center": "claude-code v2.1.205 更新",
+  "branches": [
+    {
+      "label": "安全与自动模式",
+      "detail": "自动模式新增规则，防止会话记录被篡改，危险命令前询问用户",
+      "children": [
+        "阻止篡改会话记录文件",
+        "rm -rf 变量无法解析时询问用户"
+      ]
+    },
+    {
+      "label": "bug修复",
+      "detail": "修复多项bug，涉及JSON输出、Windows文件删除和agent状态显示",
+      "children": [
+        "--json-schema 无效时静默输出非结构化内容",
+        "format 关键字被拒绝",
+        "Windows 工作树删除误删外部文件"
+      ]
+    },
+    {
+      "label": "agent视图优化",
+      "detail": "修复agent视图行高与头部裁剪问题",
+      "children": [
+        "修复行高",
+        "修复头部裁剪"
+      ]
+    },
+    {
+      "label": "新增/doctor命令",
+      "detail": "新增/doctor命令进行完整设置检查与修复",
+      "children": [
+        "完整设置检查",
+        "修复设置问题"
+      ]
+    },
+    {
+      "label": "MCP服务器名称保留",
+      "detail": "保留Claude Browser MCP服务器名称，防止用户配置冲突",
+      "children": [
+        "防止用户配置冲突"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Claude Browser",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    },
+    {
+      "name": "NTFS",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "claude-code",
+      "to": "Claude Browser",
+      "label": "包含"
+    },
+    {
+      "from": "claude-code",
+      "to": "Windows",
+      "label": "运行于"
+    },
+    {
+      "from": "Windows",
+      "to": "NTFS",
+      "label": "使用"
+    }
+  ]
+}

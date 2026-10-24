@@ -1,0 +1,50 @@
+{
+  "center": "claude-code v2.1.272 发布说明",
+  "branches": [
+    {
+      "label": "仅笼统修复",
+      "detail": "发布说明只写 Bug fixes and reliability improvements，未列具体修复项",
+      "children": [
+        "无法判断影响范围",
+        "不能据此调整依赖或行为假设"
+      ]
+    },
+    {
+      "label": "无新能力",
+      "detail": "没有新增功能、API 或配置项描述，不引入可被 harness 利用的新能力",
+      "children": [
+        "集成方保持现有调用方式不变"
+      ]
+    },
+    {
+      "label": "升级风险低",
+      "detail": "未提及破坏性变更或迁移要求，暗示升级风险较低",
+      "children": [
+        "仍需自行回归验证",
+        "保留版本回退与灰度能力"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "Bug fixes and reliability improvements",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "agent harness",
+      "label": "被集成于"
+    }
+  ]
+}

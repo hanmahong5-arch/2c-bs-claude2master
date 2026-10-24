@@ -1,0 +1,88 @@
+{
+  "center": "claude-code v2.1.228 更新",
+  "branches": [
+    {
+      "label": "稳定性修复",
+      "detail": "修复多种 UI 和会话问题，提升运行稳定性",
+      "children": [
+        "布局错误导致重绘停止",
+        "TUI 模型回退问题",
+        "跨会话消息无收件箱"
+      ]
+    },
+    {
+      "label": "技能安全强化",
+      "detail": "claude.ai 同步技能不再遮蔽本地命令或 MCP 提示",
+      "children": [
+        "描述被清理",
+        "不执行 ! 命令或展开 @ 文件"
+      ]
+    },
+    {
+      "label": "跨会话消息显示",
+      "detail": "发送者和内容内联展示，远程控制会话显示会话名",
+      "children": [
+        "远程控制会话显示会话名作为发送者"
+      ]
+    },
+    {
+      "label": "Vertex AI 凭据",
+      "detail": "过期或缺失凭据快速失败，避免长时间重试",
+      "children": []
+    },
+    {
+      "label": "Write 工具规则",
+      "detail": "新模型可覆盖未读文件，与 Edit 工具一致",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "claude.ai",
+      "type": "product"
+    },
+    {
+      "name": "Vertex AI",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Write 工具",
+      "type": "product"
+    },
+    {
+      "name": "Edit 工具",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "claude.ai",
+      "label": "同步技能"
+    },
+    {
+      "from": "claude-code",
+      "to": "Vertex AI",
+      "label": "优化凭据"
+    },
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "不再遮蔽"
+    },
+    {
+      "from": "Write 工具",
+      "to": "Edit 工具",
+      "label": "规则一致"
+    }
+  ]
+}

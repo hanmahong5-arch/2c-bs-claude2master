@@ -1,0 +1,113 @@
+{
+  "center": "smevals：轻量模型评估套件",
+  "branches": [
+    {
+      "label": "工具定位",
+      "detail": "Simon Willison 与 Jesse Vincent 实验室合作开发的轻量评估框架",
+      "children": [
+        "用于比较不同模型、提示与 harness 能力",
+        "作者第三次迭代的评估方案"
+      ]
+    },
+    {
+      "label": "使用流程",
+      "detail": "通过 uvx 命令行完成建套件、跑模型、评分与查看结果",
+      "children": [
+        "uvx smevals docs 让编码 agent 自学",
+        "run 支持 -m gpt-5.5 -m claude-opus-4.6"
+      ]
+    },
+    {
+      "label": "核心词汇",
+      "detail": "eval、task、config、run、grader、check 等一套术语体系",
+      "children": [
+        "eval 是挑战集合，task 是具体挑战",
+        "config 指定模型及系统提示等参数"
+      ]
+    },
+    {
+      "label": "评分机制",
+      "detail": "运行与评分分离，grader 执行一系列 checks 产出 grade",
+      "children": [
+        "checks 可查字符串或校验 XML",
+        "checker 脚本可调用其他模型判断"
+      ]
+    },
+    {
+      "label": "结果查看",
+      "detail": "可启动本地服务或构建静态 HTML 报告",
+      "children": [
+        "uvx smevals serve 起本地服务器",
+        "build 生成可托管静态报告"
+      ]
+    }
+  ],
+  "flow": [
+    "运行 uvx smevals docs 了解…",
+    "让编码 agent 构建 eval 套件",
+    "uvx smevals run 跑模型配置",
+    "uvx smevals grade 评分",
+    "serve 或 build 查看结果"
+  ],
+  "entities": [
+    {
+      "name": "smevals",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Jesse Vincent",
+      "type": "person"
+    },
+    {
+      "name": "Prime Radiant",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "type": "model"
+    },
+    {
+      "name": "eval",
+      "type": "concept"
+    },
+    {
+      "name": "grader",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "smevals",
+      "label": "开发"
+    },
+    {
+      "from": "Jesse Vincent",
+      "to": "Prime Radiant",
+      "label": "任职于"
+    },
+    {
+      "from": "smevals",
+      "to": "GPT-5.5",
+      "label": "评估"
+    },
+    {
+      "from": "smevals",
+      "to": "Claude Opus 4.6",
+      "label": "评估"
+    },
+    {
+      "from": "grader",
+      "to": "eval",
+      "label": "评分"
+    }
+  ]
+}

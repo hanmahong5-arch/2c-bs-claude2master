@@ -1,0 +1,68 @@
+{
+  "center": "codex rust-v0.155.1 修复",
+  "branches": [
+    {
+      "label": "默认关推理摘要",
+      "detail": "新本地 TUI 会话默认关闭 reasoning summaries，避免供应商拒绝请求",
+      "children": [
+        "harness 默认值偏向最大兼容性",
+        "而非最大信息量"
+      ]
+    },
+    {
+      "label": "尊重显式配置",
+      "detail": "用户显式设置的 reasoning-summary 配置仍被尊重，不被默认值覆盖",
+      "children": [
+        "默认值只作用于未表态场景",
+        "显式意图优先"
+      ]
+    },
+    {
+      "label": "改动范围收窄",
+      "detail": "仅针对新本地 TUI 会话，按会话类型分层修复",
+      "children": [
+        "避免全局改动带来回归风险"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex",
+      "type": "product"
+    },
+    {
+      "name": "rust-v0.155.1",
+      "type": "product"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "reasoning summaries",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "rust-v0.155.1",
+      "to": "TUI",
+      "label": "修复"
+    },
+    {
+      "from": "TUI",
+      "to": "reasoning summaries",
+      "label": "默认关闭"
+    },
+    {
+      "from": "harness",
+      "to": "reasoning summaries",
+      "label": "默认值控制"
+    }
+  ]
+}

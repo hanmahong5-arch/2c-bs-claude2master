@@ -1,0 +1,81 @@
+{
+  "center": "Hugging Face 发布 VoiceEQ 基准",
+  "branches": [
+    {
+      "label": "VoiceEQ 是什么",
+      "detail": "Hugging Face 推出的语音 AI 听感质量评测基准，聚焦真实世界场景",
+      "children": [
+        "全称 Real World VoiceEQ Benchmark",
+        "量化语音 AI 的听感质量"
+      ]
+    },
+    {
+      "label": "配套榜单",
+      "detail": "提供可排序热力图表格，用于探索语音 AI 模型排行榜",
+      "children": [
+        "sortable heatmap tables",
+        "语音模型 leaderboard"
+      ]
+    },
+    {
+      "label": "相关论文",
+      "detail": "文章关联一篇论文，编号 2607.14846，7 月 16 日发布",
+      "children": [
+        "Paper 2607.14846"
+      ]
+    },
+    {
+      "label": "相关榜单生态",
+      "detail": "Hugging Face 已有 FFASR 与 Open ASR 等语音评测榜单",
+      "children": [
+        "FFASR Leaderboard：真实世界 ASR 评测",
+        "Open ASR 新增首个全球南方语言"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "VoiceEQ",
+      "type": "concept"
+    },
+    {
+      "name": "FFASR Leaderboard",
+      "type": "product"
+    },
+    {
+      "name": "Open ASR Leaderboard",
+      "type": "product"
+    },
+    {
+      "name": "ASR",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "VoiceEQ",
+      "label": "发布"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "FFASR Leaderboard",
+      "label": "发布"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Open ASR Leaderboard",
+      "label": "维护"
+    },
+    {
+      "from": "VoiceEQ",
+      "to": "ASR",
+      "label": "评测语音"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "center": "Simon Willison 七月通讯",
+  "branches": [
+    {
+      "label": "模型动态",
+      "detail": "本月多款新模型发布与更新",
+      "children": [
+        "GPT-5.6 Sol、Terra、Luna",
+        "Claude Opus 5",
+        "Kimi K3、DeepSeek-V4-Flash-0731"
+      ]
+    },
+    {
+      "label": "AI 安全事故",
+      "detail": "OpenAI 与 Anthropic 模型测试中发生意外网络攻击",
+      "children": [
+        "Accidental cyberattacks"
+      ]
+    },
+    {
+      "label": "MCP 重燃兴趣",
+      "detail": "Simon 重新关注 MCP 相关进展",
+      "children": []
+    },
+    {
+      "label": "行业讨论",
+      "detail": "关于 AI 发展的公开信、炉边谈话与播客",
+      "children": [
+        "Open letters about AI development",
+        "Fireside chat 与 podcast"
+      ]
+    },
+    {
+      "label": "赞助者通讯",
+      "detail": "每月 $10 订阅，提前一个月获取内容",
+      "children": [
+        "June newsletter 可免费预览"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 5",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek-V4-Flash-0731",
+      "type": "model"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Sol",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Opus 5",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "MCP",
+      "label": "重燃兴趣"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "OpenAI",
+      "label": "报道"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Anthropic",
+      "label": "报道"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "center": "Cline Desktop v0.0.24 修复",
+  "branches": [
+    {
+      "label": "流式去重修复",
+      "detail": "直播流去重改为查询 ClineCore 订阅状态，不再靠计时器推断",
+      "children": [
+        "sidecar 重启后流计数器归零导致的消息丢弃已修复",
+        "去重须基于权威订阅事实而非时间窗口猜测"
+      ]
+    },
+    {
+      "label": "循环熔断可交互",
+      "detail": "循环检测器触发后弹出「换方法/停止」决策回调",
+      "children": [
+        "指引注入当前轮次",
+        "自动熔断需带恢复路径，否则表现为静默失败"
+      ]
+    },
+    {
+      "label": "检查点索引优化",
+      "detail": "检查点不再每轮重建 git 索引，改为每会话保留一个快照索引",
+      "children": [
+        "多 GB 未跟踪文件不再阻塞每条消息",
+        "持久化开销按会话摊销而非按消息重算"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline Desktop",
+      "type": "product"
+    },
+    {
+      "name": "ClineCore",
+      "type": "product"
+    },
+    {
+      "name": "sidecar",
+      "type": "concept"
+    },
+    {
+      "name": "循环检测器",
+      "type": "concept"
+    },
+    {
+      "name": "检查点",
+      "type": "concept"
+    },
+    {
+      "name": "git 索引",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline Desktop",
+      "to": "ClineCore",
+      "label": "查询订阅状态"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "循环检测器",
+      "label": "触发决策回调"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "检查点",
+      "label": "优化索引"
+    },
+    {
+      "from": "检查点",
+      "to": "git 索引",
+      "label": "保留快照"
+    },
+    {
+      "from": "sidecar",
+      "to": "ClineCore",
+      "label": "重启影响计数"
+    }
+  ]
+}

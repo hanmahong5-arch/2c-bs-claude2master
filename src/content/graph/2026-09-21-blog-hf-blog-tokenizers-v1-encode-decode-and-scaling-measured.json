@@ -1,0 +1,110 @@
+{
+  "center": "tokenizers v1 性能重构",
+  "branches": [
+    {
+      "label": "性能提升",
+      "detail": "v1 相比 v0.23 编码速度提升数十倍，避免 GPU 等待 CPU",
+      "children": [
+        "单线程、多线程、跨线程扩展均大幅优化",
+        "解码吞吐、内存堆、crate 体积同步改进"
+      ]
+    },
+    {
+      "label": "核心改动",
+      "detail": "六项关键优化：工作区拆分、无分配模型、bitcannon、合并循环重写、词缓存、原生并行",
+      "children": [
+        "bitcannon 用 SIMD 位流替代正则分割",
+        "合并循环用侵入式双向链表，减少数据移动",
+        "线程本地词缓存跳过重复合并"
+      ]
+    },
+    {
+      "label": "兼容性",
+      "detail": "v1 保持与 v0.23 相同的 token ID、API、词表和合并排名",
+      "children": [
+        "支持 BPE、WordPiece、Unigram 全家族",
+        "加载 v0.23 能加载的所有模型"
+      ]
+    },
+    {
+      "label": "生态协作",
+      "detail": "借鉴 gigatoken、tiktoken 等开源项目，IBM、NVIDIA、ExecuTorch 贡献补丁",
+      "children": [
+        "tokbench 仓库可复现基准测试",
+        "跨硬件平台测试支持"
+      ]
+    }
+  ],
+  "flow": [
+    "归一化文本",
+    "预分词分割",
+    "模型转 token ID",
+    "后处理加特殊 token"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "tokenizers",
+      "type": "product"
+    },
+    {
+      "name": "BPE",
+      "type": "technique"
+    },
+    {
+      "name": "bitcannon",
+      "type": "technique"
+    },
+    {
+      "name": "SIMD",
+      "type": "technique"
+    },
+    {
+      "name": "WordPiece",
+      "type": "technique"
+    },
+    {
+      "name": "Unigram",
+      "type": "technique"
+    },
+    {
+      "name": "tokbench",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "tokenizers",
+      "label": "发布"
+    },
+    {
+      "from": "tokenizers",
+      "to": "BPE",
+      "label": "支持"
+    },
+    {
+      "from": "tokenizers",
+      "to": "bitcannon",
+      "label": "采用"
+    },
+    {
+      "from": "bitcannon",
+      "to": "SIMD",
+      "label": "使用"
+    },
+    {
+      "from": "tokenizers",
+      "to": "WordPiece",
+      "label": "支持"
+    },
+    {
+      "from": "tokenizers",
+      "to": "Unigram",
+      "label": "支持"
+    }
+  ]
+}

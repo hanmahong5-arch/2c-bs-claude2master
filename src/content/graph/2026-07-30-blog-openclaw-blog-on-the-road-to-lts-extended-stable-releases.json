@@ -1,0 +1,112 @@
+{
+  "center": "OpenClaw 长期支持版本与成熟度评…",
+  "branches": [
+    {
+      "label": "扩展稳定版发布",
+      "detail": "每月发布一次长期支持通道，回移安全与可靠性修复",
+      "children": [
+        "首个版本 OpenClaw 2026.6.33，基于 2026.6.11",
+        "版本号格式 YYYY.M.33，补丁号随修复递增",
+        "支持至下个扩展稳定版发布，至少一个月"
+      ]
+    },
+    {
+      "label": "安装与更新",
+      "detail": "提供 npm 安装与更新通道持久化命令",
+      "children": [
+        "npm install -g openclaw@extended-stable",
+        "openclaw update --channel extended-stable"
+      ]
+    },
+    {
+      "label": "成熟度评分卡",
+      "detail": "全量功能清单，按成熟度模型追踪每个功能位置",
+      "children": [
+        "按 surface area 和 category 组织",
+        "成熟度由质量与完整性综合计算",
+        "依据 GitHub issues、同类服务对比与人工判断"
+      ]
+    },
+    {
+      "label": "成熟功能保障",
+      "detail": "成熟功能获得专属标签、优先处理与端到端测试",
+      "children": [
+        "针对成熟功能的 issue 获专属标签并优先处理",
+        "成熟功能需有生产环境端到端测试",
+        "目标：稳定功能端到端测试覆盖率 >90%"
+      ]
+    }
+  ],
+  "flow": [
+    "每月发布扩展稳定版",
+    "基于近期版本回移修复",
+    "补丁号随修复递增",
+    "支持至下个版本发布"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw 2026.6.33",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw 2026.6.11",
+      "type": "product"
+    },
+    {
+      "name": "extended-stable",
+      "type": "concept"
+    },
+    {
+      "name": "maturity scorecard",
+      "type": "concept"
+    },
+    {
+      "name": "LTS",
+      "type": "concept"
+    },
+    {
+      "name": "npm",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw 2026.6.33",
+      "to": "OpenClaw 2026.6.11",
+      "label": "基于"
+    },
+    {
+      "from": "OpenClaw 2026.6.33",
+      "to": "extended-stable",
+      "label": "属于"
+    },
+    {
+      "from": "extended-stable",
+      "to": "LTS",
+      "label": "迈向"
+    },
+    {
+      "from": "maturity scorecard",
+      "to": "OpenClaw",
+      "label": "评估"
+    },
+    {
+      "from": "npm",
+      "to": "OpenClaw",
+      "label": "安装"
+    },
+    {
+      "from": "GitHub",
+      "to": "maturity scorecard",
+      "label": "数据来源"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "center": "Claude Code v2.1.181 更新",
+  "branches": [
+    {
+      "label": "新增 /config 指令",
+      "detail": "支持 /config key=value 在提示符中直接设置配置项",
+      "children": [
+        "示例：/config thinking=false",
+        "适用于交互模式、-p 参数和远程控制"
+      ]
+    },
+    {
+      "label": "优化流式显示",
+      "detail": "长段落文本改为逐行显示，不再等待首个换行符",
+      "children": [
+        "提升实时反馈体验"
+      ]
+    },
+    {
+      "label": "修复文件写入",
+      "detail": "解决网络驱动器与云同步文件夹中写入 0 字节或截断文件的问题",
+      "children": [
+        "涉及 Write/Edit 操作"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "/config",
+      "type": "concept"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    },
+    {
+      "name": "Write",
+      "type": "concept"
+    },
+    {
+      "name": "Edit",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "/config",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Agent Harness",
+      "label": "属于"
+    }
+  ]
+}

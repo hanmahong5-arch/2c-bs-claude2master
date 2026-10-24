@@ -1,0 +1,86 @@
+{
+  "center": "Claude Code v2.1.273 更新",
+  "branches": [
+    {
+      "label": "网关请求头",
+      "detail": "新增网关提示请求头，透传请求分类与压缩状态",
+      "children": [
+        "x-claude-code-request-class 等",
+        "需 CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 开启",
+        "便于网关路由与限流策略"
+      ]
+    },
+    {
+      "label": "MCP 断连通知",
+      "detail": "MCP 服务器中途断开且重连放弃时新增通知",
+      "children": [
+        "指向 /mcp",
+        "harness 需设计可发现的恢复入口",
+        "避免静默降级"
+      ]
+    },
+    {
+      "label": "会话分叉",
+      "detail": "支持从 Claude app 分叉远程控制启动的会话",
+      "children": [
+        "--remote-control 或 /remote-control 启动",
+        "分叉在本地作为后台会话运行",
+        "会话状态需可复制且与前台控制解耦"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Claude app",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "网关请求头",
+      "type": "technique"
+    },
+    {
+      "name": "会话分叉",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "新增断连通知"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude app",
+      "label": "支持分叉会话"
+    },
+    {
+      "from": "Claude Code",
+      "to": "网关请求头",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "会话分叉",
+      "label": "支持"
+    },
+    {
+      "from": "agent harness",
+      "to": "MCP",
+      "label": "需处理断连"
+    }
+  ]
+}

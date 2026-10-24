@@ -1,0 +1,107 @@
+{
+  "center": "OpenClaw 打字指示器配置",
+  "branches": [
+    {
+      "label": "typingMode 四种模式",
+      "detail": "控制打字指示器何时开始显示，按触发时机从晚到早排列",
+      "children": [
+        "never：从不显示打字指示器",
+        "message：首次用户可见回复活动时开始",
+        "thinking：首个推理增量或执行活动时开始"
+      ]
+    },
+    {
+      "label": "默认触发规则",
+      "detail": "未设置 typingMode 时，按聊天类型和场景决定何时开始打字",
+      "children": [
+        "私聊：模型循环开始即显示",
+        "群聊被提及：立即显示",
+        "群聊未被提及：有用户可见活动时才显示"
+      ]
+    },
+    {
+      "label": "刷新间隔配置",
+      "detail": "typingIntervalSeconds 控制打字指示器刷新频率，默认 6 秒",
+      "children": [
+        "只控制刷新节奏，不控制开始时间",
+        "对所有 agent 生效"
+      ]
+    },
+    {
+      "label": "配置方式",
+      "detail": "通过 agents.defaults 设置全局默认，或 agents.entries 覆盖单个 agent",
+      "children": [
+        "全局：agents.defaults.typingMode",
+        "单 agent…"
+      ]
+    },
+    {
+      "label": "Heartbeat 打字行为",
+      "detail": "心跳运行开始时显示打字，作为目标聊天存活信号",
+      "children": [
+        "目标为 none 或无法解析时不显示",
+        "频道不支持打字时不显示",
+        "设 typingMode: never 可禁用"
+      ]
+    }
+  ],
+  "flow": [
+    "设置 typingMode",
+    "设置 typingIntervalSeconds",
+    "按场景触发打字",
+    "按间隔刷新"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "typingMode",
+      "type": "concept"
+    },
+    {
+      "name": "typingIntervalSeconds",
+      "type": "concept"
+    },
+    {
+      "name": "Heartbeat",
+      "type": "concept"
+    },
+    {
+      "name": "agents.defaults",
+      "type": "concept"
+    },
+    {
+      "name": "agents.entries",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "typingMode",
+      "to": "OpenClaw",
+      "label": "配置于"
+    },
+    {
+      "from": "typingIntervalSeconds",
+      "to": "OpenClaw",
+      "label": "配置于"
+    },
+    {
+      "from": "Heartbeat",
+      "to": "typingMode",
+      "label": "受控于"
+    },
+    {
+      "from": "agents.defaults",
+      "to": "typingMode",
+      "label": "设置"
+    },
+    {
+      "from": "agents.entries",
+      "to": "typingMode",
+      "label": "覆盖"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "center": "ChatGPT 全球使用数据：从提问到执行",
+  "branches": [
+    {
+      "label": "工作场景重执行",
+      "detail": "工作中用 ChatGPT 完成任务或创作的概率是工作外的两倍以上",
+      "children": [
+        "涵盖写作、编程、分析等应用",
+        "工作外仍以「提问」获取信息为主"
+      ]
+    },
+    {
+      "label": "全球差距缩小",
+      "detail": "拉美、非洲、大洋洲人均采用率加速追赶早期采用者",
+      "children": [
+        "秘鲁、乌拉圭、哥斯达黎加排名上升最多",
+        "北美欧洲仍在增长但南半球追赶快"
+      ]
+    },
+    {
+      "label": "多媒体增长最快",
+      "detail": "多媒体成为全球增长最快的用例，占全部消息 7.8%",
+      "children": [
+        "巴西、哥伦比亚超十分之一消息为多媒体",
+        "2026 年 4 月 ChatGPT Images 2.0 发布后上升"
+      ]
+    },
+    {
+      "label": "35 岁以上用户增长",
+      "detail": "35 岁以上用户消息占比几乎每个国家都在上升",
+      "children": [
+        "同比占比提高约 5%",
+        "法国、捷克提升超 10 个百分点"
+      ]
+    },
+    {
+      "label": "数据开放共享",
+      "detail": "OpenAI 首次发布国别数据，可在 OpenAI Signals 查看下载",
+      "children": [
+        "覆盖超 10 亿用户",
+        "仅含 Free、Go、Plus、Pro 个人账户消息"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT Images 2.0",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI Signals",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI Economic Research Team",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "发布数据"
+    },
+    {
+      "from": "OpenAI",
+      "to": "OpenAI Signals",
+      "label": "运营"
+    },
+    {
+      "from": "OpenAI Economic Research Team",
+      "to": "OpenAI Signals",
+      "label": "提供数据"
+    },
+    {
+      "from": "ChatGPT Images 2.0",
+      "to": "ChatGPT",
+      "label": "驱动多媒体"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "ChatGPT",
+      "label": "推动工作场景"
+    }
+  ]
+}

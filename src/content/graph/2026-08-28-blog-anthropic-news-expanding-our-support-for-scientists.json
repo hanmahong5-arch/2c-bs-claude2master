@@ -1,0 +1,108 @@
+{
+  "center": "Anthropic 扩展科学家支持计划",
+  "branches": [
+    {
+      "label": "免费订阅席位",
+      "detail": "面向全球科学家开放 1 万个 Claude 订阅席位，为期一年",
+      "children": [
+        "标准席位免费，高级席位 5 倍用量每月 15 美元",
+        "需为学术或非营利机构 PI 或同等身份",
+        "未来数月计划扩展至 1 万席位之外"
+      ]
+    },
+    {
+      "label": "AI for Science 扩展",
+      "detail": "从生物科学扩展至其他领域，支持算力密集型研究",
+      "children": [
+        "单个项目最高可申请 5 万美元额度",
+        "任何研究人员均可申请",
+        "曾用于黎曼 zeta 函数与蛋白质设计"
+      ]
+    },
+    {
+      "label": "Claude Science 产品",
+      "detail": "6 月推出，整合研究者常用工具并产出可审计产物",
+      "children": [
+        "提供灵活的计算资源访问",
+        "与订阅、额度共同加速科学发现"
+      ]
+    },
+    {
+      "label": "模型访问限制",
+      "detail": "生物与化学研究者仍限于 Opus 级模型",
+      "children": [
+        "Claude Fable 继续屏蔽专业生物与药物开发查询",
+        "与美国政府合作建立生命科学访问计划",
+        "Mythos 级模型首批参与者已注册"
+      ]
+    }
+  ],
+  "flow": [
+    "填写验证表",
+    "验证 PI 身份",
+    "添加实验室成员",
+    "使用订阅与额度",
+    "申请 AI for Science 额度"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Claude Science",
+      "type": "product"
+    },
+    {
+      "name": "AI for Science",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Fable",
+      "type": "model"
+    },
+    {
+      "name": "Opus",
+      "type": "model"
+    },
+    {
+      "name": "Mythos",
+      "type": "model"
+    },
+    {
+      "name": "Life Sciences Verification Program",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Science",
+      "label": "推出"
+    },
+    {
+      "from": "Anthropic",
+      "to": "AI for Science",
+      "label": "扩展"
+    },
+    {
+      "from": "Claude Fable",
+      "to": "Opus",
+      "label": "限制于"
+    },
+    {
+      "from": "Mythos",
+      "to": "Life Sciences Verification Program",
+      "label": "用于"
+    }
+  ]
+}

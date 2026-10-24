@@ -1,0 +1,74 @@
+{
+  "center": "OpenAI 助 K-12 教师学 AI",
+  "branches": [
+    {
+      "label": "AI Skills Jams",
+      "detail": "以互动工作坊形式让教师上手 AI 工具",
+      "children": [
+        "覆盖备课、个性化教学等课堂场景"
+      ]
+    },
+    {
+      "label": "实践优先",
+      "detail": "不灌输理论，直接演示 AI 实操用法",
+      "children": [
+        "用 AI 生成教案",
+        "用 AI 设计课堂活动",
+        "降低教师使用门槛"
+      ]
+    },
+    {
+      "label": "基金会合作",
+      "detail": "与 Walton Family Foundation 合作推进",
+      "children": [
+        "优先服务资源不足学区",
+        "缩小数字鸿沟"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Walton Family Foundation",
+      "type": "company"
+    },
+    {
+      "name": "AI Skills Jams",
+      "type": "product"
+    },
+    {
+      "name": "K-12 教师",
+      "type": "person"
+    },
+    {
+      "name": "AI 实操培训",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AI Skills Jams",
+      "label": "推出"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Walton Family Foundation",
+      "label": "合作"
+    },
+    {
+      "from": "AI Skills Jams",
+      "to": "K-12 教师",
+      "label": "培训"
+    },
+    {
+      "from": "AI Skills Jams",
+      "to": "AI 实操培训",
+      "label": "属于"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "center": "Cline SDK v0.0.72 更新",
+  "branches": [
+    {
+      "label": "中断恢复增强",
+      "detail": "中断的提示队列保留并应用编辑，会话停止语义一致，上下文持久化",
+      "children": [
+        "失败任务报告为 run.failed",
+        "检查点包含未跟踪文件"
+      ]
+    },
+    {
+      "label": "MCP 容错",
+      "detail": "MCP 服务器挂起不再阻塞会话创建，stdio 服务器有 30 秒初始化预算",
+      "children": [
+        "远程 SSE 支持 OAuth 授权提示"
+      ]
+    },
+    {
+      "label": "LiteLLM 与网络",
+      "detail": "LiteLLM 请求改走 Chat Completions，网络中断重试",
+      "children": [
+        "Vertex ADC 刷新支持代理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "LiteLLM",
+      "type": "product"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "Vertex ADC",
+      "type": "concept"
+    },
+    {
+      "name": "SSE",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "MCP",
+      "label": "增强容错"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "LiteLLM",
+      "label": "集成"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "OAuth",
+      "label": "支持"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Vertex ADC",
+      "label": "支持刷新"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "SSE",
+      "label": "支持"
+    }
+  ]
+}

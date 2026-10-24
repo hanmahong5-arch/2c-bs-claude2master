@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw 网关功能总览",
+  "branches": [
+    {
+      "label": "统一网关接渠道",
+      "detail": "单个 Gateway 连接所有聊天平台，核心自带 A2A、Reef、Telegram、WebChat",
+      "children": [
+        "Discord、iMessage、Signal、Slack…",
+        "插件安装命令 openclaw plugins install @…",
+        "外部插件渠道：WeChat、Yuanbao、Zalo ClawBot"
+      ]
+    },
+    {
+      "label": "多智能体路由",
+      "detail": "按工作区或发送者隔离会话，直接聊天合并为共享 main",
+      "children": [
+        "群组默认隔离，支持 @ 提及激活",
+        "DM 安全：白名单与配对",
+        "内嵌 agent 运行时，支持工具流式输出"
+      ]
+    },
+    {
+      "label": "多模型提供商",
+      "detail": "支持 Anthropic、OpenAI、Google 等，含 OAuth 订阅认证",
+      "children": [
+        "自托管：vLLM、SGLang、Ollama、llama.cpp…",
+        "兼容 OpenAI 或 Anthropic 端点",
+        "OpenAI Codex 等订阅 OAuth 登录"
+      ]
+    },
+    {
+      "label": "媒体与语音",
+      "detail": "图片、音频、视频、文档收发，支持生成与转写",
+      "children": [
+        "共享图像与视频生成能力",
+        "语音笔记转写、多提供商 TTS",
+        "Control UI、iOS/macOS、Android 内联播放"
+      ]
+    },
+    {
+      "label": "应用与自动化",
+      "detail": "多端 UI 与工具链，含浏览器自动化、搜索、定时任务",
+      "children": [
+        "macOS 菜单栏、iOS/Android 节点、浏览器…",
+        "Web 搜索支持 Brave、Exa、Perplexity 等",
+        "Cron 任务、心跳调度、Skills 与 Lobster 流…"
+      ]
+    }
+  ],
+  "flow": [
+    "安装 OpenClaw 核心",
+    "配置渠道与插件",
+    "设置模型提供商",
+    "路由至隔离会话",
+    "处理媒体与工具"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "WhatsApp",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Ollama",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Telegram",
+      "label": "连接"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Discord",
+      "label": "连接"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "WhatsApp",
+      "label": "连接"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Anthropic",
+      "label": "支持"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "OpenAI",
+      "label": "支持"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Ollama",
+      "label": "支持"
+    }
+  ]
+}

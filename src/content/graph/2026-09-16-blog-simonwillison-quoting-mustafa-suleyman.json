@@ -1,0 +1,100 @@
+{
+  "center": "Suleyman 反对模型福利",
+  "branches": [
+    {
+      "label": "核心主张",
+      "detail": "不应把模型当作有感受、偏好或权利的存在",
+      "children": [
+        "模型无感受与权利",
+        "不应给予任何福利"
+      ]
+    },
+    {
+      "label": "理由",
+      "detail": "意识是伦理、法律与政治体系的基础",
+      "children": [
+        "无证据支持模型有意识",
+        "赋予权利缺乏依据"
+      ]
+    },
+    {
+      "label": "后果警告",
+      "detail": "赋予模型权利会加大 AI 控制与对齐难度",
+      "children": [
+        "使 containment 更难",
+        "使 alignment 更难"
+      ]
+    },
+    {
+      "label": "来源",
+      "detail": "Simon Willison 博客收录的 Mustafa Suleyman 引文",
+      "children": [
+        "发布于 2026-09-16",
+        "标题：A warning about 'model welfare'"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Mustafa Suleyman",
+      "type": "person"
+    },
+    {
+      "name": "Microsoft",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "model welfare",
+      "type": "concept"
+    },
+    {
+      "name": "AI alignment",
+      "type": "concept"
+    },
+    {
+      "name": "AI containment",
+      "type": "concept"
+    },
+    {
+      "name": "consciousness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Mustafa Suleyman",
+      "to": "Microsoft",
+      "label": "任职于"
+    },
+    {
+      "from": "Mustafa Suleyman",
+      "to": "model welfare",
+      "label": "反对"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Mustafa Suleyman",
+      "label": "引用"
+    },
+    {
+      "from": "model welfare",
+      "to": "AI alignment",
+      "label": "加剧难度"
+    },
+    {
+      "from": "model welfare",
+      "to": "AI containment",
+      "label": "加剧难度"
+    },
+    {
+      "from": "consciousness",
+      "to": "model welfare",
+      "label": "作为依据"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "center": "Anthropic 千万加元投加拿大 AI",
+  "branches": [
+    {
+      "label": "千万加元投资",
+      "detail": "Anthropic 承诺 1000 万加元资助加拿大研究机构，推动负责任 AI 应用",
+      "children": [
+        "合作 8 家机构：Amii、Mila、Vector、CHEO…",
+        "提供 Claude credits 支持各机构研究"
+      ]
+    },
+    {
+      "label": "三大 AI 研究院",
+      "detail": "与加拿大三大区域 AI 研究院合作，覆盖强化学习、健康、安全等方向",
+      "children": [
+        "Amii（埃德蒙顿）：强化学习与 AI 信任安全",
+        "Mila（蒙特利尔）：负责任 AI、健康、多智能体",
+        "Vector（多伦多）：信任安全、健康与科学"
+      ]
+    },
+    {
+      "label": "医疗与高校合作",
+      "detail": "医院与大学用 Claude 推进儿童健康、精神健康、低资源语言等研究",
+      "children": [
+        "CAMH：精神健康预测模型与公平性评估",
+        "拉瓦尔大学：魁北克法语与土著语言研究",
+        "萨斯喀彻温大学：生物医学、粮食水安全"
+      ]
+    },
+    {
+      "label": "加拿大使用数据",
+      "detail": "基于 Anthropic 经济指数，加拿大 Claude 使用量全球第八，人均第二",
+      "children": [
+        "占全球消费级使用 2.6%，人均为预期 4 倍以上",
+        "BC 省人均最高，安省总量最大",
+        "翻译需求集中在政府就业多的省份"
+      ]
+    },
+    {
+      "label": "创业与政府合作",
+      "detail": "夏季将三大研究院纳入 Anthropic for Startups，并发布加拿大国家简报",
+      "children": [
+        "数百家加拿大初创各获至少 5000 美元 API…",
+        "阿尔伯塔省政府用 Claude Code 审 4.66 亿行…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Amii",
+      "type": "company"
+    },
+    {
+      "name": "Mila",
+      "type": "company"
+    },
+    {
+      "name": "Vector Institute",
+      "type": "company"
+    },
+    {
+      "name": "CAMH",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic Economic Index",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Amii",
+      "label": "合作"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Mila",
+      "label": "合作"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Vector Institute",
+      "label": "合作"
+    },
+    {
+      "from": "Anthropic",
+      "to": "CAMH",
+      "label": "合作"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Anthropic Economic Index",
+      "to": "Claude",
+      "label": "分析"
+    }
+  ]
+}

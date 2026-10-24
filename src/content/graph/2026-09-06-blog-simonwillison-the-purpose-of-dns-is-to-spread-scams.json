@@ -1,0 +1,91 @@
+{
+  "center": "DNS 沦为诈骗温床",
+  "branches": [
+    {
+      "label": "新域名诈骗率",
+      "detail": "Terence Eden 称新注册 gTLD 域名约五分之一用于诈骗",
+      "children": [
+        "2025 年新增 gTLD 注册 8500 万个",
+        "截至 2025 年 5 月 850 万被列入黑名单",
+        "滥用率下限约 10%，实际或近 20%"
+      ]
+    },
+    {
+      "label": "核心观点",
+      "detail": "Eden 认为 DNS 的目的似乎就是让犯罪分子以极高比例行骗",
+      "children": [
+        "称其为「一场血腥的危机」"
+      ]
+    },
+    {
+      "label": "数据来源",
+      "detail": "数据出自 Interisle 报告，经 Andrew Campling 转引",
+      "children": [
+        "Simon Willison 链接博客转述"
+      ]
+    },
+    {
+      "label": "ICANN 讨论",
+      "detail": "Simon Willison 表示此前不知情，ICANN 已讨论该问题多年",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "DNS",
+      "type": "concept"
+    },
+    {
+      "name": "Terence Eden",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Interisle",
+      "type": "company"
+    },
+    {
+      "name": "ICANN",
+      "type": "company"
+    },
+    {
+      "name": "Andrew Campling",
+      "type": "person"
+    },
+    {
+      "name": "gTLD",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Terence Eden",
+      "to": "DNS",
+      "label": "批评"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Terence Eden",
+      "label": "转述"
+    },
+    {
+      "from": "Interisle",
+      "to": "gTLD",
+      "label": "统计"
+    },
+    {
+      "from": "Andrew Campling",
+      "to": "Interisle",
+      "label": "转引"
+    },
+    {
+      "from": "ICANN",
+      "to": "DNS",
+      "label": "讨论治理"
+    }
+  ]
+}

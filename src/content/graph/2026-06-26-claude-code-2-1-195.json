@@ -1,0 +1,65 @@
+{
+  "center": "Claude Code v2.1.195 修复更新",
+  "branches": [
+    {
+      "label": "鼠标控制开关",
+      "detail": "新增环境变量可禁用全屏鼠标点击，保留滚轮",
+      "children": [
+        "CLAUDE_CODE_DISABLE_MOUSE_CLICKS",
+        "面向纯键盘操作与防误触场景"
+      ]
+    },
+    {
+      "label": "钩子匹配修复",
+      "detail": "带连字符标识符改为精确匹配，避免误触发",
+      "children": [
+        "如 code-reviewer 不再被误匹配",
+        "MCP 全工具需用 mcp__brave-search__.*"
+      ]
+    },
+    {
+      "label": "语音听写修复",
+      "detail": "修复 macOS 设备切换静音与无空格语言不提交",
+      "children": [
+        "默认输入设备变更不再捕获静音",
+        "日语/中文/泰语自动提交恢复"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "CLAUDE_CODE_DISABLE_MOUSE_CLICKS",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "macOS",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "CLAUDE_CODE_DISABLE_MOUSE_CLICKS",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "修复匹配"
+    },
+    {
+      "from": "Claude Code",
+      "to": "macOS",
+      "label": "修复语音"
+    }
+  ]
+}

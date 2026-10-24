@@ -1,0 +1,111 @@
+{
+  "center": "xAI 开源 Grok Build 代码",
+  "branches": [
+    {
+      "label": "隐私争议",
+      "detail": "grok CLI 被指在目录中运行会上传整个目录到 xAI 的 GCS 存储桶",
+      "children": [
+        "有用户称在家目录运行上传了 SSH 密钥、密码库…",
+        "Musk 称此前上传数据将被彻底删除"
+      ]
+    },
+    {
+      "label": "开源回应",
+      "detail": "xAI 以 Apache 2.0 许可发布全部 Grok Build 代码库以重建信任",
+      "children": [
+        "默认数据保留已关闭，此前保留的编码数据被删除",
+        "支持完全本地化运行与自有推理"
+      ]
+    },
+    {
+      "label": "代码规模",
+      "detail": "代码库含 844,530 行 Rust，仅约 3% 为 vendored 代码",
+      "children": [
+        "对比 openai/codex 为 950,933 行 Rust",
+        "目前仅一个提交，无法看到开发历史"
+      ]
+    },
+    {
+      "label": "代码亮点",
+      "detail": "包含系统提示词、Mermaid 终端渲染器及移植自其他代理的工具",
+      "children": [
+        "subagent 提示词要求不向用户泄露系统提示词内容",
+        "工具移植自 Codex 与 OpenCode，附第三方声明"
+      ]
+    },
+    {
+      "label": "上传残留",
+      "detail": "上传至 GCS 的代码仍存在但已被禁用",
+      "children": [
+        "upload_session_state() 返回硬编码的不可用…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "xAI",
+      "type": "company"
+    },
+    {
+      "name": "Grok Build",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Rust",
+      "type": "technique"
+    },
+    {
+      "name": "Apache 2.0",
+      "type": "concept"
+    },
+    {
+      "name": "Google Cloud",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "OpenCode",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "xAI",
+      "to": "Grok Build",
+      "label": "开源"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Grok Build",
+      "label": "分析"
+    },
+    {
+      "from": "Grok Build",
+      "to": "Rust",
+      "label": "用"
+    },
+    {
+      "from": "Grok Build",
+      "to": "Apache 2.0",
+      "label": "采用"
+    },
+    {
+      "from": "Grok Build",
+      "to": "Codex",
+      "label": "移植工具"
+    },
+    {
+      "from": "Grok Build",
+      "to": "OpenCode",
+      "label": "移植工具"
+    }
+  ]
+}

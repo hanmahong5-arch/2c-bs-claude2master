@@ -1,0 +1,82 @@
+{
+  "center": "Goose v1.36.0 更新",
+  "branches": [
+    {
+      "label": "TUI 与差异查看",
+      "detail": "CLI 新增文本用户界面，可在终端内操作并审查代码变更",
+      "children": [
+        "新增 TUI 命令",
+        "内置差异查看器"
+      ]
+    },
+    {
+      "label": "自评估与 Hooks",
+      "detail": "引入 /goal 自评估，代理完成任务前先自我检查",
+      "children": [
+        "Hooks 在工具调用前拦截",
+        "支持扩展与安全审查"
+      ]
+    },
+    {
+      "label": "统一思维控制",
+      "detail": "所有模型提供商采用一致的思维努力度控制",
+      "children": [
+        "可插拔后端",
+        "统一推理资源配置"
+      ]
+    },
+    {
+      "label": "新增云提供商",
+      "detail": "集成 NEAR AI Cloud、Scaleway 等新服务",
+      "children": [
+        "NEAR AI Cloud",
+        "Scaleway"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "Hooks",
+      "type": "technique"
+    },
+    {
+      "name": "NEAR AI Cloud",
+      "type": "product"
+    },
+    {
+      "name": "Scaleway",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "TUI",
+      "label": "新增"
+    },
+    {
+      "from": "Goose",
+      "to": "Hooks",
+      "label": "引入"
+    },
+    {
+      "from": "Goose",
+      "to": "NEAR AI Cloud",
+      "label": "集成"
+    },
+    {
+      "from": "Goose",
+      "to": "Scaleway",
+      "label": "集成"
+    }
+  ]
+}

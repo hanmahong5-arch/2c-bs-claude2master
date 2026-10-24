@@ -1,0 +1,116 @@
+{
+  "center": "Gemini 3.5 Transcribe 语音转文字",
+  "branches": [
+    {
+      "label": "核心能力",
+      "detail": "把原始音频直接转成准确、格式化文本，能处理噪音与口语冗余",
+      "children": [
+        "自动纠正自我修正，如周二改周三",
+        "去除 um、ah 等填充词并自动排版",
+        "支持自定义词汇与 85+ 语言自动识别"
+      ]
+    },
+    {
+      "label": "精度与延迟",
+      "detail": "Artificial Analysis 测得流式 WER 4.0%、非流式 2.6%",
+      "children": [
+        "FLEURS 基准流式 WER 5.50%、非流式 5.04%",
+        "最终转写时间较 Chirp 3 提升 70%",
+        "预录音频支持最多 3 位说话人区分与词级时间戳"
+      ]
+    },
+    {
+      "label": "双 API 形态",
+      "detail": "按实时与录音两种场景提供不同接口",
+      "children": [
+        "Live API：gemini-3.5-transcribe-live，亚…",
+        "Interactions API：gemini-3.5-transcribe…",
+        "可在 Google AI Studio 与 Gemini…"
+      ]
+    },
+    {
+      "label": "产品落地",
+      "detail": "已进入 Gboard、Antigravity、Gemini app 等 Google 产品",
+      "children": [
+        "Android Rambler 用语音编辑、改拼写与文风",
+        "macOS Gemini app 支持语音调用其他 Gemini…",
+        "Chrome 即将支持任意网页输入框语音输入"
+      ]
+    },
+    {
+      "label": "生态反馈",
+      "detail": "多家开发者平台与公司接入并给出正面评价",
+      "children": [
+        "Agora、LiveKit、Pipecat、Vercel…",
+        "vivo、Intellitek Health、Lingopal 称赞延…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Gemini 3.5 Transcribe",
+      "type": "model"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Chirp 3",
+      "type": "model"
+    },
+    {
+      "name": "Gemini API",
+      "type": "product"
+    },
+    {
+      "name": "Google AI Studio",
+      "type": "product"
+    },
+    {
+      "name": "Live API",
+      "type": "product"
+    },
+    {
+      "name": "Rambler",
+      "type": "product"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google",
+      "to": "Gemini 3.5 Transcribe",
+      "label": "发布"
+    },
+    {
+      "from": "Gemini 3.5 Transcribe",
+      "to": "Chirp 3",
+      "label": "取代升级"
+    },
+    {
+      "from": "Gemini 3.5 Transcribe",
+      "to": "Gemini API",
+      "label": "接入"
+    },
+    {
+      "from": "Gemini 3.5 Transcribe",
+      "to": "Live API",
+      "label": "提供流式"
+    },
+    {
+      "from": "Rambler",
+      "to": "Gemini 3.5 Transcribe",
+      "label": "基于"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "Gemini 3.5 Transcribe",
+      "label": "评测"
+    }
+  ]
+}

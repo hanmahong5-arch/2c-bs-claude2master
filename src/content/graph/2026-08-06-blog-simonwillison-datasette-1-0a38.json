@@ -1,0 +1,80 @@
+{
+  "center": "Datasette 1.0a38 修复 SQL 注入",
+  "branches": [
+    {
+      "label": "漏洞影响范围",
+      "detail": "仅影响同一数据库中同时提供公开与私有表的实例",
+      "children": [
+        "访问控制依赖 Datasette 权限系统",
+        "该配置据作者称较为罕见"
+      ]
+    },
+    {
+      "label": "漏洞危害",
+      "detail": "可绕过限制读取同库私有表数据",
+      "children": [
+        "拥有任意公开表访问权的用户即可发起攻击",
+        "攻击结果为只读访问私有表数据"
+      ]
+    },
+    {
+      "label": "缓解措施",
+      "detail": "管理员应禁用该数据库的 execute-sql 权限",
+      "children": [
+        "防止用户用原始 SQL 查询访问私有表"
+      ]
+    },
+    {
+      "label": "修复版本",
+      "detail": "1.0a38 与 0.65.3 均已包含该修复",
+      "children": [
+        "由 Simon Willison 于 2026 年 8 月 6 日发布"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "SQL injection",
+      "type": "concept"
+    },
+    {
+      "name": "execute-sql",
+      "type": "concept"
+    },
+    {
+      "name": "Datasette permissions system",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "发布"
+    },
+    {
+      "from": "Datasette",
+      "to": "SQL injection",
+      "label": "修复"
+    },
+    {
+      "from": "Datasette",
+      "to": "execute-sql",
+      "label": "建议禁用"
+    },
+    {
+      "from": "Datasette",
+      "to": "Datasette permissions system",
+      "label": "使用"
+    }
+  ]
+}

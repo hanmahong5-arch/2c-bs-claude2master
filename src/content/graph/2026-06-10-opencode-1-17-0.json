@@ -1,0 +1,64 @@
+{
+  "center": "opencode v1.17.0 更新",
+  "branches": [
+    {
+      "label": "搜索提速",
+      "detail": "引入 fff 工具，加速大型项目文件搜索",
+      "children": [
+        "代理处理海量代码库时更快定位文件"
+      ]
+    },
+    {
+      "label": "MCP 更稳",
+      "detail": "MCP 工具调用接收中止信号，连接状态更清晰",
+      "children": [
+        "远程工具调用更可控",
+        "连接问题更易诊断恢复"
+      ]
+    },
+    {
+      "label": "桌面端改进",
+      "detail": "支持 WSL，改进会话列表与服务器 UI",
+      "children": [
+        "Windows 开发环境集成更顺畅",
+        "多会话与后台服务管理更直观"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "fff",
+      "type": "technique"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "WSL",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "fff",
+      "label": "引入"
+    },
+    {
+      "from": "opencode",
+      "to": "MCP",
+      "label": "增强"
+    },
+    {
+      "from": "opencode",
+      "to": "WSL",
+      "label": "支持"
+    }
+  ]
+}

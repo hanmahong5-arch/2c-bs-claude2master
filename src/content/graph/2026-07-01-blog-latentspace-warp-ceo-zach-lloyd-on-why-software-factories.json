@@ -1,0 +1,121 @@
+{
+  "center": "Warp 谈软件工厂转型",
+  "branches": [
+    {
+      "label": "软件工厂定义",
+      "detail": "从工程师交互式用代理，转向自动化系统持续处理软件变更",
+      "children": [
+        "自动循环：triage、规格、实现、审查、验证、发…",
+        "Lloyd 认为一年内多数大型项目将运行自动化工厂"
+      ]
+    },
+    {
+      "label": "Warp 产品演进",
+      "detail": "从 Rust 终端到集成编码代理，再到代理编排平台 Oz",
+      "children": [
+        "2021 年成立，做现代终端",
+        "AI 浪潮后加入编码代理",
+        "2026 年 4 月开源核心 CLI"
+      ]
+    },
+    {
+      "label": "Oz 平台",
+      "detail": "连接多模型与编码工具，跨本地和云沙箱编排代理",
+      "children": [
+        "用户选择仓库、自动化环节、人工介入点",
+        "集成 Jira、Linear、Slack、Teams、GitHub",
+        "下一版可设置并管理工厂"
+      ]
+    },
+    {
+      "label": "竞争与适应",
+      "detail": "面对 Claude Code、Codex CLI、Gemini CLI 等大厂产品竞争",
+      "children": [
+        "Warp 选择开源核心 CLI 应对",
+        "Lloyd 称公司使命不变，产品随技术调整"
+      ]
+    },
+    {
+      "label": "工厂工程新学科",
+      "detail": "构建生产软件的系统，被视为元工程",
+      "children": [
+        "经济买家认可，部分工程师担忧机械化",
+        "需要前向部署工程师做集成与转型"
+      ]
+    }
+  ],
+  "flow": [
+    "选择仓库与自动化环节",
+    "设定人工介入点",
+    "从 Jira/Linear/Slack 拉取…",
+    "代理执行实现与审查",
+    "验证并发布变更",
+    "持续监控与反馈"
+  ],
+  "entities": [
+    {
+      "name": "Warp",
+      "type": "company"
+    },
+    {
+      "name": "Zach Lloyd",
+      "type": "person"
+    },
+    {
+      "name": "Oz",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex CLI",
+      "type": "product"
+    },
+    {
+      "name": "Gemini CLI",
+      "type": "product"
+    },
+    {
+      "name": "软件工厂",
+      "type": "concept"
+    },
+    {
+      "name": "前向部署工程",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Zach Lloyd",
+      "to": "Warp",
+      "label": "担任 CEO"
+    },
+    {
+      "from": "Warp",
+      "to": "Oz",
+      "label": "推出"
+    },
+    {
+      "from": "Warp",
+      "to": "软件工厂",
+      "label": "转型方向"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Warp",
+      "label": "竞争"
+    },
+    {
+      "from": "Codex CLI",
+      "to": "Warp",
+      "label": "竞争"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "Warp",
+      "label": "竞争"
+    }
+  ]
+}

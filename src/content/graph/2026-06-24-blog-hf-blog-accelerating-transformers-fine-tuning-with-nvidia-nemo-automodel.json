@@ -1,0 +1,61 @@
+{
+  "center": "NVIDIA NeMo 加速 Transformer…",
+  "branches": [
+    {
+      "label": "核心主题",
+      "detail": "NVIDIA NeMo AutoModel 用于加速 Transformer 微调",
+      "children": []
+    },
+    {
+      "label": "相关模型",
+      "detail": "文中提及两个文本生成模型，规模分别为 32B 与 561B",
+      "children": [
+        "32B 模型：658k 下载，823 赞",
+        "561B 模型：156k 下载，350 赞"
+      ]
+    },
+    {
+      "label": "作者其他内容",
+      "detail": "同作者发布多篇 NVIDIA AI 技术文章",
+      "children": [
+        "Nemotron 3 Diarization 多说话人识别",
+        "Magpie TTS 低延迟多语言语音代理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NVIDIA NeMo",
+      "type": "product"
+    },
+    {
+      "name": "NVIDIA NeMo AutoModel",
+      "type": "product"
+    },
+    {
+      "name": "Transformer",
+      "type": "model"
+    },
+    {
+      "name": "NVIDIA Nemotron 3 Diarization",
+      "type": "model"
+    },
+    {
+      "name": "NVIDIA Magpie TTS",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA NeMo AutoModel",
+      "to": "Transformer",
+      "label": "加速微调"
+    },
+    {
+      "from": "NVIDIA NeMo",
+      "to": "NVIDIA NeMo AutoModel",
+      "label": "包含"
+    }
+  ]
+}

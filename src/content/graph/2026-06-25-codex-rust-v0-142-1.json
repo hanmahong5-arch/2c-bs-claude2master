@@ -1,0 +1,72 @@
+{
+  "center": "Codex rust-v0.142.1 代理支持",
+  "branches": [
+    {
+      "label": "新增代理能力",
+      "detail": "Codex 新增 Windows 系统代理支持",
+      "children": [
+        "支持 PAC、WPAD、静态代理",
+        "支持绕过规则"
+      ]
+    },
+    {
+      "label": "opt-in 设计",
+      "detail": "该功能为 opt-in，避免默认行为变更",
+      "children": [
+        "保持向后兼容"
+      ]
+    },
+    {
+      "label": "对 harness 影响",
+      "detail": "agent harness 需集成系统代理解析",
+      "children": [
+        "确保网络请求遵循用户代理配置"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    },
+    {
+      "name": "PAC",
+      "type": "technique"
+    },
+    {
+      "name": "WPAD",
+      "type": "technique"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "Windows",
+      "label": "新增支持"
+    },
+    {
+      "from": "Codex",
+      "to": "PAC",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "WPAD",
+      "label": "支持"
+    },
+    {
+      "from": "agent harness",
+      "to": "Codex",
+      "label": "集成"
+    }
+  ]
+}

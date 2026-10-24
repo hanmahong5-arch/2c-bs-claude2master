@@ -1,0 +1,70 @@
+{
+  "center": "ChatGPT接入Slack引同事反感",
+  "branches": [
+    {
+      "label": "现象",
+      "detail": "OpenAI内部许多人把ChatGPT接入Slack，让它代自己联系同事",
+      "children": [
+        "ChatGPT以同事名义向他人求助任务"
+      ]
+    },
+    {
+      "label": "反感原因",
+      "detail": "同事讨厌被别人的ChatGPT找上门，即使同样的活由本人开口完全愿意做",
+      "children": [
+        "同样请求，人问可以，AI问不行"
+      ]
+    },
+    {
+      "label": "背后诉求",
+      "detail": "人们重视人际关系与互相帮助，希望AI还回时间而非隔开人",
+      "children": [
+        "AI应增强共处时间，而非成为人际之间的一层"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Greg Brockman",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "AI协作",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Greg Brockman",
+      "to": "OpenAI",
+      "label": "任职于"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "Slack",
+      "label": "接入"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Greg Brockman",
+      "label": "引用"
+    }
+  ]
+}

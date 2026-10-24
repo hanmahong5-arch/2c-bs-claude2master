@@ -1,0 +1,124 @@
+{
+  "center": "推理工程：开源模型变快稳省 API",
+  "branches": [
+    {
+      "label": "推理工程独立",
+      "detail": "推理不再只是训练后的收尾，而是独立学科，有自己的研究问题与基础设施",
+      "children": [
+        "三年前该领域几乎不存在",
+        "核心问题：把训练权重变成快、稳、省的规模化产品",
+        "优化收益可达 20%、100% 甚至 200%"
+      ]
+    },
+    {
+      "label": "关键优化技术",
+      "detail": "缓存感知路由、分离式 prefill/decode、量化、投机解码、KV-cache 搬运等",
+      "children": [
+        "量化更多层反而提升 20% 吞吐且保持质量",
+        "误差可相互抵消：error(a)+error(b) < error…",
+        "优化后模型最高可快 10 倍"
+      ]
+    },
+    {
+      "label": "硬件与并行",
+      "detail": "张量/专家/流水线并行、GPU kernel、NVIDIA Dynamo 与 Rubin 等系统问题",
+      "children": [
+        "Kimi K3 级模型需 GB300 级硬件",
+        "相同权重在不同集群表现不同",
+        "硬件、kernel、竞态导致非确定性失败"
+      ]
+    },
+    {
+      "label": "模型改造实践",
+      "detail": "把 Kimi 视觉编码器嫁接到 GLM-5.2，不改底层语言模型",
+      "children": [
+        "用其他架构组件改造低效层",
+        "模型有时会坍缩为重复同一 token",
+        "GLM-5.2 帮助优化服务自身的 kernel"
+      ]
+    },
+    {
+      "label": "视频与扩散",
+      "detail": "开源视频生成仍落后 Veo、Kling 等闭源模型，受二次注意力瓶颈限制",
+      "children": [
+        "长视频连贯生成算力门槛极高",
+        "未来或结合自回归与扩散架构",
+        "自回归视频存在质量漂移累积"
+      ]
+    }
+  ],
+  "flow": [
+    "20 万 token 请求进入系统",
+    "缓存感知路由复用 KV cache",
+    "prefill 与 decode 分不同 GPU",
+    "投机解码用小模型加速大模型",
+    "量化与 kernel 优化保真提速",
+    "输出生产级 API 响应"
+  ],
+  "entities": [
+    {
+      "name": "Baseten",
+      "type": "company"
+    },
+    {
+      "name": "Philip Kiely",
+      "type": "person"
+    },
+    {
+      "name": "Ali Taha",
+      "type": "person"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "NVIDIA Dynamo",
+      "type": "product"
+    },
+    {
+      "name": "推理工程",
+      "type": "concept"
+    },
+    {
+      "name": "投机解码",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Philip Kiely",
+      "to": "Baseten",
+      "label": "任职于"
+    },
+    {
+      "from": "Ali Taha",
+      "to": "Baseten",
+      "label": "任职于"
+    },
+    {
+      "from": "Baseten",
+      "to": "推理工程",
+      "label": "专注"
+    },
+    {
+      "from": "Ali Taha",
+      "to": "Kimi K3",
+      "label": "解析"
+    },
+    {
+      "from": "Baseten",
+      "to": "GLM-5.2",
+      "label": "改造"
+    },
+    {
+      "from": "投机解码",
+      "to": "推理工程",
+      "label": "属于"
+    }
+  ]
+}

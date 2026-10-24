@@ -1,0 +1,79 @@
+{
+  "center": "ChatGPT 健康功能上线",
+  "branches": [
+    {
+      "label": "功能内容",
+      "detail": "授权后 ChatGPT 可读取医疗记录与 Apple Health 数据，生成个性化健康洞察",
+      "children": [
+        "可解释化验结果",
+        "可总结睡眠趋势"
+      ]
+    },
+    {
+      "label": "隐私与安全",
+      "detail": "数据经安全协议传输，OpenAI 承诺不用于训练模型，用户可随时断开连接",
+      "children": [
+        "不用于模型训练",
+        "用户可随时断开"
+      ]
+    },
+    {
+      "label": "使用门槛",
+      "detail": "功能仅限美国用户，且需付费订阅才能使用",
+      "children": [
+        "仅限美国",
+        "需付费订阅"
+      ]
+    },
+    {
+      "label": "战略意义",
+      "detail": "标志 AI 助手从通用对话向垂直健康领域的工具化延伸",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Apple Health",
+      "type": "product"
+    },
+    {
+      "name": "医疗记录",
+      "type": "concept"
+    },
+    {
+      "name": "个性化健康洞察",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "推出"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "Apple Health",
+      "label": "连接"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "医疗记录",
+      "label": "访问"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "个性化健康洞察",
+      "label": "生成"
+    }
+  ]
+}

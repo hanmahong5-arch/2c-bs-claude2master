@@ -1,0 +1,78 @@
+{
+  "center": "LLM 提升推荐与搜索",
+  "branches": [
+    {
+      "label": "分享背景",
+      "detail": "Eugene Yan 主持 AI Engineer 2025 RecSys 分轨",
+      "children": [
+        "2025 年 6 月旧金山 AI Engineer World's…",
+        "公开开场幻灯片与整轨 YouTube 录像"
+      ]
+    },
+    {
+      "label": "核心主题",
+      "detail": "用 LLM 技术改进推荐系统与搜索",
+      "children": [
+        "RecSys 与 Search 的 LLM 化",
+        "面向生产环境的工程实践"
+      ]
+    },
+    {
+      "label": "内容形式",
+      "detail": "演讲开场 slides + 完整分轨录像",
+      "children": [
+        "eugeneyan.com 发布",
+        "可引用为 Yan, Ziyou (Jun 2025)"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Eugene Yan",
+      "type": "person"
+    },
+    {
+      "name": "AI Engineer World's Fair 2025",
+      "type": "concept"
+    },
+    {
+      "name": "RecSys",
+      "type": "concept"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "Search",
+      "type": "concept"
+    },
+    {
+      "name": "eugeneyan.com",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Eugene Yan",
+      "to": "AI Engineer World's Fair 2025",
+      "label": "主持分轨"
+    },
+    {
+      "from": "Eugene Yan",
+      "to": "eugeneyan.com",
+      "label": "发布"
+    },
+    {
+      "from": "LLM",
+      "to": "RecSys",
+      "label": "改进"
+    },
+    {
+      "from": "LLM",
+      "to": "Search",
+      "label": "改进"
+    }
+  ]
+}

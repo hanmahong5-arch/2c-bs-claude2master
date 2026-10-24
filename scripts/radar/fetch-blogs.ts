@@ -14,6 +14,8 @@
  * 适配层 (一个源用三种方式之一产出标准化条目, 后续 summarize / 渲染复用):
  *   rss        — 内置 fetch + 轻量 RSS/Atom/JSON feed 解析。Phase 1 主力, 无浏览器。
  *   lightpanda — 经 puppeteer-core 连 ws://127.0.0.1:9222, domcontentloaded 取列表页 → 逐篇取正文。
+ *   html       — 服务端渲染的列表页 (无 feed): 纯 fetch 取列表 → linkPattern 筛文章链接 → 逐篇取正文。
+ *                无浏览器; 文章页取不到发布日期则拒收 (不拿今天冒充, 防旧文回灌)。
  *   rsshub     — Phase 2 占位 (env RSSHUB_BASE + owner cookie), 见下 TODO, 暂不启用。
  *
  * 退出码:
@@ -23,6 +25,12 @@
 
 import { promises as fs } from "fs";
 import path from "path";
+import {
+  extractLinks,
+  extractMainText,
+  extractPublished,
+  extractTitle,
+} from "./html-extract";
 
 // Bun 原生, 跨平台 (旧 URL.pathname 写法在 Linux CI 退化成相对路径 → ENOENT)
 const SCRIPT_DIR = import.meta.dir;
@@ -42,11 +50,17 @@ const MAX_ITEMS_PER_SOURCE = Math.max(
 const MAX_AGE_DAYS = Math.max(1, Number(process.env.RADAR_BLOG_MAX_AGE_DAYS) || 30);
 // 正文截到 8KB — summarize.ts 用 LLM 转中文摘要时不需要全文 (镜像 practices)
 const BODY_CAP = 8000;
+// feed 只给摘录 (如 LangChain / OpenAI 的 description 仅几百字) 时抓原文页补全;
+// 摘要与知识图谱都吃正文, 摘录喂出来的图只有空壳。
+const ENRICH_BELOW = 1500;
+// html 源首跑: 列表页全是存量, 只放行最新 N 篇, 其余标 seen (防一次灌几十篇旧文)。
+const HTML_FIRST_RUN_KEEP = 2;
 const LIGHTPANDA_WS = process.env.LIGHTPANDA_WS ?? "ws://127.0.0.1:9222";
 // 单页导航超时 — 重型 SPA (如 anthropic.com newsroom) 在 Lightpanda(beta) 下偏慢, 给 45s。
 const LIGHTPANDA_NAV_TIMEOUT = 45000;
 
-type BlogType = "rss" | "lightpanda" | "rsshub";
+type BlogType = "rss" | "lightpanda" | "html" | "rsshub";
+type BlogCategory = "lab" | "company" | "person" | "community";
 
 interface BlogSource {
   author: string;
@@ -54,13 +68,21 @@ interface BlogSource {
   type: BlogType;
   url: string;
   pollDays: number;
+  category: BlogCategory;
   itemSelector?: string;
+  /** html 源: 匹配文章 URL pathname 的正则 */
+  linkPattern?: RegExp;
+  /** 全站 feed 只收 AI 相关: 标题+正文须匹配 (不区分大小写) */
+  include?: RegExp;
+  /** 文章 URL 编码了日期时 (如 DeepSeek news260821): 三个捕获组 = yy|yyyy, mm, dd */
+  urlDate?: RegExp;
 }
 
 interface BloggerOut {
   kind: "blogger";
   author: string;
   handle: string;
+  category: BlogCategory;
   url: string;
   title: string;
   body: string;
@@ -124,18 +146,44 @@ function pushSource(out: BlogSource[], o: Record<string, unknown>): void {
     console.error(`[blogs] skip malformed source: ${JSON.stringify(o)}`);
     return;
   }
-  if (type !== "rss" && type !== "lightpanda" && type !== "rsshub") {
+  if (type !== "rss" && type !== "lightpanda" && type !== "html" && type !== "rsshub") {
     console.error(`[blogs] skip ${handle}: unknown type "${type}"`);
     return;
   }
+  const re = (v: unknown, flags: string): RegExp | undefined | null => {
+    if (typeof v !== "string" || !v) return undefined;
+    try {
+      return new RegExp(v, flags);
+    } catch {
+      return null;
+    }
+  };
+  const linkPattern = re(o.linkPattern, "");
+  const include = re(o.include, "i");
+  const urlDate = re(o.urlDate, "");
+  if (linkPattern === null || include === null || urlDate === null) {
+    console.error(`[blogs] skip ${handle}: invalid regex in linkPattern/include`);
+    return;
+  }
+  if (type === "html" && !linkPattern) {
+    console.error(`[blogs] skip ${handle}: html source needs linkPattern`);
+    return;
+  }
+  const cat = String(o.category ?? "person").trim();
   out.push({
     author,
     handle,
     type: type as BlogType,
     url,
     pollDays: Number(o.pollDays ?? 1),
+    category: (["lab", "company", "person", "community"].includes(cat)
+      ? cat
+      : "person") as BlogCategory,
     itemSelector:
       typeof o.itemSelector === "string" ? o.itemSelector : undefined,
+    linkPattern,
+    include,
+    urlDate,
   });
 }
 
@@ -150,9 +198,10 @@ async function fetchText(url: string): Promise<string> {
       "User-Agent":
         "claude2master-radar/1.0 (+https://claude2master.com; bot)",
       Accept:
-        "application/rss+xml, application/atom+xml, application/json, text/xml;q=0.9, */*;q=0.8",
+        "application/rss+xml, application/atom+xml, application/json, text/xml;q=0.9, text/html;q=0.8, */*;q=0.7",
     },
     redirect: "follow",
+    signal: AbortSignal.timeout(30000),
   });
   if (!resp.ok) throw new Error(`HTTP ${resp.status} for ${url}`);
   return await resp.text();
@@ -479,36 +528,124 @@ async function saveState(state: StateShape): Promise<void> {
   await fs.rename(tmp, STATE_FILE);
 }
 
+// ── html 适配器 (SSR 列表页, 纯 fetch) ─────────────────────────────────────
+async function fetchArticlePage(
+  url: string,
+  urlDate?: RegExp,
+): Promise<{ title: string; body: string; published: string } | null> {
+  if (!(await isAllowed(url))) {
+    console.error(`[blogs] robots.txt disallows ${url}; skip`);
+    return null;
+  }
+  const html = await fetchText(url);
+  return {
+    title: extractTitle(html),
+    body: extractMainText(html).slice(0, BODY_CAP),
+    published: extractPublished(html, url, urlDate),
+  };
+}
+
+async function fetchViaHtml(
+  source: BlogSource,
+  seen: Set<string>,
+): Promise<{ items: FeedItem[]; markSeen: string[] }> {
+  if (!(await isAllowed(source.url))) {
+    console.error(`[blogs] robots.txt disallows list page ${source.url}; skip`);
+    return { items: [], markSeen: [] };
+  }
+  const links = extractLinks(await fetchText(source.url), source.url, source.linkPattern!);
+  const unseen = links.filter((h) => !seen.has(h));
+  // 首跑 (该源从未 seen 过): 只放行页面最前的 N 篇, 其余是存量直接标 seen
+  const firstRun = seen.size === 0;
+  const keep = unseen.slice(0, firstRun ? HTML_FIRST_RUN_KEEP : MAX_ITEMS_PER_SOURCE);
+  const markSeen = firstRun ? unseen.slice(HTML_FIRST_RUN_KEEP) : [];
+  if (firstRun) {
+    console.error(
+      `[blogs] ${source.handle}: first run, ${links.length} links → keep ${keep.length}, seed ${markSeen.length} as seen`,
+    );
+  }
+
+  const items: FeedItem[] = [];
+  for (const link of keep) {
+    try {
+      const page = await fetchArticlePage(link, source.urlDate);
+      if (!page) continue;
+      if (!page.published) {
+        console.error(`[blogs] ${source.handle}: no publish date at ${link}; mark seen, skip`);
+        markSeen.push(link);
+        continue;
+      }
+      if (!page.title || page.body.length < 200) {
+        console.error(`[blogs] ${source.handle}: thin content at ${link} (${page.body.length} chars); skip`);
+        markSeen.push(link);
+        continue;
+      }
+      items.push({ title: page.title, url: link, body: page.body, published_at: page.published });
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.error(`[blogs] ${source.handle}: FAIL article ${link}: ${msg}`);
+    }
+  }
+  return { items, markSeen };
+}
+
+// feed 摘录太短 → 抓原文页补全正文 (失败保留摘录, 不丢条目)
+async function enrichBody(source: BlogSource, it: FeedItem): Promise<FeedItem> {
+  if (it.body.length >= ENRICH_BELOW) return it;
+  try {
+    const page = await fetchArticlePage(it.url, source.urlDate);
+    if (page && page.body.length > it.body.length + 200) {
+      console.error(`[blogs] ${source.handle}: enriched ${it.url} (${it.body.length} → ${page.body.length} chars)`);
+      return { ...it, body: page.body };
+    }
+  } catch (err) {
+    console.error(`[blogs] ${source.handle}: enrich failed ${it.url}: ${(err as Error).message}`);
+  }
+  return it;
+}
+
 async function fetchSource(
   source: BlogSource,
   seen: Set<string>,
-): Promise<FeedItem[]> {
+): Promise<{ items: FeedItem[]; markSeen: string[] }> {
   if (source.type === "rss") {
     const all = await fetchViaRss(source);
     // feed 通常新→旧: 取最新 N 候选再去重 (与 lightpanda 一致, 防首跑刷屏)
     const candidates = all.slice(0, MAX_ITEMS_PER_SOURCE * 3);
+    // 新订阅源首跑: 只放行最新 N 篇, feed 里其余存量标 seen (同 html 源)
+    const firstRun = seen.size === 0;
+    const cap = firstRun ? HTML_FIRST_RUN_KEEP : MAX_ITEMS_PER_SOURCE;
     const fresh: FeedItem[] = [];
     for (const it of candidates) {
       if (seen.has(it.url) || fresh.some((f) => f.url === it.url)) continue;
       fresh.push(it);
-      if (fresh.length >= MAX_ITEMS_PER_SOURCE) break;
+      if (fresh.length >= cap) break;
     }
-    return fresh;
+    const markSeen = firstRun
+      ? all.map((it) => it.url).filter((u) => !fresh.some((f) => f.url === u))
+      : [];
+    return { items: fresh, markSeen };
+  }
+  if (source.type === "html") {
+    return await fetchViaHtml(source, seen);
   }
   if (source.type === "lightpanda") {
-    return await fetchViaLightpanda(source, seen);
+    return { items: await fetchViaLightpanda(source, seen), markSeen: [] };
   }
   // Phase 2 占位: rsshub — 需 env RSSHUB_BASE + owner cookie (重要信息.md) + 自托管 RSSHub (R6)。
   // TODO(Phase 2): const base = process.env.RSSHUB_BASE; 把 X/微信/知乎路由桥成 RSS 后复用 fetchViaRss。
   console.error(`[blogs] ${source.handle}: type rsshub is Phase 2, skipped`);
-  return [];
+  return { items: [], markSeen: [] };
 }
 
 async function main(): Promise<void> {
-  const dryRun = process.argv.slice(2).includes("--dry-run");
+  const argv = process.argv.slice(2);
+  const dryRun = argv.includes("--dry-run");
+  // --only=h1,h2: 只跑指定源 (调试新源用, 配 --dry-run)
+  const only = argv.find((a) => a.startsWith("--only="))?.slice(7).split(",").filter(Boolean);
 
   const yamlRaw = await fs.readFile(BLOGS_FILE, "utf-8");
-  const sources = parseBlogsYaml(yamlRaw);
+  const sources = parseBlogsYaml(yamlRaw).filter((s) => !only || only.includes(s.handle));
   const state = await loadState();
 
   let okCount = 0;
@@ -517,7 +654,7 @@ async function main(): Promise<void> {
 
   for (const src of sources) {
     const lastPoll = state.blogsLastPolled[src.handle] ?? "";
-    if (daysBetween(lastPoll, TODAY) < src.pollDays) {
+    if (!only && daysBetween(lastPoll, TODAY) < src.pollDays) {
       console.error(
         `[blogs] skip ${src.handle} (polled ${lastPoll}, < ${src.pollDays}d)`,
       );
@@ -530,7 +667,9 @@ async function main(): Promise<void> {
     attemptCount++;
     let items: FeedItem[];
     try {
-      items = await fetchSource(src, seen);
+      const res = await fetchSource(src, seen);
+      items = res.items;
+      state.blogsSeen[src.handle].push(...res.markSeen);
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
       console.error(`[blogs] FAIL ${src.handle} (${src.type}): ${msg}`);
@@ -545,12 +684,29 @@ async function main(): Promise<void> {
     }
     items = items.filter((it) => daysBetween(it.published_at, TODAY) <= MAX_AGE_DAYS);
 
+    // 全站 feed (如 Vercel / Supabase) 只收 AI 相关; 不相关的标 seen 不出稿
+    if (src.include) {
+      const off = items.filter((it) => !src.include!.test(`${it.title}\n${it.body}`));
+      for (const it of off) {
+        state.blogsSeen[src.handle].push(it.url);
+        console.error(`[blogs] ${src.handle}: off-topic, mark seen: ${it.title}`);
+      }
+      items = items.filter((it) => src.include!.test(`${it.title}\n${it.body}`));
+    }
+
+    if (src.type === "rss") {
+      const enriched: FeedItem[] = [];
+      for (const it of items) enriched.push(await enrichBody(src, it));
+      items = enriched;
+    }
+
     console.error(`[blogs] ${src.handle}: ${items.length} new`);
     for (const it of items) {
       const out: BloggerOut = {
         kind: "blogger",
         author: src.author,
         handle: src.handle,
+        category: src.category,
         url: it.url,
         title: it.title,
         body: it.body,

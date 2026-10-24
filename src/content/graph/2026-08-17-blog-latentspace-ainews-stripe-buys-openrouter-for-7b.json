@@ -1,0 +1,112 @@
+{
+  "center": "Stripe 70亿美元收购 OpenRouter",
+  "branches": [
+    {
+      "label": "收购与估值",
+      "detail": "Stripe 以 70 亿美元收购 AI 路由层 OpenRouter，约为年化收入 50 倍",
+      "children": [
+        "年化收入 1.4 亿美元，毛利约 1 亿美元",
+        "毛利率约 70%，成本约 4000 万美元",
+        "距 13 亿美元 B 轮仅 90 天"
+      ]
+    },
+    {
+      "label": "路由层价值重估",
+      "detail": "模型聚合与路由 API 层被重新定价，但加价空间可能被压缩",
+      "children": [
+        "月处理 250 万亿 token，2 月为 50 万亿",
+        "800 万开发者使用",
+        "OpenRouter 与 Vercel 相继降价"
+      ]
+    },
+    {
+      "label": "基础设施与算力",
+      "detail": "OpenAI 转向长期控制电力、数据中心、芯片全栈",
+      "children": [
+        "4+ GW NVIDIA 容量承诺",
+        "俄亥俄 8 GW 园区，SB Energy 建设运营",
+        "NVIDIA 支持首期 4.25 GW，建设至 2032 年"
+      ]
+    },
+    {
+      "label": "Agent 与评估",
+      "detail": "多智能体编排转向专业化与持久上下文，评估走向 harness 级",
+      "children": [
+        "Bot Mode 让 agent 拥有独立记忆与工具",
+        "Hamel Husain 的 eval-skills 插件发现失败…",
+        "Agent Arena 基于 170 万+ 真实会话"
+      ]
+    },
+    {
+      "label": "模型效率与记忆",
+      "detail": "开放模型逼近前沿，推理效率与记忆策略成为新扩展方向",
+      "children": [
+        "Qwen3.8-27B 达 DeepSeek V4-Pro 水平",
+        "Nemotron 3.5 Lightning 为 30B MoE 激活 3B",
+        "GPT-5.6 Sol 保留推理后 ARC-AGI-3 从 13.3%…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Stripe",
+      "type": "company"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "Alex Atallah",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "Qwen3.8-27B",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Stripe",
+      "to": "OpenRouter",
+      "label": "收购"
+    },
+    {
+      "from": "Alex Atallah",
+      "to": "OpenRouter",
+      "label": "创办"
+    },
+    {
+      "from": "OpenAI",
+      "to": "NVIDIA",
+      "label": "采购算力"
+    },
+    {
+      "from": "Cursor",
+      "to": "OpenRouter",
+      "label": "同类平台"
+    },
+    {
+      "from": "Qwen3.8-27B",
+      "to": "GPT-5.6 Sol",
+      "label": "能力对标"
+    }
+  ]
+}

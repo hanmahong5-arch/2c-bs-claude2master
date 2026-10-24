@@ -1,0 +1,88 @@
+{
+  "center": "codex rust-v0.144.6 更新",
+  "branches": [
+    {
+      "label": "上下文窗口修正",
+      "detail": "GPT-5.6 Sol/Terra/Luna 上下文窗口修正为 272,000 tokens",
+      "children": [
+        "272K tokens",
+        "agent 需适配更大窗口"
+      ]
+    },
+    {
+      "label": "仅限 GPT-5.6 系列",
+      "detail": "修复只针对 GPT-5.6 系列，其他模型不受影响",
+      "children": [
+        "agent 需区分模型版本",
+        "避免通用假设"
+      ]
+    },
+    {
+      "label": "hotfix 回传",
+      "detail": "变更通过 hotfix 回传到 0.144 分支",
+      "children": [
+        "关注 hotfix 更新",
+        "确保使用最新元数据"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex rust",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Terra",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "272K tokens",
+      "type": "concept"
+    },
+    {
+      "name": "hotfix",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex rust",
+      "to": "GPT-5.6 Sol",
+      "label": "更新"
+    },
+    {
+      "from": "codex rust",
+      "to": "GPT-5.6 Terra",
+      "label": "更新"
+    },
+    {
+      "from": "codex rust",
+      "to": "GPT-5.6 Luna",
+      "label": "更新"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "272K tokens",
+      "label": "修正为"
+    },
+    {
+      "from": "GPT-5.6 Terra",
+      "to": "272K tokens",
+      "label": "修正为"
+    },
+    {
+      "from": "GPT-5.6 Luna",
+      "to": "272K tokens",
+      "label": "修正为"
+    }
+  ]
+}

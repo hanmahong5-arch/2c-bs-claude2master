@@ -1,0 +1,44 @@
+{
+  "center": "opencode v1.18.16 修复",
+  "branches": [
+    {
+      "label": "配置容错",
+      "detail": "忽略未知顶层配置字段，不再导致解析失败",
+      "children": [
+        "配置更健壮"
+      ]
+    },
+    {
+      "label": "项目注册",
+      "detail": "Home 打开的项目会注册，供应用其他部分使用",
+      "children": [
+        "集成更顺畅"
+      ]
+    },
+    {
+      "label": "macOS 常驻",
+      "detail": "关闭最后窗口后应用保持运行，激活时重新打开窗口",
+      "children": [
+        "符合平台习惯"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "macOS",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "macOS",
+      "label": "适配"
+    }
+  ]
+}

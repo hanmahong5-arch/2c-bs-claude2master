@@ -1,0 +1,71 @@
+{
+  "center": "GitHub Dependabot 三天冷却期",
+  "branches": [
+    {
+      "label": "核心变更",
+      "detail": "Dependabot 等待新版本发布满三天后才创建更新 PR",
+      "children": [
+        "冷却期现为默认，无需配置"
+      ]
+    },
+    {
+      "label": "安全目的",
+      "detail": "避免立即拉取可能含恶意或缺陷的新版本",
+      "children": [
+        "提升依赖更新安全性"
+      ]
+    },
+    {
+      "label": "来源",
+      "detail": "GitHub Changelog 于 2026 年 7 月 14 日发布",
+      "children": [
+        "Simon Willison 博客引用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "Dependabot",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Changelog",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "dependency cooldowns",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "GitHub",
+      "to": "Dependabot",
+      "label": "拥有"
+    },
+    {
+      "from": "Dependabot",
+      "to": "dependency cooldowns",
+      "label": "采用"
+    },
+    {
+      "from": "GitHub Changelog",
+      "to": "Dependabot",
+      "label": "宣布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GitHub Changelog",
+      "label": "引用"
+    }
+  ]
+}

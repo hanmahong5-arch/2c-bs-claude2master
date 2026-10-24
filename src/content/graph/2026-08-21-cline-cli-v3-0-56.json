@@ -1,0 +1,116 @@
+{
+  "center": "cline cli v3.0.56 更新",
+  "branches": [
+    {
+      "label": "图像生成支持",
+      "detail": "支持图像生成的模型可在对话中直接产出媒体，多端适配",
+      "children": [
+        "TUI 保存临时文件并打印路径",
+        "HTML 导出内嵌图片",
+        "ACP 客户端接收图像内容"
+      ]
+    },
+    {
+      "label": "技能加载方式",
+      "detail": "Skill 斜杠命令改为通过 skills 工具加载，不再展开到消息中",
+      "children": [
+        "历史记录显示原始命令",
+        "指令只传给模型一次",
+        "工作流和 zen 模式仍展开"
+      ]
+    },
+    {
+      "label": "模型选择器清理",
+      "detail": "非聊天模型从模型选择器和 ACP 列表中移除",
+      "children": [
+        "图像、语音等模型被移除",
+        "--model 拒绝此类模型"
+      ]
+    },
+    {
+      "label": "多项问题修复",
+      "detail": "修复 TUI 颜色、钩子、命令错误处理等多个问题",
+      "children": [
+        "TUI 对话框颜色不随主题变化",
+        "PreToolUse 的 contextModification 未生效",
+        "PostToolUse 钩子输出和取消控制被忽略"
+      ]
+    },
+    {
+      "label": "其他更新",
+      "detail": "使用量显示计费网关成本，模型目录更新，新增多个提供商",
+      "children": [
+        "使用量显示计费网关成本",
+        "模型目录更新",
+        "新增多个提供商"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "ACP",
+      "type": "concept"
+    },
+    {
+      "name": "Skill",
+      "type": "concept"
+    },
+    {
+      "name": "PreToolUse",
+      "type": "concept"
+    },
+    {
+      "name": "PostToolUse",
+      "type": "concept"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "PowerShell",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli",
+      "to": "TUI",
+      "label": "支持"
+    },
+    {
+      "from": "cline cli",
+      "to": "ACP",
+      "label": "支持"
+    },
+    {
+      "from": "cline cli",
+      "to": "Skill",
+      "label": "加载"
+    },
+    {
+      "from": "cline cli",
+      "to": "PreToolUse",
+      "label": "修复"
+    },
+    {
+      "from": "cline cli",
+      "to": "PostToolUse",
+      "label": "修复"
+    },
+    {
+      "from": "cline cli",
+      "to": "Gemini",
+      "label": "修复"
+    }
+  ]
+}

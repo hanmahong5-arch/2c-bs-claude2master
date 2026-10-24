@@ -1,0 +1,106 @@
+{
+  "center": "datasette-agent 0.2a0 发布",
+  "branches": [
+    {
+      "label": "工具可中途提问",
+      "detail": "工具声明 context 参数即可用 ask_user 向用户提问",
+      "children": [
+        "支持是非、多选 options、自由文本 free_text",
+        "未答时 agent 回合挂起，问题存内部库",
+        "重启后会话仍存活，答完从头重放执行"
+      ]
+    },
+    {
+      "label": "新增 save_query",
+      "detail": "agent 可把写的 SQL 存为 Datasette 存储查询",
+      "children": [
+        "保存必须人工批准",
+        "展示完整 SQL、名称、库与可见性",
+        "点击 Yes 前不写入任何内容"
+      ]
+    },
+    {
+      "label": "依赖新 LLM alpha",
+      "detail": "ask_user 由作者前一天构建的 LLM alpha 支持",
+      "children": [
+        "构建时借助 Claude Fable 5"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 6 月 10 日发布",
+      "children": [
+        "标签：ai、datasette、llms、generative-ai"
+      ]
+    }
+  ],
+  "flow": [
+    "工具声明 context 参数",
+    "调用 ask_user 提问",
+    "agent 回合挂起并存库",
+    "用户在聊天 UI 作答",
+    "工具从头重放执行"
+  ],
+  "entities": [
+    {
+      "name": "datasette-agent",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "ask_user",
+      "type": "technique"
+    },
+    {
+      "name": "save_query",
+      "type": "technique"
+    },
+    {
+      "name": "ToolContext",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "datasette-agent",
+      "label": "发布"
+    },
+    {
+      "from": "datasette-agent",
+      "to": "Datasette",
+      "label": "扩展"
+    },
+    {
+      "from": "datasette-agent",
+      "to": "ask_user",
+      "label": "内置"
+    },
+    {
+      "from": "datasette-agent",
+      "to": "save_query",
+      "label": "内置"
+    },
+    {
+      "from": "ask_user",
+      "to": "ToolContext",
+      "label": "依赖"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "ask_user",
+      "label": "协助实现"
+    }
+  ]
+}

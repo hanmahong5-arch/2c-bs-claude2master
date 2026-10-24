@@ -1,0 +1,75 @@
+{
+  "center": "claude-code v2.1.146 更新",
+  "branches": [
+    {
+      "label": "代码审查增强",
+      "detail": "将 /simplify 重命名为 /code-review，并支持指定审查力度",
+      "children": [
+        "命令更名 /simplify → /code-review",
+        "可配置审查粒度"
+      ]
+    },
+    {
+      "label": "Windows 修复",
+      "detail": "修复 Windows PowerShell 及 MCP 分页等工具链问题",
+      "children": [
+        "PowerShell 工具链问题",
+        "MCP 分页问题"
+      ]
+    },
+    {
+      "label": "多代理稳定性",
+      "detail": "修复多代理会话中模型设置未转发等后台任务问题",
+      "children": [
+        "模型设置未转发",
+        "后台任务配置一致性",
+        "权限管理正确性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Windows PowerShell",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "/code-review",
+      "type": "concept"
+    },
+    {
+      "name": "/simplify",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "/code-review",
+      "label": "新增命令"
+    },
+    {
+      "from": "claude-code",
+      "to": "/simplify",
+      "label": "重命名自"
+    },
+    {
+      "from": "claude-code",
+      "to": "Windows PowerShell",
+      "label": "修复兼容"
+    },
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "修复交互"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "center": "OpenAI 的 AI 政策与政治倡导立场",
+  "branches": [
+    {
+      "label": "透明度与独立",
+      "detail": "声明无外部政治团体能代表其发言，划清合作边界",
+      "children": [
+        "互动应基于官方声明而非第三方解读"
+      ]
+    },
+    {
+      "label": "支持审慎监管",
+      "detail": "公开支持对 AI 进行深思熟虑的监管，向政策制定者传递合作意愿",
+      "children": [
+        "未来 AI 工具链开发将更紧密结合合规框架"
+      ]
+    },
+    {
+      "label": "聚焦 AI 安全",
+      "detail": "将 AI 安全作为政策倡导核心，技术路线优先考虑风险控制",
+      "children": [
+        "agent 开发者需将安全设计融入开发生命周期"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AI 政策",
+      "type": "concept"
+    },
+    {
+      "name": "政治倡导",
+      "type": "concept"
+    },
+    {
+      "name": "AI 安全",
+      "type": "concept"
+    },
+    {
+      "name": "监管",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AI 政策",
+      "label": "阐述立场"
+    },
+    {
+      "from": "OpenAI",
+      "to": "政治倡导",
+      "label": "明确立场"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AI 安全",
+      "label": "聚焦"
+    },
+    {
+      "from": "OpenAI",
+      "to": "监管",
+      "label": "支持"
+    }
+  ]
+}

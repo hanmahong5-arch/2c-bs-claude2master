@@ -1,0 +1,72 @@
+{
+  "center": "cline v4.1.8 更新",
+  "branches": [
+    {
+      "label": "Vertex 全目录",
+      "detail": "模型选择器显示每个区域全量目录，不再硬编码过滤",
+      "children": [
+        "未提供模型请求时报错并给恢复指引",
+        "支持手动输入任意模型 ID，含目录外"
+      ]
+    },
+    {
+      "label": "Fable 5 支持",
+      "detail": "支持 Fable 5，成本在 Vertex 上按未知计费",
+      "children": [
+        "避免低估实际费用"
+      ]
+    },
+    {
+      "label": "Yolo 并入批准",
+      "detail": "移除 Yolo 模式开关，自动批准菜单成唯一控制源",
+      "children": [
+        "旧配置自动迁移"
+      ]
+    },
+    {
+      "label": "修复摘要器",
+      "detail": "修复压缩摘要器不尊重最大输出 token 设置的问题",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Yolo 模式",
+      "type": "concept"
+    },
+    {
+      "name": "自动批准",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "Vertex",
+      "label": "支持"
+    },
+    {
+      "from": "Vertex",
+      "to": "Fable 5",
+      "label": "支持"
+    },
+    {
+      "from": "Yolo 模式",
+      "to": "自动批准",
+      "label": "并入"
+    }
+  ]
+}

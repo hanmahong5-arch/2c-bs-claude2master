@@ -1,0 +1,79 @@
+{
+  "center": "Slack Emoji Maker 工具",
+  "branches": [
+    {
+      "label": "工具用途",
+      "detail": "把任意图片转成符合 Slack 要求的自定义表情",
+      "children": [
+        "Slack 要求 128x128 方形、透明背景、PNG 小…"
+      ]
+    },
+    {
+      "label": "核心功能",
+      "detail": "自动去背景、裁剪成方形并缩放到合规尺寸",
+      "children": [
+        "按颜色去除背景",
+        "带手柄的方形裁剪",
+        "透明区域修剪"
+      ]
+    },
+    {
+      "label": "编辑体验",
+      "detail": "提供可视化编辑控件与实时预览",
+      "children": [
+        "浅色与深色 Slack 主题下实时预览"
+      ]
+    },
+    {
+      "label": "构建方式",
+      "detail": "Simon Willison 让 Fable 按需求快速生成这个简易图片编辑器",
+      "children": [
+        "作者：Simon Willison",
+        "发布时间：2026 年 7 月 31 日"
+      ]
+    }
+  ],
+  "flow": [
+    "上传任意图片",
+    "按颜色去背景",
+    "方形裁剪",
+    "修剪透明区域",
+    "精简颜色并缩放",
+    "导出合规 PNG"
+  ],
+  "entities": [
+    {
+      "name": "Slack Emoji Maker",
+      "type": "product"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Fable",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Slack Emoji Maker",
+      "label": "构建"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Fable",
+      "label": "使用"
+    },
+    {
+      "from": "Slack Emoji Maker",
+      "to": "Slack",
+      "label": "生成表情"
+    }
+  ]
+}

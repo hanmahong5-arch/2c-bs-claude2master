@@ -1,0 +1,82 @@
+{
+  "center": "claude-code v2.1.212 更新",
+  "branches": [
+    {
+      "label": "会话控制调整",
+      "detail": "区分复制会话与子任务，新增自动模式重置入口",
+      "children": [
+        "/fork 改为后台复制会话，/subtask 替代原功能",
+        "新增 claude auto-mode reset，支持 --yes…"
+      ]
+    },
+    {
+      "label": "资源上限保护",
+      "detail": "为 WebSearch 与子 Agent 生成设置默认上限，防失控循环",
+      "children": [
+        "WebSearch 调用上限默认 200",
+        "子 Agent 生成上限默认 200",
+        "/clear 重置预算"
+      ]
+    },
+    {
+      "label": "MCP 后台化",
+      "detail": "MCP 工具调用超 2 分钟自动转后台，阈值可配置",
+      "children": [
+        "避免长时间阻塞主会话"
+      ]
+    },
+    {
+      "label": "安全与进程修复",
+      "detail": "修复计划模式绕过权限提示及 SIGTERM 孤儿进程问题",
+      "children": [
+        "计划模式下 touch、rm 等命令不再绕过权限提示",
+        "SIGTERM 时终止 Bash 进程树并退出 143"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "WebSearch",
+      "type": "technique"
+    },
+    {
+      "name": "SIGTERM",
+      "type": "concept"
+    },
+    {
+      "name": "Bash",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "集成"
+    },
+    {
+      "from": "claude-code",
+      "to": "WebSearch",
+      "label": "调用"
+    },
+    {
+      "from": "claude-code",
+      "to": "Bash",
+      "label": "调用"
+    },
+    {
+      "from": "SIGTERM",
+      "to": "Bash",
+      "label": "影响"
+    }
+  ]
+}

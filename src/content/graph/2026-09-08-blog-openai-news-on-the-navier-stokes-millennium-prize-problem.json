@@ -1,0 +1,74 @@
+{
+  "center": "OpenAI 生成纳维-斯托克斯解答",
+  "branches": [
+    {
+      "label": "核心事件",
+      "detail": "OpenAI 发布 AI 生成的纳维-斯托克斯千年奖问题解答",
+      "children": [
+        "含书面说明与 Lean 形式化证明"
+      ]
+    },
+    {
+      "label": "生成方式",
+      "detail": "解答由 AI 系统自动生成，非人工推导",
+      "children": []
+    },
+    {
+      "label": "能力展示",
+      "detail": "体现 AI 在高级数学推理与证明方面的潜力",
+      "children": []
+    },
+    {
+      "label": "开发者影响",
+      "detail": "标志 AI 工具链在形式化验证与复杂问题求解上的突破",
+      "children": [
+        "可能改变数学研究与软件验证方式"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Navier-Stokes",
+      "type": "concept"
+    },
+    {
+      "name": "Lean",
+      "type": "product"
+    },
+    {
+      "name": "形式化验证",
+      "type": "technique"
+    },
+    {
+      "name": "千年奖问题",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Navier-Stokes",
+      "label": "生成解答"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Lean",
+      "label": "产出证明"
+    },
+    {
+      "from": "Lean",
+      "to": "形式化验证",
+      "label": "用于"
+    },
+    {
+      "from": "Navier-Stokes",
+      "to": "千年奖问题",
+      "label": "属于"
+    }
+  ]
+}

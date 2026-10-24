@@ -1,0 +1,56 @@
+{
+  "center": "ChatGPT Business 高级席位",
+  "branches": [
+    {
+      "label": "推出高级席位",
+      "detail": "OpenAI 为 ChatGPT Business 增加高级席位，团队可为高需求用户购买更高使用额度。",
+      "children": [
+        "面向高负载任务",
+        "团队可灵活分配资源"
+      ]
+    },
+    {
+      "label": "注册优惠",
+      "detail": "8 月 20 日前注册可获 100 美元工作区积分，降低试用门槛。",
+      "children": [
+        "截止 8 月 20 日",
+        "100 美元工作区积分"
+      ]
+    },
+    {
+      "label": "目标场景",
+      "detail": "针对“最苛刻工作”，暗示面向重度用户或复杂任务场景。",
+      "children": [
+        "重度用户",
+        "复杂任务"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Business",
+      "type": "product"
+    },
+    {
+      "name": "高级席位",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Business",
+      "label": "推出"
+    },
+    {
+      "from": "ChatGPT Business",
+      "to": "高级席位",
+      "label": "包含"
+    }
+  ]
+}

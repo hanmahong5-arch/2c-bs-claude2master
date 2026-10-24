@@ -1,0 +1,82 @@
+{
+  "center": "MUFG 用 ChatGPT 打造 AI 原生银行",
+  "branches": [
+    {
+      "label": "全员规模化部署",
+      "detail": "ChatGPT Enterprise 覆盖 4.5 万名员工，用于客服、风控、合规等场景",
+      "children": [
+        "效率提升 20-30%",
+        "企业级 LLM 需先解决规模化、安全与合规"
+      ]
+    },
+    {
+      "label": "200+ 内部应用",
+      "detail": "通过自定义 GPTs 和 API 集成，构建知识库助手、代码审查等工具",
+      "children": [
+        "低代码平台加速落地",
+        "需配套强治理"
+      ]
+    },
+    {
+      "label": "嵌入核心系统",
+      "detail": "计划将 AI 嵌入核心银行系统，实现实时欺诈检测与个性化理财",
+      "children": [
+        "从辅助工具走向核心决策系统"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "MUFG",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Enterprise",
+      "type": "product"
+    },
+    {
+      "name": "自定义 GPTs",
+      "type": "product"
+    },
+    {
+      "name": "API 集成",
+      "type": "technique"
+    },
+    {
+      "name": "AI 原生",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "MUFG",
+      "to": "ChatGPT Enterprise",
+      "label": "部署"
+    },
+    {
+      "from": "MUFG",
+      "to": "OpenAI",
+      "label": "合作"
+    },
+    {
+      "from": "MUFG",
+      "to": "自定义 GPTs",
+      "label": "构建"
+    },
+    {
+      "from": "MUFG",
+      "to": "API 集成",
+      "label": "采用"
+    },
+    {
+      "from": "MUFG",
+      "to": "AI 原生",
+      "label": "转型目标"
+    }
+  ]
+}

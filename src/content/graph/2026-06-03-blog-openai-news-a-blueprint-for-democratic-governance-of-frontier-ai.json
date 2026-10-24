@@ -1,0 +1,80 @@
+{
+  "center": "OpenAI 前沿 AI 治理蓝图",
+  "branches": [
+    {
+      "label": "联邦安全机构",
+      "detail": "提议成立联邦 AI 安全机构，制定标准、审计并监督前沿模型",
+      "children": [
+        "开发者面临更严格合规与安全审查"
+      ]
+    },
+    {
+      "label": "安全测试与报告",
+      "detail": "要求前沿模型独立安全评估并建立事件报告系统",
+      "children": [
+        "对工具链透明度与可靠性要求更高"
+      ]
+    },
+    {
+      "label": "国际合作协调",
+      "detail": "倡导全球对齐管理 AI 风险，设计需考虑国际规范",
+      "children": [
+        "促进跨域协作"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "联邦 AI 安全机构",
+      "type": "concept"
+    },
+    {
+      "name": "前沿模型",
+      "type": "concept"
+    },
+    {
+      "name": "安全测试",
+      "type": "technique"
+    },
+    {
+      "name": "事件报告系统",
+      "type": "concept"
+    },
+    {
+      "name": "国际合作",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "联邦 AI 安全机构",
+      "label": "提议成立"
+    },
+    {
+      "from": "联邦 AI 安全机构",
+      "to": "前沿模型",
+      "label": "监督"
+    },
+    {
+      "from": "安全测试",
+      "to": "前沿模型",
+      "label": "评估"
+    },
+    {
+      "from": "事件报告系统",
+      "to": "前沿模型",
+      "label": "报告"
+    },
+    {
+      "from": "国际合作",
+      "to": "前沿模型",
+      "label": "管理风险"
+    }
+  ]
+}

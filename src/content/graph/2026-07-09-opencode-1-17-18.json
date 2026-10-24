@@ -1,0 +1,47 @@
+{
+  "center": "opencode v1.17.18 更新",
+  "branches": [
+    {
+      "label": "修复 Copilot 崩溃",
+      "detail": "GitHub Copilot 返回零计费批次模型时不再崩溃",
+      "children": [
+        "修正错误定价数据",
+        "agent 定价逻辑更稳定"
+      ]
+    },
+    {
+      "label": "新增 Muse Spark 提示",
+      "detail": "为 Meta Muse Spark 模型加入专用系统提示",
+      "children": [
+        "支持按模型定制 agent 行为"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Copilot",
+      "type": "product"
+    },
+    {
+      "name": "Meta Muse Spark",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "GitHub Copilot",
+      "label": "修复兼容"
+    },
+    {
+      "from": "opencode",
+      "to": "Meta Muse Spark",
+      "label": "新增提示"
+    }
+  ]
+}

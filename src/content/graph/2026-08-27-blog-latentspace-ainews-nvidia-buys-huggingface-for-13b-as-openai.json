@@ -1,0 +1,117 @@
+{
+  "center": "NVIDIA 收购 HuggingFace 与 GLM…",
+  "branches": [
+    {
+      "label": "NVIDIA 收购 HF",
+      "detail": "NVIDIA 以 130 亿美元收购 HuggingFace，约为其 150M ARR 的 80 倍",
+      "children": [
+        "2026 年 1 月初始报价 70 亿美元，最终翻倍",
+        "2026 年客户基数翻倍",
+        "TheInformation 率先爆料并确认"
+      ]
+    },
+    {
+      "label": "GLM-5.3-Flash 发布",
+      "detail": "Z.ai 发布原生多模态模型，即此前预览的 Ox Alpha",
+      "children": [
+        "320B 总参数 / 18B 激活参数，1M 上下文",
+        "MIT 许可，权重、API、Chat、ZCode 等渠道可用",
+        "完全运行在中国 AI 芯片上"
+      ]
+    },
+    {
+      "label": "性能与成本",
+      "detail": "Artificial Analysis 智能指数 57，每任务成本仅 $0.09",
+      "children": [
+        "与 GPT-5.6 Terra、Muse Spark 1.2 并列 57…",
+        "比 GLM-5.3 max 便宜约 7.5 倍",
+        "149M 输出 token 中约 90% 为推理 token"
+      ]
+    },
+    {
+      "label": "架构效率",
+      "detail": "从 GLM-5.2 的 744B-A40B 转向 320B-A18B 的高效混合注意力",
+      "children": [
+        "Kimi Linear 风格 3:1 混合注意力",
+        "34 层 KDA + 11 层 MLA/DSA",
+        "DeepSeek V4 风格 mHC 残差路径与四并行流"
+      ]
+    },
+    {
+      "label": "中国开源趋势",
+      "detail": "中国前沿开源模型在架构选择上快速趋同",
+      "children": [
+        "普遍采用线性注意力与稀疏注意力",
+        "多用 mHC、注意力残差、门控残差",
+        "广泛使用 Muon 优化器"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "HuggingFace",
+      "type": "company"
+    },
+    {
+      "name": "Z.ai",
+      "type": "company"
+    },
+    {
+      "name": "GLM-5.3-Flash",
+      "type": "model"
+    },
+    {
+      "name": "Ox Alpha",
+      "type": "model"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Kimi Linear",
+      "type": "technique"
+    },
+    {
+      "name": "Muon",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "HuggingFace",
+      "label": "收购"
+    },
+    {
+      "from": "Z.ai",
+      "to": "GLM-5.3-Flash",
+      "label": "发布"
+    },
+    {
+      "from": "GLM-5.3-Flash",
+      "to": "Ox Alpha",
+      "label": "即"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "GLM-5.3-Flash",
+      "label": "评测"
+    },
+    {
+      "from": "GLM-5.3-Flash",
+      "to": "Kimi Linear",
+      "label": "采用"
+    },
+    {
+      "from": "GLM-5.3-Flash",
+      "to": "Muon",
+      "label": "采用"
+    }
+  ]
+}

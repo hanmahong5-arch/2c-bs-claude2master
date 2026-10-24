@@ -1,0 +1,124 @@
+{
+  "center": "Hugging Face 模型上 Foundry",
+  "branches": [
+    {
+      "label": "平台与部署",
+      "detail": "Foundry Managed Compute 是托管 GPU 平台，一键部署开源模型",
+      "children": [
+        "按参数量、上下文长度、延迟/吞吐选实例",
+        "GPU 拓扑由 Foundry 自动处理",
+        "支持全球与数据驻留部署"
+      ]
+    },
+    {
+      "label": "企业级一致性",
+      "detail": "与按 token 计费、预置吞吐共享同一套开发面",
+      "children": [
+        "单一端点、同一 SDK、同一认证",
+        "统一可观测性与单一账单",
+        "开源模型可像前沿模型一样接入 Agent"
+      ]
+    },
+    {
+      "label": "为什么选 Hugging Face",
+      "detail": "Hugging Face 是开放 AI 的公共广场，模型生态庞大",
+      "children": [
+        "1500 万开发者、40 万组织、300 万+ 开源模型",
+        "开源模型在基准上已追平闭源前沿",
+        "可微调、蒸馏、量化、LoRA 定制"
+      ]
+    },
+    {
+      "label": "模型集合特性",
+      "detail": "每周刷新，覆盖文本、视觉、音频、多模态",
+      "children": [
+        "仅 SafeTensors，无不可信代码",
+        "按模型匹配 vLLM、SGLang、TensorRT-LLM 等运…",
+        "权重预置在 Azure，运行时由微软构建扫描"
+      ]
+    },
+    {
+      "label": "策展流水线",
+      "detail": "Hugging Face 与微软合作筛选企业就绪模型",
+      "children": [
+        "识别趋势模型并审查许可证与安全",
+        "构建扫描签名运行时镜像",
+        "验证 API 一致性与性能后发布目录"
+      ]
+    }
+  ],
+  "flow": [
+    "识别趋势模型",
+    "审查合规与安全",
+    "构建扫描运行时",
+    "上传权重至 Azure",
+    "验证并发布目录",
+    "一键部署到托管计算"
+  ],
+  "entities": [
+    {
+      "name": "Microsoft Foundry",
+      "type": "product"
+    },
+    {
+      "name": "Foundry Managed Compute",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Foundry Agent Service",
+      "type": "product"
+    },
+    {
+      "name": "vLLM",
+      "type": "technique"
+    },
+    {
+      "name": "SGLang",
+      "type": "technique"
+    },
+    {
+      "name": "TensorRT-LLM",
+      "type": "technique"
+    },
+    {
+      "name": "SafeTensors",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Microsoft Foundry",
+      "label": "集成模型"
+    },
+    {
+      "from": "Foundry Managed Compute",
+      "to": "Microsoft Foundry",
+      "label": "属于"
+    },
+    {
+      "from": "Foundry Agent Service",
+      "to": "Microsoft Foundry",
+      "label": "属于"
+    },
+    {
+      "from": "vLLM",
+      "to": "Foundry Managed Compute",
+      "label": "支持运行时"
+    },
+    {
+      "from": "SGLang",
+      "to": "Foundry Managed Compute",
+      "label": "支持运行时"
+    },
+    {
+      "from": "TensorRT-LLM",
+      "to": "Foundry Managed Compute",
+      "label": "支持运行时"
+    }
+  ]
+}

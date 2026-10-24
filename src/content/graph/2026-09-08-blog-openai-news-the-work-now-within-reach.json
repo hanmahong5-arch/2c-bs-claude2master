@@ -1,0 +1,75 @@
+{
+  "center": "更强大实惠 AI 扩大能力边界",
+  "branches": [
+    {
+      "label": "成本大幅下降",
+      "detail": "更强且更实惠的模型显著降低任务完成成本",
+      "children": [
+        "个人与企业可承担以往难负担的工作",
+        "推动整体经济增长"
+      ]
+    },
+    {
+      "label": "工作流程改变",
+      "detail": "AI 普及将重塑工作流程与任务执行方式",
+      "children": [
+        "自动化复杂任务",
+        "提升整体效率"
+      ]
+    },
+    {
+      "label": "开发者集成",
+      "detail": "需将模型能力集成到现有工具链中",
+      "children": [
+        "重新评估 AI 性价比",
+        "平衡性能与成本",
+        "设计可扩展解决方案"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AI 模型",
+      "type": "model"
+    },
+    {
+      "name": "开发者",
+      "type": "person"
+    },
+    {
+      "name": "工具链",
+      "type": "concept"
+    },
+    {
+      "name": "成本优化",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AI 模型",
+      "label": "探讨"
+    },
+    {
+      "from": "开发者",
+      "to": "AI 模型",
+      "label": "集成"
+    },
+    {
+      "from": "开发者",
+      "to": "工具链",
+      "label": "接入"
+    },
+    {
+      "from": "AI 模型",
+      "to": "成本优化",
+      "label": "推动"
+    }
+  ]
+}

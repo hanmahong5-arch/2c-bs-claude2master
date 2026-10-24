@@ -1,0 +1,119 @@
+{
+  "center": "OpenClaw Progress drafts 实时…",
+  "branches": [
+    {
+      "label": "核心机制",
+      "detail": "把多轮“正在工作”消息合并为一条实时编辑的状态草稿",
+      "children": [
+        "设置 streaming.mode: \"progress\" 启用",
+        "工作开始时创建，读取/规划/调工具时编辑",
+        "最终交付答案"
+      ]
+    },
+    {
+      "label": "草稿内容",
+      "detail": "默认显示状态标题、计划步骤与审批请求",
+      "children": [
+        "中间工具失败与非零退出不显示",
+        "toolProgress: true 增加滚动工具日志",
+        "纯文本回复不显示进度草稿"
+      ]
+    },
+    {
+      "label": "模式选择",
+      "detail": "streaming.mode 控制聊天中可见的进行中行为",
+      "children": [
+        "off 仅最终答案",
+        "partial 编辑最新答案文本",
+        "block 更大块预览"
+      ]
+    },
+    {
+      "label": "标签配置",
+      "detail": "progress.label 控制标签显示，默认 auto 使用 Working",
+      "children": [
+        "状态标题会隐藏隐式标签",
+        "可设固定标签或标签池",
+        "label: false 仅显示进度行"
+      ]
+    },
+    {
+      "label": "工具进度",
+      "detail": "工具可发出类型化进度，仅渲染 progress.text",
+      "children": [
+        "web_fetch 延迟 5 秒显示进度",
+        "快速调用无进度行，取消清除定时器",
+        "进度文本不得含密钥或原始参数"
+      ]
+    }
+  ],
+  "flow": [
+    "设置 streaming.mode 为…",
+    "工作开始时创建草稿消息",
+    "读取/规划/调工具时编辑草稿",
+    "按配置显示标签与工具日志",
+    "交付最终答案"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "Progress drafts",
+      "type": "concept"
+    },
+    {
+      "name": "streaming.mode",
+      "type": "concept"
+    },
+    {
+      "name": "toolProgress",
+      "type": "concept"
+    },
+    {
+      "name": "web_fetch",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Discord",
+      "label": "支持渠道"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Telegram",
+      "label": "支持渠道"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Progress drafts",
+      "label": "实现"
+    },
+    {
+      "from": "Progress drafts",
+      "to": "streaming.mode",
+      "label": "由配置控制"
+    },
+    {
+      "from": "Progress drafts",
+      "to": "toolProgress",
+      "label": "可选启用"
+    },
+    {
+      "from": "web_fetch",
+      "to": "Progress drafts",
+      "label": "发出进度"
+    }
+  ]
+}

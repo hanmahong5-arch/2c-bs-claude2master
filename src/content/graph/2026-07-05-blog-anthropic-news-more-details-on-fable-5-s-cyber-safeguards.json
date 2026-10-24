@@ -1,0 +1,117 @@
+{
+  "center": "Fable 5 网络安全防护与越狱框架",
+  "branches": [
+    {
+      "label": "四类用途分类",
+      "detail": "Fable 5 分类器按四类网络安全用途决定拦截或放行",
+      "children": [
+        "禁止用途：直接拦截",
+        "高风险双用途：拦截",
+        "低风险双用途：监控，有时拦截"
+      ]
+    },
+    {
+      "label": "安全边际更大",
+      "detail": "Fable 5 的安全边际比以往模型更大，宁可误拦",
+      "children": [
+        "安全边际含部分良性请求",
+        "误报率更高但更安全",
+        "请求需明显安全才不触发"
+      ]
+    },
+    {
+      "label": "禁止用途清单",
+      "detail": "分类器明确拦截的破坏性、规避与恶意基础设施行为",
+      "children": [
+        "勒索软件、擦除器、拒绝服务",
+        "防御规避、日志篡改、反取证",
+        "恶意软件开发、投递与 C2 基础设施"
+      ]
+    },
+    {
+      "label": "越狱严重性框架",
+      "detail": "与 Glasswing 合作起草，统一描述越狱风险等级",
+      "children": [
+        "越狱严重性差异大",
+        "此前无共识框架",
+        "供政府与开发者一致沟通"
+      ]
+    },
+    {
+      "label": "多层防护体系",
+      "detail": "分类器只是防护之一，另有访问控制与监控",
+      "children": [
+        "访问控制",
+        "模型安全训练",
+        "离线监控"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Glasswing",
+      "type": "company"
+    },
+    {
+      "name": "HackerOne",
+      "type": "company"
+    },
+    {
+      "name": "AI jailbreak severity framework",
+      "type": "concept"
+    },
+    {
+      "name": "safety classifiers",
+      "type": "technique"
+    },
+    {
+      "name": "safety margin",
+      "type": "concept"
+    },
+    {
+      "name": "dual use",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Glasswing",
+      "label": "合作起草"
+    },
+    {
+      "from": "Anthropic",
+      "to": "HackerOne",
+      "label": "启动项目"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "safety classifiers",
+      "label": "配备"
+    },
+    {
+      "from": "safety classifiers",
+      "to": "safety margin",
+      "label": "设定"
+    },
+    {
+      "from": "AI jailbreak severity framework",
+      "to": "dual use",
+      "label": "涉及"
+    }
+  ]
+}

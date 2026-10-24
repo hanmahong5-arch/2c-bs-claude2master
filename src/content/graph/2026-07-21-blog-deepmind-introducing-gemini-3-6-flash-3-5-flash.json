@@ -1,0 +1,99 @@
+{
+  "center": "Gemini 3.6 Flash 等三款新模型",
+  "branches": [
+    {
+      "label": "3.6 Flash 主力",
+      "detail": "更强编码与知识工作，输出 token 减少 17%，价格更低",
+      "children": [
+        "输入 $1.50/1M，输出 $7.50/1M",
+        "DeepSWE 49% vs 37%",
+        "OSWorld-Verified 83.0% vs 78.4%"
+      ]
+    },
+    {
+      "label": "3.5 Flash-Lite",
+      "detail": "3.5 系列最快最便宜，350 输出 token/秒，适合高吞吐",
+      "children": [
+        "输入 $0.3/1M，输出 $2.5/1M",
+        "Terminal-Bench 2.1 54% vs 31%",
+        "SWE-Bench Pro 54.2% 超过 3 Flash"
+      ]
+    },
+    {
+      "label": "3.5 Flash Cyber",
+      "detail": "基于 3.5 Flash 微调，专攻网络安全漏洞检测与修复",
+      "children": [
+        "配合 CodeMender 多智能体协作",
+        "CyberGym 基准达前沿水平",
+        "仅限政府与可信伙伴试点"
+      ]
+    },
+    {
+      "label": "安全与后续",
+      "detail": "3.6 Flash 强化 CBRN 与网络滥用防护，后续模型在研",
+      "children": [
+        "抗越狱能力增强，减少有益用途拒答",
+        "3.5 Pro 正与伙伴测试",
+        "已启动 Gemini 4 预训练"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemini 3.6 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.5 Flash-Lite",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.5 Flash Cyber",
+      "type": "model"
+    },
+    {
+      "name": "CodeMender",
+      "type": "product"
+    },
+    {
+      "name": "Gemini 4",
+      "type": "model"
+    },
+    {
+      "name": "Tulsee Doshi",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini 3.6 Flash",
+      "label": "发布"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini 3.5 Flash-Lite",
+      "label": "发布"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini 3.5 Flash Cyber",
+      "label": "发布"
+    },
+    {
+      "from": "Gemini 3.5 Flash Cyber",
+      "to": "CodeMender",
+      "label": "集成于"
+    },
+    {
+      "from": "Tulsee Doshi",
+      "to": "Google DeepMind",
+      "label": "任职于"
+    }
+  ]
+}

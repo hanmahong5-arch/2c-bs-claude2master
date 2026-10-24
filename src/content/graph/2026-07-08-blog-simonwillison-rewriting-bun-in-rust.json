@@ -1,0 +1,110 @@
+{
+  "center": "Bun 从 Zig 重写为 Rust",
+  "branches": [
+    {
+      "label": "重写动机",
+      "detail": "Zig 手动内存管理导致大量 use-after-free 等崩溃 bug",
+      "children": [
+        "Rust 安全模式将此类 bug 变为编译错误",
+        "Drop 实现 RAII 式自动清理"
+      ]
+    },
+    {
+      "label": "测试套件是关键",
+      "detail": "Bun 测试套件用 TypeScript 编写，可作跨语言一致性套件",
+      "children": [
+        "百万级断言驱动代理自动移植",
+        "几天内高比例测试通过"
+      ]
+    },
+    {
+      "label": "代理工程流程",
+      "detail": "动态工作流、试运行、对抗式代码审查协同完成移植",
+      "children": [
+        "11 天完成重写",
+        "出问题改生成流程而非手改代码"
+      ]
+    },
+    {
+      "label": "成本与上线",
+      "detail": "预估花费 16.5 万美元 token 成本",
+      "children": [
+        "59 亿未缓存输入 token",
+        "已在 Claude Code v2.1.181 上线近一月"
+      ]
+    }
+  ],
+  "flow": [
+    "Zig 版 Bun 崩溃 bug 多",
+    "TypeScript 测试套件作一致性…",
+    "代理自动移植到 Rust",
+    "对抗式审查与工作流监控",
+    "合并并上线 Claude Code"
+  ],
+  "entities": [
+    {
+      "name": "Bun",
+      "type": "product"
+    },
+    {
+      "name": "Rust",
+      "type": "concept"
+    },
+    {
+      "name": "Zig",
+      "type": "concept"
+    },
+    {
+      "name": "Jarred Sumner",
+      "type": "person"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Mythos/Fable",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Jarred Sumner",
+      "to": "Bun",
+      "label": "重写"
+    },
+    {
+      "from": "Bun",
+      "to": "Rust",
+      "label": "移植为"
+    },
+    {
+      "from": "Bun",
+      "to": "Zig",
+      "label": "原用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Bun",
+      "label": "采用"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "开发"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Bun",
+      "label": "报道"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "center": "开源权重博弈与Kimi K3",
+  "branches": [
+    {
+      "label": "Kimi K3发布",
+      "detail": "Moonshot AI开源Kimi K3，号称全球最强开源权重模型",
+      "children": [
+        "2.8T参数MoE，104B激活，896专家/16激活",
+        "1M token上下文，原生视觉理解",
+        "独立验证超越Opus 4.8"
+      ]
+    },
+    {
+      "label": "开源权重之争",
+      "detail": "NVIDIA与微软签开源信，OpenAI先传不签后签，Anthropic未签",
+      "children": [
+        "Anthropic声明从未主张禁止开源权重",
+        "主张对华芯片管制与反蒸馏措施",
+        "美国或要求前沿模型预发布30天审查"
+      ]
+    },
+    {
+      "label": "技术报告亮点",
+      "detail": "K3报告称较K2有约2.5倍扩展效率提升",
+      "children": [
+        "MXFP4权重/MXFP8激活",
+        "视觉编码器从头联合训练保稳定",
+        "报告未披露总训练token数"
+      ]
+    },
+    {
+      "label": "开源非完全自由",
+      "detail": "许可为开源权重而非MIT/Apache式开源",
+      "children": [
+        "年收入超2000万美元托管商需单独协议",
+        "超1亿MAU或月收入2000万美元需显示Kimi K3"
+      ]
+    },
+    {
+      "label": "生态与评测",
+      "detail": "K3首日登陆vLLM、Baseten、Modal等平台",
+      "children": [
+        "Agent Arena开源权重第一，净提升9.75%",
+        "Frontend Code Arena总榜第一",
+        "Cognition称其接近前沿水平，FrontierCode 1.…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Moonshot AI",
+      "type": "company"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Open Secure AI Alliance",
+      "type": "concept"
+    },
+    {
+      "name": "FlashKDA",
+      "type": "technique"
+    },
+    {
+      "name": "Agent Arena",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Moonshot AI",
+      "to": "Kimi K3",
+      "label": "发布"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Open Secure AI Alliance",
+      "label": "发起"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Open Secure AI Alliance",
+      "label": "未加入"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "FlashKDA",
+      "label": "配套开源"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "Agent Arena",
+      "label": "登顶"
+    }
+  ]
+}

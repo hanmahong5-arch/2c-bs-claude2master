@@ -1,0 +1,47 @@
+{
+  "center": "Roo-Code v3.54.0 发布",
+  "branches": [
+    {
+      "label": "版本发布",
+      "detail": "Roo-Code 项目发布 v3.54.0 版本更新",
+      "children": [
+        "RooCodeInc/Roo-Code 仓库"
+      ]
+    },
+    {
+      "label": "持续迭代",
+      "detail": "版本发布意味着项目持续迭代，代码库有新的稳定状态",
+      "children": []
+    },
+    {
+      "label": "工具链意义",
+      "detail": "定期发布有助于保持依赖清晰和构建可复现性",
+      "children": [
+        "依赖清晰",
+        "构建可复现"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Roo-Code",
+      "type": "product"
+    },
+    {
+      "name": "RooCodeInc",
+      "type": "company"
+    },
+    {
+      "name": "Agent 工具链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "RooCodeInc",
+      "to": "Roo-Code",
+      "label": "发布"
+    }
+  ]
+}

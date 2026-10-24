@@ -1,0 +1,112 @@
+{
+  "center": "AI 快速构建 GeoJSON 地图查看器",
+  "branches": [
+    {
+      "label": "工具功能",
+      "detail": "在 OpenStreetMap 上可视化 GeoJSON 并支持样式定制",
+      "children": [
+        "粘贴 Feature/FeatureCollection/Geometry",
+        "可调填充色与透明度",
+        "多图形编号、可删除、实时更新样式"
+      ]
+    },
+    {
+      "label": "构建过程",
+      "detail": "Simon Willison 借助多个 AI 工具迭代完成",
+      "children": [
+        "GPT-5.6-Sol 主动构建初版",
+        "Claude Code for web 与 Fable 5.1 迭代",
+        "最终导出 PNG"
+      ]
+    },
+    {
+      "label": "需求背景",
+      "detail": "为 Natalie 收集地方政治边界地图",
+      "children": [
+        "Granada Community Services District",
+        "Midcoast Community Council"
+      ]
+    },
+    {
+      "label": "GeoJSON 获取",
+      "detail": "用 ChatGPT Work 从政府数据源提取边界",
+      "children": [
+        "提问即可生成精确边界多边形",
+        "示例：El Granada GCSD 与 MCC 边界"
+      ]
+    }
+  ],
+  "flow": [
+    "提出地图需求",
+    "AI 建议并构建工具",
+    "多轮迭代完善",
+    "获取 GeoJSON 边界",
+    "渲染并导出 PNG"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GeoJSON Map Viewer",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6-Sol",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code for web",
+      "type": "product"
+    },
+    {
+      "name": "Fable 5.1",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "GeoJSON",
+      "type": "concept"
+    },
+    {
+      "name": "OpenStreetMap",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "GeoJSON Map Viewer",
+      "label": "构建"
+    },
+    {
+      "from": "GPT-5.6-Sol",
+      "to": "GeoJSON Map Viewer",
+      "label": "构建初版"
+    },
+    {
+      "from": "Claude Code for web",
+      "to": "GeoJSON Map Viewer",
+      "label": "迭代"
+    },
+    {
+      "from": "Fable 5.1",
+      "to": "GeoJSON Map Viewer",
+      "label": "迭代"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "GeoJSON",
+      "label": "生成"
+    },
+    {
+      "from": "GeoJSON Map Viewer",
+      "to": "OpenStreetMap",
+      "label": "渲染于"
+    }
+  ]
+}

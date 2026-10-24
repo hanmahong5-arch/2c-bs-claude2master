@@ -1,0 +1,77 @@
+{
+  "center": "micropython-wasm 0.1a1 发布",
+  "branches": [
+    {
+      "label": "发布内容",
+      "detail": "Simon Willison 发布 micropython-wasm 0.1a1 版本",
+      "children": [
+        "Python 库，用 WebAssembly 运行…"
+      ]
+    },
+    {
+      "label": "修复动机",
+      "detail": "修复在构建 datasette-agent-micropython 时暴露的限制",
+      "children": [
+        "datasette-agent-micropython"
+      ]
+    },
+    {
+      "label": "技术栈",
+      "detail": "结合 Python、WebAssembly 与 MicroPython 实现沙箱",
+      "children": [
+        "Python",
+        "WebAssembly",
+        "MicroPython"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "micropython-wasm",
+      "type": "product"
+    },
+    {
+      "name": "MicroPython",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "datasette-agent-micropython",
+      "type": "product"
+    },
+    {
+      "name": "Python",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "micropython-wasm",
+      "label": "发布"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "MicroPython",
+      "label": "运行"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "WebAssembly",
+      "label": "基于"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "datasette-agent-micropython",
+      "label": "支撑"
+    }
+  ]
+}

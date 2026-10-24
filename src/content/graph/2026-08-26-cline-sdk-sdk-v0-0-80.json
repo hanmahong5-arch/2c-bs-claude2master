@@ -1,0 +1,97 @@
+{
+  "center": "Cline SDK v0.0.80 更新",
+  "branches": [
+    {
+      "label": "文件写入修复",
+      "detail": "新文件改用平台原生换行符，避免跨平台不一致",
+      "children": [
+        "文件写入工具创建的新文件"
+      ]
+    },
+    {
+      "label": "搜索崩溃修复",
+      "detail": "修复 search_codebase 在超长单行文件时崩溃",
+      "children": [
+        "提升稳定性"
+      ]
+    },
+    {
+      "label": "安全与计费",
+      "detail": "Git 远程 URL 凭据从工作区信息移除；Claude Code 标记订阅计费",
+      "children": [
+        "宿主可隐藏其按 token 价格和 API 成本估算"
+      ]
+    },
+    {
+      "label": "工具与模型目录",
+      "detail": "installMcpServer 不再将 -- 视为 stdio 命令；tasks 可仅计划任务；模型目录新增 7 个提供商",
+      "children": [
+        "tasks 禁用 Todo 类型但保留 Agenda 后端",
+        "更新模型列表和价格，多个默认模型变更"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "search_codebase",
+      "type": "technique"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "installMcpServer",
+      "type": "technique"
+    },
+    {
+      "name": "tasks",
+      "type": "technique"
+    },
+    {
+      "name": "Agenda",
+      "type": "product"
+    },
+    {
+      "name": "Todo",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "search_codebase",
+      "label": "修复"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Claude Code",
+      "label": "标记计费"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "installMcpServer",
+      "label": "更新"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "tasks",
+      "label": "配置"
+    },
+    {
+      "from": "tasks",
+      "to": "Agenda",
+      "label": "保留后端"
+    },
+    {
+      "from": "tasks",
+      "to": "Todo",
+      "label": "禁用类型"
+    }
+  ]
+}

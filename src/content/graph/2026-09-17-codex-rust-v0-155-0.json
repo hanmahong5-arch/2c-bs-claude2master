@@ -1,0 +1,70 @@
+{
+  "center": "Codex 0.155.0 更新",
+  "branches": [
+    {
+      "label": "语音对话",
+      "detail": "新增实验性 /voice，带实时转录与麦克风控制",
+      "children": [
+        "需通过 /experimental 开启",
+        "语音输入成为可插拔会话通道"
+      ]
+    },
+    {
+      "label": "Touch ID 验证",
+      "detail": "本地 TUI 会话中 MCP 请求支持 Touch ID 验证",
+      "children": [
+        "限支持的 Mac",
+        "敏感工具调用插入原生身份确认",
+        "不只依赖 token"
+      ]
+    },
+    {
+      "label": "守护进程调度",
+      "detail": "守护进程更新可配置调度，新增 daemon update 命令",
+      "children": [
+        "重启后已保存线程与活跃目标可恢复",
+        "长时任务状态持久化成为默认契约"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Touch ID",
+      "type": "technique"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "MCP",
+      "to": "Touch ID",
+      "label": "验证"
+    },
+    {
+      "from": "Codex",
+      "to": "agent harness",
+      "label": "属于"
+    }
+  ]
+}

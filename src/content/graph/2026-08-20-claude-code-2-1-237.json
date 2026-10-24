@@ -1,0 +1,76 @@
+{
+  "center": "claude-code v2.1.237 更新",
+  "branches": [
+    {
+      "label": "修复网关缓存",
+      "detail": "使用 LLM 网关或自定义 base URL 时 prompt 缓存失效问题已修复",
+      "children": [
+        "缓存恢复正常，提升响应速度",
+        "降低使用成本",
+        "自定义网关需注意行为变化"
+      ]
+    },
+    {
+      "label": "新增简洁风格",
+      "detail": "内置 Concise 输出风格，直接给结果，跳过前言和叙述",
+      "children": [
+        "工作完成度不变",
+        "在 /config 的 Output style 中选择",
+        "减少 token 消耗"
+      ]
+    },
+    {
+      "label": "对 agent harness 影响",
+      "detail": "自定义网关需注意缓存修复带来的行为变化，简洁风格适合高频交互",
+      "children": [
+        "缓存修复改变网关行为",
+        "简洁风格适合高频交互场景"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "LLM 网关",
+      "type": "concept"
+    },
+    {
+      "name": "prompt 缓存",
+      "type": "technique"
+    },
+    {
+      "name": "Concise",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "LLM 网关",
+      "label": "修复缓存"
+    },
+    {
+      "from": "claude-code",
+      "to": "Concise",
+      "label": "新增风格"
+    },
+    {
+      "from": "LLM 网关",
+      "to": "prompt 缓存",
+      "label": "影响"
+    },
+    {
+      "from": "Concise",
+      "to": "agent harness",
+      "label": "影响"
+    }
+  ]
+}

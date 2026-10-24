@@ -1,0 +1,79 @@
+{
+  "center": "claude-code v2.1.161 更新",
+  "branches": [
+    {
+      "label": "并行调用容错",
+      "detail": "并行工具调用中失败命令不再取消同批次其他调用",
+      "children": [
+        "每个工具独立返回结果",
+        "提升 Agent 任务鲁棒性"
+      ]
+    },
+    {
+      "label": "指标标签细化",
+      "detail": "OTEL_RESOURCE_ATTRIBUTES 值现作为指标标签",
+      "children": [
+        "可按团队或仓库切分使用指标",
+        "监控粒度更细"
+      ]
+    },
+    {
+      "label": "进度可视化",
+      "detail": "claude agents 行在任务分发时显示 done/total 进度",
+      "children": [
+        "peek 视图展示最长运行项目",
+        "优化复杂工作流监控"
+      ]
+    },
+    {
+      "label": "终端渲染优化",
+      "detail": "标题提及优化终端渲染性能",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OTEL_RESOURCE_ATTRIBUTES",
+      "type": "concept"
+    },
+    {
+      "name": "并行工具调用",
+      "type": "technique"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "claude-code",
+      "label": "发布"
+    },
+    {
+      "from": "claude-code",
+      "to": "并行工具调用",
+      "label": "支持"
+    },
+    {
+      "from": "claude-code",
+      "to": "OTEL_RESOURCE_ATTRIBUTES",
+      "label": "用作标签"
+    },
+    {
+      "from": "并行工具调用",
+      "to": "Agent",
+      "label": "服务于"
+    }
+  ]
+}

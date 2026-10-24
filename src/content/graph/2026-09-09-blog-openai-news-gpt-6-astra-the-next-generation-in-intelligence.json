@@ -1,0 +1,117 @@
+{
+  "center": "GPT-6 Astra 发布",
+  "branches": [
+    {
+      "label": "最强工作模型",
+      "detail": "面向企业复杂工作，在计算机操作、编程、网络安全等达 SOTA",
+      "children": [
+        "已上线 ChatGPT Work、Codex 和 API",
+        "无需 API 即可操作日常应用",
+        "内部提前数周部署验证"
+      ]
+    },
+    {
+      "label": "客户实测反馈",
+      "detail": "多家企业称 Astra 在各自基准上创下新纪录",
+      "children": [
+        "Devin 首发日集成，内部基准 SOTA",
+        "Hebbia：遵循简报提升 17%",
+        "Box：错误断言减少超 10%"
+      ]
+    },
+    {
+      "label": "成本效率领先",
+      "detail": "更少 token 与重试，占据专业工作成本效率前沿",
+      "children": [
+        "定价：输入 $10 / 输出 $50 每百万 token",
+        "DeepSWE v1.1 达 74% 新纪录",
+        "CodeRabbit：多抓约 20% bug"
+      ]
+    },
+    {
+      "label": "安全与对齐",
+      "detail": "迄今最对齐模型，意外结果大幅低于前代与竞品",
+      "children": [
+        "意外结果比 GPT-5.6 Sol 少 89%",
+        "比 Claude Fable 5.1 少 74.7%",
+        "首个达 Preparedness 网络安全临界阈值"
+      ]
+    },
+    {
+      "label": "企业管控",
+      "detail": "新增管理员控制与插件，可限制访问并逐步放开",
+      "children": [
+        "可限制网站、桌面应用与上传下载",
+        "确认策略要求高风险操作先审批",
+        "新增 Oracle Analytics、Power BI 等插件"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5.1",
+      "type": "model"
+    },
+    {
+      "name": "Devin",
+      "type": "product"
+    },
+    {
+      "name": "Preparedness Framework",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Astra",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "ChatGPT Work",
+      "label": "集成于"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Codex",
+      "label": "集成于"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "GPT-5.6 Sol",
+      "label": "安全优于"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Claude Fable 5.1",
+      "label": "安全优于"
+    },
+    {
+      "from": "Devin",
+      "to": "GPT-6 Astra",
+      "label": "集成"
+    }
+  ]
+}

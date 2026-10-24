@@ -1,0 +1,86 @@
+{
+  "center": "Don't classify. Hallucinate!",
+  "branches": [
+    {
+      "label": "核心思路",
+      "detail": "让 LLM 自由生成新标签，再用向量嵌入匹配已有标签",
+      "children": [
+        "Doug Turnbull 提出的方案",
+        "不把现有词表喂给模型"
+      ]
+    },
+    {
+      "label": "问题背景",
+      "detail": "Simon Willison 博客有 1,856 个标签，太多无法一次性喂给 LLM",
+      "children": [
+        "大量旧内容未打标签",
+        "无法直接问模型哪些标签匹配"
+      ]
+    },
+    {
+      "label": "提示词技巧",
+      "detail": "在 prompt 中给出标签形状示例，帮助模型猜得更准",
+      "children": [
+        "示例如 Furniture / Living Room Furniture…",
+        "查询示例：brown coffee table"
+      ]
+    },
+    {
+      "label": "匹配方式",
+      "detail": "用向量嵌入在现有语料中找与模型想象标签最接近的真实标签",
+      "children": [
+        "embeddings 匹配现有 corpus"
+      ]
+    }
+  ],
+  "flow": [
+    "让 LLM 自由生成标签",
+    "对生成标签做向量嵌入",
+    "与现有标签语料比对",
+    "选出最接近的真实标签"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Doug Turnbull",
+      "type": "person"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "embeddings",
+      "type": "technique"
+    },
+    {
+      "name": "vector embeddings",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Doug Turnbull",
+      "label": "引用方案"
+    },
+    {
+      "from": "Doug Turnbull",
+      "to": "LLM",
+      "label": "提出用"
+    },
+    {
+      "from": "LLM",
+      "to": "vector embeddings",
+      "label": "生成后匹配"
+    },
+    {
+      "from": "vector embeddings",
+      "to": "embeddings",
+      "label": "属于"
+    }
+  ]
+}

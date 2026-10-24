@@ -1,0 +1,103 @@
+{
+  "center": "Hugging Face 与 Cerebras 实时…",
+  "branches": [
+    {
+      "label": "合作方",
+      "detail": "Hugging Face 与 Cerebras 联手推进实时语音技术",
+      "children": [
+        "Hugging Face 提供模型与平台",
+        "Cerebras 提供高速推理"
+      ]
+    },
+    {
+      "label": "核心模型",
+      "detail": "使用 Gemma 4 模型实现实时语音交互",
+      "children": [
+        "Gemma 4 负责语音理解与生成"
+      ]
+    },
+    {
+      "label": "低延迟体验",
+      "detail": "降低响应延迟让对话更自然流畅",
+      "children": [
+        "延迟降低后交互更接近真人对话",
+        "速度直接影响用户体验"
+      ]
+    },
+    {
+      "label": "开放模块化",
+      "detail": "采用开放、模块化方式，开发者可灵活构建",
+      "children": [
+        "不锁定单一生态",
+        "可适配教育、客服、无障碍等场景"
+      ]
+    },
+    {
+      "label": "传输协议",
+      "detail": "实时语音通过 WebSocket 或 WebRTC 传输",
+      "children": [
+        "WebSocket",
+        "WebRTC"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Cerebras",
+      "type": "company"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "WebSocket",
+      "type": "technique"
+    },
+    {
+      "name": "WebRTC",
+      "type": "technique"
+    },
+    {
+      "name": "实时语音",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Cerebras",
+      "label": "合作"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Gemma 4",
+      "label": "集成"
+    },
+    {
+      "from": "Cerebras",
+      "to": "Gemma 4",
+      "label": "加速推理"
+    },
+    {
+      "from": "Gemma 4",
+      "to": "实时语音",
+      "label": "驱动"
+    },
+    {
+      "from": "实时语音",
+      "to": "WebSocket",
+      "label": "基于"
+    },
+    {
+      "from": "实时语音",
+      "to": "WebRTC",
+      "label": "基于"
+    }
+  ]
+}

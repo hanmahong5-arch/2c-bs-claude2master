@@ -28,6 +28,7 @@ const STATIC_ROUTES: {
   { path: "/tutorials", priority: 0.9, changeFreq: "weekly" },
   { path: "/skills", priority: 0.9, changeFreq: "weekly" },
   { path: "/changelog", priority: 0.9, changeFreq: "daily" },
+  { path: "/graph", priority: 0.85, changeFreq: "daily" },
   { path: "/weekly", priority: 0.8, changeFreq: "weekly" },
   { path: "/harness", priority: 0.8, changeFreq: "weekly" },
   { path: "/api-keys", priority: 0.8, changeFreq: "monthly" },

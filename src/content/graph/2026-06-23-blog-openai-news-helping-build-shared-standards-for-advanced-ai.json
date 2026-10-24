@@ -1,0 +1,87 @@
+{
+  "center": "OpenAI 与 Appia 共建 AI 标准",
+  "branches": [
+    {
+      "label": "合作主体",
+      "detail": "OpenAI 联合 Appia 基金会推动高级 AI 共享标准",
+      "children": [
+        "聚焦评估框架与安全实践",
+        "目标促进全球合作"
+      ]
+    },
+    {
+      "label": "核心内容",
+      "detail": "建立评估框架与安全实践两类共享标准",
+      "children": [
+        "标准化评估方法",
+        "部署前严格测试"
+      ]
+    },
+    {
+      "label": "目标价值",
+      "detail": "减少 AI 潜在风险，提升系统可靠性",
+      "children": [
+        "降低部署风险",
+        "增强系统可信度"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "提供更清晰合规路径与互操作性",
+      "children": [
+        "加速工具链可靠集成",
+        "简化合规流程"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Appia 基金会",
+      "type": "company"
+    },
+    {
+      "name": "评估框架",
+      "type": "concept"
+    },
+    {
+      "name": "安全实践",
+      "type": "concept"
+    },
+    {
+      "name": "共享标准",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Appia 基金会",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "共享标准",
+      "label": "推动"
+    },
+    {
+      "from": "Appia 基金会",
+      "to": "共享标准",
+      "label": "推动"
+    },
+    {
+      "from": "共享标准",
+      "to": "评估框架",
+      "label": "包含"
+    },
+    {
+      "from": "共享标准",
+      "to": "安全实践",
+      "label": "包含"
+    }
+  ]
+}

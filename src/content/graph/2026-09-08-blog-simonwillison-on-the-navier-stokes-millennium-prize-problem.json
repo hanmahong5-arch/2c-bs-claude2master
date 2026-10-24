@@ -1,0 +1,122 @@
+{
+  "center": "OpenAI 抢先解 Navier–Stokes 争议",
+  "branches": [
+    {
+      "label": "OpenAI 的成果",
+      "detail": "用未发布模型解出千禧年难题 Navier–Stokes 存在性与光滑性",
+      "children": [
+        "9月1日启动，9月5日得出结果，约88小时",
+        "GPT-6 Astra 做 Lean 形式化验证，耗时17小时",
+        "共发4.9M消息、约3000亿输出token"
+      ]
+    },
+    {
+      "label": "抢先指控",
+      "detail": "NYU 教授 Tristan Buckmaster 指 OpenAI 抢在其团队之前发布",
+      "children": [
+        "Tristan 与 Anthropic 的 Levent Alpöge 已…",
+        "8月15日取得突破，使用 Claude 与 Codex",
+        "OpenAI 未直接回答首个 prompt 发送时间"
+      ]
+    },
+    {
+      "label": "数据争议",
+      "detail": "是否使用了对方在 Codex 中的草稿数据训练模型，未获明确答复",
+      "children": [
+        "OpenAI 称未访问具体用户数据",
+        "承认无法排除去标识化数据影响模型",
+        "双方证明差异显著，Euler 情形结论不同"
+      ]
+    },
+    {
+      "label": "署名与竞争",
+      "detail": "OpenAI 愿等 Tristan 发表或让其署名，但拒绝 Levent 共同署名",
+      "children": [
+        "理由是与 Levent 雇主 Anthropic 的竞争关系",
+        "OpenAI 提出联合公告承认其优先权"
+      ]
+    },
+    {
+      "label": "更广的担忧",
+      "detail": "仅凭传闻即可驱动巨额 LLM 投入抢先解题",
+      "children": [
+        "类似安全领域：有漏洞传闻就能找到 exploit",
+        "作者质疑「数据用于改进模型」的真实含义",
+        "假设：用 ChatGPT 部分解题，成果可能助他人先…"
+      ]
+    }
+  ],
+  "flow": [
+    "听闻千禧年难题被解传闻",
+    "启动内部模型评估",
+    "智能体解题约88小时",
+    "GPT-6 Astra 做 Lean 验证",
+    "联系对方提出联合发布"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Tristan Buckmaster",
+      "type": "person"
+    },
+    {
+      "name": "Levent Alpöge",
+      "type": "person"
+    },
+    {
+      "name": "Navier–Stokes 问题",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Astra",
+      "label": "使用"
+    },
+    {
+      "from": "Tristan Buckmaster",
+      "to": "Claude",
+      "label": "使用"
+    },
+    {
+      "from": "Tristan Buckmaster",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "Levent Alpöge",
+      "to": "Anthropic",
+      "label": "任职于"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Navier–Stokes 问题",
+      "label": "解出"
+    },
+    {
+      "from": "Tristan Buckmaster",
+      "to": "Navier–Stokes 问题",
+      "label": "研究"
+    }
+  ]
+}

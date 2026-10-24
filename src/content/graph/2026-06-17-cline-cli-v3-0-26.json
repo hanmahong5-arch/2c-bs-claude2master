@@ -1,0 +1,80 @@
+{
+  "center": "Cline CLI 回滚模型选择器 UI",
+  "branches": [
+    {
+      "label": "回滚内容",
+      "detail": "撤销可展开的模型选择器分区与 ClinePass 模型列表",
+      "children": [
+        "恢复为之前的模型选择界面"
+      ]
+    },
+    {
+      "label": "更新范围",
+      "detail": "仅做 UI 回退，未引入新功能或底层逻辑改动",
+      "children": [
+        "不涉及后端模型调用",
+        "不影响配置逻辑"
+      ]
+    },
+    {
+      "label": "设计取舍",
+      "detail": "界面稳定性优先于实验性功能，避免用户困惑",
+      "children": [
+        "用户体验连贯性优先",
+        "核心工作流不受干扰"
+      ]
+    },
+    {
+      "label": "架构启示",
+      "detail": "前端交互层与后端解耦，可独立调整界面",
+      "children": [
+        "前端与后端解耦"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "模型选择器 UI",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "前端交互层",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "模型选择器 UI",
+      "label": "回滚"
+    },
+    {
+      "from": "模型选择器 UI",
+      "to": "ClinePass",
+      "label": "包含列表"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "agent harness",
+      "label": "属于"
+    },
+    {
+      "from": "前端交互层",
+      "to": "模型选择器 UI",
+      "label": "承载"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "center": "OpenAI 生物防御行动计划",
+  "branches": [
+    {
+      "label": "AI 加速威胁评估",
+      "detail": "AI 模型快速分析科学文献与数据，识别潜在生物风险路径",
+      "children": [
+        "需构建处理生物医学信息的专用 AI 系统"
+      ]
+    },
+    {
+      "label": "投资防护性应用",
+      "detail": "利用 AI 开发疫苗、疗法和诊断工具等防御性生物技术",
+      "children": [
+        "导向建设性、防御性生物创新"
+      ]
+    },
+    {
+      "label": "多方治理框架",
+      "detail": "政府、学术界和产业界合作建立新规范与治理框架",
+      "children": [
+        "安全、伦理与跨部门协作融入设计部署"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AI 增强生物防御",
+      "type": "concept"
+    },
+    {
+      "name": "生物威胁评估",
+      "type": "concept"
+    },
+    {
+      "name": "防护性生物技术",
+      "type": "concept"
+    },
+    {
+      "name": "多利益相关方治理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AI 增强生物防御",
+      "label": "提出"
+    },
+    {
+      "from": "AI 增强生物防御",
+      "to": "生物威胁评估",
+      "label": "包含"
+    },
+    {
+      "from": "AI 增强生物防御",
+      "to": "防护性生物技术",
+      "label": "包含"
+    },
+    {
+      "from": "AI 增强生物防御",
+      "to": "多利益相关方治理",
+      "label": "包含"
+    }
+  ]
+}

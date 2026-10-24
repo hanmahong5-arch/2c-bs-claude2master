@@ -1,0 +1,91 @@
+{
+  "center": "goose v1.51.0 ACP 状态机接管桌…",
+  "branches": [
+    {
+      "label": "ACP 接管桌面端",
+      "detail": "Desktop 通过 ACP prompt meta 路由到状态机循环，UI 事件源需与状态机解耦。",
+      "children": [
+        "#11247 路由到状态机循环",
+        "harness 避免双写状态"
+      ]
+    },
+    {
+      "label": "思考流顺序重定义",
+      "detail": "流式 thinking 保持在文本与工具调用之前，harness 须按序缓冲。",
+      "children": [
+        "#11837 thinking 先于文本与工具调用",
+        "#11836 修复 Anthropic 保留思考合规",
+        "禁止并行拼接"
+      ]
+    },
+    {
+      "label": "工具调用与退出码",
+      "detail": "目标不再每次工具调用都重新催促，中断的 headless 运行返回失败。",
+      "children": [
+        "#11697 不再每次调用重新催促",
+        "#11938 中断 headless 返回失败",
+        "nudge 与退出码视为显式状态"
+      ]
+    }
+  ],
+  "flow": [
+    "Desktop 发 ACP prompt meta",
+    "路由到状态机循环",
+    "按序缓冲 thinking 流",
+    "输出文本与工具调用",
+    "显式处理 nudge 与退出码"
+  ],
+  "entities": [
+    {
+      "name": "goose",
+      "type": "product"
+    },
+    {
+      "name": "ACP",
+      "type": "concept"
+    },
+    {
+      "name": "Desktop",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "状态机",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Desktop",
+      "to": "ACP",
+      "label": "通过路由"
+    },
+    {
+      "from": "ACP",
+      "to": "状态机",
+      "label": "驱动"
+    },
+    {
+      "from": "goose",
+      "to": "Desktop",
+      "label": "包含"
+    },
+    {
+      "from": "harness",
+      "to": "状态机",
+      "label": "解耦"
+    },
+    {
+      "from": "Anthropic",
+      "to": "goose",
+      "label": "合规影响"
+    }
+  ]
+}

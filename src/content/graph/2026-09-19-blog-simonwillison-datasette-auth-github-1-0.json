@@ -1,0 +1,91 @@
+{
+  "center": "datasette-auth-github 1.0 发布",
+  "branches": [
+    {
+      "label": "发布起因",
+      "detail": "作者发现登录会话持续很短，排查后是 cookie 问题",
+      "children": [
+        "插件设置 cookie 时缺少 Max-Age 参数",
+        "cookie 随浏览器会话结束而失效",
+        "Mobile Safari 会话结束尤其频繁"
+      ]
+    },
+    {
+      "label": "修复与发布",
+      "detail": "在 #80 中修复 cookie 问题后决定升到 1.0",
+      "children": [
+        "修复后 cookie 可跨浏览器会话保持",
+        "插件已存在较长时间且测试充分",
+        "兼容 Datasette 0.65.x 与 1.0ax"
+      ]
+    },
+    {
+      "label": "作者动机",
+      "detail": "Simon Willison 希望更积极地把稳定插件推到 1.0",
+      "children": [
+        "该插件运行在 agent.datasette.io 演示站",
+        "作者自述在改进插件版本管理习惯"
+      ]
+    }
+  ],
+  "flow": [
+    "发现会话过期",
+    "排查 cookie 设置",
+    "定位缺少 Max-Age",
+    "在 #80 中修复",
+    "升级为 1.0 发布"
+  ],
+  "entities": [
+    {
+      "name": "datasette-auth-github",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "agent.datasette.io",
+      "type": "product"
+    },
+    {
+      "name": "Mobile Safari",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "datasette-auth-github",
+      "label": "开发"
+    },
+    {
+      "from": "datasette-auth-github",
+      "to": "Datasette",
+      "label": "是插件"
+    },
+    {
+      "from": "datasette-auth-github",
+      "to": "GitHub",
+      "label": "认证对接"
+    },
+    {
+      "from": "datasette-auth-github",
+      "to": "agent.datasette.io",
+      "label": "部署于"
+    },
+    {
+      "from": "datasette-auth-github",
+      "to": "Mobile Safari",
+      "label": "受影响于"
+    }
+  ]
+}

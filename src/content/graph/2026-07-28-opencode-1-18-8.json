@@ -1,0 +1,104 @@
+{
+  "center": "opencode v1.18.8 更新",
+  "branches": [
+    {
+      "label": "MCP 兼容性",
+      "detail": "改进与新版 MCP 服务器及 OAuth 流程的兼容性",
+      "children": [
+        "修复 SDK 会话过期后 MCP 服务器重连",
+        "支持并发请求",
+        "mcp debug 使用配置的 OAuth 回调端口"
+      ]
+    },
+    {
+      "label": "桌面端优化",
+      "detail": "新增快捷键与多项体验修复",
+      "children": [
+        "快捷键打开项目选择器",
+        "标签页键盘导航遵循可见顺序",
+        "打开文件时展开带尾部分隔符的 Windows 文件夹"
+      ]
+    },
+    {
+      "label": "稳定性修复",
+      "detail": "防止桌面端冻结与状态刷新问题",
+      "children": [
+        "提供商连接状态更改后立即刷新",
+        "防止从主页关闭项目时冻结",
+        "防止右侧面板加载时冻结会话视图"
+      ]
+    },
+    {
+      "label": "Linux 与社区",
+      "detail": "Linux 包安装 AppStream 元数据及社区贡献修复",
+      "children": [
+        "Linux 包安装 AppStream 元数据",
+        "本地桌面运行使用频道数据库",
+        "修复核心中 MCP 环境字段"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "SDK",
+      "type": "concept"
+    },
+    {
+      "name": "Linux",
+      "type": "concept"
+    },
+    {
+      "name": "AppStream",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "MCP",
+      "label": "改进兼容"
+    },
+    {
+      "from": "opencode",
+      "to": "OAuth",
+      "label": "修复回调"
+    },
+    {
+      "from": "opencode",
+      "to": "Gemini",
+      "label": "停止发送"
+    },
+    {
+      "from": "opencode",
+      "to": "SDK",
+      "label": "修复重连"
+    },
+    {
+      "from": "opencode",
+      "to": "Linux",
+      "label": "优化安装"
+    },
+    {
+      "from": "Linux",
+      "to": "AppStream",
+      "label": "安装元数据"
+    }
+  ]
+}

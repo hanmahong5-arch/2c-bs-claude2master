@@ -1,0 +1,75 @@
+{
+  "center": "ChatGPT Enterprise 用量与支出…",
+  "branches": [
+    {
+      "label": "用量分析仪表盘",
+      "detail": "企业可查看团队级使用情况，按用户、功能和时间段细分",
+      "children": [
+        "按用户、功能、时间段细分",
+        "提供 AI 资源消耗洞察"
+      ]
+    },
+    {
+      "label": "增强支出控制",
+      "detail": "在每月预算上限外新增硬性限制与软性通知阈值",
+      "children": [
+        "基于使用量的硬性限制",
+        "软性通知阈值",
+        "主动防止预算超支"
+      ]
+    },
+    {
+      "label": "API 密钥与团队集成",
+      "detail": "控制功能与 API 密钥管理及团队结构集成，预算策略可应用到特定团队或项目",
+      "children": [
+        "预算与策略应用到特定团队",
+        "简化治理与成本分摊"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Enterprise",
+      "type": "product"
+    },
+    {
+      "name": "API 密钥管理",
+      "type": "concept"
+    },
+    {
+      "name": "用量分析仪表盘",
+      "type": "concept"
+    },
+    {
+      "name": "支出控制",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Enterprise",
+      "label": "推出新功能"
+    },
+    {
+      "from": "ChatGPT Enterprise",
+      "to": "用量分析仪表盘",
+      "label": "包含"
+    },
+    {
+      "from": "ChatGPT Enterprise",
+      "to": "支出控制",
+      "label": "包含"
+    },
+    {
+      "from": "支出控制",
+      "to": "API 密钥管理",
+      "label": "集成"
+    }
+  ]
+}

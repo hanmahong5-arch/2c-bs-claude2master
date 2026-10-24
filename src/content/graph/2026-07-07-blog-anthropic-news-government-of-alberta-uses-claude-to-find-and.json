@@ -1,0 +1,121 @@
+{
+  "center": "Alberta用Claude修复政府系统漏洞",
+  "branches": [
+    {
+      "label": "20小时扫4.66亿行",
+      "detail": "约50个Claude Code智能体并行扫描全部代码库，传统方式需约6.5年",
+      "children": [
+        "覆盖1280个应用、3400个代码仓库",
+        "两阶段：规则引擎标记+逐行核对文件位置",
+        "发现传统扫描工具漏掉的问题"
+      ]
+    },
+    {
+      "label": "自动修复与重建",
+      "detail": "Claude生成补丁、先写测试再修复，过时系统用现代语言重建",
+      "children": [
+        "25年Java补贴门户5天重建（原耗时5个月）",
+        "所有补丁经工程师审核后才上线"
+      ]
+    },
+    {
+      "label": "持续安全审查",
+      "detail": "红队蓝队等专用审查智能体嵌入开发流程，基于Claude Agent SDK",
+      "children": [
+        "红队模拟攻击者探测漏洞利用路径",
+        "蓝队对照国际标准写修复计划",
+        "每次检查约95项安全控制"
+      ]
+    },
+    {
+      "label": "AI人才培养",
+      "detail": "Alberta AI Academy培训政府员工与公众使用AI",
+      "children": [
+        "数千名政府员工参与",
+        "超1万名公众学习"
+      ]
+    },
+    {
+      "label": "未来现代化计划",
+      "detail": "将185个遗留应用整合为16个现代可复用应用",
+      "children": [
+        "目标降低维护成本与复杂度",
+        "发布白皮书供其他政府参考"
+      ]
+    }
+  ],
+  "flow": [
+    "Claude Code扫描代码库",
+    "规则引擎标记问题",
+    "逐行核对定位漏洞",
+    "生成并测试修复补丁",
+    "工程师审核后上线",
+    "红蓝队持续审查"
+  ],
+  "entities": [
+    {
+      "name": "Government of Alberta",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Claude Opus",
+      "type": "model"
+    },
+    {
+      "name": "Claude Sonnet",
+      "type": "model"
+    },
+    {
+      "name": "Claude Agent SDK",
+      "type": "product"
+    },
+    {
+      "name": "Nate Glubish",
+      "type": "person"
+    },
+    {
+      "name": "Alberta AI Academy",
+      "type": "product"
+    },
+    {
+      "name": "技术债",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Government of Alberta",
+      "to": "Claude Code",
+      "label": "使用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude Opus",
+      "label": "调用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude Sonnet",
+      "label": "调用"
+    },
+    {
+      "from": "Government of Alberta",
+      "to": "Claude Agent SDK",
+      "label": "基于"
+    },
+    {
+      "from": "Nate Glubish",
+      "to": "Government of Alberta",
+      "label": "任职于"
+    },
+    {
+      "from": "Government of Alberta",
+      "to": "Alberta AI Academy",
+      "label": "运营"
+    }
+  ]
+}

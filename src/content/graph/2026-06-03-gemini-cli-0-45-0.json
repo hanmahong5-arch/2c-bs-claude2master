@@ -1,0 +1,71 @@
+{
+  "center": "gemini-cli v0.45.0 稳定性修复",
+  "branches": [
+    {
+      "label": "修复终端循环",
+      "detail": "解决 Termux 移动终端下的无限重启与重绘循环",
+      "children": [
+        "非标准终端中 agent 可稳定运行"
+      ]
+    },
+    {
+      "label": "过滤会话上下文",
+      "detail": "恢复会话时自动清理内部元数据，避免历史污染",
+      "children": [
+        "保障上下文管理纯净性"
+      ]
+    },
+    {
+      "label": "工具串行执行",
+      "detail": "强制 update_topic 工具顺序运行，防止并发冲突",
+      "children": [
+        "对依赖确定顺序的 agent 流程关键"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "Termux",
+      "type": "product"
+    },
+    {
+      "name": "update_topic",
+      "type": "technique"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    },
+    {
+      "name": "上下文管理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "gemini-cli",
+      "to": "Termux",
+      "label": "修复循环"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "update_topic",
+      "label": "强制串行"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "上下文管理",
+      "label": "过滤元数据"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "agent",
+      "label": "提升稳定性"
+    }
+  ]
+}

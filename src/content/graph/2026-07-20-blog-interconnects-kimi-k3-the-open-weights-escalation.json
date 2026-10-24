@@ -1,0 +1,113 @@
+{
+  "center": "Kimi K3 开源逼近前沿",
+  "branches": [
+    {
+      "label": "K3 发布",
+      "detail": "Moonshot AI 7月16日发布旗舰模型 Kimi K3，2.8T 参数 MoE，权重7月27日开源",
+      "children": [
+        "Vals AI 指数第2，Artificial Analysis 智能…",
+        "Frontend Code Arena 第1，价格更低",
+        "史上最强开源模型"
+      ]
+    },
+    {
+      "label": "差距缩短",
+      "detail": "开源与闭源、中美模型性能差距从6-9个月缩至3-5个月",
+      "children": [
+        "K3 是自 DeepSeek R1 以来最接近前沿的开源模型",
+        "中国实验室在数据、算法、架构、工具上规模化执行"
+      ]
+    },
+    {
+      "label": "中国开源承诺",
+      "detail": "习近平在 WAIC 主题演讲中承诺中国 AI 生态走向开源与全球扩散",
+      "children": [
+        "中国实验室开源最初是务实选择：获取采用与反馈",
+        "政府认为当前前沿模型无重大风险"
+      ]
+    },
+    {
+      "label": "蒸馏争议",
+      "detail": "K3 证明中国公司能像美国领先公司一样构建模型，蒸馏贡献至多很小",
+      "children": [
+        "Moonshot AI 资源远少于 Anthropic 和 OpenAI",
+        "Kimi 团队文化出色，受 GPU 限制"
+      ]
+    },
+    {
+      "label": "峰值模型格局",
+      "detail": "当前峰值性能：Claude Fable 5、GPT 5.6 Sol、Kimi K3、Grok 4.5 等",
+      "children": [
+        "DeepMind 和部分美国巨头排名靠后",
+        "GLM 5.2、Qwen 3.7 Max 等开源模型在列"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Moonshot AI",
+      "type": "company"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek R1",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "GPT 5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Xi Jinping",
+      "type": "person"
+    },
+    {
+      "name": "WAIC",
+      "type": "concept"
+    },
+    {
+      "name": "open-weights",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Moonshot AI",
+      "to": "Kimi K3",
+      "label": "发布"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "DeepSeek R1",
+      "label": "延续开源"
+    },
+    {
+      "from": "Xi Jinping",
+      "to": "WAIC",
+      "label": "发表演讲"
+    },
+    {
+      "from": "Xi Jinping",
+      "to": "open-weights",
+      "label": "承诺支持"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "Claude Fable 5",
+      "label": "性能接近"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "GPT 5.6 Sol",
+      "label": "性能接近"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "center": "GPT-5.6 智能与性价比",
+  "branches": [
+    {
+      "label": "每 token 智能",
+      "detail": "相同计算量下产出更高质量结果",
+      "children": [
+        "更少 token 获得更好性能",
+        "降低推理成本"
+      ]
+    },
+    {
+      "label": "每美元性能",
+      "detail": "架构优化提升单位成本任务完成度",
+      "children": [
+        "更经济部署复杂 AI 应用"
+      ]
+    },
+    {
+      "label": "按需扩展",
+      "detail": "动态分配计算资源应对高难度任务",
+      "children": [
+        "支撑自适应高负载 agent 系统"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    },
+    {
+      "name": "推理成本",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "推理成本",
+      "label": "降低"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "agent",
+      "label": "支撑"
+    }
+  ]
+}

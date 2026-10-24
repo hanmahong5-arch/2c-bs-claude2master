@@ -1,0 +1,106 @@
+{
+  "center": "生物黑客减重与人体能量代谢",
+  "branches": [
+    {
+      "label": "减重动机",
+      "detail": "作者2019年中约200lb，决定减至少25lb至约175lb",
+      "children": [
+        "175lb对应其性别年龄身高最低全因死亡率",
+        "一年间尝试生酮、断食、血糖检测等"
+      ]
+    },
+    {
+      "label": "体重本质",
+      "detail": "体重增加约等于身体电池被充满，主要储存在脂肪组织",
+      "children": [
+        "脂肪以甘油三酯形式被身体囤积或合成",
+        "食物充裕时几乎不“拔掉充电器”"
+      ]
+    },
+    {
+      "label": "ATP通用货币",
+      "detail": "身体所有储能最终都为把ADP加磷酸生成ATP",
+      "children": [
+        "ATP为跨膜运输、DNA解链、肌肉收缩供能",
+        "体内ATP存量很少，需不断再生"
+      ]
+    },
+    {
+      "label": "四块电池",
+      "detail": "身体有四种容量与动员速度不同的能量储存",
+      "children": [
+        "磷酸肌酸：超短期，容量极小",
+        "糖原：肝约120g、肌约400g，约2000kcal",
+        "脂肪：约40lb储存162000kcal"
+      ]
+    }
+  ],
+  "flow": [
+    "进食后葡萄糖入血",
+    "过剩葡萄糖合成糖原或脂肪",
+    "运动时按顺序动员电池",
+    "ATP水解供能"
+  ],
+  "entities": [
+    {
+      "name": "ATP",
+      "type": "concept"
+    },
+    {
+      "name": "ADP",
+      "type": "concept"
+    },
+    {
+      "name": "Glycogen",
+      "type": "concept"
+    },
+    {
+      "name": "Adipose tissue",
+      "type": "concept"
+    },
+    {
+      "name": "Phosphocreatine system",
+      "type": "concept"
+    },
+    {
+      "name": "ketogenic diet",
+      "type": "concept"
+    },
+    {
+      "name": "intermittent fasting",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "ADP",
+      "to": "ATP",
+      "label": "合成"
+    },
+    {
+      "from": "Glycogen",
+      "to": "ATP",
+      "label": "转化为"
+    },
+    {
+      "from": "Adipose tissue",
+      "to": "ATP",
+      "label": "氧化供能"
+    },
+    {
+      "from": "Phosphocreatine system",
+      "to": "ATP",
+      "label": "快速再生"
+    },
+    {
+      "from": "ketogenic diet",
+      "to": "Adipose tissue",
+      "label": "促进分解"
+    },
+    {
+      "from": "intermittent fasting",
+      "to": "Glycogen",
+      "label": "消耗"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "center": "opencode v1.18.4 更新",
+  "branches": [
+    {
+      "label": "Kimi 自适应思考",
+      "detail": "Kimi 模型在 Anthropic 兼容提供商上启用自适应思考控制",
+      "children": [
+        "默认输出总结推理过程",
+        "提升推理效率"
+      ]
+    },
+    {
+      "label": "OpenAI 提供商修复",
+      "detail": "修复慢连接头部超时，尊重提供商推理选项",
+      "children": [
+        "避免错误回退"
+      ]
+    },
+    {
+      "label": "桌面版改进",
+      "detail": "同步终端与应用主题，重写 v2 提示输入",
+      "children": [
+        "增强命令与上下文交互可靠性",
+        "修复命令草稿保留、空文本发送 Bug"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Kimi",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "自适应思考控制",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Kimi",
+      "to": "自适应思考控制",
+      "label": "采用"
+    },
+    {
+      "from": "Kimi",
+      "to": "Anthropic",
+      "label": "兼容"
+    },
+    {
+      "from": "opencode",
+      "to": "Kimi",
+      "label": "支持"
+    },
+    {
+      "from": "opencode",
+      "to": "OpenAI",
+      "label": "修复集成"
+    }
+  ]
+}

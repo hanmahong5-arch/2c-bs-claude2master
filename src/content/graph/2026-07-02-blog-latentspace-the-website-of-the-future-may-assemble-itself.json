@@ -1,0 +1,119 @@
+{
+  "center": "Adobe 探索 AI 实时组装网页",
+  "branches": [
+    {
+      "label": "agentic site 概念",
+      "detail": "网站按访客意图实时组装个性化页面，Adobe 称之 audience of one",
+      "children": [
+        "用浏览行为与搜索词推断意图类别",
+        "LLM 从既有内容检索而非凭空生成",
+        "示例：露营者看到户外咖啡页面"
+      ]
+    },
+    {
+      "label": "延迟与成本",
+      "detail": "Adobe 要求页面生成不超过一两秒，当前推理成本约每页 1–2 美分",
+      "children": [
+        "模型评估兼顾准确率与速度",
+        "Sanchez 称成本只会继续下降"
+      ]
+    },
+    {
+      "label": "落地与不确定",
+      "detail": "尚未大规模部署，正寻找愿意试验的客户，电商是首选场景",
+      "children": [
+        "适合高转化、用户类型多的场景",
+        "Sanchez：AI 易造东西，难知造什么"
+      ]
+    },
+    {
+      "label": "面向人与 agent",
+      "detail": "网站需同时服务人类访客与个人 agent，支持不同委托程度",
+      "children": [
+        "agent 可自主复购，买夹克仍需人决策",
+        "WebMCP 向 agent 暴露结构化工具",
+        "A2A 后端可绕过可视化网站"
+      ]
+    },
+    {
+      "label": "网站角色演变",
+      "detail": "传统网站不会消失，但会变成按需组装界面的受治理内容系统",
+      "children": [
+        "不再是固定页面集合",
+        "Sanchez：agentic targeting 必然出现"
+      ]
+    }
+  ],
+  "flow": [
+    "采集浏览行为与搜索信号",
+    "归类访客意图类别",
+    "从既有内容检索素材",
+    "LLM 实时组装页面"
+  ],
+  "entities": [
+    {
+      "name": "Adobe",
+      "type": "company"
+    },
+    {
+      "name": "Carlos Sanchez",
+      "type": "person"
+    },
+    {
+      "name": "agentic site",
+      "type": "concept"
+    },
+    {
+      "name": "audience of one",
+      "type": "concept"
+    },
+    {
+      "name": "WebMCP",
+      "type": "technique"
+    },
+    {
+      "name": "MCP Apps",
+      "type": "product"
+    },
+    {
+      "name": "A2A",
+      "type": "technique"
+    },
+    {
+      "name": "LLM",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Adobe",
+      "to": "agentic site",
+      "label": "提出"
+    },
+    {
+      "from": "Carlos Sanchez",
+      "to": "Adobe",
+      "label": "任职于"
+    },
+    {
+      "from": "agentic site",
+      "to": "audience of one",
+      "label": "又称"
+    },
+    {
+      "from": "agentic site",
+      "to": "LLM",
+      "label": "依赖"
+    },
+    {
+      "from": "WebMCP",
+      "to": "agentic site",
+      "label": "支撑"
+    },
+    {
+      "from": "A2A",
+      "to": "agentic site",
+      "label": "支撑"
+    }
+  ]
+}

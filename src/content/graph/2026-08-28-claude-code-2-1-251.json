@@ -1,0 +1,100 @@
+{
+  "center": "claude-code v2.1.251 更新",
+  "branches": [
+    {
+      "label": "模型切换钩子",
+      "detail": "新增钩子事件，可拦截或注释模型切换",
+      "children": [
+        "PreModelSwitch / PostModelSwitch",
+        "SessionStart 恢复钩子提供会话陈旧度与重新缓…"
+      ]
+    },
+    {
+      "label": "子代理流式输出",
+      "detail": "前台子代理工具调用与结果实时流式传输",
+      "children": [
+        "前台子代理流式到 Remote Control 客户端",
+        "后台子代理仍仅显示状态"
+      ]
+    },
+    {
+      "label": "缓存与花费统计",
+      "detail": "/usage 与 /cost 新增缓存和花费限制信息",
+      "children": [
+        "/usage 新增花费限制条",
+        "状态行新增 rate_limits.spend_limit 字段",
+        "/cost 新增每会话提示缓存行：命中率、未命中…"
+      ]
+    },
+    {
+      "label": "安全修复",
+      "detail": "修复越权读写与路径穿越等漏洞",
+      "children": [
+        "文件工具权限检查后跟随符号链接交换导致越权读写",
+        "插件命令路径穿越",
+        "项目设置启用详细追踪"
+      ]
+    },
+    {
+      "label": "Bash 沙箱改进",
+      "detail": "改进 Bash 命令输出文件在沙箱中的创建与读取",
+      "children": [
+        "防止重定向或替换"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "PreModelSwitch",
+      "type": "concept"
+    },
+    {
+      "name": "PostModelSwitch",
+      "type": "concept"
+    },
+    {
+      "name": "SessionStart",
+      "type": "concept"
+    },
+    {
+      "name": "Remote Control",
+      "type": "product"
+    },
+    {
+      "name": "prompt_cache",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "PreModelSwitch",
+      "label": "新增钩子"
+    },
+    {
+      "from": "claude-code",
+      "to": "PostModelSwitch",
+      "label": "新增钩子"
+    },
+    {
+      "from": "claude-code",
+      "to": "SessionStart",
+      "label": "新增恢复钩子"
+    },
+    {
+      "from": "claude-code",
+      "to": "Remote Control",
+      "label": "流式传输"
+    },
+    {
+      "from": "claude-code",
+      "to": "prompt_cache",
+      "label": "新增统计"
+    }
+  ]
+}

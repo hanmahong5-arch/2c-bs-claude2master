@@ -1,0 +1,124 @@
+{
+  "center": "V7 用 GPT 给 AI Agent 建机构记忆",
+  "branches": [
+    {
+      "label": "Context Graph 记忆层",
+      "detail": "把企业文件抽成实体关系图，供 Agent 直接查询",
+      "children": [
+        "连接 SharePoint、Google Drive 等仓库",
+        "每条事实保留原文引用证据",
+        "图不够时回退 RAG 搜原文"
+      ]
+    },
+    {
+      "label": "多模型分工",
+      "detail": "按任务难度分快中智三档调用不同 GPT 模型",
+      "children": [
+        "GPT-5.6 Luna 做高量结构化抽取",
+        "GPT-5.6 Terra/Sol 做推理与工具调用",
+        "GPT-6 Astra 处理最难图查询"
+      ]
+    },
+    {
+      "label": "实测效果",
+      "detail": "长流程工作流提速降本，并保留可审计轨迹",
+      "children": [
+        "50–100 步流程数分钟完成，99.9% 准确率",
+        "资产筛选从一天缩到 15 分钟，快 21 倍",
+        "保险理赔错误率降 13.5%"
+      ]
+    },
+    {
+      "label": "模型评测数据",
+      "detail": "自建基准测试各模型在引用、抽取、成本上的表现",
+      "children": [
+        "最难图查询 GPT-6 Astra 89%，Sol 78%",
+        "Luna 单文档成本比 GPT-5.4 mini 低 78%",
+        "Sol 把工具调用错误率从 2.7% 降到 0.2%"
+      ]
+    },
+    {
+      "label": "接入 ChatGPT 与 Codex",
+      "detail": "通过 MCP 服务器暴露图查询与工作流创建能力",
+      "children": [
+        "客户可在 ChatGPT 中查询 Context Graph",
+        "Codex 里经 MCP 建工作流",
+        "中等工作流创建从 1 小时降到 20 分钟"
+      ]
+    }
+  ],
+  "flow": [
+    "连接 SharePoint/Drive 等仓库",
+    "扫描抽取实体、关系与事实",
+    "写入 Context Graph 并附引用",
+    "Agent 经 MCP 查询图或回退 RAG",
+    "按难度分派不同 GPT 模型执行",
+    "输出结果并保留审计轨迹"
+  ],
+  "entities": [
+    {
+      "name": "V7",
+      "type": "company"
+    },
+    {
+      "name": "V7 Go",
+      "type": "product"
+    },
+    {
+      "name": "Context Graph",
+      "type": "concept"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "RAG",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "V7",
+      "to": "V7 Go",
+      "label": "开发"
+    },
+    {
+      "from": "V7 Go",
+      "to": "Context Graph",
+      "label": "构建"
+    },
+    {
+      "from": "V7 Go",
+      "to": "GPT-5.6 Luna",
+      "label": "调用"
+    },
+    {
+      "from": "V7 Go",
+      "to": "GPT-5.6 Sol",
+      "label": "调用"
+    },
+    {
+      "from": "V7 Go",
+      "to": "GPT-6 Astra",
+      "label": "测试"
+    },
+    {
+      "from": "V7 Go",
+      "to": "MCP",
+      "label": "通过"
+    }
+  ]
+}

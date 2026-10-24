@@ -1,0 +1,118 @@
+{
+  "center": "OpenClaw 系统提示词分层构建",
+  "branches": [
+    {
+      "label": "三层组装",
+      "detail": "纯渲染器、配置解析、运行时适配器分工，避免单体构建器",
+      "children": [
+        "buildAgentSystemPrompt 只做纯渲染，不读全…",
+        "resolveAgentSystemPromptConfig 解析…",
+        "运行时适配器收集工具、沙箱、渠道能力等实时事实"
+      ]
+    },
+    {
+      "label": "缓存边界",
+      "detail": "稳定内容置于缓存边界之上，易变内容追加在边界之下",
+      "children": [
+        "Project Context 与静态 Memory Recall 留在…",
+        "UI Presentation、Messaging、Runtime 等每…",
+        "本地前缀缓存可跨渠道轮次复用稳定工作区前缀"
+      ]
+    },
+    {
+      "label": "Provider 贡献",
+      "detail": "插件可注入缓存感知指导，不替换 OpenClaw 自有提示词",
+      "children": [
+        "可替换 interaction_style…",
+        "可注入稳定前缀与动态后缀",
+        "v2026.4.5 起为推荐路径…"
+      ]
+    },
+    {
+      "label": "GPT-5 贡献",
+      "detail": "内置 GPT-5 家族提示词贡献使用该机制",
+      "children": [
+        "stablePrefix 行为契约：执行策略、工具纪律…",
+        "可选 interaction_style 覆盖以调整语气",
+        "personality 默认 friendly，off 仅移除友好…"
+      ]
+    },
+    {
+      "label": "固定段落",
+      "detail": "提示词紧凑，含 Tooling、Execution Bias、Safety 等固定段",
+      "children": [
+        "Runtime Context 用分隔符承载执行会话、子代…",
+        "Promised Work 要求结束回合前安排完成或观察…",
+        "长任务用 cron 做未来跟进，exec/process 仅…"
+      ]
+    }
+  ],
+  "flow": [
+    "渲染器生成提示词",
+    "解析配置开关",
+    "适配器收集实时事实",
+    "Provider 注入贡献",
+    "按缓存边界分层"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "buildAgentSystemPrompt",
+      "type": "technique"
+    },
+    {
+      "name": "resolveAgentSystemPromptConfig",
+      "type": "technique"
+    },
+    {
+      "name": "GPT-5",
+      "type": "model"
+    },
+    {
+      "name": "resolveGpt5SystemPromptContribution",
+      "type": "technique"
+    },
+    {
+      "name": "before_prompt_build",
+      "type": "technique"
+    },
+    {
+      "name": "Runtime Context",
+      "type": "concept"
+    },
+    {
+      "name": "prompt cache boundary",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "buildAgentSystemPrompt",
+      "label": "使用"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "resolveAgentSystemPromptConfig",
+      "label": "使用"
+    },
+    {
+      "from": "resolveGpt5SystemPromptContribution",
+      "to": "GPT-5",
+      "label": "服务"
+    },
+    {
+      "from": "resolveGpt5SystemPromptContribution",
+      "to": "before_prompt_build",
+      "label": "替代"
+    },
+    {
+      "from": "Runtime Context",
+      "to": "prompt cache boundary",
+      "label": "位于下方"
+    }
+  ]
+}

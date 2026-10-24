@@ -1,0 +1,118 @@
+{
+  "center": "Cloudflare Python Workers GA",
+  "branches": [
+    {
+      "label": "正式 GA",
+      "detail": "两年预览后 Python 成为 Workers 平台一等支持语言",
+      "children": [
+        "官方称 first-class 语言",
+        "2026 年 9 月 21 日发布"
+      ]
+    },
+    {
+      "label": "运行原理",
+      "detail": "Python 经 Pyodide 编译为 WebAssembly，跑在 V8 的 workerd 运行时",
+      "children": [
+        "Pyodide 编译为 Wasm",
+        "基于 V8 的 workerd"
+      ]
+    },
+    {
+      "label": "功能限制",
+      "detail": "Wasm 虚拟机中多进程与多线程均不可用",
+      "children": [
+        "multiprocessing 不可用",
+        "threading 不可用"
+      ]
+    },
+    {
+      "label": "本地开发",
+      "detail": "pywrangler 工具本地完整模拟整套栈",
+      "children": [
+        "PyPI 包名 workers-py",
+        "123MB workerd 二进制"
+      ]
+    },
+    {
+      "label": "生态投入",
+      "detail": "Cloudflare 对 Python 生态的重要投入，含 Pyodide 维护者",
+      "children": [
+        "Gyeongjae Choi",
+        "Dominik Picheta",
+        "Hood Chatham"
+      ]
+    }
+  ],
+  "flow": [
+    "编写 Python 代码",
+    "Pyodide 编译为 Wasm",
+    "workerd 运行时执行",
+    "pywrangler 本地模拟"
+  ],
+  "entities": [
+    {
+      "name": "Cloudflare",
+      "type": "company"
+    },
+    {
+      "name": "Python Workers",
+      "type": "product"
+    },
+    {
+      "name": "Pyodide",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "concept"
+    },
+    {
+      "name": "workerd",
+      "type": "product"
+    },
+    {
+      "name": "pywrangler",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Gyeongjae Choi",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cloudflare",
+      "to": "Python Workers",
+      "label": "发布"
+    },
+    {
+      "from": "Python Workers",
+      "to": "Pyodide",
+      "label": "依赖"
+    },
+    {
+      "from": "Pyodide",
+      "to": "WebAssembly",
+      "label": "编译为"
+    },
+    {
+      "from": "Python Workers",
+      "to": "workerd",
+      "label": "运行于"
+    },
+    {
+      "from": "pywrangler",
+      "to": "workerd",
+      "label": "本地模拟"
+    },
+    {
+      "from": "Gyeongjae Choi",
+      "to": "Pyodide",
+      "label": "维护"
+    }
+  ]
+}

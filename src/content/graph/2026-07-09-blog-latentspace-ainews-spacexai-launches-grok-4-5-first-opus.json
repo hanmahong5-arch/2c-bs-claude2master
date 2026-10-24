@@ -1,0 +1,108 @@
+{
+  "center": "SpaceXAI 发布 Grok 4.5",
+  "branches": [
+    {
+      "label": "发布与定位",
+      "detail": "xAI 推出首个专为编码与智能体训练的旗舰模型，主打性价比",
+      "children": [
+        "与 Cursor 合作训练，称其最强模型",
+        "定位 Opus 级但更快、更省 token、更便宜",
+        "Musk 称对标 Opus 4.7 但更快"
+      ]
+    },
+    {
+      "label": "价格与规格",
+      "detail": "输入 $2/百万 token，输出 $6/百万 token，缓存命中打 75% 折",
+      "children": [
+        "500k 上下文，Musk 称下周或回 1M",
+        "1.5T 参数，为 Grok 4.3 的 3 倍",
+        "保留视觉输入与可配置推理"
+      ]
+    },
+    {
+      "label": "评测表现",
+      "detail": "Artificial Analysis 智能指数 54 分排第 4，效率突出",
+      "children": [
+        "τ³-Banking 33% 居首，超 GPT-5.5 的 31%",
+        "编码智能体指数 76，与 Codex 中 GPT-5.5 相当",
+        "每任务输出 token 比 Opus 4.8 低逾 60%"
+      ]
+    },
+    {
+      "label": "生态支持",
+      "detail": "发布即上线 Grok Build、API、Cursor 等平台",
+      "children": [
+        "Hermes Agent 首日支持",
+        "OpenRouter、Portal 同步可用",
+        "Cursor 首周双倍用量"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "SpaceXAI",
+      "type": "company"
+    },
+    {
+      "name": "xAI",
+      "type": "company"
+    },
+    {
+      "name": "Grok 4.5",
+      "type": "model"
+    },
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "Elon Musk",
+      "type": "person"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "SpaceXAI",
+      "to": "Grok 4.5",
+      "label": "发布"
+    },
+    {
+      "from": "xAI",
+      "to": "Grok 4.5",
+      "label": "发布"
+    },
+    {
+      "from": "Cursor",
+      "to": "Grok 4.5",
+      "label": "合作训练"
+    },
+    {
+      "from": "Elon Musk",
+      "to": "Grok 4.5",
+      "label": "宣传"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "Grok 4.5",
+      "label": "评测"
+    },
+    {
+      "from": "Grok 4.5",
+      "to": "Opus 4.8",
+      "label": "对标"
+    }
+  ]
+}

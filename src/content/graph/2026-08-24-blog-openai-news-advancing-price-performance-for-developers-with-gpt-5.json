@@ -1,0 +1,119 @@
+{
+  "center": "GPT-5.6 登陆 Kiro",
+  "branches": [
+    {
+      "label": "模型上架",
+      "detail": "GPT-5.6 系列（Sol、Terra、Luna）现已在 Kiro 中可用",
+      "children": [
+        "面向 AI 原生编码的开发代理",
+        "覆盖规划、构建、评审、测试"
+      ]
+    },
+    {
+      "label": "成本优化",
+      "detail": "OpenAI 与 AWS 联合优化 Kiro 环境与模型",
+      "children": [
+        "Terminal-Bench 2.1 上 Terra 成本降约 82%",
+        "每 token 产出更多有效工作"
+      ]
+    },
+    {
+      "label": "规格驱动开发",
+      "detail": "Kiro 把高层意图转为需求、技术设计与可执行任务",
+      "children": [
+        "结构化上下文让模型理解团队目标",
+        "关键检查点先评审再落地"
+      ]
+    },
+    {
+      "label": "开发者收益",
+      "detail": "更少迭代产出更高质量代码，单次会话价值更高",
+      "children": [
+        "多步复杂编码任务更一致",
+        "用属性测试校验实现正确性"
+      ]
+    },
+    {
+      "label": "双方表态",
+      "detail": "AWS 与 OpenAI 高管称将持续合作优化",
+      "children": [
+        "Swami Sivasubramanian：扩展开发者选择",
+        "Colleen Kapase：按阶段匹配智能、速度与成本"
+      ]
+    }
+  ],
+  "flow": [
+    "输入产品想法与需求",
+    "生成需求与技术设计",
+    "拆解为可执行任务",
+    "模型完成多步编码",
+    "检查点评审修改",
+    "属性测试校验正确性"
+  ],
+  "entities": [
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "Kiro",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AWS",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Terra",
+      "type": "model"
+    },
+    {
+      "name": "Terminal-Bench 2.1",
+      "type": "concept"
+    },
+    {
+      "name": "spec-driven development",
+      "type": "technique"
+    },
+    {
+      "name": "Swami Sivasubramanian",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "GPT-5.6",
+      "to": "Kiro",
+      "label": "集成于"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6",
+      "label": "发布"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AWS",
+      "label": "合作优化"
+    },
+    {
+      "from": "GPT-5.6 Terra",
+      "to": "Terminal-Bench 2.1",
+      "label": "测试于"
+    },
+    {
+      "from": "Kiro",
+      "to": "spec-driven development",
+      "label": "采用"
+    },
+    {
+      "from": "Swami Sivasubramanian",
+      "to": "AWS",
+      "label": "任职于"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "center": "ChatGPT Work 销售自动化",
+  "branches": [
+    {
+      "label": "客户简报自动化",
+      "detail": "从真实工作输入生成 pipeline briefs，自动汇总客户动态与机会状态",
+      "children": [
+        "减少手动整理时间"
+      ]
+    },
+    {
+      "label": "会议准备包",
+      "detail": "产出 meeting prep packets，含客户背景、历史互动与建议议程",
+      "children": [
+        "帮助销售代表快速进入状态"
+      ]
+    },
+    {
+      "label": "预测与诊断",
+      "detail": "通过 forecast reviews 与 stalled-deal diagnoses 分析数据并给出行动建议",
+      "children": [
+        "辅助决策而非替代判断"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "pipeline briefs",
+      "type": "concept"
+    },
+    {
+      "name": "meeting prep packets",
+      "type": "concept"
+    },
+    {
+      "name": "forecast reviews",
+      "type": "concept"
+    },
+    {
+      "name": "stalled-deal diagnoses",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "展示"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "pipeline briefs",
+      "label": "生成"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "meeting prep packets",
+      "label": "产出"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "forecast reviews",
+      "label": "支持"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "stalled-deal diagnoses",
+      "label": "支持"
+    }
+  ]
+}

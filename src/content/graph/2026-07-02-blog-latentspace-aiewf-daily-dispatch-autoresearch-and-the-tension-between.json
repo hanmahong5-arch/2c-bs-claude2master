@@ -1,0 +1,107 @@
+{
+  "center": "AI代理与人类主体性的张力",
+  "branches": [
+    {
+      "label": "Autoresearch循环",
+      "detail": "让代理构建维护系统自身的外层循环，持续发现与适应",
+      "children": [
+        "Roland Gavrilescu：外层循环研究并维护内层循环",
+        "Thariq Shihipar：模型是长出来的，不是开发出…"
+      ]
+    },
+    {
+      "label": "人类守住外层",
+      "detail": "Osmani主张代理跑内层执行，外层仍属工程与人类主体性",
+      "children": [
+        "内层是能力，外层是主体性",
+        "Geoffrey Litt：工厂隐喻令人沮丧，隐喻很重要"
+      ]
+    },
+    {
+      "label": "理解者与委托者",
+      "detail": "Litt强调人类需理解代码，否则被代理取代",
+      "children": [
+        "理解者持续产出下一个大想法",
+        "委托理解者将被代理替代"
+      ]
+    },
+    {
+      "label": "人机分工80/20",
+      "detail": "Bakaus的Impeccable让代理做前80%，人做后20%",
+      "children": [
+        "没有auto，也不会有auto",
+        "参与带来所有权与目的感"
+      ]
+    },
+    {
+      "label": "审美与代理网站",
+      "detail": "生成媒体与agentic sites都需人类判断把关",
+      "children": [
+        "Brichtova：模型有默认审美，来自建模团队",
+        "Sanchez：易建难知建什么，不能整站生成"
+      ]
+    }
+  ],
+  "flow": [
+    "代理跑内层执行循环",
+    "人类定义目标与判断",
+    "代理维护外层循环",
+    "人类保留主体性与责任"
+  ],
+  "entities": [
+    {
+      "name": "AIEWF",
+      "type": "concept"
+    },
+    {
+      "name": "Autoresearch",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Addy Osmani",
+      "type": "person"
+    },
+    {
+      "name": "Geoffrey Litt",
+      "type": "person"
+    },
+    {
+      "name": "Impeccable",
+      "type": "product"
+    },
+    {
+      "name": "Paul Bakaus",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "开发"
+    },
+    {
+      "from": "Addy Osmani",
+      "to": "Autoresearch",
+      "label": "回应"
+    },
+    {
+      "from": "Paul Bakaus",
+      "to": "Impeccable",
+      "label": "发布"
+    },
+    {
+      "from": "Geoffrey Litt",
+      "to": "AIEWF",
+      "label": "演讲于"
+    }
+  ]
+}

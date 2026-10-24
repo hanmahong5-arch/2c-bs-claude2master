@@ -1,0 +1,106 @@
+{
+  "center": "Claude 3.5 Sonnet 的…",
+  "branches": [
+    {
+      "label": "SWE-bench 基准",
+      "detail": "评估模型解决真实 GitHub 问题的能力，用 PR 单元测试评分",
+      "children": [
+        "SWE-bench Verified 是 500 题人工审核子集",
+        "任务来自流行开源 Python 仓库"
+      ]
+    },
+    {
+      "label": "49% 成功率",
+      "detail": "升级版 Claude 3.5 Sonnet 在 SWE-bench Verified 达 49%",
+      "children": [
+        "超过此前最优模型的 45%",
+        "尚无模型突破 50%"
+      ]
+    },
+    {
+      "label": "Agent 脚手架",
+      "detail": "模型加软件脚手架，负责提示生成、输出解析与交互循环",
+      "children": [
+        "同一模型下脚手架不同，表现差异显著",
+        "设计哲学：最小脚手架，让模型自主决策"
+      ]
+    },
+    {
+      "label": "工具设计",
+      "detail": "Bash Tool 执行命令，Edit Tool 查看与编辑文件",
+      "children": [
+        "工具描述含详细说明以预防误用",
+        "采样至模型完成或超 200k 上下文"
+      ]
+    }
+  ],
+  "flow": [
+    "探索仓库结构",
+    "写脚本复现错误",
+    "编辑源码修复",
+    "重跑脚本验证",
+    "处理边缘情况"
+  ],
+  "entities": [
+    {
+      "name": "Claude 3.5 Sonnet",
+      "type": "model"
+    },
+    {
+      "name": "SWE-bench",
+      "type": "concept"
+    },
+    {
+      "name": "SWE-bench Verified",
+      "type": "concept"
+    },
+    {
+      "name": "Bash Tool",
+      "type": "product"
+    },
+    {
+      "name": "Edit Tool",
+      "type": "product"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude 3.5 Sonnet",
+      "to": "SWE-bench Verified",
+      "label": "达到49%"
+    },
+    {
+      "from": "SWE-bench Verified",
+      "to": "SWE-bench",
+      "label": "是子集"
+    },
+    {
+      "from": "agent",
+      "to": "Claude 3.5 Sonnet",
+      "label": "包含"
+    },
+    {
+      "from": "agent",
+      "to": "Bash Tool",
+      "label": "使用"
+    },
+    {
+      "from": "agent",
+      "to": "Edit Tool",
+      "label": "使用"
+    },
+    {
+      "from": "SWE-bench",
+      "to": "GitHub",
+      "label": "源自"
+    }
+  ]
+}

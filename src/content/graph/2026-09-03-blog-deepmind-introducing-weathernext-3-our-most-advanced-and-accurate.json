@@ -1,0 +1,120 @@
+{
+  "center": "Google WeatherNext 3 天气AI",
+  "branches": [
+    {
+      "label": "核心升级",
+      "detail": "用实时卫星数据替代传统物理模拟，预报精度提升约5倍",
+      "children": [
+        "分辨率从25km提升至5km",
+        "更新频率从6小时缩短至1小时",
+        "由DeepMind与Google Research联合发布"
+      ]
+    },
+    {
+      "label": "数据来源",
+      "detail": "直接学习实时地球静止卫星观测，摆脱NWP六小时数据滞后",
+      "children": [
+        "摄入1小时地球静止卫星拼图",
+        "训练于稀疏气象站观测数据",
+        "采用FGN网格Transformer架构"
+      ]
+    },
+    {
+      "label": "降水预测",
+      "detail": "训练于NASA IMERG等高精度降水数据，改善雨雪预报",
+      "children": [
+        "解决传统模型模糊估计问题",
+        "捕捉强风暴边界"
+      ]
+    },
+    {
+      "label": "清洁能源",
+      "detail": "新增100米风速、云量和太阳辐射预测，服务风光发电",
+      "children": [
+        "助力电网运营商匹配供需",
+        "支持可再生能源规划"
+      ]
+    },
+    {
+      "label": "产品集成",
+      "detail": "已接入Search、Gemini、Maps、Google Maps Platform和Cloud",
+      "children": [
+        "用户可直接在Google应用中查看",
+        "开发者可通过Cloud集成数据"
+      ]
+    }
+  ],
+  "flow": [
+    "摄入实时卫星拼图",
+    "FGN网格Transformer处理",
+    "输出网格化预报场",
+    "生成每小时高分辨率预报",
+    "分发至Google各产品"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Google Research",
+      "type": "company"
+    },
+    {
+      "name": "WeatherNext 3",
+      "type": "model"
+    },
+    {
+      "name": "WeatherNext 2",
+      "type": "model"
+    },
+    {
+      "name": "Brightband",
+      "type": "company"
+    },
+    {
+      "name": "NASA",
+      "type": "company"
+    },
+    {
+      "name": "Functional Generative Network",
+      "type": "technique"
+    },
+    {
+      "name": "Gemini",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "WeatherNext 3",
+      "label": "发布"
+    },
+    {
+      "from": "Google Research",
+      "to": "WeatherNext 3",
+      "label": "联合发布"
+    },
+    {
+      "from": "WeatherNext 3",
+      "to": "WeatherNext 2",
+      "label": "升级自"
+    },
+    {
+      "from": "Brightband",
+      "to": "WeatherNext 3",
+      "label": "独立评估"
+    },
+    {
+      "from": "WeatherNext 3",
+      "to": "Gemini",
+      "label": "集成于"
+    },
+    {
+      "from": "WeatherNext 3",
+      "to": "Functional Generative Network",
+      "label": "采用"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw 委托代理架构",
+  "branches": [
+    {
+      "label": "什么是委托代理",
+      "detail": "拥有独立身份、代表人类行动但绝不冒充人类的 OpenClaw 代理",
+      "children": [
+        "自有邮箱、显示名、日历",
+        "通过身份提供商获得显式委托权限",
+        "AGENTS.md 定义常设指令与自主边界"
+      ]
+    },
+    {
+      "label": "为何需要",
+      "detail": "解决组织部署中的问责与权限范围两大问题",
+      "children": [
+        "消息明确来自代理而非人类",
+        "身份提供商独立于 OpenClaw 工具策略执行访问控制",
+        "从个人模式（信任边界=你）扩展到组织模式"
+      ]
+    },
+    {
+      "label": "能力分级",
+      "detail": "从最低层级起步，按需逐级升级",
+      "children": [
+        "Tier 1 只读+草稿：仅需读权限，不写入",
+        "Tier 2 代表发送：显示 on behalf of 头",
+        "Tier 3 主动执行：结合 Cron Jobs 与常设指令"
+      ]
+    },
+    {
+      "label": "隔离与加固",
+      "detail": "连接外部账户前必须完成的安全前置条件",
+      "children": [
+        "SOUL.md 硬规则：禁止未批准外发、防提示注入",
+        "Gateway 层工具策略：deny write/edit/browser",
+        "沙箱隔离与审计日志留存"
+      ]
+    },
+    {
+      "label": "配置步骤",
+      "detail": "创建代理、配置身份提供商、绑定频道、添加凭证",
+      "children": [
+        "openclaw agents add delegate 创建工作区",
+        "Microsoft 365 用 Set-Mailbox 授权",
+        "Google Workspace 启用域范围委托"
+      ]
+    }
+  ],
+  "flow": [
+    "创建委托代理",
+    "配置身份提供商委托",
+    "绑定频道路由",
+    "添加独立凭证",
+    "配置审计日志"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "concept"
+    },
+    {
+      "name": "SOUL.md",
+      "type": "concept"
+    },
+    {
+      "name": "Cron Jobs",
+      "type": "technique"
+    },
+    {
+      "name": "Microsoft 365",
+      "type": "product"
+    },
+    {
+      "name": "Google Workspace",
+      "type": "product"
+    },
+    {
+      "name": "Multi-Agent Routing",
+      "type": "technique"
+    },
+    {
+      "name": "Gateway",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "AGENTS.md",
+      "label": "读取"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "SOUL.md",
+      "label": "加载"
+    },
+    {
+      "from": "Cron Jobs",
+      "to": "OpenClaw",
+      "label": "驱动"
+    },
+    {
+      "from": "Microsoft 365",
+      "to": "OpenClaw",
+      "label": "提供委托权限"
+    },
+    {
+      "from": "Google Workspace",
+      "to": "OpenClaw",
+      "label": "提供委托权限"
+    },
+    {
+      "from": "Multi-Agent Routing",
+      "to": "OpenClaw",
+      "label": "路由消息"
+    }
+  ]
+}

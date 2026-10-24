@@ -1,0 +1,95 @@
+{
+  "center": "Holo3.1 本地计算机操作智能体",
+  "branches": [
+    {
+      "label": "核心能力",
+      "detail": "无需联网即可在本地执行复杂计算机操作任务",
+      "children": [
+        "定位为快速本地 Computer Use Agent",
+        "属于 edge to cloud 系列"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "由 HCompany 发布，Hugging Face 社区博客介绍",
+      "children": [
+        "作者 merve，2026 年 6 月 3 日发布",
+        "获 40 次点赞"
+      ]
+    },
+    {
+      "label": "相关产品",
+      "detail": "HCompany 同期推出 HoloTab 浏览器 AI 助手",
+      "children": [
+        "HoloTab 为 AI 浏览器伴侣",
+        "2026 年 4 月 15 日发布"
+      ]
+    },
+    {
+      "label": "社区反馈",
+      "detail": "社区对 A3B-35B 模型评价积极",
+      "children": [
+        "评论称 A3B-35B is a beast",
+        "HCompany 成员参与互动"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Holo3.1",
+      "type": "product"
+    },
+    {
+      "name": "HCompany",
+      "type": "company"
+    },
+    {
+      "name": "HoloTab",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "merve",
+      "type": "person"
+    },
+    {
+      "name": "A3B-35B",
+      "type": "model"
+    },
+    {
+      "name": "Computer Use Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "HCompany",
+      "to": "Holo3.1",
+      "label": "发布"
+    },
+    {
+      "from": "HCompany",
+      "to": "HoloTab",
+      "label": "发布"
+    },
+    {
+      "from": "merve",
+      "to": "Holo3.1",
+      "label": "撰文介绍"
+    },
+    {
+      "from": "Holo3.1",
+      "to": "Computer Use Agent",
+      "label": "属于"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Holo3.1",
+      "label": "社区展示"
+    }
+  ]
+}

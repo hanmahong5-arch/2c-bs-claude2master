@@ -1,0 +1,86 @@
+{
+  "center": "opencode v1.17.12 更新",
+  "branches": [
+    {
+      "label": "MCP 与思考修复",
+      "detail": "修复 Claude Sonnet 5 自适应思考、MCP 内容优先级与 OAuth 重连问题",
+      "children": [
+        "MCP 内容优先于结构化输出",
+        "OAuth 后重连 MCP 服务器（即使被禁用）",
+        "Claude Sonnet 5 启用自适应思考"
+      ]
+    },
+    {
+      "label": "YOLO 模式",
+      "detail": "TUI 新增 YOLO 模式自动批准权限，支持无中断自动化流程",
+      "children": [
+        "TUI 自动批准权限",
+        "桌面端自动补全 MCP 资源",
+        "桌面端显示令牌与成本总计"
+      ]
+    },
+    {
+      "label": "SDK 事件流",
+      "detail": "SDK 新增实时事件订阅、活跃会话访问、分页持久会话历史与权限请求端点",
+      "children": [
+        "实时事件订阅流",
+        "活跃会话访问",
+        "分页持久会话历史"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Claude Sonnet 5",
+      "type": "model"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "OAuth",
+      "type": "technique"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "SDK",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Claude Sonnet 5",
+      "label": "启用思考"
+    },
+    {
+      "from": "opencode",
+      "to": "MCP",
+      "label": "修复重连"
+    },
+    {
+      "from": "opencode",
+      "to": "OAuth",
+      "label": "修复重连"
+    },
+    {
+      "from": "opencode",
+      "to": "TUI",
+      "label": "新增模式"
+    },
+    {
+      "from": "opencode",
+      "to": "SDK",
+      "label": "新增事件流"
+    }
+  ]
+}

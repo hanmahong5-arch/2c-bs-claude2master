@@ -1,0 +1,114 @@
+{
+  "center": "Preply 用 AI 生成课程摘要",
+  "branches": [
+    {
+      "label": "Lesson Insights",
+      "detail": "课后自动生成个性化反馈报告，覆盖语法、词汇、发音与下一步建议",
+      "children": [
+        "课程录制转写后由 OpenAI 分析生成",
+        "课结束前几分钟触发，几分钟内送达聊天",
+        "75% 英语学习者、70%+ 导师在用"
+      ]
+    },
+    {
+      "label": "人机结合定位",
+      "detail": "AI 强化而非取代导师，承担重复性备课与笔记工作",
+      "children": [
+        "导师负责动力、文化与情感连接",
+        "西班牙语导师备课时间减少一半以上",
+        "反馈直接喂给练习引擎生成个性化作业"
+      ]
+    },
+    {
+      "label": "内部全面用 AI",
+      "detail": "ChatGPT Enterprise 全公司推广，API 支撑客服与内部系统",
+      "children": [
+        "600+ 员工培训，周活从 60% 升至 95%",
+        "Brand Voice GPT 统一品牌语气",
+        "约 94% 工程师用 Codex 写码与评审"
+      ]
+    },
+    {
+      "label": "选型与成效",
+      "detail": "对比多个模型后选择 OpenAI，看重速度、可靠与生产可用性",
+      "children": [
+        "满意度 4.7/5，超 30 万条评分",
+        "产品市场契合度 70%",
+        "一年后多数活跃学习者仍在用"
+      ]
+    }
+  ],
+  "flow": [
+    "课堂录制并转写",
+    "OpenAI 分析转写内容",
+    "生成结构化反馈报告",
+    "推送至师生聊天",
+    "生成个性化练习作业"
+  ],
+  "entities": [
+    {
+      "name": "Preply",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Lesson Insights",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT Enterprise",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Dmytro Voloshyn",
+      "type": "person"
+    },
+    {
+      "name": "Emily Stott",
+      "type": "person"
+    },
+    {
+      "name": "个性化学习",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Preply",
+      "to": "OpenAI",
+      "label": "采用其模型"
+    },
+    {
+      "from": "Preply",
+      "to": "Lesson Insights",
+      "label": "推出"
+    },
+    {
+      "from": "Lesson Insights",
+      "to": "OpenAI",
+      "label": "由 API 驱动"
+    },
+    {
+      "from": "Preply",
+      "to": "ChatGPT Enterprise",
+      "label": "全公司部署"
+    },
+    {
+      "from": "Preply",
+      "to": "Codex",
+      "label": "用于工程"
+    },
+    {
+      "from": "Dmytro Voloshyn",
+      "to": "Preply",
+      "label": "联合创始人"
+    }
+  ]
+}

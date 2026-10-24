@@ -1,0 +1,113 @@
+{
+  "center": "本地编程智能体搭建",
+  "branches": [
+    {
+      "label": "为何用本地",
+      "detail": "本地栈透明可查、成本固定、隐私可控，是闭源订阅的替代方案",
+      "children": [
+        "硬件外几乎零运行成本",
+        "离线可用，如飞机或林中小屋",
+        "避免 API 涨价与模型升级破坏工作流"
+      ]
+    },
+    {
+      "label": "推荐模型",
+      "detail": "Qwen3.6 35B-A3B 是同尺寸当前最强本地模型，约 22GB",
+      "children": [
+        "需约 30-40GB 内存",
+        "在 Mac Mini M4 与 DGX Spark 上流畅",
+        "备选 Cohere North Mini Code"
+      ]
+    },
+    {
+      "label": "Harness 选择",
+      "detail": "可用 Qwen-Code、Codex、Claude Code、Cline 等承载本地模型",
+      "children": [
+        "Qwen 模型针对 Qwen-Code 优化",
+        "Codex 开源，Claude Code 不开源",
+        "Qwen-Code 与 Codex 可同机并行"
+      ]
+    },
+    {
+      "label": "本地模型服务",
+      "detail": "先搭本地 LLM 服务，可选 Ollama、LM Studio、vLLM、SGLang、MLX",
+      "children": [
+        "作者偏好从零实现以理解全栈",
+        "服务框架负责托管模型"
+      ]
+    }
+  ],
+  "flow": [
+    "选择本地模型",
+    "用推理引擎托管",
+    "接入编程 harness",
+    "读写文件与改代码",
+    "运行命令并验证"
+  ],
+  "entities": [
+    {
+      "name": "Sebastian Raschka",
+      "type": "person"
+    },
+    {
+      "name": "Qwen3.6 35B-A3B",
+      "type": "model"
+    },
+    {
+      "name": "Qwen-Code",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "North Mini Code",
+      "type": "model"
+    },
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "vLLM",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sebastian Raschka",
+      "to": "Qwen3.6 35B-A3B",
+      "label": "推荐"
+    },
+    {
+      "from": "Qwen3.6 35B-A3B",
+      "to": "Qwen-Code",
+      "label": "针对优化"
+    },
+    {
+      "from": "Qwen-Code",
+      "to": "Claude Code",
+      "label": "替代"
+    },
+    {
+      "from": "Codex",
+      "to": "Claude Code",
+      "label": "并列使用"
+    },
+    {
+      "from": "North Mini Code",
+      "to": "Qwen-Code",
+      "label": "可接入"
+    },
+    {
+      "from": "vLLM",
+      "to": "Qwen3.6 35B-A3B",
+      "label": "托管"
+    }
+  ]
+}

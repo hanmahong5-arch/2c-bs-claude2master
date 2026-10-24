@@ -1,0 +1,53 @@
+{
+  "center": "ChatGPT Ads 年化收入破 10 亿美元",
+  "branches": [
+    {
+      "label": "收入里程碑",
+      "detail": "ChatGPT Ads 年化收入运行率突破 10 亿美元",
+      "children": [
+        "显示广告模式在 AI 服务中商业可行"
+      ]
+    },
+    {
+      "label": "全球扩展",
+      "detail": "广告业务向全球更多市场扩展",
+      "children": [
+        "为免费和低成本 AI 访问提供资金"
+      ]
+    },
+    {
+      "label": "开发者参考",
+      "detail": "广告模式或成 AI 工具可持续盈利参考",
+      "children": [
+        "需平衡用户体验与商业化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Ads",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Ads",
+      "label": "推出"
+    },
+    {
+      "from": "ChatGPT Ads",
+      "to": "ChatGPT",
+      "label": "属于"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "center": "OpenAI 配合欧盟 AI 法案",
+  "branches": [
+    {
+      "label": "治理基础",
+      "detail": "OpenAI 强调安全、安保、透明度与来源标注是负责任 AI 治理的基础",
+      "children": [
+        "安全、安保、透明度、来源标注"
+      ]
+    },
+    {
+      "label": "持续合规",
+      "detail": "随着欧盟 AI 法案推进，OpenAI 将持续调整做法以确保合规并支持监管",
+      "children": [
+        "随法案推进调整做法"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "AI 工具链需内置可追溯性和透明度机制，以应对日益严格的监管要求",
+      "children": [
+        "工具链内置可追溯性",
+        "工具链内置透明度"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "欧盟 AI 法案",
+      "type": "concept"
+    },
+    {
+      "name": "负责任 AI 治理",
+      "type": "concept"
+    },
+    {
+      "name": "透明度",
+      "type": "concept"
+    },
+    {
+      "name": "来源标注",
+      "type": "concept"
+    },
+    {
+      "name": "可追溯性",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "欧盟 AI 法案",
+      "label": "配合"
+    },
+    {
+      "from": "OpenAI",
+      "to": "负责任 AI 治理",
+      "label": "推进"
+    },
+    {
+      "from": "透明度",
+      "to": "负责任 AI 治理",
+      "label": "构成基础"
+    },
+    {
+      "from": "来源标注",
+      "to": "负责任 AI 治理",
+      "label": "构成基础"
+    },
+    {
+      "from": "可追溯性",
+      "to": "欧盟 AI 法案",
+      "label": "应对要求"
+    }
+  ]
+}

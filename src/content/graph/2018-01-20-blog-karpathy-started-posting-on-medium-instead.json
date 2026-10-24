@@ -1,0 +1,74 @@
+{
+  "center": "Karpathy 转向 Medium 发文",
+  "branches": [
+    {
+      "label": "转向原因",
+      "detail": "在 Tesla 工作繁忙，Medium 发布流程更快更便捷",
+      "children": [
+        "适合中短篇幅内容",
+        "降低输出门槛"
+      ]
+    },
+    {
+      "label": "个人博客局限",
+      "detail": "个人博客已两年未更新，易被误解为消失",
+      "children": [
+        "维护成本高",
+        "未来仍用于长篇"
+      ]
+    },
+    {
+      "label": "内容分发策略",
+      "detail": "Medium 作默认中短平台，个人博客保留深度文章",
+      "children": [
+        "按内容类型动态调整",
+        "多渠道管理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Andrej Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "Medium",
+      "type": "product"
+    },
+    {
+      "name": "Tesla",
+      "type": "company"
+    },
+    {
+      "name": "个人博客",
+      "type": "concept"
+    },
+    {
+      "name": "内容分发",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Andrej Karpathy",
+      "to": "Medium",
+      "label": "转向"
+    },
+    {
+      "from": "Andrej Karpathy",
+      "to": "Tesla",
+      "label": "任职于"
+    },
+    {
+      "from": "Andrej Karpathy",
+      "to": "个人博客",
+      "label": "保留用于"
+    },
+    {
+      "from": "Medium",
+      "to": "内容分发",
+      "label": "用于"
+    }
+  ]
+}

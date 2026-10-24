@@ -1,0 +1,69 @@
+{
+  "center": "Hermes Agent v2026.7.1 更新",
+  "branches": [
+    {
+      "label": "P0/P1 清零",
+      "detail": "约 700 个最高优先级问题 12 天内全部解决，repo 零遗留",
+      "children": [
+        "团队承诺持续保持零积压",
+        "核心稳定性提升"
+      ]
+    },
+    {
+      "label": "MoA 一等公民",
+      "detail": "Mixture-of-Agents 预设出现在所有模型选择器中",
+      "children": [
+        "显示每个参考模型推理过程",
+        "聚合答案实时流式输出"
+      ]
+    },
+    {
+      "label": "代理自我验证",
+      "detail": "/goal 引入完成合约，靠运行项目检查判断完成",
+      "children": [
+        "记录验证证据",
+        "从模型断言转向证据证明"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "Mixture-of-Agents",
+      "type": "technique"
+    },
+    {
+      "name": "MoA",
+      "type": "technique"
+    },
+    {
+      "name": "/goal",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "Mixture-of-Agents",
+      "label": "集成"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "/goal",
+      "label": "引入"
+    },
+    {
+      "from": "Mixture-of-Agents",
+      "to": "MoA",
+      "label": "简称"
+    }
+  ]
+}

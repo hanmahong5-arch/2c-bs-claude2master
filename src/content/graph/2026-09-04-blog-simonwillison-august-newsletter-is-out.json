@@ -1,0 +1,96 @@
+{
+  "center": "Simon Willison 八月通讯",
+  "branches": [
+    {
+      "label": "通讯内容",
+      "detail": "八月赞助者专属通讯已发布，付费订阅可提前一月阅读",
+      "children": [
+        "OpenAI 意外网络攻击细节",
+        "Claude auto mode",
+        "理解 ChatGPT Work"
+      ]
+    },
+    {
+      "label": "订阅方式",
+      "detail": "每月 10 美元赞助即可获取精选 LLM 动态邮件摘要",
+      "children": [
+        "赞助者专属，免费版晚一月",
+        "七月通讯可作预览"
+      ]
+    },
+    {
+      "label": "近期文章",
+      "detail": "博客近期发布多篇 LLM 相关文章",
+      "children": [
+        "Claude Opus 5.5、GPT-6 Sol/Luna 与价格战",
+        "System One 决策模型新形态",
+        "GPT-6 Astra 生成跑步路线"
+      ]
+    },
+    {
+      "label": "赞助商",
+      "detail": "本期由 Teleport 赞助，分享 LLM 代码库清理经验",
+      "children": [
+        "13 名工程师 90 天实践",
+        "安全漏洞发现重质不重量"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Teleport",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 5.5",
+      "type": "model"
+    },
+    {
+      "name": "System One",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Claude",
+      "label": "报道"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "OpenAI",
+      "label": "报道"
+    },
+    {
+      "from": "Teleport",
+      "to": "Simon Willison",
+      "label": "赞助"
+    },
+    {
+      "from": "Claude Opus 5.5",
+      "to": "GPT-6",
+      "label": "引发价格战"
+    }
+  ]
+}

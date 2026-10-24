@@ -1,0 +1,44 @@
+{
+  "center": "codex rust-v0.144.4 维护版",
+  "branches": [
+    {
+      "label": "无可见变化",
+      "detail": "该补丁版本仅含内部维护性改动，用户侧无任何功能变化",
+      "children": [
+        "版本号 rust-v0.144.4"
+      ]
+    },
+    {
+      "label": "集成无需调整",
+      "detail": "对 agent harness 设计无直接影响，集成逻辑不必改动",
+      "children": [
+        "无需调整集成逻辑"
+      ]
+    },
+    {
+      "label": "关注后续版本",
+      "detail": "实际功能更新需等待后续版本发布",
+      "children": [
+        "建议关注后续版本"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex",
+      "to": "agent harness",
+      "label": "无直接影响"
+    }
+  ]
+}

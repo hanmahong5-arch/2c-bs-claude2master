@@ -1,0 +1,82 @@
+{
+  "center": "AI责任归属与法律",
+  "branches": [
+    {
+      "label": "德国裁定",
+      "detail": "德国法院裁定 Google 需为其 AI 概览中的错误负责",
+      "children": [
+        "AI 概览出错，Google 被判担责"
+      ]
+    },
+    {
+      "label": "AI是代理人",
+      "detail": "Bruce Schneier 与 Nathan Sanders 主张 AI 代理应视为部署方的代理人",
+      "children": [
+        "部署者应为 AI 行为负责"
+      ]
+    },
+    {
+      "label": "类比人类员工",
+      "detail": "若雇人写摘要，公司需为错误负责，AI 场景应同理",
+      "children": [
+        "雇人写摘要出错，公司担责"
+      ]
+    },
+    {
+      "label": "逃避责任后果",
+      "detail": "允许企业以 AI 故障为由免责，将带来灾难性激励",
+      "children": [
+        "AI 更便宜且能免责，谁还雇人"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Bruce Schneier",
+      "type": "person"
+    },
+    {
+      "name": "Nathan Sanders",
+      "type": "person"
+    },
+    {
+      "name": "AI agents",
+      "type": "concept"
+    },
+    {
+      "name": "AI overviews",
+      "type": "product"
+    },
+    {
+      "name": "German ruling",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "German ruling",
+      "to": "Google",
+      "label": "裁定担责"
+    },
+    {
+      "from": "Bruce Schneier",
+      "to": "AI agents",
+      "label": "主张视为代理人"
+    },
+    {
+      "from": "Nathan Sanders",
+      "to": "AI agents",
+      "label": "主张视为代理人"
+    },
+    {
+      "from": "AI agents",
+      "to": "Google",
+      "label": "由部署者负责"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "center": "openclaw v2026.7.33 安全修复",
+  "branches": [
+    {
+      "label": "安全边界收紧",
+      "detail": "拒绝转义换行命令词、精确源不匹配、注入 Git 选项参数等",
+      "children": [
+        "拒绝转义换行命令词",
+        "精确源不匹配",
+        "注入的 Git 选项参数"
+      ]
+    },
+    {
+      "label": "消息会话完整性",
+      "detail": "保留重试、钩子、恢复及渠道生命周期中的各类消息",
+      "children": [
+        "排队、导入、流式与工具结果消息",
+        "需幂等的消息持久化与恢复机制"
+      ]
+    },
+    {
+      "label": "资源生命周期安全",
+      "detail": "限制目录、历史、媒体、API 与提供者等待，停止取消的并行工具",
+      "children": [
+        "排空渠道关闭",
+        "对昂贵读取设界并在关闭前完成清理"
+      ]
+    },
+    {
+      "label": "覆盖范围",
+      "detail": "126 个 PR 覆盖网关、插件与渠道",
+      "children": [
+        "网关、插件、渠道"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "Git",
+      "type": "product"
+    },
+    {
+      "name": "网关",
+      "type": "concept"
+    },
+    {
+      "name": "插件",
+      "type": "concept"
+    },
+    {
+      "name": "渠道",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "harness",
+      "label": "要求"
+    },
+    {
+      "from": "openclaw",
+      "to": "Git",
+      "label": "拒绝注入"
+    },
+    {
+      "from": "openclaw",
+      "to": "网关",
+      "label": "覆盖"
+    },
+    {
+      "from": "openclaw",
+      "to": "插件",
+      "label": "覆盖"
+    },
+    {
+      "from": "openclaw",
+      "to": "渠道",
+      "label": "覆盖"
+    }
+  ]
+}

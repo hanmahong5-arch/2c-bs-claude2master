@@ -1,0 +1,103 @@
+{
+  "center": "LLM 推理努力控制",
+  "branches": [
+    {
+      "label": "推理模型定义",
+      "detail": "推理模型指输出中间推理轨迹、逐步解题的 LLM",
+      "children": [
+        "非字面人类推理",
+        "输出中间推理 trace"
+      ]
+    },
+    {
+      "label": "训练扩展",
+      "detail": "用 RLVR 以可验证奖励训练模型学会推理",
+      "children": [
+        "奖励 0/1，数学与代码可验证",
+        "推理 trace 不参与训练",
+        "出现自我纠错 Aha 时刻"
+      ]
+    },
+    {
+      "label": "推理扩展",
+      "detail": "推理时花更多算力提升答案质量",
+      "children": [
+        "推理模型输出更多 token",
+        "self-consistency 多数投票",
+        "DeepSeekMath-V2 极端推理扩展"
+      ]
+    },
+    {
+      "label": "努力等级",
+      "detail": "通过推理努力等级调节输出长度与算力",
+      "children": [
+        "GPT-5.6 三种尺寸",
+        "每尺寸约 5–6 档努力",
+        "Ultra 用四个子代理加速"
+      ]
+    }
+  ],
+  "flow": [
+    "预训练基础模型",
+    "SFT 监督微调",
+    "RLVR 可验证奖励训练",
+    "学习推理 trace",
+    "按努力等级推理"
+  ],
+  "entities": [
+    {
+      "name": "Sebastian Raschka",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek-R1",
+      "type": "model"
+    },
+    {
+      "name": "RLVR",
+      "type": "technique"
+    },
+    {
+      "name": "self-consistency",
+      "type": "technique"
+    },
+    {
+      "name": "DeepSeekMath-V2",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K1.5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6",
+      "label": "发布"
+    },
+    {
+      "from": "DeepSeek-R1",
+      "to": "RLVR",
+      "label": "采用"
+    },
+    {
+      "from": "DeepSeekMath-V2",
+      "to": "self-consistency",
+      "label": "应用"
+    },
+    {
+      "from": "Sebastian Raschka",
+      "to": "DeepSeek-R1",
+      "label": "分析"
+    }
+  ]
+}

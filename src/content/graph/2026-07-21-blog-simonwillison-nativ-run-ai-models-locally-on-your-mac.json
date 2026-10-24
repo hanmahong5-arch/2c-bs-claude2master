@@ -1,0 +1,97 @@
+{
+  "center": "Nativ：Mac 本地跑 AI 模型",
+  "branches": [
+    {
+      "label": "产品定位",
+      "detail": "把 MLX 封装成完整 macOS 桌面应用，形态类似 LM Studio",
+      "children": [
+        "提供聊天界面",
+        "提供 localhost API 服务",
+        "由 Prince Canuma 开发"
+      ]
+    },
+    {
+      "label": "开发者背景",
+      "detail": "作者是 MLX-VLM 库作者，该库用 MLX 在 Mac 跑视觉 LLM",
+      "children": [
+        "MLX-VLM 是 Python 库",
+        "专注 vision-LLM"
+      ]
+    },
+    {
+      "label": "上手体验",
+      "detail": "Simon Willison 称其自动识别已有模型，体验很好",
+      "children": [
+        "读取 Hugging Face 缓存目录",
+        "自动发现已试过的 MLX 模型"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nativ",
+      "type": "product"
+    },
+    {
+      "name": "MLX",
+      "type": "technique"
+    },
+    {
+      "name": "MLX-VLM",
+      "type": "product"
+    },
+    {
+      "name": "Prince Canuma",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "LM Studio",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nativ",
+      "to": "MLX",
+      "label": "封装"
+    },
+    {
+      "from": "Prince Canuma",
+      "to": "Nativ",
+      "label": "开发"
+    },
+    {
+      "from": "Prince Canuma",
+      "to": "MLX-VLM",
+      "label": "开发"
+    },
+    {
+      "from": "MLX-VLM",
+      "to": "MLX",
+      "label": "基于"
+    },
+    {
+      "from": "Nativ",
+      "to": "LM Studio",
+      "label": "类似"
+    },
+    {
+      "from": "Nativ",
+      "to": "Hugging Face",
+      "label": "读取缓存"
+    }
+  ]
+}

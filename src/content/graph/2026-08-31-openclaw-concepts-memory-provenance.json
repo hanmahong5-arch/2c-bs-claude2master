@@ -1,0 +1,114 @@
+{
+  "center": "OpenClaw 记忆溯源与删除",
+  "branches": [
+    {
+      "label": "记忆溯源机制",
+      "detail": "OpenClaw 记录记忆来源会话谱系，用于精准删除",
+      "children": [
+        "三种记录：chunk provenance、entry origins…",
+        "dreaming 合并时转移父条目 origins 到存活条目",
+        "backfill 合并同一 claim 保留所有来源 origins"
+      ]
+    },
+    {
+      "label": "预览与删除流程",
+      "detail": "用 memory forget 命令预览并删除指定会话记忆",
+      "children": [
+        "先 --dry-run 预览，检查…",
+        "确认后去掉 --dry-run 执行，无额外确认提示",
+        "删除失败可重跑，可能留下部分清理"
+      ]
+    },
+    {
+      "label": "准入策略排除",
+      "detail": "通过 excludeSessions 配置阻止会话进入记忆",
+      "children": [
+        "可排除 Gmail、IMAP、webhook 等来源",
+        "策略前瞻性，不删除已有数据",
+        "排除会话仍可编辑 MEMORY.md 等文件"
+      ]
+    },
+    {
+      "label": "覆盖范围限制",
+      "detail": "手写笔记、直接编辑等可能缺少 origins",
+      "children": [
+        "untargetableEntryKeys 列出无 origins 的条目",
+        "旧记录可能只有粗粒度 webhook 分类",
+        "无法仅靠谱系选择，需显式会话引用"
+      ]
+    }
+  ],
+  "flow": [
+    "列出会话找 ID",
+    "dry-run 预览",
+    "检查报告字段",
+    "执行 forget 删除",
+    "重跑预览验证"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "memory-core",
+      "type": "product"
+    },
+    {
+      "name": "memory forget",
+      "type": "technique"
+    },
+    {
+      "name": "dreaming ingestion",
+      "type": "concept"
+    },
+    {
+      "name": "session backfill",
+      "type": "concept"
+    },
+    {
+      "name": "chunk provenance",
+      "type": "concept"
+    },
+    {
+      "name": "entry origins",
+      "type": "concept"
+    },
+    {
+      "name": "curated-write records",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "memory-core",
+      "label": "包含插件"
+    },
+    {
+      "from": "memory forget",
+      "to": "OpenClaw",
+      "label": "是命令"
+    },
+    {
+      "from": "memory forget",
+      "to": "entry origins",
+      "label": "利用"
+    },
+    {
+      "from": "dreaming ingestion",
+      "to": "entry origins",
+      "label": "写入"
+    },
+    {
+      "from": "session backfill",
+      "to": "entry origins",
+      "label": "写入"
+    },
+    {
+      "from": "curated-write records",
+      "to": "memory forget",
+      "label": "用于审查"
+    }
+  ]
+}

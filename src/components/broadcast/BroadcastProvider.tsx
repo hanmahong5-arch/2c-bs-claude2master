@@ -33,6 +33,7 @@ import type {
 const DAY_MS = 86_400_000;
 const KIND_ORDER: ChangelogKind[] = [
   "changelog",
+  "community",
   "trending",
   "blogger",
   "practice",

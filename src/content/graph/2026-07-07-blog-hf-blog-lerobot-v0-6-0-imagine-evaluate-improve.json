@@ -1,0 +1,69 @@
+{
+  "center": "LeRobot v0.6.0 发布",
+  "branches": [
+    {
+      "label": "三大新功能",
+      "detail": "v0.6.0 新增想象、评估与改进三大能力，加速机器人学习",
+      "children": [
+        "Imagine：想象",
+        "Evaluate：评估",
+        "Improve：改进"
+      ]
+    },
+    {
+      "label": "版本迭代",
+      "detail": "继 v0.5.0 之后的新版本，延续扩展各维度的路线",
+      "children": [
+        "v0.5.0 主题为 Scaling Every Dimension"
+      ]
+    },
+    {
+      "label": "社区热度",
+      "detail": "文章获 85 次点赞，社区关注度较高",
+      "children": [
+        "Upvote 85",
+        "关联 3 个模型、1 个数据集"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "LeRobot",
+      "type": "product"
+    },
+    {
+      "name": "LeRobot v0.6.0",
+      "type": "product"
+    },
+    {
+      "name": "LeRobot v0.5.0",
+      "type": "product"
+    },
+    {
+      "name": "Grabette",
+      "type": "product"
+    },
+    {
+      "name": "机器人学习",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "LeRobot v0.6.0",
+      "to": "LeRobot",
+      "label": "属于"
+    },
+    {
+      "from": "LeRobot v0.5.0",
+      "to": "LeRobot",
+      "label": "属于"
+    },
+    {
+      "from": "LeRobot v0.6.0",
+      "to": "机器人学习",
+      "label": "加速"
+    }
+  ]
+}

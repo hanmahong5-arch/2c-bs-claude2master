@@ -1,0 +1,71 @@
+{
+  "center": "llm-mcp-client 0.1a0 发布",
+  "branches": [
+    {
+      "label": "发布内容",
+      "detail": "Simon Willison 发布 llm-mcp-client 0.1a0 版本",
+      "children": [
+        "版本号 0.1a0",
+        "发布于 2026 年 7 月 31 日"
+      ]
+    },
+    {
+      "label": "核心功能",
+      "detail": "把 MCP 服务器上的工具接入为 LLM 可调用的工具",
+      "children": [
+        "Access tools from MCP servers as LLM…"
+      ]
+    },
+    {
+      "label": "所属项目",
+      "detail": "属于 Simon Willison 的 llm 工具生态",
+      "children": [
+        "llm 标签",
+        "model-context-protocol 标签"
+      ]
+    },
+    {
+      "label": "发布渠道",
+      "detail": "通过 Simon Willison 的博客以 Release 形式公布",
+      "children": [
+        "博客附有相关 blog entry 链接"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm-mcp-client",
+      "type": "product"
+    },
+    {
+      "name": "llm",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm-mcp-client",
+      "label": "发布"
+    },
+    {
+      "from": "llm-mcp-client",
+      "to": "llm",
+      "label": "属于"
+    },
+    {
+      "from": "llm-mcp-client",
+      "to": "MCP",
+      "label": "接入"
+    }
+  ]
+}

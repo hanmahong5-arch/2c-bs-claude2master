@@ -1,0 +1,114 @@
+{
+  "center": "OpenClaw OAuth 令牌轮换与多账号…",
+  "branches": [
+    {
+      "label": "令牌池设计",
+      "detail": "把 auth profile store 当作 token sink，避免登录互踢",
+      "children": [
+        "每 agent 只从一处读凭证",
+        "多 profile 可共存并确定性路由",
+        "本地 refresh token 为权威，被拒则要求重新认证"
+      ]
+    },
+    {
+      "label": "存储位置",
+      "detail": "共享凭证与 agent 本地凭证分库存储",
+      "children": [
+        "共享：~/.openclaw/state/openclaw.sqlite",
+        "本地：agents/<agentId>/agent/…",
+        "个人账号用 model-account:<profile-id> 记录"
+      ]
+    },
+    {
+      "label": "旧文件迁移",
+      "detail": "升级后跑 openclaw doctor --fix 导入并归档旧凭证",
+      "children": [
+        "旧文件：auth-profiles.json…",
+        "Doctor 不覆盖可用凭证，防旧 token 复活",
+        "存储为空时按 provider 范围拒绝回退"
+      ]
+    },
+    {
+      "label": "OAuth 登录流程",
+      "detail": "PKCE 授权码换取 access/refresh token",
+      "children": [
+        "生成 PKCE verifier/challenge 与 state",
+        "回调默认 http://localhost:1455/auth/…",
+        "从 access token 提取 accountId 并存储"
+      ]
+    },
+    {
+      "label": "多账号路由",
+      "detail": "用 profile id 区分多个 ChatGPT/Codex 账号",
+      "children": [
+        "命令：openclaw models auth login…",
+        "多账号用 --profile-id openai:<name>",
+        "旧 openai-codex:* 前缀由 Doctor 迁移"
+      ]
+    }
+  ],
+  "flow": [
+    "生成 PKCE verifier/…",
+    "打开 OpenAI 授权页并请求…",
+    "捕获 localhost:1455 回调或…",
+    "在 oauth/token 交换授权码",
+    "提取 accountId 并存储 token"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI Codex",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic Claude CLI",
+      "type": "product"
+    },
+    {
+      "name": "PKCE",
+      "type": "technique"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "openclaw doctor --fix",
+      "type": "technique"
+    },
+    {
+      "name": "auth_profile_store",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "OpenAI Codex",
+      "label": "支持 OAuth"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Anthropic Claude CLI",
+      "label": "复用登录"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "PKCE",
+      "label": "使用"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "OAuth",
+      "label": "实现"
+    },
+    {
+      "from": "openclaw doctor --fix",
+      "to": "auth_profile_store",
+      "label": "迁移至"
+    }
+  ]
+}

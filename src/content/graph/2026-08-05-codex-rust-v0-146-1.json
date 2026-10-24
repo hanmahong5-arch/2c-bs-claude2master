@@ -1,0 +1,73 @@
+{
+  "center": "Codex 收紧 cyber 模型审查",
+  "branches": [
+    {
+      "label": "审查默认值收紧",
+      "detail": "对具备 cyber 能力的模型，自动审查默认值调得更安全，降低风险",
+      "children": [
+        "cyber 能力模型适用",
+        "默认值更安全"
+      ]
+    },
+    {
+      "label": "权限变化可见",
+      "detail": "终端界面会解释权限变更，用户能理解审查行为的调整",
+      "children": [
+        "终端解释权限变更"
+      ]
+    },
+    {
+      "label": "harness 设计启示",
+      "detail": "agent harness 需按模型能力动态调整安全策略，并透明化权限变化",
+      "children": [
+        "按模型能力动态调整",
+        "透明化权限变化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "cyber 模型",
+      "type": "concept"
+    },
+    {
+      "name": "自动审查",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "权限变更",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "cyber 模型",
+      "label": "收紧审查"
+    },
+    {
+      "from": "Codex",
+      "to": "自动审查",
+      "label": "调整默认值"
+    },
+    {
+      "from": "Codex",
+      "to": "权限变更",
+      "label": "终端解释"
+    },
+    {
+      "from": "agent harness",
+      "to": "cyber 模型",
+      "label": "按能力适配"
+    }
+  ]
+}

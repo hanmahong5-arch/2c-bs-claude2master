@@ -1,0 +1,111 @@
+{
+  "center": "Nathan Lambert 后训练新书",
+  "branches": [
+    {
+      "label": "新书发布",
+      "detail": "Manning 出版 RLHF 后训练教材，线上免费并配 12 小时课程",
+      "children": [
+        "书名 Reinforcement Learning from Human…",
+        "8 月 19 日前用码 PBLambert 五折",
+        "Manning 与美亚已发货，英亚 10 月"
+      ]
+    },
+    {
+      "label": "RL 算法直觉",
+      "detail": "全书约 25% 篇幅讲 RL，教人判断新算法真假",
+      "children": [
+        "从策略梯度到 PPO、GRPO、GSPO、CISPO",
+        "PPO 裁剪目标可归为六个区域",
+        "含 RLOO、REINFORCE 等推导"
+      ]
+    },
+    {
+      "label": "RL 系统权衡",
+      "detail": "现代 RL 是系统问题：离策略程度、训推不一致、吞吐",
+      "children": [
+        "异步 RL：learner 与 actor 分卡",
+        "损失聚合催生 DAPO、Dr. GRPO",
+        "截断重要性采样让 PPO 跑通"
+      ]
+    },
+    {
+      "label": "后训练历史",
+      "detail": "梳理三个时代：偏好 RL、语言模型应用、ChatGPT 后",
+      "children": [
+        "约 2018 年前做通用偏好 RL",
+        "2019–2022 迁移到语言模型",
+        "2023 起借鉴 ChatGPT 范例"
+      ]
+    },
+    {
+      "label": "蒸馏去神秘化",
+      "detail": "第 12 章讲清蒸馏的多种工业标准做法",
+      "children": [
+        "从 2015 知识蒸馏到多教师在线蒸馏 MOPD",
+        "案例含 Xiaomi MiMo-V2-Flash、DeepSeek V4"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "RLHF",
+      "type": "concept"
+    },
+    {
+      "name": "PPO",
+      "type": "technique"
+    },
+    {
+      "name": "GRPO",
+      "type": "technique"
+    },
+    {
+      "name": "DAPO",
+      "type": "technique"
+    },
+    {
+      "name": "MOPD",
+      "type": "technique"
+    },
+    {
+      "name": "DeepSeek V4",
+      "type": "model"
+    },
+    {
+      "name": "Manning",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "RLHF",
+      "label": "著书讲"
+    },
+    {
+      "from": "PPO",
+      "to": "GRPO",
+      "label": "演进为"
+    },
+    {
+      "from": "GRPO",
+      "to": "DAPO",
+      "label": "衍生出"
+    },
+    {
+      "from": "MOPD",
+      "to": "DeepSeek V4",
+      "label": "应用于"
+    },
+    {
+      "from": "Manning",
+      "to": "Nathan Lambert",
+      "label": "出版"
+    }
+  ]
+}

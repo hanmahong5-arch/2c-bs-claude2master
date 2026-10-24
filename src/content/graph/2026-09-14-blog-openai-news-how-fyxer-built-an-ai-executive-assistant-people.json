@@ -1,0 +1,73 @@
+{
+  "center": "Fyxer 打造可信 AI 行政助理",
+  "branches": [
+    {
+      "label": "产品定位",
+      "detail": "AI 行政助理，专注整理收件箱与起草邮件，非通用聊天",
+      "children": [
+        "垂直场景+明确交付物更易建立信任"
+      ]
+    },
+    {
+      "label": "技术组合",
+      "detail": "同时使用 OpenAI 模型、fine-tuning 与 memory 三项能力",
+      "children": [
+        "单一 prompt 不足以支撑长期个性化",
+        "模型调用、微调管线与记忆存储需统一设计"
+      ]
+    },
+    {
+      "label": "迭代闭环",
+      "detail": "用真实用户反馈打磨效果，草稿贴合个人语气",
+      "children": [
+        "评估与迭代接真实使用数据",
+        "风格一致性是可验证的产品指标"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Fyxer",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "fine-tuning",
+      "type": "technique"
+    },
+    {
+      "name": "memory",
+      "type": "concept"
+    },
+    {
+      "name": "AI 行政助理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Fyxer",
+      "to": "OpenAI",
+      "label": "使用模型"
+    },
+    {
+      "from": "Fyxer",
+      "to": "fine-tuning",
+      "label": "采用"
+    },
+    {
+      "from": "Fyxer",
+      "to": "memory",
+      "label": "集成"
+    },
+    {
+      "from": "Fyxer",
+      "to": "AI 行政助理",
+      "label": "定位为"
+    }
+  ]
+}

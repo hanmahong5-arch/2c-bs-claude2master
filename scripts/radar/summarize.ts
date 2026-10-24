@@ -16,11 +16,13 @@
 
 import { promises as fs } from "fs";
 import path from "path";
+import { sanitizeGraph, type ArticleGraph } from "../../src/lib/graph";
 
 // Bun 原生, 跨平台 (旧 URL.pathname 写法在 Linux CI 退化成相对路径 → ENOENT)
 const SCRIPT_DIR = import.meta.dir;
 const ROOT = path.resolve(SCRIPT_DIR, "..", "..");
 const CHANGELOG_DIR = path.join(ROOT, "src", "content", "changelog");
+const GRAPH_DIR = path.join(ROOT, "src", "content", "graph");
 const STATE_FILE = path.join(SCRIPT_DIR, "state.json");
 
 const NEWAPI_BASE_URL =
@@ -85,6 +87,34 @@ const BLOGGER_SYSTEM_PROMPT = `你是 claude2master.com 编辑助手。读用户
 - 不喊口号、不堆 emoji
 - 输出必须是合法 JSON，无任何前后说明文字`;
 
+const HN_SYSTEM_PROMPT = `你是 claude2master.com 编辑助手。读用户给的一条 Hacker News 高分讨论（标题 + 按站内排名的顶层评论），提炼「一线开发者怎么看」，输出严格 JSON：
+
+{
+  "hook": "30 字内中文钩子：社区整体风向 + 最尖锐的一个点",
+  "body": "280 字内中文 markdown：第一行「**整体风向**：一句话」；随后 3–4 个 bullet，每个 = 一个讨论焦点，写成「焦点：**@评论者用户名** 的代表性观点（中文转述）——一句对开发者的含义」；最后一个 bullet 必须写反对 / 质疑 / 分歧意见",
+  "tags": ["最多 4 个英文 kebab-case"]
+}
+
+强约束：
+- 观点只能来自给出的评论，用户名逐字保留，不编造、不张冠李戴
+- 中文转述，不大段直译原评论
+- 不喊口号、不堆 emoji
+- 输出必须是合法 JSON，无任何前后说明文字`;
+
+const VOICES_SYSTEM_PROMPT = `你是 claude2master.com 编辑助手。读用户给的一组 AI 领域知名从业者今天在 Bluesky 上的原创帖子，整理成「今日大佬说」，输出严格 JSON：
+
+{
+  "hook": "30 字内中文钩子：今天大佬们最集中在聊什么",
+  "body": "300 字内中文 markdown：按话题归为 2–4 组，每组一行「### 话题名」后跟 bullet，每个 bullet 写「**人名**：观点的中文转述（≤60 字）」；同一话题下不同人的观点对照着写",
+  "tags": ["最多 4 个英文 kebab-case"]
+}
+
+强约束：
+- 观点只能来自给出的帖子，人名逐字保留，不编造、不张冠李戴
+- 中文转述，不直译全文；帖子是玩笑 / 反讽时如实点明
+- 不喊口号、不堆 emoji
+- 输出必须是合法 JSON，无任何前后说明文字`;
+
 const INSIGHT_SYSTEM_PROMPT = `你是 claude2master.com 编辑助手，国内开发者视角。基于已有的中文摘要，写一段 80–150 字的「Lurus 视角」，硬约束：
 
 1. 必须给明确判断，覆盖下列至少一项（按相关度选）：
@@ -107,6 +137,29 @@ export const BROADCAST_SYSTEM_PROMPT = `你是 claude2master.com 的语音播报
 5. 只能用「输入摘要」里已经出现的事实，不引申、不脑补
 6. 输出严格 JSON：{ "broadcast": "<这段话>" }
 7. 无任何前后说明文字`;
+
+// 知识图谱抽取: 详情页动效思维导图 / 流程图 + 全站概念图 (/graph) 的数据源。
+// 改动必须 commit 留 diff, 别 patch.
+export const GRAPH_SYSTEM_PROMPT = `你是 claude2master.com 的知识图谱编辑。读用户给的文章（原文或摘要），把它拆成一张「看一眼就懂」的思维导图 + 实体关系，输出严格 JSON：
+
+{
+  "center": "≤14 字，文章核心主题（中文为主，产品/模型名保留英文原名）",
+  "branches": [
+    { "label": "≤7 字要点名", "detail": "≤40 字一句话讲清这个要点", "children": ["≤18 字的具体细节/例子/数字", "..."] }
+  ],
+  "flow": ["≤10 字步骤", "..."],
+  "entities": [ { "name": "实体名", "type": "company|product|model|person|concept|technique" } ],
+  "relations": [ { "from": "实体名", "to": "实体名", "label": "≤5 字关系动词" } ]
+}
+
+硬约束：
+1. branches 3–5 个，按「读者最该先知道」排序；每个 children 0–3 条，写具体事实而非空话
+2. flow 仅当文章描述了一个流程 / 方法步骤 / 架构数据流时填 3–6 步，否则必须是空数组 []
+3. entities 3–8 个：公司、产品、模型、人名一律保留英文原名（如 LangGraph、Claude Code、GPT-5、Andrej Karpathy）；概念用业内通行说法（如 RAG、MCP、上下文工程）
+4. relations 0–6 条，from / to 必须逐字来自 entities 的 name
+5. 字数上限是硬约束（英文单词约算半个字），宁短勿长，超长会被截断
+6. 只用文章明确出现的信息，不引申、不脑补、不喊口号、不堆 emoji
+7. 输出必须是合法 JSON，无任何前后说明文字`;
 
 interface ReleaseInput {
   kind?: "release";
@@ -142,13 +195,48 @@ interface BloggerInput {
   kind: "blogger";
   author: string;
   handle: string;
+  /** blogs.yaml category: lab / company / person; 缺省 person (旧 feed-item 兼容) */
+  category?: string;
   url: string;
   title: string;
   body: string;
   published_at: string;
 }
 
-type Input = ReleaseInput | PracticeInput | TrendingInput | BloggerInput;
+interface HnCommunityInput {
+  kind: "community";
+  sub: "hn";
+  title: string;
+  url: string;
+  discussUrl: string;
+  points: number;
+  numComments: number;
+  comments: { author: string; text: string }[];
+  published_at: string;
+}
+
+interface VoicesCommunityInput {
+  kind: "community";
+  sub: "voices";
+  title: string;
+  url: string;
+  posts: { author: string; handle: string; text: string; url: string; likes: number }[];
+  published_at: string;
+}
+
+type CommunityInput = HnCommunityInput | VoicesCommunityInput;
+
+type Input = ReleaseInput | PracticeInput | TrendingInput | BloggerInput | CommunityInput;
+
+function isCommunity(x: Input): x is CommunityInput {
+  return (x as CommunityInput).kind === "community";
+}
+
+function communityText(x: CommunityInput): string {
+  return x.sub === "hn"
+    ? x.comments.map((c, i) => `[${i + 1}] @${c.author}: ${c.text}`).join("\n\n")
+    : x.posts.map((p) => `【${p.author}】(${p.likes} likes)\n${p.text}`).join("\n\n");
+}
 
 function isPractice(x: Input): x is PracticeInput {
   return (x as PracticeInput).kind === "practice";
@@ -178,6 +266,18 @@ function slugify(s: string): string {
 
 function deriveSlug(input: Input): string {
   const date = input.published_at.slice(0, 10);
+  if (isCommunity(input)) {
+    if (input.sub === "voices") return `${date}-voices`;
+    const id = input.discussUrl.split("id=")[1] ?? "0";
+    const titleSlug = input.title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .split("-")
+      .slice(0, 6)
+      .join("-");
+    return `${date}-hn-${id}-${titleSlug || "thread"}`;
+  }
   if (isPractice(input)) {
     const pathTail = input.url
       .replace(/^https?:\/\/[^/]+\//, "")
@@ -287,16 +387,32 @@ export async function callNewapi(
 }
 
 async function callLLM(input: Input): Promise<SummaryOutput> {
-  const sysPrompt = isPractice(input)
-    ? PRACTICE_SYSTEM_PROMPT
-    : isTrending(input)
-      ? TRENDING_SYSTEM_PROMPT
-      : isBlogger(input)
-        ? BLOGGER_SYSTEM_PROMPT
-        : RELEASE_SYSTEM_PROMPT;
+  const sysPrompt = isCommunity(input)
+    ? input.sub === "hn"
+      ? HN_SYSTEM_PROMPT
+      : VOICES_SYSTEM_PROMPT
+    : isPractice(input)
+      ? PRACTICE_SYSTEM_PROMPT
+      : isTrending(input)
+        ? TRENDING_SYSTEM_PROMPT
+        : isBlogger(input)
+          ? BLOGGER_SYSTEM_PROMPT
+          : RELEASE_SYSTEM_PROMPT;
 
   let userContent: string;
-  if (isPractice(input)) {
+  if (isCommunity(input)) {
+    userContent =
+      input.sub === "hn"
+        ? `Hacker News thread: ${input.title}
+Link: ${input.url}
+Points: ${input.points} · Comments: ${input.numComments}
+
+Top-level comments (in HN ranking order):
+${communityText(input).slice(0, 9000)}`
+        : `Posts from AI practitioners on Bluesky (${input.published_at}):
+
+${communityText(input).slice(0, 9000)}`;
+  } else if (isPractice(input)) {
     userContent = `Source label: ${input.label}
 URL: ${input.url}
 Title: ${input.title}
@@ -343,6 +459,9 @@ ${input.body || "(no notes provided)"}`;
 
 // 输入条目的人读标题行 (供 insight / broadcast 的 LLM 上下文); 覆盖全四类。
 function titleLineFor(input: Input): string {
+  if (isCommunity(input)) {
+    return input.sub === "hn" ? `Hacker News 热议：${input.title}` : input.title;
+  }
   return isPractice(input)
     ? `${input.title} (${input.label})`
     : isTrending(input)
@@ -420,6 +539,61 @@ ${body}
   return broadcast;
 }
 
+// 图谱: 第三次 LLM 调用。正文优先喂原文 (信息密度高), 无原文 (trending/backfill) 退摘要。
+// 返回已 sanitize 的图谱; 骨架不成立抛错 → 调用方跳过 (图谱是增强, 不阻塞文章)。
+export async function callGraph(
+  titleLine: string,
+  sourceText: string,
+): Promise<ArticleGraph> {
+  const userContent = `文章标题：${titleLine}
+
+正文（截断至 ~8KB）：
+${sourceText.slice(0, 8000) || "(empty)"}`;
+  const content = await callNewapi(GRAPH_SYSTEM_PROMPT, userContent, 1200);
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(content);
+  } catch {
+    throw new Error(`graph LLM did not return valid JSON: ${content.slice(0, 200)}`);
+  }
+  const g = sanitizeGraph(parsed);
+  if (!g) throw new Error(`graph skeleton invalid: ${content.slice(0, 200)}`);
+  return g;
+}
+
+export async function writeGraph(slug: string, g: ArticleGraph): Promise<string> {
+  await fs.mkdir(GRAPH_DIR, { recursive: true });
+  const p = path.join(GRAPH_DIR, `${slug}.json`);
+  await fs.writeFile(p, JSON.stringify(g, null, 2) + "\n", "utf-8");
+  return p;
+}
+
+// 图谱输入正文: 有原文用原文, 否则用中文摘要 (release notes 本身即原文)。
+function graphSourceFor(input: Input, summary: SummaryOutput): string {
+  // 社区讨论: 用中文摘要 (已按焦点归纳 + 署名) 打头, 再补原评论供抽实体
+  if (isCommunity(input)) return `${summary.hook}\n\n${summary.body}\n\n${communityText(input)}`;
+  if (isPractice(input) || isBlogger(input)) {
+    return input.body && input.body.length > 400
+      ? input.body
+      : `${summary.hook}\n\n${summary.body}\n\n${input.body ?? ""}`;
+  }
+  if (isTrending(input)) return `${input.description}\n\n${summary.hook}\n\n${summary.body}`;
+  return `${input.body ?? ""}\n\n${summary.body}`;
+}
+
+// 标题尾巴: hook 去掉破折号/冒号后的补充语, 截 40 字 (按字素, 不切断英文单词)。
+// 注: 不再把 "-" 当分隔符 —— 旧正则会把 "GPT-5 ..." 截成 "GPT"。
+export function hookCore(hook: string): string {
+  const s = hook.replace(/\s[-–]\s.*$|[—:：].*$/, "").trim();
+  const chars = [...s];
+  if (chars.length <= 40) return s;
+  let cut = chars.slice(0, 40).join("");
+  if (/[A-Za-z0-9]$/.test(cut) && /^[A-Za-z0-9]/.test(chars[40])) {
+    cut = cut.replace(/[A-Za-z0-9._+-]+$/, "");
+  }
+  return cut.replace(/[\s，,、；;]+$/, "");
+}
+
 export function escapeYaml(s: string): string {
   // YAML 双引号标量里的裸换行会被 content.ts 的逐行 parseFrontmatter 截断字段(甚至
   // 含 "\n---" 时提前终止 frontmatter 致正文丢失)。LLM 输出的 hook/insight/title 可能含
@@ -450,8 +624,45 @@ function buildMdx(
         ? "blogger"
         : "changelog";
 
+  if (isCommunity(input)) {
+    const isHn = input.sub === "hn";
+    const title = isHn
+      ? `HN 热议：${input.title} — ${hookCore(summary.hook)}`
+      : `今日大佬说 ${input.published_at} — ${hookCore(summary.hook)}`;
+    const source = isHn ? "Hacker News" : "Bluesky";
+    const footer = isHn
+      ? `> 讨论原帖：[${input.title}](${input.discussUrl}) · 🔥 ${input.points} 分 · 💬 ${input.numComments} 条评论${
+          input.url !== input.discussUrl ? ` · 原文：[链接](${input.url})` : ""
+        }`
+      : `> 原帖：${input.posts.map((p) => `[${p.author}](${p.url})`).join(" · ")}`;
+    // 聚合器口径: 中文转述 + 署名 + 原帖链接, 不转载评论全文
+    return `---
+slug: ${slug}
+title: "${escapeYaml(title)}"
+source: "${source}"
+sourceUrl: ${isHn ? input.discussUrl : input.url}
+publishedAt: ${input.published_at.slice(0, 10)}
+authored: llm
+model: ${MODEL_ID}
+verified: ${verified}
+kind: community
+author: "${isHn ? "Hacker News 社区" : "AI 从业者"}"
+category: community
+hook: "${escapeYaml(summary.hook)}"
+broadcast: "${escapeYaml(broadcast)}"
+tags: ${tagsArr}
+---
+
+${summary.body}
+
+---
+
+${footer}
+`;
+  }
+
   if (isBlogger(input)) {
-    const titleCore = summary.hook.replace(/[—\-:].*$/, "").trim().slice(0, 40);
+    const titleCore = hookCore(summary.hook);
     // 原文标题是最有 SEO 价值的 headline; 超 56 字时在词边界截断 (不切到单词中间)
     const head =
       input.title.length <= 56
@@ -471,6 +682,7 @@ model: ${MODEL_ID}
 verified: ${verified}
 kind: ${kind}
 author: "${escapeYaml(input.author)}"
+category: ${input.category === "lab" || input.category === "company" || input.category === "community" ? input.category : "person"}
 hook: "${escapeYaml(summary.hook)}"
 broadcast: "${escapeYaml(broadcast)}"
 tags: ${tagsArr}
@@ -485,7 +697,7 @@ ${summary.body}
   }
 
   if (isPractice(input)) {
-    const titleCore = summary.hook.replace(/[—\-:].*$/, "").trim().slice(0, 40);
+    const titleCore = hookCore(summary.hook);
     const title = `${input.title.slice(0, 40)} — ${titleCore}`;
     return `---
 slug: ${slug}
@@ -512,7 +724,7 @@ ${summary.body}
   }
 
   if (isTrending(input)) {
-    const titleCore = summary.hook.replace(/[—\-:].*$/, "").trim().slice(0, 40);
+    const titleCore = hookCore(summary.hook);
     const title = `${input.name} — ${titleCore}`;
     // 注: trending 不写 insight(Lurus 视角面向"升级/配置", 不适配随机热门仓库)
     return `---
@@ -539,7 +751,7 @@ ${summary.body}
   }
 
   const release = input as ReleaseInput;
-  const title = `${release.repo.split("/")[1]} ${release.tag} — ${summary.hook.replace(/[—\-:].*$/, "").trim().slice(0, 40)}`;
+  const title = `${release.repo.split("/")[1]} ${release.tag} — ${hookCore(summary.hook)}`;
   return `---
 slug: ${slug}
 title: "${escapeYaml(title)}"
@@ -642,7 +854,7 @@ async function processInput(
   const summary = await callLLM(input);
   // trending / blogger 跳过 Lurus 视角(insight 面向"升级/配置", 不适配热门仓库 / 博主观点)
   const insight =
-    isTrending(input) || isBlogger(input)
+    isTrending(input) || isBlogger(input) || isCommunity(input)
       ? ""
       : await callCommentary(input, summary);
   // 口播稿: 全四类都生成 (纯音频用)。失败不阻塞整条 —— 音频是补充, tts 层缺 broadcast
@@ -659,17 +871,33 @@ async function processInput(
       `[radar] broadcast skipped for ${inputLabel(input)} (${(e as Error).message}); tts will fall back to hook`,
     );
   }
+  // 知识图谱: trending 仅有一行仓库描述, 抽不出有信息量的图 → 跳过。失败同样不阻塞。
+  let graph: ArticleGraph | null = null;
+  if (!isTrending(input)) {
+    try {
+      graph = await callGraph(titleLineFor(input), graphSourceFor(input, summary));
+    } catch (e) {
+      console.error(
+        `[radar] graph skipped for ${inputLabel(input)} (${(e as Error).message})`,
+      );
+    }
+  }
   const slug = deriveSlug(input);
   const mdx = buildMdx(input, summary, insight, broadcast, slug);
   const filePath = path.join(CHANGELOG_DIR, `${slug}.mdx`);
   if (opts.dryRun) {
     console.log(`# ---- DRY RUN: ${filePath} ----`);
     console.log(mdx);
+    if (graph) console.log(`# ---- graph ----\n${JSON.stringify(graph, null, 2)}`);
     return { slug, path: filePath };
   }
   await fs.mkdir(CHANGELOG_DIR, { recursive: true });
   await fs.writeFile(filePath, mdx, "utf-8");
   console.error(`[radar] wrote ${path.relative(ROOT, filePath)}`);
+  if (graph) {
+    const gp = await writeGraph(slug, graph);
+    console.error(`[radar] wrote ${path.relative(ROOT, gp)}`);
+  }
   return { slug, path: filePath };
 }
 
@@ -685,6 +913,7 @@ async function readStdinInputs(): Promise<Input[]> {
 }
 
 function inputLabel(x: Input): string {
+  if (isCommunity(x)) return `community:${x.sub}@${x.sub === "hn" ? x.discussUrl : x.published_at}`;
   if (isPractice(x)) return `${x.label}@${x.url}`;
   if (isTrending(x)) return `trending:${x.repo}`;
   if (isBlogger(x)) return `blog:${x.handle}@${x.url}`;
@@ -713,7 +942,17 @@ async function main(): Promise<void> {
   let okCount = 0;
   const errors: { id: string; err: string }[] = [];
 
-  for (const input of inputs) {
+  // 并发池: 每条 3–4 次串行 LLM 调用 (~15–20s), 扩源后单批 30+ 条串行会顶穿 CI 时限。
+  // state 只在内存里改 (JS 单线程, await 之间无竞态), 全部结束后一次落盘。
+  const CONCURRENCY = Math.max(1, Number(process.env.RADAR_CONCURRENCY) || 4);
+  let cursor = 0;
+  const worker = async () => {
+    while (cursor < inputs.length) {
+      const input = inputs[cursor++];
+      await processOne(input);
+    }
+  };
+  const processOne = async (input: Input) => {
     const id = inputLabel(input);
     try {
       await processInput(input, { dryRun });
@@ -724,7 +963,7 @@ async function main(): Promise<void> {
           const seen = (state.raw.trendingSeen as string[] | undefined) ?? [];
           if (!seen.includes(input.repo)) seen.push(input.repo);
           state.raw.trendingSeen = seen;
-        } else if (!isPractice(input) && !isBlogger(input)) {
+        } else if (!isPractice(input) && !isBlogger(input) && !isCommunity(input)) {
           state.lastSeen[input.repo] = input.tag;
         }
       }
@@ -734,7 +973,10 @@ async function main(): Promise<void> {
       errors.push({ id, err: msg });
       console.error(`[radar] FAIL ${id}: ${msg}`);
     }
-  }
+  };
+  await Promise.all(
+    Array.from({ length: Math.min(CONCURRENCY, inputs.length) }, worker),
+  );
 
   if (state) await saveState(state.raw, state.lastSeen);
 

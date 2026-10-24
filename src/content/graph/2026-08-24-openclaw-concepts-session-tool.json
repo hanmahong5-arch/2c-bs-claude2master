@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw 跨会话工具集",
+  "branches": [
+    {
+      "label": "会话管理工具",
+      "detail": "sessions 系列工具可补丁、重置、删除会话并管理分组",
+      "children": [
+        "sessions_list 按 kind/label/agent 过滤列…",
+        "sessions_search 搜索会话记录返回匹配片段",
+        "sessions_history 读取指定会话的完整记录"
+      ]
+    },
+    {
+      "label": "子代理编排",
+      "detail": "sessions_spawn 派生子代理，sessions_yield 等待结果",
+      "children": [
+        "sessions_spawn 生成隔离子代理会话做后台工作",
+        "sessions_yield 结束当前轮次等待子代理结果",
+        "subagents 列出或取消会话树中的后台工作"
+      ]
+    },
+    {
+      "label": "外部会话通信",
+      "detail": "conversations 系列工具向外部会话发送消息",
+      "children": [
+        "conversations_send 发送到指定外部会话不运…",
+        "conversations_turn 发送并等待关联回复",
+        "conversations_list 列出稳定的外部会话地址"
+      ]
+    },
+    {
+      "label": "工具配置策略",
+      "detail": "工具受 profile 和 allow/deny 策略限制",
+      "children": [
+        "coding profile 包含完整会话编排工具集",
+        "messaging profile 包含会话自助、发现、跨会…",
+        "用 /tools 查看当前会话的有效工具列表"
+      ]
+    },
+    {
+      "label": "列表与读取细节",
+      "detail": "sessions_list 是元数据清单而非记录搜索",
+      "children": [
+        "支持 relationship/ownerId/projectId 等过滤",
+        "limit 默认 100，每响应最多 200 行",
+        "分页是实时视图，需按 session ID 去重"
+      ]
+    }
+  ],
+  "flow": [
+    "sessions_list 列出会话",
+    "sessions_search 搜索记录",
+    "sessions_history 读取记录",
+    "sessions_spawn 派生子代理",
+    "sessions_yield 等待结果"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "sessions",
+      "type": "product"
+    },
+    {
+      "name": "sessions_list",
+      "type": "product"
+    },
+    {
+      "name": "sessions_spawn",
+      "type": "product"
+    },
+    {
+      "name": "sessions_yield",
+      "type": "product"
+    },
+    {
+      "name": "conversations_send",
+      "type": "product"
+    },
+    {
+      "name": "subagents",
+      "type": "product"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "sessions",
+      "label": "提供"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "sessions_list",
+      "label": "提供"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "sessions_spawn",
+      "label": "提供"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "sessions_yield",
+      "label": "提供"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "conversations_send",
+      "label": "提供"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "subagents",
+      "label": "提供"
+    }
+  ]
+}

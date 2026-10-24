@@ -1,0 +1,94 @@
+{
+  "center": "AI 狂热者与怀疑者的现实鸿沟",
+  "branches": [
+    {
+      "label": "狂热者没错",
+      "detail": "全力拥抱 AI 的团队已出现真实、非想象的能力跃迁",
+      "children": [
+        "不是普通技术周期，无法等尘埃落定",
+        "观望的团队可能先于对手倒闭",
+        "这是真实的生存威胁"
+      ]
+    },
+    {
+      "label": "怀疑者也没错",
+      "detail": "代码交付快过工程师阅读速度，正在透支多年积累的信任",
+      "children": [
+        "可靠性下降，机构知识蒸发",
+        "系统无人理解，产品走向失序",
+        "on-call 轮值把人磨垮"
+      ]
+    },
+    {
+      "label": "核心症结",
+      "detail": "狂热者与怀疑者之间缺少自然的反馈回路",
+      "children": [
+        "双方常在同一团队，都想做好软件",
+        "需要设计反馈回路弥合共享现实的裂痕",
+        "这是组织设计难题"
+      ]
+    },
+    {
+      "label": "双重挑战",
+      "detail": "Charity Majors 建议同时当作领导力挑战与工程挑战",
+      "children": [
+        "两类威胁都是真实存在的",
+        "需连接两个群体的现实认知"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Charity Majors",
+      "type": "person"
+    },
+    {
+      "name": "AI enthusiasts",
+      "type": "concept"
+    },
+    {
+      "name": "AI skeptics",
+      "type": "concept"
+    },
+    {
+      "name": "feedback loops",
+      "type": "concept"
+    },
+    {
+      "name": "agentic-engineering",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Charity Majors",
+      "label": "引用"
+    },
+    {
+      "from": "Charity Majors",
+      "to": "AI enthusiasts",
+      "label": "分析"
+    },
+    {
+      "from": "Charity Majors",
+      "to": "AI skeptics",
+      "label": "分析"
+    },
+    {
+      "from": "feedback loops",
+      "to": "AI enthusiasts",
+      "label": "连接"
+    },
+    {
+      "from": "feedback loops",
+      "to": "AI skeptics",
+      "label": "连接"
+    }
+  ]
+}

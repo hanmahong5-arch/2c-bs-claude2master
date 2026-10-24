@@ -1,0 +1,71 @@
+{
+  "center": "OpenAI Academy 三门新课",
+  "branches": [
+    {
+      "label": "课程一：实用技能",
+      "detail": "教把 ChatGPT 等 AI 工具整合进具体工作流程，而非停留在概念",
+      "children": [
+        "从会用工具转向能设计解决方案"
+      ]
+    },
+    {
+      "label": "课程二：可重复工作流",
+      "detail": "把一次性 AI 交互转化为标准化、可复用的自动化流程",
+      "children": [
+        "构建模块化、可编排的 AI 组件"
+      ]
+    },
+    {
+      "label": "课程三：应用智能体",
+      "detail": "教把 AI 配置成能自主执行特定任务的智能体",
+      "children": [
+        "开发者转向定义目标、提供上下文与监督"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI Academy",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "AI 智能体",
+      "type": "concept"
+    },
+    {
+      "name": "可重复工作流",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "OpenAI Academy",
+      "label": "推出"
+    },
+    {
+      "from": "OpenAI Academy",
+      "to": "ChatGPT",
+      "label": "教授使用"
+    },
+    {
+      "from": "OpenAI Academy",
+      "to": "AI 智能体",
+      "label": "教授应用"
+    },
+    {
+      "from": "OpenAI Academy",
+      "to": "可重复工作流",
+      "label": "教授构建"
+    }
+  ]
+}

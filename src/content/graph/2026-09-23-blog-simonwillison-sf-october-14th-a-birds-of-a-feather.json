@@ -1,0 +1,92 @@
+{
+  "center": "Agentic Engineering 旧金山聚会",
+  "branches": [
+    {
+      "label": "活动基本信息",
+      "detail": "Simon Willison 与 Jesse Vincent 于 10 月 14 日在旧金山举办晚间活动",
+      "children": [
+        "时间：2026 年 10 月 14 日周三晚",
+        "地点：旧金山",
+        "形式：Birds of a Feather 非正式交流"
+      ]
+    },
+    {
+      "label": "面向人群",
+      "detail": "面向用 coding agents 构建奇怪有趣东西的开发者",
+      "children": [
+        "正在尝试或实验 coding agents 的人",
+        "欢迎未公开的工作与无市场项目"
+      ]
+    },
+    {
+      "label": "活动形式",
+      "detail": "一场流动对话加非正式展示分享，无需正式演讲",
+      "children": [
+        "鼓励分享但非强制",
+        "不是产品推销，而是早期探索"
+      ]
+    },
+    {
+      "label": "核心精神",
+      "detail": "拥抱 agentic AI 的怪异，交流学习与未解问题",
+      "children": [
+        "交换笔记：在试什么、学到什么、还没搞懂什么",
+        "特别关注未公开的奇怪实验"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Jesse Vincent",
+      "type": "person"
+    },
+    {
+      "name": "Agentic Engineering",
+      "type": "concept"
+    },
+    {
+      "name": "coding agents",
+      "type": "concept"
+    },
+    {
+      "name": "San Francisco",
+      "type": "concept"
+    },
+    {
+      "name": "Birds of a Feather",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Agentic Engineering",
+      "label": "主持"
+    },
+    {
+      "from": "Jesse Vincent",
+      "to": "Agentic Engineering",
+      "label": "主持"
+    },
+    {
+      "from": "Agentic Engineering",
+      "to": "coding agents",
+      "label": "围绕"
+    },
+    {
+      "from": "Agentic Engineering",
+      "to": "San Francisco",
+      "label": "举办于"
+    },
+    {
+      "from": "Agentic Engineering",
+      "to": "Birds of a Feather",
+      "label": "形式为"
+    }
+  ]
+}

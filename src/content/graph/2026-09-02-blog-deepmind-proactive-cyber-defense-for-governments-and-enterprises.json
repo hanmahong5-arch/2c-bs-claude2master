@@ -1,0 +1,120 @@
+{
+  "center": "Google Fairwind 主动网络防御",
+  "branches": [
+    {
+      "label": "Fairwind 计划",
+      "detail": "Google 面向政府与企业可信伙伴推出的限量访问主动防御计划",
+      "children": [
+        "首批开放 Gemini 3.8 Flash Cyber 与…",
+        "全球已有 650+ 参与伙伴",
+        "面向政府、关键基础设施、核心技术平台"
+      ]
+    },
+    {
+      "label": "自主找漏洞修漏洞",
+      "detail": "用 AI 代理自动发现、验证并修复漏洞，而非仅预警",
+      "children": [
+        "CodeMender 生成可部署补丁",
+        "修复从数周缩短到数分钟",
+        "运行成本远低于传统前沿模型"
+      ]
+    },
+    {
+      "label": "安全使用约束",
+      "detail": "参与方须遵守严格操作标准，防止能力滥用",
+      "children": [
+        "仅限内部安全、应急响应、渗透测试团队访问",
+        "强制部署多因素认证等保护措施"
+      ]
+    },
+    {
+      "label": "生态与公益投入",
+      "detail": "Google.org 累计网络安全资助超 1 亿美元",
+      "children": [
+        "2026 美国报告：3600 万美元资助 35 家网络诊所",
+        "已服务 1250+ 医院、学区与市政公用事业"
+      ]
+    },
+    {
+      "label": "更广可用路径",
+      "detail": "非 Fairwind 客户也可用公开模型做主动代码防护",
+      "children": [
+        "Gemini Enterprise Agent Platform 上…",
+        "配合 AI Threat Defense 方案"
+      ]
+    }
+  ],
+  "flow": [
+    "AI 自主发现漏洞",
+    "验证漏洞可利用性",
+    "生成并校验修复代码",
+    "输出可部署补丁",
+    "在安全云环境内落地"
+  ],
+  "entities": [
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Fairwind Program",
+      "type": "product"
+    },
+    {
+      "name": "Gemini 3.8 Flash Cyber",
+      "type": "model"
+    },
+    {
+      "name": "CodeMender",
+      "type": "product"
+    },
+    {
+      "name": "Google.org",
+      "type": "company"
+    },
+    {
+      "name": "AI Threat Defense",
+      "type": "product"
+    },
+    {
+      "name": "主动网络防御",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google",
+      "to": "Fairwind Program",
+      "label": "推出"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini 3.8 Flash Cyber",
+      "label": "研发"
+    },
+    {
+      "from": "Fairwind Program",
+      "to": "Gemini 3.8 Flash Cyber",
+      "label": "提供访问"
+    },
+    {
+      "from": "CodeMender",
+      "to": "Gemini 3.8 Flash Cyber",
+      "label": "集成"
+    },
+    {
+      "from": "Fairwind Program",
+      "to": "主动网络防御",
+      "label": "实现"
+    },
+    {
+      "from": "Google.org",
+      "to": "Fairwind Program",
+      "label": "资助生态"
+    }
+  ]
+}

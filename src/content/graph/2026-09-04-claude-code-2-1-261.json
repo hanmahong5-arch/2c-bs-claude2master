@@ -1,0 +1,86 @@
+{
+  "center": "Claude Code v2.1.261 更新",
+  "branches": [
+    {
+      "label": "输出上限提升",
+      "detail": "新增设置把命令与后台任务输出上限提到 128K 字符",
+      "children": [
+        "bashOutputMaxChars 控制命令输出",
+        "taskOutputMaxChars 控制后台任务输出",
+        "内联输出更多，减少文件切换"
+      ]
+    },
+    {
+      "label": "技能体检",
+      "detail": "新增 /skill-doctor 命令，展示未使用技能及其上下文成本",
+      "children": [
+        "便于裁剪无用技能",
+        "优化 token 使用"
+      ]
+    },
+    {
+      "label": "子代理提示",
+      "detail": "新增 --append-subagent-system-prompt-file 从文件读取子代理系统提示",
+      "children": [
+        "适合超长提示场景"
+      ]
+    },
+    {
+      "label": "交互修复",
+      "detail": "修复快速输入时字符乱序或丢失，提升交互可靠性",
+      "children": []
+    },
+    {
+      "label": "会话恢复修复",
+      "detail": "修复恢复会话时并行工具调用的 hook 输出丢失",
+      "children": [
+        "确保上下文完整"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "bashOutputMaxChars",
+      "type": "concept"
+    },
+    {
+      "name": "taskOutputMaxChars",
+      "type": "concept"
+    },
+    {
+      "name": "/skill-doctor",
+      "type": "product"
+    },
+    {
+      "name": "--append-subagent-system-prompt-file",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "bashOutputMaxChars",
+      "label": "新增设置"
+    },
+    {
+      "from": "Claude Code",
+      "to": "taskOutputMaxChars",
+      "label": "新增设置"
+    },
+    {
+      "from": "Claude Code",
+      "to": "/skill-doctor",
+      "label": "新增命令"
+    },
+    {
+      "from": "Claude Code",
+      "to": "--append-subagent-system-prompt-file",
+      "label": "新增参数"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "center": "opencode v1.17.8 更新",
+  "branches": [
+    {
+      "label": "MCP 兼容性修复",
+      "detail": "OpenAI 兼容提供者现可正确处理 MCP 工具模式",
+      "children": [
+        "Cloudflare AI Gateway 正确接收 API 密钥",
+        "Agent Harness 更稳定集成第三方工具"
+      ]
+    },
+    {
+      "label": "错误处理改进",
+      "detail": "工具失败时显示服务器原始错误信息",
+      "children": [
+        "长运行工具报告进度时保持超时计时器活跃",
+        "帮助开发者更快诊断调试工具链问题"
+      ]
+    },
+    {
+      "label": "桌面端交互优化",
+      "detail": "新增主页标签页切换按钮",
+      "children": [
+        "文件/文件夹选择器在 v2 布局中更快更易导航",
+        "优化桌面环境工作流效率"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Cloudflare AI Gateway",
+      "type": "product"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "MCP",
+      "label": "增强兼容"
+    },
+    {
+      "from": "OpenAI",
+      "to": "MCP",
+      "label": "支持工具模式"
+    },
+    {
+      "from": "Cloudflare AI Gateway",
+      "to": "opencode",
+      "label": "接收密钥"
+    },
+    {
+      "from": "Agent Harness",
+      "to": "MCP",
+      "label": "集成工具"
+    }
+  ]
+}

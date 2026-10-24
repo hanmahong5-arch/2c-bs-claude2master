@@ -1,0 +1,95 @@
+{
+  "center": "cline sdk tasks 工具按客户端解析",
+  "branches": [
+    {
+      "label": "按客户端限定",
+      "detail": "tasks 工具可用性由客户端类型决定，宿主声明类型后集中解析",
+      "children": [
+        "持久待办、一次性、周期调度三类任务",
+        "核心工具目录集中解析"
+      ]
+    },
+    {
+      "label": "减少无效注册",
+      "detail": "CLI 与 VS Code 会话不再注册无法执行的工具",
+      "children": [
+        "避免无效调用",
+        "工具可用性与客户端匹配"
+      ]
+    },
+    {
+      "label": "Hub 会话解析",
+      "detail": "Hub 会话从请求客户端元数据解析相同逻辑",
+      "children": [
+        "依赖请求客户端元数据"
+      ]
+    },
+    {
+      "label": "harness 设计影响",
+      "detail": "工具注册需考虑运行环境",
+      "children": [
+        "注册逻辑与运行环境绑定"
+      ]
+    }
+  ],
+  "flow": [
+    "宿主声明客户端类型",
+    "核心工具目录集中解析",
+    "按类型限定 tasks 工具",
+    "CLI/VS Code 跳过无效注册",
+    "Hub 从元数据解析"
+  ],
+  "entities": [
+    {
+      "name": "cline sdk",
+      "type": "product"
+    },
+    {
+      "name": "tasks 工具",
+      "type": "product"
+    },
+    {
+      "name": "CLI",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "Hub",
+      "type": "product"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline sdk",
+      "to": "tasks 工具",
+      "label": "包含"
+    },
+    {
+      "from": "tasks 工具",
+      "to": "CLI",
+      "label": "适配"
+    },
+    {
+      "from": "tasks 工具",
+      "to": "VS Code",
+      "label": "适配"
+    },
+    {
+      "from": "tasks 工具",
+      "to": "Hub",
+      "label": "适配"
+    },
+    {
+      "from": "harness",
+      "to": "tasks 工具",
+      "label": "影响注册"
+    }
+  ]
+}

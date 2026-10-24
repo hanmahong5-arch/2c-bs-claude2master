@@ -1,0 +1,115 @@
+{
+  "center": "Anthropic 更新负责任扩展政策",
+  "branches": [
+    {
+      "label": "核心承诺",
+      "detail": "未落实充分安全保障前，不训练也不部署模型",
+      "children": [
+        "按风险比例配置防护，风险越高措施越严",
+        "沿用 AI Safety Level（ASL）分级标准"
+      ]
+    },
+    {
+      "label": "两大能力阈值",
+      "detail": "达到即触发更高等级防护要求",
+      "children": [
+        "自主 AI 研发：需 ASL-4 或更高",
+        "CBRN 武器协助：需 ASL-3"
+      ]
+    },
+    {
+      "label": "ASL 分级体系",
+      "detail": "借鉴生物安全等级，随能力递增而加严",
+      "children": [
+        "ASL-1 为棋类机器人等基础能力",
+        "当前所有模型运行在 ASL-2"
+      ]
+    },
+    {
+      "label": "实施与监督",
+      "detail": "建立评估、文档与内外部治理机制",
+      "children": [
+        "能力评估与防护评估定期进行",
+        "借鉴 safety case 方法论做决策记录",
+        "内部压力测试加外部专家反馈"
+      ]
+    },
+    {
+      "label": "首年复盘",
+      "detail": "发现少量未完全达标处，风险极小",
+      "children": [
+        "评估晚 3 天完成、占位评估说明不清",
+        "可借 chain-of-thought 等提升评估"
+      ]
+    }
+  ],
+  "flow": [
+    "评估模型能力",
+    "对照能力阈值",
+    "确定所需 ASL 标准",
+    "实施安全与安保措施",
+    "记录并接受内外部审查"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Responsible Scaling Policy",
+      "type": "concept"
+    },
+    {
+      "name": "ASL Standards",
+      "type": "concept"
+    },
+    {
+      "name": "Capability Thresholds",
+      "type": "concept"
+    },
+    {
+      "name": "CBRN",
+      "type": "concept"
+    },
+    {
+      "name": "safety case",
+      "type": "technique"
+    },
+    {
+      "name": "chain-of-thought",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Responsible Scaling Policy",
+      "label": "发布"
+    },
+    {
+      "from": "Responsible Scaling Policy",
+      "to": "ASL Standards",
+      "label": "采用"
+    },
+    {
+      "from": "Responsible Scaling Policy",
+      "to": "Capability Thresholds",
+      "label": "定义"
+    },
+    {
+      "from": "Capability Thresholds",
+      "to": "CBRN",
+      "label": "涵盖"
+    },
+    {
+      "from": "Responsible Scaling Policy",
+      "to": "safety case",
+      "label": "借鉴"
+    },
+    {
+      "from": "Responsible Scaling Policy",
+      "to": "chain-of-thought",
+      "label": "提及"
+    }
+  ]
+}

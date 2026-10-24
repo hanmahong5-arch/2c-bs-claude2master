@@ -7,7 +7,15 @@ import type {
   ContentItem,
   DigestItem,
   HarnessItem,
+  SourceCategory,
 } from "./content-types";
+import {
+  buildConceptGraph,
+  sanitizeGraph,
+  type ArticleGraph,
+  type ConceptGraph,
+  type GraphDoc,
+} from "./graph";
 
 const CONTENT_ROOT = path.join(process.cwd(), "src", "content");
 
@@ -80,8 +88,69 @@ function asTags(v: unknown): string[] {
   return Array.isArray(v) ? v.map((x) => String(x)) : [];
 }
 
+function asCategory(v: unknown): SourceCategory | undefined {
+  return v === "lab" || v === "company" || v === "person" || v === "community"
+    ? v
+    : undefined;
+}
+
+// ── 知识图谱 (src/content/graph/<slug>.json, summarize.ts 产出) ──────────────
+
+const GRAPH_ROOT = path.join(CONTENT_ROOT, "graph");
+
+/** 全部文章图谱, slug → graph。读盘一次 (React cache), 每份经 sanitizeGraph 收敛。 */
+export const getGraphMap = cache(async function getGraphMap(): Promise<Map<string, ArticleGraph>> {
+  const out = new Map<string, ArticleGraph>();
+  let files: string[];
+  try {
+    files = await fs.readdir(GRAPH_ROOT);
+  } catch {
+    return out;
+  }
+  await Promise.all(
+    files
+      .filter((f) => f.endsWith(".json"))
+      .map(async (f) => {
+        try {
+          const g = sanitizeGraph(JSON.parse(await fs.readFile(path.join(GRAPH_ROOT, f), "utf-8")));
+          if (g) out.set(f.slice(0, -5), g);
+        } catch {
+          // 坏文件跳过: 图谱是增强, 不能让一份损坏 JSON 拖垮整站构建
+        }
+      }),
+  );
+  return out;
+});
+
+export async function getArticleGraph(slug: string): Promise<ArticleGraph | undefined> {
+  return (await getGraphMap()).get(slug);
+}
+
+// 全站概念图: 模块级 memo (非 React cache — 后者按请求作用域, SSG 1600+ 页会各算一遍力导布局)。
+let conceptGraphMemo: Promise<ConceptGraph> | null = null;
+export function getConceptGraph(): Promise<ConceptGraph> {
+  conceptGraphMemo ??= getGraphDocs().then((docs) =>
+    buildConceptGraph(docs, { maxNodes: 90, minCount: 2, width: 1000, height: 680 }),
+  );
+  return conceptGraphMemo;
+}
+
+/** 有图谱的 changelog 条目 (日期倒序), 供全站概念图聚合 */
+export async function getGraphDocs(): Promise<GraphDoc[]> {
+  const [items, graphs] = await Promise.all([getChangelog(), getGraphMap()]);
+  return items.flatMap((c) => {
+    const graph = graphs.get(c.slug);
+    return graph ? [{ slug: c.slug, title: c.title, publishedAt: c.publishedAt, graph }] : [];
+  });
+}
+
 export const getChangelog = cache(async function getChangelog(): Promise<ChangelogItem[]> {
   const raw = await readChannelRaw("changelog");
+  const graphSlugs = new Set(
+    (await fs.readdir(GRAPH_ROOT).catch(() => [] as string[]))
+      .filter((f) => f.endsWith(".json"))
+      .map((f) => f.slice(0, -5)),
+  );
   const items: ChangelogItem[] = raw.map(({ slug, data, body }) => ({
     channel: "changelog",
     slug,
@@ -111,8 +180,12 @@ export const getChangelog = cache(async function getChangelog(): Promise<Changel
             ? "trending"
             : asString(data.kind) === "blogger"
               ? "blogger"
-              : undefined,
+              : asString(data.kind) === "community"
+                ? "community"
+                : undefined,
     author: data.author ? asString(data.author) : undefined,
+    category: asCategory(data.category),
+    hasGraph: graphSlugs.has(slug),
   }));
   return items.sort((a, b) =>
     a.publishedAt < b.publishedAt ? 1 : a.publishedAt > b.publishedAt ? -1 : 0,

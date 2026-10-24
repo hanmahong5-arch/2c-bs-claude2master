@@ -1,0 +1,62 @@
+{
+  "center": "Cline v4.0.10 遥测更新",
+  "branches": [
+    {
+      "label": "新增遥测",
+      "detail": "追踪达到连续错误限制的事件",
+      "children": [
+        "Cline 达到连续错误限制时触发"
+      ]
+    },
+    {
+      "label": "容错可量化",
+      "detail": "agent 容错机制可被监控",
+      "children": [
+        "便于调试和改进"
+      ]
+    },
+    {
+      "label": "harness 设计",
+      "detail": "需考虑遥测数据收集",
+      "children": [
+        "评估 agent 稳定性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "遥测",
+      "type": "concept"
+    },
+    {
+      "name": "连续错误限制",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "遥测",
+      "label": "新增"
+    },
+    {
+      "from": "遥测",
+      "to": "连续错误限制",
+      "label": "追踪"
+    },
+    {
+      "from": "harness",
+      "to": "遥测",
+      "label": "收集"
+    }
+  ]
+}

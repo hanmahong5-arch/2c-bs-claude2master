@@ -1,0 +1,123 @@
+{
+  "center": "Anthropic 推出 Claude Tag",
+  "branches": [
+    {
+      "label": "产品定位",
+      "detail": "Claude 以团队成员身份加入 Slack，可被 @ 委派异步任务",
+      "children": [
+        "Claude Code 团队内部已用一年",
+        "内部称合并 65% 产品 PR",
+        "Claude Code 负责同步单人，Tag 负责多人异步"
+      ]
+    },
+    {
+      "label": "核心能力",
+      "detail": "主动式、持久化、多人协作的 Slack 原生代理",
+      "children": [
+        "可 @ 相关同事与代码负责人",
+        "git webhook 可等待数天阻塞依赖",
+        "线程总结为文档并附行动项"
+      ]
+    },
+    {
+      "label": "环境模式",
+      "detail": "无需被 @ 也能主动响应与跨频道同步信息",
+      "children": [
+        "监控阈值触发后尝试修复",
+        "A/B 测试达标后准备上线 PR",
+        "跨频道主动同步信息"
+      ]
+    },
+    {
+      "label": "权限与可用性",
+      "detail": "需显式配置代理权限，按频道/工具/数据/代码库授权",
+      "children": [
+        "首发为 Claude Enterprise 与 Team 测试版",
+        "官方发布 agent permissions 配置指南",
+        "Cat Wu 称有数百种定制方式"
+      ]
+    },
+    {
+      "label": "外界评价",
+      "detail": "被视为 LLM 交互第三次重大改版，也有营销质疑",
+      "children": [
+        "Karpathy 称第三次 LLM UIUX 改版",
+        "Alex Albert 称像管理团队",
+        "有批评称只是营销"
+      ]
+    }
+  ],
+  "flow": [
+    "在 Slack 中 @Claude",
+    "授予频道与工具权限",
+    "异步委派任务",
+    "Claude 后台执行并跟进",
+    "回传进度与结果"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Tag",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "Cat Wu",
+      "type": "person"
+    },
+    {
+      "name": "Alex Albert",
+      "type": "person"
+    },
+    {
+      "name": "Andrej Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "异步代理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Tag",
+      "label": "推出"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "Slack",
+      "label": "集成于"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "Claude Code",
+      "label": "扩展自"
+    },
+    {
+      "from": "Cat Wu",
+      "to": "Claude Tag",
+      "label": "负责"
+    },
+    {
+      "from": "Andrej Karpathy",
+      "to": "Claude Tag",
+      "label": "评价"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "异步代理",
+      "label": "属于"
+    }
+  ]
+}

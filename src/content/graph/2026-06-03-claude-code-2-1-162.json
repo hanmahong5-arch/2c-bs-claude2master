@@ -1,0 +1,88 @@
+{
+  "center": "Claude Code v2.1.162 更新",
+  "branches": [
+    {
+      "label": "会话等待状态",
+      "detail": "claude agents --json 新增 waitingFor 字段，显示会话阻塞原因",
+      "children": [
+        "如权限提示导致的阻塞",
+        "便于开发者诊断 Agent 阻塞状态"
+      ]
+    },
+    {
+      "label": "权限规则修复",
+      "detail": "WebFetch 权限规则此前未应用于内置预批准域，现已修复",
+      "children": [
+        "明确规则现在优先于自动允许",
+        "强化 Agent 工具调用安全边界"
+      ]
+    },
+    {
+      "label": "中断信号修复",
+      "detail": "流转 JSON/SDK 会话开始时发送的中断信号此前被静默丢弃",
+      "children": [
+        "现在能正确中断并给予反馈",
+        "确保 Agent 交互响应性与可控性"
+      ]
+    },
+    {
+      "label": "启动稳定性",
+      "detail": "本次版本同时提升启动稳定性",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "WebFetch",
+      "type": "technique"
+    },
+    {
+      "name": "waitingFor",
+      "type": "concept"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    },
+    {
+      "name": "SDK",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Code",
+      "to": "WebFetch",
+      "label": "修复权限"
+    },
+    {
+      "from": "Claude Code",
+      "to": "waitingFor",
+      "label": "新增字段"
+    },
+    {
+      "from": "waitingFor",
+      "to": "Agent",
+      "label": "诊断阻塞"
+    },
+    {
+      "from": "Claude Code",
+      "to": "SDK",
+      "label": "修复中断"
+    }
+  ]
+}

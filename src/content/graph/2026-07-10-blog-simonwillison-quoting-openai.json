@@ -1,0 +1,55 @@
+{
+  "center": "OpenAI 澄清 ChatGPT Work 隔离",
+  "branches": [
+    {
+      "label": "云与桌面隔离",
+      "detail": "Web 和移动端 Work 跑在云端，桌面端可访问本地文件",
+      "children": [
+        "桌面端需用户授权才能用本地文件和桌面应用",
+        "云端 Work 对话不出现在桌面端 Work 中"
+      ]
+    },
+    {
+      "label": "本地数据留存",
+      "detail": "桌面端 Work 线程和本地文件保留在该电脑上",
+      "children": [
+        "桌面 Work 线程不上传云端",
+        "本地文件留在本机"
+      ]
+    },
+    {
+      "label": "澄清被指失败",
+      "detail": "Simon Willison 认为 OpenAI 的说明未能讲清隔离机制",
+      "children": [
+        "引用自 Simon Willison 博客 2026-07-10"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "OpenAI",
+      "label": "引用批评"
+    }
+  ]
+}

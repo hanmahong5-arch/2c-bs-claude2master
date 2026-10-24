@@ -1,0 +1,110 @@
+{
+  "center": "开源模型生态如何复利",
+  "branches": [
+    {
+      "label": "研发占算力八成",
+      "detail": "前沿模型算力主要花在研发而非最终训练，Ai2 与 Epoch AI 估算约 80%",
+      "children": [
+        "Ai2 记录 Olmo 3 开发",
+        "Epoch AI 研究公开成本文档",
+        "误差区间较大"
+      ]
+    },
+    {
+      "label": "中国开放生态优势",
+      "detail": "领先玩家全部开放，靠快速互相学习避免重复投入研发算力与基建",
+      "children": [
+        "最接近 LLM 的 OSS 生态",
+        "DeepSeek V3 被误读为纯训练成本",
+        "技术报告详尽、跨实验室共享"
+      ]
+    },
+    {
+      "label": "开源AI缺反馈环",
+      "detail": "不像 OSS 有用户回馈创造价值，开源AI成本几乎全落在模型开发者身上",
+      "children": [
+        "Linus 定律难适用",
+        "开源降低的是未来开发与部署成本",
+        "即用型场景闭源更便宜"
+      ]
+    },
+    {
+      "label": "分叉与共享矛盾",
+      "detail": "公司常把开源工具分叉为内部版，阻碍生态复利；MoE 大规模 RL 无真正开放配方",
+      "children": [
+        "Tinker、Lab 部分开放",
+        "无共享单一基座模型",
+        "需开放模型联盟"
+      ]
+    },
+    {
+      "label": "闭源受益较少",
+      "detail": "闭源实验室领先数月，从开源共享洞察中获益相对更少",
+      "children": [
+        "开源越强，成本激励越促使大家靠近同一帕累托曲线"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Ai2",
+      "type": "company"
+    },
+    {
+      "name": "Olmo 3",
+      "type": "model"
+    },
+    {
+      "name": "Epoch AI",
+      "type": "company"
+    },
+    {
+      "name": "DeepSeek V3",
+      "type": "model"
+    },
+    {
+      "name": "MoE",
+      "type": "concept"
+    },
+    {
+      "name": "Tinker",
+      "type": "product"
+    },
+    {
+      "name": "Lab",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ai2",
+      "to": "Olmo 3",
+      "label": "开发"
+    },
+    {
+      "from": "Epoch AI",
+      "to": "Ai2",
+      "label": "研究成本"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "DeepSeek V3",
+      "label": "举例"
+    },
+    {
+      "from": "Tinker",
+      "to": "MoE",
+      "label": "支持训练"
+    },
+    {
+      "from": "Lab",
+      "to": "MoE",
+      "label": "支持训练"
+    }
+  ]
+}

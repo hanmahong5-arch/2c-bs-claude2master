@@ -1,0 +1,84 @@
+{
+  "center": "IBM Granite 4.2 构建方法",
+  "branches": [
+    {
+      "label": "模型定位",
+      "detail": "面向多语言生成、编码、RAG 与 AI 助手工作流的高效语言模型",
+      "children": [
+        "覆盖多语言生成与编码场景",
+        "支持 RAG 与 AI 助手工作流"
+      ]
+    },
+    {
+      "label": "推理能力",
+      "detail": "包含高效推理与思考型语言模型，服务同类工作流",
+      "children": [
+        "强调高效推理与思考能力",
+        "同样面向多语言与编码"
+      ]
+    },
+    {
+      "label": "相关模型",
+      "detail": "同系列还有 Granite Speech 5.0 Turbo CTC 与 Granite Embedding Multilingual R2",
+      "children": [
+        "Granite Speech 5.0 Turbo CTC 主打快速准确…",
+        "Granite Embedding Multilingual R2 为…",
+        "嵌入模型支持 32K 上下文"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "IBM",
+      "type": "company"
+    },
+    {
+      "name": "Granite 4.2",
+      "type": "model"
+    },
+    {
+      "name": "Granite Speech 5.0 Turbo CTC",
+      "type": "model"
+    },
+    {
+      "name": "Granite Embedding Multilingual R2",
+      "type": "model"
+    },
+    {
+      "name": "RAG",
+      "type": "concept"
+    },
+    {
+      "name": "Apache 2.0",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "IBM",
+      "to": "Granite 4.2",
+      "label": "发布"
+    },
+    {
+      "from": "IBM",
+      "to": "Granite Speech 5.0 Turbo CTC",
+      "label": "发布"
+    },
+    {
+      "from": "IBM",
+      "to": "Granite Embedding Multilingual R2",
+      "label": "发布"
+    },
+    {
+      "from": "Granite 4.2",
+      "to": "RAG",
+      "label": "支持"
+    },
+    {
+      "from": "Granite Embedding Multilingual R2",
+      "to": "Apache 2.0",
+      "label": "采用"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "center": "Gemini for Science 科学套件",
+  "branches": [
+    {
+      "label": "三大实验工具",
+      "detail": "Google Labs 推出三款原型，加速科学方法核心步骤",
+      "children": [
+        "Hypothesis Generation 基于 Co-Scientist…",
+        "Computational Discovery 基于 AlphaEvolve…",
+        "Literature Insights 基于 NotebookLM 做文…"
+      ]
+    },
+    {
+      "label": "Science Skills",
+      "detail": "整合 30 多个生命科学数据库与工具的技能包",
+      "children": [
+        "含 UniProt、AlphaFold Database…",
+        "在 Google Antigravity 上运行复杂生物信息分析",
+        "数小时工作缩短至数分钟"
+      ]
+    },
+    {
+      "label": "企业级应用",
+      "detail": "通过 Google Cloud 向企业提供科研与工业研发方案",
+      "children": [
+        "BASF 用 AlphaEvolve 优化供应链",
+        "Klarna 用其增强机器学习模型",
+        "Daiichi Sankyo、Bayer Crop Science、美国…"
+      ]
+    },
+    {
+      "label": "科研生态合作",
+      "detail": "与 100 多家机构合作验证系统与工具",
+      "children": [
+        "斯坦福大学研究肝纤维化，帝国理工研究抗菌素耐药性",
+        "与 The Crick Institute 多年合作",
+        "与 ICML、STOC、NeurIPS 试点智能同行评审"
+      ]
+    },
+    {
+      "label": "既有模型基础",
+      "detail": "建立在 AlphaFold、AlphaGenome 等长期 AI 成果之上",
+      "children": [
+        "AlphaFold 帮助超 300 万研究人员",
+        "AlphaGenome 助力识别疾病驱动因素",
+        "Gemini Deep Think 提升复杂科学任务能力"
+      ]
+    }
+  ],
+  "flow": [
+    "定义研究挑战",
+    "多智能体假设竞赛",
+    "生成并评估假设",
+    "验证并附引用",
+    "并行生成代码变体",
+    "评分筛选建模方案"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemini for Science",
+      "type": "product"
+    },
+    {
+      "name": "Co-Scientist",
+      "type": "model"
+    },
+    {
+      "name": "AlphaEvolve",
+      "type": "model"
+    },
+    {
+      "name": "NotebookLM",
+      "type": "product"
+    },
+    {
+      "name": "Google Antigravity",
+      "type": "product"
+    },
+    {
+      "name": "AlphaFold",
+      "type": "model"
+    },
+    {
+      "name": "Science Skills",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini for Science",
+      "label": "推出"
+    },
+    {
+      "from": "Gemini for Science",
+      "to": "Co-Scientist",
+      "label": "包含"
+    },
+    {
+      "from": "Gemini for Science",
+      "to": "AlphaEvolve",
+      "label": "包含"
+    },
+    {
+      "from": "Gemini for Science",
+      "to": "NotebookLM",
+      "label": "包含"
+    },
+    {
+      "from": "Science Skills",
+      "to": "Google Antigravity",
+      "label": "运行于"
+    },
+    {
+      "from": "Gemini for Science",
+      "to": "Science Skills",
+      "label": "包含"
+    }
+  ]
+}

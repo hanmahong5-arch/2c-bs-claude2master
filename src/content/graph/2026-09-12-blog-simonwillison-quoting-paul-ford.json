@@ -1,0 +1,66 @@
+{
+  "center": "AI 能写代码不等于该写",
+  "branches": [
+    {
+      "label": "人类仍不可替代",
+      "detail": "顶尖软件仍需人类协作思考、发挥各自技艺",
+      "children": [
+        "AI 无法替代人类协作与手艺"
+      ]
+    },
+    {
+      "label": "AI 写码的副作用",
+      "detail": "AI 能写出好软件，却让人轻易把别人的活干砸",
+      "children": [
+        "这也是众多项目失败的原因之一"
+      ]
+    },
+    {
+      "label": "人人能写码的反思",
+      "detail": "当人人都能写代码，反而更清楚为何很多人不该写",
+      "children": [
+        "能写不等于该写"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Paul Ford",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "生成式 AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Paul Ford",
+      "to": "AI",
+      "label": "评论"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Paul Ford",
+      "label": "引用"
+    },
+    {
+      "from": "AI",
+      "to": "LLM",
+      "label": "基于"
+    }
+  ]
+}

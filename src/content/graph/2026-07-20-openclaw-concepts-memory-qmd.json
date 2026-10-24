@@ -1,0 +1,80 @@
+{
+  "center": "QMD 本地优先混合搜索引擎",
+  "branches": [
+    {
+      "label": "三种检索组合",
+      "detail": "BM25、向量搜索与重排序三路并用，靠查询扩展和重排序提升召回",
+      "children": [
+        "避免单一搜索方式的盲区"
+      ]
+    },
+    {
+      "label": "索引范围可配",
+      "detail": "可配置项目文档、团队笔记等任意路径，并自动索引历史会话",
+      "children": [
+        "让代理回忆更早的交互"
+      ]
+    },
+    {
+      "label": "自动降级兼容",
+      "detail": "QMD 不可用时无缝回退内置引擎，并兼容新旧版本 QMD",
+      "children": [
+        "检测帮助文本适配多集合或单集合路径"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "QMD",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "BM25",
+      "type": "technique"
+    },
+    {
+      "name": "向量搜索",
+      "type": "technique"
+    },
+    {
+      "name": "重排序",
+      "type": "technique"
+    },
+    {
+      "name": "查询扩展",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "QMD",
+      "label": "集成"
+    },
+    {
+      "from": "QMD",
+      "to": "BM25",
+      "label": "采用"
+    },
+    {
+      "from": "QMD",
+      "to": "向量搜索",
+      "label": "采用"
+    },
+    {
+      "from": "QMD",
+      "to": "重排序",
+      "label": "采用"
+    },
+    {
+      "from": "QMD",
+      "to": "查询扩展",
+      "label": "采用"
+    }
+  ]
+}

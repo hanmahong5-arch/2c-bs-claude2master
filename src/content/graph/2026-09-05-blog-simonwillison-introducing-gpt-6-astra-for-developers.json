@@ -1,0 +1,83 @@
+{
+  "center": "OpenAI 发布 GPT-6 Astra",
+  "branches": [
+    {
+      "label": "发布信息",
+      "detail": "OpenAI 面向开发者推出 GPT-6 Astra，Simon Willison 于 2026 年 9 月 5 日转发",
+      "children": [
+        "发布时间：2026-09-05",
+        "面向开发者"
+      ]
+    },
+    {
+      "label": "能力提升",
+      "detail": "整体更注重细节、更懂用户提示词，能构建更复杂的输出",
+      "children": [
+        "细节把控更强",
+        "提示词理解更好",
+        "输出更复杂"
+      ]
+    },
+    {
+      "label": "3D 建模专长",
+      "detail": "尤其擅长构建 3D 模型，可渲染花园、船厂、动物、城市景观等",
+      "children": [
+        "花园、船厂、动物",
+        "城市景观、戴森球"
+      ]
+    },
+    {
+      "label": "趣味彩蛋",
+      "detail": "延续经典测试梗：给骑自行车的鹈鹕戴上红领巾",
+      "children": [
+        "鹈鹕骑自行车",
+        "红色领巾"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "3D 建模",
+      "type": "concept"
+    },
+    {
+      "name": "开发者",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Astra",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-6 Astra",
+      "label": "报道"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "3D 建模",
+      "label": "擅长"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "开发者",
+      "label": "面向"
+    }
+  ]
+}

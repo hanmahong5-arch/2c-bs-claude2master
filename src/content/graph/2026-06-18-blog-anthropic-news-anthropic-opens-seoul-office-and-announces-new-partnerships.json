@@ -1,0 +1,114 @@
+{
+  "center": "Anthropic 首尔办公室与韩国合作",
+  "branches": [
+    {
+      "label": "设立首尔办公室",
+      "detail": "Anthropic 在首尔开设办公室，由 KiYoung Choi 领导，正在招聘",
+      "children": [
+        "KiYoung Choi 任韩国代表董事，有三十年科技经验",
+        "高层本周赴首尔会见合作伙伴与开发者"
+      ]
+    },
+    {
+      "label": "政府安全合作",
+      "detail": "与韩国科学与 ICT 部签署 MOU，推进公共部门 AI 安全",
+      "children": [
+        "与韩国 AI 安全研究所合作评估韩语模型安全",
+        "交换 AI 网络威胁信息"
+      ]
+    },
+    {
+      "label": "企业部署 Claude",
+      "detail": "韩国大型企业集团与初创公司广泛采用 Claude",
+      "children": [
+        "NAVER 全工程组织部署 Claude Code",
+        "Nexon 用 Claude Code 开发在线游戏",
+        "LG CNS、三星 SDS、Hanwha Solutions 部署…"
+      ]
+    },
+    {
+      "label": "研究与公益",
+      "detail": "支持学术研究和非营利组织使用 Claude",
+      "children": [
+        "向 NAIRL 联盟最多 60 名研究者提供 Claude…",
+        "Good Neighbors Korea 用 Claude 分析项目成果"
+      ]
+    },
+    {
+      "label": "开发者社区",
+      "detail": "韩国是 Claude.ai 使用量前十几名国家，开发者社区活跃",
+      "children": [
+        "Claude for Startups 在韩国上线",
+        "与 BASS Ventures 合办 Claude Build Day…",
+        "将与 Replit 等合办 Push to Prod 黑客松"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "NAVER",
+      "type": "company"
+    },
+    {
+      "name": "Samsung SDS",
+      "type": "company"
+    },
+    {
+      "name": "LG CNS",
+      "type": "company"
+    },
+    {
+      "name": "KiYoung Choi",
+      "type": "person"
+    },
+    {
+      "name": "Korea AI Safety Institute",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "NAVER",
+      "to": "Claude Code",
+      "label": "部署"
+    },
+    {
+      "from": "Samsung SDS",
+      "to": "Claude",
+      "label": "部署"
+    },
+    {
+      "from": "LG CNS",
+      "to": "Claude",
+      "label": "部署"
+    },
+    {
+      "from": "KiYoung Choi",
+      "to": "Anthropic",
+      "label": "领导韩国"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Korea AI Safety Institute",
+      "label": "合作"
+    }
+  ]
+}

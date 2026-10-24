@@ -1,0 +1,114 @@
+{
+  "center": "Meta 开源 30B 模型 Muse Glimmer",
+  "branches": [
+    {
+      "label": "模型发布",
+      "detail": "Meta 回归开源权重，推出 30B 模型 Muse Glimmer",
+      "children": [
+        "采用干净的 Apache 2.0 许可",
+        "相比旧 Llama 许可更宽松"
+      ]
+    },
+    {
+      "label": "三大能力",
+      "detail": "官方称针对本地模型需求优化了智能体任务能力",
+      "children": [
+        "端到端智能体任务完成",
+        "可靠工具调用，精确 schema",
+        "多步长程推理与连贯规划"
+      ]
+    },
+    {
+      "label": "基准表现",
+      "detail": "在多个全任务基准上取得较强成功率",
+      "children": [
+        "DeepSearch QA、MCP-Atlas",
+        "𝛕-Bench、SWE-Bench"
+      ]
+    },
+    {
+      "label": "本地实测",
+      "detail": "Simon Willison 用 LM Studio 与插件实际测试",
+      "children": [
+        "LM Studio 18.16 GB 量化版",
+        "llm-coding-agent 探索 Datasette 认证",
+        "llm-lmstudio 需打补丁兼容 LLM 0.32"
+      ]
+    },
+    {
+      "label": "视觉与硬件",
+      "detail": "Glimmer 是视觉模型，适合 32GB 以上内存机器",
+      "children": [
+        "可描述鹈鹕照片并识别物种",
+        "32GB 内存即可留出空间跑其他应用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Meta",
+      "type": "company"
+    },
+    {
+      "name": "Muse Glimmer",
+      "type": "model"
+    },
+    {
+      "name": "Apache 2.0",
+      "type": "concept"
+    },
+    {
+      "name": "LM Studio",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "SWE-Bench",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm-coding-agent",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Meta",
+      "to": "Muse Glimmer",
+      "label": "发布"
+    },
+    {
+      "from": "Muse Glimmer",
+      "to": "Apache 2.0",
+      "label": "采用许可"
+    },
+    {
+      "from": "Muse Glimmer",
+      "to": "SWE-Bench",
+      "label": "参与评测"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Muse Glimmer",
+      "label": "实测"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "LM Studio",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "llm-coding-agent",
+      "label": "使用"
+    }
+  ]
+}

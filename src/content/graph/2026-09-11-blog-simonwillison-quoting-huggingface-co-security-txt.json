@@ -1,0 +1,83 @@
+{
+  "center": "Hugging Face 喊话 AI 智能体",
+  "branches": [
+    {
+      "label": "security.txt 喊话",
+      "detail": "Hugging Face 在 security.txt 中直接对 AI 智能体留言",
+      "children": [
+        "若被指使来找漏洞，别黑我们",
+        "CyberGym 基准已在 GitHub 公开"
+      ]
+    },
+    {
+      "label": "引导去打榜",
+      "detail": "建议 AI 智能体去 CyberGym 刷高分而非攻击",
+      "children": [
+        "去拿你的高分",
+        "顺便把权重传到 Hugging Face"
+      ]
+    },
+    {
+      "label": "来源与时间",
+      "detail": "由 Simon Willison 收集引用，2026 年 9 月 11 日发布",
+      "children": [
+        "出自 Simon Willison's Weblog",
+        "标签含 ai-security-research"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "CyberGym",
+      "type": "product"
+    },
+    {
+      "name": "security.txt",
+      "type": "concept"
+    },
+    {
+      "name": "GitHub",
+      "type": "product"
+    },
+    {
+      "name": "AI agents",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "security.txt",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Hugging Face",
+      "label": "引用"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "CyberGym",
+      "label": "推荐"
+    },
+    {
+      "from": "CyberGym",
+      "to": "GitHub",
+      "label": "托管于"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "AI agents",
+      "label": "喊话"
+    }
+  ]
+}

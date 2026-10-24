@@ -1,0 +1,96 @@
+{
+  "center": "AI 用量挂钩业务价值",
+  "branches": [
+    {
+      "label": "分析能力",
+      "detail": "ChatGPT Work 与 Codex 提供分析，看清 AI 使用情况与支出",
+      "children": [
+        "不止看用了多少",
+        "覆盖用量与成本"
+      ]
+    },
+    {
+      "label": "开发者含义",
+      "detail": "AI 工具链需自带用量与成本可观测性",
+      "children": [
+        "否则难做预算",
+        "否则难做容量规划"
+      ]
+    },
+    {
+      "label": "识别培训需求",
+      "detail": "从使用数据反推团队哪些环节不熟练",
+      "children": [
+        "使用数据回流能力建设",
+        "改进提示与流程"
+      ]
+    },
+    {
+      "label": "核心主张",
+      "detail": "把采用度与业务成果连接，让 AI 投入可解释",
+      "children": [
+        "使用指标与业务指标同报表",
+        "避免各自为政"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "AI 使用量分析",
+      "type": "concept"
+    },
+    {
+      "name": "成本可观测性",
+      "type": "concept"
+    },
+    {
+      "name": "业务成果",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "推出"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "推出"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "AI 使用量分析",
+      "label": "提供"
+    },
+    {
+      "from": "Codex",
+      "to": "AI 使用量分析",
+      "label": "提供"
+    },
+    {
+      "from": "AI 使用量分析",
+      "to": "成本可观测性",
+      "label": "支撑"
+    },
+    {
+      "from": "AI 使用量分析",
+      "to": "业务成果",
+      "label": "连接"
+    }
+  ]
+}

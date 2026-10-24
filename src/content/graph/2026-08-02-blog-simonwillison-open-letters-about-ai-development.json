@@ -1,0 +1,102 @@
+{
+  "center": "AI 开放信：开源权重之争",
+  "branches": [
+    {
+      "label": "开放权重信",
+      "detail": "7月24日微软牵头，235家AI公司联署支持开放权重模型",
+      "children": [
+        "签署方含 NVIDIA、Amazon、Y Combinator…",
+        "理由：闭源模型可被攻破且形成单点故障，开源便于…",
+        "罕见地明确支持蒸馏作为合法模型开发技术"
+      ]
+    },
+    {
+      "label": "Anthropic 回应",
+      "detail": "三天后发文，Dario Amodei 强调威权政府与滥用风险",
+      "children": [
+        "呼吁打击工业级蒸馏操作",
+        "称 Anthropic 从未主张禁止开放权重模型",
+        "未签署开放权重信"
+      ]
+    },
+    {
+      "label": "Pacing the Frontier",
+      "detail": "7月28日发布，1324名前沿AI公司员工联署",
+      "children": [
+        "签署者含 Jakub Pachocki、Ilya Sutskever…",
+        "呼吁美国政府支持国际协作，刻意放缓自动化AI前沿"
+      ]
+    },
+    {
+      "label": "自动化加速担忧",
+      "detail": "AI 自动研究带来激烈竞争压力，风险被更认真对待",
+      "children": [
+        "Anthropic 80% 代码由 Claude Code 产出",
+        "OpenAI 的 Sol 将端到端服务成本降低 20%",
+        "Kimi K3 设计出服务自身架构纳米模型的芯片"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Microsoft",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Dario Amodei",
+      "type": "person"
+    },
+    {
+      "name": "Ilya Sutskever",
+      "type": "person"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "蒸馏",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Microsoft",
+      "to": "OpenAI",
+      "label": "牵头联署"
+    },
+    {
+      "from": "Dario Amodei",
+      "to": "Anthropic",
+      "label": "担任CEO"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "产出代码"
+    },
+    {
+      "from": "Dario Amodei",
+      "to": "蒸馏",
+      "label": "呼吁打击"
+    },
+    {
+      "from": "Ilya Sutskever",
+      "to": "OpenAI",
+      "label": "曾任职"
+    }
+  ]
+}

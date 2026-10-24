@@ -1,0 +1,91 @@
+{
+  "center": "AI 两天写出微信零点击蠕虫",
+  "branches": [
+    {
+      "label": "WeWorm 蠕虫",
+      "detail": "首个通过微信通话在 iOS 与 Android 间传播的零点击蠕虫",
+      "children": [
+        "受害者无需接听或操作手机",
+        "即使接听也听不到声音，攻击仍成功"
+      ]
+    },
+    {
+      "label": "AI 加速漏洞挖掘",
+      "detail": "团队借助 AI 约两天找到漏洞并写出首个 RCE 利用",
+      "children": [
+        "再花一周完成蠕虫构建",
+        "过去需大团队数月完成"
+      ]
+    },
+    {
+      "label": "人的判断仍关键",
+      "detail": "AI 完成大部分工作，团队负责目标选择与安全测试",
+      "children": [
+        "判断攻击目标",
+        "决定如何安全测试"
+      ]
+    },
+    {
+      "label": "安全门槛降低",
+      "detail": "AI 让此类大规模蠕虫的构建难度与成本大幅下降",
+      "children": [
+        "Calif Research 发布演示",
+        "Simon Willison 博客收录引用"
+      ]
+    }
+  ],
+  "flow": [
+    "AI 辅助发现漏洞",
+    "两天写出 RCE 利用",
+    "一周构建蠕虫",
+    "通过微信通话零点击传播"
+  ],
+  "entities": [
+    {
+      "name": "Calif Research",
+      "type": "company"
+    },
+    {
+      "name": "WeWorm",
+      "type": "product"
+    },
+    {
+      "name": "WeChat",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "RCE",
+      "type": "concept"
+    },
+    {
+      "name": "zero-click worm",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Calif Research",
+      "to": "WeWorm",
+      "label": "发布"
+    },
+    {
+      "from": "WeWorm",
+      "to": "WeChat",
+      "label": "利用"
+    },
+    {
+      "from": "WeWorm",
+      "to": "RCE",
+      "label": "包含"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Calif Research",
+      "label": "引用"
+    }
+  ]
+}

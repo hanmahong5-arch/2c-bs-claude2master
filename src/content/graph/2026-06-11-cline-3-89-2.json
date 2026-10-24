@@ -1,0 +1,87 @@
+{
+  "center": "Cline v3.89.2 兼容性修复",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "解决 Anthropic 与 Vertex AI 提供商在最新 VS Code 和 Node 24 下的兼容问题",
+      "children": [
+        "升级 Anthropic SDK 适配 VS Code 1.123+",
+        "同步更新 Vertex AI SDK 保持兼容"
+      ]
+    },
+    {
+      "label": "根因",
+      "detail": "依赖版本不匹配导致运行时环境升级后中断",
+      "children": [
+        "Node 24 运行时变更",
+        "VS Code 1.123+ 环境变化"
+      ]
+    },
+    {
+      "label": "经验教训",
+      "detail": "agent harness 需保持核心依赖及时更新并建立兼容性测试",
+      "children": [
+        "严格依赖版本控制",
+        "快速响应上游 SDK 变更"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Vertex AI",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "Node 24",
+      "type": "technique"
+    },
+    {
+      "name": "Anthropic SDK",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Anthropic",
+      "label": "集成"
+    },
+    {
+      "from": "Cline",
+      "to": "Vertex AI",
+      "label": "集成"
+    },
+    {
+      "from": "Anthropic SDK",
+      "to": "Anthropic",
+      "label": "属于"
+    },
+    {
+      "from": "Cline",
+      "to": "VS Code",
+      "label": "运行于"
+    },
+    {
+      "from": "Cline",
+      "to": "Node 24",
+      "label": "依赖"
+    }
+  ]
+}

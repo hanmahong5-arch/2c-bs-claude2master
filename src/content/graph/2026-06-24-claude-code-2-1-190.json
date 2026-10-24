@@ -1,0 +1,37 @@
+{
+  "center": "Claude Code v2.1.190 修复 bug",
+  "branches": [
+    {
+      "label": "版本更新",
+      "detail": "Claude Code 发布 v2.1.190，以修复 bug 为主",
+      "children": [
+        "修复多个 bug，提升整体可靠性"
+      ]
+    },
+    {
+      "label": "稳定性提升",
+      "detail": "持续修复 bug 让系统更稳定，减少意外中断",
+      "children": [
+        "对 agent harness 设计有正面意义"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "agent harness",
+      "label": "用于"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "center": "gemini-cli v0.46.0 修复",
+  "branches": [
+    {
+      "label": "PTY 崩溃修复",
+      "detail": "增强终端模拟器在尺寸变化时的健壮性，解决本地崩溃",
+      "children": [
+        "Agent 工具链需处理更稳定的子进程 I/O"
+      ]
+    },
+    {
+      "label": "编辑器死循环修复",
+      "detail": "preferredEditor 无效时不再陷入重复错误提示",
+      "children": [
+        "要求配置验证与优雅降级机制"
+      ]
+    },
+    {
+      "label": "自动切换 GA 模型",
+      "detail": "实验标志存在时自动切换至 GA 模型，简化升级路径",
+      "children": [
+        "Agent 框架应支持基于标记的无缝功能切换"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "PTY",
+      "type": "concept"
+    },
+    {
+      "name": "preferredEditor",
+      "type": "concept"
+    },
+    {
+      "name": "GA 模型",
+      "type": "model"
+    },
+    {
+      "name": "Agent 工具链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "gemini-cli",
+      "to": "PTY",
+      "label": "修复崩溃"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "preferredEditor",
+      "label": "修复死循环"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "GA 模型",
+      "label": "自动切换"
+    }
+  ]
+}

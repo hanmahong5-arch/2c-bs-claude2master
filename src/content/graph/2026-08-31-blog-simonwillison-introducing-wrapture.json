@@ -1,0 +1,117 @@
+{
+  "center": "Wrapture：统一测试与追踪",
+  "branches": [
+    {
+      "label": "核心功能",
+      "detail": "把 wrapt 的 monkeypatching 思路扩展到测试与追踪",
+      "children": [
+        "可包装任意函数/方法",
+        "追踪访问或覆盖返回值",
+        "替代 unittest.mock"
+      ]
+    },
+    {
+      "label": "配置化观测",
+      "detail": "支持 OpenTelemetry，可用纯配置为现有项目加追踪",
+      "children": [
+        "TOML 配置 target/name/sink",
+        "sink 输出 jsonlines 到 trace.jsonl"
+      ]
+    },
+    {
+      "label": "测试用法",
+      "detail": "提供 binding 上下文，可 stub 返回值或改写原方法结果",
+      "children": [
+        "on_call.returns 返回固定值",
+        "on_call.transforms_result 改写结果"
+      ]
+    },
+    {
+      "label": "AI 辅助开发",
+      "detail": "Graham 首个完全由 AI 助手按方向编写的项目",
+      "children": [
+        "每行代码与文档均由 AI 写",
+        "强调非 vibe coding，设计由人主导"
+      ]
+    },
+    {
+      "label": "项目状态",
+      "detail": "由 Graham Dumpleton 发布，仅数周大，起步很有前景",
+      "children": [
+        "作者亦为 wrapt、mod_wsgi 作者"
+      ]
+    }
+  ],
+  "flow": [
+    "配置 observe 目标",
+    "指定函数与方法名",
+    "设置 sink 输出",
+    "运行程序采集追踪"
+  ],
+  "entities": [
+    {
+      "name": "Wrapture",
+      "type": "product"
+    },
+    {
+      "name": "Graham Dumpleton",
+      "type": "person"
+    },
+    {
+      "name": "wrapt",
+      "type": "product"
+    },
+    {
+      "name": "unittest.mock",
+      "type": "product"
+    },
+    {
+      "name": "OpenTelemetry",
+      "type": "technique"
+    },
+    {
+      "name": "monkeypatching",
+      "type": "concept"
+    },
+    {
+      "name": "Python",
+      "type": "concept"
+    },
+    {
+      "name": "vibe coding",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Graham Dumpleton",
+      "to": "Wrapture",
+      "label": "创建"
+    },
+    {
+      "from": "Wrapture",
+      "to": "wrapt",
+      "label": "扩展思路"
+    },
+    {
+      "from": "Wrapture",
+      "to": "unittest.mock",
+      "label": "替代"
+    },
+    {
+      "from": "Wrapture",
+      "to": "OpenTelemetry",
+      "label": "支持"
+    },
+    {
+      "from": "Wrapture",
+      "to": "Python",
+      "label": "用于"
+    },
+    {
+      "from": "Wrapture",
+      "to": "vibe coding",
+      "label": "区别于"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "center": "opencode v1.18.26 修复",
+  "branches": [
+    {
+      "label": "Claude 5 会话修复",
+      "detail": "会话可容忍过时 thinking 块，不再因提示或工具变更失败",
+      "children": [
+        "提升长会话稳定性"
+      ]
+    },
+    {
+      "label": "Bedrock 推理改进",
+      "detail": "GPT-5.6 支持 none 推理努力，推理与重放处理更可靠",
+      "children": [
+        "增强多模型兼容性"
+      ]
+    },
+    {
+      "label": "工具计时与补丁",
+      "detail": "元数据更新时计时保持准确，apply_patch 不再产生空移动路径",
+      "children": [
+        "改善权限元数据与日志可靠性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Claude 5",
+      "type": "model"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "apply_patch",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Claude 5",
+      "label": "修复会话"
+    },
+    {
+      "from": "opencode",
+      "to": "Bedrock",
+      "label": "改进推理"
+    },
+    {
+      "from": "Bedrock",
+      "to": "GPT-5.6",
+      "label": "支持"
+    },
+    {
+      "from": "opencode",
+      "to": "apply_patch",
+      "label": "修复"
+    }
+  ]
+}

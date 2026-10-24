@@ -1,0 +1,110 @@
+{
+  "center": "Fable 5 现场指南与 AI 周报",
+  "branches": [
+    {
+      "label": "解除模型束缚",
+      "detail": "模型限制多来自 harness 与提示词，换新模型应移除旧约束",
+      "children": [
+        "Thariq 主题演讲一夜改稿",
+        "HTML 效果被广泛认可"
+      ]
+    },
+    {
+      "label": "寻找未知",
+      "detail": "用盲点扫描、访谈、参考与笔记找出未知的未知",
+      "children": [
+        "blindspot pass 盲点扫描",
+        "interview me 一次一问",
+        "implementation-notes.md 记录决策"
+      ]
+    },
+    {
+      "label": "情绪与野心",
+      "detail": "编码效率剧变带来情绪冲击，应拒绝权衡、追求更大目标",
+      "children": [
+        "数周工作缩至数小时",
+        "Tradeoffs are not real"
+      ]
+    },
+    {
+      "label": "Hy3 开源发布",
+      "detail": "腾讯 Hy3 以 Apache 2.0 发布，295B MoE 21B 激活",
+      "children": [
+        "256K 上下文，3.8B MTP 层",
+        "vLLM 首日原生支持",
+        "解码提速最高 2.95x"
+      ]
+    },
+    {
+      "label": "智能体评测与记忆",
+      "detail": "AutomationBench 与多维指数发布，记忆检索仍是瓶颈",
+      "children": [
+        "Fable 5 以 48.6% 领先",
+        "A-TMA 解决 ghost memory",
+        "ReContext 免训练长上下文"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Thariq",
+      "type": "person"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Tencent",
+      "type": "company"
+    },
+    {
+      "name": "Hy3",
+      "type": "model"
+    },
+    {
+      "name": "vLLM",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "J-space",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Thariq",
+      "to": "Fable 5",
+      "label": "撰写指南"
+    },
+    {
+      "from": "Tencent",
+      "to": "Hy3",
+      "label": "发布"
+    },
+    {
+      "from": "Hy3",
+      "to": "vLLM",
+      "label": "原生支持"
+    },
+    {
+      "from": "Anthropic",
+      "to": "J-space",
+      "label": "提出研究"
+    },
+    {
+      "from": "Claude",
+      "to": "J-space",
+      "label": "内部结构"
+    }
+  ]
+}

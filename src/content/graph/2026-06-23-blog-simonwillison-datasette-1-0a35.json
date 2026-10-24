@@ -1,0 +1,99 @@
+{
+  "center": "Datasette 1.0a35 发布",
+  "branches": [
+    {
+      "label": "新建表 UI 与 API",
+      "detail": "数据库操作菜单新增 Create table，由 /<database>/-/create JSON API 支持",
+      "children": [
+        "可定义列、主键、自定义列类型",
+        "支持 NOT NULL、字面量与表达式默认值",
+        "支持单列外键"
+      ]
+    },
+    {
+      "label": "改表 UI 与 API",
+      "detail": "新增 Alter table 操作与 /<database>/<table>/-/alter JSON API",
+      "children": [
+        "增删改列、重排列、改列类型",
+        "改默认值、NOT NULL、主键与外键",
+        "可重命名表，对话框含 Drop table 按钮"
+      ]
+    },
+    {
+      "label": "模板上下文文档",
+      "detail": "新增 Template context 文档，列出核心页面自定义模板可用变量",
+      "children": [
+        "文档变量在 Datasette 2.0 前视为稳定 API",
+        "文档由视图代码旁的 dataclass 定义生成",
+        "测试比对文档字段与实际渲染上下文"
+      ]
+    },
+    {
+      "label": "作者与演示",
+      "detail": "Simon Willison 发布该版本，并录制了创建/改表功能的视频演示",
+      "children": [
+        "发布于 2026 年 6 月 23 日",
+        "演示为审查 PR 时录制"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Create table",
+      "type": "concept"
+    },
+    {
+      "name": "Alter table",
+      "type": "concept"
+    },
+    {
+      "name": "JSON API",
+      "type": "technique"
+    },
+    {
+      "name": "Template context",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "发布"
+    },
+    {
+      "from": "Datasette",
+      "to": "Create table",
+      "label": "新增"
+    },
+    {
+      "from": "Datasette",
+      "to": "Alter table",
+      "label": "新增"
+    },
+    {
+      "from": "Create table",
+      "to": "JSON API",
+      "label": "基于"
+    },
+    {
+      "from": "Alter table",
+      "to": "JSON API",
+      "label": "基于"
+    },
+    {
+      "from": "Datasette",
+      "to": "Template context",
+      "label": "新增文档"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "center": "物理基础模型与 Neural Operators",
+  "branches": [
+    {
+      "label": "语言模型不适用",
+      "detail": "物理系统数据稀缺、分辨率需求极高，无法靠堆 token 扩展",
+      "children": [
+        "开源物理数据集仅数万至数十万样本",
+        "工业级网格上下文达千亿至万亿",
+        "全球算力也不够训练此规模 transformer"
+      ]
+    },
+    {
+      "label": "Neural Operators",
+      "detail": "Anima 提出的方法，建模随多尺度演化的函数而非网格",
+      "children": [
+        "结合数据与物理定律，内置物理先验",
+        "Fourier Neural Operator 直接在频域学习",
+        "球谐变体支撑 FourCastNet 3 全球天气建模"
+      ]
+    },
+    {
+      "label": "物理世界更宽容",
+      "detail": "物理任务所需样本远少于语言，且可大幅加速",
+      "children": [
+        "聚变仅需数千样本预测等离子体破裂",
+        "比传统模拟快一百万倍",
+        "目标是跨现象的物理基础模型"
+      ]
+    },
+    {
+      "label": "FourCastNet",
+      "detail": "首个开源 AI 天气模型，消费级 GPU 即可短期精准预测",
+      "children": [
+        "一年内做到媲美最佳物理模拟",
+        "球谐基使模型可稳定外推数月"
+      ]
+    },
+    {
+      "label": "其他工作",
+      "detail": "形式化验证与政策参与",
+      "children": [
+        "TorchLean 在 Lean 中写 PyTorch 网络并形式…",
+        "Anima 任职联合国科学顾问委员会"
+      ]
+    }
+  ],
+  "flow": [
+    "识别物理系统多尺度特性",
+    "引入物理先验与结构",
+    "用 Neural Operators 建模函数",
+    "在频域/球谐基上学习",
+    "稳定外推并跨域迁移"
+  ],
+  "entities": [
+    {
+      "name": "Anima Anandkumar",
+      "type": "person"
+    },
+    {
+      "name": "Neural Operators",
+      "type": "technique"
+    },
+    {
+      "name": "FourCastNet",
+      "type": "model"
+    },
+    {
+      "name": "Fourier Neural Operator",
+      "type": "model"
+    },
+    {
+      "name": "TorchLean",
+      "type": "product"
+    },
+    {
+      "name": "Lean",
+      "type": "product"
+    },
+    {
+      "name": "物理基础模型",
+      "type": "concept"
+    },
+    {
+      "name": "Spherical Harmonics",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anima Anandkumar",
+      "to": "Neural Operators",
+      "label": "提出"
+    },
+    {
+      "from": "Neural Operators",
+      "to": "FourCastNet",
+      "label": "支撑"
+    },
+    {
+      "from": "Fourier Neural Operator",
+      "to": "FourCastNet",
+      "label": "用于"
+    },
+    {
+      "from": "Spherical Harmonics",
+      "to": "FourCastNet",
+      "label": "作为基"
+    },
+    {
+      "from": "TorchLean",
+      "to": "Lean",
+      "label": "基于"
+    },
+    {
+      "from": "Anima Anandkumar",
+      "to": "物理基础模型",
+      "label": "目标"
+    }
+  ]
+}

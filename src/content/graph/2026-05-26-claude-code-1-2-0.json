@@ -1,0 +1,89 @@
+{
+  "center": "Claude Code 1.2.0 Subagents…",
+  "branches": [
+    {
+      "label": "Subagents 默认开",
+      "detail": "子 agent 不再需要 --with-subagents，随主 agent 默认启动",
+      "children": [
+        "老脚本不受影响但行为更主动",
+        "可用 --no-subagent 关闭"
+      ]
+    },
+    {
+      "label": "Tool group 隔离",
+      "detail": "长任务 tool 调用按子 agent 分组，便于审计和回放",
+      "children": []
+    },
+    {
+      "label": "Plan mode hook 化",
+      "detail": "plan 阶段输出落到独立 pre-write hook，方便接入 CI 校验",
+      "children": []
+    },
+    {
+      "label": "harness 设计影响",
+      "detail": "prompt 设计需假设主 agent 会下放，否则隔离边界丢失",
+      "children": [
+        "Stop hook 每个 subagent 完成触发一次",
+        "生产关闭会丢 telemetry"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Subagents",
+      "type": "concept"
+    },
+    {
+      "name": "Plan mode",
+      "type": "concept"
+    },
+    {
+      "name": "pre-write hook",
+      "type": "technique"
+    },
+    {
+      "name": "Stop hook",
+      "type": "technique"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "telemetry",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Subagents",
+      "label": "默认开启"
+    },
+    {
+      "from": "Plan mode",
+      "to": "pre-write hook",
+      "label": "输出到"
+    },
+    {
+      "from": "Subagents",
+      "to": "Stop hook",
+      "label": "触发"
+    },
+    {
+      "from": "Subagents",
+      "to": "agent harness",
+      "label": "影响设计"
+    },
+    {
+      "from": "Subagents",
+      "to": "telemetry",
+      "label": "关联"
+    }
+  ]
+}

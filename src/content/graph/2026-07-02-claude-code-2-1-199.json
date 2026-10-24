@@ -1,0 +1,83 @@
+{
+  "center": "Claude Code v2.1.199 修复",
+  "branches": [
+    {
+      "label": "子代理容错",
+      "detail": "子代理被限流或服务器错误中断时不再静默失败",
+      "children": [
+        "保留部分工作成果",
+        "通知父代理中断情况"
+      ]
+    },
+    {
+      "label": "后台代理修复",
+      "detail": "修复后台代理在 Linux 上每 50 秒自杀的 bug",
+      "children": [
+        "原因：损坏的 worker 记录",
+        "同时解决冷启动 SSH macOS 问题"
+      ]
+    },
+    {
+      "label": "面板体验优化",
+      "detail": "子代理面板中空闲代理折叠为可展开摘要行",
+      "children": [
+        "避免空闲代理占用空间",
+        "/model 等命令提示作用于主代理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "子代理",
+      "type": "concept"
+    },
+    {
+      "name": "后台代理",
+      "type": "concept"
+    },
+    {
+      "name": "Linux",
+      "type": "concept"
+    },
+    {
+      "name": "macOS",
+      "type": "concept"
+    },
+    {
+      "name": "SSH",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "子代理",
+      "label": "包含"
+    },
+    {
+      "from": "Claude Code",
+      "to": "后台代理",
+      "label": "包含"
+    },
+    {
+      "from": "后台代理",
+      "to": "Linux",
+      "label": "运行于"
+    },
+    {
+      "from": "后台代理",
+      "to": "SSH",
+      "label": "涉及"
+    },
+    {
+      "from": "SSH",
+      "to": "macOS",
+      "label": "运行于"
+    }
+  ]
+}

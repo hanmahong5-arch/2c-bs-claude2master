@@ -1,0 +1,123 @@
+{
+  "center": "AI 辅助罕见遗传病再分析",
+  "branches": [
+    {
+      "label": "研究结果",
+      "detail": "OpenAI o3 Deep Research 重析 376 例未解病例，专家确认 18 例诊断",
+      "children": [
+        "额外诊断率 4.8%",
+        "神经发育 10/100，神经肌肉 4/61",
+        "婴儿猝死 2/200，早发精神病 2/15"
+      ]
+    },
+    {
+      "label": "工作流程",
+      "detail": "模型作为解释优先推理层，输出证据链假设供专家审查",
+      "children": [
+        "输入去标识化临床与基因组数据包",
+        "按 ACMG/AMP 框架复核",
+        "CLIA 实验室确认后才算诊断"
+      ]
+    },
+    {
+      "label": "旧案新解",
+      "detail": "基因组不变但知识库更新，旧数据可重新解读",
+      "children": [
+        "新基因关联、变异重分类、新文献",
+        "数据分散在不同数据库难关联",
+        "机构积压大量待重析基因组"
+      ]
+    },
+    {
+      "label": "验证与置信度",
+      "detail": "在已知诊断病例上优化流程，置信分辅助专家聚焦",
+      "children": [
+        "51 例中 48 例重复运行正确",
+        "57 例神经肌肉中 45 例正确",
+        "正确平均最低分 85.6，错误 42.1"
+      ]
+    },
+    {
+      "label": "发现亮点",
+      "detail": "模型可推断未列出的结构变异，也可提出双基因解释",
+      "children": [
+        "推断 22q11.2 缺失后测序确认",
+        "LAMA2 与 FOXP1 共同解释复杂表型",
+        "18 例中 7 例为记录外再发现"
+      ]
+    }
+  ],
+  "flow": [
+    "组装去标识化数据包",
+    "模型生成证据链假设",
+    "专家按 ACMG/AMP 复核",
+    "CLIA 实验室确认",
+    "临床团队告知家庭"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI o3 Deep Research",
+      "type": "model"
+    },
+    {
+      "name": "Boston Children's Hospital",
+      "type": "company"
+    },
+    {
+      "name": "Harvard University",
+      "type": "company"
+    },
+    {
+      "name": "NEJM AI",
+      "type": "concept"
+    },
+    {
+      "name": "ACMG/AMP",
+      "type": "concept"
+    },
+    {
+      "name": "Human Phenotype Ontology",
+      "type": "concept"
+    },
+    {
+      "name": "22q11.2 deletion",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "OpenAI o3 Deep Research",
+      "label": "开发"
+    },
+    {
+      "from": "Boston Children's Hospital",
+      "to": "OpenAI",
+      "label": "合作"
+    },
+    {
+      "from": "Harvard University",
+      "to": "OpenAI",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI o3 Deep Research",
+      "to": "Human Phenotype Ontology",
+      "label": "使用"
+    },
+    {
+      "from": "OpenAI o3 Deep Research",
+      "to": "ACMG/AMP",
+      "label": "辅助复核"
+    },
+    {
+      "from": "OpenAI o3 Deep Research",
+      "to": "22q11.2 deletion",
+      "label": "推断"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "center": "Codex 0.152.0 更新速览",
+  "branches": [
+    {
+      "label": "Vim 搜索",
+      "detail": "Vim 模式新增草稿搜索与匹配导航",
+      "children": [
+        "支持 / 和 ? 搜索草稿",
+        "高亮匹配，n/N 循环导航",
+        "需注意与现有键位冲突"
+      ]
+    },
+    {
+      "label": "限流横幅",
+      "detail": "限流时展示横幅并提供操作入口",
+      "children": [
+        "可检查用量、管理积分、重置限制",
+        "需处理限流状态并引导用户"
+      ]
+    },
+    {
+      "label": "MCP 增强",
+      "detail": "MCP 服务器命名更灵活，支持输出限制",
+      "children": [
+        "服务器名支持 : @ / . 及包风格",
+        "单个工具可设 output_token_limit",
+        "防止 token 溢出，需确保解析正确"
+      ]
+    },
+    {
+      "label": "凭据刷新进度",
+      "detail": "TUI 和 codex exec 中显示凭据刷新进度",
+      "children": [
+        "包括 Bedrock 重新认证",
+        "需向用户透明展示认证状态"
+      ]
+    },
+    {
+      "label": "修复",
+      "detail": "自动批准审查保留更长消息与更大记录",
+      "children": [
+        "跨历史压缩保留用户指令",
+        "确保关键上下文不丢失"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Vim",
+      "type": "product"
+    },
+    {
+      "name": "codex exec",
+      "type": "product"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "Bedrock",
+      "label": "集成"
+    },
+    {
+      "from": "Codex",
+      "to": "Vim",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "codex exec",
+      "label": "包含"
+    },
+    {
+      "from": "Codex",
+      "to": "TUI",
+      "label": "包含"
+    }
+  ]
+}

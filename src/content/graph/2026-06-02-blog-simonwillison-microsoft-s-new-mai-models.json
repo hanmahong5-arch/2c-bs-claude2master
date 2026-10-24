@@ -1,0 +1,112 @@
+{
+  "center": "微软发布两款MAI模型",
+  "branches": [
+    {
+      "label": "两款新模型",
+      "detail": "微软发布MAI-Thinking-1与MAI-Code-1-Flash两款文本大模型",
+      "children": [
+        "MAI-Thinking-1：1T参数，35B激活，面向早期…",
+        "MAI-Code-1-Flash：137B参数，5B激活，服务…"
+      ]
+    },
+    {
+      "label": "低参数策略",
+      "detail": "微软以极低激活参数实现高性能，降低大模型使用成本",
+      "children": [
+        "35B激活模型据称盲测优于Sonnet 4.6",
+        "低激活参数适合本地或低成本部署"
+      ]
+    },
+    {
+      "label": "数据许可宣称",
+      "detail": "微软称模型基于企业级、干净且商业授权数据训练",
+      "children": [
+        "强调未从第三方模型蒸馏",
+        "MAI-Code-1-Flash端到端由微软构建"
+      ]
+    },
+    {
+      "label": "作者更正",
+      "detail": "作者最初误读参数规模，后据模型卡与技术论文更正",
+      "children": [
+        "误将MoE激活参数当作总参数",
+        "技术论文显示MAI-Thinking-1为1T总参数"
+      ]
+    },
+    {
+      "label": "数据许可真相",
+      "detail": "技术论文披露训练数据仍来自公开网络爬取，存在许可问题",
+      "children": [
+        "专有爬取约1.2万亿页，过滤后7940亿页",
+        "Common Crawl处理后含242亿页"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Microsoft",
+      "type": "company"
+    },
+    {
+      "name": "MAI-Thinking-1",
+      "type": "model"
+    },
+    {
+      "name": "MAI-Code-1-Flash",
+      "type": "model"
+    },
+    {
+      "name": "GitHub Copilot",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "Sonnet 4.6",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Common Crawl",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Microsoft",
+      "to": "MAI-Thinking-1",
+      "label": "发布"
+    },
+    {
+      "from": "Microsoft",
+      "to": "MAI-Code-1-Flash",
+      "label": "发布"
+    },
+    {
+      "from": "MAI-Code-1-Flash",
+      "to": "GitHub Copilot",
+      "label": "服务"
+    },
+    {
+      "from": "MAI-Code-1-Flash",
+      "to": "VS Code",
+      "label": "集成"
+    },
+    {
+      "from": "MAI-Thinking-1",
+      "to": "Sonnet 4.6",
+      "label": "盲测优于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Microsoft",
+      "label": "报道"
+    }
+  ]
+}

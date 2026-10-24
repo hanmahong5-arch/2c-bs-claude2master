@@ -1,0 +1,120 @@
+{
+  "center": "Gemma 4 12B 无编码器多模态模型",
+  "branches": [
+    {
+      "label": "统一无编码器架构",
+      "detail": "视觉与音频输入直接进入 LLM 主干，不再依赖独立编码器",
+      "children": [
+        "视觉：单次矩阵乘法+位置嵌入+归一化替代视觉编…",
+        "音频：移除音频编码器，原始信号投影到文本…",
+        "首个支持原生音频输入的中等规模 Gemma 模型"
+      ]
+    },
+    {
+      "label": "笔记本本地运行",
+      "detail": "仅需 16GB 显存或统一内存即可在消费级笔记本本地运行",
+      "children": [
+        "内存占用不到 26B MoE 模型的一半",
+        "面向笔记本的移动优先效率设计"
+      ]
+    },
+    {
+      "label": "推理性能接近 26B",
+      "detail": "标准基准测试表现接近更大的 26B MoE 模型",
+      "children": [
+        "支持多步推理与 agentic 工作流",
+        "配备 Multi-Token Prediction (MTP)…"
+      ]
+    },
+    {
+      "label": "开放生态与部署",
+      "detail": "Apache 2.0 许可发布，覆盖主流开发工具与云平台",
+      "children": [
+        "权重可从 Hugging Face 与 Kaggle 下载",
+        "支持 LM Studio、Ollama、llama.cpp、MLX…",
+        "可通过 Google Cloud、Cloud Run、GKE 部署"
+      ]
+    },
+    {
+      "label": "社区与 Skills 仓库",
+      "detail": "Gemma 4 系列下载量已突破 1.5 亿次，官方发布 Skills 仓库",
+      "children": [
+        "应用涵盖可穿戴机械臂与企业级 AI 安全",
+        "Skills Repository 帮助 agent 基于 Gemma…"
+      ]
+    }
+  ],
+  "flow": [
+    "视觉/音频原始输入",
+    "轻量嵌入模块投影",
+    "直接进入 LLM 主干",
+    "MTP drafters 加速",
+    "输出多模态推理结果"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemma 4 12B",
+      "type": "model"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "26B MoE",
+      "type": "model"
+    },
+    {
+      "name": "E4B",
+      "type": "model"
+    },
+    {
+      "name": "Multi-Token Prediction",
+      "type": "technique"
+    },
+    {
+      "name": "Apache 2.0",
+      "type": "concept"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Gemma 4 12B",
+      "label": "发布"
+    },
+    {
+      "from": "Gemma 4 12B",
+      "to": "Gemma 4",
+      "label": "属于"
+    },
+    {
+      "from": "Gemma 4 12B",
+      "to": "26B MoE",
+      "label": "性能接近"
+    },
+    {
+      "from": "Gemma 4 12B",
+      "to": "E4B",
+      "label": "介于"
+    },
+    {
+      "from": "Gemma 4 12B",
+      "to": "Multi-Token Prediction",
+      "label": "采用"
+    },
+    {
+      "from": "Gemma 4 12B",
+      "to": "Apache 2.0",
+      "label": "遵循许可"
+    }
+  ]
+}

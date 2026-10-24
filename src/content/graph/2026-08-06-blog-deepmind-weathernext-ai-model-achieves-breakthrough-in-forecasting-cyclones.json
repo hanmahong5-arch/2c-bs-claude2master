@@ -1,0 +1,80 @@
+{
+  "center": "WeatherNext 气旋预报突破",
+  "branches": [
+    {
+      "label": "预报更准",
+      "detail": "AI 在气旋路径与强度预报上显著优于传统数值天气预报",
+      "children": [
+        "路径与强度预报准确率提高"
+      ]
+    },
+    {
+      "label": "更快更省",
+      "detail": "深度学习历史天气数据，生成预报更快、计算成本更低",
+      "children": [
+        "支持实时预警"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "展示 AI 建模复杂物理系统的潜力，可启发气候模拟等工具链",
+      "children": [
+        "启发气候模拟工具链创新"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "WeatherNext",
+      "type": "model"
+    },
+    {
+      "name": "气旋预报",
+      "type": "concept"
+    },
+    {
+      "name": "数值天气预报",
+      "type": "concept"
+    },
+    {
+      "name": "深度学习",
+      "type": "technique"
+    },
+    {
+      "name": "气候模拟",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "WeatherNext",
+      "label": "开发"
+    },
+    {
+      "from": "WeatherNext",
+      "to": "气旋预报",
+      "label": "应用于"
+    },
+    {
+      "from": "WeatherNext",
+      "to": "数值天气预报",
+      "label": "优于"
+    },
+    {
+      "from": "WeatherNext",
+      "to": "深度学习",
+      "label": "基于"
+    },
+    {
+      "from": "WeatherNext",
+      "to": "气候模拟",
+      "label": "启发"
+    }
+  ]
+}

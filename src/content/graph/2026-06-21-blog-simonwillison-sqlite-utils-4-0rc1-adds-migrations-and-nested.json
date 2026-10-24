@@ -1,0 +1,108 @@
+{
+  "center": "sqlite-utils 4.0rc1 新特性",
+  "branches": [
+    {
+      "label": "新增迁移功能",
+      "detail": "移植 sqlite-migrate，用 Migrations 类定义并应用数据库迁移",
+      "children": [
+        "migrations.py 中用 @migrations() 装饰函数",
+        "CLI：sqlite-utils migrate creatures.db…",
+        "不支持反向迁移，需新迁移修复错误"
+      ]
+    },
+    {
+      "label": "嵌套事务 atomic",
+      "detail": "新增 db.atomic() 上下文管理器，基于 SQLite savepoint 实现嵌套事务",
+      "children": [
+        "术语借自 Django 和 Peewee",
+        "内层异常可被捕获而不影响外层",
+        "该功能测试较少，需更多试用反馈"
+      ]
+    },
+    {
+      "label": "不兼容变更",
+      "detail": "v4 有若干轻微破坏性改动，需注意升级影响",
+      "children": [
+        "upsert 改用 INSERT ... ON CONFLICT SET",
+        "默认浮点类型 FLOAT 改为 REAL",
+        "insert/upsert CLI 默认启用类型检测"
+      ]
+    },
+    {
+      "label": "安装试用",
+      "detail": "可通过 pip 或 uvx 安装 RC 版本并反馈问题",
+      "children": [
+        "pip install sqlite-utils==4.0rc1",
+        "uvx --with sqlite-utils==4.0rc1 sqlite-…",
+        "Discord 频道交流，GitHub Issues 报 bug"
+      ]
+    }
+  ],
+  "flow": [
+    "编写 migrations.py",
+    "用 @migrations() 装饰函数",
+    "运行 migrate 命令",
+    "应用迁移到数据库"
+  ],
+  "entities": [
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "sqlite-migrate",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "Django",
+      "type": "product"
+    },
+    {
+      "name": "Peewee",
+      "type": "product"
+    },
+    {
+      "name": "Migrations",
+      "type": "concept"
+    },
+    {
+      "name": "savepoint",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "开发"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "sqlite-migrate",
+      "label": "移植"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "SQLite",
+      "label": "封装"
+    },
+    {
+      "from": "Migrations",
+      "to": "sqlite-utils",
+      "label": "属于"
+    },
+    {
+      "from": "savepoint",
+      "to": "SQLite",
+      "label": "支持"
+    }
+  ]
+}

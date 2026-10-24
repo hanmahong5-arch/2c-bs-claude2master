@@ -1,0 +1,122 @@
+{
+  "center": "GPT-5.6 降价与效率提升",
+  "branches": [
+    {
+      "label": "价格大幅下调",
+      "detail": "Luna 降价 80%，Terra 降价 20%，覆盖 API 与订阅用量",
+      "children": [
+        "Terra：$2/百万输入，$12/百万输出",
+        "Luna：$0.20/百万输入，$1.20/百万输出",
+        "Codex 与 ChatGPT Work 用量同步降价"
+      ]
+    },
+    {
+      "label": "Fast 模式上线",
+      "detail": "API 新增 Fast 模式取代 Priority Processing，Sol 提速 2.5 倍",
+      "children": [
+        "价格为标准处理的两倍，智能不变",
+        "priority 标签请求自动走 Fast 模式"
+      ]
+    },
+    {
+      "label": "效率来自全栈",
+      "detail": "模型、推理系统与 agentic harness 三层同时优化",
+      "children": [
+        "Sol 自主优化 kernel，服务成本降 20%",
+        "token 生成效率提升超 15%",
+        "更好路由与上下文管理减少重复工作"
+      ]
+    },
+    {
+      "label": "按结果配智能",
+      "detail": "按风险、成本、时效与规模选择智能与速度的平衡",
+      "children": [
+        "Luna 每任务成本约为前沿模型的 6%",
+        "Agents' Last Exam 上成本低近 99%",
+        "编码流程：Sol 定方案，Luna 实现与测试"
+      ]
+    },
+    {
+      "label": "客户实测收益",
+      "detail": "多家企业反馈成本与速度显著改善",
+      "children": [
+        "Notion：同质量成本减半、时间省 60%",
+        "Blitzy：缓存复用 24%→90%，成本降 87%",
+        "Dust：同等任务快 40%、便宜 40%"
+      ]
+    }
+  ],
+  "flow": [
+    "定义结果与质量标准",
+    "用评估确定所需智能",
+    "高不确定步骤用 Sol",
+    "明确步骤用 Luna 执行",
+    "按阶段支付合理价格"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Terra",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Fast mode",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Replit",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Luna",
+      "label": "降价"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Terra",
+      "label": "降价"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Fast mode",
+      "label": "推出"
+    },
+    {
+      "from": "Fast mode",
+      "to": "GPT-5.6 Sol",
+      "label": "加速"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "OpenAI",
+      "label": "优化成本"
+    },
+    {
+      "from": "Replit",
+      "to": "GPT-5.6 Luna",
+      "label": "采用"
+    }
+  ]
+}

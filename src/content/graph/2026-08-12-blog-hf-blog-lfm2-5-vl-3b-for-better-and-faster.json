@@ -1,0 +1,92 @@
+{
+  "center": "LFM2.5-VL-3B 视觉能力升级",
+  "branches": [
+    {
+      "label": "模型定位",
+      "detail": "3B 参数图文转文本模型，主打更强更快的视觉能力",
+      "children": [
+        "Image-Text-to-Text",
+        "3B 规模",
+        "更新于 23 天前"
+      ]
+    },
+    {
+      "label": "浏览器本地运行",
+      "detail": "配套 WebGPU Space，可在浏览器本地跑 LFM2.5-VL-3B",
+      "children": [
+        "LFM2.5-VL-3B WebGPU",
+        "无需上传云端"
+      ]
+    },
+    {
+      "label": "系列相关进展",
+      "detail": "同作者发布 LFM2.5-DSpark 与量化感知蒸馏检查点",
+      "children": [
+        "LFM2.5-DSpark 推理快至 3.2x",
+        "Q4_0 量化感知蒸馏检查点"
+      ]
+    },
+    {
+      "label": "社区热度",
+      "detail": "文章获 51 赞，模型页 24.4k 下载、211 赞",
+      "children": [
+        "Upvote 51",
+        "24.4k · 211"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "LFM2.5-VL-3B",
+      "type": "model"
+    },
+    {
+      "name": "LFM2.5-VL-3B WebGPU",
+      "type": "product"
+    },
+    {
+      "name": "LFM2.5-DSpark",
+      "type": "model"
+    },
+    {
+      "name": "LFM2.5",
+      "type": "model"
+    },
+    {
+      "name": "WebGPU",
+      "type": "technique"
+    },
+    {
+      "name": "量化感知蒸馏",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "LFM2.5-VL-3B",
+      "to": "LFM2.5",
+      "label": "属于"
+    },
+    {
+      "from": "LFM2.5-VL-3B WebGPU",
+      "to": "LFM2.5-VL-3B",
+      "label": "本地运行"
+    },
+    {
+      "from": "LFM2.5-VL-3B WebGPU",
+      "to": "WebGPU",
+      "label": "基于"
+    },
+    {
+      "from": "LFM2.5-DSpark",
+      "to": "LFM2.5",
+      "label": "属于"
+    },
+    {
+      "from": "LFM2.5",
+      "to": "量化感知蒸馏",
+      "label": "采用"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "center": "Shopify 回归原生移动开发",
+  "branches": [
+    {
+      "label": "决策反转",
+      "detail": "Shopify 从 React Native 退回 Swift/Kotlin 双原生代码库",
+      "children": [
+        "2020 年曾从原生转向 React Native",
+        "理由：避免重复开发、跨栈协作、减少追平功能"
+      ]
+    },
+    {
+      "label": "关键变量",
+      "detail": "双平台维护成本未消失，但 AI 代理改变了权衡",
+      "children": [
+        "代理可承担实现、翻译、测试、评审工作",
+        "该成本不再是 2020 年那样的决定性因素"
+      ]
+    },
+    {
+      "label": "React Native 评价",
+      "detail": "文章肯定 React Native 是六年间的优秀平台",
+      "children": [
+        "Shopify 维护 react-native-skia…",
+        "前两者寻找新归属，restyle 2026 年底归档"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Shopify",
+      "type": "company"
+    },
+    {
+      "name": "React Native",
+      "type": "technique"
+    },
+    {
+      "name": "Swift",
+      "type": "technique"
+    },
+    {
+      "name": "Kotlin",
+      "type": "technique"
+    },
+    {
+      "name": "react-native-skia",
+      "type": "product"
+    },
+    {
+      "name": "flash-list",
+      "type": "product"
+    },
+    {
+      "name": "restyle",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Shopify",
+      "to": "React Native",
+      "label": "曾采用"
+    },
+    {
+      "from": "Shopify",
+      "to": "Swift",
+      "label": "回归"
+    },
+    {
+      "from": "Shopify",
+      "to": "Kotlin",
+      "label": "回归"
+    },
+    {
+      "from": "Shopify",
+      "to": "react-native-skia",
+      "label": "维护"
+    },
+    {
+      "from": "Shopify",
+      "to": "flash-list",
+      "label": "维护"
+    },
+    {
+      "from": "Shopify",
+      "to": "restyle",
+      "label": "维护"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "center": "AI安全与代理红队",
+  "branches": [
+    {
+      "label": "AI安全本质不同",
+      "detail": "AI系统有内在漏洞，可被欺骗，需不同安全思维",
+      "children": [
+        "不是传统网络安全加AI",
+        "模型是软件，需理解漏洞",
+        "相关故障：少数模型被广泛使用"
+      ]
+    },
+    {
+      "label": "代理引入新漏洞",
+      "detail": "代理如Codex、Claude Code带来全新利用类",
+      "children": [
+        "间接提示注入",
+        "致命三要素：不可信数据、私有数据、外泄",
+        "计算机使用代理安全噩梦"
+      ]
+    },
+    {
+      "label": "自动红队与工具",
+      "detail": "Gray Swan开发Shade等工具自动攻击模型",
+      "children": [
+        "Shade：AI比人更会攻破模型",
+        "Cygnal：护栏模型",
+        "Arena：社区红队平台"
+      ]
+    },
+    {
+      "label": "灰犀牛事件",
+      "detail": "下一次重大AI事故是可见但未发生的灰犀牛",
+      "children": [
+        "首次提示注入泄露或不可避免",
+        "AI安全将成保险与合规一部分"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Gray Swan",
+      "type": "company"
+    },
+    {
+      "name": "Zico Kolter",
+      "type": "person"
+    },
+    {
+      "name": "Matt Fredrikson",
+      "type": "person"
+    },
+    {
+      "name": "Shade",
+      "type": "product"
+    },
+    {
+      "name": "Cygnal",
+      "type": "product"
+    },
+    {
+      "name": "间接提示注入",
+      "type": "concept"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Zico Kolter",
+      "to": "Gray Swan",
+      "label": "联合创始人"
+    },
+    {
+      "from": "Matt Fredrikson",
+      "to": "Gray Swan",
+      "label": "联合创始人"
+    },
+    {
+      "from": "Gray Swan",
+      "to": "Shade",
+      "label": "开发"
+    },
+    {
+      "from": "Gray Swan",
+      "to": "Cygnal",
+      "label": "开发"
+    },
+    {
+      "from": "Shade",
+      "to": "间接提示注入",
+      "label": "测试"
+    },
+    {
+      "from": "Codex",
+      "to": "间接提示注入",
+      "label": "易受攻击"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "center": "Claude Code v2.1.193 更新",
+  "branches": [
+    {
+      "label": "Shell 命令全量分类",
+      "detail": "autoMode.classifyAllShell 让所有 Bash/PowerShell 命令走自动模式分类器",
+      "children": [
+        "不再限于任意代码执行模式",
+        "支持更细粒度命令执行策略"
+      ]
+    },
+    {
+      "label": "OpenTelemetry 日志",
+      "detail": "新增 assistant_response 日志事件，可独立控制开关",
+      "children": [
+        "默认跟随 OTEL_LOG_USER_PROMPTS",
+        "可用 OTEL_LOG_ASSISTANT_RESPONSES 独立控制"
+      ]
+    },
+    {
+      "label": "后台 shell 回收",
+      "detail": "内存压力下自动回收空闲后台 shell 命令",
+      "children": [
+        "CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_R…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "autoMode.classifyAllShell",
+      "type": "concept"
+    },
+    {
+      "name": "OpenTelemetry",
+      "type": "technique"
+    },
+    {
+      "name": "claude_code.assistant_response",
+      "type": "concept"
+    },
+    {
+      "name": "OTEL_LOG_ASSISTANT_RESPONSES",
+      "type": "concept"
+    },
+    {
+      "name": "CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "autoMode.classifyAllShell",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "OpenTelemetry",
+      "label": "集成"
+    },
+    {
+      "from": "OpenTelemetry",
+      "to": "claude_code.assistant_response",
+      "label": "新增事件"
+    },
+    {
+      "from": "OTEL_LOG_ASSISTANT_RESPONSES",
+      "to": "claude_code.assistant_response",
+      "label": "控制"
+    },
+    {
+      "from": "CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP",
+      "to": "Claude Code",
+      "label": "禁用回收"
+    }
+  ]
+}

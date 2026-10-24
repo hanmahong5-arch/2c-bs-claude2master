@@ -1,0 +1,103 @@
+{
+  "center": "Satya 谈 Loopcraft 与前沿生态",
+  "branches": [
+    {
+      "label": "核心论点",
+      "detail": "机会不在选最强模型，而在模型之上建学习循环",
+      "children": [
+        "人力资本与 token 资本复利",
+        "任务可外包，学习不能外包",
+        "首次实现人与数字系统的认知循环"
+      ]
+    },
+    {
+      "label": "前沿生态",
+      "detail": "优先建前沿生态而非单一前沿模型，让价值广泛流动",
+      "children": [
+        "每家公司、行业、国家都能受益",
+        "组织拥有编码自身知识的循环",
+        "呼应 Big Model vs Big Harness 之争"
+      ]
+    },
+    {
+      "label": "背景与时机",
+      "detail": "OpenAI 分手八个月后，微软 CEO 首次系统阐述新 AI 战略",
+      "children": [
+        "X 文章超 6000 万浏览",
+        "延续 MS Build 播客与 Loopcraft 一文",
+        "引用比尔·盖茨"
+      ]
+    },
+    {
+      "label": "行业动向",
+      "detail": "模型中立、Agent 可观测性与推理效率成为焦点",
+      "children": [
+        "Anthropic Fable 5 出口管制风波",
+        "LangSmith 生产追踪与低成本判官",
+        "SGLang 投机解码、ReplaySSM 优化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Satya Nadella",
+      "type": "person"
+    },
+    {
+      "name": "Microsoft",
+      "type": "company"
+    },
+    {
+      "name": "Loopcraft",
+      "type": "concept"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "LangSmith",
+      "type": "product"
+    },
+    {
+      "name": "SGLang",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Satya Nadella",
+      "to": "Microsoft",
+      "label": "任 CEO"
+    },
+    {
+      "from": "Satya Nadella",
+      "to": "Loopcraft",
+      "label": "提出"
+    },
+    {
+      "from": "Microsoft",
+      "to": "OpenAI",
+      "label": "已分手"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Fable 5",
+      "label": "发布"
+    },
+    {
+      "from": "LangSmith",
+      "to": "Anthropic",
+      "label": "无关"
+    }
+  ]
+}

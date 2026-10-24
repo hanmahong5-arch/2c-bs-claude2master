@@ -1,0 +1,101 @@
+{
+  "center": "llm 0.33 发布",
+  "branches": [
+    {
+      "label": "依赖升级",
+      "detail": "升级到 OpenAI Python 库 3.x，HTTP 客户端从 httpx 换成 httpx2",
+      "children": [
+        "0.32.1 是临时修复，0.33 更彻底",
+        "#1608、#1631"
+      ]
+    },
+    {
+      "label": "embed 支持 key",
+      "detail": "llm embed 与 embed-multi 新增 --key，Python 方法也接受 key=",
+      "children": [
+        "按调用传 key，不改共享模型状态",
+        "旧插件读 self.key 仍兼容",
+        "贡献者 ChrisJr404"
+      ]
+    },
+    {
+      "label": "模板可叠加",
+      "detail": "llm prompt -t 可重复，按顺序组合多个模板",
+      "children": [
+        "可把模型与默认选项打包成模板",
+        "llm -t lhigh -t pelican 组合运行"
+      ]
+    },
+    {
+      "label": "推理摘要选项",
+      "detail": "Responses API 推理模型新增 reasoning_summary 选项",
+      "children": [
+        "取值 auto、concise、detailed",
+        "配合 llm openai endpoint --responses"
+      ]
+    }
+  ],
+  "flow": [
+    "保存模型配置模板",
+    "保存提示词模板",
+    "用 -t 依次组合",
+    "运行得到结果"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI Python library",
+      "type": "product"
+    },
+    {
+      "name": "httpx",
+      "type": "product"
+    },
+    {
+      "name": "httpx2",
+      "type": "product"
+    },
+    {
+      "name": "Responses API",
+      "type": "concept"
+    },
+    {
+      "name": "reasoning_summary",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm",
+      "label": "发布"
+    },
+    {
+      "from": "llm",
+      "to": "OpenAI Python library",
+      "label": "升级依赖"
+    },
+    {
+      "from": "llm",
+      "to": "httpx2",
+      "label": "切换依赖"
+    },
+    {
+      "from": "llm",
+      "to": "Responses API",
+      "label": "支持"
+    },
+    {
+      "from": "Responses API",
+      "to": "reasoning_summary",
+      "label": "新增选项"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "center": "Codex 支持隐藏配置 GPT-6-Astra",
+  "branches": [
+    {
+      "label": "隐藏模型配置",
+      "detail": "Codex 新增通过 API 配置 GPT-6-Astra 的能力，不改变默认模型",
+      "children": [
+        "GPT-6-Astra 不出现在模型选择器中",
+        "配置路径可能涉及环境变量或配置文件"
+      ]
+    },
+    {
+      "label": "默认模型不变",
+      "detail": "隐藏配置不影响默认模型，用户侧体验保持不变",
+      "children": [
+        "模型配置可独立于默认模型"
+      ]
+    },
+    {
+      "label": "便于测试新模型",
+      "detail": "agent harness 设计上支持在不影响用户体验的前提下测试新模型",
+      "children": [
+        "需支持非用户可见的模型配置路径"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GPT-6-Astra",
+      "type": "model"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "GPT-6-Astra",
+      "label": "支持配置"
+    },
+    {
+      "from": "agent harness",
+      "to": "GPT-6-Astra",
+      "label": "测试"
+    }
+  ]
+}

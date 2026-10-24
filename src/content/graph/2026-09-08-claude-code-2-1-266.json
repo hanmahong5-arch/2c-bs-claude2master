@@ -1,0 +1,81 @@
+{
+  "center": "claude-code v2.1.266 修复网关…",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "CLAUDE_CODE_USE_GATEWAY 单独设置不再强制云登录",
+      "children": [
+        "需与 ANTHROPIC_BASE_URL、ANTHROPIC_AUTH_…",
+        "修复 2.1.265 引入的回归"
+      ]
+    },
+    {
+      "label": "兼容性改善",
+      "detail": "该变量与 API key、apiKeyHelper 或自定义认证头共存时请求不再失败",
+      "children": [
+        "无需更改现有配置"
+      ]
+    },
+    {
+      "label": "harness 设计启示",
+      "detail": "环境变量应保持明确组合语义，避免单变量触发意外行为",
+      "children": [
+        "回归测试需覆盖代理和网关场景"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "CLAUDE_CODE_USE_GATEWAY",
+      "type": "concept"
+    },
+    {
+      "name": "ANTHROPIC_BASE_URL",
+      "type": "concept"
+    },
+    {
+      "name": "ANTHROPIC_AUTH_TOKEN",
+      "type": "concept"
+    },
+    {
+      "name": "apiKeyHelper",
+      "type": "concept"
+    },
+    {
+      "name": "Cloud-gateway",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "CLAUDE_CODE_USE_GATEWAY",
+      "label": "使用"
+    },
+    {
+      "from": "CLAUDE_CODE_USE_GATEWAY",
+      "to": "ANTHROPIC_BASE_URL",
+      "label": "需同设"
+    },
+    {
+      "from": "CLAUDE_CODE_USE_GATEWAY",
+      "to": "ANTHROPIC_AUTH_TOKEN",
+      "label": "需同设"
+    },
+    {
+      "from": "claude-code",
+      "to": "apiKeyHelper",
+      "label": "兼容"
+    },
+    {
+      "from": "CLAUDE_CODE_USE_GATEWAY",
+      "to": "Cloud-gateway",
+      "label": "关联"
+    }
+  ]
+}

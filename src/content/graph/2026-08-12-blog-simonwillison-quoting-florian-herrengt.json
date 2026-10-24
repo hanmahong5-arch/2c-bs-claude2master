@@ -1,0 +1,89 @@
+{
+  "center": "AI 让代码库无人能懂",
+  "branches": [
+    {
+      "label": "认知债务累积",
+      "detail": "团队依赖 AI 理解代码，无人真正掌握系统运作",
+      "children": [
+        "被问数据来源时回答「我问 Claude」",
+        "无人判断 AI 输出是否真实"
+      ]
+    },
+    {
+      "label": "Bug 反复难修",
+      "detail": "同一 bug 第四次尝试修复，连 AI 也无法解决",
+      "children": [
+        "团队改为「让 AI 修」而非自己排查",
+        "Fable 也未能定位问题"
+      ]
+    },
+    {
+      "label": "架构过度复杂",
+      "detail": "项目层与服务过多，团队无人能整体理解",
+      "children": [
+        "层层服务叠加导致认知门槛过高"
+      ]
+    },
+    {
+      "label": "中层工程受冲击",
+      "detail": "Florian Herrengt 称 AI 正移除软件工程「中产」",
+      "children": [
+        "出处：AI is removing the middle class of…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Florian Herrengt",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Fable",
+      "type": "product"
+    },
+    {
+      "name": "cognitive-debt",
+      "type": "concept"
+    },
+    {
+      "name": "ai-assisted-programming",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Florian Herrengt",
+      "label": "引用"
+    },
+    {
+      "from": "Florian Herrengt",
+      "to": "cognitive-debt",
+      "label": "提出"
+    },
+    {
+      "from": "Claude",
+      "to": "cognitive-debt",
+      "label": "加剧"
+    },
+    {
+      "from": "Fable",
+      "to": "cognitive-debt",
+      "label": "未能解决"
+    },
+    {
+      "from": "ai-assisted-programming",
+      "to": "cognitive-debt",
+      "label": "导致"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "center": "AI开源项目关闭外部PR",
+  "branches": [
+    {
+      "label": "软件工厂模式",
+      "detail": "维护者用自家代理团队接管PR与issue，不再依赖社区提交",
+      "children": [
+        "代理分工：复现bug、修复、审查",
+        "Vercel AI SDK积压超1000 issue、近800 PR",
+        "实施4周后代理产出25-35%合并PR"
+      ]
+    },
+    {
+      "label": "信任自家代理",
+      "detail": "维护者更信任自己优化过的代理配置，而非社区代理",
+      "children": [
+        "Lars Grammel：特定代理经历史验证更可靠",
+        "自建代理可减少审查时间",
+        "部署含UI、API、执行空间、沙箱"
+      ]
+    },
+    {
+      "label": "Astro自动分诊",
+      "detail": "Astro用代理处理triage与复现，五年积压问题得以控制",
+      "children": [
+        "Fred Schott：问题曾来得比处理快",
+        "代理先让用户验证修复再人工看",
+        "每周优先处理issue而非持续清理积压"
+      ]
+    },
+    {
+      "label": "Flue与tldraw拒PR",
+      "detail": "外部PR自动关闭并转为issue或discussion",
+      "children": [
+        "Flue：bug转issue，功能请求转discussion",
+        "tldraw：2026年1月宣布关闭外部PR",
+        "Steve Ruiz：代码可由代理写，限制社区贡献到报…"
+      ]
+    },
+    {
+      "label": "社区角色变化",
+      "detail": "PR不再承担培养贡献者功能，讨论成为新入口",
+      "children": [
+        "Mitchell Hashimoto：大型开源将完全关闭贡献",
+        "Schott担忧维护者休假后无人接手",
+        "通过讨论建立信任，证明可成为维护者"
+      ]
+    }
+  ],
+  "flow": [
+    "外部PR自动关闭",
+    "转为issue或discussion",
+    "代理研究、设计、实现",
+    "代理初步审查",
+    "人工合并"
+  ],
+  "entities": [
+    {
+      "name": "Vercel",
+      "type": "company"
+    },
+    {
+      "name": "AI SDK",
+      "type": "product"
+    },
+    {
+      "name": "Astro",
+      "type": "product"
+    },
+    {
+      "name": "Flue",
+      "type": "product"
+    },
+    {
+      "name": "tldraw",
+      "type": "product"
+    },
+    {
+      "name": "Lars Grammel",
+      "type": "person"
+    },
+    {
+      "name": "Fred Schott",
+      "type": "person"
+    },
+    {
+      "name": "Steve Ruiz",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Vercel",
+      "to": "AI SDK",
+      "label": "构建软件工厂"
+    },
+    {
+      "from": "Fred Schott",
+      "to": "Astro",
+      "label": "创建"
+    },
+    {
+      "from": "Fred Schott",
+      "to": "Flue",
+      "label": "创建"
+    },
+    {
+      "from": "Steve Ruiz",
+      "to": "tldraw",
+      "label": "创建"
+    },
+    {
+      "from": "Lars Grammel",
+      "to": "Vercel",
+      "label": "任职于"
+    }
+  ]
+}

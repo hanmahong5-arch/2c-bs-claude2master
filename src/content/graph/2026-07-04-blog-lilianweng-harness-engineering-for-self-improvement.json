@@ -1,0 +1,124 @@
+{
+  "center": "Harness Engineering 与递归自我…",
+  "branches": [
+    {
+      "label": "什么是 Harness",
+      "detail": "围绕基座模型、负责编排执行与上下文管理的部署系统",
+      "children": [
+        "决定模型如何思考、规划、调用工具、存储产物",
+        "Claude Code、Codex 是成功案例",
+        "类比操作系统：封装复杂逻辑，接口保持简单"
+      ]
+    },
+    {
+      "label": "三大设计模式",
+      "detail": "工作流自动化、文件系统作持久记忆、子代理与后台任务",
+      "children": [
+        "目标循环：plan→execute→observe→improve",
+        "长任务状态写入文件，不塞进上下文",
+        "子代理并行需可检查：日志、状态记录"
+      ]
+    },
+    {
+      "label": "编码代理案例",
+      "detail": "主流编码代理接口已趋同，工具集高度标准化",
+      "children": [
+        "文件：glob、grep、read、edit、apply_patch",
+        "执行：bash、PowerShell；IO：lsp、git",
+        "外部：MCP、Skills、web_search；代理委派工具"
+      ]
+    },
+    {
+      "label": "Harness 优化路径",
+      "detail": "优化对象从提示词逐步走向工作流与整体系统",
+      "children": [
+        "上下文工程、工作流设计、进化搜索",
+        "与模型权重联合优化",
+        "harness 自身成为优化目标，减少启发式规则"
+      ]
+    },
+    {
+      "label": "近期 RSI 判断",
+      "detail": "近期路径不太可能是模型直接改写自身权重",
+      "children": [
+        "先靠 harness 工程走向元方法论",
+        "成熟 harness 支撑自动研究闭环",
+        "部分改进最终内化进模型，但外部接口保留"
+      ]
+    }
+  ],
+  "flow": [
+    "定义目标与工作流",
+    "模型规划并调用工具",
+    "执行、观察与测试",
+    "状态写入文件持久化",
+    "分析失败轨迹并改进",
+    "循环直至达成目标"
+  ],
+  "entities": [
+    {
+      "name": "Harness Engineering",
+      "type": "concept"
+    },
+    {
+      "name": "Recursive Self-Improvement",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Andrej Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "Context Engineering",
+      "type": "concept"
+    },
+    {
+      "name": "Evolutionary Search",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Harness Engineering",
+      "to": "Recursive Self-Improvement",
+      "label": "支撑"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Harness Engineering",
+      "label": "是案例"
+    },
+    {
+      "from": "Codex",
+      "to": "Harness Engineering",
+      "label": "是案例"
+    },
+    {
+      "from": "Andrej Karpathy",
+      "to": "Harness Engineering",
+      "label": "提供示例"
+    },
+    {
+      "from": "Context Engineering",
+      "to": "Harness Engineering",
+      "label": "属于"
+    },
+    {
+      "from": "Evolutionary Search",
+      "to": "Harness Engineering",
+      "label": "用于优化"
+    }
+  ]
+}

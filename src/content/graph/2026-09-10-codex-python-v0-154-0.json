@@ -1,0 +1,87 @@
+{
+  "center": "codex python-v0.154.0 更新",
+  "branches": [
+    {
+      "label": "新增推理档位",
+      "detail": "新增 max 与 ultra 两档 reasoning effort，harness 可按任务难度动态选择推理预算",
+      "children": [
+        "不再固定单一档位",
+        "按任务难度动态选择"
+      ]
+    },
+    {
+      "label": "外部消息注入",
+      "detail": "ExternalMessage 可注入同步/异步 run()、turn()，开启新回合或加入进行中的普通回合",
+      "children": [
+        "仅具工具级权限",
+        "不授予用户授权",
+        "事件流独立需自行合并"
+      ]
+    },
+    {
+      "label": "resume/fork 变更",
+      "detail": "新增 include_turns；turn_service_tier 只作用于新启动的单个回合；source 提供元数据",
+      "children": [
+        "历史选择只改返回响应",
+        "不改模型上下文"
+      ]
+    },
+    {
+      "label": "三处迁移点",
+      "detail": "升级需注意 HookMetadata 字段移入 .root、部分通知变强类型载荷、晚加入 turn handle 不回放早期事件",
+      "children": [
+        "HookMetadata 字段移入 .root",
+        "通知变强类型载荷",
+        "晚加入不回放早期事件"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex python-v0.154.0",
+      "type": "product"
+    },
+    {
+      "name": "Python SDK",
+      "type": "product"
+    },
+    {
+      "name": "ExternalMessage",
+      "type": "concept"
+    },
+    {
+      "name": "reasoning effort",
+      "type": "concept"
+    },
+    {
+      "name": "HookMetadata",
+      "type": "concept"
+    },
+    {
+      "name": "turn_service_tier",
+      "type": "concept"
+    },
+    {
+      "name": "include_turns",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex python-v0.154.0",
+      "to": "Python SDK",
+      "label": "更新"
+    },
+    {
+      "from": "Python SDK",
+      "to": "ExternalMessage",
+      "label": "新增"
+    },
+    {
+      "from": "Python SDK",
+      "to": "reasoning effort",
+      "label": "新增档位"
+    }
+  ]
+}

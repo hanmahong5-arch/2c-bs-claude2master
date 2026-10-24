@@ -1,0 +1,117 @@
+{
+  "center": "Claude Opus 5 发布",
+  "branches": [
+    {
+      "label": "性能与定位",
+      "detail": "接近 Claude Fable 5 的前沿智能，价格减半，成为 Claude Max 默认模型",
+      "children": [
+        "Frontier-Bench、GDPval-AA 上达到 SOTA",
+        "网络安全任务仍落后 Mythos 5",
+        "Claude Pro 上最强模型"
+      ]
+    },
+    {
+      "label": "性价比提升",
+      "detail": "与 Opus 4.8 同价，性能大幅提升，可按 effort 设置优化成本",
+      "children": [
+        "Frontier-Bench v0.1 性能翻倍且单任务成本更低",
+        "CursorBench 3.2 最大 effort 下距 Fable 5…",
+        "ARC-AGI 3 得分是次优模型三倍"
+      ]
+    },
+    {
+      "label": "任务表现",
+      "detail": "在软件工程、知识工作、科研与视觉输出上全面领先",
+      "children": [
+        "Zapier AutomationBench 通过率约 1.5 倍…",
+        "OSWorld 2.0 以 Fable 5 三分之一成本超越其…",
+        "有机化学光谱推断高 10.2 个百分点，蛋白质功能…"
+      ]
+    },
+    {
+      "label": "自主与验证",
+      "detail": "更强自我验证与迭代能力，能自主构建工具解决难题",
+      "children": [
+        "无图纸情况下自写计算机视觉管线重建 3D 模型",
+        "修复开源包管理器社区补丁遗漏的边缘案例",
+        "交易公司工程师单次会话构建新交易所行情数据源"
+      ]
+    },
+    {
+      "label": "客户反馈",
+      "detail": "早期客户称其在调试、金融、基因组学等任务上表现突出",
+      "children": [
+        "Devin 中擅长困难调试与根因分析",
+        "Box 上数据分析提升 11%，尽职调查提升 17%",
+        "Lovable 上 agentic 编码任务比 Opus 4.7 提…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Opus 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Frontier-Bench",
+      "type": "concept"
+    },
+    {
+      "name": "CursorBench",
+      "type": "concept"
+    },
+    {
+      "name": "Zapier AutomationBench",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Opus 5",
+      "to": "Claude Fable 5",
+      "label": "接近性能"
+    },
+    {
+      "from": "Claude Opus 5",
+      "to": "Opus 4.8",
+      "label": "性能超越"
+    },
+    {
+      "from": "Claude Opus 5",
+      "to": "Mythos 5",
+      "label": "落后于"
+    },
+    {
+      "from": "Claude Opus 5",
+      "to": "Frontier-Bench",
+      "label": "达到SOTA"
+    },
+    {
+      "from": "Claude Opus 5",
+      "to": "CursorBench",
+      "label": "表现优异"
+    },
+    {
+      "from": "Claude Opus 5",
+      "to": "Zapier AutomationBench",
+      "label": "通过率领先"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw 会话同步与附加",
+  "branches": [
+    {
+      "label": "Gateway 持有状态",
+      "detail": "会话行、转录、路由元数据与运行状态都由 Gateway 统一持有",
+      "children": [
+        "Control UI、移动端、ACP、TUI 均投影同一状态",
+        "移动节点只是外设，不成为第二会话所有者",
+        "会话键形如 agent:<agentId>:<rest>"
+      ]
+    },
+    {
+      "label": "多客户端共享",
+      "detail": "一个会话可在多个客户端打开，无需导出或复制转录",
+      "children": [
+        "openclaw tui 在终端继续对话",
+        "openclaw attach 附带编码工具与临时 MCP 授权",
+        "本地模式 --local 不接受会话目标"
+      ]
+    },
+    {
+      "label": "会话 URL 与短链",
+      "detail": "Control UI 路由与短 ID 由 Gateway 的 sessions.resolve 解析",
+      "children": [
+        "短 ID 取 UUID 前 8–32 位小写十六进制",
+        "短链需较新 Gateway，否则用完整会话键",
+        "歧义时最多返回十个候选"
+      ]
+    },
+    {
+      "label": "终端继续会话",
+      "detail": "Continue in terminal 复制免凭据的 openclaw resume 命令",
+      "children": [
+        "参数仅含会话键与 Gateway WebSocket URL",
+        "键上限 512 字符，URL 安全无需转义",
+        "查询路由 URL 无法生成该命令"
+      ]
+    },
+    {
+      "label": "附加编码工具",
+      "detail": "openclaw attach 解析会话后签发临时授权并启动工具",
+      "children": [
+        "Bearer token 走子进程环境而非 argv",
+        "正常退出即撤销，--print-config 保留至 TTL",
+        "MCP 配置严格限定于该会话"
+      ]
+    }
+  ],
+  "flow": [
+    "客户端选择会话键",
+    "Gateway 解析并返回规范键",
+    "客户端读取或更新同一状态",
+    "attach 签发临时会话授权",
+    "启动编码工具并随退出撤销"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "Control UI",
+      "type": "product"
+    },
+    {
+      "name": "openclaw tui",
+      "type": "product"
+    },
+    {
+      "name": "openclaw attach",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "sessions.resolve",
+      "type": "technique"
+    },
+    {
+      "name": "openclaw resume",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Gateway",
+      "label": "状态存于"
+    },
+    {
+      "from": "Control UI",
+      "to": "Gateway",
+      "label": "投影状态"
+    },
+    {
+      "from": "openclaw tui",
+      "to": "Gateway",
+      "label": "连接"
+    },
+    {
+      "from": "openclaw attach",
+      "to": "MCP",
+      "label": "配置"
+    },
+    {
+      "from": "Gateway",
+      "to": "sessions.resolve",
+      "label": "提供解析"
+    },
+    {
+      "from": "openclaw resume",
+      "to": "Gateway",
+      "label": "恢复会话"
+    }
+  ]
+}

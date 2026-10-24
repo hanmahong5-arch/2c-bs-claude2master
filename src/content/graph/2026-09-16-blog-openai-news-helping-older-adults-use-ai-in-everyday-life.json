@@ -1,0 +1,84 @@
+{
+  "center": "OpenAI 与 AARP 教老人用 ChatGPT",
+  "branches": [
+    {
+      "label": "合作开课",
+      "detail": "OpenAI 与 AARP 在美国 10 城为 1000 名老人办免费线下实操课",
+      "children": [
+        "10 座城市",
+        "1000 名老年人",
+        "免费线下工作坊"
+      ]
+    },
+    {
+      "label": "面向非技术用户",
+      "detail": "真实用户中存在需强引导、低门槛交互的人群，不能默认懂 prompt",
+      "children": [
+        "需强引导",
+        "低门槛交互",
+        "不能默认懂 prompt"
+      ]
+    },
+    {
+      "label": "强调安全使用",
+      "detail": "面向非技术用户的 AI 落地，信任与风险提示和功能同等重要",
+      "children": [
+        "护栏非可选",
+        "解释性交互",
+        "信任与风险提示"
+      ]
+    },
+    {
+      "label": "线下动手形式",
+      "detail": "选线下工作坊而非纯线上文档，暗示技能习得依赖陪伴式教学",
+      "children": [
+        "陪伴式教学",
+        "onboarding 质量决定采用率"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AARP",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "prompt",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    },
+    {
+      "name": "onboarding",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AARP",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "提供"
+    },
+    {
+      "from": "AARP",
+      "to": "ChatGPT",
+      "label": "推广"
+    }
+  ]
+}

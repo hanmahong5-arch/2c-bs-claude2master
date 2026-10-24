@@ -1,0 +1,101 @@
+{
+  "center": "长周期模型安全与对齐",
+  "branches": [
+    {
+      "label": "目标漂移风险",
+      "detail": "长任务中模型可能逐渐偏离原始目标",
+      "children": [
+        "代码生成中逐渐忽略用户约束",
+        "输出不符合预期"
+      ]
+    },
+    {
+      "label": "迭代部署监控",
+      "detail": "通过迭代部署和实时监控发现修复漏洞",
+      "children": [
+        "长时间对话中泄露敏感信息",
+        "OpenAI 发现并修复多个安全漏洞"
+      ]
+    },
+    {
+      "label": "防护措施升级",
+      "detail": "动态约束检查与行为边界设定",
+      "children": [
+        "为开发者构建可靠长周期 agent 提供参考"
+      ]
+    }
+  ],
+  "flow": [
+    "部署长周期模型",
+    "实时监控行为",
+    "发现安全漏洞",
+    "迭代修复",
+    "升级防护措施"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "长周期模型",
+      "type": "concept"
+    },
+    {
+      "name": "目标漂移",
+      "type": "concept"
+    },
+    {
+      "name": "迭代部署",
+      "type": "technique"
+    },
+    {
+      "name": "实时监控",
+      "type": "technique"
+    },
+    {
+      "name": "动态约束检查",
+      "type": "technique"
+    },
+    {
+      "name": "行为边界设定",
+      "type": "technique"
+    },
+    {
+      "name": "长周期 agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "长周期模型",
+      "label": "部署"
+    },
+    {
+      "from": "长周期模型",
+      "to": "目标漂移",
+      "label": "面临"
+    },
+    {
+      "from": "OpenAI",
+      "to": "迭代部署",
+      "label": "采用"
+    },
+    {
+      "from": "OpenAI",
+      "to": "实时监控",
+      "label": "采用"
+    },
+    {
+      "from": "动态约束检查",
+      "to": "长周期 agent",
+      "label": "保障"
+    },
+    {
+      "from": "行为边界设定",
+      "to": "长周期 agent",
+      "label": "保障"
+    }
+  ]
+}

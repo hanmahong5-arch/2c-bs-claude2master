@@ -1,0 +1,89 @@
+{
+  "center": "sqlite-utils 4.2.1 修复崩溃",
+  "branches": [
+    {
+      "label": "崩溃根因",
+      "detail": "4.2 引入 typing_extensions 的 Self，但未列为依赖",
+      "children": [
+        "typing-extensions 仅由 dev 依赖组间接安装",
+        "uvx sqlite-utils 直接运行时不带这些依赖"
+      ]
+    },
+    {
+      "label": "修复与冒烟测试",
+      "detail": "补上依赖，并新增不装 dev 依赖的 CLI 冒烟测试",
+      "children": [
+        "uv run --isolated --no-default-groups…",
+        "--no-default-groups 跳过默认 dev 组",
+        "--isolated 忽略 .venv 里的额外依赖"
+      ]
+    },
+    {
+      "label": "项目定位",
+      "detail": "Simon Willison 维护的 SQLite 操作 Python CLI 与库",
+      "children": [
+        "用于操作 SQLite 数据库",
+        "作者 Simon Willison"
+      ]
+    }
+  ],
+  "flow": [
+    "4.2 引入 Self 类型",
+    "typing-extensions 未声明依赖",
+    "uvx 直接运行即崩溃",
+    "补依赖并加冒烟测试"
+  ],
+  "entities": [
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "typing-extensions",
+      "type": "product"
+    },
+    {
+      "name": "uv",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "Python",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "维护"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "SQLite",
+      "label": "操作"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "typing-extensions",
+      "label": "依赖"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "Python",
+      "label": "基于"
+    },
+    {
+      "from": "uv",
+      "to": "sqlite-utils",
+      "label": "运行"
+    }
+  ]
+}

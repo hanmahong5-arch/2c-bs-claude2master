@@ -1,0 +1,54 @@
+{
+  "center": "John Gruber 谈博客写作心态",
+  "branches": [
+    {
+      "label": "现场演奏心态",
+      "detail": "把写博客当作现场演出，而非录制录音室专辑",
+      "children": [
+        "追求专业水准，认真专注",
+        "力求每个音符都准时命中"
+      ]
+    },
+    {
+      "label": "偶尔才做专辑",
+      "detail": "真正想打磨成专辑的文章并不罕见，但只是偶尔为之",
+      "children": [
+        "若每篇都追求殿堂级就写不出东西"
+      ]
+    },
+    {
+      "label": "面向观众表演",
+      "detail": "在观众面前现场演出，不是车库里随便乱弹",
+      "children": [
+        "状态最好时一首接一首地写"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "John Gruber",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "blogging",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "John Gruber",
+      "label": "引用"
+    },
+    {
+      "from": "John Gruber",
+      "to": "blogging",
+      "label": "谈论"
+    }
+  ]
+}

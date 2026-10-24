@@ -1,0 +1,62 @@
+{
+  "center": "opencode v1.18.7 修复",
+  "branches": [
+    {
+      "label": "macOS 全屏优化",
+      "detail": "移除全屏模式下多余的标题栏内边距，界面更整洁",
+      "children": [
+        "针对 macOS 全屏模式"
+      ]
+    },
+    {
+      "label": "命令面板修复",
+      "detail": "修复条目在阴影命令移除后错误重现的问题",
+      "children": [
+        "提升命令管理可靠性"
+      ]
+    },
+    {
+      "label": "项目选择器滚动",
+      "detail": "为下拉列表添加滚动功能，长列表可用",
+      "children": [
+        "解决长列表无法滚动问题"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "命令面板",
+      "type": "concept"
+    },
+    {
+      "name": "项目选择器",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "macOS",
+      "label": "适配"
+    },
+    {
+      "from": "opencode",
+      "to": "命令面板",
+      "label": "修复"
+    },
+    {
+      "from": "opencode",
+      "to": "项目选择器",
+      "label": "修复"
+    }
+  ]
+}

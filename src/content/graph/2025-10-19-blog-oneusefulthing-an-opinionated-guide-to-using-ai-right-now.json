@@ -1,0 +1,123 @@
+{
+  "center": "AI 使用实战指南",
+  "branches": [
+    {
+      "label": "免费够用吗",
+      "detail": "按真实使用场景判断，免费模型常已足够",
+      "children": [
+        "约 10% 人类每周用 AI，多数用免费工具",
+        "OpenAI 公布 ChatGPT 真实用途分布",
+        "免费够用就选喜欢的，无需看后续建议"
+      ]
+    },
+    {
+      "label": "九大模型家族",
+      "detail": "前沿模型仅来自少数公司，其余服务多基于它们",
+      "children": [
+        "四大：Claude、Gemini、ChatGPT、Grok",
+        "开源权重：Deepseek、Kimi、Z、Qwen、Mistral",
+        "Copilot、Perplexity 均基于这九种"
+      ]
+    },
+    {
+      "label": "付费怎么选",
+      "detail": "20 美元档适合多数人，200 美元档面向复杂技术需求",
+      "children": [
+        "首选 Claude、Gemini、ChatGPT",
+        "Grok 功能强但安全透明度较低",
+        "Copilot 难控制具体用哪个模型"
+      ]
+    },
+    {
+      "label": "模型类型",
+      "detail": "聊天、Agent、Wizard 三类，认真做事选 Agent",
+      "children": [
+        "Chat 快且有人格，适合对话",
+        "Agent 可自主多步执行复杂任务",
+        "Wizard 处理极复杂学术任务"
+      ]
+    },
+    {
+      "label": "提升答案质量",
+      "detail": "开启 Deep Research 或连接自有数据",
+      "children": [
+        "Deep Research 花 10-15 分钟做网络研究",
+        "报告更准、引用通常正确",
+        "Claude 有中等研究选项：开网页搜索"
+      ]
+    }
+  ],
+  "flow": [
+    "判断用途是否免费够用",
+    "选模型家族与具体模型",
+    "复杂任务手动选 Thinking 档",
+    "开启 Deep Research",
+    "连接自有数据"
+  ],
+  "entities": [
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "product"
+    },
+    {
+      "name": "Grok",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5",
+      "type": "model"
+    },
+    {
+      "name": "Deep Research",
+      "type": "technique"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ethan Mollick",
+      "to": "ChatGPT",
+      "label": "撰写指南"
+    },
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "开发"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5",
+      "label": "发布"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "GPT-5",
+      "label": "包含"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "Deep Research",
+      "label": "支持"
+    },
+    {
+      "from": "Claude",
+      "to": "Deep Research",
+      "label": "支持"
+    }
+  ]
+}

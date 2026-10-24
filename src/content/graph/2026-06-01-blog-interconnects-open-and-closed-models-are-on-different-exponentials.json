@@ -1,0 +1,103 @@
+{
+  "center": "开放与封闭模型的不同增长曲线",
+  "branches": [
+    {
+      "label": "封闭模型溢价",
+      "detail": "编码代理让用户愿为顶尖智能付高溢价，封闭实验室靠集成优势获利。",
+      "children": [
+        "Opus 4.5、Codex 5.2 是转折点",
+        "作者愿付 $2000/月",
+        "Anthropic、OpenAI 领先"
+      ]
+    },
+    {
+      "label": "开放模型经济",
+      "detail": "开放模型靠多公司协作压低价格，总市场价值将远超封闭实验室。",
+      "children": [
+        "企业用开放模型建内部代理",
+        "微调栈：Tinker、Fireworks",
+        "推理占比在超大规模云上升"
+      ]
+    },
+    {
+      "label": "不同指数增长",
+      "detail": "封闭模型从知识工作顶端变现，开放模型随 AI 扩散缓慢但广泛。",
+      "children": [
+        "封闭实验室像 Apple+Microsoft",
+        "5-10 年估值 $2-10T",
+        "开放模型市场更分散"
+      ]
+    },
+    {
+      "label": "API 业务衰退",
+      "detail": "封闭实验室将保护最佳模型，延迟 API 发布以防蒸馏并保利润。",
+      "children": [
+        "保护 token 供应",
+        "避免蒸馏",
+        "聚焦高利润用例"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Opus 4.5",
+      "type": "model"
+    },
+    {
+      "name": "Codex 5.2",
+      "type": "model"
+    },
+    {
+      "name": "Tinker",
+      "type": "product"
+    },
+    {
+      "name": "Fireworks",
+      "type": "company"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Opus 4.5",
+      "label": "发布"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex 5.2",
+      "label": "发布"
+    },
+    {
+      "from": "Google",
+      "to": "Anthropic",
+      "label": "追赶"
+    },
+    {
+      "from": "Tinker",
+      "to": "Fireworks",
+      "label": "同属微调栈"
+    },
+    {
+      "from": "Fireworks",
+      "to": "OpenRouter",
+      "label": "同属开放基础…"
+    }
+  ]
+}

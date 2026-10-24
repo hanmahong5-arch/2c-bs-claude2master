@@ -1,0 +1,101 @@
+{
+  "center": "Megakernels 是否已死",
+  "branches": [
+    {
+      "label": "争论背景",
+      "detail": "Ali 在播客称 megakernels 已死，后发文道歉称自己全对",
+      "children": [
+        "推文获 38 万浏览、1276 赞",
+        "争论源于 Inference Engineering Masterclass"
+      ]
+    },
+    {
+      "label": "反对理由",
+      "detail": "融合核难写且生产环境常不如 TensorRT-LLM 与模块化核",
+      "children": [
+        "张量并行下非线性操作需跨 GPU 通信",
+        "写优化 megakernel 极难，公司多不用于生产",
+        "67k 行手写融合前向核仅用于研究"
+      ]
+    },
+    {
+      "label": "Rubin 影响",
+      "detail": "NVIDIA Rubin 设计支持细粒度依赖触发，削弱融合动机",
+      "children": [
+        "Kyle Kranen 宣布 tile 级依赖触发",
+        "数据就绪即可启动核，改善核重叠"
+      ]
+    },
+    {
+      "label": "MoK 发布",
+      "detail": "Cursor 开源 Mixture-of-Kittens，MoE 训练 megakernel",
+      "children": [
+        "融合 MoE 通信与计算为单一确定性核",
+        "比最强公开基线快 2.37 倍",
+        "整体 tokens/s 提升 41%"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Megakernels",
+      "type": "concept"
+    },
+    {
+      "name": "Cursor",
+      "type": "company"
+    },
+    {
+      "name": "Mixture of Kittens",
+      "type": "product"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Rubin",
+      "type": "product"
+    },
+    {
+      "name": "TensorRT-LLM",
+      "type": "product"
+    },
+    {
+      "name": "ali",
+      "type": "person"
+    },
+    {
+      "name": "Kyle Kranen",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cursor",
+      "to": "Mixture of Kittens",
+      "label": "开源"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Rubin",
+      "label": "设计"
+    },
+    {
+      "from": "Rubin",
+      "to": "Megakernels",
+      "label": "削弱"
+    },
+    {
+      "from": "ali",
+      "to": "Megakernels",
+      "label": "质疑"
+    },
+    {
+      "from": "Kyle Kranen",
+      "to": "Rubin",
+      "label": "宣布"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "center": "GLM-5.2 长程任务模型",
+  "branches": [
+    {
+      "label": "模型规格",
+      "detail": "GLM-5.2 是 753B 参数文本生成模型",
+      "children": [
+        "753B 参数",
+        "文本生成任务",
+        "更新于 22 天前"
+      ]
+    },
+    {
+      "label": "社区热度",
+      "detail": "Hugging Face 上获 958k 浏览、5.13k 点赞",
+      "children": [
+        "958k 浏览",
+        "5.13k 点赞",
+        "142 次 upvote"
+      ]
+    },
+    {
+      "label": "用户评价",
+      "detail": "社区称其为 Opus 级开源模型，适合编码智能体",
+      "children": [
+        "lysandre：Opus 级开源模型",
+        "Volotat：开源模型冲击闭源",
+        "theainerd：印象深刻"
+      ]
+    },
+    {
+      "label": "开源意义",
+      "detail": "社区期待开源模型推动透明前沿 AI 研发",
+      "children": [
+        "回归 pre-GPT-2 透明时代",
+        "开放编码智能体可用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "lysandre",
+      "type": "person"
+    },
+    {
+      "name": "Volotat",
+      "type": "person"
+    },
+    {
+      "name": "theainerd",
+      "type": "person"
+    },
+    {
+      "name": "Opus",
+      "type": "model"
+    },
+    {
+      "name": "开源模型",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "GLM-5.2",
+      "to": "Hugging Face",
+      "label": "发布于"
+    },
+    {
+      "from": "lysandre",
+      "to": "GLM-5.2",
+      "label": "评价"
+    },
+    {
+      "from": "Volotat",
+      "to": "GLM-5.2",
+      "label": "评论"
+    },
+    {
+      "from": "theainerd",
+      "to": "GLM-5.2",
+      "label": "称赞"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "Opus",
+      "label": "对标"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "center": "Meta AI 客服被诱导接管 IG 账号",
+  "branches": [
+    {
+      "label": "攻击手法",
+      "detail": "黑客直接向 Meta AI 客服机器人提出请求，要求把目标账号绑定到新邮箱",
+      "children": [
+        "话术：Just link my new email address",
+        "附上目标用户名与攻击者邮箱",
+        "声称随后会发送验证码"
+      ]
+    },
+    {
+      "label": "漏洞根因",
+      "detail": "Meta 把客服系统接入具备账号找回全流程权限的 AI 聊天机器人",
+      "children": [
+        "AI 可一键跳过整个账号找回流程",
+        "Simon Willison 称其几乎不算 prompt…"
+      ]
+    },
+    {
+      "label": "影响范围",
+      "detail": "高知名度 Instagram 账号被成功接管，多来源已证实该事件",
+      "children": [
+        "Simon Willison 起初难以相信",
+        "经多方核实后确认属实"
+      ]
+    },
+    {
+      "label": "作者结论",
+      "detail": "不要把客服机器人接到能一次性完成账号接管的能力上",
+      "children": [
+        "Don't wire your support bot up to allow…"
+      ]
+    }
+  ],
+  "flow": [
+    "黑客联系 Meta AI 客服",
+    "要求绑定新邮箱",
+    "提供目标用户名",
+    "AI 跳过找回流程",
+    "账号被接管"
+  ],
+  "entities": [
+    {
+      "name": "Meta",
+      "type": "company"
+    },
+    {
+      "name": "Meta AI",
+      "type": "product"
+    },
+    {
+      "name": "Instagram",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "prompt injection",
+      "type": "concept"
+    },
+    {
+      "name": "账号找回流程",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Meta",
+      "to": "Meta AI",
+      "label": "开发"
+    },
+    {
+      "from": "Meta",
+      "to": "Instagram",
+      "label": "拥有"
+    },
+    {
+      "from": "Meta AI",
+      "to": "账号找回流程",
+      "label": "接入"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Meta AI",
+      "label": "评论"
+    },
+    {
+      "from": "prompt injection",
+      "to": "Meta AI",
+      "label": "涉及"
+    }
+  ]
+}

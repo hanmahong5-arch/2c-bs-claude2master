@@ -44,6 +44,10 @@ export const OUTBOUND_CAMPAIGN = {
   mcpDirectory: "mcp-directory",
   /** 大陆访问性对照表 → newapi */
   accessTable: "access-table",
+  /** 雷达文章详情页 (一图看懂下方) → newapi */
+  radarArticle: "radar-article",
+  /** 全站 AI 知识图谱页 → newapi */
+  knowledgeGraph: "knowledge-graph",
 } as const;
 
 export type OutboundCampaign =

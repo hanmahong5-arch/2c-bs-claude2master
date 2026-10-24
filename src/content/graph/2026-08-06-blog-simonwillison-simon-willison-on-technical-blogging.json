@@ -1,0 +1,83 @@
+{
+  "center": "Simon Willison谈技术博客",
+  "branches": [
+    {
+      "label": "核心建议",
+      "detail": "降低标准，在不满意时就发布，避免草稿堆积",
+      "children": [
+        "目标是在仍不满意时点击发布",
+        "否则只会攒满草稿文件夹"
+      ]
+    },
+    {
+      "label": "心理障碍",
+      "detail": "你看到的缺陷别人看不见，完美版本无人知晓",
+      "children": [
+        "没人知道你原本想写得多完美",
+        "写作中的瑕疵对他人不可见"
+      ]
+    },
+    {
+      "label": "访谈背景",
+      "detail": "2026年1月接受 Cynthia Dunlop 采访，8月才补链接",
+      "children": [
+        "属于 Write that blog! 系列",
+        "采访回答七个问题"
+      ]
+    },
+    {
+      "label": "访谈问题",
+      "detail": "涵盖为何写博客、最自豪与最难写的文章等",
+      "children": [
+        "为何开始并坚持写博客",
+        "最自豪与最难写的文章",
+        "给新手的建议与常读博客"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Cynthia Dunlop",
+      "type": "person"
+    },
+    {
+      "name": "Write that blog!",
+      "type": "product"
+    },
+    {
+      "name": "技术博客",
+      "type": "concept"
+    },
+    {
+      "name": "降低标准",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cynthia Dunlop",
+      "to": "Simon Willison",
+      "label": "采访"
+    },
+    {
+      "from": "Write that blog!",
+      "to": "Cynthia Dunlop",
+      "label": "由她主持"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "技术博客",
+      "label": "倡导"
+    },
+    {
+      "from": "降低标准",
+      "to": "技术博客",
+      "label": "是核心建议"
+    }
+  ]
+}

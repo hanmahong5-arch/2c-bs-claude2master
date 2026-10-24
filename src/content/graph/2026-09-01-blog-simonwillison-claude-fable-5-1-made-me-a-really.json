@@ -1,0 +1,114 @@
+{
+  "center": "Claude Fable 5.1 鹈鹕测试",
+  "branches": [
+    {
+      "label": "发布与基准",
+      "detail": "Anthropic 发布 Fable 5.1，主打编程、知识工作与长任务求解",
+      "children": [
+        "Terminal-Bench-Science 0.1 得分 52.6%",
+        "Fable 5 为 24.7%，Opus 5 为 29.0%，GPT-5…"
+      ]
+    },
+    {
+      "label": "五档推理",
+      "detail": "Fable 5.1 提供 low/medium/high/xhigh/max 五档，无法关闭推理",
+      "children": [
+        "low 与 medium 未显示推理，约 2000 输出 token",
+        "xhigh 达 36767 token、7分51秒、$1.83",
+        "max 达 65927 token、13分54秒、$3.30"
+      ]
+    },
+    {
+      "label": "最佳鹈鹕",
+      "detail": "max 档产出作者见过 Anthropic 模型里最好的鹈鹕 SVG",
+      "children": [
+        "背景得体、双脚踩踏板、翅膀扶车把",
+        "鹈鹕戴蓝色帽子，车筐里有鱼",
+        "作者称仍不及 Gemini 3.7 Flash 的灵气"
+      ]
+    },
+    {
+      "label": "动画化",
+      "detail": "作者把 max 鹈鹕交给 high 档做动画，花费 $1.37",
+      "children": [
+        "输入 6121、输出 26201 token",
+        "MP4 里车轮方向反了，原 SVG 正常"
+      ]
+    },
+    {
+      "label": "基准反思",
+      "detail": "作者对鹈鹕基准的信心下降，认为其与通用能力关联变弱",
+      "children": [
+        "现主要用于同模型家族内比较",
+        "尤其比较同一提示下不同推理档位"
+      ]
+    }
+  ],
+  "flow": [
+    "修复 llm-anthropic 推理记录",
+    "逐档生成鹈鹕 SVG",
+    "对比 token 与耗时成本",
+    "取 max 结果做动画"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5.1",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Terminal-Bench-Science 0.1",
+      "type": "concept"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.7 Flash",
+      "type": "model"
+    },
+    {
+      "name": "llm-anthropic",
+      "type": "product"
+    },
+    {
+      "name": "鹈鹕基准",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5.1",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Fable 5.1",
+      "label": "测试"
+    },
+    {
+      "from": "Claude Fable 5.1",
+      "to": "Terminal-Bench-Science 0.1",
+      "label": "得分52.6%"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "llm-anthropic",
+      "label": "修复"
+    },
+    {
+      "from": "Claude Fable 5.1",
+      "to": "鹈鹕基准",
+      "label": "参与"
+    }
+  ]
+}

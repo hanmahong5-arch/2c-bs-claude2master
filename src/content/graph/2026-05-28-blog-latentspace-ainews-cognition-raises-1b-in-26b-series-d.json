@@ -1,0 +1,107 @@
+{
+  "center": "Cognition 260 亿美元估值融资 10…",
+  "branches": [
+    {
+      "label": "Cognition 融资",
+      "detail": "Cognition 完成 10 亿美元 D 轮，估值 260 亿美元，为 8 个月前 C 轮的 2.5 倍",
+      "children": [
+        "官方披露 ARR，预计年底超 10 亿美元",
+        "客户含 Exa、Modal 等企业",
+        "自称最大独立 agent lab"
+      ]
+    },
+    {
+      "label": "推理效率优化",
+      "detail": "推理优化转向架构层面，长上下文经济性由注意力设计、缓存层级与路由推动",
+      "children": [
+        "EAGLE 3.1 改进投机解码，与 vLLM 合作",
+        "Perplexity 开源 Unigram tokenizer，CPU…",
+        "DeepSeek V4-Pro 混合注意力，KV 缓存降至 V3…"
+      ]
+    },
+    {
+      "label": "Agent 工程栈",
+      "detail": "重心从模型质量转向模型-框架-记忆匹配，垂直定制系统优于通用框架",
+      "children": [
+        "LangChain Deep Agents v0.6 用 Delta…",
+        "Trajectory 融资 1500 万美元，用 agent 轨迹…",
+        "RLM 最小训练框架可在 8×A100 上一天 RL 调优…"
+      ]
+    },
+    {
+      "label": "新基准与训练",
+      "detail": "基准转向长周期真实工作流，训练效率研究活跃",
+      "children": [
+        "ITBench-AA SRE 基准所有前沿模型低于 50%…",
+        "DeepSWE 含 113 任务、91 仓库、5 种语言",
+        "Sakana AI DiffusionBlocks 逐块训练深度网络"
+      ]
+    },
+    {
+      "label": "模型与多模态",
+      "detail": "蛋白质建模与多模态小模型发布密集",
+      "children": [
+        "ESMFold2 开源，含 68 亿蛋白图谱与 11 亿预测…",
+        "Gemini Embedding 2 原生多模态嵌入白皮书",
+        "Surya OCR 2 为 650M 模型，RTX 5090 上 5…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cognition",
+      "type": "company"
+    },
+    {
+      "name": "LangChain",
+      "type": "company"
+    },
+    {
+      "name": "DeepSeek V4-Pro",
+      "type": "model"
+    },
+    {
+      "name": "EAGLE 3.1",
+      "type": "technique"
+    },
+    {
+      "name": "Trajectory",
+      "type": "company"
+    },
+    {
+      "name": "ESMFold2",
+      "type": "model"
+    },
+    {
+      "name": "Gemini Embedding 2",
+      "type": "model"
+    },
+    {
+      "name": "ITBench-AA",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "LangChain",
+      "to": "Cognition",
+      "label": "同属 agent…"
+    },
+    {
+      "from": "DeepSeek V4-Pro",
+      "to": "EAGLE 3.1",
+      "label": "同属推理优化"
+    },
+    {
+      "from": "Trajectory",
+      "to": "LangChain",
+      "label": "基于 agent…"
+    },
+    {
+      "from": "ITBench-AA",
+      "to": "Cognition",
+      "label": "评估 agent…"
+    }
+  ]
+}

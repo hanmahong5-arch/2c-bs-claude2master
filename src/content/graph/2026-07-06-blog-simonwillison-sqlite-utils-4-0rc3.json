@@ -1,0 +1,86 @@
+{
+  "center": "sqlite-utils 4.0rc3 发布",
+  "branches": [
+    {
+      "label": "发布延期",
+      "detail": "原计划本周末发 4.0 正式版，因 rc2 后改动持续增加而推迟",
+      "children": [
+        "用 Claude Fable 5 与 GPT-5.5 处理积压…"
+      ]
+    },
+    {
+      "label": "复合外键",
+      "detail": "最大新功能：支持内省与创建复合外键",
+      "children": [
+        "对 table.foreign_keys 有细微破坏性变更",
+        "需在 4.0 正式版前落地"
+      ]
+    },
+    {
+      "label": "列名大小写",
+      "detail": "遵循 SQLite 对列名大小写不敏感的约定",
+      "children": [
+        "改动同时触及多处代码"
+      ]
+    },
+    {
+      "label": "项目定位",
+      "detail": "操作 SQLite 数据库的 Python CLI 工具与库",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "复合外键",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "发布"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "SQLite",
+      "label": "操作"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "sqlite-utils",
+      "label": "协助开发"
+    },
+    {
+      "from": "GPT-5.5",
+      "to": "sqlite-utils",
+      "label": "协助开发"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "复合外键",
+      "label": "新增支持"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "center": "Claude Code v2.1.144 更新",
+  "branches": [
+    {
+      "label": "后台会话增强",
+      "detail": "/resume 现支持后台会话，并显示运行时长",
+      "children": [
+        "后台智能体可像交互式会话一样管理监控"
+      ]
+    },
+    {
+      "label": "模型设置隔离",
+      "detail": "/model 更改仅影响当前会话，按 d 键设默认",
+      "children": [
+        "不同会话模型配置互不干扰"
+      ]
+    },
+    {
+      "label": "关键错误修复",
+      "detail": "修复网络超时、终端显示损坏、文件读取崩溃等",
+      "children": [
+        "MCP 工具列表分页问题已修复",
+        "提升边缘情况鲁棒性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "修复工具列表"
+    }
+  ]
+}

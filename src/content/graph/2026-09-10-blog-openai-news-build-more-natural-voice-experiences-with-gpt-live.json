@@ -1,0 +1,73 @@
+{
+  "center": "OpenAI 发布 GPT-Live-1 语音 API",
+  "branches": [
+    {
+      "label": "全双工语音",
+      "detail": "双方可同时听说，不再轮流式交互",
+      "children": [
+        "语音代理可像真人通话一样被打断插话",
+        "交互延迟与轮次管理设计需重做"
+      ]
+    },
+    {
+      "label": "指令遵循与音色",
+      "detail": "更强指令遵循，支持自定义音色",
+      "children": [
+        "提示词与音色配置可版本化管理",
+        "便于按场景复用"
+      ]
+    },
+    {
+      "label": "电话场景支持",
+      "detail": "支持 telephony，语音 agent 可接入电话通道",
+      "children": [
+        "客服、外呼等场景落地路径缩短"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-Live-1",
+      "type": "model"
+    },
+    {
+      "name": "API",
+      "type": "product"
+    },
+    {
+      "name": "全双工语音",
+      "type": "concept"
+    },
+    {
+      "name": "telephony",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-Live-1",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-Live-1",
+      "to": "API",
+      "label": "集成于"
+    },
+    {
+      "from": "GPT-Live-1",
+      "to": "全双工语音",
+      "label": "支持"
+    },
+    {
+      "from": "GPT-Live-1",
+      "to": "telephony",
+      "label": "支持"
+    }
+  ]
+}

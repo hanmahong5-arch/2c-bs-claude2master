@@ -1,0 +1,82 @@
+{
+  "center": "Linus 谈 AI 辅助内核调试",
+  "branches": [
+    {
+      "label": "AI 干脏活",
+      "detail": "Linus 称这场地狱级调试中 AI 承担了大量繁琐工作",
+      "children": [
+        "被称作 tireless helper",
+        "提交信息由 AI 撰写"
+      ]
+    },
+    {
+      "label": "AI 多次想放弃",
+      "detail": "AI 数次断言问题无解，建议只写份报告了事",
+      "children": [
+        "称此问题 impossible、unsolvable",
+        "Linus 猜测训练者不够固执"
+      ]
+    },
+    {
+      "label": "坚持就有产出",
+      "detail": "在 Linus 推动下 AI 持续加调试代码并忠实分析",
+      "children": [
+        "不断添加 debug code",
+        "faithfully 分析结果"
+      ]
+    },
+    {
+      "label": "成果与出处",
+      "detail": "修复提交 drm/xe: Don't hand out the flat CCS storage as usable VRAM",
+      "children": [
+        "Simon Willison 博客收录引言",
+        "2026 年 8 月 22 日发布"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Linus Torvalds",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Linux",
+      "type": "product"
+    },
+    {
+      "name": "AI 辅助调试",
+      "type": "technique"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Linus Torvalds",
+      "to": "AI 辅助调试",
+      "label": "实践"
+    },
+    {
+      "from": "Linus Torvalds",
+      "to": "Linux",
+      "label": "维护"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Linus Torvalds",
+      "label": "引用"
+    },
+    {
+      "from": "AI 辅助调试",
+      "to": "LLM",
+      "label": "依赖"
+    }
+  ]
+}

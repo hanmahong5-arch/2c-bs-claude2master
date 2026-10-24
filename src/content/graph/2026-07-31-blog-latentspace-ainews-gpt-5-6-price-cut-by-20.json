@@ -1,0 +1,113 @@
+{
+  "center": "GPT 5.6 降价与递归自优化",
+  "branches": [
+    {
+      "label": "大幅降价",
+      "detail": "OpenAI 对 GPT-5.6 系列降价，Luna 降 80%，Terra 降 20%",
+      "children": [
+        "Luna 输入 $0.20/百万 token，输出 $1.20",
+        "Terra 降至 $2/$12",
+        "Sol 新增 Fast 模式，速度 2.5 倍，价格 2 倍"
+      ]
+    },
+    {
+      "label": "推理加速",
+      "detail": "GPT-5.6 自我优化服务栈，降低端到端成本",
+      "children": [
+        "自主重写 Triton/Gluon 内核，成本降 20%",
+        "改进推测解码草稿模型，效率提升超 15%",
+        "优化 KV 缓存、批处理和分片"
+      ]
+    },
+    {
+      "label": "Agent 框架优化",
+      "detail": "优化 Rust 编排层，减少重复计算和上下文膨胀",
+      "children": [
+        "工具按需发现，输出默认上限 1 万 token",
+        "提示缓存：历史视为仅追加，保持高缓存命中率"
+      ]
+    },
+    {
+      "label": "成本骤降",
+      "detail": "同等智能水平的价格在 4 个月内下降约 13 倍",
+      "children": [
+        "GPT-5.4 旗舰智能现以约 1/13 价格出售",
+        "年化降速约 2000 倍"
+      ]
+    }
+  ],
+  "flow": [
+    "GPT-5.6 分析生产流量",
+    "自主重写内核与调优",
+    "改进推测解码",
+    "优化 KV 缓存与批处理",
+    "优化 Agent 编排层",
+    "宣布降价与 Fast 模式"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Terra",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.4",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Triton",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "GPT-5.6 Luna",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "GPT-5.6 Terra",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "GPT-5.6 Sol",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "Triton",
+      "label": "重写内核"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "Codex",
+      "label": "用于"
+    }
+  ]
+}

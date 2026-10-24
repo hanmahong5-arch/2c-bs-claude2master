@@ -1,0 +1,102 @@
+{
+  "center": "llm-chat-completions-server…",
+  "branches": [
+    {
+      "label": "插件功能",
+      "detail": "把本地 LLM 模型集合暴露为 OpenAI Chat Completions 兼容接口",
+      "children": [
+        "llm install llm-chat-completions-server",
+        "llm chat-completions-server -p 9001",
+        "支持已安装插件的全部模型"
+      ]
+    },
+    {
+      "label": "背景动机",
+      "detail": "LLM 0.32rc1 新增内容寻址日志，用于支持多轮对话请求",
+      "children": [
+        "客户端维护对话状态，请求逐次变长",
+        "用消息片段哈希去重"
+      ]
+    },
+    {
+      "label": "请求示例",
+      "detail": "curl 向本地端点发送多轮 messages 数组",
+      "children": [
+        "model 为 qwen3.5-4b",
+        "messages 含 user/assistant 交替角色"
+      ]
+    },
+    {
+      "label": "作者与实现",
+      "detail": "Simon Willison 发布，代码由 GPT-5.6 Sol 编写",
+      "children": [
+        "版本 0.1a0",
+        "发布于 2026 年 7 月 30 日"
+      ]
+    }
+  ],
+  "flow": [
+    "安装 llm 预发布版",
+    "安装该插件",
+    "启动本地服务端口",
+    "客户端发送多轮请求",
+    "哈希去重对话片段"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "LLM",
+      "type": "product"
+    },
+    {
+      "name": "llm-chat-completions-server",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI Chat Completions API",
+      "type": "concept"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "qwen3.5-4b",
+      "type": "model"
+    },
+    {
+      "name": "内容寻址日志",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm-chat-completions-server",
+      "label": "发布"
+    },
+    {
+      "from": "llm-chat-completions-server",
+      "to": "LLM",
+      "label": "是插件"
+    },
+    {
+      "from": "llm-chat-completions-server",
+      "to": "OpenAI Chat Completions API",
+      "label": "兼容"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "llm-chat-completions-server",
+      "label": "编写"
+    },
+    {
+      "from": "LLM",
+      "to": "内容寻址日志",
+      "label": "引入"
+    }
+  ]
+}

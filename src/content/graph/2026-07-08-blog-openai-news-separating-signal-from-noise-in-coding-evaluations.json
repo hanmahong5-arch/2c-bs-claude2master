@@ -1,0 +1,95 @@
+{
+  "center": "SWE-Bench Pro 评估噪声",
+  "branches": [
+    {
+      "label": "噪声占比高",
+      "detail": "SWE-Bench Pro 中约三成测试用例存在噪声",
+      "children": [
+        "30% 用例噪声",
+        "含测试本身错误",
+        "含环境配置问题"
+      ]
+    },
+    {
+      "label": "得分虚高",
+      "detail": "噪声使模型得分虚高，评估结果不可靠",
+      "children": [
+        "模型得分虚高",
+        "误导开发者选模型"
+      ]
+    },
+    {
+      "label": "噪声来源",
+      "detail": "不稳定依赖项与随机失败导致结果不可重复",
+      "children": [
+        "依赖项不稳定",
+        "随机失败",
+        "评估不可重复"
+      ]
+    },
+    {
+      "label": "改进建议",
+      "detail": "用更严格测试过滤和多次运行取中位数提升信噪比",
+      "children": [
+        "严格测试过滤",
+        "多次运行取中位数",
+        "提升信噪比"
+      ]
+    }
+  ],
+  "flow": [
+    "运行 SWE-Bench Pro",
+    "出现噪声用例",
+    "得分虚高",
+    "过滤测试",
+    "多次运行取中位数"
+  ],
+  "entities": [
+    {
+      "name": "SWE-Bench Pro",
+      "type": "product"
+    },
+    {
+      "name": "AI 编码评估",
+      "type": "concept"
+    },
+    {
+      "name": "噪声",
+      "type": "concept"
+    },
+    {
+      "name": "信噪比",
+      "type": "concept"
+    },
+    {
+      "name": "测试过滤",
+      "type": "technique"
+    },
+    {
+      "name": "中位数",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "SWE-Bench Pro",
+      "to": "噪声",
+      "label": "存在"
+    },
+    {
+      "from": "噪声",
+      "to": "AI 编码评估",
+      "label": "影响"
+    },
+    {
+      "from": "测试过滤",
+      "to": "信噪比",
+      "label": "提升"
+    },
+    {
+      "from": "中位数",
+      "to": "信噪比",
+      "label": "提升"
+    }
+  ]
+}

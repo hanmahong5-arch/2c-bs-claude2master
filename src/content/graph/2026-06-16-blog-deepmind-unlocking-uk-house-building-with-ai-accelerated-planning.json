@@ -1,0 +1,105 @@
+{
+  "center": "DeepMind 用 AI 加速英国住房规划",
+  "branches": [
+    {
+      "label": "合作背景",
+      "detail": "DeepMind 与英国政府合作，用 AI 加速住房规划审批以应对住房危机",
+      "children": [
+        "英国政府是合作方",
+        "目标是解决住房危机"
+      ]
+    },
+    {
+      "label": "合作延续",
+      "detail": "此前已与英国政府及 UK AI Security Institute 建立合作",
+      "children": [
+        "2025 年 12 月宣布支持英国繁荣与安全",
+        "2025 年 12 月深化与 UK AI Security…"
+      ]
+    },
+    {
+      "label": "全球布局",
+      "detail": "DeepMind 在多国推进国家级 AI 合作",
+      "children": [
+        "新加坡：2026 年 5 月新国家合作",
+        "韩国：2026 年 4 月宣布合作",
+        "印度：2026 年 2 月 AI 科学与教育"
+      ]
+    },
+    {
+      "label": "科学使命",
+      "detail": "支持美国能源部 Genesis 计划加速科学发现",
+      "children": [
+        "2025 年 12 月宣布",
+        "聚焦创新与科学发现"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "英国政府",
+      "type": "company"
+    },
+    {
+      "name": "UK AI Security Institute",
+      "type": "company"
+    },
+    {
+      "name": "新加坡",
+      "type": "concept"
+    },
+    {
+      "name": "韩国",
+      "type": "concept"
+    },
+    {
+      "name": "印度",
+      "type": "concept"
+    },
+    {
+      "name": "U.S. Department of Energy",
+      "type": "company"
+    },
+    {
+      "name": "Genesis",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DeepMind",
+      "to": "英国政府",
+      "label": "合作"
+    },
+    {
+      "from": "DeepMind",
+      "to": "UK AI Security Institute",
+      "label": "深化合作"
+    },
+    {
+      "from": "DeepMind",
+      "to": "新加坡",
+      "label": "国家合作"
+    },
+    {
+      "from": "DeepMind",
+      "to": "韩国",
+      "label": "合作"
+    },
+    {
+      "from": "DeepMind",
+      "to": "印度",
+      "label": "合作"
+    },
+    {
+      "from": "DeepMind",
+      "to": "U.S. Department of Energy",
+      "label": "支持"
+    }
+  ]
+}

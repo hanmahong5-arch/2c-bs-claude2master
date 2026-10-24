@@ -1,0 +1,71 @@
+{
+  "center": "Cline CLI 自动更新修复",
+  "branches": [
+    {
+      "label": "更新命令改进",
+      "detail": "自动更新从 npm install 改为 npm update，提升成功率",
+      "children": [
+        "更新逻辑优先用包管理器标准更新命令"
+      ]
+    },
+    {
+      "label": "保留发布渠道",
+      "detail": "更新过程中保持原有渠道（如 nightly）不变",
+      "children": [
+        "渠道配置作为持久化元数据"
+      ]
+    },
+    {
+      "label": "修复旧版问题",
+      "detail": "修复更新失败或意外切换渠道的问题",
+      "children": [
+        "关键运维操作需明确边界与回滚策略"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "npm install",
+      "type": "technique"
+    },
+    {
+      "name": "npm update",
+      "type": "technique"
+    },
+    {
+      "name": "nightly",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "npm install",
+      "label": "原用"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "npm update",
+      "label": "改用"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "nightly",
+      "label": "保留渠道"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "agent harness",
+      "label": "属于"
+    }
+  ]
+}

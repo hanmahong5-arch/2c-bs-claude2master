@@ -1,0 +1,72 @@
+{
+  "center": "cline v4.0.9 更新",
+  "branches": [
+    {
+      "label": "新增模型",
+      "detail": "加入 GPT-5.6 ChatGPT 订阅模型，扩展可选模型",
+      "children": [
+        "GPT-5.6 ChatGPT 订阅模型"
+      ]
+    },
+    {
+      "label": "修复 token 计数",
+      "detail": "修复 OpenAI 兼容提供商累计用量快照处理，避免高估",
+      "children": [
+        "避免 token 计数被高估",
+        "确保计费准确"
+      ]
+    },
+    {
+      "label": "修复 BOM 编码",
+      "detail": "修复从 UTF-8 BOM 文件加载技能的问题",
+      "children": [
+        "提高跨平台兼容性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "UTF-8 BOM",
+      "type": "concept"
+    },
+    {
+      "name": "token 计数",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "GPT-5.6",
+      "label": "新增支持"
+    },
+    {
+      "from": "cline",
+      "to": "OpenAI",
+      "label": "兼容"
+    },
+    {
+      "from": "cline",
+      "to": "UTF-8 BOM",
+      "label": "修复加载"
+    },
+    {
+      "from": "cline",
+      "to": "token 计数",
+      "label": "修复"
+    }
+  ]
+}

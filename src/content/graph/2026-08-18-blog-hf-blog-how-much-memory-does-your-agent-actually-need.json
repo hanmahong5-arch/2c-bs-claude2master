@@ -1,0 +1,119 @@
+{
+  "center": "Agent 记忆该给多少？ALTK 剂量研究",
+  "branches": [
+    {
+      "label": "核心结论",
+      "detail": "Agentic memory 不是开关，而是按模型能力校准的剂量",
+      "children": [
+        "八模型横跨 30B 到前沿闭源",
+        "同一套 guideline，交付方式决定效果"
+      ]
+    },
+    {
+      "label": "三种模式",
+      "detail": "按能力分三档：强模型要全量、弱模型要精选、饱和模型无增益",
+      "children": [
+        "DeepSeek-V3.2 全量 +9.5pp TGC",
+        "gpt-oss-120b 精选 +16.1pp TGC",
+        "GLM-5 饱和 0.0pp"
+      ]
+    },
+    {
+      "label": "学习在模型外",
+      "detail": "ALTK-Evolve 从自身轨迹蒸馏 guideline，不改权重、无需人工标注",
+      "children": [
+        "成功与失败轨迹都用于提取",
+        "推理时注入全量或任务相关子集"
+      ]
+    },
+    {
+      "label": "成本表现",
+      "detail": "精选检索既最准也最省，全量注入 token 开销明显",
+      "children": [
+        "gpt-oss-120b 精选仅 +5% tokens",
+        "DeepSeek 全量 +78% tokens",
+        "prompt caching 让全量也可负担"
+      ]
+    },
+    {
+      "label": "评测设置",
+      "detail": "AppWorld 585 个多步任务，9 个模拟应用，TGC 与 SGC 双指标",
+      "children": [
+        "168 test_normal + 417 test_challenge",
+        "guideline 仅从训练集挖掘"
+      ]
+    }
+  ],
+  "flow": [
+    "Agent 执行任务产生轨迹",
+    "ALTK-Evolve 提取 guideline",
+    "合并为可复用 guideline 集",
+    "推理时注入全量或精选子集"
+  ],
+  "entities": [
+    {
+      "name": "IBM",
+      "type": "company"
+    },
+    {
+      "name": "ALTK-Evolve",
+      "type": "product"
+    },
+    {
+      "name": "AppWorld",
+      "type": "product"
+    },
+    {
+      "name": "DeepSeek-V3.2",
+      "type": "model"
+    },
+    {
+      "name": "gpt-oss-120b",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "type": "model"
+    },
+    {
+      "name": "agentic memory",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "IBM",
+      "to": "ALTK-Evolve",
+      "label": "提出"
+    },
+    {
+      "from": "ALTK-Evolve",
+      "to": "agentic memory",
+      "label": "实现"
+    },
+    {
+      "from": "ALTK-Evolve",
+      "to": "AppWorld",
+      "label": "评测于"
+    },
+    {
+      "from": "DeepSeek-V3.2",
+      "to": "agentic memory",
+      "label": "全量受益"
+    },
+    {
+      "from": "gpt-oss-120b",
+      "to": "agentic memory",
+      "label": "精选受益"
+    },
+    {
+      "from": "GLM-5",
+      "to": "agentic memory",
+      "label": "无增益"
+    }
+  ]
+}

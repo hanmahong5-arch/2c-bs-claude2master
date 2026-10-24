@@ -1,0 +1,92 @@
+{
+  "center": "LLM 0.32.1 修复安装问题",
+  "branches": [
+    {
+      "label": "问题起因",
+      "detail": "OpenAI Python 库弃用 httpx，导致 LLM 全新安装失败",
+      "children": [
+        "LLM 依赖 httpx 但仅通过 openai 间接安装",
+        "openai 库停止使用 httpx"
+      ]
+    },
+    {
+      "label": "临时修复",
+      "detail": "0.32.1 通过固定 openai<3 版本暂时解决",
+      "children": [
+        "pin 到 openai<3",
+        "dot-release 快速发布"
+      ]
+    },
+    {
+      "label": "后续计划",
+      "detail": "即将发布的 0.33 将把 httpx 换成 httpx2",
+      "children": [
+        "0.33 从 httpx 切换到 httpx2"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 8 月 21 日发布",
+      "children": [
+        "发布于 2026-08-21",
+        "LLM 是命令行访问大模型工具"
+      ]
+    }
+  ],
+  "flow": [
+    "OpenAI 库弃用 httpx",
+    "LLM 安装失败",
+    "固定 openai<3",
+    "发布 0.32.1 修复",
+    "0.33 改用 httpx2"
+  ],
+  "entities": [
+    {
+      "name": "LLM",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI Python library",
+      "type": "product"
+    },
+    {
+      "name": "httpx",
+      "type": "product"
+    },
+    {
+      "name": "httpx2",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "LLM",
+      "to": "httpx",
+      "label": "依赖"
+    },
+    {
+      "from": "LLM",
+      "to": "OpenAI Python library",
+      "label": "间接依赖"
+    },
+    {
+      "from": "OpenAI Python library",
+      "to": "httpx",
+      "label": "弃用"
+    },
+    {
+      "from": "LLM",
+      "to": "httpx2",
+      "label": "计划切换"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "LLM",
+      "label": "发布"
+    }
+  ]
+}

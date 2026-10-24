@@ -1,0 +1,122 @@
+{
+  "center": "llm-coding-agent 0.1a0 发布",
+  "branches": [
+    {
+      "label": "项目定位",
+      "detail": "Simon Willison 基于 LLM 库构建的类 Claude Code 编码代理",
+      "children": [
+        "LLM 库已演进为 agent 框架",
+        "属于 Fable 5 实验产物",
+        "已发布 slop-alpha 到 PyPI"
+      ]
+    },
+    {
+      "label": "构建方式",
+      "detail": "用两条提示词让 Claude Code 写 spec 并按红绿 TDD 实现",
+      "children": [
+        "第一条提示写 spec.md",
+        "第二条提示按 TDD 分提交构建",
+        "使用环境中的 OpenAI API key 手动测试"
+      ]
+    },
+    {
+      "label": "工具集",
+      "detail": "实现 6 个 CodingTools 工具，覆盖读写、搜索与执行",
+      "children": [
+        "edit_file 精确替换并返回 diff",
+        "execute_command 超时上限 600 秒",
+        "read_file 返回带行号内容"
+      ]
+    },
+    {
+      "label": "使用方式",
+      "detail": "支持 CLI 与 Python API 两种调用",
+      "children": [
+        "uvx 运行 llm code",
+        "支持 --yolo 与 --allow 参数",
+        "CodingAgent(model, root, approve).run()"
+      ]
+    },
+    {
+      "label": "实测案例",
+      "detail": "用 --yolo 让 GPT-5.5 生成 SwiftUI ASCII 时钟 CLI",
+      "children": [
+        "GPT-5.5 指出 SwiftUI 不适合真 CLI",
+        "swift run AsciiTime 输出 ASCII 时间"
+      ]
+    }
+  ],
+  "flow": [
+    "写 spec.md",
+    "红绿 TDD 构建",
+    "分提交并更新文档",
+    "手动测试",
+    "发布 PyPI alpha"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm-coding-agent",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "PyPI",
+      "type": "product"
+    },
+    {
+      "name": "CodingAgent",
+      "type": "product"
+    },
+    {
+      "name": "TDD",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm-coding-agent",
+      "label": "发布"
+    },
+    {
+      "from": "llm-coding-agent",
+      "to": "LLM",
+      "label": "基于"
+    },
+    {
+      "from": "llm-coding-agent",
+      "to": "Claude Code",
+      "label": "模仿"
+    },
+    {
+      "from": "llm-coding-agent",
+      "to": "PyPI",
+      "label": "发布于"
+    },
+    {
+      "from": "llm-coding-agent",
+      "to": "CodingAgent",
+      "label": "提供"
+    },
+    {
+      "from": "GPT-5.5",
+      "to": "llm-coding-agent",
+      "label": "驱动"
+    }
+  ]
+}

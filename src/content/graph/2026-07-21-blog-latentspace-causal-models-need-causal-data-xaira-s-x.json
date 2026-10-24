@@ -1,0 +1,114 @@
+{
+  "center": "Xaira 用因果数据训练 X-Cell",
+  "branches": [
+    {
+      "label": "数据瓶颈",
+      "detail": "3.1B 模型偏离 scaling 曲线，参数与算力无法突破信息量上限",
+      "children": [
+        "测试损失在 1.5B 参数后走平",
+        "需信息富集数据才能继续 scaling",
+        "数据采集成本数千万美元"
+      ]
+    },
+    {
+      "label": "X-Atlas 数据集",
+      "detail": "基于 CRISPR 并行实验，逐个扰动基因以获取因果信号",
+      "children": [
+        "数百万次测试并行运行",
+        "可判断基因上下游关系",
+        "信息量约为原数据 30 倍"
+      ]
+    },
+    {
+      "label": "X-Cell 模型",
+      "detail": "从 scGPT 出发，放弃自回归改用扩散模型预测基因表达变化",
+      "children": [
+        "预测药物或基因编辑对细胞的影响",
+        "在真实人类细胞实验中泛化",
+        "击败此前最优的线性基线"
+      ]
+    },
+    {
+      "label": "CELLxGENE 基础",
+      "detail": "Chan Zuckerberg Institute 构建的 1.68 亿细胞数据库",
+      "children": [
+        "记录 2-3 万基因表达计数",
+        "约 4 万亿条目矩阵",
+        "催生一批虚拟细胞模型"
+      ]
+    }
+  ],
+  "flow": [
+    "构建 CELLxGENE 数据库",
+    "CRISPR 扰动实验生成 X-Atlas",
+    "训练扩散模型 X-Cell",
+    "预测基因表达变化",
+    "真实细胞实验验证"
+  ],
+  "entities": [
+    {
+      "name": "Xaira Therapeutics",
+      "type": "company"
+    },
+    {
+      "name": "X-Cell",
+      "type": "model"
+    },
+    {
+      "name": "X-Atlas",
+      "type": "product"
+    },
+    {
+      "name": "CELLxGENE",
+      "type": "product"
+    },
+    {
+      "name": "scGPT",
+      "type": "model"
+    },
+    {
+      "name": "Bo Wang",
+      "type": "person"
+    },
+    {
+      "name": "Ci Chu",
+      "type": "person"
+    },
+    {
+      "name": "CRISPR",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Xaira Therapeutics",
+      "to": "X-Cell",
+      "label": "开发"
+    },
+    {
+      "from": "Xaira Therapeutics",
+      "to": "X-Atlas",
+      "label": "构建"
+    },
+    {
+      "from": "X-Cell",
+      "to": "X-Atlas",
+      "label": "训练于"
+    },
+    {
+      "from": "X-Cell",
+      "to": "scGPT",
+      "label": "改进自"
+    },
+    {
+      "from": "X-Atlas",
+      "to": "CRISPR",
+      "label": "基于"
+    },
+    {
+      "from": "CELLxGENE",
+      "to": "scGPT",
+      "label": "启发"
+    }
+  ]
+}

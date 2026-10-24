@@ -1,0 +1,92 @@
+{
+  "center": "claude-code v2.1.183 更新",
+  "branches": [
+    {
+      "label": "自动模式安全",
+      "detail": "自动模式下阻止未授权的破坏性命令，防止意外数据丢失",
+      "children": [
+        "拦截 git reset --hard",
+        "拦截 terraform destroy",
+        "用户未明确要求时无法执行"
+      ]
+    },
+    {
+      "label": "配置交互改进",
+      "detail": "/config 支持 --help 查看键值，切换设置更直观",
+      "children": [
+        "/config --help 查看键值",
+        "移除启动时“设置问题”提示",
+        "需主动运行 /doctor 诊断"
+      ]
+    },
+    {
+      "label": "修复子代理错误",
+      "detail": "解决子代理 WebSearch 返回空结果等问题",
+      "children": [
+        "WebSearch 子代理返回空结果"
+      ]
+    },
+    {
+      "label": "修复界面与任务",
+      "detail": "修复 TUI 渲染错乱与后台任务被终止问题",
+      "children": [
+        "Windows Terminal 下 TUI 渲染错乱",
+        "后台任务被意外终止"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "git reset --hard",
+      "type": "technique"
+    },
+    {
+      "name": "terraform destroy",
+      "type": "technique"
+    },
+    {
+      "name": "WebSearch",
+      "type": "product"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "Windows Terminal",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "git reset --hard",
+      "label": "阻止执行"
+    },
+    {
+      "from": "claude-code",
+      "to": "terraform destroy",
+      "label": "阻止执行"
+    },
+    {
+      "from": "claude-code",
+      "to": "WebSearch",
+      "label": "修复"
+    },
+    {
+      "from": "claude-code",
+      "to": "TUI",
+      "label": "修复渲染"
+    },
+    {
+      "from": "TUI",
+      "to": "Windows Terminal",
+      "label": "渲染于"
+    }
+  ]
+}

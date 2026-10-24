@@ -1,0 +1,102 @@
+{
+  "center": "Codex 误删文件原因",
+  "branches": [
+    {
+      "label": "事件概述",
+      "detail": "GPT-5.6 在 Codex 中意外删除文件，OpenAI 已调查多起报告",
+      "children": [
+        "Thibault Sottiaux 描述为严重 bug"
+      ]
+    },
+    {
+      "label": "触发条件",
+      "detail": "全访问模式开启且 Codex 无沙箱保护、未启用自动审查",
+      "children": [
+        "缺少 sandboxing 保护",
+        "未开启 auto review"
+      ]
+    },
+    {
+      "label": "技术根因",
+      "detail": "模型试图覆盖 $HOME 环境变量来定义临时目录",
+      "children": [
+        "覆盖 $HOME env var"
+      ]
+    },
+    {
+      "label": "直接后果",
+      "detail": "模型犯错，误删了 $HOME 目录本身",
+      "children": [
+        "误删 $HOME"
+      ]
+    }
+  ],
+  "flow": [
+    "开启全访问模式",
+    "无沙箱运行 Codex",
+    "模型覆盖 $HOME",
+    "误删 $HOME 目录"
+  ],
+  "entities": [
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Thibault Sottiaux",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "$HOME",
+      "type": "concept"
+    },
+    {
+      "name": "sandboxing",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "GPT-5.6",
+      "to": "Codex",
+      "label": "运行于"
+    },
+    {
+      "from": "Thibault Sottiaux",
+      "to": "OpenAI",
+      "label": "任职于"
+    },
+    {
+      "from": "Thibault Sottiaux",
+      "to": "Codex",
+      "label": "描述 bug"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Thibault Sottiaux",
+      "label": "引用"
+    },
+    {
+      "from": "Codex",
+      "to": "sandboxing",
+      "label": "缺少"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "$HOME",
+      "label": "误删"
+    }
+  ]
+}

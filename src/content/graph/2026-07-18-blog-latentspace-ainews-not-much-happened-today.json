@@ -1,0 +1,117 @@
+{
+  "center": "Kimi K3 发布与格局重估",
+  "branches": [
+    {
+      "label": "K3 逼近前沿",
+      "detail": "中国开源权重模型首次被广泛认为达到前沿级别，编码与智能体表现突出",
+      "children": [
+        "Artificial Analysis 智能指数 57，Claude…",
+        "编码智能体指数 57，持平 GPT-5.6 Terra 与…",
+        "Terminal-Bench v2 84%，DeepSWE 64%"
+      ]
+    },
+    {
+      "label": "效率堆栈取代算力",
+      "detail": "战略论点从算力护城河转向 MoE 路由、量化、数据策展与稀缺驱动的基础设施设计",
+      "children": [
+        "Moonshot 的 Mooncake 堆栈",
+        "压缩每 FLOP 能力曲线而非直接对标西方资本开支",
+        "后训练与 harness 转化率可非线性缩小产品差距"
+      ]
+    },
+    {
+      "label": "架构与推理创新",
+      "detail": "Kimi Delta Attention 作为快速权重式记忆机制，降低长上下文注意力成本",
+      "children": [
+        "1M 上下文下吞吐最高快 6 倍，长上下文定价更平坦",
+        "异构基础设施部署，如 4xH100 节点走 RoCE",
+        "华为 950 SuperPoD 强化中国 AI 堆栈受限扩展…"
+      ]
+    },
+    {
+      "label": "价值转向 harness",
+      "detail": "前沿智能变便宜开放后，护城河转向编排、记忆、工具与领域脚手架",
+      "children": [
+        "记忆架构趋向 wiki memory，用 Markdown 层经…",
+        "MemoHarness 分解六种可编辑控制面…",
+        "MCP 与技能抽象持续成熟，如 Perplexity…"
+      ]
+    },
+    {
+      "label": "争议与基准",
+      "detail": "对 K3 落后程度仍有分歧，但共识是已无法忽视",
+      "children": [
+        "Arena 前端代码竞技场中国首次超过美国",
+        "ARC-AGI 上 Thinking Machines 的 Inkling…",
+        "长周期网络安全任务上开源仍落后最佳闭源"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Moonshot",
+      "type": "company"
+    },
+    {
+      "name": "Kimi Delta Attention",
+      "type": "technique"
+    },
+    {
+      "name": "Mooncake",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "FastMCP",
+      "type": "product"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Zhilin Yang",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Moonshot",
+      "to": "Kimi K3",
+      "label": "发布"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "Kimi Delta Attention",
+      "label": "采用"
+    },
+    {
+      "from": "Moonshot",
+      "to": "Mooncake",
+      "label": "构建"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "Artificial Analysis",
+      "label": "被评测"
+    },
+    {
+      "from": "Zhilin Yang",
+      "to": "Moonshot",
+      "label": "创立"
+    },
+    {
+      "from": "FastMCP",
+      "to": "MCP",
+      "label": "实现"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "center": "cline cli v3.0.53 升级修复",
+  "branches": [
+    {
+      "label": "Hub 守护进程",
+      "detail": "CLI 升级后按运行时构建指纹识别并重启旧守护进程，避免连上过期代码",
+      "children": [
+        "升级需管理进程生命周期",
+        "确保新代码生效"
+      ]
+    },
+    {
+      "label": "推理模型压缩",
+      "detail": "摘要器不再硬编码 1024 token 上限，遵循 max output tokens，默认 4096",
+      "children": [
+        "空摘要时记录诊断",
+        "动态适配模型输出限制"
+      ]
+    },
+    {
+      "label": "Vertex 模型目录",
+      "detail": "新增 Fable 5，定价因区域而异，成本显示为未知而非错误",
+      "children": [
+        "避免错误估算",
+        "明确标注未知"
+      ]
+    },
+    {
+      "label": "自定义模型 ID",
+      "detail": "Claude 风格 ID 路由到 Anthropic-on-Vertex 路径，不再被改写",
+      "children": [
+        "支持透明传递",
+        "保持兼容性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "Hub 守护进程",
+      "type": "concept"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic-on-Vertx",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli",
+      "to": "Hub 守护进程",
+      "label": "重启"
+    },
+    {
+      "from": "Vertex",
+      "to": "Fable 5",
+      "label": "新增"
+    },
+    {
+      "from": "cline cli",
+      "to": "Vertex",
+      "label": "支持"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "center": "ChatGPT Work 数据科学应用",
+  "branches": [
+    {
+      "label": "原始输入生成报告",
+      "detail": "数据科学团队把原始数据、会议记录输入 ChatGPT Work，自动产出根因简报与影响报告",
+      "children": [
+        "省去手动整理时间"
+      ]
+    },
+    {
+      "label": "KPI 与范围分析",
+      "detail": "借助 KPI 备忘录和范围分析功能，团队快速聚焦关键指标",
+      "children": [
+        "减少重复性分析工作"
+      ]
+    },
+    {
+      "label": "仪表盘规范生成",
+      "detail": "把分析需求转化为可执行的技术文档，提升工具链协作效率",
+      "children": []
+    }
+  ],
+  "flow": [
+    "输入原始数据",
+    "输入会议记录",
+    "生成根因简报",
+    "生成影响报告"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "数据科学团队",
+      "type": "concept"
+    },
+    {
+      "name": "根因简报",
+      "type": "concept"
+    },
+    {
+      "name": "影响报告",
+      "type": "concept"
+    },
+    {
+      "name": "KPI 备忘录",
+      "type": "concept"
+    },
+    {
+      "name": "仪表盘规范",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "展示"
+    },
+    {
+      "from": "数据科学团队",
+      "to": "ChatGPT Work",
+      "label": "使用"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "根因简报",
+      "label": "生成"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "影响报告",
+      "label": "生成"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "KPI 备忘录",
+      "label": "提供"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "仪表盘规范",
+      "label": "生成"
+    }
+  ]
+}

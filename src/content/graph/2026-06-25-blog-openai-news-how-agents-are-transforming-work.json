@@ -1,0 +1,80 @@
+{
+  "center": "AI代理如何改变工作",
+  "branches": [
+    {
+      "label": "任务时长延长",
+      "detail": "AI代理从简单问答扩展到多步骤工作流，能处理更长时间、更复杂的任务。",
+      "children": [
+        "需支持持久化状态与任务编排架构"
+      ]
+    },
+    {
+      "label": "多角色提效",
+      "detail": "代理在客服、编程、数据分析等不同角色间提升生产力。",
+      "children": [
+        "工具链应提供角色特定预配置模板与集成"
+      ]
+    },
+    {
+      "label": "自主与监督",
+      "detail": "研究强调代理的自主决策能力，但仍需人类监督。",
+      "children": [
+        "需构建可解释性与安全控制机制"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AI代理",
+      "type": "concept"
+    },
+    {
+      "name": "任务编排",
+      "type": "technique"
+    },
+    {
+      "name": "持久化状态",
+      "type": "technique"
+    },
+    {
+      "name": "可解释性",
+      "type": "concept"
+    },
+    {
+      "name": "人类监督",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AI代理",
+      "label": "研究"
+    },
+    {
+      "from": "AI代理",
+      "to": "任务编排",
+      "label": "需要"
+    },
+    {
+      "from": "AI代理",
+      "to": "持久化状态",
+      "label": "需要"
+    },
+    {
+      "from": "AI代理",
+      "to": "人类监督",
+      "label": "需要"
+    },
+    {
+      "from": "AI代理",
+      "to": "可解释性",
+      "label": "需要"
+    }
+  ]
+}

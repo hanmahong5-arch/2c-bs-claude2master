@@ -1,0 +1,99 @@
+{
+  "center": "OpenClaw 2026.6.11 修复",
+  "branches": [
+    {
+      "label": "渠道交付修复",
+      "detail": "修复 30+ 渠道消息错发、卡顿、重连丢失问题",
+      "children": [
+        "覆盖 Telegram、Discord、WhatsApp 等",
+        "确保回复准确到达目标对话",
+        "需更健壮的会话绑定与超时处理"
+      ]
+    },
+    {
+      "label": "模型恢复改进",
+      "detail": "改进 OpenAI、OpenRouter、Gemini 的设置失败与流式中断",
+      "children": [
+        "减少模型不可用时的无声失败",
+        "需清晰错误传播与重试策略",
+        "优化 fallback 链与流式状态管理"
+      ]
+    },
+    {
+      "label": "会话连续性",
+      "detail": "修复压缩后上下文丢失、记忆搜索超时等问题",
+      "children": [
+        "跨 agent 访问权限提示更清晰",
+        "需严格状态一致性与资源清理",
+        "提升长期对话连续性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "WhatsApp",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Telegram",
+      "label": "修复渠道"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Discord",
+      "label": "修复渠道"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "WhatsApp",
+      "label": "修复渠道"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "OpenAI",
+      "label": "改进模型"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "OpenRouter",
+      "label": "改进模型"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Gemini",
+      "label": "改进模型"
+    }
+  ]
+}

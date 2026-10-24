@@ -1,0 +1,92 @@
+{
+  "center": "Claude Code v2.1.154 更新",
+  "branches": [
+    {
+      "label": "默认高推理强度",
+      "detail": "Opus 4.8 对最困难任务默认启用 /effort xhigh，投入更多计算资源",
+      "children": [
+        "复杂指令下算力投入更高",
+        "面向最难任务默认开启"
+      ]
+    },
+    {
+      "label": "动态工作流",
+      "detail": "Claude 可创建并协调数十至数百个后台智能体处理大型项目",
+      "children": [
+        "/workflows 查看运行状态",
+        "支持数十至数百个智能体"
+      ]
+    },
+    {
+      "label": "简化代码审查",
+      "detail": "/simplify 只运行清理审查并应用修复，不再做完整错误审查",
+      "children": [
+        "覆盖重用、简化、效率、高度",
+        "优化日常代码优化流程"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "动态工作流",
+      "type": "concept"
+    },
+    {
+      "name": "/effort xhigh",
+      "type": "technique"
+    },
+    {
+      "name": "/workflows",
+      "type": "product"
+    },
+    {
+      "name": "/simplify",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Opus 4.8",
+      "label": "默认使用"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "发布"
+    },
+    {
+      "from": "Opus 4.8",
+      "to": "/effort xhigh",
+      "label": "默认启用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "动态工作流",
+      "label": "引入"
+    },
+    {
+      "from": "动态工作流",
+      "to": "/workflows",
+      "label": "通过查看"
+    },
+    {
+      "from": "Claude Code",
+      "to": "/simplify",
+      "label": "简化"
+    }
+  ]
+}

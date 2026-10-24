@@ -1,0 +1,119 @@
+{
+  "center": "Claude Code 最佳实践",
+  "branches": [
+    {
+      "label": "上下文是核心约束",
+      "detail": "上下文窗口填满快，性能随填充下降，是最需管理的资源",
+      "children": [
+        "一次调试或探索可消耗数万 token",
+        "上下文满时 Claude 会遗忘早期指令或出错",
+        "用自定义状态栏持续追踪用量"
+      ]
+    },
+    {
+      "label": "给 Claude 验证手段",
+      "detail": "提供可运行的检查（测试、构建、截图），让循环自动闭合",
+      "children": [
+        "无检查时你就是验证循环，每个错误等你发现",
+        "检查可跨会话设为 /goal 条件",
+        "Stop hook 可作确定性门禁，连续 8 次阻断后覆盖"
+      ]
+    },
+    {
+      "label": "先探索再计划后编码",
+      "detail": "用 plan mode 分离研究与执行，避免解决错误问题",
+      "children": [
+        "Shift+Tab 进入 plan mode，只读不改",
+        "Ctrl+G 可在编辑器中直接改计划",
+        "小改动如改错字可直接做，跳过计划"
+      ]
+    },
+    {
+      "label": "提示要具体",
+      "detail": "指令越精确，需要的纠正越少",
+      "children": [
+        "指明文件、场景与测试偏好",
+        "指向可回答问题的来源，如 git 历史",
+        "引用代码库已有模式，如 HotDogWidget.php"
+      ]
+    },
+    {
+      "label": "提供丰富内容",
+      "detail": "用 @ 引用文件、粘贴截图或直接管道输入数据",
+      "children": [
+        "用 @ 引用文件而非描述",
+        "粘贴截图/图片辅助 UI 修改",
+        "直接管道数据给 Claude"
+      ]
+    }
+  ],
+  "flow": [
+    "进入 plan mode 探索",
+    "让 Claude 制定计划",
+    "退出 plan mode 实现",
+    "运行检查并迭代",
+    "提交并创建 PR"
+  ],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "plan mode",
+      "type": "concept"
+    },
+    {
+      "name": "上下文窗口",
+      "type": "concept"
+    },
+    {
+      "name": "Stop hook",
+      "type": "technique"
+    },
+    {
+      "name": "/goal",
+      "type": "technique"
+    },
+    {
+      "name": "验证子代理",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "开发"
+    },
+    {
+      "from": "Claude Code",
+      "to": "plan mode",
+      "label": "提供"
+    },
+    {
+      "from": "Claude Code",
+      "to": "上下文窗口",
+      "label": "受限于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Stop hook",
+      "label": "支持"
+    },
+    {
+      "from": "Claude Code",
+      "to": "/goal",
+      "label": "支持"
+    },
+    {
+      "from": "Claude Code",
+      "to": "验证子代理",
+      "label": "支持"
+    }
+  ]
+}

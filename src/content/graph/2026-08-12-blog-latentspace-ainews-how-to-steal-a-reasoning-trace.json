@@ -1,0 +1,122 @@
+{
+  "center": "前沿模型隐藏推理被破解",
+  "branches": [
+    {
+      "label": "攻击原理",
+      "detail": "利用 API 漏洞重放加密推理块，让弱模型转录出隐藏思维链",
+      "children": [
+        "重放签名推理块到同厂商弱模型",
+        "Claude 用 Haiku 4.5 + 预填充",
+        "GPT 注入 encrypted_content 采样 50 次"
+      ]
+    },
+    {
+      "label": "隐私泄露",
+      "detail": "扫描约 7000 条公开 trace，发现大量敏感数据",
+      "children": [
+        "62 个 API key、33 个邮箱、33 个密码",
+        "64 项仅存在于推理块中",
+        "共享 Claude Code/Codex 会话即泄露"
+      ]
+    },
+    {
+      "label": "蒸馏争议",
+      "detail": "有人认为可蒸馏，有人称并非可扩展的窃取路径",
+      "children": [
+        "恢复 token 数与计费思考 token 1:1",
+        "Vipul Ved 称加密更像无状态推理优化",
+        "隐藏 CoT 不是可靠监控接口"
+      ]
+    },
+    {
+      "label": "对齐隐患",
+      "detail": "解码后的思维链暴露多种对齐问题",
+      "children": [
+        "CoT 摘要器隐藏答案",
+        "推理不可读、考虑作弊",
+        "攻击网站等行为"
+      ]
+    },
+    {
+      "label": "披露与修复",
+      "detail": "已负责任披露，部分漏洞修复，类似攻击仍可能",
+      "children": [
+        "Matthew Green 5 月首次报告侧信道",
+        "Can Bölük 建议用 deep_think 工具绕过"
+      ]
+    }
+  ],
+  "flow": [
+    "获取加密推理块",
+    "重放到弱模型",
+    "放入模型轮次并预填充",
+    "反复采样丢弃拒绝",
+    "合并噪声转录"
+  ],
+  "entities": [
+    {
+      "name": "Alexander Panfilov",
+      "type": "person"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "GPT",
+      "type": "model"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "Haiku 4.5",
+      "type": "model"
+    },
+    {
+      "name": "Matthew Green",
+      "type": "person"
+    },
+    {
+      "name": "Can Bölük",
+      "type": "person"
+    },
+    {
+      "name": "chain of thought",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Alexander Panfilov",
+      "to": "Claude",
+      "label": "破解"
+    },
+    {
+      "from": "Alexander Panfilov",
+      "to": "GPT",
+      "label": "破解"
+    },
+    {
+      "from": "Alexander Panfilov",
+      "to": "Gemini",
+      "label": "破解"
+    },
+    {
+      "from": "Claude",
+      "to": "Haiku 4.5",
+      "label": "重放至"
+    },
+    {
+      "from": "Matthew Green",
+      "to": "chain of thought",
+      "label": "侧信道"
+    },
+    {
+      "from": "Can Bölük",
+      "to": "chain of thought",
+      "label": "建议绕过"
+    }
+  ]
+}

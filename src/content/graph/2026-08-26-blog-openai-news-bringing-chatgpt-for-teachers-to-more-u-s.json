@@ -1,0 +1,74 @@
+{
+  "center": "ChatGPT for Teachers 扩展",
+  "branches": [
+    {
+      "label": "扩展规模",
+      "detail": "OpenAI 将项目扩展至美国 55 个学区",
+      "children": [
+        "覆盖超 10 万教育工作者和职员"
+      ]
+    },
+    {
+      "label": "项目内容",
+      "detail": "提供安全的 AI 工具、培训和持续支持",
+      "children": []
+    },
+    {
+      "label": "教学用途",
+      "detail": "帮助教师课程规划、个性化教学和行政自动化",
+      "children": [
+        "节省时间并提升教学效率"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "教育领域 AI 需求增长，需定制安全合规方案",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT for Teachers",
+      "type": "product"
+    },
+    {
+      "name": "美国学区",
+      "type": "concept"
+    },
+    {
+      "name": "教育工作者",
+      "type": "concept"
+    },
+    {
+      "name": "AI 工具",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT for Teachers",
+      "label": "扩展"
+    },
+    {
+      "from": "ChatGPT for Teachers",
+      "to": "美国学区",
+      "label": "覆盖"
+    },
+    {
+      "from": "ChatGPT for Teachers",
+      "to": "教育工作者",
+      "label": "惠及"
+    },
+    {
+      "from": "ChatGPT for Teachers",
+      "to": "AI 工具",
+      "label": "提供"
+    }
+  ]
+}

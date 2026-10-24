@@ -1,0 +1,103 @@
+{
+  "center": "AI 飞速发展：探索未来或逃避现实",
+  "branches": [
+    {
+      "label": "AI 进步速度惊人",
+      "detail": "ECI 指数显示 40+ 基准上模型分数持续攀升，成就密集涌现",
+      "children": [
+        "2023 年 3 月 AI 通过律师资格考试",
+        "2024 年 7 月 LLM 获 IMO 银牌，2025 年 7…",
+        "2025 年 AI 合著新数学证明，Claude Mythos…"
+      ]
+    },
+    {
+      "label": "AI 不是普通技术",
+      "detail": "能力随算力与数据投入可预测增长，未来进步已被锁定",
+      "children": [
+        "公司正投入数千亿美元建设训练算力设施",
+        "AI 比任何个体更聪明，正走向超越人类总和",
+        "技术更多是「生长」而非「制造」，人类未完全理解"
+      ]
+    },
+    {
+      "label": "递归自我改进风险",
+      "detail": "AI 或能开发自己的继任者，引发递归自我改进",
+      "children": [
+        "类比 3D 打印公司打印出更精细的打印头",
+        "Jack Clark 认为可能在未来两年内发生",
+        "将彻底改变经济与整个世界"
+      ]
+    },
+    {
+      "label": "探索还是逃避",
+      "detail": "面对 AI 进步，个体与社会需选择探索未来或逃避现实",
+      "children": [
+        "探索未来：正视 AI 进展，决定如何使用与引导",
+        "逃避现实：忽视技术影响，陷入被动反应状态",
+        "需决定如何塑造、使用、引导并分配 AI 收益"
+      ]
+    },
+    {
+      "label": "减速困境与竞争",
+      "detail": "若无全球协调减速，各国各公司陷入商业与地缘竞争",
+      "children": [
+        "优雅减速对人类有利，但缺乏协调机制",
+        "商业与地缘 rivalry 淹没物种级生存议题",
+        "现状不理想，但这就是我们所处的局面"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Jack Clark",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Import AI",
+      "type": "product"
+    },
+    {
+      "name": "Epoch Capabilities Index",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Mythos",
+      "type": "model"
+    },
+    {
+      "name": "recursive self-improvement",
+      "type": "concept"
+    },
+    {
+      "name": "singularity",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Jack Clark",
+      "to": "Anthropic",
+      "label": "任职于"
+    },
+    {
+      "from": "Jack Clark",
+      "to": "Import AI",
+      "label": "撰写"
+    },
+    {
+      "from": "Epoch Capabilities Index",
+      "to": "Claude Mythos",
+      "label": "衡量"
+    },
+    {
+      "from": "recursive self-improvement",
+      "to": "singularity",
+      "label": "导致"
+    }
+  ]
+}

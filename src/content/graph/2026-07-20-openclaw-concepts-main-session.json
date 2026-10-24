@@ -1,0 +1,119 @@
+{
+  "center": "OpenClaw 主会话设计",
+  "branches": [
+    {
+      "label": "什么是主会话",
+      "detail": "所有私信汇聚到一个滚动会话，跨设备共享同一上下文",
+      "children": [
+        "会话键固定为 agent:<agentId>:main",
+        "默认 DM scope 把所有直接消息折叠进来",
+        "系统视其为智能体根：心跳唤醒、后台汇报"
+      ]
+    },
+    {
+      "label": "Web 端入口",
+      "detail": "主会话即 Home 页，侧边栏第一项，可与工作页并排",
+      "children": [
+        "Cmd/Ctrl+Shift+H 打开 Home 侧栏",
+        "Threads/Groups/Coding 分列其他会话",
+        "可附加当前页面与工作区快照"
+      ]
+    },
+    {
+      "label": "什么汇入主会话",
+      "detail": "新会话通知、群组活动、后台任务、心跳都流向 Home",
+      "children": [
+        "新会话默认排队系统通知，可关闭",
+        "群组活动合并为紧凑通知，不逐条唤醒",
+        "子智能体结果回报给发起会话"
+      ]
+    },
+    {
+      "label": "记忆与滚动",
+      "detail": "MEMORY.md 与每日笔记提供跨重置连续性",
+      "children": [
+        "压缩前把持久事实写入每日笔记",
+        "重置保留旧 SQLite 记录可搜索",
+        "磁盘超 10gb 时归档最旧历史"
+      ]
+    },
+    {
+      "label": "何时隔离",
+      "detail": "多人可发消息时应隔离私信，避免共享上下文",
+      "children": [
+        "设 dmScope: per-channel-peer 隔离",
+        "隔离后跨会话记忆回忆默认关闭",
+        "安全审计检测多发送者时建议隔离"
+      ]
+    }
+  ],
+  "flow": [
+    "消息进入主会话",
+    "排队系统通知",
+    "心跳或下轮唤醒",
+    "压缩并写入每日笔记",
+    "重置后重新预热"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "main session",
+      "type": "concept"
+    },
+    {
+      "name": "Home",
+      "type": "concept"
+    },
+    {
+      "name": "MEMORY.md",
+      "type": "concept"
+    },
+    {
+      "name": "heartbeat",
+      "type": "concept"
+    },
+    {
+      "name": "compaction",
+      "type": "technique"
+    },
+    {
+      "name": "dmScope",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "main session",
+      "label": "默认汇聚"
+    },
+    {
+      "from": "main session",
+      "to": "Home",
+      "label": "对应页面"
+    },
+    {
+      "from": "heartbeat",
+      "to": "main session",
+      "label": "唤醒"
+    },
+    {
+      "from": "compaction",
+      "to": "main session",
+      "label": "保持有界"
+    },
+    {
+      "from": "MEMORY.md",
+      "to": "main session",
+      "label": "加载进"
+    },
+    {
+      "from": "dmScope",
+      "to": "main session",
+      "label": "控制隔离"
+    }
+  ]
+}

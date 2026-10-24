@@ -1,0 +1,114 @@
+{
+  "center": "shot-scraper 录制 Agent 演示视频",
+  "branches": [
+    {
+      "label": "新功能发布",
+      "detail": "shot-scraper 1.10 新增 video 命令，用 Playwright 录制网页操作视频",
+      "children": [
+        "接受 storyboard.yml 定义操作流程",
+        "支持 --auth 传入 cookie 与 --mp4 输出",
+        "示例演示 Datasette 粘贴 CSV 建表"
+      ]
+    },
+    {
+      "label": "Agent 自动生成",
+      "detail": "storyboard YAML 由 GPT-5.5 xhigh 在 Codex Desktop 中按提示词生成",
+      "children": [
+        "提示词要求查看分支改动并运行 --help",
+        "Agent 自行启动开发服务器并录制",
+        "--help 输出充当内置 SKILL.md"
+      ]
+    },
+    {
+      "label": "技术依赖",
+      "detail": "基于 Playwright 1.59 新 screencast 机制与 1.61.0 修复",
+      "children": [
+        "旧版视频含调试用 chrome 与白帧",
+        "新机制可精细控制录制",
+        "此前视频固定 800px 宽"
+      ]
+    },
+    {
+      "label": "开发方式",
+      "detail": "代码与文档均由 GPT-5.5 xhigh 编写，作者通过审阅文档迭代设计",
+      "children": [
+        "YAML 格式由编码 Agent 定义",
+        "用 Pydantic 定义并校验格式",
+        "2024 年 2 月提的 issue 终于完成"
+      ]
+    }
+  ],
+  "flow": [
+    "编写 storyboard.yml",
+    "运行 shot-scraper video",
+    "Playwright 执行操作",
+    "录制浏览器视频",
+    "输出 webm 或 mp4"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "shot-scraper",
+      "type": "product"
+    },
+    {
+      "name": "Playwright",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.5 xhigh",
+      "type": "model"
+    },
+    {
+      "name": "Codex Desktop",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Pydantic",
+      "type": "product"
+    },
+    {
+      "name": "storyboard.yml",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "shot-scraper",
+      "label": "开发"
+    },
+    {
+      "from": "shot-scraper",
+      "to": "Playwright",
+      "label": "基于"
+    },
+    {
+      "from": "GPT-5.5 xhigh",
+      "to": "Codex Desktop",
+      "label": "运行于"
+    },
+    {
+      "from": "GPT-5.5 xhigh",
+      "to": "storyboard.yml",
+      "label": "生成"
+    },
+    {
+      "from": "shot-scraper",
+      "to": "storyboard.yml",
+      "label": "读取"
+    },
+    {
+      "from": "shot-scraper",
+      "to": "Pydantic",
+      "label": "校验"
+    }
+  ]
+}

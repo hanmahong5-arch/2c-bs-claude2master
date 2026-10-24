@@ -1,0 +1,111 @@
+{
+  "center": "Anthropic 开设米兰办公室",
+  "branches": [
+    {
+      "label": "欧洲第六站",
+      "detail": "米兰是 Anthropic 在欧洲的第六个办公室，前五个为伦敦、都柏林、巴黎、苏黎世、慕尼黑",
+      "children": [
+        "由南欧负责人 Thomas Remy 领导",
+        "服务意大利企业与开发者安全采用 Claude"
+      ]
+    },
+    {
+      "label": "企业客户",
+      "detail": "已与多家意大利龙头企业合作，覆盖金融、生命科学、能源、汽车等行业",
+      "children": [
+        "Generali、Unipol、Angelini Pharma…",
+        "与 JAKALA 合作部署超 3000 席位"
+      ]
+    },
+    {
+      "label": "初创案例",
+      "detail": "意大利科技公司积极采用 Claude，显著提升工程效率",
+      "children": [
+        "Satispay 将 18 个月路线图压缩至 7 个月",
+        "Bending Spoons 多数代码变更由 Claude Code…"
+      ]
+    },
+    {
+      "label": "设计领域",
+      "detail": "在米兰设计周与 Alcova Milano 合作举办工作坊，展示 Claude 连接设计工具",
+      "children": [
+        "面向工业、家具、空间设计师",
+        "助力创意流程"
+      ]
+    },
+    {
+      "label": "AI 伦理对话",
+      "detail": "呼应教皇利奥十四世首份通谕《Magnifica Humanitas》，Anthropic 联合创始人 Chris Olah 受邀演讲",
+      "children": [
+        "呼吁宗教、公民社会、学术界、政府共同塑造 AI…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Milan",
+      "type": "concept"
+    },
+    {
+      "name": "Chris Olah",
+      "type": "person"
+    },
+    {
+      "name": "Thomas Remy",
+      "type": "person"
+    },
+    {
+      "name": "Satispay",
+      "type": "company"
+    },
+    {
+      "name": "Bending Spoons",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Milan",
+      "label": "开设办公室"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "开发"
+    },
+    {
+      "from": "Chris Olah",
+      "to": "Anthropic",
+      "label": "联合创始人"
+    },
+    {
+      "from": "Thomas Remy",
+      "to": "Anthropic",
+      "label": "南欧负责人"
+    },
+    {
+      "from": "Satispay",
+      "to": "Claude",
+      "label": "部署"
+    }
+  ]
+}

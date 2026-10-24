@@ -1,0 +1,123 @@
+{
+  "center": "测试时计算与思维链原理",
+  "branches": [
+    {
+      "label": "心理学类比",
+      "detail": "借鉴双过程理论，快思考直觉易错，慢思考审慎更准",
+      "children": [
+        "System 1 快速自动，依赖启发式",
+        "System 2 缓慢逻辑，消耗认知资源",
+        "复杂问题需慢思考"
+      ]
+    },
+    {
+      "label": "计算即资源",
+      "detail": "模型前向计算量决定能力，测试时增加计算可提升表现",
+      "children": [
+        "Transformer 每 token 计算约 2 倍参数量",
+        "MoE 稀疏模型计算 = 2 * 参数 / 稀疏度",
+        "CoT 允许按问题难度变计算量"
+      ]
+    },
+    {
+      "label": "潜变量建模",
+      "detail": "将思维链视为潜变量 z，通过边缘化提升 P(y|x)",
+      "children": [
+        "P(y|x) = Σ_z P(y|x,z)P(z|x)",
+        "并行采样可视为从后验 P(z|x,y) 采样",
+        "对数损失是有效目标"
+      ]
+    },
+    {
+      "label": "思维链方法",
+      "detail": "从提示到 RL，CoT 显著提升数学推理能力",
+      "children": [
+        "Wei et al. 2022 提出 CoT 术语",
+        "Kojima et al. 2022 用“think step by…",
+        "RL 在可验证任务上效果显著，如 o1、R1"
+      ]
+    },
+    {
+      "label": "解码策略",
+      "detail": "并行采样与顺序修订是两种主要测试时解码改进方法",
+      "children": [
+        "并行采样：best-of-N、beam search、自一致性",
+        "顺序修订：迭代反思修正，需微调模型",
+        "自纠正无外部反馈可能无效"
+      ]
+    }
+  ],
+  "flow": [
+    "输入问题",
+    "生成思维链",
+    "并行采样/顺序修订",
+    "验证或投票",
+    "输出答案"
+  ],
+  "entities": [
+    {
+      "name": "Chain-of-thought",
+      "type": "concept"
+    },
+    {
+      "name": "Test-time compute",
+      "type": "concept"
+    },
+    {
+      "name": "Transformer",
+      "type": "model"
+    },
+    {
+      "name": "o1-preview",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek-R1",
+      "type": "model"
+    },
+    {
+      "name": "Daniel Kahneman",
+      "type": "person"
+    },
+    {
+      "name": "Wei et al. 2022",
+      "type": "person"
+    },
+    {
+      "name": "Self-consistency",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Chain-of-thought",
+      "to": "Test-time compute",
+      "label": "实现"
+    },
+    {
+      "from": "Transformer",
+      "to": "Test-time compute",
+      "label": "支持"
+    },
+    {
+      "from": "o1-preview",
+      "to": "Chain-of-thought",
+      "label": "应用"
+    },
+    {
+      "from": "DeepSeek-R1",
+      "to": "Chain-of-thought",
+      "label": "应用"
+    },
+    {
+      "from": "Daniel Kahneman",
+      "to": "Test-time compute",
+      "label": "启发"
+    },
+    {
+      "from": "Wei et al. 2022",
+      "to": "Chain-of-thought",
+      "label": "提出"
+    }
+  ]
+}

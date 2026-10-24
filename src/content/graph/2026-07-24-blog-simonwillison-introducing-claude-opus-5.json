@@ -1,0 +1,105 @@
+{
+  "center": "Anthropic 发布 Claude Opus 5",
+  "branches": [
+    {
+      "label": "定位与价格",
+      "detail": "接近 Claude Fable 5 的前沿智能，价格仅一半",
+      "children": [
+        "定价与 Opus 4.8 相同",
+        "fast mode 价格为两倍"
+      ]
+    },
+    {
+      "label": "榜单表现",
+      "detail": "目前领跑 Artificial Analysis 排行榜",
+      "children": [
+        "排名超过 Fable 5"
+      ]
+    },
+    {
+      "label": "主动能力",
+      "detail": "被描述为有想法且主动的模型",
+      "children": [
+        "无图纸视图时自写 CV 管线提取几何",
+        "据像素重建 FreeCAD 3D 机械零件"
+      ]
+    },
+    {
+      "label": "安全与网络",
+      "detail": "未针对网络任务训练，但通用能力带动提升",
+      "children": [
+        "找漏洞接近 Mythos 5",
+        "利用漏洞明显落后 Mythos 5"
+      ]
+    },
+    {
+      "label": "配套资料",
+      "detail": "Anthropic 发布提示指南，Thariq Shihipar 撰文",
+      "children": [
+        "Claude 5 代上下文工程新规则"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Opus 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "product"
+    },
+    {
+      "name": "Thariq Shihipar",
+      "type": "person"
+    },
+    {
+      "name": "上下文工程",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Opus 5",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Opus 5",
+      "to": "Claude Fable 5",
+      "label": "接近"
+    },
+    {
+      "from": "Claude Opus 5",
+      "to": "Claude Opus 4.8",
+      "label": "同价于"
+    },
+    {
+      "from": "Claude Opus 5",
+      "to": "Mythos 5",
+      "label": "接近找漏洞"
+    },
+    {
+      "from": "Thariq Shihipar",
+      "to": "上下文工程",
+      "label": "撰文谈"
+    }
+  ]
+}

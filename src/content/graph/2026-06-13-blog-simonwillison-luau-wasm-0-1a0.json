@@ -1,0 +1,91 @@
+{
+  "center": "luau-wasm 0.1a0 发布",
+  "branches": [
+    {
+      "label": "发布内容",
+      "detail": "Simon Willison 发布 luau-wasm 0.1a0，将 Luau 打包为 Pyodide WebAssembly wheel",
+      "children": [
+        "版本号 0.1a0",
+        "发布于 2026-06-13"
+      ]
+    },
+    {
+      "label": "技术形态",
+      "detail": "Luau 以 WASM wheel 形式分发，供 Pyodide 环境使用",
+      "children": [
+        "Pyodide WebAssembly wheel",
+        "Luau 语言"
+      ]
+    },
+    {
+      "label": "延伸阅读",
+      "detail": "作者指向其文章《Publishing WASM wheels to PyPI for use with Pyodide》了解细节",
+      "children": [
+        "Publishing WASM wheels to PyPI"
+      ]
+    },
+    {
+      "label": "标签",
+      "detail": "文章归类标签为 lua、webassembly、pyodide",
+      "children": [
+        "lua",
+        "webassembly",
+        "pyodide"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "luau-wasm",
+      "type": "product"
+    },
+    {
+      "name": "Luau",
+      "type": "product"
+    },
+    {
+      "name": "Pyodide",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "PyPI",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "luau-wasm",
+      "label": "发布"
+    },
+    {
+      "from": "luau-wasm",
+      "to": "Luau",
+      "label": "打包"
+    },
+    {
+      "from": "luau-wasm",
+      "to": "Pyodide",
+      "label": "适配"
+    },
+    {
+      "from": "luau-wasm",
+      "to": "WebAssembly",
+      "label": "基于"
+    },
+    {
+      "from": "luau-wasm",
+      "to": "PyPI",
+      "label": "发布至"
+    }
+  ]
+}

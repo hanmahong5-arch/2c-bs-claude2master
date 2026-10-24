@@ -1,0 +1,107 @@
+{
+  "center": "Cloudflare 临时账户部署",
+  "branches": [
+    {
+      "label": "免注册部署",
+      "detail": "无需创建 Cloudflare 账户即可部署 Workers 项目",
+      "children": [
+        "命令：npx wrangler deploy --temporary",
+        "部署到新的临时项目"
+      ]
+    },
+    {
+      "label": "60 分钟有效期",
+      "detail": "临时项目上线后仅存活 60 分钟",
+      "children": [
+        "适合快速测试与演示",
+        "超时后自动失效"
+      ]
+    },
+    {
+      "label": "认领延长",
+      "detail": "部署输出认领页面 URL，可转为长期项目",
+      "children": [
+        "认领后项目不再受 60 分钟限制"
+      ]
+    },
+    {
+      "label": "AI 代理场景",
+      "detail": "官方定位为 AI 代理，但普通用户同样受益",
+      "children": [
+        "Simon Willison 认为 AI 钩子非必需"
+      ]
+    },
+    {
+      "label": "实测验证",
+      "detail": "用 GPT-5.5 xhigh 在 Codex Desktop 构建重定向工具测试",
+      "children": [
+        "功能：跟随 HTTP 重定向并返回最终地址",
+        "临时部署按预期工作"
+      ]
+    }
+  ],
+  "flow": [
+    "运行 wrangler deploy…",
+    "Cloudflare 创建临时项目",
+    "项目上线 60 分钟",
+    "输出认领页面 URL",
+    "认领可延长有效期"
+  ],
+  "entities": [
+    {
+      "name": "Cloudflare",
+      "type": "company"
+    },
+    {
+      "name": "Cloudflare Workers",
+      "type": "product"
+    },
+    {
+      "name": "wrangler",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.5 xhigh",
+      "type": "model"
+    },
+    {
+      "name": "Codex Desktop",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "AI agents",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cloudflare",
+      "to": "Cloudflare Workers",
+      "label": "提供"
+    },
+    {
+      "from": "wrangler",
+      "to": "Cloudflare Workers",
+      "label": "部署"
+    },
+    {
+      "from": "GPT-5.5 xhigh",
+      "to": "Codex Desktop",
+      "label": "运行于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Cloudflare",
+      "label": "报道"
+    },
+    {
+      "from": "Cloudflare",
+      "to": "AI agents",
+      "label": "面向"
+    }
+  ]
+}

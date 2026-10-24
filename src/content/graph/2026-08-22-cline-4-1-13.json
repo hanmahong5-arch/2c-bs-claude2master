@@ -1,0 +1,82 @@
+{
+  "center": "cline v4.1.13 修复更新",
+  "branches": [
+    {
+      "label": "工具调用修复",
+      "detail": "修复自定义 OpenAI 兼容模型因能力推断导致工具被移除的问题",
+      "children": [
+        "显式能力列表仍然生效",
+        "需区分推断能力与显式声明，避免误删工具"
+      ]
+    },
+    {
+      "label": "Hub 会话重放",
+      "detail": "Hub 重启或升级后会话保持完整，客户端可重放错失事件",
+      "children": [
+        "重放与实时流重叠时不重复投递",
+        "需实现事件去重与断线重连机制"
+      ]
+    },
+    {
+      "label": "Langfuse 追踪",
+      "detail": "追踪现在包含会话和客户端身份，适用于 Hub-backed 和委托代理运行",
+      "children": [
+        "确保追踪数据携带完整上下文，便于调试与审计"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Langfuse",
+      "type": "product"
+    },
+    {
+      "name": "Hub",
+      "type": "product"
+    },
+    {
+      "name": "工具调用",
+      "type": "concept"
+    },
+    {
+      "name": "会话重放",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "OpenAI",
+      "label": "兼容"
+    },
+    {
+      "from": "cline",
+      "to": "Langfuse",
+      "label": "集成"
+    },
+    {
+      "from": "cline",
+      "to": "Hub",
+      "label": "连接"
+    },
+    {
+      "from": "cline",
+      "to": "工具调用",
+      "label": "修复"
+    },
+    {
+      "from": "cline",
+      "to": "会话重放",
+      "label": "修复"
+    }
+  ]
+}

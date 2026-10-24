@@ -1,0 +1,113 @@
+{
+  "center": "Hugging Face 一键部署到…",
+  "branches": [
+    {
+      "label": "一键直达 Studio",
+      "detail": "Hugging Face 模型页新增按钮，直接跳转 SageMaker Studio 对应工作流",
+      "children": [
+        "Customize on SageMaker AI 打开微调页",
+        "Deploy on SageMaker AI 打开部署页",
+        "模型上下文自动带入，无需重新搜索"
+      ]
+    },
+    {
+      "label": "权限自动配置",
+      "detail": "新环境自动创建并附加托管策略，免手动配置 IAM",
+      "children": [
+        "策略名…",
+        "支持 SFT、DPO、RLVR、RLAIF",
+        "可部署到 SageMaker AI 或 Amazon Bedrock"
+      ]
+    },
+    {
+      "label": "GPU 配额可见",
+      "detail": "实例选择列表直接显示配额情况，无需另开 Service Quotas",
+      "children": [
+        "可见 G5、G6 实例可用性",
+        "需提额时直接跳转 Service Quotas"
+      ]
+    },
+    {
+      "label": "解决旧流程痛点",
+      "detail": "此前需多步操作：开控制台、建域、配 IAM、申请 GPU 配额",
+      "children": [
+        "新流程数秒内自动创建域",
+        "Arcee AI CEO 称其为开放模型缺失的体验"
+      ]
+    }
+  ],
+  "flow": [
+    "在 Hugging Face 选模型",
+    "点击 Deploy 或 Customize",
+    "登录 AWS 账号",
+    "进入 Studio 配置参数",
+    "提交微调或部署任务",
+    "在 Studio 测试端点"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Amazon SageMaker Studio",
+      "type": "product"
+    },
+    {
+      "name": "Amazon SageMaker AI",
+      "type": "product"
+    },
+    {
+      "name": "Amazon Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Arcee AI",
+      "type": "company"
+    },
+    {
+      "name": "SFT",
+      "type": "technique"
+    },
+    {
+      "name": "DPO",
+      "type": "technique"
+    },
+    {
+      "name": "RLAIF",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Amazon SageMaker Studio",
+      "label": "深度链接"
+    },
+    {
+      "from": "Amazon SageMaker AI",
+      "to": "Amazon Bedrock",
+      "label": "支持部署"
+    },
+    {
+      "from": "Arcee AI",
+      "to": "Hugging Face",
+      "label": "发布开放模型"
+    },
+    {
+      "from": "Amazon SageMaker Studio",
+      "to": "SFT",
+      "label": "支持"
+    },
+    {
+      "from": "Amazon SageMaker Studio",
+      "to": "DPO",
+      "label": "支持"
+    },
+    {
+      "from": "Amazon SageMaker Studio",
+      "to": "RLAIF",
+      "label": "支持"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "center": "DiScoFormer 统一密度与分数估计",
+  "branches": [
+    {
+      "label": "核心创新",
+      "detail": "一个 Transformer 单次前向同时输出密度与分数，无需重训",
+      "children": [
+        "共享主干 + 密度头与分数头",
+        "分数是密度的对数梯度，二者耦合",
+        "交叉注意力可在任意点评估"
+      ]
+    },
+    {
+      "label": "解决痛点",
+      "detail": "现有工具在泛化性与精度间被迫取舍",
+      "children": [
+        "KDE 无需训练但高维精度骤降",
+        "神经分数匹配高维准但需逐分布重训"
+      ]
+    },
+    {
+      "label": "理论依据",
+      "detail": "注意力是核密度估计的严格推广",
+      "children": [
+        "单注意力头权重近似高斯核",
+        "一个交叉注意力块即可复现 KDE",
+        "模型包含 KDE 作为特例并超越它"
+      ]
+    },
+    {
+      "label": "训练数据",
+      "detail": "用高斯混合模型 GMM 提供精确监督目标",
+      "children": [
+        "GMM 是通用密度逼近器",
+        "GMM 有闭式密度与分数",
+        "每批次重抽新 GMM，样本近乎无限"
+      ]
+    },
+    {
+      "label": "性能表现",
+      "detail": "全面超越 KDE，高维差距尤为悬殊",
+      "children": [
+        "100 维分数误差降约 6.5 倍",
+        "100 维密度误差降超 37 倍",
+        "可泛化到更多模态与非高斯分布"
+      ]
+    }
+  ],
+  "flow": [
+    "输入一组数据点",
+    "Transformer 交叉注意力编码",
+    "共享主干提取表示",
+    "密度头与分数头分别输出",
+    "推理时用一致性损失微调适配"
+  ],
+  "entities": [
+    {
+      "name": "DiScoFormer",
+      "type": "model"
+    },
+    {
+      "name": "Allen Institute for AI",
+      "type": "company"
+    },
+    {
+      "name": "KDE",
+      "type": "technique"
+    },
+    {
+      "name": "GMM",
+      "type": "concept"
+    },
+    {
+      "name": "Transformer",
+      "type": "model"
+    },
+    {
+      "name": "score matching",
+      "type": "technique"
+    },
+    {
+      "name": "diffusion model",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DiScoFormer",
+      "to": "Transformer",
+      "label": "基于"
+    },
+    {
+      "from": "DiScoFormer",
+      "to": "KDE",
+      "label": "超越"
+    },
+    {
+      "from": "DiScoFormer",
+      "to": "GMM",
+      "label": "用其训练"
+    },
+    {
+      "from": "DiScoFormer",
+      "to": "score matching",
+      "label": "统一"
+    },
+    {
+      "from": "Allen Institute for AI",
+      "to": "DiScoFormer",
+      "label": "提出"
+    },
+    {
+      "from": "diffusion model",
+      "to": "score matching",
+      "label": "依赖"
+    }
+  ]
+}

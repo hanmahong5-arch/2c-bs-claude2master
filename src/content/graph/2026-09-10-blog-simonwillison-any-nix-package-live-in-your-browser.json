@@ -1,0 +1,109 @@
+{
+  "center": "Nix 包在浏览器里跑起来",
+  "branches": [
+    {
+      "label": "核心产品",
+      "detail": "trynix.dev 用 qemu-wasm 在浏览器内跑 x86_64 Linux 虚拟机",
+      "children": [
+        "纯 WebAssembly 实现，无需服务器",
+        "可启动任意 Nix 包"
+      ]
+    },
+    {
+      "label": "URL 直达",
+      "detail": "每个包有独立 URL，点击 Load 即得交互式 shell",
+      "children": [
+        "示例：?pkg=python3@3.6.2",
+        "可运行 2017 年的 Python 3.6.2"
+      ]
+    },
+    {
+      "label": "覆盖 13 年",
+      "detail": "支持过去 13 年间的任意 Nix 包版本",
+      "children": [
+        "历史版本可复现运行"
+      ]
+    },
+    {
+      "label": "PR 预览",
+      "detail": "trynix-preview 是 GitHub Action，在 PR 下评论可启动链接",
+      "children": [
+        "在浏览器中启动该 PR 的构建",
+        "No servers, just browsers"
+      ]
+    }
+  ],
+  "flow": [
+    "打开 trynix.dev",
+    "指定 Nix 包 URL",
+    "点击 Load",
+    "浏览器启动 qemu-wasm VM",
+    "获得交互式 shell"
+  ],
+  "entities": [
+    {
+      "name": "trynix.dev",
+      "type": "product"
+    },
+    {
+      "name": "qemu-wasm",
+      "type": "technique"
+    },
+    {
+      "name": "Nix",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "Farid Zakaria",
+      "type": "person"
+    },
+    {
+      "name": "trynix-preview",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "trynix.dev",
+      "to": "qemu-wasm",
+      "label": "基于"
+    },
+    {
+      "from": "trynix.dev",
+      "to": "Nix",
+      "label": "启动"
+    },
+    {
+      "from": "qemu-wasm",
+      "to": "WebAssembly",
+      "label": "由...编译"
+    },
+    {
+      "from": "Farid Zakaria",
+      "to": "trynix.dev",
+      "label": "创建"
+    },
+    {
+      "from": "trynix-preview",
+      "to": "trynix.dev",
+      "label": "调用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "trynix.dev",
+      "label": "报道"
+    }
+  ]
+}

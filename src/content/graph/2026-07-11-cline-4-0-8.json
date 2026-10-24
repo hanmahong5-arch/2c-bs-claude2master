@@ -1,0 +1,55 @@
+{
+  "center": "Cline v4.0.8 GCP Vertex 更新",
+  "branches": [
+    {
+      "label": "新增更多模型",
+      "detail": "GCP Vertex 提供商扩展了可用模型选项范围",
+      "children": [
+        "需支持动态模型列表以集成新模型"
+      ]
+    },
+    {
+      "label": "自定义模型输入",
+      "detail": "模型下拉菜单增加自由输入选项",
+      "children": [
+        "用户可指定自定义 Vertex 模型",
+        "需灵活配置接口支持自定义标识符"
+      ]
+    },
+    {
+      "label": "对 agent harness 影响",
+      "detail": "更新对 agent harness 设计提出两点要求",
+      "children": [
+        "动态模型列表支持",
+        "灵活模型配置接口"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "GCP Vertex",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "GCP Vertex",
+      "label": "集成"
+    },
+    {
+      "from": "Cline",
+      "to": "agent harness",
+      "label": "涉及设计"
+    }
+  ]
+}

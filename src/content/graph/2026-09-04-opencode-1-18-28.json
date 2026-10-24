@@ -1,0 +1,73 @@
+{
+  "center": "opencode v1.18.28 更新",
+  "branches": [
+    {
+      "label": "会话ID追踪",
+      "detail": "发送会话ID作为 GitHub Copilot 交互头，改善跨会话请求追踪",
+      "children": [
+        "API 调用中传递会话标识",
+        "便于日志关联与调试"
+      ]
+    },
+    {
+      "label": "桌面认证修复",
+      "detail": "桌面客户端ID用于 OpenCode 账户设备认证，修复认证流程",
+      "children": [
+        "认证时使用正确客户端标识",
+        "避免标识混淆"
+      ]
+    },
+    {
+      "label": "图标尺寸增大",
+      "detail": "增大打开应用图标尺寸，提升可见性",
+      "children": [
+        "优化 UI 细节与交互体验"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Copilot",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "会话ID",
+      "type": "concept"
+    },
+    {
+      "name": "桌面客户端ID",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "GitHub Copilot",
+      "label": "发送会话ID"
+    },
+    {
+      "from": "会话ID",
+      "to": "GitHub Copilot",
+      "label": "作为交互头"
+    },
+    {
+      "from": "桌面客户端ID",
+      "to": "opencode",
+      "label": "用于认证"
+    },
+    {
+      "from": "opencode",
+      "to": "agent harness",
+      "label": "涉及设计"
+    }
+  ]
+}

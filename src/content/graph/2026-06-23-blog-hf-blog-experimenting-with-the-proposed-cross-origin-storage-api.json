@@ -1,0 +1,74 @@
+{
+  "center": "Transformers.js 跨域存储实验",
+  "branches": [
+    {
+      "label": "跨域存储提案",
+      "detail": "Hugging Face 在 Transformers.js 中实验浏览器跨域存储方案",
+      "children": [
+        "解决模型缓存跨域共享问题",
+        "基于 Cross-Origin Storage 提案"
+      ]
+    },
+    {
+      "label": "Transformers.js",
+      "detail": "在浏览器中运行机器学习模型的 JavaScript 库",
+      "children": [
+        "v4 已发布至 NPM",
+        "可用于 Chrome 扩展"
+      ]
+    },
+    {
+      "label": "相关模型",
+      "detail": "文章提及文本分类与语音识别模型",
+      "children": [
+        "文本分类模型 26k 下载",
+        "语音识别模型 828k 下载"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Transformers.js",
+      "type": "product"
+    },
+    {
+      "name": "Cross-Origin Storage",
+      "type": "concept"
+    },
+    {
+      "name": "Chrome Extension",
+      "type": "product"
+    },
+    {
+      "name": "NPM",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Transformers.js",
+      "label": "开发"
+    },
+    {
+      "from": "Transformers.js",
+      "to": "Cross-Origin Storage",
+      "label": "实验"
+    },
+    {
+      "from": "Transformers.js",
+      "to": "Chrome Extension",
+      "label": "用于"
+    },
+    {
+      "from": "Transformers.js",
+      "to": "NPM",
+      "label": "发布至"
+    }
+  ]
+}

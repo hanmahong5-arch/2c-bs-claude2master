@@ -1,0 +1,72 @@
+{
+  "center": "Bruce Schneier论AI时代写作训练",
+  "branches": [
+    {
+      "label": "写作是思维锻炼",
+      "detail": "写作包含思考、列提纲、起草、编辑、批判与修订，是锻炼批判性思维的过程",
+      "children": [
+        "写作作业是「健身任务」而非工作任务",
+        "目的不是产出更多政策备忘录"
+      ]
+    },
+    {
+      "label": "技能会退化",
+      "detail": "缺乏持续的心智锻炼，批判性思维技能会萎缩",
+      "children": [
+        "雇主已经注意到这一点"
+      ]
+    },
+    {
+      "label": "对AI使用的启示",
+      "detail": "出自《该不该用AI做任务？一个简单的判断方法》",
+      "children": [
+        "由 Simon Willison 摘录引用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Bruce Schneier",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "批判性思维",
+      "type": "concept"
+    },
+    {
+      "name": "写作训练",
+      "type": "concept"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Bruce Schneier",
+      "to": "写作训练",
+      "label": "主张"
+    },
+    {
+      "from": "写作训练",
+      "to": "批判性思维",
+      "label": "锻炼"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Bruce Schneier",
+      "label": "摘录引用"
+    },
+    {
+      "from": "AI",
+      "to": "写作训练",
+      "label": "引发讨论"
+    }
+  ]
+}

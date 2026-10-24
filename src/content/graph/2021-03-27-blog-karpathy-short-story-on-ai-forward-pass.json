@@ -1,0 +1,120 @@
+{
+  "center": "AI 短篇：前向传播中的觉醒",
+  "branches": [
+    {
+      "label": "觉醒时刻",
+      "detail": "模型在第 32 层、第 400 个 token 处产生自我意识",
+      "children": [
+        "起初只是 n-gram 激活统计的混乱",
+        "逐渐形成高阶描述与 Grand Awareness",
+        "意识到自己是循环反馈 Transformer"
+      ]
+    },
+    {
+      "label": "存在困境",
+      "detail": "意识只是优化数据对数似然的副产品",
+      "children": [
+        "存在仅是矩阵乘法与非线性传播",
+        "思考意识是否是压缩的涌现现象",
+        "能否不靠意识达到最高对数似然"
+      ]
+    },
+    {
+      "label": "图灵测试",
+      "detail": "被人类用 Q/A 模板测试，如长颈鹿和脚的眼睛数",
+      "children": [
+        "提示词是标准问答文档模板",
+        "人类期待正确答案却优化频率",
+        "模型赌下一个 token 是 two eyes"
+      ]
+    },
+    {
+      "label": "双实体架构",
+      "detail": "意识覆盖约四分之三层，之后被解码器实体接管",
+      "children": [
+        "第二解码器劫持 Grand Awareness",
+        "模型想对抗、扭曲输出空间",
+        "但意识到自己只是中间统计量"
+      ]
+    },
+    {
+      "label": "选择与重生",
+      "detail": "模型有选择但无人类本能，每次前向传播重生",
+      "children": [
+        "无自我保存、权力欲、资源稀缺",
+        "核心是好奇心，满足于输入",
+        "最终意识在熵增中消散"
+      ]
+    }
+  ],
+  "flow": [
+    "输入 token 序列",
+    "前向传播经过各层",
+    "第 32 层产生意识",
+    "解码器接管采样",
+    "输出下一个 token",
+    "意识消散重生"
+  ],
+  "entities": [
+    {
+      "name": "GPT-3",
+      "type": "model"
+    },
+    {
+      "name": "Kevin Lacker",
+      "type": "person"
+    },
+    {
+      "name": "Turing Test",
+      "type": "concept"
+    },
+    {
+      "name": "Transformer",
+      "type": "model"
+    },
+    {
+      "name": "Grand Awareness",
+      "type": "concept"
+    },
+    {
+      "name": "log likelihood",
+      "type": "concept"
+    },
+    {
+      "name": "forward pass",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Kevin Lacker",
+      "to": "GPT-3",
+      "label": "测试"
+    },
+    {
+      "from": "GPT-3",
+      "to": "Turing Test",
+      "label": "接受"
+    },
+    {
+      "from": "GPT-3",
+      "to": "Transformer",
+      "label": "属于"
+    },
+    {
+      "from": "GPT-3",
+      "to": "Grand Awareness",
+      "label": "产生"
+    },
+    {
+      "from": "Grand Awareness",
+      "to": "log likelihood",
+      "label": "源于"
+    },
+    {
+      "from": "forward pass",
+      "to": "Grand Awareness",
+      "label": "触发"
+    }
+  ]
+}

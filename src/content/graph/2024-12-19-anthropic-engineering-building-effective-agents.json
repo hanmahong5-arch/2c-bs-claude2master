@@ -1,0 +1,102 @@
+{
+  "center": "Anthropic 构建有效 AI 代理",
+  "branches": [
+    {
+      "label": "代理与工作流",
+      "detail": "Anthropic 将代理系统分为工作流与代理两类",
+      "children": [
+        "工作流：LLM 与工具按预定义代码路径编排",
+        "代理：LLM 动态决定流程与工具使用"
+      ]
+    },
+    {
+      "label": "何时用代理",
+      "detail": "优先最简单方案，仅在需要时增加复杂度",
+      "children": [
+        "代理以延迟和成本换取更好任务表现",
+        "单次 LLM 调用加检索与示例通常已足够"
+      ]
+    },
+    {
+      "label": "框架使用建议",
+      "detail": "框架简化底层任务但增加抽象层，难调试",
+      "children": [
+        "Claude Agent SDK、Strands Agents SDK…",
+        "建议直接用 LLM API，用框架需理解底层代码"
+      ]
+    },
+    {
+      "label": "基础构建块",
+      "detail": "增强型 LLM：带检索、工具、记忆的 LLM",
+      "children": [
+        "模型可自生成查询、选工具、决定保留信息",
+        "可通过 Model Context Protocol 集成第三方工具"
+      ]
+    },
+    {
+      "label": "常见工作流模式",
+      "detail": "提示链、路由、并行化、编排者-工作者",
+      "children": [
+        "提示链：分解固定子任务，加程序化检查",
+        "路由：分类输入并导向专门任务",
+        "并行化：分段或投票，聚合输出"
+      ]
+    }
+  ],
+  "flow": [
+    "从增强型 LLM 开始",
+    "按需组合工作流模式",
+    "仅在必要时构建代理"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Agent SDK",
+      "type": "product"
+    },
+    {
+      "name": "Strands Agents SDK",
+      "type": "product"
+    },
+    {
+      "name": "Rivet",
+      "type": "product"
+    },
+    {
+      "name": "Vellum",
+      "type": "product"
+    },
+    {
+      "name": "Model Context Protocol",
+      "type": "technique"
+    },
+    {
+      "name": "Claude Haiku 4.5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Sonnet 4.5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Agent SDK",
+      "label": "提供"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Model Context Protocol",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Haiku 4.5",
+      "to": "Claude Sonnet 4.5",
+      "label": "路由对比"
+    }
+  ]
+}

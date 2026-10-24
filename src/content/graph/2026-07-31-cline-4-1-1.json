@@ -1,0 +1,73 @@
+{
+  "center": "cline v4.1.1 MCP 路由修复",
+  "branches": [
+    {
+      "label": "路由标识变更",
+      "detail": "MCP 工具调用路由从随机 uid 改为 server name，重启后不再错乱",
+      "children": [
+        "重启和服务器列表变化后路由稳定",
+        "避免内存临时 ID 导致状态不一致"
+      ]
+    },
+    {
+      "label": "清理废弃机制",
+      "detail": "移除 McpHub 中残留的 server-key 机制，简化内部逻辑",
+      "children": [
+        "减少维护成本和潜在 bug"
+      ]
+    },
+    {
+      "label": "harness 设计启示",
+      "detail": "工具路由应基于稳定标识符，并清理废弃机制",
+      "children": [
+        "路由基于稳定标识符",
+        "清理废弃机制降低维护成本"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "McpHub",
+      "type": "concept"
+    },
+    {
+      "name": "server name",
+      "type": "concept"
+    },
+    {
+      "name": "uid",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "MCP",
+      "label": "修复路由"
+    },
+    {
+      "from": "MCP",
+      "to": "server name",
+      "label": "改用"
+    },
+    {
+      "from": "MCP",
+      "to": "uid",
+      "label": "弃用"
+    },
+    {
+      "from": "McpHub",
+      "to": "server name",
+      "label": "移除机制"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "center": "Cline 桌面版 v0.0.14 更新",
+  "branches": [
+    {
+      "label": "原生通知",
+      "detail": "macOS 原生通知，任务完成或需输入时提醒，可后台运行",
+      "children": [
+        "任务完成或需输入时提醒",
+        "支持后台运行"
+      ]
+    },
+    {
+      "label": "语音输入",
+      "detail": "通过麦克风按钮转写，使用已配置的模型",
+      "children": [
+        "麦克风按钮转写",
+        "使用已配置模型"
+      ]
+    },
+    {
+      "label": "命令流式输出",
+      "detail": "命令输出流式显示，保留终端颜色，可滚动，支持后台运行",
+      "children": [
+        "保留终端颜色",
+        "可滚动",
+        "支持后台运行"
+      ]
+    },
+    {
+      "label": "图像生成",
+      "detail": "支持图像生成模型，图片内联显示",
+      "children": [
+        "图片内联显示"
+      ]
+    },
+    {
+      "label": "体验修复",
+      "detail": "多项体验修复与优化，包括问题卡片、设置说明、markdown 渲染等",
+      "children": [
+        "问题卡片支持多选和快捷键",
+        "Web 搜索开关说明更清晰",
+        "修复事件流卡住等问题"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Cline Code Beta",
+      "type": "product"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "Yolo 模式",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Cline Code Beta",
+      "label": "新增应用"
+    },
+    {
+      "from": "Cline",
+      "to": "macOS",
+      "label": "支持通知"
+    },
+    {
+      "from": "Cline",
+      "to": "Yolo 模式",
+      "label": "修复误用"
+    }
+  ]
+}

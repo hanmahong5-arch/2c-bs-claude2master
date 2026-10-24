@@ -1,0 +1,117 @@
+{
+  "center": "Kimi K3 2.8T开源模型发布",
+  "branches": [
+    {
+      "label": "发布与定位",
+      "detail": "Moonshot AI发布Kimi K3，称其为开放前沿智能，2.8T总参数，承诺7月27日开源权重。",
+      "children": [
+        "2.8T总参数，1M上下文，原生多模态输入",
+        "官方称性能接近顶级闭源模型",
+        "定价对标Sonnet 5：输入$3/输出$15每百万token"
+      ]
+    },
+    {
+      "label": "技术架构",
+      "detail": "采用Kimi Delta Attention、Attention Residuals和LatentMoE，激活比例低于2%。",
+      "children": [
+        "KDA实现百万token上下文解码提速6.3倍",
+        "AttnRes提升训练效率约25%，成本增加<2%",
+        "896个专家中激活16个，激活比例<2%"
+      ]
+    },
+    {
+      "label": "性能评测",
+      "detail": "AA智能指数57，与Opus 4.8和GPT-5.5相当，但落后于Fable 5和GPT-5.6 Sol。",
+      "children": [
+        "Frontend Code Arena排名第1，1679分",
+        "Text Arena排名第9，1486分",
+        "AA-Omniscience准确率46%，幻觉率51%"
+      ]
+    },
+    {
+      "label": "定价与效率",
+      "detail": "输入$3/输出$15每百万token，缓存输入$0.30，平均任务成本$0.94。",
+      "children": [
+        "混合估算$5.40/百万token，低于Opus 4.8的$9",
+        "输出token比K2.6减少21%",
+        "Moonshot API实测约28 tok/s"
+      ]
+    },
+    {
+      "label": "生态与部署",
+      "detail": "vLLM日0支持KDA前缀缓存，推荐64+加速器超级节点部署。",
+      "children": [
+        "Moonshot向vLLM贡献KDA前缀缓存实现",
+        "推荐64+加速器超级节点配置",
+        "已上线Kimi.com、Kimi Work、Kimi Code和API"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Moonshot AI",
+      "type": "company"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Kimi Delta Attention",
+      "type": "technique"
+    },
+    {
+      "name": "Attention Residuals",
+      "type": "technique"
+    },
+    {
+      "name": "LatentMoE",
+      "type": "technique"
+    },
+    {
+      "name": "vLLM",
+      "type": "product"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Arena",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Moonshot AI",
+      "to": "Kimi K3",
+      "label": "发布"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "Kimi Delta Attention",
+      "label": "采用"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "Attention Residuals",
+      "label": "采用"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "LatentMoE",
+      "label": "采用"
+    },
+    {
+      "from": "Moonshot AI",
+      "to": "vLLM",
+      "label": "贡献"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "Kimi K3",
+      "label": "评测"
+    }
+  ]
+}

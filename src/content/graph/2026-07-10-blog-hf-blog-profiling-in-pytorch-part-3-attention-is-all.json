@@ -1,0 +1,103 @@
+{
+  "center": "PyTorch Profiler 分析注意力瓶颈",
+  "branches": [
+    {
+      "label": "系列定位",
+      "detail": "PyTorch Profiling 系列第三篇，聚焦注意力机制性能分析",
+      "children": [
+        "Part 1：torch.profiler 入门",
+        "Part 2：从 nn.Linear 到 Fused MLP",
+        "Part 3：Attention is all you"
+      ]
+    },
+    {
+      "label": "核心瓶颈",
+      "detail": "用 profiler 定位注意力中的性能热点与多余开销",
+      "children": [
+        "masked_fill 触发 out-of-place 拷贝",
+        "GPU 上出现 Memcpy 操作"
+      ]
+    },
+    {
+      "label": "定位方法",
+      "detail": "借助 Perfetto 时间线追踪 CPU 算子与 GPU kernel 的对应关系",
+      "children": [
+        "箭头映射显示哪个 CPU op 触发 GPU kernel",
+        "Memcpy 紧邻 masked_fill kernel 出现"
+      ]
+    },
+    {
+      "label": "优化方向",
+      "detail": "针对注意力实现做融合与就地操作以减少拷贝",
+      "children": [
+        "减少 out-of-place 操作",
+        "算子融合提升效率"
+      ]
+    }
+  ],
+  "flow": [
+    "运行 torch.profiler 采集",
+    "导出 Perfetto 时间线",
+    "定位 Memcpy 与 kernel",
+    "回溯对应 CPU 算子",
+    "确认 masked_fill 拷贝",
+    "改为就地/融合实现"
+  ],
+  "entities": [
+    {
+      "name": "PyTorch",
+      "type": "product"
+    },
+    {
+      "name": "torch.profiler",
+      "type": "product"
+    },
+    {
+      "name": "Perfetto",
+      "type": "product"
+    },
+    {
+      "name": "Attention",
+      "type": "concept"
+    },
+    {
+      "name": "masked_fill",
+      "type": "technique"
+    },
+    {
+      "name": "Memcpy",
+      "type": "concept"
+    },
+    {
+      "name": "Aritra Roy Gosthipaty",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "torch.profiler",
+      "to": "PyTorch",
+      "label": "属于"
+    },
+    {
+      "from": "torch.profiler",
+      "to": "Perfetto",
+      "label": "导出到"
+    },
+    {
+      "from": "masked_fill",
+      "to": "Memcpy",
+      "label": "触发"
+    },
+    {
+      "from": "Attention",
+      "to": "masked_fill",
+      "label": "使用"
+    },
+    {
+      "from": "Aritra Roy Gosthipaty",
+      "to": "PyTorch",
+      "label": "撰写教程"
+    }
+  ]
+}

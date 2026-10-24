@@ -1,0 +1,110 @@
+{
+  "center": "MDN 兼容数据转 SQLite",
+  "branches": [
+    {
+      "label": "项目动机",
+      "detail": "受 Mozilla 新 MDN MCP 服务启发，将浏览器兼容数据转为 SQLite",
+      "children": [
+        "数据源为 mdn/browser-compat-data 仓库",
+        "作者 Simon Willison"
+      ]
+    },
+    {
+      "label": "构建方式",
+      "detail": "用 AI 生成脚本与工作流完成转换和发布",
+      "children": [
+        "Claude Code for web (Opus 4.8) 生成…",
+        "Codex Desktop (GPT-5.5) 构建 GitHub…"
+      ]
+    },
+    {
+      "label": "CORS 访问",
+      "detail": "GitHub releases 无开放 CORS，改用普通仓库文件",
+      "children": [
+        "工作流强制推送到 db orphan 分支",
+        "普通仓库文件带开放 CORS 头"
+      ]
+    },
+    {
+      "label": "成果与使用",
+      "detail": "产出约 66MB SQLite 数据库，可下载与在线探索",
+      "children": [
+        "可从 GitHub 下载数据库",
+        "用 Datasette Lite 探索"
+      ]
+    }
+  ],
+  "flow": [
+    "读取 MDN 兼容数据",
+    "sqlite-utils 转 SQLite",
+    "GitHub Actions 构建",
+    "推送 db orphan 分支",
+    "CDN 提供 CORS 访问"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "MDN",
+      "type": "product"
+    },
+    {
+      "name": "mdn/browser-compat-data",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "technique"
+    },
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "product"
+    },
+    {
+      "name": "Datasette Lite",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "mdn/browser-compat-data",
+      "label": "转换"
+    },
+    {
+      "from": "mdn/browser-compat-data",
+      "to": "SQLite",
+      "label": "转为"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "SQLite",
+      "label": "生成"
+    },
+    {
+      "from": "GitHub Actions",
+      "to": "SQLite",
+      "label": "构建"
+    },
+    {
+      "from": "Datasette Lite",
+      "to": "SQLite",
+      "label": "探索"
+    },
+    {
+      "from": "MCP",
+      "to": "mdn/browser-compat-data",
+      "label": "启发"
+    }
+  ]
+}

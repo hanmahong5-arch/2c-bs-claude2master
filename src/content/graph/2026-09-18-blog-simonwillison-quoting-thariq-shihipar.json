@@ -1,0 +1,88 @@
+{
+  "center": "Claude Code 兼容 AGENTS.md",
+  "branches": [
+    {
+      "label": "新增支持",
+      "detail": "Claude Code 2.1.277 起支持读取 AGENTS.md 作为项目指令",
+      "children": [
+        "无 CLAUDE.md 时回退到 AGENTS.md"
+      ]
+    },
+    {
+      "label": "实现方式",
+      "detail": "该支持基于 Claude Code mods 构建，属内置 mod",
+      "children": [
+        "mods 是即将推出的定制方式",
+        "源码已公开"
+      ]
+    },
+    {
+      "label": "可自定义",
+      "detail": "用户可自行构建自定义版本的项目指令",
+      "children": [
+        "未来可自建 mod 定制 harness"
+      ]
+    },
+    {
+      "label": "行业趋势",
+      "detail": "跨工具的项目指令约定正在形成",
+      "children": [
+        "AGENTS.md 成为通用约定"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "concept"
+    },
+    {
+      "name": "CLAUDE.md",
+      "type": "concept"
+    },
+    {
+      "name": "Thariq Shihipar",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code mods",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "AGENTS.md",
+      "label": "支持读取"
+    },
+    {
+      "from": "Claude Code",
+      "to": "CLAUDE.md",
+      "label": "优先读取"
+    },
+    {
+      "from": "Claude Code mods",
+      "to": "Claude Code",
+      "label": "定制"
+    },
+    {
+      "from": "Thariq Shihipar",
+      "to": "Claude Code",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "开发"
+    }
+  ]
+}

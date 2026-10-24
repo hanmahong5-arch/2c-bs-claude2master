@@ -1,0 +1,84 @@
+{
+  "center": "opencode v1.18.31 ACP 修复",
+  "branches": [
+    {
+      "label": "会话恢复修复",
+      "detail": "ACP 会话加载、恢复或 fork 时重新还原模型与推理边界",
+      "children": [
+        "还原 model、effort、mode 与 reasoning…",
+        "推理分块边界须作为会话状态持久化",
+        "否则恢复后上下文切分错位"
+      ]
+    },
+    {
+      "label": "启动鉴权硬错误",
+      "detail": "TUI 启动显示远程配置认证错误并以失败状态退出",
+      "children": [
+        "配置鉴权失败应视为硬错误",
+        "避免 harness 带病运行"
+      ]
+    },
+    {
+      "label": "Copilot 思考摘要",
+      "detail": "扩展层为 GitHub Copilot 模型请求摘要式自适应思考",
+      "children": [
+        "按模型能力协商 thinking 摘要格式",
+        "不再统一推理输出"
+      ]
+    }
+  ],
+  "flow": [
+    "加载/恢复/fork ACP 会话",
+    "还原 model 与 effort",
+    "还原 mode 与推理边界",
+    "持久化 reasoning chunk 边界"
+  ],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "ACP",
+      "type": "concept"
+    },
+    {
+      "name": "GitHub Copilot",
+      "type": "product"
+    },
+    {
+      "name": "JacobNWolf",
+      "type": "person"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "ACP",
+      "label": "修复"
+    },
+    {
+      "from": "GitHub Copilot",
+      "to": "harness",
+      "label": "请求摘要思考"
+    },
+    {
+      "from": "JacobNWolf",
+      "to": "ACP",
+      "label": "贡献修复"
+    },
+    {
+      "from": "TUI",
+      "to": "harness",
+      "label": "启动鉴权"
+    }
+  ]
+}

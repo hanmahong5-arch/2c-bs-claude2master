@@ -1,0 +1,117 @@
+{
+  "center": "开源AI不应被禁",
+  "branches": [
+    {
+      "label": "开源AI更安全",
+      "detail": "透明度让更多研究者修复漏洞、消除不良行为，且本地部署不传数据",
+      "children": [
+        "“足够多的眼睛，所有bug都浅显”",
+        "Airbnb CEO称开源模型不传输数据",
+        "开源AI是最安全、最保护隐私的路径"
+      ]
+    },
+    {
+      "label": "开源支撑三大价值",
+      "detail": "三十多年来开源推动教育、创新与竞争，是美国社会珍视的价值",
+      "children": [
+        "1983年MIT自由软件运动起源",
+        "Facebook初版完全基于开源软件栈",
+        "Linux运行全球超90%云计算基础设施"
+      ]
+    },
+    {
+      "label": "闭源垄断在加剧",
+      "detail": "Anthropic与OpenAI双寡头集中权力，开源权重模型是唯一制衡",
+      "children": [
+        "Anthropic限制先进模型被用于改进他人模型",
+        "闭源模型价格高昂、市场集中",
+        "初创、教育机构、企业寻求替代方案"
+      ]
+    },
+    {
+      "label": "以中国为由禁开源会反噬",
+      "detail": "美国初创正用开源模型降本增效，限制只会把世界推向中国",
+      "children": [
+        "编程、法律等领域公司每天用开源模型",
+        "包括来自中国的模型",
+        "正确回应应是加大本土开源投入"
+      ]
+    },
+    {
+      "label": "监管风向趋紧",
+      "detail": "华盛顿正酝酿AI监管，可能无意或有意波及开源",
+      "children": [
+        "新签署的行政令审查AI模型",
+        "国会提案进一步立法",
+        "禁止外国国民访问Anthropic最先进模型"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Kevin Xu",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Linux",
+      "type": "product"
+    },
+    {
+      "name": "Android",
+      "type": "product"
+    },
+    {
+      "name": "开源AI",
+      "type": "concept"
+    },
+    {
+      "name": "自由软件运动",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "Kevin Xu",
+      "label": "合著"
+    },
+    {
+      "from": "Anthropic",
+      "to": "OpenAI",
+      "label": "形成双寡头"
+    },
+    {
+      "from": "开源AI",
+      "to": "Anthropic",
+      "label": "制衡"
+    },
+    {
+      "from": "开源AI",
+      "to": "OpenAI",
+      "label": "制衡"
+    },
+    {
+      "from": "自由软件运动",
+      "to": "开源AI",
+      "label": "前身"
+    },
+    {
+      "from": "Linux",
+      "to": "Android",
+      "label": "同属开源"
+    }
+  ]
+}

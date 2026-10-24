@@ -1,0 +1,90 @@
+{
+  "center": "opencode v1.18.13 更新",
+  "branches": [
+    {
+      "label": "RTL 布局修复",
+      "detail": "修复标签页、抽屉、调整大小与标题栏交互，统一方向图标和抽屉位置",
+      "children": [
+        "标签页与抽屉方向修正",
+        "统一方向图标",
+        "抽屉位置调整"
+      ]
+    },
+    {
+      "label": "空白标题修复",
+      "detail": "无标题会话回退到生成名称，避免空白显示",
+      "children": [
+        "回退生成名称"
+      ]
+    },
+    {
+      "label": "渲染性能提升",
+      "detail": "markdown 解析移出主线程，提升桌面端渲染响应性",
+      "children": [
+        "markdown 解析移出主线程"
+      ]
+    },
+    {
+      "label": "PR 审查上下文",
+      "detail": "GitHub PR 审查上下文现在包含 PR 编号和 URL，便于追踪",
+      "children": [
+        "包含 PR 编号",
+        "包含 PR URL"
+      ]
+    },
+    {
+      "label": "本地化扩展",
+      "detail": "桌面端 UI 文案本地化扩展，新增 RTL 支持、区域感知复数规则及更多语言",
+      "children": [
+        "新增 RTL 支持",
+        "区域感知复数规则",
+        "更多语言"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "RTL",
+      "type": "concept"
+    },
+    {
+      "name": "markdown",
+      "type": "concept"
+    },
+    {
+      "name": "PR",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "GitHub",
+      "label": "集成"
+    },
+    {
+      "from": "opencode",
+      "to": "RTL",
+      "label": "修复"
+    },
+    {
+      "from": "opencode",
+      "to": "markdown",
+      "label": "优化解析"
+    },
+    {
+      "from": "opencode",
+      "to": "PR",
+      "label": "追踪上下文"
+    }
+  ]
+}

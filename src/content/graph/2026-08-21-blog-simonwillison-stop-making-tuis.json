@@ -1,0 +1,88 @@
+{
+  "center": "停止只做 TUI，用 AI 构建原生 GUI",
+  "branches": [
+    {
+      "label": "核心主张",
+      "detail": "Thomas Ptacek 呼吁为个人小工具构建真正的原生界面",
+      "children": [
+        "编码代理让可用 GUI 成本几乎为零",
+        "别再只做 TUI 或一次性 CLI"
+      ]
+    },
+    {
+      "label": "作者实践",
+      "detail": "Simon Willison 已用 vibe-coding 做 macOS 任务栏应用",
+      "children": [
+        "带宽与 GPU 监控两个应用",
+        "自 3 月起每天使用",
+        "其他项目还没做真 UI，但快没借口了"
+      ]
+    },
+    {
+      "label": "行动建议",
+      "detail": "把废弃 CLI 改造成原生应用，会改变你的思考方式",
+      "children": [
+        "挑一个 500 个一次性 CLI 之一试试",
+        "不做是亏待自己"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Thomas Ptacek",
+      "type": "person"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "GUI",
+      "type": "concept"
+    },
+    {
+      "name": "vibe-coding",
+      "type": "technique"
+    },
+    {
+      "name": "coding agents",
+      "type": "concept"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "vibe-coding",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "macOS",
+      "label": "开发应用"
+    },
+    {
+      "from": "Thomas Ptacek",
+      "to": "GUI",
+      "label": "倡导构建"
+    },
+    {
+      "from": "coding agents",
+      "to": "GUI",
+      "label": "降低成本"
+    },
+    {
+      "from": "vibe-coding",
+      "to": "GUI",
+      "label": "用于构建"
+    }
+  ]
+}

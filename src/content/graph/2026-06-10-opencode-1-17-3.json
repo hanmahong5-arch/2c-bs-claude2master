@@ -1,0 +1,70 @@
+{
+  "center": "opencode v1.17.3 修复桌面崩溃",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "解决 v1.17.2 引入的桌面应用崩溃问题",
+      "children": [
+        "v1.17.2 版本导致桌面程序崩溃",
+        "v1.17.3 针对性修复该缺陷"
+      ]
+    },
+    {
+      "label": "修复效果",
+      "detail": "确保核心功能稳定可靠运行",
+      "children": [
+        "核心功能稳定性恢复",
+        "可靠性得到保障"
+      ]
+    },
+    {
+      "label": "设计启示",
+      "detail": "agent harness 设计需快速定位并修复关键稳定性缺陷",
+      "children": [
+        "版本迭代中快速识别缺陷",
+        "优先处理关键稳定性问题"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "opencode v1.17.2",
+      "type": "product"
+    },
+    {
+      "name": "opencode v1.17.3",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode v1.17.3",
+      "to": "opencode v1.17.2",
+      "label": "修复"
+    },
+    {
+      "from": "opencode v1.17.3",
+      "to": "opencode",
+      "label": "属于"
+    },
+    {
+      "from": "opencode v1.17.2",
+      "to": "opencode",
+      "label": "属于"
+    },
+    {
+      "from": "opencode v1.17.3",
+      "to": "agent harness",
+      "label": "体现设计"
+    }
+  ]
+}

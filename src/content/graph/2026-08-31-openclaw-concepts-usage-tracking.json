@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw 用量追踪与配额",
+  "branches": [
+    {
+      "label": "数据来源",
+      "detail": "直接拉取各 provider 用量端点，不做估算，只报 provider 数据",
+      "children": [
+        "provider 上报的套餐名、配额窗口、余额、花费…",
+        "配额窗口统一归一化为 X% left",
+        "无重置窗口的 provider 显示摘要文本（如余额）"
+      ]
+    },
+    {
+      "label": "会话日志降级",
+      "detail": "实时快照缺 token/model 数据时回退到会话 transcript 日志",
+      "children": [
+        "补齐缺失的 token/cache 计数",
+        "可恢复运行时模型标签",
+        "非零实时值始终优先于回退值"
+      ]
+    },
+    {
+      "label": "展示入口",
+      "detail": "聊天、CLI、Control UI、macOS 菜单栏多端展示用量",
+      "children": [
+        "/status 状态卡显示会话 token 与估算成本",
+        "openclaw status --usage 打印完整配额明细",
+        "Control UI 显示套餐与账单卡片"
+      ]
+    },
+    {
+      "label": "订阅与 API 计费",
+      "detail": "订阅配额与 API 账单是不同 provider 表面，互不合并",
+      "children": [
+        "Anthropic 设 ANTHROPIC_ADMIN_KEY 显示组织…",
+        "OpenAI 设 OPENAI_ADMIN_KEY 显示组织成本历史",
+        "Admin 凭证优先，因提供真实组织账单"
+      ]
+    },
+    {
+      "label": "用量页与归属",
+      "detail": "Usage 默认近 30 天，按会话创建者分组归属",
+      "children": [
+        "日期范围支持 Today/7d/30d/90d/1y/All",
+        "无记录创建者的历史会话显示 Unattributed",
+        "冷缓存显示加载占位而非零值"
+      ]
+    }
+  ],
+  "flow": [
+    "拉取 provider 用量端点",
+    "归一化为 X% left",
+    "缺失时回退会话日志",
+    "非零实时值优先",
+    "多端展示用量"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code CLI",
+      "type": "product"
+    },
+    {
+      "name": "Control UI",
+      "type": "product"
+    },
+    {
+      "name": "ANTHROPIC_ADMIN_KEY",
+      "type": "concept"
+    },
+    {
+      "name": "OPENAI_ADMIN_KEY",
+      "type": "concept"
+    },
+    {
+      "name": "会话日志",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Anthropic",
+      "label": "拉取用量"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "OpenAI",
+      "label": "拉取用量"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "会话日志",
+      "label": "降级回退"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Control UI",
+      "label": "展示用量"
+    },
+    {
+      "from": "Claude Code CLI",
+      "to": "Anthropic",
+      "label": "复用订阅用量"
+    },
+    {
+      "from": "ANTHROPIC_ADMIN_KEY",
+      "to": "Anthropic",
+      "label": "启用组织账单"
+    }
+  ]
+}

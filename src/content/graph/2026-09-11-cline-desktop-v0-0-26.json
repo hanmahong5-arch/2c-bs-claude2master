@@ -1,0 +1,97 @@
+{
+  "center": "Cline 桌面版 v0.0.26 更新",
+  "branches": [
+    {
+      "label": "PR 状态入输入框",
+      "detail": "composer 显示当前分支 GitHub PR 编号、合并状态、改动行数与 CI 检查",
+      "children": [
+        "可点击跳转或展开查看日志",
+        "可见时每 30 秒刷新",
+        "依赖 gh CLI 登录与 GitHub.com origin"
+      ]
+    },
+    {
+      "label": "删除排队 prompt 修复",
+      "detail": "删除排队中的 prompt 不再在 transcript 留下从未执行的消息",
+      "children": [
+        "此前 sidecar 以「待处理列表缩短且头部变化」…",
+        "现改为只依赖 runtime 的真实 start 事件"
+      ]
+    },
+    {
+      "label": "恢复会话卡死修复",
+      "detail": "从 checkpoint 恢复 fork 的会话不再卡在 Thinking",
+      "children": [
+        "带种子历史物化的会话持久化时未传递状态",
+        "行与 manifest 写成 running 而实际空闲"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "gh CLI",
+      "type": "product"
+    },
+    {
+      "name": "composer",
+      "type": "concept"
+    },
+    {
+      "name": "PR",
+      "type": "concept"
+    },
+    {
+      "name": "CI",
+      "type": "concept"
+    },
+    {
+      "name": "checkpoint",
+      "type": "concept"
+    },
+    {
+      "name": "sidecar",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "GitHub",
+      "label": "集成"
+    },
+    {
+      "from": "Cline",
+      "to": "gh CLI",
+      "label": "依赖"
+    },
+    {
+      "from": "composer",
+      "to": "PR",
+      "label": "显示"
+    },
+    {
+      "from": "PR",
+      "to": "CI",
+      "label": "包含"
+    },
+    {
+      "from": "Cline",
+      "to": "checkpoint",
+      "label": "使用"
+    },
+    {
+      "from": "Cline",
+      "to": "sidecar",
+      "label": "使用"
+    }
+  ]
+}

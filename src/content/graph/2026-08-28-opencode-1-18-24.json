@@ -1,0 +1,78 @@
+{
+  "center": "opencode v1.18.24 更新",
+  "branches": [
+    {
+      "label": "Bedrock 缓存修复",
+      "detail": "推理响应不再被缓存为空消息，避免会话中断",
+      "children": [
+        "修复不可重放的空消息缓存"
+      ]
+    },
+    {
+      "label": "Azure Entra ID 登录",
+      "detail": "Azure 提供商可通过 Azure CLI 用 Entra ID 登录，无需 API 密钥",
+      "children": [
+        "简化认证流程"
+      ]
+    },
+    {
+      "label": "V2 配置兼容",
+      "detail": "V1 读取支持的 V2 配置字段，混合配置环境更兼容",
+      "children": [
+        "混合配置环境下更兼容"
+      ]
+    },
+    {
+      "label": "桌面端归档优化",
+      "detail": "归档会话立即从首页列表消失，提升界面反馈",
+      "children": [
+        "归档后立即从首页消失"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Azure",
+      "type": "company"
+    },
+    {
+      "name": "Microsoft Entra ID",
+      "type": "product"
+    },
+    {
+      "name": "Azure CLI",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Azure",
+      "to": "Microsoft Entra ID",
+      "label": "支持登录"
+    },
+    {
+      "from": "Azure CLI",
+      "to": "Microsoft Entra ID",
+      "label": "用于登录"
+    },
+    {
+      "from": "opencode",
+      "to": "Bedrock",
+      "label": "修复缓存"
+    },
+    {
+      "from": "opencode",
+      "to": "Azure",
+      "label": "支持登录"
+    }
+  ]
+}

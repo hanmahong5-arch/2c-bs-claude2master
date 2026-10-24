@@ -1,0 +1,48 @@
+{
+  "center": "OpenAI 加入 PORTS-Pike",
+  "branches": [
+    {
+      "label": "加入项目",
+      "detail": "OpenAI 宣布加入 PORTS-Pike 项目，扩大社区投资",
+      "children": [
+        "支持南俄亥俄州数千个工作岗位"
+      ]
+    },
+    {
+      "label": "项目目标",
+      "detail": "项目旨在促进当地经济发展",
+      "children": [
+        "OpenAI 带来技术资源与合作机会"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "OpenAI 深化区域产业布局",
+      "children": [
+        "未来或催生本地化工具与生态合作"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "PORTS-Pike",
+      "type": "concept"
+    },
+    {
+      "name": "南俄亥俄州",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "PORTS-Pike",
+      "label": "加入"
+    }
+  ]
+}

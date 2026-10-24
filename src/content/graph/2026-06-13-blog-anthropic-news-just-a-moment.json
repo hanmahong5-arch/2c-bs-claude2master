@@ -1,0 +1,112 @@
+{
+  "center": "Anthropic 与 DXC 战略联盟",
+  "branches": [
+    {
+      "label": "联盟核心内容",
+      "detail": "DXC 将 Claude 引入银行、航空等受监管行业的关键系统",
+      "children": [
+        "多年期全球联盟，DXC 为全球最大 IT 服务商之一",
+        "培训数万名 Claude 认证 FDE 工程师",
+        "DXC 加入 Claude Partner Network"
+      ]
+    },
+    {
+      "label": "DXC 自身先落地",
+      "detail": "DXC 先在内部 11.5 万员工中验证 Claude 再推向客户",
+      "children": [
+        "Claude 生成 DXC OASIS 超 95% 代码",
+        "开发提速约 10 倍，工程师负责审核",
+        "OASIS 已服务超 50 家客户"
+      ]
+    },
+    {
+      "label": "工程师认证体系",
+      "detail": "从现有开发团队招募并认证为 Claude 认证 FDE",
+      "children": [
+        "通过 Anthropic Academy 认证",
+        "DXC 叠加自有课程，针对关键系统"
+      ]
+    },
+    {
+      "label": "四大起步领域",
+      "detail": "在 DXC 已有大规模运营的四个领域率先落地",
+      "children": [
+        "保险：智能体方案与核心系统现代化",
+        "MaaS：分析、重构遗留代码",
+        "网络安全：基于 Claude Security 的常驻安全子…"
+      ]
+    }
+  ],
+  "flow": [
+    "DXC 内部验证 Claude",
+    "构建 OASIS 平台",
+    "培训认证 FDE 工程师",
+    "四大领域落地客户"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "DXC Technology",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "DXC OASIS",
+      "type": "product"
+    },
+    {
+      "name": "Claude Partner Network",
+      "type": "concept"
+    },
+    {
+      "name": "Anthropic Academy",
+      "type": "product"
+    },
+    {
+      "name": "Claude Security",
+      "type": "product"
+    },
+    {
+      "name": "Paul Smith",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "DXC Technology",
+      "label": "建立联盟"
+    },
+    {
+      "from": "DXC Technology",
+      "to": "Claude",
+      "label": "集成"
+    },
+    {
+      "from": "Claude",
+      "to": "DXC OASIS",
+      "label": "驱动"
+    },
+    {
+      "from": "DXC Technology",
+      "to": "Claude Partner Network",
+      "label": "加入"
+    },
+    {
+      "from": "DXC Technology",
+      "to": "Anthropic Academy",
+      "label": "认证工程师"
+    },
+    {
+      "from": "Paul Smith",
+      "to": "Anthropic",
+      "label": "任职"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "center": "opencode v1.17.10 更新",
+  "branches": [
+    {
+      "label": "MCP 增强",
+      "detail": "MCP 服务器指令注入会话上下文，agent 可动态获取外部资源",
+      "children": [
+        "支持资源模板列表与读取工具",
+        "指令注入会话上下文"
+      ]
+    },
+    {
+      "label": "CLI 新模式",
+      "detail": "新增 --mini 模式，适合轻量级或受限环境下的 agent 交互",
+      "children": [
+        "--mini 面向受限环境"
+      ]
+    },
+    {
+      "label": "桌面与 TUI 改进",
+      "detail": "桌面端新增会话进度指示器、可折叠服务器区域及移动端底部导航",
+      "children": [
+        "会话进度指示器",
+        "可折叠服务器区域",
+        "移动端底部导航"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "MCP",
+      "label": "增强支持"
+    },
+    {
+      "from": "opencode",
+      "to": "CLI",
+      "label": "新增模式"
+    },
+    {
+      "from": "opencode",
+      "to": "TUI",
+      "label": "改进"
+    }
+  ]
+}

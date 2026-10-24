@@ -1,0 +1,82 @@
+{
+  "center": "claude-code v2.1.238 更新",
+  "branches": [
+    {
+      "label": "新增 keybindingFlavor",
+      "detail": "可切换 readline 风格 Ctrl+W，影响提示符交互设计",
+      "children": [
+        "readline 风格 Ctrl+W 切换"
+      ]
+    },
+    {
+      "label": "插件 headersHelper",
+      "detail": "marketplace 支持动态生成 HTTP 头，安装/更新需确认",
+      "children": [
+        "安装/更新时需确认",
+        "注意凭证隔离"
+      ]
+    },
+    {
+      "label": "自托管 runner 增强",
+      "detail": "新增延迟关闭和代理授权命令，提升网络边缘可靠性",
+      "children": [
+        "延迟关闭",
+        "代理授权命令"
+      ]
+    },
+    {
+      "label": "多项修复",
+      "detail": "修复子代理内存释放、输出风格漂移、远程会话恢复",
+      "children": [
+        "子代理结果内存释放",
+        "输出风格漂移",
+        "远程控制会话恢复"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "keybindingFlavor",
+      "type": "concept"
+    },
+    {
+      "name": "headersHelper",
+      "type": "concept"
+    },
+    {
+      "name": "自托管 runner",
+      "type": "concept"
+    },
+    {
+      "name": "readline",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "keybindingFlavor",
+      "label": "新增"
+    },
+    {
+      "from": "claude-code",
+      "to": "headersHelper",
+      "label": "支持"
+    },
+    {
+      "from": "claude-code",
+      "to": "自托管 runner",
+      "label": "增强"
+    },
+    {
+      "from": "keybindingFlavor",
+      "to": "readline",
+      "label": "切换风格"
+    }
+  ]
+}

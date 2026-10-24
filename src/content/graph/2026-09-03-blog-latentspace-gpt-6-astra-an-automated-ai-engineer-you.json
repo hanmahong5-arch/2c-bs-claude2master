@@ -1,0 +1,121 @@
+{
+  "center": "GPT-6 Astra 自动化 AI 工程师",
+  "branches": [
+    {
+      "label": "模型能力",
+      "detail": "OpenAI 首个 Stargate 轻循环超级模型，多项基准饱和",
+      "children": [
+        "FrontierMath 97.6%",
+        "ARC-AGI-3 99.9%",
+        "Greg 称 AGI 已至"
+      ]
+    },
+    {
+      "label": "成本与效率",
+      "detail": "33 tokens/秒，最高 $50/百万 token，约 $6/小时",
+      "children": [
+        "比 Sol 和 Fable 更省 token",
+        "Artificial Analysis 独立确认"
+      ]
+    },
+    {
+      "label": "子代理编排",
+      "detail": "一个主 Astra 代理管理 20-50 个并行子代理",
+      "children": [
+        "可指挥运行其他模型的代理",
+        "监控自身运行、启停波次"
+      ]
+    },
+    {
+      "label": "实际成果",
+      "detail": "一个月内构建十余个内部工具，替代付费 SaaS",
+      "children": [
+        "重设计个人网站",
+        "部分替代 GitHub+Vercel",
+        "训练 10,000 倍围棋合法步数的游戏 AI"
+      ]
+    },
+    {
+      "label": "AI 工程自动化",
+      "detail": "可自主选择训练模型、标注数据、部署调试系统",
+      "children": [
+        "类似 SAM 的主动学习",
+        "制作基准、管理预算、扩展运行"
+      ]
+    }
+  ],
+  "flow": [
+    "选择并训练模型",
+    "标注数据与主动学习",
+    "保持管道饱和",
+    "监控日志与调试",
+    "部署系统",
+    "指挥子代理评估"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "Fable 5.1",
+      "type": "model"
+    },
+    {
+      "name": "Sol",
+      "type": "model"
+    },
+    {
+      "name": "Greg",
+      "type": "person"
+    },
+    {
+      "name": "Jakub",
+      "type": "person"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "SAM",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Astra",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Fable 5.1",
+      "label": "超越"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Sol",
+      "label": "更省 token"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "GPT-6 Astra",
+      "label": "独立确认"
+    },
+    {
+      "from": "Greg",
+      "to": "GPT-6 Astra",
+      "label": "称 AGI 已至"
+    },
+    {
+      "from": "Jakub",
+      "to": "GPT-6 Astra",
+      "label": "称自动化研究…"
+    }
+  ]
+}

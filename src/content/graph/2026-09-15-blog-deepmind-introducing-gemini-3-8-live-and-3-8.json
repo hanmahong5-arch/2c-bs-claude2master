@@ -1,0 +1,122 @@
+{
+  "center": "Gemini 3.8 Live 双模型发布",
+  "branches": [
+    {
+      "label": "两款模型定位",
+      "detail": "Live 主打低成本实时对话，Extended Thinking 主打高复杂度多步推理",
+      "children": [
+        "Live：规模化与成本效率，实时视觉接地",
+        "Extended Thinking：边推理边说话，不打断对话"
+      ]
+    },
+    {
+      "label": "核心能力",
+      "detail": "近实时视觉输入、97 种语言自动切换、后台执行工具调用",
+      "children": [
+        "对话中自动检测并切换 97 种语言",
+        "后台跑工具与 API，同时继续聊天",
+        "用「让我查一下…」等口头提示自然确认"
+      ]
+    },
+    {
+      "label": "跑分表现",
+      "detail": "Extended Thinking 拿下 Speech to Speech 质量榜第一",
+      "children": [
+        "Speech to Speech Quality Index 82.6，第一",
+        "τ-Voice 68.6%，τ-Voice-banking 35.1%",
+        "Big Bench Audio 97.7%"
+      ]
+    },
+    {
+      "label": "落地渠道",
+      "detail": "通过 Gemini API、Google Workspace、Search 与 Gemini app 上线",
+      "children": [
+        "开发者：Gemini API 与 Google AI Studio",
+        "企业：Gemini Enterprise 私有预览",
+        "大众：Search Live、Docs/Gmail/Keep Live"
+      ]
+    },
+    {
+      "label": "生态与安全",
+      "detail": "Live API 接入多家语音平台，音频统一加 SynthID 水印",
+      "children": [
+        "合作方：Agora、LiveKit、Pipecat、Vercel 等",
+        "Salesforce、Genspark、Lumeris 参与合作",
+        "所有生成音频嵌入 SynthID 不可感知水印"
+      ]
+    }
+  ],
+  "flow": [
+    "用户语音发起请求",
+    "模型近实时解析语音与视觉",
+    "后台并行执行工具与 API",
+    "口头提示与进度播报",
+    "返回结果并保持对话"
+  ],
+  "entities": [
+    {
+      "name": "Gemini 3.8 Live",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.8 Live Extended Thinking",
+      "type": "model"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Gemini Live API",
+      "type": "product"
+    },
+    {
+      "name": "Google Workspace",
+      "type": "product"
+    },
+    {
+      "name": "SynthID",
+      "type": "technique"
+    },
+    {
+      "name": "LangChain",
+      "type": "product"
+    },
+    {
+      "name": "LiveKit",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google",
+      "to": "Gemini 3.8 Live",
+      "label": "发布"
+    },
+    {
+      "from": "Google",
+      "to": "Gemini 3.8 Live Extended Thinking",
+      "label": "发布"
+    },
+    {
+      "from": "Gemini 3.8 Live",
+      "to": "Gemini Live API",
+      "label": "接入"
+    },
+    {
+      "from": "Gemini 3.8 Live Extended Thinking",
+      "to": "Google Workspace",
+      "label": "集成"
+    },
+    {
+      "from": "Gemini 3.8 Live",
+      "to": "SynthID",
+      "label": "使用"
+    },
+    {
+      "from": "LangChain",
+      "to": "Gemini Live API",
+      "label": "基于"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "center": "Fable 5 出口管制争议",
+  "branches": [
+    {
+      "label": "事件起因",
+      "detail": "所谓「越狱」实为让模型「修复这段代码」",
+      "children": [
+        "Kate Moussouris 确认该提示词就是 fix this…",
+        "Claude Fable 5 因此被出口管制禁用"
+      ]
+    },
+    {
+      "label": "实验方法",
+      "detail": "研究者用已知 CVE 与植入漏洞的代码测试三个模型",
+      "children": [
+        "要求 Fable 5、Mythos、Opus 审查安全问题",
+        "Fable 5 拒绝，改问「修复这段代码」后成功",
+        "多步人工流程将输出转为补丁测试脚本"
+      ]
+    },
+    {
+      "label": "核心反驳",
+      "detail": "修复漏洞是编码模型本职，不是护栏绕过",
+      "children": [
+        "安全漏洞是最重要的 bug 类别",
+        "防御者需要 find、fix、test 闭环",
+        "移除该能力会让模型修 bug 与验证补丁变差"
+      ]
+    },
+    {
+      "label": "决策者误判",
+      "detail": "非技术决策者被「可发动网络攻击」说法误导",
+      "children": [
+        "数月来听闻能「craft cyber attacks」的模型…",
+        "如今准备封禁任何能帮助保护代码的模型"
+      ]
+    }
+  ],
+  "flow": [
+    "取含 CVE 与植入漏洞的代码",
+    "让模型审查安全问题",
+    "Fable 5 拒绝",
+    "改问「修复这段代码」",
+    "人工多步转为补丁测试脚本"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Kate Moussouris",
+      "type": "person"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Mythos",
+      "type": "model"
+    },
+    {
+      "name": "Opus",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "出口管制",
+      "type": "concept"
+    },
+    {
+      "name": "CVE",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Claude Fable 5",
+      "label": "评论"
+    },
+    {
+      "from": "Kate Moussouris",
+      "to": "Claude Fable 5",
+      "label": "确认提示词"
+    },
+    {
+      "from": "出口管制",
+      "to": "Claude Fable 5",
+      "label": "封禁"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5",
+      "label": "开发"
+    },
+    {
+      "from": "Mythos",
+      "to": "CVE",
+      "label": "测试"
+    },
+    {
+      "from": "Opus",
+      "to": "CVE",
+      "label": "测试"
+    }
+  ]
+}

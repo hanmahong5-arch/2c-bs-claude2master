@@ -1,0 +1,100 @@
+{
+  "center": "腾讯发布 Hy4 Preview",
+  "branches": [
+    {
+      "label": "核心规格",
+      "detail": "770B 总参数、49B 激活参数、1M 上下文，开放权重文本模型",
+      "children": [
+        "无视觉能力，仅文本输入",
+        "Hugging Face 体积 1.56TB"
+      ]
+    },
+    {
+      "label": "对比 Hy3",
+      "detail": "相比 7 月 Hy3 全面放大：参数、激活、上下文均提升",
+      "children": [
+        "Hy3：295B 总参、21B 激活、256K 上下文、598GB"
+      ]
+    },
+    {
+      "label": "推理档位",
+      "detail": "chat template 显示仅两档 reasoning_effort：high 与 no_think",
+      "children": [
+        "high 为默认值",
+        "no_think 表示关闭推理",
+        "其他取值会抛异常"
+      ]
+    },
+    {
+      "label": "实测表现",
+      "detail": "Simon Willison 用 OpenRouter 默认 high 档测试鹈鹕骑自行车 SVG",
+      "children": [
+        "推理轨迹出现截断式英语",
+        "推测为节省 token、隐藏推理无需完整语法"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Tencent",
+      "type": "company"
+    },
+    {
+      "name": "Hy4 Preview",
+      "type": "model"
+    },
+    {
+      "name": "Hy3",
+      "type": "model"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "product"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "reasoning_effort",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Tencent",
+      "to": "Hy4 Preview",
+      "label": "发布"
+    },
+    {
+      "from": "Hy4 Preview",
+      "to": "Hy3",
+      "label": "升级自"
+    },
+    {
+      "from": "Hy4 Preview",
+      "to": "Hugging Face",
+      "label": "托管于"
+    },
+    {
+      "from": "Hy4 Preview",
+      "to": "OpenRouter",
+      "label": "可调用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Hy4 Preview",
+      "label": "测试"
+    },
+    {
+      "from": "Hy4 Preview",
+      "to": "reasoning_effort",
+      "label": "支持"
+    }
+  ]
+}

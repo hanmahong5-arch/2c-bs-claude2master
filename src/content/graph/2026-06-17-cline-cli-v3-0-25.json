@@ -1,0 +1,76 @@
+{
+  "center": "cline cli v3.0.25 更新",
+  "branches": [
+    {
+      "label": "ClinePass 支持",
+      "detail": "模型选择器新增 ClinePass 模型，扩展模型集成选项",
+      "children": [
+        "Agent Harness 需支持多模型切换"
+      ]
+    },
+    {
+      "label": "MCP 服务器插件",
+      "detail": "插件安装时可授权 MCP OAuth，增强插件安全性",
+      "children": [
+        "Harness 需考虑 OAuth 流程自动化"
+      ]
+    },
+    {
+      "label": "工具调用优化",
+      "detail": "鼓励并行工具调用加速任务，限制 bash 与文件读取输出大小",
+      "children": [
+        "平衡并发性能与上下文限制"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "OAuth",
+      "type": "technique"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli",
+      "to": "ClinePass",
+      "label": "新增支持"
+    },
+    {
+      "from": "cline cli",
+      "to": "MCP",
+      "label": "引入插件"
+    },
+    {
+      "from": "MCP",
+      "to": "OAuth",
+      "label": "授权使用"
+    },
+    {
+      "from": "Agent Harness",
+      "to": "ClinePass",
+      "label": "需支持"
+    },
+    {
+      "from": "Agent Harness",
+      "to": "MCP",
+      "label": "需集成"
+    }
+  ]
+}

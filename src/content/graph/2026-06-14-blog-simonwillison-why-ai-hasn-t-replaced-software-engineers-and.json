@@ -1,0 +1,92 @@
+{
+  "center": "AI为何未取代软件工程师",
+  "branches": [
+    {
+      "label": "数据不支持失业论",
+      "detail": "现有数据仍不支持AI引发大规模失业的说法",
+      "children": [
+        "2025年3月纽约州在WARN申报中加入AI披露勾选框",
+        "首年超160家公司提交WARN通知，无一家勾选AI"
+      ]
+    },
+    {
+      "label": "写代码不是瓶颈",
+      "detail": "AI只加速敲代码环节，软件工程远不止于此",
+      "children": [
+        "任务拆解调查指向会议、调试等耗时环节",
+        "这些环节为何难被AI替代仍需定性分析"
+      ]
+    },
+    {
+      "label": "三大真实瓶颈",
+      "detail": "定性分析揭示抵抗自动化的三个核心环节",
+      "children": [
+        "决定并明确要构建什么",
+        "验证并对交付结果负责",
+        "对代码库、业务与环境的深度人类理解"
+      ]
+    },
+    {
+      "label": "深度理解仍是关键",
+      "detail": "Simon Willison认为AI能辅助决策与验证",
+      "children": [
+        "价值仍取决于对问题与方案的理解深度",
+        "AI再强也依赖人理解agent在构建什么"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Arvind Narayanan",
+      "type": "person"
+    },
+    {
+      "name": "Sayash Kappor",
+      "type": "person"
+    },
+    {
+      "name": "WARN Act",
+      "type": "concept"
+    },
+    {
+      "name": "软件工程",
+      "type": "concept"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Arvind Narayanan",
+      "label": "引用其文章"
+    },
+    {
+      "from": "Arvind Narayanan",
+      "to": "AI",
+      "label": "分析其影响"
+    },
+    {
+      "from": "Sayash Kappor",
+      "to": "AI",
+      "label": "分析其影响"
+    },
+    {
+      "from": "WARN Act",
+      "to": "AI",
+      "label": "披露勾选"
+    },
+    {
+      "from": "AI",
+      "to": "软件工程",
+      "label": "未取代"
+    }
+  ]
+}

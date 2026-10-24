@@ -1,0 +1,90 @@
+{
+  "center": "Ladybird 停收公开 PR",
+  "branches": [
+    {
+      "label": "核心决定",
+      "detail": "Ladybird 宣布不再接受公开 pull request，改变开发方式",
+      "children": [
+        "Andreas Kling 发布《Changing How We…",
+        "2026 年 6 月 5 日由 Simon Willison 收录引用"
+      ]
+    },
+    {
+      "label": "原因",
+      "detail": "AI 生成代码泛滥，使补丁规模不再代表投入与善意",
+      "children": [
+        "过去大补丁意味着大投入，是善意的合理代理",
+        "该假设已不再成立"
+      ]
+    },
+    {
+      "label": "责任标准",
+      "detail": "关键不在是否手写，而在谁对进入浏览器的代码负责",
+      "children": [
+        "Ladybird 正成为面向真实用户的浏览器",
+        "提交改动者必须是为结果负责的人"
+      ]
+    },
+    {
+      "label": "社区反响",
+      "detail": "该引用在开源与 AI 伦理话题下引发讨论",
+      "children": [
+        "标签：open-source、generative-ai、llms…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Ladybird",
+      "type": "product"
+    },
+    {
+      "name": "Andreas Kling",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "pull request",
+      "type": "concept"
+    },
+    {
+      "name": "AI 生成代码",
+      "type": "concept"
+    },
+    {
+      "name": "开源社区",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Andreas Kling",
+      "to": "Ladybird",
+      "label": "主导"
+    },
+    {
+      "from": "Ladybird",
+      "to": "pull request",
+      "label": "停止接受"
+    },
+    {
+      "from": "AI 生成代码",
+      "to": "pull request",
+      "label": "冲击"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Andreas Kling",
+      "label": "引用"
+    },
+    {
+      "from": "开源社区",
+      "to": "Ladybird",
+      "label": "讨论"
+    }
+  ]
+}

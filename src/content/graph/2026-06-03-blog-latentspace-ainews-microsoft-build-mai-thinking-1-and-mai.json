@@ -1,0 +1,117 @@
+{
+  "center": "微软Build发布MAI模型家族",
+  "branches": [
+    {
+      "label": "七款MAI模型",
+      "detail": "微软在Build发布7款MAI模型，覆盖推理、代码、图像、语音转写与语音",
+      "children": [
+        "旗舰为MAI-Thinking-1推理模型",
+        "含MAI-Code-1-Flash、MAI-Image-2.5",
+        "含MAI-Transcribe-1.5、MAI-Voice-2"
+      ]
+    },
+    {
+      "label": "MAI-Thinking-1",
+      "detail": "35B激活参数MoE，256K上下文，微软首个推理模型",
+      "children": [
+        "预训练30T tokens，8192块GB200",
+        "AIME 2025达97%，SWE-Bench Pro 53%",
+        "MAIA 200上每美元性能提升30%"
+      ]
+    },
+    {
+      "label": "109页技术报告",
+      "detail": "罕见公开详细技术报告，研究社区评价极高",
+      "children": [
+        "零合成数据、零第三方蒸馏",
+        "推理与工具使用全靠后训练习得",
+        "被称可作LLM训练教科书"
+      ]
+    },
+    {
+      "label": "其他模型亮点",
+      "detail": "代码、图像、转写模型各有具体指标",
+      "children": [
+        "Code-1-Flash仅5B参数，SWE-Bench Pro 51%",
+        "Image-2.5图像编辑榜第2，得分1401",
+        "Transcribe-1.5约276倍实时，支持43种语言"
+      ]
+    },
+    {
+      "label": "平台与生态",
+      "detail": "Build同时强调AI平台与agent原生Windows",
+      "children": [
+        "GitHub Copilot成agent开发桌面主场",
+        "Web IQ搜索API已支撑Copilot与ChatGPT",
+        "Project Solara/Scout等概念硬件"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Microsoft",
+      "type": "company"
+    },
+    {
+      "name": "MAI-Thinking-1",
+      "type": "model"
+    },
+    {
+      "name": "MAI-Code-1-Flash",
+      "type": "model"
+    },
+    {
+      "name": "MAI-Image-2.5",
+      "type": "model"
+    },
+    {
+      "name": "MAI-Transcribe-1.5",
+      "type": "model"
+    },
+    {
+      "name": "Mustafa Suleyman",
+      "type": "person"
+    },
+    {
+      "name": "GitHub Copilot",
+      "type": "product"
+    },
+    {
+      "name": "Web IQ",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Microsoft",
+      "to": "MAI-Thinking-1",
+      "label": "发布"
+    },
+    {
+      "from": "Microsoft",
+      "to": "MAI-Code-1-Flash",
+      "label": "发布"
+    },
+    {
+      "from": "Microsoft",
+      "to": "MAI-Image-2.5",
+      "label": "发布"
+    },
+    {
+      "from": "Microsoft",
+      "to": "MAI-Transcribe-1.5",
+      "label": "发布"
+    },
+    {
+      "from": "Mustafa Suleyman",
+      "to": "MAI-Thinking-1",
+      "label": "宣布"
+    },
+    {
+      "from": "Web IQ",
+      "to": "GitHub Copilot",
+      "label": "支撑"
+    }
+  ]
+}

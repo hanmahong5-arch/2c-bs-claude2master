@@ -1,0 +1,74 @@
+{
+  "center": "OpenAI 助乌克兰独立新闻业",
+  "branches": [
+    {
+      "label": "项目启动",
+      "detail": "OpenAI 联合 AIRPPU、WAN-IFRA 启动 AI 计划，支持乌克兰新闻机构",
+      "children": [
+        "合作方：AIRPPU、WAN-IFRA",
+        "目标：加强创新、韧性与独立性"
+      ]
+    },
+    {
+      "label": "工具与培训",
+      "detail": "为新闻编辑室提供 AI 工具和培训，提升报道效率与质量",
+      "children": [
+        "应对战时挑战",
+        "提升报道效率与质量"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "展示 AI 支持关键社会职能的实际应用与合作模式",
+      "children": [
+        "AI 用于新闻业等关键社会职能",
+        "技术公司与非营利组织合作推动社会影响"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AIRPPU",
+      "type": "company"
+    },
+    {
+      "name": "WAN-IFRA",
+      "type": "company"
+    },
+    {
+      "name": "乌克兰独立新闻业",
+      "type": "concept"
+    },
+    {
+      "name": "AI 工具与培训",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AIRPPU",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "WAN-IFRA",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "乌克兰独立新闻业",
+      "label": "支持"
+    },
+    {
+      "from": "AI 工具与培训",
+      "to": "乌克兰独立新闻业",
+      "label": "赋能"
+    }
+  ]
+}

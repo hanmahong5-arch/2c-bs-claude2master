@@ -1,0 +1,113 @@
+{
+  "center": "Gemini 3.5 Live Translate 发布",
+  "branches": [
+    {
+      "label": "核心能力",
+      "detail": "最新音频模型，支持 70+ 语言近实时语音到语音翻译",
+      "children": [
+        "自动检测 70+ 语言，无需手动配置",
+        "保留说话人语调、节奏与音高",
+        "持续生成语音，仅落后几秒"
+      ]
+    },
+    {
+      "label": "技术特点",
+      "detail": "流式处理语音，兼顾上下文质量与即时同步",
+      "children": [
+        "非轮次式，边听边译",
+        "噪声鲁棒，适应嘈杂环境",
+        "输出音频带 SynthID 水印"
+      ]
+    },
+    {
+      "label": "产品落地",
+      "detail": "面向开发者、企业、消费者多渠道推出",
+      "children": [
+        "Gemini Live API 与 AI Studio 公开预览",
+        "Google Meet 企业私测，支持 2000+ 语言组合",
+        "Google Translate 安卓/iOS 全球上线"
+      ]
+    },
+    {
+      "label": "生态与反馈",
+      "detail": "集成多家实时媒体平台，合作伙伴测试中",
+      "children": [
+        "Agora、LiveKit、Pipecat 等平台集成",
+        "Grab 测试司机与乘客多语言沟通",
+        "CJ ENM、LiveKit 等给出正面评价"
+      ]
+    }
+  ],
+  "flow": [
+    "语音流式输入",
+    "自动检测语言",
+    "实时翻译生成",
+    "输出自然语音"
+  ],
+  "entities": [
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Gemini 3.5 Live Translate",
+      "type": "model"
+    },
+    {
+      "name": "Gemini Live API",
+      "type": "product"
+    },
+    {
+      "name": "Google Meet",
+      "type": "product"
+    },
+    {
+      "name": "Google Translate",
+      "type": "product"
+    },
+    {
+      "name": "SynthID",
+      "type": "technique"
+    },
+    {
+      "name": "Grab",
+      "type": "company"
+    },
+    {
+      "name": "LiveKit",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google",
+      "to": "Gemini 3.5 Live Translate",
+      "label": "发布"
+    },
+    {
+      "from": "Gemini 3.5 Live Translate",
+      "to": "Gemini Live API",
+      "label": "集成于"
+    },
+    {
+      "from": "Gemini 3.5 Live Translate",
+      "to": "Google Meet",
+      "label": "应用于"
+    },
+    {
+      "from": "Gemini 3.5 Live Translate",
+      "to": "Google Translate",
+      "label": "应用于"
+    },
+    {
+      "from": "Gemini 3.5 Live Translate",
+      "to": "SynthID",
+      "label": "使用"
+    },
+    {
+      "from": "Grab",
+      "to": "Gemini 3.5 Live Translate",
+      "label": "测试"
+    }
+  ]
+}

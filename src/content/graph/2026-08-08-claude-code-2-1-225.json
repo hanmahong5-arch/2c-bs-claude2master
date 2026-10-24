@@ -1,0 +1,101 @@
+{
+  "center": "Claude Code v2.1.225 更新",
+  "branches": [
+    {
+      "label": "网关消费限额",
+      "detail": "新增网关限额支持，超限显示额度、重置时间与操作者消息",
+      "children": [
+        "需网关同步更新",
+        "agent harness 需处理限额通知并调整任务调度"
+      ]
+    },
+    {
+      "label": "远程控制增强",
+      "detail": "SendMessage 可按名称启动远程控制会话",
+      "children": [
+        "已确认收件人不会被同名本机会话替换",
+        "harness 需支持跨机器会话寻址与身份确认"
+      ]
+    },
+    {
+      "label": "工作区信任提示",
+      "detail": "claude agents 对不受信任目录增加信任提示，与 claude 一致",
+      "children": [
+        "harness 需在启动时处理信任确认流程"
+      ]
+    },
+    {
+      "label": "OAuth 修复",
+      "detail": "修复 token 被短期 token 覆盖导致 headless 会话中断",
+      "children": [
+        "修复 macOS 上 MCP OAuth keychain 超时 401",
+        "harness 需确保 token 管理稳定"
+      ]
+    },
+    {
+      "label": "安全过滤修复",
+      "detail": "安全过滤拒绝不再计入连续阻止限制，模型被告知继续",
+      "children": [
+        "harness 需区分安全拒绝与普通限制，优化重试"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "claude agents",
+      "type": "product"
+    },
+    {
+      "name": "SendMessage",
+      "type": "technique"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "macOS",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "SendMessage",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "修复"
+    },
+    {
+      "from": "MCP",
+      "to": "OAuth",
+      "label": "使用"
+    },
+    {
+      "from": "OAuth",
+      "to": "macOS",
+      "label": "受影响于"
+    },
+    {
+      "from": "claude agents",
+      "to": "agent harness",
+      "label": "需适配"
+    }
+  ]
+}

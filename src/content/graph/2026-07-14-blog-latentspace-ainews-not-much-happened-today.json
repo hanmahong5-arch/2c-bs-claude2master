@@ -1,0 +1,112 @@
+{
+  "center": "AI 代理从聊天转向执行",
+  "branches": [
+    {
+      "label": "代理用量爆发",
+      "detail": "Codex 单日新增 100 万用户，GPT-5.6 需求被称 insane",
+      "children": [
+        "Codex 达 600 万活跃用户，一天涨 100 万",
+        "Codex + ChatGPT Work 一周用量增 2.5 倍",
+        "JetBrains 将 Codex 列为推荐代理"
+      ]
+    },
+    {
+      "label": "护城河转移",
+      "detail": "模型质量不再唯一，harness 与可观测性成新差异化",
+      "children": [
+        "LangSmith 为 Codex、Cursor、Copilot 加…",
+        "过时 agents.md 如同自我注入的提示攻击",
+        "把价值编码进 evals 与环境的公司更持久"
+      ]
+    },
+    {
+      "label": "本地推理压缩",
+      "detail": "低比特量化把前沿级模型搬上消费设备",
+      "children": [
+        "Bonsai 27B：Ternary 5.9GB / 1-bit 3.9GB…",
+        "腾讯混元 Hy3 295B 单 GPU 可服务",
+        "NVFP4 动态量化覆盖 Gemma-4 等模型"
+      ]
+    },
+    {
+      "label": "多模态实时化",
+      "detail": "从看完再答转向持续感知与主动证据搜索",
+      "children": [
+        "MOSS-VL-Realtime 11B，256K 上下文，边看边…",
+        "OmniAgent-7B 在 LVBench 得 50.5，超 72B…",
+        "LingBot-World 2.0 称小时级 720p/60fps 交…"
+      ]
+    },
+    {
+      "label": "评估成新战场",
+      "detail": "基准更对抗、更贴近真实研究流程",
+      "children": [
+        "Perplexity 开源 WANDR：500 任务、17 万条证…",
+        "WANDR 重新抓取引用页核对主张，而非静态金标",
+        "Agent Arena 降本 89% 且精度持平最佳静态配置"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "LangSmith",
+      "type": "product"
+    },
+    {
+      "name": "Bonsai 27B",
+      "type": "model"
+    },
+    {
+      "name": "MOSS-VL-Realtime",
+      "type": "model"
+    },
+    {
+      "name": "WANDR",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "推出"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6",
+      "label": "发布"
+    },
+    {
+      "from": "Codex",
+      "to": "Claude Code",
+      "label": "用量反超"
+    },
+    {
+      "from": "LangSmith",
+      "to": "Codex",
+      "label": "提供追踪"
+    },
+    {
+      "from": "Bonsai 27B",
+      "to": "MOSS-VL-Realtime",
+      "label": "同属开源"
+    }
+  ]
+}

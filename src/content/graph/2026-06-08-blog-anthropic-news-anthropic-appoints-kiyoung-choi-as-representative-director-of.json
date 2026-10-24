@@ -1,0 +1,106 @@
+{
+  "center": "Anthropic 任命韩国区代表",
+  "branches": [
+    {
+      "label": "人事任命",
+      "detail": "KiYoung Choi 出任 Anthropic 韩国区代表董事，为首尔办公室开业做准备",
+      "children": [
+        "此前任 Snowflake 韩国区总经理",
+        "曾在 Google Cloud、Adobe、Autodesk…",
+        "拥有逾三十年亚太科技业务经验"
+      ]
+    },
+    {
+      "label": "韩国市场增长",
+      "detail": "韩国是 Claude.ai 全球最活跃市场之一，使用率远超人口规模预期",
+      "children": [
+        "使用率为人口规模预期的 3.5 倍以上",
+        "使用集中在技术与创意工作"
+      ]
+    },
+    {
+      "label": "本地客户案例",
+      "detail": "韩国初创与大型企业已在用 Claude 构建产品",
+      "children": [
+        "Law&Company 用 Claude 驱动 AI 法律助手",
+        "SK Telecom 用 Claude 构建定制 AI 客服模型"
+      ]
+    },
+    {
+      "label": "团队重点",
+      "detail": "韩国团队将聚焦企业合作、政府与研究机构及开发者社区",
+      "children": [
+        "与企业和初创公司建立合作",
+        "对接政府与研究机构",
+        "支持开发者社区"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "KiYoung Choi",
+      "type": "person"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Snowflake",
+      "type": "company"
+    },
+    {
+      "name": "SK Telecom",
+      "type": "company"
+    },
+    {
+      "name": "Law&Company",
+      "type": "company"
+    },
+    {
+      "name": "Chris Ciauri",
+      "type": "person"
+    },
+    {
+      "name": "Seoul office",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "KiYoung Choi",
+      "label": "任命"
+    },
+    {
+      "from": "KiYoung Choi",
+      "to": "Snowflake",
+      "label": "曾任职"
+    },
+    {
+      "from": "SK Telecom",
+      "to": "Claude",
+      "label": "采用"
+    },
+    {
+      "from": "Law&Company",
+      "to": "Claude",
+      "label": "采用"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Seoul office",
+      "label": "开设"
+    },
+    {
+      "from": "Chris Ciauri",
+      "to": "Anthropic",
+      "label": "任职于"
+    }
+  ]
+}

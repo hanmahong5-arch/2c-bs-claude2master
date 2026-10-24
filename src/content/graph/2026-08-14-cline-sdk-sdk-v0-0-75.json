@@ -1,0 +1,85 @@
+{
+  "center": "Cline SDK v0.0.75 更新",
+  "branches": [
+    {
+      "label": "模型自主搜索",
+      "detail": "新增 provider 执行的网络搜索，模型可在对话中搜索，结果持久化，默认关闭",
+      "children": [
+        "需在设置中启用 web_search 工具",
+        "harness 需支持工具调用和结果回放",
+        "确保会话恢复时搜索状态一致"
+      ]
+    },
+    {
+      "label": "网关修复",
+      "detail": "Cline 网关新增专用 provider，修复 cline-pass 扩展思考预算未生效问题",
+      "children": [
+        "需区分不同 provider 的配置传递",
+        "确保参数正确到达模型"
+      ]
+    },
+    {
+      "label": "Hub 稳定性",
+      "detail": "修复多实例 Hub 互杀问题，通过构建 ID 全序比较避免冲突",
+      "children": [
+        "新构建不再抢占活跃 Hub，空闲时再切换",
+        "需实现优雅的进程协调和版本兼容",
+        "避免会话中断"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "Cline 网关",
+      "type": "product"
+    },
+    {
+      "name": "cline-pass",
+      "type": "product"
+    },
+    {
+      "name": "web_search",
+      "type": "technique"
+    },
+    {
+      "name": "Hub",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "Cline",
+      "label": "属于"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Cline 网关",
+      "label": "包含"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "web_search",
+      "label": "新增"
+    },
+    {
+      "from": "Cline 网关",
+      "to": "cline-pass",
+      "label": "修复"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Hub",
+      "label": "修复"
+    }
+  ]
+}

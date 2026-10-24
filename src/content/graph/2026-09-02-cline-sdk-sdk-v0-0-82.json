@@ -1,0 +1,84 @@
+{
+  "center": "Cline SDK v0.0.82 更新",
+  "branches": [
+    {
+      "label": "修复工具静默禁用",
+      "detail": "网关模型能力列表为空导致工具调用被静默禁用、图片输入被丢弃",
+      "children": [
+        "统一翻译器并改用结构检测",
+        "确保 minified 构建下 Langfuse 追踪可用"
+      ]
+    },
+    {
+      "label": "新增会话导入",
+      "detail": "新增 SessionImportService，可从 Claude Code、Codex、opencode 导入历史会话",
+      "children": [
+        "事务性且幂等，可恢复"
+      ]
+    },
+    {
+      "label": "新增会话搜索",
+      "detail": "新增服务端全文搜索会话历史，通过 hub 命令暴露",
+      "children": []
+    },
+    {
+      "label": "模型目录更新",
+      "detail": "模型目录实时加载，新增 10 个提供商，默认模型变更影响 57 个提供商",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "SessionImportService",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Langfuse",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "SessionImportService",
+      "to": "Claude Code",
+      "label": "导入会话"
+    },
+    {
+      "from": "SessionImportService",
+      "to": "Codex",
+      "label": "导入会话"
+    },
+    {
+      "from": "SessionImportService",
+      "to": "opencode",
+      "label": "导入会话"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "SessionImportService",
+      "label": "新增"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Langfuse",
+      "label": "集成追踪"
+    }
+  ]
+}

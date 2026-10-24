@@ -1,0 +1,114 @@
+{
+  "center": "LLM 外部幻觉成因与检测",
+  "branches": [
+    {
+      "label": "幻觉定义",
+      "detail": "外部幻觉指模型输出未被预训练世界知识支撑，需事实且承认未知",
+      "children": [
+        "上下文幻觉：与输入源不一致",
+        "外部幻觉：与预训练知识冲突",
+        "模型不知道时应说不知道"
+      ]
+    },
+    {
+      "label": "成因",
+      "detail": "预训练数据过时错误，微调新知识易诱发幻觉",
+      "children": [
+        "预训练数据来自互联网，含过时错误信息",
+        "Gekhman 2024：新知识学得慢，学会后更易幻觉",
+        "最佳性能在学会多数 Known 少数 Unknown 时"
+      ]
+    },
+    {
+      "label": "检测方法",
+      "detail": "检索增强评估、采样检测、校准未知知识",
+      "children": [
+        "FactualityPrompt：NE 错误率与蕴含比",
+        "FActScore：分解原子事实逐条验证",
+        "SAFE：用 LLM 代理多步搜索验证事实"
+      ]
+    },
+    {
+      "label": "抗幻觉方法",
+      "detail": "RAG 编辑归因、动作链、采样、微调事实性",
+      "children": [
+        "RAG 减少幻觉，检索优于非上下文",
+        "微调提升事实性与归因",
+        "采样方法用于检测与缓解"
+      ]
+    }
+  ],
+  "flow": [
+    "定义外部幻觉",
+    "分析预训练与微调成因",
+    "检索增强评估检测",
+    "采样与校准未知",
+    "应用抗幻觉方法"
+  ],
+  "entities": [
+    {
+      "name": "Lilian Weng",
+      "type": "person"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "Gekhman et al. 2024",
+      "type": "concept"
+    },
+    {
+      "name": "FactualityPrompt",
+      "type": "product"
+    },
+    {
+      "name": "FActScore",
+      "type": "product"
+    },
+    {
+      "name": "SAFE",
+      "type": "product"
+    },
+    {
+      "name": "RAG",
+      "type": "technique"
+    },
+    {
+      "name": "Wikipedia",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Lilian Weng",
+      "to": "LLM",
+      "label": "研究"
+    },
+    {
+      "from": "Gekhman et al. 2024",
+      "to": "LLM",
+      "label": "研究微调"
+    },
+    {
+      "from": "FactualityPrompt",
+      "to": "Wikipedia",
+      "label": "使用"
+    },
+    {
+      "from": "FActScore",
+      "to": "Wikipedia",
+      "label": "验证"
+    },
+    {
+      "from": "SAFE",
+      "to": "LLM",
+      "label": "评估"
+    },
+    {
+      "from": "RAG",
+      "to": "LLM",
+      "label": "缓解幻觉"
+    }
+  ]
+}

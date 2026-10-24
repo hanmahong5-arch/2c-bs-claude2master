@@ -1,0 +1,79 @@
+{
+  "center": "Claude Code v2.1.206 更新",
+  "branches": [
+    {
+      "label": "命令体验优化",
+      "detail": "多个斜杠命令新增建议与自动化，减少手动输入",
+      "children": [
+        "/cd 新增目录路径建议，与 /add-dir 一致",
+        "/commit-push-pr 自动允许推送到配置远程仓库"
+      ]
+    },
+    {
+      "label": "配置精简建议",
+      "detail": "/doctor 可建议裁剪 CLAUDE.md 中代码库可推导的内容",
+      "children": [
+        "保持 CLAUDE.md 文件精简"
+      ]
+    },
+    {
+      "label": "后台 agent 升级",
+      "detail": "后台 agent 在更新后立即升级，避免旧会话升级延迟",
+      "children": []
+    },
+    {
+      "label": "多项 bug 修复",
+      "detail": "修复过期登录、MCP 超时、OAuth 重认证、/model 选择器错位等问题",
+      "children": [
+        "过期登录",
+        "MCP 超时",
+        "OAuth 重认证"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "CLAUDE.md",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "CLAUDE.md",
+      "label": "建议精简"
+    },
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "修复超时"
+    },
+    {
+      "from": "Claude Code",
+      "to": "OAuth",
+      "label": "修复重认证"
+    },
+    {
+      "from": "Claude Code",
+      "to": "agent",
+      "label": "升级后台"
+    }
+  ]
+}

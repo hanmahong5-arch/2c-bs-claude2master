@@ -1,0 +1,94 @@
+{
+  "center": "Cline Desktop 两个踩坑修复",
+  "branches": [
+    {
+      "label": "Windows 更新失败",
+      "detail": "旧安装器用 32 位 NSIS，WOW64 下拿不到 64 位进程路径，覆盖了被占用的可执行文件",
+      "children": [
+        "改用 Windows Restart Manager 按文件占用关…",
+        "与位数无关，不影响并存的 Cline Beta",
+        "安装路径应按谁持有文件判断"
+      ]
+    },
+    {
+      "label": "工作区劫持可执行文件",
+      "detail": "Windows 先按子进程 cwd 解析裸程序名再查 PATH，仓库放 rg.exe 就会被执行",
+      "children": [
+        "Cline 以工作区为 cwd 运行 rg、git…",
+        "现启动时禁用当前目录可执行搜索",
+        "所有子进程继承该设置"
+      ]
+    },
+    {
+      "label": "长会话压缩触发",
+      "detail": "原先按约 3 字符/token 估算，密集内容撑爆真实上下文而估算仍低于阈值",
+      "children": [
+        "反汇编、图片、压缩源码会低估 token",
+        "现同时参考 provider 上报的真实 token 数",
+        "摘要器输出预算翻倍"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline Desktop",
+      "type": "product"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    },
+    {
+      "name": "NSIS",
+      "type": "technique"
+    },
+    {
+      "name": "PowerShell",
+      "type": "product"
+    },
+    {
+      "name": "WOW64",
+      "type": "concept"
+    },
+    {
+      "name": "Windows Restart Manager",
+      "type": "technique"
+    },
+    {
+      "name": "Cline Beta",
+      "type": "product"
+    },
+    {
+      "name": "上下文管理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline Desktop",
+      "to": "Windows",
+      "label": "运行于"
+    },
+    {
+      "from": "NSIS",
+      "to": "Windows",
+      "label": "用于安装"
+    },
+    {
+      "from": "PowerShell",
+      "to": "WOW64",
+      "label": "运行于"
+    },
+    {
+      "from": "Windows Restart Manager",
+      "to": "Cline Desktop",
+      "label": "修复更新"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "上下文管理",
+      "label": "改进"
+    }
+  ]
+}

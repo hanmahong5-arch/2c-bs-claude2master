@@ -1,0 +1,72 @@
+{
+  "center": "claude-code v2.1.169 更新",
+  "branches": [
+    {
+      "label": "安全模式",
+      "detail": "新增 --safe-mode 标志，禁用所有自定义配置以排查故障",
+      "children": [
+        "复杂环境调试时快速隔离问题源"
+      ]
+    },
+    {
+      "label": "目录切换命令",
+      "detail": "新增 /cd 命令，切换工作目录不中断会话提示缓存",
+      "children": [
+        "利于跨项目保持上下文的 Agent 工作流"
+      ]
+    },
+    {
+      "label": "修复与优化",
+      "detail": "修复企业 MCP 策略未强制执行漏洞及 macOS UI 卡顿",
+      "children": [
+        "重连等场景下 MCP 策略现已强制执行",
+        "解决 macOS 每轮对话初期 UI 卡顿"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "--safe-mode",
+      "type": "concept"
+    },
+    {
+      "name": "/cd",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "修复策略"
+    },
+    {
+      "from": "claude-code",
+      "to": "macOS",
+      "label": "修复卡顿"
+    },
+    {
+      "from": "claude-code",
+      "to": "--safe-mode",
+      "label": "新增"
+    },
+    {
+      "from": "claude-code",
+      "to": "/cd",
+      "label": "新增"
+    }
+  ]
+}

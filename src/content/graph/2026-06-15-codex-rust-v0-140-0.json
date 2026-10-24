@@ -1,0 +1,74 @@
+{
+  "center": "Codex Rust v0.140.0 更新",
+  "branches": [
+    {
+      "label": "会话永久删除",
+      "detail": "新增会话永久删除功能，命令行与 API 均带确认保护机制",
+      "children": [
+        "自动清理子代理",
+        "代理需安全生命周期管理"
+      ]
+    },
+    {
+      "label": "导入 Claude Code",
+      "detail": "支持从 Claude Code 选择性导入配置和最近对话",
+      "children": [
+        "通过 /import 命令实现",
+        "需考虑数据迁移与生态集成"
+      ]
+    },
+    {
+      "label": "安全凭证存储",
+      "detail": "为 Amazon Bedrock 和 CLI/MCP OAuth 添加托管 API 密钥认证与本地加密存储",
+      "children": [
+        "强化多环境凭证安全",
+        "支持可插拔认证后端"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex Rust",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Amazon Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex Rust",
+      "to": "Claude Code",
+      "label": "导入配置"
+    },
+    {
+      "from": "Codex Rust",
+      "to": "Amazon Bedrock",
+      "label": "支持认证"
+    },
+    {
+      "from": "Codex Rust",
+      "to": "MCP",
+      "label": "支持认证"
+    },
+    {
+      "from": "Codex Rust",
+      "to": "OAuth",
+      "label": "支持认证"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "center": "SQL 类比 AI 对开发者的影响",
+  "branches": [
+    {
+      "label": "历史类比",
+      "detail": "SQL 出现前，查询大数据靠 COBOL 程序员写代码",
+      "children": [
+        "COBOL 程序员负责生成查询代码",
+        "SQL 让用户简单指定即可生成代码"
+      ]
+    },
+    {
+      "label": "职业未消失",
+      "detail": "SQL 没有让程序员消失，只是工作内容变了",
+      "children": [
+        "程序员岗位依然存在",
+        "工作方式发生转变"
+      ]
+    },
+    {
+      "label": "AI 的启示",
+      "detail": "类比 AI 对开发者的影响：工具升级而非取代",
+      "children": [
+        "AI 类似当年的 SQL",
+        "开发者角色将转型"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "D. Richard Hipp",
+      "type": "person"
+    },
+    {
+      "name": "SQL",
+      "type": "technique"
+    },
+    {
+      "name": "COBOL",
+      "type": "technique"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "SQL",
+      "to": "COBOL",
+      "label": "取代"
+    },
+    {
+      "from": "D. Richard Hipp",
+      "to": "SQL",
+      "label": "评论"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "D. Richard Hipp",
+      "label": "引用"
+    },
+    {
+      "from": "AI",
+      "to": "SQL",
+      "label": "类比"
+    }
+  ]
+}

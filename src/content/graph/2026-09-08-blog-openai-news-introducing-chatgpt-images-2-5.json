@@ -1,0 +1,59 @@
+{
+  "center": "OpenAI 发布 ChatGPT Images 2.5",
+  "branches": [
+    {
+      "label": "核心能力",
+      "detail": "将想法、草图或参考照片转化为更个性化精致的图像",
+      "children": [
+        "提升图像生成相关性与质量",
+        "支持草图与参考图输入"
+      ]
+    },
+    {
+      "label": "开发者价值",
+      "detail": "图像生成工具更易集成进创意工作流",
+      "children": [
+        "快速原型设计",
+        "内容创作"
+      ]
+    },
+    {
+      "label": "Agent 影响",
+      "detail": "增强多模态能力，可基于视觉输入迭代优化",
+      "children": [
+        "推动更智能的交互应用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Images 2.5",
+      "type": "model"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    },
+    {
+      "name": "多模态",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Images 2.5",
+      "label": "发布"
+    },
+    {
+      "from": "ChatGPT Images 2.5",
+      "to": "多模态",
+      "label": "增强"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "center": "OpenAI 发布 Genebench-Pro",
+  "branches": [
+    {
+      "label": "基准内容",
+      "detail": "包含 100 个精心设计的基因任务，覆盖突变效应预测与基因表达调控等关键领域",
+      "children": [
+        "100 个基因任务",
+        "突变效应预测",
+        "基因表达调控"
+      ]
+    },
+    {
+      "label": "评估标准",
+      "detail": "每个任务配有专家验证的基准数据集和评估指标，保证公平性与可重复性",
+      "children": [
+        "专家验证数据集",
+        "统一评估指标",
+        "可重复对比"
+      ]
+    },
+    {
+      "label": "测试重点",
+      "detail": "强调模型对长序列与复杂调控模式的理解能力",
+      "children": [
+        "长序列理解",
+        "复杂调控模式"
+      ]
+    },
+    {
+      "label": "目标方向",
+      "detail": "推动基因 AI 工具链向更精准、更可解释的方向发展",
+      "children": [
+        "更精准",
+        "更可解释"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Genebench-Pro",
+      "type": "product"
+    },
+    {
+      "name": "基因模型",
+      "type": "concept"
+    },
+    {
+      "name": "突变效应预测",
+      "type": "concept"
+    },
+    {
+      "name": "基因表达调控",
+      "type": "concept"
+    },
+    {
+      "name": "基因组学",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Genebench-Pro",
+      "label": "发布"
+    },
+    {
+      "from": "Genebench-Pro",
+      "to": "基因模型",
+      "label": "评估"
+    },
+    {
+      "from": "Genebench-Pro",
+      "to": "突变效应预测",
+      "label": "覆盖"
+    },
+    {
+      "from": "Genebench-Pro",
+      "to": "基因表达调控",
+      "label": "覆盖"
+    },
+    {
+      "from": "Genebench-Pro",
+      "to": "基因组学",
+      "label": "面向"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "center": "海狮鸬鹚照暗藏北鲣鸟",
+  "branches": [
+    {
+      "label": "拍摄地点",
+      "detail": "作者在加州 Pillar Point Harbor 拍到海狮与鸬鹚",
+      "children": [
+        "Pillar Point Harbor, CA, US"
+      ]
+    },
+    {
+      "label": "意外发现",
+      "detail": "拍完照片后才注意到标志牌后藏着一只北鲣鸟",
+      "children": [
+        "Morris the Northern Gannet 从牌子底部探出"
+      ]
+    },
+    {
+      "label": "物种记录",
+      "detail": "照片中确认了 California Sea Lion 与 Brandt's Cormorant",
+      "children": [
+        "California Sea Lion",
+        "Brandt's Cormorant"
+      ]
+    },
+    {
+      "label": "发布时间",
+      "detail": "记录于 2026 年 9 月 19 日，属作者博客的观鸟随手记",
+      "children": [
+        "19th September 2026"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "California Sea Lion",
+      "type": "concept"
+    },
+    {
+      "name": "Brandt's Cormorant",
+      "type": "concept"
+    },
+    {
+      "name": "Morris the Northern Gannet",
+      "type": "concept"
+    },
+    {
+      "name": "Pillar Point Harbor",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Pillar Point Harbor",
+      "label": "拍摄于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "California Sea Lion",
+      "label": "拍到"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Brandt's Cormorant",
+      "label": "拍到"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Morris the Northern Gannet",
+      "label": "事后发现"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "center": "Replit 免费模式用 GPT-5.6 Luna",
+  "branches": [
+    {
+      "label": "免费模式上线",
+      "detail": "Replit 推出 Free Mode，由 GPT-5.6 Luna 驱动，用户无需担心 token 成本",
+      "children": [
+        "面向数百万用户开放",
+        "OpenAI 近期降价是关键前提"
+      ]
+    },
+    {
+      "label": "先构思再构建",
+      "detail": "Free Mode 中 Agent 理解项目上下文，可快速给出答案、建议、反馈与分析",
+      "children": [
+        "帮助规划、构思、优化、探索想法",
+        "探索与创建在同一环境完成"
+      ]
+    },
+    {
+      "label": "模型路由机制",
+      "detail": "任务需要更强推理时路由到 GPT-5.6 Sol，完成后回到 Luna 并保留项目上下文",
+      "children": [
+        "GPT-5.6 Luna 负责 Free Mode",
+        "GPT-5.6 Sol 负责高级推理"
+      ]
+    },
+    {
+      "label": "合作与愿景",
+      "detail": "Replit 与 OpenAI 长期合作，从 GPT-3 早期用户到如今 Free Mode",
+      "children": [
+        "Amjad Masad：软件是赋权工具",
+        "Sam Altman：或迎创业复兴"
+      ]
+    }
+  ],
+  "flow": [
+    "用户在 Free Mode 提出想法",
+    "Agent 结合项目上下文分析",
+    "规划、构思与优化方案",
+    "需要时路由至 GPT-5.6 Sol",
+    "回到 Luna 并保留上下文",
+    "进入 Build Mode 构建软件"
+  ],
+  "entities": [
+    {
+      "name": "Replit",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Free Mode",
+      "type": "product"
+    },
+    {
+      "name": "Amjad Masad",
+      "type": "person"
+    },
+    {
+      "name": "Sam Altman",
+      "type": "person"
+    },
+    {
+      "name": "GPT-3",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Replit",
+      "to": "GPT-5.6 Luna",
+      "label": "采用"
+    },
+    {
+      "from": "Replit",
+      "to": "OpenAI",
+      "label": "合作"
+    },
+    {
+      "from": "GPT-5.6 Luna",
+      "to": "Free Mode",
+      "label": "驱动"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "Free Mode",
+      "label": "承接高级推理"
+    },
+    {
+      "from": "Amjad Masad",
+      "to": "Replit",
+      "label": "联合创始人兼…"
+    },
+    {
+      "from": "Sam Altman",
+      "to": "OpenAI",
+      "label": "CEO"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "center": "OpenClaw 转型非营利基金会",
+  "branches": [
+    {
+      "label": "基金会定位",
+      "detail": "成为 501(c)(3) 美国非营利组织，中立守护 OpenClaw 保持 MIT 开源与独立",
+      "children": [
+        "对标 Linux、Apache、Mozilla 的中立治理",
+        "Peter 继续主导技术决策，OpenAI 承诺其独立"
+      ]
+    },
+    {
+      "label": "愿景与使命",
+      "detail": "让个人 AI 跑在用户自己的机器上，只服务于用户本人",
+      "children": [
+        "每周新增 450 万 claws",
+        "GitHub 史上增长最快仓库",
+        "目标是成为 AI 界的瑞士"
+      ]
+    },
+    {
+      "label": "全职团队",
+      "detail": "首次组建全职团队，来自全球社区的开源维护者",
+      "children": [
+        "Vincent Koc 任首席架构师",
+        "运营岗含合作、财务、社区、招聘",
+        "开放技术、设计、DevRel 等职位"
+      ]
+    },
+    {
+      "label": "合作伙伴",
+      "detail": "与 30 多家机构日常协作，覆盖各大 AI 实验室与云平台",
+      "children": [
+        "NVIDIA 发布 NemoClaw，一条命令私有部署",
+        "Microsoft 推出企业级 Microsoft Scout",
+        "密歇根大学成立 Institute for Agentic…"
+      ]
+    },
+    {
+      "label": "生态与工具",
+      "detail": "从单一项目扩展为完整 claw 生态，覆盖用户与开发者体验",
+      "children": [
+        "ClawSweeper、Crabbox、Crabfleet 等工具",
+        "ClawHub 是最大的 agent 技能共享社区之一"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw Foundation",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "NemoClaw",
+      "type": "product"
+    },
+    {
+      "name": "Microsoft Scout",
+      "type": "product"
+    },
+    {
+      "name": "ClawHub",
+      "type": "product"
+    },
+    {
+      "name": "Peter",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw Foundation",
+      "to": "OpenClaw",
+      "label": "中立守护"
+    },
+    {
+      "from": "OpenAI",
+      "to": "OpenClaw Foundation",
+      "label": "主要捐赠"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "NemoClaw",
+      "label": "发布"
+    },
+    {
+      "from": "Microsoft Scout",
+      "to": "OpenClaw",
+      "label": "基于构建"
+    },
+    {
+      "from": "Peter",
+      "to": "OpenClaw",
+      "label": "创建并主导"
+    },
+    {
+      "from": "ClawHub",
+      "to": "OpenClaw",
+      "label": "生态组成"
+    }
+  ]
+}

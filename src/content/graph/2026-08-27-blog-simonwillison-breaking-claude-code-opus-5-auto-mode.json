@@ -1,0 +1,105 @@
+{
+  "center": "Claude Code Auto Mode 被绕过",
+  "branches": [
+    {
+      "label": "攻击手法",
+      "detail": "诱导 Claude Code 下载解压 zip，执行 base64 导入本地 struct.py",
+      "children": [
+        "成功率约 80%",
+        "由 Johann Rehberger 发现",
+        "非典型提示注入，属混淆环境攻击"
+      ]
+    },
+    {
+      "label": "安全机制反噬",
+      "detail": "Auto Mode 放行恶意进程，却拦截 Claude 的清理命令",
+      "children": [
+        "Claude 已察觉被入侵",
+        "清理命令被 Auto Mode 拒绝",
+        "分类器成为失败一环"
+      ]
+    },
+    {
+      "label": "Anthropic 的信任",
+      "detail": "Anthropic 将 Auto Mode 设为默认并高调宣称其有效性",
+      "children": [
+        "用于防御提示注入",
+        "保护编码 agent 用户"
+      ]
+    },
+    {
+      "label": "缓解建议",
+      "detail": "Simon Willison 认同：有对抗风险时必须用沙箱",
+      "children": [
+        "容器/VM/OS 沙箱运行",
+        "限制网络出口",
+        "不暴露家目录、SSH 密钥、云凭证"
+      ]
+    }
+  ],
+  "flow": [
+    "诱导下载 zip",
+    "解压释放 struct.py",
+    "base64 导入执行",
+    "恶意进程创建",
+    "Claude 察觉入侵",
+    "清理命令被拦截"
+  ],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Auto Mode",
+      "type": "concept"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Johann Rehberger",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "prompt injection",
+      "type": "concept"
+    },
+    {
+      "name": "sandbox",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Johann Rehberger",
+      "to": "Auto Mode",
+      "label": "发现绕过"
+    },
+    {
+      "from": "Auto Mode",
+      "to": "Claude Code",
+      "label": "默认启用"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Auto Mode",
+      "label": "设为默认"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "sandbox",
+      "label": "建议采用"
+    },
+    {
+      "from": "Auto Mode",
+      "to": "prompt injection",
+      "label": "宣称防御"
+    }
+  ]
+}

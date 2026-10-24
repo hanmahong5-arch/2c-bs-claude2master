@@ -1,0 +1,65 @@
+{
+  "center": "Gemini CLI v0.47.0 更新",
+  "branches": [
+    {
+      "label": "模型映射改进",
+      "detail": "自动模式启用标志时改用 Gemini 3.5 Flash，需正确解析后端配置",
+      "children": [
+        "自动模式使用 Gemini 3.5 Flash",
+        "Agent Harness 需传递后端标志"
+      ]
+    },
+    {
+      "label": "修复工具发现",
+      "detail": "实现 MCP 工具发现的原子更新，解决核心中的竞态条件",
+      "children": [
+        "MCP 工具发现原子更新",
+        "修复竞态条件"
+      ]
+    },
+    {
+      "label": "优化会话管理",
+      "detail": "不再持久化空的恢复会话，过滤无效状态以节省存储",
+      "children": [
+        "避免保存空恢复会话",
+        "过滤无效状态"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Gemini CLI",
+      "type": "product"
+    },
+    {
+      "name": "Gemini 3.5 Flash",
+      "type": "model"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemini CLI",
+      "to": "Gemini 3.5 Flash",
+      "label": "使用"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "MCP",
+      "label": "集成"
+    },
+    {
+      "from": "Agent Harness",
+      "to": "Gemini 3.5 Flash",
+      "label": "解析配置"
+    }
+  ]
+}

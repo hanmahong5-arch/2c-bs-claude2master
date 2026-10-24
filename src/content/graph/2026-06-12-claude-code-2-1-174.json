@@ -1,0 +1,73 @@
+{
+  "center": "claude-code v2.1.174 修复",
+  "branches": [
+    {
+      "label": "修复关键错误",
+      "detail": "本版集中修复多项影响稳定性的错误",
+      "children": [
+        "禁用全屏模式鼠标滚轮加速",
+        "修复后台会话环境变量继承",
+        "防止会话间认证信息污染"
+      ]
+    },
+    {
+      "label": "优化模型选择器",
+      "detail": "修正显示逻辑，计划类型与默认模型家族对应",
+      "children": [
+        "计划类型与默认模型家族正确对应",
+        "产品配置与计费计划深度绑定"
+      ]
+    },
+    {
+      "label": "企业级稳定性",
+      "detail": "提升企业级部署稳定性与使用体验",
+      "children": [
+        "多进程架构下环境隔离是关键",
+        "会话间认证信息不再污染"
+      ]
+    },
+    {
+      "label": "交互体验",
+      "detail": "允许用户关闭滚轮加速，精细控制滚动行为",
+      "children": [
+        "界面交互考虑滚动行为控制需求"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "模型选择器",
+      "type": "concept"
+    },
+    {
+      "name": "环境变量继承",
+      "type": "concept"
+    },
+    {
+      "name": "企业级部署",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "模型选择器",
+      "label": "优化"
+    },
+    {
+      "from": "claude-code",
+      "to": "环境变量继承",
+      "label": "修复"
+    },
+    {
+      "from": "claude-code",
+      "to": "企业级部署",
+      "label": "提升"
+    }
+  ]
+}

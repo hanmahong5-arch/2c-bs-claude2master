@@ -1,0 +1,96 @@
+{
+  "center": "Claude Code v2.1.239 更新",
+  "branches": [
+    {
+      "label": "成本估算变化",
+      "detail": "成本估算现包含 1.1× 美国数据驻留溢价",
+      "children": [
+        "影响 /cost、状态行和预算限制"
+      ]
+    },
+    {
+      "label": "全屏渲染器",
+      "detail": "Bedrock、Vertex 等新增全屏渲染器，新安装默认全屏",
+      "children": []
+    },
+    {
+      "label": "关键 bug 修复",
+      "detail": "修复多项导致重复计费、延迟、挂起的问题",
+      "children": [
+        "Bedrock 代理剥离 Content-Type 导致重复计费",
+        "代理下 SSO 启动挂起",
+        "JetBrains 终端 Edit/Write 延迟 5 秒"
+      ]
+    },
+    {
+      "label": "API 迁移",
+      "detail": "新增 /claude-api upgrade 迁移 anthropic 0.x 到 1.x",
+      "children": [
+        "超时使用 anthropic.Timeout"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    },
+    {
+      "name": "JetBrains",
+      "type": "product"
+    },
+    {
+      "name": "WebFetch",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "anthropic",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Bedrock",
+      "label": "支持"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Vertex",
+      "label": "支持"
+    },
+    {
+      "from": "Claude Code",
+      "to": "JetBrains",
+      "label": "集成"
+    },
+    {
+      "from": "Claude Code",
+      "to": "WebFetch",
+      "label": "包含"
+    },
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "Claude Code",
+      "to": "anthropic",
+      "label": "迁移"
+    }
+  ]
+}

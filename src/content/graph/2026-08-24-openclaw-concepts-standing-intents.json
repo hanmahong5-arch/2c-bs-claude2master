@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw 事件触发记忆",
+  "branches": [
+    {
+      "label": "什么是 standing intent",
+      "detail": "事件条件式指令，触发词出现时提醒，而非按时间调度",
+      "children": [
+        "示例：提到发布候选时提醒确认回滚负责人",
+        "属于前瞻记忆，存在 agent 的 SQLite 中",
+        "与定时任务、愿望清单分属不同层级"
+      ]
+    },
+    {
+      "label": "创建与权限",
+      "detail": "仅认证频道所有者可用 intent 工具创建，管理员与 CLI 只能查看取消",
+      "children": [
+        "默认范围：当前频道与发送者",
+        "默认冷却 24 小时、最多触发 3 次、90 天过期",
+        "缺认证身份时拒绝创建"
+      ]
+    },
+    {
+      "label": "匹配机制",
+      "detail": "用 FTS 关键词预过滤，无模型调用，命中后注入隐藏上下文",
+      "children": [
+        "每个触发条目所有词都出现才命中",
+        "每轮最多扫描 256 个候选",
+        "同步事务复查范围、过期、冷却与预算"
+      ]
+    },
+    {
+      "label": "生命周期",
+      "detail": "pending→armed→fired→done/cancelled/expired，冷却后才能再次触发",
+      "children": [
+        "取消必须显式，不靠模型推断",
+        "过期与冷却复用 heartbeat/cron 钩子",
+        "存储于 openclaw-agent.sqlite，无额外配置"
+      ]
+    },
+    {
+      "label": "设计依据",
+      "detail": "TriggerBench 指出前瞻回忆随上下文增长而衰减，结构匹配与触发预算可抑制误报",
+      "children": [
+        "ProEvent 报告主动系统常过度反应、取消困难",
+        "因此取消是持久状态而非模型判断"
+      ]
+    }
+  ],
+  "flow": [
+    "用户提出事件触发需求",
+    "agent 用 intent 工具创建",
+    "写入 SQLite 并进入 armed",
+    "用户轮次 FTS 关键词匹配",
+    "命中后注入隐藏上下文",
+    "更新计数并进入冷却"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "standing intent",
+      "type": "concept"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "FTS",
+      "type": "technique"
+    },
+    {
+      "name": "TriggerBench",
+      "type": "concept"
+    },
+    {
+      "name": "ProEvent",
+      "type": "concept"
+    },
+    {
+      "name": "MEMORY.md",
+      "type": "product"
+    },
+    {
+      "name": "intent tool",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "standing intent",
+      "label": "存储"
+    },
+    {
+      "from": "standing intent",
+      "to": "SQLite",
+      "label": "存于"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "FTS",
+      "label": "使用"
+    },
+    {
+      "from": "intent tool",
+      "to": "standing intent",
+      "label": "创建"
+    },
+    {
+      "from": "TriggerBench",
+      "to": "standing intent",
+      "label": "评估"
+    },
+    {
+      "from": "ProEvent",
+      "to": "standing intent",
+      "label": "佐证"
+    }
+  ]
+}

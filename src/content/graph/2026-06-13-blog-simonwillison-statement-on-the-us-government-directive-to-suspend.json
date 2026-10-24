@@ -1,0 +1,122 @@
+{
+  "center": "美政府封禁 Anthropic 模型",
+  "branches": [
+    {
+      "label": "封禁指令",
+      "detail": "美政府以国家安全为由下令暂停 Fable 5 与 Mythos 5 所有访问",
+      "children": [
+        "涵盖境内外所有外国公民",
+        "含 Anthropic 外籍员工",
+        "其他 Anthropic 模型不受影响"
+      ]
+    },
+    {
+      "label": "Anthropic 回应",
+      "detail": "为合规被迫对所有客户立即停用这两款模型",
+      "children": [
+        "6月12日17:21 ET 收到指令",
+        "政府未提供具体国安细节",
+        "24小时内公布更多信息"
+      ]
+    },
+    {
+      "label": "越狱争议",
+      "detail": "政府称发现绕过 Fable 5 的越狱方法",
+      "children": [
+        "演示仅发现少量已知小漏洞",
+        "其他公开模型也能发现",
+        "仅口头证据，非通用越狱"
+      ]
+    },
+    {
+      "label": "能力质疑",
+      "detail": "Anthropic 称该能力在 GPT-5.5 等模型上普遍可得",
+      "children": [
+        "越狱本质是让模型读代码库修漏洞",
+        "防御者日常即用此能力",
+        "非 Fable 5 独有"
+      ]
+    },
+    {
+      "label": "实测断供",
+      "detail": "Simon Willison 用脚本监测 API 何时失效",
+      "children": [
+        "18:59 PT 第37次尝试失败",
+        "返回 404 not_found_error",
+        "提示改用 Opus 4.8"
+      ]
+    }
+  ],
+  "flow": [
+    "政府发出出口管制指令",
+    "Anthropic 收到并评估合规",
+    "停用 Fable 5 与 Mythos 5",
+    "用户 API 访问被切断"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "US government",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "jailbreaking",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "US government",
+      "to": "Fable 5",
+      "label": "下令封禁"
+    },
+    {
+      "from": "US government",
+      "to": "Mythos 5",
+      "label": "下令封禁"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Fable 5",
+      "label": "停用"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Mythos 5",
+      "label": "停用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Fable 5",
+      "label": "监测访问"
+    },
+    {
+      "from": "jailbreaking",
+      "to": "Fable 5",
+      "label": "绕过"
+    }
+  ]
+}

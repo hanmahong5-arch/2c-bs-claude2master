@@ -1,0 +1,108 @@
+{
+  "center": "OpenAI 免费开放 ChatGPT 给学者",
+  "branches": [
+    {
+      "label": "免费开放计划",
+      "detail": "OpenAI 向 10 万学术研究者免费提供 ChatGPT 高级模型",
+      "children": [
+        "覆盖 10 万名学术研究者"
+      ]
+    },
+    {
+      "label": "可用模型",
+      "detail": "提供 GPT-4o、o1 等模型访问权限",
+      "children": [
+        "支持多模态输入",
+        "支持复杂推理"
+      ]
+    },
+    {
+      "label": "科研用途",
+      "detail": "帮助研究者处理文献、分析数据、撰写论文",
+      "children": [
+        "辅助假设生成",
+        "辅助实验设计",
+        "辅助结果解读"
+      ]
+    },
+    {
+      "label": "定位与边界",
+      "detail": "AI 作为协作工具，而非替代人类创造力",
+      "children": [
+        "强调协作而非替代"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "学术场景 AI 应用需求激增，需关注隐私与适配",
+      "children": [
+        "数据隐私",
+        "模型可解释性",
+        "领域适配性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "GPT-4o",
+      "type": "model"
+    },
+    {
+      "name": "o1",
+      "type": "model"
+    },
+    {
+      "name": "学术研究者",
+      "type": "concept"
+    },
+    {
+      "name": "多模态输入",
+      "type": "concept"
+    },
+    {
+      "name": "复杂推理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "提供"
+    },
+    {
+      "from": "OpenAI",
+      "to": "学术研究者",
+      "label": "免费开放"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "GPT-4o",
+      "label": "包含"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "o1",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-4o",
+      "to": "多模态输入",
+      "label": "支持"
+    },
+    {
+      "from": "o1",
+      "to": "复杂推理",
+      "label": "支持"
+    }
+  ]
+}

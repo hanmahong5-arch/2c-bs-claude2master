@@ -1,0 +1,78 @@
+{
+  "center": "Claude Code v2.1.163 更新",
+  "branches": [
+    {
+      "label": "版本范围管控",
+      "detail": "管理员可设定允许运行的版本范围，版本不符则拒绝启动",
+      "children": [
+        "引导用户使用批准版本",
+        "强化企业版本合规与安全"
+      ]
+    },
+    {
+      "label": "插件列表命令",
+      "detail": "新增 /plugin list 命令列出已安装插件",
+      "children": [
+        "支持按启用/禁用状态筛选",
+        "便于管理插件与排查依赖"
+      ]
+    },
+    {
+      "label": "后台进程修复",
+      "detail": "修复 claude -p 后台命令不退出时永久挂起的问题",
+      "children": [
+        "提升长时间运行任务可靠性"
+      ]
+    },
+    {
+      "label": "会话静默升级",
+      "detail": "后台代理会话在 Claude Code 更新后可后台静默升级",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "版本范围管控",
+      "type": "concept"
+    },
+    {
+      "name": "/plugin list",
+      "type": "technique"
+    },
+    {
+      "name": "claude -p",
+      "type": "technique"
+    },
+    {
+      "name": "插件管理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "版本范围管控",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "/plugin list",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "claude -p",
+      "label": "修复"
+    },
+    {
+      "from": "/plugin list",
+      "to": "插件管理",
+      "label": "服务于"
+    }
+  ]
+}

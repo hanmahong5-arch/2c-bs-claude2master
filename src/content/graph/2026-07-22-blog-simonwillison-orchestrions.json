@@ -1,0 +1,58 @@
+{
+  "center": "15美元掌控博物馆声音景观",
+  "branches": [
+    {
+      "label": "低成本激活",
+      "detail": "约15美元即可激活Musée Mécanique所有Orchestrion",
+      "children": [
+        "10美元25美分硬币",
+        "5美元纸币用于自动演奏小提琴"
+      ]
+    },
+    {
+      "label": "独占声音景观",
+      "detail": "多数人不会分配资金，你可能成为唯一激活者",
+      "children": [
+        "独自掌控整个博物馆的声音"
+      ]
+    },
+    {
+      "label": "地点与时间",
+      "detail": "旧金山Musée Mécanique，2026年7月22日",
+      "children": [
+        "Simon Willison博客笔记"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Musée Mécanique",
+      "type": "company"
+    },
+    {
+      "name": "Orchestrion",
+      "type": "product"
+    },
+    {
+      "name": "San Francisco",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Musée Mécanique",
+      "label": "发布笔记"
+    },
+    {
+      "from": "Musée Mécanique",
+      "to": "Orchestrion",
+      "label": "收藏"
+    }
+  ]
+}

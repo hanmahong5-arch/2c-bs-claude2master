@@ -1,0 +1,117 @@
+{
+  "center": "新模型发布与价格战",
+  "branches": [
+    {
+      "label": "GPT-6 双发",
+      "detail": "OpenAI 发布 GPT-6 Sol 与 Luna，价格仅为 GPT-5.6 同级一半",
+      "children": [
+        "Luna 输入 $0.10/M，输出 $0.50/M",
+        "Sol 输入 $2/M，输出 $10/M",
+        "GPT-5.6 十一月将涨价 25%"
+      ]
+    },
+    {
+      "label": "Opus 5.5 降价",
+      "detail": "Anthropic 发布 Opus 5.5，价格较 Opus 5.0 降 20%，缓存读取降 60%",
+      "children": [
+        "输入 $4/M，输出 $20/M",
+        "沟通风格改善，token 效率更高",
+        "Sonnet 5.5 与 Haiku 5.5 即将推出"
+      ]
+    },
+    {
+      "label": "max 档翻车",
+      "detail": "Opus 5.5 在 max 思考档因过度思考耗尽 128K 输出上限而失败",
+      "children": [
+        "两次尝试均未返回结果",
+        "每次花费 $2.56、耗时近 20 分钟",
+        "Fable 5.1 max 档正常并画出最佳鹈鹕"
+      ]
+    },
+    {
+      "label": "价格对比",
+      "detail": "当前各模型定价一览，价格战集中在次旗舰层级",
+      "children": [
+        "Grok 4.7 为 $2/$6",
+        "GPT-6 Astra 与 Fable 5.1 均为 $10/$50",
+        "Haiku 4.5 为 $1/$5，是 Luna 的十倍"
+      ]
+    },
+    {
+      "label": "作者用法",
+      "detail": "Simon Willison 更新默认模型与演示项目",
+      "children": [
+        "Codex 默认 GPT-6 Sol",
+        "Claude Code 默认 Opus 5.5",
+        "Datasette Agent 演示改用 GPT-6 Luna"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Claude Opus 5.5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "GPT-6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5.1",
+      "type": "model"
+    },
+    {
+      "name": "Grok 4.7",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Opus 5.5",
+      "label": "发布"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Sol",
+      "label": "发布"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Luna",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-6 Sol",
+      "label": "设为默认"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Opus 5.5",
+      "label": "设为默认"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-6 Luna",
+      "label": "用于演示"
+    }
+  ]
+}

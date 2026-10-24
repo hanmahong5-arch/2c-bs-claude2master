@@ -1,0 +1,75 @@
+{
+  "center": "Thinking Machines 发布 Inkling",
+  "branches": [
+    {
+      "label": "原生多模态",
+      "detail": "Inkling 原生支持文本、图像、音频三种模态输入",
+      "children": [
+        "文本、视觉、音频统一处理",
+        "开源开放权重发布"
+      ]
+    },
+    {
+      "label": "MoE 架构",
+      "detail": "采用 MoE 架构，内置可变且可控的思考强度",
+      "children": [
+        "可变思考努力",
+        "可控思考强度",
+        "12B 激活参数小版本"
+      ]
+    },
+    {
+      "label": "开源意义",
+      "detail": "开放权重多模态模型被视为开源 AI 生态的重要进展",
+      "children": [
+        "利于微调",
+        "适合本地 agent 工作流"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Thinking Machines",
+      "type": "company"
+    },
+    {
+      "name": "Inkling",
+      "type": "model"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "MoE",
+      "type": "technique"
+    },
+    {
+      "name": "多模态",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Thinking Machines",
+      "to": "Inkling",
+      "label": "发布"
+    },
+    {
+      "from": "Inkling",
+      "to": "MoE",
+      "label": "采用"
+    },
+    {
+      "from": "Inkling",
+      "to": "多模态",
+      "label": "支持"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Inkling",
+      "label": "收录"
+    }
+  ]
+}

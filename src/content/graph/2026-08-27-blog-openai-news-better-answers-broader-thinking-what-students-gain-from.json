@@ -1,0 +1,85 @@
+{
+  "center": "ChatGPT 提升学生原创性",
+  "branches": [
+    {
+      "label": "随机试验结果",
+      "detail": "OpenAI 对 1000 多名学生做随机试验，评估 ChatGPT 对真实大学作业的影响",
+      "children": [
+        "使用 ChatGPT 的学生批判性思维显著提升",
+        "作业原创性同样显著提升"
+      ]
+    },
+    {
+      "label": "关键在训练",
+      "detail": "教学生如何有效使用 ChatGPT，包括提问与验证信息，才能增强分析能力",
+      "children": [
+        "训练内容含提问技巧",
+        "训练内容含信息验证",
+        "避免直接依赖 AI 生成内容"
+      ]
+    },
+    {
+      "label": "对开发者的启示",
+      "detail": "AI 工具设计应引导用户思考，而非只给答案，工具链需集成批判性思维支持",
+      "children": [
+        "设计目标是引导思考",
+        "未来工具链集成批判性思维支持"
+      ]
+    }
+  ],
+  "flow": [
+    "学生接受使用训练",
+    "用 ChatGPT 完成作业",
+    "提问并验证信息",
+    "批判性思维与原创性提升"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "批判性思维",
+      "type": "concept"
+    },
+    {
+      "name": "原创性",
+      "type": "concept"
+    },
+    {
+      "name": "随机试验",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "开发"
+    },
+    {
+      "from": "OpenAI",
+      "to": "随机试验",
+      "label": "开展"
+    },
+    {
+      "from": "随机试验",
+      "to": "ChatGPT",
+      "label": "评估"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "批判性思维",
+      "label": "提升"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "原创性",
+      "label": "提升"
+    }
+  ]
+}

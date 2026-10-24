@@ -1,0 +1,101 @@
+{
+  "center": "Codex 0.149.0 更新",
+  "branches": [
+    {
+      "label": "agents 仪表盘",
+      "detail": "新增交互式仪表盘，可搜索、启动、打开、重命名和停止任务",
+      "children": [
+        "支持自定义快捷键",
+        "任务管理从 CLI 转向可视化"
+      ]
+    },
+    {
+      "label": "queue 队列命令",
+      "detail": "可向本地或远程会话发送消息，队列消息能唤醒空闲会话",
+      "children": [
+        "支持异步消息投递",
+        "需处理会话命名冲突"
+      ]
+    },
+    {
+      "label": "Vim 编辑增强",
+      "detail": "扩展 Vim 编辑能力，支持字符替换及 cw、c$、cc 等变更动作",
+      "children": [
+        "TUI 编辑体验增强",
+        "需适配不同编辑模式"
+      ]
+    },
+    {
+      "label": "doctor 诊断扩展",
+      "detail": "新增诊断项，覆盖端点保护、网络/代理故障、桌面应用状态和更新连接",
+      "children": [
+        "便于排查环境问题"
+      ]
+    },
+    {
+      "label": "SDK 配置覆盖",
+      "detail": "SDK 支持传递精确 CLI 配置覆盖，并可选择 max 或 ultra 推理强度",
+      "children": [
+        "需确保参数正确传递"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "codex agents",
+      "type": "product"
+    },
+    {
+      "name": "codex queue",
+      "type": "product"
+    },
+    {
+      "name": "codex doctor",
+      "type": "product"
+    },
+    {
+      "name": "Vim",
+      "type": "product"
+    },
+    {
+      "name": "SDK",
+      "type": "concept"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "codex agents",
+      "label": "新增"
+    },
+    {
+      "from": "Codex",
+      "to": "codex queue",
+      "label": "新增"
+    },
+    {
+      "from": "Codex",
+      "to": "codex doctor",
+      "label": "扩展"
+    },
+    {
+      "from": "Codex",
+      "to": "Vim",
+      "label": "增强"
+    },
+    {
+      "from": "Codex",
+      "to": "SDK",
+      "label": "支持"
+    }
+  ]
+}

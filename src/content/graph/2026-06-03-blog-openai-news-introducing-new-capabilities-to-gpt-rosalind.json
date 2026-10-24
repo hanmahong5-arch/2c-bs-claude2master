@@ -1,0 +1,83 @@
+{
+  "center": "GPT-Rosalind 新能力发布",
+  "branches": [
+    {
+      "label": "生物推理增强",
+      "detail": "模型能更深入进行生物学逻辑推理，解析复杂机制并提出假设",
+      "children": [
+        "提升科学假设可靠性",
+        "解析复杂生物机制"
+      ]
+    },
+    {
+      "label": "药物化学整合",
+      "detail": "具备更专业药物化学知识，辅助化合物评估与药物设计优化",
+      "children": [
+        "快速评估化合物性质",
+        "优化药物设计流程"
+      ]
+    },
+    {
+      "label": "基因组学与实验支持",
+      "detail": "支持复杂基因组数据分析与实验步骤规划，覆盖数据到实验工作流",
+      "children": [
+        "复杂基因组数据分析",
+        "实验步骤规划辅助"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-Rosalind",
+      "type": "model"
+    },
+    {
+      "name": "生物推理",
+      "type": "concept"
+    },
+    {
+      "name": "药物化学",
+      "type": "concept"
+    },
+    {
+      "name": "基因组学",
+      "type": "concept"
+    },
+    {
+      "name": "生命科学",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-Rosalind",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-Rosalind",
+      "to": "生物推理",
+      "label": "增强"
+    },
+    {
+      "from": "GPT-Rosalind",
+      "to": "药物化学",
+      "label": "整合"
+    },
+    {
+      "from": "GPT-Rosalind",
+      "to": "基因组学",
+      "label": "支持"
+    },
+    {
+      "from": "GPT-Rosalind",
+      "to": "生命科学",
+      "label": "应用于"
+    }
+  ]
+}

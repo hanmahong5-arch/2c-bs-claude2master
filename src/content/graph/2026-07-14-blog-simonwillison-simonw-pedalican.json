@@ -1,0 +1,109 @@
+{
+  "center": "Codex Desktop 自定义宠物",
+  "branches": [
+    {
+      "label": "意外发现",
+      "detail": "Simon Willison 误激活 Codex Desktop 宠物，得知可自定义",
+      "children": [
+        "宠物是类似 Clippy 的动画机器人",
+        "5 月首次公布时他未留意"
+      ]
+    },
+    {
+      "label": "制作过程",
+      "detail": "GPT-5.6 Sol xhigh 主导，多轮调用 gpt-image-2 生成素材",
+      "children": [
+        "宠物名 Pedalican 由 GPT-5.6 Sol 起",
+        "形象为骑自行车的鹈鹕"
+      ]
+    },
+    {
+      "label": "素材与记录",
+      "detail": "GitHub 仓库收录全部中间步骤与生成图",
+      "children": [
+        "含每张生成图与合成 sprite sheet",
+        "含各动画循环 GIF，如 waving.gif"
+      ]
+    },
+    {
+      "label": "提示词结构",
+      "detail": "先生成角色参考图，再据此生成单帧动画图",
+      "children": [
+        "纯品红 #FF00FF 抠像背景",
+        "尺寸 192x208，便于动画"
+      ]
+    },
+    {
+      "label": "开源实现",
+      "detail": "关键技能开源，均为 Apache 2.0 许可",
+      "children": [
+        "openai/skills 的 hatch-pet",
+        "openai/codex 的 imagegen"
+      ]
+    }
+  ],
+  "flow": [
+    "激活 Codex Desktop 宠物",
+    "提出自定义宠物需求",
+    "生成角色参考图",
+    "生成单帧动画图",
+    "合成 sprite sheet 与 GIF"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Codex Desktop",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "gpt-image-2",
+      "type": "model"
+    },
+    {
+      "name": "Pedalican",
+      "type": "concept"
+    },
+    {
+      "name": "hatch-pet",
+      "type": "technique"
+    },
+    {
+      "name": "imagegen",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Codex Desktop",
+      "label": "激活宠物"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "gpt-image-2",
+      "label": "多轮调用"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "Pedalican",
+      "label": "命名"
+    },
+    {
+      "from": "hatch-pet",
+      "to": "Codex Desktop",
+      "label": "用于创建"
+    },
+    {
+      "from": "imagegen",
+      "to": "gpt-image-2",
+      "label": "封装调用"
+    }
+  ]
+}

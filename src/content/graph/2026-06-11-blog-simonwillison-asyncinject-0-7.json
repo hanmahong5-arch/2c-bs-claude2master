@@ -1,0 +1,80 @@
+{
+  "center": "asyncinject 0.7 发布",
+  "branches": [
+    {
+      "label": "库的用途",
+      "detail": "用 pytest-fixtures 风格依赖注入运行异步工作流",
+      "children": [
+        "支持 asyncio 依赖注入模式"
+      ]
+    },
+    {
+      "label": "作者与背景",
+      "detail": "Simon Willison 几年前为支持 Datasette 而构建",
+      "children": [
+        "与 Datasette 配合使用"
+      ]
+    },
+    {
+      "label": "本次更新",
+      "detail": "Claude Fable 5 发现依赖中的 bug 并修复",
+      "children": [
+        "作者称其非常主动"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "asyncinject",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "asyncio",
+      "type": "technique"
+    },
+    {
+      "name": "依赖注入",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "asyncinject",
+      "label": "构建"
+    },
+    {
+      "from": "asyncinject",
+      "to": "Datasette",
+      "label": "支持"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "asyncinject",
+      "label": "修复 bug"
+    },
+    {
+      "from": "asyncinject",
+      "to": "asyncio",
+      "label": "基于"
+    },
+    {
+      "from": "asyncinject",
+      "to": "依赖注入",
+      "label": "实现"
+    }
+  ]
+}

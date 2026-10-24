@@ -1,0 +1,59 @@
+{
+  "center": "Codex 0.149.1 补丁发布",
+  "branches": [
+    {
+      "label": "补丁性质",
+      "detail": "本次为补丁版本，基于 0.149.0 的修复更新",
+      "children": [
+        "修复问题并优化稳定性"
+      ]
+    },
+    {
+      "label": "对 agent harness 影响",
+      "detail": "补丁发布意味着需关注依赖锁定和回归测试",
+      "children": [
+        "依赖锁定",
+        "回归测试"
+      ]
+    },
+    {
+      "label": "集成建议",
+      "detail": "集成前查看完整变更日志，评估对现有工作流的影响",
+      "children": [
+        "查看完整变更日志",
+        "评估工作流影响"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "0.149.0",
+      "type": "product"
+    },
+    {
+      "name": "0.149.1",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "0.149.1",
+      "to": "0.149.0",
+      "label": "基于修复"
+    },
+    {
+      "from": "Codex",
+      "to": "0.149.1",
+      "label": "发布"
+    }
+  ]
+}

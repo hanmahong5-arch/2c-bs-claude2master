@@ -1,0 +1,99 @@
+{
+  "center": "GitHub CI 迁移到 HF Jobs",
+  "branches": [
+    {
+      "label": "迁移主题",
+      "detail": "Hugging Face 官方博客教用户把 GitHub CI 迁到 HF Jobs 平台",
+      "children": [
+        "标题：Migrating Your GitHub CI to…"
+      ]
+    },
+    {
+      "label": "用户抱怨",
+      "detail": "用户 k-l-lambda 称 GitHub CI 免费无限制，HF 上连 3 个 CPU Space 都跑不了",
+      "children": [
+        "GitHub CI is limitless and free",
+        "HF 上无法运行超过 3 个 CPU Spaces"
+      ]
+    },
+    {
+      "label": "报错与配额",
+      "detail": "用户贴出 403 错误，提示已达 cpu-basic 配额上限，需升级或暂停旧 Space",
+      "children": [
+        "403 cpu-basic quota limit",
+        "建议升级账户或暂停已有 Spaces"
+      ]
+    },
+    {
+      "label": "官方回应",
+      "detail": "Hugging Face 员工 Abubakar Abid 确认非 PRO 账户存在该限制，建议升级 PRO",
+      "children": [
+        "非 PRO 账户有此限制",
+        "推荐升级到 PRO"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "GitHub CI",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face Jobs",
+      "type": "product"
+    },
+    {
+      "name": "Spaces",
+      "type": "product"
+    },
+    {
+      "name": "Abubakar Abid",
+      "type": "person"
+    },
+    {
+      "name": "k-l-lambda",
+      "type": "person"
+    },
+    {
+      "name": "PRO",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Hugging Face Jobs",
+      "label": "提供"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Spaces",
+      "label": "提供"
+    },
+    {
+      "from": "GitHub CI",
+      "to": "Hugging Face Jobs",
+      "label": "迁移至"
+    },
+    {
+      "from": "Abubakar Abid",
+      "to": "Hugging Face",
+      "label": "任职于"
+    },
+    {
+      "from": "k-l-lambda",
+      "to": "Hugging Face Jobs",
+      "label": "抱怨"
+    },
+    {
+      "from": "Abubakar Abid",
+      "to": "PRO",
+      "label": "建议升级"
+    }
+  ]
+}

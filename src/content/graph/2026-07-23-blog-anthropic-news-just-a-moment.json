@@ -1,0 +1,123 @@
+{
+  "center": "Anthropic 资助罕见病 AI 研究",
+  "branches": [
+    {
+      "label": "资助计划",
+      "detail": "AI for Science 计划下设罕见遗传病专项，两个方向，最高 5 万美元 Claude 额度",
+      "children": [
+        "额度 5 万美元，为期六个月",
+        "申请截止 2026 年 8 月 2 日",
+        "可用 Claude Opus 等生物领域模型"
+      ]
+    },
+    {
+      "label": "罕见病痛点",
+      "detail": "约 4 亿人患 7000 多种罕见病，人群分散、数据孤立、研发周期长",
+      "children": [
+        "400 million 人、7000+ 种病",
+        "基因诊断到治疗需 1–2 年",
+        "机制常被孤立研究，难找共性"
+      ]
+    },
+    {
+      "label": "基础研究赛道",
+      "detail": "联合临床、患者组织与数据科学家，加速机制发现与诊断",
+      "children": [
+        "Monarch Initiative 提供 Mondo 本体",
+        "DisMech 让 Claude 读病例找机制共性",
+        "Monarch Knowledge Graph 整合跨物种数据"
+      ]
+    },
+    {
+      "label": "生物技术赛道",
+      "detail": "支持早期生物技术公司压缩药物开发流程",
+      "children": [
+        "起草审评监管文件",
+        "评估靶点成药性与模态选择",
+        "探索 basket trial 合并申报"
+      ]
+    },
+    {
+      "label": "合作案例",
+      "detail": "现有受资助方用 Claude 推进罕见病诊疗",
+      "children": [
+        "Every Cure 做药物重定位",
+        "Centre for Population Genomics 起草变异分类",
+        "Violet Research Institute 处理 FDA 指南与…"
+      ]
+    }
+  ],
+  "flow": [
+    "提交申请",
+    "获 5 万美元额度",
+    "接入 Claude 模型",
+    "开展研究项目",
+    "共享成果与数据"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "AI for Science",
+      "type": "concept"
+    },
+    {
+      "name": "Monarch Initiative",
+      "type": "company"
+    },
+    {
+      "name": "DisMech",
+      "type": "product"
+    },
+    {
+      "name": "Every Cure",
+      "type": "company"
+    },
+    {
+      "name": "Violet Research Institute",
+      "type": "company"
+    },
+    {
+      "name": "Centre for Population Genomics",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "AI for Science",
+      "label": "发起"
+    },
+    {
+      "from": "AI for Science",
+      "to": "Claude",
+      "label": "提供额度"
+    },
+    {
+      "from": "Monarch Initiative",
+      "to": "DisMech",
+      "label": "开发"
+    },
+    {
+      "from": "Claude",
+      "to": "DisMech",
+      "label": "读取数据"
+    },
+    {
+      "from": "Every Cure",
+      "to": "Claude",
+      "label": "使用"
+    },
+    {
+      "from": "Violet Research Institute",
+      "to": "Claude",
+      "label": "使用"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "center": "OpenAI 合作伙伴网络",
+  "branches": [
+    {
+      "label": "计划概览",
+      "detail": "OpenAI 推出合作伙伴网络，投入 1.5 亿美元，联合全球伙伴共建企业 AI 生态。",
+      "children": [
+        "2026 年 6 月 14 日发布",
+        "目标 2026 年底培训 30 万名认证顾问",
+        "首批伙伴覆盖系统集成、咨询、技术与数据"
+      ]
+    },
+    {
+      "label": "企业落地瓶颈",
+      "detail": "企业 AI 价值瓶颈已非模型能力，而是用例识别、流程重构、系统集成与规模化推广。",
+      "children": [
+        "需要可信伙伴的行业专长与全球交付能力",
+        "伙伴协助策略、集成、部署与变革管理"
+      ]
+    },
+    {
+      "label": "合作案例",
+      "detail": "多家企业与伙伴联合落地 AI，覆盖客户服务、薪酬、仪器与客户体验等场景。",
+      "children": [
+        "Agilent 与 BCG 加速 AI 部署",
+        "eBay 与 Artium 打造 AI 客服平台",
+        "Paychex 与 Bain 薪酬流程等待时间降 80%"
+      ]
+    },
+    {
+      "label": "伙伴分级",
+      "detail": "伙伴分 Select、Advanced、Elite 三级，按销售、技术、联合销售与部署经验评定。",
+      "children": [
+        "可获 Codex、网络安全、agents 等专项认证",
+        "试点 Forward Deployed Experts 计划"
+      ]
+    },
+    {
+      "label": "生态构成",
+      "detail": "网络汇聚战略咨询、系统集成、行业方案与数据现代化等互补型组织。",
+      "children": [
+        "Accenture、Bain、BCG、Eliza 等加入",
+        "帮助客户从试点走向规模化转型"
+      ]
+    }
+  ],
+  "flow": [
+    "识别高价值用例",
+    "重构业务流程",
+    "集成企业系统与数据",
+    "负责任部署与治理",
+    "推动规模化采用"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI Partner Network",
+      "type": "product"
+    },
+    {
+      "name": "BCG",
+      "type": "company"
+    },
+    {
+      "name": "Bain",
+      "type": "company"
+    },
+    {
+      "name": "Accenture",
+      "type": "company"
+    },
+    {
+      "name": "Artium",
+      "type": "company"
+    },
+    {
+      "name": "Forward Deployed Experts",
+      "type": "concept"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "OpenAI Partner Network",
+      "label": "推出"
+    },
+    {
+      "from": "BCG",
+      "to": "OpenAI Partner Network",
+      "label": "加入"
+    },
+    {
+      "from": "Bain",
+      "to": "OpenAI Partner Network",
+      "label": "加入"
+    },
+    {
+      "from": "Accenture",
+      "to": "OpenAI Partner Network",
+      "label": "加入"
+    },
+    {
+      "from": "Artium",
+      "to": "OpenAI Partner Network",
+      "label": "加入"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Forward Deployed Experts",
+      "label": "试点"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "center": "openclaw 维护版安全修复",
+  "branches": [
+    {
+      "label": "浏览器网络收紧",
+      "detail": "沙箱浏览器路由、可信 DNS、自定义 origin 与 loopback provider 端点拒绝不安全访问",
+      "children": [
+        "harness 需在路由层做白名单校验",
+        "不依赖调用方自律"
+      ]
+    },
+    {
+      "label": "运行抗中断",
+      "detail": "会话写入保留、provider fallback、流进度处理与 stdio 失败可恢复",
+      "children": [
+        "不再静默终止任务",
+        "流中断视为可重试状态而非终态"
+      ]
+    },
+    {
+      "label": "通道恢复加固",
+      "detail": "待处理通道任务恢复后继续、ack 幂等、Discord 突发限流",
+      "children": [
+        "命令与状态面保持 owner-only",
+        "防止凭据泄漏到 URL"
+      ]
+    },
+    {
+      "label": "无新功能",
+      "detail": "维护版仅聚焦安全与可靠性修复",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "provider fallback",
+      "type": "technique"
+    },
+    {
+      "name": "沙箱浏览器",
+      "type": "concept"
+    },
+    {
+      "name": "可信 DNS",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "harness",
+      "label": "依赖"
+    },
+    {
+      "from": "openclaw",
+      "to": "Discord",
+      "label": "集成"
+    },
+    {
+      "from": "harness",
+      "to": "provider fallback",
+      "label": "实现"
+    },
+    {
+      "from": "harness",
+      "to": "沙箱浏览器",
+      "label": "管控"
+    },
+    {
+      "from": "harness",
+      "to": "可信 DNS",
+      "label": "校验"
+    }
+  ]
+}

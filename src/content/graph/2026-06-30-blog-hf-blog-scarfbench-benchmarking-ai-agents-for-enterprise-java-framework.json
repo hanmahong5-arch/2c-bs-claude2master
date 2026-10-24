@@ -1,0 +1,88 @@
+{
+  "center": "ScarfBench 评测 AI 迁移 Java",
+  "branches": [
+    {
+      "label": "基准概况",
+      "detail": "IBM 推出 ScarfBench，评估 AI 代理迁移企业 Java 框架的能力",
+      "children": [
+        "120 个真实 Java 迁移任务",
+        "覆盖 Spring 到 Quarkus 等框架",
+        "每个任务附带测试用例验证正确性"
+      ]
+    },
+    {
+      "label": "评测结果",
+      "detail": "最佳 AI 代理仅完成 38% 任务，平均需 5 次迭代",
+      "children": [
+        "GPT-4 + 检索增强为最佳组合",
+        "暴露 LLM 在复杂代码迁移中的局限"
+      ]
+    },
+    {
+      "label": "能力要求",
+      "detail": "代理需理解框架语义、处理依赖冲突并生成可编译代码",
+      "children": [
+        "对工具链上下文感知要求高",
+        "对错误恢复能力要求高"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "IBM",
+      "type": "company"
+    },
+    {
+      "name": "ScarfBench",
+      "type": "product"
+    },
+    {
+      "name": "GPT-4",
+      "type": "model"
+    },
+    {
+      "name": "Spring",
+      "type": "product"
+    },
+    {
+      "name": "Quarkus",
+      "type": "product"
+    },
+    {
+      "name": "检索增强",
+      "type": "technique"
+    },
+    {
+      "name": "Java",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "IBM",
+      "to": "ScarfBench",
+      "label": "推出"
+    },
+    {
+      "from": "ScarfBench",
+      "to": "Java",
+      "label": "评估迁移"
+    },
+    {
+      "from": "ScarfBench",
+      "to": "Spring",
+      "label": "覆盖"
+    },
+    {
+      "from": "ScarfBench",
+      "to": "Quarkus",
+      "label": "覆盖"
+    },
+    {
+      "from": "GPT-4",
+      "to": "检索增强",
+      "label": "结合"
+    }
+  ]
+}

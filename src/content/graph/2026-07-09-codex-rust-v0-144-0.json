@@ -1,0 +1,89 @@
+{
+  "center": "Codex rust-v0.144.0 更新",
+  "branches": [
+    {
+      "label": "写权限审批",
+      "detail": "新增 writes 审批模式，只读操作自动放行，写操作才弹审批",
+      "children": [
+        "减少 agent 执行中断次数"
+      ]
+    },
+    {
+      "label": "MCP 交互认证",
+      "detail": "MCP 工具无需实验性 opt-in 即可请求交互式认证",
+      "children": [
+        "agent harness 更灵活处理外部工具身份验证"
+      ]
+    },
+    {
+      "label": "pnpm 自动检测",
+      "detail": "全局 pnpm 安装的 Codex 被自动检测，诊断更新用正确包管理器",
+      "children": [
+        "避免 agent 环境配置错误"
+      ]
+    },
+    {
+      "label": "并发警告与修复",
+      "detail": "Ultra 推理模式高并发触发警告，修复 Windows 沙箱与 TUI 问题",
+      "children": [
+        "控制 token 消耗",
+        "修复可写根目录删除权限",
+        "粘贴控制序列不再破坏 TUI"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "pnpm",
+      "type": "product"
+    },
+    {
+      "name": "Ultra 推理模式",
+      "type": "concept"
+    },
+    {
+      "name": "Windows 沙箱",
+      "type": "concept"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "pnpm",
+      "label": "检测"
+    },
+    {
+      "from": "Codex",
+      "to": "Ultra 推理模式",
+      "label": "包含"
+    },
+    {
+      "from": "Codex",
+      "to": "Windows 沙箱",
+      "label": "修复"
+    },
+    {
+      "from": "Codex",
+      "to": "TUI",
+      "label": "修复"
+    }
+  ]
+}

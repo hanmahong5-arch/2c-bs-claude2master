@@ -1,0 +1,123 @@
+{
+  "center": "Anthropic 生命科学验证计划",
+  "branches": [
+    {
+      "label": "计划概览",
+      "detail": "为生命科学团队提供更宽松的模型访问，需通过验证",
+      "children": [
+        "覆盖 Mythos、Opus、Sonnet 模型",
+        "已通过早期访问接入数十家机构",
+        "现开放更广泛申请，初期面向团队"
+      ]
+    },
+    {
+      "label": "两类授权",
+      "detail": "Standard Use 覆盖多数日常工作，High-risk Use 针对高风险项目",
+      "children": [
+        "Standard Use 按年续期，可扩展至整个团队",
+        "High-risk Use 按项目、每半年续期",
+        "High-risk 移除生命科学相关拦截"
+      ]
+    },
+    {
+      "label": "验证与访问",
+      "detail": "申请者需通过研究资质、安全标准和伦理监督审查",
+      "children": [
+        "可用于 Claude Science、Claude.ai、Claude…",
+        "High-risk 的 Mythos 授权仍限于少数实体",
+        "其他安全分类器（如网络）仍保留"
+      ]
+    },
+    {
+      "label": "威胁模型",
+      "detail": "重点防范三类滥用风险",
+      "children": [
+        "访问被劫持：恶意软件或账号接管",
+        "内部威胁：员工恶意或被迫行为",
+        "Agent 滥用：蜂群或长任务中的意外危险行为"
+      ]
+    },
+    {
+      "label": "监控机制",
+      "detail": "从实时拦截转向离线监控，要求保留 30 天数据",
+      "children": [
+        "数据严格隔离，不用于模型训练",
+        "基于申请中声明的用例范围持续监测",
+        "异常活动可标记给组织管理员处理"
+      ]
+    }
+  ],
+  "flow": [
+    "提交申请",
+    "资质与安全审查",
+    "获得 Standard 或 High-risk…",
+    "在指定产品中使用模型",
+    "持续监控与续期"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Life Sciences Verification Program",
+      "type": "concept"
+    },
+    {
+      "name": "Mythos",
+      "type": "model"
+    },
+    {
+      "name": "Opus",
+      "type": "model"
+    },
+    {
+      "name": "Sonnet",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Xaira",
+      "type": "company"
+    },
+    {
+      "name": "Manifold Bio",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Life Sciences Verification Program",
+      "label": "推出"
+    },
+    {
+      "from": "Life Sciences Verification Program",
+      "to": "Mythos",
+      "label": "提供访问"
+    },
+    {
+      "from": "Life Sciences Verification Program",
+      "to": "Opus",
+      "label": "提供访问"
+    },
+    {
+      "from": "Life Sciences Verification Program",
+      "to": "Sonnet",
+      "label": "提供访问"
+    },
+    {
+      "from": "Life Sciences Verification Program",
+      "to": "Claude Code",
+      "label": "支持使用"
+    },
+    {
+      "from": "Xaira",
+      "to": "Anthropic",
+      "label": "合作"
+    }
+  ]
+}

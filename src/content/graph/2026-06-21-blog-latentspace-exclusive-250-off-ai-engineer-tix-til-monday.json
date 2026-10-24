@@ -1,0 +1,56 @@
+{
+  "center": "Latent Space 门票优惠",
+  "branches": [
+    {
+      "label": "专属折扣",
+      "detail": "付费订阅者可享 AI Engineer 大会门票 250 美元优惠",
+      "children": [
+        "限时折扣 250 美元",
+        "面向付费订阅者"
+      ]
+    },
+    {
+      "label": "限时截止",
+      "detail": "优惠持续至周一，激励尽快购票",
+      "children": [
+        "截止周一",
+        "使用专属折扣码"
+      ]
+    },
+    {
+      "label": "沟通渠道",
+      "detail": "此前在 AINews 宣布，约 30% 订阅者未接收该通讯",
+      "children": [
+        "AINews 已宣布",
+        "30% 未接收通讯"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Latent Space",
+      "type": "company"
+    },
+    {
+      "name": "AI Engineer",
+      "type": "concept"
+    },
+    {
+      "name": "AINews",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Latent Space",
+      "to": "AI Engineer",
+      "label": "提供优惠"
+    },
+    {
+      "from": "Latent Space",
+      "to": "AINews",
+      "label": "发布渠道"
+    }
+  ]
+}

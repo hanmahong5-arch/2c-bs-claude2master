@@ -1,0 +1,122 @@
+{
+  "center": "一条命令部署 vLLM 推理服务",
+  "branches": [
+    {
+      "label": "一条命令启动",
+      "detail": "用 hf jobs run 在 HF 基础设施上跑官方 vLLM 镜像，按秒计费",
+      "children": [
+        "hf jobs run --flavor a10g-large…",
+        "镜像 vllm/vllm-openai:latest",
+        "a10g-large 每小时 $1.50"
+      ]
+    },
+    {
+      "label": "OpenAI 兼容接口",
+      "detail": "vLLM 提供 OpenAI API，用 HF token 作 bearer 认证即可调用",
+      "children": [
+        "curl 或 OpenAI Python 客户端均可",
+        "URL 形如 <job_id>--8000.hf.jobs",
+        "端点受 token 保护，非公开"
+      ]
+    },
+    {
+      "label": "扩展大模型",
+      "detail": "换更大 --flavor 并用 --tensor-parallel-size 分片多卡",
+      "children": [
+        "Qwen3.5-122B 跑在 2× H200",
+        "--tensor-parallel-size 需匹配 GPU 数",
+        "限制 --max-model-len 与 --max-num-seqs…"
+      ]
+    },
+    {
+      "label": "进阶用法",
+      "detail": "可接 Gradio 聊天 UI、SSH 调试、或作为 Pi 编码代理后端",
+      "children": [
+        "Gradio 展示 reasoning 折叠面板",
+        "--ssh 进入容器跑 nvidia-smi",
+        "代理需 --enable-auto-tool-choice"
+      ]
+    },
+    {
+      "label": "用完即停",
+      "detail": "按秒计费，任务结束应显式取消以省钱",
+      "children": [
+        "hf jobs cancel <job_id>",
+        "--timeout 是自动停止的保险"
+      ]
+    }
+  ],
+  "flow": [
+    "准备账号与登录",
+    "hf jobs run 启动服务",
+    "等待权重下载启动",
+    "用 token 查询端点",
+    "hf jobs cancel 清理"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "vLLM",
+      "type": "product"
+    },
+    {
+      "name": "HF Jobs",
+      "type": "product"
+    },
+    {
+      "name": "Qwen3-4B",
+      "type": "model"
+    },
+    {
+      "name": "Qwen3.5-122B",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI API",
+      "type": "concept"
+    },
+    {
+      "name": "Gradio",
+      "type": "product"
+    },
+    {
+      "name": "Pi",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "HF Jobs",
+      "to": "vLLM",
+      "label": "运行"
+    },
+    {
+      "from": "vLLM",
+      "to": "Qwen3-4B",
+      "label": "服务"
+    },
+    {
+      "from": "vLLM",
+      "to": "Qwen3.5-122B",
+      "label": "服务"
+    },
+    {
+      "from": "vLLM",
+      "to": "OpenAI API",
+      "label": "兼容"
+    },
+    {
+      "from": "Gradio",
+      "to": "vLLM",
+      "label": "连接"
+    },
+    {
+      "from": "Pi",
+      "to": "vLLM",
+      "label": "调用"
+    }
+  ]
+}

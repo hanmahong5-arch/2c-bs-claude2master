@@ -1,0 +1,97 @@
+{
+  "center": "Codex 0.145.0 更新",
+  "branches": [
+    {
+      "label": "多智能体 V2 稳定",
+      "detail": "多智能体 V2 体验稳定，支持子智能体模型与并发配置",
+      "children": [
+        "可配置子智能体模型、推理级别、并发",
+        "支持角色恢复与导航改进"
+      ]
+    },
+    {
+      "label": "分页线程历史",
+      "detail": "实验性分页线程历史，高效恢复、搜索与持久化",
+      "children": [
+        "支持持久化名称、子智能体与记忆",
+        "管理长对话状态与上下文隔离"
+      ]
+    },
+    {
+      "label": "导入迁移扩展",
+      "detail": "/import 支持迁移 Cursor 和 Claude Code 设置",
+      "children": [
+        "迁移 MCP 服务器、插件、会话、命令",
+        "迁移项目级记忆"
+      ]
+    },
+    {
+      "label": "音频与实时对话",
+      "detail": "新增音频输入/输出与流式实时 V3 对话",
+      "children": [
+        "支持常见本地音频格式"
+      ]
+    },
+    {
+      "label": "终端性能改进",
+      "detail": "改进终端响应：增量 Markdown 渲染、减少重绘",
+      "children": [
+        "缓存、有界命令输出"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "多智能体 V2",
+      "type": "concept"
+    },
+    {
+      "name": "分页线程历史",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "Cursor",
+      "label": "导入配置"
+    },
+    {
+      "from": "Codex",
+      "to": "Claude Code",
+      "label": "导入配置"
+    },
+    {
+      "from": "Codex",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "多智能体 V2",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "分页线程历史",
+      "label": "新增"
+    }
+  ]
+}

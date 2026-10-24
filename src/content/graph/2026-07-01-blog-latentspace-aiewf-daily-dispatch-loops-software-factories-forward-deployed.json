@@ -1,0 +1,97 @@
+{
+  "center": "AIEWF 第二天：循环与软件工厂",
+  "branches": [
+    {
+      "label": "循环成主线",
+      "detail": "loop 一词主导全天议程，从 chat 到 tools 再到 goals 与自动化",
+      "children": [
+        "swyx 开场演讲《Loopcraft：堆叠循环的艺术》",
+        "Geoffrey Huntley 提出 everything is a…",
+        "Peter Steinberger 称未来是更好的循环"
+      ]
+    },
+    {
+      "label": "软件工厂",
+      "detail": "用自主 agent 覆盖软件开发全生命周期，工程师转向造工厂",
+      "children": [
+        "Factory 的 Tereza Tížková 定义其为全生命周…",
+        "Warp 的 Zach Lloyd：软件工程将变成工厂工程",
+        "Warp 从 CLI 工具转型为软件工厂平台"
+      ]
+    },
+    {
+      "label": "前部署工程师",
+      "detail": "FDE 又称 agent 工程师，帮企业适配 agent 与编排层",
+      "children": [
+        "Sierra 的 Natalie Meurer：客户定制多在编排层",
+        "Cursor 的 Pauline Brunet 将 FDE 定位为软…"
+      ]
+    },
+    {
+      "label": "开源模型崛起",
+      "detail": "开源与本地 AI 升温，开放模型能力快速追赶",
+      "children": [
+        "Z.ai 的 GLM-5.2 主打长周期任务，并推出 ZCode",
+        "MiniMax 发布开放权重模型 M3",
+        "Osmantic 的 Ahmad Osman：架构更高效，小改…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "AI Engineer World's Fair",
+      "type": "concept"
+    },
+    {
+      "name": "swyx",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Warp",
+      "type": "company"
+    },
+    {
+      "name": "Zach Lloyd",
+      "type": "person"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Z.ai",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "swyx",
+      "to": "AI Engineer World's Fair",
+      "label": "联合创办"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "推出"
+    },
+    {
+      "from": "Zach Lloyd",
+      "to": "Warp",
+      "label": "任职于"
+    },
+    {
+      "from": "Z.ai",
+      "to": "GLM-5.2",
+      "label": "发布"
+    }
+  ]
+}

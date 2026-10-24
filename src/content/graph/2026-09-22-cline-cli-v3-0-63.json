@@ -1,0 +1,82 @@
+{
+  "center": "cline cli 长会话截断根因",
+  "branches": [
+    {
+      "label": "摘要器凭证失效",
+      "detail": "摘要器沿用启动时 access token，主循环刷新后 token 轮换导致 401，失败被截断兜底吞掉",
+      "children": [
+        "OAuth 与 cline-free/* 模型上最明显",
+        "摘要器现跟随会话当前凭证与模型"
+      ]
+    },
+    {
+      "label": "压缩触发改用量",
+      "detail": "压缩触发改用 provider 实际 token 用量而非字符估算，并给摘要器更大输出预算",
+      "children": [
+        "密集内容 token 密度远高于估算",
+        "估算阈值会撞真实上限却不触发压缩"
+      ]
+    },
+    {
+      "label": "子代理并发执行",
+      "detail": "子代理工具调用改为并发执行，审批与 hook 仍按序，父级仍等全部结果",
+      "children": [
+        "已批准委派后子代理不再重复请求审批",
+        "并发抢同一 stdin，一次 y 可能批准多个待定操作"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "摘要器",
+      "type": "concept"
+    },
+    {
+      "name": "access token",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "cline-free/*",
+      "type": "model"
+    },
+    {
+      "name": "上下文压缩",
+      "type": "concept"
+    },
+    {
+      "name": "子代理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "摘要器",
+      "to": "access token",
+      "label": "沿用旧"
+    },
+    {
+      "from": "access token",
+      "to": "OAuth",
+      "label": "轮换致401"
+    },
+    {
+      "from": "上下文压缩",
+      "to": "摘要器",
+      "label": "依赖"
+    },
+    {
+      "from": "子代理",
+      "to": "cline cli",
+      "label": "并发执行"
+    }
+  ]
+}

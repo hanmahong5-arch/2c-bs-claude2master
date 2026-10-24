@@ -1,0 +1,99 @@
+{
+  "center": "Claude Fable 5 永久纳入订阅",
+  "branches": [
+    {
+      "label": "政策反转",
+      "detail": "Anthropic 取消原定移除 Fable 5 的计划，改为永久纳入订阅",
+      "children": [
+        "7 月 20 日起 Max 与 Team Premium 含 Fable…",
+        "Pro 与 Team Standard 仍走 usage credits"
+      ]
+    },
+    {
+      "label": "竞争压力",
+      "detail": "GPT-5.6 Sol 等竞品压力使原计划不可行",
+      "children": [
+        "Simon Willison 称 GPT-5.6 Sol 是主因",
+        "Kimi 3 影响较小"
+      ]
+    },
+    {
+      "label": "原计划动因",
+      "detail": "移除源于算力容量担忧，非产品策略",
+      "children": [
+        "作者猜测或需削减训练以腾出 GPU 服务模型"
+      ]
+    },
+    {
+      "label": "用户补偿",
+      "detail": "受影响用户获一次性额度补偿",
+      "children": [
+        "Pro 与 Team Standard 获一次性 $100 credit",
+        "$20/月计划仍无法使用 Fable 5"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Kimi 3",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Max",
+      "type": "product"
+    },
+    {
+      "name": "Team Premium",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5",
+      "label": "纳入订阅"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "Anthropic",
+      "label": "施压"
+    },
+    {
+      "from": "Kimi 3",
+      "to": "Anthropic",
+      "label": "施压"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-5.6 Sol",
+      "label": "归因"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Max",
+      "label": "包含于"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Team Premium",
+      "label": "包含于"
+    }
+  ]
+}

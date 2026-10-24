@@ -1,0 +1,100 @@
+{
+  "center": "Anthropic 秘密提交 IPO 草案",
+  "branches": [
+    {
+      "label": "提交 S-1 草案",
+      "detail": "Anthropic 于 2026 年 6 月 1 日向 SEC 秘密提交 S-1 注册声明草案",
+      "children": [
+        "主体为 Anthropic, PBC",
+        "拟发行普通股",
+        "依据 Rule 135 发布公告"
+      ]
+    },
+    {
+      "label": "上市仍待条件",
+      "detail": "是否上市取决于 SEC 审核完成及市场状况等因素",
+      "children": [
+        "SEC 审核完成后才有上市选项",
+        "发行股数与价格尚未确定"
+      ]
+    },
+    {
+      "label": "公告法律性质",
+      "detail": "该公告不构成证券出售要约或购买要约邀请",
+      "children": [
+        "证券发行须符合《证券法》注册要求"
+      ]
+    },
+    {
+      "label": "相关业务动态",
+      "detail": "同期公布与 Accenture 合作及生命科学验证计划",
+      "children": [
+        "与 Accenture 合作嵌入式评估",
+        "LSVP 提供 Claude Mythos、Opus、Sonnet 模型"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "SEC",
+      "type": "company"
+    },
+    {
+      "name": "S-1",
+      "type": "concept"
+    },
+    {
+      "name": "Accenture",
+      "type": "company"
+    },
+    {
+      "name": "Claude Mythos",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus",
+      "type": "model"
+    },
+    {
+      "name": "Claude Sonnet",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "SEC",
+      "label": "提交草案"
+    },
+    {
+      "from": "Anthropic",
+      "to": "S-1",
+      "label": "提交"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Accenture",
+      "label": "合作"
+    },
+    {
+      "from": "Claude Mythos",
+      "to": "Anthropic",
+      "label": "属于"
+    },
+    {
+      "from": "Claude Opus",
+      "to": "Anthropic",
+      "label": "属于"
+    },
+    {
+      "from": "Claude Sonnet",
+      "to": "Anthropic",
+      "label": "属于"
+    }
+  ]
+}

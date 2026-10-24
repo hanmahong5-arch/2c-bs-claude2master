@@ -1,0 +1,116 @@
+{
+  "center": "OpenAI 让 AGI 惠及全人类计划",
+  "branches": [
+    {
+      "label": "三大目标",
+      "detail": "OpenAI 当前聚焦自动化 AI 研究员、加速经济、人人拥有个人 AGI",
+      "children": [
+        "2028 年 3 月或有大比例研究由 AI 完成",
+        "加速科学、生产力与经济增长并共享收益",
+        "让地球每个人按自己方式使用个人 AGI"
+      ]
+    },
+    {
+      "label": "进入第三阶段",
+      "detail": "从研究 AGI、产品化，转向让先进 AI 普及、可负担、安全易用",
+      "children": [
+        "第一阶段：研究通往 AGI",
+        "第二阶段：成为产品公司并部署系统",
+        "第三阶段：让能力变成人人可用的工具"
+      ]
+    },
+    {
+      "label": "权力广泛分布",
+      "detail": "认为权力集中带来脆弱，广泛分布让社会更有韧性、适应力与自由",
+      "children": [
+        "不应由少数公司、政府或个人控制",
+        "重视访问权、安全、隐私、可负担、开放生态与公共…"
+      ]
+    },
+    {
+      "label": "人类判断更重要",
+      "detail": "AI 应帮人追求目标而非取代判断，人类负责方向、权衡与价值",
+      "children": [
+        "完全自动化一切既不满足也危险",
+        "关键长期角色是决定什么值得做"
+      ]
+    },
+    {
+      "label": "国际协调",
+      "detail": "前沿 AI 发展需要国家与全球协调，最终应有国际组织降低灾难风险",
+      "children": [
+        "必要时可协调放缓前沿开发",
+        "让社会韧性、安全与对齐跟上"
+      ]
+    }
+  ],
+  "flow": [
+    "研究通往 AGI",
+    "产品化部署学习",
+    "让 AI 普及可负担",
+    "人类设定方向判断",
+    "国际协调安全标准"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AGI",
+      "type": "concept"
+    },
+    {
+      "name": "Sam Altman",
+      "type": "person"
+    },
+    {
+      "name": "Jakub Pachocki",
+      "type": "person"
+    },
+    {
+      "name": "AI resilience",
+      "type": "concept"
+    },
+    {
+      "name": "alignment",
+      "type": "concept"
+    },
+    {
+      "name": "automated AI researcher",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sam Altman",
+      "to": "OpenAI",
+      "label": "共同撰文"
+    },
+    {
+      "from": "Jakub Pachocki",
+      "to": "OpenAI",
+      "label": "共同撰文"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AGI",
+      "label": "追求"
+    },
+    {
+      "from": "OpenAI",
+      "to": "automated AI researcher",
+      "label": "构建"
+    },
+    {
+      "from": "OpenAI",
+      "to": "alignment",
+      "label": "研究"
+    },
+    {
+      "from": "AGI",
+      "to": "AI resilience",
+      "label": "需要"
+    }
+  ]
+}

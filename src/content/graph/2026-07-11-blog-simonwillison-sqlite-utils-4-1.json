@@ -1,0 +1,113 @@
+{
+  "center": "sqlite-utils 4.1 发布",
+  "branches": [
+    {
+      "label": "代码生成行",
+      "detail": "insert 与 upsert 新增 --code，用 Python 代码块定义 rows() 生成待插入行",
+      "children": [
+        "支持直接传代码或 .py 文件路径",
+        "示例：yield {\"id\":1,\"name\":\"Cleo\"}",
+        "延续 convert 命令传代码的用法"
+      ]
+    },
+    {
+      "label": "类型与主键",
+      "detail": "可覆盖自动推断的列类型，upsert 可自动推断已有表主键",
+      "children": [
+        "--type 列名 类型 覆盖建表类型",
+        "ZIP 码等应存为 TEXT 保留前导零",
+        "upsert 时可省略 --pk"
+      ]
+    },
+    {
+      "label": "索引与查询",
+      "detail": "新增按名删除索引的方法与命令，query 支持从标准输入读取 SQL",
+      "children": [
+        "table.drop_index(name) 与 drop-index",
+        "支持 ignore=True / --ignore",
+        "echo \"select * from dogs\" | query dogs.…"
+      ]
+    },
+    {
+      "label": "STRICT 模式",
+      "detail": "transform 支持切换表的 SQLite strict 模式，可保留原模式",
+      "children": [
+        "transform(strict=True/False) 与…",
+        "CLI 新增 --strict / --no-strict",
+        "灵感来自 Evan Hahn 的 STRICT 表文章"
+      ]
+    },
+    {
+      "label": "AI 辅助开发",
+      "detail": "用 Codex 挑出最易实现的 issue，并让模型手动测试新功能",
+      "children": [
+        "Codex 审查全部 open issues",
+        "提示模型用 uv run python -c 手动验证",
+        "发现并修复两个边界问题"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Evan Hahn",
+      "type": "person"
+    },
+    {
+      "name": "STRICT tables",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "发布"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "SQLite",
+      "label": "操作"
+    },
+    {
+      "from": "Codex",
+      "to": "sqlite-utils",
+      "label": "辅助开发"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "sqlite-utils",
+      "label": "实现功能"
+    },
+    {
+      "from": "Evan Hahn",
+      "to": "STRICT tables",
+      "label": "撰文推荐"
+    },
+    {
+      "from": "STRICT tables",
+      "to": "SQLite",
+      "label": "属于"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "center": "OpenClaw 个人助手基准包",
+  "branches": [
+    {
+      "label": "十个本地场景",
+      "detail": "在 qa/scenarios/personal/*.yaml 定义，覆盖提醒、回复、记忆、脱敏等",
+      "children": [
+        "personal-reminder-roundtrip 本地 cron 假…",
+        "personal-no-fake-progress 无证据不报完成",
+        "personal-redaction-no-secret-leak 假密钥…"
+      ]
+    },
+    {
+      "label": "运行方式",
+      "detail": "需源码 checkout 并开启私有 QA CLI，用 mock-openai 本地跑",
+      "children": [
+        "OPENCLAW_ENABLE_PRIVATE_QA_CLI=1",
+        "pnpm openclaw qa run --qa-profile…",
+        "--provider-mode mock-openai…"
+      ]
+    },
+    {
+      "label": "隐私模型",
+      "detail": "只用假用户、假偏好、假密钥和临时 QA 工作区，不碰真实数据",
+      "children": [
+        "不读写真实 memory、sessions、credentials",
+        "产物留在 QA 套件 artifact 目录",
+        "脱敏检查用假标记，失败可安全上报"
+      ]
+    },
+    {
+      "label": "扩展方式",
+      "detail": "在 personal 目录加小 YAML 用例，声明覆盖 ID 并加入 taxonomy",
+      "children": [
+        "保持本地、确定性、单一行为",
+        "候选：脱敏轨迹导出、本地插件流程",
+        "暂不新增 runner、插件、依赖或模型裁判"
+      ]
+    }
+  ],
+  "flow": [
+    "源码 checkout OpenClaw",
+    "开启私有 QA CLI",
+    "指定 personal-agent profile",
+    "用 mock-openai 运行",
+    "查看 QA artifact 产物"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Personal Agent Benchmark Pack",
+      "type": "product"
+    },
+    {
+      "name": "qa/scenarios/personal",
+      "type": "concept"
+    },
+    {
+      "name": "mock-openai",
+      "type": "technique"
+    },
+    {
+      "name": "qa-channel",
+      "type": "product"
+    },
+    {
+      "name": "taxonomy.yaml",
+      "type": "concept"
+    },
+    {
+      "name": "QA Lab",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Personal Agent Benchmark Pack",
+      "to": "OpenClaw",
+      "label": "属于"
+    },
+    {
+      "from": "Personal Agent Benchmark Pack",
+      "to": "qa/scenarios/personal",
+      "label": "定义于"
+    },
+    {
+      "from": "Personal Agent Benchmark Pack",
+      "to": "mock-openai",
+      "label": "使用"
+    },
+    {
+      "from": "Personal Agent Benchmark Pack",
+      "to": "qa-channel",
+      "label": "运行于"
+    },
+    {
+      "from": "QA Lab",
+      "to": "taxonomy.yaml",
+      "label": "解析"
+    }
+  ]
+}

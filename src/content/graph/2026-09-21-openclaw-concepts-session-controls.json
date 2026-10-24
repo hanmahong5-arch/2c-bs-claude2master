@@ -1,0 +1,89 @@
+{
+  "center": "OpenClaw 会话级记忆开关与可观测性",
+  "branches": [
+    {
+      "label": "会话级开关",
+      "detail": "用 /active-memory 命令暂停或恢复当前会话的活跃记忆，不改全局配置",
+      "children": [
+        "/active-memory status|off|on 仅影响当前会话",
+        "全局形式需 owner 或 operator.admin 权限",
+        "全局形式写 config.enabled 但保留插件 enabled"
+      ]
+    },
+    {
+      "label": "可观测性开关",
+      "detail": "默认隐藏的记忆注入前缀可通过 /verbose 与 /trace 显示",
+      "children": [
+        "/verbose on 输出状态行 status=ok elapsed=…",
+        "/trace on 输出调试摘要，如 Lemon pepper…",
+        "/trace raw 显示原始隐藏前缀 <…"
+      ]
+    },
+    {
+      "label": "输出方式",
+      "detail": "诊断行作为正常回复后的 follow-up 追加，避免客户端闪现独立气泡",
+      "children": [
+        "诊断行跟在正常 assistant reply 之后",
+        "示例：先回复再附 🧩 与 🔎 两行"
+      ]
+    },
+    {
+      "label": "临时记录",
+      "detail": "阻塞子代理的 transcript 默认在运行结束后删除",
+      "children": [
+        "参见 Transcript persistence 可保留"
+      ]
+    }
+  ],
+  "flow": [
+    "开启 /verbose on",
+    "开启 /trace on",
+    "发送用户问题",
+    "获得正常回复",
+    "追加诊断行"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "active-memory",
+      "type": "product"
+    },
+    {
+      "name": "/verbose",
+      "type": "technique"
+    },
+    {
+      "name": "/trace",
+      "type": "technique"
+    },
+    {
+      "name": "Transcript persistence",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "active-memory",
+      "label": "包含"
+    },
+    {
+      "from": "/verbose",
+      "to": "active-memory",
+      "label": "显示状态"
+    },
+    {
+      "from": "/trace",
+      "to": "active-memory",
+      "label": "显示调试"
+    },
+    {
+      "from": "Transcript persistence",
+      "to": "active-memory",
+      "label": "保留记录"
+    }
+  ]
+}

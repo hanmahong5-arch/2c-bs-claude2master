@@ -1,0 +1,92 @@
+{
+  "center": "sqlite-utils 4.2 发布",
+  "branches": [
+    {
+      "label": "transform() 增强",
+      "detail": "table.transform() 通过建新表、拷数据、替换旧表实现复杂 alter table",
+      "children": [
+        "保留 check 约束",
+        "保留 unique 约束",
+        "保留列注释"
+      ]
+    },
+    {
+      "label": "新增内省属性",
+      "detail": "新增用于 check 约束的内省属性，并含大量其他小改动",
+      "children": []
+    },
+    {
+      "label": "社区贡献",
+      "detail": "本版本包含多位外部贡献者的提交",
+      "children": [
+        "Bunlong Heng",
+        "Rami Abdelrazzaq",
+        "ikatyal2110"
+      ]
+    },
+    {
+      "label": "4.2.1 修复崩溃",
+      "detail": "4.2 存在崩溃 bug，已在 4.2.1 中修复",
+      "children": []
+    }
+  ],
+  "flow": [
+    "创建新表",
+    "拷贝数据",
+    "删除旧表",
+    "替换旧表"
+  ],
+  "entities": [
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "table.transform()",
+      "type": "technique"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Bunlong Heng",
+      "type": "person"
+    },
+    {
+      "name": "Rami Abdelrazzaq",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "发布"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "SQLite",
+      "label": "操作"
+    },
+    {
+      "from": "table.transform()",
+      "to": "sqlite-utils",
+      "label": "属于"
+    },
+    {
+      "from": "Bunlong Heng",
+      "to": "sqlite-utils",
+      "label": "贡献"
+    },
+    {
+      "from": "Rami Abdelrazzaq",
+      "to": "sqlite-utils",
+      "label": "贡献"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "center": "cline cli v3.0.36 模式切换修复",
+  "branches": [
+    {
+      "label": "修复切换延迟",
+      "detail": "switch_to_act_mode 工具此前要等回合结束才生效",
+      "children": [
+        "模型继续用计划模式工具，无文件编辑器",
+        "只能靠 shell 命令改文件"
+      ]
+    },
+    {
+      "label": "切换即时生效",
+      "detail": "切到执行模式会立刻结束计划模式运行",
+      "children": [
+        "用完整执行模式工具集自动继续",
+        "继续执行已批准的计划"
+      ]
+    },
+    {
+      "label": "竞态修复",
+      "detail": "标签页模式切换与回合完成竞态不再误触发",
+      "children": [
+        "不再自动启动未批准的计划执行"
+      ]
+    }
+  ],
+  "flow": [
+    "计划模式运行",
+    "调用 switch_to_act_mode",
+    "立即结束计划模式",
+    "切换执行模式工具集",
+    "自动继续已批准计划"
+  ],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "switch_to_act_mode",
+      "type": "technique"
+    },
+    {
+      "name": "计划模式",
+      "type": "concept"
+    },
+    {
+      "name": "执行模式",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli",
+      "to": "switch_to_act_mode",
+      "label": "修复"
+    },
+    {
+      "from": "switch_to_act_mode",
+      "to": "计划模式",
+      "label": "结束"
+    },
+    {
+      "from": "switch_to_act_mode",
+      "to": "执行模式",
+      "label": "切换至"
+    }
+  ]
+}

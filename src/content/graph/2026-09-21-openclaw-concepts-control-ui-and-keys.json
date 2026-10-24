@@ -1,0 +1,120 @@
+{
+  "center": "OpenClaw 密钥与模型控制台",
+  "branches": [
+    {
+      "label": "密钥存储分离",
+      "detail": "密钥写入 auth store，配置的 provider 只引用已保存 profile",
+      "children": [
+        "页面与 paste-api-key 共用同一 credential…",
+        "环境变量密钥仍由 Gateway 进程环境管理",
+        "页面只显示凭据来源，不暴露密钥"
+      ]
+    },
+    {
+      "label": "保存与刷新解耦",
+      "detail": "保存密钥和刷新模型目录是两个独立结果",
+      "children": [
+        "刷新失败时已保存的密钥仍保留",
+        "删除密钥不影响模型默认值和连接设置",
+        "用量与本地成本独立加载，不阻塞 provider 设置"
+      ]
+    },
+    {
+      "label": "连接与默认值",
+      "detail": "Test connection 发起真实探测，Defaults 卡管理主模型等",
+      "children": [
+        "探测返回延迟或认证、限流、计费、超时等分类错误",
+        "Defaults 管理主模型、utility 模型、首个…",
+        "Auto 不设置 utility，Disabled 存空字符串关…"
+      ]
+    },
+    {
+      "label": "密钥轮换规则",
+      "detail": "仅限流响应才用下一个密钥重试",
+      "children": [
+        "优先级：OPENCLAW_LIVE_<PROVIDER>_KEY 最高",
+        "其次 <PROVIDER>_API_KEYS、<PROVIDER>_API…",
+        "非限流失败立即失败，不轮换；全部失败返回最后一…"
+      ]
+    },
+    {
+      "label": "插件化 provider",
+      "detail": "provider 专属逻辑放在插件，OpenClaw 保留通用推理循环",
+      "children": [
+        "插件负责 onboarding、模型目录、auth 环境变…",
+        "还负责传输归一化、工具 schema 清理、故障转移…",
+        "完全自定义请求执行器是更深的扩展面"
+      ]
+    }
+  ],
+  "flow": [
+    "在 Control UI 打开…",
+    "添加/替换/移除 provider API…",
+    "密钥写入 auth store 并保存…",
+    "单独刷新模型目录",
+    "用量与本地成本独立加载",
+    "用 Test connection 探测…"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Control UI",
+      "type": "product"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "auth store",
+      "type": "concept"
+    },
+    {
+      "name": "API key rotation",
+      "type": "technique"
+    },
+    {
+      "name": "provider plugins",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Control UI",
+      "to": "OpenClaw",
+      "label": "属于"
+    },
+    {
+      "from": "Control UI",
+      "to": "auth store",
+      "label": "写入密钥"
+    },
+    {
+      "from": "Gateway",
+      "to": "OpenClaw",
+      "label": "管理环境密钥"
+    },
+    {
+      "from": "provider plugins",
+      "to": "OpenClaw",
+      "label": "扩展"
+    },
+    {
+      "from": "API key rotation",
+      "to": "OpenClaw",
+      "label": "用于"
+    },
+    {
+      "from": "OAuth",
+      "to": "provider plugins",
+      "label": "由插件刷新"
+    }
+  ]
+}

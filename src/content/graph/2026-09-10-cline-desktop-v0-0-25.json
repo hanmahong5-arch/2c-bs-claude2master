@@ -1,0 +1,95 @@
+{
+  "center": "cline desktop v0.0.25 更新",
+  "branches": [
+    {
+      "label": "Codex 模型收紧",
+      "detail": "订阅模型列表只保留计划可用项，默认切到 gpt-5.6-terra",
+      "children": [
+        "移除 GPT-4o、GPT-4.1、chatgpt-image-latest",
+        "gpt-5.4 系列退役",
+        "按后端 400K/272K/128K 预算封顶"
+      ]
+    },
+    {
+      "label": "Windows 更新修复",
+      "detail": "安装器先停掉 Cline Hub daemon 再安装，不再报错",
+      "children": [
+        "解决 Error opening file for writing",
+        "按完整路径停常驻 daemon",
+        "避免误杀并行渠道"
+      ]
+    },
+    {
+      "label": "失败发送可恢复",
+      "detail": "回合开始前失败时提示词与附件回到输入框",
+      "children": [
+        "与等待期间新加内容合并",
+        "已开始输入则不覆盖",
+        "乐观 UI 需可回滚草稿状态"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline desktop",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GPT-4o",
+      "type": "model"
+    },
+    {
+      "name": "GPT-4.1",
+      "type": "model"
+    },
+    {
+      "name": "gpt-5.4",
+      "type": "model"
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "type": "model"
+    },
+    {
+      "name": "Cline Hub daemon",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline desktop",
+      "to": "Codex",
+      "label": "更新"
+    },
+    {
+      "from": "Codex",
+      "to": "GPT-4o",
+      "label": "移除"
+    },
+    {
+      "from": "Codex",
+      "to": "GPT-4.1",
+      "label": "移除"
+    },
+    {
+      "from": "Codex",
+      "to": "gpt-5.4",
+      "label": "退役"
+    },
+    {
+      "from": "Codex",
+      "to": "gpt-5.6-terra",
+      "label": "默认切换"
+    },
+    {
+      "from": "cline desktop",
+      "to": "Cline Hub daemon",
+      "label": "停止"
+    }
+  ]
+}

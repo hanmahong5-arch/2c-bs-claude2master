@@ -1,0 +1,113 @@
+{
+  "center": "Skill Workshop：Agent技能复用",
+  "branches": [
+    {
+      "label": "提案先行",
+      "detail": "Agent创建或修改技能时先生成未生效的提案，需人工审核后才应用",
+      "children": [
+        "待审文件名为 PROPOSAL.md 而非 SKILL.md",
+        "提案含草稿指令、支持文件与审核状态",
+        "Agent 无需手写技能文件或猜测路径"
+      ]
+    },
+    {
+      "label": "审核界面",
+      "detail": "Control UI 把提案当作可审核工作，提供 Board 与 Today 两种视图",
+      "children": [
+        "Board view 按 pending/applied/rejected/…",
+        "Today view 逐个处理并询问是否纳入技能集",
+        "Tweak 把修改变成修订对话而非死路"
+      ]
+    },
+    {
+      "label": "支持文件",
+      "detail": "技能可携带模板、脚本、参考与示例，随提案一起审核",
+      "children": [
+        "允许目录：assets、examples、references…",
+        "禁止绝对路径、路径穿越与隐藏路径段",
+        "应用时支持文件随技能一起写入"
+      ]
+    },
+    {
+      "label": "多端一致",
+      "detail": "同一提案流程可在 chat、Control UI、channels、CLI、Gateway 使用",
+      "children": [
+        "Agent 可创建、检查、修订、应用或拒绝提案",
+        "用户可从任意入口审核同一提案"
+      ]
+    }
+  ],
+  "flow": [
+    "提出可复用工作流需求",
+    "Agent 生成待审提案",
+    "在 UI 中审核与调整",
+    "修订提案保留历史",
+    "应用后成为技能"
+  ],
+  "entities": [
+    {
+      "name": "Skill Workshop",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Control UI",
+      "type": "product"
+    },
+    {
+      "name": "PROPOSAL.md",
+      "type": "concept"
+    },
+    {
+      "name": "SKILL.md",
+      "type": "concept"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    },
+    {
+      "name": "技能提案",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Skill Workshop",
+      "to": "OpenClaw",
+      "label": "属于"
+    },
+    {
+      "from": "Skill Workshop",
+      "to": "Control UI",
+      "label": "提供视图"
+    },
+    {
+      "from": "技能提案",
+      "to": "PROPOSAL.md",
+      "label": "暂存为"
+    },
+    {
+      "from": "技能提案",
+      "to": "SKILL.md",
+      "label": "应用后转为"
+    },
+    {
+      "from": "Skill Workshop",
+      "to": "Gateway",
+      "label": "支持入口"
+    },
+    {
+      "from": "Skill Workshop",
+      "to": "CLI",
+      "label": "支持入口"
+    }
+  ]
+}

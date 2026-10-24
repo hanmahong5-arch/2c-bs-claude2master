@@ -1,0 +1,74 @@
+{
+  "center": "Hex 用 GPT-6 Astra 生成可视化报告",
+  "branches": [
+    {
+      "label": "输出层升级",
+      "detail": "数据 agent 不再只返回文本或表格，而是直接产出交互式可视化",
+      "children": [
+        "查询答案转成交互式可视化",
+        "从「给答案」到「给成品」"
+      ]
+    },
+    {
+      "label": "评估标准变化",
+      "detail": "可视化要员工愿意主动分享，正确性之外还看呈现质量与可用性",
+      "children": [
+        "验收指标加入产出物可读性",
+        "强调可分享性"
+      ]
+    },
+    {
+      "label": "最后一公里",
+      "detail": "分析类 agent 的收尾是渲染与叙事，而非检索或计算",
+      "children": [
+        "可视化组件应作为一等公民集成",
+        "报告生成值得优先集成"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hex",
+      "type": "product"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "数据 agent",
+      "type": "concept"
+    },
+    {
+      "name": "可视化报告",
+      "type": "concept"
+    },
+    {
+      "name": "agent 工具链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hex",
+      "to": "GPT-6 Astra",
+      "label": "采用"
+    },
+    {
+      "from": "Hex",
+      "to": "数据 agent",
+      "label": "提供"
+    },
+    {
+      "from": "数据 agent",
+      "to": "可视化报告",
+      "label": "生成"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "可视化报告",
+      "label": "支撑生成"
+    }
+  ]
+}

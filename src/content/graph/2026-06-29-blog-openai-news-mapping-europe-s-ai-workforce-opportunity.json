@@ -1,0 +1,96 @@
+{
+  "center": "OpenAI报告：AI重塑欧盟就业",
+  "branches": [
+    {
+      "label": "自动化风险",
+      "detail": "约20%欧盟岗位可能被自动化，集中在行政与文书工作",
+      "children": [
+        "分析覆盖近千种职业",
+        "行政和文书工作风险最高"
+      ]
+    },
+    {
+      "label": "新岗位机会",
+      "detail": "AI将创造新岗位，尤其在AI开发、数据分析和人机协作领域",
+      "children": [
+        "AI开发",
+        "数据分析",
+        "人机协作"
+      ]
+    },
+    {
+      "label": "技能再培训",
+      "detail": "转型需技能再培训，政策制定者应投资教育体系",
+      "children": [
+        "投资教育体系",
+        "缓解转型冲击"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "开发者需关注AI工具链集成与自动化，提升跨领域协作能力",
+      "children": [
+        "AI工具链集成",
+        "跨领域协作能力"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "欧盟",
+      "type": "concept"
+    },
+    {
+      "name": "AI开发",
+      "type": "concept"
+    },
+    {
+      "name": "数据分析",
+      "type": "concept"
+    },
+    {
+      "name": "人机协作",
+      "type": "concept"
+    },
+    {
+      "name": "技能再培训",
+      "type": "concept"
+    },
+    {
+      "name": "教育体系",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "欧盟",
+      "label": "发布报告"
+    },
+    {
+      "from": "AI开发",
+      "to": "技能再培训",
+      "label": "需要"
+    },
+    {
+      "from": "数据分析",
+      "to": "技能再培训",
+      "label": "需要"
+    },
+    {
+      "from": "人机协作",
+      "to": "技能再培训",
+      "label": "需要"
+    },
+    {
+      "from": "技能再培训",
+      "to": "教育体系",
+      "label": "依赖"
+    }
+  ]
+}

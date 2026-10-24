@@ -1,0 +1,120 @@
+{
+  "center": "Claude Design 发布",
+  "branches": [
+    {
+      "label": "产品定位",
+      "detail": "Anthropic Labs 新品，与 Claude 协作产出视觉设计",
+      "children": [
+        "覆盖设计稿、原型、幻灯片、one-pager",
+        "由最强视觉模型 Claude Opus 4.7 驱动",
+        "Pro/Max/Team/Enterprise 研究预览"
+      ]
+    },
+    {
+      "label": "使用场景",
+      "detail": "从设计师到创始人、PM、市场都能用",
+      "children": [
+        "静态稿转可分享交互原型，无需代码评审",
+        "线框图一键交接给 Claude Code 实现",
+        "粗糙大纲几分钟变品牌化 PPTX 或 Canva"
+      ]
+    },
+    {
+      "label": "工作流程",
+      "detail": "从品牌系统到导出交接的完整创作流",
+      "children": [
+        "入职时读代码库与设计文件自动建设计系统",
+        "支持文本、图片、DOCX/PPTX/XLSX、代码库导入",
+        "行内评论、直接编辑、滑块微调间距颜色布局"
+      ]
+    },
+    {
+      "label": "协作与导出",
+      "detail": "组织级共享与多格式输出",
+      "children": [
+        "可私有、链接查看或授予编辑权限",
+        "支持群聊中与 Claude 共同修改设计",
+        "导出 Canva、PDF、PPTX 或独立 HTML"
+      ]
+    },
+    {
+      "label": "客户反馈",
+      "detail": "Canva 与 Brilliant 等团队已在使用",
+      "children": [
+        "Brilliant 复杂页面从 20+ 提示降到 2 个",
+        "原型到生产因交接含设计意图而更顺畅",
+        "一周的评审往返压缩到一次对话"
+      ]
+    }
+  ],
+  "flow": [
+    "入职建品牌设计系统",
+    "导入素材或描述需求",
+    "Claude 生成首版设计",
+    "评论/编辑/滑块微调",
+    "组织内协作共享",
+    "导出或交接 Claude Code"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Design",
+      "type": "product"
+    },
+    {
+      "name": "Claude Opus 4.7",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Canva",
+      "type": "company"
+    },
+    {
+      "name": "Brilliant",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic Labs",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Design",
+      "label": "推出"
+    },
+    {
+      "from": "Claude Opus 4.7",
+      "to": "Claude Design",
+      "label": "驱动"
+    },
+    {
+      "from": "Claude Design",
+      "to": "Claude Code",
+      "label": "交接设计"
+    },
+    {
+      "from": "Claude Design",
+      "to": "Canva",
+      "label": "导出至"
+    },
+    {
+      "from": "Brilliant",
+      "to": "Claude Design",
+      "label": "使用"
+    },
+    {
+      "from": "Anthropic Labs",
+      "to": "Claude Design",
+      "label": "发布"
+    }
+  ]
+}

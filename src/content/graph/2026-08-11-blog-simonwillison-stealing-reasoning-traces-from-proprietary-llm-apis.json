@@ -1,0 +1,116 @@
+{
+  "center": "窃取专有LLM推理链",
+  "branches": [
+    {
+      "label": "加密块可重放",
+      "detail": "Anthropic、OpenAI、Google 返回加密思维链块，可跨会话、用户、模型重放",
+      "children": [
+        "同族模型共用同一加密密钥",
+        "重放至最弱模型即可越狱"
+      ]
+    },
+    {
+      "label": "越狱还原明文",
+      "detail": "把强模型轨迹喂给弱模型并越狱，还原出强模型隐藏推理明文",
+      "children": [
+        "Claude Haiku 4.5 最易被攻击",
+        "提示词要求逐字转录 reasoning"
+      ]
+    },
+    {
+      "label": "推理内容原始",
+      "detail": "泄露的推理 token 明显非为人类阅读设计，碎片化且重复",
+      "children": [
+        "GPT-5.5 思考 CSS 时反复自问",
+        "附录含大量提取的推理轨迹"
+      ]
+    },
+    {
+      "label": "注入新变种",
+      "detail": "诱导模型在思维链中思考数据外泄，再把加密块喂给另一模型",
+      "children": [
+        "模型视自身推理轨迹为神圣",
+        "更易服从混入推理块的指令"
+      ]
+    },
+    {
+      "label": "厂商已修复",
+      "detail": "所有模型厂商确认收到报告，此后无法复现同类攻击",
+      "children": [
+        "4.6 模型移除了 assistant 前缀功能"
+      ]
+    }
+  ],
+  "flow": [
+    "获取加密推理块",
+    "重放至弱模型",
+    "越狱弱模型",
+    "还原明文推理"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Claude Haiku 4.5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "chain-of-thought",
+      "type": "concept"
+    },
+    {
+      "name": "prompt injection",
+      "type": "technique"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "chain-of-thought",
+      "label": "返回加密"
+    },
+    {
+      "from": "OpenAI",
+      "to": "chain-of-thought",
+      "label": "返回加密"
+    },
+    {
+      "from": "Google",
+      "to": "chain-of-thought",
+      "label": "返回加密"
+    },
+    {
+      "from": "Claude Haiku 4.5",
+      "to": "chain-of-thought",
+      "label": "越狱还原"
+    },
+    {
+      "from": "GPT-5.5",
+      "to": "chain-of-thought",
+      "label": "泄露推理"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "chain-of-thought",
+      "label": "报道"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "center": "cline cli-v3.0.17 稳定性修复",
+  "branches": [
+    {
+      "label": "会话恢复修复",
+      "detail": "Hub 重启后 CLI 能检测过期会话并恢复待处理消息",
+      "children": [
+        "避免“会话未找到”错误",
+        "确保 agent 交互连续性"
+      ]
+    },
+    {
+      "label": "关闭竞争修复",
+      "detail": "解决 Ctrl+C 与 Hub 关闭时的竞争条件",
+      "children": [
+        "修复 hook dispatch failed",
+        "修复 WebSocket 错误"
+      ]
+    },
+    {
+      "label": "Telegram 安全增强",
+      "detail": "新增 --allowed-user-id 标志限制授权用户",
+      "children": [
+        "强化外部渠道访问控制"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "cline cli-v3.0.17",
+      "type": "product"
+    },
+    {
+      "name": "Hub",
+      "type": "product"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    },
+    {
+      "name": "WebSocket",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli-v3.0.17",
+      "to": "cline",
+      "label": "属于"
+    },
+    {
+      "from": "cline cli-v3.0.17",
+      "to": "Hub",
+      "label": "修复交互"
+    },
+    {
+      "from": "cline cli-v3.0.17",
+      "to": "Telegram",
+      "label": "增强安全"
+    },
+    {
+      "from": "Hub",
+      "to": "CLI",
+      "label": "重启影响"
+    },
+    {
+      "from": "Hub",
+      "to": "WebSocket",
+      "label": "关闭引发错误"
+    }
+  ]
+}

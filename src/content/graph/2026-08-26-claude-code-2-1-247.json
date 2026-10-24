@@ -1,0 +1,103 @@
+{
+  "center": "Claude Code v2.1.247 更新",
+  "branches": [
+    {
+      "label": "反馈草稿",
+      "detail": "新增 SendFeedback 工具，Claude 起草反馈报告供用户审查后发送",
+      "children": [
+        "可用 feedbackDrafts 设置关闭"
+      ]
+    },
+    {
+      "label": "成本优化",
+      "detail": "新增 /claude-api cost-optimize 命令，分析项目 API 支出并逐步优化",
+      "children": [
+        "优化缓存、token、批处理等"
+      ]
+    },
+    {
+      "label": "修复与回退",
+      "detail": "修复子代理在模型 404 时使用会话回退模型链",
+      "children": [
+        "错误信息更完整"
+      ]
+    },
+    {
+      "label": "键盘与输入修复",
+      "detail": "修复非拉丁键盘布局下 Ctrl 快捷键失效",
+      "children": [
+        "修复鼠标报告拆分读取导致的文本注入"
+      ]
+    },
+    {
+      "label": "安全加固",
+      "detail": "加固插件市场，拒绝控制字符并转义输出",
+      "children": [
+        "改进 Bedrock/Vertex 等会话的 MCP 错误提示"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "SendFeedback",
+      "type": "product"
+    },
+    {
+      "name": "feedbackDrafts",
+      "type": "concept"
+    },
+    {
+      "name": "/claude-api cost-optimize",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "SendFeedback",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "/claude-api cost-optimize",
+      "label": "新增"
+    },
+    {
+      "from": "feedbackDrafts",
+      "to": "SendFeedback",
+      "label": "可关闭"
+    },
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "改进错误提示"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Bedrock",
+      "label": "支持会话"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Vertex",
+      "label": "支持会话"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "center": "通用AI不够用，垂直定制才是未来",
+  "branches": [
+    {
+      "label": "优化理论证明",
+      "detail": "Wolpert与Macready证明无通用算法在所有问题上都最优",
+      "children": [
+        "算法靠匹配目标问题取胜",
+        "有限资源下广度与性能直接冲突",
+        "通用性不是性能优势"
+      ]
+    },
+    {
+      "label": "生物学与市场",
+      "detail": "进化与竞争市场都独立得出「专精优于广博」",
+      "children": [
+        "生物：专才填满生态位",
+        "市场：淘汰匹配度低的组织",
+        "机制不同但结构压力相同"
+      ]
+    },
+    {
+      "label": "机器学习印证",
+      "detail": "ML领域反复重新发现专精化的价值",
+      "children": [
+        "负迁移：多任务竞争降低单任务表现",
+        "MoE靠路由到专家子集实现广度",
+        "广度收益变成深度成本"
+      ]
+    },
+    {
+      "label": "论文来源",
+      "detail": "基于2026年Goldfeder等论文的解读",
+      "children": [
+        "作者含LeCun、Shwartz-Ziv",
+        "论文主张AI必须拥抱专精化",
+        "Dharma AI做编辑综合"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Dharma AI",
+      "type": "company"
+    },
+    {
+      "name": "Yann LeCun",
+      "type": "person"
+    },
+    {
+      "name": "Goldfeder",
+      "type": "person"
+    },
+    {
+      "name": "Shwartz-Ziv",
+      "type": "person"
+    },
+    {
+      "name": "负迁移",
+      "type": "concept"
+    },
+    {
+      "name": "Mixture-of-Experts",
+      "type": "technique"
+    },
+    {
+      "name": "Wolpert-Macready定理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Dharma AI",
+      "to": "Goldfeder",
+      "label": "解读论文"
+    },
+    {
+      "from": "Goldfeder",
+      "to": "Yann LeCun",
+      "label": "合著"
+    },
+    {
+      "from": "Goldfeder",
+      "to": "Shwartz-Ziv",
+      "label": "合著"
+    },
+    {
+      "from": "Mixture-of-Experts",
+      "to": "负迁移",
+      "label": "规避"
+    },
+    {
+      "from": "Wolpert-Macready定理",
+      "to": "负迁移",
+      "label": "预测"
+    }
+  ]
+}

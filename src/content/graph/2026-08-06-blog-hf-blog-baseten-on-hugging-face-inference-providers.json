@@ -1,0 +1,92 @@
+{
+  "center": "Baseten 加入 HF 推理提供商",
+  "branches": [
+    {
+      "label": "合作内容",
+      "detail": "Hugging Face 与 Baseten 合作，在 Inference Providers 中提供 GPU 推理",
+      "children": [
+        "Baseten 成为 HF 推理提供商之一",
+        "面向 Text Generation 等任务"
+      ]
+    },
+    {
+      "label": "同类先例",
+      "detail": "此前已有其他厂商以相同方式接入 HF 推理提供商",
+      "children": [
+        "DeepInfra 于 2026-04-29 接入",
+        "Scaleway 于 2025-09-19 接入"
+      ]
+    },
+    {
+      "label": "涉及模型",
+      "detail": "文章提及 3 个模型，规模从 304B 到 2.8T",
+      "children": [
+        "304B 模型 8 月 1 日更新",
+        "2.8T 模型 21 天前更新",
+        "753B 模型 22 天前更新"
+      ]
+    },
+    {
+      "label": "社区反馈",
+      "detail": "评论区用户对此次合作表示认可",
+      "children": [
+        "AlessandroAle83 留言称赞",
+        "帖子获 35 次点赞"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Baseten",
+      "type": "company"
+    },
+    {
+      "name": "Hugging Face Inference Providers",
+      "type": "product"
+    },
+    {
+      "name": "DeepInfra",
+      "type": "company"
+    },
+    {
+      "name": "Scaleway",
+      "type": "company"
+    },
+    {
+      "name": "GPU",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Baseten",
+      "to": "Hugging Face Inference Providers",
+      "label": "接入"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Baseten",
+      "label": "合作"
+    },
+    {
+      "from": "DeepInfra",
+      "to": "Hugging Face Inference Providers",
+      "label": "接入"
+    },
+    {
+      "from": "Scaleway",
+      "to": "Hugging Face Inference Providers",
+      "label": "接入"
+    },
+    {
+      "from": "Baseten",
+      "to": "GPU",
+      "label": "提供"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "center": "claude-code v2.1.185 更新",
+  "branches": [
+    {
+      "label": "提示文案优化",
+      "detail": "等待提示从“无响应”改为“等待响应”，减少用户焦虑",
+      "children": [
+        "文案更积极"
+      ]
+    },
+    {
+      "label": "超时阈值翻倍",
+      "detail": "触发提示时间从 10 秒延长到 20 秒，降低误报频率",
+      "children": [
+        "10 秒 → 20 秒"
+      ]
+    },
+    {
+      "label": "重试机制更清晰",
+      "detail": "明确显示重试倒计时，提升操作可预测性",
+      "children": [
+        "显示重试倒计时"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "API",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "API",
+      "label": "调用"
+    }
+  ]
+}

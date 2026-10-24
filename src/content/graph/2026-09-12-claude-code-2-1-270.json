@@ -1,0 +1,68 @@
+{
+  "center": "claude-code v2.1.270 修复权限…",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "长会话中 Bash 只读 git 命令不再误报权限请求",
+      "children": [
+        "回归由 2.1.269 引入",
+        "仅影响会话运行一段时间后"
+      ]
+    },
+    {
+      "label": "根因含义",
+      "detail": "权限判定依赖会话内可变状态，会随时间漂移",
+      "children": [
+        "只读命令判定应无状态、可复现"
+      ]
+    },
+    {
+      "label": "测试启示",
+      "detail": "回归出现在相邻小版本，权限层需持续测试",
+      "children": [
+        "需覆盖长会话场景",
+        "不能只做冷启动验证"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Bash",
+      "type": "product"
+    },
+    {
+      "name": "git",
+      "type": "product"
+    },
+    {
+      "name": "权限判定",
+      "type": "concept"
+    },
+    {
+      "name": "长会话",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "Bash",
+      "label": "调用"
+    },
+    {
+      "from": "Bash",
+      "to": "git",
+      "label": "执行"
+    },
+    {
+      "from": "权限判定",
+      "to": "长会话",
+      "label": "受其影响"
+    }
+  ]
+}

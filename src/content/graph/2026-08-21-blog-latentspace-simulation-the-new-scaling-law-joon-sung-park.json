@@ -1,0 +1,124 @@
+{
+  "center": "Simulation 成为新 Scaling Law",
+  "branches": [
+    {
+      "label": "Simile 与数字孪生",
+      "detail": "Joon Sung Park 创立 Simile，用模拟人类行为构建数字孪生",
+      "children": [
+        "完成 2B 美元 B 轮，GreenOaks、Index…",
+        "Fei-Fei Li、Andrej Karpathy 为知名支持者",
+        "为 CVS 等财富 100 客户运行数千万次模拟"
+      ]
+    },
+    {
+      "label": "85% 行为准确率",
+      "detail": "数字孪生复现人类行为与态度的准确率达 85%",
+      "children": [
+        "对 1000 名真人创建数字孪生",
+        "准确率对标人类焦点小组的 85–99%",
+        "模型需复现人类偏见与错误，而非理性最优"
+      ]
+    },
+    {
+      "label": "从 Smallville 到 Simile",
+      "detail": "2023 年 Generative Agents 论文展示 AI 角色能记忆、规划、社交",
+      "children": [
+        "Smallville 出现涌现行为",
+        "研究转向人类行为基础模型",
+        "核心问题：能否在决策前先模拟世界"
+      ]
+    },
+    {
+      "label": "建模方法与数据",
+      "detail": "用长访谈、观察与交易数据、随机对照试验建模人类行为",
+      "children": [
+        "在因果机制上做后训练",
+        "网络数据更多反映人们说什么而非做什么",
+        "区分人口级与个体级模拟"
+      ]
+    },
+    {
+      "label": "社会物理与野心",
+      "detail": "理解社会物理或需改模型权重，而非仅提示前沿 LLM",
+      "children": [
+        "长期目标是模拟地球全部 80 亿人",
+        "可用于测试产品与政策、研究 UBI",
+        "未来模拟或需整个数据中心"
+      ]
+    }
+  ],
+  "flow": [
+    "长访谈与观察数据采集",
+    "随机对照试验后训练",
+    "构建个体与人口级模型",
+    "生成数字孪生与合成人群",
+    "评估行为准确率",
+    "模拟社会涌现行为"
+  ],
+  "entities": [
+    {
+      "name": "Simile AI",
+      "type": "company"
+    },
+    {
+      "name": "Joon Sung Park",
+      "type": "person"
+    },
+    {
+      "name": "Generative Agents",
+      "type": "concept"
+    },
+    {
+      "name": "Smallville",
+      "type": "concept"
+    },
+    {
+      "name": "Fei-Fei Li",
+      "type": "person"
+    },
+    {
+      "name": "Andrej Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "CVS",
+      "type": "company"
+    },
+    {
+      "name": "数字孪生",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Joon Sung Park",
+      "to": "Simile AI",
+      "label": "创立"
+    },
+    {
+      "from": "Joon Sung Park",
+      "to": "Generative Agents",
+      "label": "主导研究"
+    },
+    {
+      "from": "Generative Agents",
+      "to": "Smallville",
+      "label": "产出"
+    },
+    {
+      "from": "Simile AI",
+      "to": "数字孪生",
+      "label": "构建"
+    },
+    {
+      "from": "Fei-Fei Li",
+      "to": "Simile AI",
+      "label": "支持"
+    },
+    {
+      "from": "Andrej Karpathy",
+      "to": "Simile AI",
+      "label": "支持"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "center": "Steve Yegge 谈 Gas Town 因…",
+  "branches": [
+    {
+      "label": "Gas Town 的初衷",
+      "detail": "Steve Yegge 的代码生成工具，本意是做成可复用的产品。",
+      "children": [
+        "最终只用来构建它自己"
+      ]
+    },
+    {
+      "label": "Opus 4.6 表现良好",
+      "detail": "在 Opus 4.6 及之前版本，Gas Town 运行得非常出色。",
+      "children": [
+        "4.6 之前工作出色"
+      ]
+    },
+    {
+      "label": "Opus 4.7 引入坏习惯",
+      "detail": "4.7 出现“just two more things”的毛病，让模型无法收敛。",
+      "children": [
+        "总想摆弄 Gas Town 本身",
+        "无法准备好做真正的工作"
+      ]
+    },
+    {
+      "label": "Gas Town 最终烧毁",
+      "detail": "Opus 的毛病一直没消失，Gas Town 因此彻底失败。",
+      "children": [
+        "4.7 是最后一根稻草",
+        "还有其他问题"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Steve Yegge",
+      "type": "person"
+    },
+    {
+      "name": "Gas Town",
+      "type": "product"
+    },
+    {
+      "name": "Opus 4.7",
+      "type": "model"
+    },
+    {
+      "name": "Opus 4.6",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Steve Yegge",
+      "to": "Gas Town",
+      "label": "开发"
+    },
+    {
+      "from": "Gas Town",
+      "to": "Opus 4.7",
+      "label": "因之失败"
+    },
+    {
+      "from": "Gas Town",
+      "to": "Opus 4.6",
+      "label": "曾运行良好"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Steve Yegge",
+      "label": "引用"
+    }
+  ]
+}

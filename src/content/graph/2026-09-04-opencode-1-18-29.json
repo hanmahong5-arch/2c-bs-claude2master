@@ -1,0 +1,73 @@
+{
+  "center": "opencode v1.18.29 修复 GPT 版…",
+  "branches": [
+    {
+      "label": "整数版本号识别",
+      "detail": "Codex OAuth 模型过滤现可识别整数 GPT 版本，此前可能被遗漏",
+      "children": [
+        "如 gpt-6 这类非语义化版本号",
+        "过滤逻辑需兼容非语义化版本"
+      ]
+    },
+    {
+      "label": "订阅模型显示",
+      "detail": "修复 gpt-6-astra 未对 OpenAI 订阅用户显示的问题",
+      "children": [
+        "订阅用户可见列表需动态同步",
+        "确保新模型及时暴露"
+      ]
+    },
+    {
+      "label": "社区贡献",
+      "detail": "中文文档加粗渲染修复，控制台新增配额重置操作",
+      "children": [
+        "文档与 UI 操作需保持同步",
+        "便于用户管理配额"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "GPT",
+      "type": "model"
+    },
+    {
+      "name": "Codex OAuth",
+      "type": "technique"
+    },
+    {
+      "name": "gpt-6",
+      "type": "model"
+    },
+    {
+      "name": "gpt-6-astra",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "GPT",
+      "label": "修复识别"
+    },
+    {
+      "from": "Codex OAuth",
+      "to": "gpt-6",
+      "label": "过滤识别"
+    },
+    {
+      "from": "OpenAI",
+      "to": "gpt-6-astra",
+      "label": "提供订阅"
+    }
+  ]
+}

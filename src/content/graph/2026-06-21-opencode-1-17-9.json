@@ -1,0 +1,62 @@
+{
+  "center": "opencode v1.17.9 更新",
+  "branches": [
+    {
+      "label": "修复步数限制",
+      "detail": "达到配置步数限制时强制输出最终文本响应，不再中途失败",
+      "children": [
+        "确保任务按预期完成"
+      ]
+    },
+    {
+      "label": "支持 GLM-5.2",
+      "detail": "为支持的提供商添加 high 和 max 思考变体，增强复杂推理",
+      "children": [
+        "GLM-5.2 高级思考模式"
+      ]
+    },
+    {
+      "label": "优化提示缓存",
+      "detail": "停止在后续用户消息中包装转向提醒，保持提示缓存有效",
+      "children": [
+        "提升响应速度"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    },
+    {
+      "name": "提示缓存",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "GLM-5.2",
+      "label": "支持"
+    },
+    {
+      "from": "opencode",
+      "to": "agent",
+      "label": "修复"
+    },
+    {
+      "from": "opencode",
+      "to": "提示缓存",
+      "label": "优化"
+    }
+  ]
+}

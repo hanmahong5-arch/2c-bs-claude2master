@@ -1,0 +1,108 @@
+{
+  "center": "Claude Opus 5 发布与基准争议",
+  "branches": [
+    {
+      "label": "基准表现",
+      "detail": "Epoch 测得 ECI 159、SWE-ECI 161，略低于 Fable 5 的 161",
+      "children": [
+        "ECI 159 vs Fable 5 的 161",
+        "SWE-ECI 161 与 Fable 5 持平",
+        "仅比 Opus 4.8 高 1 分"
+      ]
+    },
+    {
+      "label": "独立评测",
+      "detail": "Artificial Analysis 称其登顶智能指数与 AA-Briefcase",
+      "children": [
+        "AA-Briefcase 超 Fable 5 近 150 Elo",
+        "每任务成本降低 20%",
+        "效率仅与 GPT 5.6 Sol 持平"
+      ]
+    },
+    {
+      "label": "编码口碑",
+      "detail": "多位技术用户称实际编码与工具使用强于公开基准",
+      "children": [
+        "Mikhail Parakhin 称 best-of-n 下胜 Fable",
+        "可驱动浏览器取消订阅",
+        "Nous Portal 提供访问并打 8 折"
+      ]
+    },
+    {
+      "label": "评测争议",
+      "detail": "FrontierCode 中等努力得分反高于高努力，引发基准稳定性质疑",
+      "children": [
+        "努力增加未带来一致提升",
+        "用户称 ECI 被低估",
+        "呼吁更难的公开基准"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Opus 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Epoch AI",
+      "type": "company"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "GPT 5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Mikhail Parakhin",
+      "type": "person"
+    },
+    {
+      "name": "ECI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Opus 5",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Opus 5",
+      "to": "Claude Fable 5",
+      "label": "对标"
+    },
+    {
+      "from": "Epoch AI",
+      "to": "ECI",
+      "label": "提出"
+    },
+    {
+      "from": "Epoch AI",
+      "to": "Claude Opus 5",
+      "label": "评测"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "Claude Opus 5",
+      "label": "评测"
+    },
+    {
+      "from": "Mikhail Parakhin",
+      "to": "Claude Opus 5",
+      "label": "实测"
+    }
+  ]
+}

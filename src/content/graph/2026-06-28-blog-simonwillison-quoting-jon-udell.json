@@ -1,0 +1,86 @@
+{
+  "center": "Jon Udell：代理应入团队",
+  "branches": [
+    {
+      "label": "反对人类在环",
+      "detail": "Jon Udell 认为该说法把权威让给了机器，应翻转叙事",
+      "children": [
+        "“human in the loop”让机器掌权",
+        "应说“我们的循环”"
+      ]
+    },
+    {
+      "label": "代理加入团队",
+      "detail": "我们照旧工作，只是招募代理加入团队，而非被排除在外",
+      "children": [
+        "代理是团队成员",
+        "不是黑箱决策者"
+      ]
+    },
+    {
+      "label": "拒绝黑箱流程",
+      "detail": "代理辅助流程不必是输入提示、输出功能的黑箱",
+      "children": [
+        "黑箱：prompts 进，features 出",
+        "代理开发应可审查"
+      ]
+    },
+    {
+      "label": "代理开发方式",
+      "detail": "像邀请代理加入我们自己的循环那样做代理软件开发",
+      "children": [
+        "不把我们排除在循环外",
+        "邀请代理进入循环"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Jon Udell",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "human in the loop",
+      "type": "concept"
+    },
+    {
+      "name": "agentic software development",
+      "type": "concept"
+    },
+    {
+      "name": "coding agents",
+      "type": "concept"
+    },
+    {
+      "name": "agentic-engineering",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Jon Udell",
+      "to": "human in the loop",
+      "label": "反对"
+    },
+    {
+      "from": "Jon Udell",
+      "to": "agentic software development",
+      "label": "倡导"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Jon Udell",
+      "label": "引用"
+    },
+    {
+      "from": "coding agents",
+      "to": "agentic software development",
+      "label": "属于"
+    }
+  ]
+}

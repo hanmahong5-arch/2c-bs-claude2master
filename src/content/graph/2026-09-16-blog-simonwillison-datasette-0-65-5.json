@@ -1,0 +1,82 @@
+{
+  "center": "Datasette 0.65.5 权限绕过修复",
+  "branches": [
+    {
+      "label": "漏洞本质",
+      "detail": "请求表名尾部带换行符可绕过表权限，暴露私有数据行",
+      "children": [
+        "表名尾部换行符触发绕过",
+        "可读取私有行数据"
+      ]
+    },
+    {
+      "label": "修复版本",
+      "detail": "Datasette 0.65.5 发布，专门修复该权限绕过问题",
+      "children": [
+        "版本号 0.65.5",
+        "发布日期 2026-09-16"
+      ]
+    },
+    {
+      "label": "漏洞报告",
+      "detail": "由 dpfkdlemtp 通过 GHSA-h547-rmjf-5m2m 报告",
+      "children": [
+        "报告者 dpfkdlemtp",
+        "安全公告 GHSA-h547-rmjf-5m2m"
+      ]
+    },
+    {
+      "label": "项目定位",
+      "detail": "Datasette 是用于探索和发布数据的开源多工具",
+      "children": [
+        "开源工具",
+        "探索与发布数据"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "dpfkdlemtp",
+      "type": "person"
+    },
+    {
+      "name": "GHSA-h547-rmjf-5m2m",
+      "type": "concept"
+    },
+    {
+      "name": "权限绕过",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "发布"
+    },
+    {
+      "from": "dpfkdlemtp",
+      "to": "权限绕过",
+      "label": "报告"
+    },
+    {
+      "from": "GHSA-h547-rmjf-5m2m",
+      "to": "权限绕过",
+      "label": "记录"
+    },
+    {
+      "from": "Datasette",
+      "to": "权限绕过",
+      "label": "修复"
+    }
+  ]
+}

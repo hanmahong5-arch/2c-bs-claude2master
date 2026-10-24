@@ -1,0 +1,83 @@
+{
+  "center": "Datasette 1.0a40 发布",
+  "branches": [
+    {
+      "label": "安全修复同步",
+      "detail": "与 0.65.5 相同的安全修复一并发布",
+      "children": [
+        "与 0.65.5 修复内容一致"
+      ]
+    },
+    {
+      "label": "插件后台任务",
+      "detail": "插件可用新方法启动和管理后台任务",
+      "children": [
+        "新增 datasette.add_background_task()",
+        "贡献者 Alex Garcia"
+      ]
+    },
+    {
+      "label": "迁移 httpx2",
+      "detail": "Datasette 已迁移到 httpx2 支持内部请求",
+      "children": [
+        "用于 datasette.client.get() 等"
+      ]
+    },
+    {
+      "label": "大量 bug 修复",
+      "detail": "为 1.0 稳定版做问题梳理带来多项修复",
+      "children": [
+        "源于 1.0 稳定版 issue 梳理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Alex Garcia",
+      "type": "person"
+    },
+    {
+      "name": "httpx2",
+      "type": "product"
+    },
+    {
+      "name": "datasette.add_background_task()",
+      "type": "technique"
+    },
+    {
+      "name": "datasette.client.get()",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "发布"
+    },
+    {
+      "from": "Alex Garcia",
+      "to": "datasette.add_background_task()",
+      "label": "贡献"
+    },
+    {
+      "from": "Datasette",
+      "to": "httpx2",
+      "label": "迁移至"
+    },
+    {
+      "from": "datasette.client.get()",
+      "to": "httpx2",
+      "label": "依赖"
+    }
+  ]
+}

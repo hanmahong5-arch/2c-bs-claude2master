@@ -1,0 +1,121 @@
+{
+  "center": "Claude Fable 5 实测初印象",
+  "branches": [
+    {
+      "label": "模型定位",
+      "detail": "Anthropic 新前沿模型，性能同 Mythos 5 但安全护栏更严",
+      "children": [
+        "护栏触发频繁，API 新增回退机制",
+        "Mythos 5 同日发布，仅限信任伙伴"
+      ]
+    },
+    {
+      "label": "规格与成本",
+      "detail": "100 万 token 上下文，输出上限 12.8 万，知识截止 2026 年 1 月",
+      "children": [
+        "定价 $10/M 输入、$50/M 输出，为 Opus 4.5-4…",
+        "长上下文不额外加价"
+      ]
+    },
+    {
+      "label": "知识广度",
+      "detail": "博主用开源项目列表提示对比，Fable 5 明显比 Opus 4.8 知道得多",
+      "children": [
+        "Fable 列出 files-to-prompt、symbex 等大量…",
+        "Opus 4.8 仅列 LLM、Datasette 等少数并声明…",
+        "博主推测 Fable 可能是迄今最大模型"
+      ]
+    },
+    {
+      "label": "实测案例",
+      "detail": "在 Claude.ai 容器中把 micropython-wasm 升级为完整 CPython",
+      "children": [
+        "Fable 识别可用 Brett Cannon 的…",
+        "上传 zip 后几分钟内跑通",
+        "继续尝试单 zip stdlib 与打包 wheel"
+      ]
+    },
+    {
+      "label": "可用渠道",
+      "detail": "覆盖 Claude.ai、Claude Code 网页/CLI 及 Claude Cowork",
+      "children": [
+        "订阅计划可用至 6 月 22 日，之后额外计费",
+        "Claude.ai 自 2025 年 9 月起每轮对话带容器…"
+      ]
+    }
+  ],
+  "flow": [
+    "克隆 micropython-wasm 仓库",
+    "研究改用完整 Python",
+    "上传 cpython-wasi-build",
+    "跑通 CPython 沙箱",
+    "尝试单 zip stdlib",
+    "打包完整 wheel"
+  ],
+  "entities": [
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "micropython-wasm",
+      "type": "product"
+    },
+    {
+      "name": "cpython-wasi-build",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Mythos 5",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Fable 5",
+      "label": "实测"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "micropython-wasm",
+      "label": "升级"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "cpython-wasi-build",
+      "label": "采用"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Claude Code",
+      "label": "集成于"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "center": "OpenAI WebRTC 音频会话加文档上…",
+  "branches": [
+    {
+      "label": "工具更新",
+      "detail": "Simon Willison 在旧 WebRTC 音频工具中加入文档上下文功能",
+      "children": [
+        "初版 2024 年 12 月为试用 OpenAI WebRTC…",
+        "可粘贴大段文档，在浏览器中围绕其进行语音对话"
+      ]
+    },
+    {
+      "label": "新模型支持",
+      "detail": "工具现可选择 GPT-Realtime-2 模型",
+      "children": [
+        "OpenAI 上月推出 GPT-Realtime-2",
+        "号称首个具备 GPT-5 级推理的语音模型",
+        "知识截止 2024 年 9 月 30 日"
+      ]
+    },
+    {
+      "label": "等待未果",
+      "detail": "作者等待该模型出现在 ChatGPT iPhone 应用中，但尚未上线",
+      "children": [
+        "因此重新拾起旧 playground 进行测试"
+      ]
+    }
+  ],
+  "flow": [
+    "打开 WebRTC 音频工具",
+    "选择 GPT-Realtime-2 模型",
+    "粘贴文档上下文",
+    "开始语音对话"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "WebRTC",
+      "type": "technique"
+    },
+    {
+      "name": "GPT-Realtime-2",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "WebRTC",
+      "label": "构建工具"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-Realtime-2",
+      "label": "推出"
+    },
+    {
+      "from": "GPT-Realtime-2",
+      "to": "GPT-5",
+      "label": "同级推理"
+    },
+    {
+      "from": "GPT-Realtime-2",
+      "to": "ChatGPT",
+      "label": "尚未上线"
+    }
+  ]
+}

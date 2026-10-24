@@ -1,0 +1,92 @@
+{
+  "center": "追踪稀有书籍订单至亚马逊AI设施",
+  "branches": [
+    {
+      "label": "调查方法",
+      "detail": "404 Media 用 AirTag 追踪一单约 1000 本书的订单",
+      "children": [
+        "书商在 Biblio 收到约 1000 本书的大订单",
+        "404 Media 提供 AirTag 放入其中一本书"
+      ]
+    },
+    {
+      "label": "最终去向",
+      "detail": "书籍被送到拉斯维加斯 LAS8 亚马逊设施的 VGT3 区域",
+      "children": [
+        "入口有恐龙拿书的标志",
+        "亚马逊员工论坛确认 VGT3 破坏性扫描大量书籍"
+      ]
+    },
+    {
+      "label": "背景疑云",
+      "detail": "匿名买家高价大量购书，疑似用于 AI 训练扫描",
+      "children": [
+        "买家对价格不敏感且匿名",
+        "此前有 Anthropic 扫描书籍的报道"
+      ]
+    }
+  ],
+  "flow": [
+    "书商收到大额订单",
+    "放入 AirTag 追踪",
+    "书籍运往亚马逊设施",
+    "确认 VGT3 扫描书籍"
+  ],
+  "entities": [
+    {
+      "name": "404 Media",
+      "type": "company"
+    },
+    {
+      "name": "Amazon",
+      "type": "company"
+    },
+    {
+      "name": "AirTag",
+      "type": "product"
+    },
+    {
+      "name": "Biblio",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "AI training",
+      "type": "concept"
+    },
+    {
+      "name": "VGT3",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "404 Media",
+      "to": "AirTag",
+      "label": "使用"
+    },
+    {
+      "from": "404 Media",
+      "to": "Amazon",
+      "label": "调查"
+    },
+    {
+      "from": "Amazon",
+      "to": "VGT3",
+      "label": "包含"
+    },
+    {
+      "from": "Biblio",
+      "to": "Amazon",
+      "label": "订单流向"
+    },
+    {
+      "from": "Anthropic",
+      "to": "AI training",
+      "label": "涉及"
+    }
+  ]
+}

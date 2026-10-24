@@ -1,0 +1,121 @@
+{
+  "center": "OpenClaw 新安装器简化上手",
+  "branches": [
+    {
+      "label": "macOS 原生安装",
+      "detail": "推出 macOS 原生 App，图形界面点击安装，无需接触终端",
+      "children": [
+        "引导式 onboarding 流程",
+        "在干净环境测试修复连接与认证失败点"
+      ]
+    },
+    {
+      "label": "自动检测模型",
+      "detail": "macOS 上自动检测并验证已有 AI 接入配置",
+      "children": [
+        "支持 Claude、Codex、Ollama 配置",
+        "高级用户仍可自选模型与本地推理"
+      ]
+    },
+    {
+      "label": "Windows 本地模型",
+      "detail": "NVIDIA RTX 机器上自动检测硬件并推荐本地模型",
+      "children": [
+        "需至少 24GB 显存，可跑 30B 级模型",
+        "覆盖 GeForce RTX 与 RTX PRO",
+        "装完由 App 管理本地模型与 llama-server"
+      ]
+    },
+    {
+      "label": "权限与隔离",
+      "detail": "Windows 与 macOS 均提供统一权限审查与容器隔离",
+      "children": [
+        "说明访问原因并可随时更改",
+        "Microsoft Execution Containers (MXC) 今…",
+        "节点沙箱控制可见可调"
+      ]
+    },
+    {
+      "label": "本地运行价值",
+      "detail": "本地推理带来数据可控与私有、不计量的智能",
+      "children": [
+        "减少对云端推理的依赖",
+        "企业获得更强安全与治理"
+      ]
+    }
+  ],
+  "flow": [
+    "下载 OpenClaw 应用",
+    "点击安装并引导上手",
+    "自动检测已有模型接入",
+    "检测 NVIDIA RTX 硬件",
+    "推荐并配置本地模型",
+    "App 管理模型与权限"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    },
+    {
+      "name": "NVIDIA RTX",
+      "type": "product"
+    },
+    {
+      "name": "llama-server",
+      "type": "product"
+    },
+    {
+      "name": "Microsoft Execution Containers",
+      "type": "technique"
+    },
+    {
+      "name": "Ollama",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "macOS",
+      "label": "推出安装器"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Windows",
+      "label": "简化配置"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "NVIDIA RTX",
+      "label": "检测硬件"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "llama-server",
+      "label": "管理"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Ollama",
+      "label": "检测接入"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Claude",
+      "label": "检测接入"
+    }
+  ]
+}

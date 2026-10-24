@@ -1,0 +1,123 @@
+{
+  "center": "Gemini 在塞拉利昂学习效果 RCT",
+  "branches": [
+    {
+      "label": "试验结果",
+      "detail": "八周随机对照试验，1763 名学生数学成绩显著提升",
+      "children": [
+        "数学成绩提升 +0.258 标准差",
+        "相当于 1.2–1.7 年常规学习进度",
+        "高频使用班级达 1.8–2.5 年进度"
+      ]
+    },
+    {
+      "label": "引导式学习",
+      "detail": "Gemini 用苏格拉底式提问引导，不直接给答案",
+      "children": [
+        "91.4% 对话用于构建概念理解",
+        "76% 消息为脚手架提问，仅 2% 给答案",
+        "技能构建提问从 68% 升至 90%"
+      ]
+    },
+    {
+      "label": "教师主导",
+      "detail": "教师设计课程与目标，AI 辅助而非替代",
+      "children": [
+        "教师从讲授者转为促进者",
+        "发布教师培训指南与协议",
+        "教师用 Gemini 备课获专业成长"
+      ]
+    },
+    {
+      "label": "参与度",
+      "detail": "学生使用率远超教育科技常见水平",
+      "children": [
+        "69% 学生达到或超过使用目标",
+        "远超常见 5% 的“Five Percent Problem”",
+        "学生报告更喜欢数学课"
+      ]
+    },
+    {
+      "label": "挑战与展望",
+      "detail": "基础好的学生获益更多，需关注成就差距",
+      "children": [
+        "计划扩展到更多国家",
+        "研究元认知与关系智能",
+        "发布 RCT 操作手册与 GAILA 支持"
+      ]
+    }
+  ],
+  "flow": [
+    "八周 RCT 试验",
+    "教师设计课程",
+    "Gemini 引导学习",
+    "分析 11.3 万次互动",
+    "测量数学成绩提升"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemini",
+      "type": "product"
+    },
+    {
+      "name": "Guided Learning",
+      "type": "technique"
+    },
+    {
+      "name": "Fab AI",
+      "type": "company"
+    },
+    {
+      "name": "Sierra Leone Ministry of Education",
+      "type": "company"
+    },
+    {
+      "name": "Zoubin Ghahramani",
+      "type": "person"
+    },
+    {
+      "name": "LearnLM",
+      "type": "model"
+    },
+    {
+      "name": "Global AI for Learning Alliance",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini",
+      "label": "开发"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Fab AI",
+      "label": "合作"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Sierra Leone Ministry of Education",
+      "label": "合作"
+    },
+    {
+      "from": "Gemini",
+      "to": "Guided Learning",
+      "label": "采用"
+    },
+    {
+      "from": "Guided Learning",
+      "to": "LearnLM",
+      "label": "基于"
+    },
+    {
+      "from": "Zoubin Ghahramani",
+      "to": "Google DeepMind",
+      "label": "任职于"
+    }
+  ]
+}

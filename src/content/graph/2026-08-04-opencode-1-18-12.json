@@ -1,0 +1,67 @@
+{
+  "center": "opencode v1.18.12 修复 Azure…",
+  "branches": [
+    {
+      "label": "Azure 推理修复",
+      "detail": "修复 Azure GPT-5.5+ 启用推理时请求失败的问题",
+      "children": [
+        "agent 在 Azure 上使用推理模型更稳定"
+      ]
+    },
+    {
+      "label": "桌面端性能",
+      "detail": "优化大图片或附件草稿导致的 composer 卡顿",
+      "children": [
+        "提升 agent 交互流畅度"
+      ]
+    },
+    {
+      "label": "项目搜索范围",
+      "detail": "项目搜索改为匹配所有已知项目",
+      "children": [
+        "此前仅匹配前五个项目",
+        "扩大 agent 可访问项目范围"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Azure",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    },
+    {
+      "name": "composer",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Azure",
+      "label": "修复兼容"
+    },
+    {
+      "from": "Azure",
+      "to": "GPT-5.5",
+      "label": "承载"
+    },
+    {
+      "from": "opencode",
+      "to": "composer",
+      "label": "优化"
+    }
+  ]
+}

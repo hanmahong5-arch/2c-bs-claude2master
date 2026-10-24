@@ -1,0 +1,78 @@
+{
+  "center": "claude-code 修复 Opus 4.8 思维块",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "claude-code v2.1.156 修复 Opus 4.8 思维块被修改导致的 API 错误",
+      "children": [
+        "思维块被篡改曾引发 API 调用出错"
+      ]
+    },
+    {
+      "label": "思维链完整性",
+      "detail": "Agent harness 必须保证思维链原始内容不被意外篡改",
+      "children": [
+        "跨模型版本交互时尤其关键"
+      ]
+    },
+    {
+      "label": "版本兼容防护",
+      "detail": "需对模型输出格式做版本兼容性检查与防护",
+      "children": [
+        "重点针对结构化思维块"
+      ]
+    },
+    {
+      "label": "错误归因",
+      "detail": "错误处理应区分 API 错误来自内容修改还是其他原因",
+      "children": [
+        "以便精准修复"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Chain of Thought",
+      "type": "concept"
+    },
+    {
+      "name": "Agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "Opus 4.8",
+      "label": "修复兼容"
+    },
+    {
+      "from": "Anthropic",
+      "to": "claude-code",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Opus 4.8",
+      "label": "开发"
+    },
+    {
+      "from": "Agent harness",
+      "to": "Chain of Thought",
+      "label": "保护完整性"
+    }
+  ]
+}

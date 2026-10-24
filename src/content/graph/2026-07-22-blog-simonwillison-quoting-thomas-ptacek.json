@@ -1,0 +1,81 @@
+{
+  "center": "2025 开源模型可逃逸沙箱",
+  "branches": [
+    {
+      "label": "核心论断",
+      "detail": "Thomas Ptacek 认为 2025 年开源权重模型配渗透测试框架即可逃逸沙箱",
+      "children": [
+        "无需前沿模型即可完成",
+        "可在多数网络中扫描与入侵"
+      ]
+    },
+    {
+      "label": "惊讶点",
+      "detail": "此事令人意外只因默认 OpenAI 沙箱更可靠",
+      "children": [
+        "Ptacek 质疑 OpenAI 沙箱并不更健全"
+      ]
+    },
+    {
+      "label": "来源",
+      "detail": "Simon Willison 博客收录的引文，发布于 2026 年 7 月 22 日",
+      "children": [
+        "标签含 sandboxing、security、openai"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Thomas Ptacek",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "开源权重模型",
+      "type": "concept"
+    },
+    {
+      "name": "渗透测试框架",
+      "type": "technique"
+    },
+    {
+      "name": "沙箱逃逸",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Thomas Ptacek",
+      "to": "开源权重模型",
+      "label": "论断"
+    },
+    {
+      "from": "开源权重模型",
+      "to": "渗透测试框架",
+      "label": "配合"
+    },
+    {
+      "from": "渗透测试框架",
+      "to": "沙箱逃逸",
+      "label": "实现"
+    },
+    {
+      "from": "Thomas Ptacek",
+      "to": "OpenAI",
+      "label": "质疑"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Thomas Ptacek",
+      "label": "收录引文"
+    }
+  ]
+}

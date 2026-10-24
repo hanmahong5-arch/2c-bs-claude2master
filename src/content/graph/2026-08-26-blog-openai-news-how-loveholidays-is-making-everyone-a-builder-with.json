@@ -1,0 +1,78 @@
+{
+  "center": "loveholidays 用 Codex 全员开发",
+  "branches": [
+    {
+      "label": "引入 Codex",
+      "detail": "loveholidays 将 OpenAI Codex 引入业务流程",
+      "children": [
+        "非技术员工也能参与软件开发",
+        "降低编程门槛"
+      ]
+    },
+    {
+      "label": "自然语言生成代码",
+      "detail": "通过自然语言描述需求，Codex 自动生成代码",
+      "children": [
+        "缩短从想法到产品的周期",
+        "提升团队效率"
+      ]
+    },
+    {
+      "label": "工具角色转变",
+      "detail": "AI 编程工具从辅助角色转向协作平台",
+      "children": [
+        "企业可重构工作流",
+        "业务人员直接驱动技术实现"
+      ]
+    }
+  ],
+  "flow": [
+    "自然语言描述需求",
+    "Codex 自动生成代码",
+    "缩短想法到产品周期"
+  ],
+  "entities": [
+    {
+      "name": "loveholidays",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "AI 编程工具",
+      "type": "concept"
+    },
+    {
+      "name": "自然语言生成代码",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "loveholidays",
+      "to": "Codex",
+      "label": "引入"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "开发"
+    },
+    {
+      "from": "Codex",
+      "to": "自然语言生成代码",
+      "label": "实现"
+    },
+    {
+      "from": "Codex",
+      "to": "AI 编程工具",
+      "label": "属于"
+    }
+  ]
+}

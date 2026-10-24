@@ -1,0 +1,89 @@
+{
+  "center": "Jeremy Howard 谈减缓 AI 自我迭代",
+  "branches": [
+    {
+      "label": "核心方案",
+      "detail": "排名第一的实验室承诺不用自家最强模型做前沿 AI 研究",
+      "children": [
+        "其他人仍可访问该模型",
+        "前沿因此按定义不再推进",
+        "避免危险的权力失衡"
+      ]
+    },
+    {
+      "label": "Anthropic 做法",
+      "detail": "Howard 指 Anthropic 选择了相反的不安全路径",
+      "children": [
+        "允许自己用顶级模型做前沿研究",
+        "称会破坏他人尝试",
+        "结果前沿推进、权力失衡加剧"
+      ]
+    },
+    {
+      "label": "Howard 立场",
+      "detail": "他本人并不主张减缓递归自我改进",
+      "children": [
+        "主张开放与尽可能民主化",
+        "论点针对声称要减速者",
+        "若主张减速且拥有最强模型，就应禁用"
+      ]
+    },
+    {
+      "label": "出处",
+      "detail": "Simon Willison 博客收录的 Jeremy Howard 推文",
+      "children": [
+        "发布于 2026 年 6 月 10 日",
+        "标签含 ai-ethics…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Jeremy Howard",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "recursive self improvement",
+      "type": "concept"
+    },
+    {
+      "name": "frontier AI",
+      "type": "concept"
+    },
+    {
+      "name": "AI ethics",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Jeremy Howard",
+      "to": "recursive self improvement",
+      "label": "提出方案"
+    },
+    {
+      "from": "Anthropic",
+      "to": "frontier AI",
+      "label": "用于研究"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Jeremy Howard",
+      "label": "收录引用"
+    },
+    {
+      "from": "Jeremy Howard",
+      "to": "Anthropic",
+      "label": "批评"
+    }
+  ]
+}

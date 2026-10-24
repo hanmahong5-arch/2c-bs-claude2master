@@ -1,0 +1,111 @@
+{
+  "center": "Claude Code v2.1.224 更新",
+  "branches": [
+    {
+      "label": "自托管运行器",
+      "detail": "新增 claude self-hosted-runner，可用自有机器或容器跑会话",
+      "children": [
+        "面向 Team/Enterprise 计划",
+        "需管理会话生命周期"
+      ]
+    },
+    {
+      "label": "插件归档源",
+      "detail": "新增 archive 插件源，支持从 HTTPS zip 安装并校验",
+      "children": [
+        "可选 SHA-256 固定",
+        "支持非 git/npm 来源"
+      ]
+    },
+    {
+      "label": "跨会话消息",
+      "detail": "新增 SendMessage 与 ListAgents，会话间可通信",
+      "children": [
+        "需处理消息投递失败"
+      ]
+    },
+    {
+      "label": "安全修复",
+      "detail": "修复沙箱凭据掩码仅在特定设置下生效的问题",
+      "children": [
+        "JWT 解码、AWS SigV4 重签名",
+        "需正确配置网络终止"
+      ]
+    },
+    {
+      "label": "会话隔离与限制",
+      "detail": "修复长路径串扰，移除每会话 200 子代理上限",
+      "children": [
+        "路径 >200 字符导致串扰",
+        "保留并发和深度限制"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "self-hosted-runner",
+      "type": "technique"
+    },
+    {
+      "name": "archive",
+      "type": "technique"
+    },
+    {
+      "name": "SendMessage",
+      "type": "technique"
+    },
+    {
+      "name": "ListAgents",
+      "type": "technique"
+    },
+    {
+      "name": "SHA-256",
+      "type": "concept"
+    },
+    {
+      "name": "JWT",
+      "type": "concept"
+    },
+    {
+      "name": "AWS SigV4",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "self-hosted-runner",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "archive",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "SendMessage",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "ListAgents",
+      "label": "新增"
+    },
+    {
+      "from": "archive",
+      "to": "SHA-256",
+      "label": "支持"
+    },
+    {
+      "from": "SendMessage",
+      "to": "ListAgents",
+      "label": "配合"
+    }
+  ]
+}

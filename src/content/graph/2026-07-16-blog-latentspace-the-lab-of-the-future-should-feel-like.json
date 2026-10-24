@@ -1,0 +1,123 @@
+{
+  "center": "Lila Sciences 用 AI 实验室生成…",
+  "branches": [
+    {
+      "label": "实验室即数据中心",
+      "detail": "把仪器当作图上的节点，用磁悬浮传输层连接，编排像 slurm 队列",
+      "children": [
+        "暗仓库里 AI 机器人 24/7 做实验",
+        "用视觉语言模型控制 Windows 95 机器",
+        "目标是接入湿实验室的科学超级智能"
+      ]
+    },
+    {
+      "label": "科学是最后数据源",
+      "detail": "互联网数据已耗尽，科学方法是最后一个互联网级数据集，RL 以自然为验证器",
+      "children": [
+        "已积累超 10 万亿科学推理 token",
+        "全部经实验验证，非序列数据",
+        "这类数据在互联网上几乎为零"
+      ]
+    },
+    {
+      "label": "广度换深度",
+      "detail": "通用模型逐样本优于领域专用模型，小分子化学先验可迁移到 MOF 碳捕集",
+      "children": [
+        "同一实验室同时做材料与生物",
+        "铂族金属免费电催化剂从被嘲到最佳",
+        "六个月内拿到非人灵长类 in vivo CAR-T 数据"
+      ]
+    },
+    {
+      "label": "非自动化公司",
+      "detail": "优先灵活性与通用性而非吞吐量，自动化不划算处保留人类在 API 线下",
+      "children": [
+        "气体吸附测量提速约 2500 倍",
+        "追求快速轮次迭代而非大噪声筛选",
+        "核糖体无法加速，实验有运行时间"
+      ]
+    },
+    {
+      "label": "未解难题",
+      "detail": "机器创造力、思维链不可靠、物理 rollout 的奖励黑客",
+      "children": [
+        "模型在潜空间推理，有时跳过实验仍正确",
+        "思维链坍缩成重复，模型曾骂科学家",
+        "Ken Stanley 负责开放式探索"
+      ]
+    }
+  ],
+  "flow": [
+    "AI 设计实验",
+    "机器人执行湿实验",
+    "仪器采集数据",
+    "验证生成推理 token",
+    "训练通用推理模型"
+  ],
+  "entities": [
+    {
+      "name": "Lila Sciences",
+      "type": "company"
+    },
+    {
+      "name": "Andy Beam",
+      "type": "person"
+    },
+    {
+      "name": "Rafa Gómez-Bombarelli",
+      "type": "person"
+    },
+    {
+      "name": "Ken Stanley",
+      "type": "person"
+    },
+    {
+      "name": "科学超级智能",
+      "type": "concept"
+    },
+    {
+      "name": "RL",
+      "type": "technique"
+    },
+    {
+      "name": "思维链",
+      "type": "concept"
+    },
+    {
+      "name": "CAR-T",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Lila Sciences",
+      "to": "科学超级智能",
+      "label": "追求"
+    },
+    {
+      "from": "Andy Beam",
+      "to": "Lila Sciences",
+      "label": "任 CTO"
+    },
+    {
+      "from": "Rafa Gómez-Bombarelli",
+      "to": "Lila Sciences",
+      "label": "任 CSO"
+    },
+    {
+      "from": "Ken Stanley",
+      "to": "Lila Sciences",
+      "label": "负责开放式探索"
+    },
+    {
+      "from": "Lila Sciences",
+      "to": "RL",
+      "label": "用其生成数据"
+    },
+    {
+      "from": "思维链",
+      "to": "RL",
+      "label": "属于其产物"
+    }
+  ]
+}

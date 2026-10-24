@@ -1,0 +1,113 @@
+{
+  "center": "GPT-6 Astra 生成跑步路线",
+  "branches": [
+    {
+      "label": "任务与结果",
+      "detail": "Simon Willison 让 ChatGPT Work 用 GPT-6 Astra 规划从家出发的 5K/10K 环线",
+      "children": [
+        "耗时 27 分钟完成",
+        "输出可视化地图、GPX 与 GeoJSON 文件",
+        "5K 路线约 5.1 km"
+      ]
+    },
+    {
+      "label": "实现方法",
+      "detail": "用 Nominatim 定位地址，Overpass 下载 OSM 道路与步道，本地计算环线",
+      "children": [
+        "Nominatim 解析家庭地址",
+        "Overpass 获取 OpenStreetMap 数据",
+        "本地计算闭环路线"
+      ]
+    },
+    {
+      "label": "可视化技能",
+      "detail": "通过 visualize skill 生成 HTML 嵌入 ChatGPT UI 展示地图",
+      "children": [
+        "生成 /workspace/el-granada-5k-share.html",
+        "用 D3 渲染路线与地图",
+        "CSP 仅允许白名单 CDN"
+      ]
+    },
+    {
+      "label": "透明度问题",
+      "detail": "作者看不到实际运行的代码与细节，认为这是反特性",
+      "children": [
+        "线程被压缩后无法提供 Python 代码",
+        "建议压缩前保留原文并可通过工具调用获取"
+      ]
+    }
+  ],
+  "flow": [
+    "用户提出路线需求",
+    "Nominatim 定位地址",
+    "Overpass 下载 OSM 数据",
+    "本地计算环线",
+    "生成可视化与 GPX/GeoJSON"
+  ],
+  "entities": [
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "OpenStreetMap",
+      "type": "product"
+    },
+    {
+      "name": "Nominatim",
+      "type": "product"
+    },
+    {
+      "name": "Overpass",
+      "type": "product"
+    },
+    {
+      "name": "visualize skill",
+      "type": "technique"
+    },
+    {
+      "name": "D3",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "ChatGPT Work",
+      "label": "使用"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "GPT-6 Astra",
+      "label": "调用"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Nominatim",
+      "label": "调用"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Overpass",
+      "label": "调用"
+    },
+    {
+      "from": "Overpass",
+      "to": "OpenStreetMap",
+      "label": "读取"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "visualize skill",
+      "label": "使用"
+    }
+  ]
+}

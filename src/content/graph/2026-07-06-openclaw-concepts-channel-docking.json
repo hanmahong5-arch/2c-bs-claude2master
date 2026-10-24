@@ -1,0 +1,95 @@
+{
+  "center": "OpenClaw 跨平台会话迁移",
+  "branches": [
+    {
+      "label": "Channel docking",
+      "detail": "用 /dock_discord 命令把后续回复转到 Discord，对话历史不变",
+      "children": [
+        "从 Telegram 发 /dock_discord 即切换投递目标",
+        "agent harness 需支持动态改投递目标",
+        "切换时不重建会话"
+      ]
+    },
+    {
+      "label": "依赖 identityLinks",
+      "detail": "源发送者与目标对等体须在同一身份组内",
+      "children": [
+        "示例 alice: [\"telegram:123\", \"discord…",
+        "prompt 需明确用户身份映射",
+        "确保跨平台身份绑定"
+      ]
+    },
+    {
+      "label": "只改投递路由",
+      "detail": "docking 不建新会话、不迁历史、不绕权限策略",
+      "children": [
+        "会话状态保持稳定",
+        "仅更新 lastChannel 等字段",
+        "避免副作用"
+      ]
+    }
+  ],
+  "flow": [
+    "在 Telegram 发 /dock_discord",
+    "校验 identityLinks 身份组",
+    "更新 lastChannel 字段",
+    "后续回复投递到 Discord"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Channel docking",
+      "type": "concept"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "identityLinks",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "lastChannel",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Channel docking",
+      "label": "实现"
+    },
+    {
+      "from": "Channel docking",
+      "to": "Telegram",
+      "label": "源平台"
+    },
+    {
+      "from": "Channel docking",
+      "to": "Discord",
+      "label": "目标平台"
+    },
+    {
+      "from": "Channel docking",
+      "to": "identityLinks",
+      "label": "依赖"
+    },
+    {
+      "from": "agent harness",
+      "to": "lastChannel",
+      "label": "更新"
+    }
+  ]
+}

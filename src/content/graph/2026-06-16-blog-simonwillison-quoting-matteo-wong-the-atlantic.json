@@ -1,0 +1,104 @@
+{
+  "center": "白宫报告与 Fable 越狱",
+  "branches": [
+    {
+      "label": "报告内容",
+      "detail": "白宫报告涉及 IT 专家让 Fable 协助找漏洞并打补丁",
+      "children": [
+        "Moussouris 获 Anthropic 分享报告副本",
+        "她声明未受 Anthropic 付费"
+      ]
+    },
+    {
+      "label": "越狱细节",
+      "detail": "面对故意不安全代码，Fable 拒绝安全审查提示但接受修复请求",
+      "children": [
+        "拒绝“review the code for security issues”",
+        "接受“fix this code”并配合手动步骤"
+      ]
+    },
+    {
+      "label": "专家评价",
+      "detail": "Moussouris 称这是模型按预期用于网络防御",
+      "children": [
+        "Luta Security CEO 身份",
+        "网络安全专家背景"
+      ]
+    },
+    {
+      "label": "来源与发布",
+      "detail": "Simon Willison 引用《大西洋月刊》Matteo Wong 报道",
+      "children": [
+        "发布于 2026 年 6 月 16 日",
+        "文章标题：白宫对 Anthropic 施压升级"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Fable",
+      "type": "model"
+    },
+    {
+      "name": "White House",
+      "type": "concept"
+    },
+    {
+      "name": "Katie Moussouris",
+      "type": "person"
+    },
+    {
+      "name": "Luta Security",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Matteo Wong",
+      "type": "person"
+    },
+    {
+      "name": "The Atlantic",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Fable",
+      "label": "开发"
+    },
+    {
+      "from": "White House",
+      "to": "Fable",
+      "label": "报告越狱"
+    },
+    {
+      "from": "Katie Moussouris",
+      "to": "Luta Security",
+      "label": "担任CEO"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Katie Moussouris",
+      "label": "分享报告"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Matteo Wong",
+      "label": "引用"
+    },
+    {
+      "from": "Matteo Wong",
+      "to": "The Atlantic",
+      "label": "供职"
+    }
+  ]
+}

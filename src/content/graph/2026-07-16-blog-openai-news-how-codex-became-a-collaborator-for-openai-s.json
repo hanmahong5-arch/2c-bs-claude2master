@@ -1,0 +1,60 @@
+{
+  "center": "Codex 助力 OpenAI 创意团队",
+  "branches": [
+    {
+      "label": "自动化重复任务",
+      "detail": "用 Codex 开发内部工具，自动生成图像变体和文案",
+      "children": [
+        "释放创意时间",
+        "减少手动操作"
+      ]
+    },
+    {
+      "label": "理解项目上下文",
+      "detail": "Codex 生成与品牌一致的代码片段，提升工具链连贯性",
+      "children": [
+        "减少手动调整"
+      ]
+    },
+    {
+      "label": "降低技术门槛",
+      "detail": "自然语言描述需求即可生成原型代码，非工程师也能参与",
+      "children": [
+        "快速生成原型",
+        "非工程师参与开发"
+      ]
+    }
+  ],
+  "flow": [
+    "自然语言描述需求",
+    "Codex 生成原型代码",
+    "构建内部工具",
+    "自动化重复任务"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI 创意团队",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI 创意团队",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "Codex",
+      "to": "OpenAI",
+      "label": "属于"
+    }
+  ]
+}

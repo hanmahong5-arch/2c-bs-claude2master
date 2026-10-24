@@ -1,0 +1,91 @@
+{
+  "center": "Cline 桌面版 v0.0.11 更新",
+  "branches": [
+    {
+      "label": "多模态输入",
+      "detail": "支持从剪贴板直接粘贴图片到 composer，简化多模态输入",
+      "children": [
+        "剪贴板粘贴图片到 composer"
+      ]
+    },
+    {
+      "label": "MCP 稳定性",
+      "detail": "MCP 服务器挂起不再阻塞会话创建，stdio 有 30 秒初始化预算",
+      "children": [
+        "stdio 服务器 30 秒初始化预算",
+        "远程 SSE 支持 OAuth 授权"
+      ]
+    },
+    {
+      "label": "会话与调试修复",
+      "detail": "修复会话模型覆盖、diff 路径解析、失败 turn 错误显示等问题",
+      "children": [
+        "会话模型覆盖修复",
+        "diff 路径解析修复",
+        "失败 turn 错误显示修复"
+      ]
+    },
+    {
+      "label": "非 git 友好",
+      "detail": "打开非 git 文件夹不再显示 git 术语，欢迎建议按实际内容调整",
+      "children": [
+        "非 git 文件夹不显示 git 术语",
+        "欢迎建议按内容调整"
+      ]
+    },
+    {
+      "label": "任务韧性",
+      "detail": "中断后队列提示保留，会话上下文持久化，网络中断自动重试",
+      "children": [
+        "中断后队列提示保留",
+        "会话上下文持久化",
+        "网络中断自动重试"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "SSE",
+      "type": "technique"
+    },
+    {
+      "name": "OAuth",
+      "type": "technique"
+    },
+    {
+      "name": "composer",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "Cline",
+      "to": "SSE",
+      "label": "支持"
+    },
+    {
+      "from": "SSE",
+      "to": "OAuth",
+      "label": "支持"
+    },
+    {
+      "from": "Cline",
+      "to": "composer",
+      "label": "包含"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "center": "理解 LLM 架构的工作流",
+  "branches": [
+    {
+      "label": "从技术报告起步",
+      "detail": "先读官方技术报告，但如今论文细节常不如以往充分",
+      "children": [
+        "工业实验室开源模型论文细节偏少"
+      ]
+    },
+    {
+      "label": "查配置与代码",
+      "detail": "权重在 Hugging Face 且被 transformers 支持时，直接看 config 与参考实现",
+      "children": [
+        "Hugging Face Model Hub",
+        "Python transformers 库",
+        "可运行的代码不会说谎"
+      ]
+    },
+    {
+      "label": "仅适用开源权重",
+      "detail": "该工作流面向开放权重模型，不适用于闭源模型",
+      "children": [
+        "不适用 ChatGPT、Claude、Gemini"
+      ]
+    },
+    {
+      "label": "刻意保持手动",
+      "detail": "流程有意保持手动，部分可自动化但手做更利于学习",
+      "children": [
+        "手动做几次是最好的练习之一"
+      ]
+    }
+  ],
+  "flow": [
+    "阅读官方技术报告",
+    "查 Hugging Face 权重",
+    "看 config 配置文件",
+    "读参考实现代码",
+    "手绘架构草图"
+  ],
+  "entities": [
+    {
+      "name": "Sebastian Raschka",
+      "type": "person"
+    },
+    {
+      "name": "Hugging Face Model Hub",
+      "type": "product"
+    },
+    {
+      "name": "transformers",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "product"
+    },
+    {
+      "name": "LLM-Gallery",
+      "type": "product"
+    },
+    {
+      "name": "开放权重模型",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sebastian Raschka",
+      "to": "LLM-Gallery",
+      "label": "创作"
+    },
+    {
+      "from": "Sebastian Raschka",
+      "to": "开放权重模型",
+      "label": "研究"
+    },
+    {
+      "from": "开放权重模型",
+      "to": "Hugging Face Model Hub",
+      "label": "托管于"
+    },
+    {
+      "from": "开放权重模型",
+      "to": "transformers",
+      "label": "支持于"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "开放权重模型",
+      "label": "区别于"
+    }
+  ]
+}

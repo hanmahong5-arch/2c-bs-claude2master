@@ -1,0 +1,88 @@
+{
+  "center": "IBM 发布 Granite 时序模型",
+  "branches": [
+    {
+      "label": "新模型发布",
+      "detail": "IBM 推出 Granite 时序预测新模型 PatchTST-FM-r2",
+      "children": [
+        "定位 SOTA 时序预测",
+        "参数量 0.4B",
+        "更新于 14 天前"
+      ]
+    },
+    {
+      "label": "前代版本",
+      "detail": "同系列早期时序预测模型仍在榜",
+      "children": [
+        "参数量 0.3B",
+        "更新于 Mar 25",
+        "热度 42.2k"
+      ]
+    },
+    {
+      "label": "模型热度",
+      "detail": "新模型关注度明显高于前代",
+      "children": [
+        "新模型 154k",
+        "前代 42.2k"
+      ]
+    },
+    {
+      "label": "相关文章",
+      "detail": "作者另有智能体与实时智能主题文章",
+      "children": [
+        "Your Agent Aced the Task. Will It Do It…",
+        "Real-Time Intelligence with IBM Time…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "IBM",
+      "type": "company"
+    },
+    {
+      "name": "Granite",
+      "type": "product"
+    },
+    {
+      "name": "PatchTST-FM-r2",
+      "type": "model"
+    },
+    {
+      "name": "PatchTST",
+      "type": "model"
+    },
+    {
+      "name": "Confluent",
+      "type": "company"
+    },
+    {
+      "name": "Time Series Forecasting",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "IBM",
+      "to": "Granite",
+      "label": "发布"
+    },
+    {
+      "from": "Granite",
+      "to": "PatchTST-FM-r2",
+      "label": "包含"
+    },
+    {
+      "from": "PatchTST-FM-r2",
+      "to": "Time Series Forecasting",
+      "label": "用于"
+    },
+    {
+      "from": "IBM",
+      "to": "Confluent",
+      "label": "合作"
+    }
+  ]
+}

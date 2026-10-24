@@ -1,0 +1,120 @@
+{
+  "center": "OpenAI 呼吁全球青少年 AI 安全治理",
+  "branches": [
+    {
+      "label": "核心倡议",
+      "detail": "OpenAI 呼吁建立国际青少年 AI 安全机构，超越单次峰会持续推动标准",
+      "children": [
+        "可在 G7 峰会提出，或赋予现有国家 AI 机构全球…",
+        "重点在功能：持续关注、可信证据、实用指南"
+      ]
+    },
+    {
+      "label": "G7 峰会契机",
+      "detail": "各国元首将在法国 Évian 的 G7 峰会聚焦青少年 AI 安全",
+      "children": [
+        "OpenAI 将参会讨论协作与提升行业标准",
+        "峰会提供全球协调的罕见机会"
+      ]
+    },
+    {
+      "label": "安全原则",
+      "detail": "提出八项原则：年龄识别、风险评估、家长控制、透明披露等",
+      "children": [
+        "要求隐私保护的年龄估计，默认保护性设置",
+        "年度青少年安全风险评估，兼顾风险与收益",
+        "禁止针对未成年人的定向广告与出售个人信息"
+      ]
+    },
+    {
+      "label": "现有实践",
+      "detail": "OpenAI 已在 ChatGPT 中强化青少年保护与家长控制",
+      "children": [
+        "加强 18 岁以下用户保护，推出家长控制与主动通知",
+        "Model Spec 含 18 岁以下专门原则",
+        "与 AFT 合作，支持 Common Sense Media 青少…"
+      ]
+    },
+    {
+      "label": "全球案例",
+      "detail": "爱沙尼亚全国学校部署 ChatGPT，OpenAI 与斯坦福合作研究影响",
+      "children": [
+        "研究用于指导更安全有效的学习应用",
+        "借鉴 20 世纪扫盲运动，推动安全 AI 普及"
+      ]
+    }
+  ],
+  "flow": [
+    "G7 峰会聚焦青少年 AI 安全",
+    "OpenAI 呼吁建立国际机构",
+    "机构持续分享证据与指南",
+    "各国政府与企业采纳标准",
+    "独立审计确保落实"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "G7",
+      "type": "concept"
+    },
+    {
+      "name": "Common Sense Media",
+      "type": "company"
+    },
+    {
+      "name": "American Federation of Teachers",
+      "type": "company"
+    },
+    {
+      "name": "Estonia",
+      "type": "concept"
+    },
+    {
+      "name": "Stanford",
+      "type": "company"
+    },
+    {
+      "name": "Model Spec",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "开发"
+    },
+    {
+      "from": "OpenAI",
+      "to": "G7",
+      "label": "呼吁合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Common Sense Media",
+      "label": "支持"
+    },
+    {
+      "from": "OpenAI",
+      "to": "American Federation of Teachers",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Estonia",
+      "label": "部署"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Stanford",
+      "label": "合作研究"
+    }
+  ]
+}

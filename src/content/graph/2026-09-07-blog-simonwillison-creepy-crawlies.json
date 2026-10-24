@@ -1,0 +1,78 @@
+{
+  "center": "Linux内核仓库遭爬虫滥用",
+  "branches": [
+    {
+      "label": "CPU被爬虫耗尽",
+      "detail": "渲染提交给爬虫消耗的CPU超过所有正常访问总和",
+      "children": [
+        "5个地理分布节点共14个CPU核心专用于渲染git提…",
+        "爬虫消耗超过包括git clone在内的合法访问"
+      ]
+    },
+    {
+      "label": "官方仓库受害",
+      "detail": "Konstantin Ryabitsev指出git.kernel.org滥用爬虫已成背景辐射",
+      "children": [
+        "git.kernel.org是Linux内核官方Git仓库",
+        "滥用爬虫问题严重程度被形容为背景辐射"
+      ]
+    },
+    {
+      "label": "Simon Willison担忧",
+      "detail": "从Datasette角度担心大量可爬取页面面临同样问题",
+      "children": [
+        "Datasette提供大量可爬取网页",
+        "Simon Willison为Datasette作者"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Linux",
+      "type": "concept"
+    },
+    {
+      "name": "git.kernel.org",
+      "type": "product"
+    },
+    {
+      "name": "Konstantin Ryabitsev",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "crawling",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Konstantin Ryabitsev",
+      "to": "git.kernel.org",
+      "label": "讨论"
+    },
+    {
+      "from": "git.kernel.org",
+      "to": "Linux",
+      "label": "托管"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "担忧"
+    },
+    {
+      "from": "crawling",
+      "to": "git.kernel.org",
+      "label": "滥用"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "center": "Qwen 3.8 Max 开源发布",
+  "branches": [
+    {
+      "label": "模型规格",
+      "detail": "2.4T 总参数 MoE，95B 激活，1M 上下文，下周开源权重",
+      "children": [
+        "Qwen3.8-27B 同步开源权重",
+        "API 定价 $2/$6 每百万 token",
+        "支持 low/medium/xhigh 推理档"
+      ]
+    },
+    {
+      "label": "长时自主编码",
+      "detail": "10+ 天无人值守编码，自建自进化编码 harness",
+      "children": [
+        "125 小时自主研究循环，超原论文 +2.71",
+        "WWW2025 竞赛 24 小时进前 13%",
+        "500+ 轮芯片设计优化"
+      ]
+    },
+    {
+      "label": "多模态与硬件",
+      "detail": "原生视觉反馈融入规划与 GUI 交互，完成硅设计全流程",
+      "children": [
+        "RTL 到物理布局，门数 8298→678",
+        "芯片面积减少 81%，500MHz 时序收敛",
+        "发布 Qwen-MM-Plugins 扩展框架"
+      ]
+    },
+    {
+      "label": "评测表现",
+      "detail": "Frontend Code Arena 第 4，Vision Arena 第 2，Vals Index 开源第 2",
+      "children": [
+        "SWE-bench 87.3%，Terminal-Bench 67.4",
+        "Vals Index 66.1，成本 $2.68 vs $6.17",
+        "PaperBench 93.0，CoWorkBench 74.8"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Qwen",
+      "type": "company"
+    },
+    {
+      "name": "Qwen3.8-Max",
+      "type": "model"
+    },
+    {
+      "name": "Qwen3.8-27B",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 5",
+      "type": "model"
+    },
+    {
+      "name": "Vals AI",
+      "type": "company"
+    },
+    {
+      "name": "Frontend Code Arena",
+      "type": "concept"
+    },
+    {
+      "name": "Qwen-MM-Plugins",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Qwen",
+      "to": "Qwen3.8-Max",
+      "label": "发布"
+    },
+    {
+      "from": "Qwen",
+      "to": "Qwen3.8-27B",
+      "label": "发布"
+    },
+    {
+      "from": "Qwen",
+      "to": "Qwen-MM-Plugins",
+      "label": "发布"
+    },
+    {
+      "from": "Qwen3.8-Max",
+      "to": "Kimi K3",
+      "label": "竞争"
+    },
+    {
+      "from": "Qwen3.8-Max",
+      "to": "Claude Opus 5",
+      "label": "竞争"
+    },
+    {
+      "from": "Vals AI",
+      "to": "Qwen3.8-Max",
+      "label": "评测"
+    }
+  ]
+}

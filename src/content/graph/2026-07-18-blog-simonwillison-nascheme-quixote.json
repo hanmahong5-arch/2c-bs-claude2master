@@ -1,0 +1,80 @@
+{
+  "center": "Quixote 21年仍在活跃开发",
+  "branches": [
+    {
+      "label": "最新提交",
+      "detail": "Quixote 仓库最近一次提交就在六小时前",
+      "children": [
+        "Simon Willison 于 2026-07-18 记录"
+      ]
+    },
+    {
+      "label": "最老提交",
+      "detail": "仓库最早提交来自 21 年前",
+      "children": [
+        "是 Quixote 2.4 从 Subversion 导入 Git 的…"
+      ]
+    },
+    {
+      "label": "读者反应",
+      "detail": "老一代 Python Web 开发者会为此感到高兴",
+      "children": [
+        "作者称其为「某个年代的 Python Web 极客」"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Quixote",
+      "type": "product"
+    },
+    {
+      "name": "nascheme/quixote",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Python",
+      "type": "concept"
+    },
+    {
+      "name": "Subversion",
+      "type": "product"
+    },
+    {
+      "name": "Git",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "nascheme/quixote",
+      "to": "Quixote",
+      "label": "是仓库"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "nascheme/quixote",
+      "label": "记录"
+    },
+    {
+      "from": "Quixote",
+      "to": "Python",
+      "label": "用于"
+    },
+    {
+      "from": "Quixote",
+      "to": "Subversion",
+      "label": "曾托管于"
+    },
+    {
+      "from": "Quixote",
+      "to": "Git",
+      "label": "迁移至"
+    }
+  ]
+}

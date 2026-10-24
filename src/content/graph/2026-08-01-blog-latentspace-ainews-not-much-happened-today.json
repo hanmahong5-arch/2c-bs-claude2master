@@ -1,0 +1,117 @@
+{
+  "center": "DeepSeek V4-Flash 0731 发布",
+  "branches": [
+    {
+      "label": "模型升级",
+      "detail": "仅后训练更新，架构规模不变，Agent 能力大幅提升",
+      "children": [
+        "284B 总参数 / 13B 激活，1M 上下文",
+        "Terminal-Bench 82.7，较 4 月预览 +25.8",
+        "GDPval-AA v2 Elo 1189 → 1559"
+      ]
+    },
+    {
+      "label": "API 与定价",
+      "detail": "API 公测上线，支持 Responses API 并适配 Codex",
+      "children": [
+        "$0.14 / $0.28 每 1M 输入输出 token",
+        "98% 缓存命中折扣至 $0.0028 / 1M",
+        "成本比 GPT-5.6 Luna 低约 60%"
+      ]
+    },
+    {
+      "label": "开源权重",
+      "detail": "MIT 协议开放权重，量化部署迅速跟进",
+      "children": [
+        "256 路由专家，每 token 激活 6 个",
+        "含 DSpark 推测解码模块，单 flag 启用",
+        "Unsloth 4-bit 量化需约 168GB 内存"
+      ]
+    },
+    {
+      "label": "价格战与生态",
+      "detail": "被视为对 OpenAI 降价的回应，开发者快速集成",
+      "children": [
+        "OpenAI 前日 GPT-5.6 Luna 降价 80%",
+        "Cline、Hermes Agent 等已接入",
+        "路由与 harness 选择影响工作流"
+      ]
+    },
+    {
+      "label": "安全争议",
+      "detail": "OpenAI 与 Anthropic 披露沙箱逃逸事件，归因基础设施",
+      "children": [
+        "Anthropic 审查 141,006 次评估运行",
+        "三起事件涉 Opus 4.7、Mythos 5",
+        "评论者认为是沙箱与运维失败"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "DeepSeek",
+      "type": "company"
+    },
+    {
+      "name": "DeepSeek V4-Flash",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "MIT",
+      "type": "concept"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DeepSeek",
+      "to": "DeepSeek V4-Flash",
+      "label": "发布"
+    },
+    {
+      "from": "DeepSeek V4-Flash",
+      "to": "Codex",
+      "label": "适配"
+    },
+    {
+      "from": "DeepSeek V4-Flash",
+      "to": "Hugging Face",
+      "label": "开源权重"
+    },
+    {
+      "from": "DeepSeek V4-Flash",
+      "to": "GPT-5.6 Luna",
+      "label": "竞争"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Luna",
+      "label": "降价"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Hugging Face",
+      "label": "安全事件"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "center": "Cline v4.1.9 修复与 SDK 改进",
+  "branches": [
+    {
+      "label": "Token 刷新修复",
+      "detail": "解决刷新后旧 token 仍被判过期的问题，长空闲后首次请求可成功",
+      "children": [
+        "长空闲后首次请求成功"
+      ]
+    },
+    {
+      "label": "日志误报修复",
+      "detail": "迁移任务不再误报成功，静默登出改为明确报告登出原因",
+      "children": [
+        "迁移任务误报成功",
+        "静默登出报告原因"
+      ]
+    },
+    {
+      "label": "SDK 版 Claude Code",
+      "detail": "修复原生工具、工作目录锚定、权限规则加载，拒绝截断的 tool-call JSON",
+      "children": [
+        "原生工具",
+        "工作目录锚定",
+        "权限规则加载"
+      ]
+    },
+    {
+      "label": "流式与计数修复",
+      "detail": "修复流式 tool call 索引崩溃，token 计数虚高（缓存会话约 5 倍）",
+      "children": [
+        "流式 tool call 索引崩溃",
+        "缓存会话 token 计数约 5 倍"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "SDK",
+      "type": "concept"
+    },
+    {
+      "name": "token",
+      "type": "concept"
+    },
+    {
+      "name": "tool-call JSON",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Claude Code",
+      "label": "集成"
+    },
+    {
+      "from": "Cline",
+      "to": "SDK",
+      "label": "提供"
+    },
+    {
+      "from": "Cline",
+      "to": "token",
+      "label": "修复"
+    },
+    {
+      "from": "Cline",
+      "to": "tool-call JSON",
+      "label": "拒绝截断"
+    }
+  ]
+}

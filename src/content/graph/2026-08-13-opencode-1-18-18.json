@@ -1,0 +1,87 @@
+{
+  "center": "opencode v1.18.18 修复",
+  "branches": [
+    {
+      "label": "Kimi 提示词修复",
+      "detail": "修复官方 Moonshot 与 Kimi 提供商的系统提示词选择，确保用对 Kimi 提示词",
+      "children": [
+        "按提供商区分模型能力",
+        "通用提示词会导致行为偏差"
+      ]
+    },
+    {
+      "label": "xai 推理强度修复",
+      "detail": "修复 xai 模型的 xhigh 推理强度设置，确保高推理模式生效",
+      "children": [
+        "推理强度参数需与模型 API 对齐",
+        "否则影响复杂任务表现"
+      ]
+    },
+    {
+      "label": "agent harness 设计",
+      "detail": "两处修复都指向 agent harness 需按提供商与模型 API 对齐配置",
+      "children": [
+        "提示词按提供商区分",
+        "推理强度与 API 对齐"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Kimi",
+      "type": "model"
+    },
+    {
+      "name": "Moonshot",
+      "type": "company"
+    },
+    {
+      "name": "xai",
+      "type": "company"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "系统提示词",
+      "type": "concept"
+    },
+    {
+      "name": "推理强度",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Kimi",
+      "label": "修复提示词"
+    },
+    {
+      "from": "opencode",
+      "to": "xai",
+      "label": "修复推理强度"
+    },
+    {
+      "from": "Moonshot",
+      "to": "Kimi",
+      "label": "提供"
+    },
+    {
+      "from": "agent harness",
+      "to": "系统提示词",
+      "label": "使用"
+    },
+    {
+      "from": "agent harness",
+      "to": "推理强度",
+      "label": "配置"
+    }
+  ]
+}

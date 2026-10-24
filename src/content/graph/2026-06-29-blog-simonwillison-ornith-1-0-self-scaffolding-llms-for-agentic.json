@@ -1,0 +1,111 @@
+{
+  "center": "Ornith-1.0 自脚手架编码模型",
+  "branches": [
+    {
+      "label": "模型发布",
+      "detail": "DeepReinforce 首个开源权重模型，MIT 许可",
+      "children": [
+        "变体：9B/31B Dense、35B/397B MoE",
+        "基于 Gemma 4 与 Qwen 3.5 预训练"
+      ]
+    },
+    {
+      "label": "性能表现",
+      "detail": "同规模开源模型中编码基准达 SOTA",
+      "children": [
+        "擅长多轮工具调用的 agent harness"
+      ]
+    },
+    {
+      "label": "许可兼容",
+      "detail": "底层模型均为 Apache 2.0，可合法使用",
+      "children": [
+        "Gemma 4 不再受旧 Gemma 附加条款约束",
+        "Qwen 3.5 同为 Apache 2.0"
+      ]
+    },
+    {
+      "label": "实测体验",
+      "detail": "Simon Willison 用 LM Studio 本地运行",
+      "children": [
+        "ornith-1.0-35b-Q4_K_M.gguf（20GB）",
+        "接入 Pi，成功定位 Datasette 代码",
+        "生成鹈鹕图，103 tokens/秒"
+      ]
+    },
+    {
+      "label": "团队背景",
+      "detail": "DeepReinforce 公开信息很少",
+      "children": [
+        "最早论文 CUDA-L1（2025年6月）"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Ornith-1.0",
+      "type": "model"
+    },
+    {
+      "name": "DeepReinforce",
+      "type": "company"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "Qwen 3.5",
+      "type": "model"
+    },
+    {
+      "name": "LM Studio",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "CUDA-L1",
+      "type": "concept"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DeepReinforce",
+      "to": "Ornith-1.0",
+      "label": "发布"
+    },
+    {
+      "from": "Ornith-1.0",
+      "to": "Gemma 4",
+      "label": "基于"
+    },
+    {
+      "from": "Ornith-1.0",
+      "to": "Qwen 3.5",
+      "label": "基于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Ornith-1.0",
+      "label": "测试"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "LM Studio",
+      "label": "使用"
+    },
+    {
+      "from": "DeepReinforce",
+      "to": "CUDA-L1",
+      "label": "发表"
+    }
+  ]
+}

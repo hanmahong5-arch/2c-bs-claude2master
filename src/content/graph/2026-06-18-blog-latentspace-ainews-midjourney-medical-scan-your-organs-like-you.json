@@ -1,0 +1,120 @@
+{
+  "center": "Midjourney 跨界医疗超声扫描",
+  "branches": [
+    {
+      "label": "产品发布",
+      "detail": "Midjourney 推出全身超声 CT 扫描仪与配套 Spa，定位为 50 年来首个全新全身医学成像模态。",
+      "children": [
+        "Midjourney Scanner：8,960 换能器/芯片，40…",
+        "70 cm 直径环，水浸耦合，声速约 1,481 m/s",
+        "数据采集约 17 GB/s，每层约 40 GB，21 台服务…"
+      ]
+    },
+    {
+      "label": "Spa 落地",
+      "detail": "首家 Midjourney Spa 选址旧金山 Union Square，约 25,000 平方英尺、四层，配 9–10 台扫描仪。",
+      "children": [
+        "设施含热水浴、桑拿、冷 plunge、健身房等",
+        "租约已签，设计进行中，目标 2027 年底开业",
+        "公司自筹资金、无外部投资者，可独立负担首店"
+      ]
+    },
+    {
+      "label": "技术路线",
+      "detail": "选择超声而非 MRI/X 射线，因可安全高频重复、无电离辐射、水耦合全身传播。",
+      "children": [
+        "垂直升降扫描设计提升吞吐，升降速度 4 cm/s",
+        "目标 60 秒内完成数百层扫描，分辨率约 0.5 mm",
+        "当前展示图像未使用 AI，未来将结合 AI 与定制…"
+      ]
+    },
+    {
+      "label": "商业与监管",
+      "detail": "已与 FDA 开始沟通，初期可能从体成分分析切入，定价模式探索 Spa 会员、单次扫描等。",
+      "children": [
+        "长期目标 50,000 台扫描仪，每月 10 亿次扫描",
+        "预计 Gen 2 于 2026 年底推出，Gen 3 用定制硅",
+        "规模化至数千家 Spa 或需约 200 亿美元前期资本"
+      ]
+    },
+    {
+      "label": "愿景与争议",
+      "detail": "Holz 定位为社区支持的研究实验室，目标是让扫描像去 Spa 一样日常，但 HN 等质疑其成熟度。",
+      "children": [
+        "强调纵向高频亚毫米差异追踪，而非单次扫描",
+        "预防医学、体成分追踪、AI 初筛等应用",
+        "治疗用途（如肌腱愈合、聚焦超声）为长期方向"
+      ]
+    }
+  ],
+  "flow": [
+    "用户进入水浸环",
+    "升降台以 4 cm/s 移动",
+    "超声元件发射/接收",
+    "17 GB/s 数据采集",
+    "21 台服务器重建",
+    "生成全身切片图像"
+  ],
+  "entities": [
+    {
+      "name": "Midjourney",
+      "type": "company"
+    },
+    {
+      "name": "Midjourney Scanner",
+      "type": "product"
+    },
+    {
+      "name": "Midjourney Spa",
+      "type": "product"
+    },
+    {
+      "name": "David Holz",
+      "type": "person"
+    },
+    {
+      "name": "FDA",
+      "type": "company"
+    },
+    {
+      "name": "ultrasound CT",
+      "type": "technique"
+    },
+    {
+      "name": "MRI",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Midjourney",
+      "to": "Midjourney Scanner",
+      "label": "推出"
+    },
+    {
+      "from": "Midjourney",
+      "to": "Midjourney Spa",
+      "label": "推出"
+    },
+    {
+      "from": "David Holz",
+      "to": "Midjourney",
+      "label": "领导"
+    },
+    {
+      "from": "Midjourney",
+      "to": "FDA",
+      "label": "沟通"
+    },
+    {
+      "from": "Midjourney Scanner",
+      "to": "ultrasound CT",
+      "label": "采用"
+    },
+    {
+      "from": "ultrasound CT",
+      "to": "MRI",
+      "label": "替代"
+    }
+  ]
+}

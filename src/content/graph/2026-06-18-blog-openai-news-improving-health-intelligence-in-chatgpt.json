@@ -1,0 +1,87 @@
+{
+  "center": "ChatGPT 健康智能升级",
+  "branches": [
+    {
+      "label": "新模型发布",
+      "detail": "OpenAI 推出 GPT-5.5 Instant，专攻健康与保健问答质量",
+      "children": [
+        "面向 ChatGPT 健康咨询场景"
+      ]
+    },
+    {
+      "label": "推理与上下文",
+      "detail": "更强推理处理复杂健康查询，更好利用对话历史做个性化",
+      "children": [
+        "支持连续健康对话代理"
+      ]
+    },
+    {
+      "label": "沟通更清晰",
+      "detail": "避免歧义，用通俗语言解释医学概念，降低认知门槛",
+      "children": [
+        "面向普通用户"
+      ]
+    },
+    {
+      "label": "医生评估",
+      "detail": "优化基于临床医生反馈，兼顾实用性与安全性",
+      "children": [
+        "为合规健康应用打基础"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.5 Instant",
+      "type": "model"
+    },
+    {
+      "name": "健康咨询",
+      "type": "concept"
+    },
+    {
+      "name": "上下文理解",
+      "type": "concept"
+    },
+    {
+      "name": "临床医生评估",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.5 Instant",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-5.5 Instant",
+      "to": "ChatGPT",
+      "label": "提升"
+    },
+    {
+      "from": "GPT-5.5 Instant",
+      "to": "健康咨询",
+      "label": "用于"
+    },
+    {
+      "from": "GPT-5.5 Instant",
+      "to": "上下文理解",
+      "label": "增强"
+    },
+    {
+      "from": "临床医生评估",
+      "to": "GPT-5.5 Instant",
+      "label": "优化"
+    }
+  ]
+}

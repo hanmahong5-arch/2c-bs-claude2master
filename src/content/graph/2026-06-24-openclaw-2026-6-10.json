@@ -1,0 +1,73 @@
+{
+  "center": "openclaw v2026.6.10 更新",
+  "branches": [
+    {
+      "label": "自动快速模式",
+      "detail": "新增 /fast auto，短对话自动快速响应，长对话或回退时切回正常模式",
+      "children": [
+        "切换时保持可见状态",
+        "适合平衡速度与深度的 agent 场景"
+      ]
+    },
+    {
+      "label": "跨通道身份修复",
+      "detail": "切换通道后不再沿用旧身份，状态、反应、线程指向当前通道",
+      "children": [
+        "对多通道 agent 路由设计至关重要"
+      ]
+    },
+    {
+      "label": "转录 SDK 接口",
+      "detail": "提供持久化会话转录 SDK，插件可读取、追加、发布和锁定转录",
+      "children": [
+        "避免依赖遗留文件路径",
+        "简化 agent 日志与调试工具集成"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "/fast auto",
+      "type": "technique"
+    },
+    {
+      "name": "多通道会话",
+      "type": "concept"
+    },
+    {
+      "name": "持久化会话转录 SDK",
+      "type": "technique"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "/fast auto",
+      "label": "新增"
+    },
+    {
+      "from": "openclaw",
+      "to": "多通道会话",
+      "label": "修复身份携带"
+    },
+    {
+      "from": "openclaw",
+      "to": "持久化会话转录 SDK",
+      "label": "提供"
+    },
+    {
+      "from": "持久化会话转录 SDK",
+      "to": "agent",
+      "label": "简化日志集成"
+    }
+  ]
+}

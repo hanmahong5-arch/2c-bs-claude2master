@@ -1,0 +1,117 @@
+{
+  "center": "GLM-5.3 与中美前沿差距",
+  "branches": [
+    {
+      "label": "模型发布",
+      "detail": "Z.ai 发布 GLM-5.3，仅限 coding plan，两周后开源权重",
+      "children": [
+        "约 750B 参数，仅为 Kimi K3 的三分之一",
+        "部分基准超 Claude Fable 5 与 GPT-5.6-Sol",
+        "与 GLM-5.2 同一基座，仅扩展后训练"
+      ]
+    },
+    {
+      "label": "非蒸馏解释",
+      "detail": "作者认为主因不是蒸馏，而是 RL 训练与工程能力",
+      "children": [
+        "Z.ai 称用了更多环境、更多样任务、更多算力",
+        "RL 环境与基础设施无法简单蒸馏",
+        "Z.ai 做这条模型线比多数同行更早"
+      ]
+    },
+    {
+      "label": "发布节奏优势",
+      "detail": "中国实验室发布只需数天，美国实验室常需数月",
+      "children": [
+        "美国内部模型可能更强但发布慢",
+        "慢发布让中国模型在采用上占优",
+        "自改进循环若需用户数据，快发布更有利"
+      ]
+    },
+    {
+      "label": "benchmaxxing",
+      "detail": "Z.ai 比 OpenAI、Anthropic 更在意公开基准",
+      "children": [
+        "基准分数直接影响股价与融资",
+        "买落后基准的数据是行业常态",
+        "GLM-5.3 可能比 Claude Fable 更窄"
+      ]
+    },
+    {
+      "label": "中国 RL 数据业",
+      "detail": "中国 RL 数据产业兴起，部分由美国数据公司驱动",
+      "children": [
+        "中国实验室购买与美国前沿实验室相同的 RL 环境",
+        "更快发布下游 RL 模型",
+        "市场规模与影响仍有较大误差"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Z.ai",
+      "type": "company"
+    },
+    {
+      "name": "GLM-5.3",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6-Sol",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Z.ai",
+      "to": "GLM-5.3",
+      "label": "发布"
+    },
+    {
+      "from": "GLM-5.3",
+      "to": "GLM-5.2",
+      "label": "同基座"
+    },
+    {
+      "from": "GLM-5.3",
+      "to": "Kimi K3",
+      "label": "超越"
+    },
+    {
+      "from": "GLM-5.3",
+      "to": "Claude Fable 5",
+      "label": "部分超越"
+    },
+    {
+      "from": "GLM-5.3",
+      "to": "GPT-5.6-Sol",
+      "label": "部分超越"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Anthropic",
+      "label": "同类对比"
+    }
+  ]
+}

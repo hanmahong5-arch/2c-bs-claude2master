@@ -1,0 +1,71 @@
+{
+  "center": "企业AI从辅助走向执行",
+  "branches": [
+    {
+      "label": "范式转变",
+      "detail": "企业从用AI辅助任务转向让AI直接执行任务",
+      "children": [
+        "智能体AI成为关键载体"
+      ]
+    },
+    {
+      "label": "前沿公司领先",
+      "detail": "把AI深度集成进工作流程，自动化决策与操作",
+      "children": [
+        "效率差距由此拉开"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "需构建更自主可靠的AI系统",
+      "children": [
+        "关注企业级部署的集成与安全"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "智能体 AI",
+      "type": "concept"
+    },
+    {
+      "name": "工作流程集成",
+      "type": "technique"
+    },
+    {
+      "name": "自动化决策",
+      "type": "concept"
+    },
+    {
+      "name": "企业级部署",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "智能体 AI",
+      "label": "调研"
+    },
+    {
+      "from": "智能体 AI",
+      "to": "自动化决策",
+      "label": "支撑"
+    },
+    {
+      "from": "工作流程集成",
+      "to": "自动化决策",
+      "label": "实现"
+    },
+    {
+      "from": "智能体 AI",
+      "to": "企业级部署",
+      "label": "落地于"
+    }
+  ]
+}

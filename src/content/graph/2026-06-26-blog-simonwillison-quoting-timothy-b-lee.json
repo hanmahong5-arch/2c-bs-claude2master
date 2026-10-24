@@ -1,0 +1,71 @@
+{
+  "center": "LLM 使用有学习曲线",
+  "branches": [
+    {
+      "label": "核心观点",
+      "detail": "Timothy B. Lee 反驳「LLM 无需技能、没有学习曲线」的说法",
+      "children": [
+        "由 Simon Willison 于 2026-06-26 收录引用"
+      ]
+    },
+    {
+      "label": "管理类比",
+      "detail": "用管理技能作类比：员工照做不等于管理没有学习曲线",
+      "children": [
+        "「员工会照你说的做」不能推出管理无门槛"
+      ]
+    },
+    {
+      "label": "被反驳观点",
+      "detail": "针对「LLM 无技能要求、无学习曲线」的流行看法",
+      "children": [
+        "隐含假设：模型照指令执行即无需技巧"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Timothy B. Lee",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "学习曲线",
+      "type": "concept"
+    },
+    {
+      "name": "管理技能",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Timothy B. Lee",
+      "to": "LLM",
+      "label": "反驳"
+    },
+    {
+      "from": "Timothy B. Lee",
+      "to": "管理技能",
+      "label": "类比"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Timothy B. Lee",
+      "label": "引用"
+    },
+    {
+      "from": "LLM",
+      "to": "学习曲线",
+      "label": "涉及"
+    }
+  ]
+}

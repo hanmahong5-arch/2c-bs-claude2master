@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw Markdown 多端渲染管道",
+  "branches": [
+    {
+      "label": "共享 IR 解析",
+      "detail": "Markdown 先解析为纯文本加样式/链接 span 的中间表示，一次解析供所有渠道复用",
+      "children": [
+        "markdownToIR 输出 text、styles、links",
+        "偏移用 UTF-16 码元，对齐 Signal API",
+        "表格仅在渠道开启 table 模式时解析"
+      ]
+    },
+    {
+      "label": "按渠道渲染",
+      "detail": "renderMarkdownWithMarkers 用样式标记映射把 span 转成各渠道原生标记",
+      "children": [
+        "Matrix/Telegram 用 HTML 标签",
+        "Slack 用 mrkdwn 与 <url|label>",
+        "Signal 用纯文本加样式范围"
+      ]
+    },
+    {
+      "label": "分块不破格式",
+      "detail": "chunkMarkdownIR 限 IR 文本，renderMarkdownIRChunksWithinLimit 按渲染后大小测量",
+      "children": [
+        "样式与链接 span 随文本一起切片",
+        "代码块整体保留并带尾换行",
+        "跨块样式在下一块开头重新打开"
+      ]
+    },
+    {
+      "label": "表格模式",
+      "detail": "markdown.tables 按渠道与账号控制表格转换方式",
+      "children": [
+        "code/bullets/block/off 四种模式",
+        "Matrix 默认 block，Signal/WhatsApp 默认…",
+        "无默认渠道回退到 code"
+      ]
+    },
+    {
+      "label": "链接与折叠",
+      "detail": "各渠道链接重写策略不同，details 折叠仅在支持渠道原生渲染",
+      "children": [
+        "Slack 转 <url|label>，Telegram 转 <a href>",
+        "Signal 渲染为 label (url)",
+        "不支持的渠道把 details 展平为 Summary 加正文"
+      ]
+    }
+  ],
+  "flow": [
+    "markdownToIR 解析为 IR",
+    "chunkMarkdownIR 按 IR 分块",
+    "按渠道转义与重写链接",
+    "renderMarkdownWithMarkers…",
+    "按渲染后大小测量分块",
+    "适配器从发送路径调用"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "markdownToIR",
+      "type": "technique"
+    },
+    {
+      "name": "renderMarkdownWithMarkers",
+      "type": "technique"
+    },
+    {
+      "name": "chunkMarkdownIR",
+      "type": "technique"
+    },
+    {
+      "name": "Signal",
+      "type": "product"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "Matrix",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "markdownToIR",
+      "label": "调用"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "renderMarkdownWithMarkers",
+      "label": "调用"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "chunkMarkdownIR",
+      "label": "调用"
+    },
+    {
+      "from": "renderMarkdownWithMarkers",
+      "to": "Signal",
+      "label": "渲染"
+    },
+    {
+      "from": "renderMarkdownWithMarkers",
+      "to": "Slack",
+      "label": "渲染"
+    },
+    {
+      "from": "renderMarkdownWithMarkers",
+      "to": "Telegram",
+      "label": "渲染"
+    }
+  ]
+}

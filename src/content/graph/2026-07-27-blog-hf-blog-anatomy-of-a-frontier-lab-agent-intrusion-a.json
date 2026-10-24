@@ -1,0 +1,120 @@
+{
+  "center": "前沿实验室智能体入侵复盘",
+  "branches": [
+    {
+      "label": "执行面才是关键",
+      "detail": "讨论焦点应从提示与规划转向智能体能实际执行的高后果动作",
+      "children": [
+        "写文件、调 shell、改云资源、认证 API 调用",
+        "执行面约束与模型评估同等重要"
+      ]
+    },
+    {
+      "label": "可观测性≠授权",
+      "detail": "网关遥测只能说明发生了什么，无法决定是否允许发生",
+      "children": [
+        "最终边界须在进程无法修改处拒绝动作",
+        "捕获告诉我们发生了什么，边界决定能否发生"
+      ]
+    },
+    {
+      "label": "运行时前的盲区",
+      "detail": "并非所有高后果动作都经过模型或工具网关",
+      "children": [
+        "直连云 SDK、subprocess、文件系统 API",
+        "SQL 客户端、继承凭证均可绕过网关"
+      ]
+    },
+    {
+      "label": "Actenon 防护序列",
+      "detail": "先映射执行汇点，再追踪路径，最后在动作前校验授权",
+      "children": [
+        "actenon-scan 部署前扫描执行汇点",
+        "actenon-kernel 返回 ALLOW 或类型化拒绝",
+        "receipt 绑定决策与实际动作上下文"
+      ]
+    },
+    {
+      "label": "推理层最后",
+      "detail": "推理内容与实际行动相关性弱，投入产出最低",
+      "children": [
+        "网关模型调用与工具调用并传递同一 ID",
+        "哈希上下文片段，再加内核级执行捕获"
+      ]
+    }
+  ],
+  "flow": [
+    "扫描代码库执行汇点",
+    "网关模型与工具调用",
+    "传播统一执行身份 ID",
+    "内核级执行捕获",
+    "动作前校验授权",
+    "生成决策回执"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Actenon",
+      "type": "product"
+    },
+    {
+      "name": "actenon-scan",
+      "type": "product"
+    },
+    {
+      "name": "actenon-kernel",
+      "type": "product"
+    },
+    {
+      "name": "Ross Buckley",
+      "type": "person"
+    },
+    {
+      "name": "Travis Lelle",
+      "type": "person"
+    },
+    {
+      "name": "执行面",
+      "type": "concept"
+    },
+    {
+      "name": "可观测性",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ross Buckley",
+      "to": "Actenon",
+      "label": "开发"
+    },
+    {
+      "from": "Actenon",
+      "to": "actenon-scan",
+      "label": "包含"
+    },
+    {
+      "from": "Actenon",
+      "to": "actenon-kernel",
+      "label": "包含"
+    },
+    {
+      "from": "Travis Lelle",
+      "to": "可观测性",
+      "label": "主张"
+    },
+    {
+      "from": "Ross Buckley",
+      "to": "执行面",
+      "label": "强调"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Ross Buckley",
+      "label": "发布复盘"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "center": "codex rust-v0.151.0 更新",
+  "branches": [
+    {
+      "label": "MCP 结果可拦截",
+      "detail": "MCP 工具结果到达模型前可被扩展检查或替换",
+      "children": [
+        "为 harness 提供中间层干预点"
+      ]
+    },
+    {
+      "label": "插件目录合并",
+      "detail": "插件目录合并仓库级配置，处理配置冲突",
+      "children": [
+        "无效项目市场不再隐藏有效插件"
+      ]
+    },
+    {
+      "label": "MCP 发现宽限期",
+      "detail": "可选 MCP 服务器发现新增可配置宽限期",
+      "children": [
+        "harness 可调整启动等待策略"
+      ]
+    },
+    {
+      "label": "模型切换修复",
+      "detail": "修复模型切换时工具可用性和推理努力保持正确",
+      "children": [
+        "harness 需同步模型状态"
+      ]
+    },
+    {
+      "label": "远程沙箱约定",
+      "detail": "远程沙箱强制使用执行器真实主目录、OS 和路径约定",
+      "children": [
+        "harness 需传递环境上下文"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex rust-v0.151.0",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "插件目录",
+      "type": "concept"
+    },
+    {
+      "name": "远程沙箱",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex rust-v0.151.0",
+      "to": "MCP",
+      "label": "支持拦截"
+    },
+    {
+      "from": "codex rust-v0.151.0",
+      "to": "插件目录",
+      "label": "合并配置"
+    },
+    {
+      "from": "codex rust-v0.151.0",
+      "to": "远程沙箱",
+      "label": "强制约定"
+    },
+    {
+      "from": "harness",
+      "to": "MCP",
+      "label": "调整等待"
+    },
+    {
+      "from": "harness",
+      "to": "插件目录",
+      "label": "处理冲突"
+    }
+  ]
+}

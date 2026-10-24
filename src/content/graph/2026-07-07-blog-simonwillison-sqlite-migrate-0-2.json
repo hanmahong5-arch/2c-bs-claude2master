@@ -1,0 +1,73 @@
+{
+  "center": "sqlite-migrate 0.2 发布",
+  "branches": [
+    {
+      "label": "版本核心变化",
+      "detail": "0.2 版退役原库，改为对新依赖 sqlite-utils 4.0 的兼容垫片",
+      "children": [
+        "基于 sqlite-utils 的 SQLite 迁移系统",
+        "实现 compatibility shim"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 7 月 7 日发布该版本",
+      "children": [
+        "发布于 7th July 2026",
+        "归类为 Release"
+      ]
+    },
+    {
+      "label": "依赖升级",
+      "detail": "依赖升级到 sqlite-utils 4.0，通过垫片保持兼容",
+      "children": [
+        "新 sqlite-utils 4.0 依赖"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "sqlite-migrate",
+      "type": "product"
+    },
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "compatibility shim",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "sqlite-migrate",
+      "to": "sqlite-utils",
+      "label": "依赖"
+    },
+    {
+      "from": "sqlite-migrate",
+      "to": "SQLite",
+      "label": "用于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-migrate",
+      "label": "发布"
+    },
+    {
+      "from": "sqlite-migrate",
+      "to": "compatibility shim",
+      "label": "采用"
+    }
+  ]
+}

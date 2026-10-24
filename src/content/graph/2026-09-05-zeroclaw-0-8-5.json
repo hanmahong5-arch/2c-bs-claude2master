@@ -1,0 +1,82 @@
+{
+  "center": "ZeroClaw v0.8.5 安全升级",
+  "branches": [
+    {
+      "label": "新增通信组件",
+      "detail": "引入 ZeroRelay 与 ZeroRouter，为 agent 通信提供更安全的传输层",
+      "children": [
+        "ZeroRelay 支持盲转发",
+        "mTLS 注册与托管路由预设"
+      ]
+    },
+    {
+      "label": "插件安全收紧",
+      "detail": "强制类型化实例配置、作用域密钥、主机拥有出口、路径遍历防护",
+      "children": [
+        "技能 HTTP 执行默认失败关闭",
+        "agent 设计遵循更严格边界"
+      ]
+    },
+    {
+      "label": "漏洞修复",
+      "detail": "修复 Wasmtime 沙箱逃逸及插件 wasm_path 遍历漏洞，升级安全栈",
+      "children": [
+        "RUSTSEC-2026-0222",
+        "GHSA-93f6-34w8-5g98"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "ZeroClaw",
+      "type": "product"
+    },
+    {
+      "name": "ZeroRelay",
+      "type": "product"
+    },
+    {
+      "name": "ZeroRouter",
+      "type": "product"
+    },
+    {
+      "name": "Wasmtime",
+      "type": "product"
+    },
+    {
+      "name": "mTLS",
+      "type": "technique"
+    },
+    {
+      "name": "RUSTSEC-2026-0222",
+      "type": "concept"
+    },
+    {
+      "name": "GHSA-93f6-34w8-5g98",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "ZeroClaw",
+      "to": "ZeroRelay",
+      "label": "引入"
+    },
+    {
+      "from": "ZeroClaw",
+      "to": "ZeroRouter",
+      "label": "引入"
+    },
+    {
+      "from": "ZeroRelay",
+      "to": "mTLS",
+      "label": "使用"
+    },
+    {
+      "from": "ZeroClaw",
+      "to": "Wasmtime",
+      "label": "修复漏洞"
+    }
+  ]
+}

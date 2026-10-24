@@ -1,0 +1,108 @@
+{
+  "center": "FrontierCode 代码质量基准",
+  "branches": [
+    {
+      "label": "基准定位",
+      "detail": "Cognition 推出 FrontierCode，衡量代码是否真正可合并，而非仅通过单元测试",
+      "children": [
+        "任务由开源维护者构建，每个耗时 40+ 小时",
+        "评估维度含回归安全、整洁度、范围、测试正确性…"
+      ]
+    },
+    {
+      "label": "核心结果",
+      "detail": "最强模型 Opus 4.8 在最难子集仅约 13%，远低于 SWE-Bench 常见 50%+",
+      "children": [
+        "说明编码远未「解决」",
+        "灵感与命名来自 FrontierMath"
+      ]
+    },
+    {
+      "label": "背景动机",
+      "detail": "延续 SWEBench-Verified 工作，回应 2025 年基准可靠性问题",
+      "children": [
+        "METR 发现许多通过 SWE-bench 的 PR 实际不会…",
+        "针对假阳性轨迹问题直接测量"
+      ]
+    },
+    {
+      "label": "Agent 范式",
+      "detail": "「循环」成为主流 agent 控制隐喻，但需谨慎",
+      "children": [
+        "主张明确目标、验证标准与迭代结构",
+        "Omar Sar0、Graham Neubig 强调人工检查点仍…"
+      ]
+    },
+    {
+      "label": "生态动向",
+      "detail": "模型发布、本地推理与评测方法同步演进",
+      "children": [
+        "Kimi Code 更新、Kimi Work 桌面 agent 最多…",
+        "Gemma 4 QAT 省约 4 倍内存，约 1GB 可跑",
+        "Arena 基于 100 万+ 真实会话推出 Agent Arena"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cognition",
+      "type": "company"
+    },
+    {
+      "name": "FrontierCode",
+      "type": "product"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "SWE-Bench",
+      "type": "concept"
+    },
+    {
+      "name": "FrontierMath",
+      "type": "concept"
+    },
+    {
+      "name": "METR",
+      "type": "company"
+    },
+    {
+      "name": "Kimi Code",
+      "type": "product"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cognition",
+      "to": "FrontierCode",
+      "label": "推出"
+    },
+    {
+      "from": "FrontierCode",
+      "to": "FrontierMath",
+      "label": "灵感来自"
+    },
+    {
+      "from": "FrontierCode",
+      "to": "SWE-Bench",
+      "label": "延续"
+    },
+    {
+      "from": "Opus 4.8",
+      "to": "FrontierCode",
+      "label": "评测于"
+    },
+    {
+      "from": "METR",
+      "to": "SWE-Bench",
+      "label": "质疑"
+    }
+  ]
+}

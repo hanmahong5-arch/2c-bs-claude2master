@@ -1,0 +1,109 @@
+{
+  "center": "Agentic 时代 AI 使用指南",
+  "branches": [
+    {
+      "label": "三层结构",
+      "detail": "选 AI 需分清模型、应用、工具链三层，同一模型在不同工具链表现差异巨大",
+      "children": [
+        "Models 是底层大脑，决定智能与推理能力",
+        "Apps 是实际对话与干活的界面",
+        "Harnesses 让模型用工具、自主完成多步任务"
+      ]
+    },
+    {
+      "label": "三大前沿模型",
+      "detail": "Claude Opus 4.6、Gemini 3 Pro、GPT-5.2 Thinking 能力接近，各有强弱",
+      "children": [
+        "付费约 $20/月才可用前沿模型",
+        "免费模型为聊天优化，准确性差",
+        "默认模型常是 auto 模式，需手动选强模型"
+      ]
+    },
+    {
+      "label": "工具链决定能力",
+      "detail": "Harness 像马具，把模型原始能力转化为实际生产力",
+      "children": [
+        "Claude Code 给模型虚拟电脑、浏览器、终端",
+        "Manus 是可包裹多模型的独立 harness",
+        "OpenClaw 支持本地运行任意模型"
+      ]
+    },
+    {
+      "label": "应用差异扩大",
+      "detail": "ChatGPT、Claude、Gemini 的聊天应用功能捆绑已明显分化",
+      "children": [
+        "Gemini 捆绑 nano banana、Veo 3.1、Guided…",
+        "同一问题在不同应用给出不同质量答案",
+        "选对应用与工具链比选模型更重要"
+      ]
+    }
+  ],
+  "flow": [
+    "明确任务类型",
+    "选择合适模型",
+    "挑选应用界面",
+    "配置或选择工具链",
+    "手动选强模型并开启思考"
+  ],
+  "entities": [
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.2 Thinking",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3 Pro",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Manus",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ethan Mollick",
+      "to": "Claude Opus 4.6",
+      "label": "评测"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude Opus 4.6",
+      "label": "运行"
+    },
+    {
+      "from": "Manus",
+      "to": "harness",
+      "label": "属于"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "harness",
+      "label": "属于"
+    },
+    {
+      "from": "harness",
+      "to": "Claude Opus 4.6",
+      "label": "增强"
+    }
+  ]
+}

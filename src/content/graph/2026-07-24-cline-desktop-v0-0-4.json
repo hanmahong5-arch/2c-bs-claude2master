@@ -1,0 +1,53 @@
+{
+  "center": "Cline Desktop v0.0.4 更新",
+  "branches": [
+    {
+      "label": "无项目聊天",
+      "detail": "无需项目文件夹即可直接对话，降低 agent 启动门槛",
+      "children": [
+        "适合快速问答场景"
+      ]
+    },
+    {
+      "label": "拖拽附件",
+      "detail": "拖拽文件到聊天窗口即可附加，简化多模态输入流程",
+      "children": [
+        "agent 可即时处理附件"
+      ]
+    },
+    {
+      "label": "内联图片",
+      "detail": "支持内联图片输入，丰富多模态交互方式",
+      "children": []
+    },
+    {
+      "label": "智能上下文压缩",
+      "detail": "默认启用 agentic compaction 压缩长对话上下文",
+      "children": [
+        "提升持续交互中的记忆效率"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline Desktop",
+      "type": "product"
+    },
+    {
+      "name": "agentic compaction",
+      "type": "technique"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline Desktop",
+      "to": "agentic compaction",
+      "label": "默认启用"
+    }
+  ]
+}

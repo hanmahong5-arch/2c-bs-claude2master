@@ -1,0 +1,82 @@
+{
+  "center": "Simon Willison 谈 LLM 与侏罗纪…",
+  "branches": [
+    {
+      "label": "核心比喻",
+      "detail": "用侏罗纪公园类比 LLM 对计算机科学家的冲击",
+      "children": [
+        "拒绝关注 LLM 如同遗传学家无视侏罗纪公园",
+        "质疑者称其只是青蛙 DNA，且为营销放任恐龙吃人"
+      ]
+    },
+    {
+      "label": "作者身份",
+      "detail": "Simon Willison 在个人博客发布的短评",
+      "children": [
+        "发布于 2026 年 9 月 18 日",
+        "标签为 ai、generative-ai、llms"
+      ]
+    },
+    {
+      "label": "相关动态",
+      "detail": "博客近期文章涉及多个新模型与价格战",
+      "children": [
+        "Claude Opus 5.5、GPT-6 Sol、GPT-6 Luna…",
+        "Jev 提出 System One 决策模型新形态",
+        "GPT-6 Astra 与 ChatGPT Work 生成跑步路线"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "Jurassic Park",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Opus 5.5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "GPT-6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "System One",
+      "type": "model"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "LLM",
+      "label": "评论"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Jurassic Park",
+      "label": "类比"
+    },
+    {
+      "from": "LLM",
+      "to": "Jurassic Park",
+      "label": "类比"
+    }
+  ]
+}

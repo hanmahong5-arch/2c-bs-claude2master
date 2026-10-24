@@ -1,0 +1,104 @@
+{
+  "center": "llm-gemini 0.33 发布",
+  "branches": [
+    {
+      "label": "新增模型支持",
+      "detail": "插件加入 Gemini 3.7 Flash 及多个 Flash 与嵌入模型",
+      "children": [
+        "gemini-3.7-flash、3.6-flash…",
+        "嵌入模型 gemini-embedding-2…"
+      ]
+    },
+    {
+      "label": "兼容 LLM 0.32",
+      "detail": "升级后可查看推理轨迹并启用服务端工具",
+      "children": [
+        "支持 reasoning traces 展示",
+        "可用 -T CodeExecution 调用服务端工具"
+      ]
+    },
+    {
+      "label": "思考档位变化",
+      "detail": "3.7 Flash 移除 minimal 档，保留高/中/低",
+      "children": [
+        "minimal 曾是 3.6 Flash 的选项",
+        "示例：不同档位画骑自行车鹈鹕"
+      ]
+    },
+    {
+      "label": "作者更正说明",
+      "detail": "SVG 渲染问题实为作者工具 bug，非模型错误",
+      "children": [
+        "原误指 Gemini 3.7 Flash 生成无效 SVG",
+        "8 月 14 日更新并修复渲染工具"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm-gemini",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "product"
+    },
+    {
+      "name": "Gemini 3.7 Flash",
+      "type": "model"
+    },
+    {
+      "name": "gemini-3.6-flash",
+      "type": "model"
+    },
+    {
+      "name": "gemini-3.5-flash-lite",
+      "type": "model"
+    },
+    {
+      "name": "gemini-embedding-2",
+      "type": "model"
+    },
+    {
+      "name": "CodeExecution",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm-gemini",
+      "label": "发布"
+    },
+    {
+      "from": "llm-gemini",
+      "to": "Gemini 3.7 Flash",
+      "label": "支持"
+    },
+    {
+      "from": "llm-gemini",
+      "to": "gemini-3.6-flash",
+      "label": "支持"
+    },
+    {
+      "from": "llm-gemini",
+      "to": "gemini-3.5-flash-lite",
+      "label": "支持"
+    },
+    {
+      "from": "llm-gemini",
+      "to": "gemini-embedding-2",
+      "label": "支持"
+    },
+    {
+      "from": "llm-gemini",
+      "to": "LLM",
+      "label": "兼容"
+    }
+  ]
+}

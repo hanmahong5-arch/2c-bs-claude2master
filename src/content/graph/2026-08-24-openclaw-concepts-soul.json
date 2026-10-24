@@ -1,0 +1,109 @@
+{
+  "center": "SOUL.md 让 AI 有性格",
+  "branches": [
+    {
+      "label": "SOUL.md 是什么",
+      "detail": "OpenClaw 注入会话的个性文件，决定 agent 说话的语气与风格",
+      "children": [
+        "语气平淡、含糊、官腔通常就是这文件要改",
+        "写语气、观点、简洁度、幽默、边界、直白程度"
+      ]
+    },
+    {
+      "label": "为什么有效",
+      "detail": "符合 OpenAI 提示指南：高层行为与语气应放在高优先级指令层",
+      "children": [
+        "提示应迭代、固定、评估，而非写一次就忘",
+        "SOUL.md 就是 OpenClaw 的那一层"
+      ]
+    },
+    {
+      "label": "Molty 改写提示",
+      "detail": "一段可直接粘贴给 agent 的提示，让它重写 SOUL.md",
+      "children": [
+        "要有强观点，停止用 it depends 含糊",
+        "删掉员工手册式规则，禁止以 Great question…",
+        "强制简洁、允许幽默与脏话、可直说坏主意"
+      ]
+    },
+    {
+      "label": "好规则 vs 坏规则",
+      "detail": "好规则有立场、去废话、该幽默时幽默；坏规则是官腔套话",
+      "children": [
+        "好：有观点、跳过填充、早指出坏主意",
+        "坏：maintain professionalism…"
+      ]
+    },
+    {
+      "label": "一条警告",
+      "detail": "有性格不等于可以马虎，分工要清楚",
+      "children": [
+        "AGENTS.md 管操作规则，SOUL.md 管语气与立场",
+        "公开渠道要保证语气适配场合"
+      ]
+    }
+  ],
+  "flow": [
+    "读现有 SOUL.md",
+    "粘贴 Molty 提示",
+    "按 8 条改写",
+    "保存新 SOUL.md"
+  ],
+  "entities": [
+    {
+      "name": "SOUL.md",
+      "type": "concept"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "concept"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Molty prompt",
+      "type": "technique"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "prompt engineering",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "SOUL.md",
+      "label": "注入"
+    },
+    {
+      "from": "SOUL.md",
+      "to": "AGENTS.md",
+      "label": "分工"
+    },
+    {
+      "from": "OpenAI",
+      "to": "prompt engineering",
+      "label": "提出指南"
+    },
+    {
+      "from": "Molty prompt",
+      "to": "SOUL.md",
+      "label": "改写"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Codex",
+      "label": "运行时并列"
+    }
+  ]
+}

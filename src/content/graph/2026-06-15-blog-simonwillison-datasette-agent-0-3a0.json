@@ -1,0 +1,91 @@
+{
+  "center": "datasette-agent 0.3a0 发布",
+  "branches": [
+    {
+      "label": "新增写库工具",
+      "detail": "execute_write_sql 请求用户批准后写入数据库，并考虑用户权限",
+      "children": [
+        "示例：向 pelican_sightings 表添加鹈鹕目击…",
+        "基于 0.2a0 的用户批准机制"
+      ]
+    },
+    {
+      "label": "聊天终端增强",
+      "detail": "datasette agent chat 支持需批准的工具，并新增多个选项",
+      "children": [
+        "--root 以 root 运行",
+        "--yes 自动批准所有询问",
+        "--unsafe 同时启用前两者"
+      ]
+    },
+    {
+      "label": "CLI 文本替代",
+      "detail": "工具可为 CLI 提供纯文本替代 HTML 的展示形式",
+      "children": [
+        "便于在 datasette agent chat 命令行中显示"
+      ]
+    },
+    {
+      "label": "直接对话改库",
+      "detail": "可指定数据库与模型直接对话并修改数据库",
+      "children": [
+        "命令：datasette agent chat content.db -m…",
+        "提示如 create a notes table"
+      ]
+    }
+  ],
+  "flow": [
+    "用户输入提示",
+    "agent 调用工具",
+    "请求用户批准",
+    "执行写库操作"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "datasette-agent",
+      "type": "product"
+    },
+    {
+      "name": "execute_write_sql",
+      "type": "technique"
+    },
+    {
+      "name": "gpt-5.5",
+      "type": "model"
+    },
+    {
+      "name": "datasette agent chat",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "datasette-agent",
+      "label": "发布"
+    },
+    {
+      "from": "datasette-agent",
+      "to": "Datasette",
+      "label": "扩展"
+    },
+    {
+      "from": "datasette-agent",
+      "to": "execute_write_sql",
+      "label": "新增"
+    },
+    {
+      "from": "datasette agent chat",
+      "to": "gpt-5.5",
+      "label": "调用"
+    }
+  ]
+}

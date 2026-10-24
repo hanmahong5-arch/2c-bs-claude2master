@@ -1,0 +1,106 @@
+{
+  "center": "开源模型许可风向生变",
+  "branches": [
+    {
+      "label": "许可两极分化",
+      "detail": "西方厂商转向开放许可，中国前沿厂商反而收紧限制",
+      "children": [
+        "Google、Meta 改用 Apache 2.0",
+        "Kimi K3 要求商业协议",
+        "MiniMax M3 设收入门槛"
+      ]
+    },
+    {
+      "label": "GLM-5.3 改许可",
+      "detail": "智谱从 MIT 换成自定义许可，加安全审查条款",
+      "children": [
+        "年收入超 100 亿美元需过 Z.AI 安全审查",
+        "「关联方」未定义，中英文条款不一致",
+        "GLM-5.2 及更早仍为 MIT"
+      ]
+    },
+    {
+      "label": "新模型亮点",
+      "detail": "本期收录 Motif-3、dots3、Qwen3.8 等多个新模型",
+      "children": [
+        "Motif-3 用 MIT 许可，小资源高效训练",
+        "dots3 以内部 harness 满分夺 IMO 2026",
+        "Qwen3.8-Flash-Next 用 GDN 与稀疏注意力"
+      ]
+    },
+    {
+      "label": "中国模型打法",
+      "detail": "GLM-5.3-Flash 以匿名「Ox-Alpha」先造势再揭晓",
+      "children": [
+        "在 OpenRouter、OpenCode 免费试用",
+        "引发对作者与规模的连日猜测",
+        "削弱「刷榜」质疑"
+      ]
+    },
+    {
+      "label": "腾讯发力开源",
+      "detail": "Hy4-preview 扩大旗舰规模并转动后训练飞轮",
+      "children": [
+        "当前存在过度思考问题",
+        "参照 Hy3-preview 到 Hy3 的进步轨迹"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Zhipu",
+      "type": "company"
+    },
+    {
+      "name": "GLM-5.3",
+      "type": "model"
+    },
+    {
+      "name": "Motif-3",
+      "type": "model"
+    },
+    {
+      "name": "Qwen3.8-Flash-Next",
+      "type": "model"
+    },
+    {
+      "name": "Hy4-preview",
+      "type": "model"
+    },
+    {
+      "name": "MIT",
+      "type": "concept"
+    },
+    {
+      "name": "Apache 2.0",
+      "type": "concept"
+    },
+    {
+      "name": "dots3",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Zhipu",
+      "to": "GLM-5.3",
+      "label": "发布"
+    },
+    {
+      "from": "GLM-5.3",
+      "to": "MIT",
+      "label": "弃用"
+    },
+    {
+      "from": "Motif-3",
+      "to": "MIT",
+      "label": "采用"
+    },
+    {
+      "from": "Zhipu",
+      "to": "MIT",
+      "label": "曾采用"
+    }
+  ]
+}

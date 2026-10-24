@@ -1,0 +1,117 @@
+{
+  "center": "LLM 0.32 发布",
+  "branches": [
+    {
+      "label": "推理轨迹可见",
+      "detail": "推理模型思考过程输出到 stderr，不污染 stdout",
+      "children": [
+        "-R/--hide-reasoning 可关闭",
+        "默认模型改为 GPT-5.6 Luna"
+      ]
+    },
+    {
+      "label": "服务端工具",
+      "detail": "支持各厂商服务端工具，一条命令即可调用",
+      "children": [
+        "OpenAI：CodeInterpreter、WebSearch",
+        "llm-anthropic：WebSearch、WebFetch…"
+      ]
+    },
+    {
+      "label": "Python API 重构",
+      "detail": "prompt(messages=[]) 传完整历史，stream_events() 处理混合输出",
+      "children": [
+        "事件类型含 reasoning、text、tool calls",
+        "可构建 llm-chat-completions-server"
+      ]
+    },
+    {
+      "label": "内容寻址日志",
+      "detail": "仿 Git 的内容寻址消息存储，避免重复记录历史 JSON",
+      "children": [
+        "llm logs 与 --json 已适配新格式"
+      ]
+    },
+    {
+      "label": "走向 Agent 框架",
+      "detail": "工具链可暂停等待人工批准并从历史恢复",
+      "children": [
+        "为 Datasette Agent 需求驱动",
+        "插件需升级 0.32 才支持流式事件"
+      ]
+    }
+  ],
+  "flow": [
+    "安装 LLM 0.32",
+    "选择模型与工具",
+    "一条命令执行 prompt",
+    "流式接收 reasoning/text 事件",
+    "内容寻址写入日志"
+  ],
+  "entities": [
+    {
+      "name": "LLM",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI Responses API",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "llm-anthropic",
+      "type": "product"
+    },
+    {
+      "name": "Datasette Agent",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "LLM",
+      "label": "发布"
+    },
+    {
+      "from": "LLM",
+      "to": "GPT-5.6 Luna",
+      "label": "默认使用"
+    },
+    {
+      "from": "LLM",
+      "to": "OpenAI Responses API",
+      "label": "基于"
+    },
+    {
+      "from": "llm-anthropic",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "LLM",
+      "to": "Datasette Agent",
+      "label": "支撑"
+    },
+    {
+      "from": "LLM",
+      "to": "SQLite",
+      "label": "用于日志"
+    }
+  ]
+}

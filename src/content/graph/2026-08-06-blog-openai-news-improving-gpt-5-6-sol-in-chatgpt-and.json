@@ -1,0 +1,73 @@
+{
+  "center": "GPT-5.6 Sol 精度提升与 Luna 开放",
+  "branches": [
+    {
+      "label": "Sol 精度提升",
+      "detail": "GPT-5.6 Sol 在准确性和一致性上改进，减少错误与前后矛盾",
+      "children": [
+        "对 agent 工具链意味着更可靠的决策基础"
+      ]
+    },
+    {
+      "label": "Luna 免费开放",
+      "detail": "免费用户现可使用 GPT-5.6 Luna，日常对话不限量",
+      "children": [
+        "降低高级 AI 使用门槛",
+        "开发者可构建更普惠应用"
+      ]
+    },
+    {
+      "label": "分层策略",
+      "detail": "OpenAI 通过分层平衡能力与成本，聚焦性能与可访问性",
+      "children": [
+        "开发者需关注模型版本能力差异",
+        "优化调用策略"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "agent 工具链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Sol",
+      "label": "提升"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Luna",
+      "label": "开放"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "agent 工具链",
+      "label": "支撑"
+    },
+    {
+      "from": "GPT-5.6 Luna",
+      "to": "ChatGPT",
+      "label": "集成于"
+    }
+  ]
+}

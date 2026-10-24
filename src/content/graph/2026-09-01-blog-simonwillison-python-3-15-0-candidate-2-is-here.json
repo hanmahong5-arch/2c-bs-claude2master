@@ -1,0 +1,110 @@
+{
+  "center": "Python 3.15 RC2 发布",
+  "branches": [
+    {
+      "label": "RC2 发布",
+      "detail": "Hugo van Kemenade 宣布 Python 3.15 最终候选版，10 月正式发布",
+      "children": [
+        "RC 阶段只接受明确 bug 修复的代码变更",
+        "鼓励第三方项目在 PyPI 发布 3.15 wheels"
+      ]
+    },
+    {
+      "label": "RC 测试重要性",
+      "detail": "Simon 因 2021 年错过 RC 期测试，导致 bug 已随正式版发布",
+      "children": [
+        "2021 年在 Python 3.10 测试套件中发现 bug",
+        "此后他格外重视 RC 阶段测试"
+      ]
+    },
+    {
+      "label": "CI 配置方法",
+      "detail": "GitHub Actions 暂未支持新 RC，可用矩阵手动测试",
+      "children": [
+        "allow-prereleases 与 check-latest 自动切…",
+        "关注 actions/python-versions 获取更新"
+      ]
+    },
+    {
+      "label": "项目测试结果",
+      "detail": "Datasette 与 sqlite-utils 通过，LLM 因 scikit-learn 受阻",
+      "children": [
+        "LLM 等待 3.15 版 scikit-learn wheel",
+        "scikit-learn 在测试套件中为可选依赖"
+      ]
+    }
+  ],
+  "flow": [
+    "进入 RC 阶段",
+    "第三方项目适配",
+    "发布 3.15 wheels",
+    "CI 矩阵测试",
+    "正式版发布"
+  ],
+  "entities": [
+    {
+      "name": "Python 3.15",
+      "type": "product"
+    },
+    {
+      "name": "Hugo van Kemenade",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "scikit-learn",
+      "type": "product"
+    },
+    {
+      "name": "PyPI",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugo van Kemenade",
+      "to": "Python 3.15",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Python 3.15",
+      "label": "测试"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "开发"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "开发"
+    },
+    {
+      "from": "Datasette",
+      "to": "Python 3.15",
+      "label": "通过测试"
+    },
+    {
+      "from": "scikit-learn",
+      "to": "Python 3.15",
+      "label": "缺少 wheel"
+    }
+  ]
+}

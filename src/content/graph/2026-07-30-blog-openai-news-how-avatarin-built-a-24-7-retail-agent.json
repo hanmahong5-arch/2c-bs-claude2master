@@ -1,0 +1,82 @@
+{
+  "center": "avatarin 用 GPT-Realtime 打造…",
+  "branches": [
+    {
+      "label": "落地成果",
+      "detail": "为山田电机提供 24/7 多语言客服，两周 3 万人使用，92% 好评",
+      "children": [
+        "两周内吸引 3 万用户",
+        "92% 调研反馈为正面"
+      ]
+    },
+    {
+      "label": "技术方案",
+      "detail": "基于 GPT-Realtime 构建零售智能体，通过实时语音交互处理顾客咨询",
+      "children": [
+        "实时语音交互",
+        "自然处理顾客咨询"
+      ]
+    },
+    {
+      "label": "业务价值",
+      "detail": "显著降低人工客服压力，支撑高并发零售场景",
+      "children": [
+        "降低人工客服压力",
+        "高并发零售场景可落地"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "实时多模态模型可快速落地，延迟与流畅度达商业级",
+      "children": [
+        "延迟和对话流畅度支撑商业应用",
+        "可复用技术路径"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "avatarin",
+      "type": "company"
+    },
+    {
+      "name": "GPT-Realtime",
+      "type": "model"
+    },
+    {
+      "name": "山田电机",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "零售智能体",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "avatarin",
+      "to": "GPT-Realtime",
+      "label": "基于"
+    },
+    {
+      "from": "avatarin",
+      "to": "零售智能体",
+      "label": "构建"
+    },
+    {
+      "from": "零售智能体",
+      "to": "山田电机",
+      "label": "服务"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-Realtime",
+      "label": "提供"
+    }
+  ]
+}

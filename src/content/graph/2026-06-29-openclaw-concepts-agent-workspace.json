@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw Agent 工作区",
+  "branches": [
+    {
+      "label": "工作区定位",
+      "detail": "Agent 的家目录，文件工具与上下文的工作目录，视为私有记忆",
+      "children": [
+        "默认 ~/.openclaw/workspace",
+        "与 ~/.openclaw/ 配置目录分离",
+        "OPENCLAW_WORKSPACE_DIR 可覆盖"
+      ]
+    },
+    {
+      "label": "核心文件",
+      "detail": "标准文件各司其职，会话启动时按需加载",
+      "children": [
+        "AGENTS.md 操作指令，每会话加载",
+        "SOUL.md 人格语气，每会话加载",
+        "USER.md 用户模型，4000 字符预算"
+      ]
+    },
+    {
+      "label": "记忆机制",
+      "detail": "每日日志与长期记忆分层，避免全量注入提示词",
+      "children": [
+        "memory/YYYY-MM-DD.md 每日日志",
+        "建议启动读今天+昨天",
+        "细节留日志，按需检索"
+      ]
+    },
+    {
+      "label": "多 Agent 配置",
+      "detail": "按 roster 解析工作区路径，未固定条目用默认根",
+      "children": [
+        "agents.entries.*.workspace 逐代理覆盖",
+        "多代理默认 <root>/<agentId>",
+        "共享根需显式 pin main"
+      ]
+    },
+    {
+      "label": "备份与迁移",
+      "detail": "工作区当私有记忆，用私有 git 仓库备份",
+      "children": [
+        "新工作区自动 git init",
+        "勿提交 secrets，配 .gitignore",
+        "迁移改 workspace 路径后验证"
+      ]
+    }
+  ],
+  "flow": [
+    "确定工作区路径",
+    "创建并播种文件",
+    "编辑 AGENTS/SOUL/USER",
+    "写入每日记忆日志",
+    "私有 git 备份推送",
+    "迁移时改配置验证"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "concept"
+    },
+    {
+      "name": "SOUL.md",
+      "type": "concept"
+    },
+    {
+      "name": "USER.md",
+      "type": "concept"
+    },
+    {
+      "name": "MEMORY.md",
+      "type": "concept"
+    },
+    {
+      "name": "BOOTSTRAP.md",
+      "type": "concept"
+    },
+    {
+      "name": "Control UI",
+      "type": "product"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "AGENTS.md",
+      "label": "加载"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "SOUL.md",
+      "label": "加载"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "USER.md",
+      "label": "加载"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "MEMORY.md",
+      "label": "加载"
+    },
+    {
+      "from": "Control UI",
+      "to": "AGENTS.md",
+      "label": "编辑"
+    },
+    {
+      "from": "Gateway",
+      "to": "BOOTSTRAP.md",
+      "label": "执行"
+    }
+  ]
+}

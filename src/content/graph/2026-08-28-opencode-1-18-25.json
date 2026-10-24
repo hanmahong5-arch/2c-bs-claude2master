@@ -1,0 +1,58 @@
+{
+  "center": "opencode v1.18.25 修复 Azure…",
+  "branches": [
+    {
+      "label": "Azure 认证修复",
+      "detail": "Azure CLI 登录不再依赖 Bun，认证流程已修复",
+      "children": [
+        "Azure CLI 登录无需 Bun"
+      ]
+    },
+    {
+      "label": "减少运行时依赖",
+      "detail": "对 agent harness 设计而言，减少运行时依赖可提升跨环境兼容性",
+      "children": [
+        "提升跨环境兼容性"
+      ]
+    },
+    {
+      "label": "简化认证集成",
+      "detail": "降低部署和配置复杂度",
+      "children": [
+        "降低部署复杂度",
+        "降低配置复杂度"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Azure CLI",
+      "type": "product"
+    },
+    {
+      "name": "Bun",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Azure CLI",
+      "label": "修复认证"
+    },
+    {
+      "from": "Azure CLI",
+      "to": "Bun",
+      "label": "不再依赖"
+    }
+  ]
+}

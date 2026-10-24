@@ -1,0 +1,107 @@
+{
+  "center": "OpenAI切断Cursor访问",
+  "branches": [
+    {
+      "label": "断供事件",
+      "detail": "Cursor被SpaceX收购后，OpenAI宣布终止合作，11月12日切断模型直连",
+      "children": [
+        "OpenAI称因Elon旗下公司违约",
+        "Cursor称OpenAI仅占其5%流量",
+        "Cursor正与OpenAI协商解决"
+      ]
+    },
+    {
+      "label": "开源模型爆发",
+      "detail": "GLM-5.3、腾讯Hy4-preview、Qwen3.8-Flash同期发布开放权重",
+      "children": [
+        "GLM-5.3：744B总/40B激活，1M上下文",
+        "Hy4-preview：770B总/49B激活，Code Arena约…",
+        "Qwen3.8-Flash：125B总/6B激活，约20倍便宜"
+      ]
+    },
+    {
+      "label": "推理系统调优",
+      "detail": "vLLM对比多种投机解码方法，结论是没有通用最优解",
+      "children": [
+        "对比MTP、EAGLE-3、DFlash、DSpark",
+        "测试Gemma、Qwen、Kimi、MiniMax",
+        "需按模型族与负载调参"
+      ]
+    },
+    {
+      "label": "搜索与运行时",
+      "detail": "搜索成为可评估子系统，云端持久化Agent与开放运行时兴起",
+      "children": [
+        "Perplexity Search登顶搜索指数",
+        "Kimi Code加远程控制，Claude加/resume",
+        "行业转向运行时+路由+插件栈"
+      ]
+    },
+    {
+      "label": "Agent基准与技能",
+      "detail": "基准从答案质量转向任务完成验证，Google提出wiki技能演化",
+      "children": [
+        "CommerceAgentBench：107任务，最高仅过66",
+        "检查Agent实际改动而非声称",
+        "分离执行轨迹、wiki知识与可执行技能"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "SpaceX",
+      "type": "company"
+    },
+    {
+      "name": "GLM-5.3",
+      "type": "model"
+    },
+    {
+      "name": "Hy4-preview",
+      "type": "model"
+    },
+    {
+      "name": "Qwen3.8-Flash",
+      "type": "model"
+    },
+    {
+      "name": "vLLM",
+      "type": "product"
+    },
+    {
+      "name": "Perplexity Search",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Cursor",
+      "label": "切断访问"
+    },
+    {
+      "from": "SpaceX",
+      "to": "Cursor",
+      "label": "收购"
+    },
+    {
+      "from": "vLLM",
+      "to": "GLM-5.3",
+      "label": "支持部署"
+    },
+    {
+      "from": "vLLM",
+      "to": "Hy4-preview",
+      "label": "分析服务"
+    }
+  ]
+}

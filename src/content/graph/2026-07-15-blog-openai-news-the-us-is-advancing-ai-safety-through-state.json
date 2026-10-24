@@ -1,0 +1,112 @@
+{
+  "center": "OpenAI 反向联邦制与AI安全",
+  "branches": [
+    {
+      "label": "反向联邦制",
+      "detail": "州法互相看齐，拼出事实上的全国AI安全标准",
+      "children": [
+        "加州、纽约、伊利诺伊已推进前沿安全立法",
+        "三州做法趋同，形成共同基线"
+      ]
+    },
+    {
+      "label": "三州核心要素",
+      "detail": "风险披露、事件报告、独立审计构成民主监督",
+      "children": [
+        "加州建立核心披露框架",
+        "纽约证明可跨辖区采用",
+        "伊利诺伊要求独立验证"
+      ]
+    },
+    {
+      "label": "联邦层面进展",
+      "detail": "特朗普政府推进网络能力测试框架，目标8月初落地",
+      "children": [
+        "CAISI 负责测试与评估",
+        "国会两党提出联邦框架提案",
+        "Jay Obernolte、Lori Trahan 参与"
+      ]
+    },
+    {
+      "label": "风险与边界",
+      "detail": "避免政策蔓延与拼凑，州不应承担国安决策",
+      "children": [
+        "拼凑法规拖慢创新、困扰消费者",
+        "高度技术审查应由联邦专家负责"
+      ]
+    }
+  ],
+  "flow": [
+    "州通过趋同安全立法",
+    "形成事实全国标准",
+    "联邦建立测试框架",
+    "CAISI 评估前沿模型",
+    "输出美国主导全球框架"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "California",
+      "type": "concept"
+    },
+    {
+      "name": "New York",
+      "type": "concept"
+    },
+    {
+      "name": "Illinois",
+      "type": "concept"
+    },
+    {
+      "name": "CAISI",
+      "type": "concept"
+    },
+    {
+      "name": "reverse federalism",
+      "type": "concept"
+    },
+    {
+      "name": "Chris Lehane",
+      "type": "person"
+    },
+    {
+      "name": "Jay Obernolte",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "reverse federalism",
+      "label": "提出"
+    },
+    {
+      "from": "California",
+      "to": "reverse federalism",
+      "label": "实践"
+    },
+    {
+      "from": "New York",
+      "to": "reverse federalism",
+      "label": "实践"
+    },
+    {
+      "from": "Illinois",
+      "to": "reverse federalism",
+      "label": "实践"
+    },
+    {
+      "from": "CAISI",
+      "to": "reverse federalism",
+      "label": "支撑"
+    },
+    {
+      "from": "Chris Lehane",
+      "to": "OpenAI",
+      "label": "任职于"
+    }
+  ]
+}

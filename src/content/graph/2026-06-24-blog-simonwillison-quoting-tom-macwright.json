@@ -1,0 +1,86 @@
+{
+  "center": "AI简历让求职者匿名化",
+  "branches": [
+    {
+      "label": "简历全由LLM生成",
+      "detail": "求职材料从简历到作品集再到GitHub项目均由LLM协同生成",
+      "children": [
+        "简历、作品集网站、GitHub项目、commit信息全为…",
+        "Tom MacWright 观察到这一现象"
+      ]
+    },
+    {
+      "label": "求职者失去个性",
+      "detail": "完美生成的简历通用且无人情味，无法体现个人特质",
+      "children": [
+        "简历只说明会用某些工具，不透露这个人是谁",
+        "没有真实表达，没有把自己展现出来"
+      ]
+    },
+    {
+      "label": "招聘方无法了解人",
+      "detail": "MacWright 表示对这些求职者一无所知",
+      "children": [
+        "不知道这些人的任何真实信息",
+        "他们没说过任何真实的话"
+      ]
+    },
+    {
+      "label": "AI滥用引发讨论",
+      "detail": "Simon Willison 收录该引文，标签为 careers 与 ai-misuse",
+      "children": [
+        "发布于 2026 年 6 月 24 日",
+        "标签：careers、ai、ai-misuse"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Tom MacWright",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "GitHub",
+      "type": "product"
+    },
+    {
+      "name": "AI简历",
+      "type": "concept"
+    },
+    {
+      "name": "ai-misuse",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Tom MacWright",
+      "to": "AI简历",
+      "label": "批评"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Tom MacWright",
+      "label": "引用"
+    },
+    {
+      "from": "LLM",
+      "to": "AI简历",
+      "label": "生成"
+    },
+    {
+      "from": "AI简历",
+      "to": "GitHub",
+      "label": "链接到"
+    }
+  ]
+}

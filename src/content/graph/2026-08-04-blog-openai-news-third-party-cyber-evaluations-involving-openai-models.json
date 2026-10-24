@@ -1,0 +1,79 @@
+{
+  "center": "OpenAI 回应第三方网络评估事件",
+  "branches": [
+    {
+      "label": "事件起因",
+      "detail": "OpenAI 近期遭遇第三方网络安全评估事件，涉及模型被用于测试漏洞",
+      "children": [
+        "模型被用于测试漏洞"
+      ]
+    },
+    {
+      "label": "新保障措施",
+      "detail": "推出更严格的评估协议和访问控制，以提升测试安全性",
+      "children": [
+        "更严格的评估协议",
+        "更严格的访问控制"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "AI 模型评估将更规范，但可能增加测试门槛，需关注合规要求",
+      "children": [
+        "评估更规范",
+        "测试门槛可能增加",
+        "需关注合规要求"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "第三方网络安全评估",
+      "type": "concept"
+    },
+    {
+      "name": "评估协议",
+      "type": "concept"
+    },
+    {
+      "name": "访问控制",
+      "type": "concept"
+    },
+    {
+      "name": "AI 模型测试",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "第三方网络安全评估",
+      "label": "遭遇"
+    },
+    {
+      "from": "OpenAI",
+      "to": "评估协议",
+      "label": "推出"
+    },
+    {
+      "from": "OpenAI",
+      "to": "访问控制",
+      "label": "推出"
+    },
+    {
+      "from": "评估协议",
+      "to": "AI 模型测试",
+      "label": "提升安全性"
+    },
+    {
+      "from": "访问控制",
+      "to": "AI 模型测试",
+      "label": "提升安全性"
+    }
+  ]
+}

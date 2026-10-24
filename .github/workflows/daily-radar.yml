@@ -24,7 +24,8 @@ jobs:
     name: Fetch + summarize + commit
     runs-on: ubuntu-latest
     # 20min: 15 博主源 × 5 条 × ~14s LLM 摘要的最坏批次 >10min, 曾致 4 连 cancel 死循环 (2026-06-10)
-    timeout-minutes: 20
+    # 30min (2026-09-23): 扩到 40+ 源 + 社区 + 图谱第三次调用; summarize 已并发 4, 留足余量
+    timeout-minutes: 30
     permissions:
       contents: write
 
@@ -118,6 +119,17 @@ jobs:
         if: always() && steps.lp.outputs.enabled == '1'
         run: docker rm -f lightpanda 2>/dev/null || true
 
+      # 社区热议: HN 高分 AI 讨论 + Bluesky 头部从业者当日发言 (X / Discord 不碰: API 贵 + 爬取违反 ToS)
+      - name: Fetch community discussions (HN + Bluesky)
+        id: community
+        run: |
+          set -euo pipefail
+          # 失败不阻塞主路径 (社区是补充, 同 blogs)
+          bun run scripts/radar/fetch-community.ts > radar-new-community.jsonl || true
+          cc=$(grep -c . radar-new-community.jsonl 2>/dev/null || true); cc=${cc:-0}
+          echo "cc=$cc" >> "$GITHUB_OUTPUT"
+          echo "---- fetched $cc community item(s) ----"
+
       - name: Combine inputs
         id: combine
         run: |
@@ -127,6 +139,7 @@ jobs:
           [ -s radar-new-practices.jsonl ] && cat radar-new-practices.jsonl >> radar-input.jsonl || true
           [ -s radar-new-trending.jsonl ] && cat radar-new-trending.jsonl >> radar-input.jsonl || true
           [ -s radar-new-blogs.jsonl ] && cat radar-new-blogs.jsonl >> radar-input.jsonl || true
+          [ -s radar-new-community.jsonl ] && cat radar-new-community.jsonl >> radar-input.jsonl || true
           # 同 practices 步骤: 避免 `grep -c` 空文件时 `|| echo 0` 双计数成多行破坏 $GITHUB_OUTPUT
           count=$(grep -c . radar-input.jsonl 2>/dev/null || true); count=${count:-0}
           echo "count=$count" >> "$GITHUB_OUTPUT"
@@ -138,6 +151,8 @@ jobs:
           NEWAPI_TRIAL_TOKEN: ${{ secrets.NEWAPI_TRIAL_TOKEN }}
           NEWAPI_BASE_URL: https://newapi.lurus.cn
           RADAR_MODEL_ID: deepseek-chat
+          # 每条 3–4 次 LLM 调用 (摘要/口播/图谱[/视角]); 扩源后单批 30+ 条, 并发 4 控在 CI 时限内
+          RADAR_CONCURRENCY: '4'
         run: |
           set -euo pipefail
           if [ -z "${NEWAPI_TRIAL_TOKEN}" ]; then
@@ -159,7 +174,7 @@ jobs:
           git config user.name "c2m-radar-bot"
           git config user.email "radar-bot@claude2master.com"
           # Path filter (再次防御): 只 add 这些路径 (音频留本地 cron 补, 不在 CI 提交)
-          git add src/content/changelog/ scripts/radar/state.json
+          git add src/content/changelog/ src/content/graph/ scripts/radar/state.json
           if git diff --staged --quiet; then
             echo "no diff staged, skipping commit"
             exit 0

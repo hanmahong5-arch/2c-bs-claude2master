@@ -1,0 +1,78 @@
+{
+  "center": "写代码成本崩塌后的软件工作",
+  "branches": [
+    {
+      "label": "成本崩塌",
+      "detail": "写代码成本已崩塌，评审、修复、运维成本正随之下降",
+      "children": [
+        "Laurie Voss 断言",
+        "假设运维成本也会降到低位"
+      ]
+    },
+    {
+      "label": "剩下的工作",
+      "detail": "软件工作剩下弄清用户真正想要什么、精确定义、做得易用",
+      "children": [
+        "发现真实需求",
+        "精确定义需求",
+        "让产品用起来舒服"
+      ]
+    },
+    {
+      "label": "成本不可转移",
+      "detail": "这部分成本按每件软件计算，无法转移或复用",
+      "children": [
+        "per piece of software",
+        "不随规模摊薄"
+      ]
+    },
+    {
+      "label": "需求无上限",
+      "detail": "软件数量将趋于无限，因为需求没有天花板",
+      "children": [
+        "no ceiling on demand",
+        "该成本成为全部工作"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Laurie Voss",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "We are all Product Engineers now",
+      "type": "concept"
+    },
+    {
+      "name": "Product Engineers",
+      "type": "concept"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Laurie Voss",
+      "label": "引用"
+    },
+    {
+      "from": "Laurie Voss",
+      "to": "We are all Product Engineers now",
+      "label": "出自"
+    },
+    {
+      "from": "Laurie Voss",
+      "to": "Product Engineers",
+      "label": "主张成为"
+    }
+  ]
+}

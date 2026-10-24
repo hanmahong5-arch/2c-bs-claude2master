@@ -1,0 +1,96 @@
+{
+  "center": "claude-code v2.1.198 更新",
+  "branches": [
+    {
+      "label": "Claude in Chrome",
+      "detail": "Claude in Chrome 正式可用，Chrome 扩展用户可直接使用",
+      "children": [
+        "Chrome 扩展用户直接可用"
+      ]
+    },
+    {
+      "label": "Agent 通知钩子",
+      "detail": "后台 agent 新增 Notification 钩子，支持异步通知或状态轮询",
+      "children": [
+        "agent_needs_input",
+        "agent_completed",
+        "agent harness 可集成"
+      ]
+    },
+    {
+      "label": "数据可视化技能",
+      "detail": "新增 /dataviz 技能，含可运行的色板校验器",
+      "children": [
+        "图表与仪表盘设计指导",
+        "agent harness 可集成"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Claude in Chrome",
+      "type": "product"
+    },
+    {
+      "name": "Chrome",
+      "type": "product"
+    },
+    {
+      "name": "Notification",
+      "type": "technique"
+    },
+    {
+      "name": "agent_needs_input",
+      "type": "concept"
+    },
+    {
+      "name": "agent_completed",
+      "type": "concept"
+    },
+    {
+      "name": "/dataviz",
+      "type": "technique"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude in Chrome",
+      "to": "Chrome",
+      "label": "扩展于"
+    },
+    {
+      "from": "claude-code",
+      "to": "Claude in Chrome",
+      "label": "发布"
+    },
+    {
+      "from": "claude-code",
+      "to": "Notification",
+      "label": "新增"
+    },
+    {
+      "from": "claude-code",
+      "to": "/dataviz",
+      "label": "新增"
+    },
+    {
+      "from": "agent harness",
+      "to": "Notification",
+      "label": "集成"
+    },
+    {
+      "from": "agent harness",
+      "to": "/dataviz",
+      "label": "集成"
+    }
+  ]
+}

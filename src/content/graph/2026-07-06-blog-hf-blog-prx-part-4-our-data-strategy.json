@@ -1,0 +1,83 @@
+{
+  "center": "Photoroom PRX 数据策略",
+  "branches": [
+    {
+      "label": "数据策略核心",
+      "detail": "Photoroom 分享 PRX 项目如何构建高质量训练数据提升模型性能",
+      "children": [
+        "PRX 系列第四篇",
+        "聚焦数据而非模型架构"
+      ]
+    },
+    {
+      "label": "PRX 系列脉络",
+      "detail": "前三篇分别讲 24 小时训练文生图模型与消融实验设计经验",
+      "children": [
+        "Part 3：24h 训出文生图模型",
+        "文生图训练设计：消融实验教训"
+      ]
+    },
+    {
+      "label": "社区反馈",
+      "detail": "Hugging Face 社区对 Photoroom 分享经验给予正面评价",
+      "children": [
+        "获 8 次点赞",
+        "评论称学到很多"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Photoroom",
+      "type": "company"
+    },
+    {
+      "name": "PRX",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "文生图模型",
+      "type": "concept"
+    },
+    {
+      "name": "训练数据",
+      "type": "concept"
+    },
+    {
+      "name": "消融实验",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Photoroom",
+      "to": "PRX",
+      "label": "发布"
+    },
+    {
+      "from": "PRX",
+      "to": "训练数据",
+      "label": "依赖"
+    },
+    {
+      "from": "PRX",
+      "to": "文生图模型",
+      "label": "训练"
+    },
+    {
+      "from": "Photoroom",
+      "to": "Hugging Face",
+      "label": "分享于"
+    },
+    {
+      "from": "消融实验",
+      "to": "文生图模型",
+      "label": "优化"
+    }
+  ]
+}

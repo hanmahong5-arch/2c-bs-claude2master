@@ -1,0 +1,88 @@
+{
+  "center": "OpenAI 推出网络安全专用模型",
+  "branches": [
+    {
+      "label": "专用模型发布",
+      "detail": "OpenAI 推出面向网络安全的专用模型 GPT-5.6-Cyber",
+      "children": [
+        "用于漏洞研究与安全测试",
+        "通过 Daybreak Red 平台提供"
+      ]
+    },
+    {
+      "label": "授权使用范围",
+      "detail": "仅向授权研究人员开放，用于漏洞研究、利用验证与安全测试",
+      "children": [
+        "需注意授权与合规边界"
+      ]
+    },
+    {
+      "label": "防御窗口收窄",
+      "detail": "攻击者利用漏洞速度快于防御者修补速度，防御窗口日益缩小",
+      "children": [
+        "需要更高效的安全工具应对"
+      ]
+    },
+    {
+      "label": "AI 转向垂直专用",
+      "detail": "AI 工具正从通用助手转向垂直领域专用",
+      "children": [
+        "安全团队可加速漏洞发现与响应"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6-Cyber",
+      "type": "model"
+    },
+    {
+      "name": "Daybreak Red",
+      "type": "product"
+    },
+    {
+      "name": "网络安全",
+      "type": "concept"
+    },
+    {
+      "name": "漏洞研究",
+      "type": "concept"
+    },
+    {
+      "name": "网络防御窗口",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6-Cyber",
+      "label": "推出"
+    },
+    {
+      "from": "GPT-5.6-Cyber",
+      "to": "Daybreak Red",
+      "label": "部署于"
+    },
+    {
+      "from": "GPT-5.6-Cyber",
+      "to": "漏洞研究",
+      "label": "用于"
+    },
+    {
+      "from": "GPT-5.6-Cyber",
+      "to": "网络安全",
+      "label": "服务于"
+    },
+    {
+      "from": "网络防御窗口",
+      "to": "网络安全",
+      "label": "影响"
+    }
+  ]
+}

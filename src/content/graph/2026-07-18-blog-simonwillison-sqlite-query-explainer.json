@@ -1,0 +1,108 @@
+{
+  "center": "SQLite 查询计划 AI 解释工具",
+  "branches": [
+    {
+      "label": "工具是什么",
+      "detail": "Simon Willison 发布的交互式工具，用自然语言解释 SQLite 查询计划",
+      "children": [
+        "为 EXPLAIN QUERY PLAN 每行加英文说明",
+        "也为底层 EXPLAIN 字节码逐行注释"
+      ]
+    },
+    {
+      "label": "灵感来源",
+      "detail": "Julia Evans 在博客中感叹看不懂 SQLite 查询计划",
+      "children": [
+        "Simon Willison 表示同感",
+        "于是让 Fable 构建该工具"
+      ]
+    },
+    {
+      "label": "技术实现",
+      "detail": "在浏览器中通过 Pyodide 运行 Python 版 SQLite",
+      "children": [
+        "Pyodide 跑在 WebAssembly 上",
+        "可对 Bugzilla 数据库跑 SQL 查询"
+      ]
+    },
+    {
+      "label": "使用提醒",
+      "detail": "作者无法亲自验证解释结果，建议谨慎参考",
+      "children": [
+        "自称结果看起来还算合理"
+      ]
+    }
+  ],
+  "flow": [
+    "打开工具页面",
+    "对 SQLite 数据库运行 SQL",
+    "查看 EXPLAIN QUERY PLAN 输出",
+    "阅读逐行自然语言解释"
+  ],
+  "entities": [
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "SQLite Query Explainer",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Julia Evans",
+      "type": "person"
+    },
+    {
+      "name": "Pyodide",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "Fable",
+      "type": "model"
+    },
+    {
+      "name": "EXPLAIN QUERY PLAN",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "SQLite Query Explainer",
+      "label": "发布"
+    },
+    {
+      "from": "Julia Evans",
+      "to": "SQLite Query Explainer",
+      "label": "启发"
+    },
+    {
+      "from": "SQLite Query Explainer",
+      "to": "SQLite",
+      "label": "解释查询计划"
+    },
+    {
+      "from": "SQLite Query Explainer",
+      "to": "Pyodide",
+      "label": "依赖"
+    },
+    {
+      "from": "Pyodide",
+      "to": "WebAssembly",
+      "label": "运行于"
+    },
+    {
+      "from": "Fable",
+      "to": "SQLite Query Explainer",
+      "label": "构建"
+    }
+  ]
+}

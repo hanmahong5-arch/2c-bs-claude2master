@@ -1,0 +1,65 @@
+{
+  "center": "Cline v4.1.4 计划模式安全强化",
+  "branches": [
+    {
+      "label": "硬性阻止编辑",
+      "detail": "计划模式不再依赖提示，直接拒绝文件操作与 git 变更，确保只读调查",
+      "children": [
+        "在工具调用层强制校验模式",
+        "不靠模型自律"
+      ]
+    },
+    {
+      "label": "切换权归用户",
+      "detail": "移除模型发起的计划到执行切换，模式变更完全由用户控制",
+      "children": [
+        "状态机由用户事件驱动",
+        "模型输出不可触发模式变更"
+      ]
+    },
+    {
+      "label": "上下文恢复",
+      "detail": "修复上下文耗尽恢复：自动压缩并重试一次，失败时给出明确原因",
+      "children": [
+        "内置上下文管理策略",
+        "避免原始错误暴露"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "计划模式",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "上下文工程",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "计划模式",
+      "label": "强化"
+    },
+    {
+      "from": "harness",
+      "to": "计划模式",
+      "label": "强制校验"
+    },
+    {
+      "from": "harness",
+      "to": "上下文工程",
+      "label": "内置策略"
+    }
+  ]
+}

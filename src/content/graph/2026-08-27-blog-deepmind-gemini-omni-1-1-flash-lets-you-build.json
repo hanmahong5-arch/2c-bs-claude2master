@@ -1,0 +1,115 @@
+{
+  "center": "Gemini Omni 1.1 Flash 发布",
+  "branches": [
+    {
+      "label": "场景延长",
+      "detail": "可从已有视频无缝续生成，前文上下文由 1 秒提升至 10 秒",
+      "children": [
+        "每次延长 10 秒，累计最长 40 秒",
+        "视觉一致性与叙事连贯性提升"
+      ]
+    },
+    {
+      "label": "首尾帧控制",
+      "detail": "指定起始与结束关键帧，模型生成中间连续画面",
+      "children": [
+        "适合环绕运镜、变焦转场、无缝循环片段"
+      ]
+    },
+    {
+      "label": "360p 快速草稿",
+      "detail": "低分辨率预览用于快速迭代，速度与成本更优",
+      "children": [
+        "比 720p 快最多 60%",
+        "成本约为 720p 的三分之一"
+      ]
+    },
+    {
+      "label": "4K 输出",
+      "detail": "可生成 1080p 或 4K 高分辨率成品，面向专业制作",
+      "children": [
+        "通过 Gemini API 在 Google AI Studio 使用"
+      ]
+    },
+    {
+      "label": "视频参考输入",
+      "detail": "多模态输入中可引用最多 3 秒视频，保持角色与视觉一致",
+      "children": [
+        "示例：用参考视频中的舞者替换为指定角色"
+      ]
+    }
+  ],
+  "flow": [
+    "调用 Gemini API",
+    "传入前次交互 ID",
+    "输入续写提示词",
+    "指定 360p 预览",
+    "迭代后升采样 4K"
+  ],
+  "entities": [
+    {
+      "name": "Gemini Omni 1.1 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemini API",
+      "type": "product"
+    },
+    {
+      "name": "Google AI Studio",
+      "type": "product"
+    },
+    {
+      "name": "Gemini Enterprise Agent Platform",
+      "type": "product"
+    },
+    {
+      "name": "Anish Nangia",
+      "type": "person"
+    },
+    {
+      "name": "Alisa Fortin",
+      "type": "person"
+    },
+    {
+      "name": "场景延长",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini Omni 1.1 Flash",
+      "label": "发布"
+    },
+    {
+      "from": "Gemini Omni 1.1 Flash",
+      "to": "Gemini API",
+      "label": "通过"
+    },
+    {
+      "from": "Gemini API",
+      "to": "Google AI Studio",
+      "label": "集成于"
+    },
+    {
+      "from": "Gemini Omni 1.1 Flash",
+      "to": "Gemini Enterprise Agent Platform",
+      "label": "可接入"
+    },
+    {
+      "from": "Anish Nangia",
+      "to": "Google DeepMind",
+      "label": "任职于"
+    },
+    {
+      "from": "Alisa Fortin",
+      "to": "Google DeepMind",
+      "label": "任职于"
+    }
+  ]
+}

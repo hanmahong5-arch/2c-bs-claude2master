@@ -1,0 +1,56 @@
+{
+  "center": "Claude Code v2.1.240 修复",
+  "branches": [
+    {
+      "label": "版本更新",
+      "detail": "发布 v2.1.240，修复多个 bug 提升整体可靠性",
+      "children": [
+        "版本号 v2.1.240"
+      ]
+    },
+    {
+      "label": "稳定性提升",
+      "detail": "修复 bug 后整体运行更稳定可靠",
+      "children": []
+    },
+    {
+      "label": "harness 设计",
+      "detail": "agent harness 需关注错误处理与重试机制",
+      "children": [
+        "错误处理",
+        "重试机制"
+      ]
+    },
+    {
+      "label": "依赖更新",
+      "detail": "建议更新依赖以减少潜在故障点",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "错误处理",
+      "type": "technique"
+    },
+    {
+      "name": "重试机制",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "agent harness",
+      "label": "采用"
+    }
+  ]
+}

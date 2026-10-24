@@ -1,0 +1,80 @@
+{
+  "center": "Claude Code v2.1.223 更新",
+  "branches": [
+    {
+      "label": "权限控制增强",
+      "detail": "新增 owner/* 通配符，可批量管理 GitHub 组织下 marketplace 仓库",
+      "children": [
+        "批量允许或阻止组织仓库",
+        "简化策略配置"
+      ]
+    },
+    {
+      "label": "安全漏洞修复",
+      "detail": "修复多个权限绕过漏洞，提升 agent 执行安全性",
+      "children": [
+        "Bash 命令隐藏",
+        "动态 import 逃逸沙箱"
+      ]
+    },
+    {
+      "label": "上下文窗口管理",
+      "detail": "自动压缩逻辑更新，对未知模型 ID 强制限制上下文窗口",
+      "children": [
+        "避免会话无限增长"
+      ]
+    },
+    {
+      "label": "工作流优化",
+      "detail": "/review 改为 /code-review 别名，支持记忆上次审查级别",
+      "children": [
+        "提升审查效率"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "owner/*",
+      "type": "concept"
+    },
+    {
+      "name": "Bash",
+      "type": "technique"
+    },
+    {
+      "name": "/code-review",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "GitHub",
+      "label": "集成"
+    },
+    {
+      "from": "Claude Code",
+      "to": "owner/*",
+      "label": "支持"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Bash",
+      "label": "修复漏洞"
+    },
+    {
+      "from": "Claude Code",
+      "to": "/code-review",
+      "label": "新增别名"
+    }
+  ]
+}

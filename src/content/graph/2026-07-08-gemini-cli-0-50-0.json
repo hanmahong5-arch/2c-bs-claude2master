@@ -1,0 +1,60 @@
+{
+  "center": "Gemini CLI v0.50.0 更新",
+  "branches": [
+    {
+      "label": "工具注册发现",
+      "detail": "CLI 可动态发现并注册工具，简化 agent 工具集成",
+      "children": [
+        "动态发现和注册工具",
+        "简化 agent 工具集成流程"
+      ]
+    },
+    {
+      "label": "CI 修复",
+      "detail": "修复 npm ci 忽略脚本问题，保证依赖安装一致",
+      "children": [
+        "npm ci 忽略脚本",
+        "避免 agent 环境构建失败"
+      ]
+    },
+    {
+      "label": "发布可靠性",
+      "detail": "修复二进制遮蔽与 NPM 发布崩溃，提升部署可靠性",
+      "children": [
+        "工作区二进制文件遮蔽",
+        "NPM 发布崩溃"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Gemini CLI",
+      "type": "product"
+    },
+    {
+      "name": "npm ci",
+      "type": "technique"
+    },
+    {
+      "name": "NPM",
+      "type": "product"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemini CLI",
+      "to": "agent",
+      "label": "集成工具"
+    },
+    {
+      "from": "npm ci",
+      "to": "NPM",
+      "label": "属于"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "center": "Project Genie 结合街景生成虚拟…",
+  "branches": [
+    {
+      "label": "街景落地",
+      "detail": "Project Genie 新增 Street View 接地能力，用真实影像锚定生成世界",
+      "children": [
+        "点击地图图钉选美国地点",
+        "可选 Desert Sands、Stone Age 等风格",
+        "由 Maps Imagery Grounding 技术驱动"
+      ]
+    },
+    {
+      "label": "玩法示例",
+      "detail": "描述角色后 Genie 生成以真实地点为起点的想象世界",
+      "children": [
+        "Ocean World 风格：金门大桥海底潜水",
+        "B&W film 风格：1920 年代 Fort Worth…"
+      ]
+    },
+    {
+      "label": "开放范围",
+      "detail": "Project Genie 逐步向全球 Google AI Ultra 订阅者开放",
+      "children": [
+        "面向 $200 档 Google AI Ultra 订阅者（18+）",
+        "街景功能暂仅限美国地点，后续扩展"
+      ]
+    },
+    {
+      "label": "Genie 定位",
+      "detail": "Genie 是通用世界模型，可生成多样可交互环境",
+      "children": [
+        "已用于研究，让智能体在虚拟环境学习推理",
+        "曾助 Waymo 模拟高逼真道路环境"
+      ]
+    },
+    {
+      "label": "实验性质",
+      "detail": "Project Genie 仍是 Google Labs 实验性研究原型",
+      "children": [
+        "团队持续提升细节与准确性",
+        "官网可查进展与当前局限"
+      ]
+    }
+  ],
+  "flow": [
+    "点击地图图钉选地点",
+    "选择世界风格",
+    "描述你的角色",
+    "Genie 生成接地世界"
+  ],
+  "entities": [
+    {
+      "name": "Project Genie",
+      "type": "product"
+    },
+    {
+      "name": "Genie",
+      "type": "model"
+    },
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Google Street View",
+      "type": "product"
+    },
+    {
+      "name": "Maps Imagery Grounding",
+      "type": "technique"
+    },
+    {
+      "name": "Waymo",
+      "type": "company"
+    },
+    {
+      "name": "Google AI Ultra",
+      "type": "product"
+    },
+    {
+      "name": "Google Labs",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Project Genie",
+      "to": "Genie",
+      "label": "基于"
+    },
+    {
+      "from": "Project Genie",
+      "to": "Google Street View",
+      "label": "结合"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Genie",
+      "label": "开发"
+    },
+    {
+      "from": "Maps Imagery Grounding",
+      "to": "Google Street View",
+      "label": "驱动"
+    },
+    {
+      "from": "Genie",
+      "to": "Waymo",
+      "label": "用于模拟"
+    },
+    {
+      "from": "Project Genie",
+      "to": "Google AI Ultra",
+      "label": "面向订阅者"
+    }
+  ]
+}

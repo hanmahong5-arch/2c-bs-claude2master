@@ -1,0 +1,97 @@
+{
+  "center": "Claude Opus 5 系统提示引用",
+  "branches": [
+    {
+      "label": "引用来源",
+      "detail": "Simon Willison 博客引用 Claude Opus 5 系统提示片段",
+      "children": [
+        "发布于 2026 年 8 月 9 日",
+        "标签含 anthropic、claude、system-prompts"
+      ]
+    },
+    {
+      "label": "提示内容",
+      "detail": "系统提示告知 Claude 关于 Fable 5 与 Mythos 5 出口管制事件",
+      "children": [
+        "2026-06-09 首次发布",
+        "2026-06-12 暂停访问",
+        "2026-06-30 解除管制"
+      ]
+    },
+    {
+      "label": "应对要求",
+      "detail": "要求 Claude 准确确认事件、不否认、不发表个人观点",
+      "children": [
+        "指向 Anthropic 官方声明链接",
+        "可搜索时检查最新信息"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Opus 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "type": "company"
+    },
+    {
+      "name": "system prompt",
+      "type": "concept"
+    },
+    {
+      "name": "export controls",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Claude Opus 5",
+      "label": "引用"
+    },
+    {
+      "from": "Claude Opus 5",
+      "to": "system prompt",
+      "label": "包含"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Mythos 5",
+      "label": "发布"
+    },
+    {
+      "from": "U.S. Department of Commerce",
+      "to": "export controls",
+      "label": "实施"
+    },
+    {
+      "from": "system prompt",
+      "to": "export controls",
+      "label": "说明"
+    }
+  ]
+}

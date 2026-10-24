@@ -1,0 +1,70 @@
+{
+  "center": "Cline SDK v0.0.78 升级",
+  "branches": [
+    {
+      "label": "hub 无损排空",
+      "detail": "hub 支持排空与升级，拒绝新变更但完成运行中任务",
+      "children": [
+        "持久事件日志让重连客户端重放",
+        "事件按 id 去重，避免重复投递"
+      ]
+    },
+    {
+      "label": "工具调用修复",
+      "detail": "修复自定义 OpenAI 兼容模型工具调用被静默禁用",
+      "children": [
+        "能力列表推断导致工具调用被禁用",
+        "显式能力列表仍生效"
+      ]
+    },
+    {
+      "label": "追踪更完整",
+      "detail": "Langfuse 追踪增加会话与客户端身份",
+      "children": [
+        "hub 会话从请求头重建",
+        "委托代理归入父会话"
+      ]
+    },
+    {
+      "label": "模型目录刷新",
+      "detail": "多个提供商默认模型变更，未固定模型的用户将受影响",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "hub",
+      "type": "concept"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Langfuse",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "hub",
+      "label": "包含"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Langfuse",
+      "label": "集成"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "OpenAI",
+      "label": "兼容"
+    }
+  ]
+}

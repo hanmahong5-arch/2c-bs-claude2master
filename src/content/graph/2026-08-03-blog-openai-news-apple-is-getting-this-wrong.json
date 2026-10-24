@@ -1,0 +1,44 @@
+{
+  "center": "OpenAI回应苹果诉讼",
+  "branches": [
+    {
+      "label": "诉讼回应",
+      "detail": "OpenAI称苹果诉讼缺乏事实依据，公开内部消息记录自证",
+      "children": [
+        "公布内部消息记录作为证据"
+      ]
+    },
+    {
+      "label": "指控澄清",
+      "detail": "苹果指控可能基于误解或错误信息，OpenAI呼吁基于事实沟通",
+      "children": [
+        "呼吁基于事实进行沟通"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "提醒开发者在合作中保留清晰沟通记录，避免法律纠纷",
+      "children": [
+        "保留清晰沟通记录"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Apple",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Apple",
+      "label": "回应诉讼"
+    }
+  ]
+}

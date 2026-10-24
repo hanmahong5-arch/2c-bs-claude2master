@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw 多智能体在线状态机制",
+  "branches": [
+    {
+      "label": "Presence 是什么",
+      "detail": "Gateway 与已连接客户端的轻量、尽力而为的在线状态视图",
+      "children": [
+        "展示在 Control UI 的 Devices 页与 macOS…",
+        "条目含 instanceId、host、ip、version…",
+        "ts 是心跳更新时间，不是用户活动时间"
+      ]
+    },
+    {
+      "label": "谁能看到",
+      "detail": "仅 operator.read 及以上权限可读，其余连接收到空名单",
+      "children": [
+        "node 连接、仅配对 operator 无读取权限",
+        "watchedSessions 按接收方可见性单独过滤",
+        "被观看者不会因此授予对方会话访问权"
+      ]
+    },
+    {
+      "label": "状态从哪来",
+      "detail": "多来源产生后合并：Gateway 自身、WS 连接、beacon、node",
+      "children": [
+        "Gateway 启动即写入 self 条目",
+        "cli/backend/probe 等短连接不生成条目",
+        "mac app 用 system-event beacon 上报主机与…"
+      ]
+    },
+    {
+      "label": "存储与去重",
+      "detail": "单个内存 map，键大小写不敏感，按身份命名空间分组",
+      "children": [
+        "用户 WS 每连接一行，两个标签页互不覆盖",
+        "node 按 device id → instanceId → 连接 id…",
+        "beacon 按 device id 或 instanceId 合并"
+      ]
+    },
+    {
+      "label": "过期与内存控制",
+      "detail": "状态刻意短暂，避免无限增长导致内存泄漏",
+      "children": [
+        "TTL：超过 5 分钟的条目被清除",
+        "上限 200 条，超出时先丢最旧",
+        "检测到 loopback 客户端时省略 ip 字段"
+      ]
+    }
+  ],
+  "flow": [
+    "Gateway 启动写入 self 条目",
+    "客户端发起 WS connect 握手",
+    "握手成功 upsert 状态条目",
+    "beacon 与 node 连接补充合并",
+    "按 TTL 与 200 上限清理"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "Control UI",
+      "type": "product"
+    },
+    {
+      "name": "WebChat",
+      "type": "product"
+    },
+    {
+      "name": "macOS app",
+      "type": "product"
+    },
+    {
+      "name": "presence",
+      "type": "concept"
+    },
+    {
+      "name": "system-event beacon",
+      "type": "technique"
+    },
+    {
+      "name": "TTL",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Gateway",
+      "label": "包含"
+    },
+    {
+      "from": "Gateway",
+      "to": "presence",
+      "label": "生成"
+    },
+    {
+      "from": "Control UI",
+      "to": "presence",
+      "label": "展示"
+    },
+    {
+      "from": "macOS app",
+      "to": "system-event beacon",
+      "label": "发送"
+    },
+    {
+      "from": "presence",
+      "to": "TTL",
+      "label": "受限于"
+    },
+    {
+      "from": "WebChat",
+      "to": "Gateway",
+      "label": "连接"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "center": "claude-code v2.1.259 更新",
+  "branches": [
+    {
+      "label": "企业级 MCP 管控",
+      "detail": "新增 managedMcpServers 设置，组织可统一配置 MCP 服务器",
+      "children": [
+        "支持 HTTP/SSE 类型 MCP 服务器",
+        "跳过命令型条目，便于集中管理"
+      ]
+    },
+    {
+      "label": "无头模式权限",
+      "detail": "新增 --permission-prompts none，无头环境自动拒绝所有提示",
+      "children": [
+        "权限模式仍生效",
+        "适合无人值守场景"
+      ]
+    },
+    {
+      "label": "稳定性修复",
+      "detail": "修复并发会话配置覆盖、Bash 读取规则遗漏、OAuth 刷新缓存失效等问题",
+      "children": [
+        "并发会话不再互相覆盖配置",
+        "修复 Bash 读取规则遗漏",
+        "修复 OAuth 刷新导致缓存失效"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "managedMcpServers",
+      "type": "concept"
+    },
+    {
+      "name": "HTTP",
+      "type": "concept"
+    },
+    {
+      "name": "SSE",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "Bash",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "managedMcpServers",
+      "to": "MCP",
+      "label": "配置"
+    },
+    {
+      "from": "MCP",
+      "to": "HTTP",
+      "label": "支持"
+    },
+    {
+      "from": "MCP",
+      "to": "SSE",
+      "label": "支持"
+    },
+    {
+      "from": "claude-code",
+      "to": "OAuth",
+      "label": "使用"
+    },
+    {
+      "from": "claude-code",
+      "to": "Bash",
+      "label": "集成"
+    }
+  ]
+}

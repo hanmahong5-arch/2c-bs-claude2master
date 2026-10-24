@@ -1,0 +1,100 @@
+{
+  "center": "hermes-agent v2026.7.7 补丁发布",
+  "branches": [
+    {
+      "label": "版本规模",
+      "detail": "自 v0.18.0 起合并约 667 个提交，涉及 990 个文件",
+      "children": [
+        "660+ PRs 补丁标签",
+        "为下游提供稳定快照"
+      ]
+    },
+    {
+      "label": "修复内容",
+      "detail": "涵盖 Windows 安装器自愈、仪表板与网关修复、MCP 和提供者修复",
+      "children": [
+        "WhatsApp 仪表板配对",
+        "Windows 安装器自愈"
+      ]
+    },
+    {
+      "label": "发布策略",
+      "detail": "基础设施驱动的补丁标签，完整变更日志留待 v0.19.0",
+      "children": [
+        "补丁聚焦稳定性",
+        "功能变更集中记录"
+      ]
+    },
+    {
+      "label": "更新方式",
+      "detail": "支持 hermes update 和 pip install -U hermes-agent 两种路径",
+      "children": [
+        "需保证升级脚本健壮性",
+        "需向后兼容"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "hermes-agent",
+      "type": "product"
+    },
+    {
+      "name": "v2026.7.7",
+      "type": "concept"
+    },
+    {
+      "name": "v0.18.0",
+      "type": "concept"
+    },
+    {
+      "name": "v0.19.0",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "WhatsApp",
+      "type": "product"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "hermes-agent",
+      "to": "v2026.7.7",
+      "label": "发布"
+    },
+    {
+      "from": "v2026.7.7",
+      "to": "v0.18.0",
+      "label": "基于"
+    },
+    {
+      "from": "v2026.7.7",
+      "to": "v0.19.0",
+      "label": "后续"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "MCP",
+      "label": "修复"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "WhatsApp",
+      "label": "配对"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "Windows",
+      "label": "支持"
+    }
+  ]
+}

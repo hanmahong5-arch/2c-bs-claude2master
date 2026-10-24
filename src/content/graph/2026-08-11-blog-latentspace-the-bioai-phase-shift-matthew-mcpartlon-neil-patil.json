@@ -1,0 +1,110 @@
+{
+  "center": "Chai Discovery 撬动制药业",
+  "branches": [
+    {
+      "label": "工具交易爆发",
+      "detail": "今年 JPM 大会宣布四笔 AI×制药工具大单，Chai 成立仅两年即参与其中",
+      "children": [
+        "Chai 估值 40 亿美元，获 OpenAI 投资",
+        "6 月起新增 Lilly、Novartis、argenx 三笔大单"
+      ]
+    },
+    {
+      "label": "为何转向工具",
+      "detail": "过去 AI 制药公司多自建管线，因需证明工具有效；如今模型好到药企愿意直接采购",
+      "children": [
+        "工具够好才能规模化发现，更快筛毒性与递送",
+        "可解锁双特异性抗体等实验室难做的机制"
+      ]
+    },
+    {
+      "label": "科学变工程",
+      "detail": "结构模型进化为结合模型，解锁分子设计，迭代加快，可像工程一样爬坡优化",
+      "children": [
+        "目标是首次设计就得到可用分子，减少湿实验",
+        "工程问题上最好的产品往往胜出"
+      ]
+    },
+    {
+      "label": "分子版 Photoshop",
+      "detail": "与药企深度合作了解真实需求，做 CAD 式分子编辑器而非聊天机器人",
+      "children": [
+        "Neil Patil：不做真空研究，基于伙伴需求做研究",
+        "蛋白 token 下游价值最高"
+      ]
+    }
+  ],
+  "flow": [
+    "结构模型变结合模型",
+    "解锁分子设计",
+    "设计出好分子",
+    "减少实验室迭代",
+    "加速进入临床"
+  ],
+  "entities": [
+    {
+      "name": "Chai Discovery",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Lilly",
+      "type": "company"
+    },
+    {
+      "name": "Novartis",
+      "type": "company"
+    },
+    {
+      "name": "argenx",
+      "type": "company"
+    },
+    {
+      "name": "Matt McPartlon",
+      "type": "person"
+    },
+    {
+      "name": "Neil Patil",
+      "type": "person"
+    },
+    {
+      "name": "结合模型",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Chai Discovery",
+      "label": "投资"
+    },
+    {
+      "from": "Chai Discovery",
+      "to": "Lilly",
+      "label": "达成合作"
+    },
+    {
+      "from": "Chai Discovery",
+      "to": "Novartis",
+      "label": "达成合作"
+    },
+    {
+      "from": "Chai Discovery",
+      "to": "argenx",
+      "label": "达成合作"
+    },
+    {
+      "from": "Matt McPartlon",
+      "to": "Chai Discovery",
+      "label": "联合创立"
+    },
+    {
+      "from": "Neil Patil",
+      "to": "Chai Discovery",
+      "label": "负责产品"
+    }
+  ]
+}

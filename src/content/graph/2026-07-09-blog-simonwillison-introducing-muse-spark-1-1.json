@@ -1,0 +1,103 @@
+{
+  "center": "Muse Spark 1.1 发布 API",
+  "branches": [
+    {
+      "label": "首个 API 版本",
+      "detail": "Muse Spark 1.1 是 Spark 系列首个提供 API 的模型",
+      "children": [
+        "4 月发布初代 Muse Spark"
+      ]
+    },
+    {
+      "label": "能力提升",
+      "detail": "Meta 称在 agentic 工具调用与计算机使用上有显著改进",
+      "children": [
+        "agentic tool calling",
+        "computer use"
+      ]
+    },
+    {
+      "label": "评估报告",
+      "detail": "Muse Spark 1.1 Evaluation Report 含自对话吸引态章节",
+      "children": [
+        "两个模型副本互相对话"
+      ]
+    },
+    {
+      "label": "LLM 插件",
+      "detail": "Simon Willison 用预览权限做了 llm-meta-ai 插件",
+      "children": [
+        "提供 CLI 与 Python 库访问",
+        "llm install llm-meta-ai"
+      ]
+    }
+  ],
+  "flow": [
+    "安装 llm 工具",
+    "安装 llm-meta-ai",
+    "设置 meta-ai 密钥",
+    "调用 muse-spark-1.1"
+  ],
+  "entities": [
+    {
+      "name": "Muse Spark 1.1",
+      "type": "model"
+    },
+    {
+      "name": "Meta",
+      "type": "company"
+    },
+    {
+      "name": "llm-meta-ai",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "agentic tool calling",
+      "type": "concept"
+    },
+    {
+      "name": "computer use",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Meta",
+      "to": "Muse Spark 1.1",
+      "label": "发布"
+    },
+    {
+      "from": "Muse Spark 1.1",
+      "to": "agentic tool calling",
+      "label": "支持"
+    },
+    {
+      "from": "Muse Spark 1.1",
+      "to": "computer use",
+      "label": "支持"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "llm-meta-ai",
+      "label": "开发"
+    },
+    {
+      "from": "llm-meta-ai",
+      "to": "Muse Spark 1.1",
+      "label": "接入"
+    },
+    {
+      "from": "llm-meta-ai",
+      "to": "LLM",
+      "label": "是插件"
+    }
+  ]
+}

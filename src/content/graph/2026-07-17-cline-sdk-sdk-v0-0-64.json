@@ -1,0 +1,74 @@
+{
+  "center": "Cline SDK v0.0.64 修复",
+  "branches": [
+    {
+      "label": "token 处理改进",
+      "detail": "跨提供商统一 max output token 处理，避免输出截断",
+      "children": [
+        "覆盖网关路由、OpenAI 供应商与推理模型"
+      ]
+    },
+    {
+      "label": "BOM 解析修复",
+      "detail": "修复 UTF-8 BOM 开头的 frontmatter 与指令文件解析",
+      "children": [
+        "兼容 Windows 编辑器保存的文件",
+        "确保元数据正确读取"
+      ]
+    },
+    {
+      "label": "变更可追踪",
+      "detail": "完整变更日志提供链接，可查底层 SDK 细节调整",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "UTF-8 BOM",
+      "type": "concept"
+    },
+    {
+      "name": "max output token",
+      "type": "concept"
+    },
+    {
+      "name": "frontmatter",
+      "type": "concept"
+    },
+    {
+      "name": "网关路由",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "max output token",
+      "label": "改进"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "UTF-8 BOM",
+      "label": "修复解析"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "OpenAI",
+      "label": "适配"
+    },
+    {
+      "from": "UTF-8 BOM",
+      "to": "frontmatter",
+      "label": "影响解析"
+    }
+  ]
+}

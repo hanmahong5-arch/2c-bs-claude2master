@@ -1,0 +1,104 @@
+{
+  "center": "AI 领域动态与 AIE 门票推广",
+  "branches": [
+    {
+      "label": "GLM 5.2 持续火热",
+      "detail": "GLM 5.2 在 AI 领域热度不减，仍是当日最受关注的话题",
+      "children": [
+        "GLM 5.2 持续 trending"
+      ]
+    },
+    {
+      "label": "AIE WF 2026 售票",
+      "detail": "AIE WF 2026 常规门票将于周一售罄，Latent Space 订阅者可享限时折扣",
+      "children": [
+        "常规票周一售罄",
+        "订阅者 $250 折扣",
+        "年费 $80"
+      ]
+    },
+    {
+      "label": "赞助商福利",
+      "detail": "参会者可获得价值 4 万美元的赞助商 credits",
+      "children": [
+        "Warp、Datadog、SourceGraph",
+        "Stripe、Fireworks 等"
+      ]
+    },
+    {
+      "label": "内容付费墙",
+      "detail": "文章为付费内容，提供 7 天免费试用以继续阅读",
+      "children": [
+        "7 天免费试用",
+        "付费订阅解锁全文"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "GLM 5.2",
+      "type": "model"
+    },
+    {
+      "name": "Latent Space",
+      "type": "company"
+    },
+    {
+      "name": "AIE WF 2026",
+      "type": "concept"
+    },
+    {
+      "name": "Warp",
+      "type": "company"
+    },
+    {
+      "name": "Datadog",
+      "type": "company"
+    },
+    {
+      "name": "SourceGraph",
+      "type": "company"
+    },
+    {
+      "name": "Stripe",
+      "type": "company"
+    },
+    {
+      "name": "Fireworks",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Latent Space",
+      "to": "AIE WF 2026",
+      "label": "推广"
+    },
+    {
+      "from": "Warp",
+      "to": "AIE WF 2026",
+      "label": "赞助"
+    },
+    {
+      "from": "Datadog",
+      "to": "AIE WF 2026",
+      "label": "赞助"
+    },
+    {
+      "from": "SourceGraph",
+      "to": "AIE WF 2026",
+      "label": "赞助"
+    },
+    {
+      "from": "Stripe",
+      "to": "AIE WF 2026",
+      "label": "赞助"
+    },
+    {
+      "from": "Fireworks",
+      "to": "AIE WF 2026",
+      "label": "赞助"
+    }
+  ]
+}

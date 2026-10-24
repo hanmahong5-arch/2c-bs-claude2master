@@ -1,0 +1,107 @@
+{
+  "center": "开源LLM长上下文架构新趋势",
+  "branches": [
+    {
+      "label": "KV共享降缓存",
+      "detail": "Gemma 4 跨层复用 KV 张量，约省一半 KV 缓存",
+      "children": [
+        "E2B 35层仅前15层算KV，省2.7GB@128K",
+        "E4B 42层仅24层算KV，省约6GB@128K",
+        "同类型层间共享：滑窗配滑窗、全注意力配全注意力"
+      ]
+    },
+    {
+      "label": "压缩卷积注意力",
+      "detail": "ZAYA1-8B 与 DeepSeek V4 采用压缩注意力降成本",
+      "children": [
+        "ZAYA1-8B 用 compressed convolutional…",
+        "DeepSeek V4 结合 mHC 与压缩注意力"
+      ]
+    },
+    {
+      "label": "分层注意力预算",
+      "detail": "Laguna XS.2 按层分配注意力预算以省算力",
+      "children": [
+        "layer-wise attention budgeting"
+      ]
+    },
+    {
+      "label": "Gemma 4 产品线",
+      "detail": "Google 开源三档：端侧、MoE、稠密",
+      "children": [
+        "E2B/E4B 面向移动与IoT",
+        "26B MoE 面向本地推理",
+        "31B 稠密面向最高质量"
+      ]
+    },
+    {
+      "label": "动因：长上下文",
+      "detail": "推理模型与Agent保留更多token，KV成瓶颈",
+      "children": [
+        "KV缓存大小、内存流量、注意力成本是主要约束"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Sebastian Raschka",
+      "type": "person"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek V4",
+      "type": "model"
+    },
+    {
+      "name": "ZAYA1-8B",
+      "type": "model"
+    },
+    {
+      "name": "Laguna XS.2",
+      "type": "model"
+    },
+    {
+      "name": "KV sharing",
+      "type": "technique"
+    },
+    {
+      "name": "GQA",
+      "type": "technique"
+    },
+    {
+      "name": "compressed attention",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemma 4",
+      "to": "KV sharing",
+      "label": "采用"
+    },
+    {
+      "from": "Gemma 4",
+      "to": "GQA",
+      "label": "采用"
+    },
+    {
+      "from": "DeepSeek V4",
+      "to": "compressed attention",
+      "label": "采用"
+    },
+    {
+      "from": "ZAYA1-8B",
+      "to": "compressed attention",
+      "label": "采用"
+    },
+    {
+      "from": "Sebastian Raschka",
+      "to": "Gemma 4",
+      "label": "分析"
+    }
+  ]
+}

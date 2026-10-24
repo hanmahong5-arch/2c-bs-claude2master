@@ -1,0 +1,83 @@
+{
+  "center": "cline v3.86.1 修复文件提及",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "修复 @ 文件提及在特定环境下失败的问题",
+      "children": [
+        "工作区索引或内置 ripgrep 不可用时保留文件搜…",
+        "agent harness 在受限环境中文件定位能力更强"
+      ]
+    },
+    {
+      "label": "影响环境",
+      "detail": "针对 VS Code Remote SSH 及部分 VS Code 更新后场景",
+      "children": [
+        "VS Code Remote SSH",
+        "某些 VS Code 更新后的环境"
+      ]
+    },
+    {
+      "label": "设计启示",
+      "detail": "依赖缺失时核心功能仍应可用",
+      "children": [
+        "保持回退机制确保基础功能可用",
+        "需稳健处理不同 IDE 与远程开发配置差异"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "VS Code Remote SSH",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "ripgrep",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "文件提及",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "VS Code Remote SSH",
+      "label": "兼容修复"
+    },
+    {
+      "from": "cline",
+      "to": "VS Code",
+      "label": "运行于"
+    },
+    {
+      "from": "cline",
+      "to": "ripgrep",
+      "label": "内置依赖"
+    },
+    {
+      "from": "cline",
+      "to": "agent harness",
+      "label": "属于"
+    },
+    {
+      "from": "agent harness",
+      "to": "文件提及",
+      "label": "提供"
+    }
+  ]
+}

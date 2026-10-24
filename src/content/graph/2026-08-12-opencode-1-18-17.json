@@ -1,0 +1,76 @@
+{
+  "center": "opencode v1.18.17 更新",
+  "branches": [
+    {
+      "label": "会话压缩改进",
+      "detail": "压缩时保留完整近期轮次，小模型摘要更清晰",
+      "children": [
+        "保留完整近期轮次",
+        "小模型摘要更清晰",
+        "提升上下文连贯性"
+      ]
+    },
+    {
+      "label": "重试风暴遏制",
+      "detail": "自动会话重试次数受限并加入抖动",
+      "children": [
+        "重试次数设上限",
+        "加入抖动",
+        "提升稳定性"
+      ]
+    },
+    {
+      "label": "PDF 附件支持",
+      "detail": "PDF 附件可用于支持视觉的 GitHub Copilot 模型",
+      "children": [
+        "支持视觉的 Copilot 模型",
+        "扩展多模态输入"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Copilot",
+      "type": "product"
+    },
+    {
+      "name": "会话压缩",
+      "type": "concept"
+    },
+    {
+      "name": "自动会话重试",
+      "type": "concept"
+    },
+    {
+      "name": "PDF 附件",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "会话压缩",
+      "label": "改进"
+    },
+    {
+      "from": "opencode",
+      "to": "自动会话重试",
+      "label": "限制"
+    },
+    {
+      "from": "opencode",
+      "to": "PDF 附件",
+      "label": "支持"
+    },
+    {
+      "from": "PDF 附件",
+      "to": "GitHub Copilot",
+      "label": "用于"
+    }
+  ]
+}

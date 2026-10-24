@@ -1,0 +1,99 @@
+{
+  "center": "NVIDIA Nemotron 3 Embed 登顶…",
+  "branches": [
+    {
+      "label": "登顶 RTEB 榜首",
+      "detail": "Nemotron 3 Embed 在 RTEB 排行榜综合排名第一",
+      "children": [
+        "面向企业 RAG 与智能体检索场景"
+      ]
+    },
+    {
+      "label": "LMEB 双料 SOTA",
+      "detail": "8B 与 1B 两个规模均刷新 LMEB 最佳成绩",
+      "children": [
+        "8B-BF16 得分 64.4，整体 SOTA",
+        "1B-BF16 得分 61.5，约 1B 规模 SOTA"
+      ]
+    },
+    {
+      "label": "结果已合并",
+      "detail": "评测结果通过 embeddings-benchmark 仓库 PR 合并",
+      "children": [
+        "PR 编号 617",
+        "LMEB 榜单随后同步上线"
+      ]
+    },
+    {
+      "label": "开源嵌入模型",
+      "detail": "面向企业 RAG、智能体检索、代码搜索与智能体记忆",
+      "children": [
+        "模型合集共 3 项",
+        "更新于 8 月 11 日"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Nemotron-3-Embed-8B-BF16",
+      "type": "model"
+    },
+    {
+      "name": "Nemotron-3-Embed-1B-BF16",
+      "type": "model"
+    },
+    {
+      "name": "RTEB",
+      "type": "concept"
+    },
+    {
+      "name": "LMEB",
+      "type": "concept"
+    },
+    {
+      "name": "RAG",
+      "type": "concept"
+    },
+    {
+      "name": "embeddings-benchmark",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron-3-Embed-8B-BF16",
+      "label": "发布"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron-3-Embed-1B-BF16",
+      "label": "发布"
+    },
+    {
+      "from": "Nemotron-3-Embed-8B-BF16",
+      "to": "RTEB",
+      "label": "登顶"
+    },
+    {
+      "from": "Nemotron-3-Embed-8B-BF16",
+      "to": "LMEB",
+      "label": "刷新 SOTA"
+    },
+    {
+      "from": "Nemotron-3-Embed-1B-BF16",
+      "to": "LMEB",
+      "label": "刷新 SOTA"
+    },
+    {
+      "from": "embeddings-benchmark",
+      "to": "LMEB",
+      "label": "合并结果"
+    }
+  ]
+}

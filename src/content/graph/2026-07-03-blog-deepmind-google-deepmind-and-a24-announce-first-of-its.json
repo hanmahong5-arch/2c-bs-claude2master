@@ -1,0 +1,73 @@
+{
+  "center": "DeepMind与A24合作探索AI电影",
+  "branches": [
+    {
+      "label": "合作性质",
+      "detail": "首个此类研究合作，研究实验室与电影工作室深度绑定",
+      "children": [
+        "跨越多个项目的长期研发合作",
+        "Google对A24进行了投资"
+      ]
+    },
+    {
+      "label": "合作方式",
+      "detail": "DeepMind创新直接嵌入创作流程，艺术家参与塑造技术",
+      "children": [
+        "A24及其电影人帮助塑造新技术",
+        "DeepMind获得顶尖艺术家的反馈与指导"
+      ]
+    },
+    {
+      "label": "目标",
+      "detail": "帮助艺术家开发新工作流与技术，缩小前沿技术与娱乐的差距",
+      "children": [
+        "具体目标与技术产出将随时间演变",
+        "研究人员与电影人并肩测试、迭代、构建"
+      ]
+    },
+    {
+      "label": "意义",
+      "detail": "确保未来工具由使用者塑造，拓展叙事可能性",
+      "children": [
+        "合作旅程始于研究与共同好奇心",
+        "旨在拓展未来娱乐的边界"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "A24",
+      "type": "company"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Eli Collins",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "A24",
+      "label": "合作"
+    },
+    {
+      "from": "Google",
+      "to": "A24",
+      "label": "投资"
+    },
+    {
+      "from": "Eli Collins",
+      "to": "Google DeepMind",
+      "label": "任职于"
+    }
+  ]
+}

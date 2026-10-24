@@ -1,0 +1,65 @@
+{
+  "center": "Datasette 1.0a34 新增行编辑 UI",
+  "branches": [
+    {
+      "label": "核心新功能",
+      "detail": "Datasette 界面内可直接插入、编辑、删除数据行",
+      "children": [
+        "功能位于表页面（table pages）",
+        "编辑与删除也是行页面的操作项"
+      ]
+    },
+    {
+      "label": "灵感来源",
+      "detail": "该功能灵感来自 Datasette Agent",
+      "children": [
+        "此前已为 Datasette Agent 加入 SQL 写入支持",
+        "聊天界面能改数据而常规 UI 不能，显得荒谬"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "由 Simon Willison 于 2026 年 6 月 16 日发布",
+      "children": [
+        "版本号 1.0a34，属 alpha 版本",
+        "定位为探索与发布数据的开源多工具"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Datasette Agent",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "SQL",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "发布"
+    },
+    {
+      "from": "Datasette Agent",
+      "to": "Datasette",
+      "label": "启发功能"
+    },
+    {
+      "from": "Datasette Agent",
+      "to": "SQL",
+      "label": "支持写入"
+    }
+  ]
+}

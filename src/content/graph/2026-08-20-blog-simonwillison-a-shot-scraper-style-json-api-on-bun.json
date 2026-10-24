@@ -1,0 +1,113 @@
+{
+  "center": "Bun 1.4 的 Bun.WebView 实践",
+  "branches": [
+    {
+      "label": "Bun 1.4 发布",
+      "detail": "Bun 1.4 是 Rust 重写后首个稳定版，新增大量特性与修复",
+      "children": [
+        "新增 1517 个 Node.js 测试",
+        "修复超 2900 个问题",
+        "空闲 CPU 降 5 倍，内存降 35%"
+      ]
+    },
+    {
+      "label": "Bun.WebView 特性",
+      "detail": "为 Bun 核心加入一等浏览器自动化支持",
+      "children": [
+        "macOS 用 WebKit",
+        "本地 Chromium 走 CDP",
+        "无需 Puppeteer 或 Playwright"
+      ]
+    },
+    {
+      "label": "shot-scraper 风格 API",
+      "detail": "约 150 行 TypeScript 零依赖服务，提供 JSON 接口",
+      "children": [
+        "每请求开一个浏览器标签页",
+        "支持并发",
+        "/javascript、/screenshot、/healthz"
+      ]
+    },
+    {
+      "label": "内存实测",
+      "detail": "用 cgroups 测试完整 Chrome 运行复杂页面的内存需求",
+      "children": [
+        "需 192MB-256MB 容器",
+        "由 Claude Code for web 构建原型"
+      ]
+    }
+  ],
+  "flow": [
+    "接收 HTTP 请求",
+    "创建浏览器标签页",
+    "加载目标网页",
+    "执行 JavaScript 或截图",
+    "以 JSON 返回结果或错误"
+  ],
+  "entities": [
+    {
+      "name": "Bun",
+      "type": "product"
+    },
+    {
+      "name": "Bun.WebView",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "shot-scraper",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Rust",
+      "type": "technique"
+    },
+    {
+      "name": "Chrome DevTools Protocol",
+      "type": "technique"
+    },
+    {
+      "name": "TypeScript",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Bun",
+      "to": "Bun.WebView",
+      "label": "新增"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "shot-scraper",
+      "label": "创建"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Bun.WebView",
+      "label": "试用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Bun.WebView",
+      "label": "构建原型"
+    },
+    {
+      "from": "Bun",
+      "to": "Rust",
+      "label": "重写为"
+    },
+    {
+      "from": "Bun.WebView",
+      "to": "Chrome DevTools Protocol",
+      "label": "使用"
+    }
+  ]
+}

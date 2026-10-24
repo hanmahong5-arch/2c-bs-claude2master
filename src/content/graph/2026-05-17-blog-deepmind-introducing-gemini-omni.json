@@ -1,0 +1,119 @@
+{
+  "center": "Gemini Omni 多模态视频生成",
+  "branches": [
+    {
+      "label": "对话式视频编辑",
+      "detail": "用自然语言多轮编辑视频，角色与物理保持一致",
+      "children": [
+        "每条指令基于上一条累积",
+        "可改环境、角度、风格与细节",
+        "场景记忆保留原始叙事线索"
+      ]
+    },
+    {
+      "label": "基于世界知识生成",
+      "detail": "结合 Gemini 对物理、历史、科学的知识做推理",
+      "children": [
+        "改进重力、动能、流体等物理理解",
+        "可生成字母表、蛋白质折叠等解释视频"
+      ]
+    },
+    {
+      "label": "任意输入组合",
+      "detail": "图像、文本、视频、音频可混合作为输入",
+      "children": [
+        "音频初期仅支持声音参考",
+        "可迁移风格、动作与特效"
+      ]
+    },
+    {
+      "label": "数字分身与安全",
+      "detail": "Avatar 用本人声音生成视频，含 SynthID 水印",
+      "children": [
+        "所有视频带不可感知 SynthID 水印",
+        "可在 Gemini 应用、Chrome、搜索中验证"
+      ]
+    },
+    {
+      "label": "首发与上线",
+      "detail": "首个模型 Gemini Omni Flash 今日推出",
+      "children": [
+        "上线 Gemini 应用、Google Flow、YouTube…",
+        "面向 Google AI Plus、Pro、Ultra 用户"
+      ]
+    }
+  ],
+  "flow": [
+    "输入图像/文本/视频/音频",
+    "自然语言描述需求",
+    "Omni 推理并生成视频",
+    "多轮对话继续编辑",
+    "输出带 SynthID 水印视频"
+  ],
+  "entities": [
+    {
+      "name": "Gemini Omni",
+      "type": "model"
+    },
+    {
+      "name": "Gemini Omni Flash",
+      "type": "model"
+    },
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Nano Banana",
+      "type": "model"
+    },
+    {
+      "name": "SynthID",
+      "type": "technique"
+    },
+    {
+      "name": "Google Flow",
+      "type": "product"
+    },
+    {
+      "name": "YouTube Shorts",
+      "type": "product"
+    },
+    {
+      "name": "Koray Kavukcuoglu",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini Omni",
+      "label": "推出"
+    },
+    {
+      "from": "Gemini Omni",
+      "to": "Gemini Omni Flash",
+      "label": "包含"
+    },
+    {
+      "from": "Gemini Omni Flash",
+      "to": "Google Flow",
+      "label": "上线"
+    },
+    {
+      "from": "Gemini Omni Flash",
+      "to": "YouTube Shorts",
+      "label": "上线"
+    },
+    {
+      "from": "Gemini Omni",
+      "to": "SynthID",
+      "label": "使用"
+    },
+    {
+      "from": "Koray Kavukcuoglu",
+      "to": "Google DeepMind",
+      "label": "任职于"
+    }
+  ]
+}

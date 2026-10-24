@@ -1,0 +1,83 @@
+{
+  "center": "MCP 核心价值：隔离认证流程",
+  "branches": [
+    {
+      "label": "核心观点",
+      "detail": "MCP 相比 skills/CLI 的真正优势是把认证流程移出智能体上下文窗口",
+      "children": [
+        "认证流程可完全移出 harness",
+        "由 Sean Lynch 在 Hacker News 评论提出"
+      ]
+    },
+    {
+      "label": "理想形态",
+      "detail": "MCP 的理想化形态可能只是一个 API 认证网关",
+      "children": [
+        "即便仅做认证网关也算成功"
+      ]
+    },
+    {
+      "label": "对比对象",
+      "detail": "与 skills 和 CLI 方式相比，MCP 在认证隔离上更优",
+      "children": [
+        "skills 与 CLI 无法隔离认证"
+      ]
+    },
+    {
+      "label": "来源",
+      "detail": "该引述由 Simon Willison 收集并发布于 2026 年 6 月 19 日",
+      "children": [
+        "发布于 Simon Willison 的博客"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Sean Lynch",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Hacker News",
+      "type": "product"
+    },
+    {
+      "name": "skills",
+      "type": "concept"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sean Lynch",
+      "to": "MCP",
+      "label": "评论"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Sean Lynch",
+      "label": "引述"
+    },
+    {
+      "from": "MCP",
+      "to": "skills",
+      "label": "优于"
+    },
+    {
+      "from": "MCP",
+      "to": "CLI",
+      "label": "优于"
+    }
+  ]
+}

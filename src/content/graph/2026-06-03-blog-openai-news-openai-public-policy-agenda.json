@@ -1,0 +1,91 @@
+{
+  "center": "OpenAI 公共政策议程",
+  "branches": [
+    {
+      "label": "AI 安全优先",
+      "detail": "将构建安全可靠的 AI 系统置于首位",
+      "children": [
+        "工具链需内置安全测试与对齐机制"
+      ]
+    },
+    {
+      "label": "保护青少年",
+      "detail": "制定政策保护年轻人免受潜在风险",
+      "children": [
+        "应用与 Agent 需年龄验证与内容过滤"
+      ]
+    },
+    {
+      "label": "劳动力过渡",
+      "detail": "AI 重塑就业，主张技能培训支持受影响者",
+      "children": [
+        "开发者需关注社会影响与再培训"
+      ]
+    },
+    {
+      "label": "全球合作标准",
+      "detail": "支持建立国际标准与合作框架管理 AI",
+      "children": [
+        "跨境工具需适应统一监管环境"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AI 安全",
+      "type": "concept"
+    },
+    {
+      "name": "对齐机制",
+      "type": "technique"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    },
+    {
+      "name": "年龄验证",
+      "type": "technique"
+    },
+    {
+      "name": "内容过滤",
+      "type": "technique"
+    },
+    {
+      "name": "国际标准",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AI 安全",
+      "label": "强调"
+    },
+    {
+      "from": "OpenAI",
+      "to": "国际标准",
+      "label": "倡导"
+    },
+    {
+      "from": "AI 安全",
+      "to": "对齐机制",
+      "label": "依赖"
+    },
+    {
+      "from": "Agent",
+      "to": "年龄验证",
+      "label": "需要"
+    },
+    {
+      "from": "Agent",
+      "to": "内容过滤",
+      "label": "需要"
+    }
+  ]
+}

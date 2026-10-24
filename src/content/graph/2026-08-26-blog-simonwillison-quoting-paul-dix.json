@@ -1,0 +1,83 @@
+{
+  "center": "AI 写百万行代码并持续优化",
+  "branches": [
+    {
+      "label": "核心事实",
+      "detail": "AI 生成 100 万行代码，经数月迭代优化，成为可靠软件",
+      "children": [
+        "软件运行在数百万开发者机器上",
+        "Paul Dix 称此事「绝对令人震惊」"
+      ]
+    },
+    {
+      "label": "关键条件",
+      "detail": "构建验证系统并给出正确方向，AI 才能产出复杂软件",
+      "children": [
+        "验证系统让 AI 有对照标准",
+        "明确方向指引 AI 持续改进"
+      ]
+    },
+    {
+      "label": "反驳质疑",
+      "detail": "有人认为有 oracle 对照所以简单，Paul Dix 认为低估了此事",
+      "children": [
+        "语言转换有 oracle 确实容易",
+        "但整体成就远不止语言转换"
+      ]
+    },
+    {
+      "label": "最终结论",
+      "detail": "AI 能产出高度复杂精密的软件，并持续优化直到可用",
+      "children": [
+        "AI 可不断 refine 直到 just works",
+        "出自 Paul Dix《The end of programming》"
+      ]
+    }
+  ],
+  "flow": [
+    "AI 生成 100 万行代码",
+    "构建验证系统",
+    "给出正确方向",
+    "持续迭代优化数月",
+    "产出可靠软件"
+  ],
+  "entities": [
+    {
+      "name": "Paul Dix",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    },
+    {
+      "name": "The end of programming",
+      "type": "concept"
+    },
+    {
+      "name": "coding agents",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Paul Dix",
+      "label": "引用"
+    },
+    {
+      "from": "Paul Dix",
+      "to": "The end of programming",
+      "label": "出自"
+    },
+    {
+      "from": "AI",
+      "to": "coding agents",
+      "label": "属于"
+    }
+  ]
+}

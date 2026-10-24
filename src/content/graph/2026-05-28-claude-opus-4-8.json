@@ -1,0 +1,101 @@
+{
+  "center": "Claude Opus 4.8 升级",
+  "branches": [
+    {
+      "label": "编码基准抬升",
+      "detail": "SWE-bench Verified 88.6%，Pro 69.2%，Terminal-Bench 74.6%",
+      "children": [
+        "SWE-bench Verified 88.6%（4.7 为 87.6%）",
+        "SWE-bench Pro 69.2%（4.7 为 64.3%）",
+        "终端编码 74.6% 仍落后 GPT-5.5 的 78.2%"
+      ]
+    },
+    {
+      "label": "诚实度提升",
+      "detail": "漏放代码缺陷概率约为 4.7 的 1/4，更倾向标注不确定",
+      "children": [
+        "更主动标注不确定、少做无依据断言",
+        "可让模型自检后再交付，降低 review 负担"
+      ]
+    },
+    {
+      "label": "1M 上下文与 fast mode",
+      "detail": "默认 1M token 上下文，fast mode 约 2.5× 速度",
+      "children": [
+        "模型 ID claude-opus-4-8，长上下文变体 [1m]",
+        "128k 最大输出，fast mode $10/$50 每百万…"
+      ]
+    },
+    {
+      "label": "配套能力与定价",
+      "detail": "Claude Code dynamic workflows、Messages API 更新、effort 控制",
+      "children": [
+        "dynamic workflows 单会话编排数百并行子代理",
+        "Messages API 支持 system 条目放入…",
+        "定价不变 $5/$25 每百万 input/output token"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 4.7",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Messages API",
+      "type": "product"
+    },
+    {
+      "name": "SWE-bench Verified",
+      "type": "concept"
+    },
+    {
+      "name": "fast mode",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Opus 4.8",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Opus 4.8",
+      "to": "Claude Opus 4.7",
+      "label": "升级自"
+    },
+    {
+      "from": "Claude Opus 4.8",
+      "to": "GPT-5.5",
+      "label": "终端编码落后"
+    },
+    {
+      "from": "Claude Opus 4.8",
+      "to": "SWE-bench Verified",
+      "label": "得分 88.6%"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude Opus 4.8",
+      "label": "支持"
+    }
+  ]
+}

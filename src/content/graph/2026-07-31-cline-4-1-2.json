@@ -1,0 +1,65 @@
+{
+  "center": "Cline v4.1.2 变体标识",
+  "branches": [
+    {
+      "label": "新增变体标识",
+      "detail": "设置页 About 区域显示当前扩展变体，区分 Legacy 与 Next",
+      "children": [
+        "显示 Legacy 或 Next",
+        "便于用户识别版本"
+      ]
+    },
+    {
+      "label": "设计启示",
+      "detail": "agent harness 需在 UI 暴露构建变体信息，便于调试与反馈",
+      "children": [
+        "UI 暴露构建变体",
+        "便于调试与反馈"
+      ]
+    },
+    {
+      "label": "合并包一致性",
+      "detail": "该功能同时适用于合并发布包中的两个 bundle，确保一致性",
+      "children": [
+        "两个 bundle 均适用",
+        "确保一致性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Legacy",
+      "type": "concept"
+    },
+    {
+      "name": "Next",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Legacy",
+      "label": "区分"
+    },
+    {
+      "from": "Cline",
+      "to": "Next",
+      "label": "区分"
+    },
+    {
+      "from": "agent harness",
+      "to": "Cline",
+      "label": "适用于"
+    }
+  ]
+}

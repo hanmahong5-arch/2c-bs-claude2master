@@ -1,0 +1,83 @@
+{
+  "center": "OlmoEarth 自定义嵌入导出",
+  "branches": [
+    {
+      "label": "核心更新",
+      "detail": "OlmoEarth 推出自定义嵌入导出功能，简化下游分析工作流",
+      "children": [
+        "面向遥感基础模型",
+        "支持预训练与微调模型"
+      ]
+    },
+    {
+      "label": "应用场景",
+      "detail": "导出嵌入可直接用于下游遥感分析任务",
+      "children": [
+        "减少重复特征工程",
+        "加速下游模型开发"
+      ]
+    },
+    {
+      "label": "模型基础",
+      "detail": "基于 OlmoEarth 预训练与微调遥感基础模型",
+      "children": [
+        "预训练模型",
+        "微调模型"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OlmoEarth",
+      "type": "model"
+    },
+    {
+      "name": "自定义嵌入导出",
+      "type": "technique"
+    },
+    {
+      "name": "遥感基础模型",
+      "type": "concept"
+    },
+    {
+      "name": "下游分析",
+      "type": "concept"
+    },
+    {
+      "name": "预训练",
+      "type": "technique"
+    },
+    {
+      "name": "微调",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OlmoEarth",
+      "to": "自定义嵌入导出",
+      "label": "推出"
+    },
+    {
+      "from": "自定义嵌入导出",
+      "to": "下游分析",
+      "label": "简化"
+    },
+    {
+      "from": "OlmoEarth",
+      "to": "遥感基础模型",
+      "label": "属于"
+    },
+    {
+      "from": "预训练",
+      "to": "OlmoEarth",
+      "label": "用于"
+    },
+    {
+      "from": "微调",
+      "to": "OlmoEarth",
+      "label": "用于"
+    }
+  ]
+}

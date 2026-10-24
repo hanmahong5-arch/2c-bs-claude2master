@@ -1,0 +1,112 @@
+{
+  "center": "SpaceX 成 280 亿 GPU 云",
+  "branches": [
+    {
+      "label": "SpaceX 三笔大单",
+      "detail": "SpaceX 与 Anthropic、Google、Reflection 签 GPU 租赁协议，月入 23.2 亿美元",
+      "children": [
+        "Anthropic 独占 Colossus 1，月付 12.5 亿",
+        "Reflection 月付 1.5 亿，2026 年 7 月起",
+        "合计年化 280 亿美元，约为 CoreWeave 两倍"
+      ]
+    },
+    {
+      "label": "OpenAI 安全闭环",
+      "detail": "Daybreak 计划扩展至漏洞修复，推出 GPT-5.5-Cyber 与 Codex 安全插件",
+      "children": [
+        "扫描 3000 万+ 提交、3 万+ 代码库",
+        "覆盖 cURL、Go、Python 等关键项目",
+        "从找 bug 转向生成补丁加人工审核"
+      ]
+    },
+    {
+      "label": "Sakana Fugu 编排",
+      "detail": "Fugu 以单一 API 学习多模型选择、委派、验证与合成，引发评测争议",
+      "children": [
+        "Vercel 快速接入 Fugu Ultra",
+        "被指本质是路由加预规划工作流",
+        "SWE-Bench Pro 落后 Opus 约 10 分"
+      ]
+    },
+    {
+      "label": "GLM-5.2 开源突破",
+      "detail": "GLM-5.2 成首个被广泛视为前沿级智能体开源权重模型",
+      "children": [
+        "GDPval-AA 1524 Elo 排第三",
+        "Cline 实测更便宜且验证更稳",
+        "AWS、Baseten、Fireworks 等 20 家接入"
+      ]
+    },
+    {
+      "label": "智能体基建升级",
+      "detail": "Google 将 Interactions API 设为 Gemini 智能体默认接口，支持异步与沙箱",
+      "children": [
+        "统一模型与智能体 API",
+        "内置远程 Linux 沙箱 Antigravity",
+        "支持多模态生成与托管智能体"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "SpaceX",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Reflection AI",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.5-Cyber",
+      "type": "model"
+    },
+    {
+      "name": "Sakana Fugu",
+      "type": "product"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Gemini Interactions API",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "SpaceX",
+      "to": "Anthropic",
+      "label": "出租 GPU"
+    },
+    {
+      "from": "SpaceX",
+      "to": "Reflection AI",
+      "label": "出租 GPU"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.5-Cyber",
+      "label": "发布"
+    },
+    {
+      "from": "Sakana Fugu",
+      "to": "GLM-5.2",
+      "label": "编排"
+    },
+    {
+      "from": "Gemini Interactions API",
+      "to": "GLM-5.2",
+      "label": "支持"
+    }
+  ]
+}

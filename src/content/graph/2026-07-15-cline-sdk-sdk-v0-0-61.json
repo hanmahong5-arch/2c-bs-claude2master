@@ -1,0 +1,107 @@
+{
+  "center": "Cline SDK v0.0.61 更新",
+  "branches": [
+    {
+      "label": "上下文压缩",
+      "detail": "压缩过程现在报告进度状态，便于监控长任务",
+      "children": [
+        "长时间运行任务可监控进度"
+      ]
+    },
+    {
+      "label": "工作区持久化",
+      "detail": "git 分支/远程信息跨会话持久化并刷新，避免重复初始化",
+      "children": [
+        "修复良性 git 状态被误报为初始化错误"
+      ]
+    },
+    {
+      "label": "终端可靠性",
+      "detail": "VS Code 终端改进 OSC 633 解析、退出码与超时处理",
+      "children": [
+        "OSC 633 解析",
+        "退出码处理",
+        "超时处理"
+      ]
+    },
+    {
+      "label": "编辑与模式",
+      "detail": "恢复编辑器差异视图，系统提示加入 Plan/Act 模式指导",
+      "children": [
+        "切换模式时提供提示"
+      ]
+    },
+    {
+      "label": "配置与 UI",
+      "detail": "模型 ID 自动建议、请求头集中管理、新增共享主题包",
+      "children": [
+        "模型 ID 从 OpenAI 兼容端点自动建议",
+        "提供者请求头集中到 LLM 层",
+        "新增 @cline/ui 主题包"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "@cline/ui",
+      "type": "product"
+    },
+    {
+      "name": "Plan/Act 模式",
+      "type": "concept"
+    },
+    {
+      "name": "OSC 633",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "VS Code",
+      "label": "集成于"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "OpenAI",
+      "label": "兼容端点"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "LLM",
+      "label": "调用"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "@cline/ui",
+      "label": "包含"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Plan/Act 模式",
+      "label": "支持"
+    },
+    {
+      "from": "VS Code",
+      "to": "OSC 633",
+      "label": "使用"
+    }
+  ]
+}

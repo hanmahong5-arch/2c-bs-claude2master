@@ -1,0 +1,75 @@
+{
+  "center": "opencode v1.17.20 更新",
+  "branches": [
+    {
+      "label": "修复 Codex 兼容",
+      "detail": "移除过时 Codex 变通方案，避免干扰 OpenAI 新 API 请求",
+      "children": [
+        "不再干扰 Luna Responses Lite 请求",
+        "简化代码，提升兼容性"
+      ]
+    },
+    {
+      "label": "新增 Azure 模型",
+      "detail": "Azure AI 支持升级至 GPT-5.6",
+      "children": [
+        "扩展模型选择",
+        "适配最新 Azure AI 服务"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Luna Responses Lite",
+      "type": "model"
+    },
+    {
+      "name": "Azure AI",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Codex",
+      "label": "修复兼容"
+    },
+    {
+      "from": "opencode",
+      "to": "Azure AI",
+      "label": "新增支持"
+    },
+    {
+      "from": "Azure AI",
+      "to": "GPT-5.6",
+      "label": "升级至"
+    },
+    {
+      "from": "Codex",
+      "to": "Luna Responses Lite",
+      "label": "干扰请求"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Luna Responses Lite",
+      "label": "提供"
+    }
+  ]
+}

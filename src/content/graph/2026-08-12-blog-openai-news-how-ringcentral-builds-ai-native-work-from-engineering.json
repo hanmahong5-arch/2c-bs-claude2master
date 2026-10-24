@@ -1,0 +1,77 @@
+{
+  "center": "RingCentral 用 AI 工具链加速开发",
+  "branches": [
+    {
+      "label": "集成 AI 工具",
+      "detail": "将 ChatGPT Work 与 Codex 嵌入工程和运营流程",
+      "children": [
+        "开发周期显著加速",
+        "团队更快迭代交付功能"
+      ]
+    },
+    {
+      "label": "集中运营智能",
+      "detail": "跨部门共享数据洞察，减少信息孤岛",
+      "children": [
+        "提升决策效率"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "AI 工具链从辅助编码扩展到全栈运营",
+      "children": [
+        "AI 原生工作流将嵌入企业基础设施"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "RingCentral",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "AI 原生工作流",
+      "type": "concept"
+    },
+    {
+      "name": "运营智能",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "RingCentral",
+      "to": "ChatGPT Work",
+      "label": "集成"
+    },
+    {
+      "from": "RingCentral",
+      "to": "Codex",
+      "label": "集成"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "AI 原生工作流",
+      "label": "支撑"
+    },
+    {
+      "from": "Codex",
+      "to": "AI 原生工作流",
+      "label": "支撑"
+    },
+    {
+      "from": "RingCentral",
+      "to": "运营智能",
+      "label": "集中化"
+    }
+  ]
+}

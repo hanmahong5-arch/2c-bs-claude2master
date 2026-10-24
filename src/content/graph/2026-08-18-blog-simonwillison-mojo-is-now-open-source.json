@@ -1,0 +1,74 @@
+{
+  "center": "Mojo 开源并转向独立语言",
+  "branches": [
+    {
+      "label": "正式开源",
+      "detail": "Mojo 编译器与工具链以 Apache 2 许可证开源发布",
+      "children": [
+        "2023 年 5 月起承诺开源",
+        "上周发布 1.0 版本"
+      ]
+    },
+    {
+      "label": "放弃 Python 超集",
+      "detail": "2025 年 8 月调整路线，不再追求完全兼容 Python",
+      "children": [
+        "原目标：Python 超集以复用生态",
+        "现定位：独立语言"
+      ]
+    },
+    {
+      "label": "聚焦 GPU 编程",
+      "detail": "语法借鉴 Python，但以简化 GPU 编程为核心目标",
+      "children": [
+        "不保证与现有 Python 代码 100% 兼容",
+        "AI 辅助工具可迁移 Python 到 Mojo"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Mojo",
+      "type": "product"
+    },
+    {
+      "name": "Python",
+      "type": "product"
+    },
+    {
+      "name": "Apache 2",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GPU 编程",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Mojo",
+      "to": "Apache 2",
+      "label": "采用许可证"
+    },
+    {
+      "from": "Mojo",
+      "to": "Python",
+      "label": "语法借鉴"
+    },
+    {
+      "from": "Mojo",
+      "to": "GPU 编程",
+      "label": "聚焦于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Mojo",
+      "label": "报道"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "center": "开放模型生态多元化趋势",
+  "branches": [
+    {
+      "label": "生态多元化",
+      "detail": "开放模型发布者从少数中国厂商扩展到全球多元参与者",
+      "children": [
+        "一年前由少数中国玩家主导",
+        "现涵盖全球更多细分公司"
+      ]
+    },
+    {
+      "label": "三类动机",
+      "detail": "发布者按动机分为纯模型商、大科技、产品公司",
+      "children": [
+        "纯模型商：DeepSeek、Zyphra、Cohere",
+        "大科技：阿里Qwen、Google Gemma、NVIDIA",
+        "产品公司：JetBrains、Zed、Krea"
+      ]
+    },
+    {
+      "label": "长尾模型趋势",
+      "detail": "更多公司开发长尾模型，追逐绝对前沿者减少",
+      "children": [
+        "长尾模型数量增加",
+        "前沿追逐者数量下降"
+      ]
+    },
+    {
+      "label": "近期发布",
+      "detail": "本期Artifacts收录多个重要开放模型发布",
+      "children": [
+        "NVIDIA Nemotron-3-Ultra 550B",
+        "Cohere Command A+ Apache 2.0",
+        "GLM-5.2 日常可用"
+      ]
+    },
+    {
+      "label": "反对限制",
+      "detail": "限制开放生态既徒劳又不安全且反自由",
+      "children": [
+        "历史表明技术禁令无效",
+        "限制会集中AI开发于少数人"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Zyphra",
+      "type": "company"
+    },
+    {
+      "name": "Cohere",
+      "type": "company"
+    },
+    {
+      "name": "Poolside",
+      "type": "company"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Command A+",
+      "type": "model"
+    },
+    {
+      "name": "Nemotron-3-Ultra",
+      "type": "model"
+    },
+    {
+      "name": "Apache 2.0",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cohere",
+      "to": "Command A+",
+      "label": "发布"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron-3-Ultra",
+      "label": "发布"
+    },
+    {
+      "from": "Command A+",
+      "to": "Apache 2.0",
+      "label": "采用"
+    }
+  ]
+}

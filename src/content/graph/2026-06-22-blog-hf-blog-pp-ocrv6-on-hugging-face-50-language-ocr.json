@@ -1,0 +1,97 @@
+{
+  "center": "PP-OCRv6 多语言 OCR",
+  "branches": [
+    {
+      "label": "模型规模",
+      "detail": "参数从 1.5M 到 34.5M，覆盖 tiny 到更大变体",
+      "children": [
+        "tiny 变体浏览器内 97ms",
+        "34.5M 参数版本"
+      ]
+    },
+    {
+      "label": "多语言能力",
+      "detail": "支持 50 种语言的 OCR 识别",
+      "children": [
+        "50-Language OCR"
+      ]
+    },
+    {
+      "label": "部署方式",
+      "detail": "支持 ONNX Runtime CPU 后端与浏览器内运行",
+      "children": [
+        "ONNX Runtime CPU backend",
+        "浏览器内推理"
+      ]
+    },
+    {
+      "label": "性能对比",
+      "detail": "在 OCR 任务上超越十亿级参数视觉语言模型",
+      "children": [
+        "超越 Billion-Scale VLMs"
+      ]
+    },
+    {
+      "label": "生态集成",
+      "detail": "上线 Hugging Face，原生 transformers 支持",
+      "children": [
+        "Hugging Face Spaces",
+        "PaddleOCR 3.5"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "PP-OCRv6",
+      "type": "model"
+    },
+    {
+      "name": "PaddleOCR",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "ONNX Runtime",
+      "type": "product"
+    },
+    {
+      "name": "Transformers",
+      "type": "product"
+    },
+    {
+      "name": "merve",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "PP-OCRv6",
+      "to": "PaddleOCR",
+      "label": "属于"
+    },
+    {
+      "from": "PP-OCRv6",
+      "to": "Hugging Face",
+      "label": "发布于"
+    },
+    {
+      "from": "PP-OCRv6",
+      "to": "ONNX Runtime",
+      "label": "支持"
+    },
+    {
+      "from": "PP-OCRv6",
+      "to": "Transformers",
+      "label": "集成"
+    },
+    {
+      "from": "merve",
+      "to": "PP-OCRv6",
+      "label": "介绍"
+    }
+  ]
+}

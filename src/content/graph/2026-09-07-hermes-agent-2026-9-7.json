@@ -1,0 +1,73 @@
+{
+  "center": "Hermes Agent 0.21.1 补丁版",
+  "branches": [
+    {
+      "label": "模块化与性能",
+      "detail": "代码库模块化重构，优化文件操作与启动性能",
+      "children": [
+        "harness 需适配新模块边界",
+        "需重新基准测试启动延迟"
+      ]
+    },
+    {
+      "label": "桌面与浏览器",
+      "detail": "新增桌面会话控制与浏览器注释功能",
+      "children": [
+        "harness 可扩展桌面自动化",
+        "增强浏览器交互能力"
+      ]
+    },
+    {
+      "label": "MCP 与调度",
+      "detail": "MCP 授权改进，修复 cron 调度与投递",
+      "children": [
+        "harness 需更新授权策略",
+        "验证定时任务可靠性"
+      ]
+    },
+    {
+      "label": "委托可靠性",
+      "detail": "提升子代理委托的可靠性",
+      "children": [
+        "加强子代理任务监控",
+        "加强错误恢复"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "cron",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "MCP",
+      "label": "改进授权"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "cron",
+      "label": "修复调度"
+    },
+    {
+      "from": "harness",
+      "to": "Hermes Agent",
+      "label": "适配"
+    }
+  ]
+}

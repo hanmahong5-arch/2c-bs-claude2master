@@ -1,0 +1,92 @@
+{
+  "center": "Cline v4.0.11 模型与修复",
+  "branches": [
+    {
+      "label": "新增 Opus 5",
+      "detail": "Cline 支持 Claude Opus 5，覆盖多家提供商",
+      "children": [
+        "含 1M 上下文窗口变体",
+        "覆盖 Anthropic、Bedrock、Vertex 等",
+        "提升长对话与复杂任务处理"
+      ]
+    },
+    {
+      "label": "新增 Kimi K3",
+      "detail": "支持 Moonshot Kimi K3 并启用原生工具调用",
+      "children": [
+        "修复空响应问题",
+        "避免模型不兼容导致失败"
+      ]
+    },
+    {
+      "label": "修复定价",
+      "detail": "修正 Opus 1M 变体超 200k 令牌的成本估算",
+      "children": [
+        "此前成本估算过高",
+        "准确反映实际使用成本"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Claude Opus 5",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "Moonshot",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Claude Opus 5",
+      "label": "新增支持"
+    },
+    {
+      "from": "Cline",
+      "to": "Kimi K3",
+      "label": "新增支持"
+    },
+    {
+      "from": "Claude Opus 5",
+      "to": "Anthropic",
+      "label": "由开发"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "Moonshot",
+      "label": "由开发"
+    },
+    {
+      "from": "Cline",
+      "to": "OpenRouter",
+      "label": "通过接入"
+    }
+  ]
+}

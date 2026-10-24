@@ -1,0 +1,89 @@
+{
+  "center": "OpenAI 推出 ChatGPT Work",
+  "branches": [
+    {
+      "label": "跨应用执行",
+      "detail": "可跨应用和文件操作，无需用户手动切换",
+      "children": [
+        "编辑文档、管理邮件、分析数据"
+      ]
+    },
+    {
+      "label": "长周期任务",
+      "detail": "可连续数小时专注一个项目，而非一次性响应",
+      "children": [
+        "需持久化状态与中断恢复"
+      ]
+    },
+    {
+      "label": "目标驱动自主",
+      "detail": "用户只描述目标，agent 自主规划并完成交付",
+      "children": [
+        "任务分解与工具调用",
+        "可组合的 agent 技能库"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "agent 从对话工具进化为自动化工作流引擎",
+      "children": [
+        "需集成跨平台能力",
+        "设计进度追踪架构"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    },
+    {
+      "name": "自动化工作流引擎",
+      "type": "concept"
+    },
+    {
+      "name": "任务分解",
+      "type": "technique"
+    },
+    {
+      "name": "工具调用",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "推出"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "agent",
+      "label": "属于"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "自动化工作流引擎",
+      "label": "进化为"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "任务分解",
+      "label": "依赖"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "工具调用",
+      "label": "依赖"
+    }
+  ]
+}

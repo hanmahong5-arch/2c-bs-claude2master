@@ -1,0 +1,118 @@
+{
+  "center": "深度学习缩放法则与算力分配",
+  "branches": [
+    {
+      "label": "核心发现",
+      "detail": "训练损失随模型、数据、算力按幂律可预测下降",
+      "children": [
+        "log-log 图上呈直线",
+        "三者需同步扩展才最优",
+        "大模型样本效率更高"
+      ]
+    },
+    {
+      "label": "早期研究",
+      "detail": "Amari 与 Hestness 等奠定误差可预测性基础",
+      "children": [
+        "Amari 1992 推导四类学习曲线",
+        "Hestness 2017 跨四领域验证幂律",
+        "架构改变偏移不改指数"
+      ]
+    },
+    {
+      "label": "Kaplan 定律",
+      "detail": "2020 年将缩放法则引入语言模型社区",
+      "children": [
+        "模型 768M–1.5B 参数",
+        "数据 22M–23B tokens",
+        "架构细节不如规模重要"
+      ]
+    },
+    {
+      "label": "Chinchilla 定律",
+      "detail": "用三种方法重新拟合最优 N 与 D 分配",
+      "children": [
+        "方法一：固定模型变 token",
+        "方法二：IsoFLOP 曲线",
+        "方法三：参数化拟合"
+      ]
+    },
+    {
+      "label": "数据受限区",
+      "detail": "数据不足时缩放行为与无限数据区不同",
+      "children": [
+        "小模型在大数据上损失平台化",
+        "现实拟合存在困难",
+        "玩具模拟辅助理解"
+      ]
+    }
+  ],
+  "flow": [
+    "小规模训练拟合缩放律",
+    "外推预测大模型需求",
+    "分配算力于 N 与 D",
+    "验证并调整拟合"
+  ],
+  "entities": [
+    {
+      "name": "Kaplan et al.",
+      "type": "person"
+    },
+    {
+      "name": "Chinchilla",
+      "type": "model"
+    },
+    {
+      "name": "Amari et al.",
+      "type": "person"
+    },
+    {
+      "name": "Hestness et al.",
+      "type": "person"
+    },
+    {
+      "name": "Rosenfeld et al.",
+      "type": "person"
+    },
+    {
+      "name": "Scaling Laws",
+      "type": "concept"
+    },
+    {
+      "name": "Transformer",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Kaplan et al.",
+      "to": "Scaling Laws",
+      "label": "提出"
+    },
+    {
+      "from": "Chinchilla",
+      "to": "Scaling Laws",
+      "label": "修正"
+    },
+    {
+      "from": "Amari et al.",
+      "to": "Scaling Laws",
+      "label": "奠基"
+    },
+    {
+      "from": "Hestness et al.",
+      "to": "Scaling Laws",
+      "label": "验证"
+    },
+    {
+      "from": "Rosenfeld et al.",
+      "to": "Scaling Laws",
+      "label": "建模"
+    },
+    {
+      "from": "Transformer",
+      "to": "Scaling Laws",
+      "label": "适用"
+    }
+  ]
+}

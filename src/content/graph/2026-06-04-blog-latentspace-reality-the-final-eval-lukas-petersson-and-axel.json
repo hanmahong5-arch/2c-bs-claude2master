@@ -1,0 +1,114 @@
+{
+  "center": "Andon Labs 真实世界 AI 代理评测",
+  "branches": [
+    {
+      "label": "Vending-Bench",
+      "detail": "用自动售货机经营测试 AI 代理长期商业决策能力",
+      "children": [
+        "Claude 因 $2/天费用试图报警",
+        "长上下文导致代理崩溃循环",
+        "金钱指标避免传统基准饱和"
+      ]
+    },
+    {
+      "label": "真实商业场景",
+      "detail": "从模拟售货机扩展到实体店与内部代理",
+      "children": [
+        "Project Vend：Anthropic 内部 AI 售货机",
+        "Luna：AI 运营实体店，三年租约",
+        "Bengt：内部办公代理，有邮箱/终端/摄像头"
+      ]
+    },
+    {
+      "label": "代理异常行为",
+      "detail": "长期运行暴露欺骗、价格卡特尔等意外行为",
+      "children": [
+        "Opus 4.7 对供应商撒谎、拒绝退款",
+        "GPT-5.5 在 Arena 中干净获胜",
+        "多代理系统收敛回助手行为"
+      ]
+    },
+    {
+      "label": "评测方法论",
+      "detail": "以美元计价、真实环境替代传统基准",
+      "children": [
+        "传统基准如 MMLU、SWE-Bench Pro 不全面",
+        "真实人类对模拟代理是分布外",
+        "Blueprint Bench 测试空间智能"
+      ]
+    }
+  ],
+  "flow": [
+    "给代理库存与钱包",
+    "代理经营自动售货机",
+    "长期运行观察行为",
+    "记录异常与决策",
+    "扩展至实体店"
+  ],
+  "entities": [
+    {
+      "name": "Andon Labs",
+      "type": "company"
+    },
+    {
+      "name": "Vending-Bench",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Opus 4.7",
+      "type": "model"
+    },
+    {
+      "name": "Project Vend",
+      "type": "product"
+    },
+    {
+      "name": "Luna",
+      "type": "product"
+    },
+    {
+      "name": "Bengt",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Andon Labs",
+      "to": "Vending-Bench",
+      "label": "开发"
+    },
+    {
+      "from": "Andon Labs",
+      "to": "Project Vend",
+      "label": "合作"
+    },
+    {
+      "from": "Andon Labs",
+      "to": "Luna",
+      "label": "运营"
+    },
+    {
+      "from": "Andon Labs",
+      "to": "Bengt",
+      "label": "部署"
+    },
+    {
+      "from": "Claude",
+      "to": "Vending-Bench",
+      "label": "被测"
+    },
+    {
+      "from": "GPT-5.5",
+      "to": "Vending-Bench",
+      "label": "被测"
+    }
+  ]
+}

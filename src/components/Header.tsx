@@ -8,6 +8,7 @@ import { BroadcastButton } from "@/components/broadcast/BroadcastButton";
 
 const NAV = [
   { href: "/changelog", label: "Changelog" },
+  { href: "/graph", label: "图谱" },
   { href: "/harness", label: "Harness" },
   { href: "/chat", label: "Chat" },
   { href: "/tutorials", label: "教程" },

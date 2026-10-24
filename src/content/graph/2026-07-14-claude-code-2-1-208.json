@@ -1,0 +1,80 @@
+{
+  "center": "Claude Code v2.1.208 更新",
+  "branches": [
+    {
+      "label": "无障碍支持",
+      "detail": "新增屏幕阅读器模式，方便视障用户使用",
+      "children": [
+        "claude --ax-screen-reader",
+        "无障碍文本渲染"
+      ]
+    },
+    {
+      "label": "内存泄漏修复",
+      "detail": "修复多处内存泄漏，长会话内存占用显著降低",
+      "children": [
+        "MCP stdio stderr 累积",
+        "LSP 文档无限增长",
+        "异步钩子输出残留"
+      ]
+    },
+    {
+      "label": "上下文窗口修复",
+      "detail": "修复自动更新后上下文窗口重置为 200k 的问题",
+      "children": [
+        "避免误报 100% 上下文已用",
+        "恢复长会话更可靠"
+      ]
+    },
+    {
+      "label": "稳定性提升",
+      "detail": "大量 bug 修复与性能优化，整体稳定性增强",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "LSP",
+      "type": "concept"
+    },
+    {
+      "name": "屏幕阅读器模式",
+      "type": "concept"
+    },
+    {
+      "name": "上下文窗口",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "修复泄漏"
+    },
+    {
+      "from": "Claude Code",
+      "to": "LSP",
+      "label": "修复泄漏"
+    },
+    {
+      "from": "Claude Code",
+      "to": "屏幕阅读器模式",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "上下文窗口",
+      "label": "修复重置"
+    }
+  ]
+}

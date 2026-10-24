@@ -1,0 +1,52 @@
+{
+  "center": "Cline CLI v3.0.34 更新",
+  "branches": [
+    {
+      "label": "修复升级提示",
+      "detail": "修复 ClinePass 升级通知在引导完成后立即弹出的问题",
+      "children": [
+        "避免用户困惑"
+      ]
+    },
+    {
+      "label": "优化引导措辞",
+      "detail": "改进 ClinePass 引导步骤的文案，使流程更清晰",
+      "children": []
+    },
+    {
+      "label": "简化选择器",
+      "detail": "合并 Cline 提供商选择器中的订阅与使用/计费选项",
+      "children": [
+        "移除积分链接",
+        "简化界面"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "ClinePass",
+      "label": "包含"
+    },
+    {
+      "from": "Cline",
+      "to": "Cline CLI",
+      "label": "提供"
+    }
+  ]
+}

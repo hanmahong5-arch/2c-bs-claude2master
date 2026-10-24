@@ -1,0 +1,114 @@
+{
+  "center": "Anthropic 与 TCS 合作落地 Claude",
+  "branches": [
+    {
+      "label": "合作内容",
+      "detail": "TCS 向 5 万名员工提供 Claude，并为受监管行业客户构建 Claude 产品",
+      "children": [
+        "覆盖 56 个国家的 5 万名 TCS 员工",
+        "加入 Claude Partner Network",
+        "面向金融、医疗、公共部门等受监管行业"
+      ]
+    },
+    {
+      "label": "TCS 自用",
+      "detail": "TCS 作为「客户零号」在内部多部门使用 Claude 并积累经验",
+      "children": [
+        "用于工程、财务、法务、市场、销售团队",
+        "成立专门业务团队服务客户",
+        "打包行业方案：保险理赔、银行借贷咨询"
+      ]
+    },
+    {
+      "label": "落地案例",
+      "detail": "多个 TCS 业务线已开始使用 Claude 与 Claude Code",
+      "children": [
+        "Diligenta 服务超 2200 万保单持有人",
+        "银行团队用 Claude Code 提升研发运维效率",
+        "TCS iON 每年 7500 万场考试提供 Claude 培训…"
+      ]
+    },
+    {
+      "label": "高管表态",
+      "detail": "三方高管强调信任、监管合规与企业级 AI 转型",
+      "children": [
+        "TCS CEO K. Krithivasan：结合行业专长加速投产",
+        "Anthropic CEO Dario Amodei：印度为第二大…",
+        "Tata Sons 主席 N Chandrasekaran：加速企业…"
+      ]
+    }
+  ],
+  "flow": [
+    "TCS 内部 5 万员工先用 Claude",
+    "沉淀经验形成行业方案",
+    "组建咨询与工程专门团队",
+    "为客户设计并运行 Claude 系统",
+    "推广至受监管行业企业"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "TCS",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Claude Partner Network",
+      "type": "concept"
+    },
+    {
+      "name": "Dario Amodei",
+      "type": "person"
+    },
+    {
+      "name": "K. Krithivasan",
+      "type": "person"
+    },
+    {
+      "name": "Diligenta",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "TCS",
+      "label": "合作"
+    },
+    {
+      "from": "TCS",
+      "to": "Claude",
+      "label": "部署"
+    },
+    {
+      "from": "TCS",
+      "to": "Claude Partner Network",
+      "label": "加入"
+    },
+    {
+      "from": "TCS",
+      "to": "Claude Code",
+      "label": "使用"
+    },
+    {
+      "from": "Diligenta",
+      "to": "Claude",
+      "label": "使用"
+    },
+    {
+      "from": "Dario Amodei",
+      "to": "Anthropic",
+      "label": "任职于"
+    }
+  ]
+}

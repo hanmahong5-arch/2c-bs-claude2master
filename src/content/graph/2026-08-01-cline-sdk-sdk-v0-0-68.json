@@ -1,0 +1,106 @@
+{
+  "center": "cline SDK v0.0.68 修复",
+  "branches": [
+    {
+      "label": "错误透传修复",
+      "detail": "Provider 错误经 Vercel AI Gateway 转发时保留真实上游消息",
+      "children": [
+        "不再显示 Zod 原始 dump 或 [object Object]",
+        "便于 agent 诊断上下文超限等问题"
+      ]
+    },
+    {
+      "label": "模型名解析",
+      "detail": "fetchClineRecommendedModels 返回展示用模型名，通过目录解析别名",
+      "children": [
+        "统一超时预算",
+        "宿主无需自行映射 ID 到名称"
+      ]
+    },
+    {
+      "label": "Windows 命令执行",
+      "detail": "PowerShell 命令改用 UTF-8 stdin 传输，避免非 ASCII 命令损坏",
+      "children": [
+        "getShellInvocation() 取代 getShellArgs()",
+        "写入失败报错而非挂起"
+      ]
+    },
+    {
+      "label": "根目录会话修复",
+      "detail": "修复根目录会话无法运行命令的问题",
+      "children": [
+        "basename(\"/\") 产生空 workspace 提示导致校…"
+      ]
+    },
+    {
+      "label": "辅助函数导出",
+      "detail": "导出 finish-reason 和 auth-error 辅助函数",
+      "children": [
+        "便于描述 agent 错误"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "Vercel AI Gateway",
+      "type": "product"
+    },
+    {
+      "name": "fetchClineRecommendedModels",
+      "type": "technique"
+    },
+    {
+      "name": "getShellInvocation()",
+      "type": "technique"
+    },
+    {
+      "name": "getShellArgs()",
+      "type": "technique"
+    },
+    {
+      "name": "PowerShell",
+      "type": "product"
+    },
+    {
+      "name": "Windows",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline SDK",
+      "to": "Vercel AI Gateway",
+      "label": "经其转发"
+    },
+    {
+      "from": "cline SDK",
+      "to": "fetchClineRecommendedModels",
+      "label": "包含"
+    },
+    {
+      "from": "cline SDK",
+      "to": "getShellInvocation()",
+      "label": "引入"
+    },
+    {
+      "from": "getShellInvocation()",
+      "to": "getShellArgs()",
+      "label": "取代"
+    },
+    {
+      "from": "cline SDK",
+      "to": "PowerShell",
+      "label": "支持"
+    },
+    {
+      "from": "PowerShell",
+      "to": "Windows",
+      "label": "运行于"
+    }
+  ]
+}

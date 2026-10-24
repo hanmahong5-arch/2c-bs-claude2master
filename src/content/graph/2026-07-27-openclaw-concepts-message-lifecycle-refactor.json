@@ -1,0 +1,84 @@
+{
+  "center": "OpenClaw 消息生命周期重构",
+  "branches": [
+    {
+      "label": "核心不变式",
+      "detail": "发送意图先持久化再调平台，回执成功后提交，实现至少一次恢复",
+      "children": [
+        "持久化与平台调用分离",
+        "崩溃后可恢复发送状态"
+      ]
+    },
+    {
+      "label": "发送封装",
+      "detail": "sendDurableMessageBatch 封装渲染、发送、提交/失败步骤",
+      "children": [
+        "返回 sent/suppressed/partial_failed/…",
+        "上层按结果重试或降级"
+      ]
+    },
+    {
+      "label": "接收确认",
+      "detail": "ack()/nack(error) 与可配置确认策略控制事件确认时机",
+      "children": [
+        "策略如 after_durable_send",
+        "确认绑定下游发送，防回复丢失"
+      ]
+    }
+  ],
+  "flow": [
+    "决定消息应存在",
+    "持久化发送意图",
+    "调用平台发送",
+    "平台回执成功后提交",
+    "按结果重试或降级"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "sendDurableMessageBatch",
+      "type": "technique"
+    },
+    {
+      "name": "ack()",
+      "type": "technique"
+    },
+    {
+      "name": "nack(error)",
+      "type": "technique"
+    },
+    {
+      "name": "after_durable_send",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "sendDurableMessageBatch",
+      "label": "引入"
+    },
+    {
+      "from": "sendDurableMessageBatch",
+      "to": "agent harness",
+      "label": "服务于"
+    },
+    {
+      "from": "ack()",
+      "to": "after_durable_send",
+      "label": "配合"
+    },
+    {
+      "from": "nack(error)",
+      "to": "after_durable_send",
+      "label": "配合"
+    }
+  ]
+}

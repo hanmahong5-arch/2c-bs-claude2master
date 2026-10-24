@@ -1,0 +1,63 @@
+{
+  "center": "opencode v1.17.17 更新",
+  "branches": [
+    {
+      "label": "推理模型修复",
+      "detail": "改进 Meta 模型对推理变体及供应商请求的处理",
+      "children": [
+        "增强 agent 多模型推理支持"
+      ]
+    },
+    {
+      "label": "UI 细节修复",
+      "detail": "修复模型选择器标签字母下降部分被裁剪问题",
+      "children": [
+        "提升 UI 可读性"
+      ]
+    },
+    {
+      "label": "v2 会话体验",
+      "detail": "新增可关闭标签页介绍弹窗与 v2 自由模型选择器",
+      "children": [
+        "优化子代理任务行",
+        "还原停靠栏样式"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Meta",
+      "type": "company"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    },
+    {
+      "name": "v2 自由模型选择器",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Meta",
+      "label": "改进处理"
+    },
+    {
+      "from": "opencode",
+      "to": "agent",
+      "label": "增强支持"
+    },
+    {
+      "from": "opencode",
+      "to": "v2 自由模型选择器",
+      "label": "新增"
+    }
+  ]
+}

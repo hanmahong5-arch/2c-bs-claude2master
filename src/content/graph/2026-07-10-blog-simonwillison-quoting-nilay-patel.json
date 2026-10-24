@@ -1,0 +1,83 @@
+{
+  "center": "AR眼镜隐私代价之争",
+  "branches": [
+    {
+      "label": "技术无解",
+      "detail": "AR眼镜需在眼前装摄像头持续录像并实时叠加信息，别无他法",
+      "children": [
+        "眼镜腿内芯片算力与功耗都不够实时处理",
+        "数据必须上传云端处理"
+      ]
+    },
+    {
+      "label": "替代方案",
+      "detail": "唯一替代是做成 Vision Pro 大小，外挂电池包",
+      "children": [
+        "当前世界只有这两种选择"
+      ]
+    },
+    {
+      "label": "隐私代价",
+      "detail": "要做人人看好的下一代产品，就必须侵犯他人隐私",
+      "children": [
+        "代价在社会层面极高"
+      ]
+    },
+    {
+      "label": "或应叫停",
+      "detail": "Nilay Patel 认为存在强有力理由：不该做这个产品",
+      "children": [
+        "取舍过高，应停止"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nilay Patel",
+      "type": "person"
+    },
+    {
+      "name": "The Vergecast",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Vision Pro",
+      "type": "product"
+    },
+    {
+      "name": "AR眼镜",
+      "type": "product"
+    },
+    {
+      "name": "隐私",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nilay Patel",
+      "to": "The Vergecast",
+      "label": "出自"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Nilay Patel",
+      "label": "引用"
+    },
+    {
+      "from": "AR眼镜",
+      "to": "隐私",
+      "label": "侵犯"
+    },
+    {
+      "from": "AR眼镜",
+      "to": "Vision Pro",
+      "label": "替代为"
+    }
+  ]
+}

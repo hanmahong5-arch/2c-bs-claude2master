@@ -1,0 +1,83 @@
+{
+  "center": "cline cli v3.0.45 更新",
+  "branches": [
+    {
+      "label": "安装体积减半",
+      "detail": "安装体积从约 640MB 降至约 285MB",
+      "children": [
+        "Claude Code 与 Codex 提供者改为按需加载",
+        "减少 agent 环境初始化资源占用"
+      ]
+    },
+    {
+      "label": "Kimi K3 加入",
+      "detail": "Kimi K3 作为 ClinePass 模型可用",
+      "children": [
+        "扩展 agent 可调用的模型选项",
+        "增加灵活性"
+      ]
+    },
+    {
+      "label": "团队运行更可靠",
+      "detail": "spawn 工具不再暴露给队友，出错队友运行报告为失败",
+      "children": [
+        "提升 agent 协作安全性",
+        "提升错误可见性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "spawn",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Kimi K3",
+      "to": "ClinePass",
+      "label": "作为模型可用"
+    },
+    {
+      "from": "cline cli",
+      "to": "Kimi K3",
+      "label": "支持"
+    },
+    {
+      "from": "cline cli",
+      "to": "Claude Code",
+      "label": "按需加载"
+    },
+    {
+      "from": "cline cli",
+      "to": "Codex",
+      "label": "按需加载"
+    },
+    {
+      "from": "cline cli",
+      "to": "spawn",
+      "label": "限制暴露"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "center": "Poolside 被 NVIDIA 反向收购",
+  "branches": [
+    {
+      "label": "交易结构",
+      "detail": "NVIDIA 以 60 亿美元非独家授权 Poolside 模型工厂，另投 10 亿美元，估值 120 亿",
+      "children": [
+        "109 名员工转投 NVIDIA",
+        "创始人留任 Poolside，获 10 亿美元",
+        "创始人称非收购也非 acquihire"
+      ]
+    },
+    {
+      "label": "算力困境",
+      "detail": "Poolside 因未及时融资 20 亿美元，错失 4 万块 GB300 集群",
+      "children": [
+        "去年底 6 周窗口期融资失败",
+        "1-2 万 GB300 可造前沿模型",
+        "明年前沿模型需更大集群"
+      ]
+    },
+    {
+      "label": "基础设施转向",
+      "detail": "Poolside 分拆 PIC 建设 1.2GW 德州数据中心，或转型 neocloud",
+      "children": [
+        "PIC 2026 年 1 月分拆",
+        "新 CEO 上任 2 个月",
+        "目标扩展至 7GW neocloud"
+      ]
+    },
+    {
+      "label": "AI 价值判断",
+      "detail": "创始人认为开源模型将商品化人类级智能，超级智能不会",
+      "children": [
+        "智能受限问题 vs 实验受限问题",
+        "AI 终极价值在科学发现",
+        "需真实世界实验反馈循环"
+      ]
+    },
+    {
+      "label": "行业动态",
+      "detail": "OpenAI 和 Anthropic 扩展 Agent 产品，AT&T 转向开源模型",
+      "children": [
+        "ChatGPT 推出 Apple Messages 插件",
+        "Claude 平台 GA 计算机使用和 Skills API",
+        "AT&T 40% AI 用量路由至开源模型"
+      ]
+    }
+  ],
+  "flow": [
+    "NVIDIA 授权 Poolside 模型工厂",
+    "109 名员工转投 NVIDIA",
+    "创始人留任 Poolside",
+    "PIC 建设 1.2GW 数据中心",
+    "目标扩展至 7GW neocloud"
+  ],
+  "entities": [
+    {
+      "name": "Poolside",
+      "type": "company"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "PIC",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "AT&T",
+      "type": "company"
+    },
+    {
+      "name": "GB300",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "Poolside",
+      "label": "授权并投资"
+    },
+    {
+      "from": "Poolside",
+      "to": "PIC",
+      "label": "分拆"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "发布"
+    },
+    {
+      "from": "AT&T",
+      "to": "OpenAI",
+      "label": "采用开源模型"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "center": "DeepMind与新加坡AI合作",
+  "branches": [
+    {
+      "label": "合作主体",
+      "detail": "谷歌DeepMind与新加坡政府建立国家级AI合作伙伴关系",
+      "children": [
+        "聚焦前沿AI应用",
+        "属DeepMind国家合作系列"
+      ]
+    },
+    {
+      "label": "三大领域",
+      "detail": "合作重点应对健康、教育、可持续发展等复杂挑战",
+      "children": [
+        "健康",
+        "教育",
+        "可持续发展"
+      ]
+    },
+    {
+      "label": "同类合作",
+      "detail": "DeepMind已与多国政府开展国家级AI合作",
+      "children": [
+        "英国政府与AI安全研究所",
+        "韩国",
+        "印度"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "新加坡",
+      "type": "concept"
+    },
+    {
+      "name": "英国政府",
+      "type": "concept"
+    },
+    {
+      "name": "UK AI Security Institute",
+      "type": "concept"
+    },
+    {
+      "name": "韩国",
+      "type": "concept"
+    },
+    {
+      "name": "U.S. Department of Energy",
+      "type": "concept"
+    },
+    {
+      "name": "Genesis",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "新加坡",
+      "label": "合作"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "英国政府",
+      "label": "合作"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "UK AI Security Institute",
+      "label": "深化合作"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "韩国",
+      "label": "合作"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "U.S. Department of Energy",
+      "label": "支持"
+    },
+    {
+      "from": "U.S. Department of Energy",
+      "to": "Genesis",
+      "label": "发起"
+    }
+  ]
+}

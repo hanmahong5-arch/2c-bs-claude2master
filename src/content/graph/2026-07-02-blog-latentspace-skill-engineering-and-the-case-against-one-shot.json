@@ -1,0 +1,110 @@
+{
+  "center": "技能工程与AI代理设计",
+  "branches": [
+    {
+      "label": "技能工程兴起",
+      "detail": "Paul Bakaus 提出技能工程，为代理提供领域词汇与人类引导",
+      "children": [
+        "Impeccable 源于 Anthropic 前端设计技能",
+        "多数模型缺乏创造力，输出趋同"
+      ]
+    },
+    {
+      "label": "设计词汇赋能",
+      "detail": "将设计师术语转化为代理可操作指令，如 bolder、quieter",
+      "children": [
+        "无辅助模型会加渐变霓虹，Impeccable 用层级与…",
+        "形容词需被赋予专业含义"
+      ]
+    },
+    {
+      "label": "人机协作模式",
+      "detail": "AI 快速完成前 80%，人类负责后 20% 的品味与判断",
+      "children": [
+        "拒绝自动模式，强调人类参与",
+        "用户要求 auto 模式被拒绝"
+      ]
+    },
+    {
+      "label": "角色融合上移",
+      "detail": "设计师与工程师边界模糊，产品经理与设计师角色趋同",
+      "children": [
+        "设计师占 Impeccable 受众至少一半",
+        "设计师需上移一层思考 what"
+      ]
+    }
+  ],
+  "flow": [
+    "定义领域词汇",
+    "代理理解指令",
+    "生成初步方案",
+    "人类调整细节",
+    "迭代优化结果"
+  ],
+  "entities": [
+    {
+      "name": "Paul Bakaus",
+      "type": "person"
+    },
+    {
+      "name": "Impeccable",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Copilot",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "技能工程",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Paul Bakaus",
+      "to": "Impeccable",
+      "label": "创建"
+    },
+    {
+      "from": "Impeccable",
+      "to": "Anthropic",
+      "label": "扩展自"
+    },
+    {
+      "from": "Impeccable",
+      "to": "Claude Code",
+      "label": "兼容"
+    },
+    {
+      "from": "Impeccable",
+      "to": "Cursor",
+      "label": "兼容"
+    },
+    {
+      "from": "Impeccable",
+      "to": "GitHub Copilot",
+      "label": "兼容"
+    },
+    {
+      "from": "Impeccable",
+      "to": "Codex",
+      "label": "兼容"
+    }
+  ]
+}

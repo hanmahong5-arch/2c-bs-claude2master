@@ -1,0 +1,92 @@
+{
+  "center": "NVIDIA Cosmos 3 Edge 边缘模型",
+  "branches": [
+    {
+      "label": "模型发布",
+      "detail": "NVIDIA 推出 Cosmos 3 Edge，专为边缘设备优化",
+      "children": [
+        "面向物理 AI 的世界模型",
+        "边缘端部署优化"
+      ]
+    },
+    {
+      "label": "相关模型",
+      "detail": "文章提及多个不同规格的生成模型",
+      "children": [
+        "4B 模型，7 天前更新",
+        "Image-to-Video 64B",
+        "Text-to-Image 64B"
+      ]
+    },
+    {
+      "label": "生态关联",
+      "detail": "与 NVIDIA 其他语音与多模态模型同属一个系列",
+      "children": [
+        "Nemotron 3 Diarization",
+        "Magpie TTS"
+      ]
+    },
+    {
+      "label": "社区热度",
+      "detail": "文章获得一定社区关注与讨论",
+      "children": [
+        "Upvote 45",
+        "Collections: Omnimodal World Models"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Cosmos 3 Edge",
+      "type": "model"
+    },
+    {
+      "name": "Nemotron 3 Diarization",
+      "type": "model"
+    },
+    {
+      "name": "Magpie TTS",
+      "type": "model"
+    },
+    {
+      "name": "物理 AI",
+      "type": "concept"
+    },
+    {
+      "name": "边缘计算",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "Cosmos 3 Edge",
+      "label": "发布"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron 3 Diarization",
+      "label": "发布"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Magpie TTS",
+      "label": "发布"
+    },
+    {
+      "from": "Cosmos 3 Edge",
+      "to": "边缘计算",
+      "label": "面向"
+    },
+    {
+      "from": "Cosmos 3 Edge",
+      "to": "物理 AI",
+      "label": "服务于"
+    }
+  ]
+}

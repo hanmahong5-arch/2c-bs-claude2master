@@ -1,0 +1,71 @@
+{
+  "center": "OpenAI 编码智能体加速研究",
+  "branches": [
+    {
+      "label": "内部数据",
+      "detail": "OpenAI 内部数据显示编码智能体已被研究人员广泛采用",
+      "children": [
+        "显著提升实验迭代速度"
+      ]
+    },
+    {
+      "label": "任务升级",
+      "detail": "智能体可处理更复杂任务，研究人员转向更高层次科学问题",
+      "children": [
+        "研究人员专注高层次科学问题"
+      ]
+    },
+    {
+      "label": "未来趋势",
+      "detail": "AI 开发将更依赖人机协作，对工具链自动化智能化要求更高",
+      "children": [
+        "工具链需更自动化、智能化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "编码智能体",
+      "type": "concept"
+    },
+    {
+      "name": "人机协作",
+      "type": "concept"
+    },
+    {
+      "name": "AI 研究",
+      "type": "concept"
+    },
+    {
+      "name": "工具链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "编码智能体",
+      "label": "内部采用"
+    },
+    {
+      "from": "编码智能体",
+      "to": "AI 研究",
+      "label": "加速"
+    },
+    {
+      "from": "编码智能体",
+      "to": "人机协作",
+      "label": "推动"
+    },
+    {
+      "from": "人机协作",
+      "to": "工具链",
+      "label": "提出要求"
+    }
+  ]
+}

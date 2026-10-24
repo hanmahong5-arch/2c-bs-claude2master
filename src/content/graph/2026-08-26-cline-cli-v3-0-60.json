@@ -1,0 +1,78 @@
+{
+  "center": "Cline CLI v3.0.60 修复与更新",
+  "branches": [
+    {
+      "label": "hub 内存暴涨",
+      "detail": "长会话中状态更新向所有客户端广播完整对话副本，进程可达数十 GB",
+      "children": [
+        "升级后需重启命令生效",
+        "agent harness 需管理长会话广播开销"
+      ]
+    },
+    {
+      "label": "文件与搜索修复",
+      "detail": "新文件使用平台原生行尾，代码搜索不再因超长单行崩溃",
+      "children": [
+        "提升跨平台文件处理",
+        "提升搜索稳定性"
+      ]
+    },
+    {
+      "label": "安全与成本调整",
+      "detail": "不再为 Claude Code 显示成本估算，移除 git 远程 URL 中的凭据",
+      "children": [
+        "Claude Code 用量通常由订阅覆盖",
+        "避免凭据泄露给模型"
+      ]
+    },
+    {
+      "label": "MCP 与模型目录",
+      "detail": "修复 MCP 安装参数中 -- 分隔符解析错误，更新模型目录",
+      "children": [
+        "新增 7 家提供商",
+        "ClinePass 默认改为 GLM 5.3",
+        "未固定模型用户获得新默认值"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "GLM 5.3",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "MCP",
+      "label": "修复解析"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Claude Code",
+      "label": "隐藏成本"
+    },
+    {
+      "from": "ClinePass",
+      "to": "GLM 5.3",
+      "label": "默认改为"
+    }
+  ]
+}

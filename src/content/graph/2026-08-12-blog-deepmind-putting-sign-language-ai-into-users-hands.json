@@ -1,0 +1,116 @@
+{
+  "center": "Google DeepMind 手语转文本模型…",
+  "branches": [
+    {
+      "label": "产品落地",
+      "detail": "SL2T 首次进入消费产品，支持 Pixel 11 上的 Gboard 与 Live Transcribe",
+      "children": [
+        "首发 ASL 转英文，更多设备与语言将跟进",
+        "可手语搜索、写消息、调用 Gemini 执行任务"
+      ]
+    },
+    {
+      "label": "技术突破",
+      "detail": "直接由姿态坐标翻译为文本，跳过 gloss 中间标注",
+      "children": [
+        "10 万小时以上数据，覆盖 50 多种手语",
+        "FLEURS-ASL 零样本 70 BLEURT，创最高分"
+      ]
+    },
+    {
+      "label": "隐私设计",
+      "detail": "端侧 MediaPipe Holistic 提取姿态点，仅传坐标不传视频",
+      "children": [
+        "原始视频立即丢弃，保护用户隐私"
+      ]
+    },
+    {
+      "label": "核心挑战",
+      "detail": "手语是独立自然语言，需真机器翻译而非逐词映射",
+      "children": [
+        "需理解手、臂、躯干、头、脸的同步动作",
+        "早期手语手套方案因此受限"
+      ]
+    },
+    {
+      "label": "社区共建",
+      "detail": "与聋人社区共同构建，而非仅为其构建",
+      "children": [
+        "聋人 Googler Sam Sepah 参与概念设计",
+        "成立 AISLAC 顾问委员会指导部署"
+      ]
+    }
+  ],
+  "flow": [
+    "端侧 MediaPipe 提取姿态点",
+    "仅传坐标至服务器",
+    "SL2T 直接翻译为文本",
+    "流式输出到 Gboard 等"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "SL2T",
+      "type": "model"
+    },
+    {
+      "name": "Gboard",
+      "type": "product"
+    },
+    {
+      "name": "Live Transcribe",
+      "type": "product"
+    },
+    {
+      "name": "MediaPipe Holistic",
+      "type": "technique"
+    },
+    {
+      "name": "FLEURS-ASL",
+      "type": "concept"
+    },
+    {
+      "name": "Sam Sepah",
+      "type": "person"
+    },
+    {
+      "name": "AISLAC",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "SL2T",
+      "label": "推出"
+    },
+    {
+      "from": "SL2T",
+      "to": "Gboard",
+      "label": "驱动"
+    },
+    {
+      "from": "SL2T",
+      "to": "Live Transcribe",
+      "label": "驱动"
+    },
+    {
+      "from": "SL2T",
+      "to": "MediaPipe Holistic",
+      "label": "使用"
+    },
+    {
+      "from": "SL2T",
+      "to": "FLEURS-ASL",
+      "label": "评测于"
+    },
+    {
+      "from": "Sam Sepah",
+      "to": "Google DeepMind",
+      "label": "任职于"
+    }
+  ]
+}

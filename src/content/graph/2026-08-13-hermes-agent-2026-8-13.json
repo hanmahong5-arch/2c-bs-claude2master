@@ -1,0 +1,76 @@
+{
+  "center": "Hermes Agent 稳定补丁版发布",
+  "branches": [
+    {
+      "label": "版本定位",
+      "detail": "补丁发布，为下游部署提供可靠稳定基线",
+      "children": [
+        "完整说明随 v0.21.0 提供",
+        "本版无新功能细节"
+      ]
+    },
+    {
+      "label": "合并规模",
+      "detail": "自 v0.20.0 以来合并约 656 个 PR",
+      "children": [
+        "涉及 2172 个文件",
+        "修复约 481 个 issue"
+      ]
+    },
+    {
+      "label": "修复范围",
+      "detail": "汇总桌面应用、网关平台、安装器等多处修复",
+      "children": [
+        "工具系统",
+        "提供商目录"
+      ]
+    },
+    {
+      "label": "使用建议",
+      "detail": "agent harness 设计应关注稳定性而非新特性",
+      "children": [
+        "适合作为下游依赖基线"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "v2026.8.13",
+      "type": "concept"
+    },
+    {
+      "name": "v0.20.0",
+      "type": "concept"
+    },
+    {
+      "name": "v0.21.0",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "v2026.8.13",
+      "label": "发布"
+    },
+    {
+      "from": "v2026.8.13",
+      "to": "v0.20.0",
+      "label": "承接"
+    },
+    {
+      "from": "v0.21.0",
+      "to": "Hermes Agent",
+      "label": "后续发布"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "center": "zeroclaw v0.8.3 更新",
+  "branches": [
+    {
+      "label": "SOP引擎",
+      "detail": "新增标准操作程序引擎，支持定时、文件、日历触发和审批流程",
+      "children": [
+        "agent 可执行结构化多步任务",
+        "触发方式：定时、文件、日历",
+        "含审批流程"
+      ]
+    },
+    {
+      "label": "Wasm插件宿主",
+      "detail": "基于 wasmtime 组件模型支持工具、通道和内存插件",
+      "children": [
+        "带执行限制和签名策略",
+        "扩展 agent 能力边界"
+      ]
+    },
+    {
+      "label": "Git Forge通道",
+      "detail": "集成 GitHub 和 Gitea/Forgejo，提供统一工具和 SOP 入口",
+      "children": [
+        "agent 可直接与代码仓库交互"
+      ]
+    },
+    {
+      "label": "安全与成本",
+      "detail": "修复多个 SSRF、令牌泄露漏洞；新增成本账本和离线定价目录",
+      "children": [
+        "任务归属成本账本",
+        "离线定价目录",
+        "便于审计和预算控制"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "zeroclaw",
+      "type": "product"
+    },
+    {
+      "name": "SOP引擎",
+      "type": "technique"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "wasmtime",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "product"
+    },
+    {
+      "name": "Gitea",
+      "type": "product"
+    },
+    {
+      "name": "Forgejo",
+      "type": "product"
+    },
+    {
+      "name": "SSRF",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "zeroclaw",
+      "to": "SOP引擎",
+      "label": "新增"
+    },
+    {
+      "from": "zeroclaw",
+      "to": "WebAssembly",
+      "label": "支持"
+    },
+    {
+      "from": "WebAssembly",
+      "to": "wasmtime",
+      "label": "基于"
+    },
+    {
+      "from": "zeroclaw",
+      "to": "GitHub",
+      "label": "集成"
+    },
+    {
+      "from": "zeroclaw",
+      "to": "Gitea",
+      "label": "集成"
+    },
+    {
+      "from": "zeroclaw",
+      "to": "SSRF",
+      "label": "修复"
+    }
+  ]
+}

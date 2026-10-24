@@ -1,0 +1,81 @@
+{
+  "center": "Fable 高成本改变工作分配",
+  "branches": [
+    {
+      "label": "Fable 之前",
+      "detail": "新模型同价或更便宜，优化 harness 与上下文策略显得没必要",
+      "children": [
+        "新模型会覆盖大部分问题",
+        "花时间调优不划算"
+      ]
+    },
+    {
+      "label": "Fable 之后",
+      "detail": "Fable 表现惊艳但成本极高，Opus 等已足够应付多数代码",
+      "children": [
+        "Opus 够用",
+        "5.6、K3、GLM 也够用"
+      ]
+    },
+    {
+      "label": "策略转变",
+      "detail": "开始思考哪些工作该分配给哪个模型",
+      "children": [
+        "按成本与能力分配任务"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Drew Breunig",
+      "type": "person"
+    },
+    {
+      "name": "Fable",
+      "type": "model"
+    },
+    {
+      "name": "Opus",
+      "type": "model"
+    },
+    {
+      "name": "GLM",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "coding harness",
+      "type": "concept"
+    },
+    {
+      "name": "上下文策略",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Drew Breunig",
+      "to": "Fable",
+      "label": "评论"
+    },
+    {
+      "from": "Fable",
+      "to": "Opus",
+      "label": "成本高于"
+    },
+    {
+      "from": "Opus",
+      "to": "coding harness",
+      "label": "用于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Drew Breunig",
+      "label": "引用"
+    }
+  ]
+}

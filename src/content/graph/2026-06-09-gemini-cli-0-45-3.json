@@ -1,0 +1,86 @@
+{
+  "center": "gemini-cli v0.45.3 紧急修复",
+  "branches": [
+    {
+      "label": "紧急修复发布",
+      "detail": "v0.45.3 是针对 v0.45.2 关键问题的紧急修复版本",
+      "children": [
+        "修复 v0.45.2 中的关键问题"
+      ]
+    },
+    {
+      "label": "补丁拣选",
+      "detail": "将提交 f08b4af 从修复分支拣选到主版本",
+      "children": [
+        "来源分支 release/v0.45.2-pr-27749",
+        "提交 f08b4af"
+      ]
+    },
+    {
+      "label": "新版本创建",
+      "detail": "基于修复后的代码创建 v0.45.3",
+      "children": []
+    },
+    {
+      "label": "发布流程含义",
+      "detail": "体现 agent harness 发布流程的快速响应与修复能力",
+      "children": [
+        "通过分支管理与版本控制确保稳定性"
+      ]
+    }
+  ],
+  "flow": [
+    "发现 v0.45.2 关键问题",
+    "从修复分支拣选提交 f08b4af",
+    "合入主版本",
+    "创建 v0.45.3 发布"
+  ],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "v0.45.2",
+      "type": "product"
+    },
+    {
+      "name": "v0.45.3",
+      "type": "product"
+    },
+    {
+      "name": "f08b4af",
+      "type": "concept"
+    },
+    {
+      "name": "release/v0.45.2-pr-27749",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "v0.45.3",
+      "to": "v0.45.2",
+      "label": "修复"
+    },
+    {
+      "from": "f08b4af",
+      "to": "release/v0.45.2-pr-27749",
+      "label": "拣选自"
+    },
+    {
+      "from": "v0.45.3",
+      "to": "gemini-cli",
+      "label": "属于"
+    },
+    {
+      "from": "v0.45.2",
+      "to": "gemini-cli",
+      "label": "属于"
+    }
+  ]
+}

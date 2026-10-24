@@ -1,0 +1,115 @@
+{
+  "center": "Coding Agent 六大核心组件",
+  "branches": [
+    {
+      "label": "模型与Agent分层",
+      "detail": "LLM 是引擎，推理模型是强化引擎，Agent 是围绕模型的循环",
+      "children": [
+        "Agent harness 管理上下文、工具、状态与控制流",
+        "Coding harness 是面向软件工程的专用 harness",
+        "Claude Code、Codex 属于 coding harness"
+      ]
+    },
+    {
+      "label": "Harness 决定体验",
+      "detail": "同一模型在不同 harness 中表现差异明显，harness 常是区分因素",
+      "children": [
+        "GPT-5.4、Opus 4.6、GLM-5 原生能力相近",
+        "OpenAI 曾维护 GPT-5.3 与 GPT-5.3-Codex 变体",
+        "harness 专用后训练通常有益"
+      ]
+    },
+    {
+      "label": "六大组件",
+      "detail": "Mini Coding Agent 用纯 Python 实现，代码注释标注六个组件",
+      "children": [
+        "实时仓库上下文 WorkspaceContext",
+        "提示形状与缓存复用 build_prefix",
+        "结构化工具、校验与权限 build_tools"
+      ]
+    },
+    {
+      "label": "Agent 循环",
+      "detail": "编码 harness 由模型层、Agent 循环与运行时支撑三层组成",
+      "children": [
+        "循环步骤：observe、inspect、choose、act",
+        "运行时提供管道式支撑",
+        "编码难点在仓库导航、搜索、diff、测试与错误检查"
+      ]
+    }
+  ],
+  "flow": [
+    "观察环境信息",
+    "分析信息",
+    "选择下一步",
+    "执行动作",
+    "更新状态",
+    "判断是否停止"
+  ],
+  "entities": [
+    {
+      "name": "Sebastian Raschka",
+      "type": "person"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex CLI",
+      "type": "product"
+    },
+    {
+      "name": "Mini Coding Agent",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.4",
+      "type": "model"
+    },
+    {
+      "name": "Opus 4.6",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5",
+      "type": "model"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sebastian Raschka",
+      "to": "Mini Coding Agent",
+      "label": "实现"
+    },
+    {
+      "from": "Claude Code",
+      "to": "agent harness",
+      "label": "属于"
+    },
+    {
+      "from": "Codex CLI",
+      "to": "agent harness",
+      "label": "属于"
+    },
+    {
+      "from": "Mini Coding Agent",
+      "to": "agent harness",
+      "label": "示例"
+    },
+    {
+      "from": "GPT-5.4",
+      "to": "agent harness",
+      "label": "可被包装"
+    },
+    {
+      "from": "GLM-5",
+      "to": "agent harness",
+      "label": "可被包装"
+    }
+  ]
+}

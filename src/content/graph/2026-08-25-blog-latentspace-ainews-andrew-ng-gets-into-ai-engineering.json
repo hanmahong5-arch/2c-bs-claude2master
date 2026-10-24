@@ -1,0 +1,104 @@
+{
+  "center": "Andrew Ng 重推 AI 工程",
+  "branches": [
+    {
+      "label": "四大核心技能",
+      "detail": "Andrew Ng 基于万份招聘与访谈总结 AI 工程师四项关键能力",
+      "children": [
+        "构建部署 AI 应用：LLM、RAG、智能体工作流",
+        "软件工程基础：理解权衡，避免盲目 vibe coding",
+        "使用编码智能体：编排多智能体、避免误操作"
+      ]
+    },
+    {
+      "label": "评估与错误分析",
+      "detail": "构建部署的核心是纪律化的评估与错误分析循环",
+      "children": [
+        "用统计技术测量、引导、治理 AI 系统",
+        "从提示工程到微调，再到自建智能体实验室"
+      ]
+    },
+    {
+      "label": "智能体基础设施",
+      "detail": "智能体质量越来越取决于 harness 而非基础模型",
+      "children": [
+        "NVIDIA 提出 Skill Lift 替代结构检查",
+        "Headlong 微 harness 支持持续思考，48 分钟…",
+        "exo 支持递归自我改进与快照回滚"
+      ]
+    },
+    {
+      "label": "MCP 企业化",
+      "detail": "MCP 正从玩具演示走向可审计的企业部署",
+      "children": [
+        "Anthropic 推出企业托管认证，集中授权",
+        "路线图：长时任务、流式推送、渐进发现"
+      ]
+    },
+    {
+      "label": "模型竞争动态",
+      "detail": "Qwen3.8-27B 以小尺寸进入 Code Arena 前十",
+      "children": [
+        "WebDev 榜第 9，1595 分，仅落后 Max 六名",
+        "衍生模型 Carnice-V3-27B 适配消费级 GPU"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Andrew Ng",
+      "type": "person"
+    },
+    {
+      "name": "DeepLearning.ai",
+      "type": "company"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Headlong",
+      "type": "product"
+    },
+    {
+      "name": "exo",
+      "type": "product"
+    },
+    {
+      "name": "Qwen3.8-27B",
+      "type": "model"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Andrew Ng",
+      "to": "DeepLearning.ai",
+      "label": "重推"
+    },
+    {
+      "from": "Anthropic",
+      "to": "MCP",
+      "label": "推出企业认证"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Headlong",
+      "label": "无关"
+    },
+    {
+      "from": "Qwen3.8-27B",
+      "to": "DeepLearning.ai",
+      "label": "无关"
+    }
+  ]
+}

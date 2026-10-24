@@ -1,0 +1,80 @@
+{
+  "center": "Claude Code v2.1.152 更新",
+  "branches": [
+    {
+      "label": "审查自动修复",
+      "detail": "/code-review --fix 把审查建议直接应用到工作树",
+      "children": [
+        "/simplify 命令现在调用此功能",
+        "覆盖代码复用、简化、效率建议",
+        "Agent 更主动执行代码优化"
+      ]
+    },
+    {
+      "label": "技能工具控制",
+      "detail": "技能可设置 disallowed-tools 前端元数据",
+      "children": [
+        "技能激活时移除特定工具",
+        "工具链权限控制更精细"
+      ]
+    },
+    {
+      "label": "会话钩子增强",
+      "detail": "新增 SessionStart 钩子能力",
+      "children": [
+        "可设置会话标题",
+        "可触发技能重载",
+        "技能安装与定制同会话即时生效"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "/code-review --fix",
+      "type": "technique"
+    },
+    {
+      "name": "/simplify",
+      "type": "technique"
+    },
+    {
+      "name": "disallowed-tools",
+      "type": "concept"
+    },
+    {
+      "name": "SessionStart",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "发布"
+    },
+    {
+      "from": "/simplify",
+      "to": "/code-review --fix",
+      "label": "调用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "SessionStart",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "disallowed-tools",
+      "label": "支持"
+    }
+  ]
+}

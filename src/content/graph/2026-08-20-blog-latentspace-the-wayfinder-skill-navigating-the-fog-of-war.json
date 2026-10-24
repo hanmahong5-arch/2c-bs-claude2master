@@ -1,0 +1,123 @@
+{
+  "center": "/wayfinder：AI 规划迷雾导航",
+  "branches": [
+    {
+      "label": "解决什么问题",
+      "detail": "项目终点不清晰时，帮人和代理在规划阶段导航「战争迷雾」",
+      "children": [
+        "AFK 代理需提前排期大量工作",
+        "规划阶段受上下文窗口与 token 限制",
+        "作者用它规划课程、重构个人网站"
+      ]
+    },
+    {
+      "label": "核心设计",
+      "detail": "用 orchestrator 层管理多个规划会话，把结果汇总回中心文档",
+      "children": [
+        "父 grilling 会话管理子会话",
+        "子会话需模糊全局概览 + 自身具体任务",
+        "两个文档：map（已做决策）与 ticket（具体任务）"
+      ]
+    },
+    {
+      "label": "关键术语",
+      "detail": "用精确的 leading words 让代理理解每个部分，避免行为混乱",
+      "children": [
+        "map、ticket、session 三词严格区分",
+        "fog of war 与 map 搭配引导代理",
+        "作者在整理 AI coding 术语词典"
+      ]
+    },
+    {
+      "label": "票据类型",
+      "detail": "wayfinder 内分多种 ticket，覆盖代理与人类的不同工作",
+      "children": [
+        "grilling：提问对齐会话",
+        "prototype：做原型；research：做研究",
+        "task：人类才能做的事，范围最广"
+      ]
+    },
+    {
+      "label": "与 grill-me 区别",
+      "detail": "能一次会话规划完的小功能用 grill-me，看不清前路用 wayfinder",
+      "children": [
+        "grill-me 用于出发前对齐",
+        "wayfinder 用于前方有迷雾时"
+      ]
+    }
+  ],
+  "flow": [
+    "提出模糊项目目标",
+    "orchestrator 拆分多线程",
+    "子会话做原型/研究",
+    "结果汇总回 map",
+    "生成详细 spec 与 ticket",
+    "交给 AFK 代理执行"
+  ],
+  "entities": [
+    {
+      "name": "Matt Pocock",
+      "type": "person"
+    },
+    {
+      "name": "/wayfinder",
+      "type": "product"
+    },
+    {
+      "name": "grill-me",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "fog of war",
+      "type": "concept"
+    },
+    {
+      "name": "AFK agents",
+      "type": "concept"
+    },
+    {
+      "name": "context management",
+      "type": "concept"
+    },
+    {
+      "name": "AI Skills for Real Engineers",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Matt Pocock",
+      "to": "/wayfinder",
+      "label": "发布"
+    },
+    {
+      "from": "Matt Pocock",
+      "to": "AI Skills for Real Engineers",
+      "label": "创建"
+    },
+    {
+      "from": "/wayfinder",
+      "to": "fog of war",
+      "label": "导航"
+    },
+    {
+      "from": "/wayfinder",
+      "to": "grill-me",
+      "label": "区别于"
+    },
+    {
+      "from": "/wayfinder",
+      "to": "AFK agents",
+      "label": "服务"
+    },
+    {
+      "from": "/wayfinder",
+      "to": "context management",
+      "label": "管理"
+    }
+  ]
+}

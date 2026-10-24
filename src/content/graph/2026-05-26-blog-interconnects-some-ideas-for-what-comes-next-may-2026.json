@@ -1,0 +1,112 @@
+{
+  "center": "Nathan Lambert 预测 2026 AI 格局",
+  "branches": [
+    {
+      "label": "开源缺智能体时刻",
+      "detail": "开源模型尚未出现 Opus 4.5 在 Claude Code 那样的智能体爆发时刻",
+      "children": [
+        "已过 5-6 个月仍无对等开源模型",
+        "预计还需 12+ 个月",
+        "低价 $5/月 或引发使用爆炸"
+      ]
+    },
+    {
+      "label": "Gemini 无对标产品",
+      "detail": "Google 尚无 Claude Code 与 Codex 的明确竞品，开源实验室更难",
+      "children": [
+        "Gemini 3.5 Flash 非替代品",
+        "开源模型转向企业自动化与低成本场景",
+        "Claude Code 与 Codex 是 AI 收入主路径"
+      ]
+    },
+    {
+      "label": "Mythos 开源无望",
+      "detail": "今年不会有开源权重的 Mythos，中国实验室受算力限制",
+      "children": [
+        "Kimi、Z.ai、DeepSeek、Qwen 资源受限",
+        "Alibaba、Bytedance 安全立场保守",
+        "Epoch AI：Google 25%、Meta 11%、OpenAI…"
+      ]
+    },
+    {
+      "label": "美国开源回暖",
+      "detail": "Nvidia Nemotron、Google Gemma、Arcee AI 稳定美国开源生态",
+      "children": [
+        "Gemma 4 采用 Apache 2.0 许可",
+        "Gemma 4 追平或超越同尺寸 Qwen 3.5/3.6",
+        "Reflection、Thinking Machines 或加入"
+      ]
+    },
+    {
+      "label": "权力结构介入",
+      "detail": "教皇发布 4 万字 AI 文件，中国限制 AI 研究员流动，美国将 Anthropic 列为供应链风险",
+      "children": [
+        "OpenAI 与 Anthropic 竞争激烈",
+        "GPT 5.5 与 Codex App 受青睐",
+        "知识工作两极分化加剧"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Gemini 3.5 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Mythos",
+      "type": "model"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "Qwen 3.5/3.6",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "Claude Code",
+      "label": "使用"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "Gemini 3.5 Flash",
+      "to": "Claude Code",
+      "label": "非替代"
+    },
+    {
+      "from": "Gemma 4",
+      "to": "Qwen 3.5/3.6",
+      "label": "超越"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "开发"
+    }
+  ]
+}

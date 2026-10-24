@@ -1,0 +1,50 @@
+{
+  "center": "opencode v1.18.5 修复更新",
+  "branches": [
+    {
+      "label": "多模型推理修复",
+      "detail": "修复多模型推理中断问题，提升 agent 稳定性",
+      "children": [
+        "Claude 自适应思考覆盖更多响应格式",
+        "避免 agent 推理中断",
+        "修复 OpenAI 响应阶段处理可能破坏对话"
+      ]
+    },
+    {
+      "label": "桌面端双服务器兼容",
+      "detail": "桌面端兼容新旧服务器，支持多种数据传输",
+      "children": [
+        "支持当前服务器传输",
+        "支持审查数据",
+        "支持会话时间线及事件流"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Claude",
+      "label": "适配"
+    },
+    {
+      "from": "opencode",
+      "to": "OpenAI",
+      "label": "修复兼容"
+    }
+  ]
+}

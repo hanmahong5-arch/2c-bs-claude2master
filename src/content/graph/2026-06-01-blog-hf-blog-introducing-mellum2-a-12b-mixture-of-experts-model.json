@@ -1,0 +1,82 @@
+{
+  "center": "JetBrains 发布 Mellum2",
+  "branches": [
+    {
+      "label": "模型概况",
+      "detail": "JetBrains 推出 12B 参数专家混合模型，专攻代码生成与补全",
+      "children": [
+        "120 亿参数",
+        "面向代码生成与补全任务"
+      ]
+    },
+    {
+      "label": "架构效率",
+      "detail": "MoE 架构推理时仅激活部分参数，兼顾性能与推理成本",
+      "children": [
+        "推理时仅激活部分参数",
+        "降低部署与推理成本"
+      ]
+    },
+    {
+      "label": "训练与能力",
+      "detail": "基于大量高质量代码数据训练，擅长理解编程上下文与模式",
+      "children": [
+        "高质量代码数据",
+        "提升 IDE 插件与代码助手能力"
+      ]
+    },
+    {
+      "label": "开源发布",
+      "detail": "通过 Hugging Face 开源，便于获取、评估与集成到工具链",
+      "children": [
+        "Hugging Face 平台发布",
+        "降低专业领域应用门槛"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "JetBrains",
+      "type": "company"
+    },
+    {
+      "name": "Mellum2",
+      "type": "model"
+    },
+    {
+      "name": "MoE",
+      "type": "technique"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "代码生成",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "JetBrains",
+      "to": "Mellum2",
+      "label": "发布"
+    },
+    {
+      "from": "Mellum2",
+      "to": "MoE",
+      "label": "采用"
+    },
+    {
+      "from": "Mellum2",
+      "to": "Hugging Face",
+      "label": "开源发布"
+    },
+    {
+      "from": "Mellum2",
+      "to": "代码生成",
+      "label": "用于"
+    }
+  ]
+}

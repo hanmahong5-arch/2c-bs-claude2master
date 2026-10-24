@@ -1,0 +1,99 @@
+{
+  "center": "OpenAI 董事会新增两位高管",
+  "branches": [
+    {
+      "label": "新增董事",
+      "detail": "David Vélez 与 Robin Vince 加入 OpenAI 董事会",
+      "children": [
+        "David Vélez 是 Nubank 创始人兼 CEO",
+        "Robin Vince 是 BNY Mellon 总裁兼全球市场主管"
+      ]
+    },
+    {
+      "label": "金融科技背景",
+      "detail": "Vélez 带来金融科技与拉美市场经验",
+      "children": [
+        "加速金融领域应用",
+        "布局新兴市场"
+      ]
+    },
+    {
+      "label": "银行合规背景",
+      "detail": "Vince 带来银行与风险管理背景",
+      "children": [
+        "注重合规",
+        "推动机构级合作"
+      ]
+    },
+    {
+      "label": "双层治理",
+      "detail": "两人分别加入 OpenAI Foundation 和 Group PBC 董事会",
+      "children": [
+        "平衡公益与商业目标"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "David Vélez",
+      "type": "person"
+    },
+    {
+      "name": "Robin Vince",
+      "type": "person"
+    },
+    {
+      "name": "Nubank",
+      "type": "company"
+    },
+    {
+      "name": "BNY Mellon",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI Foundation",
+      "type": "company"
+    },
+    {
+      "name": "Group PBC",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "David Vélez",
+      "to": "Nubank",
+      "label": "创始人兼CEO"
+    },
+    {
+      "from": "Robin Vince",
+      "to": "BNY Mellon",
+      "label": "总裁兼主管"
+    },
+    {
+      "from": "David Vélez",
+      "to": "OpenAI Foundation",
+      "label": "加入董事会"
+    },
+    {
+      "from": "Robin Vince",
+      "to": "Group PBC",
+      "label": "加入董事会"
+    },
+    {
+      "from": "David Vélez",
+      "to": "OpenAI",
+      "label": "加入董事会"
+    },
+    {
+      "from": "Robin Vince",
+      "to": "OpenAI",
+      "label": "加入董事会"
+    }
+  ]
+}

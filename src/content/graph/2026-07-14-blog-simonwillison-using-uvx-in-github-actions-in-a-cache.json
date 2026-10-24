@@ -1,0 +1,96 @@
+{
+  "center": "uvx 在 GitHub Actions 缓存友好…",
+  "branches": [
+    {
+      "label": "核心问题",
+      "detail": "每次跑 workflow 用 uvx 都会重新请求 PyPI 下载工具",
+      "children": [
+        "希望首次拉取后复用 GitHub Actions 缓存",
+        "避免每次运行都产生网络请求"
+      ]
+    },
+    {
+      "label": "关键技巧",
+      "detail": "设置 UV_EXCLUDE_NEWER 日期环境变量并纳入缓存 key",
+      "children": [
+        "UV_EXCLUDE_NEWER: \"2026-07-12\"",
+        "uvx 解析到该日期前的最新版本"
+      ]
+    },
+    {
+      "label": "升级方式",
+      "detail": "通过修改日期值来失效缓存并升级工具",
+      "children": [
+        "把日期改到未来即可 bust cache",
+        "工具与依赖随之更新"
+      ]
+    },
+    {
+      "label": "相关讨论",
+      "detail": "astral-sh/setup-uv 仓库已有 issue 请求默认启用缓存",
+      "children": [
+        "请求把默认行为从清除 wheel 改为缓存"
+      ]
+    }
+  ],
+  "flow": [
+    "设置 UV_EXCLUDE_NEWER 日期",
+    "用该日期作为缓存 key",
+    "uvx 解析对应版本",
+    "命中缓存复用工具",
+    "改日期以升级"
+  ],
+  "entities": [
+    {
+      "name": "uvx",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "product"
+    },
+    {
+      "name": "PyPI",
+      "type": "product"
+    },
+    {
+      "name": "UV_EXCLUDE_NEWER",
+      "type": "concept"
+    },
+    {
+      "name": "astral-sh/setup-uv",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "uvx",
+      "to": "PyPI",
+      "label": "下载依赖"
+    },
+    {
+      "from": "GitHub Actions",
+      "to": "uvx",
+      "label": "运行"
+    },
+    {
+      "from": "UV_EXCLUDE_NEWER",
+      "to": "uvx",
+      "label": "限定版本"
+    },
+    {
+      "from": "astral-sh/setup-uv",
+      "to": "GitHub Actions",
+      "label": "集成"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "uvx",
+      "label": "介绍用法"
+    }
+  ]
+}

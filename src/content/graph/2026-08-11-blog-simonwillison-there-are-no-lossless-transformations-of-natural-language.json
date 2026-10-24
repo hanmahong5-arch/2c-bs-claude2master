@@ -1,0 +1,81 @@
+{
+  "center": "AI改写无无损转换",
+  "branches": [
+    {
+      "label": "核心论点",
+      "detail": "自然语言文本不存在无损转换，每次改写都会改变原意",
+      "children": [
+        "改写者若不了解作者本意，信息必然丢失",
+        "Sophie Alpert 提出该观点"
+      ]
+    },
+    {
+      "label": "工程师政策",
+      "detail": "Sophie Alpert 分享工程师使用AI写作的内部政策",
+      "children": [
+        "短文本身即践行其建议",
+        "Simon Willison 评价其非常好"
+      ]
+    },
+    {
+      "label": "责任归属",
+      "detail": "作者必须为文档中每个观点和句子负责",
+      "children": [
+        "分享前须确保文档代表自己想法",
+        "不能以「AI写的，忽略它」回应审阅者"
+      ]
+    },
+    {
+      "label": "读者影响",
+      "detail": "呈现非本人真实想法的内容会误导并浪费读者时间",
+      "children": [
+        "审阅者提问须能解释每句话含义"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Sophie Alpert",
+      "type": "person"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "AI写作",
+      "type": "concept"
+    },
+    {
+      "name": "无损转换",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Sophie Alpert",
+      "label": "引用"
+    },
+    {
+      "from": "Sophie Alpert",
+      "to": "AI写作",
+      "label": "提出政策"
+    },
+    {
+      "from": "LLM",
+      "to": "AI写作",
+      "label": "用于"
+    },
+    {
+      "from": "AI写作",
+      "to": "无损转换",
+      "label": "违背"
+    }
+  ]
+}

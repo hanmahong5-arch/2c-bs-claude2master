@@ -1,0 +1,98 @@
+{
+  "center": "codex rust-v0.143.0 更新",
+  "branches": [
+    {
+      "label": "远程插件默认启用",
+      "detail": "远程插件默认开启，支持 npm 市场源与版本显示",
+      "children": [
+        "插件管理流程需适配远程来源",
+        "支持 npm 市场源",
+        "显示插件版本"
+      ]
+    },
+    {
+      "label": "系统代理支持",
+      "detail": "认证与 Responses API 流量可走系统代理",
+      "children": [
+        "支持 macOS/Windows 系统代理",
+        "含 PAC/WPAD",
+        "agent 需统一代理配置"
+      ]
+    },
+    {
+      "label": "新模型与推理",
+      "detail": "新增 Amazon Bedrock GPT-5.6 系列模型",
+      "children": [
+        "新增 max 推理努力",
+        "agent 需支持新模型参数"
+      ]
+    },
+    {
+      "label": "MCP 改进",
+      "detail": "本版本包含 MCP 相关改进",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex rust",
+      "type": "product"
+    },
+    {
+      "name": "npm",
+      "type": "product"
+    },
+    {
+      "name": "Responses API",
+      "type": "product"
+    },
+    {
+      "name": "Amazon Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "PAC",
+      "type": "concept"
+    },
+    {
+      "name": "WPAD",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex rust",
+      "to": "npm",
+      "label": "支持市场源"
+    },
+    {
+      "from": "codex rust",
+      "to": "Responses API",
+      "label": "代理流量"
+    },
+    {
+      "from": "codex rust",
+      "to": "Amazon Bedrock",
+      "label": "接入"
+    },
+    {
+      "from": "Amazon Bedrock",
+      "to": "GPT-5.6",
+      "label": "提供模型"
+    },
+    {
+      "from": "codex rust",
+      "to": "MCP",
+      "label": "改进"
+    }
+  ]
+}

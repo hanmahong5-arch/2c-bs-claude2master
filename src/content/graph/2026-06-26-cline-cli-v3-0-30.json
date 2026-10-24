@@ -1,0 +1,80 @@
+{
+  "center": "Cline CLI v3.0.30 更新",
+  "branches": [
+    {
+      "label": "新增 token 计数",
+      "detail": "状态栏显示 token 计数，与成本并列，便于监控消耗",
+      "children": [
+        "状态栏与成本并列显示"
+      ]
+    },
+    {
+      "label": "支持 SAP AI Core",
+      "detail": "新增 SAP AI Core 提供商，扩展模型接入选项",
+      "children": [
+        "扩展模型接入选项"
+      ]
+    },
+    {
+      "label": "改进推理稳定性",
+      "detail": "优化 OpenRouter 推理禁用行为与提示缓存",
+      "children": [
+        "OpenRouter 推理禁用行为",
+        "提示缓存优化"
+      ]
+    },
+    {
+      "label": "修复多项问题",
+      "detail": "修复 EMPTY CONTENT 错误及 CLI 运行时打包问题",
+      "children": [
+        "ERROR: EMPTY CONTENT",
+        "CLI 运行时打包问题"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "SAP AI Core",
+      "type": "product"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "token 计数",
+      "type": "concept"
+    },
+    {
+      "name": "提示缓存",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "SAP AI Core",
+      "label": "新增支持"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "OpenRouter",
+      "label": "改进行为"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "token 计数",
+      "label": "新增功能"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "提示缓存",
+      "label": "优化"
+    }
+  ]
+}

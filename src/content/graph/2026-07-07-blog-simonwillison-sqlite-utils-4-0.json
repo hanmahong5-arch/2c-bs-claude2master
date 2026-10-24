@@ -1,0 +1,75 @@
+{
+  "center": "sqlite-utils 4.0 发布",
+  "branches": [
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 7 月 7 日发布 sqlite-utils 4.0",
+      "children": [
+        "发布于 7th July 2026",
+        "作者 Simon Willison"
+      ]
+    },
+    {
+      "label": "核心新功能",
+      "detail": "4.0 版本新增数据库 schema 迁移能力",
+      "children": [
+        "数据库 schema migrations",
+        "详见专门文章说明"
+      ]
+    },
+    {
+      "label": "工具定位",
+      "detail": "用于操作 SQLite 数据库的 Python CLI 工具与库",
+      "children": [
+        "Python CLI utility",
+        "Python library",
+        "操纵 SQLite 数据库"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "Python",
+      "type": "concept"
+    },
+    {
+      "name": "schema migrations",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "发布"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "SQLite",
+      "label": "操作"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "Python",
+      "label": "基于"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "schema migrations",
+      "label": "新增"
+    }
+  ]
+}

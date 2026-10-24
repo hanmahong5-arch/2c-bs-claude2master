@@ -1,0 +1,87 @@
+{
+  "center": "hermes-agent state.db 修复与隔离",
+  "branches": [
+    {
+      "label": "写入者收敛",
+      "detail": "hosted-room 状态迁至 shared-state.db，dashboard 只读打开，cron 守卫走连接注册表",
+      "children": [
+        "doctor --fix 拒绝不安全 checkpoint",
+        "harness 集中管理连接所有权，避免多进程争抢…"
+      ]
+    },
+    {
+      "label": "FTS 损坏降级",
+      "detail": "FTS 损坏降级为 fts_index，搜索降级、索引稍后重建，transcript 不受影响",
+      "children": [
+        "单条坏行不再让 sessions list/export 崩溃",
+        "错误分类按子系统作用域，读路径对脏数据…"
+      ]
+    },
+    {
+      "label": "多 profile 隔离",
+      "detail": "次级 profile 不再继承默认白名单、凭证、vault 密钥或 MEDIA: 附件",
+      "children": [
+        "凭证与路由按 profile 显式绑定",
+        "不能靠进程级 memo 兜底"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "hermes-agent",
+      "type": "product"
+    },
+    {
+      "name": "state.db",
+      "type": "concept"
+    },
+    {
+      "name": "shared-state.db",
+      "type": "concept"
+    },
+    {
+      "name": "fts_index",
+      "type": "concept"
+    },
+    {
+      "name": "doctor --fix",
+      "type": "technique"
+    },
+    {
+      "name": "POSIX 锁",
+      "type": "concept"
+    },
+    {
+      "name": "profile",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "hermes-agent",
+      "to": "state.db",
+      "label": "修复"
+    },
+    {
+      "from": "state.db",
+      "to": "shared-state.db",
+      "label": "迁移"
+    },
+    {
+      "from": "state.db",
+      "to": "fts_index",
+      "label": "降级"
+    },
+    {
+      "from": "doctor --fix",
+      "to": "state.db",
+      "label": "拒绝不安全"
+    },
+    {
+      "from": "profile",
+      "to": "state.db",
+      "label": "隔离"
+    }
+  ]
+}

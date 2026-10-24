@@ -1,0 +1,98 @@
+{
+  "center": "Hermes Agent 大版本前哨",
+  "branches": [
+    {
+      "label": "525 PR 合并",
+      "detail": "本次合并 525 个 PR，为大版本发布做前哨准备",
+      "children": [
+        "新模型、缓存、安全三大方向增强"
+      ]
+    },
+    {
+      "label": "浏览器配置增强",
+      "detail": "新增 consent-gated 真实浏览器配置浏览，支持 Windows 关闭审批流",
+      "children": [
+        "桌面浏览器独立 OS 窗口",
+        "SSH 远程更新引擎"
+      ]
+    },
+    {
+      "label": "MCP 与缓存",
+      "detail": "远程 MCP 目录扩展至 50+ 供应商托管服务器",
+      "children": [
+        "web_search/web_extract 支持 TTL 缓存",
+        "默认 lean-tail 压缩"
+      ]
+    },
+    {
+      "label": "安全与工具发现",
+      "detail": "多查询 tool_search 带词干提取，OS 钥匙串加密存储 secrets",
+      "children": [
+        "更新器通过控制套接字暂停网关"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "web_search",
+      "type": "product"
+    },
+    {
+      "name": "web_extract",
+      "type": "product"
+    },
+    {
+      "name": "tool_search",
+      "type": "product"
+    },
+    {
+      "name": "SSH",
+      "type": "technique"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "MCP",
+      "label": "扩展"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "web_search",
+      "label": "支持缓存"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "web_extract",
+      "label": "支持缓存"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "tool_search",
+      "label": "增强"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "SSH",
+      "label": "支持远程更新"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "Windows",
+      "label": "支持关闭审批流"
+    }
+  ]
+}

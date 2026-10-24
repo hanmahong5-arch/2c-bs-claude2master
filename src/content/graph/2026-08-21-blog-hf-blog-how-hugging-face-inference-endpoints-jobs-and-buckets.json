@@ -1,0 +1,91 @@
+{
+  "center": "Hugging Face 支撑 Papers with…",
+  "branches": [
+    {
+      "label": "推理端点",
+      "detail": "Inference Endpoints 提供托管式模型推理服务",
+      "children": [
+        "用于论文演示与在线推理"
+      ]
+    },
+    {
+      "label": "任务系统",
+      "detail": "Jobs 用于运行批处理与训练任务",
+      "children": [
+        "如 vLLM Server 一键部署"
+      ]
+    },
+    {
+      "label": "存储桶",
+      "detail": "Buckets 用于存放模型与数据集文件",
+      "children": [
+        "支撑模型与数据托管"
+      ]
+    },
+    {
+      "label": "社区生态",
+      "detail": "Spaces、Collections、Models 等社区资源被文章引用",
+      "children": [
+        "文章提及 1 个 Space、1 个 Collection、1 个…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Inference Endpoints",
+      "type": "product"
+    },
+    {
+      "name": "Jobs",
+      "type": "product"
+    },
+    {
+      "name": "Buckets",
+      "type": "product"
+    },
+    {
+      "name": "Papers with Code",
+      "type": "product"
+    },
+    {
+      "name": "vLLM",
+      "type": "technique"
+    },
+    {
+      "name": "Spaces",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Inference Endpoints",
+      "label": "提供"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Jobs",
+      "label": "提供"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Buckets",
+      "label": "提供"
+    },
+    {
+      "from": "Inference Endpoints",
+      "to": "Papers with Code",
+      "label": "支撑"
+    },
+    {
+      "from": "Jobs",
+      "to": "vLLM",
+      "label": "运行"
+    }
+  ]
+}

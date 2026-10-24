@@ -1,0 +1,97 @@
+{
+  "center": "AI蠕虫借Word自我复制",
+  "branches": [
+    {
+      "label": "攻击机制",
+      "detail": "攻击者在文档中藏入隐藏指令，Copilot for Word 会将其当作请求执行",
+      "children": [
+        "隐藏指令随文档被 Copilot 读取并执行",
+        "Copilot 把指令复制进新生成的文档"
+      ]
+    },
+    {
+      "label": "自我复制",
+      "detail": "被污染的文档成为新载体，在后续 Copilot 工作流中再次触发传播",
+      "children": [
+        "无需原始攻击文档在场也能扩散",
+        "首次出现主动自我复制的注入指令"
+      ]
+    },
+    {
+      "label": "披露与修复",
+      "detail": "已负责任地披露给 Microsoft，但至今无覆盖整类攻击的缓解方案",
+      "children": [
+        "Microsoft 有 144 天修复时间",
+        "尚无覆盖全类攻击的缓解措施"
+      ]
+    },
+    {
+      "label": "背景",
+      "detail": "白底白字隐藏文本早已常见，但自我复制属新变种",
+      "children": [
+        "求职申请中已有人使用隐藏文本",
+        "由 Håkon Måløy 发现该变种"
+      ]
+    }
+  ],
+  "flow": [
+    "攻击者藏入隐藏指令",
+    "文档被 Copilot 读取",
+    "Copilot 执行并复制指令",
+    "新文档成为载体",
+    "后续工作流再次触发"
+  ],
+  "entities": [
+    {
+      "name": "Håkon Måløy",
+      "type": "person"
+    },
+    {
+      "name": "Microsoft",
+      "type": "company"
+    },
+    {
+      "name": "Copilot for Word",
+      "type": "product"
+    },
+    {
+      "name": "prompt injection",
+      "type": "technique"
+    },
+    {
+      "name": "AI worm",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Håkon Måløy",
+      "to": "AI worm",
+      "label": "发现"
+    },
+    {
+      "from": "AI worm",
+      "to": "Copilot for Word",
+      "label": "利用"
+    },
+    {
+      "from": "prompt injection",
+      "to": "AI worm",
+      "label": "升级为"
+    },
+    {
+      "from": "Håkon Måløy",
+      "to": "Microsoft",
+      "label": "披露"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "AI worm",
+      "label": "报道"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "center": "Hermes Agent 0.17.0 更新",
+  "branches": [
+    {
+      "label": "新通道接入",
+      "detail": "通过 Photon 支持 iMessage，并作为外部代理加入 Raft 网络",
+      "children": [
+        "iMessage 无需 Mac 中继",
+        "加入 Raft 网络扩展触达"
+      ]
+    },
+    {
+      "label": "桌面应用升级",
+      "detail": "可重绑定快捷键、原生通知、子代理监控、VS Code 主题安装",
+      "children": [
+        "子代理监控窗口",
+        "VS Code 主题安装"
+      ]
+    },
+    {
+      "label": "子代理后台运行",
+      "detail": "delegate_task(background=true) 异步执行，不阻塞主对话",
+      "children": [
+        "适合耗时操作"
+      ]
+    },
+    {
+      "label": "图像编辑与自动化",
+      "detail": "image_generate 支持源图编辑；问答式配置定时任务",
+      "children": [
+        "改色、去背景",
+        "无需 cron 语法"
+      ]
+    },
+    {
+      "label": "记忆批量操作",
+      "detail": "memory 支持原子性批量增删改，避免多轮交互失败",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "Photon",
+      "type": "product"
+    },
+    {
+      "name": "iMessage",
+      "type": "product"
+    },
+    {
+      "name": "Raft",
+      "type": "technique"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "delegate_task",
+      "type": "technique"
+    },
+    {
+      "name": "image_generate",
+      "type": "technique"
+    },
+    {
+      "name": "memory",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "Photon",
+      "label": "集成"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "iMessage",
+      "label": "支持"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "Raft",
+      "label": "加入"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "VS Code",
+      "label": "兼容主题"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "delegate_task",
+      "label": "提供"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "image_generate",
+      "label": "提供"
+    }
+  ]
+}

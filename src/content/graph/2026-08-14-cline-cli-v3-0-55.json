@@ -1,0 +1,54 @@
+{
+  "center": "cline cli v3.0.55 修复更新",
+  "branches": [
+    {
+      "label": "更新时机调整",
+      "detail": "自动更新改为退出时安装，避免连接 Hub 时后台更新中断会话",
+      "children": [
+        "连接 Hub 时不再安装更新",
+        "退出时安装更新"
+      ]
+    },
+    {
+      "label": "多实例竞态修复",
+      "detail": "修复两个 CLI 实例互相关闭对方 Hub 守护进程的问题",
+      "children": [
+        "构建身份全序比较解决"
+      ]
+    },
+    {
+      "label": "流式渲染稳定",
+      "detail": "流式 markdown 不再闪烁回原始文本，保持渲染状态",
+      "children": [
+        "保持渲染状态"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "Hub",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli",
+      "to": "Hub",
+      "label": "连接"
+    },
+    {
+      "from": "agent harness",
+      "to": "cline cli",
+      "label": "参考机制"
+    }
+  ]
+}

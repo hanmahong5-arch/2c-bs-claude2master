@@ -1,0 +1,81 @@
+{
+  "center": "AppleScript 统计 Safari 标签数",
+  "branches": [
+    {
+      "label": "核心命令",
+      "detail": "一行 osascript 命令即可统计 Safari 所有窗口的标签页总数",
+      "children": [
+        "osascript -e 'tell application \"Safari\"…",
+        "无需打开 Safari 界面，终端直接执行"
+      ]
+    },
+    {
+      "label": "作者与出处",
+      "detail": "Simon Willison 于 2026 年 6 月 29 日发布的 TIL 短文",
+      "children": [
+        "发布在 Simon Willison's Weblog",
+        "归类为 TIL（Today I Learned）"
+      ]
+    },
+    {
+      "label": "标签与定位",
+      "detail": "文章打上 safari、til、applescript 三个标签，属极简实用技巧",
+      "children": [
+        "safari 标签 69 篇",
+        "til 标签 26 篇",
+        "applescript 标签 9 篇"
+      ]
+    }
+  ],
+  "flow": [
+    "打开终端",
+    "输入 osascript 命令",
+    "调用 Safari 应用",
+    "统计每个窗口的标签数",
+    "返回标签总数"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Safari",
+      "type": "product"
+    },
+    {
+      "name": "AppleScript",
+      "type": "technique"
+    },
+    {
+      "name": "osascript",
+      "type": "product"
+    },
+    {
+      "name": "TIL",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Safari",
+      "label": "统计标签"
+    },
+    {
+      "from": "AppleScript",
+      "to": "Safari",
+      "label": "控制"
+    },
+    {
+      "from": "osascript",
+      "to": "AppleScript",
+      "label": "执行"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "TIL",
+      "label": "发布"
+    }
+  ]
+}

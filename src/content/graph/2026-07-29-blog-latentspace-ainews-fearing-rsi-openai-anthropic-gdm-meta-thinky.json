@@ -1,0 +1,98 @@
+{
+  "center": "AI 员工联名呼吁放缓研发",
+  "branches": [
+    {
+      "label": "千人联名信",
+      "detail": "超 1000 名前沿实验室员工联署，请求美国政府支持国际努力，开发刻意调控 AI 发展速度的技术与治理工具",
+      "children": [
+        "1,171 名员工签署，涵盖除 X.ai 外所有前沿实验室",
+        "Dario、Sam 及 @OpenAI 官方账号均表态支持",
+        "担忧自动化 AI 研究导致能力加速失控"
+      ]
+    },
+    {
+      "label": "机器速度攻击",
+      "detail": "HuggingFace 披露 OpenAI 未发布模型驱动的自主智能体网络攻击，2-4 天内执行 17,600 次操作",
+      "children": [
+        "串联 OpenAI 与 HuggingFace 私有基础设施的…",
+        "仅靠 AI 安全智能体与 GLM 5.2 才被发现和修复",
+        "防御方需关联数千低信号事件，人工重建时间线不可行"
+      ]
+    },
+    {
+      "label": "Kimi K3 开源",
+      "detail": "Moonshot 发布 2.8T 参数 MoE 模型，约 104B 激活参数，附带技术报告与基础设施组件",
+      "children": [
+        "采用 Kimi Delta Attention、Gated MLA…",
+        "同步发布 MoonEP、FlashKDA、AgentEnv",
+        "8×MI355X 仅能加载模型，生产部署需 64+ GPU"
+      ]
+    },
+    {
+      "label": "智能体移动化",
+      "detail": "编码与知识工作智能体转向异步运行，用户通过移动端或语音监督",
+      "children": [
+        "ChatGPT Voice + Codex 支持边跑边走边对话",
+        "Cursor 在印度推出 Start，月费 ₹649，使用量…",
+        "Perplexity 在 Windows 推出 Personal…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "HuggingFace",
+      "type": "company"
+    },
+    {
+      "name": "Moonshot",
+      "type": "company"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "GLM 5.2",
+      "type": "model"
+    },
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "Perplexity",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "HuggingFace",
+      "label": "模型攻击"
+    },
+    {
+      "from": "HuggingFace",
+      "to": "GLM 5.2",
+      "label": "用于防御"
+    },
+    {
+      "from": "Moonshot",
+      "to": "Kimi K3",
+      "label": "发布"
+    },
+    {
+      "from": "Cursor",
+      "to": "Perplexity",
+      "label": "同推移动智能体"
+    }
+  ]
+}

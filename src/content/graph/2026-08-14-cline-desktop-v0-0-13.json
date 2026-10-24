@@ -1,0 +1,97 @@
+{
+  "center": "Cline Desktop v0.0.13 更新",
+  "branches": [
+    {
+      "label": "字体缩放",
+      "detail": "新增字体大小设置，启动前应用避免闪烁",
+      "children": [
+        "窗口绘制前读取用户偏好"
+      ]
+    },
+    {
+      "label": "联网搜索",
+      "detail": "支持联网搜索的模型可开启 Web Search",
+      "children": [
+        "结果记录在 transcript 中",
+        "外部工具调用持久化"
+      ]
+    },
+    {
+      "label": "Hub 冲突修复",
+      "detail": "多实例不再互杀，新实例附加到现有 Hub",
+      "children": [
+        "优雅进程协调",
+        "避免资源竞争"
+      ]
+    },
+    {
+      "label": "推理预算修复",
+      "detail": "修复 Cline Pass 下 extended thinking 预算未生效",
+      "children": [
+        "确保 API 路径传递推理参数"
+      ]
+    },
+    {
+      "label": "其他更新",
+      "detail": "回收空闲插件沙箱进程，新增 Crusoe 提供商",
+      "children": [
+        "子进程生命周期管理",
+        "模型目录动态更新"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline Desktop",
+      "type": "product"
+    },
+    {
+      "name": "Cline Pass",
+      "type": "product"
+    },
+    {
+      "name": "Crusoe",
+      "type": "company"
+    },
+    {
+      "name": "Web Search",
+      "type": "technique"
+    },
+    {
+      "name": "extended thinking",
+      "type": "concept"
+    },
+    {
+      "name": "Hub",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline Desktop",
+      "to": "Web Search",
+      "label": "支持"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "Cline Pass",
+      "label": "修复"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "Crusoe",
+      "label": "新增"
+    },
+    {
+      "from": "Cline Pass",
+      "to": "extended thinking",
+      "label": "影响"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "Hub",
+      "label": "修复冲突"
+    }
+  ]
+}

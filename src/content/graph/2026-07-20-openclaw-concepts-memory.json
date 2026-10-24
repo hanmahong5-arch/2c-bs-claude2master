@@ -1,0 +1,119 @@
+{
+  "center": "OpenClaw 记忆系统：Markdown 文件",
+  "branches": [
+    {
+      "label": "四类记忆文件",
+      "detail": "记忆全部写成工作区里的 Markdown 文件，无隐藏状态",
+      "children": [
+        "USER.md：稳定偏好与画像，会话开始时加载",
+        "MEMORY.md：长期非画像事实与决策",
+        "memory/YYYY-MM-DD.md：每日笔记与观察"
+      ]
+    },
+    {
+      "label": "分层与蒸馏",
+      "detail": "每日笔记经 dreaming sweep 蒸馏进 MEMORY.md",
+      "children": [
+        "MEMORY.md 超预算则截断注入副本，磁盘文件不变",
+        "用 /context list、openclaw doctor 查看截…"
+      ]
+    },
+    {
+      "label": "导入已有记忆",
+      "detail": "Control UI 可导入 Codex、Claude Code、Hermes 的 Markdown 记忆",
+      "children": [
+        "仅复制 Markdown，不导入会话与凭据",
+        "存于 memory/imports/ 下，不合并进 MEMORY.md"
+      ]
+    },
+    {
+      "label": "动作敏感记忆",
+      "detail": "涉及审批、时效、权限的笔记要记录可行动边界",
+      "children": [
+        "写清何时生效、何时过期、应避免什么",
+        "记忆不执行策略，硬控制靠审批与沙箱"
+      ]
+    },
+    {
+      "label": "记忆工具与引擎",
+      "detail": "memory_search、memory_get、intent 三工具，默认 memory-core 插件",
+      "children": [
+        "混合检索：向量语义 + 关键词匹配",
+        "引擎可选 Builtin、Honcho、LanceDB"
+      ]
+    }
+  ],
+  "flow": [
+    "会话开始加载 USER.md 与…",
+    "工作中写入每日笔记",
+    "dreaming sweep 蒸馏进…",
+    "memory_search 检索相关笔记",
+    "memory_get 读取指定文件"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "MEMORY.md",
+      "type": "concept"
+    },
+    {
+      "name": "USER.md",
+      "type": "concept"
+    },
+    {
+      "name": "DREAMS.md",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Honcho",
+      "type": "product"
+    },
+    {
+      "name": "LanceDB",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "MEMORY.md",
+      "label": "写入"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "USER.md",
+      "label": "写入"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "DREAMS.md",
+      "label": "写入"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Claude Code",
+      "label": "导入记忆"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Codex",
+      "label": "导入记忆"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Honcho",
+      "label": "支持引擎"
+    }
+  ]
+}

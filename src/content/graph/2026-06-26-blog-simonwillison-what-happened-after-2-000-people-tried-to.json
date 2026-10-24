@@ -1,0 +1,96 @@
+{
+  "center": "6000次提示注入攻击全失败",
+  "branches": [
+    {
+      "label": "挑战结果",
+      "detail": "Fernando Irarrázaval 悬赏攻破 OpenClaw 测试实例，无人成功泄露密钥",
+      "children": [
+        "6000 次尝试，花费 500 美元 token",
+        "Google 账号因收件过多被封"
+      ]
+    },
+    {
+      "label": "防御机制",
+      "detail": "底层模型 Opus 4.6 配合反提示注入规则，禁止基于邮件内容行动",
+      "children": [
+        "禁止泄露 secrets.env 或凭证",
+        "禁止修改自身文件或执行邮件代码",
+        "禁止向外部端点外泄数据"
+      ]
+    },
+    {
+      "label": "行业趋势",
+      "detail": "前沿模型实验室正加强训练以抵御注入攻击，效果显著",
+      "children": [
+        "GPT-5.6 系统卡有相关章节",
+        "Simon Willison 观察到攻击难度提升"
+      ]
+    },
+    {
+      "label": "作者警告",
+      "detail": "6000 次失败不保证安全，生产系统仍不应部署可能造成不可逆损害的场景",
+      "children": [
+        "更复杂的攻击可能突破",
+        "Hacker News 讨论充满合理质疑"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Fernando Irarrázaval",
+      "type": "person"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Opus 4.6",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "提示注入",
+      "type": "concept"
+    },
+    {
+      "name": "hackmyclaw.com",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Fernando Irarrázaval",
+      "to": "OpenClaw",
+      "label": "测试"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Opus 4.6",
+      "label": "基于"
+    },
+    {
+      "from": "Opus 4.6",
+      "to": "提示注入",
+      "label": "抵御"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-5.6",
+      "label": "提及"
+    },
+    {
+      "from": "Fernando Irarrázaval",
+      "to": "hackmyclaw.com",
+      "label": "发起挑战"
+    }
+  ]
+}

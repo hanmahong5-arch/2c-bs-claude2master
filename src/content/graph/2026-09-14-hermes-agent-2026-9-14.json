@@ -1,0 +1,101 @@
+{
+  "center": "hermes-agent 会话刷新修复",
+  "branches": [
+    {
+      "label": "刷新并发去重",
+      "detail": "网关两条刷新路径合并携带同一轮换 refresh token 的并发请求",
+      "children": [
+        "cookie 与 Desktop bearer 两条路径",
+        "避免唤醒突发重放已轮换 token",
+        "防止 Portal 复用检测吊销整个会话"
+      ]
+    },
+    {
+      "label": "刷新移出事件循环",
+      "detail": "刷新不再阻塞 /api/status，慢身份提供方不影响健康检查",
+      "children": [
+        "认证路径与状态接口解耦",
+        "避免单点拖垮健康检查"
+      ]
+    },
+    {
+      "label": "句柄只读挂载",
+      "detail": "gateway、dashboard/Desktop 后端、ACP 与 CLI 读取端改为只读挂载",
+      "children": [
+        "进程内写入者共享注册表句柄",
+        "健康拓扑下不再出现重复 SessionDB 句柄",
+        "读写句柄按角色分离并集中管理"
+      ]
+    }
+  ],
+  "flow": [
+    "并发刷新请求合并",
+    "携带同一轮换 token",
+    "去重与宽限窗口",
+    "刷新移出事件循环",
+    "只读挂载句柄",
+    "共享注册表句柄"
+  ],
+  "entities": [
+    {
+      "name": "hermes-agent",
+      "type": "product"
+    },
+    {
+      "name": "Portal",
+      "type": "product"
+    },
+    {
+      "name": "SessionDB",
+      "type": "product"
+    },
+    {
+      "name": "ACP",
+      "type": "product"
+    },
+    {
+      "name": "CLI",
+      "type": "product"
+    },
+    {
+      "name": "refresh token",
+      "type": "concept"
+    },
+    {
+      "name": "事件循环",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "hermes-agent",
+      "to": "Portal",
+      "label": "刷新 token"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "SessionDB",
+      "label": "管理句柄"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "ACP",
+      "label": "只读挂载"
+    },
+    {
+      "from": "hermes-agent",
+      "to": "CLI",
+      "label": "只读挂载"
+    },
+    {
+      "from": "refresh token",
+      "to": "Portal",
+      "label": "复用检测"
+    },
+    {
+      "from": "事件循环",
+      "to": "hermes-agent",
+      "label": "移出刷新"
+    }
+  ]
+}

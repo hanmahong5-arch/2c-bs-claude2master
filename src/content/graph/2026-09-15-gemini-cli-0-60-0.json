@@ -1,0 +1,90 @@
+{
+  "center": "gemini-cli v0.60.0 安全加固",
+  "branches": [
+    {
+      "label": "路径边界收紧",
+      "detail": "命令安全与文件发现增强 workspace 路径边界检查及 symlink 解析",
+      "children": [
+        "处理 NTFS 8.3 短名（SFN）绕过",
+        "不能只做字符串前缀匹配，需解析真实路径后判定越界"
+      ]
+    },
+    {
+      "label": "沙箱与配置隔离",
+      "detail": "macOS Seatbelt 沙箱隔离临时目录，容器内隔离 settings 目录",
+      "children": [
+        "系统级配置路径强制权限与属主校验",
+        "临时目录与配置目录视为每会话不可共享资源"
+      ]
+    },
+    {
+      "label": "工具输出溯源",
+      "detail": "对不可信工具输出强制 envelope 元数据溯源",
+      "children": [
+        "harness 需区分可信与不可信输出"
+      ]
+    },
+    {
+      "label": "扩展加载加固",
+      "detail": "扩展加载器加固路径解析与边界校验",
+      "children": [
+        "环境变更需用户同意并清理可改运行时的环境变量",
+        "扩展的运行时改动需显式授权"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "macOS Seatbelt",
+      "type": "technique"
+    },
+    {
+      "name": "NTFS 8.3 短名",
+      "type": "concept"
+    },
+    {
+      "name": "symlink",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "envelope 元数据溯源",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "gemini-cli",
+      "to": "macOS Seatbelt",
+      "label": "使用"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "symlink",
+      "label": "校验"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "NTFS 8.3 短名",
+      "label": "处理绕过"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "envelope 元数据溯源",
+      "label": "强制"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "OAuth",
+      "label": "加固"
+    }
+  ]
+}

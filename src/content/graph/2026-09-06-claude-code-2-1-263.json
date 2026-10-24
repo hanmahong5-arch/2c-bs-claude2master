@@ -1,0 +1,52 @@
+{
+  "center": "Claude Code v2.1.263 更新",
+  "branches": [
+    {
+      "label": "更新内容",
+      "detail": "小版本更新，主要修复若干 bug",
+      "children": [
+        "提升整体可靠性",
+        "减少意外中断"
+      ]
+    },
+    {
+      "label": "对 agent 的意义",
+      "detail": "稳定的工具调用链是 agent harness 设计的基础",
+      "children": [
+        "此更新减少意外中断"
+      ]
+    },
+    {
+      "label": "后续建议",
+      "detail": "建议关注后续版本以获取更具体的变更细节",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "工具调用链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "工具调用链",
+      "label": "依赖"
+    },
+    {
+      "from": "agent harness",
+      "to": "工具调用链",
+      "label": "以之为基础"
+    }
+  ]
+}

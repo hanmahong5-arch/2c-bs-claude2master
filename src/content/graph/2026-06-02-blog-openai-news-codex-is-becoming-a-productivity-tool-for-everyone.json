@@ -1,0 +1,73 @@
+{
+  "center": "Codex 成为通用生产力工具",
+  "branches": [
+    {
+      "label": "AI 驱动研究",
+      "detail": "Codex 快速解析复杂文档并提炼关键信息",
+      "children": [
+        "分析师与研究者大幅缩短信息处理时间"
+      ]
+    },
+    {
+      "label": "自动化数据分析",
+      "detail": "理解自然语言查询并生成代码执行数据分析",
+      "children": [
+        "降低非程序员与数据交互的门槛"
+      ]
+    },
+    {
+      "label": "工作流自动化",
+      "detail": "可集成以自动执行重复性任务",
+      "children": [
+        "企业个人可将繁琐流程交给 AI 代理"
+      ]
+    },
+    {
+      "label": "定位演变",
+      "detail": "从开发者工具演变为通用生产力引擎",
+      "children": [
+        "出自 OpenAI《知识工作的下一个时代》报告"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "知识工作的下一个时代",
+      "type": "concept"
+    },
+    {
+      "name": "AI 代理",
+      "type": "concept"
+    },
+    {
+      "name": "自然语言查询",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "发布报告阐述"
+    },
+    {
+      "from": "Codex",
+      "to": "自然语言查询",
+      "label": "理解"
+    },
+    {
+      "from": "Codex",
+      "to": "AI 代理",
+      "label": "充当"
+    }
+  ]
+}

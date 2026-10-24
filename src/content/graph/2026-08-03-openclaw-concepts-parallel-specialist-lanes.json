@@ -1,0 +1,122 @@
+{
+  "center": "OpenClaw 并行专家通道设计",
+  "branches": [
+    {
+      "label": "核心原则",
+      "detail": "并行是稀缺资源设计问题，需减少真实瓶颈争用",
+      "children": [
+        "会话锁：同一会话只允许一个运行修改",
+        "全局模型容量与工具容量共享限制",
+        "上下文预算与归属模糊会拖慢整体"
+      ]
+    },
+    {
+      "label": "阶段一：通道契约",
+      "detail": "每个通道在 AGENTS.md 写契约，加载进系统提示",
+      "children": [
+        "定义目的、非目标、聊天预算、交接规则",
+        "工具风险规则：用最小工具面",
+        "重活转后台子代理，聊天保持干净"
+      ]
+    },
+    {
+      "label": "阶段二：优先级控制",
+      "detail": "按业务价值调队列与模型容量",
+      "children": [
+        "maxConcurrent 限制主通道并发",
+        "subagents.maxConcurrent 给子执行预算",
+        "队列模式 collect、cap 20、drop 用 summarize"
+      ]
+    },
+    {
+      "label": "阶段三：协调者",
+      "detail": "多通道活跃后加小型协调者模式",
+      "children": [
+        "跟踪活跃任务与归属",
+        "检测重复请求并路由交接摘要",
+        "只暴露阻塞、完成结果与需人决策项"
+      ]
+    },
+    {
+      "label": "团队预设",
+      "detail": "openclaw agents team create 提供现成通道契约",
+      "children": [
+        "角色：coordinator、researcher、writer…",
+        "协调者连接专家，专家不进一步委派",
+        "契约写在各自 AGENTS.md"
+      ]
+    }
+  ],
+  "flow": [
+    "写通道契约 AGENTS.md",
+    "重活转后台子代理",
+    "调并发与队列参数",
+    "加协调者路由交接"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "concept"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "coordinator",
+      "type": "concept"
+    },
+    {
+      "name": "researcher",
+      "type": "concept"
+    },
+    {
+      "name": "writer",
+      "type": "concept"
+    },
+    {
+      "name": "reviewer",
+      "type": "concept"
+    },
+    {
+      "name": "command queue",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Gateway",
+      "label": "包含"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "AGENTS.md",
+      "label": "使用"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "command queue",
+      "label": "使用"
+    },
+    {
+      "from": "coordinator",
+      "to": "researcher",
+      "label": "路由"
+    },
+    {
+      "from": "coordinator",
+      "to": "writer",
+      "label": "路由"
+    },
+    {
+      "from": "coordinator",
+      "to": "reviewer",
+      "label": "路由"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "center": "sqlite-utils 4.0 数据库迁移",
+  "branches": [
+    {
+      "label": "数据库迁移",
+      "detail": "用 Python 文件定义迁移序列，自动追踪并应用待执行迁移",
+      "children": [
+        "Migrations 类 + @migrations() 装饰器",
+        "migrate data.db migrations.py 命令执行",
+        "_sqlite_migrations 表记录已应用迁移"
+      ]
+    },
+    {
+      "label": "嵌套事务",
+      "detail": "新增 db.atomic() 上下文管理器，支持事务内嵌套事务",
+      "children": [
+        "基于 SQLite Savepoints 实现",
+        "with db.atomic(): 包裹多条操作"
+      ]
+    },
+    {
+      "label": "复合外键",
+      "detail": "支持复合外键的创建、转换与内省",
+      "children": [
+        "table.foreign_keys 内省方法变更",
+        "Claude Fable 5 协助 API 设计"
+      ]
+    },
+    {
+      "label": "table.transform()",
+      "detail": "提供 SQLite ALTER TABLE 不支持的增强改表能力",
+      "children": [
+        "建临时表→拷数据→删旧表→重命名",
+        "SQLite 官方推荐模式"
+      ]
+    },
+    {
+      "label": "其他变更",
+      "detail": "Upsert 改用 ON CONFLICT DO UPDATE，db.query() 立即执行",
+      "children": [
+        "自动检测主键并拒绝缺失主键记录",
+        "支持 sqlite-chronicle 触发器"
+      ]
+    }
+  ],
+  "flow": [
+    "编写 migrations.py",
+    "定义 Migrations 实例",
+    "用装饰器注册迁移函数",
+    "运行 migrate 命令",
+    "自动应用待执行迁移"
+  ],
+  "entities": [
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "Django Migrations",
+      "type": "technique"
+    },
+    {
+      "name": "sqlite-migrate",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Andrew Godwin",
+      "type": "person"
+    },
+    {
+      "name": "db.atomic()",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "发布"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "SQLite",
+      "label": "基于"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "sqlite-migrate",
+      "label": "整合"
+    },
+    {
+      "from": "Django Migrations",
+      "to": "sqlite-utils",
+      "label": "启发"
+    },
+    {
+      "from": "Andrew Godwin",
+      "to": "Django Migrations",
+      "label": "开发"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "sqlite-utils",
+      "label": "协助设计"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "center": "LLM基准测试测什么",
+  "branches": [
+    {
+      "label": "现有基准问题",
+      "detail": "BenchMIRT 指出当前 LLM 基准测试存在数据污染与过拟合，分数虚高",
+      "children": [
+        "数据污染导致分数虚高",
+        "过拟合使分数无法反映真实能力"
+      ]
+    },
+    {
+      "label": "新评估框架",
+      "detail": "提出动态生成测试任务的评估框架，减少数据泄漏",
+      "children": [
+        "动态生成测试任务",
+        "减少数据泄漏",
+        "确保评测公平有效"
+      ]
+    },
+    {
+      "label": "对开发者的影响",
+      "detail": "依赖静态基准可能误导模型选型，需结合动态评测与真实场景",
+      "children": [
+        "静态基准可能误导选型",
+        "结合动态评测与真实场景验证",
+        "构建更可靠的 agent 工具链"
+      ]
+    }
+  ],
+  "flow": [
+    "识别基准问题",
+    "提出动态评估框架",
+    "动态生成测试任务",
+    "减少数据泄漏",
+    "验证真实场景"
+  ],
+  "entities": [
+    {
+      "name": "BenchMIRT",
+      "type": "concept"
+    },
+    {
+      "name": "LLM",
+      "type": "model"
+    },
+    {
+      "name": "数据污染",
+      "type": "concept"
+    },
+    {
+      "name": "过拟合",
+      "type": "concept"
+    },
+    {
+      "name": "动态评估框架",
+      "type": "technique"
+    },
+    {
+      "name": "agent 工具链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "BenchMIRT",
+      "to": "LLM",
+      "label": "评估"
+    },
+    {
+      "from": "BenchMIRT",
+      "to": "数据污染",
+      "label": "指出"
+    },
+    {
+      "from": "BenchMIRT",
+      "to": "过拟合",
+      "label": "指出"
+    },
+    {
+      "from": "动态评估框架",
+      "to": "数据污染",
+      "label": "减少"
+    },
+    {
+      "from": "动态评估框架",
+      "to": "agent 工具链",
+      "label": "支持构建"
+    }
+  ]
+}

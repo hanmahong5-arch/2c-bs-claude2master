@@ -1,0 +1,116 @@
+{
+  "center": "AI 能力超前，界面是瓶颈",
+  "branches": [
+    {
+      "label": "聊天界面拖后腿",
+      "detail": "聊天机器人界面本身制造认知负担，抵消 AI 智能带来的收益",
+      "children": [
+        "研究：财务人员用 GPT-4o 做估值，认知负荷升高",
+        "AI 输出大段文字、发散话题，对话越乱越难收拾",
+        "经验少的员工受影响最大"
+      ]
+    },
+    {
+      "label": "专用界面先落地编程",
+      "detail": "编程是唯一真正完整的专用 AI 界面，因为实验室自己就是程序员",
+      "children": [
+        "Claude Code 可自主工作数小时",
+        "OpenAI Codex、Google Antigravity 类似",
+        "界面像 1980 年代机房，非开发者难用"
+      ]
+    },
+    {
+      "label": "Google 试水其他职业",
+      "detail": "Google 在编程之外尝试最多专用界面，但都还粗糙",
+      "children": [
+        "Stitch：自然语言描述生成多屏设计",
+        "Pomelli：贴网址自动生成品牌营销活动",
+        "NotebookLM：研究并处理多源信息"
+      ]
+    },
+    {
+      "label": "个人代理用现成界面",
+      "detail": "通过 WhatsApp、Telegram、Slack 等熟悉应用与 AI 代理对话",
+      "children": [
+        "OpenClaw 开源代理，增长最快但有安全风险",
+        "Claude Cowork 面向知识工作者，接入本地文件…",
+        "Dispatch 让手机远程指挥桌面代理"
+      ]
+    },
+    {
+      "label": "按需生成界面",
+      "detail": "AI 不再依赖预设界面，而是即时生成合适的交互界面",
+      "children": [
+        "Claude 可在对话中生成可交互可视化",
+        "未来不是单一界面，而是 AI 适配你"
+      ]
+    }
+  ],
+  "flow": [
+    "手机发消息给 Claude",
+    "Dispatch 转发到桌面代理",
+    "代理读取本地文件与应用",
+    "执行任务并返回结果"
+  ],
+  "entities": [
+    {
+      "name": "Claude Dispatch",
+      "type": "product"
+    },
+    {
+      "name": "Claude Cowork",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "NotebookLM",
+      "type": "product"
+    },
+    {
+      "name": "Google Stitch",
+      "type": "product"
+    },
+    {
+      "name": "GPT-4o",
+      "type": "model"
+    },
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Dispatch",
+      "to": "Claude Cowork",
+      "label": "扩展"
+    },
+    {
+      "from": "Claude Cowork",
+      "to": "Claude Code",
+      "label": "衍生自"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "Claude Dispatch",
+      "label": "使用"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "GPT-4o",
+      "label": "引用研究"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Claude Cowork",
+      "label": "对比"
+    }
+  ]
+}

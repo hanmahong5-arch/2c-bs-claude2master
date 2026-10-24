@@ -1,0 +1,72 @@
+{
+  "center": "Cline desktop v0.0.27 修复登录…",
+  "branches": [
+    {
+      "label": "登录过期去重",
+      "detail": "同一失败只渲染一次，详情到达时原地升级，避免气泡叠横幅",
+      "children": [
+        "此前 hub 无详情 run.failed 先弹气泡",
+        "send RPC 再覆盖错误横幅",
+        "harness 需对同一失败去重与状态升级"
+      ]
+    },
+    {
+      "label": "凭证失败带修复",
+      "detail": "错误附带可执行修复路径，而非仅报错",
+      "children": [
+        "Cline provider 显示 Sign in to Cline",
+        "其他显示 Open model settings",
+        "本地 CLI provider 指向其 CLI"
+      ]
+    },
+    {
+      "label": "登出真正生效",
+      "detail": "登出移除 provider 条目，运行时不再隐式重导入凭证",
+      "children": [
+        "此前每次命令从经典扩展存储重新导入",
+        "Cline Pass 登出此前完全无效",
+        "harness 需区分持久凭证来源"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Cline Pass",
+      "type": "product"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "run.failed",
+      "type": "concept"
+    },
+    {
+      "name": "send RPC",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Cline Pass",
+      "label": "包含"
+    },
+    {
+      "from": "harness",
+      "to": "run.failed",
+      "label": "处理"
+    },
+    {
+      "from": "harness",
+      "to": "send RPC",
+      "label": "调用"
+    }
+  ]
+}

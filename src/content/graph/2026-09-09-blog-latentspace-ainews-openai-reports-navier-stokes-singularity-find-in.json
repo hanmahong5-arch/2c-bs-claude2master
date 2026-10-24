@@ -1,0 +1,118 @@
+{
+  "center": "OpenAI 万智能体冲击…",
+  "branches": [
+    {
+      "label": "核心事件",
+      "detail": "OpenAI 称用下一代模型与约 1 万智能体产出 Navier-Stokes 千禧难题解",
+      "children": [
+        "模型强于 GPT-6 Astra",
+        "或成第二个千禧奖成果",
+        "88 小时、130B tokens、超 4000 万美元"
+      ]
+    },
+    {
+      "label": "方法架构",
+      "detail": "靠多智能体强化学习与大规模并行测试时计算，让智能体自组织分工",
+      "children": [
+        "约 1 年多智能体 RL 训练",
+        "非单条长链证明",
+        "智能体自主决定如何协作"
+      ]
+    },
+    {
+      "label": "技术含义",
+      "detail": "重心从单体大模型转向智能体集群、并行搜索与测试时算力扩展",
+      "children": [
+        "任务分解与智能体通信",
+        "搜索树管理与候选路径聚合",
+        "分布式定理搜索"
+      ]
+    },
+    {
+      "label": "争议与未知",
+      "detail": "数学界尚未验证，缺少定理陈述、预印本与形式化验证",
+      "children": [
+        "88 小时仅见于讽刺帖",
+        "人类与模型分工不明",
+        "“解”含义未澄清"
+      ]
+    },
+    {
+      "label": "被掩盖新闻",
+      "detail": "同日 Cognition 480 亿、Mistral 240 亿融资与 Meta Muse 等均被压过",
+      "children": [
+        "Cognition 48B 美元 E 轮",
+        "Mistral 24B 美元 D 轮",
+        "GPT Image 2.5、Meta Muse"
+      ]
+    }
+  ],
+  "flow": [
+    "多智能体 RL 训练约一年",
+    "约 1 万智能体并行运行",
+    "自主分工与协作搜索",
+    "聚合候选证明路径",
+    "产出 Navier-Stokes 解"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Navier-Stokes",
+      "type": "concept"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "Cognition",
+      "type": "company"
+    },
+    {
+      "name": "Mistral",
+      "type": "company"
+    },
+    {
+      "name": "Meta Muse",
+      "type": "product"
+    },
+    {
+      "name": "multi-agent RL",
+      "type": "technique"
+    },
+    {
+      "name": "test-time compute",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Navier-Stokes",
+      "label": "声称解决"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Astra",
+      "label": "使用模型"
+    },
+    {
+      "from": "OpenAI",
+      "to": "multi-agent RL",
+      "label": "训练方法"
+    },
+    {
+      "from": "OpenAI",
+      "to": "test-time compute",
+      "label": "扩展算力"
+    },
+    {
+      "from": "Cognition",
+      "to": "Mistral",
+      "label": "同日融资"
+    }
+  ]
+}

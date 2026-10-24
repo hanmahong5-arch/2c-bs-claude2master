@@ -1,0 +1,101 @@
+{
+  "center": "Grabette 开源机器人操作记录系统",
+  "branches": [
+    {
+      "label": "系统定位",
+      "detail": "开源系统，用于记录机器人操作数据",
+      "children": [
+        "面向机器人操作数据采集",
+        "开源硬件与软件方案"
+      ]
+    },
+    {
+      "label": "数据转换",
+      "detail": "可将 Grabette 录制数据转为 LeRobot 数据集",
+      "children": [
+        "Grabette Slam 空间提供转换",
+        "对接 LeRobot 数据格式"
+      ]
+    },
+    {
+      "label": "硬件物料",
+      "detail": "提供 BoM 物料清单供社区自行搭建",
+      "children": [
+        "社区用户按 BoM 复刻",
+        "elec_grabette 电子仓库已公开"
+      ]
+    },
+    {
+      "label": "社区反馈",
+      "detail": "发布后社区关注度高，反馈积极",
+      "children": [
+        "获 64 次点赞",
+        "作者修复电子仓库权限问题"
+      ]
+    }
+  ],
+  "flow": [
+    "按 BoM 搭建 Grabette 硬件",
+    "录制机器人操作数据",
+    "上传 Grabette 录制文件",
+    "用 Grabette Slam 转换",
+    "生成 LeRobot 数据集"
+  ],
+  "entities": [
+    {
+      "name": "Grabette",
+      "type": "product"
+    },
+    {
+      "name": "LeRobot",
+      "type": "product"
+    },
+    {
+      "name": "Grabette Slam",
+      "type": "product"
+    },
+    {
+      "name": "elec_grabette",
+      "type": "product"
+    },
+    {
+      "name": "Pollen Robotics",
+      "type": "company"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "机器人操作数据记录",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Grabette",
+      "to": "LeRobot",
+      "label": "数据转为"
+    },
+    {
+      "from": "Grabette Slam",
+      "to": "LeRobot",
+      "label": "转换输出"
+    },
+    {
+      "from": "Grabette Slam",
+      "to": "Grabette",
+      "label": "处理录制"
+    },
+    {
+      "from": "Pollen Robotics",
+      "to": "elec_grabette",
+      "label": "开源"
+    },
+    {
+      "from": "Grabette",
+      "to": "机器人操作数据记录",
+      "label": "用于"
+    }
+  ]
+}

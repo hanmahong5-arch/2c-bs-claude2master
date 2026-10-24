@@ -1,0 +1,105 @@
+{
+  "center": "gemini-cli v0.54.4 发布与回滚",
+  "branches": [
+    {
+      "label": "补丁修复",
+      "detail": "cherry-pick 56f9688 到 v0.54.0 分支，生成 v0.54.1 修复特定问题",
+      "children": [
+        "cherry-pick 56f9688",
+        "基于 v0.54.0 分支"
+      ]
+    },
+    {
+      "label": "版本号回滚",
+      "detail": "版本号从 v0.54.1 升至 v0.54.2 后被回滚，最终发布 v0.54.4",
+      "children": [
+        "v0.54.1 → v0.54.2",
+        "回滚后发布 v0.54.4"
+      ]
+    },
+    {
+      "label": "发布流程调整",
+      "detail": "回滚说明发布流程有调整，最终确保版本一致性",
+      "children": [
+        "确保版本一致性"
+      ]
+    },
+    {
+      "label": "对 agent harness 启示",
+      "detail": "需关注版本控制与回滚机制，确保自动化发布流程稳定",
+      "children": [
+        "版本控制",
+        "回滚机制"
+      ]
+    }
+  ],
+  "flow": [
+    "cherry-pick 56f9688 至 v0.…",
+    "生成 v0.54.1 修复问题",
+    "版本号升至 v0.54.2",
+    "回滚版本号提升",
+    "发布 v0.54.4"
+  ],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "v0.54.0",
+      "type": "concept"
+    },
+    {
+      "name": "v0.54.1",
+      "type": "concept"
+    },
+    {
+      "name": "v0.54.2",
+      "type": "concept"
+    },
+    {
+      "name": "v0.54.4",
+      "type": "concept"
+    },
+    {
+      "name": "cherry-pick",
+      "type": "technique"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "gemini-cli",
+      "to": "v0.54.0",
+      "label": "基于"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "v0.54.1",
+      "label": "发布"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "v0.54.2",
+      "label": "发布"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "v0.54.4",
+      "label": "发布"
+    },
+    {
+      "from": "cherry-pick",
+      "to": "v0.54.1",
+      "label": "生成"
+    },
+    {
+      "from": "agent harness",
+      "to": "gemini-cli",
+      "label": "关注"
+    }
+  ]
+}

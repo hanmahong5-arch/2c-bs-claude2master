@@ -1,0 +1,117 @@
+{
+  "center": "Sonnet 5 发布与 Fable 5 缺席",
+  "branches": [
+    {
+      "label": "发布与定位",
+      "detail": "Anthropic 推出 Claude Sonnet 5，称其为最智能体化的 Sonnet，主打规划、工具使用与自主执行。",
+      "children": [
+        "1M token 上下文窗口",
+        "默认在 Claude Code 中面向 Pro 用户",
+        "标准价 $3/M 输入、$15/M 输出"
+      ]
+    },
+    {
+      "label": "成本争议",
+      "detail": "因 tokenizer 变化与更多轮次，实际运行成本大增，引发效率质疑。",
+      "children": [
+        "平均输出 token 比 Sonnet 4.6 多约 40%",
+        "任务成本约 $2.29，是 4.6 的 2 倍",
+        "比 Opus 4.8 还贵约 15%"
+      ]
+    },
+    {
+      "label": "性能提升",
+      "detail": "第三方评测确认较 Sonnet 4.6 有实质进步，但未全面超越 Opus 4.8。",
+      "children": [
+        "CursorBench 57% vs 49%",
+        "AA 智能指数 53，+6 排第 5",
+        "FrontierCode 53.8% 超 Opus 4.8"
+      ]
+    },
+    {
+      "label": "Fable 5 缺席",
+      "detail": "此前传闻 Sonnet 5 与 Fable 5 同发，但 Fable 5 未出现，成为讨论焦点。",
+      "children": [
+        "Fable 5 曾被传需单独信用计费",
+        "用户称“反而只等来 Sonnet 5”",
+        "距 Fable 5 被禁已 18 天"
+      ]
+    },
+    {
+      "label": "平台与生态",
+      "detail": "发布同时扩展平台支持，多家工具快速接入。",
+      "children": [
+        "Claude Desktop 登陆 Linux 测试版",
+        "Managed Agents 更新流式与可观测性",
+        "Cursor、Perplexity、VS Code 等接入"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Sonnet 5",
+      "type": "model"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Sonnet 5",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "Claude Code",
+      "label": "默认集成"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "Claude Sonnet 5",
+      "label": "评测"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "Claude Opus 4.8",
+      "label": "成本更高"
+    },
+    {
+      "from": "Cursor",
+      "to": "Claude Sonnet 5",
+      "label": "接入支持"
+    },
+    {
+      "from": "Fable 5",
+      "to": "Claude Sonnet 5",
+      "label": "缺席对比"
+    }
+  ]
+}

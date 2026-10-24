@@ -1,0 +1,113 @@
+{
+  "center": "Agents：环境、工具与规划",
+  "branches": [
+    {
+      "label": "什么是智能体",
+      "detail": "能感知环境并通过执行器作用于环境的系统，由环境与动作集定义",
+      "children": [
+        "源自 Russell & Norvig《人工智能：一种现代方…",
+        "环境由用例决定：游戏、互联网、道路系统",
+        "ChatGPT、RAG 系统都算 agent"
+      ]
+    },
+    {
+      "label": "环境与工具",
+      "detail": "环境决定可用工具，工具清单又限制可操作的环境",
+      "children": [
+        "只读动作用于感知，写动作用于改变环境",
+        "SWE-agent 环境是电脑，动作含导航、搜索、编辑",
+        "工具越多能力越强，但越难用好"
+      ]
+    },
+    {
+      "label": "规划与执行",
+      "detail": "AI 是大脑，负责推理、规划动作序列并判断任务是否完成",
+      "children": [
+        "RAG 例子：推理→生成 SQL→执行→再推理",
+        "推理过程可表现为中间响应",
+        "任务完成需 agent 自行判断"
+      ]
+    },
+    {
+      "label": "为何需更强模型",
+      "detail": "多步任务放大误差，且工具带来更高风险",
+      "children": [
+        "单步 95% 准确率，10 步降至 60%",
+        "100 步仅剩 0.6%",
+        "高权限任务失败后果更严重"
+      ]
+    },
+    {
+      "label": "评估与失败",
+      "detail": "新运作模式带来新失败模式，需专门评估来捕捉",
+      "children": [
+        "领域尚无成熟理论框架",
+        "与 Anthropic 博客概念一致但侧重不同",
+        "本文更关注规划、工具选择与失败模式"
+      ]
+    }
+  ],
+  "flow": [
+    "接收用户任务",
+    "推理并规划动作",
+    "调用工具执行",
+    "解读工具输出",
+    "判断任务是否完成"
+  ],
+  "entities": [
+    {
+      "name": "Chip Huyen",
+      "type": "person"
+    },
+    {
+      "name": "Stuart Russell",
+      "type": "person"
+    },
+    {
+      "name": "Peter Norvig",
+      "type": "person"
+    },
+    {
+      "name": "SWE-agent",
+      "type": "product"
+    },
+    {
+      "name": "GPT-4",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "RAG",
+      "type": "concept"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Chip Huyen",
+      "to": "SWE-agent",
+      "label": "引用"
+    },
+    {
+      "from": "SWE-agent",
+      "to": "GPT-4",
+      "label": "基于"
+    },
+    {
+      "from": "Stuart Russell",
+      "to": "Peter Norvig",
+      "label": "合著"
+    },
+    {
+      "from": "Anthropic",
+      "to": "SWE-agent",
+      "label": "概念一致"
+    }
+  ]
+}

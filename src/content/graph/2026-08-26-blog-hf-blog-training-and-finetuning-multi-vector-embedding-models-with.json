@@ -1,0 +1,115 @@
+{
+  "center": "多向量嵌入模型训练与微调",
+  "branches": [
+    {
+      "label": "微调组件",
+      "detail": "微调多向量模型需模型、数据集、损失函数、训练参数、评估器与训练器类",
+      "children": [
+        "MultiVectorEncoder 随 Sentence…",
+        "支持 ColBERT 式 late interaction 检索",
+        "同一框架覆盖 RAG、语义搜索与重排序"
+      ]
+    },
+    {
+      "label": "多向量优势",
+      "detail": "保留多个表示，比单一稠密向量匹配更细粒度",
+      "children": [
+        "late interaction 保留多表示",
+        "匹配粒度优于单稠密嵌入"
+      ]
+    },
+    {
+      "label": "医学检索效果",
+      "detail": "mLateOn-medical 单卡训练 14.5 小时即超越多种基线",
+      "children": [
+        "单张 RTX 3090 训练 14.5 小时",
+        "优于稠密、稀疏、词法与其它多向量方法"
+      ]
+    },
+    {
+      "label": "领域微调价值",
+      "detail": "收益更多来自模型与训练数据贴合实际检索任务",
+      "children": [
+        "不必只追最新通用模型",
+        "可从头训练或微调已有模型"
+      ]
+    },
+    {
+      "label": "上手方式",
+      "detail": "整个训练流程可用 sentence-transformers[train] 搭建",
+      "children": [
+        "安装 sentence-transformers[train]",
+        "复杂检索训练流程更易复现"
+      ]
+    }
+  ],
+  "flow": [
+    "准备模型与数据集",
+    "选择损失函数",
+    "设置训练参数",
+    "配置评估器",
+    "用 Trainer 训练"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Sentence Transformers",
+      "type": "product"
+    },
+    {
+      "name": "MultiVectorEncoder",
+      "type": "model"
+    },
+    {
+      "name": "ColBERT",
+      "type": "model"
+    },
+    {
+      "name": "mLateOn-medical",
+      "type": "model"
+    },
+    {
+      "name": "late interaction",
+      "type": "concept"
+    },
+    {
+      "name": "RAG",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Sentence Transformers",
+      "label": "维护"
+    },
+    {
+      "from": "Sentence Transformers",
+      "to": "MultiVectorEncoder",
+      "label": "引入"
+    },
+    {
+      "from": "MultiVectorEncoder",
+      "to": "ColBERT",
+      "label": "采用"
+    },
+    {
+      "from": "ColBERT",
+      "to": "late interaction",
+      "label": "基于"
+    },
+    {
+      "from": "mLateOn-medical",
+      "to": "late interaction",
+      "label": "基于"
+    },
+    {
+      "from": "Sentence Transformers",
+      "to": "RAG",
+      "label": "支持"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "center": "Univé 打造 AI 就绪劳动力",
+  "branches": [
+    {
+      "label": "转型三支柱",
+      "detail": "领导力、负责任治理、员工主导创新三者结合",
+      "children": [
+        "自上而下战略支持",
+        "自下而上员工参与",
+        "规模化转型工作"
+      ]
+    },
+    {
+      "label": "组织文化关键",
+      "detail": "成功部署不仅依赖技术，还需文化与治理框架",
+      "children": [
+        "AI 就绪劳动力",
+        "负责任治理",
+        "员工主导创新"
+      ]
+    },
+    {
+      "label": "对 agent 启示",
+      "detail": "agent 工具链落地需战略支持与员工参与并重",
+      "children": [
+        "自上而下战略支持",
+        "自下而上员工参与"
+      ]
+    },
+    {
+      "label": "开发者建议",
+      "detail": "构建 AI 工具应关注易用性与可治理性",
+      "children": [
+        "促进员工采纳",
+        "确保合规"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Univé",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Enterprise",
+      "type": "product"
+    },
+    {
+      "name": "AI 就绪劳动力",
+      "type": "concept"
+    },
+    {
+      "name": "负责任治理",
+      "type": "concept"
+    },
+    {
+      "name": "员工主导创新",
+      "type": "concept"
+    },
+    {
+      "name": "agent 工具链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Univé",
+      "to": "ChatGPT Enterprise",
+      "label": "采用"
+    },
+    {
+      "from": "Univé",
+      "to": "AI 就绪劳动力",
+      "label": "打造"
+    },
+    {
+      "from": "负责任治理",
+      "to": "AI 就绪劳动力",
+      "label": "支撑"
+    },
+    {
+      "from": "员工主导创新",
+      "to": "AI 就绪劳动力",
+      "label": "驱动"
+    },
+    {
+      "from": "ChatGPT Enterprise",
+      "to": "agent 工具链",
+      "label": "启示"
+    }
+  ]
+}

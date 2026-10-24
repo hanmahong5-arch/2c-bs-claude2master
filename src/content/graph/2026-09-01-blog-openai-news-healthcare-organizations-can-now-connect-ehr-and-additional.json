@@ -1,0 +1,76 @@
+{
+  "center": "ChatGPT接入电子病历",
+  "branches": [
+    {
+      "label": "接入EHR数据",
+      "detail": "ChatGPT可连接电子健康记录及医疗行业数据",
+      "children": [
+        "支持EHR及其他医疗数据源"
+      ]
+    },
+    {
+      "label": "辅助临床决策",
+      "detail": "临床医生可安全访问患者上下文与医学研究",
+      "children": [
+        "访问患者上下文",
+        "查阅医学研究"
+      ]
+    },
+    {
+      "label": "减少检索时间",
+      "detail": "降低信息检索耗时，让医生更专注患者护理",
+      "children": [
+        "提升护理专注度"
+      ]
+    },
+    {
+      "label": "隐私与合规",
+      "detail": "需确保数据隐私与合规，关注数据安全",
+      "children": [
+        "数据隐私",
+        "合规要求",
+        "模型准确性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "EHR",
+      "type": "concept"
+    },
+    {
+      "name": "临床决策",
+      "type": "concept"
+    },
+    {
+      "name": "数据隐私",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "开发"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "EHR",
+      "label": "连接"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "临床决策",
+      "label": "辅助"
+    }
+  ]
+}

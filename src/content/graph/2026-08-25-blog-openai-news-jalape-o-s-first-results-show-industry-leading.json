@@ -1,0 +1,88 @@
+{
+  "center": "OpenAI 自研推理芯片 Jalapeño",
+  "branches": [
+    {
+      "label": "芯片定位",
+      "detail": "OpenAI 自研推理芯片，专为现代模型设计",
+      "children": [
+        "主打更高吞吐量与更低延迟"
+      ]
+    },
+    {
+      "label": "性能表现",
+      "detail": "首秀结果显示速度与能效达行业领先",
+      "children": [
+        "速度行业领先",
+        "能效行业领先"
+      ]
+    },
+    {
+      "label": "成本影响",
+      "detail": "可能降低 AI 推理的运营成本",
+      "children": [
+        "开发者有望更低成本获得更快响应"
+      ]
+    },
+    {
+      "label": "应用前景",
+      "detail": "推动实时 AI 应用普及",
+      "children": [
+        "实时 AI 应用更易落地"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Jalapeño",
+      "type": "product"
+    },
+    {
+      "name": "推理芯片",
+      "type": "concept"
+    },
+    {
+      "name": "AI 推理",
+      "type": "concept"
+    },
+    {
+      "name": "吞吐量",
+      "type": "concept"
+    },
+    {
+      "name": "延迟",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Jalapeño",
+      "label": "自研"
+    },
+    {
+      "from": "Jalapeño",
+      "to": "推理芯片",
+      "label": "属于"
+    },
+    {
+      "from": "Jalapeño",
+      "to": "AI 推理",
+      "label": "用于"
+    },
+    {
+      "from": "Jalapeño",
+      "to": "吞吐量",
+      "label": "提升"
+    },
+    {
+      "from": "Jalapeño",
+      "to": "延迟",
+      "label": "降低"
+    }
+  ]
+}

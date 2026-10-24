@@ -1,0 +1,85 @@
+{
+  "center": "Cline 4.1.0 双扩展灰度",
+  "branches": [
+    {
+      "label": "A/B 双扩展包",
+      "detail": "一个 VSIX 内含旧扩展和新 SDK 扩展，由加载器按窗口激活其一",
+      "children": [
+        "稳定版转为组合包",
+        "受远程分阶段控制"
+      ]
+    },
+    {
+      "label": "远程灰度切换",
+      "detail": "从 1% 用户开始，窗口重载时切换，不在会话中途变更",
+      "children": [
+        "灰度从 1% 用户开始",
+        "窗口重载时切换"
+      ]
+    },
+    {
+      "label": "失败自动回退",
+      "detail": "新扩展激活失败自动回退旧扩展，无需用户操作",
+      "children": [
+        "无需用户操作"
+      ]
+    },
+    {
+      "label": "状态与任务隔离",
+      "detail": "设置、凭据、偏好共享，无迁移丢失；但新扩展创建的任务在旧扩展下不可见",
+      "children": [
+        "重新提升后恢复",
+        "任务可见性隔离"
+      ]
+    },
+    {
+      "label": "agent harness 设计",
+      "detail": "需支持双版本共存与动态切换，确保状态兼容和回退机制",
+      "children": [
+        "考虑任务可见性隔离"
+      ]
+    }
+  ],
+  "flow": [
+    "发布组合包",
+    "远程分阶段控制",
+    "1% 用户灰度",
+    "窗口重载切换",
+    "失败自动回退"
+  ],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "VSIX",
+      "type": "product"
+    },
+    {
+      "name": "SDK",
+      "type": "technique"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "VSIX",
+      "label": "打包为"
+    },
+    {
+      "from": "VSIX",
+      "to": "SDK",
+      "label": "包含"
+    },
+    {
+      "from": "Cline",
+      "to": "agent harness",
+      "label": "设计参考"
+    }
+  ]
+}

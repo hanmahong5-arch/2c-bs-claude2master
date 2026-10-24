@@ -1,0 +1,112 @@
+{
+  "center": "Anthropic 因美政府指令停用…",
+  "branches": [
+    {
+      "label": "模型被紧急停用",
+      "detail": "发布仅 3 天的 Fable 5 与 Mythos 5 因出口管制指令全球停用",
+      "children": [
+        "美政府称存在国家安全风险",
+        "禁止所有外国国民访问，含海外员工",
+        "Anthropic 称仅收到口头证据"
+      ]
+    },
+    {
+      "label": "行业连锁反应",
+      "detail": "下游产品与基准紧急下架，引发模型主权讨论",
+      "children": [
+        "Cognition/Devin、Agent Arena 移除相关模型",
+        "Artificial Analysis 智能前沿图首次回退",
+        "开源倡导者强烈反弹"
+      ]
+    },
+    {
+      "label": "编码 Agent 评测更新",
+      "detail": "Artificial Analysis 用 DeepSWE 替换 SWE-Bench Pro 以减少刷榜",
+      "children": [
+        "Claude Code + Fable 5 以 77 分登顶",
+        "Codex + GPT-5.5 以 76 分紧随",
+        "Harness 质量成为独立变量"
+      ]
+    },
+    {
+      "label": "开源模型发布",
+      "detail": "Kimi K2.7-Code 与 MiniMax M3 相继开源",
+      "children": [
+        "Kimi K2.7-Code：1T MoE，32B 激活，256K 上…",
+        "MiniMax M3：428B 参数，23B 激活，1M 上下文",
+        "M3 获 SGLang、vLLM 等首日支持"
+      ]
+    },
+    {
+      "label": "Agent 基础设施",
+      "detail": "推理基准与沙箱成为 Agent 部署核心",
+      "children": [
+        "AA-AgentPerf 以每兆瓦 Agent 数为指标",
+        "SkyPilot Sandboxes 支持亚秒启动",
+        "Anthropic 曾推客户自控沙箱"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "US government",
+      "type": "company"
+    },
+    {
+      "name": "Kimi-K2.7-Code",
+      "type": "model"
+    },
+    {
+      "name": "MiniMax M3",
+      "type": "model"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "DeepSWE",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "US government",
+      "to": "Anthropic",
+      "label": "下达指令"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Fable 5",
+      "label": "停用"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Mythos 5",
+      "label": "停用"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "DeepSWE",
+      "label": "采用"
+    },
+    {
+      "from": "Kimi-K2.7-Code",
+      "to": "MiniMax M3",
+      "label": "同期发布"
+    }
+  ]
+}

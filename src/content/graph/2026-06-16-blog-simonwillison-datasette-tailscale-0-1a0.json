@@ -1,0 +1,96 @@
+{
+  "center": "datasette-tailscale 插件发布",
+  "branches": [
+    {
+      "label": "插件功能",
+      "detail": "让 Datasette 实例接入 Tailscale 网络对外提供服务",
+      "children": [
+        "命令行加 --ts-authkey 与 --ts-hostname",
+        "通过 http://datasette-preview/ 访问"
+      ]
+    },
+    {
+      "label": "实现方式",
+      "detail": "本地 Datasette 服务搭配 Tailscale sidecar 接入 Tailnet",
+      "children": [
+        "使用 tailscale-rs 的 Python 绑定",
+        "tailscale-rs 仍属实验性库"
+      ]
+    },
+    {
+      "label": "版本状态",
+      "detail": "0.1a0 为非常实验性的 alpha 版本",
+      "children": [
+        "作者 Simon Willison",
+        "发布于 2026 年 6 月 16 日"
+      ]
+    },
+    {
+      "label": "待改进点",
+      "detail": "作者就代理机制更简洁的实现方式提交了 issue",
+      "children": [
+        "询问是否有更干净的代理设置方法"
+      ]
+    }
+  ],
+  "flow": [
+    "运行 datasette tailscale…",
+    "传入 authkey 与 hostname",
+    "启动本地 Datasette 服务",
+    "sidecar 接入 Tailnet",
+    "通过主机名访问"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Tailscale",
+      "type": "product"
+    },
+    {
+      "name": "datasette-tailscale",
+      "type": "product"
+    },
+    {
+      "name": "tailscale-rs",
+      "type": "technique"
+    },
+    {
+      "name": "Tailnet",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "datasette-tailscale",
+      "label": "发布"
+    },
+    {
+      "from": "datasette-tailscale",
+      "to": "Datasette",
+      "label": "扩展"
+    },
+    {
+      "from": "datasette-tailscale",
+      "to": "Tailscale",
+      "label": "接入"
+    },
+    {
+      "from": "datasette-tailscale",
+      "to": "tailscale-rs",
+      "label": "依赖"
+    },
+    {
+      "from": "Tailscale",
+      "to": "Tailnet",
+      "label": "组成"
+    }
+  ]
+}

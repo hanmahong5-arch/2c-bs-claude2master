@@ -1,0 +1,100 @@
+{
+  "center": "Strands Agents 与 LeRobot 集成",
+  "branches": [
+    {
+      "label": "一体化闭环",
+      "detail": "一个 agent 工作流串起采集、流式传输、训练、评估与部署",
+      "children": [
+        "agent 不只是执行任务，而是处在持续数据学习循…",
+        "从 Hugging Face Hub 到机器人硬件"
+      ]
+    },
+    {
+      "label": "数据与存储",
+      "detail": "用 Hugging Face Storage Buckets 承载机器人数据",
+      "children": [
+        "Xet 实现字节级数据去重",
+        "可直接从云端流式训练，减轻 GPU 负担"
+      ]
+    },
+    {
+      "label": "信任边界",
+      "detail": "数据、凭证与 agent 动作的信任边界成为关键",
+      "children": [
+        "agent 方案需按完整系统设计，而非孤立功能"
+      ]
+    },
+    {
+      "label": "配套资源",
+      "detail": "文章附带模型、数据集与演示 Space",
+      "children": [
+        "5 个模型、1 个数据集、3 个 Space",
+        "LeRobot × Hugging Face Buckets 交互式可视…"
+      ]
+    }
+  ],
+  "flow": [
+    "采集机器人演示数据",
+    "存入 HF Storage Buckets",
+    "流式传输至训练",
+    "评估模型",
+    "部署到真实硬件"
+  ],
+  "entities": [
+    {
+      "name": "Strands Agents",
+      "type": "product"
+    },
+    {
+      "name": "LeRobot",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Hugging Face Hub",
+      "type": "product"
+    },
+    {
+      "name": "Storage Buckets",
+      "type": "product"
+    },
+    {
+      "name": "Xet",
+      "type": "technique"
+    },
+    {
+      "name": "AI agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Strands Agents",
+      "to": "LeRobot",
+      "label": "集成"
+    },
+    {
+      "from": "LeRobot",
+      "to": "Hugging Face Hub",
+      "label": "接入"
+    },
+    {
+      "from": "Hugging Face Hub",
+      "to": "Storage Buckets",
+      "label": "提供"
+    },
+    {
+      "from": "Storage Buckets",
+      "to": "Xet",
+      "label": "采用"
+    },
+    {
+      "from": "Strands Agents",
+      "to": "AI agent",
+      "label": "属于"
+    }
+  ]
+}

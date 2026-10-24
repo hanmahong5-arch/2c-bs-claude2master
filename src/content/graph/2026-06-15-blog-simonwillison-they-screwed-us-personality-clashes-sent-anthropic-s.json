@@ -1,0 +1,105 @@
+{
+  "center": "Anthropic 模型下线风波",
+  "branches": [
+    {
+      "label": "事件核心",
+      "detail": "Axios 披露美国政府出口管制导致 Anthropic 模型被下线",
+      "children": [
+        "涉及 Mythos/Fable 模型",
+        "被归类为潜在窄域非通用越狱"
+      ]
+    },
+    {
+      "label": "关键人物",
+      "detail": "Anthropic 三位代表赴商务部会面",
+      "children": [
+        "Logan Graham：前沿红队负责人",
+        "Dave Orr：安全负责人，前 Google DeepMind…",
+        "Nicholas Carlini：知名安全研究者"
+      ]
+    },
+    {
+      "label": "官方态度",
+      "detail": "政府消息人士称需态度修复而非技术解决",
+      "children": [
+        "要求所有人感到安全、安心、满意",
+        "完美越狱抵抗可能无法实现"
+      ]
+    },
+    {
+      "label": "技术应对",
+      "detail": "Anthropic 以 Constitutional Classifiers 应对越狱攻击",
+      "children": [
+        "声称未发现针对 Claude Mythos 的通用越狱",
+        "触发政府反应的越狱被定性为窄域非通用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Axios",
+      "type": "company"
+    },
+    {
+      "name": "Claude Mythos",
+      "type": "model"
+    },
+    {
+      "name": "Logan Graham",
+      "type": "person"
+    },
+    {
+      "name": "Dave Orr",
+      "type": "person"
+    },
+    {
+      "name": "Nicholas Carlini",
+      "type": "person"
+    },
+    {
+      "name": "Constitutional Classifiers",
+      "type": "technique"
+    },
+    {
+      "name": "jailbreaking",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Axios",
+      "to": "Anthropic",
+      "label": "披露"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Mythos",
+      "label": "开发"
+    },
+    {
+      "from": "Logan Graham",
+      "to": "Anthropic",
+      "label": "任职于"
+    },
+    {
+      "from": "Dave Orr",
+      "to": "Anthropic",
+      "label": "任职于"
+    },
+    {
+      "from": "Nicholas Carlini",
+      "to": "Anthropic",
+      "label": "关联"
+    },
+    {
+      "from": "Constitutional Classifiers",
+      "to": "jailbreaking",
+      "label": "防御"
+    }
+  ]
+}

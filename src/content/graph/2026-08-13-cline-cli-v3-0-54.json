@@ -1,0 +1,99 @@
+{
+  "center": "Cline CLI v3.0.54 修复",
+  "branches": [
+    {
+      "label": "Claude Code 代理",
+      "detail": "代理改用原生工具，会话锚定工作目录并加载权限规则",
+      "children": [
+        "不再接收无法桥接的工具定义",
+        "工作区内文件编辑自动批准",
+        "命令执行仍受 Claude 设置约束"
+      ]
+    },
+    {
+      "label": "工具调用 JSON",
+      "detail": "截断不再被静默修复，未终止字符串载荷被拒绝",
+      "children": [
+        "避免参数错误",
+        "流式工具调用索引非零或不连续不再崩溃"
+      ]
+    },
+    {
+      "label": "提供商与流式",
+      "detail": "严格提供商不再因消息仅含空文本部分而报错",
+      "children": [
+        "空文本部分不再触发错误",
+        "流式索引异常不再导致崩溃"
+      ]
+    },
+    {
+      "label": "Hub 守护进程",
+      "detail": "新 CLI 附加到较新守护进程并提示更新，避免互相淘汰",
+      "children": [
+        "Yolo 和沙箱会话不受影响",
+        "修复关闭时客户端仍连接导致的错误退出"
+      ]
+    },
+    {
+      "label": "Token 统计",
+      "detail": "修复缓存密集型会话 token 统计虚高约 5 倍的问题",
+      "children": [
+        "缓存密集型会话统计虚高约 5 倍"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Hub",
+      "type": "product"
+    },
+    {
+      "name": "Yolo",
+      "type": "concept"
+    },
+    {
+      "name": "工具调用 JSON",
+      "type": "concept"
+    },
+    {
+      "name": "token 统计",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "Claude Code",
+      "label": "修复代理"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Hub",
+      "label": "升级守护进程"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "工具调用 JSON",
+      "label": "修复截断"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "token 统计",
+      "label": "修复虚高"
+    },
+    {
+      "from": "Hub",
+      "to": "Yolo",
+      "label": "不影响"
+    }
+  ]
+}

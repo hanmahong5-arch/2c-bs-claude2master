@@ -1,0 +1,88 @@
+{
+  "center": "Nunchaku 4-bit 集成 Diffusers",
+  "branches": [
+    {
+      "label": "集成内容",
+      "detail": "Hugging Face 将 Nunchaku 4-bit 扩散推理集成进 Diffusers 库",
+      "children": [
+        "加速图像生成",
+        "支持 Stable Diffusion 和 Flux"
+      ]
+    },
+    {
+      "label": "量化效果",
+      "detail": "Nunchaku 将扩散模型权重压缩至原始大小的 25%",
+      "children": [
+        "减少内存占用",
+        "降低推理延迟"
+      ]
+    },
+    {
+      "label": "使用方式",
+      "detail": "用户只需简单修改代码即可启用该集成",
+      "children": []
+    },
+    {
+      "label": "开发者价值",
+      "detail": "可在消费级 GPU 上运行大型扩散模型",
+      "children": [
+        "降低硬件门槛",
+        "加速实验和部署"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Nunchaku",
+      "type": "technique"
+    },
+    {
+      "name": "Diffusers",
+      "type": "product"
+    },
+    {
+      "name": "Stable Diffusion",
+      "type": "model"
+    },
+    {
+      "name": "Flux",
+      "type": "model"
+    },
+    {
+      "name": "4-bit 量化",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Nunchaku",
+      "label": "集成"
+    },
+    {
+      "from": "Nunchaku",
+      "to": "Diffusers",
+      "label": "集成到"
+    },
+    {
+      "from": "Nunchaku",
+      "to": "4-bit 量化",
+      "label": "采用"
+    },
+    {
+      "from": "Diffusers",
+      "to": "Stable Diffusion",
+      "label": "支持"
+    },
+    {
+      "from": "Diffusers",
+      "to": "Flux",
+      "label": "支持"
+    }
+  ]
+}

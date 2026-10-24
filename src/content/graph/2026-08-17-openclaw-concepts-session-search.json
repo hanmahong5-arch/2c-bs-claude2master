@@ -1,0 +1,117 @@
+{
+  "center": "OpenClaw 会话检索",
+  "branches": [
+    {
+      "label": "检索与回读",
+      "detail": "sessions_search 精确匹配历史会话原文，返回 sessionKey 等定位信息",
+      "children": [
+        "结果含 sessionKey、timestamp、role、匹配摘录",
+        "传 sessionKey+messageId+sessionId 给…",
+        "锚定读取用 limit 限制周边消息，省略 offset"
+      ]
+    },
+    {
+      "label": "可见性规则",
+      "detail": "搜索沿用 sessions_history 的会话可见性配置",
+      "children": [
+        "默认 visibility: all 允许跨 agent 搜索",
+        "tools.agentToAgent 可设 false 或 allow…",
+        "越权结果在应用数量上限前先被移除"
+      ]
+    },
+    {
+      "label": "索引生命周期",
+      "detail": "全文索引与 transcript 同库同事务写入，不滞后于实时会话",
+      "children": [
+        "仅活跃分支可搜，工具结果/推理/图片排除",
+        "旧 transcript 由后台对账重建索引",
+        "删除会话同事务移除索引条目"
+      ]
+    },
+    {
+      "label": "控制台搜索",
+      "detail": "命令面板与 Threads 页把过滤条件发给 Gateway 全量授权历史检索",
+      "children": [
+        "浏览器不下载会话名册",
+        "可搜自定义分组会话，未分组子会话排除",
+        "冷归档历史需打开会话恢复后才可搜"
+      ]
+    },
+    {
+      "label": "与记忆互补",
+      "detail": "sessions_search 管原文精确词，memory_search 管语义回忆",
+      "children": [
+        "实验性 session-memory 语料是语义补充",
+        "摘录返回模型前先做脱敏"
+      ]
+    }
+  ],
+  "flow": [
+    "调用 sessions_search 检索",
+    "取回 sessionKey 与摘录",
+    "传三参数给 sessions_history",
+    "重开匹配上下文"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "sessions_search",
+      "type": "technique"
+    },
+    {
+      "name": "sessions_history",
+      "type": "technique"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "memory_search",
+      "type": "technique"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "session-memory",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "sessions_search",
+      "to": "OpenClaw",
+      "label": "属于"
+    },
+    {
+      "from": "sessions_search",
+      "to": "sessions_history",
+      "label": "配合回读"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "SQLite",
+      "label": "存储索引"
+    },
+    {
+      "from": "sessions_search",
+      "to": "memory_search",
+      "label": "互补"
+    },
+    {
+      "from": "memory_search",
+      "to": "session-memory",
+      "label": "使用语料"
+    },
+    {
+      "from": "Gateway",
+      "to": "sessions_search",
+      "label": "执行检索"
+    }
+  ]
+}

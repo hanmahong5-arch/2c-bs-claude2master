@@ -1,0 +1,120 @@
+{
+  "center": "Anthropic 合作伙伴服务分级与门户",
+  "branches": [
+    {
+      "label": "服务分级三档",
+      "detail": "Services Track 按认证人数、生产客户数、公开案例分三档",
+      "children": [
+        "Select：10 认证、2 生产客户、1 案例",
+        "Preferred：100 认证、15 客户、3 案例",
+        "Global Premier：1000 认证、100 客户、15…"
+      ]
+    },
+    {
+      "label": "伙伴门户",
+      "detail": "Partner Hub 每日刷新伙伴达标情况，客户可查合格伙伴",
+      "children": [
+        "公开目录展示等级、认证团队、部署与案例",
+        "可通过 MCP connector 接入 Claude 对话查询"
+      ]
+    },
+    {
+      "label": "大厂实践规模",
+      "detail": "多家咨询巨头围绕 Claude 建立内部实践并大规模培训",
+      "children": [
+        "Accenture 培训 3 万人",
+        "Cognizant 覆盖约 35 万员工",
+        "Deloitte 47 万人、KPMG 27.6 万人"
+      ]
+    },
+    {
+      "label": "晋升与降级规则",
+      "detail": "晋升每年 1 月 1 日与 7 月 1 日两次，首年加 10 月 1 日复核",
+      "children": [
+        "降级仅在 12 月 31 日年度复核，提前 90 天通知",
+        "业务推荐与伙伴实践分开计分"
+      ]
+    },
+    {
+      "label": "投入与下一步",
+      "detail": "1 亿美元投入培训、技术支持与联合营销",
+      "children": [
+        "新申请从 Registered 起步，最低 10 名认证",
+        "将推出行业与场景专项认证"
+      ]
+    }
+  ],
+  "flow": [
+    "申请加入网络",
+    "完成 Partner Academy 认证",
+    "交付生产客户并积累案例",
+    "在 Partner Hub 查看达标情况",
+    "按季度复核晋升等级"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Claude Partner Network",
+      "type": "product"
+    },
+    {
+      "name": "Services Track",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Partner Hub",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "Accenture",
+      "type": "company"
+    },
+    {
+      "name": "Deloitte",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Partner Network",
+      "label": "推出"
+    },
+    {
+      "from": "Claude Partner Network",
+      "to": "Services Track",
+      "label": "包含"
+    },
+    {
+      "from": "Claude Partner Network",
+      "to": "Claude Partner Hub",
+      "label": "包含"
+    },
+    {
+      "from": "Claude Partner Hub",
+      "to": "MCP",
+      "label": "支持接入"
+    },
+    {
+      "from": "Accenture",
+      "to": "Claude",
+      "label": "培训使用"
+    },
+    {
+      "from": "Deloitte",
+      "to": "Claude",
+      "label": "部署使用"
+    }
+  ]
+}

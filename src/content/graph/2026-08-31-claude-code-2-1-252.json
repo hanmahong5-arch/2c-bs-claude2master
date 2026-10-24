@@ -1,0 +1,73 @@
+{
+  "center": "claude-code v2.1.252 修复",
+  "branches": [
+    {
+      "label": "Mac Bash 修复",
+      "detail": "解决部分 Mac 上 Bash 命令因任务目录移动或链接而失败的问题",
+      "children": [
+        "确保工具执行稳定性"
+      ]
+    },
+    {
+      "label": "权限保存修复",
+      "detail": "无本地设置文件时“始终允许”权限不再丢失",
+      "children": [
+        "简化项目配置流程"
+      ]
+    },
+    {
+      "label": "远程会话修复",
+      "detail": "claude.ai 连接降级时工具完成后卡顿数分钟的问题已修复",
+      "children": [
+        "提升响应性"
+      ]
+    },
+    {
+      "label": "后台输出修复",
+      "detail": "后台任务大量错误输出导致对话超限的问题已解决",
+      "children": [
+        "避免 API 请求失败"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Mac",
+      "type": "concept"
+    },
+    {
+      "name": "Bash",
+      "type": "technique"
+    },
+    {
+      "name": "claude.ai",
+      "type": "product"
+    },
+    {
+      "name": "API",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "Bash",
+      "label": "修复执行"
+    },
+    {
+      "from": "claude-code",
+      "to": "claude.ai",
+      "label": "远程连接"
+    },
+    {
+      "from": "claude-code",
+      "to": "API",
+      "label": "避免失败"
+    }
+  ]
+}

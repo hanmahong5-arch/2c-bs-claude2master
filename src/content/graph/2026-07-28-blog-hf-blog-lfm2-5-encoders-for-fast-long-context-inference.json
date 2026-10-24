@@ -1,0 +1,112 @@
+{
+  "center": "LFM2.5 编码器 CPU 长上下文推理",
+  "branches": [
+    {
+      "label": "核心发布",
+      "detail": "Liquid AI 推出 LFM2.5 编码器，主打 CPU 上高效长上下文推理",
+      "children": [
+        "模型规模 0.1B / 0.2B / 0.4B",
+        "含 Text Generation 与 Fill-Mask 两类"
+      ]
+    },
+    {
+      "label": "性能数据",
+      "detail": "8k 上下文推理约 28 秒，官方称最高 3.2x 加速",
+      "children": [
+        "LFM2.5-DSpark 最高 3.2x 更快推理",
+        "8k 序列约 28s"
+      ]
+    },
+    {
+      "label": "部署限制",
+      "detail": "目前仅 PyTorch eager CPU 路径，需 trust_remote_code=True",
+      "children": [
+        "尚无 ORT / OpenVINO 路径",
+        "社区呼吁 int8 与 ONNX 导出"
+      ]
+    },
+    {
+      "label": "社区质疑",
+      "detail": "评测未说明 CPU 型号，笔记本与服务器差异大",
+      "children": [
+        "28s 是 Apple silicon 还是多核 x86 不明",
+        "实际场景需批量扫描数万文档"
+      ]
+    },
+    {
+      "label": "应用场景",
+      "detail": "合同扫描与 agent 沙箱内 CPU 策略校验",
+      "children": [
+        "policy linting demo 受关注",
+        "guardrail 需在 CPU 同沙箱运行"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Liquid AI",
+      "type": "company"
+    },
+    {
+      "name": "LFM2.5",
+      "type": "model"
+    },
+    {
+      "name": "LFM2.5-DSpark",
+      "type": "model"
+    },
+    {
+      "name": "PyTorch",
+      "type": "product"
+    },
+    {
+      "name": "ONNX",
+      "type": "technique"
+    },
+    {
+      "name": "OpenVINO",
+      "type": "product"
+    },
+    {
+      "name": "int8",
+      "type": "technique"
+    },
+    {
+      "name": "Tenki",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Liquid AI",
+      "to": "LFM2.5",
+      "label": "发布"
+    },
+    {
+      "from": "LFM2.5",
+      "to": "PyTorch",
+      "label": "依赖"
+    },
+    {
+      "from": "LFM2.5",
+      "to": "ONNX",
+      "label": "缺少支持"
+    },
+    {
+      "from": "LFM2.5",
+      "to": "OpenVINO",
+      "label": "缺少支持"
+    },
+    {
+      "from": "LFM2.5-DSpark",
+      "to": "LFM2.5",
+      "label": "加速"
+    },
+    {
+      "from": "Tenki",
+      "to": "LFM2.5",
+      "label": "测试"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "center": "旧金山39号码头看海狮",
+  "branches": [
+    {
+      "label": "观察地点",
+      "detail": "在旧金山39号码头观赏加州海狮",
+      "children": [
+        "Pier 39",
+        "San Francisco County, US, CA"
+      ]
+    },
+    {
+      "label": "同行者",
+      "detail": "带来访的家人一起去码头看海狮",
+      "children": [
+        "visiting family"
+      ]
+    },
+    {
+      "label": "观感",
+      "detail": "海狮总比上次记忆中更有趣",
+      "children": [
+        "比记忆里更有趣"
+      ]
+    },
+    {
+      "label": "记录出处",
+      "detail": "Simon Willison 的博客日志，2026年7月21日发布",
+      "children": [
+        "Simon Willison's Weblog",
+        "2026年7月21日"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "California Sea Lion",
+      "type": "concept"
+    },
+    {
+      "name": "Pier 39",
+      "type": "concept"
+    },
+    {
+      "name": "San Francisco",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison's Weblog",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "California Sea Lion",
+      "to": "Pier 39",
+      "label": "栖息于"
+    },
+    {
+      "from": "Pier 39",
+      "to": "San Francisco",
+      "label": "位于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Simon Willison's Weblog",
+      "label": "撰写"
+    },
+    {
+      "from": "Simon Willison's Weblog",
+      "to": "California Sea Lion",
+      "label": "记录了"
+    }
+  ]
+}

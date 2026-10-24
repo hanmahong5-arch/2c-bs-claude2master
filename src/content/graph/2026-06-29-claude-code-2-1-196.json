@@ -1,0 +1,64 @@
+{
+  "center": "Claude Code v2.1.196 更新",
+  "branches": [
+    {
+      "label": "安全改进",
+      "detail": "MCP 服务器不再自动启动，需显式批准",
+      "children": [
+        "claude mcp list/get 不自动启动仓库自批准服…",
+        "未信任工作区显示 Pending approval"
+      ]
+    },
+    {
+      "label": "后台会话可靠性",
+      "detail": "长时间运行命令在进程重启后仍存活",
+      "children": [
+        "Windows 下后台 shell 被移交而非终止",
+        "减少因进程重启导致的工作丢失"
+      ]
+    },
+    {
+      "label": "流式空闲看门狗",
+      "detail": "默认开启，5 分钟无事件则中止并重试",
+      "children": [
+        "响应超时自动恢复",
+        "提升长任务稳定性"
+      ]
+    },
+    {
+      "label": "组织默认模型",
+      "detail": "管理员可在控制台设置，未选择时显示 Org default",
+      "children": [
+        "agent 统一遵循组织模型策略",
+        "减少配置分散"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "需显式批准"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Windows",
+      "label": "后台 shell…"
+    }
+  ]
+}

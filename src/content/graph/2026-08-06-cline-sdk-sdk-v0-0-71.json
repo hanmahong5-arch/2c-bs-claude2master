@@ -1,0 +1,82 @@
+{
+  "center": "Cline SDK v0.0.71 更新",
+  "branches": [
+    {
+      "label": "推理设置统一",
+      "detail": "推理设置跨 AI SDK 提供商可移植解析，替代各提供商 thinking 覆盖",
+      "children": [
+        "含 Ollama，显式禁用优先",
+        "统一推理配置接口，减少 provider 特判"
+      ]
+    },
+    {
+      "label": "错误遥测归因",
+      "detail": "sdk.error 遥测归因到实际使用的模型，去除 undefined 值",
+      "children": [
+        "错误监控更准确，便于定位模型问题"
+      ]
+    },
+    {
+      "label": "模型目录刷新",
+      "detail": "从 models.dev 刷新模型目录，新增一个模型",
+      "children": [
+        "新增 meta/muse-spark-1.2-contributor",
+        "归属 Cline 提供商"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "AI SDK",
+      "type": "concept"
+    },
+    {
+      "name": "Ollama",
+      "type": "product"
+    },
+    {
+      "name": "models.dev",
+      "type": "product"
+    },
+    {
+      "name": "meta/muse-spark-1.2-contributor",
+      "type": "model"
+    },
+    {
+      "name": "sdk.error",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "AI SDK",
+      "label": "统一推理设置"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Ollama",
+      "label": "支持"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "models.dev",
+      "label": "刷新目录"
+    },
+    {
+      "from": "models.dev",
+      "to": "meta/muse-spark-1.2-contributor",
+      "label": "新增"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "sdk.error",
+      "label": "归因遥测"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "center": "为 Claude 和 ChatGPT 添加自定义…",
+  "branches": [
+    {
+      "label": "核心主题",
+      "detail": "为 Claude 和 ChatGPT 的网页聊天界面添加自定义 MCP 服务器",
+      "children": [
+        "MCP 即 Model Context Protocol",
+        "Claude 和 ChatGPT 网页界面均可访问 MCP 服…"
+      ]
+    },
+    {
+      "label": "设置难点",
+      "detail": "在标准聊天界面中连接自定义 MCP 服务器可行，但步骤较多且不直观",
+      "children": [
+        "需要多个步骤才能完成配置",
+        "官方未提供明显的设置指引"
+      ]
+    },
+    {
+      "label": "作者与来源",
+      "detail": "Simon Willison 于 2026 年 7 月 29 日发布在个人博客的 TIL 文章",
+      "children": [
+        "文章标题：Adding a custom MCP server to…",
+        "标签：ai、generative-ai、chatgpt、llms…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "MCP",
+      "to": "Claude",
+      "label": "接入"
+    },
+    {
+      "from": "MCP",
+      "to": "ChatGPT",
+      "label": "接入"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "MCP",
+      "label": "探索"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude",
+      "label": "撰写"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "ChatGPT",
+      "label": "撰写"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "center": "OpenAI 提出 AI 广告新形态",
+  "branches": [
+    {
+      "label": "Sponsored Agents",
+      "detail": "把广告从静态展示变成可交互的智能体形式",
+      "children": [
+        "agent 可能成为新的广告投放载体",
+        "开发者需考虑 agent 接入商业化接口"
+      ]
+    },
+    {
+      "label": "营销工具配套",
+      "detail": "为营销人员提供配套工具，形成 AI 投放工具链",
+      "children": [
+        "围绕 AI 投放的运营与优化工具链",
+        "关注营销场景 agent 编排与数据回流"
+      ]
+    },
+    {
+      "label": "平台集成",
+      "detail": "与 HubSpot 和 Shopify 集成，嵌入电商与 CRM 工作流",
+      "children": [
+        "AI 广告能力直接嵌入电商与 CRM",
+        "集成需处理平台数据与权限边界"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Sponsored Agents",
+      "type": "product"
+    },
+    {
+      "name": "HubSpot",
+      "type": "product"
+    },
+    {
+      "name": "Shopify",
+      "type": "product"
+    },
+    {
+      "name": "AI 广告",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Sponsored Agents",
+      "label": "推出"
+    },
+    {
+      "from": "Sponsored Agents",
+      "to": "AI 广告",
+      "label": "属于"
+    },
+    {
+      "from": "Sponsored Agents",
+      "to": "agent",
+      "label": "采用"
+    },
+    {
+      "from": "OpenAI",
+      "to": "HubSpot",
+      "label": "集成"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Shopify",
+      "label": "集成"
+    }
+  ]
+}

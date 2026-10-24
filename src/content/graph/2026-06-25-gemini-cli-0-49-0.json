@@ -1,0 +1,65 @@
+{
+  "center": "Gemini CLI v0.49.0 更新",
+  "branches": [
+    {
+      "label": "新增 eval 命令",
+      "detail": "新增 eval:inventory 命令，支持 JSON 输出，便于自动化评估流程",
+      "children": [
+        "Agent 可调用获取评估清单",
+        "实现自检与报告生成"
+      ]
+    },
+    {
+      "label": "修复安全漏洞",
+      "detail": "修复技能安装中的路径遍历漏洞，并增强零配额快速失败机制",
+      "children": [
+        "安装第三方技能更安全",
+        "资源耗尽及时报错而非死循环"
+      ]
+    },
+    {
+      "label": "优化工具输出",
+      "detail": "标准化工具输出格式，迁移 coreTools 配置至 tools.core",
+      "children": [
+        "工具调用输出更一致",
+        "配置结构更清晰便于扩展"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Gemini CLI",
+      "type": "product"
+    },
+    {
+      "name": "eval:inventory",
+      "type": "technique"
+    },
+    {
+      "name": "coreTools",
+      "type": "concept"
+    },
+    {
+      "name": "tools.core",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemini CLI",
+      "to": "eval:inventory",
+      "label": "新增"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "coreTools",
+      "label": "迁移配置"
+    },
+    {
+      "from": "coreTools",
+      "to": "tools.core",
+      "label": "迁移至"
+    }
+  ]
+}

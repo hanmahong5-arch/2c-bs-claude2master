@@ -1,0 +1,71 @@
+{
+  "center": "OpenAI 谈智能时代",
+  "branches": [
+    {
+      "label": "智能时代",
+      "detail": "AI 将像电力一样成为基础资源，深刻改变社会结构",
+      "children": [
+        "AI 类比电力",
+        "重塑社会结构"
+      ]
+    },
+    {
+      "label": "权力与治理",
+      "detail": "AI 影响权力分配与治理，需前瞻性政策应对挑战",
+      "children": [
+        "新权力分配",
+        "治理挑战",
+        "前瞻性政策"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "构建 AI 应用需考虑伦理、安全和公平性",
+      "children": [
+        "伦理",
+        "安全",
+        "公平性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "智能时代",
+      "type": "concept"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    },
+    {
+      "name": "治理",
+      "type": "concept"
+    },
+    {
+      "name": "伦理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "智能时代",
+      "label": "提出"
+    },
+    {
+      "from": "AI",
+      "to": "智能时代",
+      "label": "驱动"
+    },
+    {
+      "from": "AI",
+      "to": "治理",
+      "label": "影响"
+    }
+  ]
+}

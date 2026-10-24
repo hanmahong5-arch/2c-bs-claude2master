@@ -1,0 +1,106 @@
+{
+  "center": "开源AI新模型月度盘点",
+  "branches": [
+    {
+      "label": "本期最大特点",
+      "detail": "不再由大厂大模型主导，而是覆盖OCR、语音、RAG、代码、数学证明等多元小众方向",
+      "children": [
+        "来自更广泛的开放模型构建者",
+        "领域专用、低成本模型成为闭源智能体的补充工具"
+      ]
+    },
+    {
+      "label": "重点推荐模型",
+      "detail": "NVIDIA、Cohere、Sarvam、Mistral、Zed 五家发布旗舰级开源模型",
+      "children": [
+        "Nemotron-3-Super：120B总参/12B激活，1M上…",
+        "sarvam-105b：12-16T tokens，印度语言表现远…",
+        "cohere-transcribe：14种语言，Apache 2.0…"
+      ]
+    },
+    {
+      "label": "通用与多模态",
+      "detail": "通用模型走向混合注意力与压缩蒸馏，多模态覆盖文本/视觉/音频输入输出",
+      "children": [
+        "Olmo-Hybrid-7B：混合注意力+GDN架构",
+        "Yuan3.0-Ultra：1T多模态模型，2.2T tokens…",
+        "LongCat-Next：文本、视觉、音频均可输入输出"
+      ]
+    },
+    {
+      "label": "专用工具模型",
+      "detail": "面向智能体、表格预测、机器人、数学证明等垂直场景的微调模型集中涌现",
+      "children": [
+        "MiroThinker-1.7：基于Qwen 235B微调，面向研…",
+        "LongCat-Flash-Prover / Leanstral：Lean4…",
+        "reka-edge-2603：机器人模型，两年后转Apache…"
+      ]
+    },
+    {
+      "label": "RAG与OCR",
+      "detail": "检索与文档解析赛道活跃，多家推出新模型但许可限制各异",
+      "children": [
+        "Qianfan-OCR（百度）与 chandra-ocr-2 更新",
+        "Reason-ModernColBERT：SOTA检索模型，非商用…",
+        "context-1：Chroma 首个开源模型，基于…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Nemotron-3-Super",
+      "type": "model"
+    },
+    {
+      "name": "Cohere",
+      "type": "company"
+    },
+    {
+      "name": "Sarvam",
+      "type": "company"
+    },
+    {
+      "name": "Mistral",
+      "type": "company"
+    },
+    {
+      "name": "Zed",
+      "type": "product"
+    },
+    {
+      "name": "RAG",
+      "type": "concept"
+    },
+    {
+      "name": "OCR",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron-3-Super",
+      "label": "发布"
+    },
+    {
+      "from": "Cohere",
+      "to": "RAG",
+      "label": "涉及"
+    },
+    {
+      "from": "Sarvam",
+      "to": "Nemotron-3-Super",
+      "label": "同类对比"
+    },
+    {
+      "from": "Mistral",
+      "to": "Zed",
+      "label": "同期发布"
+    }
+  ]
+}

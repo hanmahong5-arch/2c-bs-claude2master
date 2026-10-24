@@ -1,0 +1,89 @@
+{
+  "center": "AI 代理重塑企业工作流",
+  "branches": [
+    {
+      "label": "入职自动化",
+      "detail": "Basis 用 AI 代理整合分散步骤，缩短新员工上手时间",
+      "children": [
+        "统一工作流编排",
+        "减少人工干预"
+      ]
+    },
+    {
+      "label": "客户管理",
+      "detail": "Clay 将代理嵌入客户管理，自动收集更新数据辅助销售",
+      "children": [
+        "自动更新客户数据",
+        "需强数据接入与实时处理"
+      ]
+    },
+    {
+      "label": "开发者集成",
+      "detail": "Exa Labs 用代理自动生成文档与示例代码，降低 API 门槛",
+      "children": [
+        "自动生成文档",
+        "自动生成示例代码",
+        "提升开发者体验 DX"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Basis",
+      "type": "company"
+    },
+    {
+      "name": "Clay",
+      "type": "company"
+    },
+    {
+      "name": "Exa Labs",
+      "type": "company"
+    },
+    {
+      "name": "AI 代理",
+      "type": "concept"
+    },
+    {
+      "name": "开发者体验",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Basis",
+      "label": "分享案例"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Clay",
+      "label": "分享案例"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Exa Labs",
+      "label": "分享案例"
+    },
+    {
+      "from": "Basis",
+      "to": "AI 代理",
+      "label": "应用"
+    },
+    {
+      "from": "Clay",
+      "to": "AI 代理",
+      "label": "应用"
+    },
+    {
+      "from": "Exa Labs",
+      "to": "AI 代理",
+      "label": "应用"
+    }
+  ]
+}

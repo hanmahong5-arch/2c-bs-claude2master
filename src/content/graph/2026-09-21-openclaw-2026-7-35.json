@@ -1,0 +1,99 @@
+{
+  "center": "openclaw v2026.7.35 正式版",
+  "branches": [
+    {
+      "label": "Doctor 插件修复",
+      "detail": "修复注册表状态时保留完整内置插件清单，重启后默认插件仍可用",
+      "children": [
+        "Browser、Canvas、配对、文件传输、电话控制…",
+        "可从 2026.7.34 写入的部分注册表恢复",
+        "保留外部插件安装记录"
+      ]
+    },
+    {
+      "label": "安全边界收紧",
+      "detail": "在解析前做参数级校验，拒绝多类不安全输入",
+      "children": [
+        "拒绝转义换行的命令词、注入的 Git 选项参数",
+        "精确 origin 不匹配、继承的密钥响应标识被拒",
+        "拦截不安全浏览器变更与畸形或超大节点负载"
+      ]
+    },
+    {
+      "label": "消息会话完整性",
+      "detail": "在重试、钩子、恢复和通道生命周期转换中保留消息",
+      "children": [
+        "保留排队、导入、流式和工具结果消息",
+        "修复 Discord、Matrix、Telegram、Slack 消…",
+        "消息投递视为可恢复事务"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "Doctor",
+      "type": "product"
+    },
+    {
+      "name": "Browser",
+      "type": "product"
+    },
+    {
+      "name": "Canvas",
+      "type": "product"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "Matrix",
+      "type": "product"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "Doctor",
+      "label": "包含"
+    },
+    {
+      "from": "openclaw",
+      "to": "Browser",
+      "label": "包含"
+    },
+    {
+      "from": "openclaw",
+      "to": "Canvas",
+      "label": "包含"
+    },
+    {
+      "from": "openclaw",
+      "to": "Discord",
+      "label": "支持通道"
+    },
+    {
+      "from": "openclaw",
+      "to": "Matrix",
+      "label": "支持通道"
+    },
+    {
+      "from": "openclaw",
+      "to": "Telegram",
+      "label": "支持通道"
+    }
+  ]
+}

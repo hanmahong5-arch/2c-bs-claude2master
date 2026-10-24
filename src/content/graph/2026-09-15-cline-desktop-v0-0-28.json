@@ -1,0 +1,64 @@
+{
+  "center": "cline desktop v0.0.28 修复",
+  "branches": [
+    {
+      "label": "后端慢启动",
+      "detail": "后端地址每次重试重新解析，不再一次询问后约 15 秒放弃",
+      "children": [
+        "启动握手设计为可重试，而非一次性超时",
+        "避免后端慢启动时卡死"
+      ]
+    },
+    {
+      "label": "输入法回车",
+      "detail": "中日文输入法组合期间 Enter 与方向键归输入法所有，不再触发发送",
+      "children": [
+        "区分「提交组合」与「提交消息」两类按键事件",
+        "修复组合期间误发消息"
+      ]
+    },
+    {
+      "label": "provider 重试",
+      "detail": "临时性 provider 错误最多重试三次，已产生输出的回合不重试",
+      "children": [
+        "如网关转发的限流",
+        "以「是否已有输出」为边界，避免重复内容"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline desktop",
+      "type": "product"
+    },
+    {
+      "name": "v0.0.28",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "provider",
+      "type": "concept"
+    },
+    {
+      "name": "输入法",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline desktop",
+      "to": "v0.0.28",
+      "label": "发布"
+    },
+    {
+      "from": "harness",
+      "to": "provider",
+      "label": "重试"
+    }
+  ]
+}

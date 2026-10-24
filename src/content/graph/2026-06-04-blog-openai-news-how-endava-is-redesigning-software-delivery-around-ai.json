@@ -1,0 +1,79 @@
+{
+  "center": "Endava 用 AI 智能体重构交付",
+  "branches": [
+    {
+      "label": "智能体自动化",
+      "detail": "AI 智能体自动化需求分析到部署多个环节，减少手动任务与交接摩擦",
+      "children": [
+        "覆盖需求分析、代码生成、测试、部署",
+        "团队聚焦高价值设计与复杂问题"
+      ]
+    },
+    {
+      "label": "企业工具链整合",
+      "detail": "部署 ChatGPT Enterprise 和 Codex，构建统一 AI 辅助开发环境",
+      "children": [
+        "促进跨团队知识共享与最佳实践",
+        "工具需无缝集成现有工作流"
+      ]
+    },
+    {
+      "label": "AI 原生文化",
+      "detail": "培养员工 AI 素养，鼓励实验，将 AI 能力视为核心技能",
+      "children": [
+        "技术与人才战略同步推进",
+        "面向规模化 AI 应用"
+      ]
+    }
+  ],
+  "flow": [
+    "需求分析",
+    "代码生成",
+    "测试",
+    "部署"
+  ],
+  "entities": [
+    {
+      "name": "Endava",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Enterprise",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "model"
+    },
+    {
+      "name": "AI 智能体",
+      "type": "concept"
+    },
+    {
+      "name": "软件交付流程",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Endava",
+      "to": "AI 智能体",
+      "label": "整合"
+    },
+    {
+      "from": "Endava",
+      "to": "ChatGPT Enterprise",
+      "label": "部署"
+    },
+    {
+      "from": "Endava",
+      "to": "Codex",
+      "label": "部署"
+    },
+    {
+      "from": "AI 智能体",
+      "to": "软件交付流程",
+      "label": "自动化"
+    }
+  ]
+}

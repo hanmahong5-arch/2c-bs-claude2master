@@ -1,0 +1,85 @@
+{
+  "center": "condense-json 1.0 发布",
+  "branches": [
+    {
+      "label": "发布 1.0",
+      "detail": "Simon Willison 为一年半前的库发布首个 1.0 版本",
+      "children": [
+        "应用了合理且非破坏性的修复",
+        "发布于 2026 年 8 月 2 日"
+      ]
+    },
+    {
+      "label": "压缩原理",
+      "detail": "扫描 JSON 中与 replacements 匹配的字符串，替换为 $r 语法",
+      "children": [
+        "输出形如 {\"$r\": [\"前缀\", {\"$\": \"1\"}]}",
+        "可减少重复数据占用空间"
+      ]
+    },
+    {
+      "label": "可逆还原",
+      "detail": "用 uncondense_json 可将压缩结果还原为原始 JSON",
+      "children": [
+        "condense_json 与 uncondense_json 成对使用"
+      ]
+    },
+    {
+      "label": "实际用途",
+      "detail": "作者用它压缩 LLM 生成的 SQLite 日志以节省空间",
+      "children": [
+        "相关迭代见 PR #1586"
+      ]
+    }
+  ],
+  "flow": [
+    "准备输入 JSON",
+    "定义 replacements 对象",
+    "调用 condense_json 压缩",
+    "调用 uncondense_json 还原"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "condense-json",
+      "type": "product"
+    },
+    {
+      "name": "Python",
+      "type": "technique"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "condense-json",
+      "label": "发布"
+    },
+    {
+      "from": "condense-json",
+      "to": "Python",
+      "label": "用其实现"
+    },
+    {
+      "from": "condense-json",
+      "to": "SQLite",
+      "label": "压缩日志"
+    },
+    {
+      "from": "SQLite",
+      "to": "LLM",
+      "label": "记录其日志"
+    }
+  ]
+}

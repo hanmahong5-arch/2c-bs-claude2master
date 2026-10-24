@@ -1,0 +1,92 @@
+{
+  "center": "Gemini CLI 0.52 修复更新",
+  "branches": [
+    {
+      "label": "文件写入修复",
+      "detail": "write_file 与 replace 工具对 JSON/IPYNB 跳过 LLM 修正，避免格式被意外改动",
+      "children": [
+        "结构化文件处理更可靠",
+        "降低数据损坏风险"
+      ]
+    },
+    {
+      "label": "计划模式路径",
+      "detail": "简化计划模式写入策略，支持相对路径",
+      "children": [
+        "路径使用更灵活",
+        "降低配置复杂度"
+      ]
+    },
+    {
+      "label": "隐私与配额提示",
+      "detail": "无 Code Assist 层级时给出清晰提示，配额错误附带设置指引",
+      "children": [
+        "权限不足反馈可操作",
+        "提升调试体验"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Gemini CLI",
+      "type": "product"
+    },
+    {
+      "name": "write_file",
+      "type": "technique"
+    },
+    {
+      "name": "replace",
+      "type": "technique"
+    },
+    {
+      "name": "JSON",
+      "type": "concept"
+    },
+    {
+      "name": "IPYNB",
+      "type": "concept"
+    },
+    {
+      "name": "Code Assist",
+      "type": "product"
+    },
+    {
+      "name": "计划模式",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemini CLI",
+      "to": "write_file",
+      "label": "修复"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "replace",
+      "label": "修复"
+    },
+    {
+      "from": "write_file",
+      "to": "JSON",
+      "label": "跳过修正"
+    },
+    {
+      "from": "replace",
+      "to": "IPYNB",
+      "label": "跳过修正"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "Code Assist",
+      "label": "提示层级"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "计划模式",
+      "label": "简化路径"
+    }
+  ]
+}

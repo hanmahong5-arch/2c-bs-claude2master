@@ -1,0 +1,123 @@
+{
+  "center": "AI竞赛转向系统优化",
+  "branches": [
+    {
+      "label": "算力浪费严重",
+      "detail": "前沿AI竞赛不只是GPU军备竞赛，更是系统优化与效率提升的工程挑战。",
+      "children": [
+        "xAI的MFU可能低于10%",
+        "GPT-3约21%，Gopher约32%",
+        "PaLM约46%，当前最佳60–70%"
+      ]
+    },
+    {
+      "label": "利用率标准",
+      "detail": "Google内部95%节点利用率被视为故障，96%才算标准。",
+      "children": [
+        "单租户集群普遍达不到该水平",
+        "MFU最佳为60–70%",
+        "本质是领导力与对齐问题"
+      ]
+    },
+    {
+      "label": "AMP算力电网",
+      "detail": "AMP设想让FLOPs像兆瓦一样流动，建独立算力电网。",
+      "children": [
+        "1.2GW基载，需6GW峰值容量",
+        "算力需独立系统运营商",
+        "借鉴Google可中断需求调度"
+      ]
+    },
+    {
+      "label": "基础设施挑战",
+      "detail": "数据中心面临社区反对、电网与激励问题，不能快速试错。",
+      "children": [
+        "AI数据中心需社区认同",
+        "DeepMind研究囤积造成负外部性",
+        "非NVIDIA芯片可受益参考架构"
+      ]
+    },
+    {
+      "label": "Anthropic与前沿",
+      "detail": "Anthropic从第一天就以编码为P0，文化脆弱而非永久护城河。",
+      "children": [
+        "Claude攻克编码",
+        "艰难是特性而非缺陷",
+        "领先前沿比“赢”更重要"
+      ]
+    }
+  ],
+  "flow": [
+    "识别算力浪费",
+    "提升节点利用率",
+    "优化MFU与系统",
+    "构建算力电网",
+    "动态调度需求"
+  ],
+  "entities": [
+    {
+      "name": "Anjney Midha",
+      "type": "person"
+    },
+    {
+      "name": "AMP",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "xAI",
+      "type": "company"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "MFU",
+      "type": "concept"
+    },
+    {
+      "name": "Periodic Labs",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anjney Midha",
+      "to": "AMP",
+      "label": "创立"
+    },
+    {
+      "from": "AMP",
+      "to": "MFU",
+      "label": "优化"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "xAI",
+      "to": "MFU",
+      "label": "利用率低"
+    },
+    {
+      "from": "Google",
+      "to": "MFU",
+      "label": "设定标准"
+    },
+    {
+      "from": "Anjney Midha",
+      "to": "Periodic Labs",
+      "label": "到访"
+    }
+  ]
+}

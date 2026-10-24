@@ -1,0 +1,117 @@
+{
+  "center": "MicroPython + WASM 沙箱运行…",
+  "branches": [
+    {
+      "label": "沙箱动机",
+      "detail": "插件代码拥有完整权限，可能破坏应用或泄露数据",
+      "children": [
+        "Datasette、LLM、sqlite-utils 均支持插件",
+        "希望限制文件、网络、内存与 CPU"
+      ]
+    },
+    {
+      "label": "选型 WASM",
+      "detail": "WebAssembly 为不可信代码设计，wasmtime 提供 Python 库",
+      "children": [
+        "V8-in-Python 维护差且不推荐",
+        "Pyodide 仅支持浏览器或 Node.js"
+      ]
+    },
+    {
+      "label": "MicroPython 方案",
+      "detail": "将 MicroPython 编译为 WASM，在 wasmtime 中运行",
+      "children": [
+        "基于 Yamamoto Takahashi 的 WASI 支持 PR",
+        "发布 micropython-wasm alpha 包"
+      ]
+    },
+    {
+      "label": "持久状态",
+      "detail": "通过宿主函数与队列让解释器跨调用保留变量",
+      "children": [
+        "MicroPythonSession 支持多次 session.run()",
+        "内部用 __session_next__ 与…"
+      ]
+    },
+    {
+      "label": "宿主函数",
+      "detail": "Python 库可选择性向沙箱代码暴露函数",
+      "children": [
+        "Codex 用 78 行解决该问题"
+      ]
+    }
+  ],
+  "flow": [
+    "编译 MicroPython 为 WASM",
+    "wasmtime 加载并启动解释器",
+    "宿主函数阻塞等待代码",
+    "eval 执行并返回结果",
+    "队列维持会话状态"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "MicroPython",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "wasmtime",
+      "type": "product"
+    },
+    {
+      "name": "Pyodide",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "micropython-wasm",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "micropython-wasm",
+      "label": "发布"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "MicroPython",
+      "label": "编译为"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "WebAssembly",
+      "label": "运行于"
+    },
+    {
+      "from": "wasmtime",
+      "to": "WebAssembly",
+      "label": "执行"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "开发"
+    },
+    {
+      "from": "GPT-5.5",
+      "to": "micropython-wasm",
+      "label": "辅助构建"
+    }
+  ]
+}

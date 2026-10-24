@@ -1,0 +1,71 @@
+{
+  "center": "claude-code v2.1.170 更新",
+  "branches": [
+    {
+      "label": "Fable 5 开放",
+      "detail": "Mythos 级模型 Claude Fable 5 正式开放，能力超越以往所有公开模型",
+      "children": [
+        "Agent 可用更强推理与生成能力"
+      ]
+    },
+    {
+      "label": "修复会话保存",
+      "detail": "修复 VS Code 集成终端或继承环境变量 shell 启动时会话无法保存转录文本",
+      "children": [
+        "工作流与状态可可靠记录恢复"
+      ]
+    },
+    {
+      "label": "修复 --resume",
+      "detail": "修复上述环境下会话不出现在 --resume 列表的问题",
+      "children": [
+        "提升持久性与可中断恢复性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Mythos",
+      "type": "concept"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "Claude Fable 5",
+      "label": "引入"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Mythos",
+      "label": "属于"
+    },
+    {
+      "from": "claude-code",
+      "to": "VS Code",
+      "label": "集成"
+    },
+    {
+      "from": "claude-code",
+      "to": "Agent",
+      "label": "支撑"
+    }
+  ]
+}

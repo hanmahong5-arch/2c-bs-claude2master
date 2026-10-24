@@ -1,0 +1,121 @@
+{
+  "center": "GLM 5.3 与后训练新缩放定律",
+  "branches": [
+    {
+      "label": "参数不再唯一",
+      "detail": "Jie Tang 称参数量须与数据、算力、运行条件一起看",
+      "children": [
+        "Chinchilla 假设在推理时代失效",
+        "记忆偏好参数，推理偏好后训练数据与有效深度"
+      ]
+    },
+    {
+      "label": "长程 RL 环境",
+      "detail": "GLM 5.3 的提升几乎全部来自长程环境上的 RL",
+      "children": [
+        "环境覆盖真实工程与研究流程",
+        "任务可达资深工程师数天工作量",
+        "模型需端到端诊断、优化并交付提速"
+      ]
+    },
+    {
+      "label": "合成环境管线",
+      "detail": "环境与奖励信号可端到端合成，规模不再靠手工",
+      "children": [
+        "研究 agent 从真实工作提取任务模式",
+        "judge agent 验证任务可解",
+        "verifier 通过 oracle/no-op 检查产出二值奖励"
+      ]
+    },
+    {
+      "label": "五个缩放旋钮",
+      "detail": "Jie Tang 提出 5 个缩放维度，含 MoE 稀疏度新记法",
+      "children": [
+        "新记法 XA-YB",
+        "高级技能需 20+ 步因果链，非检索问题"
+      ]
+    },
+    {
+      "label": "开源模型进展",
+      "detail": "Ornith-1.5 等开源模型与压缩技术同步推进",
+      "children": [
+        "Ornith-1.5 含 9B/35B/397B，MIT 许可",
+        "Unsloth 1-bit 量化保留约 77% BF16 精度",
+        "GLM 5.3 在 Terminal Bench 开源模型第 2"
+      ]
+    }
+  ],
+  "flow": [
+    "收集真实任务模式",
+    "合成可运行长程环境",
+    "judge 验证任务可解",
+    "合成 verifier 与奖励",
+    "长程 RL 训练模型"
+  ],
+  "entities": [
+    {
+      "name": "Z.ai",
+      "type": "company"
+    },
+    {
+      "name": "Jie Tang",
+      "type": "person"
+    },
+    {
+      "name": "GLM 5.3",
+      "type": "model"
+    },
+    {
+      "name": "Ornith-1.5",
+      "type": "model"
+    },
+    {
+      "name": "Chinchilla",
+      "type": "concept"
+    },
+    {
+      "name": "MoE",
+      "type": "technique"
+    },
+    {
+      "name": "RL",
+      "type": "technique"
+    },
+    {
+      "name": "Unsloth",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Jie Tang",
+      "to": "Z.ai",
+      "label": "任 CEO"
+    },
+    {
+      "from": "Jie Tang",
+      "to": "GLM 5.3",
+      "label": "解读"
+    },
+    {
+      "from": "GLM 5.3",
+      "to": "RL",
+      "label": "依赖"
+    },
+    {
+      "from": "GLM 5.3",
+      "to": "MoE",
+      "label": "采用"
+    },
+    {
+      "from": "Chinchilla",
+      "to": "GLM 5.3",
+      "label": "被超越"
+    },
+    {
+      "from": "Unsloth",
+      "to": "Ornith-1.5",
+      "label": "量化"
+    }
+  ]
+}

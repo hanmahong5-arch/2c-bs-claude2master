@@ -1,0 +1,118 @@
+{
+  "center": "TypeBox 驱动 OpenClaw 网关协议",
+  "branches": [
+    {
+      "label": "唯一事实源",
+      "detail": "TypeBox schema 定义网关 WS 协议，其余产物全部生成",
+      "children": [
+        "驱动运行时校验、JSON Schema 导出、Swift 代…",
+        "schema 变更需同步提交生成模型"
+      ]
+    },
+    {
+      "label": "三类帧结构",
+      "detail": "每条网关消息为 request、response、event 之一",
+      "children": [
+        "首帧必须是 connect 请求",
+        "方法如 health、send、chat.send",
+        "事件如 tick、presence、agent"
+      ]
+    },
+    {
+      "label": "生成流水线",
+      "detail": "pnpm 脚本生成并校验多端协议产物",
+      "children": [
+        "protocol:gen 输出 JSON Schema draft-07",
+        "protocol:gen:swift 生成 Swift 模型",
+        "protocol:gen:kotlin 生成 Android 模型"
+      ]
+    },
+    {
+      "label": "运行时校验",
+      "detail": "服务端与客户端均用 TypeBox Compile 校验帧",
+      "children": [
+        "握手仅接受匹配 ConnectParams 的 connect",
+        "JS 客户端校验事件与响应帧",
+        "hello-ok 返回保守的 features 列表"
+      ]
+    },
+    {
+      "label": "新增方法流程",
+      "detail": "以 system.echo 为例端到端添加方法",
+      "children": [
+        "在 schema 模块定义 Params 与 Result",
+        "注册后进入生成器与校验器"
+      ]
+    }
+  ],
+  "flow": [
+    "定义 TypeBox schema",
+    "注册进生成器",
+    "运行 pnpm protocol:gen",
+    "生成 Swift/Kotlin 模型",
+    "protocol:check 校验",
+    "提交 schema 与模型"
+  ],
+  "entities": [
+    {
+      "name": "TypeBox",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Gateway WebSocket",
+      "type": "concept"
+    },
+    {
+      "name": "TypeBox Compile",
+      "type": "technique"
+    },
+    {
+      "name": "JSON Schema",
+      "type": "concept"
+    },
+    {
+      "name": "GatewayModels.swift",
+      "type": "product"
+    },
+    {
+      "name": "ConnectParams",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "TypeBox",
+      "to": "OpenClaw",
+      "label": "定义协议"
+    },
+    {
+      "from": "TypeBox",
+      "to": "Gateway WebSocket",
+      "label": "驱动校验"
+    },
+    {
+      "from": "TypeBox Compile",
+      "to": "Gateway WebSocket",
+      "label": "运行时校验"
+    },
+    {
+      "from": "TypeBox",
+      "to": "JSON Schema",
+      "label": "导出"
+    },
+    {
+      "from": "TypeBox",
+      "to": "GatewayModels.swift",
+      "label": "生成"
+    },
+    {
+      "from": "ConnectParams",
+      "to": "Gateway WebSocket",
+      "label": "约束握手"
+    }
+  ]
+}

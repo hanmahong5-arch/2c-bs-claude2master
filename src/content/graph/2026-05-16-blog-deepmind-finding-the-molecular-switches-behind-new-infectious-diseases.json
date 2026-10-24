@@ -1,0 +1,94 @@
+{
+  "center": "AI 寻找传染病基因开关",
+  "branches": [
+    {
+      "label": "AI 识别基因开关",
+      "detail": "Co-Scientist 从海量基因组数据中快速找出调控疾病的关键基因开关",
+      "children": [
+        "缩短从数据到假说的周期",
+        "让科学家更快聚焦关键生物学问题"
+      ]
+    },
+    {
+      "label": "聚焦新兴传染病",
+      "detail": "研究直接用于理解威胁公共健康的新发病原体",
+      "children": [
+        "AI 工具链应对现实世界紧迫挑战",
+        "价值在于提升响应速度"
+      ]
+    },
+    {
+      "label": "人机协作模式",
+      "detail": "人类专家 Bryant 与 AI 系统 Co-Scientist 协同工作的具体流程",
+      "children": [
+        "为科学家-Agent 协作提供实际范例",
+        "强调人在回路中的核心作用"
+      ]
+    }
+  ],
+  "flow": [
+    "输入海量基因组数据",
+    "Co-Scientist 识别基因开关",
+    "生成候选假说",
+    "Bryant 聚焦关键问题",
+    "推进疾病机理研究"
+  ],
+  "entities": [
+    {
+      "name": "DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Co-Scientist",
+      "type": "product"
+    },
+    {
+      "name": "Clare Bryant",
+      "type": "person"
+    },
+    {
+      "name": "新兴传染病",
+      "type": "concept"
+    },
+    {
+      "name": "基因开关",
+      "type": "concept"
+    },
+    {
+      "name": "人机协作",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DeepMind",
+      "to": "Co-Scientist",
+      "label": "开发"
+    },
+    {
+      "from": "Clare Bryant",
+      "to": "Co-Scientist",
+      "label": "使用"
+    },
+    {
+      "from": "Co-Scientist",
+      "to": "基因开关",
+      "label": "识别"
+    },
+    {
+      "from": "Co-Scientist",
+      "to": "新兴传染病",
+      "label": "研究"
+    },
+    {
+      "from": "Clare Bryant",
+      "to": "新兴传染病",
+      "label": "研究"
+    },
+    {
+      "from": "人机协作",
+      "to": "Co-Scientist",
+      "label": "涉及"
+    }
+  ]
+}

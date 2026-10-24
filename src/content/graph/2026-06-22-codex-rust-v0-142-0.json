@@ -1,0 +1,82 @@
+{
+  "center": "Codex rust-v0.142.0 新特性",
+  "branches": [
+    {
+      "label": "Token 预算控制",
+      "detail": "新增可配置 rollout token 预算，跨 agent 线程跟踪用量",
+      "children": [
+        "预算耗尽自动中止 turn",
+        "给出剩余预算提醒",
+        "harness 需全局配置与线程级跟踪"
+      ]
+    },
+    {
+      "label": "多 agent 委托",
+      "detail": "支持线程与 turn 级别的委托模式配置",
+      "children": [
+        "可设为禁用、仅显式请求或主动委托",
+        "运行时动态切换",
+        "harness 需灵活委托策略接口"
+      ]
+    },
+    {
+      "label": "索引化搜索",
+      "detail": "新增索引化 web 搜索模式，实时搜索受限访问",
+      "children": [
+        "页面访问限服务器批准 URL",
+        "harness 需集成搜索能力",
+        "实现 URL 访问控制策略"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "token 预算",
+      "type": "concept"
+    },
+    {
+      "name": "多 agent 委托",
+      "type": "concept"
+    },
+    {
+      "name": "索引化 web 搜索",
+      "type": "technique"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "token 预算",
+      "label": "新增"
+    },
+    {
+      "from": "Codex",
+      "to": "多 agent 委托",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "索引化 web 搜索",
+      "label": "新增"
+    },
+    {
+      "from": "agent harness",
+      "to": "token 预算",
+      "label": "跟踪"
+    },
+    {
+      "from": "agent harness",
+      "to": "索引化 web 搜索",
+      "label": "集成"
+    }
+  ]
+}

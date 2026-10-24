@@ -1,0 +1,89 @@
+{
+  "center": "codex rust-v0.130.0 更新",
+  "branches": [
+    {
+      "label": "插件管理增强",
+      "detail": "插件详情显示捆绑钩子，分享时暴露链接元数据与可发现性控制",
+      "children": [
+        "插件系统更透明",
+        "便于团队协作与安全审计"
+      ]
+    },
+    {
+      "label": "无头远程控制",
+      "detail": "新增 codex remote-control 作为启动无头、可远程控制应用服务器的简化入口点",
+      "children": [
+        "简化自动化部署和CI/CD集成流程"
+      ]
+    },
+    {
+      "label": "线程分页",
+      "detail": "应用服务器客户端可对大型线程进行分页，支持未加载、摘要或完整回合视图",
+      "children": [
+        "提升处理长对话和复杂任务时的性能和用户体验"
+      ]
+    },
+    {
+      "label": "配置热更新",
+      "detail": "实时应用服务器线程现在无需重启即可获取配置更改",
+      "children": [
+        "实现配置的动态更新",
+        "提高系统的可维护性和灵活性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex",
+      "type": "product"
+    },
+    {
+      "name": "rust-v0.130.0",
+      "type": "product"
+    },
+    {
+      "name": "codex remote-control",
+      "type": "product"
+    },
+    {
+      "name": "插件系统",
+      "type": "concept"
+    },
+    {
+      "name": "应用服务器",
+      "type": "concept"
+    },
+    {
+      "name": "CI/CD",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex",
+      "to": "rust-v0.130.0",
+      "label": "发布版本"
+    },
+    {
+      "from": "codex",
+      "to": "codex remote-control",
+      "label": "新增入口"
+    },
+    {
+      "from": "codex",
+      "to": "插件系统",
+      "label": "增强管理"
+    },
+    {
+      "from": "codex",
+      "to": "应用服务器",
+      "label": "支持分页"
+    },
+    {
+      "from": "codex remote-control",
+      "to": "CI/CD",
+      "label": "简化集成"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "center": "Google 扩展内容溯源工具",
+  "branches": [
+    {
+      "label": "SynthID 水印",
+      "detail": "不可感知数字水印嵌入 AI 生成内容，已水印超千亿图片视频",
+      "children": [
+        "水印 1000 亿+ 图片视频、6 万年音频",
+        "OpenAI、Kakao、ElevenLabs 将采用 SynthID",
+        "已开源 SynthID 文本水印技术"
+      ]
+    },
+    {
+      "label": "C2PA 内容凭证",
+      "detail": "行业标准记录媒体如何创建与修改，含是否用 AI",
+      "children": [
+        "Pixel 10 首款原生相机支持凭证的手机",
+        "Pixel 8/9/10 数周内扩展至视频",
+        "Meta 将在 Instagram 标注相机拍摄内容"
+      ]
+    },
+    {
+      "label": "验证入口扩展",
+      "detail": "在 Gemini、Search、Chrome 中查验内容来源",
+      "children": [
+        "Gemini 验证已被使用 5000 万次",
+        "Search 今日上线，Chrome 数周内",
+        "可问「这是 AI 生成的吗？」"
+      ]
+    },
+    {
+      "label": "企业检测 API",
+      "detail": "Google Cloud 推出 AI Content Detection API",
+      "children": [
+        "部署于 Gemini Enterprise Agent Platform",
+        "可识别 Google 及其他主流模型生成内容",
+        "用于内容分拣、防保险欺诈、事实核查"
+      ]
+    },
+    {
+      "label": "行业协作",
+      "detail": "推动溯源技术全球标准与跨平台互操作",
+      "children": [
+        "Google 为 C2PA 指导委员会成员",
+        "与 NVIDIA 合作为 Cosmos 视频加水印",
+        "Backstory 测试提升检测可靠性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "SynthID",
+      "type": "technique"
+    },
+    {
+      "name": "C2PA Content Credentials",
+      "type": "concept"
+    },
+    {
+      "name": "Gemini",
+      "type": "product"
+    },
+    {
+      "name": "Pixel",
+      "type": "product"
+    },
+    {
+      "name": "Google Cloud",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google",
+      "to": "SynthID",
+      "label": "推出"
+    },
+    {
+      "from": "Google",
+      "to": "C2PA Content Credentials",
+      "label": "采用"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "SynthID",
+      "label": "研发"
+    },
+    {
+      "from": "Gemini",
+      "to": "SynthID",
+      "label": "集成验证"
+    },
+    {
+      "from": "Pixel",
+      "to": "C2PA Content Credentials",
+      "label": "支持"
+    },
+    {
+      "from": "OpenAI",
+      "to": "SynthID",
+      "label": "采用"
+    }
+  ]
+}

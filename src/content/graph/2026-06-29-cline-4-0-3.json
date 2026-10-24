@@ -1,0 +1,54 @@
+{
+  "center": "Cline v4.0.3 ClinePass 开放",
+  "branches": [
+    {
+      "label": "全面开放",
+      "detail": "ClinePass 提供商现已对所有用户启用，不再需要功能标志",
+      "children": [
+        "无需功能标志即可使用"
+      ]
+    },
+    {
+      "label": "默认提供商",
+      "detail": "所有用户都可以使用 ClinePass 作为默认提供商",
+      "children": [
+        "无需回退到标准 Cline 提供商"
+      ]
+    },
+    {
+      "label": "简化逻辑",
+      "detail": "对 agent harness 设计的影响：简化了提供商选择逻辑",
+      "children": [
+        "所有 agent 可直接使用 ClinePass",
+        "无需条件判断"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "ClinePass",
+      "label": "包含"
+    },
+    {
+      "from": "ClinePass",
+      "to": "agent harness",
+      "label": "简化"
+    }
+  ]
+}

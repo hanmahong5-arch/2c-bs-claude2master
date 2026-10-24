@@ -1,0 +1,89 @@
+{
+  "center": "codex rust-v0.156.0 交互层更新",
+  "branches": [
+    {
+      "label": "全屏 TUI",
+      "detail": "/tui 提供可选全屏界面，支持转录搜索、鼠标选择与右键复制",
+      "children": [
+        "#46732/#46883/#46895",
+        "转录渲染与输入选择需解耦"
+      ]
+    },
+    {
+      "label": "语音默认开启",
+      "detail": "语音对话默认开启，F8 切换，新增 /voice settings",
+      "children": [
+        "Linux/Windows 打包音频运行时",
+        "#44921/#46071/#44714",
+        "语音视为一等会话通道"
+      ]
+    },
+    {
+      "label": "用量面板",
+      "detail": "新增 /usage 分析面板，展示账户用量、token 总量与插件/技能活动",
+      "children": [
+        "#45764/#45769",
+        "turn 元数据需记录模型/插件/技能归属"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex",
+      "type": "product"
+    },
+    {
+      "name": "Rust",
+      "type": "technique"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "语音对话",
+      "type": "concept"
+    },
+    {
+      "name": "用量面板",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex",
+      "to": "Rust",
+      "label": "基于"
+    },
+    {
+      "from": "codex",
+      "to": "TUI",
+      "label": "新增"
+    },
+    {
+      "from": "codex",
+      "to": "语音对话",
+      "label": "默认开启"
+    },
+    {
+      "from": "codex",
+      "to": "用量面板",
+      "label": "新增"
+    },
+    {
+      "from": "harness",
+      "to": "TUI",
+      "label": "支撑"
+    },
+    {
+      "from": "harness",
+      "to": "语音对话",
+      "label": "支撑"
+    }
+  ]
+}

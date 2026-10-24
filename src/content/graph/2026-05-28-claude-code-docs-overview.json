@@ -1,0 +1,123 @@
+{
+  "center": "Claude Code 使用总览",
+  "branches": [
+    {
+      "label": "多端运行",
+      "detail": "终端、IDE 插件、桌面应用、网页均可使用",
+      "children": [
+        "终端 CLI、VS Code、JetBrains 支持第三方模型",
+        "网页版 claude.ai/code 无需本地安装",
+        "桌面应用内置 Claude Code，无需单独装 CLI"
+      ]
+    },
+    {
+      "label": "安装方式",
+      "detail": "原生安装推荐，另有 Homebrew、WinGet 及 Linux 包管理器",
+      "children": [
+        "原生安装后台自动更新",
+        "Homebrew 分 stable 与 latest 两个 cask",
+        "WinGet 安装需手动 upgrade"
+      ]
+    },
+    {
+      "label": "核心能力",
+      "detail": "理解整个代码库，跨文件规划、写码并验证",
+      "children": [
+        "自动写测试、修 lint、解冲突、更新依赖",
+        "直接操作 git：提交、建分支、开 PR",
+        "CI 中可用 GitHub Actions 自动审查"
+      ]
+    },
+    {
+      "label": "工具连接",
+      "detail": "通过 MCP 连接外部数据源与自定义工具",
+      "children": [
+        "可读 Google Drive 设计文档",
+        "可更新 Jira 工单、拉取 Slack 数据"
+      ]
+    },
+    {
+      "label": "定制与扩展",
+      "detail": "用 CLAUDE.md、skills、hooks 定制行为",
+      "children": [
+        "CLAUDE.md 每次会话自动读取",
+        "skills 打包可复用工作流如 /review-pr",
+        "hooks 在操作前后运行 shell 命令"
+      ]
+    }
+  ],
+  "flow": [
+    "选择运行端并安装",
+    "在项目目录启动 claude",
+    "首次登录或提供 API Key",
+    "用自然语言描述任务",
+    "Claude 规划并跨文件执行",
+    "验证结果并提交 PR"
+  ],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "CLAUDE.md",
+      "type": "concept"
+    },
+    {
+      "name": "Agent SDK",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "JetBrains",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "连接工具"
+    },
+    {
+      "from": "Claude Code",
+      "to": "CLAUDE.md",
+      "label": "读取配置"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Agent SDK",
+      "label": "支持构建"
+    },
+    {
+      "from": "Claude Code",
+      "to": "VS Code",
+      "label": "提供插件"
+    },
+    {
+      "from": "Claude Code",
+      "to": "JetBrains",
+      "label": "提供插件"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "开发"
+    }
+  ]
+}

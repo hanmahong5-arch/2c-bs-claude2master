@@ -1,0 +1,109 @@
+{
+  "center": "ChatGPT搜索大规模启用site:",
+  "branches": [
+    {
+      "label": "site:占比暴涨",
+      "detail": "ChatGPT搜索查询中含site:操作符的比例从0.3-0.5%跃升至16-17%",
+      "children": [
+        "8月3-5日短暂降至0.15%，疑似灰度测试",
+        "8月8日跳升至16-17%",
+        "数据来自Promptwatch的自动化追踪"
+      ]
+    },
+    {
+      "label": "对应GPT-5.6发布",
+      "detail": "变化与本月GPT-5.6 Sol rollout时间吻合",
+      "children": [
+        "OpenAI 8月6日称GPT-5.6 Sol更可靠、答案更聚焦",
+        "仅面向Plus和Pro用户"
+      ]
+    },
+    {
+      "label": "搜索工具形态",
+      "detail": "Simon推测新搜索工具形如search(query, recency, domains)",
+      "children": [
+        "并非直接鼓励用户写site:操作符",
+        "OpenAI刻意隐藏系统提示词"
+      ]
+    },
+    {
+      "label": "Reddit来源减少",
+      "detail": "8月18日Promptwatch报告ChatGPT搜索中Reddit使用概率大幅下降",
+      "children": [
+        "Simon未能确认系统提示词是否已更新",
+        "现有泄露提示词集合未见相关改动"
+      ]
+    },
+    {
+      "label": "GEO新赛道",
+      "detail": "Promptwatch属于新兴GEO领域，即生成引擎优化",
+      "children": [
+        "类似SEO的聊天机器人版本",
+        "追踪ChatGPT、Claude、Gemini的回复"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Promptwatch",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GEO",
+      "type": "concept"
+    },
+    {
+      "name": "Reddit",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "更新"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Sol",
+      "label": "发布"
+    },
+    {
+      "from": "Promptwatch",
+      "to": "ChatGPT",
+      "label": "追踪"
+    },
+    {
+      "from": "Promptwatch",
+      "to": "GEO",
+      "label": "属于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Promptwatch",
+      "label": "引用"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "Reddit",
+      "label": "减少引用"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "center": "DeepMind 发布 Antigravity 2.0",
+  "branches": [
+    {
+      "label": "物理模拟控制",
+      "detail": "让 AI 智能体在模拟环境中学习并操纵物理对象完成任务",
+      "children": [
+        "核心是物理交互",
+        "面向复杂动态物理世界"
+      ]
+    },
+    {
+      "label": "新训练方法",
+      "detail": "采用新的强化学习与模型基础训练方法提升效率与泛化",
+      "children": [
+        "强化学习",
+        "模型基础训练",
+        "提高学习效率与泛化能力"
+      ]
+    },
+    {
+      "label": "推动基础能力",
+      "detail": "旨在推进 AI 对物理世界的基础理解与控制，而非单一应用",
+      "children": [
+        "为机器人、自动化提供通用基础模型"
+      ]
+    },
+    {
+      "label": "对开发者的意义",
+      "detail": "底层能力突破可能为上层应用提供更强大的通用基础",
+      "children": [
+        "关注底层研究",
+        "Agent 开发前沿",
+        "需更集成训练框架与模拟平台"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Antigravity 2.0",
+      "type": "product"
+    },
+    {
+      "name": "强化学习",
+      "type": "technique"
+    },
+    {
+      "name": "物理模拟",
+      "type": "concept"
+    },
+    {
+      "name": "AI 智能体",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Antigravity 2.0",
+      "label": "发布"
+    },
+    {
+      "from": "Antigravity 2.0",
+      "to": "强化学习",
+      "label": "采用"
+    },
+    {
+      "from": "Antigravity 2.0",
+      "to": "物理模拟",
+      "label": "专注"
+    },
+    {
+      "from": "Antigravity 2.0",
+      "to": "AI 智能体",
+      "label": "训练"
+    }
+  ]
+}

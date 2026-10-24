@@ -1,0 +1,105 @@
+{
+  "center": "腾讯发布 Hy3 MoE 模型",
+  "branches": [
+    {
+      "label": "模型规格",
+      "detail": "腾讯 Hy Team 推出的 Apache 2.0 开源 MoE 模型",
+      "children": [
+        "295B 总参数，21B 激活参数",
+        "含 3.8B MTP 层参数",
+        "上下文长度 256K"
+      ]
+    },
+    {
+      "label": "性能定位",
+      "detail": "超越同规模模型，媲美 2-5 倍参数旗舰开源模型",
+      "children": [
+        "基于 50+ 产品反馈做后训练",
+        "产品与生产力任务收益显著"
+      ]
+    },
+    {
+      "label": "获取与体积",
+      "detail": "Hugging Face 上全量 598GB，FP8 量化 300GB",
+      "children": [
+        "OpenRouter 免费开放至 7 月 21 日",
+        "Apache 2.0 许可"
+      ]
+    },
+    {
+      "label": "评测表现",
+      "detail": "Simon Willison 用鹈鹕骑自行车 SVG 测试",
+      "children": [
+        "此前预览版曾大幅领先 OpenRouter 榜单",
+        "预览版输出带换色按钮"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Tencent",
+      "type": "company"
+    },
+    {
+      "name": "Hy3",
+      "type": "model"
+    },
+    {
+      "name": "Tencent Hy Team",
+      "type": "company"
+    },
+    {
+      "name": "MoE",
+      "type": "technique"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "product"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Max Woolf",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Tencent",
+      "to": "Hy3",
+      "label": "发布"
+    },
+    {
+      "from": "Tencent Hy Team",
+      "to": "Hy3",
+      "label": "开发"
+    },
+    {
+      "from": "Hy3",
+      "to": "MoE",
+      "label": "采用"
+    },
+    {
+      "from": "Hy3",
+      "to": "Hugging Face",
+      "label": "托管于"
+    },
+    {
+      "from": "Hy3",
+      "to": "OpenRouter",
+      "label": "免费开放"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Hy3",
+      "label": "测试"
+    }
+  ]
+}

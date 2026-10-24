@@ -1,0 +1,83 @@
+{
+  "center": "Claude Code v2.1.222 修复",
+  "branches": [
+    {
+      "label": "隔离加固",
+      "detail": "工作树隔离会话与子代理无法对主检出执行破坏性 git 命令",
+      "children": [
+        "文件编辑与 Bash 在所有会话类型中均受隔离",
+        "PreToolUse 自动允许钩子不再绕过后台代理任务…",
+        "后台任务含摘要、压缩、重命名"
+      ]
+    },
+    {
+      "label": "MCP 统计修正",
+      "detail": "/usage 仅将实际消耗工具结果的请求计入 MCP 服务器份额",
+      "children": [
+        "避免过度归因",
+        "利于成本监控"
+      ]
+    },
+    {
+      "label": "代理连通性",
+      "detail": "启动连通性检查改用与 API 请求相同的代理感知传输",
+      "children": [
+        "避免 HTTPS 代理后挂起",
+        "提升部署兼容性"
+      ]
+    },
+    {
+      "label": "消息可靠性",
+      "detail": "SendMessage 长摘要自动截断而非拒绝",
+      "children": [
+        "防止发送失败",
+        "提升跨会话通信可靠性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "PreToolUse",
+      "type": "concept"
+    },
+    {
+      "name": "SendMessage",
+      "type": "concept"
+    },
+    {
+      "name": "/usage",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "统计修正"
+    },
+    {
+      "from": "Claude Code",
+      "to": "PreToolUse",
+      "label": "加固钩子"
+    },
+    {
+      "from": "Claude Code",
+      "to": "SendMessage",
+      "label": "优化截断"
+    },
+    {
+      "from": "Claude Code",
+      "to": "/usage",
+      "label": "调整归因"
+    }
+  ]
+}

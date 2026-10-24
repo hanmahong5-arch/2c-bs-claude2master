@@ -1,0 +1,109 @@
+{
+  "center": "Claude Code 换用 Rust 版 Bun",
+  "branches": [
+    {
+      "label": "核心结论",
+      "detail": "Claude Code v2.1.181 起改用 Rust 移植版 Bun，几乎无人察觉",
+      "children": [
+        "Jarred Sumner 称 Linux 启动快 10%",
+        "「Boring is good」",
+        "已在数百万设备生产运行"
+      ]
+    },
+    {
+      "label": "验证方法",
+      "detail": "Simon Willison 用 strings 命令在自己的安装中找证据",
+      "children": [
+        "strings ~/.local/bin/claude | grep -m1…",
+        "输出 Bun v1.4.0 (macOS arm64)",
+        "grep -Eo 'src/...\\.rs' 列出 563 个 .rs…"
+      ]
+    },
+    {
+      "label": "版本线索",
+      "detail": "内嵌版本号 1.4.0 早于 GitHub 最新发布版",
+      "children": [
+        "GitHub 最新为 v1.3.14（5 月 12 日）",
+        "5 月 17 日 commit 将 package.json 改为 1.…",
+        "Rust 版以 Bun canary 发布"
+      ]
+    },
+    {
+      "label": "补充技巧",
+      "detail": "Ajan Raj 提供用 preload 脚本读取内嵌 Bun 版本",
+      "children": [
+        "BUN_OPTIONS=--preload=/tmp/bun-version.…",
+        "输出 1.4.0"
+      ]
+    }
+  ],
+  "flow": [
+    "读 Jarred 的声明",
+    "strings 检查本地 claude 二…",
+    "匹配 Bun v1 版本号",
+    "提取 src/*.rs 文件名",
+    "确认 Rust 版 Bun 已上线"
+  ],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Bun",
+      "type": "product"
+    },
+    {
+      "name": "Rust",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Jarred Sumner",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Ajan Raj",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Bun",
+      "label": "改用"
+    },
+    {
+      "from": "Bun",
+      "to": "Rust",
+      "label": "用其重写"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Code",
+      "label": "验证"
+    },
+    {
+      "from": "Jarred Sumner",
+      "to": "Bun",
+      "label": "声称重写"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "发布"
+    },
+    {
+      "from": "Ajan Raj",
+      "to": "Claude Code",
+      "label": "提供技巧"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "center": "Hermes Agent 稳定补丁版",
+  "branches": [
+    {
+      "label": "版本规模",
+      "detail": "自 v0.19.0 起合并约 1000+ PR、约 2789 次提交",
+      "children": [
+        "v2026.7.30 稳定补丁版",
+        "完整说明留待 v0.20.0"
+      ]
+    },
+    {
+      "label": "修复重点",
+      "detail": "网关、语音子系统、桌面应用与安装程序的错误修复和稳定性改进",
+      "children": [
+        "语音模式回归修复",
+        "安装程序稳定性"
+      ]
+    },
+    {
+      "label": "新增能力",
+      "detail": "新增 Buzz/Nostr 频道、FLUX3 视频生成与交付",
+      "children": [
+        "Telegram 媒体可靠性提升",
+        "更多异构输入输出"
+      ]
+    },
+    {
+      "label": "对 harness 含义",
+      "detail": "稳定标签便于锁定依赖版本，减少环境差异",
+      "children": [
+        "需处理更多异构输入输出",
+        "实时交互稳定性受关注"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "v0.19.0",
+      "type": "product"
+    },
+    {
+      "name": "v0.20.0",
+      "type": "product"
+    },
+    {
+      "name": "Buzz",
+      "type": "product"
+    },
+    {
+      "name": "Nostr",
+      "type": "product"
+    },
+    {
+      "name": "FLUX3",
+      "type": "model"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "v0.19.0",
+      "label": "基于"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "v0.20.0",
+      "label": "后续发布"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "Buzz",
+      "label": "新增支持"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "Nostr",
+      "label": "新增支持"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "FLUX3",
+      "label": "集成"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "agent harness",
+      "label": "影响设计"
+    }
+  ]
+}

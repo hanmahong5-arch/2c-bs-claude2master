@@ -1,0 +1,114 @@
+{
+  "center": "OpenClaw 多模型供应商配置",
+  "branches": [
+    {
+      "label": "文档拆分为四页",
+      "detail": "按读者任务拆成四页，旧锚点链接仍可跳转",
+      "children": [
+        "Quick rules：模型引用与 CLI 助手",
+        "Control UI 与 API 密钥配置",
+        "官方供应商插件"
+      ]
+    },
+    {
+      "label": "官方插件供应商",
+      "detail": "内置插件覆盖主流托管模型服务",
+      "children": [
+        "OpenAI、Anthropic、Google Gemini",
+        "Z.AI (GLM)、Vercel AI Gateway",
+        "OpenRouter、xAI、NVIDIA、MiniMax"
+      ]
+    },
+    {
+      "label": "自定义与本地运行时",
+      "detail": "通过 models.providers 配置 base URL 或代理",
+      "children": [
+        "Moonshot AI (Kimi)、Volcano Engine (…",
+        "BytePlus、Synthetic",
+        "llama.cpp、LM Studio、Ollama、vLLM、SGLang"
+      ]
+    },
+    {
+      "label": "运行时分离机制",
+      "detail": "OpenAI 供应商与运行时分离，加认证不改主模型",
+      "children": [
+        "添加供应商认证不改变主模型",
+        "CLI 运行时与模型引用独立",
+        "API 密钥轮换按优先级触发"
+      ]
+    }
+  ],
+  "flow": [
+    "选择供应商页面",
+    "配置认证与密钥",
+    "设置模型引用",
+    "指定运行时",
+    "CLI 验证"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Google Gemini",
+      "type": "model"
+    },
+    {
+      "name": "Ollama",
+      "type": "product"
+    },
+    {
+      "name": "vLLM",
+      "type": "product"
+    },
+    {
+      "name": "LM Studio",
+      "type": "product"
+    },
+    {
+      "name": "models.providers",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "OpenAI",
+      "label": "支持"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Anthropic",
+      "label": "支持"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Google Gemini",
+      "label": "支持"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Ollama",
+      "label": "集成"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "vLLM",
+      "label": "集成"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "models.providers",
+      "label": "使用"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "center": "Perplexity 用 GPT-6 Astra 接管…",
+  "branches": [
+    {
+      "label": "端到端接管",
+      "detail": "Astra 覆盖沟通撰写、改代码、生产监控多个环节",
+      "children": [
+        "从对外表达到线上运维全链路",
+        "模型嵌入真实生产闭环"
+      ]
+    },
+    {
+      "label": "检查频率降低",
+      "detail": "团队对 Astra 的人工检查明显少于早期模型",
+      "children": [
+        "长链路任务可靠性被实际验证",
+        "评估重点转向持续运行可控性"
+      ]
+    },
+    {
+      "label": "系统级职责",
+      "detail": "Astra 承担端到端系统职责，而非单点功能",
+      "children": [
+        "需可观测、可回滚的工程配套",
+        "支撑高授权程度的运维"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Perplexity",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "agent 工具链",
+      "type": "concept"
+    },
+    {
+      "name": "生产监控",
+      "type": "concept"
+    },
+    {
+      "name": "可观测性",
+      "type": "concept"
+    },
+    {
+      "name": "可回滚",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Perplexity",
+      "to": "GPT-6 Astra",
+      "label": "采用"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "生产监控",
+      "label": "接管"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "agent 工具链",
+      "label": "嵌入"
+    },
+    {
+      "from": "agent 工具链",
+      "to": "可观测性",
+      "label": "需要"
+    },
+    {
+      "from": "agent 工具链",
+      "to": "可回滚",
+      "label": "需要"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "center": "OpenAI内部Codex用量暴增",
+  "branches": [
+    {
+      "label": "内部用量激增",
+      "detail": "OpenAI内部Codex输出token中位数自2025年11月起大幅增长",
+      "children": [
+        "Research增长56倍，Customer Support 32倍",
+        "Engineering 27倍，Legal 13倍",
+        "2025年8月前人均Codex token占比不足10%"
+      ]
+    },
+    {
+      "label": "开源模型进展",
+      "detail": "GLM-5.2与Ornith-1.0在编码和代理基准上表现突出",
+      "children": [
+        "GLM-5.2 Max Code Arena前端1595分",
+        "Ornith-1.0 MIT许可，SWE-Bench Verified…",
+        "Liquid AI发布LFM2.5-230M小模型"
+      ]
+    },
+    {
+      "label": "代理生产落地",
+      "detail": "Google将计算机使用能力内置到Gemini 3.5 Flash",
+      "children": [
+        "支持浏览器、桌面和移动端",
+        "敏感操作需用户确认",
+        "Sail融资8000万美元做长时代理推理"
+      ]
+    },
+    {
+      "label": "评估与合成数据",
+      "detail": "公开基准易被刷分，合成数据生成受关注",
+      "children": [
+        "Cursor指出模型可从互联网检索答案",
+        "Meta Autodata将数据生成视为代理循环",
+        "创建通过率从62.1%提升至79.6%"
+      ]
+    },
+    {
+      "label": "开放生态经济",
+      "detail": "Hugging Face年化收入达1亿美元，保持开放",
+      "children": [
+        "97%用户仍免费使用平台",
+        "Gemma 4下载量2.5个月达2亿",
+        "Common Crawl发布2026年6月存档"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Ornith-1.0",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.5 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Meta Autodata",
+      "type": "technique"
+    },
+    {
+      "name": "Liquid AI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "内部使用"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "Ornith-1.0",
+      "label": "同属开源"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "center": "Codex rust-v0.135.0 更新",
+  "branches": [
+    {
+      "label": "诊断工具增强",
+      "detail": "codex doctor 新增环境、Git、终端等详细诊断信息",
+      "children": [
+        "便于支持团队快速定位问题"
+      ]
+    },
+    {
+      "label": "Vim 模式升级",
+      "detail": "支持文本对象编辑，改进词尾/行尾行为，可配置中断对话快捷键",
+      "children": [
+        "提升编辑器集成体验"
+      ]
+    },
+    {
+      "label": "Python SDK 沙箱预设",
+      "detail": "新增 Sandbox 预设，简化线程与会话 API 使用",
+      "children": [
+        "降低集成复杂度"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "codex doctor",
+      "type": "product"
+    },
+    {
+      "name": "Vim 模式",
+      "type": "concept"
+    },
+    {
+      "name": "Python SDK",
+      "type": "product"
+    },
+    {
+      "name": "Sandbox",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "发布"
+    },
+    {
+      "from": "Codex",
+      "to": "codex doctor",
+      "label": "包含"
+    },
+    {
+      "from": "Codex",
+      "to": "Vim 模式",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "Python SDK",
+      "label": "提供"
+    },
+    {
+      "from": "Python SDK",
+      "to": "Sandbox",
+      "label": "新增预设"
+    }
+  ]
+}

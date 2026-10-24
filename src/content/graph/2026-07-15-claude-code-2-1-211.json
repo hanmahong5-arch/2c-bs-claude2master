@@ -1,0 +1,80 @@
+{
+  "center": "Claude Code v2.1.211 更新",
+  "branches": [
+    {
+      "label": "子代理文本输出",
+      "detail": "新增 --forward-subagent-text 标志与环境变量，stream-json 可含子代理文本与思考",
+      "children": [
+        "便于外部工具捕获完整推理链",
+        "修复子代理模型覆盖被重置为父模型"
+      ]
+    },
+    {
+      "label": "权限预览修复",
+      "detail": "中和双向覆盖、零宽字符，防止工具输入视觉篡改审批消息",
+      "children": [
+        "增强安全审计可靠性",
+        "自动模式不再覆盖 PreToolUse hook 的 ask 决策"
+      ]
+    },
+    {
+      "label": "后台会话稳定性",
+      "detail": "修复共享凭据存储会话唤醒后同时登出、插件 MCP 服务器未重连",
+      "children": [
+        "提升后台任务持久性"
+      ]
+    },
+    {
+      "label": "成本计数修复",
+      "detail": "/clear 现在重置会话成本计数器，状态栏成本从 $0 开始",
+      "children": [
+        "便于准确追踪成本"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "stream-json",
+      "type": "technique"
+    },
+    {
+      "name": "PreToolUse hook",
+      "type": "technique"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "子代理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "stream-json",
+      "label": "支持输出"
+    },
+    {
+      "from": "Claude Code",
+      "to": "PreToolUse hook",
+      "label": "修复决策"
+    },
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "修复重连"
+    },
+    {
+      "from": "Claude Code",
+      "to": "子代理",
+      "label": "修复模型覆盖"
+    }
+  ]
+}

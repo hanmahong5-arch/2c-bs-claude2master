@@ -1,0 +1,92 @@
+{
+  "center": "Goose v1.49.0 更新",
+  "branches": [
+    {
+      "label": "安全边界强化",
+      "detail": "大量安全修复，内置权限与数据保护机制",
+      "children": [
+        "强制每轮模型工具白名单",
+        "限制代码模式回调输出",
+        "防止 secret 泄露"
+      ]
+    },
+    {
+      "label": "工具失败处理",
+      "detail": "新增 on_failure 块用于 PreToolUse 钩子",
+      "children": [
+        "工具调用失败时执行自定义逻辑",
+        "对 agent 错误处理流程有参考价值"
+      ]
+    },
+    {
+      "label": "工具调用追踪",
+      "detail": "引入 PreToolUseResult 事件和稳定 tool_call_id",
+      "children": [
+        "贯穿工具生命周期",
+        "便于追踪和关联工具调用结果"
+      ]
+    },
+    {
+      "label": "启动与接入优化",
+      "detail": "扩展后台加载改善启动，新增声明式 provider",
+      "children": [
+        "CLI 提示符立即可用",
+        "简化模型接入"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "PreToolUse",
+      "type": "concept"
+    },
+    {
+      "name": "on_failure",
+      "type": "concept"
+    },
+    {
+      "name": "PreToolUseResult",
+      "type": "concept"
+    },
+    {
+      "name": "tool_call_id",
+      "type": "concept"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "PreToolUse",
+      "label": "新增钩子"
+    },
+    {
+      "from": "PreToolUse",
+      "to": "on_failure",
+      "label": "支持块"
+    },
+    {
+      "from": "Goose",
+      "to": "PreToolUseResult",
+      "label": "引入事件"
+    },
+    {
+      "from": "Goose",
+      "to": "tool_call_id",
+      "label": "引入标识"
+    },
+    {
+      "from": "Goose",
+      "to": "CLI",
+      "label": "优化启动"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "center": "代码无物理极限，警惕技术债失控",
+  "branches": [
+    {
+      "label": "核心观点",
+      "detail": "代码没有物理约束，可以无限变差",
+      "children": [
+        "建筑无限加层会坍塌",
+        "软件不存在这种限制"
+      ]
+    },
+    {
+      "label": "恶化方式",
+      "detail": "代码变差有两条典型路径",
+      "children": [
+        "不断叠加新的间接层",
+        "性能持续下降"
+      ]
+    },
+    {
+      "label": "出处",
+      "detail": "Zach Kehs 提出，Simon Willison 引用",
+      "children": [
+        "文章《There's No Limit to How Bad Code…",
+        "2026年9月6日发布"
+      ]
+    },
+    {
+      "label": "主题标签",
+      "detail": "该引用被归入技术债话题",
+      "children": [
+        "标签 technical-debt"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Zach Kehs",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "There's No Limit to How Bad Code Can Get",
+      "type": "concept"
+    },
+    {
+      "name": "技术债",
+      "type": "concept"
+    },
+    {
+      "name": "间接层",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Zach Kehs",
+      "to": "There's No Limit to How Bad Code Can Get",
+      "label": "撰写"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Zach Kehs",
+      "label": "引用"
+    },
+    {
+      "from": "There's No Limit to How Bad Code Can Get",
+      "to": "技术债",
+      "label": "归属主题"
+    },
+    {
+      "from": "间接层",
+      "to": "技术债",
+      "label": "加剧"
+    }
+  ]
+}

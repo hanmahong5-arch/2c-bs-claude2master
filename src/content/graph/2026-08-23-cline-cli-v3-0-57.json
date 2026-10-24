@@ -1,0 +1,101 @@
+{
+  "center": "Cline CLI v3.0.57 更新",
+  "branches": [
+    {
+      "label": "Hub 排空升级",
+      "detail": "新增 drain 与 upgrade 命令，排空后重启并自动恢复",
+      "children": [
+        "cline hub drain 停止接收新变更，--off 解除",
+        "hub upgrade 排空后重启，中断自动恢复"
+      ]
+    },
+    {
+      "label": "会话恢复",
+      "detail": "会话在 hub 重启后存活，重连按事件 ID 去重重放",
+      "children": [
+        "客户端重连时按事件 ID 去重",
+        "确保不重复投递"
+      ]
+    },
+    {
+      "label": "工具调用修复",
+      "detail": "修复自定义 OpenAI 兼容模型工具调用被静默禁用的问题",
+      "children": [
+        "因推断能力列表导致工具调用被禁用"
+      ]
+    },
+    {
+      "label": "Langfuse 追踪",
+      "detail": "追踪现在携带会话和客户端身份，便于分组和版本追踪",
+      "children": [
+        "便于分组和版本追踪"
+      ]
+    },
+    {
+      "label": "模型目录更新",
+      "detail": "模型目录更新，影响多个提供商的默认模型选择",
+      "children": [
+        "影响多个提供商的默认模型选择"
+      ]
+    }
+  ],
+  "flow": [
+    "执行 hub drain 停止接收新工作",
+    "执行 hub upgrade 排空后重启",
+    "中断时自动恢复避免拒绝工作",
+    "客户端重连按事件 ID 去重重放"
+  ],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "cline hub",
+      "type": "product"
+    },
+    {
+      "name": "Langfuse",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "hub drain",
+      "type": "technique"
+    },
+    {
+      "name": "hub upgrade",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "cline hub",
+      "label": "包含"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Langfuse",
+      "label": "集成"
+    },
+    {
+      "from": "cline hub",
+      "to": "hub drain",
+      "label": "提供"
+    },
+    {
+      "from": "cline hub",
+      "to": "hub upgrade",
+      "label": "提供"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "OpenAI",
+      "label": "兼容"
+    }
+  ]
+}

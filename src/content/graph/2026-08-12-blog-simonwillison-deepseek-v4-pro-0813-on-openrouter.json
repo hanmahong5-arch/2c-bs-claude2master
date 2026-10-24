@@ -1,0 +1,99 @@
+{
+  "center": "DeepSeek V4 Pro 0813 发布",
+  "branches": [
+    {
+      "label": "发布与获取",
+      "detail": "DeepSeek 最新 Pro 模型仅通过 API 提供，无官方公告页",
+      "children": [
+        "Simon 只能链接 OpenRouter 页面",
+        "权重随后上线 Hugging Face"
+      ]
+    },
+    {
+      "label": "开源权重",
+      "detail": "更新显示权重已发布，规模 1.7T 参数、893 GB",
+      "children": [
+        "4 月 DeepSeek-V4-Pro 与 7 月…",
+        "此前无法确认是否开源"
+      ]
+    },
+    {
+      "label": "推理等级差异",
+      "detail": "low / medium / high 三档生成的鹈鹕图差异明显",
+      "children": [
+        "Simon 称其他模型未见此类差异",
+        "测试沿用 pelican-riding-a-bicycle 惯例"
+      ]
+    },
+    {
+      "label": "基准测试传播",
+      "detail": "跑分经微信群流出，Reddit 帖被删后转至 Hacker News",
+      "children": [
+        "Reddit 版主以 low-effort 为由删除",
+        "最终以 ASCII 表格形式出现在 HN"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "DeepSeek",
+      "type": "company"
+    },
+    {
+      "name": "DeepSeek V4 Pro 0813",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek-V4-Flash-0731",
+      "type": "model"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Reddit",
+      "type": "product"
+    },
+    {
+      "name": "Hacker News",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DeepSeek",
+      "to": "DeepSeek V4 Pro 0813",
+      "label": "发布"
+    },
+    {
+      "from": "DeepSeek V4 Pro 0813",
+      "to": "OpenRouter",
+      "label": "上架"
+    },
+    {
+      "from": "DeepSeek V4 Pro 0813",
+      "to": "Hugging Face",
+      "label": "权重上线"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "DeepSeek V4 Pro 0813",
+      "label": "实测"
+    },
+    {
+      "from": "DeepSeek",
+      "to": "DeepSeek-V4-Flash-0731",
+      "label": "开源"
+    }
+  ]
+}

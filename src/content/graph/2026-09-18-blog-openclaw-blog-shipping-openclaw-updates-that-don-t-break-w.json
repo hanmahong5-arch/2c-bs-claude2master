@@ -1,0 +1,110 @@
+{
+  "center": "OpenClaw 原子更新修复升级难题",
+  "branches": [
+    {
+      "label": "更新为何难做对",
+      "detail": "OpenClaw 配置组合近乎无穷，无法穷举测试，更新失败即整体宕机",
+      "children": [
+        "2.0 发布后更新崩溃问题集中爆发",
+        "旧版本同时下线，没有 agent 可帮忙修复",
+        "数千个配置项导致排列组合天文数字"
+      ]
+    },
+    {
+      "label": "开发者有安全网",
+      "detail": "维护者都是开发者，本机另有 Claude 或 Codex 可代修，感受不到普通用户的痛",
+      "children": [
+        "普通用户只有 OpenClaw 这一个 agent",
+        "agent 掉线后无人可修",
+        "团队习惯让 Claude/Codex 代为更新"
+      ]
+    },
+    {
+      "label": "原子更新方案",
+      "detail": "把已有升级步骤重新排序，保证任何情况下都留下可用的 claw",
+      "children": [
+        "更新期间保持旧 gateway 继续运行",
+        "失败则回滚到上一个可用配置",
+        "始终保留可用 agent 用于诊断和修复"
+      ]
+    },
+    {
+      "label": "反馈与后续",
+      "detail": "上线一键问题上报按钮，并引导用户进 Discord 反馈",
+      "children": [
+        "社区反馈已推动部分问题修复",
+        "目标是更新无缝到用户无感",
+        "未来设想独立的 agent 辅助 sidecar 监控升级"
+      ]
+    }
+  ],
+  "flow": [
+    "保持旧 gateway 运行",
+    "准备并执行更新",
+    "失败则回滚配置",
+    "保留可用 agent",
+    "诊断并修复问题"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Jason Sy",
+      "type": "person"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "model"
+    },
+    {
+      "name": "原子更新",
+      "type": "technique"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "Hermes",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Jason Sy",
+      "to": "OpenClaw",
+      "label": "任职于"
+    },
+    {
+      "from": "Jason Sy",
+      "to": "原子更新",
+      "label": "主导设计"
+    },
+    {
+      "from": "原子更新",
+      "to": "OpenClaw",
+      "label": "修复升级"
+    },
+    {
+      "from": "Claude",
+      "to": "OpenClaw",
+      "label": "被用于更新"
+    },
+    {
+      "from": "Codex",
+      "to": "OpenClaw",
+      "label": "被用于更新"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Discord",
+      "label": "引导反馈"
+    }
+  ]
+}

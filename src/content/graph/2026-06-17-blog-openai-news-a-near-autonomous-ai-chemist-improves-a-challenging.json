@@ -1,0 +1,123 @@
+{
+  "center": "AI 化学家优化 Chan-Lam 反应",
+  "branches": [
+    {
+      "label": "核心成果",
+      "detail": "GPT-5.4 发现 TEMPO 添加剂，显著提升 Chan-Lam 偶联产率",
+      "children": [
+        "88% 硼酸和 83% 磺酰胺产率提升",
+        "平均产率从 16.6% 升至 25.2%",
+        "产率超 30% 的反应占比从 15.6% 升至 37.5%"
+      ]
+    },
+    {
+      "label": "人机协作模式",
+      "detail": "近自主而非全自主，人类负责高层引导与验证",
+      "children": [
+        "GPT-5.4 生成并排序数千个研究提案",
+        "人类筛选出 4 个提案进行实验",
+        "人类修正实验细节并手工重复关键反应"
+      ]
+    },
+    {
+      "label": "实验规模",
+      "detail": "Maria Lab 高通量平台运行 10,080 个反应",
+      "children": [
+        "两轮实验周期完成",
+        "相当于化学家每天 3 个反应做十年",
+        "从 10 种氧化剂中识别出 TEMPO"
+      ]
+    },
+    {
+      "label": "化学意义",
+      "detail": "解决伯磺酰胺与硼酸偶联产率低的长期难题",
+      "children": [
+        "磺酰胺广泛存在于抗癌药、抗菌药中",
+        "合成是药物发现的主要瓶颈",
+        "提升产率可拓宽可探索分子范围"
+      ]
+    },
+    {
+      "label": "时间线",
+      "detail": "从首次提示到独立专家验证历时三个月",
+      "children": [
+        "3 月 4 日首次提示",
+        "6 月 4 日向独立专家分享结果"
+      ]
+    }
+  ],
+  "flow": [
+    "GPT-5.4 生成研究提案",
+    "人类筛选 4 个提案",
+    "Maria 设计实验网格",
+    "Maria Lab 运行 10,080 反应",
+    "分析数据并优化条件",
+    "人类手工验证关键反应"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.4",
+      "type": "model"
+    },
+    {
+      "name": "Molecule.one",
+      "type": "company"
+    },
+    {
+      "name": "Maria",
+      "type": "product"
+    },
+    {
+      "name": "Chan-Lam coupling",
+      "type": "concept"
+    },
+    {
+      "name": "TEMPO",
+      "type": "concept"
+    },
+    {
+      "name": "sulfonamide",
+      "type": "concept"
+    },
+    {
+      "name": "OAI-M1-03",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.4",
+      "label": "开发"
+    },
+    {
+      "from": "Molecule.one",
+      "to": "Maria",
+      "label": "开发"
+    },
+    {
+      "from": "GPT-5.4",
+      "to": "Maria",
+      "label": "连接"
+    },
+    {
+      "from": "GPT-5.4",
+      "to": "OAI-M1-03",
+      "label": "提出"
+    },
+    {
+      "from": "OAI-M1-03",
+      "to": "TEMPO",
+      "label": "识别"
+    },
+    {
+      "from": "TEMPO",
+      "to": "Chan-Lam coupling",
+      "label": "改进"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "center": "Cloudflare 精准触发 CAPTCHA",
+  "branches": [
+    {
+      "label": "问题背景",
+      "detail": "站点分面搜索被爬虫疯狂抓取，作者用 Managed Challenge 拦截",
+      "children": [
+        "simonwillison.net/search/ 分面搜索",
+        "简单 ?q=term 也被误伤"
+      ]
+    },
+    {
+      "label": "解决方案",
+      "detail": "用 Cloudflare 自定义规则，仅当查询串含 & 时才触发 CAPTCHA",
+      "children": [
+        "规则：path 匹配 /search/* 且 query 含 &",
+        "现在 /search/?q=lemur 不再触发"
+      ]
+    },
+    {
+      "label": "实现过程",
+      "detail": "借助 Claude Code 调试规则，MCP 无法改规则后改用 API",
+      "children": [
+        "Cloudflare MCP 无法编辑规则",
+        "切换到 Cloudflare API"
+      ]
+    }
+  ],
+  "flow": [
+    "发现误伤问题",
+    "用 Claude Code 调试",
+    "尝试 Cloudflare MCP",
+    "改用 Cloudflare API",
+    "注册自定义规则",
+    "验证不再误伤"
+  ],
+  "entities": [
+    {
+      "name": "Cloudflare",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Cloudflare MCP",
+      "type": "product"
+    },
+    {
+      "name": "Cloudflare API",
+      "type": "product"
+    },
+    {
+      "name": "Managed Challenge",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Cloudflare",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Code",
+      "label": "使用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Cloudflare MCP",
+      "label": "尝试"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Cloudflare API",
+      "label": "改用"
+    },
+    {
+      "from": "Cloudflare",
+      "to": "Managed Challenge",
+      "label": "提供"
+    }
+  ]
+}

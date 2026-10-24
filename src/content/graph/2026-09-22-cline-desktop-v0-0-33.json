@@ -1,0 +1,71 @@
+{
+  "center": "Cline Desktop v0.0.33 更新",
+  "branches": [
+    {
+      "label": "Worktree 隔离",
+      "detail": "新线程可选 Worktree 模式，agent 在独立分支运行，不污染工作树",
+      "children": [
+        "从当前分支切出 cline/<id> 分支",
+        "运行目录 ~/.cline/worktrees/",
+        "删除任务时清理 worktree 与分支"
+      ]
+    },
+    {
+      "label": "自动压缩修复",
+      "detail": "桌面端自动压缩此前从未生效，长会话耗尽上下文",
+      "children": [
+        "sidecar 只注册 checkpoint 未注册 compaction",
+        "opt-in 特性需每个宿主端显式接线"
+      ]
+    },
+    {
+      "label": "截断重试",
+      "detail": "模型输出 token 触顶且无工具调用时，改为最多重试 3 次",
+      "children": [
+        "提示简洁",
+        "大输出上限模型获更大默认预算",
+        "无工具调用的截断视为可恢复状态"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline Desktop",
+      "type": "product"
+    },
+    {
+      "name": "git worktree",
+      "type": "technique"
+    },
+    {
+      "name": "sidecar",
+      "type": "concept"
+    },
+    {
+      "name": "checkpoint",
+      "type": "concept"
+    },
+    {
+      "name": "compaction",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline Desktop",
+      "to": "git worktree",
+      "label": "新增支持"
+    },
+    {
+      "from": "sidecar",
+      "to": "checkpoint",
+      "label": "注册"
+    },
+    {
+      "from": "sidecar",
+      "to": "compaction",
+      "label": "未注册"
+    }
+  ]
+}

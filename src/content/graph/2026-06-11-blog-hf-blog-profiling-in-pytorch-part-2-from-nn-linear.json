@@ -1,0 +1,113 @@
+{
+  "center": "PyTorch 性能优化：从 nn.Linear…",
+  "branches": [
+    {
+      "label": "torch.profiler 入门",
+      "detail": "系列第一篇介绍 torch.profiler 基础用法，帮助定位性能瓶颈",
+      "children": [
+        "torch.profiler 是 PyTorch 官方性能分析工具"
+      ]
+    },
+    {
+      "label": "nn.Linear 剖析",
+      "detail": "第二篇从 nn.Linear 出发，深入分析其底层算子与性能特征",
+      "children": [
+        "涉及 aten::addmm 与 aten::mm 算子"
+      ]
+    },
+    {
+      "label": "融合 MLP 优化",
+      "detail": "通过融合多个线性层为单个 MLP 提升执行效率",
+      "children": [
+        "融合后减少 kernel 启动与内存访问开销"
+      ]
+    },
+    {
+      "label": "torch.compile 重编译",
+      "detail": "输入 strides 违反预计算时 torch.compile 会触发重编译",
+      "children": [
+        "官方文档有重编译处理指南"
+      ]
+    },
+    {
+      "label": "系列后续预告",
+      "detail": "第三篇将聚焦 Attention 的性能剖析",
+      "children": [
+        "Profiling in PyTorch (Part 3)…"
+      ]
+    }
+  ],
+  "flow": [
+    "使用 torch.profiler 采集性…",
+    "定位 nn.Linear 等热点算子",
+    "分析底层 GEMM 与内存访问",
+    "融合多个线性层为 MLP",
+    "验证优化后性能提升"
+  ],
+  "entities": [
+    {
+      "name": "PyTorch",
+      "type": "product"
+    },
+    {
+      "name": "torch.profiler",
+      "type": "product"
+    },
+    {
+      "name": "nn.Linear",
+      "type": "concept"
+    },
+    {
+      "name": "torch.compile",
+      "type": "technique"
+    },
+    {
+      "name": "aten::addmm",
+      "type": "concept"
+    },
+    {
+      "name": "aten::mm",
+      "type": "concept"
+    },
+    {
+      "name": "cuBLAS",
+      "type": "product"
+    },
+    {
+      "name": "Aritra Roy Gosthipaty",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "PyTorch",
+      "to": "torch.profiler",
+      "label": "提供"
+    },
+    {
+      "from": "torch.profiler",
+      "to": "nn.Linear",
+      "label": "分析"
+    },
+    {
+      "from": "nn.Linear",
+      "to": "aten::addmm",
+      "label": "调用"
+    },
+    {
+      "from": "nn.Linear",
+      "to": "aten::mm",
+      "label": "调用"
+    },
+    {
+      "from": "torch.compile",
+      "to": "PyTorch",
+      "label": "属于"
+    },
+    {
+      "from": "Aritra Roy Gosthipaty",
+      "to": "PyTorch",
+      "label": "撰写"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "center": "llm-keys-ui 0.1 安全注入 API key",
+  "branches": [
+    {
+      "label": "解决的问题",
+      "detail": "手机远程控制编码 agent 时，避免把 API key 粘贴进 agent 会话",
+      "children": [
+        "作者用 Codex Remote 在手机上跑编码 agent",
+        "在远程机器上配置 API key 有泄露风险"
+      ]
+    },
+    {
+      "label": "使用方式",
+      "detail": "让 Codex 运行 uvx 命令启动本地 Web UI，再通过 URL 保存密钥",
+      "children": [
+        "uvx --with llm-keys-ui llm keys-ui --all",
+        "URL 支持局域网或 Tailscale 设备 IP"
+      ]
+    },
+    {
+      "label": "密钥读取",
+      "detail": "后续在 shell 命令中用 llm keys get 取用密钥",
+      "children": [
+        "llm keys get anthropic"
+      ]
+    },
+    {
+      "label": "作者与发布",
+      "detail": "Simon Willison 于 2026 年 9 月 20 日发布",
+      "children": [
+        "发布在 Simon Willison's Weblog",
+        "标签：llm、coding-agents、codex"
+      ]
+    }
+  ],
+  "flow": [
+    "手机控制 Codex Remote",
+    "运行 uvx 启动 keys-ui",
+    "获取局域网/Tailscale URL",
+    "在 Web UI 保存 API key",
+    "shell 中 llm keys get 取用"
+  ],
+  "entities": [
+    {
+      "name": "llm-keys-ui",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Codex Remote",
+      "type": "product"
+    },
+    {
+      "name": "Tailscale",
+      "type": "product"
+    },
+    {
+      "name": "API key",
+      "type": "concept"
+    },
+    {
+      "name": "coding agent",
+      "type": "concept"
+    },
+    {
+      "name": "llm",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm-keys-ui",
+      "label": "发布"
+    },
+    {
+      "from": "llm-keys-ui",
+      "to": "API key",
+      "label": "安全注入"
+    },
+    {
+      "from": "Codex Remote",
+      "to": "coding agent",
+      "label": "远程运行"
+    },
+    {
+      "from": "llm-keys-ui",
+      "to": "Tailscale",
+      "label": "支持"
+    },
+    {
+      "from": "llm-keys-ui",
+      "to": "llm",
+      "label": "插件属于"
+    }
+  ]
+}

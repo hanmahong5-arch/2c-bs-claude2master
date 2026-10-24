@@ -1,0 +1,90 @@
+{
+  "center": "Gemma 4 与开源模型成功关键",
+  "branches": [
+    {
+      "label": "开源模型竞争格局",
+      "detail": "2026 年开源模型众多，竞争激烈但机会仍多",
+      "children": [
+        "对手包括 Qwen 3.5、Kimi K2.5、GLM 5、GPT-…",
+        "开源模型潜力如暗物质，缺乏解锁配方"
+      ]
+    },
+    {
+      "label": "评估开源模型因素",
+      "detail": "作者列出投资开源权重模型的评估标准",
+      "children": [
+        "性能与规模、来源国、许可证、工具链、微调难度",
+        "工具链需数天到数周稳定，微调性无系统监测"
+      ]
+    },
+    {
+      "label": "Gemma 4 发布",
+      "detail": "Google 最新开源模型，采用 Apache 2.0 许可证",
+      "children": [
+        "4 个尺寸：5B、8B、26B MoE（4B 活跃）、31B",
+        "31B 对标 Qwen 3.5 27B，小模型基准分高"
+      ]
+    },
+    {
+      "label": "成功取决于易用性",
+      "detail": "Gemma 4 成功由易用性决定，基准分波动无关紧要",
+      "children": [
+        "过往 Gemma 受工具链和微调问题困扰",
+        "Qwen 生态成熟因长期积累，其他家族需耐心"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "Qwen 3.5",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K2.5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-OSS",
+      "type": "model"
+    },
+    {
+      "name": "Apache 2.0",
+      "type": "concept"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google",
+      "to": "Gemma 4",
+      "label": "发布"
+    },
+    {
+      "from": "Gemma 4",
+      "to": "Apache 2.0",
+      "label": "采用"
+    },
+    {
+      "from": "Gemma 4",
+      "to": "Qwen 3.5",
+      "label": "对标"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Gemma 4",
+      "label": "分析"
+    }
+  ]
+}

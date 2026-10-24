@@ -1,0 +1,113 @@
+{
+  "center": "Stateless MCP 重燃兴趣",
+  "branches": [
+    {
+      "label": "MCP 2.0 无状态化",
+      "detail": "2026-07-28 规范发布，单次 HTTP 请求即可调用工具，无需会话 ID",
+      "children": [
+        "旧版需先 initialize 拿 Mcp-Session-Id 再…",
+        "新版用 MCP-Protocol-Version 等头部一次完成",
+        "更易实现客户端与服务端，适合可扩展 Web 应用"
+      ]
+    },
+    {
+      "label": "三个新工具",
+      "detail": "作者一周内构建 mcp-explorer、datasette-mcp 和 llm-mcp-client",
+      "children": [
+        "mcp-explorer：Python CLI，uvx 直接运行…",
+        "datasette-mcp：Datasette 插件，提供 /-/…",
+        "llm-mcp-client：LLM 插件，支持 -T 参数调用…"
+      ]
+    },
+    {
+      "label": "MCP 重新受青睐",
+      "detail": "相比给 agent 开放 shell 和 curl，MCP 更易审计和控制，小模型也能驱动",
+      "children": [
+        "2025 年 MCP 曾被 Anthropic 的 Skills 盖过…",
+        "开放终端环境风险高，需强模型才能有效驱动",
+        "MCP 工具简单，笔记本上的小模型也能合理使用"
+      ]
+    },
+    {
+      "label": "安全性考量",
+      "detail": "MCP 比任意命令执行更易推理 agent 能力与风险",
+      "children": [
+        "曾指出 MCP 存在提示注入安全问题",
+        "通用 agent 的 shell/curl 访问更难保障安全",
+        "作者计划更多采用 MCP 构建 agent"
+      ]
+    }
+  ],
+  "flow": [
+    "客户端发送单次 HTTP 请求",
+    "请求头携带协议版本与方法名",
+    "请求体包含工具名与参数",
+    "服务端直接执行并返回结果"
+  ],
+  "entities": [
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Skills",
+      "type": "product"
+    },
+    {
+      "name": "mcp-explorer",
+      "type": "product"
+    },
+    {
+      "name": "datasette-mcp",
+      "type": "product"
+    },
+    {
+      "name": "llm-mcp-client",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "MCP",
+      "label": "提出"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Skills",
+      "label": "发明"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "mcp-explorer",
+      "label": "构建"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "datasette-mcp",
+      "label": "构建"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "llm-mcp-client",
+      "label": "构建"
+    },
+    {
+      "from": "datasette-mcp",
+      "to": "Datasette",
+      "label": "插件"
+    }
+  ]
+}

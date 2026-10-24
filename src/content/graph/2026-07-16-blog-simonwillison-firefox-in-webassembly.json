@@ -1,0 +1,111 @@
+{
+  "center": "Firefox 编译为 WebAssembly",
+  "branches": [
+    {
+      "label": "项目成果",
+      "detail": "Puter 把 Firefox 编译成 WebAssembly，让整个浏览器在另一个浏览器里运行",
+      "children": [
+        "演示：在 Chrome 中运行 WASM 版 Firefox",
+        "仓库 firefox-wasm 已开源"
+      ]
+    },
+    {
+      "label": "技术选型",
+      "detail": "选择 Firefox/Gecko 因其单进程支持较强",
+      "children": [
+        "Gecko 单进程支持是编译成功关键"
+      ]
+    },
+    {
+      "label": "AI 成本",
+      "detail": "项目估计消耗约 2.5 万美元的 Claude Opus 与 Fable token",
+      "children": [
+        "借助 Claude Max 订阅实际花费低得多"
+      ]
+    },
+    {
+      "label": "网络代理",
+      "detail": "所有流量经 WebSocket（Wisp 协议）走 Puter 服务器代理",
+      "children": [
+        "浏览器代码无法开任意网络连接",
+        "HN 讨论期间服务器被迫扩容"
+      ]
+    },
+    {
+      "label": "加密验证",
+      "detail": "Puter 声称支持端到端加密，作者检查后认为属实",
+      "children": [
+        "HTTPS 站点流量加密，http 示例站明文"
+      ]
+    }
+  ],
+  "flow": [
+    "编译 Firefox 为 WASM",
+    "在宿主浏览器加载运行",
+    "流量走 WebSocket 代理",
+    "经 Wisp 协议转发",
+    "Puter 服务器中转"
+  ],
+  "entities": [
+    {
+      "name": "Firefox",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "Puter",
+      "type": "company"
+    },
+    {
+      "name": "Claude Opus",
+      "type": "model"
+    },
+    {
+      "name": "Wisp",
+      "type": "technique"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "WebKit",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Puter",
+      "to": "Firefox",
+      "label": "编译为"
+    },
+    {
+      "from": "Firefox",
+      "to": "WebAssembly",
+      "label": "编译为"
+    },
+    {
+      "from": "Puter",
+      "to": "Claude Opus",
+      "label": "使用"
+    },
+    {
+      "from": "Puter",
+      "to": "Wisp",
+      "label": "采用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Firefox",
+      "label": "报道"
+    },
+    {
+      "from": "WebKit",
+      "to": "WebAssembly",
+      "label": "编译为"
+    }
+  ]
+}

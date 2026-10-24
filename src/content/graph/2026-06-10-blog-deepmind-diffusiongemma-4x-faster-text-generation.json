@@ -1,0 +1,121 @@
+{
+  "center": "DiffusionGemma 文本扩散模型",
+  "branches": [
+    {
+      "label": "核心突破",
+      "detail": "26B MoE 文本扩散模型，GPU 上生成速度最高提升 4 倍",
+      "children": [
+        "单张 NVIDIA H100 超 1000 tokens/秒",
+        "RTX 5090 超 700 tokens/秒",
+        "Apache 2.0 开源实验模型"
+      ]
+    },
+    {
+      "label": "技术原理",
+      "detail": "放弃逐 token 自回归，改为并行生成 256 token 文本块",
+      "children": [
+        "从随机占位 token 画布迭代精炼",
+        "双向注意力让每个 token 关注全部",
+        "解码瓶颈从内存带宽转向算力"
+      ]
+    },
+    {
+      "label": "硬件门槛",
+      "detail": "推理仅激活 3.8B 参数，量化后可跑在消费级显卡",
+      "children": [
+        "适配 18GB 显存高端消费 GPU",
+        "NVIDIA NVFP4 4-bit 加速",
+        "支持 MLX、vLLM、Transformers"
+      ]
+    },
+    {
+      "label": "适用场景",
+      "detail": "面向速度敏感的本地交互工作流，而非高并发云端",
+      "children": [
+        "行内编辑、代码填充、快速迭代",
+        "Unsloth 微调后可解数独",
+        "高 QPS 云端收益递减"
+      ]
+    },
+    {
+      "label": "质量取舍",
+      "detail": "优先速度与并行布局，输出质量低于标准 Gemma 4",
+      "children": [
+        "追求最高质量仍推荐 Gemma 4",
+        "可通过微调提升特定任务表现"
+      ]
+    }
+  ],
+  "flow": [
+    "随机占位 token 画布",
+    "多轮迭代精炼",
+    "锁定正确 token 作线索",
+    "收敛为高质量文本"
+  ],
+  "entities": [
+    {
+      "name": "DiffusionGemma",
+      "type": "model"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemini Diffusion",
+      "type": "model"
+    },
+    {
+      "name": "NVIDIA H100",
+      "type": "product"
+    },
+    {
+      "name": "Unsloth",
+      "type": "product"
+    },
+    {
+      "name": "文本扩散",
+      "type": "concept"
+    },
+    {
+      "name": "双向注意力",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "DiffusionGemma",
+      "label": "发布"
+    },
+    {
+      "from": "DiffusionGemma",
+      "to": "Gemma 4",
+      "label": "基于"
+    },
+    {
+      "from": "DiffusionGemma",
+      "to": "Gemini Diffusion",
+      "label": "借鉴研究"
+    },
+    {
+      "from": "DiffusionGemma",
+      "to": "文本扩散",
+      "label": "采用"
+    },
+    {
+      "from": "DiffusionGemma",
+      "to": "双向注意力",
+      "label": "使用"
+    },
+    {
+      "from": "Unsloth",
+      "to": "DiffusionGemma",
+      "label": "微调"
+    }
+  ]
+}

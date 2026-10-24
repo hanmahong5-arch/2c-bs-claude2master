@@ -1,0 +1,69 @@
+{
+  "center": "OpenAI 成立数学与 AI 顾问组",
+  "branches": [
+    {
+      "label": "顾问组定位",
+      "detail": "OpenAI 与独立外部小组合作，评审与传播不由其单方决定",
+      "children": [
+        "引入外部数学界视角",
+        "定位为独立"
+      ]
+    },
+    {
+      "label": "职责范围",
+      "detail": "指导新兴 AI 成果的评审与对外沟通",
+      "children": [
+        "评审环节",
+        "传播环节"
+      ]
+    },
+    {
+      "label": "对开发者的信号",
+      "detail": "AI 在数学等可验证推理领域的产出需更严格核验与披露",
+      "children": [
+        "面向 agent 与工具链开发者",
+        "核验与披露流程趋严"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "数学与人工智能顾问组",
+      "type": "concept"
+    },
+    {
+      "name": "AI 数学成果评审",
+      "type": "concept"
+    },
+    {
+      "name": "可验证推理",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "数学与人工智能顾问组",
+      "label": "合作成立"
+    },
+    {
+      "from": "数学与人工智能顾问组",
+      "to": "AI 数学成果评审",
+      "label": "指导"
+    },
+    {
+      "from": "AI 数学成果评审",
+      "to": "可验证推理",
+      "label": "聚焦"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "center": "Cline v4.1.6 更新",
+  "branches": [
+    {
+      "label": "新增模型",
+      "detail": "Cline 新增 meta/muse-spark-1.2-contributor 并更新模型目录",
+      "children": [
+        "模型名：meta/muse-spark-1.2-contributor",
+        "同步模型列表以支持新模型选择"
+      ]
+    },
+    {
+      "label": "修复遥测归属",
+      "detail": "错误现在归因于实际使用的模型",
+      "children": [
+        "确保遥测数据准确",
+        "便于调试和优化"
+      ]
+    },
+    {
+      "label": "对 harness 的启示",
+      "detail": "需及时同步模型列表并保证遥测准确",
+      "children": [
+        "支持新模型选择",
+        "遥测准确利于调试优化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "meta/muse-spark-1.2-contributor",
+      "type": "model"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "遥测归属",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "meta/muse-spark-1.2-contributor",
+      "label": "新增"
+    },
+    {
+      "from": "Cline",
+      "to": "遥测归属",
+      "label": "修复"
+    },
+    {
+      "from": "agent harness",
+      "to": "meta/muse-spark-1.2-contributor",
+      "label": "需同步"
+    }
+  ]
+}

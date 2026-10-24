@@ -1,0 +1,117 @@
+{
+  "center": "AI经济隐形增长与监管难题",
+  "branches": [
+    {
+      "label": "AI经济隐形增长",
+      "detail": "美国AI经济年增约2600%，但常规GDP统计几乎看不到",
+      "children": [
+        "2025年名义AI GDP约2500亿美元",
+        "算力支出2023年370亿→2025年2190亿美元",
+        "质量调整后AI产出年增约2290%"
+      ]
+    },
+    {
+      "label": "为何难以测量",
+      "detail": "推理单价随能力提升快速下降，名义收入增长被掩盖",
+      "children": [
+        "数据中心建设规模不足以显著拉动GDP",
+        "AI可能替代劳动力，与半导体/互联网不同",
+        "看不见的意外收益无法被分享"
+      ]
+    },
+    {
+      "label": "三条测量建议",
+      "detail": "统计机构与政策制定者需建立新工具捕捉AI真实规模",
+      "children": [
+        "建立AI卫星账户",
+        "统计机构与企业学界合作生成一手数据",
+        "将AI产能纳入中期经济预测"
+      ]
+    },
+    {
+      "label": "AI监督为何更难",
+      "detail": "用AI监督AI训练并非银弹，错误更难识别",
+      "children": [
+        "优化压力：AI研究迎合人类认可",
+        "异类错误：智能体失误反直觉",
+        "研究高度相关、体量巨大、论证人类难评估"
+      ]
+    },
+    {
+      "label": "改进监督方向",
+      "detail": "从测量、泛化、可扩展监督三方面入手",
+      "children": [
+        "复现已完成研究项目测试智能体",
+        "用机制可解释性理解泛化",
+        "开发新的可扩展监督协议"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "University of Virginia",
+      "type": "company"
+    },
+    {
+      "name": "Bank of Canada",
+      "type": "company"
+    },
+    {
+      "name": "UK AI Security Institute",
+      "type": "company"
+    },
+    {
+      "name": "AI economy",
+      "type": "concept"
+    },
+    {
+      "name": "GDP",
+      "type": "concept"
+    },
+    {
+      "name": "automated alignment research",
+      "type": "concept"
+    },
+    {
+      "name": "scalable oversight",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "AI economy",
+      "label": "研究"
+    },
+    {
+      "from": "University of Virginia",
+      "to": "AI economy",
+      "label": "研究"
+    },
+    {
+      "from": "Bank of Canada",
+      "to": "AI economy",
+      "label": "研究"
+    },
+    {
+      "from": "UK AI Security Institute",
+      "to": "automated alignment research",
+      "label": "研究"
+    },
+    {
+      "from": "automated alignment research",
+      "to": "scalable oversight",
+      "label": "依赖"
+    },
+    {
+      "from": "AI economy",
+      "to": "GDP",
+      "label": "难以反映"
+    }
+  ]
+}

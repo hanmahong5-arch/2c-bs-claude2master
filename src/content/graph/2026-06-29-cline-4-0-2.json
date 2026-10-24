@@ -1,0 +1,82 @@
+{
+  "center": "Cline v4.0.2 更新",
+  "branches": [
+    {
+      "label": "DeepSeek 推理力度",
+      "detail": "DeepSeek 思考模型新增推理力度支持，含 xhigh 级别",
+      "children": [
+        "agent harness 可按需分配推理资源",
+        "新增 xhigh 推理力度级别"
+      ]
+    },
+    {
+      "label": "ClinePass 优化",
+      "detail": "ClinePass 提供商体验改进，推理控制与模型选择更清晰",
+      "children": [
+        "agent harness 可更精确配置推理行为",
+        "更清晰的推理控制与模型选择"
+      ]
+    },
+    {
+      "label": "Webview 修复",
+      "detail": "修复 Webview 中环境变量替换和焦点链默认值问题",
+      "children": [
+        "确保 agent harness 状态一致性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "DeepSeek",
+      "type": "model"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "xhigh",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "Webview",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "DeepSeek",
+      "label": "集成"
+    },
+    {
+      "from": "Cline",
+      "to": "ClinePass",
+      "label": "包含"
+    },
+    {
+      "from": "DeepSeek",
+      "to": "xhigh",
+      "label": "支持"
+    },
+    {
+      "from": "ClinePass",
+      "to": "agent harness",
+      "label": "配置"
+    },
+    {
+      "from": "Cline",
+      "to": "Webview",
+      "label": "修复"
+    }
+  ]
+}

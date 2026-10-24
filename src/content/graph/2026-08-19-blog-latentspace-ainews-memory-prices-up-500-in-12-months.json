@@ -1,0 +1,112 @@
+{
+  "center": "内存暴涨500%与AI周报",
+  "branches": [
+    {
+      "label": "内存价格失控",
+      "detail": "12个月内内存价格涨500%，128GB DDR5套件达历史最低价10倍",
+      "children": [
+        "DRAM单价回到2007年水平，逆转20年进步",
+        "超大规模买家锁定2027年全球DRAM产能",
+        "主流DRAM每公斤价值超黄金一半"
+      ]
+    },
+    {
+      "label": "OpenAI放缓前沿训练",
+      "detail": "OpenAI暂停部分前沿RL训练两周，强化监控与隔离",
+      "children": [
+        "监控增加约20%开销，30分钟内可告警",
+        "Sam Altman称能力超前于安全准备",
+        "主要影响远期发布，非临近上线模型"
+      ]
+    },
+    {
+      "label": "开源模型进展",
+      "detail": "Qwen3.8-27B成焦点，GLM-5.3靠后训练提升",
+      "children": [
+        "Qwen3.8-27B四天登顶Cline本地模型",
+        "GLM-5.3同价发布，GDPval-AA v2涨246分",
+        "GLM-5.3增益来自异步RL与沙盒训练"
+      ]
+    },
+    {
+      "label": "推理与系统基建",
+      "detail": "Mojo开源、TensorRT Connect、Cursor Git存储",
+      "children": [
+        "Mojo以Apache 2.0开源，支持多加速器",
+        "NVIDIA两命令完成HF到TensorRT转换",
+        "Cerebras CS-4称10T模型1000 tok/s"
+      ]
+    },
+    {
+      "label": "Agent与RL工具",
+      "detail": "Miles v0.1开源RL框架，Cursor发布Git存储设计",
+      "children": [
+        "Miles历时9个月构建，支持多模态",
+        "Cursor将Git存储当作数据库设计",
+        "DFlash 2在M5 Max上达70 tok/s"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Qwen3.8-27B",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5.3",
+      "type": "model"
+    },
+    {
+      "name": "Mojo",
+      "type": "product"
+    },
+    {
+      "name": "TensorRT Model Connect",
+      "type": "product"
+    },
+    {
+      "name": "Cerebras CS-4",
+      "type": "product"
+    },
+    {
+      "name": "Miles",
+      "type": "product"
+    },
+    {
+      "name": "DRAM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "DRAM",
+      "label": "受短缺影响"
+    },
+    {
+      "from": "Qwen3.8-27B",
+      "to": "GLM-5.3",
+      "label": "同周发布"
+    },
+    {
+      "from": "Mojo",
+      "to": "TensorRT Model Connect",
+      "label": "同属推理基建"
+    },
+    {
+      "from": "Cerebras CS-4",
+      "to": "DRAM",
+      "label": "依赖内存供应"
+    },
+    {
+      "from": "Miles",
+      "to": "Qwen3.8-27B",
+      "label": "支持RL训练"
+    }
+  ]
+}

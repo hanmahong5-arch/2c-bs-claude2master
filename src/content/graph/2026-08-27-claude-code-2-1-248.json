@@ -1,0 +1,99 @@
+{
+  "center": "Claude Code v2.1.248 更新",
+  "branches": [
+    {
+      "label": "受限模式",
+      "detail": "新增 --restricted，移除命令执行与 WebFetch，文件操作限工作目录",
+      "children": [
+        "忽略用户/项目/本地设置",
+        "适合高安全环境"
+      ]
+    },
+    {
+      "label": "缓存 TTL",
+      "detail": "agent frontmatter 新增 experimental.cacheTtl，按 agent 设 prompt 缓存 TTL",
+      "children": [
+        "优化子代理缓存策略"
+      ]
+    },
+    {
+      "label": "跨会话消息",
+      "detail": "修复长会话中 OAuth token 刷新导致的 prompt 缓存 miss",
+      "children": [
+        "提升长时间运行稳定性"
+      ]
+    },
+    {
+      "label": "Runner 标签",
+      "detail": "新增 claude self-hosted-runner --client-label 覆盖注册标签",
+      "children": [
+        "便于多 runner 管理"
+      ]
+    },
+    {
+      "label": "CI 安全修复",
+      "detail": "修复 claude agents 在 CI 跳过工作区信任提示的问题",
+      "children": [
+        "确保安全流程不被绕过"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "--restricted",
+      "type": "concept"
+    },
+    {
+      "name": "WebFetch",
+      "type": "product"
+    },
+    {
+      "name": "experimental.cacheTtl",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "claude self-hosted-runner",
+      "type": "product"
+    },
+    {
+      "name": "claude agents",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "--restricted",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "experimental.cacheTtl",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "claude self-hosted-runner",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "claude agents",
+      "label": "修复"
+    },
+    {
+      "from": "--restricted",
+      "to": "WebFetch",
+      "label": "移除"
+    }
+  ]
+}

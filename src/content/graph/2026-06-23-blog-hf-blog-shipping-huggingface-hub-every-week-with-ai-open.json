@@ -1,0 +1,90 @@
+{
+  "center": "Hugging Face 每周发布…",
+  "branches": [
+    {
+      "label": "AI 辅助发布",
+      "detail": "用 AI 辅助每周发布 huggingface_hub 库",
+      "children": [
+        "AI 生成发布说明与变更日志",
+        "人工审核把关"
+      ]
+    },
+    {
+      "label": "人工审核",
+      "detail": "AI 产出需人工审核后发布",
+      "children": [
+        "作者 ariG23498 参与",
+        "社区反馈积极"
+      ]
+    },
+    {
+      "label": "发布节奏",
+      "detail": "保持每周一次的发布频率",
+      "children": [
+        "每周发布一次",
+        "持续迭代"
+      ]
+    },
+    {
+      "label": "相关工具",
+      "detail": "涉及 hf CLI 与 agent 优化",
+      "children": [
+        "hf CLI 面向 agent 优化",
+        "Agentic Resource Discovery"
+      ]
+    }
+  ],
+  "flow": [
+    "AI 生成发布内容",
+    "人工审核修改",
+    "发布 huggingface_hub"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "huggingface_hub",
+      "type": "product"
+    },
+    {
+      "name": "hf CLI",
+      "type": "product"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    },
+    {
+      "name": "Agentic Resource Discovery",
+      "type": "concept"
+    },
+    {
+      "name": "ariG23498",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "huggingface_hub",
+      "label": "发布"
+    },
+    {
+      "from": "AI",
+      "to": "huggingface_hub",
+      "label": "辅助发布"
+    },
+    {
+      "from": "ariG23498",
+      "to": "huggingface_hub",
+      "label": "参与发布"
+    },
+    {
+      "from": "hf CLI",
+      "to": "Hugging Face",
+      "label": "属于"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "center": "OpenAI教育插件助力教学研究",
+  "branches": [
+    {
+      "label": "面向人群",
+      "detail": "插件覆盖K-12教师、大学教育者和学生三类用户",
+      "children": [
+        "K-12教师",
+        "大学教育者",
+        "学生"
+      ]
+    },
+    {
+      "label": "应用场景",
+      "detail": "覆盖学习、教学、研究和构建四类场景",
+      "children": [
+        "学习",
+        "教学",
+        "研究"
+      ]
+    },
+    {
+      "label": "集成平台",
+      "detail": "教育工具集成于ChatGPT Work和Codex之中",
+      "children": [
+        "ChatGPT Work",
+        "Codex"
+      ]
+    },
+    {
+      "label": "行业意义",
+      "detail": "AI工具正深入垂直领域，提供定制化解决方案",
+      "children": [
+        "垂直领域定制化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "教育插件",
+      "type": "product"
+    },
+    {
+      "name": "K-12教师",
+      "type": "concept"
+    },
+    {
+      "name": "大学教育者",
+      "type": "concept"
+    },
+    {
+      "name": "学生",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "教育插件",
+      "label": "推出"
+    },
+    {
+      "from": "教育插件",
+      "to": "ChatGPT Work",
+      "label": "集成于"
+    },
+    {
+      "from": "教育插件",
+      "to": "Codex",
+      "label": "集成于"
+    },
+    {
+      "from": "教育插件",
+      "to": "K-12教师",
+      "label": "面向"
+    },
+    {
+      "from": "教育插件",
+      "to": "大学教育者",
+      "label": "面向"
+    },
+    {
+      "from": "教育插件",
+      "to": "学生",
+      "label": "面向"
+    }
+  ]
+}

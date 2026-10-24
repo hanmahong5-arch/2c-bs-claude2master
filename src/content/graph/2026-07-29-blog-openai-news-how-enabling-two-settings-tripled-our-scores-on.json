@@ -1,0 +1,66 @@
+{
+  "center": "OpenAI 两设置提升 ARC 分数",
+  "branches": [
+    {
+      "label": "推理模式",
+      "detail": "模型回答前多步思考，复杂任务准确率显著提升",
+      "children": [
+        "agent 工具链需支持显式推理步骤"
+      ]
+    },
+    {
+      "label": "压缩输出",
+      "detail": "减少冗余 token，模型更高效表达答案",
+      "children": [
+        "优化输出格式可降低延迟与成本"
+      ]
+    },
+    {
+      "label": "协同效果",
+      "detail": "两项设置同用，保持性能同时提升效率",
+      "children": [
+        "agent 设计需平衡推理深度与输出简洁性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ARC-AGI-3",
+      "type": "concept"
+    },
+    {
+      "name": "推理模式",
+      "type": "technique"
+    },
+    {
+      "name": "压缩输出",
+      "type": "technique"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ARC-AGI-3",
+      "label": "提升分数"
+    },
+    {
+      "from": "推理模式",
+      "to": "ARC-AGI-3",
+      "label": "提升准确率"
+    },
+    {
+      "from": "压缩输出",
+      "to": "agent",
+      "label": "降低延迟"
+    }
+  ]
+}

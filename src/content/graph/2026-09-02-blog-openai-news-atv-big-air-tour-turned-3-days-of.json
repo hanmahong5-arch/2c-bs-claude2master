@@ -1,0 +1,55 @@
+{
+  "center": "ATV Big Air Tour 用 ChatGPT…",
+  "branches": [
+    {
+      "label": "效率提升",
+      "detail": "营销与商品化工作从3天压缩到3小时",
+      "children": [
+        "原需3天，现仅3小时"
+      ]
+    },
+    {
+      "label": "15分钟建站",
+      "detail": "用ChatGPT把商品照片自动转成库存网站",
+      "children": [
+        "商品照片→库存网站",
+        "耗时15分钟"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "AI工具链降低重复任务时间成本",
+      "children": [
+        "集成AI到工作流",
+        "快速原型与内容管理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "ATV Big Air Tour",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "ATV Big Air Tour",
+      "to": "ChatGPT Work",
+      "label": "使用"
+    },
+    {
+      "from": "ATV Big Air Tour",
+      "to": "ChatGPT",
+      "label": "使用"
+    }
+  ]
+}

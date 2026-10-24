@@ -1,0 +1,75 @@
+{
+  "center": "Cline Desktop v0.0.5 性能升级",
+  "branches": [
+    {
+      "label": "界面流畅度提升6倍",
+      "detail": "动画背景帧率从约10fps提升至锁定60fps，输入卡顿从245次降至3次",
+      "children": [
+        "流式响应合并更新而非逐token重绘",
+        "启动时provider目录只加载一次"
+      ]
+    },
+    {
+      "label": "消除UI冻结",
+      "detail": "原生文件夹选择器和命令执行不再因侧车写日志或发现编辑器而冻结应用",
+      "children": [
+        "异步非阻塞操作避免UI线程阻塞"
+      ]
+    },
+    {
+      "label": "修复状态卡死",
+      "detail": "队列任务完成后composer不再卡在“Agent is working...”",
+      "children": [
+        "状态管理正确处理异步任务完成信号"
+      ]
+    },
+    {
+      "label": "Agent Harness设计启示",
+      "detail": "渲染与逻辑分离、异步非阻塞、状态管理避免死锁",
+      "children": [
+        "减少不必要的重渲染",
+        "提升交互流畅度"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline Desktop",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "UI线程",
+      "type": "concept"
+    },
+    {
+      "name": "异步非阻塞",
+      "type": "technique"
+    },
+    {
+      "name": "状态管理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline Desktop",
+      "to": "agent harness",
+      "label": "体现设计"
+    },
+    {
+      "from": "异步非阻塞",
+      "to": "UI线程",
+      "label": "避免阻塞"
+    },
+    {
+      "from": "状态管理",
+      "to": "Cline Desktop",
+      "label": "修复卡死"
+    }
+  ]
+}

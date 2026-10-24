@@ -1,0 +1,106 @@
+{
+  "center": "LLM token 灰色转售市场",
+  "branches": [
+    {
+      "label": "市场运作方式",
+      "detail": "转售商聚合多个来源的 API key，通过代理低价出售 LLM token 访问权",
+      "children": [
+        "主要出现在中国",
+        "折扣远低于官方 API 定价"
+      ]
+    },
+    {
+      "label": "低价来源",
+      "detail": "通过滥用免费试用、代理未受保护的支持机器人、盗刷信用卡或拒付攻击获取额度",
+      "children": [
+        "滥用免费试用",
+        "代理未受保护的支持机器人",
+        "盗刷信用卡/拒付攻击"
+      ]
+    },
+    {
+      "label": "所用软件",
+      "detail": "代理多基于开源项目 one-api 及其更活跃的分支 new-api",
+      "children": [
+        "one-api",
+        "new-api",
+        "用于在 API 凭证池中负载均衡请求"
+      ]
+    },
+    {
+      "label": "买家动机",
+      "detail": "买家追求便宜 token、绕过地域限制，部分用于收集数据做模型蒸馏",
+      "children": [
+        "寻求低价 token",
+        "规避地域限制",
+        "收集数据用于模型蒸馏"
+      ]
+    },
+    {
+      "label": "风险与建议",
+      "detail": "Simon Willison 担忧公开 LLM 应用被滥用产生高额账单，呼吁厂商提供严格 API key 额度上限",
+      "children": [
+        "生态会主动寻找未受保护端点",
+        "希望达到金额阈值即停止工作"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Matt Lenhard",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "one-api",
+      "type": "product"
+    },
+    {
+      "name": "new-api",
+      "type": "product"
+    },
+    {
+      "name": "LLM token 转售",
+      "type": "concept"
+    },
+    {
+      "name": "模型蒸馏",
+      "type": "technique"
+    },
+    {
+      "name": "API key 池",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Matt Lenhard",
+      "to": "LLM token 转售",
+      "label": "调查"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Matt Lenhard",
+      "label": "引用"
+    },
+    {
+      "from": "one-api",
+      "to": "API key 池",
+      "label": "负载均衡"
+    },
+    {
+      "from": "new-api",
+      "to": "one-api",
+      "label": "分支自"
+    },
+    {
+      "from": "LLM token 转售",
+      "to": "模型蒸馏",
+      "label": "服务于"
+    }
+  ]
+}

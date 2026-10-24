@@ -1,0 +1,110 @@
+{
+  "center": "SQLite 文件当可执行程序",
+  "branches": [
+    {
+      "label": "核心技巧",
+      "detail": "把 SQLite 数据库文件直接当 Linux 可执行二进制运行",
+      "children": [
+        "文件第 68 字节的 4 字节应用 ID 设为 SELF",
+        "SELF 意为 Structured Executable &…"
+      ]
+    },
+    {
+      "label": "ELF 拆进表",
+      "detail": "ELF 可执行格式的各组成部分被安排进多个 SQLite 表",
+      "children": [
+        "使用 Farid Zakaria 给出的 schema",
+        "由 self-exec 解释器提取并执行"
+      ]
+    },
+    {
+      "label": "内核自动执行",
+      "detail": "用 Linux 的 binfmt_misc 机制让内核识别该二进制模式",
+      "children": [
+        "匹配 68 字节处的 SELF 标识",
+        "注册到 /proc/sys/fs/binfmt_misc/register"
+      ]
+    },
+    {
+      "label": "作者与来源",
+      "detail": "Simon Willison 链接博客介绍 Farid Zakaria 的 Linux 技巧",
+      "children": [
+        "self-exec 解释器用 C 语言编写",
+        "Farid 在 NixOS 上使用该方案"
+      ]
+    }
+  ],
+  "flow": [
+    "设置应用 ID 为 SELF",
+    "按 schema 把 ELF 存入表",
+    "编写 self-exec 解释器",
+    "注册 binfmt_misc",
+    "内核匹配并执行"
+  ],
+  "entities": [
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "ELF",
+      "type": "concept"
+    },
+    {
+      "name": "SELF",
+      "type": "concept"
+    },
+    {
+      "name": "binfmt_misc",
+      "type": "technique"
+    },
+    {
+      "name": "Farid Zakaria",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "NixOS",
+      "type": "product"
+    },
+    {
+      "name": "self-exec",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Farid Zakaria",
+      "to": "SELF",
+      "label": "提出"
+    },
+    {
+      "from": "SELF",
+      "to": "SQLite",
+      "label": "基于"
+    },
+    {
+      "from": "SELF",
+      "to": "ELF",
+      "label": "封装"
+    },
+    {
+      "from": "binfmt_misc",
+      "to": "SELF",
+      "label": "识别执行"
+    },
+    {
+      "from": "self-exec",
+      "to": "SELF",
+      "label": "解释执行"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Farid Zakaria",
+      "label": "介绍"
+    }
+  ]
+}

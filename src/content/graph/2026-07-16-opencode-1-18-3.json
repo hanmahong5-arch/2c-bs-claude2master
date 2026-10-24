@@ -1,0 +1,53 @@
+{
+  "center": "opencode v1.18.3 更新",
+  "branches": [
+    {
+      "label": "子代理选择器",
+      "detail": "新增上箭头快捷键，选中首项时关闭选择器",
+      "children": [
+        "提升交互效率"
+      ]
+    },
+    {
+      "label": "WSL启动修复",
+      "detail": "修复WSL服务器加载未计入桌面应用就绪状态",
+      "children": [
+        "确保agent harness启动时序正确"
+      ]
+    },
+    {
+      "label": "界面修复",
+      "detail": "修复主页滚动与自定义代理选择器可见性",
+      "children": [
+        "优化agent列表展示逻辑"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "WSL",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "WSL",
+      "label": "修复启动"
+    },
+    {
+      "from": "opencode",
+      "to": "agent harness",
+      "label": "确保时序"
+    }
+  ]
+}

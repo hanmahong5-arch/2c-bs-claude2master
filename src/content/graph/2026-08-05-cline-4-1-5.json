@@ -1,0 +1,51 @@
+{
+  "center": "cline v4.1.5 更新",
+  "branches": [
+    {
+      "label": "免费模型下线提示",
+      "detail": "免费模型下线时显示专属提示并给出切换模型按钮，替代通用错误",
+      "children": [
+        "错误信息可操作，引导用户快速恢复"
+      ]
+    },
+    {
+      "label": "推理设置统一",
+      "detail": "effort 级别与开关统一映射到 AI SDK 共享路径，跨提供商行为一致",
+      "children": [
+        "覆盖 Ollama 等提供商",
+        "配置抽象层减少提供商差异"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "AI SDK",
+      "type": "product"
+    },
+    {
+      "name": "Ollama",
+      "type": "product"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "AI SDK",
+      "label": "映射到"
+    },
+    {
+      "from": "cline",
+      "to": "Ollama",
+      "label": "兼容"
+    }
+  ]
+}

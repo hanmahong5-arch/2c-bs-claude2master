@@ -1,0 +1,99 @@
+{
+  "center": "Hugging Face 发布 FFASR 排行榜",
+  "branches": [
+    {
+      "label": "评测目标",
+      "detail": "在真实远场条件下评测 ASR 的鲁棒性",
+      "children": [
+        "覆盖 clean / noisy / reverberant 三类场景",
+        "聚焦真实部署而非干净会议转录"
+      ]
+    },
+    {
+      "label": "合作方",
+      "detail": "Treble Technologies 与 Hugging Face 长期合作",
+      "children": [
+        "联合发布 Treble10 数据集"
+      ]
+    },
+    {
+      "label": "社区建议",
+      "detail": "pszemraj 提出合成多流混合音频场景",
+      "children": [
+        "Granola 式抓取并混合所有音频流",
+        "系统音频、硬件麦克风、回声叠加延迟噪声",
+        "作者自用 VibeVoice 但未做正式对比"
+      ]
+    },
+    {
+      "label": "相关榜单",
+      "detail": "Hugging Face 已有多个语音评测榜单",
+      "children": [
+        "Real World VoiceEQ 衡量语音 AI 人类质量",
+        "Open ASR Leaderboard 新增 Benchmaxxer…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "FFASR Leaderboard",
+      "type": "product"
+    },
+    {
+      "name": "Treble Technologies",
+      "type": "company"
+    },
+    {
+      "name": "Treble10",
+      "type": "product"
+    },
+    {
+      "name": "VibeVoice",
+      "type": "model"
+    },
+    {
+      "name": "Granola",
+      "type": "product"
+    },
+    {
+      "name": "Open ASR Leaderboard",
+      "type": "product"
+    },
+    {
+      "name": "Real World VoiceEQ",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "FFASR Leaderboard",
+      "label": "发布"
+    },
+    {
+      "from": "Treble Technologies",
+      "to": "Hugging Face",
+      "label": "合作"
+    },
+    {
+      "from": "Treble Technologies",
+      "to": "Treble10",
+      "label": "发布"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Open ASR Leaderboard",
+      "label": "维护"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Real World VoiceEQ",
+      "label": "发布"
+    }
+  ]
+}

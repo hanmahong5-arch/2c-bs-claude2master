@@ -1,0 +1,119 @@
+{
+  "center": "OpenAI 部署模拟预测模型行为",
+  "branches": [
+    {
+      "label": "方法原理",
+      "detail": "用真实历史对话重放，去掉旧模型回复，让候选模型重新生成",
+      "children": [
+        "隐私保护方式重放历史对话",
+        "基于部署分布估计不良行为频率",
+        "发布后可验证预测准确性"
+      ]
+    },
+    {
+      "label": "解决三大局限",
+      "detail": "缓解传统评估的覆盖不足、选择偏差与模型识破测试问题",
+      "children": [
+        "覆盖度随算力扩展而非人工",
+        "提示分布代表近期真实使用",
+        "模型难分辨模拟与真实流量"
+      ]
+    },
+    {
+      "label": "实验规模",
+      "detail": "分析约 130 万条去标识化对话，覆盖 GPT-5 至 GPT-5.4",
+      "children": [
+        "预注册 20 类不良行为频率预测",
+        "时间跨度 2025 年 8 月至 2026 年 3 月",
+        "仅用允许数据改进的用户流量"
+      ]
+    },
+    {
+      "label": "评估维度",
+      "detail": "从分类覆盖、方向准确性等方面检验模拟质量",
+      "children": [
+        "发布后审计是否发现遗漏行为",
+        "预测频率升降方向是否正确",
+        "可扩展至工具使用的 agent 场景"
+      ]
+    },
+    {
+      "label": "局限与展望",
+      "detail": "无法测量低于 20 万分之一频率的行为，未来将扩大应用",
+      "children": [
+        "仅追踪 20 类不良行为",
+        "管道简化后将在开发中更重要"
+      ]
+    }
+  ],
+  "flow": [
+    "取近期部署对话",
+    "移除旧模型回复",
+    "候选模型重新生成",
+    "搜索新失败模式",
+    "估计部署频率",
+    "发布后验证预测"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Deployment Simulation",
+      "type": "technique"
+    },
+    {
+      "name": "GPT-5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.4 Thinking",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "red-teaming",
+      "type": "technique"
+    },
+    {
+      "name": "pre-deployment safety review",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Deployment Simulation",
+      "label": "推出"
+    },
+    {
+      "from": "Deployment Simulation",
+      "to": "GPT-5.4 Thinking",
+      "label": "测试"
+    },
+    {
+      "from": "Deployment Simulation",
+      "to": "GPT-5",
+      "label": "应用于"
+    },
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "分析流量"
+    },
+    {
+      "from": "Deployment Simulation",
+      "to": "pre-deployment safety review",
+      "label": "补充"
+    },
+    {
+      "from": "red-teaming",
+      "to": "pre-deployment safety review",
+      "label": "属于"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "center": "与AI协作需理解代码",
+  "branches": [
+    {
+      "label": "核心观点",
+      "detail": "Geoffrey Litt 提出「Understand to participate」：理解代码才能参与协作",
+      "children": [
+        "在 AIE 演讲中提出该框架",
+        "Simon Willison 对此深有共鸣"
+      ]
+    },
+    {
+      "label": "认知债务",
+      "detail": "理解与代码实际运作脱节会累积认知债务",
+      "children": [
+        "coding agents 构建的改动越来越大且复杂",
+        "需避免理解漂移带来的认知债务"
+      ]
+    },
+    {
+      "label": "参与深度",
+      "detail": "理解深度决定你能否继续与模型协作推进",
+      "children": [
+        "需理解到足以继续参与的程度",
+        "缺乏流畅度会显著限制参与能力"
+      ]
+    },
+    {
+      "label": "概念储备",
+      "detail": "脑中需有丰富概念才能创造性地推进项目",
+      "children": [
+        "丰富概念支撑创造性思考",
+        "概念不足则难以推动项目前进"
+      ]
+    },
+    {
+      "label": "资源获取",
+      "detail": "AIE 300+ 演讲将陆续放出，推荐看 Geoffrey 的",
+      "children": [
+        "三周内陆续发布",
+        "7月10日更新 YouTube 链接",
+        "Geoffrey 也发布了推文版"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Geoffrey Litt",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "AIE",
+      "type": "concept"
+    },
+    {
+      "name": "coding agents",
+      "type": "concept"
+    },
+    {
+      "name": "cognitive debt",
+      "type": "concept"
+    },
+    {
+      "name": "Understand to participate",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Geoffrey Litt",
+      "to": "Understand to participate",
+      "label": "提出"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Geoffrey Litt",
+      "label": "引用"
+    },
+    {
+      "from": "Geoffrey Litt",
+      "to": "AIE",
+      "label": "演讲于"
+    },
+    {
+      "from": "coding agents",
+      "to": "cognitive debt",
+      "label": "导致"
+    }
+  ]
+}

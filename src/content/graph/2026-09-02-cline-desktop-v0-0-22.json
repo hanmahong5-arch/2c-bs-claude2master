@@ -1,0 +1,89 @@
+{
+  "center": "Cline 桌面版 v0.0.22 更新",
+  "branches": [
+    {
+      "label": "导入历史会话",
+      "detail": "支持从 Claude Code、Codex、opencode 导入历史会话",
+      "children": [
+        "可批量选择并转为可恢复的 Cline 会话",
+        "导入后使用当前配置的 provider 和 model"
+      ]
+    },
+    {
+      "label": "修复工具调用",
+      "detail": "修复 Dify、SAP AI Core 等模型工具调用被静默禁用的问题",
+      "children": [
+        "修复空能力列表导致图片读取丢失的问题"
+      ]
+    },
+    {
+      "label": "定时任务优化",
+      "detail": "定时任务在侧边栏折叠为单行，显示运行次数",
+      "children": [
+        "展开后按最新优先列出，便于管理"
+      ]
+    },
+    {
+      "label": "其他改进",
+      "detail": "macOS 语音输入修复，Web 搜索默认开启",
+      "children": [
+        "macOS 语音输入需添加麦克风权限描述",
+        "市场详情面板改为点击打开"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Dify",
+      "type": "product"
+    },
+    {
+      "name": "SAP AI Core",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Claude Code",
+      "label": "导入会话"
+    },
+    {
+      "from": "Cline",
+      "to": "Codex",
+      "label": "导入会话"
+    },
+    {
+      "from": "Cline",
+      "to": "opencode",
+      "label": "导入会话"
+    },
+    {
+      "from": "Cline",
+      "to": "Dify",
+      "label": "修复调用"
+    },
+    {
+      "from": "Cline",
+      "to": "SAP AI Core",
+      "label": "修复调用"
+    }
+  ]
+}

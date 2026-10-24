@@ -1,0 +1,83 @@
+{
+  "center": "Codex 0.150.0 更新",
+  "branches": [
+    {
+      "label": "任务 @ 提及",
+      "detail": "终端用 @ 引用其他 Codex 任务，实现多任务协作",
+      "children": [
+        "agent 可读取、创建或发送消息",
+        "需解析任务引用并管理跨任务通信"
+      ]
+    },
+    {
+      "label": "/copy 选择器",
+      "detail": "新增响应目标选择器，可复制完整响应、代码块或引用块",
+      "children": [
+        "需提供结构化输出选择能力",
+        "保持与终端交互一致"
+      ]
+    },
+    {
+      "label": "Interrupt 钩子",
+      "detail": "顶层回合被中断时可运行命令或 MCP 处理器",
+      "children": [
+        "需定义中断生命周期",
+        "允许自定义清理或恢复逻辑"
+      ]
+    },
+    {
+      "label": "安全与稳定性",
+      "detail": "收紧未受信任项目权限，修复 Unix 关闭挂起",
+      "children": [
+        "未受信任项目不再提供项目级 AGENTS.md",
+        "权限更改后仍强制 deny-read 规则",
+        "修复分离进程持有终端导致的挂起"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Interrupt",
+      "type": "technique"
+    },
+    {
+      "name": "Unix",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "AGENTS.md",
+      "label": "限制读取"
+    },
+    {
+      "from": "Codex",
+      "to": "MCP",
+      "label": "支持钩子"
+    },
+    {
+      "from": "Codex",
+      "to": "Interrupt",
+      "label": "新增"
+    },
+    {
+      "from": "Codex",
+      "to": "Unix",
+      "label": "修复挂起"
+    }
+  ]
+}

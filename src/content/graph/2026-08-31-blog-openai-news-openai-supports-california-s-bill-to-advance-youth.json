@@ -1,0 +1,74 @@
+{
+  "center": "OpenAI支持加州青少年AI安全法案",
+  "branches": [
+    {
+      "label": "法案核心",
+      "detail": "加州SB 1119法案要求为青少年提供年龄适当的AI安全防护",
+      "children": [
+        "保留学习、创造和探索机会",
+        "平衡保护与探索"
+      ]
+    },
+    {
+      "label": "监管与创新平衡",
+      "detail": "保护青少年免受AI风险，同时不限制其教育和个人发展",
+      "children": [
+        "不限制利用AI进行教育",
+        "体现监管与创新平衡"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "未来AI产品需内置年龄适应性设计并考虑合规要求",
+      "children": [
+        "推动安全与功能并重",
+        "内置年龄适应性设计"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "SB 1119",
+      "type": "concept"
+    },
+    {
+      "name": "California",
+      "type": "concept"
+    },
+    {
+      "name": "青少年AI安全",
+      "type": "concept"
+    },
+    {
+      "name": "年龄适应性设计",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "SB 1119",
+      "label": "支持"
+    },
+    {
+      "from": "SB 1119",
+      "to": "California",
+      "label": "属于"
+    },
+    {
+      "from": "SB 1119",
+      "to": "青少年AI安全",
+      "label": "旨在"
+    },
+    {
+      "from": "SB 1119",
+      "to": "年龄适应性设计",
+      "label": "要求"
+    }
+  ]
+}

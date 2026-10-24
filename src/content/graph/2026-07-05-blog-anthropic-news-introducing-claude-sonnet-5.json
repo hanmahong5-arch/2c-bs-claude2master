@@ -1,0 +1,116 @@
+{
+  "center": "Claude Sonnet 5 发布",
+  "branches": [
+    {
+      "label": "性能逼近 Opus",
+      "detail": "Sonnet 5 是最具 agentic 能力的 Sonnet，性能接近 Opus 4.8 但价格更低",
+      "children": [
+        "在推理、工具使用、编码、知识工作上大幅超越…",
+        "高 effort 下部分任务可匹敌 Opus 4.8"
+      ]
+    },
+    {
+      "label": "定价与可用性",
+      "detail": "输入 $2/百万 token，输出 $10/百万 token，全套餐可用",
+      "children": [
+        "Free 与 Pro 默认模型，Max/Team/Enterprise…",
+        "开发者可通过 Claude API 调用…",
+        "介绍价已转为永久价"
+      ]
+    },
+    {
+      "label": "成本性能曲线",
+      "detail": "在 BrowseComp 与 OSWorld-Verified 上覆盖比 Opus 4.8 更宽的成本性能区间",
+      "children": [
+        "中等 effort 下成本效率显著提升",
+        "可调 effort 平衡成本与性能",
+        "Opus 4.8 定价 $5/$25 每百万 token"
+      ]
+    },
+    {
+      "label": "安全评估",
+      "detail": "整体不良行为率低于 Sonnet 4.6，agentic 场景更安全",
+      "children": [
+        "更善于拒绝恶意请求、抵抗提示注入劫持",
+        "幻觉与谄媚率低于 Sonnet 4.6",
+        "网络安全能力远低于当前 Opus 模型"
+      ]
+    },
+    {
+      "label": "早期伙伴反馈",
+      "detail": "测试者称其更 agentic，能端到端完成复杂任务",
+      "children": [
+        "会主动检查自身输出、写复现测试",
+        "擅长 brownfield 代码与多步软件工程",
+        "在保险、法律、数据分析等场景落地"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Sonnet 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Sonnet 4.6",
+      "type": "model"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Claude API",
+      "type": "product"
+    },
+    {
+      "name": "BrowseComp",
+      "type": "concept"
+    },
+    {
+      "name": "OSWorld-Verified",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Mythos Preview",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Sonnet 5",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "Claude Sonnet 4.6",
+      "label": "超越"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "Opus 4.8",
+      "label": "逼近"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "Claude API",
+      "label": "可通过调用"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "BrowseComp",
+      "label": "参与评测"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "OSWorld-Verified",
+      "label": "参与评测"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "center": "开放权重模型革命讨论",
+  "branches": [
+    {
+      "label": "开放权重崛起",
+      "detail": "Kimi K3 证明开放权重模型可与专有前沿模型比肩",
+      "children": [
+        "Kimi K3 与专有前沿模型势均力敌"
+      ]
+    },
+    {
+      "label": "播客讨论话题",
+      "detail": "Bryan Cantrill 与 Adam Leventhal 邀请 Simon 讨论一周热点",
+      "children": [
+        "意外网络安全攻击",
+        "开放权重与美国 AI 领导力公开信"
+      ]
+    },
+    {
+      "label": "内容已过时",
+      "detail": "录制后几天内出现新事件，未能纳入讨论",
+      "children": [
+        "DeepSeek V4 Flash 0731",
+        "Anthropic 自身网络事件"
+      ]
+    },
+    {
+      "label": "其他话题",
+      "detail": "涵盖多个离题话题与预测回顾",
+      "children": [
+        "Golden Gate Claude",
+        "Zizians",
+        "Alameda 野火鸡攻击"
+      ]
+    },
+    {
+      "label": "新预测",
+      "detail": "回顾一月预测并新增教皇预测",
+      "children": [
+        "年底前教皇会谈论开放模型"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Bryan Cantrill",
+      "type": "person"
+    },
+    {
+      "name": "Adam Leventhal",
+      "type": "person"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek V4 Flash 0731",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Oxide and Friends",
+      "type": "product"
+    },
+    {
+      "name": "开放权重",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Oxide and Friends",
+      "label": "做客"
+    },
+    {
+      "from": "Bryan Cantrill",
+      "to": "Oxide and Friends",
+      "label": "主持"
+    },
+    {
+      "from": "Adam Leventhal",
+      "to": "Oxide and Friends",
+      "label": "主持"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "开放权重",
+      "label": "代表"
+    },
+    {
+      "from": "DeepSeek V4 Flash 0731",
+      "to": "开放权重",
+      "label": "属于"
+    },
+    {
+      "from": "Anthropic",
+      "to": "开放权重",
+      "label": "涉及"
+    }
+  ]
+}

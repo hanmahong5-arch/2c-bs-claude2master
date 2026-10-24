@@ -1,0 +1,83 @@
+{
+  "center": "ChatGPT 测试广告",
+  "branches": [
+    {
+      "label": "测试广告",
+      "detail": "OpenAI 开始在 ChatGPT 中测试展示广告",
+      "children": [
+        "目的是支持免费用户访问成本"
+      ]
+    },
+    {
+      "label": "广告标注",
+      "detail": "广告将明确标注，保持清晰标识",
+      "children": [
+        "不影响模型回答独立性"
+      ]
+    },
+    {
+      "label": "隐私控制",
+      "detail": "承诺加强隐私保护并提供用户控制",
+      "children": [
+        "管理广告偏好",
+        "关闭个性化广告"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "AI 平台可能引入新商业化模式",
+      "children": [
+        "关注广告集成对 API 生态影响"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "广告",
+      "type": "concept"
+    },
+    {
+      "name": "免费访问",
+      "type": "concept"
+    },
+    {
+      "name": "隐私保护",
+      "type": "concept"
+    },
+    {
+      "name": "API 生态",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "测试广告"
+    },
+    {
+      "from": "广告",
+      "to": "免费访问",
+      "label": "支持"
+    },
+    {
+      "from": "OpenAI",
+      "to": "隐私保护",
+      "label": "承诺加强"
+    },
+    {
+      "from": "广告",
+      "to": "API 生态",
+      "label": "潜在影响"
+    }
+  ]
+}

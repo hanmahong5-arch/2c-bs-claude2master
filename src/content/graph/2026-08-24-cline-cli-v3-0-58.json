@@ -1,0 +1,90 @@
+{
+  "center": "Cline CLI v3.0.58 更新",
+  "branches": [
+    {
+      "label": "日志上限 64MiB",
+      "detail": "Hub 事件日志磁盘上限 64 MiB，超出丢弃最旧事件并回收空间",
+      "children": [
+        "修剪在卷和定时器上运行",
+        "需实现日志轮转与容量控制"
+      ]
+    },
+    {
+      "label": "新增两家提供商",
+      "detail": "模型目录刷新，新增 AgentRouter 和 Opper 提供商",
+      "children": [
+        "更新模型列表和价格"
+      ]
+    },
+    {
+      "label": "默认模型变更",
+      "detail": "Aki.io 和 NanoGPT 的默认模型发生变更",
+      "children": [
+        "需同步更新模型配置",
+        "默认模型变化可能影响用户预期"
+      ]
+    },
+    {
+      "label": "促销弹窗调整",
+      "detail": "首次启动的 ClinePass 弹窗不再宣传 $4.99 首月优惠",
+      "children": [
+        "该促销即将结束",
+        "需移除或更新促销 UI 逻辑"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "AgentRouter",
+      "type": "company"
+    },
+    {
+      "name": "Opper",
+      "type": "company"
+    },
+    {
+      "name": "Aki.io",
+      "type": "company"
+    },
+    {
+      "name": "NanoGPT",
+      "type": "company"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "AgentRouter",
+      "label": "新增提供商"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Opper",
+      "label": "新增提供商"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Aki.io",
+      "label": "变更默认模型"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "NanoGPT",
+      "label": "变更默认模型"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "ClinePass",
+      "label": "调整弹窗"
+    }
+  ]
+}

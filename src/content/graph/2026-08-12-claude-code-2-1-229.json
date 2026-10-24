@@ -1,0 +1,95 @@
+{
+  "center": "Claude Code 2.1.229 更新",
+  "branches": [
+    {
+      "label": "插件市场新源",
+      "detail": "新增 command 源，本地命令输出插件目录，每会话重解析",
+      "children": [
+        "无需重启即可生效"
+      ]
+    },
+    {
+      "label": "SSE 保活",
+      "detail": "网关流式响应加 SSE keepalive 心跳",
+      "children": [
+        "避免 Vertex/Bedrock 长思考空闲超时断开"
+      ]
+    },
+    {
+      "label": "崩溃修复",
+      "detail": "修复工具调用非字符串参数崩溃与窄终端 RangeError",
+      "children": [
+        "glob/file_path/command 非字符串",
+        "窄终端进度条/表格渲染"
+      ]
+    },
+    {
+      "label": "平台与模式修复",
+      "detail": "修复 Windows 扩展长度路径崩溃与 auto 模式失败",
+      "children": [
+        "禁用 attribution 头时每次工具调用失败"
+      ]
+    },
+    {
+      "label": "工作流扇出改进",
+      "detail": "错开同前缀兄弟 agent 启动，读取缓存前缀",
+      "children": [
+        "减少重复计算"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "SSE",
+      "type": "technique"
+    },
+    {
+      "name": "插件市场",
+      "type": "concept"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "插件市场",
+      "label": "新增命令源"
+    },
+    {
+      "from": "Claude Code",
+      "to": "SSE",
+      "label": "增加保活"
+    },
+    {
+      "from": "SSE",
+      "to": "Vertex",
+      "label": "避免超时"
+    },
+    {
+      "from": "SSE",
+      "to": "Bedrock",
+      "label": "避免超时"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Windows",
+      "label": "修复崩溃"
+    }
+  ]
+}

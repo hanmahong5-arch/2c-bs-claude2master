@@ -1,0 +1,95 @@
+{
+  "center": "sqlite-utils 4.1.1 发布",
+  "branches": [
+    {
+      "label": "修复外键隐患",
+      "detail": "table.transform() 在特定条件下改为抛 TransactionError",
+      "children": [
+        "事务开启且 PRAGMA foreign_keys 启用时触发",
+        "表被 ON DELETE CASCADE/SET NULL/SET…"
+      ]
+    },
+    {
+      "label": "隐患成因",
+      "detail": "pragma 无法在事务内修改，旧表删除会误触发级联动作",
+      "children": [
+        "可能静默删除或修改引用行",
+        "详见 Foreign keys and transactions 文档"
+      ]
+    },
+    {
+      "label": "文档互链",
+      "detail": "CLI 与 Python API 文档互相交叉引用",
+      "children": [
+        "CLI 章节链接对应 Python API",
+        "Python API 章节链接对应 CLI 命令"
+      ]
+    },
+    {
+      "label": "项目定位",
+      "detail": "Simon Willison 出品的 SQLite 操作工具",
+      "children": [
+        "Python CLI 工具兼库",
+        "用于操作 SQLite 数据库"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "TransactionError",
+      "type": "concept"
+    },
+    {
+      "name": "table.transform()",
+      "type": "technique"
+    },
+    {
+      "name": "ON DELETE",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "开发"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "SQLite",
+      "label": "操作"
+    },
+    {
+      "from": "Claude",
+      "to": "sqlite-utils",
+      "label": "发现边界问题"
+    },
+    {
+      "from": "table.transform()",
+      "to": "TransactionError",
+      "label": "抛出"
+    },
+    {
+      "from": "table.transform()",
+      "to": "ON DELETE",
+      "label": "受其影响"
+    }
+  ]
+}

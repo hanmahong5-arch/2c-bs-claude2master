@@ -1,0 +1,90 @@
+{
+  "center": "开源AI现状地图 Gap Map",
+  "branches": [
+    {
+      "label": "发布方与背景",
+      "detail": "非营利组织 Current AI 于 2025 年 2 月巴黎 AI 行动峰会成立，已获 4 亿美元承诺资金",
+      "children": [
+        "定位：为 AI 构建公共选项的全球伙伴关系",
+        "Gap Map v0.1 于 2026 年 7 月初发布"
+      ]
+    },
+    {
+      "label": "收录规模",
+      "detail": "深度收录 421 个产品，来自 228 个组织，另有 24,400 个未分类项目",
+      "children": [
+        "266 个软件工具与库、85 个模型、50 个数据集…",
+        "未分类长尾暂不计分，待研究引用后评分"
+      ]
+    },
+    {
+      "label": "分类结构",
+      "detail": "按技术栈 3 层、14 个类别组织",
+      "children": [
+        "三层：模型组件、产品/UX、基础设施"
+      ]
+    },
+    {
+      "label": "底层数据开放",
+      "detail": "数据以 MIT 许可发布在 GitHub 账号 currentai-org/os-ai-map",
+      "children": [
+        "1,184 个 YAML 文件，附 notebook、schema…",
+        "可用 Datasette Lite 探索，含 16,185 个被追…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Current AI",
+      "type": "company"
+    },
+    {
+      "name": "Gap Map",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Datasette Lite",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "product"
+    },
+    {
+      "name": "开源AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Current AI",
+      "to": "Gap Map",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Gap Map",
+      "label": "报道"
+    },
+    {
+      "from": "Gap Map",
+      "to": "GitHub",
+      "label": "数据托管于"
+    },
+    {
+      "from": "Datasette Lite",
+      "to": "GitHub",
+      "label": "读取数据"
+    },
+    {
+      "from": "Gap Map",
+      "to": "开源AI",
+      "label": "索引"
+    }
+  ]
+}

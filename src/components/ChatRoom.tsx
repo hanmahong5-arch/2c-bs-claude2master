@@ -22,9 +22,11 @@ export default function ChatRoom() {
   const sp = useSearchParams();
   const initialSlug = sp.get("prompt");
   const initialPrompt = initialSlug ? getPrompt(initialSlug) : undefined;
+  // ?ask=<文本>: 雷达文章「带着这篇去问」预填 (只预填不自动发送, 截 600 字防超长 URL 滥用)
+  const initialAsk = (sp.get("ask") ?? "").slice(0, 600);
 
   const [msgs, setMsgs] = useState<Msg[]>([]);
-  const [input, setInput] = useState<string>(initialPrompt?.body ?? "");
+  const [input, setInput] = useState<string>(initialPrompt?.body ?? initialAsk);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState<string | null>(null);
   const [exhausted, setExhausted] = useState(false);

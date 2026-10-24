@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw 上下文压缩策略",
+  "branches": [
+    {
+      "label": "压缩机制",
+      "detail": "旧对话轮次被摘要成紧凑条目，近期消息保持原样",
+      "children": [
+        "摘要存入会话记录，完整历史仍留在磁盘",
+        "压缩只改变模型下一轮看到的内容",
+        "工具调用与对应 toolResult 成对保留"
+      ]
+    },
+    {
+      "label": "自动压缩",
+      "detail": "默认开启，接近上下文上限或模型报溢出错误时触发",
+      "children": [
+        "溢出错误后压缩并重试，保留原请求不重放已完成动作",
+        "需工具结果已结算，待处理工具与审批走正常流程",
+        "取消运行会停止溢出与超时恢复"
+      ]
+    },
+    {
+      "label": "内置摘要器",
+      "detail": "按 CJK 字符估算分块，只接收文本不接收图像像素",
+      "children": [
+        "省略图像加标记，前八条消息各最多两个固定标记",
+        "标记等新增内容每次请求最多 847 UTF-8 字节",
+        "自定义压缩提供者仍收到原始消息内容"
+      ]
+    },
+    {
+      "label": "质量守卫",
+      "detail": "启用后在验证前应用最终摘要预算",
+      "children": [
+        "必需标题须保留在生成正文中",
+        "待处理请求与精确标识符须保留在原文中",
+        "无合格摘要则停止压缩并保留原历史"
+      ]
+    },
+    {
+      "label": "手动与配置",
+      "detail": "输入 /compact 强制压缩，可加指令引导摘要",
+      "children": [
+        "keepRecentTokens 默认 20,000 作为切点预算",
+        "可配置 compaction.model 换用摘要模型",
+        "focus 限 800 Unicode 码点并转义为提示数据"
+      ]
+    }
+  ],
+  "flow": [
+    "对话接近上下文上限",
+    "选定压缩切点",
+    "旧轮次摘要为紧凑条目",
+    "摘要写入会话记录",
+    "近期消息保持完整",
+    "模型继续下一轮"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "compaction",
+      "type": "concept"
+    },
+    {
+      "name": "context window",
+      "type": "concept"
+    },
+    {
+      "name": "quality guard",
+      "type": "technique"
+    },
+    {
+      "name": "keepRecentTokens",
+      "type": "concept"
+    },
+    {
+      "name": "Ollama",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "compaction",
+      "label": "实现"
+    },
+    {
+      "from": "compaction",
+      "to": "context window",
+      "label": "应对"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "quality guard",
+      "label": "内置"
+    },
+    {
+      "from": "compaction",
+      "to": "keepRecentTokens",
+      "label": "使用"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Ollama",
+      "label": "支持"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "OpenRouter",
+      "label": "支持"
+    }
+  ]
+}

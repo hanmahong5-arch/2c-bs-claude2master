@@ -1,0 +1,111 @@
+{
+  "center": "Claude Opus 4.8 能力与反应",
+  "branches": [
+    {
+      "label": "官方定位",
+      "detail": "主打诚实与减少错位行为，编码能力提升",
+      "children": [
+        "SWE-bench Pro 从 64.3 升至 69.2",
+        "价格与 Opus 4.7 相同：$5/$25 每百万 token",
+        "Boris Cherny 称其为最强编码模型"
+      ]
+    },
+    {
+      "label": "新功能",
+      "detail": "effort 参数、快速模式、动态工作流",
+      "children": [
+        "claude.ai 和 Cowork 可控制 effort 级别",
+        "快速模式 2.5 倍速，价格 $10/$50",
+        "动态工作流可并行数十至数百子代理"
+      ]
+    },
+    {
+      "label": "用户反应",
+      "detail": "总体好评，但存在懒惰、过度诚实等问题",
+      "children": [
+        "nsxdavid 抱怨复杂任务上懒惰",
+        "Matt Pocock 批评 workflow 关键词触发",
+        "部分用户认为过于严厉或模棱两可"
+      ]
+    },
+    {
+      "label": "基准表现",
+      "detail": "多数基准小幅提升，GDPval-AA 显著进步",
+      "children": [
+        "GDPval-AA Elo 1890，对 GPT-5.5 胜率 66.7%",
+        "GPQA Diamond 接近饱和",
+        "effort 可弥补约一个模型周期的差距"
+      ]
+    },
+    {
+      "label": "模型福利",
+      "detail": "模型福利信息帮助理解模型行为",
+      "children": [
+        "自我画像由 Opus 4.8 生成",
+        "模型福利附录提供额外视角"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Boris Cherny",
+      "type": "person"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "SWE-bench Pro",
+      "type": "concept"
+    },
+    {
+      "name": "GDPval-AA",
+      "type": "concept"
+    },
+    {
+      "name": "Zvi Mowshowitz",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Opus 4.8",
+      "label": "发布"
+    },
+    {
+      "from": "Boris Cherny",
+      "to": "Claude Code",
+      "label": "创建"
+    },
+    {
+      "from": "Claude Opus 4.8",
+      "to": "SWE-bench Pro",
+      "label": "测试于"
+    },
+    {
+      "from": "Claude Opus 4.8",
+      "to": "GPT-5.5",
+      "label": "对比"
+    },
+    {
+      "from": "Zvi Mowshowitz",
+      "to": "Claude Opus 4.8",
+      "label": "分析"
+    }
+  ]
+}

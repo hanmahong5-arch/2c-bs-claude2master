@@ -1,0 +1,47 @@
+{
+  "center": "llm 0.32 命令行工具发布",
+  "branches": [
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 8 月 4 日发布 llm 0.32 版本",
+      "children": [
+        "发布时间：2026-08-04",
+        "作者：Simon Willison"
+      ]
+    },
+    {
+      "label": "工具定位",
+      "detail": "llm 是一个从命令行访问大语言模型的工具",
+      "children": [
+        "命令行访问 LLM",
+        "配套详细博客文章"
+      ]
+    },
+    {
+      "label": "内容缺失",
+      "detail": "正文被截断，未包含新特性与改进的具体细节",
+      "children": [
+        "仅见发布公告",
+        "无具体功能说明"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm",
+      "label": "发布"
+    }
+  ]
+}

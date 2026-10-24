@@ -1,0 +1,42 @@
+{
+  "center": "claude-code v2.1.167 更新",
+  "branches": [
+    {
+      "label": "修复已知错误",
+      "detail": "提升代码执行与工具调用的稳定性",
+      "children": [
+        "修复若干错误"
+      ]
+    },
+    {
+      "label": "可靠性改进",
+      "detail": "增强复杂任务中的容错能力",
+      "children": []
+    },
+    {
+      "label": "性能优化",
+      "detail": "为 agent harness 提供更健壮运行环境",
+      "children": [
+        "整体性能优化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "agent harness",
+      "label": "提供运行环境"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "center": "claude-code v2.1.277 更新",
+  "branches": [
+    {
+      "label": "AGENTS.md 兼容",
+      "detail": "项目无 CLAUDE.md 时改读 AGENTS.md，可在 /config 切换",
+      "children": [
+        "Bedrock/Vertex/Foundry 暂不支持",
+        "项目指令来源需抽象成可配置优先级"
+      ]
+    },
+    {
+      "label": "会话挂起修复",
+      "detail": "claude -p 与 Agent SDK 内部错误后不再无结果挂起",
+      "children": [
+        "改为报错并以退出码 1 结束",
+        "headless harness 失败必须可观测"
+      ]
+    },
+    {
+      "label": "缓存失效修复",
+      "detail": "恢复会话时不再重渲染 MCP 工具定义、重放历史附件",
+      "children": [
+        "避免破坏 prompt cache 前缀",
+        "持久化需区分已发送与重放内容"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "concept"
+    },
+    {
+      "name": "CLAUDE.md",
+      "type": "concept"
+    },
+    {
+      "name": "Agent SDK",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "prompt cache",
+      "type": "concept"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "AGENTS.md",
+      "label": "新增支持"
+    },
+    {
+      "from": "claude-code",
+      "to": "CLAUDE.md",
+      "label": "原有读取"
+    },
+    {
+      "from": "claude-code",
+      "to": "Agent SDK",
+      "label": "修复会话"
+    },
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "修复重渲染"
+    },
+    {
+      "from": "claude-code",
+      "to": "prompt cache",
+      "label": "修复失效"
+    },
+    {
+      "from": "AGENTS.md",
+      "to": "Bedrock",
+      "label": "暂不支持"
+    }
+  ]
+}

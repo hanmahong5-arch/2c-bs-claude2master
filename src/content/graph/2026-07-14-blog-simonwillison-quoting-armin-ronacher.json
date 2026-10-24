@@ -1,0 +1,69 @@
+{
+  "center": "软件项目的共同语言",
+  "branches": [
+    {
+      "label": "共同语言是什么",
+      "detail": "不是英语或 Python，而是对概念含义、边界、不变量、归属与系统形态的共识",
+      "children": [
+        "很少集中写在一处",
+        "散落在文档、代码、评审与争论中"
+      ]
+    },
+    {
+      "label": "摩擦同步理解",
+      "detail": "改别人的存储层需读代码、提问、跨团队协调，这种慢是理解迁移的过程",
+      "children": [
+        "慢不全是浪费",
+        "摩擦让人与人同步认知"
+      ]
+    },
+    {
+      "label": "Agent 前的机制",
+      "detail": "过去靠摩擦维持共享理解，双方借此确认对系统是否仍有共识",
+      "children": [
+        "需向他人解释变更",
+        "协调依赖方团队"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Armin Ronacher",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "The Tower Keeps Rising",
+      "type": "concept"
+    },
+    {
+      "name": "coding agents",
+      "type": "concept"
+    },
+    {
+      "name": "software-engineering",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Armin Ronacher",
+      "label": "引用"
+    },
+    {
+      "from": "Armin Ronacher",
+      "to": "The Tower Keeps Rising",
+      "label": "撰写"
+    },
+    {
+      "from": "coding agents",
+      "to": "software-engineering",
+      "label": "影响"
+    }
+  ]
+}

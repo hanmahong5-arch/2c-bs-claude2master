@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw 自动审批模式",
+  "branches": [
+    {
+      "label": "三种执行模式",
+      "detail": "Ask 人工优先、Auto 审查者优先、YOLO 无提示，按安全与效率取舍",
+      "children": [
+        "Ask：allowlist 未命中即停下等操作员",
+        "Auto：确定性匹配直接跑，未命中先过审查者",
+        "YOLO：host exec 无审批提示，仅限已信任环境"
+      ]
+    },
+    {
+      "label": "Auto 工作流程",
+      "detail": "命中 allowlist 或安全规则即执行，未命中生成受限审查包交模型判断",
+      "children": [
+        "审查包含 command、argv、cwd、env key…",
+        "审查者仅可放行一次低风险执行",
+        "模糊、高风险、超时、模型不可用均回退人工"
+      ]
+    },
+    {
+      "label": "审查模型可分离",
+      "detail": "审查模型独立于主 agent 模型，可本地跑 agent、前沿模型做审批",
+      "children": [
+        "tools.exec.reviewer.model 单独设置",
+        "示例：openai/gpt-5.5 做审查",
+        "不设置则复用当前 agent 模型"
+      ]
+    },
+    {
+      "label": "审批与安全",
+      "detail": "人工仍是最终权威，审批可路由到 Slack、Telegram、iMessage",
+      "children": [
+        "选项：allow-once、allow-always、deny",
+        "allow-once 绑定命令计划、cwd、argv、会话上…",
+        "命令文本等视为不可信数据，诱导审查者即转人工"
+      ]
+    },
+    {
+      "label": "与 Codex 对齐",
+      "detail": "OpenAI 已在 Codex 内以 Guardian 实现该模式，OpenClaw 将其带到 host exec",
+      "children": [
+        "Codex harness 映射到 Guardian 审查审批",
+        "可用 workspace-write 沙箱",
+        "auto 不覆盖本地安全设置，默认暂不改变"
+      ]
+    }
+  ],
+  "flow": [
+    "命令进入 host exec",
+    "匹配 allowlist 或安全规则",
+    "未命中则构建审查包",
+    "auto reviewer 判断",
+    "不确定回退人工审批",
+    "按审批结果执行或拒绝"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Guardian",
+      "type": "concept"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "gpt-5.5",
+      "type": "model"
+    },
+    {
+      "name": "YOLO mode",
+      "type": "concept"
+    },
+    {
+      "name": "auto mode",
+      "type": "concept"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Codex",
+      "label": "对齐模式"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Guardian",
+      "label": "推出"
+    },
+    {
+      "from": "Codex",
+      "to": "Guardian",
+      "label": "内置"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "gpt-5.5",
+      "label": "可调用审查"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Slack",
+      "label": "路由审批"
+    },
+    {
+      "from": "auto mode",
+      "to": "YOLO mode",
+      "label": "替代更安全"
+    }
+  ]
+}

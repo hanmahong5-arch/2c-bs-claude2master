@@ -1,0 +1,108 @@
+{
+  "center": "Gemini 3.7 Flash 发布",
+  "branches": [
+    {
+      "label": "编码与智能体",
+      "detail": "面向编码和 agent 的最强主力模型，距 3.6 Flash 仅三周",
+      "children": [
+        "FrontierCode 1.1 Main 43.6% vs 34.4%",
+        "DeepSWE v1.1 65.3% vs 49.0%",
+        "首轮代码准确率与生产级代码生成提升"
+      ]
+    },
+    {
+      "label": "网页与知识工作",
+      "detail": "更少提示生成功能完整应用，金融法律生物推理更强",
+      "children": [
+        "WebDev Arena Elo 1588 vs 1538",
+        "GDP.pdf 34.0% vs 22.0%",
+        "AutomationBench 30.4% vs 17.0%"
+      ]
+    },
+    {
+      "label": "开发体验与价格",
+      "detail": "更少人工干预与重试，年底前入门价减半",
+      "children": [
+        "$0.75/1M 输入，$3.75/1M 输出",
+        "多步规划与工具调用更投入",
+        "更好适应阻碍、澄清意图"
+      ]
+    },
+    {
+      "label": "落地与安全",
+      "detail": "Gemini Spark 即日起换用该模型，并更新安全防护",
+      "children": [
+        "Spark 覆盖 160+ 国家 Pro/Ultra 订阅者",
+        "强化 CBRN 与网络攻击防护",
+        "可通过 Gemini API、Antigravity 使用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemini 3.7 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.6 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Gemini Spark",
+      "type": "product"
+    },
+    {
+      "name": "Nano Banana",
+      "type": "model"
+    },
+    {
+      "name": "Gemini Omni",
+      "type": "model"
+    },
+    {
+      "name": "Tulsee Doshi",
+      "type": "person"
+    },
+    {
+      "name": "Gemini API",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini 3.7 Flash",
+      "label": "发布"
+    },
+    {
+      "from": "Gemini 3.7 Flash",
+      "to": "Gemini 3.6 Flash",
+      "label": "迭代自"
+    },
+    {
+      "from": "Gemini Spark",
+      "to": "Gemini 3.7 Flash",
+      "label": "采用"
+    },
+    {
+      "from": "Gemini 3.7 Flash",
+      "to": "Nano Banana",
+      "label": "配合使用"
+    },
+    {
+      "from": "Gemini 3.7 Flash",
+      "to": "Gemini Omni",
+      "label": "配合使用"
+    },
+    {
+      "from": "Tulsee Doshi",
+      "to": "Gemini 3.7 Flash",
+      "label": "发布介绍"
+    }
+  ]
+}

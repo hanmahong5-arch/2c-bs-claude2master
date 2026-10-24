@@ -1,0 +1,105 @@
+{
+  "center": "Georgi Gerganov 用 Qwen3.6 本…",
+  "branches": [
+    {
+      "label": "本地模型够用",
+      "detail": "Gerganov 称 Qwen3.6-27B 是能力很强的本地编程模型",
+      "children": [
+        "近一个半月几乎每天使用",
+        "跑在 M2 Ultra 或 RTX 5090 上"
+      ]
+    },
+    {
+      "label": "用途与局限",
+      "detail": "用于 ggml-org 的小型日常任务，自认不算惊艳但有用",
+      "children": [
+        "定位是维护者的实用工具",
+        "大量时间花在审 PR 上，否则会用更多"
+      ]
+    },
+    {
+      "label": "轻量工具链",
+      "detail": "用精简版 pi agent 加简短系统提示来对齐个人风格",
+      "children": [
+        "pi -nc --offline",
+        "短 system prompt"
+      ]
+    },
+    {
+      "label": "出处",
+      "detail": "摘自 Gerganov 在 Hacker News 的评论，由 Simon Willison 收录",
+      "children": [
+        "评论对象：Running local models is good now",
+        "作者 Vicki Boykis",
+        "发布于 2026-06-16"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Georgi Gerganov",
+      "type": "person"
+    },
+    {
+      "name": "Qwen3.6-27B",
+      "type": "model"
+    },
+    {
+      "name": "ggml-org",
+      "type": "company"
+    },
+    {
+      "name": "pi",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Vicki Boykis",
+      "type": "person"
+    },
+    {
+      "name": "Hacker News",
+      "type": "product"
+    },
+    {
+      "name": "本地 LLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Georgi Gerganov",
+      "to": "Qwen3.6-27B",
+      "label": "日常使用"
+    },
+    {
+      "from": "Georgi Gerganov",
+      "to": "ggml-org",
+      "label": "任职于"
+    },
+    {
+      "from": "Georgi Gerganov",
+      "to": "pi",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Georgi Gerganov",
+      "label": "引用"
+    },
+    {
+      "from": "Vicki Boykis",
+      "to": "Hacker News",
+      "label": "发文于"
+    },
+    {
+      "from": "Qwen3.6-27B",
+      "to": "本地 LLM",
+      "label": "属于"
+    }
+  ]
+}

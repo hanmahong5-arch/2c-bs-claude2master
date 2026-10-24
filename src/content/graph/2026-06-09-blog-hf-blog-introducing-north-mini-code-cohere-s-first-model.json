@@ -1,0 +1,68 @@
+{
+  "center": "Cohere 发布 North Mini Code",
+  "branches": [
+    {
+      "label": "首个开发者模型",
+      "detail": "Cohere 推出 North Mini Code，面向代码生成场景",
+      "children": [
+        "定位为开发者专用",
+        "Cohere 首个此类模型"
+      ]
+    },
+    {
+      "label": "模型规格",
+      "detail": "文中提及 30B 与 31B 两个文本生成模型",
+      "children": [
+        "30B 更新于 6 月 15 日",
+        "31B 更新于 6 月 9 日"
+      ]
+    },
+    {
+      "label": "社区反馈",
+      "detail": "开发者称在 opencode 上试用速度快、效果好",
+      "children": [
+        "kishl：速度超快",
+        "yiakwy-xpu-team 提议基于 DSV4 做 SFT/RL"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cohere",
+      "type": "company"
+    },
+    {
+      "name": "North Mini Code",
+      "type": "model"
+    },
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "DSV4",
+      "type": "model"
+    },
+    {
+      "name": "SFT",
+      "type": "technique"
+    },
+    {
+      "name": "RL",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cohere",
+      "to": "North Mini Code",
+      "label": "发布"
+    },
+    {
+      "from": "North Mini Code",
+      "to": "opencode",
+      "label": "可接入"
+    }
+  ]
+}

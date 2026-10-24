@@ -1,0 +1,65 @@
+{
+  "center": "Cline CLI v3.0.39 更新",
+  "branches": [
+    {
+      "label": "免费模型上线",
+      "detail": "ClinePass 新增免费模型选择，降低使用门槛",
+      "children": []
+    },
+    {
+      "label": "diff 更准确",
+      "detail": "str_replace 编辑现在显示准确差异，便于调试",
+      "children": []
+    },
+    {
+      "label": "上下文压缩",
+      "detail": "压缩时保留会话历史，确保 agent 记忆连续性",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "str_replace",
+      "type": "technique"
+    },
+    {
+      "name": "上下文压缩",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "ClinePass",
+      "label": "包含"
+    },
+    {
+      "from": "ClinePass",
+      "to": "Cline",
+      "label": "属于"
+    },
+    {
+      "from": "str_replace",
+      "to": "Cline CLI",
+      "label": "用于"
+    },
+    {
+      "from": "上下文压缩",
+      "to": "Cline CLI",
+      "label": "用于"
+    }
+  ]
+}

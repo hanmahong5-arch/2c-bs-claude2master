@@ -1,0 +1,115 @@
+{
+  "center": "Anthropic 多智能体研究系统架构",
+  "branches": [
+    {
+      "label": "性能提升",
+      "detail": "多智能体系统在内部研究评测中比单智能体高出 90.2%",
+      "children": [
+        "Claude Opus 4 主导 + Claude Sonnet 4 子…",
+        "擅长广度优先、多方向并行的查询",
+        "单智能体顺序搜索慢且易失败"
+      ]
+    },
+    {
+      "label": "架构模式",
+      "detail": "采用 orchestrator-worker 模式，主导智能体协调并行子智能体",
+      "children": [
+        "主导智能体分析查询、制定策略、生成子智能体",
+        "子智能体独立搜索并返回结果",
+        "CitationAgent 负责引用归属"
+      ]
+    },
+    {
+      "label": "Token 消耗",
+      "detail": "多智能体系统消耗约 15 倍于聊天的 token，需高价值任务",
+      "children": [
+        "Token 使用解释 BrowseComp 评测 80% 性能方差",
+        "升级 Claude Sonnet 4 比翻倍 token 预算更有效",
+        "不适合需共享上下文或强依赖的任务"
+      ]
+    },
+    {
+      "label": "提示工程",
+      "detail": "提示工程是改善智能体行为的主要手段",
+      "children": [
+        "早期错误：简单查询生成 50 个子智能体",
+        "需像智能体一样思考来迭代提示",
+        "协调复杂度随智能体数量快速增长"
+      ]
+    }
+  ],
+  "flow": [
+    "用户提交查询",
+    "主导智能体制定计划并存入…",
+    "生成并行子智能体",
+    "子智能体搜索并返回发现",
+    "主导智能体综合并决定是否继续",
+    "CitationAgent 处理引用并返…"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Opus 4",
+      "type": "model"
+    },
+    {
+      "name": "Claude Sonnet 4",
+      "type": "model"
+    },
+    {
+      "name": "多智能体系统",
+      "type": "concept"
+    },
+    {
+      "name": "orchestrator-worker",
+      "type": "technique"
+    },
+    {
+      "name": "RAG",
+      "type": "technique"
+    },
+    {
+      "name": "CitationAgent",
+      "type": "product"
+    },
+    {
+      "name": "BrowseComp",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "多智能体系统",
+      "label": "构建"
+    },
+    {
+      "from": "Claude Opus 4",
+      "to": "多智能体系统",
+      "label": "作为主导"
+    },
+    {
+      "from": "Claude Sonnet 4",
+      "to": "多智能体系统",
+      "label": "作为子智能体"
+    },
+    {
+      "from": "多智能体系统",
+      "to": "orchestrator-worker",
+      "label": "采用"
+    },
+    {
+      "from": "多智能体系统",
+      "to": "RAG",
+      "label": "对比"
+    },
+    {
+      "from": "CitationAgent",
+      "to": "多智能体系统",
+      "label": "属于"
+    }
+  ]
+}

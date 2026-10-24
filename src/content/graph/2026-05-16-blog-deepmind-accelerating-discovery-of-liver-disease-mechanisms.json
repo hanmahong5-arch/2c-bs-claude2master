@@ -1,0 +1,59 @@
+{
+  "center": "DeepMind AI 加速肝病研究",
+  "branches": [
+    {
+      "label": "加速机制发现",
+      "detail": "Co-Scientist 快速分析生物数据，识别 NAFLD 进展关键分子机制",
+      "children": [
+        "缩短从数据到假说周期",
+        "AI 成为科研副驾驶"
+      ]
+    },
+    {
+      "label": "解释疗效差异",
+      "detail": "揭示患者亚群异质性，解释药物仅对部分人有效",
+      "children": [
+        "展示个性化医疗潜力",
+        "需处理生物医学异质性"
+      ]
+    },
+    {
+      "label": "发现治疗靶点",
+      "detail": "通过模拟推理发现新靶点和化合物，主动提出可验证假设",
+      "children": [
+        "开辟药物研发新路径"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Co-Scientist",
+      "type": "product"
+    },
+    {
+      "name": "NAFLD",
+      "type": "concept"
+    },
+    {
+      "name": "AI agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DeepMind",
+      "to": "Co-Scientist",
+      "label": "开发"
+    },
+    {
+      "from": "Co-Scientist",
+      "to": "NAFLD",
+      "label": "研究"
+    }
+  ]
+}

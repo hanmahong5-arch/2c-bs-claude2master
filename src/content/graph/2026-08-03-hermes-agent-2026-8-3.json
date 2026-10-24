@@ -1,0 +1,79 @@
+{
+  "center": "Hermes Agent 0.20 发布",
+  "branches": [
+    {
+      "label": "语音交互",
+      "detail": "新增流式语音对话，支持打断、唤醒词与免提控制",
+      "children": [
+        "跨 CLI、桌面及网关平台",
+        "需处理实时音频流与低延迟 TTS"
+      ]
+    },
+    {
+      "label": "A2A 协议",
+      "detail": "实现 A2A v1.0，支持 agent 发现、通信与协作",
+      "children": [
+        "标准化 agent 间通信协议",
+        "支持异构系统集成"
+      ]
+    },
+    {
+      "label": "桌面平台化",
+      "detail": "桌面应用升级为平台，支持 artifacts 实时预览",
+      "children": [
+        "提供插件 SDK 与全局快捷入口",
+        "需可扩展 UI 框架与沙箱环境"
+      ]
+    },
+    {
+      "label": "工具自愈与压缩",
+      "detail": "本次发布包含工具自愈与压缩优化",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "A2A v1.0",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "TTS",
+      "type": "technique"
+    },
+    {
+      "name": "插件 SDK",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "A2A v1.0",
+      "label": "实现"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "TTS",
+      "label": "集成"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "插件 SDK",
+      "label": "提供"
+    },
+    {
+      "from": "agent harness",
+      "to": "A2A v1.0",
+      "label": "需支持"
+    }
+  ]
+}

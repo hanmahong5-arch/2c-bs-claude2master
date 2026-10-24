@@ -1,0 +1,97 @@
+{
+  "center": "OpenAI 数学与理论计算机十大进展",
+  "branches": [
+    {
+      "label": "几何学突破",
+      "detail": "解决若干长期未解开放问题，如高维凸体性质",
+      "children": [
+        "为几何算法与优化提供新工具"
+      ]
+    },
+    {
+      "label": "密码学进展",
+      "detail": "改进安全多方计算与零知识证明效率",
+      "children": [
+        "可能加速隐私保护技术部署"
+      ]
+    },
+    {
+      "label": "复杂性理论",
+      "detail": "某些问题下界证明取得突破",
+      "children": [
+        "帮助理解计算极限",
+        "指导算法设计"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "对 agent 与工具链开发者意味着更高效数学推理库",
+      "children": [
+        "更安全通信协议可集成自动化系统"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "几何学",
+      "type": "concept"
+    },
+    {
+      "name": "密码学",
+      "type": "concept"
+    },
+    {
+      "name": "复杂性理论",
+      "type": "concept"
+    },
+    {
+      "name": "安全多方计算",
+      "type": "technique"
+    },
+    {
+      "name": "零知识证明",
+      "type": "technique"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "几何学",
+      "label": "解决开放问题"
+    },
+    {
+      "from": "OpenAI",
+      "to": "密码学",
+      "label": "改进效率"
+    },
+    {
+      "from": "OpenAI",
+      "to": "复杂性理论",
+      "label": "取得突破"
+    },
+    {
+      "from": "密码学",
+      "to": "安全多方计算",
+      "label": "涵盖"
+    },
+    {
+      "from": "密码学",
+      "to": "零知识证明",
+      "label": "涵盖"
+    },
+    {
+      "from": "agent",
+      "to": "OpenAI",
+      "label": "受益于进展"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "center": "Claude Code v2.1.207 更新",
+  "branches": [
+    {
+      "label": "自动模式默认开",
+      "detail": "Auto mode 在 Bedrock/Vertex AI/Foundry 上默认可用，无需 opt-in",
+      "children": [
+        "可用 disableAutoMode 关闭"
+      ]
+    },
+    {
+      "label": "修复终端冻结",
+      "detail": "修复流式响应中长列表/表格/代码块导致的终端冻结与按键延迟",
+      "children": []
+    },
+    {
+      "label": "修注入漏洞",
+      "detail": "修复插件 shell-form 命令中 ${user_config.*} 注入漏洞",
+      "children": [
+        "建议改用 exec 形式或环境变量"
+      ]
+    },
+    {
+      "label": "修安全确认缺失",
+      "detail": "非交互式运行中远程管理设置被永久记录为已同意而未显示确认对话框",
+      "children": []
+    },
+    {
+      "label": "修更新器覆盖",
+      "detail": "自动更新器不再覆盖自定义启动脚本/符号链接",
+      "children": [
+        "/doctor 报告外部管理的启动器"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Auto mode",
+      "type": "concept"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Vertex AI",
+      "type": "product"
+    },
+    {
+      "name": "Foundry",
+      "type": "product"
+    },
+    {
+      "name": "disableAutoMode",
+      "type": "concept"
+    },
+    {
+      "name": "/doctor",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Auto mode",
+      "to": "Bedrock",
+      "label": "默认启用"
+    },
+    {
+      "from": "Auto mode",
+      "to": "Vertex AI",
+      "label": "默认启用"
+    },
+    {
+      "from": "Auto mode",
+      "to": "Foundry",
+      "label": "默认启用"
+    },
+    {
+      "from": "disableAutoMode",
+      "to": "Auto mode",
+      "label": "关闭"
+    },
+    {
+      "from": "/doctor",
+      "to": "Claude Code",
+      "label": "报告启动器"
+    }
+  ]
+}

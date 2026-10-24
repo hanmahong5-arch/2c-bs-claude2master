@@ -1,0 +1,115 @@
+{
+  "center": "GPT-3 到 Gemini 3 三年跃迁",
+  "branches": [
+    {
+      "label": "从聊天到智能体",
+      "detail": "Gemini 3 不再只是聊天，而是能自主规划、执行任务的智能体",
+      "children": [
+        "2022 年 GPT-3 只能写诗描述引擎",
+        "2025 年 Gemini 3 直接编码出可玩游戏",
+        "Antigravity 中可同时管理四个智能体"
+      ]
+    },
+    {
+      "label": "编码即通用工具",
+      "detail": "AI 能编码就意味着能操作电脑上的一切，成为通用工具",
+      "children": [
+        "Antigravity 类似 Claude Code 和 OpenAI…",
+        "用英文下指令，AI 用代码执行",
+        "可读文件、建网站、做 PPT、查资料"
+      ]
+    },
+    {
+      "label": "人机协作新体验",
+      "detail": "AI 会主动询问许可，工作可见，像管理队友而非提示聊天",
+      "children": [
+        "Antigravity 的 Inbox 让智能体汇报和求助",
+        "AI 先给计划供编辑或批准",
+        "错误更像人类判断偏差而非幻觉"
+      ]
+    },
+    {
+      "label": "博士级智能测试",
+      "detail": "Gemini 3 能独立完成从数据清洗到写论文的科研流程",
+      "children": [
+        "恢复损坏数据、处理过时格式",
+        "自主提出假设、统计分析、生成 14 页论文",
+        "自创 NLP 指标衡量众筹创意独特性"
+      ]
+    },
+    {
+      "label": "仍有局限",
+      "detail": "虽能胜任研究生工作，但统计方法等细节仍需改进",
+      "children": [
+        "部分统计方法需要更多完善",
+        "可能仍不及 200 美元的 GPT-5 Pro",
+        "Deep Think 版本或改变格局"
+      ]
+    }
+  ],
+  "flow": [
+    "给 Gemini 3 截图和提示",
+    "Gemini 3 构建可玩游戏",
+    "用 Antigravity 管理智能体",
+    "智能体读取文件并规划",
+    "执行编码和网络研究",
+    "交付结果并迭代改进"
+  ],
+  "entities": [
+    {
+      "name": "Gemini 3",
+      "type": "model"
+    },
+    {
+      "name": "GPT-3",
+      "type": "model"
+    },
+    {
+      "name": "Antigravity",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI Codex",
+      "type": "product"
+    },
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "GPT-5 Pro",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemini 3",
+      "to": "Antigravity",
+      "label": "集成于"
+    },
+    {
+      "from": "Antigravity",
+      "to": "Claude Code",
+      "label": "类似"
+    },
+    {
+      "from": "Antigravity",
+      "to": "OpenAI Codex",
+      "label": "类似"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "Gemini 3",
+      "label": "测试"
+    },
+    {
+      "from": "Gemini 3",
+      "to": "GPT-5 Pro",
+      "label": "对比"
+    }
+  ]
+}

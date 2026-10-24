@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw USER.md 用户模型",
+  "branches": [
+    {
+      "label": "USER.md 是什么",
+      "detail": "agent workspace 中可选的用户模型文件，存稳定偏好、沟通风格与项目上下文",
+      "children": [
+        "与 MEMORY.md 一起在会话开始时加载",
+        "有独立的小 bootstrap 预算",
+        "文件缺失时启动照常继续"
+      ]
+    },
+    {
+      "label": "个人文件选择",
+      "detail": "每个会话只选一个个人 USER.md：先人类 owner，否则认证创建者",
+      "children": [
+        "路径 users/<canonical-profile-id>/USER.md",
+        "个人文件补充而非替换共享文件",
+        "不能覆盖项目规则与安全策略"
+      ]
+    },
+    {
+      "label": "身份与限制",
+      "detail": "显示名、GitHub 登录、邮箱、消息里的 ID 都不能选个人文件",
+      "children": [
+        "无合格人类身份时只用共享默认值",
+        "子代理 bootstrap 不含个人 profile",
+        "个人文件须完整放入 4000 字符预算"
+      ]
+    },
+    {
+      "label": "Gateway 身份",
+      "detail": "认证 Gateway profile 与 USER.md 分离，在 Settings → Profile → Identity 设置",
+      "children": [
+        "单用户 Gateway 给未识别连接一个本地 owner…",
+        "Control UI 中标记为 Shared owner",
+        "owner profile 无邮箱，不改权限"
+      ]
+    },
+    {
+      "label": "GitHub 登录",
+      "detail": "通过 Cloudflare Access 与 Tailscale Serve 支持 GitHub 登录",
+      "children": [
+        "记录不可变数字 account ID 与当前 canonical…",
+        "新 profile 优先用 GitHub 公开名",
+        "GitHub 账户行只读"
+      ]
+    }
+  ],
+  "flow": [
+    "会话开始加载 USER.md",
+    "选共享或个人文件",
+    "个人文件补充共享默认",
+    "后续轮次刷新文件",
+    "重新分配会话换上下文"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "USER.md",
+      "type": "concept"
+    },
+    {
+      "name": "MEMORY.md",
+      "type": "concept"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "Cloudflare Access",
+      "type": "product"
+    },
+    {
+      "name": "Tailscale Serve",
+      "type": "product"
+    },
+    {
+      "name": "OIDC",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "USER.md",
+      "label": "加载"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "MEMORY.md",
+      "label": "加载"
+    },
+    {
+      "from": "Gateway",
+      "to": "GitHub",
+      "label": "支持登录"
+    },
+    {
+      "from": "Cloudflare Access",
+      "to": "GitHub",
+      "label": "提供登录"
+    },
+    {
+      "from": "Tailscale Serve",
+      "to": "GitHub",
+      "label": "提供登录"
+    },
+    {
+      "from": "OIDC",
+      "to": "GitHub",
+      "label": "声明身份"
+    }
+  ]
+}

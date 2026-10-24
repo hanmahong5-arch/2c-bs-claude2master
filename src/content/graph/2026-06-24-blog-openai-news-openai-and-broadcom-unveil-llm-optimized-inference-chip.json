@@ -1,0 +1,123 @@
+{
+  "center": "OpenAI 与 Broadcom 推出 Jalape…",
+  "branches": [
+    {
+      "label": "芯片发布",
+      "detail": "OpenAI 首款 Intelligence Processor，与 Broadcom 联合发布",
+      "children": [
+        "代号 Jalapeño，专为 LLM 推理从头设计",
+        "非通用加速器改造，面向当前及未来 LLM",
+        "由 Broadcom CEO Hock Tan 交付 Sam Altman"
+      ]
+    },
+    {
+      "label": "性能与架构",
+      "detail": "早期测试每瓦性能显著优于现有最先进水平",
+      "children": [
+        "减少数据搬运，平衡计算/内存/网络",
+        "实测利用率接近理论峰值",
+        "工程样品已跑 GPT-5.3-Codex-Spark"
+      ]
+    },
+    {
+      "label": "九个月流片",
+      "detail": "从设计到量产流片仅九个月，号称最快 ASIC 周期",
+      "children": [
+        "OpenAI 模型加速部分设计与优化",
+        "Broadcom 负责硅实现与网络技术",
+        "Celestica 负责板卡、机架与系统集成"
+      ]
+    },
+    {
+      "label": "多代平台",
+      "detail": "多代计算平台首步，2026 年底开始部署",
+      "children": [
+        "与 Microsoft 等伙伴部署吉瓦级数据中心",
+        "Broadcom Tomahawk 网络芯片支撑规模化",
+        "后续多年持续扩展代际"
+      ]
+    },
+    {
+      "label": "全栈战略",
+      "detail": "OpenAI 自研芯片架构、内核、内存、网络与调度",
+      "children": [
+        "服务 ChatGPT、Codex、API 及未来 agent 产品",
+        "目标更快、更可靠、更便宜的推理",
+        "推动算力更充裕、AI 更普及"
+      ]
+    }
+  ],
+  "flow": [
+    "OpenAI 定义 LLM 推理需求",
+    "Broadcom 硅实现与网络",
+    "Celestica 板卡机架集成",
+    "九个月完成流片",
+    "2026 年底吉瓦级部署"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Broadcom",
+      "type": "company"
+    },
+    {
+      "name": "Jalapeño",
+      "type": "product"
+    },
+    {
+      "name": "Celestica",
+      "type": "company"
+    },
+    {
+      "name": "Sam Altman",
+      "type": "person"
+    },
+    {
+      "name": "Hock Tan",
+      "type": "person"
+    },
+    {
+      "name": "GPT-5.3-Codex-Spark",
+      "type": "model"
+    },
+    {
+      "name": "Tomahawk",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Jalapeño",
+      "label": "设计"
+    },
+    {
+      "from": "Broadcom",
+      "to": "Jalapeño",
+      "label": "联合开发"
+    },
+    {
+      "from": "Celestica",
+      "to": "Jalapeño",
+      "label": "系统集成"
+    },
+    {
+      "from": "Hock Tan",
+      "to": "Jalapeño",
+      "label": "交付"
+    },
+    {
+      "from": "Jalapeño",
+      "to": "GPT-5.3-Codex-Spark",
+      "label": "运行"
+    },
+    {
+      "from": "Broadcom",
+      "to": "Tomahawk",
+      "label": "提供"
+    }
+  ]
+}

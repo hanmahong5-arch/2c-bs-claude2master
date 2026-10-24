@@ -1,0 +1,86 @@
+{
+  "center": "LLM 当校对而非写手",
+  "branches": [
+    {
+      "label": "核心规则",
+      "detail": "Thomas Ptacek 主张绝不采用 LLM 建议的任何具体措辞",
+      "children": [
+        "规则一：不得使用 LLM 建议的任何一个词",
+        "把 LLM 措辞视为禁区，作为智识防护装备"
+      ]
+    },
+    {
+      "label": "Simon 的做法",
+      "detail": "Simon Willison 不让 LLM 写博客，只用于事实核查与拼写语法",
+      "children": [
+        "用途：事实核查、拼写语法、偶尔当同义词词典",
+        "使用自己的 proofreading prompt"
+      ]
+    },
+    {
+      "label": "为何拒绝",
+      "detail": "LLM 生成的文本有股怪味，严格规则有助于保持自律",
+      "children": [
+        "文本带有奇怪的“味道”",
+        "该原则帮助写作者保持纪律"
+      ]
+    },
+    {
+      "label": "工具与提示词",
+      "detail": "Thomas 展示了个人 LLM 校对工具截图并提供起步提示词",
+      "children": [
+        "附有个人 LLM 校对工具截图",
+        "在 Hacker News 评论中分享了 system prompt"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Thomas Ptacek",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "Hacker News",
+      "type": "product"
+    },
+    {
+      "name": "proofreading prompt",
+      "type": "technique"
+    },
+    {
+      "name": "system prompt",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Thomas Ptacek",
+      "to": "LLM",
+      "label": "主张当校对"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "LLM",
+      "label": "用于核查"
+    },
+    {
+      "from": "Thomas Ptacek",
+      "to": "Hacker News",
+      "label": "分享提示词"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "proofreading prompt",
+      "label": "使用"
+    }
+  ]
+}

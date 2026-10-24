@@ -1,0 +1,76 @@
+{
+  "center": "claude-code v2.1.268 更新",
+  "branches": [
+    {
+      "label": "网关计费对齐",
+      "detail": "网关新增 pricing 配置，客户端经托管设置拿到相同费率",
+      "children": [
+        "/cost 与遥测、消费计量口径一致",
+        "harness 成本口径统一到网关侧"
+      ]
+    },
+    {
+      "label": "权限规则修复",
+      "detail": "符号链接目录上的 deny/ask 规则此前不生效",
+      "children": [
+        "涉及 macOS /etc /tmp /var、Linux /bin",
+        "Bash 忽略符号链接路径写法已修",
+        "权限检查需先规范化路径再匹配"
+      ]
+    },
+    {
+      "label": "WebFetch 超时",
+      "detail": "服务器保持连接时不再无限挂起，300 秒后失败",
+      "children": [
+        "CLAUDE_CODE_WEBFETCH_DEADLINE_MS 可覆盖",
+        "设为 0 则关闭超时",
+        "工具调用需显式超时上限"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "WebFetch",
+      "type": "technique"
+    },
+    {
+      "name": "Bash",
+      "type": "technique"
+    },
+    {
+      "name": "CLAUDE_CODE_WEBFETCH_DEADLINE_MS",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "WebFetch",
+      "label": "修复超时"
+    },
+    {
+      "from": "claude-code",
+      "to": "Bash",
+      "label": "修复权限"
+    },
+    {
+      "from": "CLAUDE_CODE_WEBFETCH_DEADLINE_MS",
+      "to": "WebFetch",
+      "label": "覆盖超时"
+    },
+    {
+      "from": "harness",
+      "to": "claude-code",
+      "label": "统一成本口径"
+    }
+  ]
+}

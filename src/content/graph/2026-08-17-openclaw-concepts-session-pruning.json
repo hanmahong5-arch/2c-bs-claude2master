@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw 会话修剪机制",
+  "branches": [
+    {
+      "label": "为什么修剪",
+      "detail": "长会话累积工具输出撑大上下文，推高成本并提前触发压缩",
+      "children": [
+        "修剪对象是工具结果，不改对话正文",
+        "对 Anthropic 提示缓存尤其有价值",
+        "减少需缓存内容，后续请求留在更短前缀"
+      ]
+    },
+    {
+      "label": "两条执行路径",
+      "detail": "按 provider、endpoint 与认证方式决定在服务端还是本地修剪",
+      "children": [
+        "Anthropic API key 直连走服务端清除",
+        "Bedrock、Vertex、OAuth、代理等走客户端修剪",
+        "服务端路径保留完整本地历史"
+      ]
+    },
+    {
+      "label": "服务端参数",
+      "detail": "OpenClaw 自动推导参数，不新增配置项",
+      "children": [
+        "trigger：max(50000, 上下文窗口×0.3)",
+        "keep：最近 3 次工具调用及结果",
+        "clear_at_least：max(12500, 窗口×0.05)"
+      ]
+    },
+    {
+      "label": "客户端修剪",
+      "detail": "需同时通过时间检查与上下文大小检查才开新一轮",
+      "children": [
+        "默认 TTL 5 分钟，Anthropic 插件预置 1h",
+        "超 4000 字符结果软修剪，保留首尾 1500 字符",
+        "用量≥50% 且可修剪内容≥50000 字符则硬清除"
+      ]
+    },
+    {
+      "label": "安全与默认",
+      "detail": "两条硬规则加 Anthropic 插件自动默认配置",
+      "children": [
+        "最近 3 个助手回合与首条用户消息前内容永不修剪",
+        "OAuth 默认 ttl 1h、心跳 1h；API key 心跳…",
+        "非 Anthropic provider 默认关闭修剪"
+      ]
+    }
+  ],
+  "flow": [
+    "开启 cache-ttl 模式",
+    "等待缓存 TTL 过期",
+    "估算上下文用量",
+    "软修剪超长工具结果",
+    "必要时硬清除结果",
+    "记录投影并重置时钟"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "prompt caching",
+      "type": "concept"
+    },
+    {
+      "name": "Amazon Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    },
+    {
+      "name": "compaction",
+      "type": "concept"
+    },
+    {
+      "name": "cache-ttl",
+      "type": "technique"
+    },
+    {
+      "name": "Claude CLI",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Anthropic",
+      "label": "委托服务端清除"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "prompt caching",
+      "label": "优化"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Amazon Bedrock",
+      "label": "本地修剪"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Vertex",
+      "label": "本地修剪"
+    },
+    {
+      "from": "cache-ttl",
+      "to": "compaction",
+      "label": "互补"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Claude CLI",
+      "label": "复用认证"
+    }
+  ]
+}

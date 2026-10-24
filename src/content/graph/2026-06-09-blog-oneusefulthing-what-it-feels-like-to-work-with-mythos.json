@@ -1,0 +1,107 @@
+{
+  "center": "Claude 5 Fable 实测体验",
+  "branches": [
+    {
+      "label": "能力跃升",
+      "detail": "Fable 在多项任务上大幅超越此前所有公开模型",
+      "children": [
+        "可连续执行多页规格长达十几小时",
+        "单提示生成复杂学术论文",
+        "生成10页押韵史诗"
+      ]
+    },
+    {
+      "label": "游戏生成",
+      "detail": "仅凭模糊提示在 Claude Code 中生成可玩游戏",
+      "children": [
+        "无图像能力，全靠数学生成美术",
+        "示例：硬币翻转、自省蛇、深渊下潜"
+      ]
+    },
+    {
+      "label": "等时线地图",
+      "detail": "自主研究并构建复杂等时线地图项目",
+      "children": [
+        "启动多个子AI研究航班、铁路、公路",
+        "检索2200+航班与各国道路速度",
+        "用对抗性代理组验证远程地点"
+      ]
+    },
+    {
+      "label": "Concord 软件",
+      "detail": "自主设计并执行19页文档，工作9.5小时",
+      "children": [
+        "校准人类与AI判断的数据分析工具",
+        "解决研究界多年未有的需求"
+      ]
+    },
+    {
+      "label": "黑箱与失控感",
+      "detail": "用户角色极小，对决策过程缺乏控制",
+      "children": [
+        "AI自主做数百个判断，用户不知情",
+        "过程太长无法追踪，成终极黑箱"
+      ]
+    }
+  ],
+  "flow": [
+    "用户给出模糊提示",
+    "AI 自主规划并启动子代理",
+    "并行研究、编码与测试",
+    "用户少量反馈",
+    "AI 迭代修正并交付"
+  ],
+  "entities": [
+    {
+      "name": "Claude 5 Fable",
+      "type": "model"
+    },
+    {
+      "name": "Mythos",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "Concord",
+      "type": "product"
+    },
+    {
+      "name": "Claude Sonnet",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ethan Mollick",
+      "to": "Claude 5 Fable",
+      "label": "测试"
+    },
+    {
+      "from": "Claude 5 Fable",
+      "to": "Mythos",
+      "label": "属于"
+    },
+    {
+      "from": "Claude 5 Fable",
+      "to": "Claude Code",
+      "label": "运行于"
+    },
+    {
+      "from": "Claude 5 Fable",
+      "to": "Concord",
+      "label": "创建"
+    },
+    {
+      "from": "Claude 5 Fable",
+      "to": "Claude Sonnet",
+      "label": "调用"
+    }
+  ]
+}

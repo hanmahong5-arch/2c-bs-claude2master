@@ -1,0 +1,118 @@
+{
+  "center": "AI 时代管理能力成超能力",
+  "branches": [
+    {
+      "label": "四天造创业公司",
+      "detail": "Ethan Mollick 在宾大实验课上让学生四天从零做出创业原型",
+      "children": [
+        "多数是 EMBA 学员，几乎没人写过代码",
+        "用 Claude Code、Google Antigravity 搭原型",
+        "ChatGPT、Claude、Gemini 做调研与财务建模"
+      ]
+    },
+    {
+      "label": "成果远超预期",
+      "detail": "两天的产出比过去一整学期的学生项目领先一个数量级",
+      "children": [
+        "原型含可运行核心功能，非仅示意界面",
+        "案例：Ticket Passport、Revenue…",
+        "省下数月时间与大量成本，转型成本极低"
+      ]
+    },
+    {
+      "label": "委托决策公式",
+      "detail": "是否交给 AI 取决于三个变量权衡",
+      "children": [
+        "人工基线时间：自己做要多久",
+        "成功率：AI 一次达标概率",
+        "AI 流程时间：写提示、等待与评估耗时"
+      ]
+    },
+    {
+      "label": "GDPval 实证",
+      "detail": "OpenAI 让专家与 AI 对决，专家评审打分",
+      "children": [
+        "专家平均 7 小时完成任务",
+        "AI 几分钟出结果，但需 1 小时核查",
+        "GPT-5.2 追平或胜过专家达 72%"
+      ]
+    },
+    {
+      "label": "委托即新提示",
+      "detail": "用管理技巧提高成功率、降低评估成本",
+      "children": [
+        "给清晰目标与更好指令",
+        "提升评估与反馈能力，减少重试",
+        "领域专长让判断与纠错更快"
+      ]
+    }
+  ],
+  "flow": [
+    "明确任务与目标",
+    "判断是否委托 AI",
+    "写提示并等待输出",
+    "评估结果与反馈",
+    "失败则重试或自己做"
+  ],
+  "entities": [
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Google Antigravity",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.2",
+      "type": "model"
+    },
+    {
+      "name": "GDPval",
+      "type": "concept"
+    },
+    {
+      "name": "Jagged Frontier",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ethan Mollick",
+      "to": "Claude Code",
+      "label": "课堂使用"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "Google Antigravity",
+      "label": "课堂使用"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "GDPval",
+      "label": "引用研究"
+    },
+    {
+      "from": "GPT-5.2",
+      "to": "GDPval",
+      "label": "参与评测"
+    },
+    {
+      "from": "Jagged Frontier",
+      "to": "GDPval",
+      "label": "解释委托"
+    }
+  ]
+}

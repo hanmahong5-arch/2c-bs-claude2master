@@ -1,0 +1,80 @@
+{
+  "center": "Anthropic 2亿美元AI经济影响研究…",
+  "branches": [
+    {
+      "label": "基金概况",
+      "detail": "Anthropic投入2亿美元支持外部研究，应对AI经济冲击",
+      "children": [
+        "主要资助500万-3000万美元项目",
+        "不直接资助低于100万美元的项目",
+        "面向全球，但方向偏美国"
+      ]
+    },
+    {
+      "label": "五大优先方向",
+      "detail": "从工作场所、转型、收入支持到公共投资证据",
+      "children": [
+        "企业层面AI对工人影响",
+        "帮助人们应对AI转型",
+        "现代化收入支持"
+      ]
+    },
+    {
+      "label": "资助类型",
+      "detail": "大型RCT、创意试点或项目评估，鼓励公开分享",
+      "children": [
+        "大规模随机对照试验",
+        "可快速扩展的试点",
+        "关键节点公开学习成果"
+      ]
+    },
+    {
+      "label": "申请资格",
+      "detail": "认证大学、独立研究机构、有实地实验经验的非营利组织",
+      "children": [
+        "个人不能以个人身份申请",
+        "研究者可作为机构PI"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Economic Futures Research Fund",
+      "type": "concept"
+    },
+    {
+      "name": "Economic Policy Framework",
+      "type": "concept"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "RCT",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Economic Futures Research Fund",
+      "label": "设立"
+    },
+    {
+      "from": "Economic Futures Research Fund",
+      "to": "Economic Policy Framework",
+      "label": "支持研究"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    }
+  ]
+}

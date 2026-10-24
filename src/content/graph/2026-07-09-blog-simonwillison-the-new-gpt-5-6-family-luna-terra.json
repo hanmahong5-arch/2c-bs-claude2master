@@ -1,0 +1,108 @@
+{
+  "center": "GPT-5.6 三款模型发布",
+  "branches": [
+    {
+      "label": "三档模型",
+      "detail": "OpenAI 发布 Luna、Terra、Sol 三款尺寸，Sol 最大",
+      "children": [
+        "定价：Luna $1/$6，Terra $2.50/$15，Sol $5…",
+        "均支持 100 万 token 上下文、128K 输出",
+        "知识截止 2026 年 2 月 16 日"
+      ]
+    },
+    {
+      "label": "基准表现",
+      "detail": "长时智能体任务超越 Claude Fable 5，但 SWE-Bench Pro 落后",
+      "children": [
+        "Agents' Last Exam：Sol 得 53.6，超 Fable…",
+        "SWE-Bench Pro：Fable 5 得 80%，Sol 仅 64…",
+        "OpenAI 称约 30% SWE-bench Pro 任务有缺陷"
+      ]
+    },
+    {
+      "label": "新 API 功能",
+      "detail": "程序化工具调用、多智能体、提示缓存断点等",
+      "children": [
+        "Programmatic Tool Calling：用 JS 编排工具…",
+        "Multi-agent：模型可生成子智能体并行工作",
+        "Prompt cache breakpoints：显式指定缓存位置"
+      ]
+    },
+    {
+      "label": "实测与成本",
+      "detail": "作者早期体验 Sol 编码能力不优于 Fable，成本差异大",
+      "children": [
+        "18 个鹈鹕示例覆盖 6 档推理强度",
+        "最低成本 0.71 美分（Luna 无推理）",
+        "最高成本 48.55 美分（Sol 最大推理）"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Terra",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "SWE-Bench Pro",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Sol",
+      "label": "发布"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Terra",
+      "label": "发布"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Luna",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "Claude Fable 5",
+      "label": "超越于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-5.6 Sol",
+      "label": "体验"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "SWE-Bench Pro",
+      "label": "落后于"
+    }
+  ]
+}

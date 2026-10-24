@@ -1,0 +1,92 @@
+{
+  "center": "Cline 4.0 统一 SDK 重构",
+  "branches": [
+    {
+      "label": "统一 SDK 运行时",
+      "detail": "VS Code 扩展运行时由 SDK 驱动，任务、工具、Plan/Act、MCP、检查点经共享会话层协调",
+      "children": [
+        "agent harness 需适配 SDK 会话管理",
+        "统一状态与错误处理"
+      ]
+    },
+    {
+      "label": "Customize 市场",
+      "detail": "新增市场，支持发现和管理 Skills、MCP 服务器、插件",
+      "children": [
+        "含安装/卸载、启用/禁用、搜索过滤",
+        "harness 可集成市场接口动态扩展能力"
+      ]
+    },
+    {
+      "label": "聊天消息队列",
+      "detail": "聊天支持消息排队与编辑重发，当前轮次提交的消息进入队列",
+      "children": [
+        "消息可取消",
+        "harness 需处理并发消息队列，确保输入不丢失"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "SDK",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Skills",
+      "type": "concept"
+    },
+    {
+      "name": "Plan/Act",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "SDK",
+      "label": "迁移至"
+    },
+    {
+      "from": "Cline",
+      "to": "VS Code",
+      "label": "扩展运行于"
+    },
+    {
+      "from": "Cline",
+      "to": "MCP",
+      "label": "集成"
+    },
+    {
+      "from": "Cline",
+      "to": "Skills",
+      "label": "支持"
+    },
+    {
+      "from": "Cline",
+      "to": "Plan/Act",
+      "label": "支持"
+    },
+    {
+      "from": "agent harness",
+      "to": "SDK",
+      "label": "适配"
+    }
+  ]
+}

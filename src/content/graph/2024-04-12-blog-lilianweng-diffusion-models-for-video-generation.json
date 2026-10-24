@@ -1,0 +1,112 @@
+{
+  "center": "扩散模型视频生成",
+  "branches": [
+    {
+      "label": "视频生成挑战",
+      "detail": "比图像生成更难，需时序一致性和大量高质量视频数据",
+      "children": [
+        "图像是单帧视频，视频是超集",
+        "需编码更多世界知识",
+        "文本-视频对数据稀缺"
+      ]
+    },
+    {
+      "label": "参数化与采样",
+      "detail": "v-prediction 避免颜色偏移，DDIM 更新用角度坐标",
+      "children": [
+        "v = α_t ε - σ_t x",
+        "DDIM 沿 -v 方向更新",
+        "重建引导条件采样"
+      ]
+    },
+    {
+      "label": "模型架构",
+      "detail": "常用 3D U-Net 和 DiT 作为骨干网络",
+      "children": [
+        "3D U-Net 处理时空",
+        "DiT 基于 Transformer"
+      ]
+    },
+    {
+      "label": "图像模型适配",
+      "detail": "微调图像扩散模型到视频数据，或免训练适配",
+      "children": [
+        "微调视频数据",
+        "免训练适配方法"
+      ]
+    }
+  ],
+  "flow": [
+    "加噪前向过程",
+    "学习去噪模型",
+    "v-prediction 参数化",
+    "DDIM 采样更新",
+    "重建引导条件生成"
+  ],
+  "entities": [
+    {
+      "name": "Lilian Weng",
+      "type": "person"
+    },
+    {
+      "name": "Diffusion Models",
+      "type": "concept"
+    },
+    {
+      "name": "Video Generation",
+      "type": "concept"
+    },
+    {
+      "name": "DDIM",
+      "type": "technique"
+    },
+    {
+      "name": "v-prediction",
+      "type": "technique"
+    },
+    {
+      "name": "3D U-Net",
+      "type": "model"
+    },
+    {
+      "name": "DiT",
+      "type": "model"
+    },
+    {
+      "name": "VDM",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Lilian Weng",
+      "to": "Diffusion Models",
+      "label": "撰写"
+    },
+    {
+      "from": "Diffusion Models",
+      "to": "Video Generation",
+      "label": "应用于"
+    },
+    {
+      "from": "DDIM",
+      "to": "v-prediction",
+      "label": "结合"
+    },
+    {
+      "from": "VDM",
+      "to": "Diffusion Models",
+      "label": "基于"
+    },
+    {
+      "from": "3D U-Net",
+      "to": "Video Generation",
+      "label": "用于"
+    },
+    {
+      "from": "DiT",
+      "to": "Video Generation",
+      "label": "用于"
+    }
+  ]
+}

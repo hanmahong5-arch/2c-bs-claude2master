@@ -1,0 +1,83 @@
+{
+  "center": "Hugging Face 2026年7月安全事件…",
+  "branches": [
+    {
+      "label": "事件披露",
+      "detail": "Hugging Face 公开披露 2026 年 7 月安全事件，强调零信任与审计",
+      "children": [
+        "披露时间：2026 年 7 月",
+        "核心原则：零信任、审计重"
+      ]
+    },
+    {
+      "label": "社区讨论",
+      "detail": "评论区围绕 LLM 安全防护技术展开讨论，多人询问技术细节与链接",
+      "children": [
+        "用户 gemstonebro 发帖引发讨论",
+        "David Mussington 称技术已在 ArXiv 有文档",
+        "Ibrahim Dayah 等人索要链接"
+      ]
+    },
+    {
+      "label": "AI SOC 实践",
+      "detail": "用户 George Szulc 分享用 AI 代理构建 SOC 团队，集成工具并设人工护栏",
+      "children": [
+        "用 agents 构建完整 SOC 团队",
+        "所有写入或操作需人工审批",
+        "系统具备学习与记忆能力"
+      ]
+    },
+    {
+      "label": "技术参考",
+      "detail": "用户 phukface 分享 ArXiv 论文链接，题为《LLM 可证明安全架构》",
+      "children": [
+        "论文链接：arxiv.org/pdf/2508.09288v1",
+        "标题：Provable Security Architecture for…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "ArXiv",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "零信任",
+      "type": "concept"
+    },
+    {
+      "name": "AI SOC",
+      "type": "concept"
+    },
+    {
+      "name": "Provable Security Architecture for LLMS",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "零信任",
+      "label": "强调"
+    },
+    {
+      "from": "ArXiv",
+      "to": "Provable Security Architecture for LLMS",
+      "label": "收录"
+    },
+    {
+      "from": "AI SOC",
+      "to": "LLM",
+      "label": "应用"
+    }
+  ]
+}

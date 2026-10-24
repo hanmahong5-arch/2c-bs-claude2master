@@ -1,0 +1,92 @@
+{
+  "center": "Codex 0.148.0 更新",
+  "branches": [
+    {
+      "label": "TUI 导出",
+      "detail": "新增 /export 命令，将完整对话导出为 Markdown",
+      "children": [
+        "可复制到剪贴板",
+        "可存为新文件",
+        "便于审计和复用"
+      ]
+    },
+    {
+      "label": "会话管理",
+      "detail": "codex exec fork 支持会话分叉，恢复选择器可归档/恢复",
+      "children": [
+        "支持分支工作流",
+        "会话管理更灵活"
+      ]
+    },
+    {
+      "label": "Bedrock 支持",
+      "detail": "新增 Amazon Bedrock Runtime 内置 provider",
+      "children": [
+        "支持 AWS profile 和 region",
+        "支持 GPT-5.6 路由"
+      ]
+    },
+    {
+      "label": "Hooks 异步化",
+      "detail": "Hooks 可异步运行命令并调用 MCP 工具",
+      "children": [
+        "可集成外部工具",
+        "需注意异步生命周期管理"
+      ]
+    },
+    {
+      "label": "修复项",
+      "detail": "模型切换、会话恢复、MCP 认证等状态一致性修复",
+      "children": [
+        "切换不再留陈旧指令",
+        "恢复保留工作目录与审批策略",
+        "OAuth 重认证后 MCP 自动恢复"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Amazon Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "AWS",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "Amazon Bedrock",
+      "label": "新增支持"
+    },
+    {
+      "from": "Codex",
+      "to": "MCP",
+      "label": "调用"
+    },
+    {
+      "from": "Amazon Bedrock",
+      "to": "GPT-5.6",
+      "label": "路由"
+    },
+    {
+      "from": "Amazon Bedrock",
+      "to": "AWS",
+      "label": "属于"
+    }
+  ]
+}

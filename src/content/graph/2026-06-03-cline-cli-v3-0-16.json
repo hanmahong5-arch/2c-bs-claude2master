@@ -1,0 +1,76 @@
+{
+  "center": "cline cli-v3.0.16 插件管理升级",
+  "branches": [
+    {
+      "label": "官方插件库",
+      "detail": "可通过 slug 从 github.com/cline/plugins 集合直接安装插件",
+      "children": [
+        "简化 Agent 生态集成流程"
+      ]
+    },
+    {
+      "label": "技能分组",
+      "detail": "插件可捆绑技能，并在设置中分组显示",
+      "children": [
+        "优化复杂 Agent 功能管理界面"
+      ]
+    },
+    {
+      "label": "供应商配置增强",
+      "detail": "Anthropic 类供应商支持自定义基础 URL",
+      "children": [
+        "修复 OAuth 令牌迁移问题",
+        "提高 Agent 部署灵活性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "cline cli-v3.0.16",
+      "type": "product"
+    },
+    {
+      "name": "github.com/cline/plugins",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli-v3.0.16",
+      "to": "github.com/cline/plugins",
+      "label": "支持安装"
+    },
+    {
+      "from": "cline cli-v3.0.16",
+      "to": "Anthropic",
+      "label": "支持配置"
+    },
+    {
+      "from": "cline cli-v3.0.16",
+      "to": "OAuth",
+      "label": "修复迁移"
+    },
+    {
+      "from": "cline",
+      "to": "Agent",
+      "label": "集成生态"
+    }
+  ]
+}

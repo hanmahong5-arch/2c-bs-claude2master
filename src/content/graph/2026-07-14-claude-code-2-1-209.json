@@ -1,0 +1,63 @@
+{
+  "center": "claude-code v2.1.209 修复",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "修复 /model 等对话框在后台会话被阻塞的问题",
+      "children": [
+        "回退了一个过于宽泛的防护",
+        "涉及 claude agents 后台会话"
+      ]
+    },
+    {
+      "label": "用户影响",
+      "detail": "agent 后台运行时用户仍可正常与对话框交互",
+      "children": [
+        "不再因防护误判而卡住"
+      ]
+    },
+    {
+      "label": "设计含义",
+      "detail": "agent 的 UI 交互路径需要更精细的权限控制",
+      "children": [
+        "避免全局防护影响核心功能"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "claude agents",
+      "type": "product"
+    },
+    {
+      "name": "/model",
+      "type": "concept"
+    },
+    {
+      "name": "权限控制",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "claude agents",
+      "label": "包含"
+    },
+    {
+      "from": "claude agents",
+      "to": "/model",
+      "label": "阻塞"
+    },
+    {
+      "from": "claude agents",
+      "to": "权限控制",
+      "label": "需要"
+    }
+  ]
+}

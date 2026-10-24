@@ -1,0 +1,70 @@
+{
+  "center": "Claude Code v2.1.147 更新",
+  "branches": [
+    {
+      "label": "背景会话持久化",
+      "detail": "固定背景会话空闲时不再被终止，更新时原地重启，内存压力下最后释放",
+      "children": [
+        "固定会话快捷键 Ctrl+T",
+        "为长期运行代理任务提供可靠环境"
+      ]
+    },
+    {
+      "label": "代码审查升级",
+      "detail": "/simplify 重命名为 /code-review，专注报告正确性错误并可选审查力度",
+      "children": [
+        "支持 /code-review high 指定力度",
+        "--comment 可发布为 GitHub PR 评论"
+      ]
+    },
+    {
+      "label": "多项健壮性修复",
+      "detail": "修复企业登录限制、& 转义、未知斜杠命令静默失败及 PowerShell 工具问题",
+      "children": [
+        "修复 & 符号在命令输出中的转义",
+        "修复 PowerShell 工具输出与匹配问题",
+        "修复界面布局与粘贴文本显示问题"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "/code-review",
+      "type": "product"
+    },
+    {
+      "name": "/simplify",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "PowerShell",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "/simplify",
+      "to": "/code-review",
+      "label": "重命名为"
+    },
+    {
+      "from": "/code-review",
+      "to": "GitHub",
+      "label": "发布评论到"
+    },
+    {
+      "from": "Claude Code",
+      "to": "/code-review",
+      "label": "包含命令"
+    }
+  ]
+}

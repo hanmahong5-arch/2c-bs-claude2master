@@ -1,0 +1,117 @@
+{
+  "center": "2026 春季开源大模型架构盘点",
+  "branches": [
+    {
+      "label": "十款模型时间线",
+      "detail": "Sebastian Raschka 按发布时间梳理 2026 年 1–2 月十款开源权重模型",
+      "children": [
+        "Trinity Large 与 Kimi K2.5 同日 1 月 27…",
+        "Qwen 3.5（2/15）、GLM-5 与 MiniMax M2.5（…",
+        "Ling 2.5 1T / Ring 2.5 1T（2/16）、Tiny…"
+      ]
+    },
+    {
+      "label": "Trinity 架构细节",
+      "detail": "Arcee AI 400B MoE 旗舰，13B 激活参数，对标 GLM-4.5",
+      "children": [
+        "3:1 局部:全局滑动窗口注意力，窗口 4096",
+        "QK-Norm、全局层 NoPE、Qwen3-Next 式门控注…",
+        "DeepSeek 式 MoE 但专家更粗，提升推理吞吐"
+      ]
+    },
+    {
+      "label": "Kimi K2.5 规模",
+      "detail": "1 万亿参数，为 Trinity 的 2.5 倍，刷新开源性能上限",
+      "children": [
+        "架构为 Kimi K2 的延续，即 DeepSeek V3 放大版",
+        "由纯文本升级为原生多模态，支持视觉",
+        "约 15 万亿混合视觉与文本 token 联合预训练"
+      ]
+    },
+    {
+      "label": "多模态早融合",
+      "detail": "K2.5 采用 early fusion，视觉 token 与文本 token 一同输入",
+      "children": [
+        "早融合含义一：预训练早期即引入视觉 token",
+        "含义二：图像 token 作为嵌入与文本并列输入",
+        "消融显示早期少量视觉 token 反而提升性能"
+      ]
+    },
+    {
+      "label": "架构共性趋势",
+      "detail": "多款新模型复用 DeepSeek V3 与 Gemma 3 的设计思路",
+      "children": [
+        "滑动窗口注意力成为长上下文标配",
+        "RMSNorm 放置类似 Gemma 3，第二处增益按深度…",
+        "MoE 走小专家、粗粒度路线"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Sebastian Raschka",
+      "type": "person"
+    },
+    {
+      "name": "Arcee AI",
+      "type": "company"
+    },
+    {
+      "name": "Trinity Large",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K2.5",
+      "type": "model"
+    },
+    {
+      "name": "Moonshot AI",
+      "type": "company"
+    },
+    {
+      "name": "DeepSeek V3",
+      "type": "model"
+    },
+    {
+      "name": "GLM-4.5",
+      "type": "model"
+    },
+    {
+      "name": "Mixture-of-Experts",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sebastian Raschka",
+      "to": "Trinity Large",
+      "label": "盘点"
+    },
+    {
+      "from": "Arcee AI",
+      "to": "Trinity Large",
+      "label": "发布"
+    },
+    {
+      "from": "Moonshot AI",
+      "to": "Kimi K2.5",
+      "label": "发布"
+    },
+    {
+      "from": "Kimi K2.5",
+      "to": "DeepSeek V3",
+      "label": "架构源自"
+    },
+    {
+      "from": "Trinity Large",
+      "to": "GLM-4.5",
+      "label": "性能对标"
+    },
+    {
+      "from": "Trinity Large",
+      "to": "Mixture-of-Experts",
+      "label": "采用"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "center": "新西兰鸮鹦鹉数量突破325只",
+  "branches": [
+    {
+      "label": "数量突破",
+      "detail": "今年创纪录繁殖季的雏鸟已长成幼鸟，被计入种群总数",
+      "children": [
+        "种群总数达到325只",
+        "雏鸟已成长为幼鸟"
+      ]
+    },
+    {
+      "label": "历史对比",
+      "detail": "1995年鸮鹦鹉仅剩51只，如今实现大幅回升",
+      "children": [
+        "1995年仅存51只",
+        "从51只增至325只"
+      ]
+    },
+    {
+      "label": "保育启示",
+      "detail": "Andrew Digby指出，持续努力下极危物种的恢复是可能的",
+      "children": [
+        "极危物种恢复可行",
+        "需要持续投入"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Andrew Digby",
+      "type": "person"
+    },
+    {
+      "name": "kākāpō",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Andrew Digby",
+      "to": "kākāpō",
+      "label": "报告数量"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Andrew Digby",
+      "label": "引用"
+    }
+  ]
+}

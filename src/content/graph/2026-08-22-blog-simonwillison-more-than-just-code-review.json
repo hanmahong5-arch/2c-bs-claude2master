@@ -1,0 +1,64 @@
+{
+  "center": "Simon Willison 谈编码代理",
+  "branches": [
+    {
+      "label": "核心技能",
+      "detail": "高效使用编码代理的关键是能自信地指示改动并验证改动正确",
+      "children": [
+        "自信指示代理如何修改代码",
+        "自信验证改动是否被正确应用"
+      ]
+    },
+    {
+      "label": "验证方式",
+      "detail": "逐行审查代码只是验证方式之一，并非唯一途径",
+      "children": [
+        "有时需要审查代理写的每一行代码",
+        "还有其他方式达成验证目标"
+      ]
+    },
+    {
+      "label": "逐行审查局限",
+      "detail": "逐行肉眼检查从来不是验证软件改动的最有效方式",
+      "children": [
+        "Eyeballing every line 并非最有效验证手段"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "coding agents",
+      "type": "concept"
+    },
+    {
+      "name": "code review",
+      "type": "concept"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "coding agents",
+      "label": "谈论"
+    },
+    {
+      "from": "coding agents",
+      "to": "code review",
+      "label": "涉及"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "LLM",
+      "label": "关注"
+    }
+  ]
+}

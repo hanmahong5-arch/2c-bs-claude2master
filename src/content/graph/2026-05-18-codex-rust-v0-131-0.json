@@ -1,0 +1,82 @@
+{
+  "center": "Codex Rust v0.131.0 更新",
+  "branches": [
+    {
+      "label": "TUI 增强",
+      "detail": "新增数据驱动服务层命令、混合令牌用量显示与响应式 Markdown 表格",
+      "children": [
+        "数据驱动的服务层命令",
+        "混合令牌用量显示",
+        "响应式 Markdown 表格"
+      ]
+    },
+    {
+      "label": "插件工作流升级",
+      "detail": "支持市场 CLI 命令、版本感知共享与默认启用钩子",
+      "children": [
+        "市场 CLI 命令",
+        "版本感知共享",
+        "默认启用钩子"
+      ]
+    },
+    {
+      "label": "远程控制",
+      "detail": "新增守护进程管理的远程控制、运行时启用/禁用 API 与注册表环境",
+      "children": [
+        "守护进程管理远程控制",
+        "运行时启用/禁用 API",
+        "注册表支持的环境"
+      ]
+    },
+    {
+      "label": "Python SDK 重构",
+      "detail": "提升开发体验与系统可靠性",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Rust",
+      "type": "technique"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "Python SDK",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "Rust",
+      "label": "使用"
+    },
+    {
+      "from": "Codex",
+      "to": "TUI",
+      "label": "增强"
+    },
+    {
+      "from": "Codex",
+      "to": "Python SDK",
+      "label": "重构"
+    },
+    {
+      "from": "Codex",
+      "to": "agent harness",
+      "label": "影响"
+    }
+  ]
+}

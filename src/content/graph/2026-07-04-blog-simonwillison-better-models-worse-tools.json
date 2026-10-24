@@ -1,0 +1,115 @@
+{
+  "center": "新模型更聪明，工具调用更差",
+  "branches": [
+    {
+      "label": "问题现象",
+      "detail": "新版 Claude 调用 Pi 编辑工具时凭空捏造字段，参数不符 schema 被拒",
+      "children": [
+        "Opus 4.8 也会出错，不只是小模型",
+        "编辑内容通常正确，但参数不匹配",
+        "Pi 只能拒绝调用并要求重试"
+      ]
+    },
+    {
+      "label": "代际反常",
+      "detail": "越新的 Anthropic 模型在该工具 schema 上表现越差，旧模型反而正常",
+      "children": [
+        "Opus 4.8 与 Sonnet 5 均出现",
+        "更早的模型没有此问题",
+        "同族 SOTA 反而不如老版本"
+      ]
+    },
+    {
+      "label": "原因推测",
+      "detail": "Armin 认为新模型经强化学习专门训练使用 Claude Code 内置编辑工具",
+      "children": [
+        "训练偏向内置工具而非通用 schema",
+        "第三方 harness 自定义工具更易被误用"
+      ]
+    },
+    {
+      "label": "工具差异",
+      "detail": "各家编辑工具机制不同，模型被针对性训练",
+      "children": [
+        "Claude 编辑工具用 search and replace",
+        "OpenAI Codex 用 apply_patch",
+        "OpenAI 曾称模型针对该工具训练"
+      ]
+    },
+    {
+      "label": "开放疑问",
+      "detail": "第三方 harness 是否该实现多种编辑工具以匹配底层模型",
+      "children": [
+        "Pi 等工具面临选择难题",
+        "按用户所选模型切换最优工具"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Sonnet 5",
+      "type": "model"
+    },
+    {
+      "name": "Pi",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Opus 4.8",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Sonnet 5",
+      "label": "发布"
+    },
+    {
+      "from": "Opus 4.8",
+      "to": "Pi",
+      "label": "错误调用"
+    },
+    {
+      "from": "Claude",
+      "to": "Claude Code",
+      "label": "内置工具"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "开发"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "center": "HSP GRUPPE 用 ChatGPT 提升税务…",
+  "branches": [
+    {
+      "label": "生产力提升",
+      "detail": "ChatGPT Enterprise 集成进税务咨询流程，团队能承接更多客户需求",
+      "children": [
+        "处理更多客户需求"
+      ]
+    },
+    {
+      "label": "质量与错误率",
+      "detail": "AI 辅助改善工作质量，错误率降低",
+      "children": [
+        "错误率降低"
+      ]
+    },
+    {
+      "label": "人力释放",
+      "detail": "释放人力专注于高价值咨询任务",
+      "children": [
+        "聚焦高价值咨询"
+      ]
+    },
+    {
+      "label": "采用启示",
+      "detail": "专业服务公司可借通用 AI 工具快速建内部能力，无需定制开发",
+      "children": [
+        "标准化 API 与安全合规是关键"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "HSP GRUPPE",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Enterprise",
+      "type": "product"
+    },
+    {
+      "name": "税务咨询",
+      "type": "concept"
+    },
+    {
+      "name": "标准化 API",
+      "type": "concept"
+    },
+    {
+      "name": "安全合规",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "HSP GRUPPE",
+      "to": "ChatGPT Enterprise",
+      "label": "集成"
+    },
+    {
+      "from": "ChatGPT Enterprise",
+      "to": "税务咨询",
+      "label": "辅助"
+    },
+    {
+      "from": "标准化 API",
+      "to": "ChatGPT Enterprise",
+      "label": "支撑采用"
+    },
+    {
+      "from": "安全合规",
+      "to": "ChatGPT Enterprise",
+      "label": "支撑采用"
+    }
+  ]
+}

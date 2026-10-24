@@ -1,0 +1,122 @@
+{
+  "center": "Google 4000万美元资助 Genesis…",
+  "branches": [
+    {
+      "label": "资助内容",
+      "detail": "Google 承诺 4000 万美元 AI tokens 与云额度，支持 DOE Genesis 任务",
+      "children": [
+        "面向 DOE Genesis 获奖研究者提供实物支持",
+        "延续 12 月对白宫 Genesis 任务的承诺",
+        "目标十年内让美国科学发现速度翻倍"
+      ]
+    },
+    {
+      "label": "开放工具",
+      "detail": "提供 GDM 前沿 AI for Science 工具组合",
+      "children": [
+        "AlphaEvolve：Gemini 驱动的编码与发现智能体",
+        "AlphaFold 3：预测蛋白质等生物分子结构",
+        "AlphaGenome、WeatherNext、AlphaEarth…"
+      ]
+    },
+    {
+      "label": "政府平台",
+      "detail": "向 DOE 国家实验室数万用户提供一年 Gemini for Government",
+      "children": [
+        "覆盖运营、研究与管理团队",
+        "从研究台到用户设施管理",
+        "提供单一安全基础平台"
+      ]
+    },
+    {
+      "label": "落地案例",
+      "detail": "工具已在实验室生态产生实际影响",
+      "children": [
+        "PNNL 用 AlphaEvolve 探索复杂数学系统",
+        "NLR 用 Gemini 实现自主材料发现",
+        "显微镜校准从 90 分钟降至约 13 分钟"
+      ]
+    },
+    {
+      "label": "战略意义",
+      "detail": "推动美国在能源、安全与科学挑战上的突破",
+      "children": [
+        "Genesis 任务旨在变革全美研究与科学",
+        "10 月 Google Public Sector Summit 可了解…"
+      ]
+    }
+  ],
+  "flow": [
+    "承诺支持 Genesis 任务",
+    "向 DOE 实验室开放 AI 工具",
+    "提供 Gemini for Government",
+    "研究者在实验室部署应用",
+    "加速科学发现"
+  ],
+  "entities": [
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Genesis Mission",
+      "type": "concept"
+    },
+    {
+      "name": "DOE",
+      "type": "company"
+    },
+    {
+      "name": "AlphaEvolve",
+      "type": "product"
+    },
+    {
+      "name": "AlphaFold 3",
+      "type": "model"
+    },
+    {
+      "name": "Gemini for Government",
+      "type": "product"
+    },
+    {
+      "name": "PNNL",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google",
+      "to": "Genesis Mission",
+      "label": "资助"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "AlphaEvolve",
+      "label": "开发"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "AlphaFold 3",
+      "label": "开发"
+    },
+    {
+      "from": "Google",
+      "to": "Gemini for Government",
+      "label": "提供"
+    },
+    {
+      "from": "DOE",
+      "to": "Genesis Mission",
+      "label": "主导"
+    },
+    {
+      "from": "PNNL",
+      "to": "AlphaEvolve",
+      "label": "使用"
+    }
+  ]
+}

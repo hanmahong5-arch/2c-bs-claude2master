@@ -1,0 +1,113 @@
+{
+  "center": "Claude 永久无广告",
+  "branches": [
+    {
+      "label": "核心决定",
+      "detail": "Anthropic 宣布 Claude 将永久保持无广告，对话中不出现赞助链接或广告影响",
+      "children": [
+        "用户不会看到「sponsored」链接",
+        "Claude 回复不受广告商影响",
+        "不含用户未要求的第三方产品植入"
+      ]
+    },
+    {
+      "label": "为何无广告",
+      "detail": "AI 对话开放且私密，常涉及敏感个人话题或深度工作，广告会显得格格不入",
+      "children": [
+        "用户常分享比搜索查询更多的上下文",
+        "对话涉及敏感、私人或复杂工程任务",
+        "广告激励可能带来不可预测的结果"
+      ]
+    },
+    {
+      "label": "激励冲突",
+      "detail": "广告模式引入交易动机，可能与「真正有帮助」原则冲突，用户难以分辨建议是否被商业化",
+      "children": [
+        "失眠例子：无广告助手只探索原因，有广告助手会考…",
+        "广告还会激励优化参与度，而非真正帮助",
+        "Claude 宪法核心原则是真正有帮助"
+      ]
+    },
+    {
+      "label": "商业模式",
+      "detail": "Anthropic 通过企业合同和付费订阅创收，再投资于改进 Claude，不卖用户注意力或数据",
+      "children": [
+        "为 60 多国教育者提供 AI 工具和培训",
+        "与多国政府开展国家 AI 教育试点",
+        "向非营利组织大幅折扣提供 Claude"
+      ]
+    },
+    {
+      "label": "支持商业",
+      "detail": "探索代理式商业，让 Claude 代表用户完成购买或预订，所有第三方交互由用户发起",
+      "children": [
+        "用户可连接 Figma、Asana、Canva 等工具",
+        "第三方交互应由用户而非广告商发起",
+        "Claude 唯一动机是给出有帮助的答案"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Claude's Constitution",
+      "type": "concept"
+    },
+    {
+      "name": "agentic commerce",
+      "type": "concept"
+    },
+    {
+      "name": "Figma",
+      "type": "product"
+    },
+    {
+      "name": "Asana",
+      "type": "product"
+    },
+    {
+      "name": "Canva",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Claude",
+      "to": "Claude's Constitution",
+      "label": "遵循"
+    },
+    {
+      "from": "Anthropic",
+      "to": "agentic commerce",
+      "label": "探索"
+    },
+    {
+      "from": "Claude",
+      "to": "Figma",
+      "label": "集成"
+    },
+    {
+      "from": "Claude",
+      "to": "Asana",
+      "label": "集成"
+    },
+    {
+      "from": "Claude",
+      "to": "Canva",
+      "label": "集成"
+    }
+  ]
+}

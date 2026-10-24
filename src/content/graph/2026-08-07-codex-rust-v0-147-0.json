@@ -1,0 +1,80 @@
+{
+  "center": "Codex 0.147.0 更新",
+  "branches": [
+    {
+      "label": "插件搜索",
+      "detail": "支持便携式 Agent 插件安装，可跨多目录搜索插件",
+      "children": [
+        "跨本地、个人、工作区、远程目录搜索",
+        "Harness 动态发现并加载插件"
+      ]
+    },
+    {
+      "label": "会话分节",
+      "detail": "会话按持久化、手动排序的分节组织，支持增量浏览",
+      "children": [
+        "长对话增量浏览",
+        "Harness 管理分节元数据"
+      ]
+    },
+    {
+      "label": "自动审批",
+      "detail": "新增 --approve-for-me 标志，实现自动审查审批流程",
+      "children": [
+        "Harness 可配置自动审批策略",
+        "减少人工干预"
+      ]
+    },
+    {
+      "label": "MCP 支持",
+      "detail": "支持 MCP 2026-07-28 协议，提升集成效率",
+      "children": [
+        "分页发现、多轮请求、非阻塞启动",
+        "Harness 适配新协议"
+      ]
+    },
+    {
+      "label": "安全修复",
+      "detail": "修复命令显示和回放历史中秘密与 bearer token 泄露",
+      "children": [
+        "日志和 UI 中敏感信息脱敏"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Harness",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "Harness",
+      "label": "使用"
+    },
+    {
+      "from": "Codex",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "Harness",
+      "to": "Agent",
+      "label": "扩展"
+    }
+  ]
+}

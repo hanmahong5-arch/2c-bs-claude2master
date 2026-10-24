@@ -1,0 +1,91 @@
+{
+  "center": "开源模型最新进展盘点",
+  "branches": [
+    {
+      "label": "Kimi K3 发布",
+      "detail": "上周发布，权重未公开，使用体验与后训练潜力受关注",
+      "children": [
+        "Nathan 订阅 $200 计划，含 100 万上下文",
+        "研究任务中能挖掘 Reddit 早期信号",
+        "代码更简洁易读但存在错误"
+      ]
+    },
+    {
+      "label": "中美开源格局",
+      "detail": "Xi 在 WAIC 承诺开源，Qwen 宣布下一代开放权重",
+      "children": [
+        "中国厂商：Qwen、DeepSeek、MiniMax、GLM",
+        "GLM 5.2 加速后训练生态",
+        "美国开源生态相对滞后"
+      ]
+    },
+    {
+      "label": "蒸馏争议",
+      "detail": "Ben Thompson 辩论引发对蒸馏方法的讨论",
+      "children": [
+        "蒸馏常被误读为简单复制",
+        "后训练可针对高价值任务微调"
+      ]
+    },
+    {
+      "label": "开闭差距",
+      "detail": "基准测试混乱，开源模型落后闭源数月",
+      "children": [
+        "代理编码等任务差距影响大",
+        "不同基准结论矛盾"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Qwen",
+      "type": "model"
+    },
+    {
+      "name": "GLM 5.2",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek",
+      "type": "model"
+    },
+    {
+      "name": "MiniMax",
+      "type": "model"
+    },
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Florian Brand",
+      "type": "person"
+    },
+    {
+      "name": "Ben Thompson",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "Kimi K3",
+      "label": "讨论"
+    },
+    {
+      "from": "Florian Brand",
+      "to": "Kimi K3",
+      "label": "使用"
+    },
+    {
+      "from": "Qwen",
+      "to": "GLM 5.2",
+      "label": "同属中国模型"
+    }
+  ]
+}

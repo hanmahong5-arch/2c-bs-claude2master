@@ -1,0 +1,111 @@
+{
+  "center": "RSI、中美差距与锯齿状能力辩论",
+  "branches": [
+    {
+      "label": "RSI 证据不足",
+      "detail": "JS 认为实验室公开证据不足以证明即将出现自我维持的智能爆炸",
+      "children": [
+        "OpenAI 博客显示 Codex 研究支出每月翻倍",
+        "但可能只是测量口径变化",
+        "不足以证明半年内软件智能爆炸"
+      ]
+    },
+    {
+      "label": "内部指标未知",
+      "detail": "实验室内部可能有算力乘数等 KPI，但外界无法确认是否异常",
+      "children": [
+        "预训练团队算力乘数可能飙升",
+        "近期讨论未必反映内部指标失控"
+      ]
+    },
+    {
+      "label": "中美模型差距",
+      "detail": "讨论中国模型落后多少，以及蒸馏能否解释差距",
+      "children": [
+        "章节：中国模型落后多少",
+        "蒸馏能否解释差距",
+        "中国招聘信息揭示实验室动向"
+      ]
+    },
+    {
+      "label": "能力锯齿与风险",
+      "detail": "JS 自认能力理论万能派，对 x-risk 极度不确定但担忧",
+      "children": [
+        "Evan Hubinger 认为十年内 x-risk 至少 10%",
+        "分歧核心是能力增长多快多大",
+        "扩散与对齐也影响风险"
+      ]
+    },
+    {
+      "label": "机器人与加速",
+      "detail": "AI 加速场景中机器人扮演关键角色，可能带来工业爆炸",
+      "children": [
+        "AI 管理工厂形成自维持经济",
+        "科学进展大幅加速",
+        "类似 AI 2027 场景"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Epoch AI",
+      "type": "company"
+    },
+    {
+      "name": "JS Denain",
+      "type": "person"
+    },
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "RSI",
+      "type": "concept"
+    },
+    {
+      "name": "Evan Hubinger",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "JS Denain",
+      "to": "Epoch AI",
+      "label": "任职于"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "JS Denain",
+      "label": "辩论"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "开发"
+    },
+    {
+      "from": "Anthropic",
+      "to": "RSI",
+      "label": "发布博客"
+    },
+    {
+      "from": "Evan Hubinger",
+      "to": "RSI",
+      "label": "提出风险"
+    }
+  ]
+}

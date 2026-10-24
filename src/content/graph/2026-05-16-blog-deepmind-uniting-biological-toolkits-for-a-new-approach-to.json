@@ -1,0 +1,97 @@
+{
+  "center": "DeepMind 用 AI 探索 ALS RNA 疗法",
+  "branches": [
+    {
+      "label": "跨机构合作",
+      "detail": "DeepMind 促成波士顿儿童医院与 MIT 实验室联手攻关 ALS",
+      "children": [
+        "波士顿儿童医院提供临床专业知识",
+        "MIT 提供 RNA 生物学与计算研究"
+      ]
+    },
+    {
+      "label": "聚焦 RNA 疗法",
+      "detail": "研究重点是用 RNA 靶向技术干预 ALS 疾病进程",
+      "children": [
+        "需要专用计算工具分析设计 RNA 靶向分子",
+        "需要相应模拟环境"
+      ]
+    },
+    {
+      "label": "计算实验闭环",
+      "detail": "计算模型指导实验设计，实验数据反过来优化模型",
+      "children": [
+        "需智能体处理多模态生物数据",
+        "需智能体提出假设并规划实验"
+      ]
+    },
+    {
+      "label": "Co-Scientist 项目",
+      "detail": "DeepMind 通过该项目推动此次 ALS 研究合作",
+      "children": []
+    }
+  ],
+  "flow": [
+    "计算模型指导实验设计",
+    "实验产出多模态生物数据",
+    "数据回流优化模型"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "波士顿儿童医院",
+      "type": "company"
+    },
+    {
+      "name": "MIT",
+      "type": "company"
+    },
+    {
+      "name": "Co-Scientist",
+      "type": "product"
+    },
+    {
+      "name": "ALS",
+      "type": "concept"
+    },
+    {
+      "name": "RNA 靶向治疗",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Co-Scientist",
+      "label": "推出"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "波士顿儿童医院",
+      "label": "促成合作"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "MIT",
+      "label": "促成合作"
+    },
+    {
+      "from": "波士顿儿童医院",
+      "to": "ALS",
+      "label": "研究"
+    },
+    {
+      "from": "MIT",
+      "to": "RNA 靶向治疗",
+      "label": "研究"
+    },
+    {
+      "from": "RNA 靶向治疗",
+      "to": "ALS",
+      "label": "治疗"
+    }
+  ]
+}

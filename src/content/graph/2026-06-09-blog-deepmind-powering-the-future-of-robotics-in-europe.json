@@ -1,0 +1,114 @@
+{
+  "center": "DeepMind 欧洲机器人加速器",
+  "branches": [
+    {
+      "label": "加速器计划",
+      "detail": "Google DeepMind 推出三个月机器人加速器，扶持欧洲早期创业公司",
+      "children": [
+        "入选 15 家欧洲机器人创业公司",
+        "提供技术指导、产品建议与合作伙伴网络",
+        "本周在伦敦启动，接触 Google DeepMind 与…"
+      ]
+    },
+    {
+      "label": "资源支持",
+      "detail": "入选团队可使用 Google AI 技术栈、技术专长与 Gemini 机器人模型",
+      "children": [
+        "接入 Google AI stack 与 Gemini robotics…",
+        "专家手把手指导，把研究转化为真实应用"
+      ]
+    },
+    {
+      "label": "覆盖领域",
+      "detail": "涵盖医疗、制造、建筑、回收、气候与高级导航等实体 AI 方向",
+      "children": [
+        "医疗：ROBEAUTE 脑组织微型机器人",
+        "制造：3D-Components 焊接与金属 3D 打印",
+        "建筑：AUAR 现场机器人 MicroFactory"
+      ]
+    },
+    {
+      "label": "代表公司",
+      "detail": "15 家创业公司横跨欧洲多国，聚焦具身 AI 与物理 AI",
+      "children": [
+        "挪威 3D-Components、希腊 Acumino、罗马尼亚…",
+        "英国 AUAR、Danu、Extend、Staer、Touchlab",
+        "法国 Bubble、ROBEAUTE；德国 Deltia；瑞士…"
+      ]
+    }
+  ],
+  "flow": [
+    "申请与筛选",
+    "入选 15 家创业公司",
+    "伦敦启动会面",
+    "三个月密集指导",
+    "接入 AI 技术栈",
+    "落地真实机器人应用"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Google DeepMind Accelerator: Robotics",
+      "type": "product"
+    },
+    {
+      "name": "Gemini robotics models",
+      "type": "model"
+    },
+    {
+      "name": "Carolina Parada",
+      "type": "person"
+    },
+    {
+      "name": "3D-Components AS",
+      "type": "company"
+    },
+    {
+      "name": "AUAR",
+      "type": "company"
+    },
+    {
+      "name": "Touchlab",
+      "type": "company"
+    },
+    {
+      "name": "embodied AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Google DeepMind Accelerator: Robotics",
+      "label": "推出"
+    },
+    {
+      "from": "Google DeepMind Accelerator: Robotics",
+      "to": "Gemini robotics models",
+      "label": "提供"
+    },
+    {
+      "from": "Carolina Parada",
+      "to": "Google DeepMind",
+      "label": "任职于"
+    },
+    {
+      "from": "3D-Components AS",
+      "to": "Google DeepMind Accelerator: Robotics",
+      "label": "入选"
+    },
+    {
+      "from": "AUAR",
+      "to": "Google DeepMind Accelerator: Robotics",
+      "label": "入选"
+    },
+    {
+      "from": "Touchlab",
+      "to": "Google DeepMind Accelerator: Robotics",
+      "label": "入选"
+    }
+  ]
+}

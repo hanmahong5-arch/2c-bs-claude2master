@@ -1,0 +1,95 @@
+{
+  "center": "llm-gemini 0.34 发布",
+  "branches": [
+    {
+      "label": "新增模型",
+      "detail": "插件支持 Gemini 3.8 Flash，含低中高三档思考级别",
+      "children": [
+        "gemini-3.8-flash",
+        "3.8 Flash Cyber 仅限可信防御者"
+      ]
+    },
+    {
+      "label": "修复问题",
+      "detail": "修复异步响应未记录已解析模型版本的 bug",
+      "children": [
+        "贡献者 Charlie Tonneslan",
+        "issue #137"
+      ]
+    },
+    {
+      "label": "实测表现",
+      "detail": "快、便宜，擅长 HTML 与 JavaScript 生成",
+      "children": [
+        "13 秒生成 HTML 作品",
+        "成本 1.8 美分"
+      ]
+    },
+    {
+      "label": "工具扩展",
+      "detail": "用 Gemini 3.8 Flash 为 markdown-svg-renderer 加 HTML 支持",
+      "children": [
+        "HTML 块用沙箱 iframe 渲染",
+        "借助 llm-coding-agent 插件"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm-gemini",
+      "type": "product"
+    },
+    {
+      "name": "Gemini 3.8 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.7 Flash",
+      "type": "model"
+    },
+    {
+      "name": "llm-coding-agent",
+      "type": "product"
+    },
+    {
+      "name": "markdown-svg-renderer",
+      "type": "product"
+    },
+    {
+      "name": "Charlie Tonneslan",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm-gemini",
+      "label": "发布"
+    },
+    {
+      "from": "llm-gemini",
+      "to": "Gemini 3.8 Flash",
+      "label": "支持"
+    },
+    {
+      "from": "Gemini 3.8 Flash",
+      "to": "markdown-svg-renderer",
+      "label": "用于扩展"
+    },
+    {
+      "from": "llm-coding-agent",
+      "to": "markdown-svg-renderer",
+      "label": "辅助开发"
+    },
+    {
+      "from": "Charlie Tonneslan",
+      "to": "llm-gemini",
+      "label": "修复贡献"
+    }
+  ]
+}

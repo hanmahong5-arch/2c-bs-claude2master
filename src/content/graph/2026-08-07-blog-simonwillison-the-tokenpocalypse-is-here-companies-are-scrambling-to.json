@@ -1,0 +1,107 @@
+{
+  "center": "AI Token 消耗黑洞",
+  "branches": [
+    {
+      "label": "非工程师耗token",
+      "detail": "Accenture 内部数据显示，token 消耗主力不是工程师，而是非工程岗位",
+      "children": [
+        "Justice Kwak：非工程师在驱动消耗",
+        "来源为泄露的会议录音"
+      ]
+    },
+    {
+      "label": "PDF转Markdown最费",
+      "detail": "把 PDF 转成图片再转 Markdown 被指为最大的 token 消耗源之一",
+      "children": [
+        "Stuart Henderson：这是大 token 吞噬者",
+        "Kwak 确认公司数据支持该说法"
+      ]
+    },
+    {
+      "label": "企业紧急控成本",
+      "detail": "各公司正设法遏制不断上涨的 AI 支出",
+      "children": [
+        "标题：Tokenpocalypse 已至",
+        "企业正手忙脚乱地削减开销"
+      ]
+    },
+    {
+      "label": "PDF是糟糕媒介",
+      "detail": "Simon Willison 认为 PDF 本就不适合传递信息",
+      "children": [
+        "若 Accenture 想通可推动业界改变"
+      ]
+    }
+  ],
+  "flow": [
+    "PDF 转成图片",
+    "图片再转 Markdown",
+    "大量 token 被消耗"
+  ],
+  "entities": [
+    {
+      "name": "Accenture",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Justice Kwak",
+      "type": "person"
+    },
+    {
+      "name": "Stuart Henderson",
+      "type": "person"
+    },
+    {
+      "name": "404 Media",
+      "type": "company"
+    },
+    {
+      "name": "PDF",
+      "type": "concept"
+    },
+    {
+      "name": "Markdown",
+      "type": "concept"
+    },
+    {
+      "name": "token",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Justice Kwak",
+      "to": "Accenture",
+      "label": "任职于"
+    },
+    {
+      "from": "Stuart Henderson",
+      "to": "Accenture",
+      "label": "任职于"
+    },
+    {
+      "from": "404 Media",
+      "to": "Accenture",
+      "label": "报道"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "404 Media",
+      "label": "引用"
+    },
+    {
+      "from": "PDF",
+      "to": "Markdown",
+      "label": "转换为"
+    },
+    {
+      "from": "Markdown",
+      "to": "token",
+      "label": "消耗"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "center": "openclaw v2026.7.1 更新",
+  "branches": [
+    {
+      "label": "Control UI 翻新",
+      "detail": "对话可并排组织，任务、成本、健康面板紧邻聊天区",
+      "children": [
+        "UI 层需嵌入实时监控与操作面板"
+      ]
+    },
+    {
+      "label": "模型兼容扩展",
+      "detail": "新增 GPT-5.6 兼容与 Tencent Hy3 完整支持",
+      "children": [
+        "新增模型与提供商完整配置路径",
+        "需支持动态模型发现和认证"
+      ]
+    },
+    {
+      "label": "Gateway 崩溃修复",
+      "detail": "反复失败的 Gateway 进入稳定修复路径，不再无限重启",
+      "children": [
+        "运行时管理引入熔断与优雅降级"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "Control UI",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "Tencent Hy3",
+      "type": "model"
+    },
+    {
+      "name": "Gateway",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "Control UI",
+      "label": "改版"
+    },
+    {
+      "from": "openclaw",
+      "to": "GPT-5.6",
+      "label": "兼容"
+    },
+    {
+      "from": "openclaw",
+      "to": "Tencent Hy3",
+      "label": "支持"
+    },
+    {
+      "from": "openclaw",
+      "to": "Gateway",
+      "label": "修复"
+    },
+    {
+      "from": "agent harness",
+      "to": "Control UI",
+      "label": "嵌入"
+    }
+  ]
+}

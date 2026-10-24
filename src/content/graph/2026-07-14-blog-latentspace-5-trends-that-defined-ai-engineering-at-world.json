@@ -1,0 +1,109 @@
+{
+  "center": "AI工程五大趋势：从智能体到系统",
+  "branches": [
+    {
+      "label": "重心转向系统",
+      "detail": "焦点从智能体本身转向其外围的harness系统",
+      "children": [
+        "Lilian Weng 2023讲智能体，2026讲harness",
+        "harness管理上下文、权限、评估与状态",
+        "AutoGPT今年几乎无人提及"
+      ]
+    },
+    {
+      "label": "循环工程成控制层",
+      "detail": "工程师进入外层循环，监督内层自主执行",
+      "children": [
+        "内层循环执行工作，外层循环做监督",
+        "autoresearch提供反馈结构",
+        "Addy Osmani：外层循环仍是工程"
+      ]
+    },
+    {
+      "label": "进入企业",
+      "detail": "通过前向部署工程师FDE落地AI能力",
+      "children": [
+        "Sierra的Natalie Meurer领导FDE",
+        "企业需管理集成与多团队协作",
+        "Cursor的Pauline Brunet谈FDE"
+      ]
+    },
+    {
+      "label": "智能体增强而非替代",
+      "detail": "完全自主不可靠也不可取，定位为增强工程师",
+      "children": [
+        "Romain Huet：AI工程师在吃世界",
+        "Thariq Shihipar：模型是长出来的",
+        "Claude能力呈尖刺式增长"
+      ]
+    }
+  ],
+  "flow": [
+    "构建编码智能体",
+    "设计harness",
+    "管理上下文",
+    "评估模型输出",
+    "编排自主系统"
+  ],
+  "entities": [
+    {
+      "name": "Lilian Weng",
+      "type": "person"
+    },
+    {
+      "name": "AutoGPT",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "FDE",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Lilian Weng",
+      "to": "harness",
+      "label": "提出"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "开发"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "开发"
+    },
+    {
+      "from": "AutoGPT",
+      "to": "Lilian Weng",
+      "label": "被举例"
+    },
+    {
+      "from": "FDE",
+      "to": "harness",
+      "label": "落地"
+    }
+  ]
+}

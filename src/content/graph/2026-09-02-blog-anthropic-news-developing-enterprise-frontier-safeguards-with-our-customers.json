@@ -1,0 +1,114 @@
+{
+  "center": "Anthropic 企业前沿防护 EFS",
+  "branches": [
+    {
+      "label": "EFS 是什么",
+      "detail": "结合零数据留存隐私与前沿滥用检测的企业级防护方案",
+      "children": [
+        "数据存于客户自有云，而非 Anthropic",
+        "今秋起分阶段向客户推出",
+        "过渡期 Fable 5/5.1 提供 ZDR"
+      ]
+    },
+    {
+      "label": "为何需要留存",
+      "detail": "复杂滥用跨会话跨账号，需留存数据做关联分析",
+      "children": [
+        "Fable 5 起实行 30 天数据留存",
+        "Anthropic 未经许可不训练企业数据",
+        "监管行业难接受数据留存"
+      ]
+    },
+    {
+      "label": "客户掌控设计",
+      "detail": "数据存储、密钥、审查人员均由客户自己掌控",
+      "children": [
+        "存于 Amazon S3、Azure Blob、Google Cloud",
+        "监控信号直发客户，无需 Anthropic 人工审查",
+        "客户自有团队做人工复核"
+      ]
+    },
+    {
+      "label": "共建与支持",
+      "detail": "与 100 多家客户及三大云厂商共同设计",
+      "children": [
+        "覆盖金融、医疗、制造、电信、法律等",
+        "支持 Claude Code、Claude Enterprise…",
+        "ARC 及多家大银行 CISO 参与"
+      ]
+    }
+  ],
+  "flow": [
+    "数据存客户云",
+    "自动监控滚动窗口",
+    "检测异常信号",
+    "信号直发客户",
+    "客户团队复核"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Enterprise Frontier Safeguards",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable 5.1",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Amazon Web Services",
+      "type": "company"
+    },
+    {
+      "name": "Google Cloud",
+      "type": "company"
+    },
+    {
+      "name": "Microsoft Azure",
+      "type": "company"
+    },
+    {
+      "name": "零数据留存",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Enterprise Frontier Safeguards",
+      "label": "推出"
+    },
+    {
+      "from": "Enterprise Frontier Safeguards",
+      "to": "零数据留存",
+      "label": "结合"
+    },
+    {
+      "from": "Enterprise Frontier Safeguards",
+      "to": "Claude Code",
+      "label": "支持"
+    },
+    {
+      "from": "Enterprise Frontier Safeguards",
+      "to": "Amazon Web Services",
+      "label": "依托"
+    },
+    {
+      "from": "Enterprise Frontier Safeguards",
+      "to": "Google Cloud",
+      "label": "依托"
+    },
+    {
+      "from": "Enterprise Frontier Safeguards",
+      "to": "Microsoft Azure",
+      "label": "依托"
+    }
+  ]
+}

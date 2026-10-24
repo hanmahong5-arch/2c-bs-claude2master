@@ -1,0 +1,70 @@
+{
+  "center": "Cline CLI v3.0.47 更新",
+  "branches": [
+    {
+      "label": "免费模型支持",
+      "detail": "端到端支持免费模型，显示额度与重置时间",
+      "children": [
+        "模型名旁显示 (free) 标识",
+        "达限额时显示重置时间卡片"
+      ]
+    },
+    {
+      "label": "设置持久化",
+      "detail": "/settings 通用开关重启后保持",
+      "children": [
+        "plan/act 模式",
+        "工具自动批准",
+        "压缩模式"
+      ]
+    },
+    {
+      "label": "Agentic 压缩默认",
+      "detail": "成为默认上下文压缩策略，更智能管理上下文窗口",
+      "children": [
+        "修复静默回退到基础压缩",
+        "修复工具密集记录找不到切割点"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "Agentic 压缩",
+      "type": "technique"
+    },
+    {
+      "name": "基础压缩",
+      "type": "technique"
+    },
+    {
+      "name": "plan/act 模式",
+      "type": "concept"
+    },
+    {
+      "name": "上下文窗口",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "Agentic 压缩",
+      "label": "默认启用"
+    },
+    {
+      "from": "Agentic 压缩",
+      "to": "上下文窗口",
+      "label": "管理"
+    },
+    {
+      "from": "Agentic 压缩",
+      "to": "基础压缩",
+      "label": "替代"
+    }
+  ]
+}

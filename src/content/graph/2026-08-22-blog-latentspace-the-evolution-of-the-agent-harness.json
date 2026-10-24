@@ -1,0 +1,112 @@
+{
+  "center": "Agent Harness 的进化",
+  "branches": [
+    {
+      "label": "Harness 是什么",
+      "detail": "模型权重之外让 Agent 真正工作的一切：环境、工具、上下文与护栏",
+      "children": [
+        "让模型能感知、行动、记忆、守边界",
+        "没有 harness，模型只是缸中之脑"
+      ]
+    },
+    {
+      "label": "曲线交叉时刻",
+      "detail": "模型能力曲线与 harness 需求曲线在 2024 末至 2025 初交叉",
+      "children": [
+        "o1 让模型首次出现能力过剩",
+        "Claude Code 抓住时机放手给模型自主权",
+        "Claude Code 半年约 10 亿美元 ARR"
+      ]
+    },
+    {
+      "label": "Harness 1.0 演进",
+      "detail": "从纸上循环到过早自主，再到退回人在环中",
+      "children": [
+        "ReAct 只是提示技巧，非真 harness",
+        "AutoGPT 过度自主，20 步 95% 可靠性仅约 36%…",
+        "Cursor/Copilot 让人类编排循环"
+      ]
+    },
+    {
+      "label": "Harness 2.0 现状",
+      "detail": "RL 进入 harness，模型与 harness 共同训练、互相编织",
+      "children": [
+        "Harness-Bench 同模型不同 harness 分差 23.…",
+        "GPT-5.6 Sol 加保留推理与压缩，ARC-AGI-3 从…",
+        "codex-1 在真实编码任务上做 RL"
+      ]
+    },
+    {
+      "label": "未来方向",
+      "detail": "模型不断吸收 harness 能力进权重，工程师删掉被吸收的部分",
+      "children": [
+        "Toolformer 的梦想成真：工具调用从内部训练",
+        "最终剩下的是为人类注意力设计的 harness"
+      ]
+    }
+  ],
+  "flow": [
+    "ReAct 提示循环",
+    "AutoGPT 过早自主",
+    "IDE 退回人在环",
+    "o1 能力过剩",
+    "Claude Code 曲线交叉",
+    "RL 进入 harness"
+  ],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "ReAct",
+      "type": "technique"
+    },
+    {
+      "name": "AutoGPT",
+      "type": "product"
+    },
+    {
+      "name": "Toolformer",
+      "type": "model"
+    },
+    {
+      "name": "o1",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "codex-1",
+      "type": "model"
+    },
+    {
+      "name": "Lukasz Kaiser",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "o1",
+      "label": "承接能力过剩"
+    },
+    {
+      "from": "AutoGPT",
+      "to": "ReAct",
+      "label": "扩展为自主循环"
+    },
+    {
+      "from": "codex-1",
+      "to": "Claude Code",
+      "label": "同属编码…"
+    },
+    {
+      "from": "Lukasz Kaiser",
+      "to": "ReAct",
+      "label": "评论其变化"
+    }
+  ]
+}

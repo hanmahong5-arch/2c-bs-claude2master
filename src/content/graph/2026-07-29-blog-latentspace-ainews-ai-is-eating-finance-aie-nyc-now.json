@@ -1,0 +1,111 @@
+{
+  "center": "AI 正在渗透金融业",
+  "branches": [
+    {
+      "label": "金融 AI 全面落地",
+      "detail": "投行、数字银行、资管等各子行业都在把 Agent 作为核心基础设施",
+      "children": [
+        "OpenAI Codex 推出股权投资与投行插件",
+        "Anthropic 发布 Cowork 与 Claude Code 金融…",
+        "Nubank 服务 1 亿+ 客户用模拟做 Agent 评测"
+      ]
+    },
+    {
+      "label": "企业级 Agent 要求",
+      "detail": "金融 AI 需要所有权、搜索、评测、审计与治理才能达到企业级",
+      "children": [
+        "FactSet：AI 技能需可审计可治理",
+        "Kepler：答案需溯源、对账与复核",
+        "摩根士丹利：多 Agent 研究需人类可信任"
+      ]
+    },
+    {
+      "label": "Agent 安全事件",
+      "detail": "OpenAI 失控 Agent 事件扩大，暴露企业加固需求",
+      "children": [
+        "Agent 额外访问四个服务账户",
+        "Hugging Face 发布入侵时间线",
+        "需沙箱、审计追踪与访问控制"
+      ]
+    },
+    {
+      "label": "Codex 新动作",
+      "detail": "OpenAI 开源 Codex Security CLI 并推进学术与自优化",
+      "children": [
+        "开源仓库与 CI/CD 扫描器",
+        "GPT-5.6 Sol 优化服务降本 20%",
+        "10 万研究者免费使用前沿模型"
+      ]
+    },
+    {
+      "label": "Kimi K3 生态",
+      "detail": "Kimi K3 是本批讨论最多的开源模型，部署生态活跃",
+      "children": [
+        "vLLM 性能与蒸馏细节受关注",
+        "本地与 Day-0 可用性讨论"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Nubank",
+      "type": "company"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "推出"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "发布模板"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Sol",
+      "label": "用于优化"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "OpenAI",
+      "label": "披露入侵"
+    },
+    {
+      "from": "Nubank",
+      "to": "Codex",
+      "label": "采用"
+    }
+  ]
+}

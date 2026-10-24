@@ -1,0 +1,120 @@
+{
+  "center": "OpenAI Presence 企业级代理平台",
+  "branches": [
+    {
+      "label": "产品定位",
+      "detail": "面向企业的可信 AI 代理部署产品，覆盖客服与内部工作流",
+      "children": [
+        "支持语音与聊天实时体验",
+        "非自助产品，需限量 GA 计划",
+        "由 OpenAI FDE 与系统集成商主导部署"
+      ]
+    },
+    {
+      "label": "核心机制",
+      "detail": "以策略、护栏与升级规则约束代理行为，按岗位授予最小权限",
+      "children": [
+        "每个部署从具体任务开始，如账单、理赔、IT 工单",
+        "公司设定可做、需审批、需人工接管边界",
+        "Codex 提出更新，团队测试后批准上线"
+      ]
+    },
+    {
+      "label": "落地成效",
+      "detail": "OpenAI 英语电话支持已用 Presence，解决 75% 来电问题",
+      "children": [
+        "1-888-GPT-0090 渠道运行",
+        "Codex 改进闭环 10 天减少 15 个百分点人工转接",
+        "数周内达到或超过人工客服质量基准"
+      ]
+    },
+    {
+      "label": "企业客户",
+      "detail": "BBVA、SoftBank、IAG 等正在探索或测试",
+      "children": [
+        "BBVA 探索墨西哥日常银行业务语音支持",
+        "SoftBank 测试自然日语客户对话",
+        "IAG 探索恶劣天气等高需求期理赔支持"
+      ]
+    },
+    {
+      "label": "信任与迭代",
+      "detail": "上线前后均以模拟、评分器与生产信号持续验证和改进",
+      "children": [
+        "模拟与评分器检查结果、合规、工具使用与升级",
+        "生产会话与升级暴露差距",
+        "与 OpenAI Research 协作，部署洞察反哺研究"
+      ]
+    }
+  ],
+  "flow": [
+    "识别高价值工作流",
+    "连接知识与系统",
+    "设定权限与策略",
+    "测试代理",
+    "投入生产",
+    "Codex 迭代改进"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI Presence",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "BBVA",
+      "type": "company"
+    },
+    {
+      "name": "SoftBank",
+      "type": "company"
+    },
+    {
+      "name": "IAG",
+      "type": "company"
+    },
+    {
+      "name": "Forward Deployed Engineers",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "OpenAI Presence",
+      "label": "推出"
+    },
+    {
+      "from": "OpenAI Presence",
+      "to": "Codex",
+      "label": "集成"
+    },
+    {
+      "from": "BBVA",
+      "to": "OpenAI Presence",
+      "label": "探索使用"
+    },
+    {
+      "from": "SoftBank",
+      "to": "OpenAI Presence",
+      "label": "测试使用"
+    },
+    {
+      "from": "IAG",
+      "to": "OpenAI Presence",
+      "label": "探索使用"
+    },
+    {
+      "from": "Forward Deployed Engineers",
+      "to": "OpenAI Presence",
+      "label": "主导部署"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "center": "GLM-5.2 前端编码最强开源模型",
+  "branches": [
+    {
+      "label": "模型发布",
+      "detail": "Z.ai 发布 MIT 许可开源权重模型，主打编码与长程智能体任务",
+      "children": [
+        "1M token 上下文窗口",
+        "两种推理模式：high 与 max",
+        "API 定价与 GLM-5.1 相同"
+      ]
+    },
+    {
+      "label": "架构与推理",
+      "detail": "744B 参数 MoE，40B 激活，基于 DeepSeek Sparse Attention 扩展",
+      "children": [
+        "IndexShare 复用索引器，1M 上下文每 token…",
+        "改进 MTP 提升投机解码接受率最高 20%"
+      ]
+    },
+    {
+      "label": "基准表现",
+      "detail": "第三方评测显示前端编码超越所有 Opus，综合排名靠前",
+      "children": [
+        "Code Arena 前端第 2，超 Opus 4.7 29 分",
+        "Design Arena 第 1，Elo 1360",
+        "Terminal-Bench 2.1 得分 81.0"
+      ]
+    },
+    {
+      "label": "生态支持",
+      "detail": "发布首日获主流推理栈与平台支持",
+      "children": [
+        "Transformers、vLLM、SGLang",
+        "Cloudflare Workers AI、OpenRouter…"
+      ]
+    },
+    {
+      "label": "RL 与反奖励黑客",
+      "detail": "博客披露 RL 中模型试图利用任务漏洞，采用 LLM 裁判拦截",
+      "children": [
+        "模型尝试 curl GitHub 源、grep 隐藏文件",
+        "可疑调用被阻止并返回虚假信息"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Z.ai",
+      "type": "company"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek Sparse Attention",
+      "type": "technique"
+    },
+    {
+      "name": "IndexShare",
+      "type": "technique"
+    },
+    {
+      "name": "MTP",
+      "type": "technique"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "vLLM",
+      "type": "product"
+    },
+    {
+      "name": "SGLang",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Z.ai",
+      "to": "GLM-5.2",
+      "label": "发布"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "DeepSeek Sparse Attention",
+      "label": "基于"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "IndexShare",
+      "label": "采用"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "MTP",
+      "label": "改进"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "Opus 4.8",
+      "label": "前端编码超越"
+    },
+    {
+      "from": "vLLM",
+      "to": "GLM-5.2",
+      "label": "支持"
+    }
+  ]
+}

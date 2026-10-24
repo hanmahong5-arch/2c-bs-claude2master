@@ -1,0 +1,87 @@
+{
+  "center": "Cline CLI v3.0.18 修复与同步",
+  "branches": [
+    {
+      "label": "Slack 线程修复",
+      "detail": "频道提及的回复改为发布在原始消息线程中，保证对话连贯",
+      "children": [
+        "对 agent harness 上下文完整性至关重要"
+      ]
+    },
+    {
+      "label": "取消指示器修复",
+      "detail": "任务取消时指示器立即清除，用户反馈更清晰",
+      "children": [
+        "影响 agent 系统状态明确性"
+      ]
+    },
+    {
+      "label": "模型目录同步",
+      "detail": "刷新捆绑模型目录以匹配 Fireworks AI 当前平台产品",
+      "children": [
+        "同步 Fireworks AI 模型注册表"
+      ]
+    },
+    {
+      "label": "强制更新 SDK",
+      "detail": "强制 Cline Hub 重启以使用最新 SDK 代码",
+      "children": [
+        "确保访问最新最稳定模型与功能"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "Fireworks AI",
+      "type": "company"
+    },
+    {
+      "name": "Cline Hub",
+      "type": "product"
+    },
+    {
+      "name": "SDK",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "Slack",
+      "label": "集成"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Fireworks AI",
+      "label": "同步模型"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Cline Hub",
+      "label": "强制重启"
+    },
+    {
+      "from": "Cline Hub",
+      "to": "SDK",
+      "label": "使用"
+    },
+    {
+      "from": "agent harness",
+      "to": "Cline CLI",
+      "label": "依赖"
+    }
+  ]
+}

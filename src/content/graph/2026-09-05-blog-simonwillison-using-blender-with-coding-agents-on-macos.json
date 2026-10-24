@@ -1,0 +1,110 @@
+{
+  "center": "编码代理在 macOS 上用 Blender",
+  "branches": [
+    {
+      "label": "核心做法",
+      "detail": "安装完整 Mac 版 Blender，让编码代理直接调用它生成场景",
+      "children": [
+        "从 blender.org 安装完整 Mac 应用",
+        "提示词：用 /Applications/Blender 渲染骑自…"
+      ]
+    },
+    {
+      "label": "模型能力",
+      "detail": "前沿模型已非常擅长使用 Blender，通过其 Python API 生成内容",
+      "children": [
+        "可产出可在 Blender 中编辑的 .blend 文件",
+        "可渲染图片，甚至用 ffmpeg 合成序列成影片"
+      ]
+    },
+    {
+      "label": "迭代过程",
+      "detail": "Simon Willison 用连续提示词逐步改进渲染结果",
+      "children": [
+        "追加提示：加背景和大量花哨效果",
+        "再追加：让它整体好很多"
+      ]
+    },
+    {
+      "label": "成本与渠道",
+      "detail": "在 Mac 上的 ChatGPT Codex 中完成，由现有订阅覆盖",
+      "children": [
+        "AgentsView 估算 API 价约 $4.24",
+        "按 gpt-6-astra 价格计算"
+      ]
+    }
+  ],
+  "flow": [
+    "安装 Mac 版 Blender",
+    "在编码代理中写提示词",
+    "代理调用 Blender Python API",
+    "渲染图片或序列",
+    "用 ffmpeg 合成影片"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Blender",
+      "type": "product"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT Codex",
+      "type": "product"
+    },
+    {
+      "name": "gpt-6-astra",
+      "type": "model"
+    },
+    {
+      "name": "AgentsView",
+      "type": "product"
+    },
+    {
+      "name": "ffmpeg",
+      "type": "product"
+    },
+    {
+      "name": "编码代理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Blender",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "ChatGPT Codex",
+      "label": "使用"
+    },
+    {
+      "from": "ChatGPT Codex",
+      "to": "gpt-6-astra",
+      "label": "调用"
+    },
+    {
+      "from": "编码代理",
+      "to": "Blender",
+      "label": "调用"
+    },
+    {
+      "from": "Blender",
+      "to": "ffmpeg",
+      "label": "配合"
+    },
+    {
+      "from": "AgentsView",
+      "to": "gpt-6-astra",
+      "label": "估算成本"
+    }
+  ]
+}

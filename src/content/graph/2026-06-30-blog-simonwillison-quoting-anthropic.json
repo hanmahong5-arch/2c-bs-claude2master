@@ -1,0 +1,88 @@
+{
+  "center": "Anthropic 恢复 Claude Fable 5…",
+  "branches": [
+    {
+      "label": "出口管制解除",
+      "detail": "美国商务部已撤销对 Claude Fable 5 和 Mythos 5 的出口管制",
+      "children": [
+        "Anthropic 收到商务部通知",
+        "管制撤销后即可恢复访问"
+      ]
+    },
+    {
+      "label": "恢复时间表",
+      "detail": "Anthropic 表示将于次日开始恢复访问，并很快分享更新",
+      "children": [
+        "公告发布于 2026 年 6 月 30 日",
+        "恢复从 7 月 1 日开始"
+      ]
+    },
+    {
+      "label": "消息来源",
+      "detail": "该消息由 Simon Willison 博客引用 Anthropic 在 Twitter 上的声明",
+      "children": [
+        "Simon Willison's Weblog 收录",
+        "原文为 Anthropic 推文"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "Department of Commerce",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "export controls",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5",
+      "label": "恢复访问"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Mythos 5",
+      "label": "恢复访问"
+    },
+    {
+      "from": "Department of Commerce",
+      "to": "export controls",
+      "label": "撤销"
+    },
+    {
+      "from": "export controls",
+      "to": "Claude Fable 5",
+      "label": "曾限制"
+    },
+    {
+      "from": "export controls",
+      "to": "Mythos 5",
+      "label": "曾限制"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Anthropic",
+      "label": "引用"
+    }
+  ]
+}

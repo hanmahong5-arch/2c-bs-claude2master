@@ -1,0 +1,50 @@
+{
+  "center": "Cline v4.0.4 ClinePass 开放",
+  "branches": [
+    {
+      "label": "功能标志移除",
+      "detail": "ClinePass 功能标志被完全移除，所有用户无需开关即可使用",
+      "children": [
+        "不再需要条件判断"
+      ]
+    },
+    {
+      "label": "入口全面覆盖",
+      "detail": "ClinePass 入口覆盖 onboarding、设置、欢迎横幅及额度限制提示",
+      "children": [
+        "onboarding",
+        "设置",
+        "欢迎横幅"
+      ]
+    },
+    {
+      "label": "简化接入流程",
+      "detail": "对 agent harness 设计而言，付费功能接入流程被简化",
+      "children": [
+        "无需条件判断"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "ClinePass",
+      "label": "发布"
+    }
+  ]
+}

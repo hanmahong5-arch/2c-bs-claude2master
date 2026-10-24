@@ -1,0 +1,112 @@
+{
+  "center": "Claude Fable/Mythos 5.1 发布",
+  "branches": [
+    {
+      "label": "新旗舰模型",
+      "detail": "Anthropic 发布 Fable 5.1 与 Mythos 5.1，主打编码与知识工作",
+      "children": [
+        "Fable 5.1 面向自主多步长任务",
+        "Mythos 5.1 为知识工作配对版本",
+        "社区推测二者同权重、仅安全路由不同"
+      ]
+    },
+    {
+      "label": "缓存降价 75%",
+      "detail": "缓存读取从 $1.00 降至 $0.25/百万 token，输入输出价格不变",
+      "children": [
+        "输入 $10、输出 $50、缓存写 $12.5",
+        "长会话与长上下文用户受益最大",
+        "CursorBench 成本降近 50%"
+      ]
+    },
+    {
+      "label": "输出 token 增 70%",
+      "detail": "Artificial Analysis 观测输出 token 用量约 1.7 倍，单任务净成本涨 20%",
+      "children": [
+        "Fable 5.1 max：$3.76/任务",
+        "缓存节省约 $1.40/任务",
+        "GPT-5.6 Sol 每美元智能仍占优"
+      ]
+    },
+    {
+      "label": "基准登顶",
+      "detail": "AA 智能指数 66 居首，HLE 59.1%，Terminal-Bench v2.1 91.4%",
+      "children": [
+        "Terminal-Bench-Science 从 24.7% 升至 52.6%",
+        "GDPval-AA v2 达 1853 Elo，+130",
+        "安全请求回退 Opus 4.8/5，占输出约 4%"
+      ]
+    },
+    {
+      "label": "企业级控制",
+      "detail": "新增 Enterprise Frontier Safeguards，支持零数据保留",
+      "children": [
+        "EFS 被称 ZDR++，用于 agent 可观测性",
+        "改进诚实度：卡住时如实报告",
+        "用户抱怨限流与安全误报"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Fable 5.1",
+      "type": "model"
+    },
+    {
+      "name": "Claude Mythos 5.1",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Enterprise Frontier Safeguards",
+      "type": "product"
+    },
+    {
+      "name": "World Labs Astra",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Fable 5.1",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Mythos 5.1",
+      "label": "发布"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "Claude Fable 5.1",
+      "label": "评测"
+    },
+    {
+      "from": "Claude Fable 5.1",
+      "to": "Claude Opus 5",
+      "label": "回退至"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Enterprise Frontier Safeguards",
+      "label": "推出"
+    }
+  ]
+}

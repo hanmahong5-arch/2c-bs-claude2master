@@ -1,0 +1,66 @@
+{
+  "center": "AI 助手整合衰老研究",
+  "branches": [
+    {
+      "label": "整合碎片化数据",
+      "detail": "Calico 研究数据分散于数据库和论文，Co-Scientist 能整合并识别潜在联系",
+      "children": [
+        "跨领域非结构化数据关联是关键"
+      ]
+    },
+    {
+      "label": "生成新研究假设",
+      "detail": "系统基于现有知识提出可验证假设，为研究人员指明新方向",
+      "children": [
+        "超越信息检索，具备推理与联想"
+      ]
+    },
+    {
+      "label": "聚焦衰老生物学",
+      "detail": "案例展示 AI 识别与年龄相关疾病相关的基因和通路",
+      "children": [
+        "领域专业化 AI 转化文献为见解"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Calico",
+      "type": "company"
+    },
+    {
+      "name": "Co-Scientist",
+      "type": "product"
+    },
+    {
+      "name": "衰老研究",
+      "type": "concept"
+    },
+    {
+      "name": "AI 助手",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Co-Scientist",
+      "label": "开发"
+    },
+    {
+      "from": "Calico",
+      "to": "Co-Scientist",
+      "label": "应用"
+    },
+    {
+      "from": "Co-Scientist",
+      "to": "衰老研究",
+      "label": "助力"
+    }
+  ]
+}

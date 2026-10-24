@@ -1,0 +1,116 @@
+{
+  "center": "ALTK-Evolve 用更少 token 实现…",
+  "branches": [
+    {
+      "label": "核心分歧在交付",
+      "detail": "两系统都不压缩经验，差别在于推理时把多少经验喂给模型",
+      "children": [
+        "ACE 每步注入完整 playbook",
+        "ALTK-Evolve 按任务检索少量 guideline"
+      ]
+    },
+    {
+      "label": "构建方式不同",
+      "detail": "ACE 用 Generator→Reflector→Curator 循环扩写单一 playbook",
+      "children": [
+        "ALTK-Evolve 聚类合并近似经验并保留支持计数",
+        "提取 strategy/recovery/optimization 三类…"
+      ]
+    },
+    {
+      "label": "AppWorld 成绩",
+      "detail": "同基座 ReAct agent 上，ALTK-Evolve 精度不输且 token 大幅下降",
+      "children": [
+        "DeepSeek-V3.2：89.3/80.4，263K token",
+        "gpt-oss-120b：56.0/37.5，116K token"
+      ]
+    },
+    {
+      "label": "成本差异",
+      "detail": "强模型上约为 ACE 推理成本的 40%，弱模型上约七分之一",
+      "children": [
+        "ACE 的省钱在构建上下文，ALTK-Evolve 在服务…"
+      ]
+    },
+    {
+      "label": "难度分层表现",
+      "detail": "弱模型上 ACE 领先简单/中等任务，ALTK-Evolve 赢在困难任务",
+      "children": [
+        "强模型上 ALTK-Evolve 赢 Easy、Hard 与总体"
+      ]
+    }
+  ],
+  "flow": [
+    "采集 agent 轨迹",
+    "提取 typed guideline",
+    "聚类合并并保留支持计数",
+    "按任务检索少量 guideline",
+    "推理时注入模型"
+  ],
+  "entities": [
+    {
+      "name": "ALTK-Evolve",
+      "type": "product"
+    },
+    {
+      "name": "ACE",
+      "type": "technique"
+    },
+    {
+      "name": "IBM",
+      "type": "company"
+    },
+    {
+      "name": "AppWorld",
+      "type": "product"
+    },
+    {
+      "name": "DeepSeek-V3.2",
+      "type": "model"
+    },
+    {
+      "name": "gpt-oss-120b",
+      "type": "model"
+    },
+    {
+      "name": "ReAct",
+      "type": "technique"
+    },
+    {
+      "name": "agentic memory",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "IBM",
+      "to": "ALTK-Evolve",
+      "label": "提出"
+    },
+    {
+      "from": "ALTK-Evolve",
+      "to": "ACE",
+      "label": "对比"
+    },
+    {
+      "from": "ALTK-Evolve",
+      "to": "AppWorld",
+      "label": "评测于"
+    },
+    {
+      "from": "ACE",
+      "to": "AppWorld",
+      "label": "评测于"
+    },
+    {
+      "from": "ALTK-Evolve",
+      "to": "agentic memory",
+      "label": "属于"
+    },
+    {
+      "from": "ACE",
+      "to": "agentic memory",
+      "label": "属于"
+    }
+  ]
+}

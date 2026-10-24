@@ -1,0 +1,103 @@
+{
+  "center": "Hermes Agent 补丁版更新",
+  "branches": [
+    {
+      "label": "桌面 UI 毛玻璃",
+      "detail": "新增磨砂玻璃与半透明效果，含取色器及 macOS 预选",
+      "children": [
+        "磨砂玻璃、取色器",
+        "macOS 预选",
+        "提升视觉一致性"
+      ]
+    },
+    {
+      "label": "侧栏标签化",
+      "detail": "侧栏改为 SESSIONS|BOTS 标签式，支持按 bot 隐藏/显示",
+      "children": [
+        "SESSIONS|BOTS 标签",
+        "按 bot 隐藏/显示",
+        "优化多 bot 管理"
+      ]
+    },
+    {
+      "label": "NVIDIA 技能扫描",
+      "detail": "SkillEvaluator 在技能安装时执行 Tier 1 许可与安全扫描",
+      "children": [
+        "安装时自动扫描",
+        "Tier 1 许可与安全"
+      ]
+    },
+    {
+      "label": "Bot Mode 修复",
+      "detail": "修复群聊长轮次、Markdown 渲染及跨机器路由问题",
+      "children": [
+        "群聊长轮次",
+        "Markdown 渲染",
+        "跨机器路由"
+      ]
+    },
+    {
+      "label": "cron 与存储加固",
+      "detail": "cron 媒体发送可配置超时与错失提示，SessionDB 修复线程竞争",
+      "children": [
+        "可配置超时",
+        "手动运行附件",
+        "错失触发提示"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "NVIDIA SkillEvaluator",
+      "type": "product"
+    },
+    {
+      "name": "Bot Mode",
+      "type": "concept"
+    },
+    {
+      "name": "SessionDB",
+      "type": "product"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "cron",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "NVIDIA SkillEvaluator",
+      "label": "集成"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "Bot Mode",
+      "label": "包含"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "SessionDB",
+      "label": "使用"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "cron",
+      "label": "支持"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "macOS",
+      "label": "适配"
+    }
+  ]
+}

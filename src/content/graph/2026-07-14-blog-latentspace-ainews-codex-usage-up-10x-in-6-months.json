@@ -1,0 +1,117 @@
+{
+  "center": "Codex 用户半年增10倍达700万",
+  "branches": [
+    {
+      "label": "Codex 用户暴增",
+      "detail": "半年内用户增长超10倍，达700万活跃用户",
+      "children": [
+        "7月12日达600万，24.5小时后达700万",
+        "年初约55万-70万用户",
+        "新增用户可获银行重置周用量"
+      ]
+    },
+    {
+      "label": "可能超越Claude Code",
+      "detail": "Claude Code 2月约200万用户，Codex增速更快",
+      "children": [
+        "Claude Code 2月约200万周活、25亿美元ARR",
+        "Claude 将编码重心转向 Claude Tag",
+        "两者统计口径不同，难以直接比较"
+      ]
+    },
+    {
+      "label": "GPT-5.6 Sol 优化",
+      "detail": "OpenAI 修复用量燃烧问题，提升推理效率",
+      "children": [
+        "推理优化带来约10%更多用量",
+        "上下文限制从372k回滚至272k",
+        "修复高推理强度下多智能体过度行为"
+      ]
+    },
+    {
+      "label": "Agent RL 基础设施",
+      "detail": "Prime Intellect 发布 verifiers v1，重构环境栈",
+      "children": [
+        "环境拆分为 taskset、harness、runtime",
+        "轨迹存为消息 DAG，复杂度从 O(n²) 降至 O(n)",
+        "100B 模型在 6 台 H200 上 2 天内完成 1000…"
+      ]
+    },
+    {
+      "label": "成本每任务成新指标",
+      "detail": "行业从 token 定价转向 cost per task 评估",
+      "children": [
+        "Devin Fusion 用 Fable 5 成本低于 Opus 4.8",
+        "81% Fable 主导运行中主模型未编辑代码",
+        "Arena 将 GPT-5.6 Sol 列为 agent 榜第2"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Prime Intellect",
+      "type": "company"
+    },
+    {
+      "name": "verifiers v1",
+      "type": "product"
+    },
+    {
+      "name": "Claude Tag",
+      "type": "product"
+    },
+    {
+      "name": "Devin Fusion",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "运营"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Sol",
+      "label": "发布"
+    },
+    {
+      "from": "Codex",
+      "to": "Claude Code",
+      "label": "竞争"
+    },
+    {
+      "from": "Prime Intellect",
+      "to": "verifiers v1",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude Tag",
+      "label": "重心转移"
+    },
+    {
+      "from": "Devin Fusion",
+      "to": "GPT-5.6 Sol",
+      "label": "采用"
+    }
+  ]
+}

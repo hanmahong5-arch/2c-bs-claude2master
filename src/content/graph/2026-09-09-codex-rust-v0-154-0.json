@@ -1,0 +1,70 @@
+{
+  "center": "Codex rust-v0.154.0 更新",
+  "branches": [
+    {
+      "label": "GPT-6-Astra 上架",
+      "detail": "模型目录新增 GPT-6-Astra，进入模型选择器与 Bedrock 目录",
+      "children": [
+        "harness 需支持多模型路由与能力声明",
+        "不再硬编码单一后端"
+      ]
+    },
+    {
+      "label": "worktree 隔离会话",
+      "detail": "实验性 worktree 支持，通过 --worktree 或 /worktree 创建隔离检出",
+      "children": [
+        "隔离检出可浏览与恢复",
+        "会话状态与文件系统快照解耦",
+        "便于 fork 与回滚"
+      ]
+    },
+    {
+      "label": "异步内联问答",
+      "detail": "Codex 工作时可用建议选项或自定义文本回答，不丢失主草稿",
+      "children": [
+        "需支持非阻塞用户输入通道",
+        "需支持草稿保护"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GPT-6-Astra",
+      "type": "model"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "worktree",
+      "type": "technique"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "GPT-6-Astra",
+      "to": "Bedrock",
+      "label": "上架"
+    },
+    {
+      "from": "Codex",
+      "to": "worktree",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "GPT-6-Astra",
+      "label": "接入"
+    }
+  ]
+}

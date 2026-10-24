@@ -1,0 +1,86 @@
+{
+  "center": "codex rust-v0.137.0 更新",
+  "branches": [
+    {
+      "label": "多智能体运行时",
+      "detail": "V2 运行时选择按线程保留，默认隐藏生成的智能体元数据",
+      "children": [
+        "每线程保留运行时选择",
+        "默认隐藏智能体元数据",
+        "编排需细粒度运行时管理"
+      ]
+    },
+    {
+      "label": "企业级配置",
+      "detail": "支持云端管理配置包（含 EDU 工作区）并显示月度信用额度",
+      "children": [
+        "云端管理配置包",
+        "覆盖 EDU 工作区",
+        "显示月度信用额度"
+      ]
+    },
+    {
+      "label": "插件与工具",
+      "detail": "插件列表支持 JSON 输出，托管网络/图像工具在更多代码模式可用",
+      "children": [
+        "插件列表 JSON 输出",
+        "托管网络工具扩展",
+        "托管图像工具扩展"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "多智能体 V2 运行时",
+      "type": "concept"
+    },
+    {
+      "name": "插件管理",
+      "type": "concept"
+    },
+    {
+      "name": "企业级配置",
+      "type": "concept"
+    },
+    {
+      "name": "信用额度管理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "发布"
+    },
+    {
+      "from": "Codex",
+      "to": "多智能体 V2 运行时",
+      "label": "支持"
+    },
+    {
+      "from": "Codex",
+      "to": "插件管理",
+      "label": "增强"
+    },
+    {
+      "from": "Codex",
+      "to": "企业级配置",
+      "label": "强化"
+    },
+    {
+      "from": "企业级配置",
+      "to": "信用额度管理",
+      "label": "包含"
+    }
+  ]
+}

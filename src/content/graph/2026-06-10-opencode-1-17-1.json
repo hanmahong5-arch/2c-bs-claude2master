@@ -1,0 +1,74 @@
+{
+  "center": "OpenCode 1.17.1 更新",
+  "branches": [
+    {
+      "label": "引用功能增强",
+      "detail": "引用可含代理使用说明并在文档中显示",
+      "children": [
+        "可按需从 @ 自动补全中隐藏",
+        "代理工具需定义使用上下文与可见性"
+      ]
+    },
+    {
+      "label": "连接稳定性修复",
+      "detail": "修复 MCP 服务器设置期间失败导致连接残留",
+      "children": [
+        "提示与资源请求遵守配置超时",
+        "需更健壮的错误处理与资源生命周期管理"
+      ]
+    },
+    {
+      "label": "桌面会话改进",
+      "detail": "新增 /new-session 路由优化任务创建流程",
+      "children": [
+        "提示与项目选择保存在草稿标签页",
+        "直到会话开始才提交"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenCode",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "代理引用管理",
+      "type": "concept"
+    },
+    {
+      "name": "桌面会话流程",
+      "type": "concept"
+    },
+    {
+      "name": "/new-session",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenCode",
+      "to": "MCP",
+      "label": "修复连接"
+    },
+    {
+      "from": "OpenCode",
+      "to": "代理引用管理",
+      "label": "优化"
+    },
+    {
+      "from": "OpenCode",
+      "to": "桌面会话流程",
+      "label": "改进"
+    },
+    {
+      "from": "桌面会话流程",
+      "to": "/new-session",
+      "label": "新增"
+    }
+  ]
+}

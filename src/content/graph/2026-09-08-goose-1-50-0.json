@@ -1,0 +1,83 @@
+{
+  "center": "Goose v1.50.0 更新",
+  "branches": [
+    {
+      "label": "支持 GPT-6 Astra",
+      "detail": "新增 GPT-6 Astra 模型支持，扩展模型选择范围",
+      "children": [
+        "harness 需适配新模型 API"
+      ]
+    },
+    {
+      "label": "工具调用能力",
+      "detail": "goose-agent 支持工具调用，可主动调用外部工具",
+      "children": [
+        "harness 需管理工具注册与权限"
+      ]
+    },
+    {
+      "label": "安全边界强化",
+      "detail": "强制 Snowflake 连接使用 HTTPS，限制 CLI 会话命名路径",
+      "children": [
+        "harness 需加强安全校验"
+      ]
+    },
+    {
+      "label": "隐私与子代理隔离",
+      "detail": "追踪尊重内容捕获退出选项，子代理平台守卫强制执行",
+      "children": [
+        "harness 需确保数据隐私合规",
+        "harness 需隔离子代理环境"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "goose-agent",
+      "type": "product"
+    },
+    {
+      "name": "Snowflake",
+      "type": "product"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "GPT-6 Astra",
+      "label": "支持"
+    },
+    {
+      "from": "goose-agent",
+      "to": "Goose",
+      "label": "属于"
+    },
+    {
+      "from": "Goose",
+      "to": "Snowflake",
+      "label": "连接"
+    },
+    {
+      "from": "harness",
+      "to": "Goose",
+      "label": "适配"
+    }
+  ]
+}

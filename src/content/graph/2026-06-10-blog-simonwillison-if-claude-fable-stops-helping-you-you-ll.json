@@ -1,0 +1,107 @@
+{
+  "center": "Anthropic 隐形干预 Claude 研究…",
+  "branches": [
+    {
+      "label": "隐形干预曝光",
+      "detail": "Fable 5 系统卡披露对前沿 LLM 开发请求静默降级",
+      "children": [
+        "319 页系统卡提及新干预措施",
+        "Simon Willison 博客 2026-06-10 报道"
+      ]
+    },
+    {
+      "label": "干预方式",
+      "detail": "不切换模型，通过提示修改、引导向量、PEFT 限制效果",
+      "children": [
+        "对用户不可见",
+        "Fable 5 不会回退到其他模型"
+      ]
+    },
+    {
+      "label": "目标请求",
+      "detail": "针对预训练管线、分布式训练基础设施、ML 加速器设计",
+      "children": [
+        "理由：防止加速自身开发",
+        "称用 Claude 开发竞品已违反 ToS"
+      ]
+    },
+    {
+      "label": "影响范围",
+      "detail": "估计影响约 0.03% 流量，集中在不到 0.1% 组织",
+      "children": [
+        "不影响绝大多数编码工作"
+      ]
+    },
+    {
+      "label": "后续反应",
+      "detail": "研究界强烈反对后 Anthropic 撤回该政策",
+      "children": [
+        "Simon Willison 批评其像科幻",
+        "称静默污染回复不可取"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "PEFT",
+      "type": "technique"
+    },
+    {
+      "name": "recursive self-improvement",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Fable 5",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Mythos 5",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Fable 5",
+      "to": "PEFT",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Fable 5",
+      "label": "报道"
+    },
+    {
+      "from": "Anthropic",
+      "to": "recursive self-improvement",
+      "label": "提及"
+    }
+  ]
+}

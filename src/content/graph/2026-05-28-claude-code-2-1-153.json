@@ -1,0 +1,75 @@
+{
+  "center": "claude-code v2.1.153 更新",
+  "branches": [
+    {
+      "label": "跳过 LFS 下载",
+      "detail": "GitHub/Git 插件市场源克隆和更新时可跳过 Git LFS 下载",
+      "children": [
+        "新增 skipLfs 选项",
+        "减少大型文件传输时间"
+      ]
+    },
+    {
+      "label": "补全能力增强",
+      "detail": "代理调度输入自动补全现在会建议原生斜杠命令和捆绑技能",
+      "children": [
+        "不再只建议项目技能",
+        "提升工具发现效率"
+      ]
+    },
+    {
+      "label": "修复关键问题",
+      "detail": "修复多项内存、更新与权限问题，增强系统稳定性和安全性",
+      "children": [
+        "状态化 MCP 服务器重连循环",
+        "自定义 API 网关令牌混淆",
+        "子代理 MCP 服务器配置忽略"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Git LFS",
+      "type": "technique"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "claude-code",
+      "label": "发布"
+    },
+    {
+      "from": "claude-code",
+      "to": "Git LFS",
+      "label": "支持跳过"
+    },
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "修复"
+    },
+    {
+      "from": "claude-code",
+      "to": "GitHub",
+      "label": "集成"
+    }
+  ]
+}

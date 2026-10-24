@@ -1,0 +1,112 @@
+{
+  "center": "每日 AI 速览：Claude Code 与 Jev",
+  "branches": [
+    {
+      "label": "Claude Code 多线程",
+      "detail": "Anthropic 推出 Projects，一次对话可派生多个云端并行会话",
+      "children": [
+        "线程间可传递上下文，用户离开后继续运行",
+        "目前仅云端，本地工作流后续推出",
+        "内部称其为更高层协调者抽象"
+      ]
+    },
+    {
+      "label": "Jev 分类器争议",
+      "detail": "TypeSafe 的 Jev 被当作路由与结构化决策层，而非聊天模型",
+      "children": [
+        "用于 LLM-as-judge、harness 路由、结构化输出",
+        "Cloudflare 已通过 AI Gateway 提供",
+        "Theo 批评其做历史压缩会破坏缓存与推理"
+      ]
+    },
+    {
+      "label": "Astra 法律垂直化",
+      "detail": "OpenAI 推出 Astra for Law，含 26 个合作插件与 47 个社区插件",
+      "children": [
+        "通过 ChatGPT 与 Codex 的 Trusted Access…",
+        "报告称其法律基准优于通用 GPT-6 Astra",
+        "Codex 新增手机语音与 Windows Appshots"
+      ]
+    },
+    {
+      "label": "多智能体研究",
+      "detail": "研究框架走向模块化与可复现，强调显式记忆结构",
+      "children": [
+        "DeepMind 发布 Stellar Colosseum 多智能体…",
+        "NVIDIA 相关工作 Agora 用 Git 提交作共享记忆",
+        "LangChain 分享 200+ 工具付费媒体智能体经验"
+      ]
+    },
+    {
+      "label": "安全与基准质疑",
+      "detail": "Claude 辅助攻破 OpenAI 账户；基准审计成为一等公民",
+      "children": [
+        "三研究员用 Claude Opus 5 链式漏洞，72 小时…",
+        "Epoch 推出 Benchmark Reviews，审计 15 个…",
+        "Vals 推出 Vibe Code Bench 测迭代修改鲁棒性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Jev",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Astra for Law",
+      "type": "product"
+    },
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Stellar Colosseum",
+      "type": "product"
+    },
+    {
+      "name": "Claude Opus 5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "推出"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Astra for Law",
+      "label": "发布"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Stellar Colosseum",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Opus 5",
+      "to": "OpenAI",
+      "label": "被用于攻击"
+    },
+    {
+      "from": "Jev",
+      "to": "Claude Code",
+      "label": "可作路由层"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "center": "Claude 文本水印原理",
+  "branches": [
+    {
+      "label": "水印是什么",
+      "detail": "Anthropic 在 Claude 输出文本中嵌入不可见水印，用于识别 AI 生成内容",
+      "children": [
+        "只有 Anthropic 能解码验证",
+        "用户不可见，不影响阅读",
+        "可标记 Claude Opus 4.8 等模型输出"
+      ]
+    },
+    {
+      "label": "生成流程",
+      "detail": "水印只是常规文本生成中的微小改动，不增加大成本",
+      "children": [
+        "提示词先分词转 token ID",
+        "LLM 输出下一 token 分数分布",
+        "在采样环节嵌入水印信号"
+      ]
+    },
+    {
+      "label": "讲解来源",
+      "detail": "Sebastian Raschka 用 52 页幻灯片、48 分钟视频从零讲解",
+      "children": [
+        "原计划 10 页 10 分钟，扩展至 52 页",
+        "含 YouTube 版与幻灯片链接",
+        "大量复用其 from-scratch 教材图"
+      ]
+    },
+    {
+      "label": "水印局限",
+      "detail": "视频也讨论水印如何失效或被移除",
+      "children": [
+        "水印可被检测也可被去除",
+        "理解机制才能判断利弊"
+      ]
+    }
+  ],
+  "flow": [
+    "输入提示词",
+    "分词转 token ID",
+    "LLM 输出分数分布",
+    "采样时嵌入水印",
+    "生成带水印文本",
+    "解码验证来源"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Sebastian Raschka",
+      "type": "person"
+    },
+    {
+      "name": "文本水印",
+      "type": "concept"
+    },
+    {
+      "name": "token 采样",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Claude",
+      "to": "文本水印",
+      "label": "应用"
+    },
+    {
+      "from": "Sebastian Raschka",
+      "to": "文本水印",
+      "label": "讲解"
+    },
+    {
+      "from": "文本水印",
+      "to": "token 采样",
+      "label": "嵌入于"
+    },
+    {
+      "from": "Claude Opus 4.8",
+      "to": "文本水印",
+      "label": "可被标记"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "center": "美国应立法允许蒸馏中国模型",
+  "branches": [
+    {
+      "label": "立法提案",
+      "detail": "Ben Thompson 建议美国立法明确训练数据属合理使用，并禁止服务条款限制蒸馏",
+      "children": [
+        "训练数据收集明确为 fair use",
+        "禁止 ToS 禁止蒸馏，至少对美国公司",
+        "为实验室提供版权免责"
+      ]
+    },
+    {
+      "label": "蒸馏难禁",
+      "detail": "蒸馏本质只是查询 API，几乎无法阻止，美国应反向拥抱",
+      "children": [
+        "蒸馏 = 查询 API",
+        "阻止几乎不可能",
+        "应让所学推动他人创新"
+      ]
+    },
+    {
+      "label": "Qwen 3.8 Max",
+      "detail": "阿里发布 2.4T 参数开源权重模型，逆转此前不发布决定",
+      "children": [
+        "2.4T 参数，接近 Kimi K3 的 2.8T",
+        "此前 5 月决定不发布 Qwen 3.7 Max",
+        "可能受习近平讲话影响"
+      ]
+    },
+    {
+      "label": "开源政策信号",
+      "detail": "习近平讲话鼓励开源、开放、协作与共享，称其为历史机遇",
+      "children": [
+        "抓住罕见历史机遇",
+        "鼓励开源、开放、协作、共享"
+      ]
+    },
+    {
+      "label": "推理痕迹趣闻",
+      "detail": "Qwen 3.8 Max 画鹈鹕的推理痕迹显示自我否决",
+      "children": [
+        "“Could add helmet? No.”",
+        "“Maybe add small bell? no.”",
+        "“Need maybe add small fish in basket?…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Ben Thompson",
+      "type": "person"
+    },
+    {
+      "name": "Qwen 3.8 Max",
+      "type": "model"
+    },
+    {
+      "name": "Qwen 3.7 Max",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Alibaba",
+      "type": "company"
+    },
+    {
+      "name": "Xi Jinping",
+      "type": "person"
+    },
+    {
+      "name": "distillation",
+      "type": "technique"
+    },
+    {
+      "name": "fair use",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ben Thompson",
+      "to": "distillation",
+      "label": "提议允许"
+    },
+    {
+      "from": "Alibaba",
+      "to": "Qwen 3.8 Max",
+      "label": "发布"
+    },
+    {
+      "from": "Alibaba",
+      "to": "Qwen 3.7 Max",
+      "label": "未发布"
+    },
+    {
+      "from": "Xi Jinping",
+      "to": "Qwen 3.8 Max",
+      "label": "可能影响"
+    },
+    {
+      "from": "Qwen 3.8 Max",
+      "to": "Kimi K3",
+      "label": "参数接近"
+    }
+  ]
+}

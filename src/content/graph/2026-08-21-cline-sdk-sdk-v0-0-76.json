@@ -1,0 +1,95 @@
+{
+  "center": "Cline SDK v0.0.76 更新",
+  "branches": [
+    {
+      "label": "图像生成",
+      "detail": "新增模型驱动的图像生成，需模型支持",
+      "children": [
+        "图像持久化到会话历史与导出"
+      ]
+    },
+    {
+      "label": "定时任务",
+      "detail": "代理可创建定时任务与持久化待办议程",
+      "children": [
+        "作用域限定工作区"
+      ]
+    },
+    {
+      "label": "技能加载优化",
+      "detail": "技能斜杠命令改为通过 skills 工具加载",
+      "children": [
+        "记录输入而非 SKILL.md 全文",
+        "避免重复注入"
+      ]
+    },
+    {
+      "label": "工具事件修复",
+      "detail": "修复 provider 执行工具活动被丢弃",
+      "children": [
+        "现以观察事件呈现"
+      ]
+    },
+    {
+      "label": "钩子修复",
+      "detail": "PreToolUse 的 contextModification 现传递给模型",
+      "children": [
+        "PostToolUse 钩子被等待并支持取消"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "skills 工具",
+      "type": "technique"
+    },
+    {
+      "name": "PreToolUse",
+      "type": "concept"
+    },
+    {
+      "name": "PostToolUse",
+      "type": "concept"
+    },
+    {
+      "name": "SKILL.md",
+      "type": "concept"
+    },
+    {
+      "name": "contextModification",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "skills 工具",
+      "label": "使用"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "PreToolUse",
+      "label": "包含"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "PostToolUse",
+      "label": "包含"
+    },
+    {
+      "from": "PreToolUse",
+      "to": "contextModification",
+      "label": "传递"
+    },
+    {
+      "from": "skills 工具",
+      "to": "SKILL.md",
+      "label": "替代加载"
+    }
+  ]
+}

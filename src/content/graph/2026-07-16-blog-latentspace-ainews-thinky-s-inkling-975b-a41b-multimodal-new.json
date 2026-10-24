@@ -1,0 +1,115 @@
+{
+  "center": "Thinking Machines 发布…",
+  "branches": [
+    {
+      "label": "模型规格",
+      "detail": "975B 总参数、41B 激活的 MoE 多模态模型，Apache 2.0 开源",
+      "children": [
+        "支持文本/图像/音频输入，文本输出",
+        "开源权重支持 1M 上下文，Tinker API 256K",
+        "预训练 45T tokens，含文本图像音视频"
+      ]
+    },
+    {
+      "label": "架构亮点",
+      "detail": "混合滑窗注意力、相对位置编码、短卷积等非典型选择",
+      "children": [
+        "5:1 局部/全局注意力，窗口 512",
+        "相对位置编码替代 RoPE",
+        "2 个共享专家，8 个 MTP 投机解码头"
+      ]
+    },
+    {
+      "label": "性能定位",
+      "detail": "美国最强开源模型，但落后中国开源与顶级闭源",
+      "children": [
+        "AA 智能指数 41，超 Nemotron 3 Ultra 38",
+        "Agentic Web App Arena 第 9，Elo 1257",
+        "输出 token 效率高，平均 25K"
+      ]
+    },
+    {
+      "label": "小模型预览",
+      "detail": "Inkling-Small 276B 总参数、12B 激活，同配方训练",
+      "children": [
+        "更低成本与延迟",
+        "部分评测竞争力意外接近大模型"
+      ]
+    },
+    {
+      "label": "生态支持",
+      "detail": "发布首日获 vLLM、SGLang、Hugging Face 等广泛支持",
+      "children": [
+        "Tinker 平台同日支持微调",
+        "Modal、Baseten、Databricks 等集成"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Thinking Machines",
+      "type": "company"
+    },
+    {
+      "name": "Inkling",
+      "type": "model"
+    },
+    {
+      "name": "Inkling-Small",
+      "type": "model"
+    },
+    {
+      "name": "Mira Murati",
+      "type": "person"
+    },
+    {
+      "name": "Soumith Chintala",
+      "type": "person"
+    },
+    {
+      "name": "Tinker",
+      "type": "product"
+    },
+    {
+      "name": "MoE",
+      "type": "technique"
+    },
+    {
+      "name": "Apache 2.0",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Thinking Machines",
+      "to": "Inkling",
+      "label": "发布"
+    },
+    {
+      "from": "Thinking Machines",
+      "to": "Inkling-Small",
+      "label": "预览"
+    },
+    {
+      "from": "Inkling",
+      "to": "MoE",
+      "label": "采用"
+    },
+    {
+      "from": "Inkling",
+      "to": "Apache 2.0",
+      "label": "采用许可"
+    },
+    {
+      "from": "Inkling",
+      "to": "Tinker",
+      "label": "支持微调"
+    },
+    {
+      "from": "Mira Murati",
+      "to": "Thinking Machines",
+      "label": "任职于"
+    }
+  ]
+}

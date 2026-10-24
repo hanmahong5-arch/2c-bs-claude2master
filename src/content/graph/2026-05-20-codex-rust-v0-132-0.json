@@ -1,0 +1,102 @@
+{
+  "center": "codex rust-v0.132.0 更新",
+  "branches": [
+    {
+      "label": "Python SDK 认证",
+      "detail": "新增原生认证方式，便于 agent harness 安全集成",
+      "children": [
+        "支持 API 密钥登录",
+        "支持 ChatGPT 浏览器/设备码流程"
+      ]
+    },
+    {
+      "label": "简化文本工作流",
+      "detail": "提供更易用的纯文本输入与 TurnResult 返回",
+      "children": [
+        "纯文本输入",
+        "TurnResult 返回简化数据处理"
+      ]
+    },
+    {
+      "label": "自动化执行增强",
+      "detail": "codex exec resume 新增 --output-schema 强制 JSON 输出",
+      "children": [
+        "保持会话上下文",
+        "远程执行器注册改用标准 Codex 认证"
+      ]
+    },
+    {
+      "label": "TUI 启动加速",
+      "detail": "终端能力探测改为批处理，加快启动速度",
+      "children": [
+        "批处理探测终端能力"
+      ]
+    },
+    {
+      "label": "多会话可靠性",
+      "detail": "修复多会话中 MCP 调用标记和回复路由问题",
+      "children": [
+        "修复 MCP 调用标记",
+        "修复回复路由"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex",
+      "type": "product"
+    },
+    {
+      "name": "Python SDK",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "TurnResult",
+      "type": "concept"
+    },
+    {
+      "name": "codex exec resume",
+      "type": "technique"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Python SDK",
+      "to": "codex",
+      "label": "属于"
+    },
+    {
+      "from": "Python SDK",
+      "to": "ChatGPT",
+      "label": "集成认证"
+    },
+    {
+      "from": "codex exec resume",
+      "to": "codex",
+      "label": "属于"
+    },
+    {
+      "from": "TUI",
+      "to": "codex",
+      "label": "属于"
+    },
+    {
+      "from": "MCP",
+      "to": "codex",
+      "label": "集成"
+    }
+  ]
+}

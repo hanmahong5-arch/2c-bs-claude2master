@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw Dreaming 记忆巩固系统",
+  "branches": [
+    {
+      "label": "三阶段巩固流程",
+      "detail": "每次 sweep 按 light→REM→deep 顺序运行，仅 deep 阶段写入 MEMORY.md",
+      "children": [
+        "Light：整理近期短期材料，去重并暂存候选",
+        "REM：提炼主题与反复出现的想法",
+        "Deep：加权评分与阈值门控后提升持久记忆"
+      ]
+    },
+    {
+      "label": "写入内容与位置",
+      "detail": "机器状态存 SQLite，人类可读输出写入 DREAMS.md，长期提升只写 MEMORY.md",
+      "children": [
+        "重写前镜像存于 SQLite-backed plugin state",
+        "DREAMS.md 记录 added/merged/superseded…",
+        "每条提升条目带 trigger 标签与 importance 值"
+      ]
+    },
+    {
+      "label": "会话转录摄取",
+      "detail": "仅交互式会话可被摄取，个人敏感内容与已召回片段在摄取前被移除",
+      "children": [
+        "Cron、heartbeat、subagent 会话不进入候选",
+        "admission policy 与 forget 记录可排除会话",
+        "手动 session-backfill 支持 preview/apply…"
+      ]
+    },
+    {
+      "label": "巩固安全机制",
+      "detail": "确定性评分与查询多样性阈值作为候选门控，模型只返回操作决策而非替换文本",
+      "children": [
+        "untrusted/system 来源候选被结构性剔除",
+        "重写须保留 Source 引用与 bootstrap 预算",
+        "失败时回退到 append-only 提升路径"
+      ]
+    },
+    {
+      "label": "Dream Diary 与回填",
+      "detail": "DREAMS.md 保存叙事式日记，支持历史笔记与保留会话的 grounded 回填",
+      "children": [
+        "日记用工作区默认模型，失败写本地 fallback",
+        "rem-harness 预览历史日记输出",
+        "rem-backfill 写入可回滚的 grounded 条目"
+      ]
+    }
+  ],
+  "flow": [
+    "Light 整理短期信号",
+    "REM 提炼主题反思",
+    "Deep 评分与阈值门控",
+    "重写前存 MEMORY.md 镜像",
+    "应用决策写入 MEMORY.md",
+    "DREAMS.md 记录摘要"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Dreaming",
+      "type": "concept"
+    },
+    {
+      "name": "MEMORY.md",
+      "type": "product"
+    },
+    {
+      "name": "DREAMS.md",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "technique"
+    },
+    {
+      "name": "memory-core",
+      "type": "product"
+    },
+    {
+      "name": "sleep-time compute",
+      "type": "concept"
+    },
+    {
+      "name": "Generative Agents",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Dreaming",
+      "label": "包含"
+    },
+    {
+      "from": "Dreaming",
+      "to": "MEMORY.md",
+      "label": "写入"
+    },
+    {
+      "from": "Dreaming",
+      "to": "DREAMS.md",
+      "label": "写入"
+    },
+    {
+      "from": "Dreaming",
+      "to": "SQLite",
+      "label": "存储状态"
+    },
+    {
+      "from": "Dreaming",
+      "to": "memory-core",
+      "label": "属于"
+    },
+    {
+      "from": "Dreaming",
+      "to": "sleep-time compute",
+      "label": "受启发"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "center": "开放模型面临6个月禁令风险",
+  "branches": [
+    {
+      "label": "禁令风险",
+      "detail": "白宫拟以行政令限制开放权重模型，能力超GPT-5.5/Claude Opus 4.8/GLM-5.2者或被禁",
+      "children": [
+        "预计6个月内落地",
+        "主要针对中国来源模型",
+        "政府使用场景先行"
+      ]
+    },
+    {
+      "label": "蒸馏争议",
+      "detail": "Anthropic主导反中国模型游说，被指监管俘获，意在保护自身商业地位",
+      "children": [
+        "Anthropic检测外国API使用并封禁",
+        "呼吁全面禁止中国开放权重模型",
+        "作者认为应让实验室自我执行"
+      ]
+    },
+    {
+      "label": "API安全迷思",
+      "detail": "API并非天然安全，Mythos私测期即遭Discord用户未授权访问",
+      "children": [
+        "API持续被越狱",
+        "开放权重不安全论被夸大",
+        "危险能力不应托管于可查询API"
+      ]
+    },
+    {
+      "label": "开放模型劣势",
+      "detail": "开放模型缺乏中心化经济代言人，游说能力远弱于闭源公司",
+      "children": [
+        "Reflection AI呼吁按能力豁免",
+        "DeepSeek等中国开源模型领先",
+        "闭源公司游说更有效"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "DeepSeek",
+      "type": "company"
+    },
+    {
+      "name": "Reflection AI",
+      "type": "company"
+    },
+    {
+      "name": "Claude Mythos",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "蒸馏",
+      "type": "concept"
+    },
+    {
+      "name": "开放权重模型",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "蒸馏",
+      "label": "主导游说"
+    },
+    {
+      "from": "Anthropic",
+      "to": "开放权重模型",
+      "label": "呼吁禁止"
+    },
+    {
+      "from": "DeepSeek",
+      "to": "开放权重模型",
+      "label": "领先"
+    },
+    {
+      "from": "Reflection AI",
+      "to": "开放权重模型",
+      "label": "呼吁豁免"
+    },
+    {
+      "from": "Claude Mythos",
+      "to": "蒸馏",
+      "label": "被蒸馏风险"
+    }
+  ]
+}

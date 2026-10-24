@@ -1,0 +1,85 @@
+{
+  "center": "Goose v1.39 转向 ACP 架构",
+  "branches": [
+    {
+      "label": "ACP 架构",
+      "detail": "全面采用 ACP 管理会话、配置与扩展，统一 agent harness 通信接口",
+      "children": [
+        "会话/配置/扩展统一走 ACP",
+        "为 agent harness 提供统一接口"
+      ]
+    },
+    {
+      "label": "感知与成本",
+      "detail": "新增图像读取、模型交互查看与缓存 token 追踪",
+      "children": [
+        "图像读取工具",
+        "模型交互查看",
+        "缓存 token 追踪"
+      ]
+    },
+    {
+      "label": "模型与推理",
+      "detail": "支持 OpenAI GPT via Bedrock、MLX 本地推理及多个新 provider",
+      "children": [
+        "OpenAI GPT via Bedrock",
+        "MLX 本地推理",
+        "多个新 provider"
+      ]
+    },
+    {
+      "label": "CLI 与可移植",
+      "detail": "新增 /status、/model 命令，支持 deep link 与会话导入",
+      "children": [
+        "/status 命令",
+        "/model 命令",
+        "deep link 与会话导入"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "ACP",
+      "type": "concept"
+    },
+    {
+      "name": "OpenAI GPT",
+      "type": "model"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "MLX",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "ACP",
+      "label": "采用"
+    },
+    {
+      "from": "Goose",
+      "to": "OpenAI GPT",
+      "label": "支持"
+    },
+    {
+      "from": "Goose",
+      "to": "MLX",
+      "label": "支持"
+    },
+    {
+      "from": "OpenAI GPT",
+      "to": "Bedrock",
+      "label": "经由"
+    }
+  ]
+}

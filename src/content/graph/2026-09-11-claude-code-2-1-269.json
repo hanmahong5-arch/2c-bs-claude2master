@@ -1,0 +1,85 @@
+{
+  "center": "claude-code v2.1.269 更新",
+  "branches": [
+    {
+      "label": "插件可评测",
+      "detail": "新增 claude plugin eval，对插件跑评测套件并输出 JSON/HTML 评分报告",
+      "children": [
+        "插件质量可被回归验证",
+        "harness 把插件当可测单元而非黑盒"
+      ]
+    },
+    {
+      "label": "并发上限可配",
+      "detail": "新增环境变量提高单次 Workflow 并发 agent 上限",
+      "children": [
+        "CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGE…",
+        "取值范围 1–256",
+        "fan-out 调度上限由配置暴露而非硬编码"
+      ]
+    },
+    {
+      "label": "缓存修复",
+      "detail": "修复续写与恢复路径中 prompt cache 部分失效的问题",
+      "children": [
+        "输出 token 截断后自动续写那轮缓存被部分失效",
+        "中断后恢复会话改变早期上下文重发",
+        "续写与恢复路径须保持缓存前缀稳定"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "claude plugin eval",
+      "type": "product"
+    },
+    {
+      "name": "CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS",
+      "type": "concept"
+    },
+    {
+      "name": "prompt cache",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "Workflow",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "claude plugin eval",
+      "label": "新增"
+    },
+    {
+      "from": "claude-code",
+      "to": "CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS",
+      "label": "新增"
+    },
+    {
+      "from": "claude-code",
+      "to": "prompt cache",
+      "label": "修复"
+    },
+    {
+      "from": "claude plugin eval",
+      "to": "harness",
+      "label": "依赖"
+    },
+    {
+      "from": "CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS",
+      "to": "Workflow",
+      "label": "配置"
+    }
+  ]
+}

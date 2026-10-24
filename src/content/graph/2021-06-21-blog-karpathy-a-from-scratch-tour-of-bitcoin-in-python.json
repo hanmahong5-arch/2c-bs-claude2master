@@ -1,0 +1,105 @@
+{
+  "center": "Python 从零实现比特币交易",
+  "branches": [
+    {
+      "label": "核心动机",
+      "detail": "Karpathy 为直观理解比特币，用纯 Python 零依赖从零实现交易",
+      "children": [
+        "区块链把开源扩展到开源+状态",
+        "“我不能创造即我不理解”"
+      ]
+    },
+    {
+      "label": "椭圆曲线基础",
+      "detail": "比特币用 secp256k1 曲线，仅需 3 个整数定义",
+      "children": [
+        "曲线方程 y^2 = x^3 + 7 (mod p)",
+        "a=0, b=7, p 为特定大素数"
+      ]
+    },
+    {
+      "label": "生成器与阶",
+      "detail": "定义公开的生成点 G 及其阶 n，作为曲线上的起点",
+      "children": [
+        "G 坐标固定且公开",
+        "n 为 G 的阶，0*G = n*G = 无穷远点"
+      ]
+    },
+    {
+      "label": "私钥生成",
+      "detail": "私钥是满足 1 <= key < n 的随机整数，控制账户资金",
+      "children": [
+        "示例用 'Andrej is cool :P' 生成可复现私钥",
+        "私钥即控制比特币的密码"
+      ]
+    },
+    {
+      "label": "公钥推导",
+      "detail": "公钥 = 私钥 * G，即 G 自加私钥次得到的曲线点",
+      "children": [
+        "需定义椭圆曲线点加法",
+        "涉及模逆运算（扩展欧几里得算法）"
+      ]
+    }
+  ],
+  "flow": [
+    "定义椭圆曲线参数",
+    "定义生成点 G 与阶 n",
+    "生成随机私钥",
+    "通过点加法计算公钥",
+    "数字签名并广播交易"
+  ],
+  "entities": [
+    {
+      "name": "Andrej Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "Bitcoin",
+      "type": "product"
+    },
+    {
+      "name": "Python",
+      "type": "product"
+    },
+    {
+      "name": "secp256k1",
+      "type": "concept"
+    },
+    {
+      "name": "Elliptic Curve Cryptography",
+      "type": "concept"
+    },
+    {
+      "name": "Andrea Corbellini",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Andrej Karpathy",
+      "to": "Bitcoin",
+      "label": "从零实现"
+    },
+    {
+      "from": "Andrej Karpathy",
+      "to": "Python",
+      "label": "使用"
+    },
+    {
+      "from": "Bitcoin",
+      "to": "secp256k1",
+      "label": "采用"
+    },
+    {
+      "from": "secp256k1",
+      "to": "Elliptic Curve Cryptography",
+      "label": "属于"
+    },
+    {
+      "from": "Andrea Corbellini",
+      "to": "Elliptic Curve Cryptography",
+      "label": "撰写教程"
+    }
+  ]
+}

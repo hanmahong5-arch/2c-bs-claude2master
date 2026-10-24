@@ -1,0 +1,80 @@
+{
+  "center": "OpenAI 推出 Astra for Law",
+  "branches": [
+    {
+      "label": "产品定位",
+      "detail": "OpenAI for Law 提供法律领域前沿智能，支持律所自定义工作流",
+      "children": [
+        "通用模型被包装成垂直行业方案"
+      ]
+    },
+    {
+      "label": "数据连接",
+      "detail": "可连接法律数据源，agent 需接入专业语料与检索层",
+      "children": [
+        "不靠模型本身，需检索层"
+      ]
+    },
+    {
+      "label": "合规控制",
+      "detail": "强调法律级管控，面向机密客户工作",
+      "children": [
+        "权限、审计、数据隔离是硬性要求"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Astra for Law",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI for Law",
+      "type": "product"
+    },
+    {
+      "name": "法律数据源",
+      "type": "concept"
+    },
+    {
+      "name": "检索层",
+      "type": "technique"
+    },
+    {
+      "name": "法律级管控",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Astra for Law",
+      "label": "推出"
+    },
+    {
+      "from": "OpenAI",
+      "to": "OpenAI for Law",
+      "label": "提供"
+    },
+    {
+      "from": "Astra for Law",
+      "to": "法律数据源",
+      "label": "连接"
+    },
+    {
+      "from": "Astra for Law",
+      "to": "检索层",
+      "label": "接入"
+    },
+    {
+      "from": "Astra for Law",
+      "to": "法律级管控",
+      "label": "强调"
+    }
+  ]
+}

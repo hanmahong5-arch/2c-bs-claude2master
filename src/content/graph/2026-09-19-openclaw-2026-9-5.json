@@ -1,0 +1,71 @@
+{
+  "center": "OpenClaw 2026.9.5 发布",
+  "branches": [
+    {
+      "label": "发布规模",
+      "detail": "单次发布含 64 次提交、4179 个 PR、503 位贡献者",
+      "children": [
+        "高频合并与多贡献者协作"
+      ]
+    },
+    {
+      "label": "Agent 版 changelog",
+      "detail": "提供纯 Markdown changelog，内容同人类 release notes",
+      "children": [
+        "harness 优先消费结构化纯文本"
+      ]
+    },
+    {
+      "label": "Android APK 跳过",
+      "detail": "apps/android/version.json 为 2026.8.2，落后发布列车 2026.9.5",
+      "children": [
+        "打 tag 前需校验各平台版本文件一致"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Android APK",
+      "type": "product"
+    },
+    {
+      "name": "AI agent",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "Markdown changelog",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Android APK",
+      "label": "跳过"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Markdown changelog",
+      "label": "提供"
+    },
+    {
+      "from": "AI agent",
+      "to": "Markdown changelog",
+      "label": "消费"
+    },
+    {
+      "from": "harness",
+      "to": "AI agent",
+      "label": "支撑"
+    }
+  ]
+}

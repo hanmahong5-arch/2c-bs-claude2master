@@ -1,0 +1,94 @@
+{
+  "center": "Bryan Cantrill 反驳 AI 灭绝论",
+  "branches": [
+    {
+      "label": "反驳灭绝论",
+      "detail": "Cantrill 回应 Jacob Coxon 称 Anthropic 研究员相信 AI 本十年末杀死所有人",
+      "children": [
+        "Coxon 非关键基础设施或生物武器专家",
+        "灭绝说法靠含糊外推支撑"
+      ]
+    },
+    {
+      "label": "证据边界",
+      "detail": "能力宣称与风险宣称都应标注证据边界",
+      "children": [
+        "对 agent 开发者同样适用"
+      ]
+    },
+    {
+      "label": "专家克制",
+      "detail": "专家凭专业身份持有公众信任，拉响警报时更该克制",
+      "children": [
+        "Cantrill 年轻时曾引发无谓恐慌",
+        "发布安全警告需可验证细节"
+      ]
+    },
+    {
+      "label": "恐惧填补想象",
+      "detail": "生物武器话题刺人因留下太多想象空间，恐惧自行填补",
+      "children": [
+        "反问能否请生物学家或生物武器专家来谈",
+        "风险叙事应交对应领域专家评审"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Bryan Cantrill",
+      "type": "person"
+    },
+    {
+      "name": "Jacob Coxon",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Oxide and Friends",
+      "type": "product"
+    },
+    {
+      "name": "AI 灭绝论",
+      "type": "concept"
+    },
+    {
+      "name": "生物武器",
+      "type": "concept"
+    },
+    {
+      "name": "关键基础设施",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Bryan Cantrill",
+      "to": "Jacob Coxon",
+      "label": "回应"
+    },
+    {
+      "from": "Jacob Coxon",
+      "to": "Anthropic",
+      "label": "前员工"
+    },
+    {
+      "from": "Bryan Cantrill",
+      "to": "Oxide and Friends",
+      "label": "参与"
+    },
+    {
+      "from": "AI 灭绝论",
+      "to": "生物武器",
+      "label": "涉及"
+    },
+    {
+      "from": "AI 灭绝论",
+      "to": "关键基础设施",
+      "label": "涉及"
+    }
+  ]
+}

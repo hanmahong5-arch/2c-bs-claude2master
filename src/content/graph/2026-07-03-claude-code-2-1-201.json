@@ -1,0 +1,71 @@
+{
+  "center": "Claude Code v2.1.201 更新",
+  "branches": [
+    {
+      "label": "移除中期系统提示",
+      "detail": "Sonnet 5 会话不再用对话中期的系统角色发 harness 提醒",
+      "children": [
+        "影响 Claude Code v2.1.201"
+      ]
+    },
+    {
+      "label": "上下文策略调整",
+      "detail": "harness 的上下文管理不再依赖系统角色注入",
+      "children": [
+        "需重新设计上下文管理"
+      ]
+    },
+    {
+      "label": "提醒机制改道",
+      "detail": "开发者应通过其他方式实现 harness 提醒",
+      "children": [
+        "如改用用户消息"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Claude Sonnet 5",
+      "type": "model"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "系统角色提示",
+      "type": "concept"
+    },
+    {
+      "name": "上下文管理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Claude Sonnet 5",
+      "label": "支持"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "系统角色提示",
+      "label": "移除"
+    },
+    {
+      "from": "harness",
+      "to": "上下文管理",
+      "label": "调整"
+    },
+    {
+      "from": "harness",
+      "to": "系统角色提示",
+      "label": "不再依赖"
+    }
+  ]
+}

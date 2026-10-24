@@ -1,0 +1,97 @@
+{
+  "center": "MiniMax-H3 在 Apple Silicon…",
+  "branches": [
+    {
+      "label": "模型能力",
+      "detail": "MiniMax-H3 是通用全模态生成系统，可生成带音频的 15 秒视频",
+      "children": [
+        "接受文本、图像、音频、视频输入",
+        "输出最长 15 秒视频并含音频"
+      ]
+    },
+    {
+      "label": "MLX 移植",
+      "detail": "PipeNetwork/minimax-h3-mlx 将模型移植到 MLX，可在 Apple Silicon 运行",
+      "children": [
+        "Python 包，基于 MLX 框架",
+        "作者在 M5 Max MacBook Pro 上跑通"
+      ]
+    },
+    {
+      "label": "运行成本",
+      "detail": "需下载约 115 GB 模型文件，生成一段视频耗时近 45 分钟",
+      "children": [
+        "下载约 115 GB 模型文件",
+        "视频生成耗时近 45 分钟"
+      ]
+    },
+    {
+      "label": "实测效果",
+      "detail": "视频画面令人印象深刻，但音频是奇怪的类语音垃圾，因未提供音频提示",
+      "children": [
+        "提示词：彩虹臭鼬跳过超市苔藓木头",
+        "未读提示指南导致音频失控"
+      ]
+    }
+  ],
+  "flow": [
+    "下载 MiniMax-H3 模型",
+    "下载 MLX 8bit 权重",
+    "运行 generate.py 脚本",
+    "输入文本提示词",
+    "输出带音频视频"
+  ],
+  "entities": [
+    {
+      "name": "MiniMax-H3",
+      "type": "model"
+    },
+    {
+      "name": "PipeNetwork/minimax-h3-mlx",
+      "type": "product"
+    },
+    {
+      "name": "MLX",
+      "type": "technique"
+    },
+    {
+      "name": "Apple Silicon",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "M5 Max MacBook Pro",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "PipeNetwork/minimax-h3-mlx",
+      "to": "MiniMax-H3",
+      "label": "移植"
+    },
+    {
+      "from": "PipeNetwork/minimax-h3-mlx",
+      "to": "MLX",
+      "label": "基于"
+    },
+    {
+      "from": "MLX",
+      "to": "Apple Silicon",
+      "label": "运行于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "M5 Max MacBook Pro",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "PipeNetwork/minimax-h3-mlx",
+      "label": "测试"
+    }
+  ]
+}

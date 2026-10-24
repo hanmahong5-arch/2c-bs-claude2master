@@ -1,0 +1,101 @@
+{
+  "center": "Anthropic任命首席全球事务官",
+  "branches": [
+    {
+      "label": "任命概况",
+      "detail": "Tino Cuéllar 成为 Anthropic 首位首席全球事务官",
+      "children": [
+        "负责政策、国际战略与政府关系",
+        "2026年8月4日公布"
+      ]
+    },
+    {
+      "label": "履历背景",
+      "detail": "横跨法律、科技、国际安全与公共机构",
+      "children": [
+        "曾任卡内基国际和平基金会主席",
+        "曾任加州最高法院法官",
+        "斯坦福 HAI 高级研究员"
+      ]
+    },
+    {
+      "label": "与Anthropic渊源",
+      "detail": "2026年1月起任长期利益信托受托人",
+      "children": [
+        "为入职已退出该信托",
+        "信托将按流程选继任者"
+      ]
+    },
+    {
+      "label": "任命意义",
+      "detail": "AI治理处于关键转折点，需民主社会定规则",
+      "children": [
+        "与各国政府、民间社会合作",
+        "兼顾风险与机遇"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Tino Cuéllar",
+      "type": "person"
+    },
+    {
+      "name": "Daniela Amodei",
+      "type": "person"
+    },
+    {
+      "name": "Carnegie Endowment for International Peace",
+      "type": "company"
+    },
+    {
+      "name": "Stanford HAI",
+      "type": "company"
+    },
+    {
+      "name": "Long-Term Benefit Trust",
+      "type": "concept"
+    },
+    {
+      "name": "Chief Global Affairs Officer",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Tino Cuéllar",
+      "to": "Anthropic",
+      "label": "加入任"
+    },
+    {
+      "from": "Tino Cuéllar",
+      "to": "Carnegie Endowment for International Peace",
+      "label": "曾任主席"
+    },
+    {
+      "from": "Tino Cuéllar",
+      "to": "Stanford HAI",
+      "label": "任高级研究员"
+    },
+    {
+      "from": "Tino Cuéllar",
+      "to": "Long-Term Benefit Trust",
+      "label": "曾任受托人"
+    },
+    {
+      "from": "Daniela Amodei",
+      "to": "Anthropic",
+      "label": "任职于"
+    },
+    {
+      "from": "Tino Cuéllar",
+      "to": "Chief Global Affairs Officer",
+      "label": "出任"
+    }
+  ]
+}

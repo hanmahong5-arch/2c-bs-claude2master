@@ -1,0 +1,80 @@
+{
+  "center": "Cline SDK 新增错误限制遥测事件",
+  "branches": [
+    {
+      "label": "新增遥测事件",
+      "detail": "会话运行时达到连续错误限制时发出 task.mistake_limit_reached 事件",
+      "children": [
+        "事件名 task.mistake_limit_reached"
+      ]
+    },
+    {
+      "label": "全宿主可捕获",
+      "detail": "CLI、VS Code 扩展、hub daemon 均可捕获该事件",
+      "children": [
+        "含未配置宿主提示时的自动停止"
+      ]
+    },
+    {
+      "label": "统一错误处理",
+      "detail": "agent 可通过该事件统一处理错误限制逻辑",
+      "children": [
+        "无需各宿主自行实现"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "task.mistake_limit_reached",
+      "type": "concept"
+    },
+    {
+      "name": "CLI",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "hub daemon",
+      "type": "product"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "task.mistake_limit_reached",
+      "label": "新增"
+    },
+    {
+      "from": "CLI",
+      "to": "task.mistake_limit_reached",
+      "label": "捕获"
+    },
+    {
+      "from": "VS Code",
+      "to": "task.mistake_limit_reached",
+      "label": "捕获"
+    },
+    {
+      "from": "hub daemon",
+      "to": "task.mistake_limit_reached",
+      "label": "捕获"
+    },
+    {
+      "from": "agent",
+      "to": "task.mistake_limit_reached",
+      "label": "处理"
+    }
+  ]
+}

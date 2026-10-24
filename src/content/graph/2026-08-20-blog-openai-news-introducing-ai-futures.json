@@ -1,0 +1,93 @@
+{
+  "center": "OpenAI 推出 AI Futures 博客",
+  "branches": [
+    {
+      "label": "博客定位",
+      "detail": "OpenAI 新博客聚焦 AI 对权力、治理、经济与自由的影响",
+      "children": [
+        "探讨变革性潜力，非具体产品",
+        "为开发者提供前瞻视角"
+      ]
+    },
+    {
+      "label": "核心议题",
+      "detail": "AI 如何重塑权力、治理、经济与个人自由",
+      "children": [
+        "权力",
+        "治理",
+        "经济"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "工具链开发者需关注 AI 的社会维度，而不仅是技术实现",
+      "children": [
+        "社会维度",
+        "技术实现"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AI Futures",
+      "type": "product"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    },
+    {
+      "name": "权力",
+      "type": "concept"
+    },
+    {
+      "name": "治理",
+      "type": "concept"
+    },
+    {
+      "name": "经济",
+      "type": "concept"
+    },
+    {
+      "name": "个人自由",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AI Futures",
+      "label": "推出"
+    },
+    {
+      "from": "AI Futures",
+      "to": "AI",
+      "label": "探讨"
+    },
+    {
+      "from": "AI",
+      "to": "权力",
+      "label": "重塑"
+    },
+    {
+      "from": "AI",
+      "to": "治理",
+      "label": "重塑"
+    },
+    {
+      "from": "AI",
+      "to": "经济",
+      "label": "重塑"
+    },
+    {
+      "from": "AI",
+      "to": "个人自由",
+      "label": "重塑"
+    }
+  ]
+}

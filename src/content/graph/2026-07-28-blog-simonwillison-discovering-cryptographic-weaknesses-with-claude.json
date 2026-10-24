@@ -1,0 +1,111 @@
+{
+  "center": "Claude Mythos 发现密码学弱点",
+  "branches": [
+    {
+      "label": "核心成果",
+      "detail": "Anthropic 用 Claude Mythos 找出 HAWK 与弱化版 AES 的数学缺陷",
+      "children": [
+        "对现有计算机系统无实际影响",
+        "论文与代码仓库已公开"
+      ]
+    },
+    {
+      "label": "提示词是关键",
+      "detail": "模型默认认为问题无解，需大量提示才肯尝试",
+      "children": [
+        "原文提示词含拼写错误",
+        "反复强调要找到值得发表的结果",
+        "要求不要只摘低垂果实"
+      ]
+    },
+    {
+      "label": "运行成本",
+      "detail": "Mythos Preview 累计工作 60 小时",
+      "children": [
+        "预估 API 成本约 10 万美元",
+        "人工干预主要是鼓励其别放弃"
+      ]
+    },
+    {
+      "label": "配套评测",
+      "detail": "工作过程中创建了 CryptanalysisBench 评测",
+      "children": [
+        "合作方：ETH Zurich、Tel Aviv University…"
+      ]
+    }
+  ],
+  "flow": [
+    "设定密码学攻击目标",
+    "反复提示模型别放弃",
+    "模型长时间自主探索",
+    "人工干预鼓励继续",
+    "产出可发表的新攻击",
+    "构建 CryptanalysisBench 评测"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Mythos",
+      "type": "model"
+    },
+    {
+      "name": "HAWK",
+      "type": "concept"
+    },
+    {
+      "name": "AES",
+      "type": "concept"
+    },
+    {
+      "name": "CryptanalysisBench",
+      "type": "product"
+    },
+    {
+      "name": "ETH Zurich",
+      "type": "company"
+    },
+    {
+      "name": "Tel Aviv University",
+      "type": "company"
+    },
+    {
+      "name": "University of Haifa",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Mythos",
+      "label": "使用"
+    },
+    {
+      "from": "Claude Mythos",
+      "to": "HAWK",
+      "label": "发现弱点"
+    },
+    {
+      "from": "Claude Mythos",
+      "to": "AES",
+      "label": "发现弱点"
+    },
+    {
+      "from": "Anthropic",
+      "to": "CryptanalysisBench",
+      "label": "创建"
+    },
+    {
+      "from": "ETH Zurich",
+      "to": "CryptanalysisBench",
+      "label": "合作开发"
+    },
+    {
+      "from": "Tel Aviv University",
+      "to": "CryptanalysisBench",
+      "label": "合作开发"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "center": "Cursor 企业级 AI 部署",
+  "branches": [
+    {
+      "label": "FDE 团队定位",
+      "detail": "驻场工程师深入客户系统，部署高度定制的 AI 应用与平台",
+      "children": [
+        "VP Pauline Brunet 领导",
+        "目标年底团队扩十倍",
+        "只招 5 年以上经验工程师"
+      ]
+    },
+    {
+      "label": "AI 软件工厂",
+      "detail": "用长时运行 agent 覆盖软件开发全生命周期",
+      "children": [
+        "规划、设计、写码、评审、测试、部署",
+        "打破设计/开发/PM 各自为战的孤岛",
+        "问题与反馈回流同一流程"
+      ]
+    },
+    {
+      "label": "企业落地难点",
+      "detail": "采用仍集中在 10%–20% 早期爱好者，跨团队推广缺高层支持",
+      "children": [
+        "需找到内部 champion 推动变革",
+        "从个人 agent 走向团队/职能级自动化",
+        "例：QA agent 统一多个开发团队流程"
+      ]
+    },
+    {
+      "label": "本地与云 agent",
+      "detail": "本地 agent 走桌面端与 CLI 自助使用，云 agent 支持任务脱离本机运行",
+      "children": [
+        "本地体验基本自助化",
+        "云 agent 让任务不再依赖笔记本",
+        "客户关注跨职能一致性自动化"
+      ]
+    },
+    {
+      "label": "反哺产品路线",
+      "detail": "FDE 贴近客户用例，直接影响 Cursor 产品与工程路线图",
+      "children": [
+        "与产品、工程团队紧密协作",
+        "客户需求塑造下一步功能"
+      ]
+    }
+  ],
+  "flow": [
+    "驻场了解客户系统",
+    "定制部署 agent 平台",
+    "覆盖软件全生命周期",
+    "找到内部 champion",
+    "跨团队标准化流程",
+    "反馈驱动产品路线"
+  ],
+  "entities": [
+    {
+      "name": "Cursor",
+      "type": "product"
+    },
+    {
+      "name": "Pauline Brunet",
+      "type": "person"
+    },
+    {
+      "name": "Forward Deployed Engineering",
+      "type": "concept"
+    },
+    {
+      "name": "AI software factory",
+      "type": "concept"
+    },
+    {
+      "name": "Latent Space",
+      "type": "company"
+    },
+    {
+      "name": "Palantir",
+      "type": "company"
+    },
+    {
+      "name": "Spotify",
+      "type": "company"
+    },
+    {
+      "name": "Rippling",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Pauline Brunet",
+      "to": "Cursor",
+      "label": "任职于"
+    },
+    {
+      "from": "Pauline Brunet",
+      "to": "Forward Deployed Engineering",
+      "label": "负责"
+    },
+    {
+      "from": "Cursor",
+      "to": "AI software factory",
+      "label": "提出"
+    },
+    {
+      "from": "Latent Space",
+      "to": "Pauline Brunet",
+      "label": "采访"
+    },
+    {
+      "from": "Pauline Brunet",
+      "to": "Palantir",
+      "label": "团队来自"
+    },
+    {
+      "from": "Pauline Brunet",
+      "to": "Spotify",
+      "label": "团队来自"
+    }
+  ]
+}

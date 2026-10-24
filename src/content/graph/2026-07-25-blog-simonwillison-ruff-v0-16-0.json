@@ -1,0 +1,117 @@
+{
+  "center": "Ruff v0.16.0 默认启用 413 条规则",
+  "branches": [
+    {
+      "label": "默认规则大增",
+      "detail": "Ruff 0.16.0 默认启用规则从 59 条增至 413 条",
+      "children": [
+        "规则总数从 708 增至 968",
+        "上次默认集修改在 v0.1.0"
+      ]
+    },
+    {
+      "label": "CI 意外失败",
+      "detail": "未固定版本的 ruff 依赖导致 CI 任务因新默认检查失败",
+      "children": [
+        "Simon Willison 的 CI 作业全部失败"
+      ]
+    },
+    {
+      "label": "一键试用与修复",
+      "detail": "可用 uvx 直接运行最新 Ruff 检查并自动修复",
+      "children": [
+        "uvx ruff@latest check .",
+        "uvx ruff@latest check . --fix --unsafe-…"
+      ]
+    },
+    {
+      "label": "实际修复效果",
+      "detail": "在三个大型项目中发现数百个轻微问题",
+      "children": [
+        "sqlite-utils：发现 1618 个错误，修复 1538 个",
+        "剩余 80 个问题示例：DTZ005、BLE001、B018"
+      ]
+    },
+    {
+      "label": "AI 代理升级",
+      "detail": "用 Codex 和 Claude Code 完成项目升级",
+      "children": [
+        "Codex (GPT-5.6 Sol high) 升级 LLM 和…",
+        "Claude Code (Opus 5) 升级 Datasette"
+      ]
+    }
+  ],
+  "flow": [
+    "运行 uvx ruff@latest check .",
+    "发现新默认规则违规",
+    "运行 --fix --unsafe-fixes…",
+    "手动处理剩余问题",
+    "用 AI 代理完成升级"
+  ],
+  "entities": [
+    {
+      "name": "Ruff",
+      "type": "product"
+    },
+    {
+      "name": "Astral",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Astral",
+      "to": "Ruff",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Ruff",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "创建"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "创建"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "LLM",
+      "label": "创建"
+    },
+    {
+      "from": "Codex",
+      "to": "LLM",
+      "label": "升级"
+    }
+  ]
+}

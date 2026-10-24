@@ -1,0 +1,95 @@
+{
+  "center": "LLM cliché highlighter 套话检测",
+  "branches": [
+    {
+      "label": "工具用途",
+      "detail": "高亮 LLM 生成写作中常见的套话措辞",
+      "children": [
+        "针对十种常见 LLM 写作模式",
+        "如 no fluff, no filler, no jargon"
+      ]
+    },
+    {
+      "label": "使用方式",
+      "detail": "三种输入文本的方式",
+      "children": [
+        "直接粘贴文本",
+        "通过 Jina Reader 代理加载 URL",
+        "示例加载器演示"
+      ]
+    },
+    {
+      "label": "开发背景",
+      "detail": "Simon Willison 因读到套话文章而受挫",
+      "children": [
+        "用 Fable 5 vibe code 出该应用"
+      ]
+    },
+    {
+      "label": "应用场景",
+      "detail": "查看 Mozilla Bugzilla 等文章中的套话",
+      "children": [
+        "识别空洞的 LLM 风格文本"
+      ]
+    }
+  ],
+  "flow": [
+    "粘贴文本或输入 URL",
+    "通过 Jina Reader 加载内容",
+    "检测十种套话模式",
+    "高亮显示套话措辞"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "LLM cliché highlighter",
+      "type": "product"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Jina Reader",
+      "type": "product"
+    },
+    {
+      "name": "Mozilla Bugzilla",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "LLM cliché highlighter",
+      "label": "开发"
+    },
+    {
+      "from": "Fable 5",
+      "to": "LLM cliché highlighter",
+      "label": "编写"
+    },
+    {
+      "from": "LLM cliché highlighter",
+      "to": "Jina Reader",
+      "label": "使用"
+    },
+    {
+      "from": "LLM cliché highlighter",
+      "to": "Mozilla Bugzilla",
+      "label": "查看"
+    },
+    {
+      "from": "LLM cliché highlighter",
+      "to": "LLM",
+      "label": "检测"
+    }
+  ]
+}

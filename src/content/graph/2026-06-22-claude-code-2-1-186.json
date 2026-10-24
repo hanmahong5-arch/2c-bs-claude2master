@@ -1,0 +1,81 @@
+{
+  "center": "Claude Code v2.1.186 更新",
+  "branches": [
+    {
+      "label": "MCP CLI 登录",
+      "detail": "新增 claude mcp login/logout 命令，支持无头环境认证",
+      "children": [
+        "SSH 下用 --no-browser 完成认证",
+        "无需打开交互菜单",
+        "便于远程或自动化部署"
+      ]
+    },
+    {
+      "label": "!命令自动响应",
+      "detail": "! bash 命令默认触发 agent 自动响应输出",
+      "children": [
+        "设 respondToBashCommands: false 可关闭",
+        "关闭后恢复仅上下文行为",
+        "agent 对 shell 从被动变主动"
+      ]
+    },
+    {
+      "label": "子代理权限改进",
+      "detail": "后台子代理权限提示显示在主会话并标明请求 agent",
+      "children": [
+        "Esc 仅拒绝当前工具",
+        "提升多 agent 协作安全可见性",
+        "避免自动拒绝导致功能受阻"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "claude mcp login",
+      "type": "technique"
+    },
+    {
+      "name": "respondToBashCommands",
+      "type": "technique"
+    },
+    {
+      "name": "SSH",
+      "type": "concept"
+    },
+    {
+      "name": "子代理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "新增登录支持"
+    },
+    {
+      "from": "claude mcp login",
+      "to": "SSH",
+      "label": "支持无头认证"
+    },
+    {
+      "from": "Claude Code",
+      "to": "respondToBashCommands",
+      "label": "新增配置项"
+    },
+    {
+      "from": "Claude Code",
+      "to": "子代理",
+      "label": "改进权限提示"
+    }
+  ]
+}

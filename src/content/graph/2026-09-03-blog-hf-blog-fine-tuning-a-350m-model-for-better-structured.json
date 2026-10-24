@@ -1,0 +1,96 @@
+{
+  "center": "350M模型GRPO微调结构化输出",
+  "branches": [
+    {
+      "label": "核心方法",
+      "detail": "用GRPO强化学习微调350M小模型，提升结构化输出质量",
+      "children": [
+        "仅需约100步训练",
+        "模型规模0.4B",
+        "GRPO为强化学习算法"
+      ]
+    },
+    {
+      "label": "模型与数据",
+      "detail": "文章关联2个模型与2个数据集作为实验基础",
+      "children": [
+        "Text Generation类模型",
+        "更新于8月5日",
+        "下载量82k与72.4k"
+      ]
+    },
+    {
+      "label": "社区反馈",
+      "detail": "文章获131次点赞，评论区存在安全测试内容",
+      "children": [
+        "Upvote 131",
+        "含XSS测试评论",
+        "作者helpmehere发布"
+      ]
+    },
+    {
+      "label": "相关阅读",
+      "detail": "博客另有多向量嵌入模型微调相关文章",
+      "children": [
+        "Sentence Transformers微调",
+        "Late Interaction嵌入",
+        "8月发布"
+      ]
+    }
+  ],
+  "flow": [
+    "准备结构化输出数据集",
+    "加载350M基础模型",
+    "配置GRPO训练参数",
+    "执行约100步微调",
+    "评估结构化输出效果"
+  ],
+  "entities": [
+    {
+      "name": "GRPO",
+      "type": "technique"
+    },
+    {
+      "name": "350M Model",
+      "type": "model"
+    },
+    {
+      "name": "Sentence Transformers",
+      "type": "product"
+    },
+    {
+      "name": "helpmehere",
+      "type": "person"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "结构化输出",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "GRPO",
+      "to": "350M Model",
+      "label": "微调"
+    },
+    {
+      "from": "helpmehere",
+      "to": "Hugging Face",
+      "label": "发布于"
+    },
+    {
+      "from": "350M Model",
+      "to": "结构化输出",
+      "label": "提升"
+    },
+    {
+      "from": "Sentence Transformers",
+      "to": "Hugging Face",
+      "label": "托管于"
+    }
+  ]
+}

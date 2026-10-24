@@ -1,0 +1,66 @@
+{
+  "center": "Cline CLI 修复额度不足检测",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "CLI 现在能识别 Cline API 的 insufficient_credits（402）错误",
+      "children": [
+        "此前额度耗尽只报通用错误",
+        "402 状态码对应额度不足"
+      ]
+    },
+    {
+      "label": "用户提示",
+      "detail": "检测到额度不足时显示 add credits 卡片",
+      "children": [
+        "agent 获得明确的添加额度提示",
+        "避免错误信息模糊导致困惑"
+      ]
+    },
+    {
+      "label": "版本",
+      "detail": "本次改动发布于 cline cli-v3.0.46",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "Cline API",
+      "type": "product"
+    },
+    {
+      "name": "insufficient_credits",
+      "type": "concept"
+    },
+    {
+      "name": "402",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "Cline API",
+      "label": "调用"
+    },
+    {
+      "from": "Cline API",
+      "to": "insufficient_credits",
+      "label": "返回"
+    },
+    {
+      "from": "insufficient_credits",
+      "to": "402",
+      "label": "对应状态码"
+    }
+  ]
+}

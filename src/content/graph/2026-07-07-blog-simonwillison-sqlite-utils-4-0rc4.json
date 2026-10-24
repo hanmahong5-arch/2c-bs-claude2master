@@ -1,0 +1,71 @@
+{
+  "center": "sqlite-utils 4.0rc4 发布",
+  "branches": [
+    {
+      "label": "版本定位",
+      "detail": "4.0 正式版前的最后一个候选版本",
+      "children": [
+        "属于 Release 类公告"
+      ]
+    },
+    {
+      "label": "核心变更",
+      "detail": "主要落实 Claude Fable 5 详细评审的反馈",
+      "children": [
+        "由 Simon Willison 发布"
+      ]
+    },
+    {
+      "label": "项目性质",
+      "detail": "操作 SQLite 数据库的 Python CLI 工具与库",
+      "children": [
+        "发布于 2026 年 7 月 7 日"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "Python",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "sqlite-utils",
+      "to": "SQLite",
+      "label": "操作"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "Python",
+      "label": "基于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "sqlite-utils",
+      "label": "评审"
+    }
+  ]
+}

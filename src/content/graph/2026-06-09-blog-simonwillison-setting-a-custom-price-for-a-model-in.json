@@ -1,0 +1,90 @@
+{
+  "center": "AgentsView 自定义模型价格",
+  "branches": [
+    {
+      "label": "背景与动机",
+      "detail": "新模型未收录进 AgentsView 定价库，导致用量无法计价",
+      "children": [
+        "Claude Fable 5 当天发布，尚未收录",
+        "作者是 AgentsView 新用户"
+      ]
+    },
+    {
+      "label": "工具介绍",
+      "detail": "AgentsView 是 Wes McKinney 开发的 Python 工具，分析本地编码代理记录",
+      "children": [
+        "Wes McKinney 为 Pandas 作者",
+        "用于查看各编码代理的 token 用量",
+        "以树状图按项目展示用量"
+      ]
+    },
+    {
+      "label": "解决方法",
+      "detail": "作者用 Fable 逆向分析 AgentsView，找到设置自定义价格的配方",
+      "children": [
+        "用 Claude Fable 5 逆向工程",
+        "得到自定义定价的 recipe"
+      ]
+    }
+  ],
+  "flow": [
+    "发现新模型未定价",
+    "用 Fable 逆向 AgentsView",
+    "找到自定义价格配方",
+    "设置自定义价格",
+    "按项目查看用量"
+  ],
+  "entities": [
+    {
+      "name": "AgentsView",
+      "type": "product"
+    },
+    {
+      "name": "Wes McKinney",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Pandas",
+      "type": "product"
+    },
+    {
+      "name": "Python",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Wes McKinney",
+      "to": "AgentsView",
+      "label": "开发"
+    },
+    {
+      "from": "Wes McKinney",
+      "to": "Pandas",
+      "label": "曾开发"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "AgentsView",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Fable 5",
+      "label": "使用"
+    },
+    {
+      "from": "AgentsView",
+      "to": "Python",
+      "label": "基于"
+    }
+  ]
+}

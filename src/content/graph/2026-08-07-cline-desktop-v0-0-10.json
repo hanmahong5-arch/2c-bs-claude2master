@@ -1,0 +1,108 @@
+{
+  "center": "cline desktop v0.0.10 更新",
+  "branches": [
+    {
+      "label": "MCP OAuth 认证",
+      "detail": "MCP 服务器支持 OAuth，可查看状态、取消或重试",
+      "children": [
+        "支持预注册客户端",
+        "配置变更时令牌失效"
+      ]
+    },
+    {
+      "label": "错误可见性提升",
+      "detail": "MCP 错误显示在单个服务器上，不再静默消失",
+      "children": [
+        "无模型凭据或队列失败时转录中显示错误及原因",
+        "错误指向设置，便于调试"
+      ]
+    },
+    {
+      "label": "模型连接引导",
+      "detail": "欢迎屏新增“连接模型”提示，实时识别已连接服务",
+      "children": [
+        "识别 Bedrock/Vertex 等",
+        "减少配置错误"
+      ]
+    },
+    {
+      "label": "UI 与快捷键",
+      "detail": "修复首条消息重复渲染、composer 卡在“工作中”等问题",
+      "children": [
+        "新增 Cmd/Ctrl+N 新会话",
+        "Cmd/Ctrl+, 设置，Esc 停止"
+      ]
+    },
+    {
+      "label": "推理与网络修复",
+      "detail": "推理控制跨 AI SDK 提供商一致，包括 Ollama",
+      "children": [
+        "Vertex AI 凭据刷新使用配置的 fetch",
+        "修复代理问题"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline desktop",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Vertex AI",
+      "type": "product"
+    },
+    {
+      "name": "Ollama",
+      "type": "product"
+    },
+    {
+      "name": "AI SDK",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline desktop",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "MCP",
+      "to": "OAuth",
+      "label": "支持"
+    },
+    {
+      "from": "cline desktop",
+      "to": "Bedrock",
+      "label": "连接"
+    },
+    {
+      "from": "cline desktop",
+      "to": "Vertex AI",
+      "label": "连接"
+    },
+    {
+      "from": "cline desktop",
+      "to": "Ollama",
+      "label": "支持"
+    },
+    {
+      "from": "cline desktop",
+      "to": "AI SDK",
+      "label": "集成"
+    }
+  ]
+}

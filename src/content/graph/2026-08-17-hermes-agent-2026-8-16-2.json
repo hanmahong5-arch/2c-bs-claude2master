@@ -1,0 +1,90 @@
+{
+  "center": "Hermes Agent 0.20.3 更新",
+  "branches": [
+    {
+      "label": "MCP 2.x 迁移",
+      "detail": "适配 MCP 2.x SDK 与 stateless 协议，保证工具调用兼容",
+      "children": [
+        "MCP 2.x SDK 迁移",
+        "stateless 协议支持"
+      ]
+    },
+    {
+      "label": "运行时隔离",
+      "detail": "子进程 Python 运行时隔离 PYTHONHOME/PYTHONPATH，防环境污染",
+      "children": [
+        "PYTHONHOME/PYTHONPATH 隔离"
+      ]
+    },
+    {
+      "label": "调度器自愈",
+      "detail": "EMFILE 恢复与陈旧认领协调，提升长时间运行可靠性",
+      "children": [
+        "EMFILE 恢复",
+        "陈旧认领协调"
+      ]
+    },
+    {
+      "label": "会话与插件修复",
+      "detail": "修复会话交接数据丢失，并引入插件安装安全扫描",
+      "children": [
+        "会话交接数据丢失修复",
+        "插件安装安全扫描"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "MCP 2.x SDK",
+      "type": "product"
+    },
+    {
+      "name": "PYTHONHOME",
+      "type": "concept"
+    },
+    {
+      "name": "PYTHONPATH",
+      "type": "concept"
+    },
+    {
+      "name": "EMFILE",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "MCP 2.x SDK",
+      "label": "迁移至"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "PYTHONHOME",
+      "label": "隔离"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "PYTHONPATH",
+      "label": "隔离"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "EMFILE",
+      "label": "恢复"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "center": "Simon Willison 六月 AI 动态",
+  "branches": [
+    {
+      "label": "新模型发布",
+      "detail": "六月多款重要模型集中发布",
+      "children": [
+        "Claude Fable 5",
+        "GPT-5.6",
+        "GLM-5.2 最佳开源权重模型"
+      ]
+    },
+    {
+      "label": "出口限制",
+      "detail": "美国出口限制影响 AI 模型",
+      "children": [
+        "与 Claude Fable 5、GPT-5.6 并列提及"
+      ]
+    },
+    {
+      "label": "Tokenmaxxing 结束",
+      "detail": "Tokenmaxxing 时代已结束",
+      "children": []
+    },
+    {
+      "label": "Datasette 生态",
+      "detail": "Datasette 相关工具与项目更新",
+      "children": [
+        "Datasette Apps",
+        "sqlite-utils",
+        "shot-scraper"
+      ]
+    },
+    {
+      "label": "其他动态",
+      "detail": "WASM 项目与其他模型发布",
+      "children": [
+        "Miscellaneous WASM projects",
+        "Other model releases"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "shot-scraper",
+      "type": "product"
+    },
+    {
+      "name": "Tokenmaxxing",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Claude Fable 5",
+      "label": "报道"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-5.6",
+      "label": "报道"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GLM-5.2",
+      "label": "报道"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Datasette",
+      "label": "开发"
+    },
+    {
+      "from": "Datasette",
+      "to": "sqlite-utils",
+      "label": "相关工具"
+    },
+    {
+      "from": "Datasette",
+      "to": "shot-scraper",
+      "label": "相关工具"
+    }
+  ]
+}

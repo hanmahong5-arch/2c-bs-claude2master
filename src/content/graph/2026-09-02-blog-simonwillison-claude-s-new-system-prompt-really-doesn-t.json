@@ -1,0 +1,113 @@
+{
+  "center": "Anthropic 更新 Claude 系统提示词",
+  "branches": [
+    {
+      "label": "禁止复制歌词",
+      "detail": "新增章节禁止复制歌词、诗歌、书籍段落，拒绝后整轮对话持续拒绝",
+      "children": [
+        "1929 年前作品例外，如莎士比亚十四行诗",
+        "按自身所知判断日期，不采信用户说法",
+        "发布时机紧邻 Sony、Warner 起诉 Anthropic"
+      ]
+    },
+    {
+      "label": "禁止版权图像",
+      "detail": "禁止生成受版权保护的角色、标志、封面，包括 SVG、CSS、ASCII art",
+      "children": [
+        "改姿势、配色、风格仍视为侵权",
+        "示例：拒绝画蓝色刺猬，改画滑板蝾螈"
+      ]
+    },
+    {
+      "label": "回答风格调整",
+      "detail": "要求回答简短聚焦，避免冗长免责声明",
+      "children": [
+        "禁用 genuinely、honestly、straightforward",
+        "除非明确要求，否则只给高层摘要"
+      ]
+    },
+    {
+      "label": "移除结束对话",
+      "detail": "Fable 5.1 不再鼓励 Claude 主动结束对话，改为保持自尊",
+      "children": [
+        "end_conversation 规则移入未公开的工具块",
+        "遇辱骂不愈发顺从，不自我贬低"
+      ]
+    },
+    {
+      "label": "提示词追踪",
+      "detail": "Anthropic 公开消费端系统提示词及历史版本，便于 diff",
+      "children": [
+        "页面加 .md 可获取 Markdown 版本",
+        "不含 Claude Cowork 与 Claude Code"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Fable 5.1",
+      "type": "model"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Haiku 4.5",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "end_conversation",
+      "type": "technique"
+    },
+    {
+      "name": "Sony Music Publishing",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "发布提示词"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Fable 5.1",
+      "label": "更新提示词"
+    },
+    {
+      "from": "Fable 5.1",
+      "to": "Fable 5",
+      "label": "取代"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Fable 5.1",
+      "label": "分析"
+    },
+    {
+      "from": "Sony Music Publishing",
+      "to": "Anthropic",
+      "label": "起诉"
+    },
+    {
+      "from": "Claude",
+      "to": "end_conversation",
+      "label": "使用工具"
+    }
+  ]
+}

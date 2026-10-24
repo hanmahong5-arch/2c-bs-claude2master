@@ -1,0 +1,118 @@
+{
+  "center": "DeepSeek v4.1-Flash 新架构",
+  "branches": [
+    {
+      "label": "全新架构",
+      "detail": "因果编码器-解码器，预填充与解码分离，稀疏度仅1-2%",
+      "children": [
+        "763B总参数，8B激活输入，16B激活输出",
+        "KV缓存仅为V4 Flash的1/8",
+        "滑动窗口注意力有界重放"
+      ]
+    },
+    {
+      "label": "性能与定价",
+      "detail": "超越V4 Pro，价格极低，1M上下文，MIT许可",
+      "children": [
+        "AA智能指数40，低于GLM-5.3-Flash",
+        "输入$0.30/1M，输出$1.20/1M",
+        "缓存输入$0.006/1M，非高峰再5折"
+      ]
+    },
+    {
+      "label": "原生视觉",
+      "detail": "无需单独视觉模型，直接支持文本+图像输入",
+      "children": [
+        "文本+图像输入",
+        "美国API可用，ZDR"
+      ]
+    },
+    {
+      "label": "开源生态",
+      "detail": "Day-0支持：Baseten、Ollama等平台迅速集成",
+      "children": [
+        "Baseten提供day-0支持",
+        "Ollama向Max/Team/Pro推出"
+      ]
+    },
+    {
+      "label": "后训练观点",
+      "detail": "DeepSeek认为数据质量ROI远超新后训练算法",
+      "children": [
+        "与Jie Tang教授观点一致"
+      ]
+    }
+  ],
+  "flow": [
+    "输入文本/图像",
+    "8B激活预填充编码",
+    "16B激活解码输出",
+    "KV缓存优化"
+  ],
+  "entities": [
+    {
+      "name": "DeepSeek",
+      "type": "company"
+    },
+    {
+      "name": "DeepSeek v4.1-Flash",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek V4 Pro",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5.3-Flash",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Sebastian Raschka",
+      "type": "person"
+    },
+    {
+      "name": "因果编码器-解码器",
+      "type": "technique"
+    },
+    {
+      "name": "滑动窗口注意力有界重放",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DeepSeek",
+      "to": "DeepSeek v4.1-Flash",
+      "label": "发布"
+    },
+    {
+      "from": "DeepSeek v4.1-Flash",
+      "to": "DeepSeek V4 Pro",
+      "label": "超越"
+    },
+    {
+      "from": "DeepSeek v4.1-Flash",
+      "to": "GLM-5.3-Flash",
+      "label": "低于"
+    },
+    {
+      "from": "DeepSeek v4.1-Flash",
+      "to": "Kimi K3",
+      "label": "领先"
+    },
+    {
+      "from": "DeepSeek v4.1-Flash",
+      "to": "因果编码器-解码器",
+      "label": "采用"
+    },
+    {
+      "from": "DeepSeek v4.1-Flash",
+      "to": "滑动窗口注意力有界重放",
+      "label": "采用"
+    }
+  ]
+}

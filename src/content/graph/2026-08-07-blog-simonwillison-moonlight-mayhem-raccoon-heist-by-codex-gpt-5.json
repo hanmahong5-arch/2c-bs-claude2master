@@ -1,0 +1,110 @@
+{
+  "center": "Codex + GPT-5.6 复刻 Raccoon…",
+  "branches": [
+    {
+      "label": "同提示词对比",
+      "detail": "Simon Willison 用同一提示词分别让 Claude Fable 5 与 Codex + GPT-5.6 生成游戏",
+      "children": [
+        "提示词源自四年前 GPT-3 + DALL-E 生成的点子",
+        "Codex 版本明显更好"
+      ]
+    },
+    {
+      "label": "游戏内容升级",
+      "detail": "GPT-5.6 版从单只浣熊捡硬币升级为博物馆团队盗窃",
+      "children": [
+        "需救出两只浣熊队友叠罗汉",
+        "目标是偷走金沙丁鱼"
+      ]
+    },
+    {
+      "label": "遗留 Bug",
+      "detail": "一次性生成的版本中每只浣熊头顶漂浮巨大眼球球体",
+      "children": [
+        "Codex 开发中看截图也没发现",
+        "用户追问后一句 Fix it 修复"
+      ]
+    },
+    {
+      "label": "成本与耗时",
+      "detail": "Codex 在该项目上共花费 52 分钟",
+      "children": [
+        "仓库含完整 Codex 对话记录",
+        "附 AgentsView 按全价 API 估算的费用"
+      ]
+    }
+  ],
+  "flow": [
+    "复用四年前 GPT-3 提示词",
+    "交给 Codex + GPT-5.6 一次性…",
+    "生成贴图与游戏代码",
+    "发现浣熊眼球 Bug",
+    "追问并修复"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6 Sol Ultra",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-3",
+      "type": "model"
+    },
+    {
+      "name": "gpt-image-2",
+      "type": "model"
+    },
+    {
+      "name": "Moonlight & Mayhem",
+      "type": "product"
+    },
+    {
+      "name": "Raccoon Heist",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Codex",
+      "label": "测试"
+    },
+    {
+      "from": "Codex",
+      "to": "GPT-5.6 Sol Ultra",
+      "label": "运行于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Fable 5",
+      "label": "此前测试"
+    },
+    {
+      "from": "Codex",
+      "to": "Moonlight & Mayhem",
+      "label": "生成"
+    },
+    {
+      "from": "Moonlight & Mayhem",
+      "to": "Raccoon Heist",
+      "label": "改编自"
+    },
+    {
+      "from": "Codex",
+      "to": "gpt-image-2",
+      "label": "调用生成贴图"
+    }
+  ]
+}

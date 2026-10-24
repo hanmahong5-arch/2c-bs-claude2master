@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw 主动记忆配置",
+  "branches": [
+    {
+      "label": "启用与范围",
+      "detail": "控制插件开关、可用 agent 与会话类型",
+      "children": [
+        "enabled 布尔开关插件本身",
+        "config.agents 指定可用 agent id",
+        "allowedChatTypes 默认仅 direct"
+      ]
+    },
+    {
+      "label": "召回触发模式",
+      "detail": "mode 决定阻塞式深度召回子代理何时运行",
+      "children": [
+        "escalate / always / off，默认 escalate",
+        "queryMode 控制子代理可见对话量",
+        "promptStyle 控制召回积极度"
+      ]
+    },
+    {
+      "label": "子代理与工具",
+      "detail": "配置阻塞子代理的模型、工具与思考等级",
+      "children": [
+        "toolsAllow 默认 memory_search、memory_get",
+        "thinking 默认 off 以提速",
+        "model 未设则继承当前会话模型"
+      ]
+    },
+    {
+      "label": "超时与熔断",
+      "detail": "限制召回耗时并在连续超时后跳过",
+      "children": [
+        "timeoutMs 默认 15000，范围 250-120000",
+        "连续超时 3 次触发熔断",
+        "熔断冷却默认 60000 ms"
+      ]
+    },
+    {
+      "label": "调优与日志",
+      "detail": "近期轮次、缓存与转录导出等微调项",
+      "children": [
+        "recentUserTurns 默认 2，上限 4",
+        "cacheTtlMs 默认 15000",
+        "persistTranscripts 导出 JSONL"
+      ]
+    }
+  ],
+  "flow": [
+    "会话触发召回",
+    "按 mode 决定是否运行",
+    "子代理查询记忆",
+    "返回摘要或跳过",
+    "超时则熔断"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "active-memory",
+      "type": "product"
+    },
+    {
+      "name": "memory_search",
+      "type": "technique"
+    },
+    {
+      "name": "memory_get",
+      "type": "technique"
+    },
+    {
+      "name": "memory_recall",
+      "type": "technique"
+    },
+    {
+      "name": "memory-lancedb",
+      "type": "product"
+    },
+    {
+      "name": "JSONL",
+      "type": "concept"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "active-memory",
+      "label": "包含插件"
+    },
+    {
+      "from": "active-memory",
+      "to": "memory_search",
+      "label": "默认调用"
+    },
+    {
+      "from": "active-memory",
+      "to": "memory_get",
+      "label": "默认调用"
+    },
+    {
+      "from": "active-memory",
+      "to": "memory_recall",
+      "label": "可选调用"
+    },
+    {
+      "from": "active-memory",
+      "to": "memory-lancedb",
+      "label": "可搭配"
+    },
+    {
+      "from": "active-memory",
+      "to": "JSONL",
+      "label": "导出格式"
+    }
+  ]
+}

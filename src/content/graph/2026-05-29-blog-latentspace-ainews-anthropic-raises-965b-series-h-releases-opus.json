@@ -1,0 +1,108 @@
+{
+  "center": "Anthropic 融资并发布 Opus 4.8",
+  "branches": [
+    {
+      "label": "巨额融资",
+      "detail": "Anthropic 完成 650 亿美元 H 轮融资，投后估值 9650 亿美元",
+      "children": [
+        "领投方：Altimeter、Dragoneer、Greenoaks…",
+        "年化收入达 470 亿美元，去年 12 月仅 90 亿",
+        "资金用于研究与扩展 Claude 算力"
+      ]
+    },
+    {
+      "label": "Opus 4.8 发布",
+      "detail": "定位为 Opus 4.7 的更新，判断更敏锐、更诚实、可独立工作更久",
+      "children": [
+        "价格与 4.7 相同",
+        "修复 4.7 反馈问题，对话更自然",
+        "经济相关基准测试 SOTA"
+      ]
+    },
+    {
+      "label": "动态工作流",
+      "detail": "Claude Code 推出 Dynamic Workflows（ultracode），可生成数百并行子代理",
+      "children": [
+        "研究预览版，支持 Max/Team/Enterprise/API 等",
+        "曾用于 6 天将 Bun 从 Zig 重写为 Rust（75…",
+        "可能消耗大量 token 和配额"
+      ]
+    },
+    {
+      "label": "评价分化",
+      "detail": "看多者称可叫 Opus 5，看空者认为是追赶 OpenAI 的小升级",
+      "children": [
+        "Andon Labs 基准：Vending Bench 不如 4.7…",
+        "部分认为在追赶 GPT-5.5 系列",
+        "诚实度与校准获好评"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Dynamic Workflows",
+      "type": "technique"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Altimeter",
+      "type": "company"
+    },
+    {
+      "name": "Bun",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Opus 4.8",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "推出"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Dynamic Workflows",
+      "label": "集成"
+    },
+    {
+      "from": "Anthropic",
+      "to": "OpenAI",
+      "label": "追赶"
+    },
+    {
+      "from": "Altimeter",
+      "to": "Anthropic",
+      "label": "领投"
+    },
+    {
+      "from": "Dynamic Workflows",
+      "to": "Bun",
+      "label": "用于重写"
+    }
+  ]
+}

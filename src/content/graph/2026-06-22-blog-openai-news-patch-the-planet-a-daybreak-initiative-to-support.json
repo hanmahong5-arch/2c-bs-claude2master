@@ -1,0 +1,97 @@
+{
+  "center": "OpenAI 开源漏洞修复计划",
+  "branches": [
+    {
+      "label": "项目定位",
+      "detail": "Daybreak 计划用 AI 帮开源维护者发现并修复漏洞",
+      "children": [
+        "OpenAI 发起",
+        "面向开源维护者",
+        "降低安全维护门槛"
+      ]
+    },
+    {
+      "label": "AI+专家审核",
+      "detail": "AI 提供漏洞发现与修复建议，专家审核保证质量",
+      "children": [
+        "避免 AI 误判引入新问题",
+        "人工监督修复流程"
+      ]
+    },
+    {
+      "label": "聚焦关键设施",
+      "detail": "重点支持关键基础设施项目，提升生态安全",
+      "children": [
+        "关键基础设施项目",
+        "提升整体生态安全性"
+      ]
+    },
+    {
+      "label": "对开发者意义",
+      "detail": "AI 工具链可安全融入开源安全流程，但需人工监督",
+      "children": [
+        "AI 工具链融入安全流程",
+        "仍需人工监督"
+      ]
+    }
+  ],
+  "flow": [
+    "AI 发现漏洞",
+    "生成修复建议",
+    "专家审核",
+    "维护者修复"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Daybreak",
+      "type": "product"
+    },
+    {
+      "name": "开源维护者",
+      "type": "person"
+    },
+    {
+      "name": "AI 辅助漏洞发现",
+      "type": "technique"
+    },
+    {
+      "name": "专家审核",
+      "type": "concept"
+    },
+    {
+      "name": "关键基础设施",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Daybreak",
+      "label": "发起"
+    },
+    {
+      "from": "Daybreak",
+      "to": "开源维护者",
+      "label": "支持"
+    },
+    {
+      "from": "Daybreak",
+      "to": "AI 辅助漏洞发现",
+      "label": "采用"
+    },
+    {
+      "from": "Daybreak",
+      "to": "专家审核",
+      "label": "结合"
+    },
+    {
+      "from": "Daybreak",
+      "to": "关键基础设施",
+      "label": "聚焦"
+    }
+  ]
+}

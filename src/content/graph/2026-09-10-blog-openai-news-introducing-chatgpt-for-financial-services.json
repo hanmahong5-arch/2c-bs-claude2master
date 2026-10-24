@@ -1,0 +1,74 @@
+{
+  "center": "OpenAI 金融服务版 ChatGPT",
+  "branches": [
+    {
+      "label": "产品发布",
+      "detail": "OpenAI 推出 ChatGPT for Financial Services，内置金融数据加 GPT-6 Astra",
+      "children": [
+        "面向研究、建模、客户交付材料三类任务",
+        "目标用户是金融从业者日常工作流"
+      ]
+    },
+    {
+      "label": "竞争转向",
+      "detail": "垂直行业 agent 竞争点从模型能力转向「模型 + 专有数据源」打包",
+      "children": [
+        "数据接入由平台侧完成，非用户自行拼接",
+        "数据授权与更新频率成选型关键"
+      ]
+    },
+    {
+      "label": "输出要求",
+      "detail": "输出需可交付、可复核，格式与审计链路比纯对话更重要",
+      "children": [
+        "强调 client-ready materials",
+        "审计链路成为工具链重点"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT for Financial Services",
+      "type": "product"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "金融数据",
+      "type": "concept"
+    },
+    {
+      "name": "垂直行业 agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT for Financial Services",
+      "label": "发布"
+    },
+    {
+      "from": "ChatGPT for Financial Services",
+      "to": "GPT-6 Astra",
+      "label": "内置"
+    },
+    {
+      "from": "ChatGPT for Financial Services",
+      "to": "金融数据",
+      "label": "内置"
+    },
+    {
+      "from": "ChatGPT for Financial Services",
+      "to": "垂直行业 agent",
+      "label": "属于"
+    }
+  ]
+}

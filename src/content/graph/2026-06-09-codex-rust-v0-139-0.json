@@ -1,0 +1,74 @@
+{
+  "center": "Codex Rust v0.139.0 更新",
+  "branches": [
+    {
+      "label": "代码模式联网",
+      "detail": "代码模式可直接调用独立网页搜索，代理在代码执行中实时获取外部信息",
+      "children": [
+        "支持嵌套 JavaScript 工具调用",
+        "接收纯文本搜索结果"
+      ]
+    },
+    {
+      "label": "工具输入模式增强",
+      "detail": "压缩大型模式时保留 oneOf 和 allOf，结构更浅",
+      "children": [
+        "提升与复杂 MCP 工具兼容性",
+        "可处理更丰富模式定义"
+      ]
+    },
+    {
+      "label": "doctor 报告增强",
+      "detail": "codex doctor 本地报告增加编辑器与分页器环境信息",
+      "children": [
+        "JSON 输出隐藏原始值",
+        "便于调试时保护敏感数据"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Rust",
+      "type": "technique"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "JavaScript",
+      "type": "technique"
+    },
+    {
+      "name": "codex doctor",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "Rust",
+      "label": "以 Rust 实现"
+    },
+    {
+      "from": "Codex",
+      "to": "MCP",
+      "label": "兼容"
+    },
+    {
+      "from": "Codex",
+      "to": "JavaScript",
+      "label": "支持调用"
+    },
+    {
+      "from": "Codex",
+      "to": "codex doctor",
+      "label": "包含命令"
+    }
+  ]
+}

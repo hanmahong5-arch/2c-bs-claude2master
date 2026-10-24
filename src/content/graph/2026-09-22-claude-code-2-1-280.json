@@ -1,0 +1,80 @@
+{
+  "center": "Claude Code v2.1.280 更新",
+  "branches": [
+    {
+      "label": "Opus 5.5 默认",
+      "detail": "新增 claude-opus-5-5 并设为默认 Opus 模型",
+      "children": [
+        "1M 上下文",
+        "$4/$20 per Mtok，缓存读取 $0.20/Mtok",
+        "harness 可默认假设更长上下文"
+      ]
+    },
+    {
+      "label": "子代理缓存修复",
+      "detail": "恢复的 fork 子代理重建工具列表导致 prompt 缓存失效",
+      "children": [
+        "改为复用首次工具列表",
+        "需持久化初始工具集以保住缓存命中"
+      ]
+    },
+    {
+      "label": "子代理消息修复",
+      "detail": "后台子代理收尾消息被静默丢弃、报告丢失",
+      "children": [
+        "影响无头与 SDK 会话",
+        "父对话压缩后报告丢失",
+        "消息与报告需独立于父对话落盘"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Opus 5.5",
+      "type": "model"
+    },
+    {
+      "name": "claude-opus-5-5",
+      "type": "model"
+    },
+    {
+      "name": "prompt 缓存",
+      "type": "concept"
+    },
+    {
+      "name": "子代理",
+      "type": "concept"
+    },
+    {
+      "name": "SDK",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Opus 5.5",
+      "label": "默认采用"
+    },
+    {
+      "from": "Opus 5.5",
+      "to": "claude-opus-5-5",
+      "label": "对应标识"
+    },
+    {
+      "from": "子代理",
+      "to": "prompt 缓存",
+      "label": "影响命中"
+    },
+    {
+      "from": "子代理",
+      "to": "SDK",
+      "label": "用于会话"
+    }
+  ]
+}

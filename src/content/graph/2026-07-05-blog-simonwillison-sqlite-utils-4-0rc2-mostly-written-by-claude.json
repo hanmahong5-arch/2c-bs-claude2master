@@ -1,0 +1,107 @@
+{
+  "center": "sqlite-utils 4.0rc2 由 Claude…",
+  "branches": [
+    {
+      "label": "发布前审查",
+      "detail": "Simon Willison 用 Claude Fable 审查 4.0 稳定版，发现 5 个发布阻塞问题",
+      "children": [
+        "最严重：delete_where() 不提交并污染连接导致…",
+        "37 个提示、34 次提交、+1321 -190 行、涉及…"
+      ]
+    },
+    {
+      "label": "事务模型改进",
+      "detail": "新 RC 引入全面事务文档，每个写方法自动提交",
+      "children": [
+        "insert/upsert/update/delete 等均在自身事…",
+        "db.atomic() 用于分组操作，db.begin() 手动…"
+      ]
+    },
+    {
+      "label": "跨模型审查",
+      "detail": "用 GPT-5.5 审查 Claude Fable 的工作，发现两个 P1 问题",
+      "children": [
+        "db.query() 对非行语句先提交后报错",
+        "INSERT ... RETURNING 需耗尽生成器才提交"
+      ]
+    },
+    {
+      "label": "成本估算",
+      "detail": "使用 AgentsView 估算本次会话 API 成本约 $149.25",
+      "children": [
+        "主会话 claude-fable-5 花费 $141.02",
+        "其他子代理花费 $2.40、$2.39 等"
+      ]
+    }
+  ],
+  "flow": [
+    "提示 Fable 审查 4.0 稳定版",
+    "Fable 报告 5 个发布阻塞问题",
+    "逐项修复并改进设计",
+    "GPT-5.5 二次审查发现新问题",
+    "Fable 确认并修复",
+    "估算成本并发布 4.0rc2"
+  ],
+  "entities": [
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "AgentsView",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "开发"
+    },
+    {
+      "from": "Claude Fable",
+      "to": "sqlite-utils",
+      "label": "修复"
+    },
+    {
+      "from": "GPT-5.5",
+      "to": "Claude Fable",
+      "label": "审查"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude Fable",
+      "label": "运行"
+    },
+    {
+      "from": "AgentsView",
+      "to": "Claude Fable",
+      "label": "估算成本"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "SQLite",
+      "label": "封装"
+    }
+  ]
+}

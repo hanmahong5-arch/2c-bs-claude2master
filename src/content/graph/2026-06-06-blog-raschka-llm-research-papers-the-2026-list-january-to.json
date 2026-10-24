@@ -1,0 +1,96 @@
+{
+  "center": "2026上半年LLM论文精选",
+  "branches": [
+    {
+      "label": "混合架构崛起",
+      "detail": "2026年架构创新转向混合设计，交替使用注意力层与状态空间层以提升长上下文效率",
+      "children": [
+        "Nemotron 3 Super采用Mamba-2层交替注意力层",
+        "Qwen3.6使用Gated DeltaNet层替代Mamba-2",
+        "Nemotron 3 Ultra扩展至550B-A55B"
+      ]
+    },
+    {
+      "label": "推理与RL重点",
+      "detail": "列表偏重推理模型、强化学习与高效推理，反映作者当前工作方向",
+      "children": [
+        "涵盖推理与测试时计算、RLVR等类别",
+        "较2025年新增agent harness、工具使用、长上下…"
+      ]
+    },
+    {
+      "label": "十大论文类别",
+      "detail": "按主题分为架构设计、高效训练、推理效率、稀疏注意力、推理、RL、Agent系统、编码Agent、扩散语言模型、评估基准",
+      "children": [
+        "架构与模型设计：Nemotron 3、Mamba-3等",
+        "推理效率与KV Cache、稀疏注意力与长上下文",
+        "Agent系统与工具使用、编码Agent与软件工程"
+      ]
+    },
+    {
+      "label": "精选而非全集",
+      "detail": "作者基于个人兴趣与工作相关性筛选，非完整论文列表",
+      "children": [
+        "覆盖2026年1月至5月书签论文",
+        "作者仅详细阅读了其中一部分"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Sebastian Raschka",
+      "type": "person"
+    },
+    {
+      "name": "Nemotron 3",
+      "type": "model"
+    },
+    {
+      "name": "Mamba-3",
+      "type": "model"
+    },
+    {
+      "name": "Qwen3.6",
+      "type": "model"
+    },
+    {
+      "name": "Gated DeltaNet-2",
+      "type": "model"
+    },
+    {
+      "name": "MoE",
+      "type": "concept"
+    },
+    {
+      "name": "RLVR",
+      "type": "concept"
+    },
+    {
+      "name": "扩散语言模型",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nemotron 3",
+      "to": "Mamba-3",
+      "label": "采用"
+    },
+    {
+      "from": "Qwen3.6",
+      "to": "Gated DeltaNet-2",
+      "label": "采用"
+    },
+    {
+      "from": "Sebastian Raschka",
+      "to": "Nemotron 3",
+      "label": "推荐"
+    },
+    {
+      "from": "Nemotron 3",
+      "to": "MoE",
+      "label": "属于"
+    }
+  ]
+}

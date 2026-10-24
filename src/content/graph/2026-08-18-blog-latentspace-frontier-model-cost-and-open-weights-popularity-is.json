@@ -1,0 +1,109 @@
+{
+  "center": "Glean 模型路由控成本",
+  "branches": [
+    {
+      "label": "成本驱动路由",
+      "detail": "前沿模型按 token 更贵、任务更长，企业人均 AI 支出涨 10–20 倍",
+      "children": [
+        "Opus/GPT 最新模型单价是上代 2–4 倍",
+        "自动模式因经济性最受客户欢迎"
+      ]
+    },
+    {
+      "label": "三层模型选择",
+      "detail": "员工自选、管理员限制、Glean 自动按任务动态选模型",
+      "children": [
+        "自动模式按任务动态路由",
+        "管理员可设用量上限"
+      ]
+    },
+    {
+      "label": "Waldo 预筛",
+      "detail": "agentic 搜索模型先拆解问题、选工具、备齐原料再交给前沿模型",
+      "children": [
+        "延迟降 50%、token 降 25%",
+        "不烧 token 即组装好原料"
+      ]
+    },
+    {
+      "label": "人类反馈闭环",
+      "detail": "大规模观察员工真实使用与换模型行为，反哺路由系统",
+      "children": [
+        "Zillow 7000 人 80% 采用率",
+        "Booking.com 全公司首个 AI 平台"
+      ]
+    },
+    {
+      "label": "开源模型崛起",
+      "detail": "近三个月企业因成本转向开源，视其为 AI 战略关键部分",
+      "children": [
+        "Kimi K3、Qwen3.8-Max 等开源权重模型",
+        "开源做任务便宜一个数量级"
+      ]
+    }
+  ],
+  "flow": [
+    "用户发起查询",
+    "Waldo 拆解并备原料",
+    "路由选择模型",
+    "前沿模型生成答案",
+    "并行跑对照任务",
+    "AI 评委打分反哺"
+  ],
+  "entities": [
+    {
+      "name": "Glean",
+      "type": "company"
+    },
+    {
+      "name": "Arvind Jain",
+      "type": "person"
+    },
+    {
+      "name": "Waldo",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Qwen3.8-Max",
+      "type": "model"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "模型路由",
+      "type": "concept"
+    },
+    {
+      "name": "开源权重模型",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Arvind Jain",
+      "to": "Glean",
+      "label": "联合创办"
+    },
+    {
+      "from": "Glean",
+      "to": "Waldo",
+      "label": "推出"
+    },
+    {
+      "from": "Glean",
+      "to": "模型路由",
+      "label": "采用"
+    },
+    {
+      "from": "模型路由",
+      "to": "开源权重模型",
+      "label": "受推动"
+    }
+  ]
+}

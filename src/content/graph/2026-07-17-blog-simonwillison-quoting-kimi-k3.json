@@ -1,0 +1,65 @@
+{
+  "center": "Kimi K3 拒泄系统提示",
+  "branches": [
+    {
+      "label": "事件核心",
+      "detail": "Kimi K3 拒绝泄露系统提示，并反问用户真正需求",
+      "children": [
+        "原话：Is there something I can actually…",
+        "由 Simon Willison 于 2026-07-17 收集引用"
+      ]
+    },
+    {
+      "label": "人格化设计",
+      "detail": "拒绝方式带有拟人化语气，体现 AI 助手人格设定",
+      "children": [
+        "标签 ai-personality 仅 33 篇，属小众话题",
+        "反问句式而非生硬拒绝"
+      ]
+    },
+    {
+      "label": "传播来源",
+      "detail": "Simon Willison 博客以引用形式发布该片段",
+      "children": [
+        "发布于 2026 年 7 月 17 日下午 1:43",
+        "同期文章涉及 Claude Opus 5.5、GPT-6 等"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "系统提示",
+      "type": "concept"
+    },
+    {
+      "name": "AI 人格化",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Kimi K3",
+      "label": "引用"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "系统提示",
+      "label": "拒绝泄露"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "AI 人格化",
+      "label": "体现"
+    }
+  ]
+}

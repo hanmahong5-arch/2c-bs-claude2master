@@ -1,0 +1,110 @@
+{
+  "center": "Subagent yield handoff 机制",
+  "branches": [
+    {
+      "label": "注册表接管",
+      "detail": "子代理让出控制权后，注册表持有任务完成权，跨会话续跑",
+      "children": [
+        "yield 结束执行但保留委派任务与完成受众",
+        "requester settlement batch 在子任务结算后…"
+      ]
+    },
+    {
+      "label": "交接阶段",
+      "detail": "从执行到后继完成的五阶段所有权转移",
+      "children": [
+        "显式 yield：持久化意图、冻结子运行 ID、推进…",
+        "后继准入：Gateway 将后继附加到暂停子代理，保…"
+      ]
+    },
+    {
+      "label": "核心不变量",
+      "detail": "单一完成所有者、不复活旧权限、稳定受众",
+      "children": [
+        "yield 在关闭旧执行前转移所有权",
+        "后继通过正常 Gateway 准入获得全新执行权限"
+      ]
+    },
+    {
+      "label": "确定性批次",
+      "detail": "冻结运行 ID 排序，批次身份含请求者、子 ID、yield 代",
+      "children": [
+        "发现以创建时间、完成时间、子会话身份为决胜",
+        "被取代的子行被排除"
+      ]
+    },
+    {
+      "label": "有界交付",
+      "detail": "三次尝试、三次模糊重放、十次陈旧延迟",
+      "children": [
+        "活跃后代不消耗陈旧延迟预算",
+        "发现上限 4096 字符，单结果 512，路由通知 1024"
+      ]
+    }
+  ],
+  "flow": [
+    "执行请求者轮次",
+    "显式 yield 持久化",
+    "等待子任务结算",
+    "结算调度后继",
+    "Gateway 准入后继",
+    "后继完成交付"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "subagent registry",
+      "type": "concept"
+    },
+    {
+      "name": "sessions_yield",
+      "type": "concept"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "requester settlement batch",
+      "type": "concept"
+    },
+    {
+      "name": "adoptPausedSubagentRunForFollowUp",
+      "type": "technique"
+    },
+    {
+      "name": "cron",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "subagent registry",
+      "to": "sessions_yield",
+      "label": "接管完成"
+    },
+    {
+      "from": "Gateway",
+      "to": "subagent registry",
+      "label": "准入后继"
+    },
+    {
+      "from": "requester settlement batch",
+      "to": "subagent registry",
+      "label": "启动后继"
+    },
+    {
+      "from": "adoptPausedSubagentRunForFollowUp",
+      "to": "subagent registry",
+      "label": "使用替换"
+    },
+    {
+      "from": "cron",
+      "to": "subagent registry",
+      "label": "拥有交付"
+    }
+  ]
+}

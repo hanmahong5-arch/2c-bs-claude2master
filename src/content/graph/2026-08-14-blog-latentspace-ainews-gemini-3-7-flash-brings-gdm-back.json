@@ -1,0 +1,80 @@
+{
+  "center": "Gemini 3.7 Flash 发布",
+  "branches": [
+    {
+      "label": "性能大幅提升",
+      "detail": "Gemini 3.7 Flash 显著超越前代 3.5 与 3.6 Flash",
+      "children": [
+        "缩小与 Claude 4.8、GPT 5.5 的差距"
+      ]
+    },
+    {
+      "label": "GDM 重回前沿",
+      "detail": "更新让 GDM 重新成为开发者关注焦点",
+      "children": [
+        "可能影响工具链选择"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "开发者获得更多高性能模型选项",
+      "children": [
+        "需评估与现有 agent 工作流兼容性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Gemini 3.7 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.5 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.6 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Claude 4.8",
+      "type": "model"
+    },
+    {
+      "name": "GPT 5.5",
+      "type": "model"
+    },
+    {
+      "name": "GDM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemini 3.7 Flash",
+      "to": "Gemini 3.5 Flash",
+      "label": "超越"
+    },
+    {
+      "from": "Gemini 3.7 Flash",
+      "to": "Gemini 3.6 Flash",
+      "label": "超越"
+    },
+    {
+      "from": "Gemini 3.7 Flash",
+      "to": "Claude 4.8",
+      "label": "缩小差距"
+    },
+    {
+      "from": "Gemini 3.7 Flash",
+      "to": "GPT 5.5",
+      "label": "缩小差距"
+    },
+    {
+      "from": "Gemini 3.7 Flash",
+      "to": "GDM",
+      "label": "推动重回前沿"
+    }
+  ]
+}

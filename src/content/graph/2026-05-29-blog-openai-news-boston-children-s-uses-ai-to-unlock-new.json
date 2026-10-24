@@ -1,0 +1,67 @@
+{
+  "center": "波士顿儿童医院用AI诊断罕见病",
+  "branches": [
+    {
+      "label": "罕见病诊断成果",
+      "detail": "AI 成功诊断超过 40 例罕见疾病",
+      "children": [
+        "显示 AI 识别复杂医学模式的能力"
+      ]
+    },
+    {
+      "label": "技术来源",
+      "detail": "医院部署 OpenAI 的技术实现上述成果",
+      "children": []
+    },
+    {
+      "label": "减轻临床负担",
+      "detail": "AI 工具减少医护日常繁琐操作",
+      "children": [
+        "让医护更专注患者护理"
+      ]
+    },
+    {
+      "label": "改善医疗可及性",
+      "detail": "AI 加速诊断流程，服务更多患者",
+      "children": [
+        "提供更及时、准确的医疗服务"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Boston Children's Hospital",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AI辅助诊断",
+      "type": "concept"
+    },
+    {
+      "name": "罕见病",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Boston Children's Hospital",
+      "to": "OpenAI",
+      "label": "部署其技术"
+    },
+    {
+      "from": "Boston Children's Hospital",
+      "to": "AI辅助诊断",
+      "label": "应用"
+    },
+    {
+      "from": "AI辅助诊断",
+      "to": "罕见病",
+      "label": "诊断"
+    }
+  ]
+}

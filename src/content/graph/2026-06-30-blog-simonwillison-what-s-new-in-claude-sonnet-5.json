@@ -1,0 +1,103 @@
+{
+  "center": "Claude Sonnet 5 发布",
+  "branches": [
+    {
+      "label": "性能与定价",
+      "detail": "性能接近 Opus 4.8，价格与 Sonnet 4.6 相同",
+      "children": [
+        "$3/百万输入，$15/百万输出",
+        "8月31日前优惠价 $2/$10",
+        "官方称性能接近 Opus 4.8"
+      ]
+    },
+    {
+      "label": "新分词器涨价",
+      "detail": "相同文本产生约 30% 更多 token，等于涨价",
+      "children": [
+        "英语输入约 1.42 倍成本",
+        "西班牙语约 1.33 倍",
+        "Python 代码约 1.28 倍"
+      ]
+    },
+    {
+      "label": "API 变更",
+      "detail": "采样参数被移除，上下文与输出上限大幅提升",
+      "children": [
+        "不再支持 temperature/top_p/top_k",
+        "100 万 token 上下文窗口",
+        "最大输出 128,000 token"
+      ]
+    },
+    {
+      "label": "安全与合规",
+      "detail": "网络任务能力弱于 Mythos 5，因此未被政府阻止发布",
+      "children": [
+        "防护措施类似 Opus 4.7/4.8",
+        "能力弱于 Mythos 5"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Sonnet 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Sonnet 4.6",
+      "type": "model"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Token Counter",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Sonnet 5",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "Opus 4.8",
+      "label": "性能接近"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "Claude Sonnet 4.6",
+      "label": "定价相同"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "Mythos 5",
+      "label": "能力弱于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Token Counter",
+      "label": "使用"
+    },
+    {
+      "from": "Claude Token Counter",
+      "to": "Claude Sonnet 5",
+      "label": "测试分词"
+    }
+  ]
+}

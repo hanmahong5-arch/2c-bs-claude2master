@@ -1,0 +1,123 @@
+{
+  "center": "Codex 多角色工作流扩展",
+  "branches": [
+    {
+      "label": "角色插件",
+      "detail": "推出六款角色专属插件，无需编码即可适配非开发者工作流",
+      "children": [
+        "含 62 个应用与 110 项技能",
+        "覆盖数据分析、创意制作、销售、产品设计、股票投…",
+        "非开发者占 Codex 用户约 20%，增速是开发者 3…"
+      ]
+    },
+    {
+      "label": "Sites 预览",
+      "detail": "Codex 可生成可分享的交互式网站与应用，通过 URL 共享",
+      "children": [
+        "面向 Business 与 Enterprise 客户预览",
+        "可做仪表盘、规划器、项目看板、画廊",
+        "合作方含 Vercel、Wix、Replit、Figma 等"
+      ]
+    },
+    {
+      "label": "标注精修",
+      "detail": "Annotations 让用户指向具体部分让 Codex 局部修改",
+      "children": [
+        "从代码扩展到文档、表格、幻灯片",
+        "可改字体、追溯论点来源、优化图表标签",
+        "无需重做已满意的部分"
+      ]
+    },
+    {
+      "label": "企业落地",
+      "detail": "OpenAI 内部及 Zapier、NVIDIA 等团队已用 Codex 做实际工作",
+      "children": [
+        "Zapier 用其生成复盘、事故响应计划、功能工单",
+        "NVIDIA 研究者用其加速实验与 ML 基础设施脚本",
+        "OpenAI 非技术团队用其建内部应用与高管材料"
+      ]
+    },
+    {
+      "label": "生态与可用性",
+      "detail": "插件在支持地区上线，未来将开放合作伙伴自建插件",
+      "children": [
+        "即将推出公司金融、私募、营销战略、战略咨询、法…",
+        "目标开放生态，伙伴可在 Codex 与 ChatGPT 中…",
+        "管理员可控制底层应用权限"
+      ]
+    }
+  ],
+  "flow": [
+    "安装角色插件",
+    "连接已有工具与上下文",
+    "生成初稿或分析",
+    "用标注局部精修",
+    "发布为 Sites 共享"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Sites",
+      "type": "product"
+    },
+    {
+      "name": "Annotations",
+      "type": "technique"
+    },
+    {
+      "name": "Zapier",
+      "type": "company"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Figma",
+      "type": "product"
+    },
+    {
+      "name": "Vercel",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "推出"
+    },
+    {
+      "from": "Codex",
+      "to": "Sites",
+      "label": "支持生成"
+    },
+    {
+      "from": "Codex",
+      "to": "Annotations",
+      "label": "集成"
+    },
+    {
+      "from": "Zapier",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "Figma",
+      "to": "Sites",
+      "label": "合作"
+    }
+  ]
+}

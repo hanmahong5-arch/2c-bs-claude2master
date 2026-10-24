@@ -1,0 +1,117 @@
+{
+  "center": "Meta开源Muse Glimmer",
+  "branches": [
+    {
+      "label": "开源模型发布",
+      "detail": "Meta发布30B开源权重模型Muse Glimmer，主打本地常驻Agent",
+      "children": [
+        "30B dense多模态，Apache 2.0许可",
+        "单张RTX 3090可跑，4-bit约18GB",
+        "128K上下文，量化后低于20GB"
+      ]
+    },
+    {
+      "label": "技术亮点",
+      "detail": "面向长程Agent循环与工具调用，从训练起就用Agent轨迹",
+      "children": [
+        "从Muse Spark做logit蒸馏",
+        "类Gemma 4混合注意力+scale-free QK norm",
+        "DFlash轻量drafter加速本地生成"
+      ]
+    },
+    {
+      "label": "个人超级智能",
+      "detail": "Zuckerberg续写个人超级智能文章，强调赋权个体",
+      "children": [
+        "人人有个人Agent、创作与创业工具",
+        "人人有PhD级个性化导师",
+        "免费或可负担地获取这些工具"
+      ]
+    },
+    {
+      "label": "风险与主张",
+      "detail": "提出就业、基建、安全、对齐与算力控制等核心风险",
+      "children": [
+        "公司变小但公司数量更多",
+        "前沿实验室应向政府共享训练检查点",
+        "避免单一集中超级智能，多实验室互相制衡"
+      ]
+    },
+    {
+      "label": "评测与生态",
+      "detail": "第三方评测显示同尺寸表现强，本地自托管突出",
+      "children": [
+        "Artificial Analysis智能指数35",
+        "Qwen3.6-27B为38，Kimi K2.5约36",
+        "开放度指数44"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Meta",
+      "type": "company"
+    },
+    {
+      "name": "Muse Glimmer",
+      "type": "model"
+    },
+    {
+      "name": "Muse Spark",
+      "type": "model"
+    },
+    {
+      "name": "Mark Zuckerberg",
+      "type": "person"
+    },
+    {
+      "name": "Alexandr Wang",
+      "type": "person"
+    },
+    {
+      "name": "个人超级智能",
+      "type": "concept"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Qwen3.6-27B",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Meta",
+      "to": "Muse Glimmer",
+      "label": "发布"
+    },
+    {
+      "from": "Meta",
+      "to": "Muse Spark",
+      "label": "将发布"
+    },
+    {
+      "from": "Muse Glimmer",
+      "to": "Muse Spark",
+      "label": "蒸馏自"
+    },
+    {
+      "from": "Mark Zuckerberg",
+      "to": "个人超级智能",
+      "label": "提出"
+    },
+    {
+      "from": "Alexandr Wang",
+      "to": "Muse Glimmer",
+      "label": "参与发布"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "Muse Glimmer",
+      "label": "评测"
+    }
+  ]
+}

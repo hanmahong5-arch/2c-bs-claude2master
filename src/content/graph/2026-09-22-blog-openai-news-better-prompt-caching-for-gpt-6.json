@@ -1,0 +1,72 @@
+{
+  "center": "GPT-6 提示缓存升级",
+  "branches": [
+    {
+      "label": "命中率提升",
+      "detail": "GPT-6 提高提示缓存命中率，多轮长上下文调用更稳定复用前缀",
+      "children": [
+        "减少重复计算",
+        "agent 工具链受益"
+      ]
+    },
+    {
+      "label": "显式断点",
+      "detail": "新增 explicit breakpoints，开发者可主动标记缓存边界",
+      "children": [
+        "系统提示与动态内容分离",
+        "工具定义可固定缓存"
+      ]
+    },
+    {
+      "label": "诊断能力",
+      "detail": "新增诊断工具，让开发者看清缓存是否生效",
+      "children": [
+        "缓存状态可观测"
+      ]
+    },
+    {
+      "label": "降本提速",
+      "detail": "提供降低延迟与成本的控制项，缓存策略变为可配置",
+      "children": [
+        "从被动等待命中转为主动配置",
+        "成本模型需单独评估"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "GPT-6",
+      "type": "model"
+    },
+    {
+      "name": "提示缓存",
+      "type": "concept"
+    },
+    {
+      "name": "explicit breakpoints",
+      "type": "technique"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "GPT-6",
+      "to": "提示缓存",
+      "label": "升级"
+    },
+    {
+      "from": "GPT-6",
+      "to": "explicit breakpoints",
+      "label": "新增"
+    },
+    {
+      "from": "提示缓存",
+      "to": "agent",
+      "label": "服务"
+    }
+  ]
+}

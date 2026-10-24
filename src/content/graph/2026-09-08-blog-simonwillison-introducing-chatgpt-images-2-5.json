@@ -1,0 +1,94 @@
+{
+  "center": "ChatGPT Images 2.5 发布",
+  "branches": [
+    {
+      "label": "模型升级点",
+      "detail": "多轮指令遵循更强、响应更快、更好保留参考图主体",
+      "children": [
+        "ChatGPT Images 与 GPT-Image API 累计生成…",
+        "官方称其为最新图像生成模型版本"
+      ]
+    },
+    {
+      "label": "两个新模型 ID",
+      "detail": "API 新增 gpt-image-2.5-sunburst 与 gpt-image-2.5-flare",
+      "children": [
+        "Sunburst 适合编辑精度要求高的流程",
+        "Flare 适合快速、日常高质量出图"
+      ]
+    },
+    {
+      "label": "Simon 的 CLI 升级",
+      "detail": "openai_image.py 支持传入一张或多张参考图",
+      "children": [
+        "用 -i 传参考图 URL，-m 指定模型",
+        "示例：给图表加一只思考的浣熊科学家"
+      ]
+    }
+  ],
+  "flow": [
+    "准备参考图 URL",
+    "运行 uv run openai_image.py",
+    "用 -i 传入参考图",
+    "用 -m 指定 Sunburst",
+    "输入编辑指令",
+    "获取生成结果"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Images 2.5",
+      "type": "product"
+    },
+    {
+      "name": "gpt-image-2.5-sunburst",
+      "type": "model"
+    },
+    {
+      "name": "gpt-image-2.5-flare",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "openai_image.py",
+      "type": "product"
+    },
+    {
+      "name": "GPT-Image",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Images 2.5",
+      "label": "发布"
+    },
+    {
+      "from": "ChatGPT Images 2.5",
+      "to": "gpt-image-2.5-sunburst",
+      "label": "包含"
+    },
+    {
+      "from": "ChatGPT Images 2.5",
+      "to": "gpt-image-2.5-flare",
+      "label": "包含"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "openai_image.py",
+      "label": "升级"
+    },
+    {
+      "from": "openai_image.py",
+      "to": "gpt-image-2.5-sunburst",
+      "label": "调用"
+    }
+  ]
+}

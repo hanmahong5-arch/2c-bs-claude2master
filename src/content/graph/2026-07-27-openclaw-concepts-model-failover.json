@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw 模型故障转移机制",
+  "branches": [
+    {
+      "label": "两阶段故障处理",
+      "detail": "先在同 provider 内轮换 auth-profile，再按 fallbacks 列表切换模型",
+      "children": [
+        "阶段一：Auth-profile rotation",
+        "阶段二：Model fallback 到下一模型",
+        "切换前先做有界同模型恢复"
+      ]
+    },
+    {
+      "label": "同模型有界恢复",
+      "detail": "针对临时限流与 provider 故障，保留已有 transcript 与部分输出",
+      "children": [
+        "继续现有 transcript，保留已完成工作",
+        "提示 agent 检查被中断动作再决定是否重试",
+        "显示重试等待与尝试次数，可取消"
+      ]
+    },
+    {
+      "label": "运行时流程",
+      "detail": "解析会话状态→构建候选链→试当前 provider→失败推进→用 fallback→耗尽报错",
+      "children": [
+        "Fallback 仅对当前 turn 生效",
+        "仅持久化 fallback 通知状态供 /status 区分",
+        "耗尽时抛出含每次尝试详情的结构化摘要"
+      ]
+    },
+    {
+      "label": "选择来源策略",
+      "detail": "不同来源决定是否允许 fallback 链",
+      "children": [
+        "配置默认与 cron 主模型可用 fallbacks",
+        "用户显式选择为 strict，失败直接报错",
+        "legacy override 视为用户覆盖"
+      ]
+    },
+    {
+      "label": "网络策略自动升级",
+      "detail": "嵌入式运行时对 OpenAI cyber-policy 拒绝重试一次 Daybreak Blue",
+      "children": [
+        "默认目标 openai/gpt-daybreak-blue-latest",
+        "仅当 replay 安全且非 strict 时重试",
+        "strict 选择保持 strict，拒绝为终态"
+      ]
+    }
+  ],
+  "flow": [
+    "解析会话状态",
+    "构建候选链",
+    "试当前 provider",
+    "失败推进候选",
+    "用 fallback 应答",
+    "耗尽报终态失败"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Daybreak Blue",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "auth-profile rotation",
+      "type": "technique"
+    },
+    {
+      "name": "model fallback",
+      "type": "technique"
+    },
+    {
+      "name": "cyber-policy refusal",
+      "type": "concept"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "auth-profile rotation",
+      "label": "实现"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "model fallback",
+      "label": "实现"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Daybreak Blue",
+      "label": "重试"
+    },
+    {
+      "from": "Daybreak Blue",
+      "to": "OpenAI",
+      "label": "属于"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Codex",
+      "label": "兼容"
+    },
+    {
+      "from": "cyber-policy refusal",
+      "to": "OpenAI",
+      "label": "来自"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "center": "opencode v1.18.2 更新",
+  "branches": [
+    {
+      "label": "子代理不再嵌套",
+      "detail": "子代理默认不再启动嵌套子代理，避免无限递归",
+      "children": [
+        "可用 subagent_depth 配置限制深度"
+      ]
+    },
+    {
+      "label": "Meta 推理增强",
+      "detail": "Meta 模型默认推理深度提升，增强复杂任务处理",
+      "children": []
+    },
+    {
+      "label": "桌面端改进",
+      "detail": "新增快捷键并修复若干界面问题",
+      "children": [
+        "Mod+N 打开新标签页",
+        "修复 Help 按钮与会话可见性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "subagent_depth",
+      "type": "concept"
+    },
+    {
+      "name": "Meta",
+      "type": "model"
+    },
+    {
+      "name": "子代理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "subagent_depth",
+      "label": "新增配置"
+    },
+    {
+      "from": "opencode",
+      "to": "Meta",
+      "label": "提升推理深度"
+    },
+    {
+      "from": "opencode",
+      "to": "子代理",
+      "label": "限制嵌套"
+    }
+  ]
+}

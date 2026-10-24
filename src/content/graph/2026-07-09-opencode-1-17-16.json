@@ -1,0 +1,66 @@
+{
+  "center": "opencode v1.17.16 更新",
+  "branches": [
+    {
+      "label": "Grok 推理修复",
+      "detail": "修复 Grok 模型推理努力变体暴露问题，agent 可更灵活控制推理深度与成本",
+      "children": [
+        "推理努力变体暴露",
+        "控制推理深度与成本"
+      ]
+    },
+    {
+      "label": "xAI 缓存路由",
+      "detail": "改进 xAI 提示缓存路由与 PDF 文件支持",
+      "children": [
+        "xAI 提示缓存路由",
+        "PDF 文件支持"
+      ]
+    },
+    {
+      "label": "桌面端改进",
+      "detail": "新增项目文件夹打开、编辑器添加菜单，且不丢失草稿",
+      "children": [
+        "项目文件夹打开",
+        "编辑器添加菜单",
+        "文件/命令/上下文/Shell 模式"
+      ]
+    },
+    {
+      "label": "会话偏好持久化",
+      "detail": "会话内记住审查面板模式和选中文件，侧面板新增内联文件浏览器标签页",
+      "children": [
+        "记住审查面板模式",
+        "记住选中文件",
+        "内联文件浏览器标签页"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Grok",
+      "type": "model"
+    },
+    {
+      "name": "xAI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Grok",
+      "label": "修复推理暴露"
+    },
+    {
+      "from": "opencode",
+      "to": "xAI",
+      "label": "改进缓存路由"
+    }
+  ]
+}

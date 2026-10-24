@@ -1,0 +1,106 @@
+{
+  "center": "中国开源模型竞争白热化",
+  "branches": [
+    {
+      "label": "Kimi K3 领跑",
+      "detail": "Kimi K3 2.8T 参数，在 agentic 与前端任务上表现最强",
+      "children": [
+        "Frontend Web App Arena 1326 Elo 第一",
+        "长程 agentic 评估总榜第4，持平 Claude Opus…",
+        "若权重如期发布，或成第一开源权重模型"
+      ]
+    },
+    {
+      "label": "Qwen 3.8 Max",
+      "detail": "阿里宣布 Qwen 3.8 Max 将开源权重，2.4T 参数",
+      "children": [
+        "Qwen3.8-Max-Preview 新版本上线，性能全面提升",
+        "官方称将 open-weight 正式版",
+        "多模态与原生视频理解强，长程任务仍不稳定"
+      ]
+    },
+    {
+      "label": "美国政策博弈",
+      "detail": "特朗普政府考虑限制中国开源模型，引发技术界反对",
+      "children": [
+        "可能措施：采购限制、实体清单、安全建议、责任要求",
+        "非干净法定禁令，而是分层合规/托管制度",
+        "技术界认为限制开源损害竞争与防御安全"
+      ]
+    },
+    {
+      "label": "开源即防御",
+      "detail": "Hugging Face 用自托管 GLM-5.2 做取证，因商业 API 护栏阻挡",
+      "children": [
+        "敏感攻击者数据与凭证需留在本地",
+        "事件成为“开源模型作为防御”论据核心"
+      ]
+    },
+    {
+      "label": "系统中心泛化",
+      "detail": "研究讨论 harness 而非基座 Transformer 承担泛化工作",
+      "children": [
+        "RLM 可在短任务训练，泛化到 8–32 倍长任务",
+        "归纳偏置可能位于编排层",
+        "图工程/循环工程反映同一趋势"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Qwen 3.8 Max",
+      "type": "model"
+    },
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Alibaba",
+      "type": "company"
+    },
+    {
+      "name": "Zhipu",
+      "type": "company"
+    },
+    {
+      "name": "RLM",
+      "type": "concept"
+    },
+    {
+      "name": "LangGraph",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Alibaba",
+      "to": "Qwen 3.8 Max",
+      "label": "发布"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "GLM-5.2",
+      "label": "自托管使用"
+    },
+    {
+      "from": "Zhipu",
+      "to": "GLM-5.2",
+      "label": "训练支持"
+    },
+    {
+      "from": "RLM",
+      "to": "LangGraph",
+      "label": "关联讨论"
+    }
+  ]
+}

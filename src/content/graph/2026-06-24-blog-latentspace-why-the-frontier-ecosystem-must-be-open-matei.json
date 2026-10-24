@@ -1,0 +1,108 @@
+{
+  "center": "Databricks 开放生态与代理操作系统",
+  "branches": [
+    {
+      "label": "Omnigent 元框架",
+      "detail": "开源元框架，统一编排 Claude Code、Codex、Cursor 等代理",
+      "children": [
+        "提供会话、文件、工具调用等通用 API",
+        "支持实时协作与丰富控制策略",
+        "解决可移植性、安全、成本控制问题"
+      ]
+    },
+    {
+      "label": "LTAP 与 Lakebase",
+      "detail": "LTAP 统一存储层，Lakebase 架构直接在对象存储上构建数据库",
+      "children": [
+        "LTAP 是 HTAP 的正确实现方式",
+        "CDC 脆弱，被称为持续数据损坏",
+        "支持事务数据写入列式格式"
+      ]
+    },
+    {
+      "label": "代理安全与治理",
+      "detail": "代理需要上下文和状态化策略，防止数据泄露和成本失控",
+      "children": [
+        "代理可能读取机密文档并泄露数据",
+        "代理可花费 500 美元读取日志",
+        "需要支出控制和权限管理"
+      ]
+    },
+    {
+      "label": "Databricks 规模与战略",
+      "detail": "每天 5000-6000 万台虚拟机，处理 EB 级数据，定位企业代理操作系统",
+      "children": [
+        "从大数据公司转向数据与 AI 操作系统",
+        "开放格式和 AI 改变与 Snowflake 的竞争",
+        "Mosaic、DBRX、Genie 等模型策略"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Databricks",
+      "type": "company"
+    },
+    {
+      "name": "Matei Zaharia",
+      "type": "person"
+    },
+    {
+      "name": "Reynold Xin",
+      "type": "person"
+    },
+    {
+      "name": "Omnigent",
+      "type": "product"
+    },
+    {
+      "name": "LTAP",
+      "type": "concept"
+    },
+    {
+      "name": "Lakebase",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Snowflake",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Matei Zaharia",
+      "to": "Databricks",
+      "label": "联合创始人"
+    },
+    {
+      "from": "Reynold Xin",
+      "to": "Databricks",
+      "label": "联合创始人"
+    },
+    {
+      "from": "Databricks",
+      "to": "Omnigent",
+      "label": "开源"
+    },
+    {
+      "from": "Databricks",
+      "to": "LTAP",
+      "label": "提出"
+    },
+    {
+      "from": "Databricks",
+      "to": "Lakebase",
+      "label": "开发"
+    },
+    {
+      "from": "Omnigent",
+      "to": "Claude Code",
+      "label": "编排"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "center": "Claude Code v2.1.271 权限收紧",
+  "branches": [
+    {
+      "label": "命令级网络授权",
+      "detail": "Bash/PowerShell/Monitor 在自动模式加沙箱下新增按命令的 allowed_domains",
+      "children": [
+        "只放行该命令评审过的域名，其余拒绝",
+        "网络授权从会话级下沉到命令级"
+      ]
+    },
+    {
+      "label": "子代理上下文裁剪",
+      "detail": "子代理 frontmatter 与 --agents JSON 新增 omitClaudeMd",
+      "children": [
+        "自定义与插件子代理可不加载用户、项目、本地…",
+        "托管策略文件仍加载"
+      ]
+    },
+    {
+      "label": "监听强制续期",
+      "detail": "Monitor watches 取消无超时的 persistent，改为始终带截止时间",
+      "children": [
+        "最长 30 分钟，单次 -p 为 10 分钟",
+        "到期通知 Claude 重新武装"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "allowed_domains",
+      "type": "concept"
+    },
+    {
+      "name": "omitClaudeMd",
+      "type": "concept"
+    },
+    {
+      "name": "CLAUDE.md",
+      "type": "concept"
+    },
+    {
+      "name": "Monitor watches",
+      "type": "concept"
+    },
+    {
+      "name": "Bash",
+      "type": "product"
+    },
+    {
+      "name": "PowerShell",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "allowed_domains",
+      "label": "新增"
+    },
+    {
+      "from": "Claude Code",
+      "to": "omitClaudeMd",
+      "label": "新增"
+    },
+    {
+      "from": "omitClaudeMd",
+      "to": "CLAUDE.md",
+      "label": "控制加载"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Monitor watches",
+      "label": "调整"
+    },
+    {
+      "from": "allowed_domains",
+      "to": "Bash",
+      "label": "适用于"
+    },
+    {
+      "from": "allowed_domains",
+      "to": "PowerShell",
+      "label": "适用于"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "center": "云端AI负载零成本迁移",
+  "branches": [
+    {
+      "label": "避免供应商锁定",
+      "detail": "AI工作负载可在任意云运行，数据存Hugging Face，防止被单一云厂商绑定",
+      "children": [
+        "数据与计算解耦",
+        "跨云自由迁移"
+      ]
+    },
+    {
+      "label": "零成本迁移",
+      "detail": "迁移云端AI工作负载数据无需额外成本",
+      "children": [
+        "利用Hugging Face免费存储",
+        "无需支付云厂商出口费"
+      ]
+    },
+    {
+      "label": "Hugging Face存储",
+      "detail": "将AI工作负载数据集中存储在Hugging Face平台",
+      "children": [
+        "支持模型与数据集托管",
+        "社区协作与版本管理"
+      ]
+    },
+    {
+      "label": "任意云运行",
+      "detail": "计算任务可在任意云平台执行，不依赖特定云",
+      "children": [
+        "兼容主流云厂商",
+        "灵活调度计算资源"
+      ]
+    }
+  ],
+  "flow": [
+    "将数据上传至Hugging Face",
+    "在任意云启动计算实例",
+    "从Hugging Face拉取数据",
+    "运行AI工作负载",
+    "结果存回Hugging Face"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Cerebras",
+      "type": "company"
+    },
+    {
+      "name": "Gemma 4",
+      "type": "model"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "供应商锁定",
+      "type": "concept"
+    },
+    {
+      "name": "云端AI工作负载",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Cerebras",
+      "label": "合作"
+    },
+    {
+      "from": "Cerebras",
+      "to": "Gemma 4",
+      "label": "部署"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "云端AI工作负载",
+      "label": "存储"
+    },
+    {
+      "from": "云端AI工作负载",
+      "to": "供应商锁定",
+      "label": "避免"
+    }
+  ]
+}

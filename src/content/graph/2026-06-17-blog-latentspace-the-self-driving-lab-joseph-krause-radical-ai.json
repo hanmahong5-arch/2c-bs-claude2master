@@ -1,0 +1,123 @@
+{
+  "center": "Radical AI 自驱动实验室加速材料…",
+  "branches": [
+    {
+      "label": "自驱动实验室",
+      "detail": "AI 科学家提假设，机器人自动合成与表征，闭环并行跑研究战役",
+      "children": [
+        "AI 科学家结合科学知识、计算与人类直觉",
+        "闭环系统：假设生成→合成→表征",
+        "并行而非串行运行研究战役"
+      ]
+    },
+    {
+      "label": "材料发现难点",
+      "detail": "材料不止化学式，微观结构与制造工艺决定成败，难复现",
+      "children": [
+        "供应链、微结构、制造工艺等宏观变量",
+        "LK99 因制造未披露导致无法复现",
+        "无单一模型能一次设计出可量产材料"
+      ]
+    },
+    {
+      "label": "成果与吞吐",
+      "detail": "六个月产出表征 1200 种合金，约为 DARPA/GE MACH 的 10 倍",
+      "children": [
+        "DARPA/GE MACH：一年 500 种合金",
+        "目标每天测试表征 100 种新合金",
+        "AI 科学家提出并测试 300 种新材料，10 种具新…"
+      ]
+    },
+    {
+      "label": "护城河是实验室",
+      "detail": "Joseph 认为实验数据才是真护城河，而非模型本身",
+      "children": [
+        "材料的地面真值是材料本身，必须测试表征",
+        "数据质量比数据集规模更关键",
+        "AI 探索人类未发表的元素/合金族"
+      ]
+    },
+    {
+      "label": "开源与地缘",
+      "detail": "开源 TorchSim、MATRIX 等工具，并呼吁国家实验室级投入",
+      "children": [
+        "TorchSim：PyTorch 分子动力学框架，已独立为…",
+        "MATRIX/MATRIX-PT：自驱动实验室基准数据集与…",
+        "材料推理提升也改善了生物系统推理"
+      ]
+    }
+  ],
+  "flow": [
+    "AI 科学家生成假设",
+    "机器人合成材料",
+    "自动表征测试",
+    "反馈更新模型",
+    "并行推进研究战役"
+  ],
+  "entities": [
+    {
+      "name": "Radical AI",
+      "type": "company"
+    },
+    {
+      "name": "Joseph Krause",
+      "type": "person"
+    },
+    {
+      "name": "Self-Driving Lab",
+      "type": "concept"
+    },
+    {
+      "name": "TorchSim",
+      "type": "product"
+    },
+    {
+      "name": "MATRIX",
+      "type": "product"
+    },
+    {
+      "name": "MATRIX-PT",
+      "type": "model"
+    },
+    {
+      "name": "DARPA/GE MACH",
+      "type": "concept"
+    },
+    {
+      "name": "LK99",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Joseph Krause",
+      "to": "Radical AI",
+      "label": "创立"
+    },
+    {
+      "from": "Radical AI",
+      "to": "Self-Driving Lab",
+      "label": "构建"
+    },
+    {
+      "from": "Radical AI",
+      "to": "TorchSim",
+      "label": "开源"
+    },
+    {
+      "from": "Radical AI",
+      "to": "MATRIX",
+      "label": "开源"
+    },
+    {
+      "from": "MATRIX",
+      "to": "MATRIX-PT",
+      "label": "衍生"
+    },
+    {
+      "from": "Radical AI",
+      "to": "DARPA/GE MACH",
+      "label": "速度超越"
+    }
+  ]
+}

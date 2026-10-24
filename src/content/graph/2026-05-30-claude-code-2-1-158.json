@@ -1,0 +1,90 @@
+{
+  "center": "Claude Code 自动模式上云",
+  "branches": [
+    {
+      "label": "三云平台支持",
+      "detail": "自动模式扩展至 Bedrock、Vertex、Foundry 三大云平台",
+      "children": [
+        "跨云部署流程得以简化",
+        "多平台用户获得统一自动化体验"
+      ]
+    },
+    {
+      "label": "支持最新模型",
+      "detail": "自动模式适用于 Opus 4.7 与 Opus 4.8 两个最新版本",
+      "children": [
+        "无需等待功能适配即可用新模型能力"
+      ]
+    },
+    {
+      "label": "手动启用方式",
+      "detail": "需设置环境变量 CLAUDE_CODE_ENABLE_AUTO_MODE=1 激活",
+      "children": [
+        "保留用户选择权，可逐步采用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    },
+    {
+      "name": "Foundry",
+      "type": "product"
+    },
+    {
+      "name": "Opus 4.7",
+      "type": "model"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "自动模式",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "自动模式",
+      "label": "启用"
+    },
+    {
+      "from": "自动模式",
+      "to": "Bedrock",
+      "label": "支持"
+    },
+    {
+      "from": "自动模式",
+      "to": "Vertex",
+      "label": "支持"
+    },
+    {
+      "from": "自动模式",
+      "to": "Foundry",
+      "label": "支持"
+    },
+    {
+      "from": "自动模式",
+      "to": "Opus 4.7",
+      "label": "适用"
+    },
+    {
+      "from": "自动模式",
+      "to": "Opus 4.8",
+      "label": "适用"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "center": "Hermes Agent 延迟暴降与安全升级",
+  "branches": [
+    {
+      "label": "首 token 延迟降 80%",
+      "detail": "从 4.3 秒降至 0.9 秒，推理模型默认流式输出思考过程",
+      "children": [
+        "启动与响应更快，等待感大幅减少"
+      ]
+    },
+    {
+      "label": "智能审批默认启用",
+      "detail": "LLM 自动评估标记命令，用户可定义拒绝规则和原因",
+      "children": [
+        "减少人工审批疲劳",
+        "保持对危险命令的控制"
+      ]
+    },
+    {
+      "label": "密钥管理集成",
+      "detail": "新增可插拔 SecretSource 接口，支持 Bitwarden 和 1Password",
+      "children": [
+        "API 密钥不再需要明文存储"
+      ]
+    },
+    {
+      "label": "子代理与投递可靠性",
+      "detail": "子代理返回实时转录文件，网关新增持久化投递账本",
+      "children": [
+        "后台委托结果持久化，进程重启可恢复",
+        "网关崩溃后最终响应重新投递"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "Bitwarden",
+      "type": "product"
+    },
+    {
+      "name": "1Password",
+      "type": "product"
+    },
+    {
+      "name": "SecretSource",
+      "type": "technique"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "SecretSource",
+      "label": "引入"
+    },
+    {
+      "from": "SecretSource",
+      "to": "Bitwarden",
+      "label": "支持"
+    },
+    {
+      "from": "SecretSource",
+      "to": "1Password",
+      "label": "支持"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "LLM",
+      "label": "用于审批"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "center": "Google DeepMind AI 智能体安全…",
+  "branches": [
+    {
+      "label": "AI Control 框架",
+      "detail": "深度防御，超越传统对齐，将内部智能体视为可能失准",
+      "children": [
+        "传统防护：沙箱、端点安全、提示注入抵抗",
+        "模型对齐作为主要防御",
+        "系统级安全层提供额外保障"
+      ]
+    },
+    {
+      "label": "三大核心领域",
+      "detail": "威胁建模、部署控制缓解、性能度量",
+      "children": [
+        "威胁建模：基于 MITRE ATT&CK，将智能体视为内…",
+        "检测：用可信 AI 监督推理、行动和计划",
+        "预防响应：阻止有害行动，度量覆盖、召回、响应时间"
+      ]
+    },
+    {
+      "label": "安全随能力扩展",
+      "detail": "防御需匹配模型能力，检测与响应分级",
+      "children": [
+        "检测等级 D1-D4：基于逃避检测能力",
+        "预防响应等级 R1-R3：基于攻击执行能力",
+        "高风险需实时同步阻止，低风险可异步审查"
+      ]
+    },
+    {
+      "label": "百万轨迹分析",
+      "detail": "内部异步监控原型分析百万编码任务，构建实时监控",
+      "children": [
+        "分析百万编码智能体任务，识别高信号行为模式",
+        "为 Gemini Spark 构建实时监控，响应数据删除…",
+        "多数标记事件非对抗意图，而是误解或过度急切"
+      ]
+    },
+    {
+      "label": "生态系统共同责任",
+      "detail": "多层安全需行业、政策、学术界协作，发布政策框架",
+      "children": [
+        "发布 'Three Layers of Agent Security' 技…",
+        "涵盖个体智能体、多智能体系统、赋能防御者",
+        "对齐最佳实践和标准，构建社会韧性"
+      ]
+    }
+  ],
+  "flow": [
+    "威胁建模：识别攻击战术技术",
+    "部署控制缓解：检测与预防",
+    "度量性能：覆盖、召回、响应时间",
+    "扩展安全：匹配模型能力等级",
+    "分析轨迹：优化监控协议"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "AI Control Roadmap",
+      "type": "concept"
+    },
+    {
+      "name": "MITRE ATT&CK",
+      "type": "concept"
+    },
+    {
+      "name": "Gemini Spark",
+      "type": "product"
+    },
+    {
+      "name": "Rohin Shah",
+      "type": "person"
+    },
+    {
+      "name": "Three Layers of Agent Security",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "AI Control Roadmap",
+      "label": "开发"
+    },
+    {
+      "from": "AI Control Roadmap",
+      "to": "MITRE ATT&CK",
+      "label": "基于"
+    },
+    {
+      "from": "AI Control Roadmap",
+      "to": "Gemini Spark",
+      "label": "应用于"
+    },
+    {
+      "from": "Rohin Shah",
+      "to": "AI Control Roadmap",
+      "label": "合著"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Three Layers of Agent Security",
+      "label": "发布"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "center": "Anthropic 资助 AI 福祉评估",
+  "branches": [
+    {
+      "label": "资助计划",
+      "detail": "Anthropic 投入 500 万美元资助独立研究 AI 对用户福祉的影响",
+      "children": [
+        "提供资金、模型访问与技术支持",
+        "成果须开源供开发者使用",
+        "申请截止 9 月 21 日，10 月 5 日通知"
+      ]
+    },
+    {
+      "label": "为何难评估",
+      "detail": "福祉评估需要长对话上下文，单条回答无法判断是否恰当",
+      "children": [
+        "用户可能不会立刻透露自残念头",
+        "同一建议在不同情境下可能有害",
+        "如饮食建议对进食障碍者可能有害"
+      ]
+    },
+    {
+      "label": "评估标准",
+      "detail": "Anthropic Safeguards 团队给出严谨福祉评估的五项要求",
+      "children": [
+        "明确测量对象与通过/失败标准",
+        "临床与领域专家参与设计与验证",
+        "同时测试过度顺从与过度拒绝"
+      ]
+    },
+    {
+      "label": "招募对象",
+      "detail": "希望临床医生、心理学家、方法论专家等加入这一新兴领域",
+      "children": [
+        "面向独立研究者开放",
+        "推动行业形成模型行为标准"
+      ]
+    }
+  ],
+  "flow": [
+    "发布 500 万美元资助计划",
+    "提供资金、模型与技术支持",
+    "受资助者独立开展评估研究",
+    "开源发布评估与基准",
+    "行业据此衡量模型福祉影响"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Safeguards team",
+      "type": "concept"
+    },
+    {
+      "name": "wellbeing evaluation",
+      "type": "concept"
+    },
+    {
+      "name": "open-source benchmarks",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Anthropic",
+      "to": "wellbeing evaluation",
+      "label": "资助"
+    },
+    {
+      "from": "Safeguards team",
+      "to": "wellbeing evaluation",
+      "label": "提供指导"
+    },
+    {
+      "from": "wellbeing evaluation",
+      "to": "open-source benchmarks",
+      "label": "产出"
+    }
+  ]
+}

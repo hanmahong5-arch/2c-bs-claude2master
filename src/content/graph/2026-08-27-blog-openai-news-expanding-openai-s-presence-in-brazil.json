@@ -1,0 +1,64 @@
+{
+  "center": "OpenAI 拓展巴西市场",
+  "branches": [
+    {
+      "label": "业务扩张",
+      "detail": "OpenAI 宣布扩大在巴西的业务布局",
+      "children": [
+        "加强与当地开发者、企业、社区互动"
+      ]
+    },
+    {
+      "label": "生态参与",
+      "detail": "更深入参与巴西 AI 生态系统",
+      "children": [
+        "可能带来更多本地化工具与支持"
+      ]
+    },
+    {
+      "label": "开发者信号",
+      "detail": "对开发者意味着资源与合作机会",
+      "children": [
+        "需关注 API 可用性与本地化更新"
+      ]
+    },
+    {
+      "label": "新兴市场优化",
+      "detail": "预示针对新兴市场优化服务",
+      "children": [
+        "推动 AI 在巴西的采用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Brazil",
+      "type": "concept"
+    },
+    {
+      "name": "API",
+      "type": "product"
+    },
+    {
+      "name": "AI 应用",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Brazil",
+      "label": "拓展市场"
+    },
+    {
+      "from": "OpenAI",
+      "to": "API",
+      "label": "优化服务"
+    }
+  ]
+}

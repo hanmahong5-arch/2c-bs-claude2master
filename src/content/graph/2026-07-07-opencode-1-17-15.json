@@ -1,0 +1,86 @@
+{
+  "center": "opencode v1.17.15 修复与优化",
+  "branches": [
+    {
+      "label": "上下文溢出修复",
+      "detail": "修正 Z.ai 上下文窗口溢出的错误分类，超长请求触发正确失败模式",
+      "children": [
+        "需区分不同 LLM 的 token 限制错误",
+        "确保超长请求触发正确失败模式"
+      ]
+    },
+    {
+      "label": "配置读取容错",
+      "detail": "优雅处理不可用的配置目录，避免读取配置时崩溃",
+      "children": [
+        "需处理配置缺失场景"
+      ]
+    },
+    {
+      "label": "终端交互优化",
+      "detail": "终端快捷键在终端聚焦时优先，并显示待处理问题的未读状态",
+      "children": [
+        "需管理输入焦点和会话状态"
+      ]
+    },
+    {
+      "label": "桌面UI一致性",
+      "detail": "优化桌面 UI 一致性",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Z.ai",
+      "type": "company"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "上下文窗口溢出",
+      "type": "concept"
+    },
+    {
+      "name": "配置目录",
+      "type": "concept"
+    },
+    {
+      "name": "终端快捷键",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Z.ai",
+      "label": "修复溢出"
+    },
+    {
+      "from": "opencode",
+      "to": "配置目录",
+      "label": "容错读取"
+    },
+    {
+      "from": "opencode",
+      "to": "终端快捷键",
+      "label": "优化优先级"
+    },
+    {
+      "from": "agent harness",
+      "to": "上下文窗口溢出",
+      "label": "需区分错误"
+    },
+    {
+      "from": "agent harness",
+      "to": "配置目录",
+      "label": "需处理缺失"
+    }
+  ]
+}

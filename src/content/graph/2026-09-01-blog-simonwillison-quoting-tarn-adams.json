@@ -1,0 +1,74 @@
+{
+  "center": "Tarn Adams 谈矮人行为设计",
+  "branches": [
+    {
+      "label": "核心观点",
+      "detail": "Tarn Adams 强调 Dwarf Fortress 中不存在矮人 AI，只有矮人行为",
+      "children": [
+        "原话：It doesn't exist. It's dwarf…",
+        "拒绝用 AI 一词描述游戏内角色逻辑"
+      ]
+    },
+    {
+      "label": "行为会出错",
+      "detail": "Adams 指出矮人行为有时会 misbehave，这是设计的一部分",
+      "children": [
+        "原话：they misbehave sometimes",
+        "出错被视为行为系统的自然结果"
+      ]
+    },
+    {
+      "label": "出处与作者",
+      "detail": "该引语由 Simon Willison 收集并发布于其博客",
+      "children": [
+        "发布时间：2026 年 9 月 1 日",
+        "Tarn Adams 是 Dwarf Fortress 联合创作者"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Tarn Adams",
+      "type": "person"
+    },
+    {
+      "name": "Dwarf Fortress",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "矮人行为",
+      "type": "concept"
+    },
+    {
+      "name": "游戏 AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Tarn Adams",
+      "to": "Dwarf Fortress",
+      "label": "联合创作"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Tarn Adams",
+      "label": "引用"
+    },
+    {
+      "from": "Tarn Adams",
+      "to": "矮人行为",
+      "label": "主张"
+    },
+    {
+      "from": "Tarn Adams",
+      "to": "游戏 AI",
+      "label": "否定"
+    }
+  ]
+}

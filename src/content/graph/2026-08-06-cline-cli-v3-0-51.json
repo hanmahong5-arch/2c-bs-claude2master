@@ -1,0 +1,77 @@
+{
+  "center": "Cline CLI v3.0.51 推理控制统一",
+  "branches": [
+    {
+      "label": "推理强度统一",
+      "detail": "推理强度设置跨提供商一致生效，不再依赖各提供商的思考覆盖",
+      "children": [
+        "包括 Ollama",
+        "关闭推理的请求在所有提供商都被尊重"
+      ]
+    },
+    {
+      "label": "新增模型",
+      "detail": "Cline 提供商新增 meta/muse-spark-1.2-contributor 模型可选",
+      "children": [
+        "刷新了模型目录"
+      ]
+    },
+    {
+      "label": "错误遥测改进",
+      "detail": "错误遥测现在报告运行中实际使用的模型",
+      "children": [
+        "有助于诊断问题",
+        "harness 应确保遥测数据准确传递模型标识"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "Ollama",
+      "type": "product"
+    },
+    {
+      "name": "meta/muse-spark-1.2-contributor",
+      "type": "model"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "推理强度",
+      "type": "concept"
+    },
+    {
+      "name": "错误遥测",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "Ollama",
+      "label": "支持"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "meta/muse-spark-1.2-contributor",
+      "label": "新增"
+    },
+    {
+      "from": "推理强度",
+      "to": "Ollama",
+      "label": "统一生效"
+    },
+    {
+      "from": "错误遥测",
+      "to": "agent harness",
+      "label": "服务于"
+    }
+  ]
+}

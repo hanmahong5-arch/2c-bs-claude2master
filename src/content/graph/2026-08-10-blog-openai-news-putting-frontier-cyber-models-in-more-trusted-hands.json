@@ -1,0 +1,77 @@
+{
+  "center": "OpenAI 开放前沿网络模型",
+  "branches": [
+    {
+      "label": "开放对象",
+      "detail": "仅向经批准的 Daybreak 合作伙伴提供前沿网络模型",
+      "children": [
+        "Daybreak 合作伙伴需经批准"
+      ]
+    },
+    {
+      "label": "用途限定",
+      "detail": "用于授权、受治理的网络安全服务",
+      "children": [
+        "授权",
+        "受治理"
+      ]
+    },
+    {
+      "label": "核心目的",
+      "detail": "把强大 AI 能力交到可信手中，符合安全与伦理标准",
+      "children": [
+        "安全标准",
+        "伦理标准"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "AI 网络安全工具更广泛可用，但须在严格监管框架下使用",
+      "children": [
+        "更广泛可用",
+        "严格监管框架"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Daybreak",
+      "type": "product"
+    },
+    {
+      "name": "前沿网络模型",
+      "type": "model"
+    },
+    {
+      "name": "网络安全服务",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "前沿网络模型",
+      "label": "开放"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Daybreak",
+      "label": "合作"
+    },
+    {
+      "from": "Daybreak",
+      "to": "前沿网络模型",
+      "label": "获准使用"
+    },
+    {
+      "from": "前沿网络模型",
+      "to": "网络安全服务",
+      "label": "用于"
+    }
+  ]
+}

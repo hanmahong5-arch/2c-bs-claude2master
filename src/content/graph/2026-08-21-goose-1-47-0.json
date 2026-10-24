@@ -1,0 +1,77 @@
+{
+  "center": "Goose v1.47.0 更新",
+  "branches": [
+    {
+      "label": "OAuth 安全强化",
+      "detail": "新增 OAuth 预注册客户端支持，强制安全 token 传输，弃用 Gemini OAuth",
+      "children": [
+        "预注册客户端支持",
+        "强制安全 token 传输",
+        "弃用 Gemini OAuth"
+      ]
+    },
+    {
+      "label": "上下文管理修复",
+      "detail": "修复上下文超限错误处理，包括字节大小限制和显式禁用思考",
+      "children": [
+        "字节大小限制",
+        "显式禁用思考",
+        "统一错误分类"
+      ]
+    },
+    {
+      "label": "agent 循环状态机",
+      "detail": "引入 unrolled agent loop 状态机，并泛化以支持多种 agent 类型",
+      "children": [
+        "unrolled agent loop",
+        "泛化支持多种 agent 类型",
+        "可复用状态机简化循环控制"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "Gemini OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "agent loop 状态机",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "OAuth",
+      "label": "强化"
+    },
+    {
+      "from": "Goose",
+      "to": "Gemini OAuth",
+      "label": "弃用"
+    },
+    {
+      "from": "Goose",
+      "to": "agent loop 状态机",
+      "label": "引入"
+    },
+    {
+      "from": "Goose",
+      "to": "harness",
+      "label": "影响"
+    }
+  ]
+}

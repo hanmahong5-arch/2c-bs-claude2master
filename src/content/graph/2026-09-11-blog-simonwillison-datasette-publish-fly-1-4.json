@@ -1,0 +1,87 @@
+{
+  "center": "datasette-publish-fly 1.4 发布",
+  "branches": [
+    {
+      "label": "HTTPS 强制开启",
+      "detail": "在 fly.toml 中设置 force_https=true，修复 HTTPS 问题",
+      "children": [
+        "对应 issue #31"
+      ]
+    },
+    {
+      "label": "修复 Volume 错误",
+      "detail": "修复 Volume could not be found 的 bug",
+      "children": [
+        "对应 issue #32"
+      ]
+    },
+    {
+      "label": "支持应用级令牌",
+      "detail": "兼容 app-scoped deploy tokens",
+      "children": [
+        "对应 issue #34"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 9 月 11 日发布",
+      "children": [
+        "Datasette 插件，用于发布数据到 Fly"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "datasette-publish-fly",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Fly.io",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "fly.toml",
+      "type": "concept"
+    },
+    {
+      "name": "force_https",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "datasette-publish-fly",
+      "to": "Datasette",
+      "label": "是插件"
+    },
+    {
+      "from": "datasette-publish-fly",
+      "to": "Fly.io",
+      "label": "发布到"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "datasette-publish-fly",
+      "label": "发布"
+    },
+    {
+      "from": "datasette-publish-fly",
+      "to": "fly.toml",
+      "label": "配置"
+    },
+    {
+      "from": "fly.toml",
+      "to": "force_https",
+      "label": "包含"
+    }
+  ]
+}

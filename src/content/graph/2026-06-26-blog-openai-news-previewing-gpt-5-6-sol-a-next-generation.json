@@ -1,0 +1,77 @@
+{
+  "center": "OpenAI 预览 GPT-5.6 Sol",
+  "branches": [
+    {
+      "label": "能力提升",
+      "detail": "聚焦编码、科学和网络安全三大领域能力增强",
+      "children": [
+        "更高效代码生成",
+        "更精准科学数据分析",
+        "复杂推理与多步骤任务改进"
+      ]
+    },
+    {
+      "label": "安全栈升级",
+      "detail": "配备 OpenAI 迄今最先进的安全栈",
+      "children": [
+        "新对齐技术",
+        "新监控机制",
+        "更严格安全标准"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "工具链开发者需适应更严格安全标准",
+      "children": [
+        "可集成安全特性到自有系统",
+        "agent 可处理更复杂任务链",
+        "提升自动化工作流效率"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "安全栈",
+      "type": "concept"
+    },
+    {
+      "name": "对齐技术",
+      "type": "technique"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Sol",
+      "label": "预览"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "安全栈",
+      "label": "配备"
+    },
+    {
+      "from": "安全栈",
+      "to": "对齐技术",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "agent",
+      "label": "赋能"
+    }
+  ]
+}

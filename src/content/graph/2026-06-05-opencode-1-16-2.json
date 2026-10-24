@@ -1,0 +1,72 @@
+{
+  "center": "opencode v1.16.2 更新",
+  "branches": [
+    {
+      "label": "推理摘要修复",
+      "detail": "推理摘要仅在支持的提供商运行，避免向 GPT-5 发错误请求",
+      "children": [
+        "兼容后端不再误发请求",
+        "需更精确的提供商能力检测"
+      ]
+    },
+    {
+      "label": "子代理后台运行",
+      "detail": "子代理可发送至后台，用户代理工作时可继续操作",
+      "children": [
+        "支持长时间多任务并行工作流"
+      ]
+    },
+    {
+      "label": "桌面多服务器",
+      "detail": "每个服务器拥有独立首页状态和会话标签页",
+      "children": [
+        "改善多环境代理管理体验"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5",
+      "type": "model"
+    },
+    {
+      "name": "推理摘要",
+      "type": "concept"
+    },
+    {
+      "name": "子代理",
+      "type": "concept"
+    },
+    {
+      "name": "提供商能力检测",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "GPT-5",
+      "label": "避免误发请求"
+    },
+    {
+      "from": "opencode",
+      "to": "推理摘要",
+      "label": "修复兼容性"
+    },
+    {
+      "from": "opencode",
+      "to": "子代理",
+      "label": "支持后台运行"
+    },
+    {
+      "from": "opencode",
+      "to": "提供商能力检测",
+      "label": "需要更精确"
+    }
+  ]
+}

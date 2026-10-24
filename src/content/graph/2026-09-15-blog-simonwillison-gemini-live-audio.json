@@ -1,0 +1,110 @@
+{
+  "center": "Gemini Live 语音模型实测",
+  "branches": [
+    {
+      "label": "新模型发布",
+      "detail": "Google 推出 Gemini 3.8 Live 与 Extended Thinking 两个语音对语音模型",
+      "children": [
+        "形态类似 OpenAI GPT-Live 系列",
+        "支持打断模型说话"
+      ]
+    },
+    {
+      "label": "AI 写试用网页",
+      "detail": "Simon Willison 用 GPT-6 Astra Extra High 读文档后直接生成试用网页",
+      "children": [
+        "可选模型、语音预设、系统提示词",
+        "在浏览器里发起语音对话"
+      ]
+    },
+    {
+      "label": "零依赖实现",
+      "detail": "不依赖任何库，直接连 WebSocket 端点并用 Web Audio API",
+      "children": [
+        "WebSocket 端点 BidiGenerateContent",
+        "AudioContext 同时做采集与播放"
+      ]
+    },
+    {
+      "label": "行业含义",
+      "detail": "实时双向语音正成为主流模型厂商标配接口层",
+      "children": [
+        "读文档写胶水代码可整体外包给模型",
+        "浏览器原生 API 已足够支撑实时语音 agent"
+      ]
+    }
+  ],
+  "flow": [
+    "读文档",
+    "生成试用网页",
+    "选模型与语音",
+    "连 WebSocket",
+    "浏览器语音对话"
+  ],
+  "entities": [
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Gemini 3.8 Live",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.8 Live Extended Thinking",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GPT-6 Astra Extra High",
+      "type": "model"
+    },
+    {
+      "name": "WebSocket",
+      "type": "technique"
+    },
+    {
+      "name": "Web Audio API",
+      "type": "technique"
+    },
+    {
+      "name": "BidiGenerateContent",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google",
+      "to": "Gemini 3.8 Live",
+      "label": "发布"
+    },
+    {
+      "from": "Google",
+      "to": "Gemini 3.8 Live Extended Thinking",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-6 Astra Extra High",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Gemini 3.8 Live",
+      "label": "试玩"
+    },
+    {
+      "from": "WebSocket",
+      "to": "BidiGenerateContent",
+      "label": "连接"
+    },
+    {
+      "from": "Web Audio API",
+      "to": "WebSocket",
+      "label": "配合"
+    }
+  ]
+}

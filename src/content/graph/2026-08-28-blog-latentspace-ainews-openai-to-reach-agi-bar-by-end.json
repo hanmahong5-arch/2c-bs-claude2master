@@ -1,0 +1,107 @@
+{
+  "center": "OpenAI 2026 年底宣布 AGI",
+  "branches": [
+    {
+      "label": "AGI 时间表",
+      "detail": "OpenAI 高层称 2026 年底内部宣布达成 AGI",
+      "children": [
+        "Sam Altman 估 2026 年 12 月",
+        "Mark Chen 称已走完 80%",
+        "Jakub Pachocki 的 Astra 即自动研究实习生"
+      ]
+    },
+    {
+      "label": "开源机器人",
+      "detail": "Hugging Face 与 Pollen 推 399 美元 Microduck 双足机器人",
+      "children": [
+        "25cm、15 个执行器、圣诞前发货",
+        "仿真训练迁移真机，模拟器已公开",
+        "Thom Wolf 称每 5 秒卖一台，销售额破百万美元"
+      ]
+    },
+    {
+      "label": "GLM-5.3-Flash",
+      "detail": "神秘模型 Ox Alpha 确认为智谱 GLM-5.3-Flash",
+      "children": [
+        "320B 总参、18B 激活、1M 上下文",
+        "Unsloth 称 3-bit GGUF 可跑 128GB 内存",
+        "Databricks 称质量高 10%、成本仅 1/10"
+      ]
+    },
+    {
+      "label": "视频生成竞赛",
+      "detail": "Google 与 MiniMax 同日发布视频模型",
+      "children": [
+        "Gemini Omni 1.1 Flash 支持 40 秒场景延展…",
+        "登顶 Text-to-Video Arena 第一",
+        "fal 联合 MiniMax 推 H3 Max，5 秒出 15 秒…"
+      ]
+    },
+    {
+      "label": "Agent 与安全",
+      "detail": "Agent harness 成核心，安全议题升温",
+      "children": [
+        "Hermes Agent 可用真实 Chrome 登录态浏览",
+        "OpenAI 联合 116 家组织呼吁网络防御",
+        "Anthropic 发布 Claude Managed Agents 接…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Sam Altman",
+      "type": "person"
+    },
+    {
+      "name": "Astra",
+      "type": "model"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Microduck",
+      "type": "product"
+    },
+    {
+      "name": "GLM-5.3-Flash",
+      "type": "model"
+    },
+    {
+      "name": "Gemini Omni 1.1 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sam Altman",
+      "to": "OpenAI",
+      "label": "领导"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Astra",
+      "label": "开发"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Microduck",
+      "label": "联合发布"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "OpenAI",
+      "label": "无关"
+    }
+  ]
+}

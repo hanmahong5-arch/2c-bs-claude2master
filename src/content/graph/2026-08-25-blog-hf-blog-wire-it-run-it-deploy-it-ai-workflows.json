@@ -1,0 +1,104 @@
+{
+  "center": "Gradio 构建 AI 工作流",
+  "branches": [
+    {
+      "label": "可视化画布",
+      "detail": "用交互式画布搭建复杂 AI 管线，无需纠缠代码",
+      "children": [
+        "gr.Workflow 提供交互式画布",
+        "可视化每个处理步骤"
+      ]
+    },
+    {
+      "label": "实时调试",
+      "detail": "在画布中实时查看和调试流程每一步",
+      "children": [
+        "实时调试每个步骤"
+      ]
+    },
+    {
+      "label": "一键部署",
+      "detail": "模型可直接部署到 Hugging Face Spaces",
+      "children": [
+        "部署到 Hugging Face Spaces"
+      ]
+    },
+    {
+      "label": "示例工作流",
+      "detail": "官方展示多个 gr.Workflow 示例应用",
+      "children": [
+        "Generative Art Lab",
+        "Data Detective",
+        "Instruction Image Editor"
+      ]
+    }
+  ],
+  "flow": [
+    "在画布搭建管线",
+    "连接各处理步骤",
+    "实时调试流程",
+    "部署到 Spaces"
+  ],
+  "entities": [
+    {
+      "name": "Gradio",
+      "type": "product"
+    },
+    {
+      "name": "gr.Workflow",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face Spaces",
+      "type": "product"
+    },
+    {
+      "name": "Generative Art Lab",
+      "type": "product"
+    },
+    {
+      "name": "Data Detective",
+      "type": "product"
+    },
+    {
+      "name": "Instruction Image Editor",
+      "type": "product"
+    },
+    {
+      "name": "ZeroGPU Animator",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gradio",
+      "to": "gr.Workflow",
+      "label": "提供"
+    },
+    {
+      "from": "gr.Workflow",
+      "to": "Hugging Face Spaces",
+      "label": "部署到"
+    },
+    {
+      "from": "Generative Art Lab",
+      "to": "gr.Workflow",
+      "label": "基于"
+    },
+    {
+      "from": "Data Detective",
+      "to": "gr.Workflow",
+      "label": "基于"
+    },
+    {
+      "from": "Instruction Image Editor",
+      "to": "gr.Workflow",
+      "label": "基于"
+    },
+    {
+      "from": "ZeroGPU Animator",
+      "to": "gr.Workflow",
+      "label": "基于"
+    }
+  ]
+}

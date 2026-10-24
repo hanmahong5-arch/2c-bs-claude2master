@@ -1,0 +1,60 @@
+{
+  "center": "opencode v1.17.11 会话快照与回滚",
+  "branches": [
+    {
+      "label": "会话快照回滚",
+      "detail": "新增快照与回滚控制，可回退到早期消息并撤销文件变更",
+      "children": [
+        "回退包含文件变更",
+        "便于实验性修改"
+      ]
+    },
+    {
+      "label": "桌面版标签页",
+      "detail": "桌面版新增 Chrome 风格标签页快捷键与拖拽标签页",
+      "children": [
+        "快捷键 mod+1~9",
+        "支持拖拽标签页",
+        "提升多会话管理效率"
+      ]
+    },
+    {
+      "label": "修复 MCP OAuth",
+      "detail": "修复 MCP OAuth URL 始终打印的问题",
+      "children": [
+        "确保浏览器登录流程可手动完成"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "Chrome",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "MCP",
+      "label": "修复"
+    },
+    {
+      "from": "MCP",
+      "to": "OAuth",
+      "label": "使用"
+    }
+  ]
+}

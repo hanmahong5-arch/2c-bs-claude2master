@@ -1,0 +1,56 @@
+{
+  "center": "OpenCode 提升 MCP 兼容性",
+  "branches": [
+    {
+      "label": "声明客户端能力",
+      "detail": "OpenCode 现明确声明其支持的 MCP 客户端能力",
+      "children": [
+        "要求 harness 具备能力协商机制",
+        "只调用双方都支持的功能"
+      ]
+    },
+    {
+      "label": "修复兼容性问题",
+      "detail": "改动旨在解决与某些 MCP 客户端的兼容性问题",
+      "children": [
+        "harness 需处理服务器能力声明",
+        "能力不匹配时优雅降级或报错"
+      ]
+    },
+    {
+      "label": "核心稳定性提升",
+      "detail": "此次更新属于核心模块的 bug 修复",
+      "children": [
+        "优先选用已声明能力的稳定服务器",
+        "减少集成风险"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenCode",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenCode",
+      "to": "MCP",
+      "label": "声明能力"
+    },
+    {
+      "from": "Agent Harness",
+      "to": "MCP",
+      "label": "集成服务器"
+    }
+  ]
+}

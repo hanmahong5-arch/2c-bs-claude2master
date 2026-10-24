@@ -1,0 +1,85 @@
+{
+  "center": "Karpathy 谈 AI 释放软件需求",
+  "branches": [
+    {
+      "label": "软件随手可得",
+      "detail": "Karpathy 感到工作软件正变得像开水龙头一样唾手可得",
+      "children": [
+        "\"working software comes out on a tap\""
+      ]
+    },
+    {
+      "label": "杰文斯悖论",
+      "detail": "软件供给变易后，他自己的软件需求反而大幅增长",
+      "children": [
+        "Jevon's paradox kicks in",
+        "个人软件需求显著增长"
+      ]
+    },
+    {
+      "label": "可要任何东西",
+      "detail": "解释器、可视化、仪表盘、一次性定制应用都能随口要",
+      "children": [
+        "为项目定制的超专用 wandb",
+        "测试套件 10 倍扩张",
+        "自动优化代码"
+      ]
+    },
+    {
+      "label": "大型研究项目",
+      "detail": "可用自定义 HTML 呈现结果来跑大型研究项目",
+      "children": [
+        "custom HTML for the results"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Andrej Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Jevon's paradox",
+      "type": "concept"
+    },
+    {
+      "name": "wandb",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Andrej Karpathy",
+      "to": "Claude Fable 5",
+      "label": "评论于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Andrej Karpathy",
+      "label": "引用"
+    },
+    {
+      "from": "Andrej Karpathy",
+      "to": "Jevon's paradox",
+      "label": "援引"
+    },
+    {
+      "from": "Jevon's paradox",
+      "to": "LLM",
+      "label": "适用于"
+    }
+  ]
+}

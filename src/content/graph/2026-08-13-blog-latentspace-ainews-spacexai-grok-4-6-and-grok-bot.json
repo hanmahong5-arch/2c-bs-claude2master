@@ -1,0 +1,112 @@
+{
+  "center": "Grok 4.6 与 Grok Bot 发布",
+  "branches": [
+    {
+      "label": "Grok 4.6 发布",
+      "detail": "1.5T 模型，主打长时程代理与视觉交互，效率登顶",
+      "children": [
+        "AA 智能指数 61，与 GPT-5.6 Sol Max 相当",
+        "Terminal-Bench v2.1 达 88.4%",
+        "定价 $2/$6 每百万 token，远低于同行"
+      ]
+    },
+    {
+      "label": "Grok Bot 代理",
+      "detail": "AI 队友可登录工具、像人一样操作并交付成果",
+      "children": [
+        "早期 beta，由 Grok 4.6 驱动",
+        "推文 2290 万浏览、2.89 万点赞",
+        "定位知识工作新战场"
+      ]
+    },
+    {
+      "label": "训练方法",
+      "detail": "更长补充训练 + 用 Grok 4.5 重生成 SFT 轨迹",
+      "children": [
+        "精选模型生成推理与技术数据",
+        "代理 RL 覆盖编码、网页、CAD、内核优化",
+        "改进优化器与训练配方"
+      ]
+    },
+    {
+      "label": "竞品同日登场",
+      "detail": "Qwen3.8-Max、DeepSeek V4 Pro、MAI-Thinking-1 齐发",
+      "children": [
+        "Qwen3.8-Max 开源 2.4T/95B 激活 MoE",
+        "DeepSeek V4 Pro 输入 $0.435/M",
+        "微软首个自研推理模型进 Foundry"
+      ]
+    },
+    {
+      "label": "开源多模态",
+      "detail": "视频、视觉、语音与本地推理模型集中发布",
+      "children": [
+        "LTX-2.5 支持视频+48kHz 音频",
+        "Cohere North Micro Vision 文档理解",
+        "Deepgram Flux TTS 延迟约 80ms"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "SpaceXAI",
+      "type": "company"
+    },
+    {
+      "name": "Grok 4.6",
+      "type": "model"
+    },
+    {
+      "name": "Grok Bot",
+      "type": "product"
+    },
+    {
+      "name": "Qwen3.8-Max",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek V4 Pro",
+      "type": "model"
+    },
+    {
+      "name": "MAI-Thinking-1",
+      "type": "model"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "LTX-2.5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "SpaceXAI",
+      "to": "Grok 4.6",
+      "label": "发布"
+    },
+    {
+      "from": "Grok 4.6",
+      "to": "Grok Bot",
+      "label": "驱动"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "Grok 4.6",
+      "label": "评测"
+    },
+    {
+      "from": "Qwen3.8-Max",
+      "to": "DeepSeek V4 Pro",
+      "label": "同日竞争"
+    },
+    {
+      "from": "MAI-Thinking-1",
+      "to": "Grok 4.6",
+      "label": "同场竞争"
+    }
+  ]
+}

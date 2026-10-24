@@ -1,0 +1,78 @@
+{
+  "center": "cline v4.1.20 更新",
+  "branches": [
+    {
+      "label": "子代理并行",
+      "detail": "同一步骤内子代理工具调用改为并行执行，父代理等待全部结果",
+      "children": [
+        "调度层区分可并行与必须串行的工具",
+        "保留结果聚合屏障"
+      ]
+    },
+    {
+      "label": "输出预算放大",
+      "detail": "声明大输出上限的模型默认预算改为上限的30%，不低于32k",
+      "children": [
+        "harness 按模型能力动态分配预算",
+        "接受更长响应带来的单轮成本与延迟"
+      ]
+    },
+    {
+      "label": "hook 上下文修复",
+      "detail": "UserPromptSubmit/TaskStart hook 的 contextModification 恢复注入",
+      "children": [
+        "以 <hook_context> 块出现在首次请求",
+        "不渲染到记录中，不回灌为下一轮提示"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "子代理",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "UserPromptSubmit",
+      "type": "technique"
+    },
+    {
+      "name": "TaskStart",
+      "type": "technique"
+    },
+    {
+      "name": "contextModification",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "子代理",
+      "label": "支持并行"
+    },
+    {
+      "from": "cline",
+      "to": "harness",
+      "label": "依赖"
+    },
+    {
+      "from": "UserPromptSubmit",
+      "to": "contextModification",
+      "label": "触发"
+    },
+    {
+      "from": "TaskStart",
+      "to": "contextModification",
+      "label": "触发"
+    }
+  ]
+}

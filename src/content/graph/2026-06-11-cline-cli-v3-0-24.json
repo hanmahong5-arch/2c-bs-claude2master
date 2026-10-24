@@ -1,0 +1,63 @@
+{
+  "center": "cline cli v3.0.24 更新",
+  "branches": [
+    {
+      "label": "插件可提交提示词",
+      "detail": "插件命令现可向代理提交提示词，扩展交互能力",
+      "children": [
+        "外部工具能更灵活驱动代理行为"
+      ]
+    },
+    {
+      "label": "自定义 API 地址",
+      "detail": "支持覆盖 API 基础 URL，用户可自定义后端服务地址",
+      "children": [
+        "增强部署和测试灵活性"
+      ]
+    },
+    {
+      "label": "自动打开验证链接",
+      "detail": "设备认证时自动打开验证 URL，简化登录流程",
+      "children": [
+        "减少手动操作步骤",
+        "提升用户体验"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "插件",
+      "type": "concept"
+    },
+    {
+      "name": "API 基础 URL",
+      "type": "concept"
+    },
+    {
+      "name": "设备认证",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "插件",
+      "to": "cline cli",
+      "label": "提交提示词"
+    },
+    {
+      "from": "cline cli",
+      "to": "API 基础 URL",
+      "label": "支持覆盖"
+    },
+    {
+      "from": "设备认证",
+      "to": "cline cli",
+      "label": "自动打开链接"
+    }
+  ]
+}

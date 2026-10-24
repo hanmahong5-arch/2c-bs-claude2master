@@ -1,0 +1,118 @@
+{
+  "center": "OpenClaw 实验特性配置指南",
+  "branches": [
+    {
+      "label": "实验特性定位",
+      "detail": "预览功能由配置开关控制，默认关闭，形态与行为可能快速变化",
+      "children": [
+        "所有插件 API 也属实验性",
+        "稳定路径存在时优先用稳定路径",
+        "先小范围测试再广泛铺开"
+      ]
+    },
+    {
+      "label": "已文档化开关",
+      "detail": "Codex harness、Code Mode、Cloud workers、Custom plugin UI、Host Desktop、Tool Search 等",
+      "children": [
+        "Codex harness 需 app-server 0.143.0+",
+        "Code Mode 提供隐藏工具目录的代码编排访问",
+        "Tool Search 未设置时默认启用"
+      ]
+    },
+    {
+      "label": "Control UI Labs",
+      "detail": "Settings → Labs 管理带 UI 开关的实验，改配置无需重启 Gateway",
+      "children": [
+        "含 Decision assistance、Code Mode、Tool…",
+        "Custom plugin UI 默认关闭，禁用后需刷新浏览…",
+        "Cloud Worker Desktop 仅影响新配置 worker"
+      ]
+    },
+    {
+      "label": "Decision assistance",
+      "detail": "仅基础层：保存意图但不连接自动消费者，不启动推理",
+      "children": [
+        "全局布尔 decisionAssistance，默认 off",
+        "需显式 true，对象形式无效",
+        "isDecisionAssistanceEligible 为内部边界…"
+      ]
+    },
+    {
+      "label": "本地模型精简模式",
+      "detail": "Lean mode 是高级排障覆盖，在 Labs 外配置",
+      "children": [
+        "沿用 experimental.localModelLean 键",
+        "用于减少工具列表避免上下文溢出"
+      ]
+    }
+  ],
+  "flow": [
+    "打开 Settings → Labs",
+    "启用或禁用实验开关",
+    "配置即时写入 Gateway",
+    "按需刷新浏览器标签",
+    "新 agent 运行生效"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Codex harness",
+      "type": "technique"
+    },
+    {
+      "name": "Code Mode",
+      "type": "technique"
+    },
+    {
+      "name": "Tool Search",
+      "type": "technique"
+    },
+    {
+      "name": "Decision assistance",
+      "type": "concept"
+    },
+    {
+      "name": "Control UI Labs",
+      "type": "product"
+    },
+    {
+      "name": "Local model lean mode",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Codex harness",
+      "label": "支持"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Code Mode",
+      "label": "支持"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Tool Search",
+      "label": "支持"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Decision assistance",
+      "label": "包含"
+    },
+    {
+      "from": "Control UI Labs",
+      "to": "Decision assistance",
+      "label": "管理"
+    },
+    {
+      "from": "Control UI Labs",
+      "to": "Code Mode",
+      "label": "管理"
+    }
+  ]
+}

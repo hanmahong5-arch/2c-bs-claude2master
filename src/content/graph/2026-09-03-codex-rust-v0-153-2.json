@@ -1,0 +1,52 @@
+{
+  "center": "codex rust-v0.153.2 文本修正",
+  "branches": [
+    {
+      "label": "修正内容",
+      "detail": "GPT-6-Astra Fast 档描述由 1.5x 改为 2x speed, increased usage",
+      "children": [
+        "仅文本变更",
+        "不影响请求执行逻辑"
+      ]
+    },
+    {
+      "label": "影响范围",
+      "detail": "仅影响显示文本，不改变实际执行",
+      "children": [
+        "对 agent harness 设计有提示意义"
+      ]
+    },
+    {
+      "label": "设计提示",
+      "detail": "提示用户时需注意模型档位描述准确性，避免误导",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex rust-v0.153.2",
+      "type": "product"
+    },
+    {
+      "name": "GPT-6-Astra",
+      "type": "model"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex rust-v0.153.2",
+      "to": "GPT-6-Astra",
+      "label": "修正描述"
+    },
+    {
+      "from": "agent harness",
+      "to": "GPT-6-Astra",
+      "label": "需准确描述"
+    }
+  ]
+}

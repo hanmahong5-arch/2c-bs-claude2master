@@ -1,0 +1,71 @@
+{
+  "center": "cline v3.89.0 更新",
+  "branches": [
+    {
+      "label": "新增模型支持",
+      "detail": "为 Agent Harness 加入 Claude Fable 5，扩展复杂任务处理能力",
+      "children": [
+        "Claude Fable 5 可能更强大"
+      ]
+    },
+    {
+      "label": "修复思考控制",
+      "detail": "修复 MiniMax M3 经网关调用时的思考控制，提升多模型集成稳定性",
+      "children": [
+        "网关调用下思考控制稳定"
+      ]
+    },
+    {
+      "label": "清理模型列表",
+      "detail": "移除过时或不必要的 Codex 模型，简化配置界面",
+      "children": [
+        "开发者更易选择合适模型"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "MiniMax M3",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "model"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "Claude Fable 5",
+      "label": "新增支持"
+    },
+    {
+      "from": "cline",
+      "to": "MiniMax M3",
+      "label": "修复控制"
+    },
+    {
+      "from": "cline",
+      "to": "Codex",
+      "label": "清理列表"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Agent Harness",
+      "label": "接入"
+    }
+  ]
+}

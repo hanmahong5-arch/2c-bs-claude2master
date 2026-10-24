@@ -1,0 +1,98 @@
+{
+  "center": "GPT-5.6 Sol 金融工作流",
+  "branches": [
+    {
+      "label": "端到端金融分析",
+      "detail": "GPT-5.6 Sol 自动完成从研究分析到生成交付物的完整金融工作流",
+      "children": [
+        "减少人工重复操作",
+        "覆盖研究分析到成果输出"
+      ]
+    },
+    {
+      "label": "可编辑可追溯输出",
+      "detail": "生成可编辑、可追溯的 PowerPoint 和 Excel 工作簿",
+      "children": [
+        "输出为可编辑 PPT",
+        "输出为可编辑 Excel",
+        "结果可追溯"
+      ]
+    },
+    {
+      "label": "合规友好",
+      "detail": "可编辑性与可追溯性让 AI 结果可被人类审查修改，对合规金融行业至关重要",
+      "children": [
+        "不再是黑箱",
+        "可被人类审查和修改"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "展示 AI 在金融等垂直领域落地潜力，工具链应围绕可编辑输出与流程透明设计",
+      "children": [
+        "不只看生成速度",
+        "围绕可编辑输出设计",
+        "围绕流程透明设计"
+      ]
+    }
+  ],
+  "flow": [
+    "研究分析",
+    "生成可编辑 PPT",
+    "生成可编辑 Excel",
+    "人类审查修改"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "PowerPoint",
+      "type": "product"
+    },
+    {
+      "name": "Excel",
+      "type": "product"
+    },
+    {
+      "name": "金融分析",
+      "type": "concept"
+    },
+    {
+      "name": "可追溯性",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6 Sol",
+      "label": "展示"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "金融分析",
+      "label": "完成"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "PowerPoint",
+      "label": "生成"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "Excel",
+      "label": "生成"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "可追溯性",
+      "label": "强调"
+    }
+  ]
+}

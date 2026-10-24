@@ -1,0 +1,77 @@
+{
+  "center": "Claude Code v2.1.202 更新",
+  "branches": [
+    {
+      "label": "动态工作流规模",
+      "detail": "/config 新增设置，控制工作流 agent 数量",
+      "children": [
+        "可选小/中/大",
+        "仅建议性指导，非硬性限制",
+        "便于按任务复杂度分配资源"
+      ]
+    },
+    {
+      "label": "OTel 属性增强",
+      "detail": "工作流 agent 携带 OpenTelemetry 属性",
+      "children": [
+        "新增 workflow.run_id",
+        "新增 workflow.name",
+        "可从 OTel 数据重建运行活动"
+      ]
+    },
+    {
+      "label": "远程控制修复",
+      "detail": "修复移动端/网页发送命令的多项问题",
+      "children": [
+        "修复 Unknown command 提示",
+        "修复无标题图片/文件被静默丢弃",
+        "确保多端交互一致性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "OpenTelemetry",
+      "type": "technique"
+    },
+    {
+      "name": "Dynamic workflow size",
+      "type": "concept"
+    },
+    {
+      "name": "workflow.run_id",
+      "type": "concept"
+    },
+    {
+      "name": "workflow.name",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Dynamic workflow size",
+      "label": "新增设置"
+    },
+    {
+      "from": "Claude Code",
+      "to": "OpenTelemetry",
+      "label": "集成"
+    },
+    {
+      "from": "workflow.run_id",
+      "to": "OpenTelemetry",
+      "label": "作为属性"
+    },
+    {
+      "from": "workflow.name",
+      "to": "OpenTelemetry",
+      "label": "作为属性"
+    }
+  ]
+}

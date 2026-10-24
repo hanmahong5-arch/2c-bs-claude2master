@@ -1,0 +1,80 @@
+{
+  "center": "Cline v4.1.3 稳定性修复",
+  "branches": [
+    {
+      "label": "会话失效修复",
+      "detail": "旧窗口刷新 token 挤掉新会话的问题已修复，保留当前会话并提示重载",
+      "children": [
+        "多窗口共享 token 需隔离或协调刷新"
+      ]
+    },
+    {
+      "label": "检查点回滚恢复",
+      "detail": "回滚现在能重放整个工作区，而非部分文件，避免不一致",
+      "children": [
+        "检查点需覆盖完整状态"
+      ]
+    },
+    {
+      "label": "设置编辑保留",
+      "detail": "provider 配置加载完成前的修改不再丢失，合并用户输入避免竞态覆盖",
+      "children": [
+        "异步加载时需合并用户输入"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Cline v4.1.3",
+      "type": "product"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "token",
+      "type": "concept"
+    },
+    {
+      "name": "检查点",
+      "type": "concept"
+    },
+    {
+      "name": "provider",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline v4.1.3",
+      "to": "Cline",
+      "label": "版本属于"
+    },
+    {
+      "from": "Cline v4.1.3",
+      "to": "harness",
+      "label": "设计启示"
+    },
+    {
+      "from": "Cline v4.1.3",
+      "to": "token",
+      "label": "修复问题"
+    },
+    {
+      "from": "Cline v4.1.3",
+      "to": "检查点",
+      "label": "修复问题"
+    },
+    {
+      "from": "Cline v4.1.3",
+      "to": "provider",
+      "label": "修复问题"
+    }
+  ]
+}

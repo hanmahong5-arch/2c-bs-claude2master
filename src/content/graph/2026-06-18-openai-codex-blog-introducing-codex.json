@@ -1,0 +1,74 @@
+{
+  "center": "Codex 云端并行编程代理",
+  "branches": [
+    {
+      "label": "并行云沙盒",
+      "detail": "每个任务独立云沙盒，预加载代码库，可并行处理多项任务",
+      "children": [
+        "任务描述需清晰独立，便于资源分配",
+        "首个云端并行软件工程代理"
+      ]
+    },
+    {
+      "label": "AGENTS.md 引导",
+      "detail": "仓库放置 AGENTS.md 指导导航代码库、运行测试与项目规范",
+      "children": [
+        "结构化上下文提升输出质量与合规性",
+        "类似项目指南的代理上下文"
+      ]
+    },
+    {
+      "label": "安全与验证",
+      "detail": "禁用互联网的隔离容器运行，引用终端日志与测试结果作证据",
+      "children": [
+        "行动证据可验证",
+        "需明确用户审查环节"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "concept"
+    },
+    {
+      "name": "云沙盒",
+      "type": "concept"
+    },
+    {
+      "name": "隔离容器",
+      "type": "concept"
+    },
+    {
+      "name": "prompt",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex",
+      "to": "云沙盒",
+      "label": "创建"
+    },
+    {
+      "from": "Codex",
+      "to": "AGENTS.md",
+      "label": "读取"
+    },
+    {
+      "from": "Codex",
+      "to": "隔离容器",
+      "label": "运行于"
+    },
+    {
+      "from": "AGENTS.md",
+      "to": "Codex",
+      "label": "引导"
+    }
+  ]
+}

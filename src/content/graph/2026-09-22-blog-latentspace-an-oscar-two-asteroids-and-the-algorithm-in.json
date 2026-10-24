@@ -1,0 +1,122 @@
+{
+  "center": "Google ERA 用 Gemini 自动求解…",
+  "branches": [
+    {
+      "label": "ERA 是什么",
+      "detail": "把可打分的科学问题交给 AI 自动搜索最优代码解",
+      "children": [
+        "核心思路：先定义 score，再找最大化 score 的…",
+        "源自 auto-Kaggle 构想，Kaggle 数据由…",
+        "已产出至少十篇论文"
+      ]
+    },
+    {
+      "label": "怎么运作",
+      "detail": "Gemini 维护实验树，用 UCB 选分支并批量变异",
+      "children": [
+        "类似 Monte Carlo Tree Search，乐观而非贪心",
+        "每轮约十个变异，分支历史共享互相学习",
+        "Gemini 2.0 到 2.5 出现从不可用到好用的跃变"
+      ]
+    },
+    {
+      "label": "风险与忠告",
+      "detail": "优化器会奖励黑客，需科学家判断模型是否描述真实",
+      "children": [
+        "凝结尾迹竞赛靠半像素标签误差取胜",
+        "Goodhart 定律：指标一旦成为目标就失效",
+        "建议从线性回归或 SVM 起步"
+      ]
+    },
+    {
+      "label": "气候应用",
+      "detail": "用 AI 减少飞机凝结尾迹与快速发现野火",
+      "children": [
+        "凝结尾迹占人类致暖约 1%，一克尾气生成十公斤冰晶",
+        "ERA 找到含未考虑混杂因素的简单模型",
+        "FireSat 用卫星星座在火灾还小时识别"
+      ]
+    },
+    {
+      "label": "John Platt 其人",
+      "detail": "拥有奥斯卡、两个教科书算法与两颗命名小行星",
+      "children": [
+        "1982 年上过 Richard Feynman 的计算物理课",
+        "建议深耕领域专长，偶尔亲手实现工具"
+      ]
+    }
+  ],
+  "flow": [
+    "定义可打分的科学问题",
+    "Gemini 维护实验树",
+    "UCB 选最有希望分支",
+    "批量提出变异代码",
+    "迭代最大化 score"
+  ],
+  "entities": [
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "ERA",
+      "type": "product"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "John Platt",
+      "type": "person"
+    },
+    {
+      "name": "Kaggle",
+      "type": "product"
+    },
+    {
+      "name": "Monte Carlo Tree Search",
+      "type": "technique"
+    },
+    {
+      "name": "FireSat",
+      "type": "product"
+    },
+    {
+      "name": "Richard Feynman",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google",
+      "to": "ERA",
+      "label": "开发"
+    },
+    {
+      "from": "ERA",
+      "to": "Gemini",
+      "label": "使用"
+    },
+    {
+      "from": "John Platt",
+      "to": "ERA",
+      "label": "领导"
+    },
+    {
+      "from": "ERA",
+      "to": "Monte Carlo Tree Search",
+      "label": "类似"
+    },
+    {
+      "from": "Google",
+      "to": "Kaggle",
+      "label": "拥有"
+    },
+    {
+      "from": "John Platt",
+      "to": "Richard Feynman",
+      "label": "上过课"
+    }
+  ]
+}

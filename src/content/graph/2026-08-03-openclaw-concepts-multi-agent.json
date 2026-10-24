@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw 多智能体路由",
+  "branches": [
+    {
+      "label": "隔离的智能体",
+      "detail": "每个 agent 拥有独立工作区、状态目录与 SQLite 会话历史",
+      "children": [
+        "agentDir 存 auth profiles 与模型注册表",
+        "会话存于 openclaw-agent.sqlite",
+        "默认单 agent：agentId 为 main"
+      ]
+    },
+    {
+      "label": "绑定路由消息",
+      "detail": "binding 把渠道账号映射到某个 agent，入站消息据此路由",
+      "children": [
+        "一个渠道可挂多个账号（如两个 WhatsApp 号）",
+        "openclaw agents list --bindings 验证",
+        "显式目标与绑定优先于默认"
+      ]
+    },
+    {
+      "label": "新增与配置",
+      "detail": "用 CLI 或 Control UI 添加隔离 agent 并绑定渠道",
+      "children": [
+        "openclaw agents add work",
+        "支持 --role --workspace --model --bind",
+        "Control UI 的 /agents 查看花名册"
+      ]
+    },
+    {
+      "label": "团队预设",
+      "detail": "一键创建 coordinator、researcher、writer、reviewer 四角色",
+      "children": [
+        "coordinator 是人类唯一对接人",
+        "allowAgents 控制 spawn 目标",
+        "delegationMode prefer 仅为提示引导"
+      ]
+    },
+    {
+      "label": "来源与审批",
+      "detail": "记录 agent 创建来源，新建 agent 需操作者批准",
+      "children": [
+        "provenance：operator/agent/claw",
+        "openclaw agents list --tree 查看层级",
+        "外部发送等操作需人工批准"
+      ]
+    }
+  ],
+  "flow": [
+    "创建 agent 工作区",
+    "创建渠道账号",
+    "添加 agent 与账号",
+    "配置 binding 路由",
+    "验证绑定列表"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "agentDir",
+      "type": "concept"
+    },
+    {
+      "name": "binding",
+      "type": "concept"
+    },
+    {
+      "name": "openclaw-agent.sqlite",
+      "type": "product"
+    },
+    {
+      "name": "coordinator",
+      "type": "concept"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "concept"
+    },
+    {
+      "name": "WhatsApp",
+      "type": "product"
+    },
+    {
+      "name": "Control UI",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "agentDir",
+      "label": "使用"
+    },
+    {
+      "from": "binding",
+      "to": "OpenClaw",
+      "label": "路由于"
+    },
+    {
+      "from": "agentDir",
+      "to": "openclaw-agent.sqlite",
+      "label": "包含"
+    },
+    {
+      "from": "coordinator",
+      "to": "AGENTS.md",
+      "label": "定义于"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "WhatsApp",
+      "label": "支持渠道"
+    },
+    {
+      "from": "Control UI",
+      "to": "OpenClaw",
+      "label": "管理"
+    }
+  ]
+}

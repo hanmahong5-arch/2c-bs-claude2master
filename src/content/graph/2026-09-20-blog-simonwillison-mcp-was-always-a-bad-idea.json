@@ -1,0 +1,100 @@
+{
+  "center": "MCP 是否已过时之争",
+  "branches": [
+    {
+      "label": "反驳核心观点",
+      "detail": "文章完全忽略了 MCP 今天带来的价值",
+      "children": [
+        "作者 Simon Willison 回应 HN 讨论",
+        "标题：MCP was always a bad idea?"
+      ]
+    },
+    {
+      "label": "全权限 agent 无需 MCP",
+      "detail": "终端 agent 有不受限网络访问时可直接调 API",
+      "children": [
+        "Claude Code、Codex、Meta Muse、OpenClaw",
+        "直接调用 API 即可，几乎不需要 MCP"
+      ]
+    },
+    {
+      "label": "受控场景需要 MCP",
+      "detail": "非 YOLO 场景下 MCP 让受控能力更易提供",
+      "children": [
+        "控制可访问哪些外部服务",
+        "认证不暴露 API key 给 agent",
+        "连接认证 UI 与强审计日志"
+      ]
+    },
+    {
+      "label": "结论：别只看编码 agent",
+      "detail": "认为 MCP 过时忽略了其他可构建的东西",
+      "children": [
+        "MCP 让受控能力更易实现"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Meta Muse",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Hacker News",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "MCP",
+      "label": "辩护"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Hacker News",
+      "label": "回应讨论"
+    },
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "无需"
+    },
+    {
+      "from": "Codex",
+      "to": "MCP",
+      "label": "无需"
+    },
+    {
+      "from": "Meta Muse",
+      "to": "MCP",
+      "label": "无需"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "MCP",
+      "label": "无需"
+    }
+  ]
+}

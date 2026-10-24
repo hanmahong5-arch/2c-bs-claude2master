@@ -1,0 +1,115 @@
+{
+  "center": "AI 投资回报记分卡",
+  "branches": [
+    {
+      "label": "有用工作量",
+      "detail": "衡量 AI 真正完成的可用工作，而非席位或 token 数",
+      "children": [
+        "从单一工作流开始，先定义 done",
+        "客服看问题解决，工程看测试通过",
+        "ChatGPT Work 承担预测复盘准备"
+      ]
+    },
+    {
+      "label": "单任务成本",
+      "detail": "用总成本除以达标成功任务数，而非每 token 价格",
+      "children": [
+        "总成本含人工审核、重试与返工",
+        "一次做对的前沿模型可能更便宜",
+        "GPT-5.6 分 Sol/Terra/Luna 三档"
+      ]
+    },
+    {
+      "label": "可靠性",
+      "detail": "结果可依赖才有经济价值，减少复核与返工",
+      "children": [
+        "跟踪三类结果：可用、需修正、需升级",
+        "行动前须界定数据与系统权限边界",
+        "ChatGPT Work 基于 Enterprise 安全底座"
+      ]
+    },
+    {
+      "label": "规模回报",
+      "detail": "随用量增长，每个 AI 美元是否买到更多工作",
+      "children": [
+        "持续跟踪同一工作流的达标任务数",
+        "完成工作增速需快于总成本",
+        "算力是方程核心：训练与推理"
+      ]
+    }
+  ],
+  "flow": [
+    "选一个工作流",
+    "定义 done 标准",
+    "统计达标任务数",
+    "计算总成本",
+    "除以成功任务数",
+    "持续跟踪对比"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT Enterprise",
+      "type": "product"
+    },
+    {
+      "name": "Useful Intelligence per Dollar",
+      "type": "concept"
+    },
+    {
+      "name": "DeepSWE v1.1",
+      "type": "technique"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Artificial Analysis Coding Agent Index",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6",
+      "label": "发布"
+    },
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "推出"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "ChatGPT Enterprise",
+      "label": "基于"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "DeepSWE v1.1",
+      "label": "评测于"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Claude Fable 5",
+      "label": "对比"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Artificial Analysis Coding Agent Index",
+      "label": "刷新纪录"
+    }
+  ]
+}

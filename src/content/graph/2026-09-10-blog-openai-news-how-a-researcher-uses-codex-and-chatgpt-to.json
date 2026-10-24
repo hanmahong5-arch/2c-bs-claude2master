@@ -1,0 +1,93 @@
+{
+  "center": "Codex 与 ChatGPT 挖掘抗菌分子",
+  "branches": [
+    {
+      "label": "研究目标",
+      "detail": "在现存与灭绝物种基因组中搜索抗菌候选分子，应对耐药感染",
+      "children": [
+        "César de la Fuente 实验室主导",
+        "来源不限于可培养微生物"
+      ]
+    },
+    {
+      "label": "工具用法",
+      "detail": "把 Codex 与 ChatGPT 嵌入实际科研工作流",
+      "children": [
+        "代码模型驱动批量筛选与结果汇总",
+        "案例来自 OpenAI 官方博客"
+      ]
+    },
+    {
+      "label": "对 agent 启示",
+      "detail": "长链条生物信息检索任务被拆解为自动化流程",
+      "children": [
+        "数据源越异质越依赖脚本配合",
+        "价值在承接具体领域任务"
+      ]
+    }
+  ],
+  "flow": [
+    "确定现存与灭绝物种基因组",
+    "用 Codex 编写筛选脚本",
+    "ChatGPT 辅助汇总候选分子",
+    "输出抗菌候选分子"
+  ],
+  "entities": [
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "César de la Fuente",
+      "type": "person"
+    },
+    {
+      "name": "抗菌分子",
+      "type": "concept"
+    },
+    {
+      "name": "基因组",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "César de la Fuente",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "César de la Fuente",
+      "to": "ChatGPT",
+      "label": "使用"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "发布"
+    },
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "发布"
+    },
+    {
+      "from": "Codex",
+      "to": "基因组",
+      "label": "筛选"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "抗菌分子",
+      "label": "汇总"
+    }
+  ]
+}

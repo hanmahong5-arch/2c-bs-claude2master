@@ -1,0 +1,88 @@
+{
+  "center": "LLM 自动化安全代码审查",
+  "branches": [
+    {
+      "label": "威胁建模",
+      "detail": "LLM 自动生成系统威胁模型，识别攻击面，帮助开发者提前防御",
+      "children": [
+        "自动生成威胁模型",
+        "识别攻击面"
+      ]
+    },
+    {
+      "label": "漏洞发现",
+      "detail": "LLM 扫描代码库，发现 SQL 注入、XSS 等常见漏洞，减少人工审计成本",
+      "children": [
+        "SQL 注入",
+        "XSS",
+        "减少人工审计成本"
+      ]
+    },
+    {
+      "label": "补丁生成",
+      "detail": "LLM 不仅发现漏洞，还能自动生成修复代码，加速安全修复流程",
+      "children": [
+        "自动生成修复代码",
+        "加速安全修复"
+      ]
+    }
+  ],
+  "flow": [
+    "威胁建模",
+    "漏洞发现",
+    "补丁生成"
+  ],
+  "entities": [
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "威胁建模",
+      "type": "technique"
+    },
+    {
+      "name": "漏洞发现",
+      "type": "technique"
+    },
+    {
+      "name": "补丁生成",
+      "type": "technique"
+    },
+    {
+      "name": "SQL 注入",
+      "type": "concept"
+    },
+    {
+      "name": "XSS",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "LLM",
+      "to": "威胁建模",
+      "label": "自动化"
+    },
+    {
+      "from": "LLM",
+      "to": "漏洞发现",
+      "label": "执行"
+    },
+    {
+      "from": "LLM",
+      "to": "补丁生成",
+      "label": "生成"
+    },
+    {
+      "from": "漏洞发现",
+      "to": "SQL 注入",
+      "label": "发现"
+    },
+    {
+      "from": "漏洞发现",
+      "to": "XSS",
+      "label": "发现"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "center": "Cline CLI v3.0.33 订阅优化",
+  "branches": [
+    {
+      "label": "备选订阅链接",
+      "detail": "新增 ClinePass 订阅 URL 作为备选，自动打开失败时可手动订阅",
+      "children": [
+        "自动打开订阅界面失败时仍可订阅"
+      ]
+    },
+    {
+      "label": "隐藏已订阅提示",
+      "detail": "已订阅 ClinePass 的用户不再看到推广提示，避免干扰",
+      "children": []
+    },
+    {
+      "label": "自适应主题色",
+      "detail": "ClinePass 提示采用自适应主题色，与当前主题风格统一",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "ClinePass",
+      "label": "集成订阅"
+    }
+  ]
+}

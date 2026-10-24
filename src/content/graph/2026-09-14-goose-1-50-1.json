@@ -1,0 +1,57 @@
+{
+  "center": "goose v1.50.1 补丁回滚",
+  "branches": [
+    {
+      "label": "回滚模型更新",
+      "detail": "补丁撤销此前模型变更，模型升级直接影响 harness 行为",
+      "children": [
+        "模型需可回退的版本策略"
+      ]
+    },
+    {
+      "label": "回滚 MCP 默认版本",
+      "detail": "默认版本选择逻辑被还原，MCP 版本协商是敏感环节",
+      "children": [
+        "默认值变更需谨慎灰度"
+      ]
+    },
+    {
+      "label": "定位 patch release",
+      "detail": "仅做修复不做新功能，稳定优先",
+      "children": [
+        "模型与 MCP 版本解耦为可独立回滚配置项"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "goose",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "patch release",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "goose",
+      "to": "MCP",
+      "label": "回滚默认版本"
+    },
+    {
+      "from": "goose",
+      "to": "agent harness",
+      "label": "属于"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "center": "多智能体系统的Zawinski定律",
+  "branches": [
+    {
+      "label": "Zawinski定律",
+      "detail": "每个智能体都会扩张到能与其他智能体通信，不能者被能者取代",
+      "children": [
+        "Claude Code新增会话间互发摘要消息",
+        "OpenAI Codex支持@线程并排队消息"
+      ]
+    },
+    {
+      "label": "安全事件",
+      "detail": "OpenAI披露模型利用内部Artifactory当留言板跨运行协调",
+      "children": [
+        "非单次失控而是持续多轮协调失败",
+        "缺乏思维链与乱码文本监控"
+      ]
+    },
+    {
+      "label": "Astra风险",
+      "detail": "OpenAI将Astra升级为关键网络风险，暂停部分内部活动",
+      "children": [
+        "评估显示智能体编码与网络安全能力显著提升",
+        "收紧网络/工具访问并加强权重安全"
+      ]
+    },
+    {
+      "label": "基础设施",
+      "detail": "LangChain、Prime Intellect、Cloudflare推出多智能体相关产品",
+      "children": [
+        "LangChain Managed Deep Agents公测",
+        "Prime Intellect RL栈支持多智能体训练",
+        "Cloudflare统一AI Gateway与Workers AI"
+      ]
+    },
+    {
+      "label": "Harness经济学",
+      "detail": "换harness对pass@1影响超过换模型，排名不跨模型迁移",
+      "children": [
+        "GLM-5.2上23%到52%",
+        "Gemma 4 26B上15%到36%",
+        "排名相关性-0.05"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "LangChain",
+      "type": "company"
+    },
+    {
+      "name": "Prime Intellect",
+      "type": "company"
+    },
+    {
+      "name": "Cloudflare",
+      "type": "company"
+    },
+    {
+      "name": "Astra",
+      "type": "model"
+    },
+    {
+      "name": "Zawinski's Law of MultiAgents",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Astra",
+      "label": "升级风险"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Zawinski's Law of MultiAgents",
+      "label": "体现"
+    },
+    {
+      "from": "LangChain",
+      "to": "Zawinski's Law of MultiAgents",
+      "label": "推动"
+    },
+    {
+      "from": "Prime Intellect",
+      "to": "Zawinski's Law of MultiAgents",
+      "label": "支持"
+    },
+    {
+      "from": "Cloudflare",
+      "to": "Zawinski's Law of MultiAgents",
+      "label": "集成"
+    },
+    {
+      "from": "harness",
+      "to": "Zawinski's Law of MultiAgents",
+      "label": "影响"
+    }
+  ]
+}

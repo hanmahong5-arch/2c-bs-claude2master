@@ -1,0 +1,66 @@
+{
+  "center": "LSEG 用 OpenAI 规模化可信 AI",
+  "branches": [
+    {
+      "label": "加速数据洞察",
+      "detail": "AI 快速分析海量金融数据，转化为可操作见解",
+      "children": [
+        "开发者和分析师更高效获取市场情报",
+        "支持实时决策"
+      ]
+    },
+    {
+      "label": "缩短发布周期",
+      "detail": "AI 自动化部分开发流程，减少产品上线时间",
+      "children": [
+        "帮助团队更快迭代",
+        "更快响应市场需求"
+      ]
+    },
+    {
+      "label": "赋能员工",
+      "detail": "AI 工具扩展到 4000 名员工，提升效率",
+      "children": [
+        "提升数据分析和报告生成效率",
+        "AI 代理成为日常工作核心助手",
+        "降低技术门槛并增强协作"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "LSEG",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "可信 AI",
+      "type": "concept"
+    },
+    {
+      "name": "AI 代理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "LSEG",
+      "to": "OpenAI",
+      "label": "采用"
+    },
+    {
+      "from": "LSEG",
+      "to": "可信 AI",
+      "label": "部署"
+    },
+    {
+      "from": "OpenAI",
+      "to": "可信 AI",
+      "label": "支撑"
+    }
+  ]
+}

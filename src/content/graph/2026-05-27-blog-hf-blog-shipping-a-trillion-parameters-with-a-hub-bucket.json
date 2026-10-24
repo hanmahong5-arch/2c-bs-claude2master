@@ -1,0 +1,110 @@
+{
+  "center": "TRL 用 Delta Weight 分发万亿参数",
+  "branches": [
+    {
+      "label": "核心方法",
+      "detail": "TRL 通过 Delta Weight 同步万亿参数模型权重",
+      "children": [
+        "Delta Weight 只传权重变化量",
+        "避免全量参数传输"
+      ]
+    },
+    {
+      "label": "Hub Bucket",
+      "detail": "用 Hugging Face Hub 的 Bucket 作为权重分发通道",
+      "children": [
+        "无需 NCCL 通信",
+        "借助 Hub 存储中转"
+      ]
+    },
+    {
+      "label": "异步 GRPO",
+      "detail": "结合 LoRA 在 HF Jobs 上跑异步 GRPO 训练",
+      "children": [
+        "Async GRPO with LoRA",
+        "运行于 HF Jobs"
+      ]
+    },
+    {
+      "label": "相关论文",
+      "detail": "文章引用两篇论文作为方法依据",
+      "children": [
+        "2602.03839",
+        "2603.24477"
+      ]
+    }
+  ],
+  "flow": [
+    "训练产生权重更新",
+    "计算 Delta Weight",
+    "上传至 Hub Bucket",
+    "下游拉取增量",
+    "合并回全量权重"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "TRL",
+      "type": "product"
+    },
+    {
+      "name": "Delta Weight",
+      "type": "technique"
+    },
+    {
+      "name": "Hub Bucket",
+      "type": "product"
+    },
+    {
+      "name": "GRPO",
+      "type": "technique"
+    },
+    {
+      "name": "LoRA",
+      "type": "technique"
+    },
+    {
+      "name": "HF Jobs",
+      "type": "product"
+    },
+    {
+      "name": "NCCL",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "TRL",
+      "to": "Delta Weight",
+      "label": "采用"
+    },
+    {
+      "from": "Delta Weight",
+      "to": "Hub Bucket",
+      "label": "经由"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Hub Bucket",
+      "label": "提供"
+    },
+    {
+      "from": "TRL",
+      "to": "GRPO",
+      "label": "支持"
+    },
+    {
+      "from": "GRPO",
+      "to": "LoRA",
+      "label": "结合"
+    },
+    {
+      "from": "GRPO",
+      "to": "HF Jobs",
+      "label": "运行于"
+    }
+  ]
+}

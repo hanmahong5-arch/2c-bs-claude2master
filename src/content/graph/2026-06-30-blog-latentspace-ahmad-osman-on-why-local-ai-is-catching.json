@@ -1,0 +1,117 @@
+{
+  "center": "本地AI正快速追赶云端",
+  "branches": [
+    {
+      "label": "本地AI现状",
+      "detail": "开源模型与硬件协同进化，本地AI从笔记本到企业级基础设施全面铺开",
+      "children": [
+        "开源与闭源前沿模型差距持续缩小",
+        "本地模型落后前沿约4到8个月",
+        "2022年旧印象已过时，能力大幅提升"
+      ]
+    },
+    {
+      "label": "模型只是系统一环",
+      "detail": "托管产品如ChatGPT、Claude Code包含搜索、工具与基础设施，本地常缺失",
+      "children": [
+        "朋友用RTX 5090跑Qwen 3.5改RGB失败",
+        "接入搜索端点后任务才完成",
+        "本地生态缺端到端部署层"
+      ]
+    },
+    {
+      "label": "受众广泛",
+      "detail": "从学生到Intel高管，关注点涵盖模型路由、数据隐私与延迟",
+      "children": [
+        "学生问入学前该买什么硬件",
+        "Intel高管问Windows运行体验",
+        "Osman家有22块RTX 3090"
+      ]
+    },
+    {
+      "label": "硬件门槛降低",
+      "detail": "模型效率提升，MacBook可跑4-bit Qwen，手机可跑超越两年前云端的模型",
+      "children": [
+        "4-bit Qwen可在MacBook运行",
+        "超大模型需多块RTX Pro 6000",
+        "RTX 3090可跑数十亿参数模型"
+      ]
+    },
+    {
+      "label": "混合与主权AI",
+      "detail": "企业倾向专用硬件与安全计算，避免模型质量、定价、访问被单方改变",
+      "children": [
+        "边缘模型将更流行",
+        "专用托管硬件保留控制权",
+        "Llama、Mistral、Qwen、DeepSeek、GLM、Kimi…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Ahmad Osman",
+      "type": "person"
+    },
+    {
+      "name": "Osmantic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Qwen",
+      "type": "model"
+    },
+    {
+      "name": "RTX 5090",
+      "type": "product"
+    },
+    {
+      "name": "RTX 3090",
+      "type": "product"
+    },
+    {
+      "name": "DGX Spark",
+      "type": "product"
+    },
+    {
+      "name": "本地AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ahmad Osman",
+      "to": "Osmantic",
+      "label": "创立"
+    },
+    {
+      "from": "Ahmad Osman",
+      "to": "本地AI",
+      "label": "倡导"
+    },
+    {
+      "from": "Osmantic",
+      "to": "本地AI",
+      "label": "部署"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Qwen",
+      "label": "连接"
+    },
+    {
+      "from": "RTX 5090",
+      "to": "Qwen",
+      "label": "运行"
+    },
+    {
+      "from": "RTX 3090",
+      "to": "本地AI",
+      "label": "支持"
+    }
+  ]
+}

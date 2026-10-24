@@ -1,0 +1,123 @@
+{
+  "center": "Kimi K3 与鹈鹕基准测试",
+  "branches": [
+    {
+      "label": "Kimi K3 发布",
+      "detail": "Moonshot AI 发布 2.8 万亿参数模型，称首个开放 3T 级模型",
+      "children": [
+        "网站与 API 可用，开放权重承诺 7 月 27 日前发布",
+        "自报基准多超 Claude Opus 4.8 max 与 GPT-5…",
+        "落后于 Claude Fable 5 和 GPT-5.6 Sol"
+      ]
+    },
+    {
+      "label": "性能与定价",
+      "detail": "Artificial Analysis 评测 Elo 1547，定价创中国实验室新高",
+      "children": [
+        "每任务成本 $0.94，输出 token 比 K2.6 少 21%",
+        "输入 $3/百万 token，输出 $15/百万 token",
+        "Arena.ai 前端代码榜第一，超 Claude Fable 5"
+      ]
+    },
+    {
+      "label": "鹈鹕测试结果",
+      "detail": "用 OpenRouter 生成骑自行车鹈鹕 SVG，成本 25 美分",
+      "children": [
+        "95 输入 token，16,658 输出 token（13,241…",
+        "视觉描述准确，仅 0.6 美分",
+        "仅一个推理等级 max，推理开销大"
+      ]
+    },
+    {
+      "label": "鹈鹕基准局限",
+      "detail": "21 个月老测试，与模型实际能力关联已断裂",
+      "children": [
+        "不涉及智能体工具调用与长对话可靠性",
+        "GPT-5.6 和 Claude Fable 5 的鹈鹕被 GLM-5.…",
+        "作者不认为实验室针对此基准训练"
+      ]
+    },
+    {
+      "label": "测试价值",
+      "detail": "作为 hello world 练习，快速估算成本与推理",
+      "children": [
+        "强制实际运行模型，验证 API 或本地运行",
+        "确认 SVG 输出与几何空间感知",
+        "同家族版本对比，K3 比 Kimi 2.5 明显改进"
+      ]
+    }
+  ],
+  "flow": [
+    "用 OpenRouter 调用 Kimi K3",
+    "输入生成鹈鹕骑自行车 SVG 提示",
+    "模型输出 SVG 并消耗 token",
+    "将 SVG 渲染为图像",
+    "用图像输入让模型生成 alt 文本"
+  ],
+  "entities": [
+    {
+      "name": "Moonshot AI",
+      "type": "company"
+    },
+    {
+      "name": "Kimi K3",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "鹈鹕基准测试",
+      "type": "concept"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Moonshot AI",
+      "to": "Kimi K3",
+      "label": "发布"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Kimi K3",
+      "label": "测试"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "鹈鹕基准测试",
+      "label": "创建"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "OpenRouter",
+      "label": "通过访问"
+    },
+    {
+      "from": "Kimi K3",
+      "to": "Claude Fable 5",
+      "label": "落后于"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "Kimi K3",
+      "label": "评测"
+    }
+  ]
+}

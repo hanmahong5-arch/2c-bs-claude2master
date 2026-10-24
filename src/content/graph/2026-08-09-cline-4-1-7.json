@@ -1,0 +1,90 @@
+{
+  "center": "Cline v4.1.7 更新修复",
+  "branches": [
+    {
+      "label": "会话中断修复",
+      "detail": "中断时保留排队提示，中止后继续处理并正确报告失败",
+      "children": [
+        "会话上下文跨中止持久化",
+        "恢复“查看更改”按钮，基于 SDK 检查点",
+        "无改动时隐藏按钮"
+      ]
+    },
+    {
+      "label": "MCP 挂起修复",
+      "detail": "修复 MCP 服务器挂起阻塞会话创建",
+      "children": [
+        "stdio 服务器 30 秒初始化预算",
+        "SSE 服务器 401 触发 OAuth"
+      ]
+    },
+    {
+      "label": "检查点增强",
+      "detail": "检查点 diff 包含未跟踪文件，git 中途初始化也能捕获",
+      "children": [
+        "空窗口 @-mention 搜索回退到 cwd 或桌面"
+      ]
+    },
+    {
+      "label": "OAuth 与代理修复",
+      "detail": "LiteLLM 改用 Chat Completions，修复代理请求",
+      "children": [
+        "Vertex ADC 令牌刷新使用配置的 fetch"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "LiteLLM",
+      "type": "product"
+    },
+    {
+      "name": "Vertex ADC",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "SDK",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "MCP",
+      "label": "修复挂起"
+    },
+    {
+      "from": "Cline",
+      "to": "LiteLLM",
+      "label": "改用"
+    },
+    {
+      "from": "Cline",
+      "to": "OAuth",
+      "label": "支持"
+    },
+    {
+      "from": "Cline",
+      "to": "SDK",
+      "label": "基于"
+    },
+    {
+      "from": "Cline",
+      "to": "Vertex ADC",
+      "label": "修复刷新"
+    }
+  ]
+}

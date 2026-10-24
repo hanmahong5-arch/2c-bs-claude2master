@@ -1,0 +1,75 @@
+{
+  "center": "Cline CLI v3.0.41 更新",
+  "branches": [
+    {
+      "label": "压缩进度可视化",
+      "detail": "压缩操作在 TUI 中显示进度状态，便于监控后台任务",
+      "children": [
+        "TUI 显示进度状态",
+        "便于监控后台任务"
+      ]
+    },
+    {
+      "label": "模型 ID 自动建议",
+      "detail": "配置 OpenAI 兼容端点时自动建议模型 ID，减少手动输入",
+      "children": [
+        "OpenAI 兼容端点",
+        "减少手动输入"
+      ]
+    },
+    {
+      "label": "Git 信息持久化",
+      "detail": "工作区 Git 分支/远程信息跨会话持久化并刷新",
+      "children": [
+        "分支/远程信息",
+        "跨会话持久化",
+        "agent 依赖稳定上下文"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "CLI v3.0.41",
+      "type": "product"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Git",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "CLI v3.0.41",
+      "label": "发布"
+    },
+    {
+      "from": "CLI v3.0.41",
+      "to": "TUI",
+      "label": "显示进度"
+    },
+    {
+      "from": "CLI v3.0.41",
+      "to": "OpenAI",
+      "label": "建议模型"
+    },
+    {
+      "from": "CLI v3.0.41",
+      "to": "Git",
+      "label": "持久化信息"
+    }
+  ]
+}

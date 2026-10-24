@@ -1,0 +1,96 @@
+{
+  "center": "Paint.NET 用 Claude 重写…",
+  "branches": [
+    {
+      "label": "重写动机",
+      "detail": "Direct2D 是 Paint.NET 在 WINE 上的最大障碍，且无法禁用",
+      "children": [
+        "Direct2D 在 WINE 上永远无法满足需求",
+        "不能简单禁用 Direct2D"
+      ]
+    },
+    {
+      "label": "实现方式",
+      "detail": "从零净室逆向重写 Direct2D，通过 /wine 触发",
+      "children": [
+        "位于…",
+        "由 Claude 编写，否则不可能实现"
+      ]
+    },
+    {
+      "label": "代码规模",
+      "detail": "约 18 万行代码，多为 vibe coded 未充分审查",
+      "children": [
+        "Paint.NET 其余部分约 70 万行，开发超 20 年",
+        "作者无法审查全部 18 万行"
+      ]
+    },
+    {
+      "label": "Claude 表现",
+      "detail": "时而天才时而需监督，资源管理曾出错",
+      "children": [
+        "曾未对引用计数对象做 AddRef()",
+        "逆向出 Direct2D 内置效果库公式"
+      ]
+    }
+  ],
+  "flow": [
+    "WINE 上 Direct2D 不可用",
+    "用 /wine 触发重写版",
+    "Claude 生成 18 万行代码",
+    "作者监督修正资源管理"
+  ],
+  "entities": [
+    {
+      "name": "Paint.NET",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Direct2D",
+      "type": "technique"
+    },
+    {
+      "name": "WINE",
+      "type": "product"
+    },
+    {
+      "name": "Rick Brewster",
+      "type": "person"
+    },
+    {
+      "name": "vibe coding",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Rick Brewster",
+      "to": "Paint.NET",
+      "label": "作者"
+    },
+    {
+      "from": "Claude",
+      "to": "Direct2D",
+      "label": "重写"
+    },
+    {
+      "from": "Paint.NET",
+      "to": "Direct2D",
+      "label": "依赖"
+    },
+    {
+      "from": "Paint.NET",
+      "to": "WINE",
+      "label": "运行于"
+    },
+    {
+      "from": "Claude",
+      "to": "vibe coding",
+      "label": "采用"
+    }
+  ]
+}

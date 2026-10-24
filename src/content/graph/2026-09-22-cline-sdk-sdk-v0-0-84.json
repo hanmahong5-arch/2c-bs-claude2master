@@ -1,0 +1,84 @@
+{
+  "center": "Cline SDK v0.0.84 修复要点",
+  "branches": [
+    {
+      "label": "并发竞态修复",
+      "detail": "同账号 feature-flag 轮询共享在途请求，失败可传播重试",
+      "children": [
+        "切换账号不再等待旧请求",
+        "缓存新鲜度须网络完成后标记"
+      ]
+    },
+    {
+      "label": "Windows 劫持防护",
+      "detail": "新增 disableCurrentDirectoryExecutableSearch() 阻止伪造可执行文件",
+      "children": [
+        "设置 NoDefaultCurrentDirectoryInExePath",
+        "阻止工作区伪造 rg.exe 在审批前执行",
+        "须在任何 spawn 之前调用"
+      ]
+    },
+    {
+      "label": "压缩触发修正",
+      "detail": "改用 provider 上报输入 token 数，取估算与实际最大值",
+      "children": [
+        "默认摘要输出预算 4096 提到 8192",
+        "密集内容下估算会低估真实占用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "feature-flag",
+      "type": "concept"
+    },
+    {
+      "name": "disableCurrentDirectoryExecutableSearch()",
+      "type": "technique"
+    },
+    {
+      "name": "NoDefaultCurrentDirectoryInExePath",
+      "type": "concept"
+    },
+    {
+      "name": "rg.exe",
+      "type": "product"
+    },
+    {
+      "name": "token",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "feature-flag",
+      "label": "轮询"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "disableCurrentDirectoryExecutableSearch()",
+      "label": "新增"
+    },
+    {
+      "from": "disableCurrentDirectoryExecutableSearch()",
+      "to": "NoDefaultCurrentDirectoryInExePath",
+      "label": "设置"
+    },
+    {
+      "from": "disableCurrentDirectoryExecutableSearch()",
+      "to": "rg.exe",
+      "label": "阻止执行"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "token",
+      "label": "统计"
+    }
+  ]
+}

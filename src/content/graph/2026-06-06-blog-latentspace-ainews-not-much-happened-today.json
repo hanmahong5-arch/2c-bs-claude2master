@@ -1,0 +1,83 @@
+{
+  "center": "AI 领域最新动态梳理",
+  "branches": [
+    {
+      "label": "前沿模型与 RSI",
+      "detail": "Anthropic 的 Mythos/Opus 引发热议，递归自我改进成为正式研究战略",
+      "children": [
+        "Sakana AI 在东京成立 RSI Lab，整合 The AI…",
+        "Opus 4.7 在部分 NMR 任务上匹配或超越专用软件",
+        "Opus 4.8 在 LLM Debate Benchmark 上被指不…"
+      ]
+    },
+    {
+      "label": "智能体评估与可靠性",
+      "detail": "基准转向长周期经济价值任务，前沿模型可靠性未显著提升",
+      "children": [
+        "Agents’ Last Exam 含 1000+ 任务，最难层全…",
+        "SWE-Marathon 测试 1B token 预算下的编码智…",
+        "Princeton 论文称 GPT 5.5、Gemini 3.1 Pro…"
+      ]
+    },
+    {
+      "label": "开放模型与多模态",
+      "detail": "Gemma 4 QAT、Ideogram 4、Nemotron 3 Ultra 等开放发布",
+      "children": [
+        "Gemma 4 QAT 支持移动量化，E2B 可在约 1GB…",
+        "Ideogram 4.0 为 9.3B DiT，nf4 版可单张…",
+        "Nemotron 3 Ultra 向 Perplexity Pro/Max…"
+      ]
+    },
+    {
+      "label": "智能体产品与工具",
+      "detail": "Hermes Agent、Arena Agent Mode 等产品更新，工具围绕智能体效率重构",
+      "children": [
+        "Hermes v0.16.0 含桌面 GUI、仪表盘重构与安…",
+        "Arena 推出 Agent Mode 与 Agent Arena 排行榜",
+        "Hugging Face CLI 比手写 API 交互省最多 6…"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Mythos",
+      "type": "model"
+    },
+    {
+      "name": "Sakana AI",
+      "type": "company"
+    },
+    {
+      "name": "Gemma 4 QAT",
+      "type": "model"
+    },
+    {
+      "name": "Ideogram 4.0",
+      "type": "model"
+    },
+    {
+      "name": "Nemotron 3 Ultra",
+      "type": "model"
+    },
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "Arena",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Mythos",
+      "label": "发布"
+    }
+  ]
+}

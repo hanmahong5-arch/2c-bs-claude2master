@@ -1,0 +1,90 @@
+{
+  "center": "Cline SDK v0.0.79 更新",
+  "branches": [
+    {
+      "label": "事件日志上限",
+      "detail": "事件日志磁盘上限 64MiB，旧事件优先删除并 vacuum",
+      "children": [
+        "每追加 16MiB 触发清理",
+        "避免 SQLite 无限膨胀"
+      ]
+    },
+    {
+      "label": "修复 telemetry",
+      "detail": "修复 task.completed telemetry 在多数交互会话中丢失",
+      "children": [
+        "每次会话结束精确发送一次"
+      ]
+    },
+    {
+      "label": "模型目录更新",
+      "detail": "新增 AgentRouter 和 Opper 提供商，调整模型列表与价格",
+      "children": [
+        "Aki.io 和 NanoGPT 默认模型变更"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "AgentRouter",
+      "type": "company"
+    },
+    {
+      "name": "Opper",
+      "type": "company"
+    },
+    {
+      "name": "Aki.io",
+      "type": "company"
+    },
+    {
+      "name": "NanoGPT",
+      "type": "company"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "telemetry",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "AgentRouter",
+      "label": "新增提供商"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Opper",
+      "label": "新增提供商"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Aki.io",
+      "label": "变更默认模型"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "NanoGPT",
+      "label": "变更默认模型"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "SQLite",
+      "label": "使用"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "telemetry",
+      "label": "修复"
+    }
+  ]
+}

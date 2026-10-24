@@ -1,0 +1,103 @@
+{
+  "center": "AI能力的锯齿状前沿与瓶颈",
+  "branches": [
+    {
+      "label": "锯齿状前沿",
+      "detail": "AI能力极不均衡，某些任务超人类，某些却远低于人类，且难以预测",
+      "children": [
+        "2023年提出“Jagged Frontier”概念",
+        "AI擅长数学、诊断，却不会开自动售货机",
+        "记忆是明显弱项，改进甚微"
+      ]
+    },
+    {
+      "label": "瓶颈效应",
+      "detail": "系统整体受限于最弱环节，即使AI超强也无法完全自动化",
+      "children": [
+        "LLM视觉读片不准，无法替代医生",
+        "幻觉未根除，不能用于100%准确任务",
+        "药物发现加速，但临床试验和FDA审批仍是瓶颈"
+      ]
+    },
+    {
+      "label": "反向突出点",
+      "detail": "单一技术弱点阻碍整体进步，一旦突破则系统跃升",
+      "children": [
+        "Thomas Hughes提出“reverse salients”",
+        "数学能力曾是瓶颈，突破后飞速提升",
+        "Nano Banana Pro突破图像生成瓶颈"
+      ]
+    },
+    {
+      "label": "人机互补",
+      "detail": "AI与人类能力重叠有限，需协作处理边缘案例",
+      "children": [
+        "GPT-4.1两天完成12人年的Cochrane综述",
+        "但无法获取补充文件或邮件作者",
+        "不到1%的错误仍需人类专家处理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "Jagged Frontier",
+      "type": "concept"
+    },
+    {
+      "name": "Nano Banana Pro",
+      "type": "product"
+    },
+    {
+      "name": "GPT-4.1",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Cochrane reviews",
+      "type": "concept"
+    },
+    {
+      "name": "reverse salients",
+      "type": "concept"
+    },
+    {
+      "name": "Thomas Hughes",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ethan Mollick",
+      "to": "Jagged Frontier",
+      "label": "提出"
+    },
+    {
+      "from": "Nano Banana Pro",
+      "to": "Jagged Frontier",
+      "label": "突破瓶颈"
+    },
+    {
+      "from": "GPT-4.1",
+      "to": "Cochrane reviews",
+      "label": "重现"
+    },
+    {
+      "from": "Thomas Hughes",
+      "to": "reverse salients",
+      "label": "提出"
+    },
+    {
+      "from": "GPT-5.2",
+      "to": "GPT-4.1",
+      "label": "改进"
+    }
+  ]
+}

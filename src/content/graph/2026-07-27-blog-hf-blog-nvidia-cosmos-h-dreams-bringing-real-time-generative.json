@@ -1,0 +1,116 @@
+{
+  "center": "NVIDIA Cosmos-H-Dreams 手术模拟",
+  "branches": [
+    {
+      "label": "核心目标",
+      "detail": "用生成式AI实时模拟手术场景，加速机器人训练",
+      "children": [
+        "面向手术机器人训练与规划",
+        "降低真实训练风险与成本"
+      ]
+    },
+    {
+      "label": "技术路线",
+      "detail": "将大模型蒸馏为因果学生模型实现实时生成",
+      "children": [
+        "大模型蒸馏为因果学生模型",
+        "实时生成手术视频场景"
+      ]
+    },
+    {
+      "label": "模拟细节",
+      "detail": "需还原组织、器械、烟雾与光照等要素",
+      "children": [
+        "组织、器械、烟雾、光照",
+        "长时rollout保持器械与场景组织"
+      ]
+    },
+    {
+      "label": "评估基准",
+      "detail": "需超越视觉质量，建立闭环基准",
+      "children": [
+        "工具尖端可达与位姿精度",
+        "夹爪循环保真、空闲稳定性",
+        "反事实动作多样性与长时漂移"
+      ]
+    },
+    {
+      "label": "应用前景",
+      "detail": "推动视觉-语言-动作系统在仿真中训练",
+      "children": [
+        "训练VLA系统无需真实设备",
+        "助力手术培训与患者预后"
+      ]
+    }
+  ],
+  "flow": [
+    "采集手术场景数据",
+    "训练大生成模型",
+    "蒸馏为因果学生模型",
+    "实时生成模拟视频",
+    "训练机器人策略",
+    "闭环基准评估"
+  ],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Cosmos-H-Dreams",
+      "type": "model"
+    },
+    {
+      "name": "手术机器人",
+      "type": "concept"
+    },
+    {
+      "name": "生成式AI",
+      "type": "concept"
+    },
+    {
+      "name": "因果学生模型",
+      "type": "technique"
+    },
+    {
+      "name": "VLA",
+      "type": "concept"
+    },
+    {
+      "name": "闭环基准",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "Cosmos-H-Dreams",
+      "label": "发布"
+    },
+    {
+      "from": "Cosmos-H-Dreams",
+      "to": "手术机器人",
+      "label": "用于训练"
+    },
+    {
+      "from": "Cosmos-H-Dreams",
+      "to": "生成式AI",
+      "label": "基于"
+    },
+    {
+      "from": "Cosmos-H-Dreams",
+      "to": "因果学生模型",
+      "label": "蒸馏出"
+    },
+    {
+      "from": "手术机器人",
+      "to": "VLA",
+      "label": "训练"
+    },
+    {
+      "from": "闭环基准",
+      "to": "手术机器人",
+      "label": "评估"
+    }
+  ]
+}

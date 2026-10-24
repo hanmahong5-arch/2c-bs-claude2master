@@ -1,0 +1,101 @@
+{
+  "center": "OpenAI 模型与 Codex 上 AWS",
+  "branches": [
+    {
+      "label": "全面可用",
+      "detail": "OpenAI 前沿模型与 Codex 现已在 AWS 上全面可用",
+      "children": [
+        "面向企业客户开放",
+        "无需新建管理关系"
+      ]
+    },
+    {
+      "label": "集成现有工作流",
+      "detail": "企业可通过熟悉的 AWS 控制台与采购流程使用 OpenAI 服务",
+      "children": [
+        "沿用 AWS 采购流程",
+        "降低运维与采购门槛",
+        "评估项目更快转生产"
+      ]
+    },
+    {
+      "label": "简化部署路径",
+      "detail": "客户可在 AWS 上直接开始使用 OpenAI，加速产品化",
+      "children": [
+        "从技术评估到产品化",
+        "MLOps 与 DevOps 更顺畅"
+      ]
+    },
+    {
+      "label": "企业级可控性",
+      "detail": "借助 AWS 环境与控制措施满足合规与安全要求",
+      "children": [
+        "满足合规与安全要求",
+        "支撑可审计的企业内 Agent"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AWS",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "model"
+    },
+    {
+      "name": "GPT-3",
+      "type": "model"
+    },
+    {
+      "name": "MLOps",
+      "type": "concept"
+    },
+    {
+      "name": "DevOps",
+      "type": "concept"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AWS",
+      "label": "上架于"
+    },
+    {
+      "from": "Codex",
+      "to": "AWS",
+      "label": "可用"
+    },
+    {
+      "from": "GPT-3",
+      "to": "AWS",
+      "label": "可用"
+    },
+    {
+      "from": "AWS",
+      "to": "MLOps",
+      "label": "结合"
+    },
+    {
+      "from": "AWS",
+      "to": "DevOps",
+      "label": "结合"
+    },
+    {
+      "from": "AWS",
+      "to": "Agent",
+      "label": "支撑"
+    }
+  ]
+}

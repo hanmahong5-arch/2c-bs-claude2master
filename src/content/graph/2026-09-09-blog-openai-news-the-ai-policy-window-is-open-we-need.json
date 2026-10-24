@@ -1,0 +1,83 @@
+{
+  "center": "AI 安全标准政策窗口",
+  "branches": [
+    {
+      "label": "能力越强证据越严",
+      "detail": "Chris Lehane 主张更强 AI 能力须对应更强安全证据，而非先放开再补证明",
+      "children": [
+        "评测与可验证安全记录将成发布前硬门槛",
+        "对做 agent 的团队影响最直接"
+      ]
+    },
+    {
+      "label": "需要共享标准",
+      "detail": "单家公司内部规范不足以支撑行业，需跨机构跨公司共同标准",
+      "children": [
+        "模型卡、评测协议、审计日志更受重视",
+        "可互操作产物优于自研私有格式"
+      ]
+    },
+    {
+      "label": "趁政策窗口行动",
+      "detail": "当前是政策可塑期，错过就难再塑造规则",
+      "children": [
+        "合规节奏可能快于技术迭代",
+        "提前把可解释性与数据流向记录做进架构"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Chris Lehane",
+      "type": "person"
+    },
+    {
+      "name": "AI 安全标准",
+      "type": "concept"
+    },
+    {
+      "name": "模型卡",
+      "type": "concept"
+    },
+    {
+      "name": "评测协议",
+      "type": "concept"
+    },
+    {
+      "name": "审计日志",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Chris Lehane",
+      "to": "OpenAI",
+      "label": "任职于"
+    },
+    {
+      "from": "Chris Lehane",
+      "to": "AI 安全标准",
+      "label": "呼吁制定"
+    },
+    {
+      "from": "AI 安全标准",
+      "to": "模型卡",
+      "label": "包含"
+    },
+    {
+      "from": "AI 安全标准",
+      "to": "评测协议",
+      "label": "包含"
+    },
+    {
+      "from": "AI 安全标准",
+      "to": "审计日志",
+      "label": "包含"
+    }
+  ]
+}

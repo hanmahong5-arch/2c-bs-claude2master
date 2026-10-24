@@ -1,0 +1,122 @@
+{
+  "center": "Wasmer 用 Codex 造边缘 Node.js…",
+  "branches": [
+    {
+      "label": "两周完成一年工程",
+      "detail": "Wasmer 用 Codex 与 GPT-5.5 把原本需一年的项目压缩到两周",
+      "children": [
+        "开发速度提升 10x 到 20x",
+        "成果为 Edge.js JavaScript 运行时",
+        "首个在边缘层提供完整 Node.js 的云主机"
+      ]
+    },
+    {
+      "label": "无需 Docker 跑 Node",
+      "detail": "在 WebAssembly 沙箱内运行 Node.js 工作负载",
+      "children": [
+        "可跑 JavaScript 应用、MCPs 与 agents",
+        "摆脱 Docker 依赖",
+        "面向 AI 与边缘计算场景"
+      ]
+    },
+    {
+      "label": "从写码转向引导",
+      "detail": "工程师逐渐离开 IDE，少改代码，只引导方向",
+      "children": [
+        "CEO Syrus Akbary Nieto 称不再频繁碰代码",
+        "Codex 覆盖项目从架构到成品全程",
+        "团队初期对 AI 输出并不信任"
+      ]
+    },
+    {
+      "label": "跨语言低层调试",
+      "detail": "Codex 能追踪调用并深入汇编级调试定位根因",
+      "children": [
+        "用 console logs 追踪调用链",
+        "使用 LLD 低层调试器",
+        "发现团队不熟悉的 C++ 细节问题"
+      ]
+    },
+    {
+      "label": "小公司做大项目",
+      "detail": "Codex 让小团队完成过去只有大公司能做的项目",
+      "children": [
+        "团队人少但技术强，此前缺时间",
+        "Nieto 称没有 Codex 项目不可能实现",
+        "下一步瞄准更具挑战性的问题"
+      ]
+    }
+  ],
+  "flow": [
+    "确定 Edge.js 项目目标",
+    "用 Codex 搭建架构模块",
+    "Codex 调试并定位根因",
+    "打磨并发布最终产品"
+  ],
+  "entities": [
+    {
+      "name": "Wasmer",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Edge.js",
+      "type": "product"
+    },
+    {
+      "name": "Node.js",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "Syrus Akbary Nieto",
+      "type": "person"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Wasmer",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "Codex",
+      "to": "GPT-5.5",
+      "label": "基于"
+    },
+    {
+      "from": "Wasmer",
+      "to": "Edge.js",
+      "label": "开发"
+    },
+    {
+      "from": "Edge.js",
+      "to": "Node.js",
+      "label": "运行"
+    },
+    {
+      "from": "Edge.js",
+      "to": "WebAssembly",
+      "label": "基于"
+    },
+    {
+      "from": "Syrus Akbary Nieto",
+      "to": "Wasmer",
+      "label": "创办"
+    }
+  ]
+}

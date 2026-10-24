@@ -1,0 +1,124 @@
+{
+  "center": "Autoresearch 自我改进代理",
+  "branches": [
+    {
+      "label": "外循环概念",
+      "detail": "用外循环让代理维护并改进主系统，靠反馈信号与评估推进",
+      "children": [
+        "内循环：主系统与用户交互完成工作",
+        "外循环：另一系统研究并维护主系统",
+        "从模型到 harness 再到 loops"
+      ]
+    },
+    {
+      "label": "Agent Recipe",
+      "detail": "比 agent skills 更大的容器，编码人类专业知识的可移植格式",
+      "children": [
+        "包含 evals、judges、信号处理与反馈信息",
+        "源自模型后训练的数据配方",
+        "记录失败与决策过程，而非仅代码"
+      ]
+    },
+    {
+      "label": "人类在环",
+      "detail": "人类成为信号来源，代理通过 ask a human 工具提问学习",
+      "children": [
+        "初期大量提问，逐渐积累偏好",
+        "类比新员工入职逐步独立",
+        "目标是减少人类瓶颈"
+      ]
+    },
+    {
+      "label": "Pi 框架",
+      "detail": "Pi 是 agent harness 中的 Linux，可扩展且可移植",
+      "children": [
+        "分离 agent loop 与扩展配置",
+        "加载不同文件即可启动不同代理",
+        "Introspection 类比 Red Hat"
+      ]
+    },
+    {
+      "label": "生产与垂直市场",
+      "detail": "Introspection 提供托管基础设施，聚焦垂直代理落地",
+      "children": [
+        "控制成本、安全与可靠性",
+        "客户要求数据所有权、避免锁定",
+        "把前沿实验室基础设施带给企业"
+      ]
+    }
+  ],
+  "flow": [
+    "定义反馈信号与评估",
+    "构建外循环代理",
+    "代理提问学习人类偏好",
+    "记录失败生成新评估",
+    "迭代优化系统",
+    "部署到生产环境"
+  ],
+  "entities": [
+    {
+      "name": "Autoresearch",
+      "type": "concept"
+    },
+    {
+      "name": "Introspection",
+      "type": "company"
+    },
+    {
+      "name": "Roland Gavrilescu",
+      "type": "person"
+    },
+    {
+      "name": "xAI",
+      "type": "company"
+    },
+    {
+      "name": "Pi",
+      "type": "product"
+    },
+    {
+      "name": "agent recipe",
+      "type": "concept"
+    },
+    {
+      "name": "Cursor",
+      "type": "company"
+    },
+    {
+      "name": "Cognition",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Roland Gavrilescu",
+      "to": "Introspection",
+      "label": "联合创立"
+    },
+    {
+      "from": "Roland Gavrilescu",
+      "to": "xAI",
+      "label": "曾任职"
+    },
+    {
+      "from": "Introspection",
+      "to": "Autoresearch",
+      "label": "构建"
+    },
+    {
+      "from": "Introspection",
+      "to": "Pi",
+      "label": "基于"
+    },
+    {
+      "from": "Autoresearch",
+      "to": "agent recipe",
+      "label": "使用"
+    },
+    {
+      "from": "Cursor",
+      "to": "Cognition",
+      "label": "同类成功案例"
+    }
+  ]
+}

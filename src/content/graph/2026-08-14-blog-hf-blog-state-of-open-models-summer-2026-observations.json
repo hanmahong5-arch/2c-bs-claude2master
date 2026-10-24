@@ -1,0 +1,106 @@
+{
+  "center": "开源模型生态夏季观察",
+  "branches": [
+    {
+      "label": "许可现状",
+      "detail": "中国大模型开源许可以 Apache 2.0 与 MIT 为主，但并非全部无商业限制",
+      "children": [
+        "178 个超 20B 中国模型中 59% Apache 2.0…",
+        "Kimi 模型限制年收入超 2000 万美元公司使用",
+        "需 Moonshot 明确授权方可商用"
+      ]
+    },
+    {
+      "label": "模型规模",
+      "detail": "文章提及多个大参数模型，覆盖文本与图文多模态",
+      "children": [
+        "Text Generation 2.4T 参数",
+        "Image-Text-to-Text 2.8T 参数",
+        "Image-Text-to-Text 30B 参数"
+      ]
+    },
+    {
+      "label": "工具链与数据",
+      "detail": "Hugging Face 上模型、数据集与合集构成开源工具链生态",
+      "children": [
+        "提及 4 个模型、1 个数据集、3 个合集",
+        "Sentence Similarity 模型 22.7M 参数",
+        "合集含 Open, Production-ready Enterprise…"
+      ]
+    },
+    {
+      "label": "社区讨论",
+      "detail": "评论区对开源许可统计提出反驳，指出 Kimi 存在商业限制",
+      "children": [
+        "hurler98 质疑「无商业限制」说法",
+        "评论获 213 次赞同",
+        "另一条评论被隐藏"
+      ]
+    },
+    {
+      "label": "相关研究",
+      "detail": "博客关联评测可复现性与论文复现等社区研究",
+      "children": [
+        "UK AISI 与 EvalEval 提升基准可复现性",
+        "复现 2200 篇 ICML 论文"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Kimi",
+      "type": "model"
+    },
+    {
+      "name": "Moonshot",
+      "type": "company"
+    },
+    {
+      "name": "Apache 2.0",
+      "type": "concept"
+    },
+    {
+      "name": "MIT",
+      "type": "concept"
+    },
+    {
+      "name": "UK AISI",
+      "type": "company"
+    },
+    {
+      "name": "EvalEval",
+      "type": "company"
+    },
+    {
+      "name": "ICML",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Kimi",
+      "to": "Moonshot",
+      "label": "由...发布"
+    },
+    {
+      "from": "Kimi",
+      "to": "Apache 2.0",
+      "label": "不采用"
+    },
+    {
+      "from": "UK AISI",
+      "to": "EvalEval",
+      "label": "合作"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Kimi",
+      "label": "收录"
+    }
+  ]
+}

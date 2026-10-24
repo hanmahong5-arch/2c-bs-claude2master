@@ -1,0 +1,107 @@
+{
+  "center": "NVIDIA 用 ChatGPT Work 规模化…",
+  "branches": [
+    {
+      "label": "GTC 流程自动化",
+      "detail": "Will Daney 把 GTC 筹备从表格手工分析转为每周跑两次的 ChatGPT 工作流",
+      "children": [
+        "12 周筹备周期每周省约 16 小时",
+        "此前手工分析占其约 40% 时间",
+        "流程已分享给圣何塞、台北、欧洲、华盛顿团队"
+      ]
+    },
+    {
+      "label": "外部信号提炼",
+      "detail": "Rachita Jain 用 ChatGPT Work 结合外部信源与内部上下文筛选重点",
+      "children": [
+        "每周把 25–40 条外部 AI 更新压缩为 5–8 条可…",
+        "从被动阅读转为主动情报"
+      ]
+    },
+    {
+      "label": "原型提速",
+      "detail": "在同一环境内从想法走到可运行原型，无需在多个工具间切换",
+      "children": [
+        "约 3–5 天出可用原型",
+        "此前手工跨工具需 2–3 周"
+      ]
+    },
+    {
+      "label": "可复用工作流",
+      "detail": "把专业知识沉淀为可复用流程，跨职能、跨活动、跨区域推广",
+      "children": [
+        "流程由最贴近业务的人自己掌控和迭代",
+        "无需等待新工具采购与实施"
+      ]
+    }
+  ],
+  "flow": [
+    "搭建 ChatGPT 工作流",
+    "接入外部信源与内部上下文",
+    "识别重叠与可行动信号",
+    "输出洞察并驱动行动",
+    "跨区域复用与定制"
+  ],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Will Daney",
+      "type": "person"
+    },
+    {
+      "name": "Rachita Jain",
+      "type": "person"
+    },
+    {
+      "name": "GTC",
+      "type": "concept"
+    },
+    {
+      "name": "工作流自动化",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "ChatGPT Work",
+      "label": "采用"
+    },
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "开发"
+    },
+    {
+      "from": "Will Daney",
+      "to": "ChatGPT Work",
+      "label": "构建流程"
+    },
+    {
+      "from": "Rachita Jain",
+      "to": "ChatGPT Work",
+      "label": "构建流程"
+    },
+    {
+      "from": "Will Daney",
+      "to": "GTC",
+      "label": "负责筹备"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "工作流自动化",
+      "label": "支撑"
+    }
+  ]
+}

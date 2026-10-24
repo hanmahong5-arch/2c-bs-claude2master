@@ -1,0 +1,118 @@
+{
+  "center": "ChatGPT Work 代理拆解",
+  "branches": [
+    {
+      "label": "产品定位",
+      "detail": "面向知识工作的代理，连接 Slack、邮件、Drive 等工具产出成品",
+      "children": [
+        "2026年7月9日发布，三周超1000万用户",
+        "Chat 与 Work 年底将合并"
+      ]
+    },
+    {
+      "label": "运行架构",
+      "detail": "跑在 Codex harness 上，运行于云端隔离 microVM",
+      "children": [
+        "Pro 8 CPU/20GB 内存/64GB 磁盘",
+        "配托管 Chrome 服务供代理操作"
+      ]
+    },
+    {
+      "label": "云端与本地",
+      "detail": "桌面端分 cloud 与 local 两种模式",
+      "children": [
+        "cloud 模式三端同步",
+        "local 模式即 Codex 去掉代码 UI"
+      ]
+    },
+    {
+      "label": "持久化与记忆",
+      "detail": "工作区同步到持久存储，按需恢复到新 microVM",
+      "children": [
+        "每任务在 /workspace/scratch 有工作目录",
+        "跨线程上下文靠 Personal Context 工具查询"
+      ]
+    },
+    {
+      "label": "文件与产物",
+      "detail": "产出表格、文档、幻灯片及可托管分享的 Sites",
+      "children": [
+        "Library 是文件中央仓库，与工作副本不同步",
+        "代理默认不主动访问其他任务目录"
+      ]
+    }
+  ],
+  "flow": [
+    "连接 Slack/邮件/Drive 等",
+    "云端 microVM 启动任务",
+    "代理跨源收集上下文",
+    "产出文档表格或 Sites",
+    "跨线程复用记忆与文件"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Personal Context",
+      "type": "technique"
+    },
+    {
+      "name": "Greg Brockman",
+      "type": "person"
+    },
+    {
+      "name": "microVM",
+      "type": "concept"
+    },
+    {
+      "name": "Library",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "发布"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "Codex",
+      "label": "基于"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "microVM",
+      "label": "运行于"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "Personal Context",
+      "label": "调用"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "Library",
+      "label": "使用"
+    },
+    {
+      "from": "Greg Brockman",
+      "to": "ChatGPT Work",
+      "label": "确认合并"
+    }
+  ]
+}

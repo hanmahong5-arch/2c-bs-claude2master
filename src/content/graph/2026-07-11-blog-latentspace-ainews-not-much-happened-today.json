@@ -1,0 +1,117 @@
+{
+  "center": "GPT-5.6 发布与模型分层",
+  "branches": [
+    {
+      "label": "GPT-5.6 分层",
+      "detail": "OpenAI 推出 Luna/Terra/Sol 多档模型与 effort 设置，API 有 36 种变体",
+      "children": [
+        "Luna 日常编码，Terra 大型功能，Sol 规划/验证",
+        "Max 单模型长思考，Ultra 并行子代理",
+        "5.5→5.6 effort 设置不可直接比较"
+      ]
+    },
+    {
+      "label": "发布 UX 问题",
+      "detail": "ChatGPT Work/Codex 拆分导致导航混乱、用量消耗过快，OpenAI 快速重置限额并承诺修复",
+      "children": [
+        "多次重置用量限制",
+        "承认默认设置偏向昂贵选项",
+        "承诺恢复侧边栏导航"
+      ]
+    },
+    {
+      "label": "基准表现",
+      "detail": "GPT-5.6 在代理编码/演示/科学任务强，但非全面领先",
+      "children": [
+        "Code Arena 前端与 Claude Fable 5 并列第一…",
+        "AA-Briefcase 演示 Elo 比 GPT-5.5 高约 500…",
+        "CritPt 超 GPT-5.5 并胜 Fable 5 约 4 分"
+      ]
+    },
+    {
+      "label": "代理与成本",
+      "detail": "Sol 作为编排器强，但子代理成本爆炸，spawn_agent 默认继承高级设置",
+      "children": [
+        "Sol Ultra 自动生成更多 Sol Ultra",
+        "用户无法选择子代理模型/effort",
+        "计算机使用与 GUI 自动化高吞吐"
+      ]
+    },
+    {
+      "label": "Meta Muse Spark",
+      "detail": "Muse Spark 1.1 发布，UI/前端生成强、速度快、定价激进，智能指数 51",
+      "children": [
+        "1M 上下文，~114 tok/s，$1.25/$4.25 每 1M…",
+        "与 GLM-5.2/GPT-5.4/GPT-5.6 Luna 大致持平",
+        "Code Arena 前端第 9 名"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "Luna",
+      "type": "model"
+    },
+    {
+      "name": "Terra",
+      "type": "model"
+    },
+    {
+      "name": "Sol",
+      "type": "model"
+    },
+    {
+      "name": "Meta",
+      "type": "company"
+    },
+    {
+      "name": "Muse Spark 1.1",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Luna",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Terra",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Sol",
+      "label": "包含"
+    },
+    {
+      "from": "Meta",
+      "to": "Muse Spark 1.1",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Claude Fable 5",
+      "label": "并列"
+    }
+  ]
+}

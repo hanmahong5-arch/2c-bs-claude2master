@@ -1,0 +1,86 @@
+{
+  "center": "OpenAI与泰国合作加速AI初创",
+  "branches": [
+    {
+      "label": "合作方",
+      "detail": "OpenAI与泰国MHESI联合推出加速器项目",
+      "children": [
+        "MHESI为泰国高等教育、科学、研究与创新部"
+      ]
+    },
+    {
+      "label": "项目规模",
+      "detail": "为期八周，聚焦10家健康、保健和教育领域初创企业",
+      "children": [
+        "帮助AI原型转化为可信赖产品"
+      ]
+    },
+    {
+      "label": "模式意义",
+      "detail": "政府与AI领军企业联合推动区域创新",
+      "children": [
+        "展示AI垂直行业落地路径",
+        "政策支持对技术商业化关键"
+      ]
+    }
+  ],
+  "flow": [
+    "OpenAI与MHESI合作",
+    "筛选10家初创企业",
+    "提供8周加速器",
+    "AI原型转化为产品"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "MHESI",
+      "type": "company"
+    },
+    {
+      "name": "泰国",
+      "type": "concept"
+    },
+    {
+      "name": "AI加速器",
+      "type": "concept"
+    },
+    {
+      "name": "健康领域",
+      "type": "concept"
+    },
+    {
+      "name": "教育领域",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "MHESI",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AI加速器",
+      "label": "推出"
+    },
+    {
+      "from": "MHESI",
+      "to": "AI加速器",
+      "label": "联合推出"
+    },
+    {
+      "from": "AI加速器",
+      "to": "健康领域",
+      "label": "聚焦"
+    },
+    {
+      "from": "AI加速器",
+      "to": "教育领域",
+      "label": "聚焦"
+    }
+  ]
+}

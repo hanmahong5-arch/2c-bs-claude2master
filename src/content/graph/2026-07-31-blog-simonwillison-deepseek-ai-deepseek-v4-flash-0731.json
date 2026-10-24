@@ -1,0 +1,110 @@
+{
+  "center": "DeepSeek-V4-Flash-0731 发布",
+  "branches": [
+    {
+      "label": "代理能力大增",
+      "detail": "DeepSeek V4 家族最新版，显著增强 agentic 能力",
+      "children": [
+        "V4 家族新成员",
+        "主打 agentic capabilities"
+      ]
+    },
+    {
+      "label": "参数与体积",
+      "detail": "304B 参数，Hugging Face 上 167GB",
+      "children": [
+        "304 billion parameters",
+        "167GB on Hugging Face"
+      ]
+    },
+    {
+      "label": "性价比之王",
+      "detail": "输入 $0.14、输出 $0.27 每百万 token，或为当前最佳性价比",
+      "children": [
+        "$0.14/M input",
+        "$0.27/M output",
+        "Intelligence Index vs Cost 图表表现好"
+      ]
+    },
+    {
+      "label": "排名超 MiniMax M3",
+      "detail": "Artificial Analysis 排名领先 428B 的 MiniMax M3",
+      "children": [
+        "领先 MiniMax M3",
+        "MiniMax M3 为 428B"
+      ]
+    },
+    {
+      "label": "推理等级影响效果",
+      "detail": "Simon Willison 测试 pelican，默认推理差，high 明显更好",
+      "children": [
+        "默认 reasoning 效果失望",
+        "reasoning_effort high 效果更好",
+        "经 OpenRouter 调用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "DeepSeek-V4-Flash-0731",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek",
+      "type": "company"
+    },
+    {
+      "name": "MiniMax M3",
+      "type": "model"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DeepSeek",
+      "to": "DeepSeek-V4-Flash-0731",
+      "label": "发布"
+    },
+    {
+      "from": "Artificial Analysis",
+      "to": "DeepSeek-V4-Flash-0731",
+      "label": "排名"
+    },
+    {
+      "from": "DeepSeek-V4-Flash-0731",
+      "to": "MiniMax M3",
+      "label": "排名领先"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "DeepSeek-V4-Flash-0731",
+      "label": "测试"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "OpenRouter",
+      "label": "使用"
+    },
+    {
+      "from": "DeepSeek-V4-Flash-0731",
+      "to": "Hugging Face",
+      "label": "托管于"
+    }
+  ]
+}

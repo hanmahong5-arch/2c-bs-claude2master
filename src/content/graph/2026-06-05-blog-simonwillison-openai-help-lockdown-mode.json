@@ -1,0 +1,107 @@
+{
+  "center": "OpenAI Lockdown Mode 防数据泄露",
+  "branches": [
+    {
+      "label": "功能定位",
+      "detail": "限制出站网络请求，阻断提示注入攻击的最后一步数据外泄",
+      "children": [
+        "不阻止注入内容进入 ChatGPT 处理流程",
+        "缓存网页或上传文件中的注入仍可影响回答"
+      ]
+    },
+    {
+      "label": "覆盖范围",
+      "detail": "面向符合条件的个人账户与自助版 ChatGPT Business 账户推出",
+      "children": [
+        "含 Free、Go、Plus、Pro",
+        "2026 年 2 月预告，6 月正式上线"
+      ]
+    },
+    {
+      "label": "致命三要素",
+      "detail": "LLM 同时具备私有数据访问、接触不可信内容、外泄通道即构成风险",
+      "children": [
+        "解法是切断其中一条腿",
+        "外泄通道最易限制且不损实用性"
+      ]
+    },
+    {
+      "label": "机制优势",
+      "detail": "采用确定性机制，不依赖可能被攻破的 AI 系统来判定",
+      "children": [
+        "Simon Willison 评价其思路很好"
+      ]
+    },
+    {
+      "label": "代价与暗示",
+      "detail": "功能与实用性有折损，且暗示默认设置防护不足",
+      "children": [
+        "OpenAI CISO Dane Stuckey：面向高风险人群",
+        "默认 ChatGPT 无法抵御足够坚决的外泄攻击"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Lockdown Mode",
+      "type": "technique"
+    },
+    {
+      "name": "prompt injection",
+      "type": "concept"
+    },
+    {
+      "name": "Lethal Trifecta",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Dane Stuckey",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Lockdown Mode",
+      "label": "推出"
+    },
+    {
+      "from": "Lockdown Mode",
+      "to": "ChatGPT",
+      "label": "应用于"
+    },
+    {
+      "from": "Lockdown Mode",
+      "to": "prompt injection",
+      "label": "缓解"
+    },
+    {
+      "from": "Lethal Trifecta",
+      "to": "prompt injection",
+      "label": "涉及"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Lockdown Mode",
+      "label": "评论"
+    },
+    {
+      "from": "Dane Stuckey",
+      "to": "Lockdown Mode",
+      "label": "说明"
+    }
+  ]
+}

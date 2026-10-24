@@ -1,0 +1,95 @@
+{
+  "center": "cline SDK v0.0.83 改动",
+  "branches": [
+    {
+      "label": "Hub 托管插件",
+      "detail": "插件从 hub 的 plugin.json 发现校验，客户端不再自带 loader",
+      "children": [
+        "skills/ 暴露为 plugin-name:skill-name",
+        "mcp.json 启动 stdio/HTTP/SSE 服务",
+        "不写 cline_mcp_settings.json"
+      ]
+    },
+    {
+      "label": "流式失败重试",
+      "detail": "瞬时 provider 错误最多重试 3 次并指数退避",
+      "children": [
+        "已流出文本/推理/媒体/工具调用则不重试",
+        "SDK 级重试从 2 次升到 5 次",
+        "按是否已产生可见输出区分边界"
+      ]
+    },
+    {
+      "label": "流式延迟优化",
+      "detail": "逐 chunk 增量不再转发给远程 onEvent hook",
+      "children": [
+        "文本、推理、工具增量被排除",
+        "其余事件不变",
+        "hub 事件日志改为 synchronous = NORMAL"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "Hub",
+      "type": "concept"
+    },
+    {
+      "name": "Agent Plugins",
+      "type": "concept"
+    },
+    {
+      "name": "plugin.json",
+      "type": "concept"
+    },
+    {
+      "name": "mcp.json",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "onEvent hook",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline SDK",
+      "to": "Hub",
+      "label": "托管插件"
+    },
+    {
+      "from": "Hub",
+      "to": "Agent Plugins",
+      "label": "发现校验"
+    },
+    {
+      "from": "Agent Plugins",
+      "to": "plugin.json",
+      "label": "读取配置"
+    },
+    {
+      "from": "Agent Plugins",
+      "to": "mcp.json",
+      "label": "启动服务"
+    },
+    {
+      "from": "mcp.json",
+      "to": "MCP",
+      "label": "启动"
+    },
+    {
+      "from": "cline SDK",
+      "to": "onEvent hook",
+      "label": "停止转发增量"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "center": "codex rust-v0.136.0 更新",
+  "branches": [
+    {
+      "label": "会话存档",
+      "detail": "TUI 新增 /archive 与 CLI 命令，可存档或恢复会话",
+      "children": [
+        "防止意外恢复或分叉",
+        "harness 需管理会话生命周期状态"
+      ]
+    },
+    {
+      "label": "服务器令牌",
+      "detail": "远程执行注册支持 CODEX_API_KEY，websocket 改用短生命周期服务器令牌",
+      "children": [
+        "替代 ChatGPT 令牌，降低长期凭证风险",
+        "harness 需适配新认证流程"
+      ]
+    },
+    {
+      "label": "TUI 交互增强",
+      "detail": "Markdown 表格拥挤时转为键值对记录，并保留 OSC 8 元数据",
+      "children": [
+        "网页链接保持可点击",
+        "输出更结构化、可读性更高"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "codex",
+      "type": "product"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "CODEX_API_KEY",
+      "type": "concept"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "OSC 8",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "codex",
+      "label": "发布"
+    },
+    {
+      "from": "codex",
+      "to": "TUI",
+      "label": "包含"
+    },
+    {
+      "from": "codex",
+      "to": "CODEX_API_KEY",
+      "label": "支持"
+    },
+    {
+      "from": "CODEX_API_KEY",
+      "to": "ChatGPT",
+      "label": "替代令牌"
+    },
+    {
+      "from": "TUI",
+      "to": "OSC 8",
+      "label": "保留"
+    }
+  ]
+}

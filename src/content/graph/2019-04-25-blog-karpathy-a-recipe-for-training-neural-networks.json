@@ -1,0 +1,122 @@
+{
+  "center": "神经网络训练避坑指南",
+  "branches": [
+    {
+      "label": "训练是漏抽象",
+      "detail": "神经网络不像普通软件API那样即插即用，偏离标准场景就易失败",
+      "children": [
+        "30行代码解决数据问题的印象是假的",
+        "Backprop、BatchNorm、RNN都不会自动生效",
+        "不理解原理就使用技术很可能失败"
+      ]
+    },
+    {
+      "label": "失败是静默的",
+      "detail": "代码语法正确但配置错误时不会报错，只是悄悄变差",
+      "children": [
+        "数据增强翻转图像却忘了翻转标签",
+        "自回归模型因off-by-one把预测目标当输入",
+        "梯度裁剪误裁了loss，异常样本被忽略"
+      ]
+    },
+    {
+      "label": "先彻底看数据",
+      "detail": "第一步完全不碰神经网络代码，花数小时检查数千样本",
+      "children": [
+        "发现重复样本、损坏图像或标签",
+        "关注数据不平衡、偏差与噪声",
+        "用代码搜索排序并可视化分布与异常值"
+      ]
+    },
+    {
+      "label": "搭骨架拿基线",
+      "detail": "先建立完整训练评估骨架，用简单模型验证正确性",
+      "children": [
+        "选线性分类器或极小ConvNet",
+        "可视化loss、准确率与预测结果",
+        "做一系列消融实验建立信任"
+      ]
+    },
+    {
+      "label": "从简到繁推进",
+      "detail": "每一步提出具体假设并用实验验证，避免一次性引入大量未验证复杂度",
+      "children": [
+        "防止同时引入多个bug难以定位",
+        "像训练网络一样用小学习率逐步猜测评估"
+      ]
+    }
+  ],
+  "flow": [
+    "彻底检查数据",
+    "搭建训练评估骨架",
+    "用简单模型拿基线",
+    "逐步增加复杂度",
+    "每步验证假设"
+  ],
+  "entities": [
+    {
+      "name": "Andrej Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "神经网络训练",
+      "type": "concept"
+    },
+    {
+      "name": "Backprop",
+      "type": "technique"
+    },
+    {
+      "name": "SGD",
+      "type": "technique"
+    },
+    {
+      "name": "BatchNorm",
+      "type": "technique"
+    },
+    {
+      "name": "ResNet50",
+      "type": "model"
+    },
+    {
+      "name": "RNN",
+      "type": "model"
+    },
+    {
+      "name": "数据增强",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Andrej Karpathy",
+      "to": "神经网络训练",
+      "label": "分享指南"
+    },
+    {
+      "from": "神经网络训练",
+      "to": "Backprop",
+      "label": "依赖"
+    },
+    {
+      "from": "神经网络训练",
+      "to": "SGD",
+      "label": "依赖"
+    },
+    {
+      "from": "神经网络训练",
+      "to": "BatchNorm",
+      "label": "可能使用"
+    },
+    {
+      "from": "神经网络训练",
+      "to": "数据增强",
+      "label": "可能使用"
+    },
+    {
+      "from": "ResNet50",
+      "to": "神经网络训练",
+      "label": "是模型示例"
+    }
+  ]
+}

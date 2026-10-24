@@ -1,0 +1,81 @@
+{
+  "center": "Cline v4.0.5 支持 Claude…",
+  "branches": [
+    {
+      "label": "新模型支持",
+      "detail": "Cline v4.0.5 新增 Claude Sonnet 5 模型支持",
+      "children": [
+        "覆盖 Anthropic、Bedrock、Vertex 等 7 个提…"
+      ]
+    },
+    {
+      "label": "选择器更新",
+      "detail": "模型选择器和推荐模型列表同步更新",
+      "children": [
+        "用户可快速选用新模型"
+      ]
+    },
+    {
+      "label": "架构启示",
+      "detail": "对 agent harness 设计的要求",
+      "children": [
+        "模型配置层统一管理多提供商接入",
+        "动态更新推荐列表"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Claude Sonnet 5",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Claude Sonnet 5",
+      "label": "支持"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "Anthropic",
+      "label": "来自"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "Bedrock",
+      "label": "覆盖"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "Vertex",
+      "label": "覆盖"
+    },
+    {
+      "from": "agent harness",
+      "to": "Claude Sonnet 5",
+      "label": "接入"
+    }
+  ]
+}

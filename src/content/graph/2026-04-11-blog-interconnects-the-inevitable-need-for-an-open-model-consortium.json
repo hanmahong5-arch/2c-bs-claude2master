@@ -1,0 +1,114 @@
+{
+  "center": "开放模型联盟为何必然",
+  "branches": [
+    {
+      "label": "核心论点",
+      "detail": "开放近前沿模型成本飙升，联盟是唯一长期可持续路径",
+      "children": [
+        "训练成本从百万级升至十亿级美元",
+        "联盟成员或只需付前沿成本的1/10至1/50"
+      ]
+    },
+    {
+      "label": "开放模型困境",
+      "detail": "开放最强模型与商业化赚钱存在根本张力",
+      "children": [
+        "Qwen、Ai2 出现高层离职",
+        "Meta 已把重心移离 Llama",
+        "Moonshot AI、MiniMax、Z.ai 资金承压"
+      ]
+    },
+    {
+      "label": "未来格局",
+      "detail": "小模型开放者增多，近前沿全开放者减少",
+      "children": [
+        "Arcee AI、Thinking Machines、Gemma 走小模…",
+        "Nemotron 是 Nvidia 单公司押注的联盟雏形"
+      ]
+    },
+    {
+      "label": "Nvidia 变数",
+      "detail": "最可能支持开放生态，但存在撤回压力",
+      "children": [
+        "Nemotron 太成功会威胁其大客户",
+        "核心业务受挫将失去补贴现金流",
+        "或转向自建闭源 ASI"
+      ]
+    },
+    {
+      "label": "需求侧压力",
+      "detail": "依赖开放权重的公司增多，获取能力却下降",
+      "children": [
+        "前沿模型可能不开放 API",
+        "非营利机构已被挤出前沿训练"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Percy Liang",
+      "type": "person"
+    },
+    {
+      "name": "Marin",
+      "type": "product"
+    },
+    {
+      "name": "Nemotron",
+      "type": "model"
+    },
+    {
+      "name": "Nvidia",
+      "type": "company"
+    },
+    {
+      "name": "Moonshot AI",
+      "type": "company"
+    },
+    {
+      "name": "MiniMax",
+      "type": "company"
+    },
+    {
+      "name": "开放模型联盟",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "开放模型联盟",
+      "label": "主张"
+    },
+    {
+      "from": "Percy Liang",
+      "to": "Marin",
+      "label": "领导"
+    },
+    {
+      "from": "Nvidia",
+      "to": "Nemotron",
+      "label": "开发"
+    },
+    {
+      "from": "Nvidia",
+      "to": "开放模型联盟",
+      "label": "押注雏形"
+    },
+    {
+      "from": "Moonshot AI",
+      "to": "开放模型联盟",
+      "label": "潜在成员"
+    },
+    {
+      "from": "MiniMax",
+      "to": "开放模型联盟",
+      "label": "潜在成员"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "center": "cline cli 自动信任系统证书",
+  "branches": [
+    {
+      "label": "自动信任证书",
+      "detail": "CLI 自动读取操作系统证书存储，无需手动配置",
+      "children": [
+        "不再需要设置 NODE_EXTRA_CA_CERTS",
+        "减少证书问题导致的连接失败"
+      ]
+    },
+    {
+      "label": "修复证书错误",
+      "detail": "解决“无法获取本地颁发者证书”报错",
+      "children": [
+        "覆盖 Windows 中间 CA 存储",
+        "Windows 上无需额外处理中间证书"
+      ]
+    },
+    {
+      "label": "适配企业网络",
+      "detail": "支持企业代理与 TLS 检查防火墙环境",
+      "children": [
+        "受限网络下通信更可靠",
+        "无需用户干预证书配置"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "NODE_EXTRA_CA_CERTS",
+      "type": "concept"
+    },
+    {
+      "name": "TLS",
+      "type": "concept"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    },
+    {
+      "name": "中间 CA",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli",
+      "to": "NODE_EXTRA_CA_CERTS",
+      "label": "不再依赖"
+    },
+    {
+      "from": "cline cli",
+      "to": "TLS",
+      "label": "修复错误"
+    },
+    {
+      "from": "cline cli",
+      "to": "Windows",
+      "label": "兼容"
+    },
+    {
+      "from": "cline cli",
+      "to": "中间 CA",
+      "label": "信任"
+    }
+  ]
+}

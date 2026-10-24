@@ -1,0 +1,122 @@
+{
+  "center": "Honcho 为 OpenClaw 加持久记忆",
+  "branches": [
+    {
+      "label": "核心能力",
+      "detail": "通过外部插件为 OpenClaw 提供 AI 原生跨会话记忆",
+      "children": [
+        "每轮对话后持久化，跨会话重置与频道切换",
+        "自动构建用户与代理画像",
+        "对历史观察做语义搜索"
+      ]
+    },
+    {
+      "label": "可用工具",
+      "detail": "注册检索类与问答类工具供代理调用",
+      "children": [
+        "honcho_context 取完整用户表示",
+        "honcho_search_conclusions 语义搜索结论",
+        "honcho_search_messages 跨会话找消息"
+      ]
+    },
+    {
+      "label": "安装配置",
+      "detail": "安装插件后运行 setup 写入配置",
+      "children": [
+        "openclaw plugins install @honcho-ai/…",
+        "API key 由 Honcho 签发，仅托管 API 需要",
+        "自托管可省略 key 并改 baseUrl"
+      ]
+    },
+    {
+      "label": "记忆迁移",
+      "detail": "setup 可检测并迁移已有工作区记忆文件",
+      "children": [
+        "支持 USER.md、MEMORY.md、IDENTITY.md…",
+        "可与内置记忆系统并存"
+      ]
+    },
+    {
+      "label": "对比内置",
+      "detail": "内置靠 Markdown 手动维护，Honcho 自动持久",
+      "children": [
+        "内置跨会话靠记忆文件，Honcho 自动内置",
+        "内置用户建模需手写，Honcho 自动画像",
+        "内置不追踪多代理，Honcho 有父子感知"
+      ]
+    }
+  ],
+  "flow": [
+    "安装 Honcho 插件",
+    "运行 honcho setup 配置",
+    "每轮对话持久化到 Honcho",
+    "before_prompt_build 注入上…",
+    "代理调用 Honcho 工具查询"
+  ],
+  "entities": [
+    {
+      "name": "Honcho",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "honcho_context",
+      "type": "technique"
+    },
+    {
+      "name": "honcho_ask",
+      "type": "technique"
+    },
+    {
+      "name": "honcho_search_conclusions",
+      "type": "technique"
+    },
+    {
+      "name": "跨会话记忆",
+      "type": "concept"
+    },
+    {
+      "name": "用户建模",
+      "type": "concept"
+    },
+    {
+      "name": "语义搜索",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Honcho",
+      "to": "OpenClaw",
+      "label": "提供记忆插件"
+    },
+    {
+      "from": "Honcho",
+      "to": "跨会话记忆",
+      "label": "实现"
+    },
+    {
+      "from": "Honcho",
+      "to": "用户建模",
+      "label": "支持"
+    },
+    {
+      "from": "Honcho",
+      "to": "语义搜索",
+      "label": "支持"
+    },
+    {
+      "from": "honcho_context",
+      "to": "Honcho",
+      "label": "属于"
+    },
+    {
+      "from": "honcho_ask",
+      "to": "Honcho",
+      "label": "属于"
+    }
+  ]
+}

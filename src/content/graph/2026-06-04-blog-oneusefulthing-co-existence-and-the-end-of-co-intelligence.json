@@ -1,0 +1,122 @@
+{
+  "center": "Co-Existence：与超越你的 AI 共存",
+  "branches": [
+    {
+      "label": "从协作到自主",
+      "detail": "AI 从聊天助手转向自主代理，协作式 co-intelligence 时代结束",
+      "children": [
+        "OpenAI 章程目标：超越人类的高自主系统",
+        "2025 年底首批编码代理出现",
+        "Anthropic：AI 已写 80% 代码，人均产出 8 倍"
+      ]
+    },
+    {
+      "label": "写作中的取舍",
+      "detail": "Mollick 亲自写每章草稿，AI 仅用于反馈、查证与解困",
+      "children": [
+        "AI 不擅长长篇写作，文本痕迹明显",
+        "AI 读者逐章反馈，AI 模型核查事实",
+        "上本书 128 个破折号，这本刻意少用"
+      ]
+    },
+    {
+      "label": "向 AI 推销书",
+      "detail": "AI 成为读者与推荐守门人，作者需争取 AI 青睐",
+      "children": [
+        "旧网页用隐藏文字注入指令，现已失效",
+        "GPT-5.5 指出页面像提示注入，遂修改",
+        "Codex 让数十模型做 A/B 测试定稿"
+      ]
+    },
+    {
+      "label": "网站由 AI 建",
+      "detail": "用 Claude Code 与 Opus 4.8 提示生成，几分钟完成",
+      "children": [
+        "上本书网站靠模板仍花数小时",
+        "新站含 AI 专属页面与留言簿"
+      ]
+    },
+    {
+      "label": "新阶段的问题",
+      "detail": "何时拒绝 AI 帮助、何时交出控制权，需持续协商",
+      "children": [
+        "AI 同时是助手、读者、批评者与守门人",
+        "与 AI 的关系需随模型进步反复谈判"
+      ]
+    }
+  ],
+  "flow": [
+    "亲自写每章草稿",
+    "AI 读者逐章反馈",
+    "AI 模型核查事实",
+    "Claude Code 建网站",
+    "多模型 A/B 测试页面",
+    "定稿面向人与 AI"
+  ],
+  "entities": [
+    {
+      "name": "Ethan Mollick",
+      "type": "person"
+    },
+    {
+      "name": "Co-Intelligence",
+      "type": "product"
+    },
+    {
+      "name": "Co-Existence",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ethan Mollick",
+      "to": "Co-Intelligence",
+      "label": "著有"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "Co-Existence",
+      "label": "著有"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "Claude Code",
+      "label": "使用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Opus 4.8",
+      "label": "基于"
+    },
+    {
+      "from": "Ethan Mollick",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "Codex",
+      "to": "GPT-5.5",
+      "label": "调用"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "center": "Lyria 3.5 登陆 Google Flow…",
+  "branches": [
+    {
+      "label": "音乐性提升",
+      "detail": "生成更丰富复杂的旋律结构，听感更自然",
+      "children": [
+        "更复杂旋律结构",
+        "听感更自然"
+      ]
+    },
+    {
+      "label": "歌词增强",
+      "detail": "歌词质量更高，提示词遵循与结构感知更好",
+      "children": [
+        "提示词遵循度提升",
+        "结构感知增强"
+      ]
+    },
+    {
+      "label": "人声改进",
+      "detail": "人声更真实、情感更细腻，发音更准确",
+      "children": [
+        "情感表达更丰富",
+        "发音更准确"
+      ]
+    },
+    {
+      "label": "创作控制",
+      "detail": "更轻松地控制输出的速度与时长",
+      "children": [
+        "控制 tempo",
+        "控制 duration"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Lyria 3.5",
+      "type": "model"
+    },
+    {
+      "name": "Google Flow Music",
+      "type": "product"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Lyria 3.5",
+      "to": "Google Flow Music",
+      "label": "上线于"
+    },
+    {
+      "from": "Google",
+      "to": "Lyria 3.5",
+      "label": "发布"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "center": "Cline 桌面版 v0.0.9 更新",
+  "branches": [
+    {
+      "label": "统一架构分发",
+      "detail": "桌面版改为通用 macOS 下载，自动迁移旧架构安装",
+      "children": [
+        "简化分发流程",
+        "旧安装自动迁移"
+      ]
+    },
+    {
+      "label": "上下文自动恢复",
+      "detail": "上下文耗尽时自动压缩并重试一次，而非直接失败",
+      "children": [
+        "自动压缩上下文",
+        "重试一次"
+      ]
+    },
+    {
+      "label": "会话与成本管理",
+      "detail": "会话历史可按来源过滤，编辑器显示 token 用量环和累计成本",
+      "children": [
+        "侧边栏过滤控件",
+        "token 用量环",
+        "接近限制时变色"
+      ]
+    },
+    {
+      "label": "安全与错误修复",
+      "detail": "计划模式硬阻止文件编辑 shell 命令，修复多项关键错误",
+      "children": [
+        "仅允许只读操作",
+        "空模型响应重试",
+        "Bedrock 提示缓存修复"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "company"
+    },
+    {
+      "name": "Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "token 用量环",
+      "type": "concept"
+    },
+    {
+      "name": "计划模式",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "macOS",
+      "label": "支持"
+    },
+    {
+      "from": "Cline",
+      "to": "OpenRouter",
+      "label": "集成"
+    },
+    {
+      "from": "Cline",
+      "to": "Bedrock",
+      "label": "集成"
+    },
+    {
+      "from": "Cline",
+      "to": "token 用量环",
+      "label": "显示"
+    },
+    {
+      "from": "Cline",
+      "to": "计划模式",
+      "label": "包含"
+    }
+  ]
+}

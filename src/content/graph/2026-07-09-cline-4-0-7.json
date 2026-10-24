@@ -1,0 +1,53 @@
+{
+  "center": "cline v4.0.7 ClinePass 更新",
+  "branches": [
+    {
+      "label": "限流错误处理",
+      "detail": "新增 ClinePass 限流错误提示，支持一键切换按量计费",
+      "children": [
+        "配额超限时可直接切换计费方式"
+      ]
+    },
+    {
+      "label": "免费模型分页",
+      "detail": "免费模型按已订阅与免费分页展示，附模型描述",
+      "children": [
+        "简化模型选择流程"
+      ]
+    },
+    {
+      "label": "引导文案优化",
+      "detail": "优化 ClinePass 引导文案，移除 GLM 5.1 引用",
+      "children": [
+        "减少用户混淆"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "GLM 5.1",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "ClinePass",
+      "label": "包含"
+    },
+    {
+      "from": "ClinePass",
+      "to": "GLM 5.1",
+      "label": "移除引用"
+    }
+  ]
+}

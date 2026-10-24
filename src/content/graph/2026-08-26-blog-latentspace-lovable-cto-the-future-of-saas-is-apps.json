@@ -1,0 +1,123 @@
+{
+  "center": "Lovable 转向 Agent 能力平台",
+  "branches": [
+    {
+      "label": "能力取代应用",
+      "detail": "Lovable 将应用功能暴露为 Agent 可直接调用的 capability，绕过人类 UI",
+      "children": [
+        "通过托管 MCP server 暴露应用函数为工具",
+        "一个应用两种接口：人类 UI 与 Agent 接口",
+        "可从 ChatGPT、Claude 等 MCP 客户端调用"
+      ]
+    },
+    {
+      "label": "公司大脑愿景",
+      "detail": "打造团队数字大脑，单一入口访问所有工具与工作流",
+      "children": [
+        "尽可能多地掌握你、公司与环境的上下文",
+        "所有能力通过一个 Agent 连接，而非每个任务建…",
+        "Agent 可异步调度，稍后恢复任务并返回结果"
+      ]
+    },
+    {
+      "label": "三年演进路径",
+      "detail": "从开源工具到商业产品再到 Agent 平台",
+      "children": [
+        "2023 年源自开源工具 GPT Engineer",
+        "2024 年 11 月商业化，12 月更名 Lovable",
+        "用户从原型扩展到生产应用与内部软件"
+      ]
+    },
+    {
+      "label": "增长与融资",
+      "detail": "用户与收入高速增长，Menlo Ventures 领投 C 轮",
+      "children": [
+        "年化收入超 5 亿美元，创建项目超 6000 万",
+        "月访问 Lovable 构建应用超 9 亿次",
+        "C 轮 4 亿美元，估值 133 亿美元"
+      ]
+    },
+    {
+      "label": "安全与连接器",
+      "detail": "通过 Connectors 连接外部工具，用权限图保障安全",
+      "children": [
+        "app user connector 保留用户身份与源系统权限",
+        "凭证服务端加密存储，经 connector gateway…",
+        "应用仅获短期密钥，永不接触凭证"
+      ]
+    }
+  ],
+  "flow": [
+    "发布应用",
+    "选择函数暴露为工具",
+    "托管 MCP server 生成能力",
+    "Agent 客户端调用能力",
+    "异步返回结果到对话"
+  ],
+  "entities": [
+    {
+      "name": "Lovable",
+      "type": "company"
+    },
+    {
+      "name": "Fabian Hedin",
+      "type": "person"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "GPT Engineer",
+      "type": "product"
+    },
+    {
+      "name": "Menlo Ventures",
+      "type": "company"
+    },
+    {
+      "name": "Vercel",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Fabian Hedin",
+      "to": "Lovable",
+      "label": "担任CTO"
+    },
+    {
+      "from": "Lovable",
+      "to": "MCP",
+      "label": "基于"
+    },
+    {
+      "from": "Lovable",
+      "to": "GPT Engineer",
+      "label": "源自"
+    },
+    {
+      "from": "Menlo Ventures",
+      "to": "Lovable",
+      "label": "领投"
+    },
+    {
+      "from": "Vercel",
+      "to": "Lovable",
+      "label": "竞争"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "MCP",
+      "label": "兼容"
+    }
+  ]
+}

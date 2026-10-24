@@ -1,0 +1,111 @@
+{
+  "center": "Anthropic 对开源权重的立场",
+  "branches": [
+    {
+      "label": "不主张禁令",
+      "detail": "Anthropic 从未主张禁止开源权重模型，认为无危险能力的开源模型是公共品",
+      "children": [
+        "Dario Amodei 明确澄清立场",
+        "保护主义禁令无法解决国家安全担忧"
+      ]
+    },
+    {
+      "label": "两大担忧",
+      "detail": "首要担忧威权政府（如中共）用 AI 取得军事优势或镇压；次要担忧网络/生物攻击与对齐问题",
+      "children": [
+        "开源模型更难加护栏、发布后无法撤回",
+        "禁令无法阻止恶意行为者"
+      ]
+    },
+    {
+      "label": "三项措施",
+      "detail": "支持芯片管制、打击蒸馏、强制安全测试，而非禁止开源",
+      "children": [
+        "不向中国出售强大芯片并打击走私",
+        "打击工业级蒸馏操作",
+        "所有足够强大模型须强制安全测试"
+      ]
+    },
+    {
+      "label": "对公开信态度",
+      "detail": "同意开源扩大访问和竞争，但不同意开源必然利于防御者",
+      "children": [
+        "生物领域可能存在攻击者-防御者不对称",
+        "应通过发布前测试实证回答"
+      ]
+    }
+  ],
+  "flow": [
+    "澄清未主张禁令",
+    "阐述两大国家安全担忧",
+    "提出三项替代措施",
+    "回应公开信分歧",
+    "总结立场"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Dario Amodei",
+      "type": "person"
+    },
+    {
+      "name": "open-weights models",
+      "type": "concept"
+    },
+    {
+      "name": "CCP",
+      "type": "concept"
+    },
+    {
+      "name": "distillation",
+      "type": "technique"
+    },
+    {
+      "name": "chip controls",
+      "type": "concept"
+    },
+    {
+      "name": "safety testing",
+      "type": "concept"
+    },
+    {
+      "name": "AE Studio",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Dario Amodei",
+      "to": "Anthropic",
+      "label": "担任CEO"
+    },
+    {
+      "from": "Anthropic",
+      "to": "open-weights models",
+      "label": "不主张禁止"
+    },
+    {
+      "from": "Anthropic",
+      "to": "chip controls",
+      "label": "支持"
+    },
+    {
+      "from": "Anthropic",
+      "to": "distillation",
+      "label": "主张打击"
+    },
+    {
+      "from": "Anthropic",
+      "to": "safety testing",
+      "label": "支持强制"
+    },
+    {
+      "from": "Anthropic",
+      "to": "AE Studio",
+      "label": "合作研究"
+    }
+  ]
+}

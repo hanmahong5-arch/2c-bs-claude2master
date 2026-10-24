@@ -1,0 +1,120 @@
+{
+  "center": "Hugging Face 发布 200+ WebGPU…",
+  "branches": [
+    {
+      "label": "发布内容",
+      "detail": "推出 @huggingface/kernels 加载库与 207 个 WebGPU 内核",
+      "children": [
+        "内核托管于 webgpu-kernels 组织，Apache-2.…",
+        "npm 安装 @huggingface/kernels@preview"
+      ]
+    },
+    {
+      "label": "内核即仓库",
+      "detail": "每个内核是独立版本化仓库，含契约与证据",
+      "children": [
+        "manifest.json 定义输入输出与类型约束",
+        "test.json 正确性用例、bench.json 基准用例",
+        "*.wgsl.jinja 参数化 WGSL 着色器模板"
+      ]
+    },
+    {
+      "label": "Fleet 众测",
+      "detail": "浏览器内 GPU 基准测试套件，众包真实硬件证据",
+      "children": [
+        "在用户硬件上运行并给内核打分",
+        "经同意上传私有证据，发现失败与慢路径"
+      ]
+    },
+    {
+      "label": "性能对比",
+      "detail": "在 Apple M4 上与 ORT WebGPU 对比，明显更快",
+      "children": [
+        "1756 用例中取 809 个有效对比",
+        "几何平均快 2.57 倍，中位数快 1.90 倍",
+        "629 胜 176 负"
+      ]
+    },
+    {
+      "label": "为何先做内核",
+      "detail": "内核是浏览器推理性能的底层基础层",
+      "children": [
+        "同一算子不同着色器性能差异巨大",
+        "最优实现随输入形状、设备、浏览器变化"
+      ]
+    }
+  ],
+  "flow": [
+    "npm 安装 kernels 包",
+    "getKernel 指定仓库 ID 与版本",
+    "传入张量数据与形状",
+    "加载器按 manifest 推导输出形状",
+    "自动分配输出并执行内核"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "@huggingface/kernels",
+      "type": "product"
+    },
+    {
+      "name": "WebGPU",
+      "type": "technique"
+    },
+    {
+      "name": "WGSL",
+      "type": "technique"
+    },
+    {
+      "name": "Fleet",
+      "type": "product"
+    },
+    {
+      "name": "ORT WebGPU",
+      "type": "product"
+    },
+    {
+      "name": "Apple M4",
+      "type": "product"
+    },
+    {
+      "name": "ai.onnx.Add",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "@huggingface/kernels",
+      "label": "发布"
+    },
+    {
+      "from": "@huggingface/kernels",
+      "to": "WebGPU",
+      "label": "基于"
+    },
+    {
+      "from": "WebGPU",
+      "to": "WGSL",
+      "label": "使用"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Fleet",
+      "label": "推出"
+    },
+    {
+      "from": "@huggingface/kernels",
+      "to": "ORT WebGPU",
+      "label": "性能对比"
+    },
+    {
+      "from": "Fleet",
+      "to": "WebGPU",
+      "label": "测试"
+    }
+  ]
+}

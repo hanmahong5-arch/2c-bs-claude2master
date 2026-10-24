@@ -1,0 +1,72 @@
+{
+  "center": "OpenAI 呼吁全球 AI 标准协作",
+  "branches": [
+    {
+      "label": "评测为核心",
+      "detail": "评测是标准建设核心环节，而非事后补充",
+      "children": [
+        "工具链应内建可复现评测流程",
+        "减少零散人工检查"
+      ]
+    },
+    {
+      "label": "报告与治理",
+      "detail": "透明披露与责任归属并列为标准两大支柱",
+      "children": [
+        "日志、审计、合规输出或成默认要求"
+      ]
+    },
+    {
+      "label": "对开发者的影响",
+      "detail": "跨模型跨平台评测口径可能趋于统一",
+      "children": [
+        "工具链需预留标准化接口"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "AI 标准",
+      "type": "concept"
+    },
+    {
+      "name": "评测",
+      "type": "concept"
+    },
+    {
+      "name": "治理",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "AI 标准",
+      "label": "呼吁协作"
+    },
+    {
+      "from": "AI 标准",
+      "to": "评测",
+      "label": "核心环节"
+    },
+    {
+      "from": "AI 标准",
+      "to": "治理",
+      "label": "支柱之一"
+    },
+    {
+      "from": "AI 标准",
+      "to": "agent",
+      "label": "影响开发"
+    }
+  ]
+}

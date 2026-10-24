@@ -1,0 +1,54 @@
+{
+  "center": "cline v4.1.15 修复 MCP 自动批准",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "开启 Use MCP servers 后自动批准所有 MCP 工具调用",
+      "children": [
+        "此前仅对单独勾选的工具生效",
+        "版本 v4.1.15"
+      ]
+    },
+    {
+      "label": "设计影响一",
+      "detail": "全局开关与细粒度权限控制需保持一致",
+      "children": [
+        "避免用户困惑"
+      ]
+    },
+    {
+      "label": "设计影响二",
+      "detail": "agent harness 需明确权限层级",
+      "children": [
+        "全局开关应覆盖或叠加个体设置"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "MCP",
+      "label": "支持"
+    },
+    {
+      "from": "cline",
+      "to": "agent harness",
+      "label": "属于"
+    }
+  ]
+}

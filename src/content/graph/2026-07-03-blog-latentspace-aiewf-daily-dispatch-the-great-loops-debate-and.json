@@ -1,0 +1,101 @@
+{
+  "center": "AIEWF：自主软件工厂之争",
+  "branches": [
+    {
+      "label": "循环大辩论",
+      "detail": "自主软件工厂是当下可行还是炒作，工程纪律是否落后于野心",
+      "children": [
+        "正方：Ralph Loop 作者 Geoffrey Huntley…",
+        "反方：HumanLayer 的 Dex Horthy…",
+        "Horthy：炒作跑在纪律前面，应降低抽象层级"
+      ]
+    },
+    {
+      "label": "Anthropic 的 Claude Tag",
+      "detail": "Mike Krieger 称 Tag 比 Claude 更委派、异步、主动，是早期软件工厂雏形",
+      "children": [
+        "用法：让 agent 负责某块代码库并主动接任务",
+        "副作用：团队卡在代码评审和人类理解上"
+      ]
+    },
+    {
+      "label": "2026 AI 工程调查",
+      "detail": "Amplify 的 Barr Yaron 发布：95% 受访者用 agent，89% 可写数据",
+      "children": [
+        "控制层仍原始：靠人工审批与权限",
+        "40% 称成本常限制 AI 使用野心",
+        "59% 担心 AI 生成代码造成长期负债"
+      ]
+    },
+    {
+      "label": "闭幕乐观基调",
+      "detail": "Theo Browne 与 Garry Tan 谈用 AI 构建的乐观前景",
+      "children": [
+        "Browne：过去的创业现在只是副业项目",
+        "Tan：把 AI 当劳动力，建 AI 原生公司"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "AI Engineer World's Fair",
+      "type": "concept"
+    },
+    {
+      "name": "Geoffrey Huntley",
+      "type": "person"
+    },
+    {
+      "name": "Ralph Loop",
+      "type": "technique"
+    },
+    {
+      "name": "Claude Tag",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Mike Krieger",
+      "type": "person"
+    },
+    {
+      "name": "Garry Tan",
+      "type": "person"
+    },
+    {
+      "name": "Y Combinator",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Geoffrey Huntley",
+      "to": "Ralph Loop",
+      "label": "创造"
+    },
+    {
+      "from": "Mike Krieger",
+      "to": "Anthropic",
+      "label": "任职于"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Tag",
+      "label": "发布"
+    },
+    {
+      "from": "Garry Tan",
+      "to": "Y Combinator",
+      "label": "领导"
+    },
+    {
+      "from": "Geoffrey Huntley",
+      "to": "AI Engineer World's Fair",
+      "label": "出席辩论"
+    }
+  ]
+}

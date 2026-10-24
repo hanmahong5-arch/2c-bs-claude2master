@@ -1,0 +1,105 @@
+{
+  "center": "IBM时序模型集成Confluent",
+  "branches": [
+    {
+      "label": "实时智能预测",
+      "detail": "IBM Granite时序基础模型与Confluent流平台集成，在数据流动处直接推理",
+      "children": [
+        "模型已在Confluent Cloud早期访问",
+        "通过Flink SQL直接调用",
+        "Confluent Platform后续支持本地部署"
+      ]
+    },
+    {
+      "label": "TSFM能力",
+      "detail": "时序基础模型一次训练即可泛化到未见过的序列，无需数据科学团队",
+      "children": [
+        "预测、异常检测、相似搜索、分类、补缺、优化",
+        "领域专家可直接使用",
+        "44M+下载量"
+      ]
+    },
+    {
+      "label": "核心优势",
+      "detail": "零配置、内置治理、成本高效，无需独立ML平台或GPU",
+      "children": [
+        "Flink管理有状态推理，按序列键控",
+        "推理结果写入Kafka主题并扇出",
+        "无云入口/出口费用"
+      ]
+    },
+    {
+      "label": "应用案例",
+      "detail": "巧克力工厂调温线实时预测产量、检测漂移、匹配历史",
+      "children": [
+        "每几秒采样温度、速度、吞吐量",
+        "预测晚班产出，提前发现短缺",
+        "生产力提升5-10倍"
+      ]
+    }
+  ],
+  "flow": [
+    "流数据接入Confluent",
+    "Flink管理状态与上下文",
+    "调用Granite时序模型推理",
+    "结果写入Kafka主题",
+    "下游系统消费行动"
+  ],
+  "entities": [
+    {
+      "name": "IBM",
+      "type": "company"
+    },
+    {
+      "name": "Confluent",
+      "type": "company"
+    },
+    {
+      "name": "Granite Time Series",
+      "type": "model"
+    },
+    {
+      "name": "Confluent Cloud",
+      "type": "product"
+    },
+    {
+      "name": "Apache Flink",
+      "type": "product"
+    },
+    {
+      "name": "Kafka",
+      "type": "product"
+    },
+    {
+      "name": "TSFM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "IBM",
+      "to": "Granite Time Series",
+      "label": "开发"
+    },
+    {
+      "from": "Confluent",
+      "to": "Confluent Cloud",
+      "label": "提供"
+    },
+    {
+      "from": "Granite Time Series",
+      "to": "Confluent Cloud",
+      "label": "集成于"
+    },
+    {
+      "from": "Confluent Cloud",
+      "to": "Apache Flink",
+      "label": "支持"
+    },
+    {
+      "from": "Apache Flink",
+      "to": "Kafka",
+      "label": "写入"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "center": "claude-code v2.1.216 更新",
+  "branches": [
+    {
+      "label": "新增沙箱选项",
+      "detail": "新增 sandbox.filesystem.disabled 设置，可跳过文件系统隔离但保留网络出口控制",
+      "children": [
+        "提供更细粒度沙箱配置"
+      ]
+    },
+    {
+      "label": "修复长会话卡顿",
+      "detail": "修复消息归一化成本随轮数二次增长导致的卡顿",
+      "children": [
+        "避免 O(n²) 复杂度操作"
+      ]
+    },
+    {
+      "label": "修复 OAuth 问题",
+      "detail": "修复 OAuth 令牌过期后自动模式拒绝命令的问题",
+      "children": [
+        "需处理令牌刷新并重试授权请求"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "sandbox.filesystem.disabled",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "sandbox.filesystem.disabled",
+      "label": "新增设置"
+    },
+    {
+      "from": "claude-code",
+      "to": "OAuth",
+      "label": "修复令牌问题"
+    }
+  ]
+}

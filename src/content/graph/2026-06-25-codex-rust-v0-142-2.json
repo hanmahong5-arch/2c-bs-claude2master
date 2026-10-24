@@ -1,0 +1,89 @@
+{
+  "center": "Codex Rust v0.142.2 更新",
+  "branches": [
+    {
+      "label": "MCP工具搜索",
+      "detail": "MCP工具默认启用工具搜索，提升工具发现能力",
+      "children": [
+        "兼容旧模型和提供商",
+        "agent harness 需适配搜索逻辑"
+      ]
+    },
+    {
+      "label": "macOS代理支持",
+      "detail": "macOS认证客户端可遵循系统代理、PAC和WPAD设置",
+      "children": [
+        "agent harness 需支持代理配置"
+      ]
+    },
+    {
+      "label": "暗色Logo",
+      "detail": "插件可通过本地清单和远程目录提供暗色模式Logo",
+      "children": [
+        "agent harness 需处理主题相关元数据"
+      ]
+    },
+    {
+      "label": "安全缓冲UI",
+      "detail": "应用可显示更丰富的安全缓冲UI",
+      "children": [
+        "使用服务器提供的可见性和快速模型元数据",
+        "agent harness 需传递这些元数据"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Codex Rust",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "PAC",
+      "type": "concept"
+    },
+    {
+      "name": "WPAD",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Codex Rust",
+      "to": "MCP",
+      "label": "启用工具搜索"
+    },
+    {
+      "from": "Codex Rust",
+      "to": "macOS",
+      "label": "支持代理"
+    },
+    {
+      "from": "macOS",
+      "to": "PAC",
+      "label": "遵循"
+    },
+    {
+      "from": "macOS",
+      "to": "WPAD",
+      "label": "遵循"
+    },
+    {
+      "from": "agent harness",
+      "to": "MCP",
+      "label": "适配搜索"
+    }
+  ]
+}

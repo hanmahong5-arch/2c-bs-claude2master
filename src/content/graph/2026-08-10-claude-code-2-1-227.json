@@ -1,0 +1,98 @@
+{
+  "center": "claude-code v2.1.227 修复",
+  "branches": [
+    {
+      "label": "订阅层级误判",
+      "detail": "过期登录令牌启动会话时功能标志未按订阅层级评估",
+      "children": [
+        "Max 用户被误提示启用 Fable 用量积分",
+        "需确保订阅状态在会话生命周期内正确传递"
+      ]
+    },
+    {
+      "label": "Bash 命令失败",
+      "detail": "GitHub 托管运行器上 claude-code-action 的 Bash 命令全部失败",
+      "children": [
+        "原因：allowed_non_write_users 权限配置",
+        "需注意 CI 环境下的权限配置"
+      ]
+    },
+    {
+      "label": "TUI 回退问题",
+      "detail": "/tui 将对话回退到首条消息之前",
+      "children": [
+        "需确保 TUI 状态管理正确处理回退",
+        "避免丢失会话上下文"
+      ]
+    },
+    {
+      "label": "斜杠命令菜单",
+      "detail": "改进渲染：蓝色仅标记选中行，匹配字符加粗",
+      "children": [
+        "保留 emoji 或重音字符",
+        "提升可访问性和视觉清晰度"
+      ]
+    },
+    {
+      "label": "性能改进",
+      "detail": "减少文件未找到建议和 at-mention 大小检查的事件循环阻塞",
+      "children": [
+        "优化异步操作，提升响应速度"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "claude-code-action",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "Fable",
+      "type": "product"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "Bash",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "claude-code-action",
+      "label": "包含"
+    },
+    {
+      "from": "claude-code-action",
+      "to": "GitHub",
+      "label": "运行于"
+    },
+    {
+      "from": "Claude Code",
+      "to": "TUI",
+      "label": "使用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Bash",
+      "label": "执行"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Fable",
+      "label": "关联"
+    }
+  ]
+}

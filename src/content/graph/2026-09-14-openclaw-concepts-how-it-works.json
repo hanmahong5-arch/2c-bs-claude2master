@@ -1,0 +1,120 @@
+{
+  "center": "OpenClaw 主动记忆机制",
+  "branches": [
+    {
+      "label": "运行范围",
+      "detail": "主动记忆只在持久对话中运行，一次性任务和后台运行一律跳过",
+      "children": [
+        "持久会话/网页聊天：运行",
+        "无头一次性运行：不运行",
+        "心跳/后台运行：不运行"
+      ]
+    },
+    {
+      "label": "触发流程",
+      "detail": "先确定性触发召回，弱匹配时检查召回意图，再决定是否启动深度召回子代理",
+      "children": [
+        "强可信匹配：注入有界隐藏上下文",
+        "弱/空匹配：检查召回意图",
+        "有意图：启动深度召回子代理"
+      ]
+    },
+    {
+      "label": "目标路径",
+      "detail": "两条路径：跨对话记忆自动目标，高级主动记忆按代理 ID 列表目标",
+      "children": [
+        "跨对话记忆：仅限私聊直接或持久显式 UI 对话",
+        "高级主动记忆：按配置的代理 ID 列表",
+        "两条路径均需插件启用且对话符合条件"
+      ]
+    },
+    {
+      "label": "模式控制",
+      "detail": "config.mode 控制何时启动阻塞子代理",
+      "children": [
+        "escalate：默认，仅当第一通道无强命中且有召回…",
+        "always：每个符合条件的轮次都运行",
+        "off：禁用深度召回，但确定性触发通道仍可用"
+      ]
+    },
+    {
+      "label": "会话类型",
+      "detail": "allowedChatTypes 控制哪些对话可运行高级主动记忆，默认仅 direct",
+      "children": [
+        "默认：direct",
+        "可选：group、channel、explicit",
+        "allowedChatIds 白名单收窄所有类型"
+      ]
+    }
+  ],
+  "flow": [
+    "用户消息",
+    "确定性触发召回",
+    "检查召回意图",
+    "深度召回子代理",
+    "注入上下文或跳过",
+    "主回复"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Active Memory",
+      "type": "concept"
+    },
+    {
+      "name": "deep-recall sub-agent",
+      "type": "concept"
+    },
+    {
+      "name": "rememberAcrossConversations",
+      "type": "concept"
+    },
+    {
+      "name": "allowedChatTypes",
+      "type": "concept"
+    },
+    {
+      "name": "allowedChatIds",
+      "type": "concept"
+    },
+    {
+      "name": "deniedChatIds",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Active Memory",
+      "label": "实现"
+    },
+    {
+      "from": "Active Memory",
+      "to": "deep-recall sub-agent",
+      "label": "调用"
+    },
+    {
+      "from": "Active Memory",
+      "to": "rememberAcrossConversations",
+      "label": "受控于"
+    },
+    {
+      "from": "Active Memory",
+      "to": "allowedChatTypes",
+      "label": "受控于"
+    },
+    {
+      "from": "allowedChatIds",
+      "to": "allowedChatTypes",
+      "label": "收窄"
+    },
+    {
+      "from": "deniedChatIds",
+      "to": "allowedChatIds",
+      "label": "覆盖"
+    }
+  ]
+}

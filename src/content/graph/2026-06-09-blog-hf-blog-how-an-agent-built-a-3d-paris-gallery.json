@@ -1,0 +1,93 @@
+{
+  "center": "智能体串联双空间建3D巴黎画廊",
+  "branches": [
+    {
+      "label": "核心成果",
+      "detail": "智能体串联两个空间，自动构建3D巴黎画廊",
+      "children": [
+        "无需Photoshop或Blender",
+        "由Agent自动完成多媒体生成"
+      ]
+    },
+    {
+      "label": "涉及空间",
+      "detail": "文章提及5个Hugging Face Space",
+      "children": [
+        "TripoSplat：单图生成3D模型",
+        "Ideogram 4：开放权重图像生成",
+        "Monuments de Paris：巴黎地标3D模型"
+      ]
+    },
+    {
+      "label": "相关作品",
+      "detail": "作者此前发布过智能体多媒体生成实验",
+      "children": [
+        "No Photoshop, No Blender: Multimedia by…",
+        "36 Prompts, One Infinite City"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "TripoSplat",
+      "type": "product"
+    },
+    {
+      "name": "Ideogram 4",
+      "type": "model"
+    },
+    {
+      "name": "Monuments de Paris",
+      "type": "product"
+    },
+    {
+      "name": "Monuments d'Égypte",
+      "type": "product"
+    },
+    {
+      "name": "Monuments du Japon",
+      "type": "product"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "TripoSplat",
+      "label": "托管"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Ideogram 4",
+      "label": "托管"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "Monuments de Paris",
+      "label": "托管"
+    },
+    {
+      "from": "Agent",
+      "to": "TripoSplat",
+      "label": "调用"
+    },
+    {
+      "from": "Agent",
+      "to": "Ideogram 4",
+      "label": "调用"
+    },
+    {
+      "from": "Agent",
+      "to": "Monuments de Paris",
+      "label": "构建"
+    }
+  ]
+}

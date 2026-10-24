@@ -1,0 +1,82 @@
+{
+  "center": "OpenAI 联合美国国家实验室加速科…",
+  "branches": [
+    {
+      "label": "合作对象",
+      "detail": "OpenAI 与美国能源部及国家实验室达成合作",
+      "children": [
+        "覆盖能源、材料、生物等领域"
+      ]
+    },
+    {
+      "label": "合作重点",
+      "detail": "训练 AI 模型处理高价值科学数据以提升研究效率",
+      "children": [
+        "核聚变模拟",
+        "蛋白质结构预测"
+      ]
+    },
+    {
+      "label": "开发者影响",
+      "detail": "AI 工具链将更深度整合科学计算",
+      "children": [
+        "推动专用模型优化",
+        "推动基础设施优化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "美国能源部",
+      "type": "company"
+    },
+    {
+      "name": "国家实验室",
+      "type": "company"
+    },
+    {
+      "name": "核聚变模拟",
+      "type": "concept"
+    },
+    {
+      "name": "蛋白质结构预测",
+      "type": "concept"
+    },
+    {
+      "name": "科学计算",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "美国能源部",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "国家实验室",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "核聚变模拟",
+      "label": "训练模型处理"
+    },
+    {
+      "from": "OpenAI",
+      "to": "蛋白质结构预测",
+      "label": "训练模型处理"
+    },
+    {
+      "from": "OpenAI",
+      "to": "科学计算",
+      "label": "整合工具链"
+    }
+  ]
+}

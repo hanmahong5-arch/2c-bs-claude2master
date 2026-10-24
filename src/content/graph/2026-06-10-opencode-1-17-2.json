@@ -1,0 +1,73 @@
+{
+  "center": "opencode v1.17.2 修复更新",
+  "branches": [
+    {
+      "label": "远程配置恢复",
+      "detail": "远程配置认证过期时提示重新登录，而非直接失败",
+      "children": [
+        "确保配置加载可靠性",
+        "需更优雅的错误恢复机制"
+      ]
+    },
+    {
+      "label": "子代理权限",
+      "detail": "子代理可再次使用自身配置的权限，恢复权限隔离",
+      "children": [
+        "对多 agent 权限管理有参考价值"
+      ]
+    },
+    {
+      "label": "Linux 启动器修复",
+      "detail": "修复 Linux 启动器身份识别，固定应用可正确打开",
+      "children": [
+        "恢复设备附件选择器功能",
+        "跨平台部署需注意系统集成"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Linux",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "多 agent 系统",
+      "type": "concept"
+    },
+    {
+      "name": "权限隔离",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Linux",
+      "label": "修复启动器"
+    },
+    {
+      "from": "opencode",
+      "to": "agent harness",
+      "label": "涉及"
+    },
+    {
+      "from": "opencode",
+      "to": "多 agent 系统",
+      "label": "支持"
+    },
+    {
+      "from": "多 agent 系统",
+      "to": "权限隔离",
+      "label": "依赖"
+    }
+  ]
+}

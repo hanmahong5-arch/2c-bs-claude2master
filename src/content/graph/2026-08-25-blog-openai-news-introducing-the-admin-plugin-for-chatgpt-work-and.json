@@ -1,0 +1,123 @@
+{
+  "center": "ChatGPT Work 与 Codex 的…",
+  "branches": [
+    {
+      "label": "插件定位",
+      "detail": "在对话中完成工作区分析、设置更新与授权操作",
+      "children": [
+        "面向 ChatGPT Work 和 Codex",
+        "无需复杂提示词或切换工具",
+        "提问、查看、变更、确认一步完成"
+      ]
+    },
+    {
+      "label": "核心管理能力",
+      "detail": "覆盖用量、成员、权限与额度四类日常管理",
+      "children": [
+        "查看活动与 credit 用量，识别额度临界",
+        "增删成员、更新分组、完成入离职",
+        "按角色或分组控制功能与模型访问"
+      ]
+    },
+    {
+      "label": "自动化工作流",
+      "detail": "无需自研工程即可自动处理高频重复请求",
+      "children": [
+        "用量请求可路由到 Slack 或 Microsoft Teams…",
+        "符合预设条件的功能访问请求自动授权",
+        "例外情况转人工复核，变更后确认结果"
+      ]
+    },
+    {
+      "label": "权限与安全",
+      "detail": "沿用用户既有角色权限，不授予额外访问",
+      "children": [
+        "指令映射为受支持的读写操作",
+        "遵循工作区策略与审批要求",
+        "影响面大的操作可先审后执行"
+      ]
+    },
+    {
+      "label": "OpenAI IT 实践",
+      "detail": "IT 团队用其提问钻取数据并生成报告洞察",
+      "children": [
+        "Slack 中 ChatGPT Work agent 处理 IT 工单",
+        "已部署流程解决约 45% 工单量",
+        "工单数据转为运营健康看板，消除积压"
+      ]
+    }
+  ],
+  "flow": [
+    "在工作区设置中启用插件",
+    "从 Plugins 目录安装",
+    "在对话中提出管理问题",
+    "插件映射为受支持操作",
+    "执行并确认变更结果"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Admin plugin",
+      "type": "product"
+    },
+    {
+      "name": "Admin Console",
+      "type": "product"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "Microsoft Teams",
+      "type": "product"
+    },
+    {
+      "name": "Kunal Malik",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Admin plugin",
+      "label": "推出"
+    },
+    {
+      "from": "Admin plugin",
+      "to": "ChatGPT Work",
+      "label": "支持"
+    },
+    {
+      "from": "Admin plugin",
+      "to": "Codex",
+      "label": "支持"
+    },
+    {
+      "from": "Admin plugin",
+      "to": "Admin Console",
+      "label": "开放能力"
+    },
+    {
+      "from": "Admin plugin",
+      "to": "Slack",
+      "label": "路由请求"
+    },
+    {
+      "from": "Admin plugin",
+      "to": "Microsoft Teams",
+      "label": "路由请求"
+    }
+  ]
+}

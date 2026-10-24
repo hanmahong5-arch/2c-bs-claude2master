@@ -1,0 +1,107 @@
+{
+  "center": "用 GPT 生成 Blender 模型",
+  "branches": [
+    {
+      "label": "生成彩蛋图",
+      "detail": "用 ChatGPT Images 2.5 按提示词生成 Pluribus 主题法贝热彩蛋照片",
+      "children": [
+        "提示词要求先 research 再生成",
+        "作者评价首次尝试效果不差"
+      ]
+    },
+    {
+      "label": "转成 3D 模型",
+      "detail": "把图片贴进 Codex（GPT-6 Astra high），调用本地 Blender skill 建模",
+      "children": [
+        "耗时 17 分 51 秒",
+        "产出多个 .blend 文件"
+      ]
+    },
+    {
+      "label": "浏览器查看器",
+      "detail": ".blend URL Viewer 粘贴 URL 即可在浏览器渲染 .blend 文件",
+      "children": [
+        "支持 CORS 可访问文件或 GitHub 仓库链接",
+        "渲染网格、曲线、文本及材质灯光",
+        "支持轨道控制、线框模式、模型适配"
+      ]
+    },
+    {
+      "label": "技术背景",
+      "detail": "作者持续用 GPT-6 Astra 与 Blender 做实验，并把成果加入工具集",
+      "children": [
+        "查看器基于作者此前 vibe-coded 实验",
+        "读取 Blender 5.x 文件的相机位置"
+      ]
+    }
+  ],
+  "flow": [
+    "写提示词生成彩蛋图",
+    "把图片贴入 Codex",
+    "调用 Blender skill 建模",
+    "产出 .blend 文件",
+    "粘贴 URL 在浏览器查看"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "ChatGPT Images 2.5",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Blender",
+      "type": "product"
+    },
+    {
+      "name": ".blend URL Viewer",
+      "type": "product"
+    },
+    {
+      "name": "Blender skill",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": ".blend URL Viewer",
+      "label": "开发"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "ChatGPT Images 2.5",
+      "label": "使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "Codex",
+      "to": "GPT-6 Astra",
+      "label": "运行"
+    },
+    {
+      "from": "Codex",
+      "to": "Blender skill",
+      "label": "调用"
+    },
+    {
+      "from": ".blend URL Viewer",
+      "to": "Blender",
+      "label": "渲染"
+    }
+  ]
+}

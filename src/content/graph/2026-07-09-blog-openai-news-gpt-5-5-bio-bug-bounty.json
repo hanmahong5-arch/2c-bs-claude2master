@@ -1,0 +1,60 @@
+{
+  "center": "OpenAI悬赏检测GPT-5.5生物风险",
+  "branches": [
+    {
+      "label": "悬赏目标",
+      "detail": "寻找GPT-5.5在生物威胁方面的误用风险",
+      "children": [
+        "如生成病原体或毒素信息"
+      ]
+    },
+    {
+      "label": "参与与奖励",
+      "detail": "提交真实评估报告，最高奖励2.5万美元",
+      "children": [
+        "鼓励深入测试"
+      ]
+    },
+    {
+      "label": "行业影响",
+      "detail": "推动AI安全标准化，要求开发者主动验证模型潜在危害",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "生物风险",
+      "type": "concept"
+    },
+    {
+      "name": "AI安全",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.5",
+      "label": "悬赏检测"
+    },
+    {
+      "from": "GPT-5.5",
+      "to": "生物风险",
+      "label": "存在"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AI安全",
+      "label": "推动"
+    }
+  ]
+}

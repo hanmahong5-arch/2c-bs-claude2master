@@ -1,0 +1,86 @@
+{
+  "center": "OpenAI 模型接入 Oracle 云",
+  "branches": [
+    {
+      "label": "合作内容",
+      "detail": "OpenAI 与 Oracle Cloud Infrastructure 合作，企业可通过 OCI 访问 OpenAI 模型与 Codex",
+      "children": [
+        "覆盖 GPT 系列模型与 Codex",
+        "服务部署在 OCI 之上"
+      ]
+    },
+    {
+      "label": "复用云承诺",
+      "detail": "企业无需新签合同，直接用已有 Oracle 云承诺额度调用 OpenAI API",
+      "children": [
+        "降低采购复杂度",
+        "降低尝试与部署门槛"
+      ]
+    },
+    {
+      "label": "安全与治理",
+      "detail": "模型服务部署在 OCI，满足企业对数据安全、合规与治理的要求",
+      "children": [
+        "适合严格数据管控行业",
+        "提供可信基础设施选择"
+      ]
+    },
+    {
+      "label": "构建与部署",
+      "detail": "企业可基于该集成安全地构建并规模化部署 AI 驱动应用",
+      "children": [
+        "面向企业环境的 agent 开发",
+        "可处理敏感数据的合规平台"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Oracle Cloud Infrastructure",
+      "type": "product"
+    },
+    {
+      "name": "GPT",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI API",
+      "type": "product"
+    },
+    {
+      "name": "云承诺额度",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Oracle Cloud Infrastructure",
+      "label": "合作"
+    },
+    {
+      "from": "Oracle Cloud Infrastructure",
+      "to": "GPT",
+      "label": "提供访问"
+    },
+    {
+      "from": "Oracle Cloud Infrastructure",
+      "to": "Codex",
+      "label": "提供访问"
+    },
+    {
+      "from": "云承诺额度",
+      "to": "OpenAI API",
+      "label": "可调用"
+    }
+  ]
+}

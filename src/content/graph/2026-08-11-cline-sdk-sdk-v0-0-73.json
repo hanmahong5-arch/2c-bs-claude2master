@@ -1,0 +1,83 @@
+{
+  "center": "Cline SDK v0.0.73 更新",
+  "branches": [
+    {
+      "label": "Daemon 防重连",
+      "detail": "daemon 携带运行时构建指纹，升级后旧 daemon 被重启而非复用",
+      "children": [
+        "避免连接到过期代码",
+        "升级需强制重启 daemon"
+      ]
+    },
+    {
+      "label": "推理压缩修复",
+      "detail": "summarizer 不再硬编码 1024 token 上限，默认改为 4096",
+      "children": [
+        "尊重模型最大输出设置",
+        "空摘要时记录诊断日志"
+      ]
+    },
+    {
+      "label": "新增 Fable 5",
+      "detail": "Vertex 模型更新新增 Fable 5，价格未知",
+      "children": [
+        "自定义模型 ID 原样传递",
+        "路由到 Anthropic-on-Vertex"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "daemon",
+      "type": "concept"
+    },
+    {
+      "name": "summarizer",
+      "type": "concept"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Vertex",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic-on-Vertex",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "daemon",
+      "label": "修复重连"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "summarizer",
+      "label": "修复压缩"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "Fable 5",
+      "label": "新增支持"
+    },
+    {
+      "from": "Fable 5",
+      "to": "Vertex",
+      "label": "部署于"
+    },
+    {
+      "from": "Fable 5",
+      "to": "Anthropic-on-Vertex",
+      "label": "路由到"
+    }
+  ]
+}

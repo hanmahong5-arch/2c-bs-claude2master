@@ -1,0 +1,73 @@
+{
+  "center": "Cline v4.0.1 回滚修复回归",
+  "branches": [
+    {
+      "label": "回滚原因",
+      "detail": "4.0.0 版本出现回归问题，稳定版扩展回滚至 SDK 迁移前代码",
+      "children": [
+        "解决 4.0.0 中报告的回归问题"
+      ]
+    },
+    {
+      "label": "版本号策略",
+      "detail": "以更高版本号发布 3.89.2 扩展代码，让 4.0.0 用户能收到更新",
+      "children": [
+        "版本号管理需支持紧急回滚",
+        "保持兼容性"
+      ]
+    },
+    {
+      "label": "SDK 迁移继续",
+      "detail": "SDK 迁移工作继续在 main 分支上独立进行",
+      "children": [
+        "重大重构保持分支隔离",
+        "降低对稳定版的影响"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "SDK",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "main",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "VS Code",
+      "label": "扩展运行于"
+    },
+    {
+      "from": "Cline",
+      "to": "SDK",
+      "label": "迁移至"
+    },
+    {
+      "from": "Cline",
+      "to": "agent harness",
+      "label": "涉及设计"
+    },
+    {
+      "from": "SDK",
+      "to": "main",
+      "label": "迁移在"
+    }
+  ]
+}

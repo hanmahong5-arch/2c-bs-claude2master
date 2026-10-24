@@ -1,0 +1,80 @@
+{
+  "center": "GPT-5.6 构建指南",
+  "branches": [
+    {
+      "label": "模型选择策略",
+      "detail": "按任务复杂度选不同规模模型，避免过度使用大模型",
+      "children": [
+        "平衡成本与性能"
+      ]
+    },
+    {
+      "label": "Responses API",
+      "detail": "支持更灵活的代理工作流，简化多步骤任务编排",
+      "children": [
+        "提升开发效率"
+      ]
+    },
+    {
+      "label": "成本优化",
+      "detail": "通过智能路由和缓存机制降低 API 调用成本",
+      "children": [
+        "适合初创企业规模化部署"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "Responses API",
+      "type": "product"
+    },
+    {
+      "name": "智能路由",
+      "type": "technique"
+    },
+    {
+      "name": "缓存机制",
+      "type": "technique"
+    },
+    {
+      "name": "AI 代理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Responses API",
+      "label": "配套"
+    },
+    {
+      "from": "Responses API",
+      "to": "AI 代理",
+      "label": "支持构建"
+    },
+    {
+      "from": "智能路由",
+      "to": "GPT-5.6",
+      "label": "优化调用"
+    },
+    {
+      "from": "缓存机制",
+      "to": "GPT-5.6",
+      "label": "降低成本"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "center": "OpenAI 收购 Ona 强化 Codex",
+  "branches": [
+    {
+      "label": "收购事件",
+      "detail": "OpenAI 宣布收购 Ona，将其安全云执行与编排技术并入 Codex 生态",
+      "children": [
+        "2026 年 6 月 11 日公布",
+        "需监管批准，交割前两家独立运营",
+        "交割后 Ona 团队加入 OpenAI"
+      ]
+    },
+    {
+      "label": "Codex 现状",
+      "detail": "每周超 500 万人使用 Codex，较年初增长 400%",
+      "children": [
+        "从开发者工具扩展到更广泛知识工作",
+        "任务时长从分钟级延伸到数小时或数天"
+      ]
+    },
+    {
+      "label": "Ona 能力",
+      "detail": "Ona 提供安全、持久、客户可控的云执行环境",
+      "children": [
+        "已帮助 200 万开发者在云环境工作",
+        "支持代理访问工具、系统与上下文",
+        "客户自有云内运行，OpenAI 提供智能与编排"
+      ]
+    },
+    {
+      "label": "企业级价值",
+      "detail": "满足安全、治理与运营要求，便于生产环境部署代理",
+      "children": [
+        "控制运行位置、访问范围与凭证",
+        "活动日志与审查流程可控",
+        "笔记本关闭后代理仍持续工作"
+      ]
+    }
+  ],
+  "flow": [
+    "OpenAI 宣布收购 Ona",
+    "等待监管批准与交割",
+    "Ona 团队加入 Codex 团队",
+    "整合安全持久云执行能力",
+    "扩展 Codex 企业级部署"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Ona",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Johannes Landgraf",
+      "type": "person"
+    },
+    {
+      "name": "Thibault Sottiaux",
+      "type": "person"
+    },
+    {
+      "name": "云执行环境",
+      "type": "concept"
+    },
+    {
+      "name": "AI 代理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Ona",
+      "label": "收购"
+    },
+    {
+      "from": "Ona",
+      "to": "Codex",
+      "label": "技术并入"
+    },
+    {
+      "from": "Johannes Landgraf",
+      "to": "Ona",
+      "label": "联合创办并领导"
+    },
+    {
+      "from": "Thibault Sottiaux",
+      "to": "OpenAI",
+      "label": "任职"
+    },
+    {
+      "from": "Codex",
+      "to": "AI 代理",
+      "label": "支持"
+    },
+    {
+      "from": "Ona",
+      "to": "云执行环境",
+      "label": "提供"
+    }
+  ]
+}

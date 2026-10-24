@@ -1,0 +1,96 @@
+{
+  "center": "click-to-play Web Component",
+  "branches": [
+    {
+      "label": "组件作用",
+      "detail": "把 GIF 变成静态首帧加播放按钮，点击才加载 GIF",
+      "children": [
+        "避免大 GIF 在页面加载时被下载",
+        "用 img 显示首帧，a 链接指向 GIF"
+      ]
+    },
+    {
+      "label": "渐进增强",
+      "detail": "基于 Web Component 的 progressive enhancement 实现",
+      "children": [
+        "标签为 click-to-play",
+        "无 JS 时仍可点击链接查看 GIF"
+      ]
+    },
+    {
+      "label": "使用方式",
+      "detail": "包裹 a 与 img 的简单标记即可启用",
+      "children": [
+        "a href 指向 GIF URL",
+        "img src 指向首帧 URL"
+      ]
+    },
+    {
+      "label": "作者与场景",
+      "detail": "Simon Willison 为 Datasette 行编辑文章而建",
+      "children": [
+        "发布于 2026 年 6 月 17 日",
+        "示例展示 Datasette 新行编辑工具"
+      ]
+    }
+  ],
+  "flow": [
+    "写 click-to-play 标记",
+    "img 显示首帧",
+    "点击播放按钮",
+    "按需加载 GIF"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "click-to-play",
+      "type": "product"
+    },
+    {
+      "name": "Web Component",
+      "type": "technique"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "GIF",
+      "type": "concept"
+    },
+    {
+      "name": "progressive enhancement",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "click-to-play",
+      "label": "创建"
+    },
+    {
+      "from": "click-to-play",
+      "to": "Web Component",
+      "label": "基于"
+    },
+    {
+      "from": "click-to-play",
+      "to": "GIF",
+      "label": "按需加载"
+    },
+    {
+      "from": "click-to-play",
+      "to": "Datasette",
+      "label": "用于示例"
+    },
+    {
+      "from": "click-to-play",
+      "to": "progressive enhancement",
+      "label": "采用"
+    }
+  ]
+}

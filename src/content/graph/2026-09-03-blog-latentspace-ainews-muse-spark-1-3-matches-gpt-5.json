@@ -1,0 +1,112 @@
+{
+  "center": "Muse Spark 1.3 登顶前三",
+  "branches": [
+    {
+      "label": "Muse Spark 1.3 发布",
+      "detail": "Meta 新模型 AAII 排名全球第三，逼近 OpenAI 与 Anthropic 前沿模型",
+      "children": [
+        "Zuckerberg 称其为编码与 agentic 工作最大跃升",
+        "承诺即将开放权重",
+        "训练数据换 90%+ 折扣定价"
+      ]
+    },
+    {
+      "label": "斯坦福课程转向",
+      "detail": "斯坦福将 AI 原生软件工程正式化为学科，课程大幅重置",
+      "children": [
+        "Fall 2025 材料 85% 被替换",
+        "新增 agent skills、上下文工程、MCP portals",
+        "CS329Z 从零构建 AI Agent"
+      ]
+    },
+    {
+      "label": "模型架构讨论",
+      "detail": "Astra 循环 transformer 传闻被指非突破，仅为适度架构调整",
+      "children": [
+        "Nanbeige 4.2-3B 22 层复用两次等效 44 层",
+        "计算量约 2 倍，内存相近",
+        "Mixture-of-recursions 可自适应决定 token…"
+      ]
+    },
+    {
+      "label": "Agent 工具链进展",
+      "detail": "HarnessDev 以 harness 为中心评估 agent，效率纳入目标",
+      "children": [
+        "两阶段：弱种子构建 harness，再用下游反馈改进",
+        "在写作与 ML 实验上匹配或超越人工系统",
+        "技能检索可能对触发任务产生负面同任务效应"
+      ]
+    },
+    {
+      "label": "Gemini 3.8 Flash Cyber",
+      "detail": "Google 推出专用网络安全模型，保持 Flash 级速度与定价",
+      "children": [
+        "CyberGym 86.2%，CWE-Bench 补丁 47.2%",
+        "内部漏洞发现基准 20 种语言成功率 70%+",
+        "开发者抱怨 Google 工具链与封号风险"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Meta",
+      "type": "company"
+    },
+    {
+      "name": "Muse Spark 1.3",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6-Sol",
+      "type": "model"
+    },
+    {
+      "name": "Stanford",
+      "type": "company"
+    },
+    {
+      "name": "Gemini 3.8 Flash Cyber",
+      "type": "model"
+    },
+    {
+      "name": "HarnessDev",
+      "type": "technique"
+    },
+    {
+      "name": "Mark Zuckerberg",
+      "type": "person"
+    },
+    {
+      "name": "Astra",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Meta",
+      "to": "Muse Spark 1.3",
+      "label": "发布"
+    },
+    {
+      "from": "Muse Spark 1.3",
+      "to": "GPT-5.6-Sol",
+      "label": "比肩"
+    },
+    {
+      "from": "Stanford",
+      "to": "HarnessDev",
+      "label": "课程涉及"
+    },
+    {
+      "from": "Mark Zuckerberg",
+      "to": "Muse Spark 1.3",
+      "label": "宣布"
+    },
+    {
+      "from": "Gemini 3.8 Flash Cyber",
+      "to": "Meta",
+      "label": "竞品"
+    }
+  ]
+}

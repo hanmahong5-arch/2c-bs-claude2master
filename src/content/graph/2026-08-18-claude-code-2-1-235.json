@@ -1,0 +1,108 @@
+{
+  "center": "Claude Code v2.1.235 更新",
+  "branches": [
+    {
+      "label": "拼写检查",
+      "detail": "新增可选 spellcheck 设置，输入时下划线标出拼写错误",
+      "children": [
+        "支持 aspell/hunspell/ispell",
+        "便于发现提示词拼写问题"
+      ]
+    },
+    {
+      "label": "缓存修复",
+      "detail": "修复语言服务器断连重连导致提示词缓存整体失效的问题",
+      "children": [
+        "减少不必要重算",
+        "对依赖缓存的 agent 工作流更友好"
+      ]
+    },
+    {
+      "label": "权限对话框",
+      "detail": "修复 Shift+Tab 误批准编辑并授予全局权限的问题",
+      "children": [
+        "现在正确关闭字段",
+        "避免意外授权"
+      ]
+    },
+    {
+      "label": "Agent 工具提示",
+      "detail": "改进 Agent 工具不可用时的错误提示",
+      "children": [
+        "明确列出可用 agent",
+        "帮助定位配置问题"
+      ]
+    },
+    {
+      "label": "后台会话优化",
+      "detail": "优化后台云会话（如 /ultrareview）的内存和 CPU 占用",
+      "children": [
+        "不再重复扫描事件流",
+        "提升长时间运行资源效率"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "spellcheck",
+      "type": "concept"
+    },
+    {
+      "name": "aspell",
+      "type": "product"
+    },
+    {
+      "name": "hunspell",
+      "type": "product"
+    },
+    {
+      "name": "ispell",
+      "type": "product"
+    },
+    {
+      "name": "/ultrareview",
+      "type": "product"
+    },
+    {
+      "name": "Agent 工具",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "spellcheck",
+      "label": "新增"
+    },
+    {
+      "from": "spellcheck",
+      "to": "aspell",
+      "label": "支持"
+    },
+    {
+      "from": "spellcheck",
+      "to": "hunspell",
+      "label": "支持"
+    },
+    {
+      "from": "spellcheck",
+      "to": "ispell",
+      "label": "支持"
+    },
+    {
+      "from": "Claude Code",
+      "to": "/ultrareview",
+      "label": "优化"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Agent 工具",
+      "label": "改进提示"
+    }
+  ]
+}

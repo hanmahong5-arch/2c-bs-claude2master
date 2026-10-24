@@ -1,0 +1,112 @@
+{
+  "center": "三星全球部署 ChatGPT 与 Codex",
+  "branches": [
+    {
+      "label": "部署范围",
+      "detail": "覆盖韩国全体员工及全球 DX 部门员工",
+      "children": [
+        "OpenAI 迄今最大企业部署之一",
+        "韩国全员 + 全球 Device eXperience 员工"
+      ]
+    },
+    {
+      "label": "应用场景",
+      "detail": "横跨研发、制造、营销到企业职能",
+      "children": [
+        "ChatGPT 用于信息检索、文档、数据分析",
+        "Codex 用于写码、审查、调试与自动化"
+      ]
+    },
+    {
+      "label": "安全合规",
+      "detail": "ChatGPT Enterprise 提供企业级安全能力",
+      "children": [
+        "数据保护、用户与访问管理",
+        "符合公司安全政策与治理框架"
+      ]
+    },
+    {
+      "label": "Codex 增长",
+      "detail": "全球周活超 500 万，韩国增长迅猛",
+      "children": [
+        "韩国周活自 2026 年 2 月 1 日增长近 800%",
+        "非技术团队也用于内部工具与网站"
+      ]
+    },
+    {
+      "label": "合作扩展",
+      "detail": "从 AI 基础设施延伸到全员 AI 采用",
+      "children": [
+        "三星供应下一代 AI 所需内存半导体",
+        "首尔大学 4.7 万人用 ChatGPT Edu"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Samsung Electronics",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Enterprise",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Harrison Kim",
+      "type": "person"
+    },
+    {
+      "name": "Seoul National University",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Edu",
+      "type": "product"
+    },
+    {
+      "name": "Kakao",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Samsung Electronics",
+      "to": "ChatGPT Enterprise",
+      "label": "部署"
+    },
+    {
+      "from": "Samsung Electronics",
+      "to": "Codex",
+      "label": "部署"
+    },
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Enterprise",
+      "label": "提供"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "提供"
+    },
+    {
+      "from": "Samsung Electronics",
+      "to": "OpenAI",
+      "label": "合作"
+    },
+    {
+      "from": "Seoul National University",
+      "to": "ChatGPT Edu",
+      "label": "采用"
+    }
+  ]
+}

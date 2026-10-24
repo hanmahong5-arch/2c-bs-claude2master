@@ -1,0 +1,91 @@
+{
+  "center": "cline v3.86.2 修复文件提及与搜索",
+  "branches": [
+    {
+      "label": "修复文件提及",
+      "detail": "解决 VS Code 1.122+ 中 @ 文件提及失效问题",
+      "children": [
+        "@ 文件提及恢复正常"
+      ]
+    },
+    {
+      "label": "修复文件搜索",
+      "detail": "同一版本中文件搜索功能失效问题一并修复",
+      "children": [
+        "文件搜索恢复可用"
+      ]
+    },
+    {
+      "label": "适配新二进制布局",
+      "detail": "优先解析新版 @vscode/ripgrep-universal 跨平台二进制路径",
+      "children": [
+        "优先解析 @vscode/ripgrep-universal"
+      ]
+    },
+    {
+      "label": "保持向后兼容",
+      "detail": "新路径解析失败时回退到旧 ripgrep 路径",
+      "children": [
+        "回退旧 ripgrep 路径"
+      ]
+    }
+  ],
+  "flow": [
+    "解析新 ripgrep 路径",
+    "失败则回退旧路径",
+    "恢复提及与搜索"
+  ],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "@vscode/ripgrep-universal",
+      "type": "product"
+    },
+    {
+      "name": "ripgrep",
+      "type": "product"
+    },
+    {
+      "name": "文件提及",
+      "type": "concept"
+    },
+    {
+      "name": "文件搜索",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "VS Code",
+      "label": "适配"
+    },
+    {
+      "from": "cline",
+      "to": "@vscode/ripgrep-universal",
+      "label": "解析路径"
+    },
+    {
+      "from": "cline",
+      "to": "ripgrep",
+      "label": "回退兼容"
+    },
+    {
+      "from": "@vscode/ripgrep-universal",
+      "to": "文件搜索",
+      "label": "支撑"
+    },
+    {
+      "from": "文件提及",
+      "to": "文件搜索",
+      "label": "同版本修复"
+    }
+  ]
+}

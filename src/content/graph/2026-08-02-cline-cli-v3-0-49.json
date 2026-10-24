@@ -1,0 +1,80 @@
+{
+  "center": "Cline CLI v3.0.49 修复",
+  "branches": [
+    {
+      "label": "检查点与撤销",
+      "detail": "检查点恢复完整回退工作区，删除任务后新建的文件",
+      "children": [
+        "保留 .gitignore 路径，利于构建产物管理"
+      ]
+    },
+    {
+      "label": "Ollama 稳定性",
+      "detail": "响应启动超时从 30 秒延长至 5 分钟，并重试空响应",
+      "children": [
+        "适合本地大模型冷启动场景"
+      ]
+    },
+    {
+      "label": "Windows 兼容",
+      "detail": "修复 PowerShell 命令 UTF-8 传输，避免非 ASCII 命令失败",
+      "children": [
+        "对跨平台 harness 有参考价值"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "Ollama",
+      "type": "product"
+    },
+    {
+      "name": "PowerShell",
+      "type": "product"
+    },
+    {
+      "name": "Windows",
+      "type": "product"
+    },
+    {
+      "name": "检查点恢复",
+      "type": "concept"
+    },
+    {
+      "name": "UTF-8",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "Ollama",
+      "label": "增强稳定性"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "PowerShell",
+      "label": "修复传输"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "检查点恢复",
+      "label": "修复"
+    },
+    {
+      "from": "PowerShell",
+      "to": "Windows",
+      "label": "运行于"
+    },
+    {
+      "from": "PowerShell",
+      "to": "UTF-8",
+      "label": "使用编码"
+    }
+  ]
+}

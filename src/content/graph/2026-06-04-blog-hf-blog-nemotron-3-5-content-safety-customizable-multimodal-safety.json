@@ -1,0 +1,79 @@
+{
+  "center": "Nemotron 3.5 内容安全模型",
+  "branches": [
+    {
+      "label": "模型定位",
+      "detail": "NVIDIA 推出的可定制多模态内容安全模型",
+      "children": [
+        "4B 参数规模",
+        "支持图文输入"
+      ]
+    },
+    {
+      "label": "多模态能力",
+      "detail": "Image-Text-to-Text 架构，可处理图像与文本",
+      "children": [
+        "图文混合输入",
+        "面向企业 AI 场景"
+      ]
+    },
+    {
+      "label": "可定制性",
+      "detail": "企业可按自身需求定制安全策略",
+      "children": []
+    },
+    {
+      "label": "生态关联",
+      "detail": "与 Nemotron 3 Diarization、Magpie TTS 同属 NVIDIA 系列",
+      "children": [
+        "Nemotron 3 Diarization",
+        "Magpie TTS"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Nemotron 3.5 Content Safety",
+      "type": "model"
+    },
+    {
+      "name": "Nemotron 3 Diarization",
+      "type": "model"
+    },
+    {
+      "name": "Magpie TTS",
+      "type": "model"
+    },
+    {
+      "name": "多模态内容安全",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron 3.5 Content Safety",
+      "label": "推出"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron 3 Diarization",
+      "label": "推出"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Magpie TTS",
+      "label": "推出"
+    },
+    {
+      "from": "Nemotron 3.5 Content Safety",
+      "to": "多模态内容安全",
+      "label": "属于"
+    }
+  ]
+}

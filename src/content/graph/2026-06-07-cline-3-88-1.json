@@ -1,0 +1,65 @@
+{
+  "center": "cline v3.88.1 更新",
+  "branches": [
+    {
+      "label": "新增调试面板",
+      "detail": "在设置中为测试人员添加调试部分，便于问题诊断与反馈",
+      "children": [
+        "面向 Cline 测试人员",
+        "位于设置中"
+      ]
+    },
+    {
+      "label": "修复引导加载",
+      "detail": "将演练 Markdown 文件包含进 VS Code 扩展包，保证首次运行引导正常加载",
+      "children": [
+        "演练 Markdown 文件打包进扩展",
+        "解决首次运行引导加载问题"
+      ]
+    },
+    {
+      "label": "提升用户体验",
+      "detail": "修复引导加载后，改善新用户上手体验与产品稳定性",
+      "children": [
+        "新用户上手更顺畅",
+        "产品稳定性增强"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "调试面板",
+      "type": "concept"
+    },
+    {
+      "name": "引导加载",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "VS Code",
+      "label": "扩展运行于"
+    },
+    {
+      "from": "Cline",
+      "to": "调试面板",
+      "label": "新增"
+    },
+    {
+      "from": "Cline",
+      "to": "引导加载",
+      "label": "修复"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "center": "Interconnects 推出 Artifacts…",
+  "branches": [
+    {
+      "label": "Artifacts Hub",
+      "detail": "精选 Hugging Face 热门模型，展示推理、智能与采用度数据",
+      "children": [
+        "覆盖近两年 792 个模型",
+        "含推理 tokens、Intelligence Index、RAM 分数",
+        "与 Project VAIL 合作构建"
+      ]
+    },
+    {
+      "label": "Adoption Dashboard",
+      "detail": "每日更新的下载与衍生模型看板，按地域和组织划分",
+      "children": [
+        "突出中美差距",
+        "展示开放生态新兴玩家",
+        "基于 The ATOM Project 数据"
+      ]
+    },
+    {
+      "label": "数据来源",
+      "detail": "整合 Hugging Face、Open Router、Artificial Analysis 三方数据",
+      "children": [
+        "Hugging Face 提供下载与衍生数据",
+        "Open Router 提供推理 tokens",
+        "Artificial Analysis 提供智能指数"
+      ]
+    },
+    {
+      "label": "目标与背景",
+      "detail": "扩展开放模型生态的策展与度量，免费共享数据",
+      "children": [
+        "此前以模型发布回顾和月度汇总为主",
+        "帮助生态发现优势并成长",
+        "联系邮箱 mail@interconnects.ai"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Interconnects",
+      "type": "company"
+    },
+    {
+      "name": "Artifacts Hub",
+      "type": "product"
+    },
+    {
+      "name": "Adoption Dashboard",
+      "type": "product"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Open Router",
+      "type": "company"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Project VAIL",
+      "type": "company"
+    },
+    {
+      "name": "The ATOM Project",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Interconnects",
+      "to": "Artifacts Hub",
+      "label": "推出"
+    },
+    {
+      "from": "Interconnects",
+      "to": "Adoption Dashboard",
+      "label": "推出"
+    },
+    {
+      "from": "Artifacts Hub",
+      "to": "Hugging Face",
+      "label": "使用数据"
+    },
+    {
+      "from": "Artifacts Hub",
+      "to": "Open Router",
+      "label": "使用数据"
+    },
+    {
+      "from": "Artifacts Hub",
+      "to": "Artificial Analysis",
+      "label": "使用数据"
+    },
+    {
+      "from": "Artifacts Hub",
+      "to": "Project VAIL",
+      "label": "合作构建"
+    }
+  ]
+}

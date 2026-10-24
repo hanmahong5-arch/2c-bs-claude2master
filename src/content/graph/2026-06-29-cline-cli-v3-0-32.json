@@ -1,0 +1,64 @@
+{
+  "center": "Cline CLI v3.0.32 更新",
+  "branches": [
+    {
+      "label": "订阅流程优化",
+      "detail": "ClinePass 入门流程新增模型选择前中间步骤，降低认知负担",
+      "children": [
+        "分步引导减少信息过载",
+        "订阅界面变为可选中"
+      ]
+    },
+    {
+      "label": "UI 文案统一",
+      "detail": "统一 ClinePass 拼写，术语一致减少歧义",
+      "children": [
+        "交互元素可选性提升控制感"
+      ]
+    },
+    {
+      "label": "SDK 升级",
+      "detail": "集成 SDK v0.0.54，上下文压缩更精准，错误信息更明确",
+      "children": [
+        "提升上下文管理能力",
+        "改善调试体验"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "SDK v0.0.54",
+      "type": "product"
+    },
+    {
+      "name": "上下文压缩",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "ClinePass",
+      "label": "集成"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "SDK v0.0.54",
+      "label": "集成"
+    },
+    {
+      "from": "SDK v0.0.54",
+      "to": "上下文压缩",
+      "label": "优化"
+    }
+  ]
+}

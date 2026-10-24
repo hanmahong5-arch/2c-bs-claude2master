@@ -1,0 +1,56 @@
+{
+  "center": "OpenCode v1.17.7 修复要点",
+  "branches": [
+    {
+      "label": "插件请求路由",
+      "detail": "插件客户端复用活动服务器，不再假设默认本地端口",
+      "children": [
+        "请求正确路由",
+        "Agent 工具调用需精确管理服务器实例"
+      ]
+    },
+    {
+      "label": "会话路由修复",
+      "detail": "新会话路由限定在其草稿服务器内",
+      "children": [
+        "提示与状态指向目标工作区",
+        "会话与工作区需明确绑定"
+      ]
+    },
+    {
+      "label": "MCP 协议增强",
+      "detail": "MCP 服务器可接收当前工作区作为客户端根目录",
+      "children": [
+        "增强工作区上下文感知",
+        "集成时需传递正确根目录"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenCode",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenCode",
+      "to": "MCP",
+      "label": "修复协议"
+    },
+    {
+      "from": "Agent",
+      "to": "MCP",
+      "label": "集成工具"
+    }
+  ]
+}

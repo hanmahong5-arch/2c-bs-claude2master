@@ -1,0 +1,78 @@
+{
+  "center": "Hack Your Summer 暑期项目",
+  "branches": [
+    {
+      "label": "项目定位",
+      "detail": "面向学生与应届生的4周高强度生产冲刺，做出真实作品",
+      "children": [
+        "4周 high-velocity production sprint",
+        "面向本科生、研究生、应届毕业生"
+      ]
+    },
+    {
+      "label": "背景动因",
+      "detail": "回应美国大学生实习危机，实习名额大幅减少",
+      "children": [
+        "公司缩减招聘规模",
+        "团队无力带实习生"
+      ]
+    },
+    {
+      "label": "学生收获",
+      "detail": "学会选题、稳步推进、获得导师与同伴支持",
+      "children": [
+        "产出可公开展示的作品",
+        "可用于向未来雇主展示"
+      ]
+    },
+    {
+      "label": "报名信息",
+      "detail": "第二期免费，7月13日开营，7月8日截止申请",
+      "children": [
+        "第二 cohort 免费",
+        "同时招募志愿者担任导师"
+      ]
+    }
+  ],
+  "flow": [
+    "识别项目",
+    "稳步推进",
+    "导师同伴支持",
+    "产出公开作品"
+  ],
+  "entities": [
+    {
+      "name": "Hack Your Summer",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "DJ Patil",
+      "type": "person"
+    },
+    {
+      "name": "实习危机",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Hack Your Summer",
+      "label": "介绍"
+    },
+    {
+      "from": "DJ Patil",
+      "to": "Hack Your Summer",
+      "label": "告知"
+    },
+    {
+      "from": "Hack Your Summer",
+      "to": "实习危机",
+      "label": "回应"
+    }
+  ]
+}

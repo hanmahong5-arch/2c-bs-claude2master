@@ -1,0 +1,113 @@
+{
+  "center": "microgpt：200 行纯 Python 实现…",
+  "branches": [
+    {
+      "label": "项目定位",
+      "detail": "Andrej Karpathy 的艺术项目，单文件 200 行纯 Python 无依赖训练并推理 GPT",
+      "children": [
+        "包含数据集、分词器、autograd、GPT-2 架构…",
+        "是 micrograd、makemore、nanogpt 等项目的…",
+        "代码可完美分成 3 列展示"
+      ]
+    },
+    {
+      "label": "数据集",
+      "detail": "用 32,000 个名字作为文档，每行一个名字，随机打乱",
+      "children": [
+        "目标：学习名字统计模式并生成新名字",
+        "示例输出：kamon、ann、karai、jaire 等"
+      ]
+    },
+    {
+      "label": "分词器",
+      "detail": "最简字符级分词，每个唯一字符映射一个整数 id",
+      "children": [
+        "26 个小写字母 + 1 个 BOS 特殊 token，共 27…",
+        "每个文档两端加 BOS 包裹，如 [BOS, e, m, m…"
+      ]
+    },
+    {
+      "label": "Autograd",
+      "detail": "用单个 Value 类从零实现反向传播，基于链式法则",
+      "children": [
+        "Value 记录 data、grad、_children、_local_…",
+        "支持 add、mul、pow、log、exp、relu 等运算",
+        "backward() 通过拓扑排序反向累积梯度"
+      ]
+    }
+  ],
+  "flow": [
+    "加载名字数据集",
+    "字符级分词加 BOS",
+    "构建 Value 计算图",
+    "前向计算损失",
+    "反向传播求梯度",
+    "Adam 更新参数"
+  ],
+  "entities": [
+    {
+      "name": "Andrej Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "microgpt",
+      "type": "product"
+    },
+    {
+      "name": "GPT-2",
+      "type": "model"
+    },
+    {
+      "name": "micrograd",
+      "type": "product"
+    },
+    {
+      "name": "makemore",
+      "type": "product"
+    },
+    {
+      "name": "nanogpt",
+      "type": "product"
+    },
+    {
+      "name": "Adam",
+      "type": "technique"
+    },
+    {
+      "name": "autograd",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Andrej Karpathy",
+      "to": "microgpt",
+      "label": "创作"
+    },
+    {
+      "from": "microgpt",
+      "to": "GPT-2",
+      "label": "借鉴架构"
+    },
+    {
+      "from": "microgpt",
+      "to": "micrograd",
+      "label": "继承"
+    },
+    {
+      "from": "microgpt",
+      "to": "makemore",
+      "label": "继承"
+    },
+    {
+      "from": "microgpt",
+      "to": "nanogpt",
+      "label": "继承"
+    },
+    {
+      "from": "microgpt",
+      "to": "Adam",
+      "label": "使用"
+    }
+  ]
+}

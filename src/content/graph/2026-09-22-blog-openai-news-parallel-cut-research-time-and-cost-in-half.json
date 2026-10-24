@@ -1,0 +1,98 @@
+{
+  "center": "Parallel 用 GPT-6 Astra 提速降本",
+  "branches": [
+    {
+      "label": "核心成效",
+      "detail": "研究任务耗时与成本各降约一半，质量不变",
+      "children": [
+        "研究任务完成时间减少 50%",
+        "代码成本降低 50%",
+        "与旧模型相比研究质量相同"
+      ]
+    },
+    {
+      "label": "实测案例",
+      "detail": "跨四州六个月劳动力市场数据研究任务",
+      "children": [
+        "需搜索多网站并汇总为一份报告",
+        "GPT-6 Astra 用时为旧模型一半"
+      ]
+    },
+    {
+      "label": "效率提升",
+      "detail": "搜索更聚焦、步骤更少即可得到有用结果",
+      "children": [
+        "发出更有针对性的搜索查询",
+        "更专注最终任务并运用世界知识"
+      ]
+    },
+    {
+      "label": "多智能体分工",
+      "detail": "可将研究任务委派给子智能体并行执行",
+      "children": [
+        "子智能体同时处理特定研究任务",
+        "减少单一搜索序列的等待时间"
+      ]
+    }
+  ],
+  "flow": [
+    "提出复杂研究问题",
+    "智能体发起聚焦搜索",
+    "委派子智能体并行研究",
+    "汇总多源信息",
+    "生成研究报告"
+  ],
+  "entities": [
+    {
+      "name": "Parallel",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Devin Gupta",
+      "type": "person"
+    },
+    {
+      "name": "AI agents",
+      "type": "concept"
+    },
+    {
+      "name": "web search",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Parallel",
+      "to": "GPT-6 Astra",
+      "label": "采用"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "OpenAI",
+      "label": "由...开发"
+    },
+    {
+      "from": "Devin Gupta",
+      "to": "Parallel",
+      "label": "任职于"
+    },
+    {
+      "from": "Parallel",
+      "to": "AI agents",
+      "label": "构建"
+    },
+    {
+      "from": "AI agents",
+      "to": "web search",
+      "label": "结合"
+    }
+  ]
+}

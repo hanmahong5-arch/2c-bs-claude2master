@@ -1,0 +1,100 @@
+{
+  "center": "Morris：太平洋唯一北方塘鹅",
+  "branches": [
+    {
+      "label": "唯一太平洋个体",
+      "detail": "Morris 是整个太平洋已知唯一的北方塘鹅",
+      "children": [
+        "学名 Morus bassanus",
+        "北大西洋物种，本不该出现在太平洋"
+      ]
+    },
+    {
+      "label": "14年前现身",
+      "detail": "14 年前首次出现在旧金山外海的法拉隆群岛",
+      "children": [
+        "地点：Farallon Islands",
+        "此后定居 Pillar Point 港"
+      ]
+    },
+    {
+      "label": "当地明星",
+      "detail": "Morris 是当地名人，在 Pillar Point 港很容易被认出",
+      "children": [
+        "唯一白头黄冠的白色大鸟",
+        "常与黑色 Brandt's 鸬鹚同处"
+      ]
+    },
+    {
+      "label": "观测位置",
+      "detail": "常在港口标志牌附近活动，从商业码头尽头可见",
+      "children": [
+        "Pillar Point Harbor, CA, US",
+        "2026-08-15 记录到目击"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Morris",
+      "type": "concept"
+    },
+    {
+      "name": "Northern Gannet",
+      "type": "concept"
+    },
+    {
+      "name": "Morus bassanus",
+      "type": "concept"
+    },
+    {
+      "name": "Farallon Islands",
+      "type": "concept"
+    },
+    {
+      "name": "Pillar Point Harbor",
+      "type": "concept"
+    },
+    {
+      "name": "Brandt's cormorant",
+      "type": "concept"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Morris",
+      "to": "Northern Gannet",
+      "label": "属于"
+    },
+    {
+      "from": "Northern Gannet",
+      "to": "Morus bassanus",
+      "label": "学名为"
+    },
+    {
+      "from": "Morris",
+      "to": "Farallon Islands",
+      "label": "现身于"
+    },
+    {
+      "from": "Morris",
+      "to": "Pillar Point Harbor",
+      "label": "定居于"
+    },
+    {
+      "from": "Morris",
+      "to": "Brandt's cormorant",
+      "label": "常同处"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Morris",
+      "label": "记录"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "center": "Gemini CLI v0.54.0 修复",
+  "branches": [
+    {
+      "label": "会话状态修复",
+      "detail": "模型回退时轮换会话 ID，避免状态化 API 错误",
+      "children": [
+        "确保 agent 连续运行"
+      ]
+    },
+    {
+      "label": "安全增强",
+      "detail": "强制 Google 认证走 HTTPS，防止明文泄露",
+      "children": [
+        "增强凭证安全"
+      ]
+    },
+    {
+      "label": "上下文管理",
+      "detail": "禁用上下文管理时过滤思考片段，历史更干净",
+      "children": [
+        "减少 token 浪费"
+      ]
+    },
+    {
+      "label": "配置可靠性",
+      "detail": "文件钥匙链强制标签长度校验，防止无效标签",
+      "children": [
+        "提升配置可靠性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Gemini CLI",
+      "type": "product"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "HTTPS",
+      "type": "technique"
+    },
+    {
+      "name": "会话 ID",
+      "type": "concept"
+    },
+    {
+      "name": "上下文管理",
+      "type": "concept"
+    },
+    {
+      "name": "文件钥匙链",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemini CLI",
+      "to": "Google",
+      "label": "认证走"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "HTTPS",
+      "label": "强制使用"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "会话 ID",
+      "label": "轮换"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "上下文管理",
+      "label": "过滤"
+    },
+    {
+      "from": "Gemini CLI",
+      "to": "文件钥匙链",
+      "label": "校验"
+    }
+  ]
+}

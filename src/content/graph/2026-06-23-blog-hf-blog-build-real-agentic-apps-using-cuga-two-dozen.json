@@ -1,0 +1,83 @@
+{
+  "center": "IBM CUGA 构建 Agent 应用",
+  "branches": [
+    {
+      "label": "CUGA 是什么",
+      "detail": "IBM 推出的开源 agent 框架，主打轻量级 agent 应用构建",
+      "children": [
+        "面向开放模型与开放技术栈优化",
+        "定位 sovereign、open、self-learning"
+      ]
+    },
+    {
+      "label": "24 个示例应用",
+      "detail": "提供两打真实场景 agent 示例，覆盖实际可用场景",
+      "children": [
+        "示例针对开放模型优化",
+        "可直接参考搭建自己的 agent"
+      ]
+    },
+    {
+      "label": "开源与社区",
+      "detail": "代码托管在 GitHub，作者呼吁社区协作贡献",
+      "children": [
+        "仓库 cuga-project/cuga-agent",
+        "欢迎贡献以推进开放 agent 社区"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "IBM",
+      "type": "company"
+    },
+    {
+      "name": "CUGA",
+      "type": "product"
+    },
+    {
+      "name": "cuga-agent",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "product"
+    },
+    {
+      "name": "Ayhan Sebin",
+      "type": "person"
+    },
+    {
+      "name": "开放模型",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "IBM",
+      "to": "CUGA",
+      "label": "推出"
+    },
+    {
+      "from": "CUGA",
+      "to": "cuga-agent",
+      "label": "开源为"
+    },
+    {
+      "from": "cuga-agent",
+      "to": "GitHub",
+      "label": "托管于"
+    },
+    {
+      "from": "Ayhan Sebin",
+      "to": "CUGA",
+      "label": "介绍"
+    },
+    {
+      "from": "CUGA",
+      "to": "开放模型",
+      "label": "适配"
+    }
+  ]
+}

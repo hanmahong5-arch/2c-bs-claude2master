@@ -1,0 +1,119 @@
+{
+  "center": "Claude Code 移植 Moebius 到浏…",
+  "branches": [
+    {
+      "label": "项目成果",
+      "detail": "用 Claude Code 把 0.2B 图像修复模型 Moebius 移植到浏览器 WebGPU 运行",
+      "children": [
+        "演示地址 simonw.github.io/moebius-web/",
+        "全程未写一行代码，仅测试与提需求"
+      ]
+    },
+    {
+      "label": "技术路线",
+      "detail": "将 PyTorch 模型转为 ONNX，用 ONNX Runtime Web 跑在 WebGPU 后端",
+      "children": [
+        "Claude 建议用 ONNX Runtime Web 而非…",
+        "转换后 ONNX 权重 1.24GB 发布到 Hugging Face"
+      ]
+    },
+    {
+      "label": "工作流程",
+      "detail": "先让 Claude 做可行性研究，再让 Claude Code 在 /tmp 中开发并持续提交",
+      "children": [
+        "研究结果存为 research.md 供 Claude Code…",
+        "要求维护 notes.md 和 plan.md 记录进展"
+      ]
+    },
+    {
+      "label": "缓存优化",
+      "detail": "页面每次刷新重复下载 1.3GB 权重，用 CacheStorage API 解决",
+      "children": [
+        "参考 Whisper Web 的 caches.open(\"…",
+        "用子代理分析混淆的 JS 文件"
+      ]
+    },
+    {
+      "label": "经验反思",
+      "detail": "属于 vibe coding，对 WebGPU、ONNX 等底层技术学习有限",
+      "children": [
+        "最大收获是了解 Claude Opus 4.8 的能力边界",
+        "模型转换、发布、部署可全自动完成"
+      ]
+    }
+  ],
+  "flow": [
+    "Claude 可行性研究",
+    "克隆代码与权重",
+    "Claude Code 转 ONNX",
+    "WebGPU 浏览器运行",
+    "发布 Hugging Face",
+    "GitHub Pages 部署"
+  ],
+  "entities": [
+    {
+      "name": "Moebius",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "ONNX Runtime Web",
+      "type": "product"
+    },
+    {
+      "name": "WebGPU",
+      "type": "technique"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Transformers.js",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Moebius",
+      "label": "移植"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Claude Opus 4.8",
+      "label": "基于"
+    },
+    {
+      "from": "Moebius",
+      "to": "ONNX Runtime Web",
+      "label": "运行于"
+    },
+    {
+      "from": "ONNX Runtime Web",
+      "to": "WebGPU",
+      "label": "使用"
+    },
+    {
+      "from": "Moebius",
+      "to": "Hugging Face",
+      "label": "发布到"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Code",
+      "label": "使用"
+    }
+  ]
+}

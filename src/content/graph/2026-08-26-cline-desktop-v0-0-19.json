@@ -1,0 +1,64 @@
+{
+  "center": "Cline desktop v0.0.19 修复内存…",
+  "branches": [
+    {
+      "label": "内存暴涨修复",
+      "detail": "长会话后台进程内存膨胀，状态更新不再携带完整对话记录",
+      "children": [
+        "状态更新仅含状态、用量、模型、工作区、检查点",
+        "转录按需获取，避免多客户端同步复制完整对话"
+      ]
+    },
+    {
+      "label": "状态数据分离",
+      "detail": "对 harness 设计的启示：状态与数据分离，减少传输和内存占用",
+      "children": []
+    },
+    {
+      "label": "模型目录刷新",
+      "detail": "新增 7 个提供商，更新模型列表和定价",
+      "children": [
+        "harness 需动态适配提供商和默认模型变化"
+      ]
+    },
+    {
+      "label": "默认模型变更",
+      "detail": "多个提供商默认模型变更，如 ClinePass 改为 GLM 5.3",
+      "children": [
+        "未固定模型的用户将使用新默认",
+        "建议显式固定模型以避免意外切换"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline desktop",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "GLM 5.3",
+      "type": "model"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "ClinePass",
+      "to": "GLM 5.3",
+      "label": "默认改为"
+    },
+    {
+      "from": "Cline desktop",
+      "to": "harness",
+      "label": "设计启示"
+    }
+  ]
+}

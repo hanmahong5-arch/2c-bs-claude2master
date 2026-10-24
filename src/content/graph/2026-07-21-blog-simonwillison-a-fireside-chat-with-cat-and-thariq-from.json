@@ -1,0 +1,117 @@
+{
+  "center": "Anthropic 内部 AI 代理重写工程…",
+  "branches": [
+    {
+      "label": "Claude Tag 落地",
+      "detail": "Claude Tag 是 Slack 内多人协作代理，已承担团队 65% 产品 PR",
+      "children": [
+        "多人协作：频道内成员可共同参与 PR",
+        "主动模式：可监控 bug 并自动提 PR",
+        "团队记忆：记住频道偏好并复用"
+      ]
+    },
+    {
+      "label": "工程流程变化",
+      "detail": "从写详细 spec 转向快速构建，重写代码不再禁忌",
+      "children": [
+        "产品经理先写 spec 的流程被反转",
+        "重写代码现在被认为是好事",
+        "Bun 用 Rust 重写并已上线"
+      ]
+    },
+    {
+      "label": "模型与提示词",
+      "detail": "新模型下系统提示词大幅精简，示例和禁令不再必要",
+      "children": [
+        "Claude Code 系统提示词缩减 80%",
+        "Fable 5 或 Opus 4.8 无需加示例",
+        "禁止性列表会降低结果质量"
+      ]
+    },
+    {
+      "label": "内部实践",
+      "detail": "Anthropic 内部先试用新功能，再根据留存决定是否发布",
+      "children": [
+        "内部试用称为 ant fooding",
+        "关键改动仍人工审查",
+        "外层代码依赖自动审查"
+      ]
+    },
+    {
+      "label": "能力与建议",
+      "detail": "Fable 可编辑视频，建议用更大野心抵消焦虑",
+      "children": [
+        "Fable 编辑了自己的发布视频",
+        "Thariq 建议更雄心勃勃地接活",
+        "Anthropic 文化是公开内部工作"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Claude Tag",
+      "type": "product"
+    },
+    {
+      "name": "Fable",
+      "type": "model"
+    },
+    {
+      "name": "Cat Wu",
+      "type": "person"
+    },
+    {
+      "name": "Thariq Shihipar",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Bun",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cat Wu",
+      "to": "Anthropic",
+      "label": "任职于"
+    },
+    {
+      "from": "Thariq Shihipar",
+      "to": "Anthropic",
+      "label": "任职于"
+    },
+    {
+      "from": "Claude Tag",
+      "to": "Claude Code",
+      "label": "演进自"
+    },
+    {
+      "from": "Fable",
+      "to": "Anthropic",
+      "label": "由开发"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Cat Wu",
+      "label": "主持对话"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Thariq Shihipar",
+      "label": "主持对话"
+    }
+  ]
+}

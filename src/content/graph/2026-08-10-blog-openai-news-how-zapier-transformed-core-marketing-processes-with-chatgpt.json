@@ -1,0 +1,107 @@
+{
+  "center": "Zapier 用 ChatGPT Work 改造营销",
+  "branches": [
+    {
+      "label": "漏斗自动优化",
+      "detail": "自动 QA/QC 数千条线索，定位并修复漏斗流失问题",
+      "children": [
+        "每月可质检数千条线索",
+        "人工查一条流失线索需 35–45 分钟",
+        "每月交付七位数管道价值给销售"
+      ]
+    },
+    {
+      "label": "素材与报告自动化",
+      "detail": "几分钟内生成活动素材，并自动完成报告分析",
+      "children": [
+        "ChatGPT Work 进入各系统自动搭建活动",
+        "报告自动化，减少分析结果的时间"
+      ]
+    },
+    {
+      "label": "释放创意时间",
+      "detail": "需求生成团队更专注创意与策略，执行按需完成",
+      "children": [
+        "从构思到执行速度大幅缩短",
+        "工作可在 autopilot 上自动运行"
+      ]
+    },
+    {
+      "label": "未来方向",
+      "detail": "设置 always-on loops，构建共享大脑",
+      "children": [
+        "整合会议、通话录音、客户与市场洞察",
+        "人类成为 tastemakers"
+      ]
+    }
+  ],
+  "flow": [
+    "识别高流失线索",
+    "自动 QA/QC 分析",
+    "定位并修复问题",
+    "量化管道影响",
+    "交付销售并报告"
+  ],
+  "entities": [
+    {
+      "name": "Zapier",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Angela Ferrante",
+      "type": "person"
+    },
+    {
+      "name": "lead funnel",
+      "type": "concept"
+    },
+    {
+      "name": "QA/QC",
+      "type": "technique"
+    },
+    {
+      "name": "always-on loops",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Zapier",
+      "to": "ChatGPT Work",
+      "label": "使用"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "OpenAI",
+      "label": "属于"
+    },
+    {
+      "from": "Angela Ferrante",
+      "to": "Zapier",
+      "label": "任职于"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "lead funnel",
+      "label": "优化"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "QA/QC",
+      "label": "自动化"
+    },
+    {
+      "from": "Angela Ferrante",
+      "to": "always-on loops",
+      "label": "提出"
+    }
+  ]
+}

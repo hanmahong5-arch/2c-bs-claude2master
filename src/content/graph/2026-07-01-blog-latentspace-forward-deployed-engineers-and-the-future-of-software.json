@@ -1,0 +1,118 @@
+{
+  "center": "Forward Deployed Engineer 定…",
+  "branches": [
+    {
+      "label": "FDE 靠问责定义",
+      "detail": "Meurer 认为 FDE 缺乏统一定义，更应由对客户的问责而非技能组合来界定",
+      "children": [
+        "技能范围过宽，几乎变得无意义",
+        "问责本身带来力量"
+      ]
+    },
+    {
+      "label": "Sierra 用 agent engineer",
+      "detail": "Sierra 刻意不用 FDE，改称 agent engineer，强调技术工作形态而非只讲客户痴迷",
+      "children": [
+        "Meurer 领导 120+ 工程师团队",
+        "agent engineering 是 FDE 的子集或邻近领域"
+      ]
+    },
+    {
+      "label": "工作重心在编排层",
+      "detail": "客户定制工作多发生在编排层而非模型本身，agent 是模型的编排星座",
+      "children": [
+        "集成低延迟语音、聊天、邮件 agent",
+        "需数据集成能力，也需品味与拟人感",
+        "帮助客户应用内部知识与上下文"
+      ]
+    },
+    {
+      "label": "定制与复用混合",
+      "detail": "每个 agent 围绕客户 API、系统、SOP、品牌与语气定制，部分能力可复用",
+      "children": [
+        "知识库问答是较通用问题",
+        "大型组织最快 40–60 天上线",
+        "金融、医疗、旅游、零售有行业专家"
+      ]
+    },
+    {
+      "label": "产品与 FDE 融合",
+      "detail": "代码变便宜后，产品工程与 FDE 在某些方面开始收敛",
+      "children": [
+        "产品工程师应接触客户",
+        "FDE 应参与构建产品",
+        "客服需一致流程，非每次重新推理"
+      ]
+    }
+  ],
+  "flow": [
+    "与客户做 discovery",
+    "找难题与业务影响交集",
+    "集成客户系统与模型",
+    "在编排层定制 agent",
+    "按品牌语气调优",
+    "进入发布与变更管理"
+  ],
+  "entities": [
+    {
+      "name": "Sierra",
+      "type": "company"
+    },
+    {
+      "name": "Natalie Meurer",
+      "type": "person"
+    },
+    {
+      "name": "Palantir",
+      "type": "company"
+    },
+    {
+      "name": "Forward Deployed Engineer",
+      "type": "concept"
+    },
+    {
+      "name": "agent engineer",
+      "type": "concept"
+    },
+    {
+      "name": "AI Engineer World's Fair",
+      "type": "concept"
+    },
+    {
+      "name": "Latent Space",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Natalie Meurer",
+      "to": "Sierra",
+      "label": "任职于"
+    },
+    {
+      "from": "Natalie Meurer",
+      "to": "Palantir",
+      "label": "曾任职"
+    },
+    {
+      "from": "Sierra",
+      "to": "agent engineer",
+      "label": "定义角色"
+    },
+    {
+      "from": "agent engineer",
+      "to": "Forward Deployed Engineer",
+      "label": "属于子集"
+    },
+    {
+      "from": "Natalie Meurer",
+      "to": "AI Engineer World's Fair",
+      "label": "演讲于"
+    },
+    {
+      "from": "Latent Space",
+      "to": "Natalie Meurer",
+      "label": "采访"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "center": "视频智能体是下一代方向",
+  "branches": [
+    {
+      "label": "视频智能来自LLM",
+      "detail": "视频模型智能主要来自LLM，而非视频数据训练",
+      "children": [
+        "下一代Sora是视频智能体",
+        "语言模型解锁更好视频生成"
+      ]
+    },
+    {
+      "label": "Grok Imagine",
+      "detail": "xAI小团队3个月从零构建多模态视频模型",
+      "children": [
+        "720P、视频编辑、更好音频",
+        "0.9版支持大规模音视频生成",
+        "Agent Mode在无限画布上规划生成编辑迭代"
+      ]
+    },
+    {
+      "label": "视频智能体路径",
+      "detail": "类比AI编程：从单次输出转向多轮规划与编排",
+      "children": [
+        "规划→生成→编辑→批判→迭代",
+        "Grok Imagine Agent自动迭代",
+        "视频智能体是明年趋势"
+      ]
+    },
+    {
+      "label": "技术栈与成本",
+      "detail": "VAE、扩散Transformer、音视频对齐、推理加速",
+      "children": [
+        "步蒸馏与一致性模型加速推理",
+        "音视频对齐比文本视频更难",
+        "存储、出口、GPU小时是隐藏成本"
+      ]
+    },
+    {
+      "label": "未来界面",
+      "detail": "生成式UI可能取代HTML/CSS，视频模型成为AI前端",
+      "children": [
+        "Flipbook与Neural OS",
+        "世界模型需实时、交互、长时程",
+        "从用户意图直接到像素"
+      ]
+    }
+  ],
+  "flow": [
+    "规划任务",
+    "生成视频",
+    "编辑修改",
+    "批判评估",
+    "迭代优化"
+  ],
+  "entities": [
+    {
+      "name": "Ethan He",
+      "type": "person"
+    },
+    {
+      "name": "xAI",
+      "type": "company"
+    },
+    {
+      "name": "Grok Imagine",
+      "type": "product"
+    },
+    {
+      "name": "NVIDIA Cosmos",
+      "type": "model"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "视频智能体",
+      "type": "concept"
+    },
+    {
+      "name": "Flipbook",
+      "type": "product"
+    },
+    {
+      "name": "VAE",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Ethan He",
+      "to": "xAI",
+      "label": "任职于"
+    },
+    {
+      "from": "Ethan He",
+      "to": "Grok Imagine",
+      "label": "领导构建"
+    },
+    {
+      "from": "Ethan He",
+      "to": "NVIDIA Cosmos",
+      "label": "曾负责"
+    },
+    {
+      "from": "Grok Imagine",
+      "to": "xAI",
+      "label": "属于"
+    },
+    {
+      "from": "视频智能体",
+      "to": "LLM",
+      "label": "智能来自"
+    },
+    {
+      "from": "Grok Imagine",
+      "to": "视频智能体",
+      "label": "演进为"
+    }
+  ]
+}

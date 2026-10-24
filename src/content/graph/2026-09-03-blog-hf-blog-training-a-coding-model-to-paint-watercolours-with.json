@@ -1,0 +1,75 @@
+{
+  "center": "用TRL训练编码模型画水彩",
+  "branches": [
+    {
+      "label": "训练目标",
+      "detail": "让编码模型学会生成水彩画风格图像，探索多模态生成新路径",
+      "children": [
+        "结合TRL与OpenEnv",
+        "面向图像生成任务"
+      ]
+    },
+    {
+      "label": "技术栈",
+      "detail": "使用TRL强化学习框架与OpenEnv环境进行训练",
+      "children": [
+        "TRL",
+        "OpenEnv"
+      ]
+    },
+    {
+      "label": "相关模型",
+      "detail": "文章提及多个Image-Text-to-Text与Text Generation模型",
+      "children": [
+        "80B、31B、125B、36B、2.8T等规模",
+        "753B文本生成模型"
+      ]
+    },
+    {
+      "label": "社区反馈",
+      "detail": "文章获得71个赞，评论区有正面评价",
+      "children": [
+        "blakegger评论great job"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "TRL",
+      "type": "technique"
+    },
+    {
+      "name": "OpenEnv",
+      "type": "product"
+    },
+    {
+      "name": "blakegger",
+      "type": "person"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "GRPO",
+      "type": "technique"
+    },
+    {
+      "name": "LoRA",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "TRL",
+      "to": "OpenEnv",
+      "label": "结合使用"
+    },
+    {
+      "from": "blakegger",
+      "to": "TRL",
+      "label": "评论"
+    }
+  ]
+}

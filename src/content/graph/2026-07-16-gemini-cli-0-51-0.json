@@ -1,0 +1,78 @@
+{
+  "center": "gemini-cli v0.51.0 安全加固",
+  "branches": [
+    {
+      "label": "安全修复",
+      "detail": "敏感路径黑名单改为大小写不敏感，并修复 VSCode HITL 漏洞",
+      "children": [
+        "路径过滤更严格，防绕过攻击",
+        "修复 VSCode HITL 漏洞"
+      ]
+    },
+    {
+      "label": "沙箱加固",
+      "detail": "macOS 沙箱将 ~/.gitconfig 设为只读，防配置篡改",
+      "children": [
+        "限制 agent 环境副作用",
+        "提升隔离性"
+      ]
+    },
+    {
+      "label": "核心修复",
+      "detail": "保留现代模型的字符串转义序列，清除历史中的思维泄漏",
+      "children": [
+        "确保 agent 输出准确",
+        "避免内部推理泄露"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "VSCode",
+      "type": "product"
+    },
+    {
+      "name": "HITL",
+      "type": "concept"
+    },
+    {
+      "name": "macOS",
+      "type": "product"
+    },
+    {
+      "name": "~/.gitconfig",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "gemini-cli",
+      "to": "VSCode",
+      "label": "修复漏洞"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "macOS",
+      "label": "沙箱加固"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "agent",
+      "label": "提升可靠性"
+    },
+    {
+      "from": "macOS",
+      "to": "~/.gitconfig",
+      "label": "设为只读"
+    }
+  ]
+}

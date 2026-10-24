@@ -1,0 +1,58 @@
+{
+  "center": "Claude Code v2.1.150 更新",
+  "branches": [
+    {
+      "label": "更新内容",
+      "detail": "本次更新只做内部基础设施改进，没有面向用户的新功能",
+      "children": [
+        "版本号 v2.1.150",
+        "发布方 anthropics/claude-code"
+      ]
+    },
+    {
+      "label": "设计含义",
+      "detail": "开发重点转向强化底层架构，为更复杂的 Agent 任务提供可靠基础",
+      "children": [
+        "支撑未来复杂 Agent 任务"
+      ]
+    },
+    {
+      "label": "稳定性价值",
+      "detail": "稳定基础设施是可扩展、高可用 Agent 系统的先决条件",
+      "children": [
+        "更新不显眼但至关重要"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Agent Harness",
+      "type": "concept"
+    },
+    {
+      "name": "Agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Agent Harness",
+      "label": "支撑设计"
+    }
+  ]
+}

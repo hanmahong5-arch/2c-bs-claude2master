@@ -1,0 +1,77 @@
+{
+  "center": "Goose v1.41 新增 60+ 功能",
+  "branches": [
+    {
+      "label": "模型生态扩展",
+      "detail": "新增 20+ 提供商，agent 可接入更多模型",
+      "children": [
+        "iFlytek Spark",
+        "Astron MaaS",
+        "Fireworks AI"
+      ]
+    },
+    {
+      "label": "交互与可编程性",
+      "detail": "新增会话标志、斜杠命令、钩子与全局提示",
+      "children": [
+        "--edit 会话标志",
+        "/status 斜杠命令",
+        "钩子系统与全局提示加载"
+      ]
+    },
+    {
+      "label": "ACP 改进",
+      "detail": "提升 agent 通信安全性与灵活性",
+      "children": [
+        "支持 TLS",
+        "思考力度配置",
+        "工具暴露与会话摘要"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "iFlytek Spark",
+      "type": "model"
+    },
+    {
+      "name": "Astron MaaS",
+      "type": "product"
+    },
+    {
+      "name": "Fireworks AI",
+      "type": "company"
+    },
+    {
+      "name": "ACP",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "iFlytek Spark",
+      "label": "接入"
+    },
+    {
+      "from": "Goose",
+      "to": "Astron MaaS",
+      "label": "接入"
+    },
+    {
+      "from": "Goose",
+      "to": "Fireworks AI",
+      "label": "接入"
+    },
+    {
+      "from": "Goose",
+      "to": "ACP",
+      "label": "改进"
+    }
+  ]
+}

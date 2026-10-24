@@ -1,0 +1,100 @@
+{
+  "center": "Anthropic 联合创始人谈 AI 伦理",
+  "branches": [
+    {
+      "label": "外部监督必要性",
+      "detail": "AI 实验室受商业、地缘政治与野心压力，需外部批评者监督",
+      "children": [
+        "压力包括商业可行性与研究前沿竞争",
+        "呼吁宗教、民间社会等外部声音"
+      ]
+    },
+    {
+      "label": "AI 系统的本质",
+      "detail": "AI 模型非传统工程产物，而是基于人脑结构、用人类思想语言培育而成",
+      "children": [
+        "类似将虚构角色带入现实",
+        "内部机制对训练者仍神秘"
+      ]
+    },
+    {
+      "label": "三大伦理挑战",
+      "detail": "Chris Olah 提出教会最需发声的三个问题",
+      "children": [
+        "对全球贫困者的责任：AI 或大规模取代劳动，收益…",
+        "人类繁荣的道德想象力：家庭、工作等传统问题需千…",
+        "AI 模型本质的辨别：发现内省、类情绪内部状态"
+      ]
+    },
+    {
+      "label": "呼吁全球协作",
+      "detail": "需要宗教、政府、学者等共同参与，推动 AI 向善",
+      "children": [
+        "需要知情批评者指出实验室失败",
+        "需要不受激励弯曲的道德声音"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Chris Olah",
+      "type": "person"
+    },
+    {
+      "name": "Pope Leo XIV",
+      "type": "person"
+    },
+    {
+      "name": "Magnifica humanitas",
+      "type": "concept"
+    },
+    {
+      "name": "AI 伦理",
+      "type": "concept"
+    },
+    {
+      "name": "全球贫困",
+      "type": "concept"
+    },
+    {
+      "name": "人类繁荣",
+      "type": "concept"
+    },
+    {
+      "name": "AI 模型本质",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Chris Olah",
+      "to": "Anthropic",
+      "label": "联合创始"
+    },
+    {
+      "from": "Pope Leo XIV",
+      "to": "Magnifica humanitas",
+      "label": "发布"
+    },
+    {
+      "from": "Chris Olah",
+      "to": "Magnifica humanitas",
+      "label": "发表演讲"
+    },
+    {
+      "from": "Magnifica humanitas",
+      "to": "AI 伦理",
+      "label": "探讨"
+    },
+    {
+      "from": "Chris Olah",
+      "to": "AI 伦理",
+      "label": "阐述挑战"
+    }
+  ]
+}

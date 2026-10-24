@@ -1,0 +1,123 @@
+{
+  "center": "OpenClaw Agent 运行时契约",
+  "branches": [
+    {
+      "label": "工作区契约",
+      "detail": "每个 agent 只有一个 workspace 目录，作为工具与上下文的唯一 cwd",
+      "children": [
+        "配置项 agents.defaults.workspace 或…",
+        "沙箱开启后非主会话可用…",
+        "openclaw setup 可初始化工作区文件"
+      ]
+    },
+    {
+      "label": "引导文件注入",
+      "detail": "新会话首轮把工作区内用户可编辑文件注入系统提示的 Project Context",
+      "children": [
+        "AGENTS.md 指令与记忆、SOUL.md 人格…",
+        "USER.md 用户画像、MEMORY.md 长期记忆（存在…",
+        "空文件跳过，大文件截断，缺失文件注入 missing…"
+      ]
+    },
+    {
+      "label": "BOOTSTRAP 仪式",
+      "detail": "BOOTSTRAP.md 仅全新工作区创建，完成首次仪式后删除且不重建",
+      "children": [
+        "工作区状态与 attestation 存入…",
+        "工作区被抹除时启动拒绝静默重建 BOOTSTRAP.md",
+        "skipBootstrap: true 可完全禁用引导文件创建"
+      ]
+    },
+    {
+      "label": "内置工具与技能",
+      "detail": "核心工具 read/exec/edit/write 始终可用，受工具策略约束",
+      "children": [
+        "apply_patch 对 OpenAI 模型默认开启，由…",
+        "AGENTS.md 的 ## Tools 段只指导用法，不决定…",
+        "技能按工作区、项目、个人、托管、内置顺序加载"
+      ]
+    },
+    {
+      "label": "会话与流式",
+      "detail": "会话行存于每 agent 的 SQLite，运行时支持流中转向与块流式",
+      "children": [
+        "会话库路径 agents/<agentId>/agent/…",
+        "默认 /queue steer，另有 followup、collect…",
+        "块流式默认关闭，块大小 800-1200 字符"
+      ]
+    }
+  ],
+  "flow": [
+    "配置 workspace 路径",
+    "openclaw setup 初始化文件",
+    "首轮注入引导文件",
+    "完成 BOOTSTRAP 仪式并删除",
+    "状态写入 SQLite"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "concept"
+    },
+    {
+      "name": "SOUL.md",
+      "type": "concept"
+    },
+    {
+      "name": "BOOTSTRAP.md",
+      "type": "concept"
+    },
+    {
+      "name": "MEMORY.md",
+      "type": "concept"
+    },
+    {
+      "name": "SQLite",
+      "type": "technique"
+    },
+    {
+      "name": "apply_patch",
+      "type": "technique"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "AGENTS.md",
+      "label": "注入"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "SOUL.md",
+      "label": "注入"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "BOOTSTRAP.md",
+      "label": "创建"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "MEMORY.md",
+      "label": "注入"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "SQLite",
+      "label": "存储状态"
+    },
+    {
+      "from": "apply_patch",
+      "to": "OpenAI",
+      "label": "默认开启"
+    }
+  ]
+}

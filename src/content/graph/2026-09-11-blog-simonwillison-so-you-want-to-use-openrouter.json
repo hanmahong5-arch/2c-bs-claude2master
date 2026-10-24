@@ -1,0 +1,83 @@
+{
+  "center": "OpenRouter 自动路由的隐患",
+  "branches": [
+    {
+      "label": "卖点与风险",
+      "detail": "OpenRouter 主打自动回退与选最省钱后端，但同一端点行为可能不一致",
+      "children": [
+        "单一 API 端点即可调用模型并路由到最优后端",
+        "Mohamed Moustafa 指出这会带来一系列问题"
+      ]
+    },
+    {
+      "label": "行为不一致",
+      "detail": "不同提供商使用不同服务软件、优化与设置，导致同一模型表现不同",
+      "children": [
+        "部分提供商对视觉模型缺少视觉能力",
+        "reasoning effort 选项的处理方式也可能不同"
+      ]
+    },
+    {
+      "label": "如何控制路由",
+      "detail": "可用 provider.only 指定提供商，用 /endpoints 查询可用列表",
+      "children": [
+        "provider.only 选项控制路由到哪个提供商",
+        "/endpoints 返回某模型 ID 的可用提供商列表"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Mohamed Moustafa",
+      "type": "person"
+    },
+    {
+      "name": "provider.only",
+      "type": "technique"
+    },
+    {
+      "name": "/endpoints",
+      "type": "technique"
+    },
+    {
+      "name": "自动路由",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "OpenRouter",
+      "label": "撰文讨论"
+    },
+    {
+      "from": "Mohamed Moustafa",
+      "to": "OpenRouter",
+      "label": "指出问题"
+    },
+    {
+      "from": "provider.only",
+      "to": "OpenRouter",
+      "label": "控制路由"
+    },
+    {
+      "from": "/endpoints",
+      "to": "OpenRouter",
+      "label": "查询提供商"
+    },
+    {
+      "from": "自动路由",
+      "to": "OpenRouter",
+      "label": "属于"
+    }
+  ]
+}

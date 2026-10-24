@@ -1,0 +1,124 @@
+{
+  "center": "OpenClaw Models CLI 模型选择与…",
+  "branches": [
+    {
+      "label": "选择顺序",
+      "detail": "先主模型，再按序回退，最后在提供商内部轮换认证配置",
+      "children": [
+        "主模型：agents.defaults.model.primary",
+        "回退：agents.defaults.model.fallbacks 按…",
+        "认证故障切换发生在同一提供商内部，先于切换回退…"
+      ]
+    },
+    {
+      "label": "回退严格性",
+      "detail": "同一 provider/model 因来源不同行为不同，用户手选最严格",
+      "children": [
+        "用户会话选择：精确且严格，不可达则运行显式失败",
+        "自动回退：临时恢复态，定期重探主模型并清除",
+        "原生 agent 主模型：除非提供 fallbacks，否则…"
+      ]
+    },
+    {
+      "label": "专用模型",
+      "detail": "utility、decision、image、pdf、media 各有独立配置键",
+      "children": [
+        "utilityModel 用于标题、进度叙述等短任务",
+        "decisionModel 供插件做选择、评分、布尔概率",
+        "imageModel 仅当主模型不接受图片时启用"
+      ]
+    },
+    {
+      "label": "运行时与计费",
+      "detail": "模型引用只选提供商和模型，不决定底层 agent 运行时",
+      "children": [
+        "openai/* 前缀本身从不选择 Codex",
+        "github-copilot/* 需显式选择外部运行时插件",
+        "运行时选择不影响计费，API key 与订阅凭证保持…"
+      ]
+    },
+    {
+      "label": "策略与迁移",
+      "detail": "modelPolicy.allow 白名单控制可覆盖模型，旧配置由 doctor 修复",
+      "children": [
+        "支持精确引用与 provider/* 尾部通配",
+        "v2026.8.1 引入显式 modelPolicy.allow 限制",
+        "openclaw doctor --fix 迁移旧 model map…"
+      ]
+    }
+  ],
+  "flow": [
+    "读取主模型配置",
+    "按序尝试回退模型",
+    "提供商内轮换认证配置",
+    "进入自动回退恢复态",
+    "定期重探原主模型",
+    "恢复后清除自动选择"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Models CLI",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Copilot",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "modelPolicy.allow",
+      "type": "concept"
+    },
+    {
+      "name": "utilityModel",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Models CLI",
+      "label": "提供"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Codex",
+      "label": "可选运行时"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "GitHub Copilot",
+      "label": "显式接入"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "modelPolicy.allow",
+      "label": "使用白名单"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "utilityModel",
+      "label": "配置专用模型"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Anthropic",
+      "label": "并列提供商"
+    }
+  ]
+}

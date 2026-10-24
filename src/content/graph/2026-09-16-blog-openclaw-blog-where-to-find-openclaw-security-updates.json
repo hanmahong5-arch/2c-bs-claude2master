@@ -1,0 +1,103 @@
+{
+  "center": "OpenClaw 安全更新索引页",
+  "branches": [
+    {
+      "label": "安全页面发布",
+      "detail": "OpenClaw 上线安全页，汇总状态、修复与上报渠道",
+      "children": [
+        "整合 GitHub、文档、博客与公告信息",
+        "展示当前安全状态与活跃公告",
+        "由 NVIDIA、腾讯安全工程师参与维护"
+      ]
+    },
+    {
+      "label": "漏洞数据",
+      "detail": "自 1 月以来发布 722 个修复，14 个确认严重漏洞",
+      "children": [
+        "14 个严重漏洞均已修复并披露",
+        "覆盖网关认证、沙箱、插件等模块"
+      ]
+    },
+    {
+      "label": "持续安全工作",
+      "detail": "ClawHub 技能扫描、安装拦截、文件系统与网络管控",
+      "children": [
+        "恶意或隔离技能安装拦截",
+        "命令链检查与网络出口控制",
+        "基于历史公告的回归测试"
+      ]
+    },
+    {
+      "label": "上报与公开数据",
+      "detail": "明确漏洞上报流程，并公开 67,000+ 技能扫描数据集",
+      "children": [
+        "说明有效报告标准与处理流程",
+        "公开 ClawHub 技能扫描数据集",
+        "包含不同扫描器评估研究"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Tencent",
+      "type": "company"
+    },
+    {
+      "name": "ClawHub",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "product"
+    },
+    {
+      "name": "漏洞上报流程",
+      "type": "concept"
+    },
+    {
+      "name": "技能扫描",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "OpenClaw",
+      "label": "参与维护"
+    },
+    {
+      "from": "Tencent",
+      "to": "OpenClaw",
+      "label": "参与维护"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "ClawHub",
+      "label": "扫描技能"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "GitHub",
+      "label": "信息整合"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "漏洞上报流程",
+      "label": "提供"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "技能扫描",
+      "label": "实施"
+    }
+  ]
+}

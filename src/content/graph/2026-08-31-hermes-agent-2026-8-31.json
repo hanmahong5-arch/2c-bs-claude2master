@@ -1,0 +1,77 @@
+{
+  "center": "Hermes Agent 0.21.0 更新",
+  "branches": [
+    {
+      "label": "Bot Mode 内置",
+      "detail": "多智能体协作变成内置社交网络，从管道变为团队聊天",
+      "children": [
+        "每个 agent 有名字、头像和群聊",
+        "支持 @提及",
+        "需持久化 agent 身份与群组会话"
+      ]
+    },
+    {
+      "label": "Cron 记忆",
+      "detail": "定时任务有持久记忆和 notepad，支持连续性传递",
+      "children": [
+        "continuity=true 传递上次输出",
+        "monitor 模式无变化时跳过 LLM",
+        "调度需状态持久化与去重"
+      ]
+    },
+    {
+      "label": "实时子代理编排",
+      "detail": "delegate_task 支持列出、中途修正、提前停止并保留部分结果",
+      "children": [
+        "默认迭代 250 次",
+        "并发 10",
+        "需细粒度任务控制与结果回收"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "Bot Mode",
+      "type": "concept"
+    },
+    {
+      "name": "Cron",
+      "type": "concept"
+    },
+    {
+      "name": "delegate_task",
+      "type": "technique"
+    },
+    {
+      "name": "LLM",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "Bot Mode",
+      "label": "内置"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "Cron",
+      "label": "增强"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "delegate_task",
+      "label": "支持"
+    },
+    {
+      "from": "Cron",
+      "to": "LLM",
+      "label": "可跳过"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "center": "opencode v1.18.23 修复",
+  "branches": [
+    {
+      "label": "网关路由修复",
+      "detail": "Cloudflare AI Gateway 对第三方提供商的路由已修复",
+      "children": [
+        "非 Workers 模型可通过 REST API 正常工作"
+      ]
+    },
+    {
+      "label": "Anthropic 兼容",
+      "detail": "修复 Anthropic 模型经网关时的模型 ID 格式问题",
+      "children": [
+        "点号模型 ID 转换为连字符形式"
+      ]
+    },
+    {
+      "label": "会话与认证",
+      "detail": "修复会话感知提供商与 GitHub 认证相关问题",
+      "children": [
+        "父会话 ID 请求头问题",
+        "GitHub 不可变 OIDC 令牌认证"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Cloudflare AI Gateway",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "REST API",
+      "type": "technique"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "OIDC",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Cloudflare AI Gateway",
+      "label": "修复路由"
+    },
+    {
+      "from": "Cloudflare AI Gateway",
+      "to": "Anthropic",
+      "label": "兼容模型"
+    },
+    {
+      "from": "opencode",
+      "to": "GitHub",
+      "label": "修复认证"
+    },
+    {
+      "from": "Cloudflare AI Gateway",
+      "to": "REST API",
+      "label": "支持调用"
+    }
+  ]
+}

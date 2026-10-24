@@ -1,0 +1,99 @@
+{
+  "center": "claude-code v2.1.246 修复",
+  "branches": [
+    {
+      "label": "Bash 通配符漏洞",
+      "detail": "规则中通配符在子命令前会匹配选项插入，启动时警告",
+      "children": [
+        "如 Bash(git * main)",
+        "设计 harness 注意匹配边界"
+      ]
+    },
+    {
+      "label": "长 diff 卡顿",
+      "detail": "超长单行 diff 导致严重卡顿，现截断显示并标记",
+      "children": [
+        "如 base64 内容",
+        "渲染需考虑性能"
+      ]
+    },
+    {
+      "label": "Auto 模式标签页",
+      "detail": "新增于 /permissions，可查看编辑分类器规则",
+      "children": [
+        "更细粒度权限控制",
+        "便于自动化场景"
+      ]
+    },
+    {
+      "label": "MCP 调用修复",
+      "detail": "工具调用被中断时误报完成无输出，现明确报错",
+      "children": [
+        "状态需准确传递",
+        "避免误导模型"
+      ]
+    },
+    {
+      "label": "strict-mcp-config 修复",
+      "detail": "会话提示批准未加载服务器导致后台卡住，已修复",
+      "children": [
+        "配置加载与实际一致",
+        "避免启动阻塞"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "Bash",
+      "type": "technique"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "Auto 模式",
+      "type": "concept"
+    },
+    {
+      "name": "/permissions",
+      "type": "product"
+    },
+    {
+      "name": "--strict-mcp-config",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "Bash",
+      "label": "修复规则"
+    },
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "修复调用"
+    },
+    {
+      "from": "claude-code",
+      "to": "Auto 模式",
+      "label": "新增"
+    },
+    {
+      "from": "Auto 模式",
+      "to": "/permissions",
+      "label": "位于"
+    },
+    {
+      "from": "claude-code",
+      "to": "--strict-mcp-config",
+      "label": "修复"
+    }
+  ]
+}

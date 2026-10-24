@@ -1,0 +1,46 @@
+{
+  "center": "opencode v1.18.10 更新",
+  "branches": [
+    {
+      "label": "自动发现模型",
+      "detail": "自动发现可用的 Modal 模型，无需手动配置",
+      "children": [
+        "简化模型接入",
+        "减少硬编码，提升扩展性"
+      ]
+    },
+    {
+      "label": "桌面端优化",
+      "detail": "防止重复添加附件，始终显示新会话按钮",
+      "children": [
+        "优化通知堆叠",
+        "改进移动端布局"
+      ]
+    },
+    {
+      "label": "修复标签页",
+      "detail": "修复损坏的保存标签页，避免跨启动持久化错误状态",
+      "children": [
+        "隐藏模型变体选择器直到数据加载完成"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Modal",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Modal",
+      "label": "自动发现"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "center": "OpenAI Agents API 发布",
+  "branches": [
+    {
+      "label": "托管服务定位",
+      "detail": "OpenAI 发布 Agents API，托管云端 agent 构建与上线",
+      "children": [
+        "开发者无需自建编排层",
+        "agent 运行时被平台化"
+      ]
+    },
+    {
+      "label": "Codex harness 驱动",
+      "detail": "服务由 Codex harness 驱动，负责编排与工具使用",
+      "children": [
+        "长时运行会话由平台托管",
+        "团队专注任务定义与工具接入"
+      ]
+    },
+    {
+      "label": "三大能力边界",
+      "detail": "官方能力集中在 orchestration、long-running sessions、tool use",
+      "children": [
+        "评估重点：会话持久性",
+        "评估重点：工具调用可控性"
+      ]
+    },
+    {
+      "label": "对工具链的影响",
+      "detail": "编排与调度逐渐变成基础设施而非自研代码",
+      "children": [
+        "agent 运行时平台化"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Agents API",
+      "type": "product"
+    },
+    {
+      "name": "Codex harness",
+      "type": "technique"
+    },
+    {
+      "name": "orchestration",
+      "type": "concept"
+    },
+    {
+      "name": "long-running sessions",
+      "type": "concept"
+    },
+    {
+      "name": "tool use",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Agents API",
+      "label": "发布"
+    },
+    {
+      "from": "Agents API",
+      "to": "Codex harness",
+      "label": "由驱动"
+    },
+    {
+      "from": "Codex harness",
+      "to": "orchestration",
+      "label": "负责"
+    },
+    {
+      "from": "Codex harness",
+      "to": "long-running sessions",
+      "label": "负责"
+    },
+    {
+      "from": "Codex harness",
+      "to": "tool use",
+      "label": "负责"
+    }
+  ]
+}

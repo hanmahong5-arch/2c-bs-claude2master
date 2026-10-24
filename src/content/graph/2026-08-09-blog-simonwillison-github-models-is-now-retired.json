@@ -1,0 +1,96 @@
+{
+  "center": "GitHub Models 退役",
+  "branches": [
+    {
+      "label": "退役事件",
+      "detail": "Simon Willison 的 GitHub Actions 运行失败才发现服务已下线",
+      "children": [
+        "报错称处于计划退役的 brownout 阶段",
+        "实际退役已完成，提示信息已过时"
+      ]
+    },
+    {
+      "label": "原有价值",
+      "detail": "统一 API 聚合多家 LLM 提供商，并提供模型 playground",
+      "children": [
+        "GitHub Actions 可直接用环境内 API key 跑提示",
+        "便于实现 GitHub Next 的 Continuous AI 概念"
+      ]
+    },
+    {
+      "label": "退役原因",
+      "detail": "GitHub 未公布原因，Simon 推测与编码智能体成本有关",
+      "children": [
+        "免费或补贴 token 在 agent 模式下过于昂贵"
+      ]
+    },
+    {
+      "label": "替代方案",
+      "detail": "改用带月度消费上限的 OpenAI API key",
+      "children": [
+        "用 GPT-5.6 Luna 生成 README 文件夹摘要"
+      ]
+    }
+  ],
+  "flow": [
+    "GitHub Actions 运行失败",
+    "看到退役 brownout 报错",
+    "确认服务已完全退役",
+    "换用 OpenAI API key",
+    "设置月度消费上限",
+    "用 GPT-5.6 Luna 生成摘要"
+  ],
+  "entities": [
+    {
+      "name": "GitHub Models",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "Continuous AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "GitHub Models",
+      "to": "GitHub Actions",
+      "label": "集成于"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GitHub Models",
+      "label": "使用并分析"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-5.6 Luna",
+      "label": "改用"
+    },
+    {
+      "from": "GPT-5.6 Luna",
+      "to": "OpenAI",
+      "label": "属于"
+    },
+    {
+      "from": "GitHub Models",
+      "to": "Continuous AI",
+      "label": "支撑"
+    }
+  ]
+}

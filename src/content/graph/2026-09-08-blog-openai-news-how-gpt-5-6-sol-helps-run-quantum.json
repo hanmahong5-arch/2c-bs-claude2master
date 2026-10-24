@@ -1,0 +1,79 @@
+{
+  "center": "GPT-5.6 Sol 辅助量子实验",
+  "branches": [
+    {
+      "label": "自主运行实验",
+      "detail": "MIT 研究员用 GPT-5.6 Sol 与 Codex 自主完成实验设计、执行与结果分析",
+      "children": [
+        "大幅减少人工干预",
+        "覆盖实验全流程"
+      ]
+    },
+    {
+      "label": "自动校准量子比特",
+      "detail": "模型能自动校准量子比特并优化实验参数",
+      "children": [
+        "提升实验效率",
+        "提升可重复性"
+      ]
+    },
+    {
+      "label": "科研自动化潜力",
+      "detail": "案例展示 AI 在科学实验中的潜力，可集成到复杂科研工具链",
+      "children": [
+        "未来实现更高程度自动化"
+      ]
+    }
+  ],
+  "flow": [
+    "实验设计",
+    "执行实验",
+    "结果分析",
+    "校准量子比特",
+    "优化参数"
+  ],
+  "entities": [
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "MIT",
+      "type": "company"
+    },
+    {
+      "name": "量子计算",
+      "type": "concept"
+    },
+    {
+      "name": "量子比特",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "MIT",
+      "to": "GPT-5.6 Sol",
+      "label": "使用"
+    },
+    {
+      "from": "MIT",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "量子比特",
+      "label": "校准"
+    },
+    {
+      "from": "GPT-5.6 Sol",
+      "to": "量子计算",
+      "label": "辅助实验"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "center": "claude-code 修复代理 400 报错",
+  "branches": [
+    {
+      "label": "问题现象",
+      "detail": "2.1.275 引入回归，代理网关下所有请求报 400 失败",
+      "children": [
+        "报错信息 Input tag 'advisor_20260301'",
+        "仅当 ANTHROPIC_BASE_URL 指向代理或网关时触发"
+      ]
+    },
+    {
+      "label": "修复版本",
+      "detail": "v2.1.276 已修复该 400 报错回归",
+      "children": [
+        "2.1.275 引入，2.1.276 修复"
+      ]
+    },
+    {
+      "label": "设计教训",
+      "detail": "harness 不应假设请求直达官方端点",
+      "children": [
+        "新增输入标签或字段需兼容代理链路",
+        "自定义 base URL 场景要纳入发布前验证"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "ANTHROPIC_BASE_URL",
+      "type": "concept"
+    },
+    {
+      "name": "advisor_20260301",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "ANTHROPIC_BASE_URL",
+      "label": "读取配置"
+    },
+    {
+      "from": "claude-code",
+      "to": "advisor_20260301",
+      "label": "报错涉及"
+    },
+    {
+      "from": "harness",
+      "to": "ANTHROPIC_BASE_URL",
+      "label": "需兼容"
+    }
+  ]
+}

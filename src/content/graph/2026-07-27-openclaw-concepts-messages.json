@@ -1,0 +1,120 @@
+{
+  "center": "OpenClaw 多通道消息通信层",
+  "branches": [
+    {
+      "label": "入站去重",
+      "detail": "按 agent 作用域+通道路由+消息 id 缓存，重投递不触发二次运行",
+      "children": [
+        "缓存 20 分钟或 5000 条后过期",
+        "防止重连后重复消息"
+      ]
+    },
+    {
+      "label": "入站防抖",
+      "detail": "同一发送者的快速文本合并为一个 agent turn，按通道+会话作用域",
+      "children": [
+        "默认 2000ms，Discord/Slack 1500ms…",
+        "媒体附件立即刷新，控制命令绕过防抖",
+        "Telegram 默认 300ms 静默窗口"
+      ]
+    },
+    {
+      "label": "排队与跟随",
+      "detail": "运行中消息默认 steer 注入，可切换 followup/collect/interrupt",
+      "children": [
+        "内置 500ms 防抖，cap 默认 20 条",
+        "drop 默认 summarize"
+      ]
+    },
+    {
+      "label": "会话与设备",
+      "detail": "会话由 gateway 拥有，直聊折叠为主会话键，群组独立会话键",
+      "children": [
+        "历史不完全同步回各客户端",
+        "Control UI 与 TUI 显示 gateway 会话记录"
+      ]
+    },
+    {
+      "label": "流式与分块",
+      "detail": "块流式随模型产出发送部分回复，分块遵守通道文本上限",
+      "children": [
+        "blockStreamingDefault 默认 off",
+        "避免拆分围栏代码"
+      ]
+    }
+  ],
+  "flow": [
+    "入站消息路由绑定",
+    "生成会话键",
+    "去重与防抖",
+    "排队等待运行",
+    "agent 运行（流式+工具）",
+    "出站回复分块发送"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "WhatsApp",
+      "type": "product"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "iMessage",
+      "type": "product"
+    },
+    {
+      "name": "gateway",
+      "type": "concept"
+    },
+    {
+      "name": "agent run",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Telegram",
+      "label": "支持通道"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "WhatsApp",
+      "label": "支持通道"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Discord",
+      "label": "支持通道"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "Slack",
+      "label": "支持通道"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "iMessage",
+      "label": "支持通道"
+    },
+    {
+      "from": "gateway",
+      "to": "agent run",
+      "label": "拥有会话"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "center": "openclaw v2026.8.1 更新",
+  "branches": [
+    {
+      "label": "会话跨设备运行",
+      "detail": "会话可在配对设备或云 worker 上执行，工作区随会话迁移",
+      "children": [
+        "复用热机与项目种子",
+        "harness 需解耦工作区与执行位置"
+      ]
+    },
+    {
+      "label": "凭证不进上下文",
+      "detail": "agent 通过掩码提示索要凭证，值不进入聊天或模型上下文",
+      "children": [
+        "可选代理限制受保护密钥替换目标",
+        "秘密注入与模型可见上下文分离"
+      ]
+    },
+    {
+      "label": "重复工作一次批准",
+      "detail": "针对精确操作授予自动化权限，可事后检查或撤销",
+      "children": [
+        "任务或操作变化时需重新批准",
+        "权限模型绑定操作签名而非会话"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "Gateway",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "云 worker",
+      "type": "concept"
+    },
+    {
+      "name": "私有凭证请求",
+      "type": "technique"
+    },
+    {
+      "name": "掩码提示",
+      "type": "technique"
+    },
+    {
+      "name": "操作签名",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "Gateway",
+      "label": "跨运行"
+    },
+    {
+      "from": "harness",
+      "to": "云 worker",
+      "label": "解耦执行"
+    },
+    {
+      "from": "私有凭证请求",
+      "to": "掩码提示",
+      "label": "使用"
+    },
+    {
+      "from": "harness",
+      "to": "操作签名",
+      "label": "绑定权限"
+    }
+  ]
+}

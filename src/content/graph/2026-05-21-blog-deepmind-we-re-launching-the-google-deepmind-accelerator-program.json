@@ -1,0 +1,96 @@
+{
+  "center": "Google DeepMind 亚太加速器",
+  "branches": [
+    {
+      "label": "计划启动",
+      "detail": "Google DeepMind 在亚太推出首届加速器，主题为 AI for the Planet",
+      "children": [
+        "面向亚太地区应对环境风险",
+        "2026 年 5 月 17 日发布"
+      ]
+    },
+    {
+      "label": "目标对象",
+      "detail": "面向亚太的初创公司、研究团队和非营利组织",
+      "children": [
+        "用前沿 AI 解决自然、气候、农业、能源等问题"
+      ]
+    },
+    {
+      "label": "支持内容",
+      "detail": "入选组织获得专家指导、定制支持及前沿 AI 与科学 AI 模型整合帮助",
+      "children": [
+        "由 Google AI 专家提供支持",
+        "帮助将模型整合进项目或产品"
+      ]
+    },
+    {
+      "label": "项目安排",
+      "detail": "为期三个月，以新加坡线下训练营启动",
+      "children": [
+        "新加坡 in-person bootcamp",
+        "可注册表达兴趣"
+      ]
+    }
+  ],
+  "flow": [
+    "注册表达兴趣",
+    "入选加速器",
+    "新加坡线下训练营",
+    "整合前沿 AI 模型",
+    "三个月项目支持"
+  ],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Google DeepMind Accelerator",
+      "type": "product"
+    },
+    {
+      "name": "AI for the Planet",
+      "type": "concept"
+    },
+    {
+      "name": "APAC",
+      "type": "concept"
+    },
+    {
+      "name": "Singapore",
+      "type": "concept"
+    },
+    {
+      "name": "Ramine Tinati",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Google DeepMind Accelerator",
+      "label": "推出"
+    },
+    {
+      "from": "Google DeepMind Accelerator",
+      "to": "AI for the Planet",
+      "label": "主题为"
+    },
+    {
+      "from": "Google DeepMind Accelerator",
+      "to": "APAC",
+      "label": "落地于"
+    },
+    {
+      "from": "Google DeepMind Accelerator",
+      "to": "Singapore",
+      "label": "启动于"
+    },
+    {
+      "from": "Ramine Tinati",
+      "to": "Google DeepMind",
+      "label": "任职于"
+    }
+  ]
+}

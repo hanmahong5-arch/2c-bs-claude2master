@@ -1,0 +1,91 @@
+{
+  "center": "知识蒸馏低成本规模化",
+  "branches": [
+    {
+      "label": "成本瓶颈",
+      "detail": "知识蒸馏计算开销大，难以大规模运行",
+      "children": [
+        "需降低蒸馏成本"
+      ]
+    },
+    {
+      "label": "模型规模",
+      "detail": "文中提及多种参数规模模型，从8B到2.8T",
+      "children": [
+        "8B、45B、59B、117B、753B、2.8T"
+      ]
+    },
+    {
+      "label": "相关资源",
+      "detail": "文章关联6个模型、1篇论文、1个合集",
+      "children": [
+        "6个模型",
+        "1篇论文",
+        "1个合集"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "知识蒸馏",
+      "type": "concept"
+    },
+    {
+      "name": "8B",
+      "type": "model"
+    },
+    {
+      "name": "45B",
+      "type": "model"
+    },
+    {
+      "name": "59B",
+      "type": "model"
+    },
+    {
+      "name": "117B",
+      "type": "model"
+    },
+    {
+      "name": "753B",
+      "type": "model"
+    },
+    {
+      "name": "2.8T",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "知识蒸馏",
+      "to": "8B",
+      "label": "涉及"
+    },
+    {
+      "from": "知识蒸馏",
+      "to": "45B",
+      "label": "涉及"
+    },
+    {
+      "from": "知识蒸馏",
+      "to": "59B",
+      "label": "涉及"
+    },
+    {
+      "from": "知识蒸馏",
+      "to": "117B",
+      "label": "涉及"
+    },
+    {
+      "from": "知识蒸馏",
+      "to": "753B",
+      "label": "涉及"
+    },
+    {
+      "from": "知识蒸馏",
+      "to": "2.8T",
+      "label": "涉及"
+    }
+  ]
+}

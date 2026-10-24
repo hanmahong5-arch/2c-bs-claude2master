@@ -1,0 +1,88 @@
+{
+  "center": "Claude Code v2.1.210 更新",
+  "branches": [
+    {
+      "label": "安全隔离修复",
+      "detail": "修复子 agent 隔离漏洞，确保操作范围严格受限",
+      "children": [
+        "修复 isolation: 'worktree' 子 agent 可对…",
+        "隔离机制需确保子 agent 操作范围严格受限"
+      ]
+    },
+    {
+      "label": "权限模型调整",
+      "detail": "弃用 Write(path) 等权限规则，改用 Edit(path) 或 Read(path)",
+      "children": [
+        "agent 权限模型需统一为更安全的读写分离"
+      ]
+    },
+    {
+      "label": "实时耗时计数器",
+      "detail": "新增计数器，长时工具调用不再看似卡死",
+      "children": [
+        "agent harness 可借此判断工具是否仍在运行"
+      ]
+    },
+    {
+      "label": "opt-in 机制修复",
+      "detail": "修复 ultracode 关键词在非人类输入中误触发",
+      "children": [
+        "agent 的 opt-in 机制应仅响应人类意图"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "isolation: 'worktree'",
+      "type": "concept"
+    },
+    {
+      "name": "ultracode",
+      "type": "concept"
+    },
+    {
+      "name": "Write(path)",
+      "type": "concept"
+    },
+    {
+      "name": "Edit(path)",
+      "type": "concept"
+    },
+    {
+      "name": "Read(path)",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "isolation: 'worktree'",
+      "label": "修复漏洞"
+    },
+    {
+      "from": "Claude Code",
+      "to": "ultracode",
+      "label": "修复误触发"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Write(path)",
+      "label": "弃用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Edit(path)",
+      "label": "改用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Read(path)",
+      "label": "改用"
+    }
+  ]
+}

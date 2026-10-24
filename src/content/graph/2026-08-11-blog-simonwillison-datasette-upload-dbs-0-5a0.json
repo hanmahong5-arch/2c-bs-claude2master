@@ -1,0 +1,97 @@
+{
+  "center": "datasette-upload-dbs 0.5a0 发布",
+  "branches": [
+    {
+      "label": "新增正式 API",
+      "detail": "可通过 HTTP 请求上传或替换数据库，无需手动操作",
+      "children": [
+        "curl POST 到 /-/upload-dbs",
+        "需 Bearer Token 认证",
+        "表单字段 db 与 db_name"
+      ]
+    },
+    {
+      "label": "原子替换机制",
+      "detail": "上传后先保存文件并校验，再原子切换，/name 立即服务新库",
+      "children": [
+        "避免替换过程中服务中断",
+        "校验通过才切换"
+      ]
+    },
+    {
+      "label": "典型使用场景",
+      "detail": "在 GitHub Actions 等环境构建新库后，自动替换生产实例",
+      "children": [
+        "构建完成即上线",
+        "适合定时更新数据"
+      ]
+    },
+    {
+      "label": "插件原有能力",
+      "detail": "长期支持上传全新 SQLite 数据库到托管 Datasette 实例",
+      "children": [
+        "上传后实例自动开始服务该库"
+      ]
+    }
+  ],
+  "flow": [
+    "构建新 SQLite 数据库",
+    "POST 上传至 /-/upload-dbs",
+    "保存文件并校验",
+    "原子替换旧库",
+    "/name 开始服务新库"
+  ],
+  "entities": [
+    {
+      "name": "datasette-upload-dbs",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "product"
+    },
+    {
+      "name": "API",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "datasette-upload-dbs",
+      "label": "发布"
+    },
+    {
+      "from": "datasette-upload-dbs",
+      "to": "Datasette",
+      "label": "是插件"
+    },
+    {
+      "from": "datasette-upload-dbs",
+      "to": "SQLite",
+      "label": "上传"
+    },
+    {
+      "from": "datasette-upload-dbs",
+      "to": "API",
+      "label": "新增"
+    },
+    {
+      "from": "GitHub Actions",
+      "to": "datasette-upload-dbs",
+      "label": "配合使用"
+    }
+  ]
+}

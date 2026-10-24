@@ -1,0 +1,73 @@
+{
+  "center": "大公司全员用 Claude Code 生成",
+  "branches": [
+    {
+      "label": "全员依赖",
+      "detail": "从 L1 到 L7 工程师都在用 Claude Code 生成一切",
+      "children": [
+        "规格、代码、测试、PRD、工单全由 AI 产出"
+      ]
+    },
+    {
+      "label": "团队不满",
+      "detail": "团队没人喜欢这种方式，但被迫尽量多交付",
+      "children": [
+        "每天工作 12 到 13 小时只为按回车"
+      ]
+    },
+    {
+      "label": "管理层施压",
+      "detail": "高层认为推代码不是瓶颈，质疑为何慢",
+      "children": [
+        "多次听到高层强调速度问题"
+      ]
+    },
+    {
+      "label": "无人阅读",
+      "detail": "产出内容没人真正阅读，流程形同虚设",
+      "children": [
+        "所有人都在跟 Claude 对话"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "voxium",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "L1 到 L7 工程师",
+      "type": "concept"
+    },
+    {
+      "name": "大公司",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "voxium",
+      "to": "大公司",
+      "label": "任职于"
+    },
+    {
+      "from": "大公司",
+      "to": "Claude Code",
+      "label": "全员使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "voxium",
+      "label": "引用"
+    }
+  ]
+}

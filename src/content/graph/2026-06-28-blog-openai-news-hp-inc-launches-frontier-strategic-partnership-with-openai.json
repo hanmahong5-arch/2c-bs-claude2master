@@ -1,0 +1,80 @@
+{
+  "center": "HP与OpenAI战略合作",
+  "branches": [
+    {
+      "label": "客户体验",
+      "detail": "HP将OpenAI模型集成到客户服务，实现个性化交互和实时支持",
+      "children": [
+        "提升客户满意度"
+      ]
+    },
+    {
+      "label": "软件开发",
+      "detail": "HP利用OpenAI加速代码生成和测试，减少开发周期",
+      "children": [
+        "提高工程效率"
+      ]
+    },
+    {
+      "label": "企业运营",
+      "detail": "HP通过AI优化供应链和预测维护，降低成本和停机时间",
+      "children": [
+        "关注后台流程落地价值"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "HP",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "客户服务",
+      "type": "concept"
+    },
+    {
+      "name": "软件开发",
+      "type": "concept"
+    },
+    {
+      "name": "供应链优化",
+      "type": "concept"
+    },
+    {
+      "name": "预测维护",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "HP",
+      "to": "OpenAI",
+      "label": "战略合作"
+    },
+    {
+      "from": "HP",
+      "to": "客户服务",
+      "label": "集成AI"
+    },
+    {
+      "from": "HP",
+      "to": "软件开发",
+      "label": "加速"
+    },
+    {
+      "from": "HP",
+      "to": "供应链优化",
+      "label": "优化"
+    },
+    {
+      "from": "HP",
+      "to": "预测维护",
+      "label": "应用"
+    }
+  ]
+}

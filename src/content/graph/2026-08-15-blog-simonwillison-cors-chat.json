@@ -1,0 +1,117 @@
+{
+  "center": "CORS Chat 测试本地 LLM 端点",
+  "branches": [
+    {
+      "label": "工具定位",
+      "detail": "用浏览器直接对话任意 OpenAI Responses 兼容 API 端点",
+      "children": [
+        "依赖浏览器可访问的 CORS 响应头",
+        "由 Simon Willison 于 2026-08-15 发布"
+      ]
+    },
+    {
+      "label": "配置能力",
+      "detail": "可自定义端点、Bearer Token 与额外 HTTP 头",
+      "children": [
+        "支持多会话，各自使用不同模型与请求参数",
+        "所有数据持久化在浏览器本地"
+      ]
+    },
+    {
+      "label": "实测对象",
+      "detail": "用于测试 LM Studio 中运行的 Qwen 3.8 27B",
+      "children": [
+        "在 M5 MacBook Pro 与 NVIDIA DGX Spark 上…",
+        "LM Studio 需开启 --cors 选项"
+      ]
+    },
+    {
+      "label": "兼容验证",
+      "detail": "已成功对接 LM Studio 与 OpenRouter",
+      "children": [
+        "两者均可正常使用"
+      ]
+    },
+    {
+      "label": "流式 SVG",
+      "detail": "识别正在生成的 SVG 并在 token 流式输出时渐进渲染",
+      "children": [
+        "会话可导出为可复制的 JSON"
+      ]
+    }
+  ],
+  "flow": [
+    "配置 API 端点与鉴权头",
+    "选择模型与请求参数",
+    "发起对话请求",
+    "流式接收 token",
+    "实时渲染 SVG 图像",
+    "本地持久化或导出 JSON"
+  ],
+  "entities": [
+    {
+      "name": "CORS Chat",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "LM Studio",
+      "type": "product"
+    },
+    {
+      "name": "Qwen 3.8 27B",
+      "type": "model"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI Responses API",
+      "type": "product"
+    },
+    {
+      "name": "CORS",
+      "type": "concept"
+    },
+    {
+      "name": "NVIDIA DGX Spark",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "CORS Chat",
+      "label": "开发"
+    },
+    {
+      "from": "CORS Chat",
+      "to": "LM Studio",
+      "label": "测试"
+    },
+    {
+      "from": "CORS Chat",
+      "to": "OpenRouter",
+      "label": "对接"
+    },
+    {
+      "from": "LM Studio",
+      "to": "Qwen 3.8 27B",
+      "label": "运行"
+    },
+    {
+      "from": "CORS Chat",
+      "to": "OpenAI Responses API",
+      "label": "兼容"
+    },
+    {
+      "from": "CORS Chat",
+      "to": "CORS",
+      "label": "依赖"
+    }
+  ]
+}

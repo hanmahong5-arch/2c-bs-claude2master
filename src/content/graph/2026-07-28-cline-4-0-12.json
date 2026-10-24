@@ -1,0 +1,66 @@
+{
+  "center": "Cline v4.0.12 更新",
+  "branches": [
+    {
+      "label": "免费模型上线",
+      "detail": "新增免费 Cline 模型，模型选择器标注 (free)",
+      "children": [
+        "达到免费限制显示专用错误卡片",
+        "错误卡片包含重置时间"
+      ]
+    },
+    {
+      "label": "配额状态处理",
+      "detail": "agent 需处理模型配额状态并给出可操作反馈",
+      "children": []
+    },
+    {
+      "label": "流式响应保留",
+      "detail": "修复 CLI max-turns 错误退出丢弃已流式响应的问题",
+      "children": [
+        "已流式传输的 Claude Code 响应不再丢失",
+        "提升容错与用户体验"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    },
+    {
+      "name": "流式响应",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Claude Code",
+      "label": "保留响应"
+    },
+    {
+      "from": "CLI",
+      "to": "Claude Code",
+      "label": "流式传输"
+    },
+    {
+      "from": "agent",
+      "to": "Cline",
+      "label": "处理配额"
+    }
+  ]
+}

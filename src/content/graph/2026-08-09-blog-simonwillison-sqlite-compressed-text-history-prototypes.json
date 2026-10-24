@@ -1,0 +1,117 @@
+{
+  "center": "SQLite 压缩文本历史原型",
+  "branches": [
+    {
+      "label": "核心思路",
+      "detail": "把每版全文放进 JSON 数组，整体用 zstd/zlib 压缩存储",
+      "children": [
+        "历史列存压缩 JSON 文本数组",
+        "时间戳列存未压缩 Unix 整数数组",
+        "利用重复文本获得高压缩比"
+      ]
+    },
+    {
+      "label": "两种存储方案",
+      "detail": "WholeBlobHistoryStore 每次重写整块，ChunkedHistoryStore 分块密封",
+      "children": [
+        "WholeBlob 每次编辑重写压缩历史块",
+        "Chunked 分块提升长历史扩展性",
+        "默认跳过未变化的替换"
+      ]
+    },
+    {
+      "label": "压缩效果",
+      "detail": "1000 次模拟修订的 20.4 MB 原文压到 80.3 KB",
+      "children": [
+        "Zstandard 压缩 JSON 数组",
+        "压缩比约 250:1"
+      ]
+    },
+    {
+      "label": "并发与分块",
+      "detail": "BEGIN IMMEDIATE 串行化写入，单行上限 128 版或 3MB",
+      "children": [
+        "BEGIN IMMEDIATE 保证原子更新",
+        "每行最多 128 个修订",
+        "每行最多 3MB 未压缩 JSON"
+      ]
+    },
+    {
+      "label": "原型来源",
+      "detail": "Simon Willison 遛狗时想到，用 GPT-Live 语音讨论后由 GPT-5.6 Sol Pro 实现",
+      "children": [
+        "语音模式讨论方案",
+        "GPT-5.6 Sol Pro 跑 38 分钟产出代码"
+      ]
+    }
+  ],
+  "flow": [
+    "记录每版全文",
+    "组成 JSON 文本数组",
+    "zstd 压缩整块",
+    "写入 SQLite BLOB",
+    "时间戳单独存列",
+    "超限则分块密封"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "zstd",
+      "type": "technique"
+    },
+    {
+      "name": "WholeBlobHistoryStore",
+      "type": "technique"
+    },
+    {
+      "name": "ChunkedHistoryStore",
+      "type": "technique"
+    },
+    {
+      "name": "GPT-5.6 Sol Pro",
+      "type": "model"
+    },
+    {
+      "name": "GPT-Live",
+      "type": "product"
+    },
+    {
+      "name": "JSON",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "SQLite",
+      "label": "研究"
+    },
+    {
+      "from": "WholeBlobHistoryStore",
+      "to": "zstd",
+      "label": "使用"
+    },
+    {
+      "from": "ChunkedHistoryStore",
+      "to": "zstd",
+      "label": "使用"
+    },
+    {
+      "from": "GPT-5.6 Sol Pro",
+      "to": "WholeBlobHistoryStore",
+      "label": "实现"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-Live",
+      "label": "讨论"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "center": "Gemini 智能体视频理解",
+  "branches": [
+    {
+      "label": "核心收益",
+      "detail": "相比静态逐帧处理，token 降 88%、成本降 66%、准确率升 7%",
+      "children": [
+        "长视频（10 分钟至数小时）收益最明显",
+        "Gemini 3.7 Flash 处于准确率-成本帕累托前沿"
+      ]
+    },
+    {
+      "label": "工作原理",
+      "detail": "模型主动决定看什么、以何速度、用哪种模态，只取所需片段",
+      "children": [
+        "通过智能体循环调用内部工具加载视频相关部分",
+        "覆盖视觉帧、音频与转录文本三种模态",
+        "取代默认 1 FPS 的固定帧率静态处理"
+      ]
+    },
+    {
+      "label": "支持模型",
+      "detail": "Gemini 3.7 Flash、3.6 Flash、3.5 Flash-Lite 三款模型上线",
+      "children": [
+        "3.7 Flash 质量最佳、性价比最优"
+      ]
+    },
+    {
+      "label": "典型能力",
+      "detail": "亚秒级片段检索、长视频大海捞针、异常检测、动作与物体计数",
+      "children": [
+        "异常检测可对可疑时间窗提高 FPS 重采样",
+        "动态 FPS 重看视频以准确计数快速动作"
+      ]
+    },
+    {
+      "label": "接入方式",
+      "detail": "在 Google AI Studio 或 Gemini Enterprise Agent Platform 配置启用",
+      "children": [
+        "API 配置中设 processing 为 agentic",
+        "沿用标准 token 定价，无额外功能费",
+        "支持视频上传与 YouTube 视频"
+      ]
+    }
+  ],
+  "flow": [
+    "API 配置设为 agentic",
+    "模型推理定位目标片段",
+    "调用内部工具加载片段",
+    "按需切换帧率与模态",
+    "输出答案并降低 token"
+  ],
+  "entities": [
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.7 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.6 Flash",
+      "type": "model"
+    },
+    {
+      "name": "Gemini 3.5 Flash-Lite",
+      "type": "model"
+    },
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Google AI Studio",
+      "type": "product"
+    },
+    {
+      "name": "Gemini Enterprise Agent Platform",
+      "type": "product"
+    },
+    {
+      "name": "agentic video understanding",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Gemini 3.7 Flash",
+      "to": "agentic video understanding",
+      "label": "支持"
+    },
+    {
+      "from": "Gemini 3.6 Flash",
+      "to": "agentic video understanding",
+      "label": "支持"
+    },
+    {
+      "from": "Gemini 3.5 Flash-Lite",
+      "to": "agentic video understanding",
+      "label": "支持"
+    },
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini",
+      "label": "开发"
+    },
+    {
+      "from": "Google AI Studio",
+      "to": "Gemini",
+      "label": "提供接入"
+    },
+    {
+      "from": "Gemini Enterprise Agent Platform",
+      "to": "Gemini",
+      "label": "提供接入"
+    }
+  ]
+}

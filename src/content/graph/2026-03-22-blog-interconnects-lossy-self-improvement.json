@@ -1,0 +1,93 @@
+{
+  "center": "AI自我改进是有损耗的线性进程",
+  "branches": [
+    {
+      "label": "RSI的三大假设",
+      "detail": "递归自我改进需闭环、自放大、无效率损失，但现实中摩擦会打破这些假设",
+      "children": [
+        "闭环：模型能持续自我改进并产生新模型",
+        "自放大：下一代模型带来更大提升",
+        "无损耗：指数增长不会因摩擦变成S形曲线"
+      ]
+    },
+    {
+      "label": "损耗自我改进LSI",
+      "detail": "模型成为开发核心，但摩擦导致进步更接近线性而非指数",
+      "children": [
+        "投入更多算力和智能体，损耗与重复反而增加",
+        "复杂度刹车：越接近理解智能，进一步进展越难",
+        "专利数量自1850-1900年峰值后持续下降"
+      ]
+    },
+    {
+      "label": "可自动化研究太窄",
+      "detail": "AI只能优化单一指标，难以同时平衡多个指标，而顶尖研究者需让多个可扩展想法协同工作",
+      "children": [
+        "Karpathy的autoresearch可降低测试损失",
+        "缩放定律显示损失下降，但经济价值不确定",
+        "PostTrainBench易被扭曲，后训练90%挑战在最后…"
+      ]
+    },
+    {
+      "label": "历史与概念背景",
+      "detail": "RSI概念可追溯至2000年代，Yudkowsky提出Seed AI，但真正递归自我改进需先有显著通用智能",
+      "children": [
+        "2008年博客提出递归自我改进循环",
+        "2007年Yudkowsky定义Seed AI",
+        "Seed AI需先具备一定智能才能受益"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Andrej Karpathy",
+      "type": "person"
+    },
+    {
+      "name": "Eliezer Yudkowsky",
+      "type": "person"
+    },
+    {
+      "name": "Paul Allen",
+      "type": "person"
+    },
+    {
+      "name": "RSI",
+      "type": "concept"
+    },
+    {
+      "name": "LSI",
+      "type": "concept"
+    },
+    {
+      "name": "Seed AI",
+      "type": "concept"
+    },
+    {
+      "name": "PostTrainBench",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "LSI",
+      "label": "提出"
+    },
+    {
+      "from": "Eliezer Yudkowsky",
+      "to": "Seed AI",
+      "label": "定义"
+    },
+    {
+      "from": "RSI",
+      "to": "LSI",
+      "label": "被修正为"
+    }
+  ]
+}

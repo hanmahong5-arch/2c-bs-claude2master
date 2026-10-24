@@ -1,0 +1,83 @@
+{
+  "center": "gemini-cli v0.57.0 稳定性修复",
+  "branches": [
+    {
+      "label": "IDE 连接修复",
+      "detail": "动态解析 Cloud Workstations 代理重定向 URI，修复 OAuth 流程",
+      "children": [
+        "IDE 连接目录不匹配问题已解决"
+      ]
+    },
+    {
+      "label": "容量错误重试",
+      "detail": "容量错误增加上下文感知静默重试与可用性 TTL",
+      "children": []
+    },
+    {
+      "label": "多轮回滚",
+      "detail": "取消或中止时回滚整个多轮请求，提升可靠性",
+      "children": []
+    },
+    {
+      "label": "eval 与子代理",
+      "detail": "新增 eval 工具调用格式化与失败摘要；子代理在 agents 模式禁用时不再运行",
+      "children": [
+        "修复启动时交接令牌回归"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "Cloud Workstations",
+      "type": "product"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "IDE",
+      "type": "concept"
+    },
+    {
+      "name": "eval",
+      "type": "concept"
+    },
+    {
+      "name": "agents 模式",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "gemini-cli",
+      "to": "Cloud Workstations",
+      "label": "解析代理"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "OAuth",
+      "label": "修复流程"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "IDE",
+      "label": "修复连接"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "eval",
+      "label": "新增格式化"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "agents 模式",
+      "label": "禁用子代理"
+    }
+  ]
+}

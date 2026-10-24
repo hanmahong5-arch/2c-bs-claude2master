@@ -1,0 +1,62 @@
+{
+  "center": "Cline desktop v0.0.23 更新",
+  "branches": [
+    {
+      "label": "插件统一 Hub 管理",
+      "detail": "Agent 插件由共享 Hub 发现和运行，技能与 MCP 服务器自动启动",
+      "children": [
+        "~/.agents/plugins 下包经 plugin.json 验证",
+        "设置中可单独管理插件"
+      ]
+    },
+    {
+      "label": "修复版本误报",
+      "detail": "解决“Hub 已更新”对话框反复出现的问题",
+      "children": [
+        "构建不匹配提示仅在应用更新暂存后显示",
+        "“稍后”选项跨会话保持"
+      ]
+    },
+    {
+      "label": "登录设备确认码",
+      "detail": "登录时在应用内显示设备确认码，便于与浏览器核对",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Hub",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "plugin.json",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Hub",
+      "label": "集成"
+    },
+    {
+      "from": "Hub",
+      "to": "MCP",
+      "label": "管理"
+    },
+    {
+      "from": "plugin.json",
+      "to": "Hub",
+      "label": "验证"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "center": "445字节生成ASCII世界地图",
+  "branches": [
+    {
+      "label": "核心成果",
+      "detail": "Iwo Kadziela 用 445 字节数据生成可信的 ASCII 世界地图",
+      "children": [
+        "Codex 协助完成",
+        "数据仅 445 字节"
+      ]
+    },
+    {
+      "label": "关键技术",
+      "detail": "用 deflate 压缩数据，再通过 JavaScript 解压还原地图",
+      "children": [
+        "DecompressionStream('deflate-raw')",
+        "fetch() 读取 data: URI"
+      ]
+    },
+    {
+      "label": "代码技巧",
+      "detail": "fetch 可直接请求 base64 data URI 并流式解压",
+      "children": [
+        "r.body.pipeThrough 解压流",
+        "结果写入 <pre> 标签"
+      ]
+    },
+    {
+      "label": "来源",
+      "detail": "Simon Willison 博客的链接文章，发布于 2026 年 7 月 4 日",
+      "children": [
+        "标签：ascii-art、javascript",
+        "标签：data-urls"
+      ]
+    }
+  ],
+  "flow": [
+    "准备 445 字节地图数据",
+    "base64 编码为 data URI",
+    "fetch 请求 data URI",
+    "deflate-raw 流式解压",
+    "文本写入 pre 标签"
+  ],
+  "entities": [
+    {
+      "name": "Iwo Kadziela",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "deflate",
+      "type": "technique"
+    },
+    {
+      "name": "JavaScript",
+      "type": "technique"
+    },
+    {
+      "name": "ASCII 世界地图",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Iwo Kadziela",
+      "to": "ASCII 世界地图",
+      "label": "生成"
+    },
+    {
+      "from": "Codex",
+      "to": "Iwo Kadziela",
+      "label": "协助"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Iwo Kadziela",
+      "label": "链接报道"
+    },
+    {
+      "from": "deflate",
+      "to": "ASCII 世界地图",
+      "label": "压缩数据"
+    },
+    {
+      "from": "JavaScript",
+      "to": "deflate",
+      "label": "解压"
+    }
+  ]
+}

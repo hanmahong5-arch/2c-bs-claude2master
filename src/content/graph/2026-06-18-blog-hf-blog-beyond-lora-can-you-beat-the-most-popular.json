@@ -1,0 +1,101 @@
+{
+  "center": "超越 LoRA 的微调技术",
+  "branches": [
+    {
+      "label": "LoRA 的地位",
+      "detail": "LoRA 是最流行的参数高效微调方法，但社区在探索更优替代方案",
+      "children": [
+        "Hugging Face 博客发起讨论",
+        "PEFT 库集成多种方法"
+      ]
+    },
+    {
+      "label": "DEFT 方法",
+      "detail": "将预训练权重更新分解为低秩子空间补投影与低秩更新两部分",
+      "children": [
+        "两个可训练低秩矩阵",
+        "一个定义子空间，一个灵活适配",
+        "GitHub 与 arXiv 已公开"
+      ]
+    },
+    {
+      "label": "社区互动",
+      "detail": "作者提出 DEFT 后，Hugging Face 成员邀请其提交 PEFT PR",
+      "children": [
+        "Kashif Rasul 邀请提交 PR",
+        "已提交 PR #3342"
+      ]
+    },
+    {
+      "label": "OFT 版本讨论",
+      "detail": "评论者询问测试的是 OFT 哪个版本，确认使用 v2",
+      "children": [
+        "OFT 有 v1 和 v2",
+        "测试的是更新版 v2",
+        "对应 PR #2575"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "LoRA",
+      "type": "technique"
+    },
+    {
+      "name": "DEFT",
+      "type": "technique"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "PEFT",
+      "type": "product"
+    },
+    {
+      "name": "OFT",
+      "type": "technique"
+    },
+    {
+      "name": "Komal Kumar",
+      "type": "person"
+    },
+    {
+      "name": "Kashif Rasul",
+      "type": "person"
+    },
+    {
+      "name": "Benjamin Bossan",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Komal Kumar",
+      "to": "DEFT",
+      "label": "提出"
+    },
+    {
+      "from": "Kashif Rasul",
+      "to": "PEFT",
+      "label": "邀请提交PR"
+    },
+    {
+      "from": "Komal Kumar",
+      "to": "PEFT",
+      "label": "提交PR"
+    },
+    {
+      "from": "Benjamin Bossan",
+      "to": "OFT",
+      "label": "确认版本"
+    },
+    {
+      "from": "DEFT",
+      "to": "LoRA",
+      "label": "超越"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "center": "Lilian Weng 论 Harness 工程与…",
+  "branches": [
+    {
+      "label": "核心论点",
+      "detail": "RSI 关键在 harness 工程，而非直接改权重",
+      "children": [
+        "harness 工程将走向自我改进与 auto-research",
+        "目标与上下文指定需求不会消失",
+        "即使改进被内化进核心模型"
+      ]
+    },
+    {
+      "label": "论文综述",
+      "detail": "总结 35 篇 harness 优化文献与设计趋势",
+      "children": [
+        "涵盖 ACE 论文到 Meta-Harnesses",
+        "梳理已验证的 harness 设计趋势"
+      ]
+    },
+    {
+      "label": "行业呼应",
+      "detail": "多家公司产品化 harness 与 agent 方向",
+      "children": [
+        "LangChain 推出 Deep Agents 课程与开源…",
+        "Gemini API Managed Agents 加后台执行与远…",
+        "Sakana 关联 AI Scientist、ShinkaEvolve…"
+      ]
+    },
+    {
+      "label": "产品动态",
+      "detail": "Claude Cowork 登陆移动与网页端",
+      "children": [
+        "定位为后台任务型队友而非前台聊天",
+        "Claude Fable 5 付费计划延长至 7 月 12 日"
+      ]
+    },
+    {
+      "label": "模型发布",
+      "detail": "Meta 与 NVIDIA、Cohere 同期发布新模型",
+      "children": [
+        "Meta Muse Image/Video 采用 agentic 生成循环",
+        "NVIDIA Audex 30B MoE 支持 1M 上下文",
+        "Cohere Transcribe Arabic 开源阿拉伯语 ASR"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Lilian Weng",
+      "type": "person"
+    },
+    {
+      "name": "Thinky",
+      "type": "company"
+    },
+    {
+      "name": "RSI",
+      "type": "concept"
+    },
+    {
+      "name": "harness engineering",
+      "type": "concept"
+    },
+    {
+      "name": "Meta-Harnesses",
+      "type": "technique"
+    },
+    {
+      "name": "ACE",
+      "type": "technique"
+    },
+    {
+      "name": "Claude Cowork",
+      "type": "product"
+    },
+    {
+      "name": "Muse Image",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Lilian Weng",
+      "to": "Thinky",
+      "label": "联合创办"
+    },
+    {
+      "from": "Lilian Weng",
+      "to": "harness engineering",
+      "label": "总结"
+    },
+    {
+      "from": "harness engineering",
+      "to": "RSI",
+      "label": "支撑"
+    },
+    {
+      "from": "Meta-Harnesses",
+      "to": "harness engineering",
+      "label": "属于"
+    },
+    {
+      "from": "ACE",
+      "to": "harness engineering",
+      "label": "属于"
+    }
+  ]
+}

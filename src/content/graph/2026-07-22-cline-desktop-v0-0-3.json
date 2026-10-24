@@ -1,0 +1,60 @@
+{
+  "center": "cline desktop-v0.0.3 界面更新",
+  "branches": [
+    {
+      "label": "推理状态简化",
+      "detail": "聊天记录中推理部分状态文本从冗余描述简化为“Thinking”",
+      "children": [
+        "状态文本统一为“Thinking”"
+      ]
+    },
+    {
+      "label": "移除脑部图标",
+      "detail": "移除了脑部图标，减少视觉干扰",
+      "children": []
+    },
+    {
+      "label": "设计原则",
+      "detail": "agent harness 状态显示应保持简洁，避免不必要信息和图标",
+      "children": [
+        "使用户快速理解当前状态"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline desktop",
+      "type": "product"
+    },
+    {
+      "name": "v0.0.3",
+      "type": "product"
+    },
+    {
+      "name": "Thinking",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline desktop",
+      "to": "v0.0.3",
+      "label": "发布版本"
+    },
+    {
+      "from": "cline desktop",
+      "to": "Thinking",
+      "label": "显示状态"
+    },
+    {
+      "from": "cline desktop",
+      "to": "agent harness",
+      "label": "属于"
+    }
+  ]
+}

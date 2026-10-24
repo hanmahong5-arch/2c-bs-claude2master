@@ -1,0 +1,116 @@
+{
+  "center": "OpenClaw 记忆子代理高级配置",
+  "branches": [
+    {
+      "label": "思考级别覆盖",
+      "detail": "config.thinking 覆盖子代理思考级别，默认 off，因记忆在回复路径上会直接增加延迟",
+      "children": [
+        "thinking: \"medium\"",
+        "默认 off 避免用户可见延迟"
+      ]
+    },
+    {
+      "label": "快速模式覆盖",
+      "detail": "config.fastMode 仅对阻塞记忆子代理生效，可设 true/false/auto，不设则继承默认",
+      "children": [
+        "auto 用 recall 模型的 fastAutoOnSeconds…"
+      ]
+    },
+    {
+      "label": "提示词改写",
+      "detail": "promptAppend 在默认提示后追加指令；promptOverride 完全替换默认提示，不推荐",
+      "children": [
+        "promptAppend 需搭配 toolsAllow",
+        "promptOverride 用于测试不同召回契约"
+      ]
+    },
+    {
+      "label": "转录持久化",
+      "detail": "阻塞子代理运行默认清理临时会话行且不生成 JSONL，persistTranscripts 仅控制调试导出",
+      "children": [
+        "导出路径在 state-dir/plugins/…",
+        "agent id 做 URI 编码如 support%2Fagent"
+      ]
+    },
+    {
+      "label": "超时恢复",
+      "detail": "清理超过召回截止时，基于记忆结果的摘要可作为 timeout_partial 恢复，但失败运行等不符合条件",
+      "children": [
+        "恢复摘要不缓存也不存入会话调试行"
+      ]
+    }
+  ],
+  "flow": [
+    "配置 thinking/fastMode",
+    "设置 promptAppend/Override",
+    "开启 persistTranscripts",
+    "运行阻塞记忆子代理",
+    "导出 JSONL 转录"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "active-memory",
+      "type": "product"
+    },
+    {
+      "name": "config.thinking",
+      "type": "concept"
+    },
+    {
+      "name": "config.fastMode",
+      "type": "concept"
+    },
+    {
+      "name": "promptAppend",
+      "type": "concept"
+    },
+    {
+      "name": "promptOverride",
+      "type": "concept"
+    },
+    {
+      "name": "persistTranscripts",
+      "type": "concept"
+    },
+    {
+      "name": "timeout_partial",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "active-memory",
+      "label": "包含插件"
+    },
+    {
+      "from": "config.thinking",
+      "to": "active-memory",
+      "label": "覆盖子代理"
+    },
+    {
+      "from": "config.fastMode",
+      "to": "active-memory",
+      "label": "覆盖快速模式"
+    },
+    {
+      "from": "promptAppend",
+      "to": "active-memory",
+      "label": "追加提示"
+    },
+    {
+      "from": "promptOverride",
+      "to": "active-memory",
+      "label": "替换提示"
+    },
+    {
+      "from": "persistTranscripts",
+      "to": "active-memory",
+      "label": "控制导出"
+    }
+  ]
+}

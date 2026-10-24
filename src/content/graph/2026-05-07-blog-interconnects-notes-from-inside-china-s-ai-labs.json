@@ -1,0 +1,112 @@
+{
+  "center": "中国AI实验室文化观察",
+  "branches": [
+    {
+      "label": "文化适配追赶",
+      "detail": "中国实验室文化上适合快速跟进前沿，注重全栈细致工作",
+      "children": [
+        "学生是核心贡献者，被视为同行",
+        "美国顶级实验室如OpenAI、Anthropic不提供实习"
+      ]
+    },
+    {
+      "label": "学生优势",
+      "detail": "学生以新鲜视角适应LLM范式快速变化，愿意做非炫酷工作",
+      "children": [
+        "范式从MoE扩展到RL再到Agent",
+        "学生乐于放下预设，全身心投入"
+      ]
+    },
+    {
+      "label": "自我推销差异",
+      "detail": "美国文化鼓励自我推销，导致冲突；中国更注重集体优化",
+      "children": [
+        "Llama组织因政治权重崩溃",
+        "美国实验室需付钱让研究员停止抱怨"
+      ]
+    },
+    {
+      "label": "哲学讨论缺失",
+      "detail": "中国研究员对AI经济、社会风险等哲学问题缺乏 sophisticated 意见",
+      "children": [
+        "角色是构建最佳模型",
+        "教育系统不鼓励社会辩论"
+      ]
+    },
+    {
+      "label": "地理集中",
+      "detail": "北京AI生态类似湾区，竞争实验室短距离可达",
+      "children": [
+        "36小时内访问Z.ai、Moonshot AI、清华等",
+        "滴滴出行方便，常配电动迷你van"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "Z.ai",
+      "type": "company"
+    },
+    {
+      "name": "Moonshot AI",
+      "type": "company"
+    },
+    {
+      "name": "Tsinghua University",
+      "type": "company"
+    },
+    {
+      "name": "Meituan",
+      "type": "company"
+    },
+    {
+      "name": "Xiaomi",
+      "type": "company"
+    },
+    {
+      "name": "01.ai",
+      "type": "company"
+    },
+    {
+      "name": "Alibaba",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "Z.ai",
+      "label": "访问"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Moonshot AI",
+      "label": "访问"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Tsinghua University",
+      "label": "访问"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Meituan",
+      "label": "访问"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Xiaomi",
+      "label": "访问"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "01.ai",
+      "label": "访问"
+    }
+  ]
+}

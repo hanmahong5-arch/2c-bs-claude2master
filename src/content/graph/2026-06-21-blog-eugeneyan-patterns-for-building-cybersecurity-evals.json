@@ -1,0 +1,114 @@
+{
+  "center": "网络安全评估构建模式",
+  "branches": [
+    {
+      "label": "四大组件",
+      "detail": "网络安全评估共享四个基本原语，类似通用评估但针对安全领域调整",
+      "children": [
+        "沙箱目标：漏洞系统运行在 Docker 容器中",
+        "输入：从仅漏洞代码到提供描述、补丁、崩溃轨迹或…",
+        "工具：bash、读写、网络搜索、调试器、静态分析器"
+      ]
+    },
+    {
+      "label": "分级评分",
+      "detail": "因利用开放性，多数基准评结果而非方法，并设部分学分追踪攻击链",
+      "children": [
+        "Level 1：在代码库中找到漏洞",
+        "Level 2：用 PoC 复现漏洞",
+        "Level 3：通过未授权代码执行利用漏洞"
+      ]
+    },
+    {
+      "label": "Cybench 基准",
+      "detail": "40 个专业级 CTF 任务，来自 HackTheBox、SekaiCTF、Glacier、HKCert",
+      "children": [
+        "用首次解决时间（FST）衡量难度，范围 2 分钟到…",
+        "无引导模式 Claude 3.5 Sonnet 成功率 17.5%…",
+        "子任务模式 o1-preview 完成 46.8% 里程碑"
+      ]
+    },
+    {
+      "label": "CVE-Bench 基准",
+      "detail": "评估 40 个来自 NVD 的关键 CVE，针对免费开源 Web 应用",
+      "children": [
+        "每个 CVE 需 5-24 人时复现并容器化",
+        "漏洞应用、数据库和服务作为目标容器运行",
+        "参考利用位于独立容器"
+      ]
+    }
+  ],
+  "flow": [
+    "构建沙箱目标容器",
+    "提供输入与工具",
+    "Agent 执行命令并观察",
+    "提交利用或 flag",
+    "评分器给出反馈"
+  ],
+  "entities": [
+    {
+      "name": "Cybench",
+      "type": "product"
+    },
+    {
+      "name": "CVE-Bench",
+      "type": "product"
+    },
+    {
+      "name": "Claude 3.5 Sonnet",
+      "type": "model"
+    },
+    {
+      "name": "GPT-4o",
+      "type": "model"
+    },
+    {
+      "name": "o1-preview",
+      "type": "model"
+    },
+    {
+      "name": "Docker",
+      "type": "product"
+    },
+    {
+      "name": "NVD",
+      "type": "concept"
+    },
+    {
+      "name": "CTF",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cybench",
+      "to": "CTF",
+      "label": "基于"
+    },
+    {
+      "from": "CVE-Bench",
+      "to": "NVD",
+      "label": "使用"
+    },
+    {
+      "from": "Cybench",
+      "to": "Claude 3.5 Sonnet",
+      "label": "测试"
+    },
+    {
+      "from": "Cybench",
+      "to": "GPT-4o",
+      "label": "测试"
+    },
+    {
+      "from": "Cybench",
+      "to": "o1-preview",
+      "label": "测试"
+    },
+    {
+      "from": "Cybench",
+      "to": "Docker",
+      "label": "运行于"
+    }
+  ]
+}

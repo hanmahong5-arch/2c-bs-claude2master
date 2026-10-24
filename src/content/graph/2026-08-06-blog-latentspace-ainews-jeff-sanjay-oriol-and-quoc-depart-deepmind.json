@@ -1,0 +1,116 @@
+{
+  "center": "DeepMind 四核心出走创办…",
+  "branches": [
+    {
+      "label": "四人出走创业",
+      "detail": "Jeff Dean、Sanjay Ghemawat、Oriol Vinyals、Quoc Le 离开 DeepMind 共同创办 Discovery Loop",
+      "children": [
+        "Discovery Loop 为 Public Benefit…",
+        "目标：自动化机器学习、科学与工程",
+        "定位 autoresearch / 自动发现循环"
+      ]
+    },
+    {
+      "label": "谷歌高层调整",
+      "detail": "Demis Hassabis 转任 Google DeepMind 主席兼 Alphabet 首席科学家",
+      "children": [
+        "Koray Kavukcuoglu 升任 DeepMind SVP 掌管…",
+        "Koray 负责 Gemini、前沿研究与产品团队",
+        "Demis 侧重长期战略与 Isomorphic"
+      ]
+    },
+    {
+      "label": "融资与投资方",
+      "detail": "Radical Ventures 与 Khosla Ventures 领投种子轮",
+      "children": [
+        "Lightspeed、Kleiner Perkins、Doerr…",
+        "Alphabet 也参与投资",
+        "谷歌与出走团队关系友好"
+      ]
+    },
+    {
+      "label": "出走背景",
+      "detail": "半年内多位知名研究者离开谷歌，Gemini Pro 已久未更新",
+      "children": [
+        "John Jumper 去了 Anthropic",
+        "Noam Shazeer 加入 OpenAI",
+        "David Silver、Denny Zhou 等亦有出走"
+      ]
+    },
+    {
+      "label": "行业解读",
+      "detail": "被视为谷歌 AI 的历史性拐点，AI-for-science 成主战场",
+      "children": [
+        "Nathan Lambert、Andrew Ng 等发声评论",
+        "谷歌仍拥有强模型、人才、算力与数据"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Discovery Loop",
+      "type": "company"
+    },
+    {
+      "name": "Jeff Dean",
+      "type": "person"
+    },
+    {
+      "name": "Demis Hassabis",
+      "type": "person"
+    },
+    {
+      "name": "Koray Kavukcuoglu",
+      "type": "person"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "Alphabet",
+      "type": "company"
+    },
+    {
+      "name": "Isomorphic",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Jeff Dean",
+      "to": "Discovery Loop",
+      "label": "创办"
+    },
+    {
+      "from": "Demis Hassabis",
+      "to": "Google DeepMind",
+      "label": "任主席"
+    },
+    {
+      "from": "Koray Kavukcuoglu",
+      "to": "Google DeepMind",
+      "label": "任SVP"
+    },
+    {
+      "from": "Alphabet",
+      "to": "Discovery Loop",
+      "label": "投资"
+    },
+    {
+      "from": "Demis Hassabis",
+      "to": "Isomorphic",
+      "label": "侧重"
+    },
+    {
+      "from": "Koray Kavukcuoglu",
+      "to": "Gemini",
+      "label": "负责"
+    }
+  ]
+}

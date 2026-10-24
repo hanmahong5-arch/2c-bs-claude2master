@@ -1,0 +1,113 @@
+{
+  "center": "UST 将 Claude 引入物理 AI",
+  "branches": [
+    {
+      "label": "合作核心",
+      "detail": "Anthropic 与 UST 合作，把 Claude 嵌入其工程环境并培训 2 万名员工",
+      "children": [
+        "UST 是技术与工程服务公司",
+        "培训 2 万工程师、架构师、顾问",
+        "UST 成为 Claude Partner Network 全球首席…"
+      ]
+    },
+    {
+      "label": "芯片验证",
+      "detail": "Claude Code 读取原理图与引脚，自动编写并运行回归测试",
+      "children": [
+        "iDEC 平台闭环流水线验证周期缩短 50–70%",
+        "四天周转压缩到 48 小时",
+        "对比数字孪生标记固件回归与信号完整性问题"
+      ]
+    },
+    {
+      "label": "三大行业平台",
+      "detail": "Claude 接入医疗、电信、银行三个客户运营平台",
+      "children": [
+        "UST CarePath：理赔与护理数据转为下一步行动",
+        "UST IntelliOps：预测无线接入网故障、缩短中断",
+        "UST FinX：将 AI agent 嵌入银行工作流"
+      ]
+    },
+    {
+      "label": "治理与安全",
+      "detail": "高风险行业需人工审批与审计控制才能进入生产",
+      "children": [
+        "每个建议动作先路由给人工审批",
+        "Claude 的可靠性与 UST 合规交付经验结合"
+      ]
+    }
+  ],
+  "flow": [
+    "读取芯片原理图与引脚",
+    "生成并运行回归测试",
+    "对比设备数据与数字孪生",
+    "标记固件与信号问题",
+    "人工审批后进入生产"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "UST",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "iDEC",
+      "type": "product"
+    },
+    {
+      "name": "UST CarePath",
+      "type": "product"
+    },
+    {
+      "name": "UST IntelliOps",
+      "type": "product"
+    },
+    {
+      "name": "UST FinX",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "UST",
+      "label": "合作"
+    },
+    {
+      "from": "UST",
+      "to": "Claude",
+      "label": "部署"
+    },
+    {
+      "from": "Claude Code",
+      "to": "iDEC",
+      "label": "集成"
+    },
+    {
+      "from": "Claude",
+      "to": "UST CarePath",
+      "label": "接入"
+    },
+    {
+      "from": "Claude",
+      "to": "UST IntelliOps",
+      "label": "接入"
+    },
+    {
+      "from": "Claude",
+      "to": "UST FinX",
+      "label": "接入"
+    }
+  ]
+}

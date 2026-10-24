@@ -1,0 +1,111 @@
+{
+  "center": "Lobsters 迁移到 SQLite",
+  "branches": [
+    {
+      "label": "迁移结果",
+      "detail": "Lobsters 从 MariaDB 迁到 SQLite，性能提升、成本减半",
+      "children": [
+        "CPU、内存下降，站点更快",
+        "MariaDB VPS 下线后成本减半"
+      ]
+    },
+    {
+      "label": "架构现状",
+      "detail": "Rails 应用跑在单台 VPS 上，用多个 SQLite 数据库文件",
+      "children": [
+        "主内容库约 3.8GB",
+        "缓存库 1.1GB、队列库 218MB",
+        "rack_attack 库 555MB 且仍在增长"
+      ]
+    },
+    {
+      "label": "迁移历程",
+      "detail": "2018 年起计划迁离 MariaDB，最初目标 PostgreSQL，去年转向 SQLite",
+      "children": [
+        "本周末完成迁移并视为稳定",
+        "Thomas Dziedzic 的 PR 含 30 commits、188…"
+      ]
+    },
+    {
+      "label": "案例意义",
+      "detail": "证明 2026 年单服务器 + SQLite 也能支撑完整社区站点",
+      "children": [
+        "Rack::Attack 用 SQLite 做限流",
+        "Simon Willison 称其为有用案例"
+      ]
+    }
+  ],
+  "flow": [
+    "计划迁离 MariaDB",
+    "评估 PostgreSQL 与 SQLite",
+    "选择 SQLite 方案",
+    "提交迁移 PR",
+    "完成迁移并稳定运行"
+  ],
+  "entities": [
+    {
+      "name": "Lobsters",
+      "type": "product"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "MariaDB",
+      "type": "product"
+    },
+    {
+      "name": "PostgreSQL",
+      "type": "product"
+    },
+    {
+      "name": "Rails",
+      "type": "technique"
+    },
+    {
+      "name": "Thomas Dziedzic",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Rack::Attack",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Lobsters",
+      "to": "SQLite",
+      "label": "迁移到"
+    },
+    {
+      "from": "Lobsters",
+      "to": "MariaDB",
+      "label": "迁离"
+    },
+    {
+      "from": "Lobsters",
+      "to": "Rails",
+      "label": "基于"
+    },
+    {
+      "from": "Thomas Dziedzic",
+      "to": "Lobsters",
+      "label": "提交迁移 PR"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Lobsters",
+      "label": "报道"
+    },
+    {
+      "from": "Rack::Attack",
+      "to": "SQLite",
+      "label": "使用"
+    }
+  ]
+}

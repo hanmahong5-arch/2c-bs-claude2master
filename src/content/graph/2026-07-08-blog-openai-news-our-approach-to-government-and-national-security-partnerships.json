@@ -1,0 +1,65 @@
+{
+  "center": "OpenAI 政府与国安合作原则",
+  "branches": [
+    {
+      "label": "负责任 AI 原则",
+      "detail": "与政府合作须遵循负责任 AI 使用原则，确保技术服务于公共利益",
+      "children": []
+    },
+    {
+      "label": "民主问责制",
+      "detail": "在国家安全项目中保持民主问责制，防止技术被滥用",
+      "children": []
+    },
+    {
+      "label": "聚焦公共安全",
+      "detail": "合作聚焦公共安全，用 AI 增强威胁检测与应急响应能力",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "负责任 AI 使用原则",
+      "type": "concept"
+    },
+    {
+      "name": "民主问责制",
+      "type": "concept"
+    },
+    {
+      "name": "国家安全",
+      "type": "concept"
+    },
+    {
+      "name": "公共安全",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "负责任 AI 使用原则",
+      "label": "遵循"
+    },
+    {
+      "from": "OpenAI",
+      "to": "民主问责制",
+      "label": "承诺保持"
+    },
+    {
+      "from": "OpenAI",
+      "to": "国家安全",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "公共安全",
+      "label": "聚焦"
+    }
+  ]
+}

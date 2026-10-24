@@ -1,0 +1,115 @@
+{
+  "center": "OpenAI自研推理芯片Jalapeño",
+  "branches": [
+    {
+      "label": "Jalapeño性能",
+      "detail": "首代自研推理芯片，能效与延迟全面超越NVIDIA Blackwell",
+      "children": [
+        "峰值吞吐每瓦1.5–1.9倍于GB200/GB300",
+        "端到端延迟降低1.7–3.6倍",
+        "额定700W，实测≤550W"
+      ]
+    },
+    {
+      "label": "部署与路线",
+      "detail": "年底进入OpenAI自有基础设施，第二代已在开发",
+      "children": [
+        "Gen 2深度开发中，Gen 3已启动",
+        "非ASIC，定位Blackwell替代方案"
+      ]
+    },
+    {
+      "label": "模型辅助优化",
+      "detail": "GPT-Astra与Codex参与编写底层kernel",
+      "children": [
+        "两月内让三个开源权重模型高性能运行",
+        "注意力与MoE块比人工代码快1.5–1.8倍"
+      ]
+    },
+    {
+      "label": "智能体工程",
+      "detail": "Harness质量与模型选择同等重要",
+      "children": [
+        "AutoSaddler在GAIA2提升+9.0",
+        "SWE Refactor Bench存活率仅5.4%",
+        "记忆系统改为可编程事件日志"
+      ]
+    },
+    {
+      "label": "本地智能体",
+      "detail": "Perplexity与Apple推动端侧推理栈",
+      "children": [
+        "Portable Computer跑在DGX Spark",
+        "PPLX 27B本地编排",
+        "Apple M6/M5支持RDMA集群"
+      ]
+    }
+  ],
+  "flow": [
+    "发布Jalapeño基准",
+    "GPT-Astra优化kernel",
+    "年底部署自有设施",
+    "Gen 2/3持续迭代"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Jalapeño",
+      "type": "product"
+    },
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Blackwell",
+      "type": "product"
+    },
+    {
+      "name": "GPT-Astra",
+      "type": "model"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Perplexity",
+      "type": "company"
+    },
+    {
+      "name": "DGX Spark",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Jalapeño",
+      "label": "自研"
+    },
+    {
+      "from": "Jalapeño",
+      "to": "Blackwell",
+      "label": "超越"
+    },
+    {
+      "from": "GPT-Astra",
+      "to": "Jalapeño",
+      "label": "优化kernel"
+    },
+    {
+      "from": "Codex",
+      "to": "Jalapeño",
+      "label": "优化kernel"
+    },
+    {
+      "from": "Perplexity",
+      "to": "DGX Spark",
+      "label": "部署于"
+    }
+  ]
+}

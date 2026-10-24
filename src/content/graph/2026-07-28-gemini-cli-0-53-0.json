@@ -1,0 +1,83 @@
+{
+  "center": "gemini-cli v0.53.0 稳定性修复",
+  "branches": [
+    {
+      "label": "修复400错误",
+      "detail": "修复工具响应分组与角色合并，避免请求报400",
+      "children": [
+        "并发工具调用后需合并连续相同角色消息",
+        "由 agent harness 负责合并"
+      ]
+    },
+    {
+      "label": "防无限循环",
+      "detail": "缓解无限ReAct循环与提示注入风险",
+      "children": [
+        "agent harness 需实现循环检测",
+        "需实现终止机制"
+      ]
+    },
+    {
+      "label": "防RCE风险",
+      "detail": "强制工作区信任与任务隔离",
+      "children": [
+        "隔离不同来源的任务执行环境",
+        "由 agent harness 执行隔离"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "ReAct",
+      "type": "concept"
+    },
+    {
+      "name": "A2A",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "提示注入",
+      "type": "concept"
+    },
+    {
+      "name": "RCE",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "gemini-cli",
+      "to": "ReAct",
+      "label": "修复循环"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "A2A",
+      "label": "加固安全"
+    },
+    {
+      "from": "agent harness",
+      "to": "ReAct",
+      "label": "检测终止"
+    },
+    {
+      "from": "agent harness",
+      "to": "提示注入",
+      "label": "缓解"
+    },
+    {
+      "from": "agent harness",
+      "to": "RCE",
+      "label": "隔离防护"
+    }
+  ]
+}

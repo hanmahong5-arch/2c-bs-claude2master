@@ -1,0 +1,65 @@
+{
+  "center": "Cline v3.88.0 更新",
+  "branches": [
+    {
+      "label": "新增 Fireworks 模型",
+      "detail": "接入 Fireworks AI 最新无服务器模型，默认模型更新为 Kimi K2.6",
+      "children": [
+        "默认模型改为 Kimi K2.6",
+        "为 agent harness 提供前沿模型选择"
+      ]
+    },
+    {
+      "label": "修复 MCP 配置同步",
+      "detail": "解决文件监视器误清空服务器列表的问题，保证配置持久性",
+      "children": [
+        "修复 MCP 服务器增删流程",
+        "确保配置更改同步可靠"
+      ]
+    },
+    {
+      "label": "统一模型推荐源",
+      "detail": "始终使用上游推荐的模型端点，移除功能标志限制",
+      "children": [
+        "移除功能标志限制",
+        "所有用户获取一致模型更新"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Fireworks AI",
+      "type": "company"
+    },
+    {
+      "name": "Kimi K2.6",
+      "type": "model"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Fireworks AI",
+      "label": "接入"
+    },
+    {
+      "from": "Cline",
+      "to": "Kimi K2.6",
+      "label": "默认使用"
+    },
+    {
+      "from": "Cline",
+      "to": "MCP",
+      "label": "修复配置"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "center": "OpenAI 发布 GPT-6 Astra",
+  "branches": [
+    {
+      "label": "发布与定价",
+      "detail": "今日起向部分机构开放，随后覆盖 ChatGPT 付费版与 API、AWS",
+      "children": [
+        "API 定价 $10/百万输入、$50/百万输出",
+        "与 Claude Fable 5 同价，定位其竞品",
+        "API 模型名 gpt-6-astra"
+      ]
+    },
+    {
+      "label": "基准表现",
+      "detail": "多数 OpenAI 自报基准高于 Fable，但第三方指数落后",
+      "children": [
+        "ARC-AGI 3 得 99.9%，默认 harness 仅 62.7%",
+        "Artificial Analysis 智能指数 61，低于…",
+        "编码智能体指数同分成本不到 Fable 5 一半"
+      ]
+    },
+    {
+      "label": "安全与长上下文",
+      "detail": "安全任务与超长上下文表现突出",
+      "children": [
+        "ExploitBench 100%，GPT-5.6 Sol 为 78.5%",
+        "SRE-Bench 逆向 99.2%（四次内），Sol 68.7%",
+        "八针测试 256K–512K 全对，512K–1M 达 96.3%"
+      ]
+    },
+    {
+      "label": "评测 harness",
+      "detail": "高分依赖 OpenAI 自定义 Provider Adapter harness",
+      "children": [
+        "保留不透明推理状态供后续请求复用",
+        "长对话使用 compaction 压缩",
+        "99.9% 成绩成本 $19K，默认 harness 为 $26K"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "ARC-AGI 3",
+      "type": "concept"
+    },
+    {
+      "name": "Artificial Analysis",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Provider Adapter harness",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Astra",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Claude Fable 5",
+      "label": "对标"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "GPT-5.6 Sol",
+      "label": "超越"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "ARC-AGI 3",
+      "label": "评测于"
+    },
+    {
+      "from": "Provider Adapter harness",
+      "to": "GPT-6 Astra",
+      "label": "提升成绩"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "GPT-6 Astra",
+      "label": "报道"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "center": "shot-scraper 1.10 发布",
+  "branches": [
+    {
+      "label": "核心新功能",
+      "detail": "新增 shot-scraper video storyboard.yml 命令，用 YAML 编排视频录制",
+      "children": [
+        "storyboard.yml 驱动录制流程",
+        "详见官方博客文章"
+      ]
+    },
+    {
+      "label": "工具定位",
+      "detail": "CLI 工具，用于网站截图、录制视频演示与 JS 抓取",
+      "children": [
+        "截图网站",
+        "录制视频演示",
+        "用 JavaScript 抓取站点"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 6 月 30 日发布",
+      "children": [
+        "作者 Simon Willison",
+        "发布于个人博客"
+      ]
+    },
+    {
+      "label": "配套文章",
+      "detail": "官方文章讲解让 agent 用该功能录制工作演示视频",
+      "children": [
+        "Have your agent record video demos"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "shot-scraper",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "storyboard.yml",
+      "type": "technique"
+    },
+    {
+      "name": "CLI",
+      "type": "concept"
+    },
+    {
+      "name": "JavaScript",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "shot-scraper",
+      "label": "发布"
+    },
+    {
+      "from": "shot-scraper",
+      "to": "storyboard.yml",
+      "label": "新增支持"
+    },
+    {
+      "from": "shot-scraper",
+      "to": "JavaScript",
+      "label": "用于抓取"
+    }
+  ]
+}

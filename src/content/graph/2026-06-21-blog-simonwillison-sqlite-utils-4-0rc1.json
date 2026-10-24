@@ -1,0 +1,83 @@
+{
+  "center": "sqlite-utils 4.0rc1 发布",
+  "branches": [
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 6 月 21 日发布 sqlite-utils 4.0rc1",
+      "children": [
+        "发布者：Simon Willison",
+        "日期：2026-06-21"
+      ]
+    },
+    {
+      "label": "工具定位",
+      "detail": "用于操作 SQLite 数据库的 Python CLI 工具与库",
+      "children": [
+        "Python CLI 工具",
+        "Python 库"
+      ]
+    },
+    {
+      "label": "核心新特性",
+      "detail": "4.0rc1 新增 migrations 与嵌套事务支持",
+      "children": [
+        "migrations",
+        "嵌套事务"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "Python",
+      "type": "concept"
+    },
+    {
+      "name": "migrations",
+      "type": "concept"
+    },
+    {
+      "name": "嵌套事务",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "sqlite-utils",
+      "label": "发布"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "SQLite",
+      "label": "操作"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "Python",
+      "label": "基于"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "migrations",
+      "label": "新增"
+    },
+    {
+      "from": "sqlite-utils",
+      "to": "嵌套事务",
+      "label": "新增"
+    }
+  ]
+}

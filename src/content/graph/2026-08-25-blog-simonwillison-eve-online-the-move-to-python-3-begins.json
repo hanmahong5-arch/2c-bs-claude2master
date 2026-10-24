@@ -1,0 +1,98 @@
+{
+  "center": "EVE Online 迁移 Python 3",
+  "branches": [
+    {
+      "label": "迁移规模",
+      "detail": "EVE Online 将把 240 万行代码从 Python 2 迁移到 Python 3",
+      "children": [
+        "使用 futurize 脚本自动转换",
+        "约 2 万处需人工审查"
+      ]
+    },
+    {
+      "label": "历史背景",
+      "detail": "自 2003 年上线即运行 Stackless Python，16 年前升级到 2.7",
+      "children": [
+        "2003 年启动使用 Stackless Python",
+        "2010 年升级至 Stackless Python 2.7"
+      ]
+    },
+    {
+      "label": "差异处理",
+      "detail": "Python 2 与 3 行为差异需逐处人工确认",
+      "children": [
+        "如 1/2 在 Py2 为 0，Py3 为 0.5"
+      ]
+    },
+    {
+      "label": "Stackless 替代",
+      "detail": "公告未提 Stackless 替换方案，但去年会议已展示 Carbon 引擎方案",
+      "children": [
+        "EVE Frontier 用 carbonengine/scheduler…",
+        "该库已开源"
+      ]
+    }
+  ],
+  "flow": [
+    "运行 futurize 脚本",
+    "人工审查约 2 万处差异",
+    "完成 Python 3 迁移"
+  ],
+  "entities": [
+    {
+      "name": "EVE Online",
+      "type": "product"
+    },
+    {
+      "name": "Stackless Python",
+      "type": "product"
+    },
+    {
+      "name": "Python 3",
+      "type": "concept"
+    },
+    {
+      "name": "futurize",
+      "type": "technique"
+    },
+    {
+      "name": "EVE Frontier",
+      "type": "product"
+    },
+    {
+      "name": "carbonengine/scheduler",
+      "type": "product"
+    },
+    {
+      "name": "Carbon",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "EVE Online",
+      "to": "Stackless Python",
+      "label": "运行于"
+    },
+    {
+      "from": "EVE Online",
+      "to": "Python 3",
+      "label": "迁移至"
+    },
+    {
+      "from": "futurize",
+      "to": "Python 3",
+      "label": "用于迁移"
+    },
+    {
+      "from": "EVE Frontier",
+      "to": "carbonengine/scheduler",
+      "label": "使用"
+    },
+    {
+      "from": "carbonengine/scheduler",
+      "to": "Stackless Python",
+      "label": "替代"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "center": "AI 平静日暗流：NVIDIA 开源与…",
+  "branches": [
+    {
+      "label": "NVIDIA 开源模型",
+      "detail": "Nemotron 3 Ultra 全开放 550B MoE，面向长时 agent 任务",
+      "children": [
+        "55B 激活参数，1M 上下文，OpenMDW 1.1 发布",
+        "混合 Mamba/注意力 + LatentMoE + 原生 MTP",
+        "NVFP4 预训练 20T tokens，agent 任务快 5 倍"
+      ]
+    },
+    {
+      "label": "Anthropic RSI 信号",
+      "detail": "称 AI 加速 AI 研发，80%+ 合并代码由 Claude 编写",
+      "children": [
+        "内部工程任务成功率半年从 26% 升至 76%",
+        "小模型训练加速测试：Opus 4 约 3x，Mythos 约…",
+        "建议保留暂停前沿 AI 开发的选项"
+      ]
+    },
+    {
+      "label": "Cloudflare 收购 VoidZero",
+      "detail": "拿下 Vite 团队，收紧全栈 agent 工具链",
+      "children": [
+        "Vite 保持开源 MIT 与厂商中立",
+        "承诺 100 万美元独立生态基金",
+        "整合前端、运行时、推理与安全"
+      ]
+    },
+    {
+      "label": "Agent 基础设施成熟",
+      "detail": "瓶颈从提示词转向 harness/编排器与评估",
+      "children": [
+        "LangSmith Sandboxes GA，支持 Dockerfile…",
+        "Arena 推出 Agent Arena，GPT-5.5 居首",
+        "Devin 提供最高 1000 万美元生产力保证"
+      ]
+    },
+    {
+      "label": "模型与记忆更新",
+      "detail": "ChatGPT 记忆升级，Nemotron 3.5 ASR 发布",
+      "children": [
+        "ChatGPT 记忆翻倍，面向美国 Plus/Pro",
+        "Nemotron 3.5 ASR：0.6B，40 语言，<100ms",
+        "ChatGPT 月活突破 10 亿"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NVIDIA",
+      "type": "company"
+    },
+    {
+      "name": "Nemotron 3 Ultra",
+      "type": "model"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Cloudflare",
+      "type": "company"
+    },
+    {
+      "name": "VoidZero",
+      "type": "company"
+    },
+    {
+      "name": "Vite",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NVIDIA",
+      "to": "Nemotron 3 Ultra",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude",
+      "label": "开发"
+    },
+    {
+      "from": "Cloudflare",
+      "to": "VoidZero",
+      "label": "收购"
+    },
+    {
+      "from": "VoidZero",
+      "to": "Vite",
+      "label": "维护"
+    }
+  ]
+}

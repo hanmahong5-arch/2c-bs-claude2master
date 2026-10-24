@@ -1,0 +1,115 @@
+{
+  "center": "Anthropic 回应 Fable 5 下架",
+  "branches": [
+    {
+      "label": "政府指令",
+      "detail": "美政府以国家安全为由下达出口管制指令，暂停所有外国人访问 Fable 5 与 Mythos 5",
+      "children": [
+        "6月12日17:21(ET)收到指令",
+        "含美国境内的外国籍员工",
+        "其他 Anthropic 模型不受影响"
+      ]
+    },
+    {
+      "label": "越狱争议",
+      "detail": "政府称发现绕过 Fable 5 防护的越狱方法，Anthropic 认为证据薄弱",
+      "children": [
+        "演示仅识别少量已知小漏洞",
+        "其他公开模型也能发现",
+        "政府仅提供口头证据"
+      ]
+    },
+    {
+      "label": "防护措施",
+      "detail": "Anthropic 称 Fable 5 防护强于以往任何模型，采用纵深防御策略",
+      "children": [
+        "红队测试数千小时",
+        "无通用越狱被找到",
+        "要求客户数据保留30天"
+      ]
+    },
+    {
+      "label": "Anthropic 立场",
+      "detail": "遵守指令但反对，认为此标准将阻碍所有前沿模型部署",
+      "children": [
+        "呼吁透明公平的法定流程",
+        "向客户致歉",
+        "正努力恢复访问"
+      ]
+    }
+  ],
+  "flow": [
+    "政府下达指令",
+    "Anthropic 审查演示",
+    "评估越狱风险",
+    "决定遵守指令",
+    "下架 Fable 5 与 Mythos 5",
+    "寻求恢复访问"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Mythos 5",
+      "type": "model"
+    },
+    {
+      "name": "US government",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "jailbreak",
+      "type": "concept"
+    },
+    {
+      "name": "defense in depth",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "US government",
+      "to": "Anthropic",
+      "label": "下达指令"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Fable 5",
+      "label": "下架"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Mythos 5",
+      "label": "下架"
+    },
+    {
+      "from": "Fable 5",
+      "to": "jailbreak",
+      "label": "存在风险"
+    },
+    {
+      "from": "Anthropic",
+      "to": "defense in depth",
+      "label": "采用"
+    },
+    {
+      "from": "GPT-5.5",
+      "to": "jailbreak",
+      "label": "同样可发现"
+    }
+  ]
+}

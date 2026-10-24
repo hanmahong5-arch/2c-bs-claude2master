@@ -1,0 +1,78 @@
+{
+  "center": "codex rust-v0.152.1 修复…",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "Guardian 审批现在遵循模型元数据提供的 Node REPL 策略",
+      "children": [
+        "此前审批未遵循该策略",
+        "Node REPL 中审批行为更符合预期"
+      ]
+    },
+    {
+      "label": "版本信息",
+      "detail": "codex rust-v0.152.1 版本发布，属补丁级修复",
+      "children": [
+        "版本号 rust-v0.152.1"
+      ]
+    },
+    {
+      "label": "设计启示",
+      "detail": "agent harness 需确保模型元数据策略被正确传递并应用于审批流程",
+      "children": [
+        "策略传递",
+        "策略应用"
+      ]
+    }
+  ],
+  "flow": [
+    "模型元数据提供策略",
+    "策略传递至 harness",
+    "Guardian 读取策略",
+    "审批遵循 Node REPL 策略"
+  ],
+  "entities": [
+    {
+      "name": "codex",
+      "type": "product"
+    },
+    {
+      "name": "Guardian",
+      "type": "concept"
+    },
+    {
+      "name": "Node REPL",
+      "type": "technique"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "模型元数据",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Guardian",
+      "to": "Node REPL",
+      "label": "遵循策略"
+    },
+    {
+      "from": "模型元数据",
+      "to": "Guardian",
+      "label": "提供策略"
+    },
+    {
+      "from": "agent harness",
+      "to": "模型元数据",
+      "label": "传递策略"
+    },
+    {
+      "from": "codex",
+      "to": "Guardian",
+      "label": "包含"
+    }
+  ]
+}

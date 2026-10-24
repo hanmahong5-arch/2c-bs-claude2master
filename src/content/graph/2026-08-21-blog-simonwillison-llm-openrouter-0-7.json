@@ -1,0 +1,91 @@
+{
+  "center": "llm-openrouter 0.7 发布",
+  "branches": [
+    {
+      "label": "兼容 LLM 0.32",
+      "detail": "插件升级以适配 LLM 0.32 版本",
+      "children": [
+        "可显示 OpenRouter 模型的推理轨迹"
+      ]
+    },
+    {
+      "label": "改用 Responses API",
+      "detail": "模型调用切换为 OpenRouter 的 Responses API 实现",
+      "children": []
+    },
+    {
+      "label": "新增服务端工具",
+      "detail": "新增 Shell、WebFetch、WebSearch 三个服务端工具",
+      "children": [
+        "用 -T WebSearch 等选项启用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "llm-openrouter",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "product"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "company"
+    },
+    {
+      "name": "Responses API",
+      "type": "technique"
+    },
+    {
+      "name": "Shell",
+      "type": "product"
+    },
+    {
+      "name": "WebFetch",
+      "type": "product"
+    },
+    {
+      "name": "WebSearch",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "llm-openrouter",
+      "to": "LLM",
+      "label": "兼容"
+    },
+    {
+      "from": "llm-openrouter",
+      "to": "OpenRouter",
+      "label": "托管于"
+    },
+    {
+      "from": "llm-openrouter",
+      "to": "Responses API",
+      "label": "使用"
+    },
+    {
+      "from": "llm-openrouter",
+      "to": "Shell",
+      "label": "新增"
+    },
+    {
+      "from": "llm-openrouter",
+      "to": "WebFetch",
+      "label": "新增"
+    },
+    {
+      "from": "llm-openrouter",
+      "to": "WebSearch",
+      "label": "新增"
+    }
+  ]
+}

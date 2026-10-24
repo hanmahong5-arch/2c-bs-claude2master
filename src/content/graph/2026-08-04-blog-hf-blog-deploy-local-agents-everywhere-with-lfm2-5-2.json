@@ -1,0 +1,106 @@
+{
+  "center": "LFM2.5-2.6B 本地智能体",
+  "branches": [
+    {
+      "label": "模型定位",
+      "detail": "LFM2.5-2.6B 面向端侧智能体，支持工具调用与多步工作流",
+      "children": [
+        "小且快，适配笔记本到手机",
+        "数据留在设备，无云端推理账单"
+      ]
+    },
+    {
+      "label": "性能与效率",
+      "detail": "官方称推理速度最高提升 3.2 倍，内存占用低",
+      "children": [
+        "LFM2.5-DSpark 最高 3.2x 推理加速",
+        "Q4_0 量化感知蒸馏检查点"
+      ]
+    },
+    {
+      "label": "能力对标",
+      "detail": "强调工具调用、指令遵循与多步流程，可与更大模型竞争",
+      "children": [
+        "面向真实应用而非单纯堆规模"
+      ]
+    },
+    {
+      "label": "社区反馈",
+      "detail": "用户报告 MCP 工具返回格式错误时模型自信输出错误数据",
+      "children": [
+        "Gemma 4 E4B 同流程未出现该幻觉",
+        "长上下文后期表现下降，文件编辑失败"
+      ]
+    },
+    {
+      "label": "争议问题",
+      "detail": "工具返回坏数据时，该由模型、提示词还是工具层负责校验",
+      "children": [
+        "如何用提示模式强制模型验证工具响应"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "LFM2.5-2.6B",
+      "type": "model"
+    },
+    {
+      "name": "LFM2.5-DSpark",
+      "type": "model"
+    },
+    {
+      "name": "Gemma 4 E4B",
+      "type": "model"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "量化感知蒸馏",
+      "type": "technique"
+    },
+    {
+      "name": "工具调用",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "LFM2.5-2.6B",
+      "label": "发布"
+    },
+    {
+      "from": "LFM2.5-2.6B",
+      "to": "MCP",
+      "label": "调用"
+    },
+    {
+      "from": "LFM2.5-2.6B",
+      "to": "工具调用",
+      "label": "支持"
+    },
+    {
+      "from": "LFM2.5-DSpark",
+      "to": "LFM2.5-2.6B",
+      "label": "加速"
+    },
+    {
+      "from": "量化感知蒸馏",
+      "to": "LFM2.5-2.6B",
+      "label": "生成检查点"
+    },
+    {
+      "from": "Gemma 4 E4B",
+      "to": "MCP",
+      "label": "对比测试"
+    }
+  ]
+}

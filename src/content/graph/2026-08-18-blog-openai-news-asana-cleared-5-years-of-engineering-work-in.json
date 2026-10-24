@@ -1,0 +1,98 @@
+{
+  "center": "Asana 用 Codex 两周清五年工程",
+  "branches": [
+    {
+      "label": "成果与成本",
+      "detail": "两周完成原计划五年的 Enzyme 移除，成本约 1.2 万美元",
+      "children": [
+        "原 staffing 估算约 600 万美元",
+        "工程投入 1.5 周，跨两个日历周"
+      ]
+    },
+    {
+      "label": "做法",
+      "detail": "五句话提示词驱动最多四个编码代理并行，各在独立代码副本中工作",
+      "children": [
+        "工程师每天检查两次进度",
+        "审查并批准每一项变更",
+        "简单指令比复杂设置更有效"
+      ]
+    },
+    {
+      "label": "背景",
+      "detail": "旧测试系统 Enzyme 已停止维护，阻碍前端技术栈现代化",
+      "children": [
+        "Enzyme 使代码难以升级"
+      ]
+    },
+    {
+      "label": "后续",
+      "detail": "Asana 将把代理用于其他迁移、重写和性能问题",
+      "children": [
+        "此前认为这些工作需数年",
+        "希望让工程师更专注于 craft"
+      ]
+    }
+  ],
+  "flow": [
+    "五句话提示词",
+    "最多四个代理并行",
+    "各在独立代码副本",
+    "工程师每日检查两次",
+    "审查批准每项变更",
+    "完成 Enzyme 移除"
+  ],
+  "entities": [
+    {
+      "name": "Asana",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "Enzyme",
+      "type": "product"
+    },
+    {
+      "name": "Amritansh Raghav",
+      "type": "person"
+    },
+    {
+      "name": "frontier models",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Asana",
+      "to": "Codex",
+      "label": "使用"
+    },
+    {
+      "from": "Codex",
+      "to": "OpenAI",
+      "label": "由开发"
+    },
+    {
+      "from": "Codex",
+      "to": "frontier models",
+      "label": "由驱动"
+    },
+    {
+      "from": "Asana",
+      "to": "Enzyme",
+      "label": "移除"
+    },
+    {
+      "from": "Amritansh Raghav",
+      "to": "Asana",
+      "label": "任 CTO"
+    }
+  ]
+}

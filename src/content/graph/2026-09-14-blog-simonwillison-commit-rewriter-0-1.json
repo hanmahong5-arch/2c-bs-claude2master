@@ -1,0 +1,94 @@
+{
+  "center": "commit-rewriter 0.1",
+  "branches": [
+    {
+      "label": "工具定位",
+      "detail": "Python 网页应用，用于批量改写 git 提交信息",
+      "children": [
+        "由 Simon Willison 发布",
+        "版本 0.1，2026-09-14"
+      ]
+    },
+    {
+      "label": "解决痛点",
+      "detail": "AI 编码代理留下的提交记录脏乱、含私有 issue ID",
+      "children": [
+        "Datasette 安全发版时遇到",
+        "初始提交不适合公开"
+      ]
+    },
+    {
+      "label": "使用方式",
+      "detail": "uvx commit-rewriter path/to/repo 启动",
+      "children": [
+        "已在仓库目录可省略路径"
+      ]
+    },
+    {
+      "label": "安全机制",
+      "detail": "提交编辑后自动创建带时间戳分支以便回滚",
+      "children": [
+        "从首个被编辑提交重写到最新提交"
+      ]
+    }
+  ],
+  "flow": [
+    "运行 uvx 启动工具",
+    "编辑提交信息",
+    "自动创建时间戳分支",
+    "重写提交历史"
+  ],
+  "entities": [
+    {
+      "name": "commit-rewriter",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "git",
+      "type": "technique"
+    },
+    {
+      "name": "Python",
+      "type": "technique"
+    },
+    {
+      "name": "AI 编码代理",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "commit-rewriter",
+      "label": "开发"
+    },
+    {
+      "from": "commit-rewriter",
+      "to": "git",
+      "label": "改写提交"
+    },
+    {
+      "from": "commit-rewriter",
+      "to": "Python",
+      "label": "基于"
+    },
+    {
+      "from": "commit-rewriter",
+      "to": "Datasette",
+      "label": "用于发版"
+    },
+    {
+      "from": "AI 编码代理",
+      "to": "git",
+      "label": "留下脏提交"
+    }
+  ]
+}

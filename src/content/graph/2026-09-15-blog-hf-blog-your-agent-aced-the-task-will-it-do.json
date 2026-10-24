@@ -1,0 +1,117 @@
+{
+  "center": "Agent 任务一致性度量与改进",
+  "branches": [
+    {
+      "label": "一致性缺口",
+      "detail": "平均成功率掩盖了单次跑通不等于稳定复现的问题",
+      "children": [
+        "ReAct+GPT-4.1 在 AppWorld 上 Mean@5 为…",
+        "Pass^5 仅 53.0%，缺口 24.4 个百分点",
+        "困难任务上缺口可达 30 点"
+      ]
+    },
+    {
+      "label": "指标区分",
+      "detail": "Pass^k 要求 k 次全部成功，与乐观的 Pass@k 相反",
+      "children": [
+        "Pass^k ≤ Mean@k ≤ Pass@k 恒成立",
+        "Mean@k 回答平均有多好，Pass^k 回答重问是否…"
+      ]
+    },
+    {
+      "label": "翻转根因",
+      "detail": "决策分布平坦时，微小扰动即可改变输出",
+      "children": [
+        "尖锐分布抗扰动，平坦分布近并列易翻转",
+        "温度 0.0 下仍会因平台效应翻转",
+        "多步决策累积放大单步翻转概率"
+      ]
+    },
+    {
+      "label": "诊断工具",
+      "detail": "Consistency Analyzer 重采样轨迹定位易翻转决策点",
+      "children": [
+        "对每个决策点一次调用取 k=5 个补全",
+        "黑盒，仅需一条轨迹，无需真值",
+        "输出每步一致性评分记入 scorecard"
+      ]
+    },
+    {
+      "label": "改进效果",
+      "detail": "生成一致性指南注入推理，缺口减半",
+      "children": [
+        "缺口从 24.4pp 降至 12.0pp",
+        "同任务 Pass^5 提升 16.0pp",
+        "平均准确率无损失"
+      ]
+    }
+  ],
+  "flow": [
+    "记录一条 agent 轨迹",
+    "重采样各决策点测一致性",
+    "定位易翻转步骤",
+    "生成一致性指南",
+    "注入推理时上下文"
+  ],
+  "entities": [
+    {
+      "name": "IBM",
+      "type": "company"
+    },
+    {
+      "name": "ReAct",
+      "type": "technique"
+    },
+    {
+      "name": "GPT-4.1",
+      "type": "model"
+    },
+    {
+      "name": "AppWorld",
+      "type": "product"
+    },
+    {
+      "name": "ALTK-Evolve",
+      "type": "product"
+    },
+    {
+      "name": "Consistency Analyzer",
+      "type": "product"
+    },
+    {
+      "name": "Pass^k",
+      "type": "concept"
+    },
+    {
+      "name": "Mean@k",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "IBM",
+      "to": "Consistency Analyzer",
+      "label": "提出"
+    },
+    {
+      "from": "Consistency Analyzer",
+      "to": "ALTK-Evolve",
+      "label": "集成于"
+    },
+    {
+      "from": "ReAct",
+      "to": "GPT-4.1",
+      "label": "使用"
+    },
+    {
+      "from": "ReAct",
+      "to": "AppWorld",
+      "label": "评测于"
+    },
+    {
+      "from": "Pass^k",
+      "to": "Mean@k",
+      "label": "对比"
+    }
+  ]
+}

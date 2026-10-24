@@ -1,0 +1,71 @@
+{
+  "center": "ChatGPT 记忆系统",
+  "branches": [
+    {
+      "label": "记忆用户偏好",
+      "detail": "ChatGPT 记住用户提到的细节与偏好，减少重复输入",
+      "children": [
+        "如喜欢的写作风格、常用设置"
+      ]
+    },
+    {
+      "label": "保持上下文新鲜",
+      "detail": "多次对话中维持相关背景，互动不中断",
+      "children": [
+        "有助开发者构建更流畅的工具链"
+      ]
+    },
+    {
+      "label": "跨会话应用",
+      "detail": "不同会话间调用已存信息，像持续学习的伙伴",
+      "children": [
+        "为 agent 长期个性化交互打基础"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "product"
+    },
+    {
+      "name": "记忆系统",
+      "type": "concept"
+    },
+    {
+      "name": "个性化",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT",
+      "label": "推出"
+    },
+    {
+      "from": "ChatGPT",
+      "to": "记忆系统",
+      "label": "引入"
+    },
+    {
+      "from": "记忆系统",
+      "to": "个性化",
+      "label": "提升"
+    },
+    {
+      "from": "记忆系统",
+      "to": "agent",
+      "label": "支撑"
+    }
+  ]
+}

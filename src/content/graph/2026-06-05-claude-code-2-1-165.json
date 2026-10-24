@@ -1,0 +1,49 @@
+{
+  "center": "claude-code v2.1.165 更新",
+  "branches": [
+    {
+      "label": "修复已知错误",
+      "detail": "修复多个已知错误，提升代码执行与测试准确性",
+      "children": [
+        "减少意外中断"
+      ]
+    },
+    {
+      "label": "增强可靠性",
+      "detail": "优化内部处理机制，复杂场景下代理表现更一致",
+      "children": []
+    },
+    {
+      "label": "改进稳定性",
+      "detail": "为长期运行测试任务提供更坚固基础，降低维护成本",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "代理测试流程",
+      "type": "concept"
+    },
+    {
+      "name": "系统可靠性",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "代理测试流程",
+      "label": "提升稳定性"
+    },
+    {
+      "from": "claude-code",
+      "to": "系统可靠性",
+      "label": "增强"
+    }
+  ]
+}

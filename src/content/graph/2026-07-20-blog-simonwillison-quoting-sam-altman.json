@@ -1,0 +1,97 @@
+{
+  "center": "Sam Altman 邮件曝光：开源 GPT",
+  "branches": [
+    {
+      "label": "开源计划",
+      "detail": "Altman 提议做接近 GPT-3 能力、可在消费级硬件本地运行的模型并发布",
+      "children": [
+        "能力对标 GPT-3",
+        "本地运行于消费级硬件",
+        "计划尽快发布"
+      ]
+    },
+    {
+      "label": "竞争动机",
+      "detail": "赶在 Stability 等对手之前发布，抢占先机",
+      "children": [
+        "担心 Stability 抢先",
+        "时间点 2022 年 10 月"
+      ]
+    },
+    {
+      "label": "战略意图",
+      "detail": "开源可抑制他人发布同类强模型，并让新项目更难融资",
+      "children": [
+        "discourage 他人发布同类模型",
+        "增加新项目融资难度"
+      ]
+    },
+    {
+      "label": "曝光来源",
+      "detail": "邮件出自 Musk v. Altman 诉讼（2026），由 Simon Willison 引用",
+      "children": [
+        "邮件日期 2022-10-01",
+        "案件 Musk v. Altman (2026)",
+        "Simon Willison 博客引用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Sam Altman",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-3",
+      "type": "model"
+    },
+    {
+      "name": "Stability",
+      "type": "company"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Musk v. Altman",
+      "type": "concept"
+    },
+    {
+      "name": "开源策略",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Sam Altman",
+      "to": "OpenAI",
+      "label": "发邮件给"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-3",
+      "label": "对标能力"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Stability",
+      "label": "竞争抢先"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Musk v. Altman",
+      "label": "引用曝光"
+    },
+    {
+      "from": "开源策略",
+      "to": "OpenAI",
+      "label": "属于"
+    }
+  ]
+}

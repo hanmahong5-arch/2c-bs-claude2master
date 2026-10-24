@@ -1,0 +1,104 @@
+{
+  "center": "claude-code v2.1.232 更新",
+  "branches": [
+    {
+      "label": "子代理默认 fork",
+      "detail": "子代理 fork 默认开启，继承完整对话与缓存，非队友代理默认后台运行",
+      "children": [
+        "继承完整对话与缓存",
+        "交互式会话中非队友代理后台运行",
+        "harness 需适配并发与缓存复用"
+      ]
+    },
+    {
+      "label": "跨会话 @ 提及",
+      "detail": "输入 @ 可提及另一会话，SendMessage 直达同名会话，命名自动去重",
+      "children": [
+        "SendMessage 直达同名会话",
+        "会话命名自动去重",
+        "harness 需实现跨会话消息路由"
+      ]
+    },
+    {
+      "label": "GitLab 支持增强",
+      "detail": "新增 GitLab 令牌脱敏、插件市场支持 GitLab URL、配置别名",
+      "children": [
+        "GitLab 令牌脱敏",
+        "插件市场支持 GitLab URL",
+        "新增配置别名"
+      ]
+    },
+    {
+      "label": "安全修复密集",
+      "detail": "修复 PowerShell 权限绕过、Git Bash 符号链接、嵌套仓库信任等问题",
+      "children": [
+        "PowerShell 权限绕过",
+        "Git Bash 符号链接",
+        "嵌套仓库信任"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "GitLab",
+      "type": "product"
+    },
+    {
+      "name": "PowerShell",
+      "type": "product"
+    },
+    {
+      "name": "Git Bash",
+      "type": "product"
+    },
+    {
+      "name": "SendMessage",
+      "type": "technique"
+    },
+    {
+      "name": "子代理 fork",
+      "type": "concept"
+    },
+    {
+      "name": "跨会话 @ 提及",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "GitLab",
+      "label": "支持"
+    },
+    {
+      "from": "claude-code",
+      "to": "PowerShell",
+      "label": "修复绕过"
+    },
+    {
+      "from": "claude-code",
+      "to": "Git Bash",
+      "label": "修复符号链接"
+    },
+    {
+      "from": "claude-code",
+      "to": "SendMessage",
+      "label": "集成"
+    },
+    {
+      "from": "claude-code",
+      "to": "子代理 fork",
+      "label": "默认开启"
+    },
+    {
+      "from": "claude-code",
+      "to": "跨会话 @ 提及",
+      "label": "新增"
+    }
+  ]
+}

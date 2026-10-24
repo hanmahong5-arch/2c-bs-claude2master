@@ -1,0 +1,55 @@
+{
+  "center": "LLM 0.32a3 发布",
+  "branches": [
+    {
+      "label": "版本发布",
+      "detail": "Simon Willison 发布命令行 LLM 工具 0.32a3 版本",
+      "children": [
+        "发布于 2026 年 6 月 9 日",
+        "定位：命令行访问大语言模型"
+      ]
+    },
+    {
+      "label": "AI 编写",
+      "detail": "该版本几乎完全由新的 Claude Fable 5 编写",
+      "children": [
+        "作者另附详细说明文章"
+      ]
+    },
+    {
+      "label": "作者与项目",
+      "detail": "Simon Willison 的 llm 项目，标签含 llm、claude-mythos-fable",
+      "children": [
+        "llm 标签下 635 篇",
+        "claude-mythos-fable 41 篇"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "llm",
+      "label": "编写"
+    }
+  ]
+}

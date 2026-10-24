@@ -1,0 +1,115 @@
+{
+  "center": "LLM 让开源软件可读可改",
+  "branches": [
+    {
+      "label": "开源初衷",
+      "detail": "开源软件对用户的核心价值一直是能查看并修改其运作方式",
+      "children": [
+        "自由检查与修改软件"
+      ]
+    },
+    {
+      "label": "现实门槛",
+      "detail": "即便资深程序员也难抽出时间读代码再改代码，自由多靠他人代劳",
+      "children": [
+        "多数人无法承担时间成本"
+      ]
+    },
+    {
+      "label": "LLM 改变等式",
+      "detail": "LLM 让「读代码、改代码」的原始理想变得可行得多",
+      "children": [
+        "Simon 认为一年前不存在这条路"
+      ]
+    },
+    {
+      "label": "亲测用法",
+      "detail": "Simon 每天多次让 Claude 克隆仓库并解释某功能如何运作",
+      "children": [
+        "提示词：Clone x/y from GitHub 并讲清 Z",
+        "用 Codex 或 Claude Code 检出并构建"
+      ]
+    },
+    {
+      "label": "编译不再卡点",
+      "detail": "过去让软件编译起来是动手改代码的主要摩擦，现在视为零时间投入",
+      "children": [
+        "十分钟后回来看构建结果",
+        "尚未习惯性修改所用软件"
+      ]
+    }
+  ],
+  "flow": [
+    "提示 LLM 克隆 GitHub 仓库",
+    "让 LLM 解释某功能如何运作",
+    "让 Codex/Claude Code 检出…",
+    "十分钟后查看构建结果",
+    "逐步走向修改软件"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "exe.dev",
+      "type": "product"
+    },
+    {
+      "name": "Claude",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "product"
+    },
+    {
+      "name": "open source",
+      "type": "concept"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Claude",
+      "label": "日常使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Codex",
+      "label": "日常使用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Claude Code",
+      "label": "日常使用"
+    },
+    {
+      "from": "Claude",
+      "to": "GitHub",
+      "label": "克隆仓库"
+    },
+    {
+      "from": "LLM",
+      "to": "open source",
+      "label": "降低门槛"
+    },
+    {
+      "from": "exe.dev",
+      "to": "open source",
+      "label": "主张开源"
+    }
+  ]
+}

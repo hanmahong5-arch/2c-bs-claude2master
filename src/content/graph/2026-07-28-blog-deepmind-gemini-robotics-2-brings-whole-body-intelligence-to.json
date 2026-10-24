@@ -1,0 +1,90 @@
+{
+  "center": "Gemini Robotics 2 全身智能",
+  "branches": [
+    {
+      "label": "模型发布",
+      "detail": "Google DeepMind 推出 Gemini Robotics 2，赋予机器人全身智能",
+      "children": [
+        "整合视觉、语言和动作",
+        "提升操作能力"
+      ]
+    },
+    {
+      "label": "精细操作",
+      "detail": "机器人能理解复杂指令并执行精细操作",
+      "children": [
+        "如抓取物体"
+      ]
+    },
+    {
+      "label": "多模态感知",
+      "detail": "支持多模态输入，结合触觉和力反馈",
+      "children": [
+        "增强动态环境适应性",
+        "提升安全性"
+      ]
+    },
+    {
+      "label": "开发者价值",
+      "detail": "提供更通用的机器人控制基础",
+      "children": [
+        "减少任务特定编程",
+        "加速自动化部署"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Google DeepMind",
+      "type": "company"
+    },
+    {
+      "name": "Gemini Robotics 2",
+      "type": "model"
+    },
+    {
+      "name": "视觉语言动作模型",
+      "type": "concept"
+    },
+    {
+      "name": "多模态输入",
+      "type": "concept"
+    },
+    {
+      "name": "触觉反馈",
+      "type": "concept"
+    },
+    {
+      "name": "力反馈",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Google DeepMind",
+      "to": "Gemini Robotics 2",
+      "label": "推出"
+    },
+    {
+      "from": "Gemini Robotics 2",
+      "to": "视觉语言动作模型",
+      "label": "整合"
+    },
+    {
+      "from": "Gemini Robotics 2",
+      "to": "多模态输入",
+      "label": "支持"
+    },
+    {
+      "from": "多模态输入",
+      "to": "触觉反馈",
+      "label": "结合"
+    },
+    {
+      "from": "多模态输入",
+      "to": "力反馈",
+      "label": "结合"
+    }
+  ]
+}

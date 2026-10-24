@@ -1,0 +1,106 @@
+{
+  "center": "github-code Web Component 嵌…",
+  "branches": [
+    {
+      "label": "核心功能",
+      "detail": "用 Web Component 把 GitHub 文件指定行嵌入网页，无需后端",
+      "children": [
+        "输入带 #L33-L54 行片段的 GitHub URL",
+        "显示行号，不做语法高亮",
+        "书签 URL 保留在页面 fragment 便于分享"
+      ]
+    },
+    {
+      "label": "实现原理",
+      "detail": "把 GitHub URL 转成 raw.githubusercontent.com 再用 fetch() 拉取",
+      "children": [
+        "示例：simonw/sqlite-ast 的 parser.py #L9…",
+        "转换后 fetch 原始文件并截取指定行范围"
+      ]
+    },
+    {
+      "label": "构建方式",
+      "detail": "实验性组件，由 Simon Willison 用 GPT-5.5 按一句提示词生成",
+      "children": [
+        "提示词：let's build a Web Component for…",
+        "还要求生成预览浏览器查看效果"
+      ]
+    },
+    {
+      "label": "使用方式",
+      "detail": "以 <github-code href=\"...\"> 标签形式直接嵌入页面",
+      "children": [
+        "href 指向带行片段的 GitHub 文件 URL"
+      ]
+    }
+  ],
+  "flow": [
+    "输入 GitHub URL 与行片段",
+    "转换为…",
+    "fetch() 拉取原始文件",
+    "截取指定行范围",
+    "带行号渲染到页面"
+  ],
+  "entities": [
+    {
+      "name": "github-code",
+      "type": "product"
+    },
+    {
+      "name": "Web Component",
+      "type": "technique"
+    },
+    {
+      "name": "GitHub",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "raw.githubusercontent.com",
+      "type": "product"
+    },
+    {
+      "name": "fetch()",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "github-code",
+      "label": "构建"
+    },
+    {
+      "from": "github-code",
+      "to": "GPT-5.5",
+      "label": "由...生成"
+    },
+    {
+      "from": "github-code",
+      "to": "Web Component",
+      "label": "基于"
+    },
+    {
+      "from": "github-code",
+      "to": "GitHub",
+      "label": "嵌入代码"
+    },
+    {
+      "from": "github-code",
+      "to": "fetch()",
+      "label": "使用"
+    },
+    {
+      "from": "fetch()",
+      "to": "raw.githubusercontent.com",
+      "label": "请求"
+    }
+  ]
+}

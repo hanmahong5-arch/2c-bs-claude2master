@@ -1,0 +1,77 @@
+{
+  "center": "PyPI 禁止旧版本上传新文件",
+  "branches": [
+    {
+      "label": "新规内容",
+      "detail": "PyPI 拒绝向发布超过 14 天的 release 上传新文件",
+      "children": [
+        "14 天为硬性时间门槛",
+        "针对旧且长期稳定的版本"
+      ]
+    },
+    {
+      "label": "防御目的",
+      "detail": "防止发布令牌或工作流被攻破后投毒旧版本",
+      "children": [
+        "供应链投毒防护",
+        "保护已稳定的旧 release"
+      ]
+    },
+    {
+      "label": "滥用现状",
+      "detail": "目前尚未发现该手法被实际滥用",
+      "children": [
+        "无已知攻击案例",
+        "攻击者此前可能不知可行"
+      ]
+    },
+    {
+      "label": "信息来源",
+      "detail": "Seth Larson 在 PyPI 博客发布，Simon Willison 引用",
+      "children": [
+        "Seth Larson 为 PyPI 官方",
+        "2026-07-23 收录"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "PyPI",
+      "type": "product"
+    },
+    {
+      "name": "Seth Larson",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "supply-chain",
+      "type": "concept"
+    },
+    {
+      "name": "Python",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Seth Larson",
+      "to": "PyPI",
+      "label": "发布公告"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Seth Larson",
+      "label": "引用"
+    },
+    {
+      "from": "PyPI",
+      "to": "supply-chain",
+      "label": "防御"
+    }
+  ]
+}

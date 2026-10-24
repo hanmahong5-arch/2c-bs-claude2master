@@ -1,0 +1,100 @@
+{
+  "center": "Prompt Injection 即角色混淆",
+  "branches": [
+    {
+      "label": "核心发现",
+      "detail": "LLM 无法区分角色标签与用户输入，风格比内容更影响判断",
+      "children": [
+        "模型更看重文本风格而非实际内容",
+        "角色边界是连续而非离散的"
+      ]
+    },
+    {
+      "label": "越狱示例",
+      "detail": "模仿模型内部思考块风格即可绕过安全策略",
+      "children": [
+        "gpt-oss-20b 可被诱导覆盖初始训练",
+        "用户请求制毒，附加绿色衬衫条件即被放行"
+      ]
+    },
+    {
+      "label": "去风格化",
+      "detail": "改写文本使其不像角色标签格式，攻击成功率骤降",
+      "children": [
+        "攻击成功率从 61% 降至 10%",
+        "人类几乎看不出差异，LLM 反应巨大"
+      ]
+    },
+    {
+      "label": "机制命名",
+      "detail": "研究者称其为 role confusion，是提示注入的关键挑战",
+      "children": [
+        "缺乏真正角色感知，防御将是无休止打地鼠",
+        "可被用于合法且大规模地微妙偏移 LLM 状态"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Charles Ye",
+      "type": "person"
+    },
+    {
+      "name": "Jasmine Cui",
+      "type": "person"
+    },
+    {
+      "name": "Dylan Hadfield-Menell",
+      "type": "person"
+    },
+    {
+      "name": "gpt-oss-20b",
+      "type": "model"
+    },
+    {
+      "name": "prompt injection",
+      "type": "concept"
+    },
+    {
+      "name": "role confusion",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Charles Ye",
+      "to": "role confusion",
+      "label": "提出"
+    },
+    {
+      "from": "Jasmine Cui",
+      "to": "role confusion",
+      "label": "提出"
+    },
+    {
+      "from": "Dylan Hadfield-Menell",
+      "to": "role confusion",
+      "label": "提出"
+    },
+    {
+      "from": "role confusion",
+      "to": "prompt injection",
+      "label": "解释"
+    },
+    {
+      "from": "gpt-oss-20b",
+      "to": "role confusion",
+      "label": "易受"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "role confusion",
+      "label": "报道"
+    }
+  ]
+}

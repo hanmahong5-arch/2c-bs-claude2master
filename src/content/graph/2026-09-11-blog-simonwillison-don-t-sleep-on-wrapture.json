@@ -1,0 +1,112 @@
+{
+  "center": "wrapture：Python 猴子补丁库",
+  "branches": [
+    {
+      "label": "核心定位",
+      "detail": "Graham Dumpleton 发布，同时服务测试与可观测性",
+      "children": [
+        "2026 年 8 月 31 日首发，仍处 alpha",
+        "类似 New Relic 风格 tracing"
+      ]
+    },
+    {
+      "label": "测试能力",
+      "detail": "可替代 unittest.mock 的单元测试用法",
+      "children": [
+        "记录方法调用为时间线并渲染成树",
+        "分阶段行为：多次调用间改变行为"
+      ]
+    },
+    {
+      "label": "追踪能力",
+      "detail": "支持活应用实时追踪与零代码配置",
+      "children": [
+        "用 TOML 文件配置，不改 Python 代码",
+        "可导出 trace 到 OpenTelemetry"
+      ]
+    },
+    {
+      "label": "生态集成",
+      "detail": "wrapture-instrumentation 包提供大量框架插桩",
+      "children": [
+        "覆盖 flask、django、fastapi、httpx 等",
+        "含 sqlalchemy、grpc、uvicorn 等"
+      ]
+    },
+    {
+      "label": "性能排查",
+      "detail": "记录单次与聚合的耗时信息找慢代码",
+      "children": [
+        "支持补丁属性、字典、生成器",
+        "提供 JupyterLab 交互式教程"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "wrapture",
+      "type": "product"
+    },
+    {
+      "name": "Graham Dumpleton",
+      "type": "person"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Python",
+      "type": "concept"
+    },
+    {
+      "name": "unittest.mock",
+      "type": "product"
+    },
+    {
+      "name": "OpenTelemetry",
+      "type": "product"
+    },
+    {
+      "name": "wrapture-instrumentation",
+      "type": "product"
+    },
+    {
+      "name": "Flask",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Graham Dumpleton",
+      "to": "wrapture",
+      "label": "开发"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "wrapture",
+      "label": "推荐"
+    },
+    {
+      "from": "wrapture",
+      "to": "Python",
+      "label": "用于"
+    },
+    {
+      "from": "wrapture",
+      "to": "unittest.mock",
+      "label": "替代"
+    },
+    {
+      "from": "wrapture",
+      "to": "OpenTelemetry",
+      "label": "导出到"
+    },
+    {
+      "from": "wrapture-instrumentation",
+      "to": "Flask",
+      "label": "插桩"
+    }
+  ]
+}

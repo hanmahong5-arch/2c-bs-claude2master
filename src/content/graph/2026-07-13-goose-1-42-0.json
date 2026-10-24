@@ -1,0 +1,71 @@
+{
+  "center": "Goose v1.42 更新",
+  "branches": [
+    {
+      "label": "Ollama 动态发现",
+      "detail": "新增 OllamaCloudProvider，支持动态模型发现与上下文限制",
+      "children": [
+        "agent 可自动适配不同模型能力"
+      ]
+    },
+    {
+      "label": "逐条 token 统计",
+      "detail": "每条消息显示 token、成本、TTFT、tok/s 等使用统计",
+      "children": [
+        "汇总会话总计，便于成本监控与优化"
+      ]
+    },
+    {
+      "label": "会话按项目分组",
+      "detail": "聊天会话按项目分组导航，目录切换器显示项目名",
+      "children": [
+        "提升多项目 agent 工作流组织效率"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Goose",
+      "type": "product"
+    },
+    {
+      "name": "OllamaCloudProvider",
+      "type": "product"
+    },
+    {
+      "name": "Ollama",
+      "type": "product"
+    },
+    {
+      "name": "token 统计",
+      "type": "concept"
+    },
+    {
+      "name": "TTFT",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Goose",
+      "to": "OllamaCloudProvider",
+      "label": "新增"
+    },
+    {
+      "from": "OllamaCloudProvider",
+      "to": "Ollama",
+      "label": "支持"
+    },
+    {
+      "from": "Goose",
+      "to": "token 统计",
+      "label": "新增"
+    },
+    {
+      "from": "token 统计",
+      "to": "TTFT",
+      "label": "包含"
+    }
+  ]
+}

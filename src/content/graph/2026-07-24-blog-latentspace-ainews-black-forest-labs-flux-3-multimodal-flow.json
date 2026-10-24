@@ -1,0 +1,112 @@
+{
+  "center": "Black Forest Labs 发布 FLUX 3",
+  "branches": [
+    {
+      "label": "统一多模态",
+      "detail": "单一架构联合训练图像、视频、音频与动作预测",
+      "children": [
+        "FLUX 3 Video 已开放早期访问",
+        "输出自带原生音频生成",
+        "开源权重 Dev 版本即将推出"
+      ]
+    },
+    {
+      "label": "视频能力",
+      "detail": "覆盖文生视频、图生视频、视频转视频与关键帧过渡",
+      "children": [
+        "支持多语言对话与长镜头智能链接",
+        "风格从随手拍到动画电影级",
+        "强排版生成与动态设计"
+      ]
+    },
+    {
+      "label": "机器人控制",
+      "detail": "FLUX-mimic 将视频世界模型迁移到机器人操作",
+      "children": [
+        "基于 FLUX 3 骨干与 mimic 机器人学习",
+        "用机器人与可穿戴数据训练",
+        "单台本地 GPU 可部署，已与 Audi 测试"
+      ]
+    },
+    {
+      "label": "开源数据集",
+      "detail": "The Stack v3 成为最大公开代码数据集",
+      "children": [
+        "114TB 原始数据、224M 仓库、770 种语言",
+        "过滤后约 5T token，C++ 增 15 倍",
+        "内联内容并重新抓取至 2025 年 8 月"
+      ]
+    },
+    {
+      "label": "音频发布",
+      "detail": "阿里 Qwen 推出 Qwen-Audio-3.0-TTS",
+      "children": [
+        "Flash 与 Plus 两个版本，支持 16 种语言",
+        "内联控制标签如 [whisper]/[angry]",
+        "单次生成最长 3 分钟"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Black Forest Labs",
+      "type": "company"
+    },
+    {
+      "name": "FLUX 3",
+      "type": "model"
+    },
+    {
+      "name": "FLUX-mimic",
+      "type": "model"
+    },
+    {
+      "name": "mimic",
+      "type": "company"
+    },
+    {
+      "name": "The Stack v3",
+      "type": "product"
+    },
+    {
+      "name": "Qwen-Audio-3.0-TTS",
+      "type": "model"
+    },
+    {
+      "name": "Alibaba Qwen",
+      "type": "company"
+    },
+    {
+      "name": "Audi",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Black Forest Labs",
+      "to": "FLUX 3",
+      "label": "发布"
+    },
+    {
+      "from": "mimic",
+      "to": "FLUX-mimic",
+      "label": "开发"
+    },
+    {
+      "from": "FLUX-mimic",
+      "to": "FLUX 3",
+      "label": "基于"
+    },
+    {
+      "from": "Audi",
+      "to": "FLUX-mimic",
+      "label": "测试"
+    },
+    {
+      "from": "Alibaba Qwen",
+      "to": "Qwen-Audio-3.0-TTS",
+      "label": "发布"
+    }
+  ]
+}

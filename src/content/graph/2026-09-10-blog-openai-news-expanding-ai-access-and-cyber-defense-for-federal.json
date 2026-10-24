@@ -1,0 +1,96 @@
+{
+  "center": "OpenAI 与 GSA 合作降价",
+  "branches": [
+    {
+      "label": "零许可费",
+      "detail": "OpenAI 与 GSA 合作，向符合条件的政府提供 $0 许可费",
+      "children": [
+        "覆盖联邦、州、地方、部落四级"
+      ]
+    },
+    {
+      "label": "半价用量",
+      "detail": "给予 50% 的用量折扣，压低政府采购接入成本",
+      "children": [
+        "面向公共部门的 agent 与工具链开发者受益"
+      ]
+    },
+    {
+      "label": "网络安全支持",
+      "detail": "合作包含扩展的网络安全防御支持，安全能力打包交付",
+      "children": [
+        "合规、审计、安全加固团队需关注"
+      ]
+    },
+    {
+      "label": "准入条件",
+      "detail": "资格需符合 eligible 条件，落地前需确认准入标准",
+      "children": [
+        "潜在客户横跨多个行政层级"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GSA",
+      "type": "company"
+    },
+    {
+      "name": "联邦政府",
+      "type": "concept"
+    },
+    {
+      "name": "州政府",
+      "type": "concept"
+    },
+    {
+      "name": "地方政府",
+      "type": "concept"
+    },
+    {
+      "name": "部落政府",
+      "type": "concept"
+    },
+    {
+      "name": "网络安全防御",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GSA",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "联邦政府",
+      "label": "提供"
+    },
+    {
+      "from": "OpenAI",
+      "to": "州政府",
+      "label": "提供"
+    },
+    {
+      "from": "OpenAI",
+      "to": "地方政府",
+      "label": "提供"
+    },
+    {
+      "from": "OpenAI",
+      "to": "部落政府",
+      "label": "提供"
+    },
+    {
+      "from": "OpenAI",
+      "to": "网络安全防御",
+      "label": "支持"
+    }
+  ]
+}

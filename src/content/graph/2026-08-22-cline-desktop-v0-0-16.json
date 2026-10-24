@@ -1,0 +1,72 @@
+{
+  "center": "Cline desktop v0.0.16 更新",
+  "branches": [
+    {
+      "label": "Hub 交接不丢工作",
+      "detail": "Hub 重启时拒绝新任务，完成当前任务后交接，断线重连重放未完成工作",
+      "children": [
+        "确保 agent 状态不丢失",
+        "需实现任务队列和断点续传机制"
+      ]
+    },
+    {
+      "label": "修复工具调用",
+      "detail": "修复自定义 OpenAI 兼容模型因能力列表推断错误导致工具调用被静默禁用",
+      "children": [
+        "能力检测应基于显式声明而非便捷标志"
+      ]
+    },
+    {
+      "label": "更新模型目录",
+      "detail": "调整多家提供商（如 DeepSeek、Eden AI）的默认模型和定价",
+      "children": [
+        "需动态同步模型配置"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Hub",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "DeepSeek",
+      "type": "company"
+    },
+    {
+      "name": "Eden AI",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "Hub",
+      "label": "包含"
+    },
+    {
+      "from": "Cline",
+      "to": "OpenAI",
+      "label": "兼容"
+    },
+    {
+      "from": "Cline",
+      "to": "DeepSeek",
+      "label": "支持"
+    },
+    {
+      "from": "Cline",
+      "to": "Eden AI",
+      "label": "支持"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "center": "一次辞职引爆AI恐惧",
+  "branches": [
+    {
+      "label": "辞职引爆舆论",
+      "detail": "Jacob Coxon 因安全风险辞职，恰逢AI风险关注升温，迅速病毒式传播",
+      "children": [
+        "WSJ 独家报道，提前协调媒体",
+        "同日 Daniel Kokotajlo 上 Joe Rogan 节目",
+        "恐惧叙事最易传播"
+      ]
+    },
+    {
+      "label": "灭绝论争议",
+      "detail": "Evan Hubinger 提出 >10% 灭绝风险，作者认为完全灭绝概率极低",
+      "children": [
+        "应关注网络攻击、生物风险等实际灾难",
+        "存在性风险讨论基础薄弱",
+        "AGI 等术语含义模糊"
+      ]
+    },
+    {
+      "label": "实验室脱节",
+      "detail": "前沿实验室员工（尤其 Anthropic）观点脱离实际，影响预测",
+      "children": [
+        "带有宗教式热情",
+        "互动常脱离现实",
+        "扭曲对技术进展的理解"
+      ]
+    },
+    {
+      "label": "RSI 质疑",
+      "detail": "递归自我改进导致快速起飞的说法被高估，人类瓶颈被低估",
+      "children": [
+        "AI 能力锯齿状，数学强但直觉弱",
+        "作者提出 Lossy self-improvement",
+        "未见模型尺寸成本大幅下降"
+      ]
+    },
+    {
+      "label": "短期风险",
+      "detail": "实验室安全投入不足，基础设施未加固，AI 滥用可能扩散",
+      "children": [
+        "HuggingFace-OpenAI 事件",
+        "竞争环境导致监控不足"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Jacob Coxon",
+      "type": "person"
+    },
+    {
+      "name": "Evan Hubinger",
+      "type": "person"
+    },
+    {
+      "name": "Daniel Kokotajlo",
+      "type": "person"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "RSI",
+      "type": "concept"
+    },
+    {
+      "name": "Fast Takeoff",
+      "type": "concept"
+    },
+    {
+      "name": "Lossy self-improvement",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Jacob Coxon",
+      "to": "Anthropic",
+      "label": "曾任职"
+    },
+    {
+      "from": "Evan Hubinger",
+      "to": "Anthropic",
+      "label": "任职于"
+    },
+    {
+      "from": "RSI",
+      "to": "Fast Takeoff",
+      "label": "导致"
+    },
+    {
+      "from": "Lossy self-improvement",
+      "to": "RSI",
+      "label": "反驳"
+    }
+  ]
+}

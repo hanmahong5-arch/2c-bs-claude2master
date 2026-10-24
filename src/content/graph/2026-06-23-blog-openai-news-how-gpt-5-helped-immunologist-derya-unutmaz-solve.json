@@ -1,0 +1,122 @@
+{
+  "center": "GPT-5 破解免疫学三年谜题",
+  "branches": [
+    {
+      "label": "谜题背景",
+      "detail": "2022 年 Unutmaz 实验发现葡萄糖影响 T 细胞分化，结果异常无法解释",
+      "children": [
+        "低糖与脱氧葡萄糖环境结果不同",
+        "脱氧葡萄糖组大量产生 Th17 炎症细胞",
+        "实验被搁置三年"
+      ]
+    },
+    {
+      "label": "GPT-5 的洞察",
+      "detail": "GPT-5 Pro 分析数据后指出脱氧葡萄糖干扰 IL-2 蛋白构建",
+      "children": [
+        "IL-2 可阻止 T 细胞变为 Th17",
+        "脱氧葡萄糖移除该屏障",
+        "解释低糖组 Th17 较少的原因"
+      ]
+    },
+    {
+      "label": "预测验证",
+      "detail": "GPT-5 Pro 成功预测未发表实验中 CD8+ T 细胞杀伤淋巴瘤能力增强",
+      "children": [
+        "实验尚未发表，模型无法从网络获取",
+        "Unutmaz 称模型真正理解了机制"
+      ]
+    },
+    {
+      "label": "科研协作价值",
+      "detail": "AI 加速文献综述、假设筛选与实验模拟，节省数周至数年",
+      "children": [
+        "处理每周数百篇新论文",
+        "模拟实验预测结果，缩小实验范围",
+        "专家仍需评估洞察的重要性"
+      ]
+    },
+    {
+      "label": "风险与展望",
+      "detail": "AI 能力需负责任管理，防止被用于设计生物武器",
+      "children": [
+        "OpenAI Preparedness Framework 跟踪风险",
+        "Unutmaz 用 Codex 和 GPT-5.2 Deep…"
+      ]
+    }
+  ],
+  "flow": [
+    "2022 年实验发现异常",
+    "搁置三年",
+    "2025 年上传数据给 GPT-5 Pro",
+    "模型提出 IL-2 机制",
+    "预测未发表实验结果",
+    "加速后续研究"
+  ],
+  "entities": [
+    {
+      "name": "GPT-5 Pro",
+      "type": "model"
+    },
+    {
+      "name": "Derya Unutmaz",
+      "type": "person"
+    },
+    {
+      "name": "The Jackson Laboratory",
+      "type": "company"
+    },
+    {
+      "name": "University of Connecticut",
+      "type": "company"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "IL-2",
+      "type": "concept"
+    },
+    {
+      "name": "Th17",
+      "type": "concept"
+    },
+    {
+      "name": "CD8+ T 细胞",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "GPT-5 Pro",
+      "to": "Derya Unutmaz",
+      "label": "协助"
+    },
+    {
+      "from": "Derya Unutmaz",
+      "to": "The Jackson Laboratory",
+      "label": "任职于"
+    },
+    {
+      "from": "Derya Unutmaz",
+      "to": "University of Connecticut",
+      "label": "任职于"
+    },
+    {
+      "from": "GPT-5 Pro",
+      "to": "IL-2",
+      "label": "揭示机制"
+    },
+    {
+      "from": "IL-2",
+      "to": "Th17",
+      "label": "抑制分化"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-5 Pro",
+      "label": "开发"
+    }
+  ]
+}

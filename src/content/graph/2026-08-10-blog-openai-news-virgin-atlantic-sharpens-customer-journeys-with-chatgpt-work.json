@@ -1,0 +1,76 @@
+{
+  "center": "维珍航空用ChatGPT Work",
+  "branches": [
+    {
+      "label": "应用场景",
+      "detail": "维珍航空将ChatGPT Work用于客户旅程研究、产品规划与决策",
+      "children": [
+        "连接客户旅程中的信号"
+      ]
+    },
+    {
+      "label": "效率提升",
+      "detail": "团队跨部门信息处理更高效，响应速度与协作效率提升",
+      "children": []
+    },
+    {
+      "label": "行业趋势",
+      "detail": "企业级AI工具从单点任务转向流程集成，成为决策支持核心",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Virgin Atlantic",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "客户旅程研究",
+      "type": "concept"
+    },
+    {
+      "name": "产品规划",
+      "type": "concept"
+    },
+    {
+      "name": "决策支持",
+      "type": "concept"
+    },
+    {
+      "name": "流程集成",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Virgin Atlantic",
+      "to": "ChatGPT Work",
+      "label": "采用"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "客户旅程研究",
+      "label": "加速"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "产品规划",
+      "label": "加速"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "决策支持",
+      "label": "支持"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "流程集成",
+      "label": "体现"
+    }
+  ]
+}

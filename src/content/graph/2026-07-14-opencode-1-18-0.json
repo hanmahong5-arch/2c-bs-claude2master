@@ -1,0 +1,53 @@
+{
+  "center": "opencode v1.18.0 更新",
+  "branches": [
+    {
+      "label": "Desktop v2 迁移",
+      "detail": "Desktop v2 迁移完成，含新布局升级处理与首次启动引导",
+      "children": [
+        "agent 需适配新 UI 布局"
+      ]
+    },
+    {
+      "label": "新旧布局切换",
+      "detail": "新增新旧布局切换设置，过渡期内兼容两种布局",
+      "children": [
+        "需按用户选择调整交互"
+      ]
+    },
+    {
+      "label": "多项 bug 修复",
+      "detail": "修复远程会话自动接受权限、终端标签聚焦、时间线同步等问题",
+      "children": [
+        "提升远程与本地环境稳定性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Desktop v2",
+      "type": "product"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Desktop v2",
+      "label": "完成迁移"
+    },
+    {
+      "from": "agent",
+      "to": "Desktop v2",
+      "label": "适配布局"
+    }
+  ]
+}

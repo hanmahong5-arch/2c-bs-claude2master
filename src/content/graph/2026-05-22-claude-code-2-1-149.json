@@ -1,0 +1,85 @@
+{
+  "center": "claude-code v2.1.149 更新",
+  "branches": [
+    {
+      "label": "用量分类统计",
+      "detail": "新增 /usage 命令，按类别展示成本驱动来源",
+      "children": [
+        "覆盖技能、子代理、插件、MCP 服务器",
+        "便于资源管理与优化"
+      ]
+    },
+    {
+      "label": "安全沙盒修复",
+      "detail": "修复多项沙盒漏洞，提升代码执行环境安全性",
+      "children": [
+        "PowerShell 权限绕过",
+        "git worktrees 沙盒白名单过宽",
+        "变量追踪失效"
+      ]
+    },
+    {
+      "label": "界面交互优化",
+      "detail": "修复多项界面问题，提升用户体验",
+      "children": [
+        "/diff 视图支持键盘滚动",
+        "Markdown 渲染任务列表",
+        "修复思维指示器状态与参数提示"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "/usage",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "PowerShell",
+      "type": "product"
+    },
+    {
+      "name": "git worktrees",
+      "type": "concept"
+    },
+    {
+      "name": "/diff",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "/usage",
+      "label": "新增"
+    },
+    {
+      "from": "claude-code",
+      "to": "MCP",
+      "label": "统计"
+    },
+    {
+      "from": "claude-code",
+      "to": "PowerShell",
+      "label": "修复绕过"
+    },
+    {
+      "from": "claude-code",
+      "to": "git worktrees",
+      "label": "修复白名单"
+    },
+    {
+      "from": "claude-code",
+      "to": "/diff",
+      "label": "优化"
+    }
+  ]
+}

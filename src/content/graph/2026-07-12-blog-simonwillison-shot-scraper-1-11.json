@@ -1,0 +1,88 @@
+{
+  "center": "shot-scraper 1.11 发布",
+  "branches": [
+    {
+      "label": "server 启动等待",
+      "detail": "multi 与 video 的 server 进程改为轮询端口，最长等 30 秒",
+      "children": [
+        "替换原先固定 1 秒延迟",
+        "#197"
+      ]
+    },
+    {
+      "label": "新增 --js-file",
+      "detail": "多个命令支持从本地文件、标准输入或 gh: 加载 JS",
+      "children": [
+        "shot、pdf、html、accessibility、har",
+        "替代直接传字符串的 --javascript",
+        "#192"
+      ]
+    },
+    {
+      "label": "multi 支持 js_file",
+      "detail": "shot-scraper multi 的 YAML 配置新增等价键 js_file",
+      "children": []
+    },
+    {
+      "label": "javascript 加 --timeout",
+      "detail": "javascript 与 html 命令新增 --timeout，与其他命令保持一致",
+      "children": [
+        "#118"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "shot-scraper",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "shot-scraper multi",
+      "type": "product"
+    },
+    {
+      "name": "shot-scraper video",
+      "type": "product"
+    },
+    {
+      "name": "JavaScript",
+      "type": "concept"
+    },
+    {
+      "name": "YAML",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "shot-scraper",
+      "label": "发布"
+    },
+    {
+      "from": "shot-scraper multi",
+      "to": "shot-scraper",
+      "label": "属于"
+    },
+    {
+      "from": "shot-scraper video",
+      "to": "shot-scraper",
+      "label": "属于"
+    },
+    {
+      "from": "shot-scraper multi",
+      "to": "YAML",
+      "label": "使用"
+    },
+    {
+      "from": "shot-scraper",
+      "to": "JavaScript",
+      "label": "执行"
+    }
+  ]
+}

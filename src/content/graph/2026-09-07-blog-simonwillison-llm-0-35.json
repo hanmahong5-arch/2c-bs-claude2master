@@ -1,0 +1,64 @@
+{
+  "center": "llm 0.35 支持 GPT-6 Astra",
+  "branches": [
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 于 2026 年 9 月 7 日发布 llm 0.35 版本",
+      "children": [
+        "发布时间：2026-09-07",
+        "作者：Simon Willison"
+      ]
+    },
+    {
+      "label": "新增模型",
+      "detail": "新增对 OpenAI 新模型 gpt-6-astra 的支持",
+      "children": [
+        "模型名：gpt-6-astra",
+        "对应 GPT-6 Astra"
+      ]
+    },
+    {
+      "label": "工具定位",
+      "detail": "llm 是命令行访问大语言模型的工具",
+      "children": [
+        "命令行访问 LLM"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "gpt-6-astra",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm",
+      "label": "发布"
+    },
+    {
+      "from": "llm",
+      "to": "gpt-6-astra",
+      "label": "支持"
+    },
+    {
+      "from": "OpenAI",
+      "to": "gpt-6-astra",
+      "label": "推出"
+    }
+  ]
+}

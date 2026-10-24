@@ -1,0 +1,80 @@
+{
+  "center": "Hermes Agent 0.20.5 更新",
+  "branches": [
+    {
+      "label": "Bot Mode 群聊",
+      "detail": "新增群组房间线程与可折叠对话摘要，支持多代理群聊",
+      "children": [
+        "harness 管理线程状态与摘要折叠"
+      ]
+    },
+    {
+      "label": "无密钥 Web 层",
+      "detail": "5 家供应商免费轮换加环形故障转移，新装零密钥即可搜索",
+      "children": [
+        "harness 实现密钥管理与故障切换"
+      ]
+    },
+    {
+      "label": "CLI 打磨",
+      "detail": "模糊 /model 选择器、Ctrl+P 命令面板、更丰富的 /status",
+      "children": [
+        "harness 优化交互与状态展示"
+      ]
+    },
+    {
+      "label": "执行纪律",
+      "detail": "基于 Composio 评估发现，加强超时与运行时停滞检测",
+      "children": [
+        "harness 需加强超时与停滞检测"
+      ]
+    },
+    {
+      "label": "cron 任务增强",
+      "detail": "cron 任务获得持久记忆与按任务推理力度",
+      "children": [
+        "harness 支持任务级记忆与推理配置"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hermes Agent",
+      "type": "product"
+    },
+    {
+      "name": "Bot Mode",
+      "type": "concept"
+    },
+    {
+      "name": "Composio",
+      "type": "company"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "cron",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hermes Agent",
+      "to": "Bot Mode",
+      "label": "新增"
+    },
+    {
+      "from": "Hermes Agent",
+      "to": "harness",
+      "label": "依赖"
+    },
+    {
+      "from": "Composio",
+      "to": "harness",
+      "label": "评估"
+    }
+  ]
+}

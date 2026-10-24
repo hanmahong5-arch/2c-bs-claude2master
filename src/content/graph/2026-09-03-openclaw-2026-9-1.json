@@ -1,0 +1,87 @@
+{
+  "center": "openclaw v2026.9.1 稳定性更新",
+  "branches": [
+    {
+      "label": "更新可回滚",
+      "detail": "openclaw update 在 Doctor 失败时回滚 npm 候选版本",
+      "children": [
+        "保留配置与密钥引用",
+        "避免 agent 在坏版本上继续跑"
+      ]
+    },
+    {
+      "label": "Gateway 自愈",
+      "detail": "启动在负载和大规模 agent 名单下可恢复",
+      "children": [
+        "畸形 legacy cron 行被隔离",
+        "本地模型服务成 OOM 首选牺牲对象"
+      ]
+    },
+    {
+      "label": "审批直达聊天",
+      "detail": "委派系统 agent 提议变更或重启时审批卡片投递到原始频道",
+      "children": [
+        "含 Telegram 主题",
+        "带请求者标题"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "Gateway",
+      "type": "product"
+    },
+    {
+      "name": "Doctor",
+      "type": "product"
+    },
+    {
+      "name": "npm",
+      "type": "product"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "OOM",
+      "type": "concept"
+    },
+    {
+      "name": "legacy cron",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "Doctor",
+      "label": "调用"
+    },
+    {
+      "from": "openclaw",
+      "to": "npm",
+      "label": "回滚"
+    },
+    {
+      "from": "Gateway",
+      "to": "legacy cron",
+      "label": "隔离"
+    },
+    {
+      "from": "Gateway",
+      "to": "OOM",
+      "label": "牺牲"
+    },
+    {
+      "from": "openclaw",
+      "to": "Telegram",
+      "label": "投递"
+    }
+  ]
+}

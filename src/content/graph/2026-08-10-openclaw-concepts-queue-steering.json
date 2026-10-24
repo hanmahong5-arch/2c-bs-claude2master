@@ -1,0 +1,116 @@
+{
+  "center": "OpenClaw 会话内消息注入",
+  "branches": [
+    {
+      "label": "steer 模式",
+      "detail": "默认队列模式，把新消息注入正在运行的会话而不打断工具调用",
+      "children": [
+        "followup/collect 模式跳过该路径，等运行结束",
+        "steer 不可用时等待当前运行结束"
+      ]
+    },
+    {
+      "label": "注入边界",
+      "detail": "在工具启动边界与模型边界检查，不中断已运行的工具调用",
+      "children": [
+        "顺序模式：每次调用启动前检查，跳过未启动的尾部",
+        "并行模式：准备后仅一个原子启动检查点",
+        "被跳过调用返回合成结果并配对 start/end 事件"
+      ]
+    },
+    {
+      "label": "Codex harness",
+      "detail": "原生 Codex harness 暴露 turn/steer，而非 OpenClaw 内部队列",
+      "children": [
+        "按 quiet window 批量发送单个 turn/steer",
+        "Codex 上游调度器在下一模型边界消费",
+        "review 与手动压缩轮次拒绝同轮 steer"
+      ]
+    },
+    {
+      "label": "队列模式对比",
+      "detail": "steer 注入、followup 延后、collect 合并、interrupt 中止",
+      "children": [
+        "collect 在 debounce 后合并兼容消息",
+        "interrupt 中止当前运行并启动最新消息"
+      ]
+    },
+    {
+      "label": "取消与范围",
+      "detail": "可用 chat.abort 撤回未投递的 steer，范围限于当前会话运行",
+      "children": [
+        "投递开始后无法保证撤回",
+        "不新建会话、不改工具策略、不按发送者拆分"
+      ]
+    }
+  ],
+  "flow": [
+    "新消息到达运行中会话",
+    "在工具启动边界检查",
+    "跳过未启动调用并给合成结果",
+    "在下一 LLM 调用前追加 steer…",
+    "模型看到 steer 后重新决策"
+  ],
+  "entities": [
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "turn/steer",
+      "type": "technique"
+    },
+    {
+      "name": "steer 模式",
+      "type": "concept"
+    },
+    {
+      "name": "工具启动边界",
+      "type": "concept"
+    },
+    {
+      "name": "chat.abort",
+      "type": "technique"
+    },
+    {
+      "name": "Control UI",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenClaw",
+      "to": "Codex",
+      "label": "对接 harness"
+    },
+    {
+      "from": "Codex",
+      "to": "turn/steer",
+      "label": "暴露接口"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "steer 模式",
+      "label": "默认启用"
+    },
+    {
+      "from": "steer 模式",
+      "to": "工具启动边界",
+      "label": "在边界检查"
+    },
+    {
+      "from": "chat.abort",
+      "to": "OpenClaw",
+      "label": "撤回队列消息"
+    },
+    {
+      "from": "Control UI",
+      "to": "OpenClaw",
+      "label": "显示跳过状态"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "center": "OpenAI 公布 Astra 网络安全评估",
+  "branches": [
+    {
+      "label": "初步安全评估",
+      "detail": "OpenAI 分享针对 Astra 的初步网络安全评估，主动评估前沿模型潜在风险",
+      "children": [
+        "针对 Astra 模型",
+        "主动评估风险"
+      ]
+    },
+    {
+      "label": "强化防护措施",
+      "detail": "为应对新威胁，OpenAI 加强了安全防护和控制措施",
+      "children": [
+        "加强控制措施",
+        "应对新威胁"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "提示开发者需将安全设计融入 AI 工具链的每个环节",
+      "children": [
+        "安全融入工具链",
+        "覆盖每个环节"
+      ]
+    },
+    {
+      "label": "趋势转变",
+      "detail": "AI 安全从被动响应转向主动预防，对构建可信赖 agent 系统有参考意义",
+      "children": [
+        "被动转主动预防",
+        "可信赖 agent 系统"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Astra",
+      "type": "model"
+    },
+    {
+      "name": "网络安全评估",
+      "type": "concept"
+    },
+    {
+      "name": "AI 安全",
+      "type": "concept"
+    },
+    {
+      "name": "agent 系统",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Astra",
+      "label": "评估"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AI 安全",
+      "label": "强化"
+    },
+    {
+      "from": "Astra",
+      "to": "网络安全评估",
+      "label": "接受"
+    },
+    {
+      "from": "AI 安全",
+      "to": "agent 系统",
+      "label": "支撑"
+    }
+  ]
+}

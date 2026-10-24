@@ -1,0 +1,69 @@
+{
+  "center": "Hugging Face 失败项目复盘",
+  "branches": [
+    {
+      "label": "项目背景",
+      "detail": "作者在 Hugging Face 分享一个名为 Amazing Digital Pet Dentures 的失败项目",
+      "children": [
+        "项目名 AmazingDigitalPetDentures",
+        "发布于 Hugging Face 社区博客"
+      ]
+    },
+    {
+      "label": "失败教训",
+      "detail": "文章揭示 AI 开发中常见陷阱与实用教训",
+      "children": [
+        "不要期望一次成功",
+        "3D 方块几何是最难部分"
+      ]
+    },
+    {
+      "label": "社区互动",
+      "detail": "评论者 k-l-lambda 分享自己的 cube-tetris 尝试",
+      "children": [
+        "cube-tetris 链接",
+        "作者认同几何难点"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "AmazingDigitalPetDentures",
+      "type": "product"
+    },
+    {
+      "name": "k-l-lambda",
+      "type": "person"
+    },
+    {
+      "name": "cube-tetris",
+      "type": "product"
+    },
+    {
+      "name": "3D 方块几何",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "AmazingDigitalPetDentures",
+      "to": "Hugging Face",
+      "label": "发布于"
+    },
+    {
+      "from": "k-l-lambda",
+      "to": "cube-tetris",
+      "label": "开发"
+    },
+    {
+      "from": "k-l-lambda",
+      "to": "AmazingDigitalPetDentures",
+      "label": "评论"
+    }
+  ]
+}

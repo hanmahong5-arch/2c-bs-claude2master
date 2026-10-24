@@ -1,0 +1,97 @@
+{
+  "center": "OpenAI CFO 拆解智能全栈",
+  "branches": [
+    {
+      "label": "全栈协同",
+      "detail": "智能进步来自芯片、算力、模型、产品四层协同，而非单一突破",
+      "children": [
+        "芯片",
+        "算力",
+        "模型"
+      ]
+    },
+    {
+      "label": "成本下降",
+      "detail": "每层优化（如训练、推理效率）都降低单位智能成本",
+      "children": [
+        "更高效训练",
+        "更高效推理",
+        "单位智能成本降低"
+      ]
+    },
+    {
+      "label": "规模扩张",
+      "detail": "成本下降推动更广泛的应用，形成复合效应",
+      "children": [
+        "应用范围扩大",
+        "复合效应"
+      ]
+    },
+    {
+      "label": "开发者启示",
+      "detail": "应关注全栈效率，而非仅依赖模型升级",
+      "children": [
+        "构建更经济 AI 产品",
+        "可扩展性"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "芯片",
+      "type": "concept"
+    },
+    {
+      "name": "算力",
+      "type": "concept"
+    },
+    {
+      "name": "模型",
+      "type": "concept"
+    },
+    {
+      "name": "产品",
+      "type": "concept"
+    },
+    {
+      "name": "单位智能成本",
+      "type": "concept"
+    },
+    {
+      "name": "全栈效率",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "芯片",
+      "to": "算力",
+      "label": "支撑"
+    },
+    {
+      "from": "算力",
+      "to": "模型",
+      "label": "驱动"
+    },
+    {
+      "from": "模型",
+      "to": "产品",
+      "label": "赋能"
+    },
+    {
+      "from": "全栈效率",
+      "to": "单位智能成本",
+      "label": "降低"
+    },
+    {
+      "from": "单位智能成本",
+      "to": "产品",
+      "label": "推动应用"
+    }
+  ]
+}

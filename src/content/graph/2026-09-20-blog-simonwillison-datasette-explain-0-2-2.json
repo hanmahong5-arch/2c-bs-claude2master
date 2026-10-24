@@ -1,0 +1,78 @@
+{
+  "center": "datasette-explain 0.2.2 更新",
+  "branches": [
+    {
+      "label": "核心更新",
+      "detail": "解释计划现支持只读存储查询页面",
+      "children": [
+        "Explain plans now work on read-only…"
+      ]
+    },
+    {
+      "label": "插件功能",
+      "detail": "在 Datasette 中边输入边解释和验证 SQL 查询",
+      "children": [
+        "Explain and validate SQL queries as you…"
+      ]
+    },
+    {
+      "label": "升级背景",
+      "detail": "作者将站点升级至 Datasette 1.0a40 后发布新版插件",
+      "children": [
+        "datasette.simonwillison.net 升级至 1.0a40"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "2026 年 9 月 20 日由 Simon Willison 发布",
+      "children": [
+        "Posted 20th September 2026"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "datasette-explain",
+      "type": "product"
+    },
+    {
+      "name": "Datasette",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    },
+    {
+      "name": "Datasette 1.0a40",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "datasette-explain",
+      "label": "发布"
+    },
+    {
+      "from": "datasette-explain",
+      "to": "Datasette",
+      "label": "是插件"
+    },
+    {
+      "from": "datasette-explain",
+      "to": "SQLite",
+      "label": "解释查询"
+    },
+    {
+      "from": "Datasette",
+      "to": "Datasette 1.0a40",
+      "label": "升级至"
+    }
+  ]
+}

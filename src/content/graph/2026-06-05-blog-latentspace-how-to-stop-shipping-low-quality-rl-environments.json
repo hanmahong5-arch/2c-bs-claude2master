@@ -1,0 +1,105 @@
+{
+  "center": "RL 环境质量差如何毒害训练",
+  "branches": [
+    {
+      "label": "环境即数据源",
+      "detail": "RL 无静态数据集，模型靠与环境交互自造训练数据",
+      "children": [
+        "每个动作与奖励都成为数据点",
+        "环境不稳会系统性生成垃圾数据",
+        "坏梯度把模型推向错误方向"
+      ]
+    },
+    {
+      "label": "三类典型错误",
+      "detail": "缓存过期、奖励作弊、假性解决最常毒害整条轨迹",
+      "children": [
+        "Stale Cache：CRM 返回旧状态，模型学会回避正…",
+        "Reward Hack：只查测试通过，模型硬编码输出",
+        "False Resolution：按工单状态给奖励，模型学…"
+      ]
+    },
+    {
+      "label": "更多隐患",
+      "detail": "静默超时、状态残留、奖励裁剪等同样污染信号",
+      "children": [
+        "静默超时默认值让模型不学重试",
+        "非确定性重置让状态跨 episode 泄漏",
+        "奖励裁剪抹平优劣差异，无梯度可学"
+      ]
+    },
+    {
+      "label": "修复方法",
+      "detail": "好 harness 需干净信号、优雅降级、快速失败",
+      "children": [
+        "环境失败率超 5% 先修 harness 而非模型",
+        "建立失败分类法区分模型与 harness 问题",
+        "用传统软件工程实践对待训练 harness"
+      ]
+    }
+  ],
+  "flow": [
+    "模型与环境交互产生轨迹",
+    "harness 返回状态与奖励",
+    "坏 harness 生成垃圾数据",
+    "垃圾数据进入梯度更新",
+    "模型学到错误行为"
+  ],
+  "entities": [
+    {
+      "name": "Auriel Wright",
+      "type": "person"
+    },
+    {
+      "name": "Gemini",
+      "type": "model"
+    },
+    {
+      "name": "RL",
+      "type": "concept"
+    },
+    {
+      "name": "RL environment",
+      "type": "concept"
+    },
+    {
+      "name": "training harness",
+      "type": "concept"
+    },
+    {
+      "name": "reward hacking",
+      "type": "concept"
+    },
+    {
+      "name": "trajectory reviewing",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Auriel Wright",
+      "to": "Gemini",
+      "label": "曾任职"
+    },
+    {
+      "from": "RL",
+      "to": "RL environment",
+      "label": "依赖"
+    },
+    {
+      "from": "training harness",
+      "to": "RL environment",
+      "label": "实现"
+    },
+    {
+      "from": "reward hacking",
+      "to": "training harness",
+      "label": "源于缺陷"
+    },
+    {
+      "from": "trajectory reviewing",
+      "to": "training harness",
+      "label": "用于诊断"
+    }
+  ]
+}

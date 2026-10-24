@@ -1,0 +1,111 @@
+{
+  "center": "smolvm 沙箱测试",
+  "branches": [
+    {
+      "label": "沙箱能力",
+      "detail": "smolvm 1.8.3 用硬件隔离 VM 沙箱不可信 Python/JS",
+      "children": [
+        "离线本地镜像、无网络执行",
+        "CPU/RAM 限制、访客超时、存储配额",
+        "只读输入挂载、可写输出挂载、--unprivileged"
+      ]
+    },
+    {
+      "label": "性能表现",
+      "detail": "冷启动约 0.6–1.5 秒，热执行约 50 毫秒",
+      "children": [
+        "适合数据转换类用户任务"
+      ]
+    },
+    {
+      "label": "环境受阻",
+      "detail": "Claude Code for web 容器无 /dev/kvm，无法嵌套虚拟化",
+      "children": [
+        "Linux 6.18.5-fc-v20，4 vCPU，15GB RAM",
+        "smolvm machine run 报错 kvm not available"
+      ]
+    },
+    {
+      "label": "Plan B 绕行",
+      "detail": "改用 GitHub Actions ubuntu runner，其暴露 /dev/kvm",
+      "children": [
+        "临时 workflow 跑完整测试并收集日志",
+        "最终提交移除该 workflow"
+      ]
+    }
+  ],
+  "flow": [
+    "Claude Fable 5 接研究任务",
+    "在 Claude Code 中尝试运行…",
+    "发现无 /dev/kvm 失败",
+    "改用 GitHub Actions runner",
+    "安装 smolvm 跑测试",
+    "收集日志并清理 workflow"
+  ],
+  "entities": [
+    {
+      "name": "smolmachines",
+      "type": "product"
+    },
+    {
+      "name": "smolvm",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "product"
+    },
+    {
+      "name": "Firecracker",
+      "type": "technique"
+    },
+    {
+      "name": "KVM",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "smolvm",
+      "label": "测试"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "smolvm",
+      "label": "测试"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "Claude Code",
+      "label": "运行于"
+    },
+    {
+      "from": "Claude Fable 5",
+      "to": "GitHub Actions",
+      "label": "改用"
+    },
+    {
+      "from": "smolvm",
+      "to": "KVM",
+      "label": "依赖"
+    },
+    {
+      "from": "Claude Code",
+      "to": "Firecracker",
+      "label": "基于"
+    }
+  ]
+}

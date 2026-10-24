@@ -1,0 +1,117 @@
+{
+  "center": "Claude Opus 4.8 发布",
+  "branches": [
+    {
+      "label": "核心升级",
+      "detail": "在 Opus 4.7 基础上全面提升，价格不变",
+      "children": [
+        "推理、诚实度、代理任务表现提升",
+        "默认高 effort，编码 token 与 4.7 相当但更强"
+      ]
+    },
+    {
+      "label": "诚实度提升",
+      "detail": "更愿标记不确定性，少做无依据断言",
+      "children": [
+        "代码缺陷未标记概率约为前代 1/4",
+        "错位行为率低于 4.7，接近 Claude Mythos…"
+      ]
+    },
+    {
+      "label": "新功能",
+      "detail": "动态工作流、effort 控制、Messages API 更新",
+      "children": [
+        "Claude Code 动态工作流可并行数百子代理",
+        "claude.ai 可选 effort，Messages API 支持…"
+      ]
+    },
+    {
+      "label": "测试者反馈",
+      "detail": "代理任务判断力与可靠性获多方认可",
+      "children": [
+        "Super-Agent 基准唯一端到端全通过",
+        "Online-Mind2Web 得 84%，超 Opus 4.7 与…"
+      ]
+    },
+    {
+      "label": "速度与成本",
+      "detail": "fast mode 速度 2.5 倍，成本降至前代 1/3",
+      "children": [
+        "Databricks Genie 多模态 token 成本省 61%",
+        "Claude Code 速率限制提高"
+      ]
+    }
+  ],
+  "flow": [
+    "规划任务",
+    "并行运行子代理",
+    "验证输出",
+    "回报用户"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Claude Opus 4.7",
+      "type": "model"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "Databricks",
+      "type": "company"
+    },
+    {
+      "name": "动态工作流",
+      "type": "technique"
+    },
+    {
+      "name": "Messages API",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Claude Opus 4.8",
+      "label": "发布"
+    },
+    {
+      "from": "Claude Opus 4.8",
+      "to": "Claude Opus 4.7",
+      "label": "升级自"
+    },
+    {
+      "from": "Claude Opus 4.8",
+      "to": "Claude Code",
+      "label": "集成于"
+    },
+    {
+      "from": "Claude Opus 4.8",
+      "to": "GPT-5.5",
+      "label": "性能超越"
+    },
+    {
+      "from": "Databricks",
+      "to": "Claude Opus 4.8",
+      "label": "采用"
+    },
+    {
+      "from": "Claude Code",
+      "to": "动态工作流",
+      "label": "新增"
+    }
+  ]
+}

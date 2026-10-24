@@ -1,0 +1,101 @@
+{
+  "center": "Qwen3.8-Flash-Next 新模型",
+  "branches": [
+    {
+      "label": "模型规格",
+      "detail": "Qwen 开源多模态 MoE 模型，125B 参数仅 6B 激活",
+      "children": [
+        "125B 参数 / 6B 激活",
+        "多模态 MoE 架构",
+        "Qwen4 架构早期预览"
+      ]
+    },
+    {
+      "label": "本地实测",
+      "detail": "Simon Willison 在 DGX Spark 上试用 Unsloth 量化版本",
+      "children": [
+        "72.5GB UD-IQ1_S",
+        "78.9GB UD-Q2_K_XL",
+        "xhigh 推理档表现最佳"
+      ]
+    },
+    {
+      "label": "性能优势",
+      "detail": "低激活参数带来显著性能提升",
+      "children": [
+        "仅 6B 激活"
+      ]
+    },
+    {
+      "label": "发布信息",
+      "detail": "Simon Willison 博客链接帖，2026 年 8 月 26 日发布",
+      "children": [
+        "标签：qwen、llm-release",
+        "标签：ai-in-china"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Qwen3.8-Flash-Next",
+      "type": "model"
+    },
+    {
+      "name": "Qwen",
+      "type": "company"
+    },
+    {
+      "name": "Qwen4",
+      "type": "model"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "DGX Spark",
+      "type": "product"
+    },
+    {
+      "name": "Unsloth",
+      "type": "product"
+    },
+    {
+      "name": "MoE",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Qwen",
+      "to": "Qwen3.8-Flash-Next",
+      "label": "发布"
+    },
+    {
+      "from": "Qwen3.8-Flash-Next",
+      "to": "Qwen4",
+      "label": "预览架构"
+    },
+    {
+      "from": "Qwen3.8-Flash-Next",
+      "to": "MoE",
+      "label": "采用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "Qwen3.8-Flash-Next",
+      "label": "试用"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "DGX Spark",
+      "label": "运行于"
+    },
+    {
+      "from": "Unsloth",
+      "to": "Qwen3.8-Flash-Next",
+      "label": "提供量化"
+    }
+  ]
+}

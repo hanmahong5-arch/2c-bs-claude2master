@@ -1,0 +1,54 @@
+{
+  "center": "Claude Code v2.1.241 修复",
+  "branches": [
+    {
+      "label": "版本更新",
+      "detail": "Claude Code 发布 v2.1.241，以修复 bug 为主",
+      "children": [
+        "版本号 v2.1.241"
+      ]
+    },
+    {
+      "label": "稳定性提升",
+      "detail": "修复若干 bug，整体稳定性提高",
+      "children": [
+        "减少意外中断",
+        "执行更可预测"
+      ]
+    },
+    {
+      "label": "对 agent harness 意义",
+      "detail": "更少意外中断，执行更可预测",
+      "children": [
+        "更少意外中断",
+        "更可预测执行"
+      ]
+    },
+    {
+      "label": "集成简化",
+      "detail": "可靠性改进减少重试与错误处理需求",
+      "children": [
+        "减少重试",
+        "减少错误处理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "agent harness",
+      "label": "用于"
+    }
+  ]
+}

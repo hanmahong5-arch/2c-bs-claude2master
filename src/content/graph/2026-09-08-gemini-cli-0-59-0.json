@@ -1,0 +1,75 @@
+{
+  "center": "gemini-cli v0.59.0 修复 MCP 漏洞",
+  "branches": [
+    {
+      "label": "修复 SSRF 漏洞",
+      "detail": "修复 MCP OAuth 元数据发现与认证中的 SSRF，限制请求目标",
+      "children": [
+        "严格校验 MCP 服务器 URL",
+        "避免代理发起任意网络请求"
+      ]
+    },
+    {
+      "label": "强制工作区信任关闭",
+      "detail": "受限模式下强制关闭工作区信任，过滤 mcpServers 配置",
+      "children": [
+        "仅允许受信任的服务器",
+        "实现 fail-closed 信任模型",
+        "默认拒绝未授权 MCP 服务器"
+      ]
+    },
+    {
+      "label": "安全增强效果",
+      "detail": "增强 MCP 集成安全性，防止恶意服务器窃取数据或内部攻击",
+      "children": [
+        "定期审计 MCP 配置",
+        "确保安全策略及时更新"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "SSRF",
+      "type": "concept"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "gemini-cli",
+      "to": "MCP",
+      "label": "修复漏洞"
+    },
+    {
+      "from": "MCP",
+      "to": "SSRF",
+      "label": "存在漏洞"
+    },
+    {
+      "from": "MCP",
+      "to": "OAuth",
+      "label": "使用"
+    },
+    {
+      "from": "agent harness",
+      "to": "MCP",
+      "label": "集成"
+    }
+  ]
+}

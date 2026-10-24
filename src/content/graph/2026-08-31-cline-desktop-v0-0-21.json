@@ -1,0 +1,98 @@
+{
+  "center": "Cline Desktop v0.0.21 更新",
+  "branches": [
+    {
+      "label": "停止会话更彻底",
+      "detail": "停止时级联终止所有子代理与队友任务，并持久化取消状态",
+      "children": [
+        "避免后台孤儿进程",
+        "需实现级联取消与状态同步"
+      ]
+    },
+    {
+      "label": "模型目录实时更新",
+      "detail": "Cline 提供商模型从实时目录刷新，新模型无需更新应用即可用",
+      "children": [
+        "模型列表动态化，支持运行时更新",
+        "新增 TokenGo 与 Volcengine Ark",
+        "调整约 36 个提供商默认模型"
+      ]
+    },
+    {
+      "label": "市场双栏浏览",
+      "detail": "市场改为左列表右详情，支持分类筛选，便于发现和比较工具",
+      "children": [
+        "UI 信息架构优化，提升工具发现效率"
+      ]
+    },
+    {
+      "label": "附件拖放与错误处理",
+      "detail": "文件可拖放到聊天输入任意位置；401/403 归类为认证错误",
+      "children": [
+        "降低操作门槛，需处理拖放事件边界",
+        "区分 API 密钥问题与提供商故障"
+      ]
+    },
+    {
+      "label": "修复 Langfuse 追踪",
+      "detail": "修复发布构建中 Langfuse 追踪未初始化，并适配 AI SDK 7",
+      "children": [
+        "确保遥测在优化构建中正常工作"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Cline Desktop",
+      "type": "product"
+    },
+    {
+      "name": "Langfuse",
+      "type": "product"
+    },
+    {
+      "name": "AI SDK 7",
+      "type": "technique"
+    },
+    {
+      "name": "TokenGo",
+      "type": "product"
+    },
+    {
+      "name": "Volcengine Ark",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline Desktop",
+      "to": "Cline",
+      "label": "属于"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "Langfuse",
+      "label": "集成"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "AI SDK 7",
+      "label": "适配"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "TokenGo",
+      "label": "新增支持"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "Volcengine Ark",
+      "label": "新增支持"
+    }
+  ]
+}

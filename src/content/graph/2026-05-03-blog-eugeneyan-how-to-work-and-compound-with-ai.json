@@ -1,0 +1,95 @@
+{
+  "center": "AI 时代高效工作与复利",
+  "branches": [
+    {
+      "label": "上下文即基础设施",
+      "detail": "把代码与知识分目录存放，方便模型检索与导航",
+      "children": [
+        "代码放 ~/src，知识放 ~/vault",
+        "每个项目维护 INDEX.md 注解索引",
+        "新会话像新员工一样用 CLAUDE.md 引导"
+      ]
+    },
+    {
+      "label": "品味即配置",
+      "detail": "用 CLAUDE.md 写行为契约，按目录分层作用域",
+      "children": [
+        "全局/仓库/项目三层 CLAUDE.md",
+        "太长就拆成懒加载 guides",
+        "每周重复的事做成 skill"
+      ]
+    },
+    {
+      "label": "记忆分层",
+      "detail": "事实与配置分开持久化，模型默认不记忆",
+      "children": [
+        "~/vault 存事实与产物",
+        "~/.claude 存偏好与工作流"
+      ]
+    },
+    {
+      "label": "技能迭代",
+      "detail": "先手动做一遍再让模型生成 skill，用会话反馈修正",
+      "children": [
+        "在会话中纠正而非直接改 SKILL.md",
+        "积累前后对比让 skill 收敛",
+        "简单模式用于头脑风暴"
+      ]
+    }
+  ],
+  "flow": [
+    "组织目录与索引",
+    "写 CLAUDE.md 配置",
+    "分层作用域加载",
+    "重复任务做成 skill",
+    "会话反馈迭代 skill"
+  ],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "CLAUDE.md",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "skill",
+      "type": "concept"
+    },
+    {
+      "name": "INDEX.md",
+      "type": "concept"
+    },
+    {
+      "name": "eugeneyan",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "CLAUDE.md",
+      "label": "读取"
+    },
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "连接"
+    },
+    {
+      "from": "CLAUDE.md",
+      "to": "skill",
+      "label": "引用"
+    },
+    {
+      "from": "eugeneyan",
+      "to": "Claude Code",
+      "label": "使用"
+    }
+  ]
+}

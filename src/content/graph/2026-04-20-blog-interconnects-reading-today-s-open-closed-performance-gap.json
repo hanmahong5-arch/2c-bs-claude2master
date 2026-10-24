@@ -1,0 +1,112 @@
+{
+  "center": "开源闭源模型性能差距真相",
+  "branches": [
+    {
+      "label": "单一分数失真",
+      "detail": "Artificial Analysis 指数由约10个子评测合成，掩盖能力结构差异",
+      "children": [
+        "开源模型被视为永久追赶闭源",
+        "指数只反映一个距离数字"
+      ]
+    },
+    {
+      "label": "基准焦点轮换",
+      "detail": "行业评测重点每12到18个月切换一次，训练域随之改变",
+      "children": [
+        "ChatGPT后：聊天、数学、简单代码",
+        "2025后：复杂编码与智能体任务",
+        "新方向：会计、法律、医疗等专业领域"
+      ]
+    },
+    {
+      "label": "数据即护城河",
+      "detail": "前沿实验室高价购买环境与数据集，追随者后期折价买入",
+      "children": [
+        "类似芯片晶圆厂的经济结构",
+        "中国实验室常以折扣获取数据",
+        "蒸馏并非唯一追赶手段，RL环境更关键"
+      ]
+    },
+    {
+      "label": "商业压力重塑前沿",
+      "detail": "闭源靠编码与终端任务维持收入优势，需不断发明新用例",
+      "children": [
+        "企业可换廉价开源模型省token成本",
+        "若编码能力饱和，收入靠客户关系与产品",
+        "Gemini 3 基准强但智能体部署相关性低"
+      ]
+    },
+    {
+      "label": "开源真实水平",
+      "detail": "开源模型并非只靠过拟合基准，实际差距比预期小",
+      "children": [
+        "WeirdML、ARC AGI 2 等分布外基准仍落后",
+        "长上下文与智能体稳定性较弱",
+        "并非根本不同的模型类别"
+      ]
+    }
+  ],
+  "flow": [
+    "ChatGPT后评测聊天数学代码",
+    "推理模型成默认转向编码智能体",
+    "RLVR训练从问答转向复杂环境",
+    "前沿实验室高价买环境数据",
+    "追随者折价买入并追赶基准"
+  ],
+  "entities": [
+    {
+      "name": "Artificial Analysis Intelligence Index",
+      "type": "product"
+    },
+    {
+      "name": "Gemini 3",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "RLVR",
+      "type": "technique"
+    },
+    {
+      "name": "ARC AGI 2",
+      "type": "concept"
+    },
+    {
+      "name": "WeirdML",
+      "type": "concept"
+    },
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Artificial Analysis Intelligence Index",
+      "to": "Gemini 3",
+      "label": "评测"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Anthropic",
+      "label": "同属前沿"
+    },
+    {
+      "from": "RLVR",
+      "to": "Artificial Analysis Intelligence Index",
+      "label": "影响训练"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Artificial Analysis Intelligence Index",
+      "label": "分析"
+    }
+  ]
+}

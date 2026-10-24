@@ -1,0 +1,103 @@
+{
+  "center": "openclaw v2026.9.4 发布复盘",
+  "branches": [
+    {
+      "label": "npm 回读失败",
+      "detail": "Original publisher 在 npm 传播回读阶段失败，靠手动恢复完成",
+      "children": [
+        "未重新发布包",
+        "发布流水线需可重入恢复路径"
+      ]
+    },
+    {
+      "label": "豁免与失败混淆",
+      "detail": "Telegram 与 Parallels 检查被显式豁免，Android 原生资格验证失败",
+      "children": [
+        "豁免与失败应作为不同状态记录",
+        "避免下游误判"
+      ]
+    },
+    {
+      "label": "验证部分完成",
+      "detail": "split-publication verifier 通过实时 npm/Docker 验证，其余待完成",
+      "children": [
+        "beta-selector 完整验证待完成",
+        "main-closeout 记录待完成",
+        "需支持部分完成状态并保留证据快照"
+      ]
+    }
+  ],
+  "flow": [
+    "发布验证",
+    "npm 回读失败",
+    "手动恢复",
+    "豁免与失败记录",
+    "部分验证完成"
+  ],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "npm",
+      "type": "product"
+    },
+    {
+      "name": "Docker",
+      "type": "product"
+    },
+    {
+      "name": "Telegram",
+      "type": "product"
+    },
+    {
+      "name": "Parallels",
+      "type": "product"
+    },
+    {
+      "name": "Android",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "split-publication verifier",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "npm",
+      "label": "发布到"
+    },
+    {
+      "from": "openclaw",
+      "to": "Docker",
+      "label": "验证于"
+    },
+    {
+      "from": "openclaw",
+      "to": "Telegram",
+      "label": "豁免检查"
+    },
+    {
+      "from": "openclaw",
+      "to": "Parallels",
+      "label": "豁免检查"
+    },
+    {
+      "from": "openclaw",
+      "to": "Android",
+      "label": "验证失败"
+    },
+    {
+      "from": "split-publication verifier",
+      "to": "npm",
+      "label": "验证"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "center": "NeoMME 多模态多语言编码器",
+  "branches": [
+    {
+      "label": "模型家族",
+      "detail": "NeoMME 是 260M 与 800M 参数的多模态原生多语言编码器家族",
+      "children": [
+        "260M 与 800M 两个规模",
+        "统一文本与图像表示"
+      ]
+    },
+    {
+      "label": "支持任务",
+      "detail": "覆盖特征提取、视觉文档检索、句子相似度三类任务",
+      "children": [
+        "Feature Extraction",
+        "Visual Document Retrieval",
+        "Sentence Similarity"
+      ]
+    },
+    {
+      "label": "模型规模",
+      "detail": "文章列出 0.3B、0.8B、0.9B 等多档参数模型",
+      "children": [
+        "0.3B",
+        "0.8B",
+        "0.9B"
+      ]
+    },
+    {
+      "label": "社区热度",
+      "detail": "相关模型下载量从数百到数千不等，更新于数天至数周前",
+      "children": [
+        "最高 3.32k 下载",
+        "更新于 8–13 天前"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NeoMME",
+      "type": "model"
+    },
+    {
+      "name": "Feature Extraction",
+      "type": "concept"
+    },
+    {
+      "name": "Visual Document Retrieval",
+      "type": "concept"
+    },
+    {
+      "name": "Sentence Similarity",
+      "type": "concept"
+    },
+    {
+      "name": "Holo3.1",
+      "type": "model"
+    },
+    {
+      "name": "HoloTab",
+      "type": "product"
+    },
+    {
+      "name": "HCompany",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NeoMME",
+      "to": "Feature Extraction",
+      "label": "支持"
+    },
+    {
+      "from": "NeoMME",
+      "to": "Visual Document Retrieval",
+      "label": "支持"
+    },
+    {
+      "from": "NeoMME",
+      "to": "Sentence Similarity",
+      "label": "支持"
+    },
+    {
+      "from": "HCompany",
+      "to": "HoloTab",
+      "label": "发布"
+    },
+    {
+      "from": "HCompany",
+      "to": "Holo3.1",
+      "label": "发布"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "center": "Markdown SVG 渲染工具升级",
+  "branches": [
+    {
+      "label": "工具定位",
+      "detail": "Simon Willison 打造的 Markdown 转 SVG 渲染工具，用于分享含 SVG 的 Markdown 文稿",
+      "children": [
+        "5 月开始构建，本次为功能更新",
+        "浏览器打开即可粘贴 Markdown 渲染"
+      ]
+    },
+    {
+      "label": "URL 分享",
+      "detail": "支持粘贴 CORS 友好 URL 或 GitHub Gist 链接，生成可收藏页面",
+      "children": [
+        "示例用 Gist 链接烘焙进 URL",
+        "Gist 中可见原始 SVG 代码"
+      ]
+    },
+    {
+      "label": "多格式导出",
+      "detail": "渲染后提供多个标签页，把 SVG 转成其他图片格式",
+      "children": [
+        "PNG / JPEG 标签在浏览器内渲染",
+        "可复制或下载，便于不支持 SVG 的平台分享"
+      ]
+    },
+    {
+      "label": "MP4 新功能",
+      "detail": "今日新增 MP4 标签，把动画 SVG 转成视频",
+      "children": [
+        "检测 SVG 是否含动画并估算循环时长",
+        "渲染多帧后加载 30+MB ffmpeg.wasm 合成 MP4"
+      ]
+    }
+  ],
+  "flow": [
+    "粘贴 Markdown 或 URL",
+    "渲染 Markdown 与 SVG",
+    "选择导出标签页",
+    "浏览器内转换格式",
+    "复制或下载结果"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "markdown-svg-renderer",
+      "type": "product"
+    },
+    {
+      "name": "Markdown",
+      "type": "concept"
+    },
+    {
+      "name": "SVG",
+      "type": "concept"
+    },
+    {
+      "name": "GitHub Gist",
+      "type": "product"
+    },
+    {
+      "name": "ffmpeg.wasm",
+      "type": "technique"
+    },
+    {
+      "name": "MP4",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "markdown-svg-renderer",
+      "label": "开发"
+    },
+    {
+      "from": "markdown-svg-renderer",
+      "to": "Markdown",
+      "label": "渲染"
+    },
+    {
+      "from": "markdown-svg-renderer",
+      "to": "SVG",
+      "label": "渲染"
+    },
+    {
+      "from": "markdown-svg-renderer",
+      "to": "GitHub Gist",
+      "label": "读取"
+    },
+    {
+      "from": "markdown-svg-renderer",
+      "to": "ffmpeg.wasm",
+      "label": "调用"
+    },
+    {
+      "from": "ffmpeg.wasm",
+      "to": "MP4",
+      "label": "合成"
+    }
+  ]
+}

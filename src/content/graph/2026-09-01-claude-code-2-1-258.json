@@ -1,0 +1,56 @@
+{
+  "center": "Claude Code v2.1.258 修复",
+  "branches": [
+    {
+      "label": "修复 macOS 12 启动",
+      "detail": "解决 2.1.255 引入的 Monterey 无法启动回归",
+      "children": [
+        "2.1.255 引入该问题",
+        "发布前需覆盖旧系统兼容测试"
+      ]
+    },
+    {
+      "label": "修复权限重发错误",
+      "detail": "远程与定时会话重发权限批准失败时报错",
+      "children": [
+        "报错：用户消息必须非空",
+        "重发失败需保证消息内容有效"
+      ]
+    },
+    {
+      "label": "harness 设计启示",
+      "detail": "两条修复各自给出对 harness 设计的改进建议",
+      "children": [
+        "旧系统兼容性测试前置",
+        "避免权限重发导致会话中断"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "macOS 12",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "macOS 12",
+      "label": "修复启动"
+    },
+    {
+      "from": "Claude Code",
+      "to": "harness",
+      "label": "影响设计"
+    }
+  ]
+}

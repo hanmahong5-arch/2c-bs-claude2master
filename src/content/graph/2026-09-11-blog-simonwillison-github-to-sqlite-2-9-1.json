@@ -1,0 +1,76 @@
+{
+  "center": "github-to-sqlite 2.9.1 发布",
+  "branches": [
+    {
+      "label": "版本发布",
+      "detail": "Simon Willison 发布 github-to-sqlite 2.9.1",
+      "children": [
+        "2026 年 9 月 11 日发布"
+      ]
+    },
+    {
+      "label": "核心修复",
+      "detail": "修复与 sqlite-utils 4.x 的兼容性问题",
+      "children": [
+        "对应 issue #85"
+      ]
+    },
+    {
+      "label": "工具用途",
+      "detail": "把 GitHub 数据保存到 SQLite 数据库",
+      "children": []
+    },
+    {
+      "label": "作者动态",
+      "detail": "Simon Willison 的 weblog 发布该版本说明",
+      "children": [
+        "同期文章涉及 Claude Opus 5.5、GPT-6 等"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "github-to-sqlite",
+      "type": "product"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "sqlite-utils",
+      "type": "product"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "SQLite",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "github-to-sqlite",
+      "label": "发布"
+    },
+    {
+      "from": "github-to-sqlite",
+      "to": "GitHub",
+      "label": "读取数据"
+    },
+    {
+      "from": "github-to-sqlite",
+      "to": "SQLite",
+      "label": "写入数据"
+    },
+    {
+      "from": "github-to-sqlite",
+      "to": "sqlite-utils",
+      "label": "依赖兼容"
+    }
+  ]
+}

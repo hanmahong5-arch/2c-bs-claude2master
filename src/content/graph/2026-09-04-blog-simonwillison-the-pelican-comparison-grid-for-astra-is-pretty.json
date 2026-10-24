@@ -1,0 +1,103 @@
+{
+  "center": "Simon Willison 用鹈鹕骑自行车对…",
+  "branches": [
+    {
+      "label": "Astra 画得更好",
+      "detail": "Astra 各推理档位的鹈鹕都优于 GPT-5.6 Sol 最佳档位",
+      "children": [
+        "GPT-5.6-Sol 最佳档（xhigh）仍像抽象色块",
+        "Astra max 档效果最好",
+        "Astra low 已胜过 Sol 任意档"
+      ]
+    },
+    {
+      "label": "推理档位对比",
+      "detail": "在 low、medium、high、xhigh、max 五档生成 SVG 并排比较",
+      "children": [
+        "Astra 不支持 reasoning=none",
+        "Astra 低于 max 时鹈鹕腿仍不可靠",
+        "对比对象含 GPT-5.6 Sol、Terra、Luna"
+      ]
+    },
+    {
+      "label": "价格与 token",
+      "detail": "Astra 单价约为 Sol 两倍，但每档用 token 明显更少",
+      "children": [
+        "Astra $10/$50 每百万，Sol $5/$30",
+        "Astra low 仅 9.55 美分",
+        "Astra 与 Luna 输入 token 均为 16，Sol 与…"
+      ]
+    },
+    {
+      "label": "模型关联猜测",
+      "detail": "Simon 由输入 token 数怀疑 Astra 与 Luna 关系更近",
+      "children": [
+        "Astra 与 Luna 输入 token 相同",
+        "怀疑程度超出 OpenAI 公开说法"
+      ]
+    }
+  ],
+  "flow": [
+    "获取 GPT-6 Astra 访问权限",
+    "在五个推理档位生成鹈鹕 SVG",
+    "与 GPT-5.6 各模型渲染对比",
+    "观察质量、价格与 token 数"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Terra",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "推理档位",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "GPT-6 Astra",
+      "label": "测试"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "GPT-5.6 Sol",
+      "label": "优于"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "GPT-5.6 Luna",
+      "label": "疑似相关"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Astra",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "推理档位",
+      "label": "支持"
+    }
+  ]
+}

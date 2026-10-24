@@ -1,0 +1,110 @@
+{
+  "center": "cline cli v3.0.48 更新",
+  "branches": [
+    {
+      "label": "历史记录进 TUI",
+      "detail": "cline history 直接在现有 TUI 内打开，不再渲染第二个视图",
+      "children": [
+        "支持恢复与删除",
+        "简化交互流程"
+      ]
+    },
+    {
+      "label": "连接器会话恢复",
+      "detail": "Slack、Discord 等线程绑定会话丢失时自动丢弃旧绑定并重放",
+      "children": [
+        "无需手动编辑 threads.json",
+        "增强健壮性"
+      ]
+    },
+    {
+      "label": "MCP 超时可配",
+      "detail": "timeout 设置对 initialize、tools/list、tools/call 生效",
+      "children": [
+        "替代硬编码 5 秒限制",
+        "慢服务器不再失败"
+      ]
+    },
+    {
+      "label": "推理控制路由",
+      "detail": "推理控制从 models.dev 目录路由，预算受限且编码正确",
+      "children": [
+        "跨提供商一致"
+      ]
+    },
+    {
+      "label": "默认模型变更",
+      "detail": "OpenRouter 默认模型改为 anthropic/claude-sonnet-5",
+      "children": [
+        "影响默认行为"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline cli",
+      "type": "product"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "models.dev",
+      "type": "product"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "product"
+    },
+    {
+      "name": "anthropic/claude-sonnet-5",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline cli",
+      "to": "TUI",
+      "label": "集成"
+    },
+    {
+      "from": "cline cli",
+      "to": "MCP",
+      "label": "配置超时"
+    },
+    {
+      "from": "cline cli",
+      "to": "OpenRouter",
+      "label": "默认模型"
+    },
+    {
+      "from": "OpenRouter",
+      "to": "anthropic/claude-sonnet-5",
+      "label": "默认使用"
+    },
+    {
+      "from": "Slack",
+      "to": "cline cli",
+      "label": "连接器"
+    },
+    {
+      "from": "Discord",
+      "to": "cline cli",
+      "label": "连接器"
+    }
+  ]
+}

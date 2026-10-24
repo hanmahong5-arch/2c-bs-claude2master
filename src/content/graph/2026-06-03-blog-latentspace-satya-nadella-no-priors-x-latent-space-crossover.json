@@ -1,0 +1,118 @@
+{
+  "center": "Satya Nadella 谈微软 AI 平台战略",
+  "branches": [
+    {
+      "label": "生态平台定位",
+      "detail": "微软要做前沿智能平台，客户从生态获得的价值须超过微软自身所得",
+      "children": [
+        "平台定义：创造的价值大于平台自身捕获的价值",
+        "让企业成为一等参与者，能指出自己创造的 AI"
+      ]
+    },
+    {
+      "label": "MAI 模型策略",
+      "detail": "从干净血统的预训练出发，让企业围绕模型构建自己的专家模型",
+      "children": [
+        "强调数据质量与消融实验，避免只刷榜的开源权重模型",
+        "5B 小模型可爬坡，追求认知核心",
+        "企业自建私有 eval 与 traces 作为 Token IP"
+      ]
+    },
+    {
+      "label": "多模型与上下文层",
+      "detail": "通过 OpenClaw、Scout 等多模型 harness 与企业上下文层构建应用",
+      "children": [
+        "Work IQ 暴露完整企业上下文，被 C-suite 重度…"
+      ]
+    },
+    {
+      "label": "AI ROI 与 SaaS 重估",
+      "detail": "企业面临 Tokenmaxxing 与裁员的艰难对话，Build vs Buy 方程改变",
+      "children": [
+        "End of SaaS 被重新评估",
+        "微软作为 ur-SaaS 巨头给出回应"
+      ]
+    },
+    {
+      "label": "两年经验反思",
+      "detail": "低估了真实世界部署复杂度，行业未把 token 使用视为创造价值",
+      "children": [
+        "智能约等于 compute 的对数成立",
+        "真实 eval 是客户做出只有自己能衡量的独特价值"
+      ]
+    }
+  ],
+  "flow": [
+    "干净血统预训练",
+    "构建爬坡脚手架",
+    "企业自建私有 eval",
+    "收集 traces 与 RLE",
+    "形成 Token IP"
+  ],
+  "entities": [
+    {
+      "name": "Satya Nadella",
+      "type": "person"
+    },
+    {
+      "name": "Microsoft",
+      "type": "company"
+    },
+    {
+      "name": "MAI",
+      "type": "model"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Scout",
+      "type": "product"
+    },
+    {
+      "name": "Work IQ",
+      "type": "product"
+    },
+    {
+      "name": "Tokenmaxxing",
+      "type": "concept"
+    },
+    {
+      "name": "End of SaaS",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Satya Nadella",
+      "to": "Microsoft",
+      "label": "担任CEO"
+    },
+    {
+      "from": "Microsoft",
+      "to": "MAI",
+      "label": "发布"
+    },
+    {
+      "from": "Microsoft",
+      "to": "OpenClaw",
+      "label": "提供"
+    },
+    {
+      "from": "Microsoft",
+      "to": "Scout",
+      "label": "提供"
+    },
+    {
+      "from": "Microsoft",
+      "to": "Work IQ",
+      "label": "提供"
+    },
+    {
+      "from": "MAI",
+      "to": "Tokenmaxxing",
+      "label": "关联"
+    }
+  ]
+}

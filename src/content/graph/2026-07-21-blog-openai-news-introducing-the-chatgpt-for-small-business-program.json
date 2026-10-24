@@ -1,0 +1,114 @@
+{
+  "center": "OpenAI小企业ChatGPT计划",
+  "branches": [
+    {
+      "label": "计划四大内容",
+      "detail": "线上培训、线下AI学院、入门指南、小企业专属智能体与合作伙伴",
+      "children": [
+        "线上产品网络研讨会，覆盖会计、营销、电商",
+        "美国线下AI学院，含实操练习与同行支持",
+        "可上传至ChatGPT Work的互动指南"
+      ]
+    },
+    {
+      "label": "核心产品ChatGPT Work",
+      "detail": "可完成多步骤任务的智能体，连接文件、应用并记忆工作方式",
+      "children": [
+        "由GPT-5.6驱动，所有订阅计划可用",
+        "语音笔记转Slack消息、实时市场看板",
+        "用客户评论生成培训演示"
+      ]
+    },
+    {
+      "label": "实际成效数据",
+      "detail": "去年Small Business AI Jams中参与者已获显著效率提升",
+      "children": [
+        "78%参与者一天内搭建可用AI工作流",
+        "42%每周节省超5小时",
+        "30页合同报价单省10小时录入"
+      ]
+    },
+    {
+      "label": "用户案例",
+      "detail": "多位创业者用ChatGPT强化思考与日常运营",
+      "children": [
+        "Intentful.ai CEO Marina Petrova用于拓展思路",
+        "Adam Ruege用chief of staff agent管理日程",
+        "Keg Built老板Kevin English用于数据录入"
+      ]
+    }
+  ],
+  "flow": [
+    "注册并接收更新",
+    "参加线上或线下培训",
+    "上传指南至ChatGPT Work",
+    "连接文件与应用",
+    "用智能体完成多步任务"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "Dropbox",
+      "type": "company"
+    },
+    {
+      "name": "Shopify",
+      "type": "company"
+    },
+    {
+      "name": "Intuit",
+      "type": "company"
+    },
+    {
+      "name": "Slack",
+      "type": "company"
+    },
+    {
+      "name": "Marina Petrova",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "推出"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "GPT-5.6",
+      "label": "由…驱动"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Dropbox",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Shopify",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Intuit",
+      "label": "合作"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Slack",
+      "label": "合作"
+    }
+  ]
+}

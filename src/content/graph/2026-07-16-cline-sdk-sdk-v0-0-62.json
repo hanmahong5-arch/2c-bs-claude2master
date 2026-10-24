@@ -1,0 +1,62 @@
+{
+  "center": "Cline SDK v0.0.62 更新",
+  "branches": [
+    {
+      "label": "Ollama 路由修复",
+      "detail": "修复 Ollama 原生 API 路由，使上下文窗口与超时设置重新生效",
+      "children": [
+        "避免路由错误导致配置失效",
+        "确保 agent 正确控制上下文长度和超时"
+      ]
+    },
+    {
+      "label": "遥测移除",
+      "detail": "遥测不再附加到 hub 工具上下文中",
+      "children": [
+        "减少工具调用数据冗余",
+        "提升 agent 执行效率",
+        "保护用户隐私"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline SDK",
+      "type": "product"
+    },
+    {
+      "name": "Ollama",
+      "type": "product"
+    },
+    {
+      "name": "Ollama 原生 API",
+      "type": "technique"
+    },
+    {
+      "name": "遥测",
+      "type": "concept"
+    },
+    {
+      "name": "hub 工具上下文",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline SDK",
+      "to": "Ollama",
+      "label": "修复路由"
+    },
+    {
+      "from": "Cline SDK",
+      "to": "遥测",
+      "label": "移除"
+    },
+    {
+      "from": "遥测",
+      "to": "hub 工具上下文",
+      "label": "不再附加"
+    }
+  ]
+}

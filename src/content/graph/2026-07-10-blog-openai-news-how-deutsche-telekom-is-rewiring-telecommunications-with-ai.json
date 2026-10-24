@@ -1,0 +1,65 @@
+{
+  "center": "德国电信AI全链路升级",
+  "branches": [
+    {
+      "label": "AI客服",
+      "detail": "部署AI客服系统，处理超10万次咨询，首次解决率提升15%",
+      "children": [
+        "处理超10万次客户咨询",
+        "首次解决率提升15%"
+      ]
+    },
+    {
+      "label": "网络运维",
+      "detail": "AI优化网络运维，自动检测并预测故障，减少中断时间",
+      "children": [
+        "自动检测并预测故障",
+        "减少网络中断时间"
+      ]
+    },
+    {
+      "label": "员工赋能",
+      "detail": "员工用AI助手快速获取技术文档与流程指引，缩短解决时间",
+      "children": [
+        "快速获取技术文档与流程指引",
+        "缩短问题解决时间"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Deutsche Telekom",
+      "type": "company"
+    },
+    {
+      "name": "AI客服系统",
+      "type": "product"
+    },
+    {
+      "name": "AI助手",
+      "type": "product"
+    },
+    {
+      "name": "AI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Deutsche Telekom",
+      "to": "AI客服系统",
+      "label": "部署"
+    },
+    {
+      "from": "Deutsche Telekom",
+      "to": "AI助手",
+      "label": "赋能员工"
+    },
+    {
+      "from": "AI客服系统",
+      "to": "AI",
+      "label": "基于"
+    }
+  ]
+}

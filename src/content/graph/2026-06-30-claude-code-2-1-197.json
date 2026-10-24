@@ -1,0 +1,65 @@
+{
+  "center": "Claude Code v2.1.197 更新",
+  "branches": [
+    {
+      "label": "Sonnet 5 默认",
+      "detail": "Claude Sonnet 5 成为 Claude Code 默认模型",
+      "children": [
+        "原生支持 1M token 上下文窗口",
+        "Agent 可处理更长对话历史或代码库"
+      ]
+    },
+    {
+      "label": "促销定价",
+      "detail": "$2/$10 每百万 token，持续至 8 月 31 日",
+      "children": [
+        "低成本窗口鼓励更频繁的上下文重用",
+        "需监控预算"
+      ]
+    },
+    {
+      "label": "版本要求",
+      "detail": "需更新至 v2.1.197 才能使用新模型",
+      "children": [
+        "版本锁定确保兼容性",
+        "升级前需测试现有 harness 集成"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Claude Sonnet 5",
+      "type": "model"
+    },
+    {
+      "name": "1M token 上下文窗口",
+      "type": "concept"
+    },
+    {
+      "name": "v2.1.197",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "Claude Sonnet 5",
+      "label": "默认采用"
+    },
+    {
+      "from": "Claude Sonnet 5",
+      "to": "1M token 上下文窗口",
+      "label": "支持"
+    },
+    {
+      "from": "Claude Code",
+      "to": "v2.1.197",
+      "label": "版本更新"
+    }
+  ]
+}

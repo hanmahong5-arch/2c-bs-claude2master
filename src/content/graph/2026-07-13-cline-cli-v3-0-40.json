@@ -1,0 +1,99 @@
+{
+  "center": "Cline CLI v3.0.40 更新",
+  "branches": [
+    {
+      "label": "新增密钥入口",
+      "detail": "Cline OAuth 提供商支持手动输入 API 密钥，作为自动化流程的备用认证方式",
+      "children": [
+        "手动 API 密钥逃生口",
+        "为自动化流程提供备用认证"
+      ]
+    },
+    {
+      "label": "修复模型切换",
+      "detail": "解决切换模型时提供商配置不重新加载的问题，确保 agent 动态调整模型时正确更新配置",
+      "children": [
+        "提供商配置不重新加载",
+        "动态调整模型时更新配置"
+      ]
+    },
+    {
+      "label": "修复自动更新",
+      "detail": "解决 Bun 全局安装后符号链接解析失败导致的自动更新问题",
+      "children": [
+        "Bun 全局安装",
+        "符号链接解析失败"
+      ]
+    },
+    {
+      "label": "修复会话持久性",
+      "detail": "解决令牌刷新时因网络或服务器错误导致意外登出，并保留同一会话的会话 ID",
+      "children": [
+        "令牌刷新意外登出",
+        "继续时保留会话 ID"
+      ]
+    },
+    {
+      "label": "优化错误与压缩",
+      "detail": "ClinePass 用量限制错误清晰显示，强化上下文压缩预算处理",
+      "children": [
+        "ClinePass 用量限制错误",
+        "上下文压缩预算处理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "Cline OAuth",
+      "type": "product"
+    },
+    {
+      "name": "Bun",
+      "type": "product"
+    },
+    {
+      "name": "ClinePass",
+      "type": "product"
+    },
+    {
+      "name": "API 密钥",
+      "type": "concept"
+    },
+    {
+      "name": "上下文压缩",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "Cline OAuth",
+      "label": "支持"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Bun",
+      "label": "兼容"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "ClinePass",
+      "label": "集成"
+    },
+    {
+      "from": "Cline OAuth",
+      "to": "API 密钥",
+      "label": "使用"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "上下文压缩",
+      "label": "优化"
+    }
+  ]
+}

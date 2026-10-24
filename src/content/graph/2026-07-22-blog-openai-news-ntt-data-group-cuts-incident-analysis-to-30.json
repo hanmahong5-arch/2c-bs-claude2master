@@ -1,0 +1,69 @@
+{
+  "center": "NTT DATA用Codex缩短事故分析",
+  "branches": [
+    {
+      "label": "部署规模",
+      "detail": "为9000名员工部署ChatGPT Enterprise和Codex",
+      "children": [
+        "9000名员工",
+        "ChatGPT Enterprise + Codex"
+      ]
+    },
+    {
+      "label": "效率提升",
+      "detail": "事故分析从数小时缩短至30分钟",
+      "children": [
+        "数小时 → 30分钟",
+        "加速问题定位与解决"
+      ]
+    },
+    {
+      "label": "企业级落地",
+      "detail": "统一平台实现安全合规的规模化AI部署",
+      "children": [
+        "兼顾安全与规模化",
+        "统一平台合规部署"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "NTT DATA Group",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT Enterprise",
+      "type": "product"
+    },
+    {
+      "name": "事故分析",
+      "type": "concept"
+    },
+    {
+      "name": "企业级AI部署",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "NTT DATA Group",
+      "to": "Codex",
+      "label": "部署"
+    },
+    {
+      "from": "NTT DATA Group",
+      "to": "ChatGPT Enterprise",
+      "label": "部署"
+    },
+    {
+      "from": "Codex",
+      "to": "事故分析",
+      "label": "加速"
+    }
+  ]
+}

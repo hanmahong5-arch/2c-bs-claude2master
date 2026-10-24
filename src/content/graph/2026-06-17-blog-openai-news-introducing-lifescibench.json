@@ -1,0 +1,83 @@
+{
+  "center": "OpenAI 发布 LifeSciBench",
+  "branches": [
+    {
+      "label": "专家编写评审",
+      "detail": "基准由生命科学领域专家编写和评审，贴近真实科研挑战",
+      "children": [
+        "非简单知识问答",
+        "要求深度理解与推理"
+      ]
+    },
+    {
+      "label": "覆盖科研全流程",
+      "detail": "任务涵盖实验设计、数据分析到结果解读等关键环节",
+      "children": [
+        "评估端到端问题解决能力",
+        "不止于信息检索"
+      ]
+    },
+    {
+      "label": "推动可靠 AI",
+      "detail": "通过标准化评估衡量 AI 在生命科学中的可靠性、安全性与有效性",
+      "children": [
+        "为开发者提供性能衡量标准",
+        "引导负责任发展方向"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "LifeSciBench",
+      "type": "product"
+    },
+    {
+      "name": "生命科学",
+      "type": "concept"
+    },
+    {
+      "name": "AI 基准",
+      "type": "concept"
+    },
+    {
+      "name": "实验设计",
+      "type": "concept"
+    },
+    {
+      "name": "数据分析",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "LifeSciBench",
+      "label": "发布"
+    },
+    {
+      "from": "LifeSciBench",
+      "to": "生命科学",
+      "label": "评估"
+    },
+    {
+      "from": "LifeSciBench",
+      "to": "AI 基准",
+      "label": "属于"
+    },
+    {
+      "from": "LifeSciBench",
+      "to": "实验设计",
+      "label": "涵盖"
+    },
+    {
+      "from": "LifeSciBench",
+      "to": "数据分析",
+      "label": "涵盖"
+    }
+  ]
+}

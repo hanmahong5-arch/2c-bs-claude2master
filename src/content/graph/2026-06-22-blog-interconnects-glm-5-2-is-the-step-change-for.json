@@ -1,0 +1,108 @@
+{
+  "center": "GLM-5.2 开源智能体突破",
+  "branches": [
+    {
+      "label": "发布与热度",
+      "detail": "Z.ai 于 6 月 13 日周末向 GLM Coding Plan 用户推出，6 月 16 日开源 MIT 权重",
+      "children": [
+        "社区基准显示超越预期，Arena 智能体榜唯一开源…",
+        "Design Arena 上击败 Claude Fable",
+        "热度堪比 DeepSeek R1 发布"
+      ]
+    },
+    {
+      "label": "能力定位",
+      "detail": "首个在编码工具链中作为通用智能体表现自然的开源权重模型",
+      "children": [
+        "在 Claude Code 中通过 Fireworks API 使用",
+        "建议始终使用 Max thinking 模式",
+        "与 Opus 4.8 无思考模式相当"
+      ]
+    },
+    {
+      "label": "开源闭源差距",
+      "detail": "从 Claude Opus 4.5 到 GLM-5.2 约 204 天，落在 6-9 个月性能滞后区间",
+      "children": [
+        "Opus 4.5 发布于 2025 年 11 月 24 日",
+        "GLM-5.2 发布于 2026 年 6 月 16 日",
+        "差距未如预期扩大"
+      ]
+    },
+    {
+      "label": "经济影响",
+      "detail": "给 token 消耗大户带来定价压力，利好开源模型推理生态",
+      "children": [
+        "Fireworks、Together、Prime Intellect 等…",
+        "Anthropic 旗舰模型被禁期间，GLM-5.2 抢占经…",
+        "工作流趋向多模型分工"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "GLM-5.2",
+      "type": "model"
+    },
+    {
+      "name": "Z.ai",
+      "type": "company"
+    },
+    {
+      "name": "Claude Opus 4.5",
+      "type": "model"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek R1",
+      "type": "model"
+    },
+    {
+      "name": "Kimi K2",
+      "type": "model"
+    },
+    {
+      "name": "Fireworks",
+      "type": "company"
+    },
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Z.ai",
+      "to": "GLM-5.2",
+      "label": "发布"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "Claude Opus 4.5",
+      "label": "性能对标"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "Claude Fable 5",
+      "label": "基准超越"
+    },
+    {
+      "from": "GLM-5.2",
+      "to": "DeepSeek R1",
+      "label": "热度类比"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "GLM-5.2",
+      "label": "评测"
+    },
+    {
+      "from": "Fireworks",
+      "to": "GLM-5.2",
+      "label": "提供推理"
+    }
+  ]
+}

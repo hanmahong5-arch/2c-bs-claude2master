@@ -1,0 +1,71 @@
+{
+  "center": "Cline CLI v3.0.42 修复 Ollama…",
+  "branches": [
+    {
+      "label": "版本与修复",
+      "detail": "cline cli-v3.0.42 修复了 Ollama 原生 API 路由问题",
+      "children": [
+        "上下文窗口与超时设置重新生效"
+      ]
+    },
+    {
+      "label": "修复影响",
+      "detail": "agent 使用 Ollama 时能正确应用配置的上下文窗口限制",
+      "children": [
+        "避免路由错误导致的截断或超时"
+      ]
+    },
+    {
+      "label": "harness 设计启示",
+      "detail": "需确保 API 路由逻辑正确传递参数",
+      "children": [
+        "避免类似配置失效问题"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline CLI",
+      "type": "product"
+    },
+    {
+      "name": "Ollama",
+      "type": "product"
+    },
+    {
+      "name": "Ollama 原生 API",
+      "type": "technique"
+    },
+    {
+      "name": "上下文窗口",
+      "type": "concept"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline CLI",
+      "to": "Ollama",
+      "label": "修复路由"
+    },
+    {
+      "from": "Cline CLI",
+      "to": "Ollama 原生 API",
+      "label": "调用"
+    },
+    {
+      "from": "Ollama 原生 API",
+      "to": "上下文窗口",
+      "label": "传递配置"
+    },
+    {
+      "from": "harness",
+      "to": "Ollama 原生 API",
+      "label": "需正确路由"
+    }
+  ]
+}

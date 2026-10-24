@@ -1,0 +1,78 @@
+{
+  "center": "AI代理不能当DRI",
+  "branches": [
+    {
+      "label": "DRI定义",
+      "detail": "DRI指对项目成败最终负责的人，源自Apple",
+      "children": [
+        "GitLab手册给出最佳定义",
+        "术语起源于Apple"
+      ]
+    },
+    {
+      "label": "代理不能当DRI",
+      "detail": "Simon Willison认为代理不应被视为项目DRI",
+      "children": [
+        "问责是独属人类的能力",
+        "机器无法为行为担责"
+      ]
+    },
+    {
+      "label": "历史佐证",
+      "detail": "IBM 1979年培训幻灯片早有类似论断",
+      "children": [
+        "计算机永不能被问责",
+        "故不能做管理决策"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "DRI",
+      "type": "concept"
+    },
+    {
+      "name": "GitLab",
+      "type": "company"
+    },
+    {
+      "name": "Apple",
+      "type": "company"
+    },
+    {
+      "name": "IBM",
+      "type": "company"
+    },
+    {
+      "name": "LLM-powered agents",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "DRI",
+      "to": "Apple",
+      "label": "起源于"
+    },
+    {
+      "from": "GitLab",
+      "to": "DRI",
+      "label": "定义于手册"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "LLM-powered agents",
+      "label": "讨论其定位"
+    },
+    {
+      "from": "IBM",
+      "to": "LLM-powered agents",
+      "label": "观点呼应"
+    }
+  ]
+}

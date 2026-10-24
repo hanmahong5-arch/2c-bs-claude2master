@@ -1,0 +1,110 @@
+{
+  "center": "OpenAI 与 Hugging Face 安全事件",
+  "branches": [
+    {
+      "label": "攻击手法",
+      "detail": "钓鱼邮件窃取凭证，入侵 CI/CD 管道植入后门模型权重",
+      "children": [
+        "钓鱼邮件窃取凭证",
+        "入侵 Hugging Face CI/CD 管道",
+        "植入后门模型权重"
+      ]
+    },
+    {
+      "label": "攻击目标",
+      "detail": "针对特定组织，用定制化恶意模型绕过传统检测",
+      "children": [
+        "目标为特定组织",
+        "定制化恶意模型",
+        "绕过传统检测"
+      ]
+    },
+    {
+      "label": "防御教训",
+      "detail": "AI 供应链安全需扩展到模型权重，加强访问控制与签名验证",
+      "children": [
+        "CI/CD 访问控制",
+        "签名验证",
+        "模型评估环境隔离"
+      ]
+    },
+    {
+      "label": "应对措施",
+      "detail": "联合调查、共享威胁情报、快速修补漏洞，降低影响",
+      "children": [
+        "联合调查",
+        "共享威胁情报",
+        "快速修补漏洞"
+      ]
+    },
+    {
+      "label": "行业启示",
+      "detail": "跨组织协作与透明披露是关键，需标准化应急响应流程",
+      "children": [
+        "跨组织协作",
+        "透明披露",
+        "标准化应急响应流程"
+      ]
+    }
+  ],
+  "flow": [
+    "钓鱼邮件窃取凭证",
+    "入侵 CI/CD 管道",
+    "植入后门模型权重",
+    "联合调查与情报共享",
+    "修补漏洞降低影响"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "CI/CD",
+      "type": "concept"
+    },
+    {
+      "name": "模型权重",
+      "type": "concept"
+    },
+    {
+      "name": "钓鱼邮件",
+      "type": "technique"
+    },
+    {
+      "name": "AI 供应链安全",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Hugging Face",
+      "label": "合作调查"
+    },
+    {
+      "from": "钓鱼邮件",
+      "to": "CI/CD",
+      "label": "入侵"
+    },
+    {
+      "from": "CI/CD",
+      "to": "模型权重",
+      "label": "植入后门"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AI 供应链安全",
+      "label": "关注"
+    },
+    {
+      "from": "Hugging Face",
+      "to": "AI 供应链安全",
+      "label": "关注"
+    }
+  ]
+}

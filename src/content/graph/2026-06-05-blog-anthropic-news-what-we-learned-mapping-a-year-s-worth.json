@@ -1,0 +1,115 @@
+{
+  "center": "Anthropic 分析一年 AI 网络威胁",
+  "branches": [
+    {
+      "label": "AI 让攻击者更危险",
+      "detail": "AI 被用于攻击后期复杂阶段，提升攻击者威胁等级",
+      "children": [
+        "832 个被封禁账号中 67.3% 用 AI 写恶意软件",
+        "6.5% 用 AI 辅助横向移动",
+        "中高风险占比从 33% 升至 56%"
+      ]
+    },
+    {
+      "label": "攻击更自主化",
+      "detail": "AI 能串联攻击链多环节，旧风险区分方法失效",
+      "children": [
+        "AI 用于账户发现上升 8.9%",
+        "AI 辅助钓鱼下降 8.6%",
+        "低技能与高技能者使用技术数相近（16 vs 20）"
+      ]
+    },
+    {
+      "label": "MITRE ATT&CK 不足",
+      "detail": "框架未涵盖 AI 驱动的自主编排等关键行为",
+      "children": [
+        "2025 年 11 月间谍行动用 30 项技术却获最高风…",
+        "缺乏 agentic orchestration 的 ATT&CK ID"
+      ]
+    },
+    {
+      "label": "新区分信号",
+      "detail": "高风险者围绕模型构建可串联攻击阶段的架构",
+      "children": [
+        "平台（Claude Code/API/聊天界面）与风险无关",
+        "关键在攻击生命周期中应用 AI 的位置"
+      ]
+    },
+    {
+      "label": "应对与展望",
+      "detail": "Anthropic 部署网络防护并与 MITRE 讨论框架演进",
+      "children": [
+        "在最强模型上部署防护拦截恶意软件开发等",
+        "与 Verizon DBIR 合作发布部分结果"
+      ]
+    }
+  ],
+  "flow": [
+    "收集 832 个被封禁账号",
+    "映射到 MITRE ATT&CK 框架",
+    "分析 AI 使用阶段与风险评分",
+    "发现框架未覆盖自主编排",
+    "部署防护并推动框架演进"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "MITRE ATT&CK",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "Verizon",
+      "type": "company"
+    },
+    {
+      "name": "Project Glasswing",
+      "type": "concept"
+    },
+    {
+      "name": "agentic orchestration",
+      "type": "technique"
+    },
+    {
+      "name": "lateral movement",
+      "type": "technique"
+    },
+    {
+      "name": "account discovery",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "MITRE ATT&CK",
+      "label": "映射分析"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Verizon",
+      "label": "合作发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Code",
+      "label": "开发"
+    },
+    {
+      "from": "Claude Code",
+      "to": "agentic orchestration",
+      "label": "被用于"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Project Glasswing",
+      "label": "开展"
+    }
+  ]
+}

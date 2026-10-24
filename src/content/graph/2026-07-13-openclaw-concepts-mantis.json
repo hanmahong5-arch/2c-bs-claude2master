@@ -1,0 +1,122 @@
+{
+  "center": "Mantis 用 CI 证据验证 AI agent",
+  "branches": [
+    {
+      "label": "核心机制",
+      "detail": "对比已知坏基线候选 ref，发布视觉 CI 证据与 PR 评论",
+      "children": [
+        "实时传输场景对比 baseline 与 candidate",
+        "浏览器通道可用确定性 mock 传输验证"
+      ]
+    },
+    {
+      "label": "覆盖范围",
+      "detail": "Discord 已上线，Slack 与 Control UI 部分支持",
+      "children": [
+        "Discord 含真实 bot 认证、频道、反应、线程",
+        "WhatsApp 与 Matrix 尚未实现"
+      ]
+    },
+    {
+      "label": "CLI 命令",
+      "detail": "pnpm openclaw qa mantis <command>，需私有 QA CLI 开关",
+      "children": [
+        "discord-smoke 验证 bot 可见频道并发帖反应",
+        "run 跑 baseline/candidate 场景（仅…",
+        "desktop-browser-smoke 租 Crabbox 桌面截图…"
+      ]
+    },
+    {
+      "label": "所有权划分",
+      "detail": "OpenClaw、QA Lab、Crabbox、GitHub Actions 各管一块",
+      "children": [
+        "OpenClaw 管场景运行时与证据 schema",
+        "Crabbox 提供预热 Linux 机器与 VNC",
+        "ClawSweeper 独立审查证据与就绪策略"
+      ]
+    },
+    {
+      "label": "证据发布",
+      "detail": "五份稳定产物原子替换，失败保留旧证据并写 error.txt",
+      "children": [
+        "comparison.json、mantis-report.md…",
+        "失败时保留前一次完整证据集",
+        "Mantis 结果本身不授予合并权限"
+      ]
+    }
+  ],
+  "flow": [
+    "租用或复用 Crabbox 桌面",
+    "检出 baseline 与 candidate…",
+    "各自 pnpm install / build",
+    "跑 Discord 场景并采集时间线",
+    "对比结果生成证据与报告",
+    "原子发布五份稳定产物"
+  ],
+  "entities": [
+    {
+      "name": "Mantis",
+      "type": "product"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "Crabbox",
+      "type": "product"
+    },
+    {
+      "name": "ClawSweeper",
+      "type": "product"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "product"
+    },
+    {
+      "name": "Discord",
+      "type": "product"
+    },
+    {
+      "name": "Slack",
+      "type": "product"
+    },
+    {
+      "name": "QA Lab",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Mantis",
+      "to": "OpenClaw",
+      "label": "验证行为"
+    },
+    {
+      "from": "Mantis",
+      "to": "Crabbox",
+      "label": "租用桌面"
+    },
+    {
+      "from": "Mantis",
+      "to": "GitHub Actions",
+      "label": "远程入口"
+    },
+    {
+      "from": "ClawSweeper",
+      "to": "Mantis",
+      "label": "独立审查"
+    },
+    {
+      "from": "Mantis",
+      "to": "Discord",
+      "label": "首发支持"
+    },
+    {
+      "from": "Mantis",
+      "to": "Slack",
+      "label": "部分支持"
+    }
+  ]
+}

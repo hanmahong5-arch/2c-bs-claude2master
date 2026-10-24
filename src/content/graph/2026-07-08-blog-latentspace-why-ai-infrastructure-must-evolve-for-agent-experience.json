@@ -1,0 +1,124 @@
+{
+  "center": "Modal CTO 谈 Agent 体验与 AI…",
+  "branches": [
+    {
+      "label": "从开发者到代理",
+      "detail": "基础设施从服务人类开发者转向服务 AI 代理，代理需要快速迭代与完整上下文",
+      "children": [
+        "旧栈假设人类能读文档、写 YAML、看仪表盘",
+        "代理需要写码、运行、检查、调试、重试的闭环",
+        "沙箱是这一转变的典型代表"
+      ]
+    },
+    {
+      "label": "Kubernetes 不适配",
+      "detail": "K8s 并非为突发性、计算密集型 AI 工作负载设计，开发者体验差",
+      "children": [
+        "K8s 难管理，不擅长突发性与自定义镜像",
+        "Modal 最初定位是更好的运行时",
+        "在 ChatGPT 之前就加入了 GPU"
+      ]
+    },
+    {
+      "label": "Modal 基础设施",
+      "detail": "serverless 函数、装饰器基础设施、弹性推理、GPU 快照等原语",
+      "children": [
+        "GPU 快照与冷启动优化应对突发推理",
+        "DeFlash、推测解码、Auto Endpoints",
+        "网络化沙箱、私有 IPv6、RDMA"
+      ]
+    },
+    {
+      "label": "规模与容量",
+      "detail": "RL rollout 可能需要 10 万个沙箱，Modal 拥有跨 17 家云厂商的容量池",
+      "children": [
+        "17 云 supercloud 策略",
+        "多节点训练支持后训练与研究",
+        "生产代理需要专用沙箱与硬性护栏"
+      ]
+    },
+    {
+      "label": "可观测性优先",
+      "detail": "当代理写代码时，可观测性可能比读代码更重要",
+      "children": [
+        "代理生命周期与后台代理",
+        "Ramp Inspect 案例",
+        "AI 让基础设施重新变得令人兴奋"
+      ]
+    }
+  ],
+  "flow": [
+    "代理写代码",
+    "运行沙箱",
+    "检查输出",
+    "修改环境",
+    "调试失败",
+    "重试迭代"
+  ],
+  "entities": [
+    {
+      "name": "Modal",
+      "type": "company"
+    },
+    {
+      "name": "Akshat Bubna",
+      "type": "person"
+    },
+    {
+      "name": "Kubernetes",
+      "type": "product"
+    },
+    {
+      "name": "GPU snapshotting",
+      "type": "technique"
+    },
+    {
+      "name": "DeFlash",
+      "type": "product"
+    },
+    {
+      "name": "speculative decoding",
+      "type": "technique"
+    },
+    {
+      "name": "vLLM",
+      "type": "product"
+    },
+    {
+      "name": "SGLang",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Akshat Bubna",
+      "to": "Modal",
+      "label": "任CTO"
+    },
+    {
+      "from": "Modal",
+      "to": "Kubernetes",
+      "label": "超越"
+    },
+    {
+      "from": "Modal",
+      "to": "GPU snapshotting",
+      "label": "采用"
+    },
+    {
+      "from": "Modal",
+      "to": "DeFlash",
+      "label": "提供"
+    },
+    {
+      "from": "Modal",
+      "to": "vLLM",
+      "label": "补充"
+    },
+    {
+      "from": "Modal",
+      "to": "SGLang",
+      "label": "补充"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "center": "gemini-cli v0.58.0 稳定性修复",
+  "branches": [
+    {
+      "label": "沙箱隔离加固",
+      "detail": "macOS Seatbelt 隔离 Docker 与容器运行时 socket 和二进制，降低逃逸风险",
+      "children": [
+        "harness 需适配更严的沙箱路径"
+      ]
+    },
+    {
+      "label": "忽略路径修复",
+      "detail": "统一符号链接评估，避免忽略规则误判",
+      "children": [
+        "harness 应确保路径解析一致"
+      ]
+    },
+    {
+      "label": "历史回滚优化",
+      "detail": "修复回滚与重试提示，提升交互可靠性",
+      "children": [
+        "harness 可依赖更稳定的会话状态"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "gemini-cli",
+      "type": "product"
+    },
+    {
+      "name": "macOS Seatbelt",
+      "type": "technique"
+    },
+    {
+      "name": "Docker",
+      "type": "product"
+    },
+    {
+      "name": "沙箱隔离",
+      "type": "concept"
+    },
+    {
+      "name": "符号链接",
+      "type": "concept"
+    },
+    {
+      "name": "历史回滚",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "macOS Seatbelt",
+      "to": "Docker",
+      "label": "隔离"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "沙箱隔离",
+      "label": "加固"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "符号链接",
+      "label": "统一评估"
+    },
+    {
+      "from": "gemini-cli",
+      "to": "历史回滚",
+      "label": "优化"
+    }
+  ]
+}

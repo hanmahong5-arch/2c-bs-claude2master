@@ -1,0 +1,83 @@
+{
+  "center": "micropython-wasm 0.1a0 发布",
+  "branches": [
+    {
+      "label": "发布内容",
+      "detail": "Simon Willison 发布 Python 库 micropython-wasm 0.1a0",
+      "children": [
+        "2026年6月2日发布",
+        "定位为沙箱实验"
+      ]
+    },
+    {
+      "label": "核心功能",
+      "detail": "用 WebAssembly 运行 MicroPython 沙箱",
+      "children": [
+        "打包定制 WASM 版 MicroPython",
+        "通过 wasmtime 执行代码"
+      ]
+    },
+    {
+      "label": "技术栈",
+      "detail": "MicroPython + WebAssembly + wasmtime 组合",
+      "children": [
+        "Python 库封装",
+        "沙箱隔离执行"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "micropython-wasm",
+      "type": "product"
+    },
+    {
+      "name": "MicroPython",
+      "type": "product"
+    },
+    {
+      "name": "WebAssembly",
+      "type": "technique"
+    },
+    {
+      "name": "wasmtime",
+      "type": "product"
+    },
+    {
+      "name": "Python",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "micropython-wasm",
+      "label": "发布"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "MicroPython",
+      "label": "封装"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "WebAssembly",
+      "label": "基于"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "wasmtime",
+      "label": "使用"
+    },
+    {
+      "from": "micropython-wasm",
+      "to": "Python",
+      "label": "属于"
+    }
+  ]
+}

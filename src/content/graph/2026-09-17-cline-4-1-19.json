@@ -1,0 +1,83 @@
+{
+  "center": "Cline v4.1.19 修复三类硬伤",
+  "branches": [
+    {
+      "label": "压缩触发修复",
+      "detail": "长任务压缩改用 provider 上报的真实 token 数，并按估算偏差缩放保留历史",
+      "children": [
+        "不再只靠字符数估算上下文",
+        "以真实 token 计数为准"
+      ]
+    },
+    {
+      "label": "Windows 提权修复",
+      "detail": "启动时设置 NoDefaultCurrentDirectoryInExePath，工作区内 rg.exe/git.exe 不再被优先执行",
+      "children": [
+        "可执行文件解析必须走 PATH",
+        "不再优先用工作目录"
+      ]
+    },
+    {
+      "label": "静默覆盖修复",
+      "detail": "apply_patch 对已存在路径的 Add File 不再静默覆盖，写操作需显式报错",
+      "children": [
+        "run_commands 后台子进程不再挂住管道",
+        "进程管理需正确关闭输出句柄"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline",
+      "type": "product"
+    },
+    {
+      "name": "Windows",
+      "type": "concept"
+    },
+    {
+      "name": "apply_patch",
+      "type": "technique"
+    },
+    {
+      "name": "run_commands",
+      "type": "technique"
+    },
+    {
+      "name": "NoDefaultCurrentDirectoryInExePath",
+      "type": "concept"
+    },
+    {
+      "name": "token 计数",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline",
+      "to": "apply_patch",
+      "label": "修复"
+    },
+    {
+      "from": "Cline",
+      "to": "run_commands",
+      "label": "修复"
+    },
+    {
+      "from": "Cline",
+      "to": "Windows",
+      "label": "适配"
+    },
+    {
+      "from": "Cline",
+      "to": "token 计数",
+      "label": "改用"
+    },
+    {
+      "from": "Windows",
+      "to": "NoDefaultCurrentDirectoryInExePath",
+      "label": "设置"
+    }
+  ]
+}

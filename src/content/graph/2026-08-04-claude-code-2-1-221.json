@@ -1,0 +1,96 @@
+{
+  "center": "claude-code v2.1.221 更新",
+  "branches": [
+    {
+      "label": "Focus view",
+      "detail": "VSCode 新增 Focus view，把工具活动折叠为每轮摘要",
+      "children": [
+        "显示运行中工具指示器",
+        "快捷键 Ctrl+Alt+F"
+      ]
+    },
+    {
+      "label": "沙箱 mask 模式",
+      "detail": "Linux/WSL 沙箱新增 mode: \"mask\" 处理凭据文件",
+      "children": [
+        "沙箱命令读取哨兵副本",
+        "出站时替换真实值",
+        "macOS 回退为 deny"
+      ]
+    },
+    {
+      "label": "权限漏洞修复",
+      "detail": "修复 zsh 在 [[ ]] 中绕过 Bash 工具权限检查的漏洞",
+      "children": [
+        "受影响命令现在会提示权限"
+      ]
+    },
+    {
+      "label": "稳定性修复",
+      "detail": "本次更新包含多项安全与稳定性修复",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "VSCode",
+      "type": "product"
+    },
+    {
+      "name": "Focus view",
+      "type": "concept"
+    },
+    {
+      "name": "Linux",
+      "type": "concept"
+    },
+    {
+      "name": "WSL",
+      "type": "concept"
+    },
+    {
+      "name": "macOS",
+      "type": "concept"
+    },
+    {
+      "name": "zsh",
+      "type": "concept"
+    },
+    {
+      "name": "Bash",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "VSCode",
+      "label": "集成"
+    },
+    {
+      "from": "VSCode",
+      "to": "Focus view",
+      "label": "新增"
+    },
+    {
+      "from": "claude-code",
+      "to": "Linux",
+      "label": "支持沙箱"
+    },
+    {
+      "from": "claude-code",
+      "to": "WSL",
+      "label": "支持沙箱"
+    },
+    {
+      "from": "claude-code",
+      "to": "zsh",
+      "label": "修复漏洞"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "center": "Cline Desktop v0.0.20 更新",
+  "branches": [
+    {
+      "label": "Windows 支持",
+      "detail": "提供签名安装包，自动更新与 macOS 同步",
+      "children": [
+        "后台进程不再弹窗",
+        "MCP 路径回退 USERPROFILE"
+      ]
+    },
+    {
+      "label": "图片内联显示",
+      "detail": "工具返回的截图等图片内联显示，可点击展开、轮播",
+      "children": [
+        "替代 base64 文本"
+      ]
+    },
+    {
+      "label": "全局会话搜索",
+      "detail": "搜索覆盖全量历史，侧边栏图标打开命令栏",
+      "children": [
+        "Cmd/Ctrl+P 快捷键",
+        "服务端排序结果"
+      ]
+    },
+    {
+      "label": "调度与修复",
+      "detail": "修复更新后定时任务丢失，统一存储调度",
+      "children": [
+        "调度存于 ~/.cline/schedules",
+        "Schedules 页显示",
+        "完成会话自动展开最终答案"
+      ]
+    },
+    {
+      "label": "其他改进",
+      "detail": "新增 GitHub 集成引导，修复凭据与 Codex 登录",
+      "children": [
+        "全局规则路径扩展至 ~/Cline/Rules",
+        "apply_patch 保留 CRLF 行尾"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Cline Desktop",
+      "type": "product"
+    },
+    {
+      "name": "Windows",
+      "type": "concept"
+    },
+    {
+      "name": "macOS",
+      "type": "concept"
+    },
+    {
+      "name": "GitHub",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "WSL",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Cline Desktop",
+      "to": "Windows",
+      "label": "支持"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "macOS",
+      "label": "同步更新"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "GitHub",
+      "label": "集成"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "Codex",
+      "label": "修复登录"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "MCP",
+      "label": "路径回退"
+    },
+    {
+      "from": "Cline Desktop",
+      "to": "WSL",
+      "label": "修复问题"
+    }
+  ]
+}

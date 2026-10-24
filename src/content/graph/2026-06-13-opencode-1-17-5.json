@@ -1,0 +1,82 @@
+{
+  "center": "opencode v1.17.5 更新",
+  "branches": [
+    {
+      "label": "Snowflake OAuth",
+      "detail": "新增 Snowflake Cortex 外部浏览器 OAuth 认证",
+      "children": [
+        "简化 Snowflake 服务认证流程",
+        "需支持更灵活的外部身份验证集成"
+      ]
+    },
+    {
+      "label": "修复 MCP 会话",
+      "detail": "恢复过期会话、清理陈旧连接并结构化工具输出",
+      "children": [
+        "需更健壮的长连接与状态管理"
+      ]
+    },
+    {
+      "label": "修复 TUI 渲染",
+      "detail": "解决重复渲染 ID 与 $ARGUMENTS 命令注入问题",
+      "children": [
+        "$ARGUMENTS 曾致文件内容重复注入",
+        "UI 层需稳定组件标识与安全参数传递"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Snowflake Cortex",
+      "type": "product"
+    },
+    {
+      "name": "OAuth",
+      "type": "concept"
+    },
+    {
+      "name": "MCP",
+      "type": "concept"
+    },
+    {
+      "name": "TUI",
+      "type": "concept"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Snowflake Cortex",
+      "label": "新增支持"
+    },
+    {
+      "from": "Snowflake Cortex",
+      "to": "OAuth",
+      "label": "采用"
+    },
+    {
+      "from": "opencode",
+      "to": "MCP",
+      "label": "修复会话"
+    },
+    {
+      "from": "opencode",
+      "to": "TUI",
+      "label": "修复渲染"
+    },
+    {
+      "from": "agent harness",
+      "to": "MCP",
+      "label": "需管理"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "center": "用语义ID训练LLM推荐混合模型",
+  "branches": [
+    {
+      "label": "核心思路",
+      "detail": "把商品编码成语义ID，作为LLM词表的一部分，训练出双语模型",
+      "children": [
+        "扩展词表加入<|sid_0|>等语义ID token",
+        "模型既能推荐又能用自然语言对话",
+        "可对话式操控推荐并解释理由"
+      ]
+    },
+    {
+      "label": "为什么有用",
+      "detail": "结合推荐系统与语言模型各自优势，实现可操控与可推理",
+      "children": [
+        "LLM有世界知识但不了解商品库",
+        "推荐模型精准但无法用自然语言操控",
+        "两者共同点是都在序列上学习"
+      ]
+    },
+    {
+      "label": "数据与模型",
+      "detail": "用Amazon Reviews 2023电子游戏类目数据训练",
+      "children": [
+        "137k商品，过滤后剩66k",
+        "737k行为记录，79k用户购买序列",
+        "平均序列长度6.5个商品"
+      ]
+    },
+    {
+      "label": "语义ID生成",
+      "detail": "用RQ-VAE把商品元数据嵌入转成离散语义ID",
+      "children": [
+        "分层量化，相似商品共享前缀",
+        "损失含重建损失与量化损失",
+        "量化损失含码本损失和承诺损失"
+      ]
+    },
+    {
+      "label": "训练流程",
+      "detail": "先扩展词表，再继续预训练，最后在用户行为序列上微调",
+      "children": [
+        "继续预训练教模型语义ID与商品关系",
+        "微调教模型根据用户偏好推荐",
+        "小模型基础微调，提示词影响大"
+      ]
+    }
+  ],
+  "flow": [
+    "扩展LLM词表加入语义ID",
+    "继续预训练学习ID与商品关系",
+    "在用户行为序列上微调",
+    "模型生成语义ID推荐商品",
+    "用自然语言对话操控推荐"
+  ],
+  "entities": [
+    {
+      "name": "Semantic IDs",
+      "type": "concept"
+    },
+    {
+      "name": "RQ-VAE",
+      "type": "model"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "Amazon Reviews 2023",
+      "type": "product"
+    },
+    {
+      "name": "eugeneyan",
+      "type": "person"
+    },
+    {
+      "name": "recsys",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "RQ-VAE",
+      "to": "Semantic IDs",
+      "label": "生成"
+    },
+    {
+      "from": "LLM",
+      "to": "Semantic IDs",
+      "label": "使用"
+    },
+    {
+      "from": "eugeneyan",
+      "to": "RQ-VAE",
+      "label": "使用"
+    },
+    {
+      "from": "eugeneyan",
+      "to": "Amazon Reviews 2023",
+      "label": "使用"
+    },
+    {
+      "from": "LLM",
+      "to": "recsys",
+      "label": "结合"
+    }
+  ]
+}

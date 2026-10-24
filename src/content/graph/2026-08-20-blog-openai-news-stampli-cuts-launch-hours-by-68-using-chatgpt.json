@@ -1,0 +1,60 @@
+{
+  "center": "Stampli用ChatGPT Work提效发布",
+  "branches": [
+    {
+      "label": "发布工时降68%",
+      "detail": "Stampli借助ChatGPT Work将发布准备工时削减68%",
+      "children": [
+        "原本数周的发布准备压缩至数天"
+      ]
+    },
+    {
+      "label": "AI压缩上市时间",
+      "detail": "Codex与ChatGPT Work结合，显著缩短产品上市周期",
+      "children": [
+        "数周工作压缩为几天"
+      ]
+    },
+    {
+      "label": "缓解资源瓶颈",
+      "detail": "在固定截止日期与设计资源受限下仍高效完成发布",
+      "children": [
+        "AI可缓解资源瓶颈"
+      ]
+    },
+    {
+      "label": "对开发者的启示",
+      "detail": "将AI集成进工作流可大幅提升效率，尤其时间紧迫项目",
+      "children": [
+        "AI成为关键生产力工具"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Stampli",
+      "type": "company"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Codex",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Stampli",
+      "to": "ChatGPT Work",
+      "label": "使用"
+    },
+    {
+      "from": "Stampli",
+      "to": "Codex",
+      "label": "使用"
+    }
+  ]
+}

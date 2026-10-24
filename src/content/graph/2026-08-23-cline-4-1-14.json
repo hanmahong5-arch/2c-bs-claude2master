@@ -1,0 +1,97 @@
+{
+  "center": "cline v4.1.14 模型目录更新",
+  "branches": [
+    {
+      "label": "模型目录大更新",
+      "detail": "内置模型目录刷新，新增多款前沿模型供用户选择",
+      "children": [
+        "新增 Claude Fable 5、Grok 4.6 on Vertex",
+        "DeepSeek V4 Flash 变体（含视觉预览）",
+        "MiMo v2.5、Qwen3.8 27B、Gemma 4 26B"
+      ]
+    },
+    {
+      "label": "修复会话遥测",
+      "detail": "修复交互式会话任务完成遥测，此前部分会话未上报完成",
+      "children": [
+        "teardown 路径未上报完成事件",
+        "现确保每次会话仅上报一次"
+      ]
+    },
+    {
+      "label": "对 harness 的启示",
+      "detail": "需及时同步模型列表并保证遥测可靠触发",
+      "children": [
+        "注意各模型能力差异（如视觉预览）",
+        "遥测准确性对监控和调试至关重要"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "Claude Fable 5",
+      "type": "model"
+    },
+    {
+      "name": "Grok 4.6 on Vertex",
+      "type": "model"
+    },
+    {
+      "name": "DeepSeek V4 Flash",
+      "type": "model"
+    },
+    {
+      "name": "MiMo v2.5",
+      "type": "model"
+    },
+    {
+      "name": "Qwen3.8 27B",
+      "type": "model"
+    },
+    {
+      "name": "Gemma 4 26B",
+      "type": "model"
+    },
+    {
+      "name": "LongCat 2.0",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "Claude Fable 5",
+      "label": "新增支持"
+    },
+    {
+      "from": "cline",
+      "to": "Grok 4.6 on Vertex",
+      "label": "新增支持"
+    },
+    {
+      "from": "cline",
+      "to": "DeepSeek V4 Flash",
+      "label": "新增支持"
+    },
+    {
+      "from": "cline",
+      "to": "MiMo v2.5",
+      "label": "新增支持"
+    },
+    {
+      "from": "cline",
+      "to": "Qwen3.8 27B",
+      "label": "新增支持"
+    },
+    {
+      "from": "cline",
+      "to": "Gemma 4 26B",
+      "label": "新增支持"
+    }
+  ]
+}

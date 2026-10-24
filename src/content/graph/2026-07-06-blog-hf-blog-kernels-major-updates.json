@@ -1,0 +1,119 @@
+{
+  "center": "Hugging Face Kernels 重大更新",
+  "branches": [
+    {
+      "label": "新仓库类型",
+      "detail": "Hub 新增 kernel 仓库类型，内核成为一等公民",
+      "children": [
+        "可查看支持的加速器、操作系统与后端版本",
+        "在 huggingface.co/kernels 浏览全部内核"
+      ]
+    },
+    {
+      "label": "安全性增强",
+      "detail": "默认只加载可信发布者的内核，并引入代码签名",
+      "children": [
+        "用 Nix 保证可复现构建，嵌入源码 Git SHA1",
+        "非可信来源需 trust_remote_code=True 显式选择",
+        "用 Sigstore cosign 临时密钥签名内核"
+      ]
+    },
+    {
+      "label": "CLI 重构",
+      "detail": "kernels 与 kernel-builder 职责分离，各自更精简",
+      "children": [
+        "kernels 只负责加载与准备内核",
+        "构建相关功能全部归入 kernel-builder"
+      ]
+    },
+    {
+      "label": "框架后端扩展",
+      "detail": "新增 Torch Stable ABI 与 Apache TVM FFI 支持",
+      "children": [
+        "Torch 2.9 Stable ABI 支持 Torch >= 2.9…",
+        "TVM FFI 可跨 PyTorch、Jax、CuPy 运行"
+      ]
+    },
+    {
+      "label": "面向 Agent 开发",
+      "detail": "为 agent 自动开发内核提供脚手架、构建与基准测试基础",
+      "children": [
+        "kernel-builder 提供可预测的项目结构与可复现…",
+        "CLI 面向 agent 优化，非交互式输出",
+        "结合 HF Jobs 跨硬件跑基准对比基线"
+      ]
+    }
+  ],
+  "flow": [
+    "Agent 脚手架内核源码",
+    "kernel-builder 可复现构建",
+    "在目标硬件上基准测试",
+    "对比基线并迭代优化"
+  ],
+  "entities": [
+    {
+      "name": "Hugging Face",
+      "type": "company"
+    },
+    {
+      "name": "Kernels",
+      "type": "product"
+    },
+    {
+      "name": "kernel-builder",
+      "type": "product"
+    },
+    {
+      "name": "Torch Stable ABI",
+      "type": "technique"
+    },
+    {
+      "name": "Apache TVM FFI",
+      "type": "technique"
+    },
+    {
+      "name": "Nix",
+      "type": "technique"
+    },
+    {
+      "name": "Sigstore cosign",
+      "type": "technique"
+    },
+    {
+      "name": "HF Jobs",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Hugging Face",
+      "to": "Kernels",
+      "label": "发布"
+    },
+    {
+      "from": "Kernels",
+      "to": "kernel-builder",
+      "label": "职责分离"
+    },
+    {
+      "from": "Kernels",
+      "to": "Torch Stable ABI",
+      "label": "支持"
+    },
+    {
+      "from": "Kernels",
+      "to": "Apache TVM FFI",
+      "label": "支持"
+    },
+    {
+      "from": "Kernels",
+      "to": "Nix",
+      "label": "用于可复现构建"
+    },
+    {
+      "from": "Kernels",
+      "to": "Sigstore cosign",
+      "label": "用于签名"
+    }
+  ]
+}

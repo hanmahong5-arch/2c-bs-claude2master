@@ -1,0 +1,119 @@
+{
+  "center": "Codex 到 ChatGPT Work 演进",
+  "branches": [
+    {
+      "label": "用户爆发增长",
+      "detail": "Codex 月活较 1 月增长超 10 倍，与 ChatGPT Work 合计达 1000 万用户",
+      "children": [
+        "7 月 9 日发布，不到两周破 1000 万",
+        "知识工作者占 Codex 用户约 20%，增速是开发者…"
+      ]
+    },
+    {
+      "label": "共享 Agent Harness",
+      "detail": "Codex 与 ChatGPT Work 共用同一底层 agent harness，但 UX 与默认配置不同",
+      "children": [
+        "Codex 保留 Git 可见性，ChatGPT Work 面向非…",
+        "OpenAI 合并 agent 体验而非做独立产品"
+      ]
+    },
+    {
+      "label": "跨原语知识工作",
+      "detail": "ChatGPT Work 让用户跨文档、表格、幻灯片等原语用 agent 完成工作",
+      "children": [
+        "用户描述结果，agent 组装工具、上下文与产物",
+        "交互式 Sites 可能取代 deck 和表格"
+      ]
+    },
+    {
+      "label": "持久化与记忆",
+      "detail": "OpenClaw 启发持久环境、定时任务与个人 agent，ChatGPT 记忆与 Chronicle 提供长期上下文",
+      "children": [
+        "子 agent 与 Ultra 模式控制任务委派深度",
+        "ChatGPT 用于财务、健身、家务等个人场景"
+      ]
+    },
+    {
+      "label": "产品开发变革",
+      "detail": "AI 模糊工程、设计、策略与运营边界，想法与品味成为瓶颈",
+      "children": [
+        "更多人成为有专长的通才",
+        "用高质量 at-bats 而非 commit 衡量生产力",
+        "区分 AI 生成的 motion 与真正 progress"
+      ]
+    }
+  ],
+  "flow": [
+    "Codex 意外在非开发者中流行",
+    "知识工作者占比升至 20%",
+    "构建 ChatGPT Work 专用产品",
+    "共用 agent harness 合并体验",
+    "发布两周达 1000 万用户"
+  ],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Codex",
+      "type": "product"
+    },
+    {
+      "name": "ChatGPT Work",
+      "type": "product"
+    },
+    {
+      "name": "Akshay Nathan",
+      "type": "person"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "Sites",
+      "type": "product"
+    },
+    {
+      "name": "Chronicle",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "Codex",
+      "label": "开发"
+    },
+    {
+      "from": "OpenAI",
+      "to": "ChatGPT Work",
+      "label": "开发"
+    },
+    {
+      "from": "Codex",
+      "to": "ChatGPT Work",
+      "label": "共用 harness"
+    },
+    {
+      "from": "Akshay Nathan",
+      "to": "OpenAI",
+      "label": "任职于"
+    },
+    {
+      "from": "OpenClaw",
+      "to": "ChatGPT Work",
+      "label": "启发"
+    },
+    {
+      "from": "ChatGPT Work",
+      "to": "Sites",
+      "label": "包含"
+    }
+  ]
+}

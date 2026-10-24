@@ -1,0 +1,72 @@
+{
+  "center": "GPT-6 Astra 安全概述",
+  "branches": [
+    {
+      "label": "关键安全等级",
+      "detail": "GPT-6 Astra 首次在 OpenAI Preparedness Framework 中达到“关键”网络安全能力等级",
+      "children": [
+        "OpenAI 迄今最强大的广泛部署模型",
+        "首次达到“关键”网络安全能力等级"
+      ]
+    },
+    {
+      "label": "潜在风险",
+      "detail": "该等级意味着模型可能被用于高级网络攻击",
+      "children": [
+        "可能被用于高级网络攻击"
+      ]
+    },
+    {
+      "label": "应对措施",
+      "detail": "OpenAI 因此加强了安全监控与部署限制",
+      "children": [
+        "加强安全监控",
+        "加强部署限制"
+      ]
+    },
+    {
+      "label": "开发者提示",
+      "detail": "前沿模型能力提升需伴随更严格的安全评估与使用边界",
+      "children": [
+        "更严格的安全评估",
+        "更明确的使用边界"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Astra",
+      "type": "model"
+    },
+    {
+      "name": "Preparedness Framework",
+      "type": "concept"
+    },
+    {
+      "name": "关键网络安全能力等级",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Astra",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "Preparedness Framework",
+      "label": "依据"
+    },
+    {
+      "from": "GPT-6 Astra",
+      "to": "关键网络安全能力等级",
+      "label": "达到"
+    }
+  ]
+}

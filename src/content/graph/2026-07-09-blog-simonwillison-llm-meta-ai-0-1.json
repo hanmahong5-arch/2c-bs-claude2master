@@ -1,0 +1,73 @@
+{
+  "center": "llm-meta-ai 0.1 插件发布",
+  "branches": [
+    {
+      "label": "发布内容",
+      "detail": "Simon Willison 发布 llm-meta-ai 0.1，为 LLM 提供 Meta AI API 插件",
+      "children": [
+        "版本号 0.1",
+        "发布于 2026-07-09"
+      ]
+    },
+    {
+      "label": "核心功能",
+      "detail": "让 LLM 命令行工具可对新模型 muse-spark-1.1 运行提示词",
+      "children": [
+        "支持 muse-spark-1.1",
+        "通过 LLM 调用"
+      ]
+    },
+    {
+      "label": "发布者",
+      "detail": "Simon Willison 在其博客发布该插件",
+      "children": [
+        "Simon Willison's Weblog"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "llm-meta-ai",
+      "type": "product"
+    },
+    {
+      "name": "LLM",
+      "type": "product"
+    },
+    {
+      "name": "Meta AI API",
+      "type": "product"
+    },
+    {
+      "name": "muse-spark-1.1",
+      "type": "model"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "llm-meta-ai",
+      "label": "发布"
+    },
+    {
+      "from": "llm-meta-ai",
+      "to": "LLM",
+      "label": "是插件"
+    },
+    {
+      "from": "llm-meta-ai",
+      "to": "Meta AI API",
+      "label": "接入"
+    },
+    {
+      "from": "LLM",
+      "to": "muse-spark-1.1",
+      "label": "运行提示词"
+    }
+  ]
+}

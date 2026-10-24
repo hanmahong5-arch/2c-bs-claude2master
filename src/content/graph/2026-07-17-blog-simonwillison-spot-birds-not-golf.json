@@ -1,0 +1,93 @@
+{
+  "center": "用高尔夫球场水冷却AI数据中心",
+  "branches": [
+    {
+      "label": "核心提议",
+      "detail": "Simon Willison 建议超大规模厂商买下高尔夫球场，改造成公园并引导会员观鸟",
+      "children": [
+        "买下专属乡村俱乐部",
+        "把高尔夫球场变成公共公园",
+        "付费提供向导和双筒望远镜"
+      ]
+    },
+    {
+      "label": "Google 用水量",
+      "detail": "Google 2025 年用水 109 亿加仑，约合每天 3000 万加仑",
+      "children": [
+        "2025 年总用水 10.9 billion gallons",
+        "日均约 30 million gallons"
+      ]
+    },
+    {
+      "label": "球场用水量",
+      "detail": "Coachella Valley 有 120 个高尔夫球场，每个每年约 800 acre-feet",
+      "children": [
+        "每个球场约 750,000 加仑/天",
+        "120 个球场合计用水巨大"
+      ]
+    },
+    {
+      "label": "算术方案",
+      "detail": "Google 买下其中 40 个球场（三分之一）就足以抵消其用水量",
+      "children": [
+        "40 个球场 ≈ 1/3 的 Coachella Valley 球场",
+        "买下后即可解决用水压力"
+      ]
+    }
+  ],
+  "flow": [
+    "买下高尔夫球场",
+    "改造成公共公园",
+    "引导会员观鸟",
+    "释放球场用水",
+    "用于冷却数据中心"
+  ],
+  "entities": [
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    },
+    {
+      "name": "Google",
+      "type": "company"
+    },
+    {
+      "name": "Coachella Valley",
+      "type": "concept"
+    },
+    {
+      "name": "AI 数据中心",
+      "type": "concept"
+    },
+    {
+      "name": "高尔夫球场",
+      "type": "concept"
+    },
+    {
+      "name": "观鸟",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Simon Willison",
+      "to": "Google",
+      "label": "建议"
+    },
+    {
+      "from": "Google",
+      "to": "AI 数据中心",
+      "label": "冷却"
+    },
+    {
+      "from": "Coachella Valley",
+      "to": "高尔夫球场",
+      "label": "拥有"
+    },
+    {
+      "from": "高尔夫球场",
+      "to": "观鸟",
+      "label": "改造为"
+    }
+  ]
+}

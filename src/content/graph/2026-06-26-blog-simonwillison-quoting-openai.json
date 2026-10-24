@@ -1,0 +1,108 @@
+{
+  "center": "OpenAI 发布 GPT-5.6 系列",
+  "branches": [
+    {
+      "label": "三款模型",
+      "detail": "GPT-5.6 分 Sol、Terra、Luna 三档，覆盖旗舰到低价",
+      "children": [
+        "Sol 为旗舰模型",
+        "Terra 性能对标 GPT-5.5 且便宜 2 倍",
+        "Luna 最快最便宜"
+      ]
+    },
+    {
+      "label": "定价",
+      "detail": "按每百万 token 计费，三档价格差异明显",
+      "children": [
+        "Sol：$5 输入 / $30 输出",
+        "Terra：$2.50 输入 / $15 输出",
+        "Luna：$1 输入 / $6 输出"
+      ]
+    },
+    {
+      "label": "缓存计费",
+      "detail": "引入更可预测的 prompt caching 与显式缓存断点",
+      "children": [
+        "缓存写入按未缓存输入价 1.25 倍计费",
+        "缓存读取维持 90% 折扣",
+        "最短缓存寿命 30 分钟"
+      ]
+    },
+    {
+      "label": "发布节奏",
+      "detail": "先限量预览，数周内再全面开放",
+      "children": [
+        "先向少数可信合作伙伴限量预览",
+        "已提前向美国政府预览计划与能力",
+        "计划数周内全面可用"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-5.6",
+      "type": "model"
+    },
+    {
+      "name": "Sol",
+      "type": "model"
+    },
+    {
+      "name": "Terra",
+      "type": "model"
+    },
+    {
+      "name": "Luna",
+      "type": "model"
+    },
+    {
+      "name": "GPT-5.5",
+      "type": "model"
+    },
+    {
+      "name": "prompt caching",
+      "type": "technique"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "person"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-5.6",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Sol",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Terra",
+      "label": "包含"
+    },
+    {
+      "from": "GPT-5.6",
+      "to": "Luna",
+      "label": "包含"
+    },
+    {
+      "from": "Terra",
+      "to": "GPT-5.5",
+      "label": "对标"
+    },
+    {
+      "from": "Simon Willison",
+      "to": "OpenAI",
+      "label": "引用"
+    }
+  ]
+}

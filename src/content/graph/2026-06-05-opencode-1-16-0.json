@@ -1,0 +1,72 @@
+{
+  "center": "OpenCode v1.16.0 更新",
+  "branches": [
+    {
+      "label": "托管工作区克隆",
+      "detail": "克隆时保留脏文件与未跟踪文件，保证开发环境一致",
+      "children": [
+        "Agent 可在更真实的代码库上下文工作"
+      ]
+    },
+    {
+      "label": "会话跨目录移动",
+      "detail": "活动会话可在不同工作区与目录间迁移",
+      "children": [
+        "任务上下文切换更灵活"
+      ]
+    },
+    {
+      "label": "Bedrock 模型支持",
+      "detail": "新增通过 AWS Bedrock 调用 OpenAI 模型",
+      "children": [
+        "扩展模型后端选项",
+        "可用企业级云基础设施推理"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenCode",
+      "type": "product"
+    },
+    {
+      "name": "AWS Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "托管工作区克隆",
+      "type": "concept"
+    },
+    {
+      "name": "会话迁移",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenCode",
+      "to": "AWS Bedrock",
+      "label": "接入"
+    },
+    {
+      "from": "AWS Bedrock",
+      "to": "OpenAI",
+      "label": "托管模型"
+    },
+    {
+      "from": "OpenCode",
+      "to": "托管工作区克隆",
+      "label": "新增"
+    },
+    {
+      "from": "OpenCode",
+      "to": "会话迁移",
+      "label": "新增"
+    }
+  ]
+}

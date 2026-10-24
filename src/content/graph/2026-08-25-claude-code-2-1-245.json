@@ -1,0 +1,93 @@
+{
+  "center": "claude-code 修复 glibc 崩溃",
+  "branches": [
+    {
+      "label": "修复内容",
+      "detail": "修复 glibc 2.44 的 Linux 发行版上启动崩溃问题",
+      "children": [
+        "受影响发行版：Arch、CachyOS、Fedora Rawhide",
+        "版本号 v2.1.245"
+      ]
+    },
+    {
+      "label": "问题根因",
+      "detail": "系统库版本 glibc 2.44 与运行时环境不兼容导致崩溃",
+      "children": [
+        "属于运行时环境兼容性问题"
+      ]
+    },
+    {
+      "label": "设计启示",
+      "detail": "agent harness 设计需关注运行时环境兼容性",
+      "children": [
+        "重点关注系统库版本差异"
+      ]
+    },
+    {
+      "label": "改进建议",
+      "detail": "在 CI 中覆盖最新 glibc 环境或提供静态链接",
+      "children": [
+        "CI 覆盖最新 glibc 环境",
+        "提供静态链接选项"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "claude-code",
+      "type": "product"
+    },
+    {
+      "name": "glibc 2.44",
+      "type": "concept"
+    },
+    {
+      "name": "Arch",
+      "type": "product"
+    },
+    {
+      "name": "CachyOS",
+      "type": "product"
+    },
+    {
+      "name": "Fedora Rawhide",
+      "type": "product"
+    },
+    {
+      "name": "agent harness",
+      "type": "concept"
+    },
+    {
+      "name": "CI",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "claude-code",
+      "to": "glibc 2.44",
+      "label": "兼容于"
+    },
+    {
+      "from": "Arch",
+      "to": "glibc 2.44",
+      "label": "使用"
+    },
+    {
+      "from": "CachyOS",
+      "to": "glibc 2.44",
+      "label": "使用"
+    },
+    {
+      "from": "Fedora Rawhide",
+      "to": "glibc 2.44",
+      "label": "使用"
+    },
+    {
+      "from": "agent harness",
+      "to": "glibc 2.44",
+      "label": "需兼容"
+    }
+  ]
+}

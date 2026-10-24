@@ -1,0 +1,65 @@
+{
+  "center": "Claude Code v2.1.217 更新",
+  "branches": [
+    {
+      "label": "emoji 补全",
+      "detail": "新增 emoji 短代码自动补全，输入 :heart: 即插入 ❤️",
+      "children": [
+        "可用 emojiCompletionEnabled 关闭",
+        "改善 agent 输入体验"
+      ]
+    },
+    {
+      "label": "内存泄漏修复",
+      "detail": "修复 MCP 工具输出截断后仍保留完整结果导致的内存泄漏",
+      "children": [
+        "agent 长会话内存更稳定"
+      ]
+    },
+    {
+      "label": "子代理并发限制",
+      "detail": "限制并发子代理数，默认 20，可配置调整",
+      "children": [
+        "CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS 可调",
+        "禁止子代理默认嵌套",
+        "防止 agent 无限扇出，资源可控"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "MCP",
+      "type": "technique"
+    },
+    {
+      "name": "emojiCompletionEnabled",
+      "type": "concept"
+    },
+    {
+      "name": "CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Claude Code",
+      "to": "MCP",
+      "label": "修复内存泄漏"
+    },
+    {
+      "from": "Claude Code",
+      "to": "emojiCompletionEnabled",
+      "label": "新增设置"
+    },
+    {
+      "from": "Claude Code",
+      "to": "CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS",
+      "label": "新增环境变量"
+    }
+  ]
+}

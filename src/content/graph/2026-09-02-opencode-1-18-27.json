@@ -1,0 +1,65 @@
+{
+  "center": "opencode v1.18.27 稳定性修复",
+  "branches": [
+    {
+      "label": "超时默认调整",
+      "detail": "provider header 与流式 chunk 超时默认设为 5 分钟",
+      "children": [
+        "减少慢启动失败",
+        "可用 false 禁用流式超时"
+      ]
+    },
+    {
+      "label": "Anthropic 兼容",
+      "detail": "thinking.blockBinding 可配置退出，仅对 Claude 5.1+ 生效",
+      "children": [
+        "避免旧模型拒绝请求"
+      ]
+    },
+    {
+      "label": "SSE 健壮性",
+      "detail": "取消超时 SSE 读取时避免未处理错误",
+      "children": []
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "opencode",
+      "type": "product"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Claude 5.1",
+      "type": "model"
+    },
+    {
+      "name": "thinking.blockBinding",
+      "type": "technique"
+    },
+    {
+      "name": "SSE",
+      "type": "technique"
+    }
+  ],
+  "relations": [
+    {
+      "from": "opencode",
+      "to": "Anthropic",
+      "label": "兼容"
+    },
+    {
+      "from": "thinking.blockBinding",
+      "to": "Claude 5.1",
+      "label": "仅适用"
+    },
+    {
+      "from": "opencode",
+      "to": "SSE",
+      "label": "处理"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "center": "cline v3.87.0 更新",
+  "branches": [
+    {
+      "label": "新增模型支持",
+      "detail": "为 Agent 增加 MiniMax M3 作为底层模型选择",
+      "children": [
+        "增强任务处理能力"
+      ]
+    },
+    {
+      "label": "修复依赖漏洞",
+      "detail": "更新 VS Code 扩展依赖，修复多个安全问题",
+      "children": [
+        "@xmldom/xmldom",
+        "basic-ftp"
+      ]
+    },
+    {
+      "label": "解决传递依赖",
+      "detail": "更新多个依赖包，减少潜在安全风险",
+      "children": [
+        "确保系统稳定运行"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "cline",
+      "type": "product"
+    },
+    {
+      "name": "MiniMax M3",
+      "type": "model"
+    },
+    {
+      "name": "VS Code",
+      "type": "product"
+    },
+    {
+      "name": "@xmldom/xmldom",
+      "type": "product"
+    },
+    {
+      "name": "basic-ftp",
+      "type": "product"
+    }
+  ],
+  "relations": [
+    {
+      "from": "cline",
+      "to": "MiniMax M3",
+      "label": "新增支持"
+    },
+    {
+      "from": "cline",
+      "to": "VS Code",
+      "label": "扩展依赖"
+    },
+    {
+      "from": "cline",
+      "to": "@xmldom/xmldom",
+      "label": "修复漏洞"
+    },
+    {
+      "from": "cline",
+      "to": "basic-ftp",
+      "label": "修复漏洞"
+    }
+  ]
+}

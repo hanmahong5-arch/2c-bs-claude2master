@@ -1,0 +1,83 @@
+{
+  "center": "openclaw v2026.6.35 LTS 收官",
+  "branches": [
+    {
+      "label": "响应体设上限",
+      "detail": "provider、搜索、嵌入、媒体与 channel 集成读取前先限流，防恶意大 payload 耗尽内存",
+      "children": [
+        "harness 默认「先限流再解析」",
+        "覆盖成功与错误响应两条路径"
+      ]
+    },
+    {
+      "label": "长任务不丢结果",
+      "detail": "agent、gateway、retry 与 channel 路径正确处理取消、重试、部分发送和进程流失败",
+      "children": [
+        "不重放不安全操作",
+        "重试层区分「可重放」与「已产生副作用」"
+      ]
+    },
+    {
+      "label": "插件输入前置校验",
+      "detail": "本地模型、浏览器、媒体、协作插件对畸形 payload、超时和上游抖动可干净恢复",
+      "children": [
+        "浏览器自动化与 workspace 读取在昂贵操作前拒…",
+        "harness 应在调度前做输入门禁，而非事后捕获"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "openclaw",
+      "type": "product"
+    },
+    {
+      "name": "harness",
+      "type": "concept"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    },
+    {
+      "name": "gateway",
+      "type": "concept"
+    },
+    {
+      "name": "retry",
+      "type": "concept"
+    },
+    {
+      "name": "channel",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "openclaw",
+      "to": "harness",
+      "label": "依赖"
+    },
+    {
+      "from": "harness",
+      "to": "agent",
+      "label": "调度"
+    },
+    {
+      "from": "harness",
+      "to": "gateway",
+      "label": "调度"
+    },
+    {
+      "from": "harness",
+      "to": "retry",
+      "label": "管理"
+    },
+    {
+      "from": "harness",
+      "to": "channel",
+      "label": "管理"
+    }
+  ]
+}

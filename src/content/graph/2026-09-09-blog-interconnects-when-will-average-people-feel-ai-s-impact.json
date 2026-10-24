@@ -1,0 +1,94 @@
+{
+  "center": "AI 热潮为何普通人无感",
+  "branches": [
+    {
+      "label": "普通人无感",
+      "detail": "日常生活几乎感受不到 AI 直接好处，接触点边缘且令人困惑",
+      "children": [
+        "家庭、食物、交通、娱乐少有直接影响",
+        "多数人只把 AI 当生成图片、增强搜索的小工具",
+        "负面联想：成瘾算法、AI 聊天机器人、数据中心争议"
+      ]
+    },
+    {
+      "label": "与工业革命对比",
+      "detail": "历次工业革命给普通人带来实实在在的实物改变，AI 收益太间接",
+      "children": [
+        "第一次工业革命：更便宜衣物、厨具、读物",
+        "第二次工业革命：缝纫机、室内管道、摄影、电灯…",
+        "AI 救命成果可能被归功于家庭医生而非 OpenAI"
+      ]
+    },
+    {
+      "label": "社会停滞风险",
+      "detail": "AI 目前主要服务精英，知识工作约占美国经济一半",
+      "children": [
+        "Engels' pause：1790–1840 英国工资停滞而…",
+        "科技经济繁荣但普通人生活停滞，易引发反弹",
+        "担心 AI 品牌受损，重演美国核电的警示故事"
+      ]
+    },
+    {
+      "label": "长期扩散过程",
+      "detail": "AI 是需数十年复利的基础设施建设，50 年后日常生活或仍相似",
+      "children": [
+        "当前处于 50 年扩散过程的前五年",
+        "数学突破早期看似微小，后期复利惊人",
+        "机器人、自动驾驶或成普通人感知 AI 的入口"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "Nathan Lambert",
+      "type": "person"
+    },
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "LLM",
+      "type": "concept"
+    },
+    {
+      "name": "Engels' pause",
+      "type": "concept"
+    },
+    {
+      "name": "industrial revolution",
+      "type": "concept"
+    },
+    {
+      "name": "self-driving",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Nathan Lambert",
+      "to": "OpenAI",
+      "label": "评论"
+    },
+    {
+      "from": "Nathan Lambert",
+      "to": "Anthropic",
+      "label": "评论"
+    },
+    {
+      "from": "LLM",
+      "to": "self-driving",
+      "label": "独立发展"
+    },
+    {
+      "from": "Engels' pause",
+      "to": "industrial revolution",
+      "label": "类比"
+    }
+  ]
+}

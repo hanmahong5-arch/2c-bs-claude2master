@@ -1,0 +1,86 @@
+{
+  "center": "codex rust-v0.146.0 更新",
+  "branches": [
+    {
+      "label": "会话管理增强",
+      "detail": "新增命名会话与固定线程，切换侧边对话不关闭",
+      "children": [
+        "新增 /new 和 /clear 命令",
+        "支持固定线程",
+        "切换侧边对话不关闭"
+      ]
+    },
+    {
+      "label": "Agent 插件生态",
+      "detail": "支持插件清单、工作区发布及第三方插件市场",
+      "children": [
+        "Agent Plugins 清单",
+        "工作区插件发布",
+        "Amazon Bedrock/Claude Code 插件市场"
+      ]
+    },
+    {
+      "label": "线程分叉与远程执行",
+      "detail": "支持分页历史线程分叉，WebSocket 连接远程主机",
+      "children": [
+        "分页历史线程分叉",
+        "含临时分叉",
+        "WebSocket 连接远程 Code Mode 主机"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "codex rust-v0.146.0",
+      "type": "product"
+    },
+    {
+      "name": "Agent Plugins",
+      "type": "concept"
+    },
+    {
+      "name": "Amazon Bedrock",
+      "type": "product"
+    },
+    {
+      "name": "Claude Code",
+      "type": "product"
+    },
+    {
+      "name": "WebSocket",
+      "type": "technique"
+    },
+    {
+      "name": "Code Mode",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "codex rust-v0.146.0",
+      "to": "Agent Plugins",
+      "label": "支持"
+    },
+    {
+      "from": "codex rust-v0.146.0",
+      "to": "WebSocket",
+      "label": "使用"
+    },
+    {
+      "from": "codex rust-v0.146.0",
+      "to": "Code Mode",
+      "label": "连接远程"
+    },
+    {
+      "from": "Agent Plugins",
+      "to": "Amazon Bedrock",
+      "label": "集成"
+    },
+    {
+      "from": "Agent Plugins",
+      "to": "Claude Code",
+      "label": "集成"
+    }
+  ]
+}

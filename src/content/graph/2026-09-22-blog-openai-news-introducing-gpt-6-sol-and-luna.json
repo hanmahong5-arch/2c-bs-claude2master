@@ -1,0 +1,65 @@
+{
+  "center": "OpenAI 发布 GPT-6 Sol 与 Luna",
+  "branches": [
+    {
+      "label": "两款新模型",
+      "detail": "OpenAI 同时推出 GPT-6 Sol 与 Luna，把前沿智能带入日常工作场景",
+      "children": [
+        "GPT-6 Sol",
+        "GPT-6 Luna"
+      ]
+    },
+    {
+      "label": "能力成本权衡",
+      "detail": "两者差异在能力与成本之间的取舍，而非单一维度强弱",
+      "children": [
+        "按任务复杂度选模型",
+        "在效果与开销间取舍"
+      ]
+    },
+    {
+      "label": "面向开发者",
+      "detail": "对 agent 与工具链开发者，可按任务复杂度灵活选择模型",
+      "children": [
+        "agent 开发者",
+        "工具链开发者"
+      ]
+    }
+  ],
+  "flow": [],
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "company"
+    },
+    {
+      "name": "GPT-6 Sol",
+      "type": "model"
+    },
+    {
+      "name": "GPT-6 Luna",
+      "type": "model"
+    },
+    {
+      "name": "agent",
+      "type": "concept"
+    }
+  ],
+  "relations": [
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Sol",
+      "label": "发布"
+    },
+    {
+      "from": "OpenAI",
+      "to": "GPT-6 Luna",
+      "label": "发布"
+    },
+    {
+      "from": "GPT-6 Sol",
+      "to": "GPT-6 Luna",
+      "label": "能力成本权衡"
+    }
+  ]
+}

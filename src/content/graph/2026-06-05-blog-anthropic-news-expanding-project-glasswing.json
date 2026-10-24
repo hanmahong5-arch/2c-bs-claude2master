@@ -1,0 +1,115 @@
+{
+  "center": "Anthropic 扩大 Glasswing 项目",
+  "branches": [
+    {
+      "label": "项目扩至150家",
+      "detail": "Glasswing 新增约150家机构，覆盖15国以上关键基础设施",
+      "children": [
+        "初期约50家伙伴已发现超1万个高危漏洞",
+        "新伙伴涵盖电力、水务、医疗、通信、硬件",
+        "多数为供应商，代码被全球大量组织依赖"
+      ]
+    },
+    {
+      "label": "攻击影响巨大",
+      "detail": "多数伙伴遭成功攻击或影响超1亿人",
+      "children": [
+        "对全球与国家安全有重大影响",
+        "入选需先满足安全要求"
+      ]
+    },
+    {
+      "label": "AI 改变网安",
+      "detail": "Mythos 级模型将普及，攻击更频繁难测",
+      "children": [
+        "预计6-12个月内多家公司拥有同级模型",
+        "可能无防护措施发布，防御方须加速适应"
+      ]
+    },
+    {
+      "label": "支持防御者",
+      "detail": "发布 Claude Security，用 Opus 4.8 扫描并建议补丁",
+      "children": [
+        "向可信安全团队按需提供漏洞发现工具",
+        "长期目标是建立新标准与基础设施"
+      ]
+    },
+    {
+      "label": "加速修补",
+      "detail": "瓶颈已转向验证、披露与修补漏洞",
+      "children": [
+        "Mythos 可写补丁、做发布前检查与渗透测试",
+        "与第三方讨论扩大开源软件修补规模"
+      ]
+    }
+  ],
+  "flow": [
+    "伙伴接入 Mythos Preview",
+    "扫描代码库找漏洞",
+    "第三方分诊发现",
+    "编写并验证补丁",
+    "披露并部署修复"
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "type": "company"
+    },
+    {
+      "name": "Project Glasswing",
+      "type": "concept"
+    },
+    {
+      "name": "Claude Mythos Preview",
+      "type": "model"
+    },
+    {
+      "name": "Claude Security",
+      "type": "product"
+    },
+    {
+      "name": "Claude Opus 4.8",
+      "type": "model"
+    },
+    {
+      "name": "Cyber Verification Program",
+      "type": "concept"
+    },
+    {
+      "name": "US government",
+      "type": "company"
+    }
+  ],
+  "relations": [
+    {
+      "from": "Anthropic",
+      "to": "Project Glasswing",
+      "label": "发起"
+    },
+    {
+      "from": "Project Glasswing",
+      "to": "Claude Mythos Preview",
+      "label": "使用"
+    },
+    {
+      "from": "Claude Security",
+      "to": "Claude Opus 4.8",
+      "label": "基于"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Claude Security",
+      "label": "发布"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Cyber Verification Program",
+      "label": "扩展"
+    },
+    {
+      "from": "Project Glasswing",
+      "to": "US government",
+      "label": "合作"
+    }
+  ]
+}
