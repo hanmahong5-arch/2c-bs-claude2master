@@ -1,0 +1,23 @@
+---
+slug: 2026-10-27-gemini-cli-0-66-0
+title: "gemini-cli v0.66.0 — 工具调用分组改由调度器发出，UI 不再预判"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0
+publishedAt: 2026-10-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "工具调用分组改由调度器发出，UI 不再预判"
+broadcast: "谷歌的命令行智能体工具发布新版，把工具调用的分组改由调度器统一发出，界面不再自己预判，这样界面和执行层就不会各说各话、状态对不上。另外它执行 git 操作时不再弹交互提示，无人值守场景得自己备好凭据。对做智能体的人来说，这提醒我们事件要以执行层为准，别让界面另做推断。"
+insight: "这次 v0.66.0 的核心变化是工具调用分组改由调度器统一发出、UI 不再预判，属于执行层与 UI 的状态一致性重构。现有用户值得升级，但升级后要检查依赖 UI 前瞻逻辑的 hook 配置，把分组事件当作唯一事实来源，避免重复推断。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关改动，按现有方式使用即可，无需额外调整。"
+tags: [tool-scheduler, git-env, skill-frontmatter, cli-ui]
+---
+
+- **调度器直接发出工具调用分组**：core 与 cli 重构后，工具调用分组由 scheduler 统一发出，UI 侧的前瞻逻辑被移除；harness 应把分组事件当作唯一事实来源，避免 UI 与执行层各自推断导致状态不一致。
+- **getSafeGitEnv 禁用交互式凭据与 SSH 提示**：git 环境不再弹出交互提示；harness 在无人值守执行 git 操作时，需自行预置凭据或明确失败路径，不能依赖交互回退。
+- **SKILL.md frontmatter 解析加固**：支持单行 description 的解析；harness 加载技能元数据时，对格式变体的容错提升，但仍应校验字段完整性。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.66.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0)

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-23-claude-code-2-1-310
+title: "claude-code v2.1.310 — 网关兼容重试与压缩修复，直接影响 agent 长会话稳定性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.310
+publishedAt: 2026-10-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "网关兼容重试与压缩修复，直接影响 agent 长会话稳定性"
+broadcast: "这次更新主要修的是长会话里的稳定性问题。网关拒绝某个测试参数或者中途插入系统消息时，现在会自动去掉再重试，做 agent 的朋友可以把能力协商失败当成可降级路径，而不是直接报错。另外压缩策略改成按文本密度裁剪，不再只看消息条数，非交互会话压缩超大记录时内存占用也降了，长跑批处理更不容易崩。"
+insight: "这次 v2.1.310 值得升级，尤其是跑长会话和批处理的用户：网关拒绝 beta 值或中途 system 消息时会自动降级重试，压缩也改为按 token 密度裁剪，能减少 base64/SVG 密集文本导致的二次失败，非交互会话内存占用也有改善。现有 prompt 和 hook 配置不用改，但 harness 里把能力协商失败当硬错误的逻辑要改成可降级路径。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有配置升级即可。"
+tags: [gateway-compat, compaction, agent-sdk, memory]
+---
+
+- 网关拒绝 `effort-2025-11-24` beta 值或中途 system 消息时，Claude Code 自动去掉后重试；harness 需把能力协商失败当作可降级路径而非硬错误。
+- 修复 "Prompt is too long" 后压缩仍保留大量 base64/SVG 密集文本导致再次失败；压缩策略应按 token 密度裁剪，而非只按消息数。
+- 非交互会话（`-p`、Agent SDK）在超大 transcript 压缩时内存占用改善；长跑批处理 harness 可减少 OOM 风险。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.310](https://github.com/anthropics/claude-code/releases/tag/v2.1.310)

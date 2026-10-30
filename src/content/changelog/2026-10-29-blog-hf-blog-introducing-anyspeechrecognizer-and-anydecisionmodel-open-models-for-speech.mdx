@@ -1,0 +1,23 @@
+---
+slug: 2026-10-29-blog-hf-blog-introducing-anyspeechrecognizer-and-anydecisionmodel-open-models-for-speech
+title: "Introducing AnySpeechRecognizer and AnyDecisionModel: — Hugging Face 发布两个可在苹果设备本地运行的开源模型：语音识别与决策"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/anydecisionmodel
+publishedAt: 2026-10-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 发布两个可在苹果设备本地运行的开源模型：语音识别与决策模型"
+broadcast: "Hugging Face 发布了两个能在苹果设备上本地跑的开源模型，一个负责语音识别，一个负责做决策，都不依赖云端推理。对国内开发者来说，这意味着端侧 agent 的语音输入和轻量判断可以完全离线完成，语音识别的结果能直接接进决策模型，省掉一次网络往返，模型选型也不用再只盯着云端供应商。"
+tags: [on-device-ai, speech-recognition, apple-platforms, open-models]
+---
+
+- 文章介绍 AnySpeechRecognizer 与 AnyDecisionModel 两个开源模型，定位是在 Apple 平台（iPhone、Mac 等）上本地运行语音识别与决策任务，不依赖云端推理。对开发者的含义：端侧 agent 的语音输入与轻量决策环节可以完全离线完成。
+- 两个模型以开源形式发布，可直接获取权重并在苹果生态内集成，而非仅提供 API 服务。对工具链的含义：本地推理栈需要同时覆盖音频前端与决策逻辑，模型选型不再局限于单一云端供应商。
+- 文章将语音与决策并列作为同一套端侧能力发布，说明作者把「听懂」和「做判断」视为苹果设备上 agent 的两个基础模块。对 agent 设计的含义：端侧流水线可以把 ASR 输出直接接入决策模型，减少一次网络往返。
+
+---
+
+> 原文：[Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms](https://huggingface.co/blog/anydecisionmodel) · 作者 Hugging Face

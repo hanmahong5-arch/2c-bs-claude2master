@@ -1,0 +1,23 @@
+---
+slug: 2026-10-23-codex-rust-v0-164-0
+title: "codex rust-v0.164.0 — 预设槽位与内联参数让 harness 交互更可编排"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.164.0
+publishedAt: 2026-10-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "预设槽位与内联参数让 harness 交互更可编排"
+broadcast: "OpenAI 的 Codex 命令行工具更新了。这次加了十个编号预设槽位，能把常用提示和斜杠命令存起来随时调用，模型和权限也能直接在命令里带参数设定。对做 agent 的开发者来说，高频操作可以固化成可寻址入口，会话策略切换也能脚本化；另外压缩失败不再留下半成品摘要，而是降级回退，设计上得把上下文压缩当成可能失败的步骤。"
+insight: "对现有用户来说，这次 0.164.0 值得升级：/presets 的十个编号槽位能把高频提示和斜杠命令固化成可寻址入口，/model 与 /permissions 的内联参数让会话级策略切换可脚本化，压缩失败改为降级而非 panic 也更稳。现有 prompt 和 hook 配置建议同步调整，把重复拼装的提示迁到预设槽位，并让 harness 按轮次记录生效的模型与权限配置。摘要未提及 newapi.lurus.cn 代理相关变化，国内走代理是否受影响暂无依据。"
+tags: [codex, presets, compaction, permissions]
+---
+
+- 新增 `/presets` 十个编号槽位保存可复用提示与斜杠命令，并配键盘菜单；harness 可把高频操作固化为可寻址入口，减少重复拼装。
+- `/model` 与 `/permissions` 支持内联参数直接设定模型、推理强度、速度与权限配置；意味着会话级策略切换可脚本化，harness 需按轮次记录生效配置。
+- 压缩失败不再残留半成品摘要，后台压缩失败走降级而非 panic；harness 设计上应把上下文压缩视为可失败步骤，保留原始历史并显式回退。
+
+---
+
+> 原文 release：[openai/codex rust-v0.164.0](https://github.com/openai/codex/releases/tag/rust-v0.164.0)

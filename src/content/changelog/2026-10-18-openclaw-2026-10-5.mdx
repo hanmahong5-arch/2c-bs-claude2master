@@ -1,0 +1,23 @@
+---
+slug: 2026-10-18-openclaw-2026-10-5
+title: "openclaw v2026.10.5 — 发布说明本身提供机器可读的 changelog，供 agent 直接消费"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.10.5
+publishedAt: 2026-10-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "发布说明本身提供机器可读的 changelog，供 agent 直接消费"
+broadcast: "这次发布有个细节值得国内做 agent 的同行留意：发布说明除了给人看的文档页，还专门提供了一份纯文本的变更日志，工具可以直接抓取，不用再去解析网页。这次变更量很大，两千多次提交、六百多位贡献者，所以更适合让 agent 按需检索，而不是整篇塞进上下文。另外发布信息里还带了产物校验和构建报告链接，方便把供应链验证也纳入自动化流程。"
+insight: "这次 v2026.10.5 的发布说明本身提供纯 Markdown changelog，对现有用户来说升级价值主要在自动化侧：如果你的 harness 或 agent 需要消费 changelog，可以改成直接抓取结构化文本，不必再解析 HTML；但 2,704 次提交、2,250 个 PR 的变更量极大，不建议把全文塞进上下文，应按需检索。现有 prompt 或 hook 配置没有必须改的依据。国内用户走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [release-notes, changelog, agent-tooling, supply-chain]
+---
+
+- 发布说明与 changelog 内容相同，但提供两种格式：面向人的文档页，以及面向 AI agent 和工具的纯 Markdown changelog。含义：harness 可直接抓取结构化文本，无需解析 HTML。
+- 本次发布包含 2,704 次提交、2,250 个 PR、638 位贡献者。含义：变更量极大，harness 需要能按需检索 changelog，而不是把全文塞进上下文。
+- 发布验证信息包含 npm 包、registry tarball、integrity 哈希、release SHA 与 CI 报告链接。含义：agent 可据此校验产物完整性，把供应链验证纳入自动化流程。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.10.5](https://github.com/openclaw/openclaw/releases/tag/v2026.10.5)

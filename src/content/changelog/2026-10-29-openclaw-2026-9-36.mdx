@@ -1,0 +1,23 @@
+---
+slug: 2026-10-29-openclaw-2026-9-36
+title: "openclaw v2026.9.36 — LTS 线补安全与更新回滚修复，harness 边界收紧"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.36
+publishedAt: 2026-10-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "LTS 线补安全与更新回滚修复，harness 边界收紧"
+broadcast: "这次更新主要补的是安全和回滚上的漏洞：更新失败后能恢复，不会再出现装好的包缺失。更值得关注的是，工作区限制现在覆盖到网关工具，走网关和技能分发的工具都要审批，媒体工具也被限制在工作区内；同时媒体元数据、邮件地址、超大集合这些不可信输入都设了上限。对做 agent 的开发者来说，这意味着工具边界和解析入口得统一收紧，失败路径也要能回退。"
+insight: "这次 2026.9.36 是 LTS 线的安全与回滚修复，现有用户值得升级：npm 回滚失败不再丢已安装包，Doctor 恢复指引保留，失败路径可回退。若你的 harness 把安装态与迁移态混在一起，建议按摘要所述分离，否则更新失败时难以回退。prompt 无需改动；但若启用了 tools.fs.workspaceOnly，经 Gateway loopback 与 skill 分发的工具现在需审批，媒体工具限制在工作区内，相关 hook 与工具派生策略要随构建路径一致生效，升级后需复核。摘要未提及 newapi.lurus.cn 代理，国内走代理是否受影响无法据此判断。"
+tags: [release-notes, security, agent-harness, lts]
+---
+
+- **更新失败可恢复**：npm 回滚失败不再导致已安装包缺失，Doctor 恢复指引保留且不再重拷私有演练库；harness 应把安装态与迁移态分离，失败路径可回退。
+- **工作区限制覆盖 Gateway 工具**：`tools.fs.workspaceOnly` 下经 Gateway loopback 与 skill 分发的工具需审批，媒体工具限制在工作区内；工具派生策略须随构建路径一致生效。
+- **不可信输入设上限**：媒体元数据、IMAP 地址、TOML、URI、A2UI/Discord 超大集合及 Microsoft 认证路由均被限界；解析入口需统一配额与身份隔离。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.36](https://github.com/openclaw/openclaw/releases/tag/v2026.9.36)

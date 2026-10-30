@@ -1,0 +1,23 @@
+---
+slug: 2026-10-20-gemini-cli-0-65-0
+title: "gemini-cli v0.65.0 — 会话恢复与工具调用一致性修复，harness 设计者该看"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0
+publishedAt: 2026-10-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "会话恢复与工具调用一致性修复，harness 设计者该看"
+broadcast: "这次更新修的是会话恢复和工具调用的一致性：恢复会话时不再产生重复的工具响应轮次，还加了终端用户轮次的不变量校验，快速退出也不会删掉已恢复的历史。对做 agent 的国内开发者来说，这提醒我们，工具结果要和请求内容一一对应，发送前统一消息序列，持久化写入也要和退出流程解耦。"
+insight: "这次 v0.65.0 修的是会话恢复时重复 tool response turn、终端轮次不变量校验和快速退出删历史三处一致性问题，对自建 harness 的开发者是实打实的稳定性收益，建议现有用户升级。但升级后要检查自己的 prompt 与 hook 配置：工具结果必须与请求内容一一对应，发送前统一消息序列，持久化写入也要和退出流程解耦，否则旧配置可能踩到新校验。国内走 newapi.lurus.cn 代理的部分，摘要未提及任何代理相关变化，按现有方式使用即可。"
+tags: [session-resume, tool-calling, message-normalization, persistence]
+---
+
+- 恢复会话时不再产生重复的 tool response turn，harness 需保证每轮工具结果与请求内容一一对应
+- 新增终端用户轮次不变量校验并规范化请求内容，harness 应在发送前统一消息序列
+- 快速退出不再删除已恢复的会话历史，harness 的持久化写入需与退出流程解耦
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.65.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0)

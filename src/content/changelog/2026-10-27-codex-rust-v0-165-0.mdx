@@ -1,0 +1,23 @@
+---
+slug: 2026-10-27-codex-rust-v0-165-0
+title: "codex rust-v0.165.0 — 新增 GCP Vertex 提供商与默认记忆 v2，多后端会话路由更稳"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.165.0
+publishedAt: 2026-10-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "新增 GCP Vertex 提供商与默认记忆 v2，多后端会话路由更稳"
+broadcast: "OpenAI 的 Codex 刚更新，新增了谷歌云 Vertex AI 作为内置模型提供商，模型目录里也加入了新的 GPT-6.1 Terra，同时默认开启记忆 v2，还能导入外部 agent 的记忆。对国内做 agent 的开发者来说，这意味着后端选择不再被单一厂商绑死，记忆层也要做成可迁移、可版本化的独立组件，另外中断和报错的语义这次也修得更清楚了。"
+insight: "这次 0.165.0 的改动对现有用户来说值得升级：新增 GCP Vertex 提供商和 GPT-6.1 Terra，默认启用 memory v2 并支持导入外部 agent 记忆，还修复了中断后排队消息重启工作、模型未找到错误仍重试的问题。如果你在用自定义 hook 或 prompt 配置，建议先检查提供商选择是否硬编码了单一后端，以及记忆层是否可迁移，再升级；国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [vertex-ai, memory-v2, agent-harness, model-catalog]
+---
+
+- 新增内置 Google Cloud Vertex AI 提供商（`model_provider = "gcp"`），模型目录同时加入 GPT-6.1 Terra；harness 需把提供商选择与模型目录解耦，避免硬编码单一后端。
+- 新配置默认启用 memory v2，并支持导入外部 agent 记忆；harness 设计上要把记忆层做成可迁移、可版本化的独立组件。
+- 修复中断或切到 Plan 模式后排队 agent 消息仍重启工作的问题，并让模型未找到错误直接终止重试；harness 需明确中断语义与终态错误分类。
+
+---
+
+> 原文 release：[openai/codex rust-v0.165.0](https://github.com/openai/codex/releases/tag/rust-v0.165.0)

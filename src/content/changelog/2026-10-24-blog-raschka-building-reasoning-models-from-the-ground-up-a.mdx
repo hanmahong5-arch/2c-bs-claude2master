@@ -1,0 +1,23 @@
+---
+slug: 2026-10-24-blog-raschka-building-reasoning-models-from-the-ground-up-a
+title: "Building Reasoning Models from the Ground Up: A Full — Raschka 发布 11 小时视频课，用 PyTorch 从零实现推理模型的评"
+source: "Sebastian Raschka"
+sourceUrl: https://magazine.sebastianraschka.com/p/building-reasoning-models
+publishedAt: 2026-10-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Sebastian Raschka"
+hook: "Raschka 发布 11 小时视频课，用 PyTorch 从零实现推理模型的评估、推理扩展、强化学习与蒸馏。"
+broadcast: "有人发布了一套十一小时的视频课，用 PyTorch 从零实现推理模型的评估、推理扩展、强化学习和蒸馏。他把推理模型看作 agent 的引擎，工具链负责上下文管理和工具调用，提醒开发者选型时先分清两者职责。课程还从一个小基座模型起步，先搭可复现的基线，再单独工程化数学答案验证器，用它来评估和训练推理能力。"
+tags: [reasoning-models, pytorch, reinforcement-learning, agent-harness]
+---
+
+- 作者把推理模型定位为 agent harness 的"引擎"：模型负责推理能力，harness 负责上下文管理与工具调用，二者分工明确。对开发者的含义是选型时先分清模型能力与工具链职责，别把上下文管理塞进模型层。
+- 课程从预训练 Qwen3 0.6B 起步，先实现流式生成、KV cache 与 torch.compile，再在此基础上做评估与改进。含义是推理能力改造应建立在可复现的基线之上，先量化再优化。
+- 第三个视频逐步构建数学答案验证器（答案抽取、归一化、等价判断），并用它在 MATH-500 上评估基座模型。含义是可验证奖励是强化学习训练推理模型的前置基础设施，值得单独工程化。
+
+---
+
+> 原文：[Building Reasoning Models from the Ground Up: A Full Video Course](https://magazine.sebastianraschka.com/p/building-reasoning-models) · 作者 Sebastian Raschka

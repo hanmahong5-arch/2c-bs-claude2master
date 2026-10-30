@@ -1,0 +1,23 @@
+---
+slug: 2026-10-29-opencode-2-2-1
+title: "opencode v2.2.1 — 目标循环与图像生成工具进入 agent 运行时"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.2.1
+publishedAt: 2026-10-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "目标循环与图像生成工具进入 agent 运行时"
+broadcast: "这次更新把目标循环和图像生成工具带进了 agent 运行时。会话可以围绕一个目标持续运行，直到评审确认达成，还能暂停、恢复和清除；同时新增了可选的图像生成工具，能在后台创建或编辑图像。对国内做 agent 的开发者来说，这意味着完成判定要外置成可暂停的循环状态，还要管理异步生成任务和模型选择，会话空闲前也多了可插入自定义逻辑的扩展点。"
+insight: "这次 v2.2.1 的改动对现有用户来说值得升级，但不必急着改 prompt。目标循环把完成判定外置成可暂停状态，单轮 prompt 的写法不受影响；image_generate 是 opt-in，不开就不改变现有工具集；experimental.idle 属于插件 hook，只有你在用 Session hook 时才需要关注。国内用户经 newapi.lurus.cn 代理访问不受影响，摘要未提及任何代理或鉴权变化。建议先升级，再按需启用新工具。"
+tags: [goal-loop, image-generation, session-hooks, agent-harness]
+---
+
+- `/goal <objective>` 让会话持续运行直到 reviewer 确认目标达成，并支持 pause/resume/clear；harness 需把“完成判定”外置为可暂停的循环状态，而非单轮结束。
+- 新增 opt-in `image_generate` 工具，可后台创建或编辑图像并配置默认模型；工具集从文本扩展到多模态产物，harness 要管理异步生成任务与模型选择。
+- 新增 `experimental.idle` Session hook，插件可在会话进入 idle 前继续工作；这给 harness 提供了在空闲边界插入自定义逻辑的扩展点。
+
+---
+
+> 原文 release：[sst/opencode v2.2.1](https://github.com/anomalyco/opencode/releases/tag/v2.2.1)

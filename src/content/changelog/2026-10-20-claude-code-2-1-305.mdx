@@ -1,0 +1,23 @@
+---
+slug: 2026-10-20-claude-code-2-1-305
+title: "claude-code v2.1.305 — 沙箱逃逸开关、工具搜索回退、重试看门狗，三条都改 harness 边界"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.305
+publishedAt: 2026-10-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "沙箱逃逸开关、工具搜索回退、重试看门狗，三条都改 harness 边界"
+broadcast: "这次更新有三处改动都碰到了执行框架的边界。第一处是新增一个沙箱开关，允许沙箱里的命令创建用户命名空间，但这也会让它们绕过文件保护，所以默认关闭，得当成明确的信任升级来审计。第二处修了个回归，网关拒绝工具搜索时所有请求都会失败，现在会自动去掉这个能力再重试。第三处加了重试看门狗，让无人值守的长时运行能察觉提前解除的用量限制。"
+insight: "这次 v2.1.305 值得升级，但重点不在新功能，而在修复 2.1.304 的 tool search 回归——端点或网关拒绝该能力时，Vertex、Bedrock 等所有请求都会失败，现在会自动去掉该能力重试。国内用户走 newapi.lurus.cn 代理，若代理侧不支持 tool search，旧版会整体失败，升级后能自动降级，建议尽快升。sandbox.allowNestedUserNamespaces 默认关闭，现有 hook 配置无需改动，除非明确需要 Chromium、rootless podman 并接受信任升级。"
+tags: [sandbox, tool-search, retry-watchdog, provider-fallback]
+---
+
+- 新增 `sandbox.allowNestedUserNamespaces`，Linux 沙箱内命令可创建 user namespace（Chromium、rootless podman），但这也让它们绕过沙箱文件保护：harness 需把该开关当作显式信任升级，默认关闭并审计。
+- 修复 2.1.304 回归：端点或网关拒绝 tool search 时，Vertex、Bedrock 等所有请求都失败；现在会自动去掉该能力重试：harness 应把可选能力做成可降级路径，而非硬依赖。
+- 新增 `CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS`，让无人值守重试模式能察觉提前解除的用量限制：长时无人运行需主动轮询外部配额状态，不能只等重置时刻。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.305](https://github.com/anthropics/claude-code/releases/tag/v2.1.305)

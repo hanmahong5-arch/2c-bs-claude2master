@@ -1,0 +1,23 @@
+---
+slug: 2026-10-22-claude-code-2-1-309
+title: "claude-code v2.1.309 — 沙箱逃逸与权限绕过集中修复，agent 执行边界值得重看"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.309
+publishedAt: 2026-10-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "沙箱逃逸与权限绕过集中修复，agent 执行边界值得重看"
+broadcast: "这次更新集中修了几处沙箱逃逸和权限绕过问题：在苹果和Linux系统上，沙箱命令原本会先在隔离区外执行shell启动文件，现在已修正；自动接受的编辑也能改写MCP配置文件，这个口子已经封堵；另外路径拒绝规则此前挡不住子shell里的重定向写入，也已修复。对做agent的国内开发者来说，这说明执行边界不能只覆盖工作区，初始化脚本和配置文件本身都得纳入隔离和权限范围。"
+insight: "这次 v2.1.309 修的是沙箱逃逸和权限绕过，属于执行边界问题，不是功能更新，现有用户值得升级。如果你在 macOS/Linux 上跑沙箱命令，或依赖 Edit(path) 拒绝规则约束 Bash 重定向，旧版本存在实际绕过风险，建议直接升到该版本。prompt 不用改，但 hook 配置要重看：初始化脚本要纳入隔离边界，工具权限要覆盖 --mcp-config 指向的配置文件本身，而不只是工作区。走 newapi.lurus.cn 代理的用户，摘要未提及代理层变化，按现有方式升级即可。"
+tags: [sandbox, permissions, mcp, agent-harness]
+---
+
+- macOS/Linux 沙箱命令此前会在沙箱外先执行 shell 启动文件，现已修正；harness 需把初始化脚本也纳入隔离边界。
+- 沙箱命令与自动接受的编辑可改写 `--mcp-config` 指定的 MCP 配置文件，现已封堵；工具权限应覆盖配置文件本身，而非只覆盖工作区。
+- `Edit(path)` 拒绝规则在含子 shell 的命令中未能阻止 Bash 重定向到该路径，现已修复；路径级拒绝需同时约束重定向等间接写入。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.309](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)

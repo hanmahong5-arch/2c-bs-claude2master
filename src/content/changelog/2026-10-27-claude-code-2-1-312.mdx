@@ -1,0 +1,23 @@
+---
+slug: 2026-10-27-claude-code-2-1-312
+title: "claude-code v2.1.312 — 写文件前先读全文，钩子并发上限，模型名识别更宽松"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.312
+publishedAt: 2026-10-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "写文件前先读全文，钩子并发上限，模型名识别更宽松"
+broadcast: "这次更新有个细节值得国内做 agent 的同行留意：写文件工具碰到超大的项目说明或引用文件时，不再只看开头就覆盖，而是要求先读全文或者原地编辑。另外钩子每会话最多并发二十四个，还有超时等待槽，调度得自己算好并发和超时预算。再有就是遇到认不出的模型名会改用短系统提示，咱们的框架也得给未知模型名留条降级路径。"
+insight: "这次 v2.1.312 对现有用户值得升级：Write 工具在超大 CLAUDE.md 或 @ 引用文件上要求先读全文或原地编辑，能避免只看开头就覆盖。hook 配置需要改，每会话并发上限 24 个、超时等待槽 12 个、timeout 小于 1 秒按 1 秒计，子代理多的会话要显式做并发与超时预算。走 newapi.lurus.cn 代理的国内用户，摘要未提及代理相关变化，按现有配置使用即可。"
+tags: [write-tool, hook-concurrency, model-routing, system-prompt]
+---
+
+- Write 工具遇到超大 CLAUDE.md 或 @ 引用文件时，不再只看开头就覆盖，而是要求先读全文或原地编辑；harness 设计上应把「读全再写」做成工具级约束，而非依赖模型自觉。
+- prompt 与 agent hooks 每会话最多并发 24 个（含子代理），另有最多 12 个超时等待槽，timeout 小于 1 秒按 1 秒计；说明 hook 调度需要显式的并发与超时预算，避免子代理放大负载。
+- Bedrock、Vertex、Foundry、Mantle 上无法识别的模型名（自定义部署名、推理配置 ARN）改用短系统提示，拒绝回退也覆盖这些名字；harness 需为未知模型名保留降级路径与开关。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.312](https://github.com/anthropics/claude-code/releases/tag/v2.1.312)

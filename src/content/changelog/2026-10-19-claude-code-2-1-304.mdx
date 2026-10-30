@@ -1,0 +1,23 @@
+---
+slug: 2026-10-19-claude-code-2-1-304
+title: "claude-code v2.1.304 — 权限判定新增 person 决策者与只读标记，钩子与插件边界更可控"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.304
+publishedAt: 2026-10-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "权限判定新增 person 决策者与只读标记，钩子与插件边界更可控"
+broadcast: "这次更新给权限判定加了一个“人”的决策者：只有权限弹窗或宿主回调能批准，没人可问时就按给出的理由拒绝，所以做 agent 的得把“无人可问”这条降级路径显式做出来。另外只读调用现在能被单独识别，读写工具可以走不同审批策略；插件钩子被跳过时会写进记录并点名，跳过和终止条件都变得可审计、可强制。"
+insight: "这次 v2.1.304 对普通用户没有强制升级的必要，但如果你自己维护 harness 或写了 tool.check 钩子，建议跟进：新增的 decider: \"person\" 要求你显式处理“无人可问”的降级路径，e.isReadOnly 则让你能对读写工具分开审批，这两点不改配置就可能在新版本下行为不一致。插件钩子跳过会写进 transcript 并点名事件与插件，排查更透明。国内走 newapi.lurus.cn 代理的部分，摘要未提及任何影响，按现有方式使用即可。"
+tags: [permissions, hooks, plugins, agent-harness]
+---
+
+- `tool.check` 新增 `decider: "person"`：只有权限弹窗或宿主回调能批准，无人可问时按 mod 给出的理由拒绝；harness 需显式建模“无人可问”的降级路径。
+- `tool.check` 事件新增 `e.isReadOnly`：只读调用可被单独识别；harness 可据此对读写工具走不同审批策略。
+- 插件钩子被跳过时写入 transcript 并点名事件与插件；同时修复插件在 `--max-turns`、Stop 后仍靠子代理续跑；harness 需把钩子跳过与终止条件做成可审计、可强制。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.304](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)

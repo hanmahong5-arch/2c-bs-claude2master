@@ -1,0 +1,23 @@
+---
+slug: 2026-10-28-blog-latentspace-why-agents-love-supabase
+title: "Why Agents Love Supabase — Latent Space 与 Supabase 创始人聊：为什么 agent 偏"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/supabase/
+publishedAt: 2026-10-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Latent Space 与 Supabase 创始人聊：为什么 agent 偏爱 Supabase，以及后端为 agent 做了哪些改造"
+broadcast: "Latent Space 跟 Supabase 创始人聊了聊，为什么 agent 偏爱这个后端。他们做了几处改造：本地运行不再依赖 Docker，少一层依赖就少一个失败点；声明式 schema 让 agent 能直接读取、修改、fork 结构，不用从迁移历史反推；容器还能跑在数据库旁边，补上启动应用到运维之间的缺口。对国内做 agent 的开发者来说，这些都在减少环境摩擦。"
+tags: [supabase, ai-agents, postgres, developer-tools]
+---
+
+- 本地运行时不再依赖 Docker：agent 反复创建和测试环境时，每次都要面对这个摩擦，去掉一层依赖就能减少一次失败点。
+- 声明式 schema 被比作数据库的 Terraform 时刻：期望状态写进 Git，agent 能直接读取、修改、fork，不必从迁移历史反推结构。
+- Supabase Compute 让容器跑在数据库旁边，补上从启动应用到运维之间的缺口；作者同时强调日志、连接和上下文对 agent 理解改动的价值。
+
+---
+
+> 原文：[Why Agents Love Supabase](https://latent.space/p/supabase/) · 作者 Latent Space

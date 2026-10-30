@@ -1,0 +1,23 @@
+---
+slug: 2026-10-22-claude-code-2-1-308
+title: "claude-code v2.1.308 — 仅一句笼统说明，无具体功能变化，30 秒可判断是否相关"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.308
+publishedAt: 2026-10-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "仅一句笼统说明，无具体功能变化，30 秒可判断是否相关"
+broadcast: "这次更新只写了修复问题和提升可靠性，没有列出任何具体修复项，也没说哪些模块受影响。对做 agent 的国内开发者来说，这意味着没法判断哪些执行路径的稳定性被改动过，升级前得自己跑一遍回归验证。版本号往前推了，说明确实有代码变更，但范围没公开，所以别假设行为完全不变，最好留着旧版本方便回滚。没有新增功能或接口调整，集成层不用改，重点放在可靠性测试上。"
+insight: "这次 v2.1.308 只写了 Bug fixes and reliability improvements，没列具体修复项，也没提新增功能或配置项调整，所以现有 prompt 和 hook 配置不用改。是否升级要看你对稳定性的敏感度：变更范围未公开，harness 行为不能假设完全不变，建议先保留旧版本，自行回归验证执行路径后再升，并留好回滚。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [claude-code, release-notes, reliability, bug-fixes]
+---
+
+- 发布说明只写「Bug fixes and reliability improvements」，未列出任何具体修复项或受影响模块；对 agent harness 设计的含义是：无法据此判断哪些执行路径的稳定性被改动，升级前需自行回归验证。
+- 版本号从上一版推进到 v2.1.308，说明有代码变更，但变更范围未公开；含义是：harness 侧不宜假设行为完全不变，应保留旧版本以便回滚。
+- 未提及新增功能、配置项或接口调整；含义是：无需为适配新特性修改 harness 集成层，重点放在可靠性回归测试上。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.308](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)

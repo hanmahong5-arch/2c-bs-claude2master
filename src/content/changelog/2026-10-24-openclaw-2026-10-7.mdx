@@ -1,0 +1,23 @@
+---
+slug: 2026-10-24-openclaw-2026-10-7
+title: "openclaw v2026.10.7 — 中断会话可安全恢复，更新失败可续传，适合关注 agent 运行时可靠性"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.10.7
+publishedAt: 2026-10-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "中断会话可安全恢复，更新失败可续传，适合关注 agent 运行时可靠性"
+broadcast: "这次更新主要解决 agent 运行时的可靠性问题：中断的会话可以安全恢复，恢复来源和没跑完的工具结果都会保留下来；被拒绝的草稿不会再混进最终回复，大批量子任务的结果回传也有了体积限制。另外，包更新中断后能续传，升级流程带超时边界。对做 agent 的国内开发者来说，这些正是长期运行时最容易踩的坑。"
+insight: "这次 2026.10.7 的重点是运行时可靠性，现有用户值得升级：会话中断可安全恢复、更新失败可续传，直接减少 agent 长任务翻车。升级时注意 harness 要把工具结果与恢复标记纳入持久状态，并在输出前做草稿过滤、限制批量回传体积，升级流程需幂等且带超时边界，否则新能力用不上。摘要未提及 newapi.lurus.cn 代理，国内走代理是否受影响暂无依据，建议先小范围验证再全量。"
+tags: [session-recovery, update-safety, agent-harness, context-management]
+---
+
+- 会话恢复保留恢复来源与未完成工具结果，停止的对话在接收下一条消息前清理终态残留；harness 需把工具结果与恢复标记纳入持久状态。
+- 被拒绝的 Claude CLI 草稿不再进入最终回复，大子任务完成批次限制在请求方上下文内；harness 应在输出前做草稿过滤并限制批量回传体积。
+- 包更新中断后可安全续传，激活后 Doctor 等待有上限，陈旧回执不能否决有效修复；harness 的升级流程需幂等且带超时边界。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.10.7](https://github.com/openclaw/openclaw/releases/tag/v2026.10.7)

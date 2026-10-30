@@ -1,0 +1,23 @@
+---
+slug: 2026-10-21-claude-code-2-1-307
+title: "claude-code v2.1.307 — 权限拦截与工具重试逻辑有实质变化，影响 harness 安全与稳定性"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.307
+publishedAt: 2026-10-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "权限拦截与工具重试逻辑有实质变化，影响 harness 安全与稳定性"
+broadcast: "这次更新在权限拦截和工具重试上有实质变化。新增的安全事件能把每次工具调用的决策链路变成可观测数据，方便排查问题。另外，网络中断时不再盲目重发，只对只读或幂等工具重试，所以做 agent 的开发者要显式标注工具幂等性，否则可能丢调用或重复副作用；解析失败的工具调用也会先重试两次再报错。"
+insight: "这次 v2.1.307 对现有用户是值得升级的，重点不在新功能而在行为变化：HTTP MCP 断连后只对只读或幂等工具重试，如果你的 harness 或 hook 配置里没显式标注工具幂等性，升级后可能丢调用或产生重复副作用，建议升级前先梳理一遍工具标注。另外无法解析的工具调用改为最多重试两次，harness 应把解析失败当可恢复状态处理。摘要未提及代理层变动，走 newapi.lurus.cn 的国内用户按现有配置即可。"
+tags: [tool-retry, opentelemetry, mcp, permissions]
+---
+
+- 新增 `claude_code.safety_event` OTel 事件，覆盖权限规则、auto 模式、安全检查、hook 与沙箱的拦截/提示/回退；harness 可据此把每次工具调用的决策链路变成可观测数据。
+- HTTP MCP 调用在连接中断时不再盲目重发，仅对只读或幂等工具重试；harness 设计需显式标注工具幂等性，否则会丢调用或重复副作用。
+- 无法解析的工具调用现在最多重试两次再报错结束回合；harness 应把解析失败当作可恢复状态，而非立即终止。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.307](https://github.com/anthropics/claude-code/releases/tag/v2.1.307)

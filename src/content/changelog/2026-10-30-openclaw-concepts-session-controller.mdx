@@ -1,0 +1,23 @@
+---
+slug: 2026-10-30-openclaw-concepts-session-controller
+title: "Session controller · OpenClaw — 会话控制器如何决定哪一轮能占用会话，以及为什么取消不等于已结算"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/session-controller
+publishedAt: 2026-10-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "会话控制器如何决定哪一轮能占用会话，以及为什么取消不等于已结算"
+broadcast: "这期讲会话控制器怎么判断哪一轮能占用会话。它把状态拆成六种分别推导，排队请求不会因为有编号就显示在执行。更关键的是，取消请求不等于取消完成，停止要等持久化、钩子和子进程清理完才确认，期间控制器保留托管并拦住下一轮。对做 agent 的国内开发者来说，这意味着别再用一个运行中标志糊弄，要把已请求停止和已安全交接分开建模。"
+insight: "对现有 OpenClaw 用户来说，这次不需要急着升级，但 prompt 和 hook 配置值得按摘要里的状态拆分思路改一改：把“已请求停止”和“已安全交接”分开建模，别再依赖单一 is_running 判断。取消不等于已结算，控制器会保留 custody 并 fence 下一轮直到 settle，所以循环里要等 settle 再放行。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [session-controller, agent-harness, cancellation, state-machine]
+---
+
+- **区分六种状态而非一个布尔值**：文章要求从权威事实分别推导 slot owned、admissible、execution active、injectable、abortable、settled，排队请求不能因有 run ID 就显示为执行中。含义：harness 的状态查询接口应按问题拆分，避免用单一 `is_running` 掩盖取消与结算的差异。
+- **取消请求不等于取消完成**：Stop 在持久化、钩子、MCP 清理与子进程清理后才确认，但不等待原始准备返回；控制器保留该工作的 custody 并 fence 下一轮直到其 settle。含义：prompt/agent 循环中应把“已请求停止”和“已安全交接”分开建模。
+- **不按 session key 重新发现后继**：逻辑 key、存储 incarnation、reply operation、backend attempt 是不同身份，旧回调可能活过 reset，必须做 generation 检查。含义：harness 应持有捕获的 operation 引用，而非用 key 重查目标。
+
+---
+
+> 原文：[Session controller · OpenClaw](https://docs.openclaw.ai/concepts/session-controller)

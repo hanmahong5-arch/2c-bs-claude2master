@@ -1,0 +1,23 @@
+---
+slug: 2026-10-23-hermes-agent-0-22-5
+title: "hermes-agent v0.22.5 — 81 个 PR 汇总成稳定版，子代理路由和插件命令有变化"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5
+publishedAt: 2026-10-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "81 个 PR 汇总成稳定版，子代理路由和插件命令有变化"
+broadcast: "这次更新把八十多个改动汇总成了一个稳定版，最值得留意的是子代理可以按模型或配置来路由，还能在会话里随时切换，做 agent 的朋友得把委派策略从写死改成可配置。另外插件命令现在能要求用户做选择、支持多轮参数回传，核心也做了瘦身，把服务端和另一种后端移出去变成插件，需要提供插件发现和安装入口。"
+insight: "这次 v0.22.5 把子代理委派改成可配置路由、插件命令支持多轮选项交互，还把 MCP serve 与 Singularity 移出核心转插件，说明 harness 层要动的地方不少。现有用户如果依赖硬编码委派策略或单次执行的插件命令协议，升级前得先把这两块改成可配置层和多轮参数回传，否则容易踩坑；只用基础对话的可以跟稳定版走。国内走 newapi.lurus.cn 代理是否受影响，摘要里没提，无法判断。"
+tags: [delegation, plugins, mcp, release]
+---
+
+- **可插拔委派后端**：子代理可按模型映射或 profile 路由，并能在会话内切换，harness 需把委派策略从硬编码改为可配置层。
+- **插件斜杠命令支持选项交互**：插件命令可要求用户选择，命令协议需支持多轮参数回传而非单次执行。
+- **MCP serve 与 Singularity 后端移出核心转为插件**：核心瘦身，harness 需提供插件发现与安装入口，并在检测到其他 agent 时提示迁移导入。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.22.5](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5)

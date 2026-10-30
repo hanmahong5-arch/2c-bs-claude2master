@@ -1,0 +1,23 @@
+---
+slug: 2026-10-23-goose-1-56-0
+title: "goose v1.56.0 — 子代理可恢复、可限流、可查看，goose 把多代理编排做成了可控基础设施"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.56.0
+publishedAt: 2026-10-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "子代理可恢复、可限流、可查看，goose 把多代理编排做成了可控基础设施"
+broadcast: "goose 这次更新把多代理编排做成了可控的基础设施：现在能限制并发子代理数量，失败或取消的子代理可以恢复，界面上还能查看只读的子代理会话。对国内做 agent 的开发者来说，这意味着并发上限、状态持久化和命名预算这些事，得当成一等配置来设计，而不是靠隐式约束。"
+insight: "这次 v1.56.0 的改动对现有用户来说值得升级，尤其是已经在用 delegate 子代理的团队：并发上限变成显式配置、失败或取消的子代理可恢复、UI 能查看只读会话，这三点直接改变多代理编排的可控性。现有 prompt 和 hook 配置需要检查：如果之前依赖隐式并发或子代理回合预算，要按新的全局 turn limit 回退和统一命名策略调整，否则行为可能和预期不一致。国内用户走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [subagents, concurrency, mcp, agent-harness]
+---
+
+- 新增 `GOOSE_MAX_CONCURRENT_SUBAGENTS` 限制并发子代理数量，harness 需把并发上限作为一等配置而非隐式约束。
+- 失败或取消的 delegate 子代理可恢复，UI 提供只读子代理会话链接，意味着子代理状态要持久化并可被父会话重新接管。
+- 子代理回合上限回退到全局 turn limit，MCP 工具改用 provider 安全的公开名，harness 需统一命名与预算回退策略。
+
+---
+
+> 原文 release：[block/goose v1.56.0](https://github.com/aaif-goose/goose/releases/tag/v1.56.0)

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-27-blog-latentspace-how-anthropic-ships-claude-with-claude-separating-the
+title: "How Anthropic ships Claude with Claude: Separating the — Anthropic 工程与产品负责人拆解 Opus 5.5 发布，核心是把 ag"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/opus55/
+publishedAt: 2026-10-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Anthropic 工程与产品负责人拆解 Opus 5.5 发布，核心是把 agent 的“脑”和“手”拆开。"
+broadcast: "Anthropic 的工程和产品负责人拆解了新一代模型的发布，核心思路是把 agent 的“脑”和“手”拆开：会话日志和调度框架不再跟执行代码的沙箱绑在一起，沙箱按需创建，失败也不会拖垮整个会话。更关键的是，生成的代码跑在不持有服务凭证的沙箱里，凭证单独保存、经代理附加，出口流量也受限。对国内做 agent 的团队来说，这提醒我们隔离和网络控制要当成架构属性，而不是事后补丁。"
+tags: [agent-runtime, sandbox-isolation, anthropic, api-design]
+---
+
+- **模型发布即 API 发布**：Opus 5.5 同时强调质量与单位成本，官方称运行成本低于前代，具体节省取决于工作负载与缓存上下文的使用；跨轮保留 thinking blocks 可防止推理被提取用于蒸馏，但新要求可能打断客户已有的 harness。含义：升级模型不只是换权重，接入层与成本模型要一起评估。
+- **脑与手分离**：Managed Agents 把会话日志与 harness 同执行代码的 sandbox 解耦，sandbox 按需创建、失败不拖垮整个会话；早期把整个编码 agent 放进 sandbox 会拉高首响延迟。含义：设计 agent runtime 时先问哪些部分必须存活、哪些执行不可信代码。
+- **凭证不进 sandbox**：生成的代码运行在不持有服务凭证的 sandbox 中，凭证单独保存并经代理附加，同时限制 sandbox 流量出口。含义：隔离与网络控制应作为架构属性，而非事后补丁。
+
+---
+
+> 原文：[How Anthropic ships Claude with Claude: Separating the Brain from the Hands](https://latent.space/p/opus55/) · 作者 Latent Space

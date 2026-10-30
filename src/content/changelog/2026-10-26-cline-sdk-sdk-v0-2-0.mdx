@@ -1,0 +1,23 @@
+---
+slug: 2026-10-26-cline-sdk-sdk-v0-2-0
+title: "cline sdk/sdk/v0.2.0 — 会话重连、能力路由与重试策略同时收紧，直接影响 agent harness 的可"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.0
+publishedAt: 2026-10-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "会话重连、能力路由与重试策略同时收紧，直接影响 agent harness 的可靠性设计"
+broadcast: "这次更新把会话重连、能力路由和重试策略同时收紧了。重连现在复用进行中的运行，重复启动会被拒绝；能力请求只发给首个仍连接的客户端，没人连就快速失败；模型请求重试上限也从五次降到三次，只有推理流断线能重试。对做 agent 的国内开发者来说，这些变化直接影响 harness 的可靠性设计，得区分重连和重启，把能力注册和连接状态解耦。"
+insight: "现有 harness 用户值得升级到 v0.2.0，但升级前要改配置：重连必须复用进行中的运行，带 prompt 的重复启动会被拒绝，需把「重连」与「重启」分开处理；能力路由要按连接状态解耦，无人连接时快速失败并给出可操作错误；重试上限从 5 降到 3，仅推理流断线可重试且丢弃部分推理，需按内容类型决定重试。走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，不受影响。"
+tags: [agent-harness, session-reconnect, retry-policy, capability-routing]
+---
+
+- 会话重连改为复用进行中的运行：带 prompt 的重复启动被拒绝，避免写入过期快照。harness 需区分「重连」与「重启」语义。
+- hub 记录每个注册能力的客户端，请求发给首个仍连接者；无人连接时快速失败。harness 应把能力注册与连接状态解耦，并给出可操作错误。
+- 模型请求重试上限从 5 降到 3，仅推理流断线可重试且丢弃部分推理；Gemini 不再发原生搜索。harness 需按内容类型决定重试，并显式管理 provider 能力差异。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.2.0](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.0)

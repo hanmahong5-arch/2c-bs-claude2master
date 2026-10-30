@@ -1,0 +1,23 @@
+---
+slug: 2026-10-28-opencode-1-19-5
+title: "opencode v1.19.5 — TUI worker 请求失败不再挂起，调用方能拿到错误"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.19.5
+publishedAt: 2026-10-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "TUI worker 请求失败不再挂起，调用方能拿到错误"
+broadcast: "这次更新修了一个很实际的问题：终端界面里 worker 的请求失败后不再一直挂着，调用方能直接拿到错误。这意味着你可以根据错误去做重试或者降级，不用再靠超时兜底。对做 agent 的开发者来说，这提醒我们设计 harness 时，应该把失败必有回应当成 worker 通信的默认约定。"
+insight: "这次 v1.19.5 值得升级，但重点不在功能而在行为契约：TUI worker 请求失败从挂起改为返回错误，调用方终于能拿到错误做重试或降级，而不是靠超时兜底。如果你的 harness 依赖超时兜底，升级后要检查每个 worker 调用是否设置了明确的失败回传路径，否则错误虽返回却无人处理。摘要未提及代理相关改动，国内走 newapi.lurus.cn 的用户按现有方式升级即可，无需额外调整。"
+tags: [tui, worker, error-handling, bugfix]
+---
+
+- 失败请求现在返回错误而非无限等待，harness 需为每个 worker 调用设置明确的失败回传路径
+- 修复点在 TUI worker 请求层，意味着调用方可以基于错误做重试或降级，而不是靠超时兜底
+- 改动来自社区贡献者单点修复，提示 harness 设计应把「失败必应答」当作 worker 通信的默认契约
+
+---
+
+> 原文 release：[sst/opencode v1.19.5](https://github.com/anomalyco/opencode/releases/tag/v1.19.5)

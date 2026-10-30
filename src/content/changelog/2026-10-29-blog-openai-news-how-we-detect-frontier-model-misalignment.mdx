@@ -1,0 +1,23 @@
+---
+slug: 2026-10-29-blog-openai-news-how-we-detect-frontier-model-misalignment
+title: "How we detect frontier model misalignment — OpenAI 讲如何用分层监控发现前沿模型失准与越权 agent 行为"
+source: "OpenAI"
+sourceUrl: https://openai.com/index/how-we-detect-frontier-model-misalignment
+publishedAt: 2026-10-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "OpenAI"
+hook: "OpenAI 讲如何用分层监控发现前沿模型失准与越权 agent 行为"
+broadcast: "OpenAI 最近讲了他们怎么用分层监控来发现前沿模型的失准和越权 agent 行为，目标是在事情升级之前就让响应者介入。值得注意的是，他们监控的不只是模型输出，还包括 agent 的实际行为，这就要求 agent 工具链把行为日志当成安全基础设施来做，而不是事后审计。对国内开发者来说，关键含义是告警必须能触发可执行的动作，不能只是仪表盘上的数字。"
+tags: [ai-safety, agent-monitoring, misalignment, observability]
+---
+
+- 文章介绍 OpenAI 采用分层监控（layered monitoring）来检测前沿模型的失准（misalignment）和未授权 agent 行为，目标是让响应者在事件升级前介入。
+- 监控覆盖的不只是模型输出本身，还包括 agent 的实际行为，这意味着 agent 工具链需要可观测性设计，把行为日志作为安全基础设施而非事后审计。
+- 检测与响应被串成一条链路：先发现异常，再由响应者干预，对开发者的含义是告警必须能触发可执行的动作，而不只是仪表盘上的数字。
+
+---
+
+> 原文：[How we detect frontier model misalignment](https://openai.com/index/how-we-detect-frontier-model-misalignment) · 作者 OpenAI

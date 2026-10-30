@@ -1,0 +1,23 @@
+---
+slug: 2026-10-29-blog-latentspace-can-frontier-models-see-past-a-decoy-elorian
+title: "Can Frontier Models See Past a Decoy? Elorian Tests — 前沿模型在数数基准上集体不及格，Elorian 用\"视觉思考\"切入视觉推理赛道"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/elorian/
+publishedAt: 2026-10-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "前沿模型在数数基准上集体不及格，Elorian 用\"视觉思考\"切入视觉推理赛道"
+broadcast: "前沿模型在数数这件小事上集体翻车了。有个叫 DecoyCount 的基准专门测模型是真在数物体，还是靠视觉捷径蒙答案，结果最强的模型正确率也才四成出头，另一家只有两成半。这说明通用推理强不等于视觉推理强，做 agent 的得把视觉判断单独拿出来评测。另外有个新模型内部测试刚过五成，但只是单次运行、没接工具框架，跟别人三次平均比，口径不一样，看对比时得留个心眼。"
+tags: [visual-reasoning, benchmark, multimodal, agent-evaluation]
+---
+
+- DecoyCount 基准测试模型是否真在数物体，还是靠视觉捷径；前沿模型最高仅 GPT-6 Astra 43.17%，Claude-Fable-5.1 仅 25.22%。含义：通用推理强不等于视觉推理强，agent 的视觉判断需要单独评测。
+- Elorian 的 Glimpse 内部测试 50.48%，是唯一过 50% 的模型，但仅单次运行、无 agent 或工具框架，而对比模型为三次平均。含义：跨模型对比需注意评测口径差异。
+- Dai 主张图像生成与编辑应进入推理链，而非仅作输出；并区分世界模型（直接作用于世界）与视觉推理（间接辅助决策，如审核视频）。含义：视觉推理可作为工具链中的判断模块，无需 3D 仿真。
+
+---
+
+> 原文：[Can Frontier Models See Past a Decoy? Elorian Tests Visual Reasoning](https://latent.space/p/elorian/) · 作者 Latent Space

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-29-opencode-process-daemon-v0-4-0
+title: "opencode process-daemon-v0.4.0 — PTY 协议升到 7，进程守护层有变动"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.4.0
+publishedAt: 2026-10-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "PTY 协议升到 7，进程守护层有变动"
+broadcast: "这次进程守护层更新到了新版本，终端协议也升到了第七版。对做 agent 的开发者来说，重点有两个：一是接入时要按协议号做兼容判断，别和旧客户端混连；二是依赖要锁定新的作用域包名，别再用旧名字。版本从零点三跳到零点四，属于次版本变更，建议提前留好协议协商和回退的路子。"
+insight: "这次 opencode-pty 升到 0.4.0、PTY 协议号变为 7，属于次版本变更，接入方需要预留协议协商与回退路径。我的判断是：现有用户值得升级，但要按协议号做兼容判断，避免与旧客户端混连；依赖要锁定 @opencode/pty@0.4.0 这个作用域包名，而不是旧名。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理层受影响，可照常使用，升级前先确认 harness 的协议协商逻辑到位。"
+tags: [opencode-pty, process-daemon, protocol-7, npm-release]
+---
+
+- opencode-pty 发布 0.4.0，协议版本为 7：harness 需按协议号做兼容判断，避免与旧客户端混连。
+- 包位于 packages/process-daemon，并以 @opencode/pty@0.4.0 发布到 npm：依赖应锁定该作用域包名，而非旧名。
+- 版本号从 0.3.x 跳到 0.4.0：属次版本变更，接入方应预留协议协商与回退路径。
+
+---
+
+> 原文 release：[sst/opencode process-daemon-v0.4.0](https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.4.0)

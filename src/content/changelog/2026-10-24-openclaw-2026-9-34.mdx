@@ -1,0 +1,23 @@
+---
+slug: 2026-10-24-openclaw-2026-9-34
+title: "openclaw v2026.9.34 — 补丁原子性与工具钩子修复，直接影响 agent 执行安全"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.34
+publishedAt: 2026-10-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "补丁原子性与工具钩子修复，直接影响 agent 执行安全"
+broadcast: "这次更新主要修的是补丁原子性和工具钩子，直接关系到 agent 执行安全。以前补丁包里后面有非法改动，前面已经改的文件可能被删掉，现在会先整体校验再动工作区；另外命令行执行入口的钩子也恢复了，策略和审计不会再漏。做 agent 的团队值得留意，工具调用该当成事务，先验证再提交。"
+insight: "这次 2026.9.34 值得现有用户升级，重点在 apply_patch 预校验和 before_tool_call 钩子恢复：前者让非法 hunk 不再误删已改文件，后者保证 openclaw agent exec 下钩子重新执行，直接影响执行安全与审计完整性。若你的 prompt 或 hook 配置依赖旧行为，升级后应确认所有执行入口都走同一钩子链路。摘要未提及 newapi.lurus.cn 代理相关变化，国内用户走代理是否受影响暂无依据。"
+tags: [apply-patch, tool-hooks, model-lifecycle, gateway-stability]
+---
+
+- **apply_patch 预校验**：有序补丁包在改动工作区前先整体校验，后续非法 hunk 不再删除前面已改文件；harness 应把工具调用当作事务，先验证再提交。
+- **before_tool_call 钩子恢复**：`openclaw agent exec` 下钩子重新执行；harness 需保证所有执行入口都走同一钩子链路，否则策略与审计会漏。
+- **模型启动与账号固定**：启动在模型刷新替换后仍存活，目录就绪遵循主模型配置的账号 pin；harness 应把模型选择视为可热替换状态，而非启动期常量。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.34](https://github.com/openclaw/openclaw/releases/tag/v2026.9.34)

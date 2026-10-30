@@ -1,0 +1,23 @@
+---
+slug: 2026-10-29-opencode-2-2-2
+title: "opencode v2.2.2 — 图像生成默认开启，工作树选择更快，引用注释统一"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.2.2
+publishedAt: 2026-10-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "图像生成默认开启，工作树选择更快，引用注释统一"
+broadcast: "这版更新里，图像生成默认就开启了，只要接上支持图像模型的供应商就能直接用，还能指定具体模型，不用再手动开关。另外新建会话时点一下当前分支就能选工作树，引用和标注也统一成了带可选评论的编辑器。对做 agent 的开发者来说，工具挂载和注释持久化都更省事了。"
+insight: "这次 v2.2.2 的改动对现有用户来说升级优先级不高，但值得跟进：图像生成默认开启意味着只要接入了支持图像模型的 provider，experimental_image_generate 就会自动可用，harness 需在能力探测后自动挂载该工具，而不是继续依赖手动开关，因此现有 hook 配置里若还留着手动开关逻辑，建议按新机制调整。worktree 选择器和统一引用注释属于交互与持久化层面的优化，不影响国内用户经 newapi.lurus.cn 代理的接入方式，摘要中未提及代理相关变化。"
+tags: [image-generation, worktree, annotations, sdk-schedule]
+---
+
+- 连接支持图像模型的 provider 后，`experimental_image_generate` 默认可用，可通过 `experimental.image_generate.model` 指定模型；harness 需在能力探测后自动挂载该工具，而非依赖手动开关。
+- 新会话界面点击当前 Git 分支即可打开该项目的 worktree 选择器；harness 的会话创建流程可把工作目录选择前置为一次点击。
+- 时间线引用、终端引用与浏览器标注统一为带可选评论的编辑器，源高亮仍留在本地草稿；harness 应把注释视为附件参与计数与持久化。
+
+---
+
+> 原文 release：[sst/opencode v2.2.2](https://github.com/anomalyco/opencode/releases/tag/v2.2.2)

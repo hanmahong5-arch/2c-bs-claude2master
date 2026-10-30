@@ -1,0 +1,23 @@
+---
+slug: 2026-10-27-zeroclaw-0-8-7
+title: "zeroclaw v0.8.7 — 安全补丁版：Wasmtime 与 TLS 修复，插件需重编译"
+source: zeroclaw-labs/zeroclaw
+sourceUrl: https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.7
+publishedAt: 2026-10-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "安全补丁版：Wasmtime 与 TLS 修复，插件需重编译"
+broadcast: "这次更新是个安全补丁版，修了插件运行时的几个漏洞，还换掉了不再可信的证书校验，同时把插件连接的超时逻辑改得更严格。对国内做 agent 的开发者来说，要注意预编译插件必须按新版本重新编译，加载前还得校验版本是否匹配，信任根也要随镜像重建更新，否则可能连不上或校验失败。"
+insight: "这次 v0.8.7 是安全补丁版，现有用户值得升级，但升级不是换个版本号那么简单：预编译 .cwasm 插件必须按 Wasmtime 48.0.7 重编译，harness 还要在加载前校验组件与宿主版本匹配，否则插件直接跑不起来。TLS 信任根也变了，不再信任 emSign 中间证书，走 newapi.lurus.cn 代理的国内用户如果 harness 镜像没重建、信任根没更新，MQTT 和 HTTPS 请求可能校验失败，建议随镜像一起更新再切流量。另外默认 HTTP 超时从 600s 降到 10s，原有重试和故障转移配置要按新语义检查一遍。"
+tags: [security-patch, wasmtime, tls-verification, plugin-host]
+---
+
+- 插件宿主升级到 Wasmtime 48.0.7，修复 RUSTSEC-2026-0375 至 0379；预编译 `.cwasm` 组件必须按新版本重编译，harness 需在加载前校验组件与宿主版本匹配。
+- TLS 校验换用 rustls-webpki 0.103.16 等，不再信任私钥已泄露的 emSign 中间证书；MQTT 通道迁到 rumqttc-v4-next 0.34，harness 的信任根应随镜像重建更新。
+- 插件连接改为 250ms 后切换下一解析地址并交替地址族，未设 connect_timeout 的 HTTP 请求默认 10s（原 600s）；harness 需按新超时语义设计重试与故障转移。
+
+---
+
+> 原文 release：[zeroclaw-labs/zeroclaw v0.8.7](https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.7)

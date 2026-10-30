@@ -1,0 +1,23 @@
+---
+slug: 2026-10-27-opencode-2-2-0
+title: "opencode v2.2.0 — 插件可增量注入会话指令而不破坏 prompt 缓存，这是 agent harne"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.2.0
+publishedAt: 2026-10-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件可增量注入会话指令而不破坏 prompt 缓存，这是 agent harness 设计的关键变化"
+broadcast: "这次更新最值得关注的是插件能按增量条目往会话里注入指令，不再改写系统提示，所以不会让提示缓存失效，压缩和回滚后条目还在，也不多花一轮模型调用。对做 agent 的人来说，这意味着动态上下文应该做成可追加的层，而不是反复重写系统提示；另外缓存有效期现在能按模型分别配置。"
+insight: "现有用户值得升级到 v2.2.0：插件改用 ctx.session.instructions.entry 增量注入会话指令，不再重写系统提示，因此不会触发 prompt 缓存失效，压缩与回滚后条目仍保留，也不额外消耗一轮模型调用，现有依赖系统提示拼动态上下文的 prompt 或 hook 配置应改为可追加的层。同时 @opencode/ai 根导出改为 Promise API，Effect API 移至 @opencode/ai/effect，/promise 子路径移除，插件与集成需按显式入口重构导入。摘要未提及 newapi.lurus.cn 代理，国内用户走该代理是否受影响无法据此判断。"
+tags: [prompt-cache, plugin-api, breaking-change, agent-harness]
+---
+
+- 插件新增 `ctx.session.instructions.entry.put/list/remove`：指令以增量条目在下一步注入，不再改系统提示，因此不触发 prompt 缓存失效；条目在压缩与回滚后仍保留，也不额外消耗一轮模型调用。含义：harness 应把动态上下文做成可追加的层，而非重写系统提示。
+- `@opencode/ai` 根导出改为 Promise API，Effect API 移至 `@opencode/ai/effect`，`/promise` 子路径移除；GitHub Action 不再发布。含义：插件与集成需按显式入口重构导入，避免依赖通配导出。
+- 新增可配置的按 provider/model 的 prompt 缓存 TTL，并新增实验性图像与决策生成 API。含义：缓存生命周期成为 harness 可调参数，多模型路由可按成本与命中率分别设定。
+
+---
+
+> 原文 release：[sst/opencode v2.2.0](https://github.com/anomalyco/opencode/releases/tag/v2.2.0)

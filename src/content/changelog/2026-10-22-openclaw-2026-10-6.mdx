@@ -1,0 +1,23 @@
+---
+slug: 2026-10-22-openclaw-2026-10-6
+title: "openclaw v2026.10.6 — 补丁版只修可靠性：Node 运行时强制升级，更新与恢复更安全"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.10.6
+publishedAt: 2026-10-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "补丁版只修可靠性：Node 运行时强制升级，更新与恢复更安全"
+broadcast: "这次更新是个补丁版，重点全在可靠性上。它把运行环境的最低版本要求提高了，旧版本上会直接拒绝安装并给出恢复指引；更新和迁移也会先检查数据完整性，遇到不安全或损坏的状态就保留证据而不是悄悄丢掉。对做 agent 的国内开发者来说，这意味着升级前要先校验运行时，恢复路径也得做到不丢不重。"
+insight: "这次 2026.10.6 是纯可靠性补丁，没有新功能，现有用户不必急着升级，但如果你还在 Node 24.22.1 以下，openclaw update 会直接拒绝安装，建议先把运行时升到门槛再更新，避免卡在半路。现有 prompt 和 hook 配置不用改，摘要里没有任何相关变更。国内走 newapi.lurus.cn 代理的用户也不受影响，摘要未提及代理或网络层调整。真正值得关注的是迁移和重启恢复：升级前先做数据完整性校验，失败会保留证据而非静默丢弃，投递状态也做了持久化和幂等，长期跑任务的实例升级收益更明显。"
+tags: [release-notes, node-runtime, migration-safety, delivery-recovery]
+---
+
+- **Node 运行时门槛提高**：要求 Node 24.22.1+ 或 26.12.1+，`openclaw update` 在旧版本上会拒绝安装并给出恢复指引；对 harness 的含义是运行时校验要在安装前完成，避免破坏正在运行的实例。
+- **更新与迁移拒绝不安全状态**：包替换会拒绝不安全服务状态，Doctor 与迁移路径拒绝畸形或有损的 workspace 导入，并保留畸形 Notes 字节；对 harness 的含义是迁移前先做数据完整性校验，失败时保留证据而非静默丢弃。
+- **重启后投递不丢不重**：排队轮次、子结果、死信投递与流式回复在恢复后不再消失、重复或误报缺失答案；对 harness 的含义是投递状态需要持久化，恢复路径要幂等。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.10.6](https://github.com/openclaw/openclaw/releases/tag/v2026.10.6)

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-28-blog-simonwillison-quoting-ted-sanders
+title: "Quoting Ted Sanders — OpenAI 模型命名背后的逻辑：版本号同时编码发布顺序、模型家族与进步幅度"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/28/ted-sanders/
+publishedAt: 2026-10-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "OpenAI 模型命名背后的逻辑：版本号同时编码发布顺序、模型家族与进步幅度"
+broadcast: "OpenAI 的模型命名其实藏着信息：版本号同时表示发布顺序、模型家族关系和进步幅度，比如六点一就晚于五点六，但还不足以叫七。为什么值得关注？因为模型能力是多维的，没有固定排序，性能差异很大一部分由模型规模解释。对国内开发者和 agent 工具链来说，这意味着选型要按任务维度评估，冷门知识检索和高可靠步骤可以交给大模型，其余环节用小模型控制成本。"
+tags: [llm, openai, model-naming, model-selection]
+---
+
+- 模型能力是多维的，没有固定排序保证数学最强的模型也最擅长讲笑话；但性能差异很大一部分由单一变量解释：模型规模。含义：选型不能只看单一榜单，要按任务维度评估。
+- 规模更大的模型通常更可靠、每 token 成本更高、对冷门事实的召回更好。含义：agent 工具链里，冷门知识检索与高可靠步骤可交给大模型，其余环节用更小模型控制成本。
+- 版本号同时表示发布顺序、与其他版本的关系、改进幅度：6.1 晚于 5.6，与同代 6.1 共享训练数据或性格，但不足以称为 7。含义：升级依赖时，版本号可当作兼容性与变更幅度的粗略信号。
+
+---
+
+> 原文：[Quoting Ted Sanders](https://simonwillison.net/2026/Oct/28/ted-sanders/) · 作者 Simon Willison

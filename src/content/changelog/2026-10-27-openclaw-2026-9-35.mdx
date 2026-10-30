@@ -1,0 +1,23 @@
+---
+slug: 2026-10-27-openclaw-2026-9-35
+title: "openclaw v2026.9.35 — extended"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.35
+publishedAt: 2026-10-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "extended-stable 回补：内存、更新、网关响应三处长期运行痛点被修"
+broadcast: "这次更新主要修了三处长期运行的痛点：内存、更新和网关响应。内存上限现在能叠加生效，空闲子进程会自动退出；升级时能容忍旧配置和超大历史；网关遇到不可信输入也不再卡住事件循环。对国内做 agent 的开发者来说，这些正是长跑场景里最容易踩的坑。"
+insight: "这次 2026.9.35 是 extended-stable 回补，修的是内存、更新、网关响应三处长期运行痛点，属于稳定性修复而非功能变更。现有用户值得升级，尤其是长跑 harness 和网关场景：内存上限可叠加、空闲 Codex app-server 客户端 30 秒退出、更新时 Doctor 清理残留配置键并容忍无 meta 配置，能直接减少升级失败和事件循环阻塞。prompt 与 hook 配置无需改动，本次未涉及相关变更。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关调整，按现有方式升级即可。"
+tags: [gateway, memory, upgrade, reliability]
+---
+
+- **内存更稳**：worker 堆上限在 Gateway 传入进程级 `--max-old-space-size` 时仍生效，空闲 Codex app-server 客户端 30 秒后退出，归档 worker 在会话删除间复用。含义：长跑 harness 要把内存上限做成可叠加约束，并主动回收空闲子进程。
+- **更新更易完成**：更新时 Doctor 清理迁移后残留的未知配置键、接受缺失的旧 OAuth 目录、容忍无 `meta` 的合法配置，且不再因超大 session 历史溢出。含义：升级路径需把配置兼容与规模边界当作一等公民。
+- **网关保持响应**：Teams HTML、形似工具调用的回复、长流式 HTML/JSX 不再阻塞事件循环数秒；超时 MCP 会话不再破坏下一轮。含义：对不可信输入的正则与扫描必须设界，会话超时要隔离。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.35](https://github.com/openclaw/openclaw/releases/tag/v2026.9.35)

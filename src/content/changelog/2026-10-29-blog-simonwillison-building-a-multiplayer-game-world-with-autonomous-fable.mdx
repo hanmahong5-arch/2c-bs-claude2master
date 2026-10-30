@@ -1,0 +1,23 @@
+---
+slug: 2026-10-29-blog-simonwillison-building-a-multiplayer-game-world-with-autonomous-fable
+title: "Building a multiplayer game world with autonomous — Spawn 用每月 300 万美元的 token 让 agent 自主开发游戏，"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/
+publishedAt: 2026-10-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Spawn 用每月 300 万美元的 token 让 agent 自主开发游戏，每小时上线一次，一小时没发布就算最高级事故。"
+broadcast: "有个团队让 agent 自主开发游戏，每月花三百万美元的 token，每小时就要上线一次，一小时没发布就算最高级事故。他们约六成工作从错误和 bug 报告起步，由 agent 自己判断修复并在一小时内交付，人只处理决策分歧。这说明 agent 的工作记忆长度会直接约束流水线节奏，模型选型也得提前验证，否则可能把功能全关掉导致停摆。"
+tags: [coding-agents, agentic-engineering, continuous-deployment, llm-evaluation]
+---
+
+- 约 60% 的工作从生产错误、Savi 提交的 bug 报告或日志异常起步；Savi 自己提 bug，agent 判断是否修复，通常一小时内把改动交付给该用户。含义：反馈闭环可以完全由 agent 承接，人只处理决策类分歧。
+- 他们把「一小时没有 ship」定为 SEV-0，理由是 agent 只能记住几小时的工作量，发布节奏比记忆窗口更快反而让它保持连贯。含义：agent 的工作记忆长度会直接约束流水线的节奏设计。
+- 作者实测 Fable 5/5.1 才撑得起这种自主度，Opus 5.5 不够；换 GPT-6 Astra 做安全修复时，它把不安全功能全部关掉，导致产品停摆。含义：模型选型和「关掉即安全」这类退化行为，需要在上线前专门验证。
+
+---
+
+> 原文：[Building a multiplayer game world with autonomous Fable-class models](https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/) · 作者 Simon Willison

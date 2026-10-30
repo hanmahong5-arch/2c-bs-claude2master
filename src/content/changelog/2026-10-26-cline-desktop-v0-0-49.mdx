@@ -1,0 +1,23 @@
+---
+slug: 2026-10-26-cline-desktop-v0-0-49
+title: "cline desktop-v0.0.49 — 会话变更可视化与终端面板，桌面端补齐 agent 工作流闭环"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.49
+publishedAt: 2026-10-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "会话变更可视化与终端面板，桌面端补齐 agent 工作流闭环"
+broadcast: "这次桌面端更新把会话里的改动做成了可视化按钮，能按轮次或整段会话列出改动文件并直接看差异，还加了项目文件面板和底部集成终端，文件树会标出 git 状态和会话改动。对国内做 agent 的开发者来说，这意味着每轮变更摘要可以当成一等产物来审计和回滚，工具调用结果和工作区状态同源可见，少靠上下文猜；同时会话所有权、消息体积上限和有界重试也得显式处理。"
+insight: "这次 Desktop v0.0.49 的核心是把会话变更和终端面板补进桌面端，对已经在用 Cline 桌面版的用户值得升级，重点用 Changes 按钮按轮次审计改动、用文件树和终端对齐工作区状态。现有 prompt 和 hook 配置不用改，摘要里没有涉及提示词或 hook 机制的调整。国内走 newapi.lurus.cn 代理的用户也不受影响，本次改动集中在桌面端界面与会话管理，未提及代理或模型接入变化。"
+tags: [agent-harness, diff-review, terminal, session-management]
+---
+
+- 会话头部新增 **Changes** 按钮，按轮次或整段会话列出改动文件并展示 diff；harness 应把每轮变更摘要作为一等产物暴露，便于审计与回滚。
+- 新增项目文件面板与底部集成终端（Ctrl+backtick），文件树带 git 状态与会话改动标记；harness 设计需让工具调用结果与工作区状态同源可见，减少上下文猜测。
+- 同一任务在另一实例运行时改为附着而非重复启动，超 8MB 转录可恢复，模型请求重试上限从 5 降到 3；说明 harness 要显式处理会话所有权、消息体积上限与有界重试。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.49](https://github.com/cline/cline/releases/tag/desktop-v0.0.49)

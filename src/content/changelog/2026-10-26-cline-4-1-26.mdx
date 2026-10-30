@@ -1,0 +1,23 @@
+---
+slug: 2026-10-26-cline-4-1-26
+title: "cline v4.1.26 — 云端任务与模型目录大改，重试与工具行为修复影响 harness 稳定性"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.26
+publishedAt: 2026-10-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "云端任务与模型目录大改，重试与工具行为修复影响 harness 稳定性"
+broadcast: "这次更新给云端任务加了本地和云端切换，还能单独配置云模型，启动沙箱时会显示进度卡。对做 agent 的人来说，重点在于要把云会话的模型选择和本地配置分开，并且把启动阶段的状态暴露出来。另外模型请求重试上限从五次降到三次，推理档位也按模型能力来映射，不再硬编码，这些都会影响 harness 的稳定性。"
+insight: "这次 v4.1.26 对现有用户来说值得升级，重点不在新功能而在稳定性：重试上限从 5 次降到 3 次，意味着 harness 的重试预算更紧，若你的 prompt 或 hook 依赖多次重试兜底，建议同步收紧超时与失败处理；推理参数也需按模型能力映射，Kimi K3 已改用 max 档，硬编码的配置要改。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有配置继续即可。"
+tags: [cloud-tasks, model-catalog, retry-policy, provider-compat]
+---
+
+- 云端任务新增 Local/Cloud 切换与独立云模型配置，启动沙箱显示进度卡；harness 需把云会话的模型选择与本地配置解耦，并暴露启动阶段状态。
+- 模型请求重试上限从 5 次降为 3 次，Kimi K3 的 Extra High/Max 改用 `max` 推理档；harness 应假设重试预算更紧，并按模型能力映射推理参数而非硬编码。
+- 修复 Gemini 密钥误发原生搜索导致 429 或工具丢失、GPT-6 改用 `max_completion_tokens`；harness 需按 provider 区分参数与能力，避免统一请求体。
+
+---
+
+> 原文 release：[cline/cline v4.1.26](https://github.com/cline/cline/releases/tag/v4.1.26)

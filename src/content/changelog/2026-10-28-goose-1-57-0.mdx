@@ -1,0 +1,23 @@
+---
+slug: 2026-10-28-goose-1-57-0
+title: "goose v1.57.0 — Allowlist 强制 HTTPS 并校验重定向，安全策略失败即阻断"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.57.0
+publishedAt: 2026-10-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Allowlist 强制 HTTPS 并校验重定向，安全策略失败即阻断"
+broadcast: "这次更新把网络白名单改成强制走加密连接，还会检查跳转，策略不通过就直接阻断，不再悄悄降级。对做 agent 的国内开发者来说，这意味着执行环境的网络出口可以默认拒绝、失败即停。另外会话标识能由外部传入，方便把多轮执行归到同一条追踪链路，取消时也会连带终止子进程，避免残留和假成功。"
+insight: "这次 v1.57.0 对现有用户来说值得升级，重点在 Allowlist 强制 HTTPS 并校验重定向、策略失败直接阻断，属于安全策略收紧，升级后若原有 allowlist 条目走 HTTP 或依赖重定向，会被直接拦下，建议先核对配置再升。现有 hook 配置需要跟着改：失败即停取代静默降级，取消要终止自有 shell 进程树、ACP 回合出错让 session/prompt 失败，原有容错假设要重新检查。摘要未涉及 newapi.lurus.cn 代理，国内走代理是否受影响暂无依据。"
+tags: [allowlist, session-id, process-cleanup, acp]
+---
+
+- Allowlist 现在要求 HTTPS 并校验重定向，策略失败直接阻断：harness 的网络出口应默认拒绝、失败即停，而非静默降级。
+- 调用方可自带 Goose session ID：会话标识可外部注入，便于 harness 把多轮执行归并到统一追踪链路。
+- 取消时终止自有 shell 进程树，ACP 在回合出错时让 session/prompt 失败：harness 需保证取消与错误传播到子进程和调用方，避免残留与假成功。
+
+---
+
+> 原文 release：[block/goose v1.57.0](https://github.com/aaif-goose/goose/releases/tag/v1.57.0)

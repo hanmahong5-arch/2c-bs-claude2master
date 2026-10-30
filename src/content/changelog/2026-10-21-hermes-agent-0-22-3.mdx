@@ -1,0 +1,23 @@
+---
+slug: 2026-10-21-hermes-agent-0-22-3
+title: "hermes-agent v0.22.3 — 620 个 PR 汇总成稳定版，CLI、Docker 和商店版同步更新"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.3
+publishedAt: 2026-10-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "620 个 PR 汇总成稳定版，CLI、Docker 和商店版同步更新"
+broadcast: "一个叫 Hermes 的智能体项目发布了稳定版，把大约六百二十个合并请求和三百多个已关闭问题汇总到一起，命令行、安装器、应用商店和容器版同步更新。值得关注的是，它把多个分发渠道统一到同一版本基线，避免各端行为漂移；同时把长任务的中间进度实时暴露给调用方，压缩后和登录鉴权也留出了可插拔的扩展点，这对国内做智能体框架的开发者很有参考价值。"
+insight: "这次 v0.22.3 把 620 个 PR 收进稳定版，CLI、Docker 和商店版同步更新，说明多分发渠道的版本基线已经统一，现有用户值得升级到这个稳定版，避免各端行为漂移。如果你在 harness 里配置了插件钩子，需要留意新增的 post_compaction 钩子，压缩后的扩展点可以按需接入；鉴权方面插件可声明 OAuth 客户端并由 Hermes 完成登录与刷新，相关配置可顺势调整。摘要未提及 newapi.lurus.cn 代理，国内用户走代理是否受影响暂无依据。"
+tags: [release-notes, mcp, plugin-hooks, cli]
+---
+
+- 发布窗口含约 620 个已合并 PR、326 个已关闭 issue，覆盖 CLI、安装器、Microsoft Store、Docker 与 Hermes Cloud；对 harness 的含义是：多分发渠道需统一版本基线，避免各端行为漂移。
+- MCP 进度通知以实时工具进度流式呈现；对 harness 的含义是：长任务应把中间进度暴露给调用方，而不是只返回最终结果。
+- 新增 `post_compaction` 插件钩子，以及插件可声明 OAuth 客户端、由 Hermes 完成登录与刷新；对 harness 的含义是：压缩后与鉴权生命周期都应有可插拔的扩展点。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.22.3](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.3)

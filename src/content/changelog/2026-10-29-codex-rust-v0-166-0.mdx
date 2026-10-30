@@ -1,0 +1,23 @@
+---
+slug: 2026-10-29-codex-rust-v0-166-0
+title: "codex rust-v0.166.0 — Codex 0.166 强化会话续接与安全拦截，直接影响 agent harne"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.166.0
+publishedAt: 2026-10-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 0.166 强化会话续接与安全拦截，直接影响 agent harness 状态管理"
+broadcast: "这次更新让排队消息后能恢复已卸载的线程，恢复或分叉时还会保留已确认的审批权限和推理计数，避免过早压缩；安全拦截也给出更清楚的解释和更安全的改写建议。对做 agent 的国内开发者来说，这意味着会话状态要能持久化，权限和计数得跟着线程走，被拦截时还得给出可执行的替代路径，而不是只报错。"
+insight: "现有 Codex 用户值得升级到 0.166.0：新增的 codex queue --resume 让排队消息后可恢复已卸载线程，resume/fork 时还会保留已确认的审批权限与 reasoning token 计数，能减少过早压缩。若你的 harness 依赖线程生命周期与消息队列紧耦合，或把权限、token 账本当临时状态，就需要改配置，把它们做成可持久化会话状态；安全拦截现在会给出可执行替代路径，阻断逻辑也应相应调整。摘要未涉及 newapi.lurus.cn 代理，国内走代理是否受影响暂无依据。"
+tags: [codex, agent-harness, session-resume, safety]
+---
+
+- 新增 `codex queue --resume`，排队消息后可恢复已卸载线程；harness 需把线程生命周期与消息队列解耦，支持延迟重连。
+- 恢复或分叉线程时保留已确认的审批与权限设置，并跨 resume/fork 保留 reasoning token 计数以避免过早压缩；harness 应把权限与 token 账本作为可持久化会话状态。
+- TUI 安全拦截给出更清晰解释与可选更安全改写，新增 `codex doctor --network-only` 聚焦网络诊断；harness 需在阻断时提供可执行替代路径而非仅报错。
+
+---
+
+> 原文 release：[openai/codex rust-v0.166.0](https://github.com/openai/codex/releases/tag/rust-v0.166.0)

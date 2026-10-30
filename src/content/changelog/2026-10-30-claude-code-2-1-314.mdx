@@ -1,0 +1,23 @@
+---
+slug: 2026-10-30-claude-code-2-1-314
+title: "claude-code v2.1.314 — 写入越界拦截与网关分组路由，权限边界更硬"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.314
+publishedAt: 2026-10-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "写入越界拦截与网关分组路由，权限边界更硬"
+broadcast: "这次更新给写入权限加了一道硬边界：无论当前是什么权限模式，只要路径在工作目录之外，写文件、改文件、编辑笔记本都会被直接拒绝，等于把写入范围变成了恒定约束。同时网关上游支持按身份分组路由，只有指定身份组的人才会被分到对应上游，故障转移时也照样生效。对做多租户 agent 的国内开发者来说，权限边界和分流都更可控了。"
+insight: "这次 v2.1.314 对现有用户的实际影响集中在写入边界：新增的 blockWritesOutsideWorkingDirectories 让 Write/Edit/NotebookEdit 在所有权限模式下都拒绝工作目录外路径，属于恒定约束而非模式相关，建议升级前先确认现有 hook 和脚本是否有跨目录写入，有则需调整路径或配置，否则升级后会被直接拦截。网关 groups 与 Bedrock guardrail_trace 主要面向多租户和审计场景，普通用户和现有 prompt 无需改动；摘要未提及 newapi.lurus.cn 代理相关变化，国内走代理是否受影响暂无依据。"
+tags: [permissions, gateway, guardrails, bedrock]
+---
+
+- 新增 `permissions.blockWritesOutsideWorkingDirectories`：Write/Edit/NotebookEdit 在所有权限模式下都拒绝工作目录外路径，harness 可把写入边界从"模式相关"改为"恒定约束"。
+- 网关上游支持 `groups` 列表：仅列出的 IdP 组开发者被路由到该上游，故障转移时同样生效，多租户 harness 可按身份而非仅按权重分流。
+- Bedrock 上游新增 `guardrail_trace`：记录触发了哪个 guardrail 过滤器但不含匹配文本，审计可定位拦截原因而不泄露内容。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.314](https://github.com/anthropics/claude-code/releases/tag/v2.1.314)

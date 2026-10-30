@@ -1,0 +1,23 @@
+---
+slug: 2026-10-26-cline-cli-v3-0-74
+title: "cline cli-v3.0.74 — 任务接管、重试与超时修复，直接影响 agent 稳定性"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.74
+publishedAt: 2026-10-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "任务接管、重试与超时修复，直接影响 agent 稳定性"
+broadcast: "这次更新主要修的是任务接管、重试和超时这几处，直接关系到 agent 跑起来稳不稳。比如同一个任务已经在别处运行，现在会附加过去，而不是再起一个停不掉的实例；健康检查也加了硬超时，避免整体卡住。另外，只输出了一部分内容就断连的回合现在会重试，次数上限也收紧了，这对控制成本挺关键。"
+insight: "这次 CLI v3.0.74 的修复集中在任务接管、健康检查超时和重试上限，属于稳定性补丁而非功能升级，现有用户值得升，直接更新 CLI 即可，无需改动 prompt 或 hook 配置。重试从 5 次降到 3 次会改变失败成本，依赖长重试的自动化流程要留意。摘要未提及 newapi.lurus.cn 代理相关变化，国内走代理的用户不受本次更新影响。"
+tags: [agent-harness, retry-policy, timeout, task-lifecycle]
+---
+
+- 已在其他 Cline 应用运行的任务改为附加到该运行，不再启动无法停止的第二个实例；应用中途关闭时等待请求会明确失败。含义：harness 需把任务所有权与失败语义显式化。
+- `cline hub status` 与 `cline doctor` 对冻结 Hub 的健康检查 3 秒超时并报告未运行。含义：外部依赖探测必须有硬超时，避免 harness 整体挂起。
+- 仅流式输出 reasoning 后断连的回合现在会重试，模型请求最多重试 3 次（原 5 次）。含义：重试判定应基于已产生内容，并设上限控制成本。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.74](https://github.com/cline/cline/releases/tag/cli-v3.0.74)

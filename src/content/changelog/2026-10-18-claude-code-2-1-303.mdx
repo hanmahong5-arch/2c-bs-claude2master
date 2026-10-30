@@ -1,0 +1,23 @@
+---
+slug: 2026-10-18-claude-code-2-1-303
+title: "claude-code v2.1.303 — 仅标注 bug 修复与可靠性改进，无具体功能变化"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.303
+publishedAt: 2026-10-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "仅标注 bug 修复与可靠性改进，无具体功能变化"
+broadcast: "这次更新只写了修复问题和提升可靠性，没列具体修了哪些。对做 harness 的开发者来说，光看说明判断不了哪些失败路径被覆盖，升级前最好自己建回归用例验证。好消息是没提新功能、配置项或行为变更，接口和调用方式大概率稳定，harness 侧不用为适配改动。但可靠性改进的范围和场景也没给，依赖这个版本前，建议用你自己的任务集对比前后失败率，别只看发布说明。"
+insight: "这次 v2.1.303 只写了 bug 修复与可靠性改进，没有任何具体修复项、新功能或配置变更，接口大概率稳定。我的判断是：现有用户不必急着升级，prompt 和 hook 配置也不用改；如果要用，先在自建任务集上对比前后失败率再决定。国内走 newapi.lurus.cn 代理的用户，摘要里没有任何相关信号，按现有方式继续用即可，无需为此版本调整。"
+tags: [claude-code, release-notes, bug-fixes, reliability]
+---
+
+- 发布说明只写「Bug fixes and reliability improvements」，未列出任何具体修复项；对 harness 设计而言，无法据此判断哪些失败路径被覆盖，升级验证仍需自建回归用例。
+- 未提及新功能、配置项或行为变更；这意味着接口与调用方式大概率保持稳定，harness 侧无需为适配做改动。
+- 未给出可靠性改进的范围与场景；在依赖该版本前，应通过自身任务集对比前后失败率，而非依赖发布说明。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.303](https://github.com/anthropics/claude-code/releases/tag/v2.1.303)

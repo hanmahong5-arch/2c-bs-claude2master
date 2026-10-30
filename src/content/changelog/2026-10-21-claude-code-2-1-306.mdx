@@ -1,0 +1,23 @@
+---
+slug: 2026-10-21-claude-code-2-1-306
+title: "claude-code v2.1.306 — 云会话登录误报与 MCP 工具过多导致的错误掩盖，两处修复都影响 harness"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.306
+publishedAt: 2026-10-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "云会话登录误报与 MCP 工具过多导致的错误掩盖，两处修复都影响 harness 可靠性"
+broadcast: "这次更新修了两个影响 harness 可靠性的问题。一是云会话里没继承环境变量时，不再误报未登录，提醒我们启动子进程要显式传会话凭据。二是 MCP 工具很多时，API 错误不再被提示过长覆盖，也不再触发不必要的压缩，排障更准。对做 agent 的国内开发者来说，这两点直接关系到稳定性。"
+insight: "这次 v2.1.306 修的是 harness 可靠性问题，不是新功能，现有用户值得升级：云会话里 claude -p 不再误报未登录，MCP 工具多时 API 错误也不会被 prompt is too long 掩盖，排障会少走弯路。如果你在大量 MCP 工具场景下跑过不必要的 compaction，升级后上下文预算判断更准。prompt 和 hook 配置本身不用改，但启动子进程时最好显式传会话凭据。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [cloud-sessions, mcp-tools, error-handling, context-compaction]
+---
+
+- `claude -p` 在云会话中未继承环境变量时不再误报 "Not logged in"；harness 启动子进程时应显式传递会话凭据，而非依赖隐式继承。
+- 大量 MCP 工具的场景下，API 错误不再被 "prompt is too long" 覆盖；错误分类需保留原始原因，避免误导排障。
+- 同一场景下不再触发不必要的 compaction；工具数量多时上下文预算判断需更精确，减少无效压缩。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.306](https://github.com/anthropics/claude-code/releases/tag/v2.1.306)

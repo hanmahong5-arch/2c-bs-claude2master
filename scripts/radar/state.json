@@ -1,16 +1,16 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.302",
-    "openai/codex": "rust-v0.163.0",
+    "anthropics/claude-code": "v2.1.314",
+    "openai/codex": "rust-v0.166.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "desktop-v0.0.48",
-    "block/goose": "v1.55.0",
-    "sst/opencode": "v1.19.3",
+    "cline/cline": "v4.1.26",
+    "block/goose": "v1.57.0",
+    "sst/opencode": "process-daemon-v0.4.0",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.64.0",
-    "openclaw/openclaw": "v2026.10.4",
-    "zeroclaw-labs/zeroclaw": "v0.8.6",
-    "NousResearch/hermes-agent": "v0.22.2"
+    "google-gemini/gemini-cli": "v0.66.0",
+    "openclaw/openclaw": "v2026.9.36",
+    "zeroclaw-labs/zeroclaw": "v0.8.7",
+    "NousResearch/hermes-agent": "v0.22.5"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -203,7 +203,12 @@
     "trhhubsd/ARTEXX",
     "trhhubsd/ARTEX",
     "feder-cr/git-ai",
-    "wheresryan22/anatomy"
+    "wheresryan22/anatomy",
+    "Gathin23/cleanyourtv",
+    "deepseek-ai/DeepInfer",
+    "Zagitta/gpu-unlock",
+    "tangency-labs/solidcraft",
+    "storytold/cadcraft"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -322,16 +327,18 @@
       "https://docs.openclaw.ai/concepts/qa-e2e-automation/slack-qa",
       "https://docs.openclaw.ai/concepts/qa-e2e-automation/whatsapp-and-credentials",
       "https://docs.openclaw.ai/concepts/storage-locations",
-      "https://docs.openclaw.ai/concepts/recommended-models"
+      "https://docs.openclaw.ai/concepts/recommended-models",
+      "https://docs.openclaw.ai/concepts/runtime-profiles",
+      "https://docs.openclaw.ai/concepts/session-controller"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-10-18",
-    "claude-code-docs": "2026-10-16",
-    "openai-codex-blog": "2026-10-15",
-    "openclaw-concepts": "2026-10-12",
-    "hermes-guides": "2026-10-12"
+    "anthropic-engineering": "2026-10-30",
+    "claude-code-docs": "2026-10-30",
+    "openai-codex-blog": "2026-10-30",
+    "openclaw-concepts": "2026-10-30",
+    "hermes-guides": "2026-10-30"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -730,7 +737,12 @@
       "https://simonwillison.net/2026/Oct/16/code-review/",
       "https://simonwillison.net/2026/Oct/15/latex/",
       "https://simonwillison.net/2026/Oct/17/document-currentscript/",
-      "https://simonwillison.net/2026/Oct/17/web-edit/"
+      "https://simonwillison.net/2026/Oct/17/web-edit/",
+      "https://simonwillison.net/2026/Oct/29/api-credits/",
+      "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
+      "https://simonwillison.net/2026/Oct/29/ben-hylak/",
+      "https://simonwillison.net/2026/Oct/28/ted-sanders/",
+      "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -918,7 +930,12 @@
       "https://www.latent.space/p/lab-in-the-loop-at-compute-speed",
       "https://www.latent.space/p/ainews-agents-disprove-polysemanticity",
       "https://www.latent.space/p/ainews-modals-1b-arr-16b-series-d",
-      "https://www.latent.space/p/ainews-high-taste-testers-ep-1"
+      "https://www.latent.space/p/ainews-high-taste-testers-ep-1",
+      "https://latent.space/p/elorian/",
+      "https://latent.space/p/ainews-gemini-4-carbon/",
+      "https://latent.space/p/supabase/",
+      "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/",
+      "https://latent.space/p/opus55/"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -962,7 +979,10 @@
       "https://www.interconnects.ai/p/debating-rsi-the-us-china-gap-and",
       "https://www.interconnects.ai/p/the-cyber-risk-discourse-is-broken",
       "https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards",
-      "https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open"
+      "https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open",
+      "https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers",
+      "https://www.interconnects.ai/p/podcast-kimi-k31-pro-the-new-cyber",
+      "https://www.interconnects.ai/p/latest-open-artifacts-25-deepseek"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -997,7 +1017,8 @@
       "https://magazine.sebastianraschka.com/p/ai-detector-from-scratch",
       "https://magazine.sebastianraschka.com/p/claude-watermarking",
       "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
-      "https://magazine.sebastianraschka.com/p/classifier-history-and-jev"
+      "https://magazine.sebastianraschka.com/p/classifier-history-and-jev",
+      "https://magazine.sebastianraschka.com/p/building-reasoning-models"
     ],
     "eugeneyan": [
       "https://eugeneyan.com//writing/working-with-ai/",
@@ -1050,7 +1071,8 @@
       "https://www.oneusefulthing.org/p/an-opinionated-guide-to-which-ai-b22",
       "https://www.oneusefulthing.org/p/agency-and-agents",
       "https://www.oneusefulthing.org/p/the-overhang",
-      "https://www.oneusefulthing.org/p/the-dot-and-the-swarm"
+      "https://www.oneusefulthing.org/p/the-dot-and-the-swarm",
+      "https://www.oneusefulthing.org/p/30-months-on-the-exponential-in-charts"
     ],
     "importai": [
       "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
@@ -1316,7 +1338,12 @@
       "https://openai.com/index/sullivan-cromwell",
       "https://openai.com/index/itau-generative-ai",
       "https://openai.com/index/stack-overflow-chatgpt-plugin",
-      "https://openai.com/index/benefit-street-partners"
+      "https://openai.com/index/benefit-street-partners",
+      "https://openai.com/index/updated-model-spec",
+      "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+      "https://openai.com/index/ropes-gray-ai-diligence",
+      "https://openai.com/index/openai-servicenow-partnership-expansion",
+      "https://openai.com/index/the-future-of-the-firm"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1374,7 +1401,10 @@
       "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
       "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
       "https://deepmind.google/blog/introducing-gemini-4-argon/",
-      "https://deepmind.google/blog/accelerating-antimicrobial-discovery/"
+      "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+      "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+      "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -1506,7 +1536,12 @@
       "https://huggingface.co/blog/reflection-beam",
       "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
       "https://huggingface.co/blog/meta-muse-spark-open",
-      "https://huggingface.co/blog/flux-3"
+      "https://huggingface.co/blog/flux-3",
+      "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+      "https://huggingface.co/blog/announcing-project-protostar",
+      "https://huggingface.co/blog/mistral-large4",
+      "https://huggingface.co/blog/anydecisionmodel",
+      "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -1569,7 +1604,12 @@
       "https://www.anthropic.com/news/anthropic-cyber-mission",
       "https://www.anthropic.com/news/2026-us-midterms",
       "https://www.anthropic.com/news/singapore-office-opening",
-      "https://www.anthropic.com/news/an-update-on-independent-evaluators"
+      "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "https://www.anthropic.com/news/announcements",
+      "https://www.anthropic.com/news/public-benefit-fund",
+      "https://www.anthropic.com/news/s1-sec",
+      "https://www.anthropic.com/news/features",
+      "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -1610,27 +1650,28 @@
       "https://openclaw.ai/blog/microsoft-autopilot-openclaw/",
       "https://openclaw.ai/blog/openclaw-enterprise/",
       "https://openclaw.ai/blog/tencent-aig-joins-clawscan/",
-      "https://openclaw.ai/blog/pj-small-business-openclaw/"
+      "https://openclaw.ai/blog/pj-small-business-openclaw/",
+      "https://openclaw.ai/blog/openclaw-focus-weeks/"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-10-18",
-    "lilianweng": "2026-10-15",
-    "latentspace": "2026-10-18",
-    "interconnects": "2026-10-18",
-    "karpathy": "2026-10-18",
-    "raschka": "2026-10-18",
-    "eugeneyan": "2026-10-18",
-    "chiphuyen": "2026-10-15",
-    "oneusefulthing": "2026-10-17",
+    "simonwillison": "2026-10-30",
+    "lilianweng": "2026-10-30",
+    "latentspace": "2026-10-30",
+    "interconnects": "2026-10-30",
+    "karpathy": "2026-10-30",
+    "raschka": "2026-10-30",
+    "eugeneyan": "2026-10-30",
+    "chiphuyen": "2026-10-30",
+    "oneusefulthing": "2026-10-30",
     "importai": "2026-06-04",
     "thezvi": "2026-06-04",
-    "openai-news": "2026-10-18",
-    "deepmind": "2026-10-17",
-    "hf-blog": "2026-10-17",
-    "anthropic-news": "2026-10-18",
-    "steipete": "2026-10-17",
-    "openclaw-blog": "2026-10-17"
+    "openai-news": "2026-10-30",
+    "deepmind": "2026-10-30",
+    "hf-blog": "2026-10-30",
+    "anthropic-news": "2026-10-30",
+    "steipete": "2026-10-30",
+    "openclaw-blog": "2026-10-30"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-29-openclaw-2026-10-9
+title: "openclaw v2026.10.9 — 安全依赖补丁与回滚安全：agent 运行时更可控"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.10.9
+publishedAt: 2026-10-29
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "安全依赖补丁与回滚安全：agent 运行时更可控"
+broadcast: "这次更新主要做的是安全加固：修补了几个运行时依赖，收紧了模型调用协议里的校验和发件人令牌检查，还把文件工具的权限默认限制在工作区内，委派改动仍然要审批。对做 agent 的国内开发者来说，这意味着工具调用链的信任边界要更明确，依赖版本也得算进去；另外升级回滚更安全了，回滚不会丢掉运维改动，升级流程应该做成可逆的。"
+insight: "这次 2026.10.9 的核心是安全依赖补丁和回滚安全，不是新功能，现有用户值得升级，尤其是把依赖版本纳入工具调用链信任边界、以及 tools.fs.workspaceOnly 覆盖 Gateway 构建工具这两点，直接关系到运行时可控性。升级时建议走 npm 回滚路径，Windows 瞬时拒绝会重试并报告恢复路径，Git 源回滚也会保留运维改动，风险可控。现有 prompt 和 hook 配置不需要改，摘要里没有涉及接口变更。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [security-patch, workspace-isolation, rollback-safety, agent-harness]
+---
+
+- 修补 fast-uri、nodemailer、MSAL 等运行时依赖，MCP schema 校验与 IMAP 发件人令牌门更严；harness 应把依赖版本纳入工具调用链的信任边界。
+- `tools.fs.workspaceOnly` 现覆盖 Gateway 构建的工具，委派改动仍需审批、媒体工具限制在工作区内；harness 设计需默认最小文件权限并保留审批点。
+- 更新回滚更安全：Git 源回滚保留运维改动，npm 回滚重试 Windows 瞬时拒绝并报告恢复路径；harness 的升级流程应可逆且不丢操作者状态。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.10.9](https://github.com/openclaw/openclaw/releases/tag/v2026.10.9)

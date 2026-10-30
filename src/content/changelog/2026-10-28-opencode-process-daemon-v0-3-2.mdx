@@ -1,0 +1,23 @@
+---
+slug: 2026-10-28-opencode-process-daemon-v0-3-2
+title: "opencode process-daemon-v0.3.2 — opencode"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.3.2
+publishedAt: 2026-10-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "opencode-pty 升到 0.3.2，协议版本变为 7"
+broadcast: "这次更新的是那个给终端会话做进程守护的组件，包版本升到了零点三点二，但协议版本单独标成了七。值得留意的是，版本号和协议号现在是分开的，所以做 agent 的开发者要注意，测试框架得分别校验包版本和协议版本，跟进程之间的握手和消息格式也要对齐新的协议号，依赖也要按新包版本锁定。"
+insight: "这次 opencode-pty 升到 0.3.2，协议版本变为 7，包版本和协议号已经分离，harness 需要分别校验两者。对现有用户来说，如果 harness 锁定了旧版 pty 依赖，就必须按新包版本重新锁定，并让握手和消息格式对齐协议 7，否则可能连不上。现有 prompt 或 hook 配置本身不用改，但依赖锁定和协议校验要同步更新。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理层变化，按现有信息不受影响。"
+tags: [opencode-pty, process-daemon, protocol-version, npm-release]
+---
+
+- 发布 @opencode/pty@0.3.2，来自 packages/process-daemon；harness 需按新包版本锁定依赖。
+- 协议版本标为 7；harness 与 pty 进程的握手/消息格式需对齐该协议号。
+- 版本号与协议号分离（0.3.2 对 7）；harness 设计应分别校验包版本与协议版本。
+
+---
+
+> 原文 release：[sst/opencode process-daemon-v0.3.2](https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.3.2)

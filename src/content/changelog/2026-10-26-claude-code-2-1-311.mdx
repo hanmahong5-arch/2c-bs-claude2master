@@ -1,0 +1,23 @@
+---
+slug: 2026-10-26-claude-code-2-1-311
+title: "claude-code v2.1.311 — 修复上下文超限、MCP 卡死与子代理工具缺失，harness 稳定性关键补丁"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.311
+publishedAt: 2026-10-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "修复上下文超限、MCP 卡死与子代理工具缺失，harness 稳定性关键补丁"
+broadcast: "这次更新修了三个很实在的问题：上下文超过二十万 token 不再报错，会自动压缩后继续；中断操作不用再等外部读取超时，立刻生效；子代理也能用上启动后才连上的工具了。对做 agent 的人来说，这提醒我们：上下文溢出要当成可恢复事件，取消路径不能被外部读写卡住，工具集还得支持延迟注册。"
+insight: "这次 v2.1.311 是稳定性补丁，值得升级：200K 上下文超限改为自动压缩继续、中断即时响应、子代理可用延迟连上的 MCP 工具，都直接影响日常会话成功率。现有 hook 配置需要检查：SubagentStop 从每分钟约两次改为完成时一次，若你的钩子依赖高频触发做轮询或状态同步，要改成幂等的一次性逻辑，否则行为会变。走 newapi.lurus.cn 代理的国内用户，摘要未提及代理层改动，按现有配置升级即可，无需额外调整。"
+tags: [context-compaction, mcp, subagents, cancellation]
+---
+
+- 标准上下文会话超 200K token 不再报“需要 1M 上下文额度”，改为自动压缩后继续；harness 需把上下文溢出当作可恢复事件而非终止条件。
+- 中断操作此前要等 MCP 资源读取或技能下载超时才生效，现在即时响应；harness 的取消路径必须独立于外部 I/O 阻塞。
+- 子代理现在能用启动后才连上的 MCP 服务器工具，且 SubagentStop 钩子从每分钟约两次改为完成时一次；harness 需支持工具集延迟注册与钩子幂等触发。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.311](https://github.com/anthropics/claude-code/releases/tag/v2.1.311)
