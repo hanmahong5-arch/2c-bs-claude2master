@@ -1,6 +1,105 @@
 {
   "items": [
     {
+      "slug": "2026-10-31-blog-anthropic-news-partnerships",
+      "zh": true,
+      "en": false,
+      "title": "Partnerships — Anthropic 合作公告合集：政府、咨询巨头、印度 IT 服务商如何把 Cl",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-10-31"
+    },
+    {
+      "slug": "2026-10-31-blog-anthropic-news-product",
+      "zh": true,
+      "en": false,
+      "title": "Product — Anthropic 产品动态汇总：Agent Skills 成为跨平台开放标准，",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-10-31"
+    },
+    {
+      "slug": "2026-10-31-blog-latentspace-ainews-google-admits-ai-mode-hurts-search-revenue",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Google admits AI Mode hurts Search revenue; — 谷歌承认 AI Mode 查询变现更差，搜索收入暴跌 15%、市值蒸发 5000",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-31"
+    },
+    {
+      "slug": "2026-10-31-claude-code-2-1-316",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.316 — 子代理努力级别与网关策略合并方式可独立配置，影响多代理编排成本与权限模型",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-10-31"
+    },
+    {
+      "slug": "2026-10-31-trending-folkbench-folkbench",
+      "zh": true,
+      "en": false,
+      "title": "folkbench — Rust 写的 AI API 中转站评测与切换工具，实测可用率、延迟和价格",
+      "kind": "trending",
+      "author": null,
+      "source": "Folkbench/folkbench",
+      "tool": null,
+      "publishedAt": "2026-10-31"
+    },
+    {
+      "slug": "2026-10-31-trending-horizon-rust-horizon",
+      "zh": true,
+      "en": false,
+      "title": "horizon — 用 Rust 重写 Minecraft Java 版，并用 281 个差分测试对",
+      "kind": "trending",
+      "author": null,
+      "source": "horizon-rust/horizon",
+      "tool": null,
+      "publishedAt": "2026-10-31"
+    },
+    {
+      "slug": "2026-10-31-trending-net-merge-net-merge",
+      "zh": true,
+      "en": false,
+      "title": "net-merge — 把 Wi",
+      "kind": "trending",
+      "author": null,
+      "source": "net-merge/net-merge",
+      "tool": null,
+      "publishedAt": "2026-10-31"
+    },
+    {
+      "slug": "2026-10-31-trending-storytold-craft-launcher",
+      "zh": true,
+      "en": false,
+      "title": "craft-launcher — Rust 写的 Craft 应用启动器，4.3k 星",
+      "kind": "trending",
+      "author": null,
+      "source": "storytold/craft-launcher",
+      "tool": null,
+      "publishedAt": "2026-10-31"
+    },
+    {
+      "slug": "2026-10-31-trending-storytold-deckcraft",
+      "zh": true,
+      "en": false,
+      "title": "deckcraft — 纯 Rust 重写 PowerPoint，开源幻灯片工具获 4.4k 星",
+      "kind": "trending",
+      "author": null,
+      "source": "storytold/deckcraft",
+      "tool": null,
+      "publishedAt": "2026-10-31"
+    },
+    {
       "slug": "2026-10-30-blog-anthropic-news-announcements",
       "zh": true,
       "en": false,
@@ -19,6 +118,83 @@
       "kind": "blogger",
       "author": "Anthropic",
       "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-10-30"
+    },
+    {
+      "slug": "2026-10-30-blog-interconnects-was-i-wrong-about-open-models-cyber-risks",
+      "zh": true,
+      "en": true,
+      "title": "Was I wrong about open models & cyber risks? — 作者复盘自己关于开源模型与网络安全风险的判断，认为所谓开源模型会引发灾难的预测正",
+      "kind": "blogger",
+      "author": "Nathan Lambert",
+      "source": "Nathan Lambert",
+      "tool": null,
+      "publishedAt": "2026-10-30"
+    },
+    {
+      "slug": "2026-10-30-blog-latentspace-ainews-building-aie-code-the-top-coding-agent",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Building AIE CODE: The top Coding Agent — Latent Space 揭秘 CODE 大会三大主题，并汇总 Mistral ",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-30"
+    },
+    {
+      "slug": "2026-10-30-blog-openai-news-community-safety-report-and-new-protections-for-teens",
+      "zh": true,
+      "en": true,
+      "title": "Community safety report and new protections for teens — OpenAI 发布社区安全报告，并收紧 ChatGPT 对青少年的保护",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-30"
+    },
+    {
+      "slug": "2026-10-30-blog-openai-news-fair-use-benefits-everyone",
+      "zh": true,
+      "en": true,
+      "title": "Fair use benefits everyone — OpenAI 汇编创作者、学者与法律专家法庭意见，论证合理使用支撑 AI 训练与",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-30"
+    },
+    {
+      "slug": "2026-10-30-blog-openai-news-making-it-easier-for-websites-to-express-ai",
+      "zh": true,
+      "en": true,
+      "title": "Making it easier for websites to express AI training — OpenAI 将支持 robots.txt 中的共享 AI 训练偏好信号，网站可",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-30"
+    },
+    {
+      "slug": "2026-10-30-blog-simonwillison-dbreunig-nesformer",
+      "zh": true,
+      "en": false,
+      "title": "dbreunig/nesformer — 有人把 NES 的 6502 CPU 模拟器塞进了 Qwen3.5",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-30"
+    },
+    {
+      "slug": "2026-10-30-blog-thezvi-childhood-and-education-22-voice-without-exit",
+      "zh": true,
+      "en": false,
+      "title": "Childhood and Education #22: Voice Without Exit — 纽约时报记者亲述把女儿送进烂校八年的代价，追问学校到底为了什么",
+      "kind": "blogger",
+      "author": "Zvi Mowshowitz",
+      "source": "Zvi Mowshowitz",
       "tool": null,
       "publishedAt": "2026-10-30"
     },
@@ -53,6 +229,39 @@
       "author": null,
       "source": "openclaw-concepts",
       "tool": null,
+      "publishedAt": "2026-10-30"
+    },
+    {
+      "slug": "2026-10-30-opencode-2-2-3",
+      "zh": true,
+      "en": false,
+      "title": "opencode v2.2.3 — OpenCode 可直接复用 Claude Code 登录与模型，长会话渲染大幅",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-10-30"
+    },
+    {
+      "slug": "2026-10-30-opencode-2-2-4",
+      "zh": true,
+      "en": false,
+      "title": "opencode v2.2.4 — 终端持久化与 agent 发布 HTML 产物，改变会话状态边界",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
+      "publishedAt": "2026-10-30"
+    },
+    {
+      "slug": "2026-10-30-opencode-2-2-5",
+      "zh": true,
+      "en": false,
+      "title": "opencode v2.2.5 — 压缩缓冲可按百分比配置，一套参数适配大小窗口模型",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
       "publishedAt": "2026-10-30"
     },
     {
@@ -188,6 +397,17 @@
       "publishedAt": "2026-10-29"
     },
     {
+      "slug": "2026-10-29-blog-openai-news-credit-saison-achieves-954-roi-in-a-chatgpt",
+      "zh": true,
+      "en": true,
+      "title": "Credit Saison achieves 954% ROI in a ChatGPT Enterprise — 信用卡公司试点 ChatGPT 企业版，算出 954% ROI 并推向全公司",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-29"
+    },
+    {
       "slug": "2026-10-29-blog-openai-news-how-ropes-gray-is-developing-ai-for-transactional",
       "zh": true,
       "en": true,
@@ -239,6 +459,17 @@
       "kind": "blogger",
       "author": "Simon Willison",
       "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-29"
+    },
+    {
+      "slug": "2026-10-29-blog-thezvi-ai-192-anthropic-is-going-public",
+      "zh": true,
+      "en": false,
+      "title": "AI #192: Anthropic Is Going Public — Anthropic递交S",
+      "kind": "blogger",
+      "author": "Zvi Mowshowitz",
+      "source": "Zvi Mowshowitz",
       "tool": null,
       "publishedAt": "2026-10-29"
     },
@@ -386,6 +617,17 @@
       "publishedAt": "2026-10-28"
     },
     {
+      "slug": "2026-10-28-blog-openai-news-legora-is-building-the-agentic-operating-system-for",
+      "zh": true,
+      "en": true,
+      "title": "Legora is building the agentic operating system for — Legora 用 OpenAI 模型、ChatGPT 和 Codex 打造法律工",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-10-28"
+    },
+    {
       "slug": "2026-10-28-blog-openai-news-openai-and-servicenow-expand-partnership-across-enterprise-workflows",
       "zh": true,
       "en": true,
@@ -430,6 +672,39 @@
       "publishedAt": "2026-10-28"
     },
     {
+      "slug": "2026-10-28-blog-simonwillison-quoting-terk-terkowitz",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Terk Terkowitz — 亚马逊工程领导层引用：AI 帮不上你的工作，这是发现而非失败，要记录并上报",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-28"
+    },
+    {
+      "slug": "2026-10-28-blog-simonwillison-the-october-inflection-point-for-vibe-game-development",
+      "zh": true,
+      "en": true,
+      "title": "The October inflection point for vibe game development — Simon Willison 认为 2026 年 10 月是氛围游戏开发的拐点：",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-28"
+    },
+    {
+      "slug": "2026-10-28-blog-thezvi-anthropic-files-its-s-1",
+      "zh": true,
+      "en": true,
+      "title": "Anthropic Files Its S-1 — 逐条拆解 Anthropic S",
+      "kind": "blogger",
+      "author": "Zvi Mowshowitz",
+      "source": "Zvi Mowshowitz",
+      "tool": null,
+      "publishedAt": "2026-10-28"
+    },
+    {
       "slug": "2026-10-28-goose-1-57-0",
       "zh": true,
       "en": false,
@@ -463,6 +738,17 @@
       "publishedAt": "2026-10-28"
     },
     {
+      "slug": "2026-10-27-blog-anthropic-news-expanding-our-partnership-with-gsa-to-bring-claude",
+      "zh": true,
+      "en": true,
+      "title": "Expanding our partnership with GSA to bring Claude to — Anthropic 与 GSA 扩大合作，政府全层级采购 Claude 打四折，",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-10-27"
+    },
+    {
       "slug": "2026-10-27-blog-deepmind-genie-4-a-new-generation-of-world-simulation",
       "zh": true,
       "en": true,
@@ -474,6 +760,28 @@
       "publishedAt": "2026-10-27"
     },
     {
+      "slug": "2026-10-27-blog-latentspace-ainews-anthropic-files-for-2t-ipo-in-2",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Anthropic files for $2T IPO in 2 weeks: 1400% — Anthropic S",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-27"
+    },
+    {
+      "slug": "2026-10-27-blog-latentspace-coding-from-the-himalayas-with-an-offline-ai",
+      "zh": true,
+      "en": true,
+      "title": "Coding From the Himalayas With an Offline AI Agent — 在喜马拉雅山麓断网写代码：作者用 OpenCode + Ollama + Qwe",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-27"
+    },
+    {
       "slug": "2026-10-27-blog-latentspace-how-anthropic-ships-claude-with-claude-separating-the",
       "zh": true,
       "en": true,
@@ -481,6 +789,39 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-27"
+    },
+    {
+      "slug": "2026-10-27-blog-latentspace-how-anthropic-ships-the-1-llm-in-the",
+      "zh": true,
+      "en": false,
+      "title": "How Anthropic ships the #1 LLM in the World safely: — Anthropic 平台工程负责人拆解 Claude 平台：如何把模型“大脑”与",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-27"
+    },
+    {
+      "slug": "2026-10-27-blog-simonwillison-game-boy-color-on-my-conference-badge",
+      "zh": true,
+      "en": true,
+      "title": "Game Boy Color on My Conference Badge — GitHub Universe 大会胸牌是台彩色屏电脑，有人用 Gemini 让",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-27"
+    },
+    {
+      "slug": "2026-10-27-blog-thezvi-anthropic-versus-anthropic",
+      "zh": true,
+      "en": true,
+      "title": "Anthropic Versus Anthropic — Zvi 逐条拆解 Dario 与批评者的公开交锋，判断 Anthropic 的安",
+      "kind": "blogger",
+      "author": "Zvi Mowshowitz",
+      "source": "Zvi Mowshowitz",
       "tool": null,
       "publishedAt": "2026-10-27"
     },
@@ -538,347 +879,6 @@
       "source": "sst/opencode",
       "tool": "opencode",
       "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-zeroclaw-0-8-7",
-      "zh": true,
-      "en": false,
-      "title": "zeroclaw v0.8.7 — 安全补丁版：Wasmtime 与 TLS 修复，插件需重编译",
-      "kind": "changelog",
-      "author": null,
-      "source": "zeroclaw-labs/zeroclaw",
-      "tool": "zeroclaw",
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-26-blog-anthropic-news-anthropic-files-s-1-with-the-sec-for",
-      "zh": true,
-      "en": true,
-      "title": "Anthropic files S-1 with the SEC for proposed initial — Anthropic 递交 S",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-10-26"
-    },
-    {
-      "slug": "2026-10-26-claude-code-2-1-311",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.311 — 修复上下文超限、MCP 卡死与子代理工具缺失，harness 稳定性关键补丁",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-26"
-    },
-    {
-      "slug": "2026-10-26-cline-4-1-26",
-      "zh": true,
-      "en": false,
-      "title": "cline v4.1.26 — 云端任务与模型目录大改，重试与工具行为修复影响 harness 稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-10-26"
-    },
-    {
-      "slug": "2026-10-26-cline-cli-v3-0-74",
-      "zh": true,
-      "en": false,
-      "title": "cline cli-v3.0.74 — 任务接管、重试与超时修复，直接影响 agent 稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-10-26"
-    },
-    {
-      "slug": "2026-10-26-cline-desktop-v0-0-49",
-      "zh": true,
-      "en": false,
-      "title": "cline desktop-v0.0.49 — 会话变更可视化与终端面板，桌面端补齐 agent 工作流闭环",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-10-26"
-    },
-    {
-      "slug": "2026-10-26-cline-sdk-sdk-v0-2-0",
-      "zh": true,
-      "en": false,
-      "title": "cline sdk/sdk/v0.2.0 — 会话重连、能力路由与重试策略同时收紧，直接影响 agent harness 的可",
-      "kind": "changelog",
-      "author": null,
-      "source": "cline/cline",
-      "tool": "cline",
-      "publishedAt": "2026-10-26"
-    },
-    {
-      "slug": "2026-10-25-blog-interconnects-podcast-kimi-k3-1-pro-the-new-cyber",
-      "zh": true,
-      "en": true,
-      "title": "Podcast: Kimi K3.1 Pro, the new cyber reality, and Muse — Kimi K3.1 Pro 跑分亮眼却口碑分化，两位主播拆解开放权重模型的评测、",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-10-25"
-    },
-    {
-      "slug": "2026-10-24-blog-raschka-building-reasoning-models-from-the-ground-up-a",
-      "zh": true,
-      "en": true,
-      "title": "Building Reasoning Models from the Ground Up: A Full — Raschka 发布 11 小时视频课，用 PyTorch 从零实现推理模型的评",
-      "kind": "blogger",
-      "author": "Sebastian Raschka",
-      "source": "Sebastian Raschka",
-      "tool": null,
-      "publishedAt": "2026-10-24"
-    },
-    {
-      "slug": "2026-10-24-openclaw-2026-10-7",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.10.7 — 中断会话可安全恢复，更新失败可续传，适合关注 agent 运行时可靠性",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-10-24"
-    },
-    {
-      "slug": "2026-10-24-openclaw-2026-9-34",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.9.34 — 补丁原子性与工具钩子修复，直接影响 agent 执行安全",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-10-24"
-    },
-    {
-      "slug": "2026-10-23-claude-code-2-1-310",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.310 — 网关兼容重试与压缩修复，直接影响 agent 长会话稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-23"
-    },
-    {
-      "slug": "2026-10-23-codex-rust-v0-164-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.164.0 — 预设槽位与内联参数让 harness 交互更可编排",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-10-23"
-    },
-    {
-      "slug": "2026-10-23-goose-1-56-0",
-      "zh": true,
-      "en": false,
-      "title": "goose v1.56.0 — 子代理可恢复、可限流、可查看，goose 把多代理编排做成了可控基础设施",
-      "kind": "changelog",
-      "author": null,
-      "source": "block/goose",
-      "tool": "goose",
-      "publishedAt": "2026-10-23"
-    },
-    {
-      "slug": "2026-10-23-hermes-agent-0-22-5",
-      "zh": true,
-      "en": false,
-      "title": "hermes-agent v0.22.5 — 81 个 PR 汇总成稳定版，子代理路由和插件命令有变化",
-      "kind": "changelog",
-      "author": null,
-      "source": "NousResearch/hermes-agent",
-      "tool": "hermes",
-      "publishedAt": "2026-10-23"
-    },
-    {
-      "slug": "2026-10-22-blog-deepmind-beyond-tree-cover-mapping-the-world-s-forest",
-      "zh": true,
-      "en": true,
-      "title": "Beyond tree cover: mapping the world’s forest types — DeepMind 把全球每 10 米地表划成不同森林类型，超越单一树冠覆盖率指标",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-10-22"
-    },
-    {
-      "slug": "2026-10-22-claude-code-2-1-308",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.308 — 仅一句笼统说明，无具体功能变化，30 秒可判断是否相关",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-22"
-    },
-    {
-      "slug": "2026-10-22-claude-code-2-1-309",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.309 — 沙箱逃逸与权限绕过集中修复，agent 执行边界值得重看",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-22"
-    },
-    {
-      "slug": "2026-10-22-openclaw-2026-10-6",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.10.6 — 补丁版只修可靠性：Node 运行时强制升级，更新与恢复更安全",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-10-22"
-    },
-    {
-      "slug": "2026-10-22-opencode-1-19-4",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.19.4 — 内置 Bun 升级到 1.4.4，修复多项网络与 TLS 安全问题",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-10-22"
-    },
-    {
-      "slug": "2026-10-21-blog-openclaw-blog-come-build-with-us-openclaw-focus-weeks",
-      "zh": true,
-      "en": true,
-      "title": "Come Build With Us: OpenClaw Focus Weeks — OpenClaw 启动 Focus Weeks，首批 Clawtributor ",
-      "kind": "blogger",
-      "author": "OpenClaw",
-      "source": "OpenClaw",
-      "tool": null,
-      "publishedAt": "2026-10-21"
-    },
-    {
-      "slug": "2026-10-21-claude-code-2-1-306",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.306 — 云会话登录误报与 MCP 工具过多导致的错误掩盖，两处修复都影响 harness",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-21"
-    },
-    {
-      "slug": "2026-10-21-claude-code-2-1-307",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.307 — 权限拦截与工具重试逻辑有实质变化，影响 harness 安全与稳定性",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-21"
-    },
-    {
-      "slug": "2026-10-21-hermes-agent-0-22-3",
-      "zh": true,
-      "en": false,
-      "title": "hermes-agent v0.22.3 — 620 个 PR 汇总成稳定版，CLI、Docker 和商店版同步更新",
-      "kind": "changelog",
-      "author": null,
-      "source": "NousResearch/hermes-agent",
-      "tool": "hermes",
-      "publishedAt": "2026-10-21"
-    },
-    {
-      "slug": "2026-10-21-hermes-agent-0-22-4",
-      "zh": true,
-      "en": false,
-      "title": "hermes-agent v0.22.4 — 桌面端移除无端弹出的建议胶囊，插件目录新增 bwrap 等后端",
-      "kind": "changelog",
-      "author": null,
-      "source": "NousResearch/hermes-agent",
-      "tool": "hermes",
-      "publishedAt": "2026-10-21"
-    },
-    {
-      "slug": "2026-10-20-blog-interconnects-latest-open-artifacts-25-deepseek-v4-1-flash",
-      "zh": true,
-      "en": false,
-      "title": "Latest open artifacts (#25): DeepSeek V4.1 Flash 1017, — 开放权重模型的地缘政治与监管加速，DeepSeek 开源推理栈成焦点",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-10-20"
-    },
-    {
-      "slug": "2026-10-20-blog-oneusefulthing-30-months-on-the-exponential-in-charts",
-      "zh": true,
-      "en": true,
-      "title": "30 Months on the Exponential (in Charts) — 作者用图表回顾两年半 AI 进展：能力指数级上升，用法从聊天转向代理",
-      "kind": "blogger",
-      "author": "Ethan Mollick",
-      "source": "Ethan Mollick",
-      "tool": null,
-      "publishedAt": "2026-10-20"
-    },
-    {
-      "slug": "2026-10-20-claude-code-2-1-305",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.305 — 沙箱逃逸开关、工具搜索回退、重试看门狗，三条都改 harness 边界",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-20"
-    },
-    {
-      "slug": "2026-10-20-gemini-cli-0-65-0",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.65.0 — 会话恢复与工具调用一致性修复，harness 设计者该看",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-10-20"
-    },
-    {
-      "slug": "2026-10-19-claude-code-2-1-304",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.304 — 权限判定新增 person 决策者与只读标记，钩子与插件边界更可控",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-19"
-    },
-    {
-      "slug": "2026-10-18-blog-anthropic-news-investing-in-the-public-benefit",
-      "zh": true,
-      "en": true,
-      "title": "Investing in the public benefit — Anthropic 把 5% 股份捐给公益基金，公司估值越高，注入比例越大",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-10-18"
     }
   ]
 }
