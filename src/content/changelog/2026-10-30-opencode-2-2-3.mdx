@@ -1,0 +1,23 @@
+---
+slug: 2026-10-30-opencode-2-2-3
+title: "opencode v2.2.3 — OpenCode 可直接复用 Claude Code 登录与模型，长会话渲染大幅"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.2.3
+publishedAt: 2026-10-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "OpenCode 可直接复用 Claude Code 登录与模型，长会话渲染大幅减负"
+broadcast: "OpenCode 这次更新有个很实用的点：只要装好 Claude Code 并登录，就能在连接页面直接复用它的登录和模型，等于把外部 agent 的认证和模型层当成可插拔后端。对国内开发者来说，接入门槛低了不少。另外桌面端长会话渲染负担明显下降，权限也按 MCP、技能、插件分开管控，做 agent 的人值得留意。"
+insight: "现有 OpenCode 用户值得升级到 v2.2.3：长会话渲染工作量显著下降，时间线增长与滚动性能问题已修复，长对话体验直接受益。若你已装 Claude Code 并完成 claude auth login，升级后可在 /connect 复用其登录与模型，无需另配密钥。托管配置方面，旧前缀规则会自动转换为 mcp.use、skill.use、plugin.use，一般不必手动改；但若你原先靠 integration.use 统一管控 MCP 或插件，建议升级后核对新开关是否按预期生效。摘要未涉及 newapi.lurus.cn 代理，国内走代理是否受影响暂无依据。"
+tags: [claude-code, agent-harness, policy, performance]
+---
+
+- 新增内置 Claude Agent 提供方：安装 Claude Code 并 `claude auth login` 后，在 `/connect` 选择即可复用其登录与模型，`OPENCODE_CLAUDE_PATH` 可覆盖可执行文件；含义是 harness 可把外部 agent 的认证与模型层当作可插拔后端。
+- 桌面端长会话优化：流式回复与长对话的渲染工作量显著下降，并修复时间线增长、缩放滚动与 DOM observer 性能问题；含义是长上下文 harness 需把渲染成本与 token 增长解耦。
+- 托管策略拆分：`integration.use` 只管集成账户，新增 `mcp.use`、`skill.use`、`plugin.use` 分别管控 MCP、技能与插件，旧前缀规则自动转换；含义是权限模型应按能力面细分而非单一开关。
+
+---
+
+> 原文 release：[sst/opencode v2.2.3](https://github.com/anomalyco/opencode/releases/tag/v2.2.3)

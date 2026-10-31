@@ -1,0 +1,23 @@
+---
+slug: 2026-10-30-opencode-2-2-5
+title: "opencode v2.2.5 — 压缩缓冲可按百分比配置，一套参数适配大小窗口模型"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.2.5
+publishedAt: 2026-10-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "压缩缓冲可按百分比配置，一套参数适配大小窗口模型"
+broadcast: "这次更新里，压缩缓冲可以直接按百分比配置了，比如设成两成，同时也还兼容按 token 数来写，这样一套参数就能适配不同上下文窗口的模型，不用再分别调。另外命令行工具调用会自动按 shell 执行、权限保持一致，编辑找不到目标内容时会给出最接近的行，读取缺目录时也会报出目录和最近存在的路径，这些错误回传能直接拿来自我纠正。"
+insight: "这次 v2.2.5 对现有用户值得升级：compaction.buffer 支持百分比后，一套参数就能适配不同上下文窗口的模型，不必再按模型分别调参，现有 hook 配置可以借机改成百分比形式；bash 工具按 shell 执行且权限一致、插件同名工具仍优先，旧调用不受影响，工具命名也无需改动。摘要未提及代理相关变化，国内用户走 newapi.lurus.cn 是否受影响暂无依据，建议升级后自行验证。"
+tags: [compaction, tool-calling, error-messages, mcp]
+---
+
+- `compaction.buffer` 支持百分比（如 `"20%"`），仍兼容 token 数；harness 无需为不同上下文窗口的模型分别调参。
+- `bash` 工具调用自动按 `shell` 执行且权限一致，插件同名工具仍优先；harness 可统一工具命名而不破坏旧调用。
+- `edit` 找不到 `oldString` 时展示最接近的行或提示改动已存在，`read` 缺目录时报出该目录与最近存在目录；harness 的错误回传可直接用于自我纠正。
+
+---
+
+> 原文 release：[sst/opencode v2.2.5](https://github.com/anomalyco/opencode/releases/tag/v2.2.5)

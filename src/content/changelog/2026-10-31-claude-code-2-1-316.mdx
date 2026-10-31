@@ -1,0 +1,23 @@
+---
+slug: 2026-10-31-claude-code-2-1-316
+title: "claude-code v2.1.316 — 子代理努力级别与网关策略合并方式可独立配置，影响多代理编排成本与权限模型"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.316
+publishedAt: 2026-10-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "子代理努力级别与网关策略合并方式可独立配置，影响多代理编排成本与权限模型"
+broadcast: "这次更新给子代理加了一个独立的努力级别开关，不再默认跟着主会话走，高成本的父会话就不会把开销传导到每个子任务上。网关那边还多了分层合并的策略模式，匹配到的策略会逐层叠加、后层覆盖前层，另外新增了输入标签，用来给上游提示词开启注入过滤。对做多代理编排的国内开发者来说，成本和权限模型都能配得更细了。"
+insight: "这次 v2.1.316 对多代理编排用户是实质性升级：子代理努力级别可独立配置，高努力父会话不再把成本传导到每个子代理，建议有子代理工作流的团队升级并显式设置 CLAUDE_CODE_SUBAGENT_EFFORT。网关策略改为 layered 逐层合并后，现有依赖只取第一条匹配的配置需按顺序重排，后层会覆盖前层，升级前先核对。摘要未提及代理链路变化，走 newapi.lurus.cn 的用户暂无影响依据。"
+tags: [subagent-effort, policy-layering, guardrails, gateway]
+---
+
+- 新增 `CLAUDE_CODE_SUBAGENT_EFFORT`，子代理不再默认继承会话努力级别；harness 可给子任务单独定档，避免高努力父会话把成本传导到每个子代理。
+- 网关新增 `managed.policy_mode: layered`，所有匹配策略逐层合并而非只取第一条；策略叠加需按顺序设计，后层覆盖前层。
+- 新增 `guardrail.input_tagging`，为 Bedrock 上游提示词加输入标签以启用提示注入过滤；安全护栏需在请求封装层预留标签注入点。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.316](https://github.com/anthropics/claude-code/releases/tag/v2.1.316)

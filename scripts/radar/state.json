@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.314",
+    "anthropics/claude-code": "v2.1.316",
     "openai/codex": "rust-v0.166.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "v4.1.26",
     "block/goose": "v1.57.0",
-    "sst/opencode": "process-daemon-v0.4.0",
+    "sst/opencode": "v2.2.5",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.66.0",
     "openclaw/openclaw": "v2026.9.36",
@@ -208,7 +208,12 @@
     "deepseek-ai/DeepInfer",
     "Zagitta/gpu-unlock",
     "tangency-labs/solidcraft",
-    "storytold/cadcraft"
+    "storytold/cadcraft",
+    "horizon-rust/horizon",
+    "storytold/deckcraft",
+    "storytold/craft-launcher",
+    "Folkbench/folkbench",
+    "net-merge/net-merge"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -334,7 +339,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-10-30",
+    "anthropic-engineering": "2026-10-31",
     "claude-code-docs": "2026-10-30",
     "openai-codex-blog": "2026-10-30",
     "openclaw-concepts": "2026-10-30",
@@ -742,7 +747,12 @@
       "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
       "https://simonwillison.net/2026/Oct/29/ben-hylak/",
       "https://simonwillison.net/2026/Oct/28/ted-sanders/",
-      "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/"
+      "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/",
+      "https://simonwillison.net/2026/Oct/30/nesformer/",
+      "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+      "https://simonwillison.net/2026/Oct/28/terk-terkowitz/",
+      "https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge/",
+      "https://simonwillison.net/2026/Oct/26/gpt-61-terra/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -935,7 +945,12 @@
       "https://latent.space/p/ainews-gemini-4-carbon/",
       "https://latent.space/p/supabase/",
       "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/",
-      "https://latent.space/p/opus55/"
+      "https://latent.space/p/opus55/",
+      "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/",
+      "https://latent.space/p/ainews-building-aie-code-the-top-coding-agent-conference/",
+      "https://latent.space/p/how_anthropic_ships_the_1_llm_in_the_world_safely_separating_the_brain_from_the_hands/",
+      "https://latent.space/p/offline-coding/",
+      "https://latent.space/p/ainews-anthropic-s1/"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -982,7 +997,8 @@
       "https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open",
       "https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers",
       "https://www.interconnects.ai/p/podcast-kimi-k31-pro-the-new-cyber",
-      "https://www.interconnects.ai/p/latest-open-artifacts-25-deepseek"
+      "https://www.interconnects.ai/p/latest-open-artifacts-25-deepseek",
+      "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -1076,11 +1092,21 @@
     ],
     "importai": [
       "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
-      "https://importai.substack.com/p/import-ai-458-reckoning-with-the"
+      "https://importai.substack.com/p/import-ai-458-reckoning-with-the",
+      "https://importai.substack.com/p/import-ai-474-platonic-mindspace",
+      "https://importai.substack.com/p/import-ai-478-math-for-alignment",
+      "https://importai.substack.com/p/import-ai-477-in-which-i-tell-the",
+      "https://importai.substack.com/p/import-ai-476-creativity-and-rsi",
+      "https://importai.substack.com/p/import-ai-475-swarm-scaling-google"
     ],
     "thezvi": [
       "https://thezvi.substack.com/p/trump-signs-executive-order-for-ai",
-      "https://thezvi.substack.com/p/claude-opus-48-capabilities-and-reactions"
+      "https://thezvi.substack.com/p/claude-opus-48-capabilities-and-reactions",
+      "https://thezvi.substack.com/p/childhood-and-education-22-voice",
+      "https://thezvi.substack.com/p/ai-192-anthropic-is-going-public",
+      "https://thezvi.substack.com/p/anthropic-files-its-s-1",
+      "https://thezvi.substack.com/p/anthropic-versus-anthropic",
+      "https://thezvi.substack.com/p/gemini-4-argon-the-model-and-safety"
     ],
     "openai-news": [
       "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
@@ -1343,7 +1369,12 @@
       "https://openai.com/index/how-we-detect-frontier-model-misalignment",
       "https://openai.com/index/ropes-gray-ai-diligence",
       "https://openai.com/index/openai-servicenow-partnership-expansion",
-      "https://openai.com/index/the-future-of-the-firm"
+      "https://openai.com/index/the-future-of-the-firm",
+      "https://openai.com/index/helping-websites-express-ai-training-preferences",
+      "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+      "https://openai.com/index/fair-use-benefits-everyone",
+      "https://openai.com/index/credit-saison",
+      "https://openai.com/index/legora"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1609,7 +1640,12 @@
       "https://www.anthropic.com/news/public-benefit-fund",
       "https://www.anthropic.com/news/s1-sec",
       "https://www.anthropic.com/news/features",
-      "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+      "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+      "https://www.anthropic.com/news/expanding-partnership-gsa",
+      "https://www.anthropic.com/news/partnerships",
+      "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      "https://www.anthropic.com/news/product",
+      "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -1655,21 +1691,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-10-30",
+    "simonwillison": "2026-10-31",
     "lilianweng": "2026-10-30",
-    "latentspace": "2026-10-30",
-    "interconnects": "2026-10-30",
+    "latentspace": "2026-10-31",
+    "interconnects": "2026-10-31",
     "karpathy": "2026-10-30",
     "raschka": "2026-10-30",
     "eugeneyan": "2026-10-30",
     "chiphuyen": "2026-10-30",
     "oneusefulthing": "2026-10-30",
-    "importai": "2026-06-04",
-    "thezvi": "2026-06-04",
-    "openai-news": "2026-10-30",
+    "importai": "2026-10-31",
+    "thezvi": "2026-10-31",
+    "openai-news": "2026-10-31",
     "deepmind": "2026-10-30",
     "hf-blog": "2026-10-30",
-    "anthropic-news": "2026-10-30",
+    "anthropic-news": "2026-10-31",
     "steipete": "2026-10-30",
     "openclaw-blog": "2026-10-30"
   },

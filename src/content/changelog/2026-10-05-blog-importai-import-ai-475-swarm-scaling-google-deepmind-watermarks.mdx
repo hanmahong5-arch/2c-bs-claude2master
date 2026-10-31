@@ -1,0 +1,23 @@
+---
+slug: 2026-10-05-blog-importai-import-ai-475-swarm-scaling-google-deepmind-watermarks
+title: "Import AI 475: Swarm scaling; Google DeepMind — 本期 Import AI：群体扩展的收益与损耗、生物序列水印、以及 AI 科学家"
+source: "Jack Clark"
+sourceUrl: https://importai.substack.com/p/import-ai-475-swarm-scaling-google
+publishedAt: 2026-10-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Jack Clark"
+hook: "本期 Import AI：群体扩展的收益与损耗、生物序列水印、以及 AI 科学家的经济学"
+broadcast: "这期节目聊三件事：AI 群体协作、生物序列水印，还有 AI 科学家的经济学。群体协作能让多个智能体并行干活、把耗时压下来，但数量翻十倍只换来三到五倍性能，所以更适合用来压缩延迟，而不是一味堆并发。生物模型输出开始加水印，方便追溯来源。另外，前沿模型已经能部分操作自动化实验室，但成本和成功率仍是落地瓶颈，值得国内做智能体的团队留意。"
+tags: [multi-agent, biosecurity, ai-science, benchmarks]
+---
+
+- Toby Ord 把 AI 群体（swarm）看作一种新的推理扩展方式：4 个 agent 的群体总 token 消耗约为单 agent 的 2 倍，但每个 agent 只需一半 token，并行执行理论上能把耗时减半；代价是存在类似经济学「踩脚」参数的边际递减，agent 数量扩 10 倍只换来 3–5 倍性能。对工具链的含义是：多 agent 编排应优先用于压缩延迟，而非无脑堆并发。
+- Google DeepMind 发布 SynthID Bio，针对合成生物学数据做水印：按数据类型调整氨基酸选择、微调预测 3D 结构的原子坐标；在 VEGF-A、SARS-CoV-2 spike RBD、PD-L1 三个靶点的湿实验中，水印设计的命中率、结合亲和力与序列多样性与未水印版本相当。含义是：生物类模型输出需要可追溯信号，并与设备与分类器监控配合。
+- C5R Corp 的 SciUniverse 基准含 92 个任务、17 个任务族，覆盖样品制备、仪器控制、协议适配等；Claude Fable 5.1 以 45.3% 通过率领先，单任务成本 $40.61。含义是：前沿模型已能部分操作自动化实验室，但成本与成功率仍是落地瓶颈。
+
+---
+
+> 原文：[Import AI 475: Swarm scaling; Google DeepMind watermarks biology; and the AI science economy](https://importai.substack.com/p/import-ai-475-swarm-scaling-google) · 作者 Jack Clark

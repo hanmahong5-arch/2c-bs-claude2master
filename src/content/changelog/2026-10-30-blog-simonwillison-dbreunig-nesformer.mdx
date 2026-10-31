@@ -1,0 +1,23 @@
+---
+slug: 2026-10-30-blog-simonwillison-dbreunig-nesformer
+title: "dbreunig/nesformer — 有人把 NES 的 6502 CPU 模拟器塞进了 Qwen3.5"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/30/nesformer/
+publishedAt: 2026-10-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "有人把 NES 的 6502 CPU 模拟器塞进了 Qwen3.5-4B 的权重里，能慢速跑《超级马里奥》。"
+broadcast: "有人把可运行的任天堂红白机处理器模拟器，直接训练进了一个四十亿参数的开源模型权重里，能加载游戏慢速跑起来。这说明模型权重不只是用来生成文字，还能承载可执行的逻辑。更值得关注的是，作者公开了做法：先读资料、再评估可行性、最后动手实现，这种多轮提示正好给 agent 做复杂工程任务打了样，公开的一致性测试集也能当现成基准。"
+tags: [llm-emulation, nes, qwen, conformance-tests]
+---
+
+- 受 qwenputer 启发，Drew Breunig 把可运行的 NES 6502 CPU 模拟器训练进 Qwen3.5-4B 权重，能加载 ROM 慢速运行；这说明模型权重可作为可执行逻辑的载体，而不只是文本生成器。
+- 他在 HN 公开了 Opus 5.5 的提示词：先读 qwenputer 文章与源码，再评估用同样技术模拟 NES 芯片和 RAM、需要多大模型、小模型能否达到标准时钟频率；对 agent 的含义是，复杂工程任务可由「读资料→可行性评估→动手实现」的多轮提示驱动。
+- 据称 Opus 还找到并使用了 Christopher Pow 15 年前发布的 NES CPU 一致性测试集；对工具链的启示是，公开的一致性测试套件可作为 agent 验证硬件模拟正确性的现成基准。
+
+---
+
+> 原文：[dbreunig/nesformer](https://simonwillison.net/2026/Oct/30/nesformer/) · 作者 Simon Willison

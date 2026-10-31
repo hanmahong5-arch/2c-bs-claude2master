@@ -1,0 +1,23 @@
+---
+slug: 2026-10-27-blog-latentspace-coding-from-the-himalayas-with-an-offline-ai
+title: "Coding From the Himalayas With an Offline AI Agent — 在喜马拉雅山麓断网写代码：作者用 OpenCode + Ollama + Qwe"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/offline-coding/
+publishedAt: 2026-10-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "在喜马拉雅山麓断网写代码：作者用 OpenCode + Ollama + Qwen 实测本地编码 agent 能走多远"
+broadcast: "有人在喜马拉雅山脚下经常断网断电，干脆把本地编码智能体接到自己电脑上跑，先下好模型再断网，读文件、查失败测试、改代码、跑测试都能离线完成，只有装新包和查网页还得联网。这说明本地推理加本地依赖已经能撑起一条受限但完整的编码回路，对国内开发者来说，真正的瓶颈往往在内存和上下文预算，而不是模型文件大小。"
+tags: [offline-coding, local-llm, coding-agents, opencode]
+---
+
+- 作者住在喜马拉雅山麓，常遇断网断电，于是把 OpenCode 接到本机 Ollama 上的 Qwen3.5 9B，先下载模型再断网跑任务：读文件、查失败测试、改代码、跑测试都能离线完成，只有装新包和查网页仍需联网。对 agent 工具链的含义是：本地推理 + 本地项目依赖已足以支撑一条受限但完整的编码回路。
+- 选型依据是 Qwen 模型卡公布的数据：Qwen3.5 9B 在 LiveCodeBench v6 得 65.6、BFCL-V4 得 66.1，均高于 4B 的 55.8 和 50.3；9B 下载约 6.6–7.6 GB，但内存预算需 12–16 GB，64k 上下文配置还要留更多余量。含义是本地 agent 的瓶颈常在内存与上下文预算，而非模型文件大小。
+- 引用的预印本 The Scaffold Effect 在 50 个 Terminal-Bench Pro 任务上比较 OpenCode、Goose、OpenHands-SDK，OpenCode 通过率 50%/46%，但每解决一题消耗的 token 约为 Goose 的 40 倍，作者也提醒多数差异在统计上并不显著。含义是 scaffold 的 token 成本应纳入 agent 选型评估。
+
+---
+
+> 原文：[Coding From the Himalayas With an Offline AI Agent](https://latent.space/p/offline-coding/) · 作者 Latent Space

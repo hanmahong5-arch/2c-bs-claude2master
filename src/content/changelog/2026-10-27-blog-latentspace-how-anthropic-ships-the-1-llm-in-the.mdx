@@ -1,0 +1,23 @@
+---
+slug: 2026-10-27-blog-latentspace-how-anthropic-ships-the-1-llm-in-the
+title: "How Anthropic ships the #1 LLM in the World safely: — Anthropic 平台工程负责人拆解 Claude 平台：如何把模型“大脑”与"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/how_anthropic_ships_the_1_llm_in_the_world_safely_separating_the_brain_from_the_hands/
+publishedAt: 2026-10-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Anthropic 平台工程负责人拆解 Claude 平台：如何把模型“大脑”与 agent“双手”分离，安全地规模化上线。"
+broadcast: "Anthropic 平台工程负责人拆解了 Claude 平台的做法：把模型这个“大脑”和 agent 的“双手”拆开，让执行环境和推理层各自独立演进、独立加固。对国内做 agent 的开发者来说，这意味着凭证和沙箱边界要当成一等公民来设计，训练事故和生产事故也得分开看。他们还用 Rust 重写了消息接口，并讨论了长时运行 agent 跨上下文窗口保持进度的设计，这些直接决定 agent 的可靠性。"
+tags: [anthropic, claude-platform, agent-harness, sandboxing]
+---
+
+- 把模型“大脑”与 agent 的“双手”（harness 与沙箱）解耦，是 Anthropic 扩展 Managed Agents 的核心做法；对 agent 开发者的含义是：执行环境与推理层应各自独立演进、独立加固。
+- 团队用隔离、凭证管控与网络控制来约束 Claude 的运行，并区分训练事故与生产事故两类风险；这意味着工具链设计要把凭证与沙箱边界当作一等公民。
+- 为支撑平台规模，Anthropic 用 Rust 重写了 Messages API，并讨论了长时运行 agent 在跨上下文窗口时保持进度的 harness 设计；对开发者的含义是：API 层性能与上下文连续性直接决定 agent 可靠性。
+
+---
+
+> 原文：[How Anthropic ships the #1 LLM in the World safely: Separating the Brain from the Hands](https://latent.space/p/how_anthropic_ships_the_1_llm_in_the_world_safely_separating_the_brain_from_the_hands/) · 作者 Latent Space

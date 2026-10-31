@@ -1,0 +1,23 @@
+---
+slug: 2026-10-30-opencode-2-2-4
+title: "opencode v2.2.4 — 终端持久化与 agent 发布 HTML 产物，改变会话状态边界"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.2.4
+publishedAt: 2026-10-30
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "终端持久化与 agent 发布 HTML 产物，改变会话状态边界"
+broadcast: "这版更新把桌面终端改成了会话级持久，重启后滚动缓冲和重命名都还在，意味着做 agent 的要把终端状态算进会话生命周期，而不是窗口生命周期。另外开启实验性产物功能后，agent 能创建、更新、删除并本地托管网页静态产物，做 harness 的得单独准备存储和访问层，还要区分读写权限。"
+insight: "这次 v2.2.4 的改动对现有用户来说，升级的必要性取决于你是否依赖终端会话的连续性：终端改为会话级持久 PTY、重启后保留滚动缓冲与重命名，意味着 harness 要把终端状态纳入会话生命周期，原有按窗口生命周期管理终端的配置需要相应调整。开启 experimental.artifacts 后 agent 可读写并本地托管 HTML 产物，harness 需补上独立存储与读写权限区分，prompt 与 hook 里涉及产物路径的部分建议同步核对。Claude Agent 接入改用 claude auth login，原先依赖 /login 的引导流程要改。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [persistent-pty, artifacts, provider-setup, session-state]
+---
+
+- 桌面终端改为会话级持久 PTY，重启后保留滚动缓冲与重命名：harness 需把终端状态纳入会话生命周期，而非窗口生命周期。
+- 开启 `experimental.artifacts` 后 agent 可创建、更新、删除并本地托管 HTML 静态产物：harness 需为产物提供独立存储与访问层，并区分读写权限。
+- 新增 Claude Agent 引导式安装与连接校验，`claude auth login` 替代误导性 `/login`：harness 的 provider 接入应内置前置检查与失败恢复路径。
+
+---
+
+> 原文 release：[sst/opencode v2.2.4](https://github.com/anomalyco/opencode/releases/tag/v2.2.4)
