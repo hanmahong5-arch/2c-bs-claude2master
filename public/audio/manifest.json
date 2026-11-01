@@ -1,6 +1,83 @@
 {
   "items": [
     {
+      "slug": "2026-11-01-blog-anthropic-news-policy",
+      "zh": true,
+      "en": false,
+      "title": "Policy — Anthropic 政策页汇总：外部评估者入驻、使用政策更新与前沿 AI 治理主",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-11-01"
+    },
+    {
+      "slug": "2026-11-01-blog-anthropic-news-safeguards",
+      "zh": true,
+      "en": false,
+      "title": "Safeguards — Anthropic 安全防护文章索引：从蒸馏攻击防御到 agent 安全框架，一",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-11-01"
+    },
+    {
+      "slug": "2026-11-01-blog-anthropic-news-security",
+      "zh": true,
+      "en": false,
+      "title": "Security — Anthropic 安全文章索引：从模型被滥用、蒸馏攻击到评测环境逃逸的真实案例",
+      "kind": "blogger",
+      "author": "Anthropic",
+      "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-11-01"
+    },
+    {
+      "slug": "2026-11-01-trending-baarai-artex",
+      "zh": true,
+      "en": false,
+      "title": "ARTEX — Go 写的 AI 自主渗透测试系统，近千星",
+      "kind": "trending",
+      "author": null,
+      "source": "BaaRai/ARTEX",
+      "tool": null,
+      "publishedAt": "2026-11-01"
+    },
+    {
+      "slug": "2026-11-01-trending-helixdb-helix-foundry",
+      "zh": true,
+      "en": false,
+      "title": "helix-foundry — 把公司数据连进来，让 agent 起草本体并载入图数据库",
+      "kind": "trending",
+      "author": null,
+      "source": "HelixDB/helix-foundry",
+      "tool": null,
+      "publishedAt": "2026-11-01"
+    },
+    {
+      "slug": "2026-11-01-trending-paipiange-nvzhuang",
+      "zh": true,
+      "en": false,
+      "title": "nvzhuang — 1407 张 AI 女装参考图集，配虚拟试穿网站，Go 项目一周破千星",
+      "kind": "trending",
+      "author": null,
+      "source": "paipiange/nvzhuang",
+      "tool": null,
+      "publishedAt": "2026-11-01"
+    },
+    {
+      "slug": "2026-11-01-trending-storytold-figcraft",
+      "zh": true,
+      "en": false,
+      "title": "figcraft — 纯 Rust 重写协作设计工作流，开源 Figma 替代方案",
+      "kind": "trending",
+      "author": null,
+      "source": "storytold/figcraft",
+      "tool": null,
+      "publishedAt": "2026-11-01"
+    },
+    {
       "slug": "2026-10-31-blog-anthropic-news-partnerships",
       "zh": true,
       "en": false,
@@ -23,6 +100,17 @@
       "publishedAt": "2026-10-31"
     },
     {
+      "slug": "2026-10-31-blog-latentspace-agents-prompt-people-using-agents-for-long-horizon",
+      "zh": true,
+      "en": true,
+      "title": "Agents Prompt People: Using Agents for Long-Horizon — Arca 用 agent 处理长达十天的财富管理任务，但交易仍由人拍板，核心是“",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-31"
+    },
+    {
       "slug": "2026-10-31-blog-latentspace-ainews-google-admits-ai-mode-hurts-search-revenue",
       "zh": true,
       "en": true,
@@ -30,6 +118,28 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-10-31"
+    },
+    {
+      "slug": "2026-10-31-blog-simonwillison-datasette-llm-0-1a9",
+      "zh": true,
+      "en": true,
+      "title": "datasette-llm 0.1a9 — datasette",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-10-31"
+    },
+    {
+      "slug": "2026-10-31-blog-simonwillison-how-we-took-over-chatgpt-accounts",
+      "zh": true,
+      "en": true,
+      "title": "How We Took Over ChatGPT Accounts — ChatGPT 沙箱被攻破：一个分享链接就能窃取登录用户私密数据",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-10-31"
     },
@@ -118,6 +228,17 @@
       "kind": "blogger",
       "author": "Anthropic",
       "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-10-30"
+    },
+    {
+      "slug": "2026-10-30-blog-hf-blog-nemotron-halloween",
+      "zh": true,
+      "en": false,
+      "title": "nemotron-halloween — Hugging Face 与 NVIDIA 的 Nemotron 万圣节主题博客",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
       "tool": null,
       "publishedAt": "2026-10-30"
     },
@@ -757,127 +878,6 @@
       "author": "Google DeepMind",
       "source": "Google DeepMind",
       "tool": null,
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-blog-latentspace-ainews-anthropic-files-for-2t-ipo-in-2",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Anthropic files for $2T IPO in 2 weeks: 1400% — Anthropic S",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-blog-latentspace-coding-from-the-himalayas-with-an-offline-ai",
-      "zh": true,
-      "en": true,
-      "title": "Coding From the Himalayas With an Offline AI Agent — 在喜马拉雅山麓断网写代码：作者用 OpenCode + Ollama + Qwe",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-blog-latentspace-how-anthropic-ships-claude-with-claude-separating-the",
-      "zh": true,
-      "en": true,
-      "title": "How Anthropic ships Claude with Claude: Separating the — Anthropic 工程与产品负责人拆解 Opus 5.5 发布，核心是把 ag",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-blog-latentspace-how-anthropic-ships-the-1-llm-in-the",
-      "zh": true,
-      "en": false,
-      "title": "How Anthropic ships the #1 LLM in the World safely: — Anthropic 平台工程负责人拆解 Claude 平台：如何把模型“大脑”与",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-blog-simonwillison-game-boy-color-on-my-conference-badge",
-      "zh": true,
-      "en": true,
-      "title": "Game Boy Color on My Conference Badge — GitHub Universe 大会胸牌是台彩色屏电脑，有人用 Gemini 让",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-blog-thezvi-anthropic-versus-anthropic",
-      "zh": true,
-      "en": true,
-      "title": "Anthropic Versus Anthropic — Zvi 逐条拆解 Dario 与批评者的公开交锋，判断 Anthropic 的安",
-      "kind": "blogger",
-      "author": "Zvi Mowshowitz",
-      "source": "Zvi Mowshowitz",
-      "tool": null,
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-claude-code-2-1-312",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.312 — 写文件前先读全文，钩子并发上限，模型名识别更宽松",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-codex-rust-v0-165-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.165.0 — 新增 GCP Vertex 提供商与默认记忆 v2，多后端会话路由更稳",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-gemini-cli-0-66-0",
-      "zh": true,
-      "en": false,
-      "title": "gemini-cli v0.66.0 — 工具调用分组改由调度器发出，UI 不再预判",
-      "kind": "changelog",
-      "author": null,
-      "source": "google-gemini/gemini-cli",
-      "tool": "gemini-cli",
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-openclaw-2026-9-35",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.9.35 — extended",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-opencode-2-2-0",
-      "zh": true,
-      "en": false,
-      "title": "opencode v2.2.0 — 插件可增量注入会话指令而不破坏 prompt 缓存，这是 agent harne",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
       "publishedAt": "2026-10-27"
     }
   ]
