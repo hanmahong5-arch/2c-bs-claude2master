@@ -1,0 +1,23 @@
+---
+slug: 2026-10-31-blog-simonwillison-how-we-took-over-chatgpt-accounts
+title: "How We Took Over ChatGPT Accounts — ChatGPT 沙箱被攻破：一个分享链接就能窃取登录用户私密数据"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/
+publishedAt: 2026-10-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "ChatGPT 沙箱被攻破：一个分享链接就能窃取登录用户私密数据"
+broadcast: "安全团队发现，ChatGPT 的网页预览沙箱可以被绕过：攻击者只要构造一个分享链接，已登录用户点开，私密数据就可能被窃取，甚至被代其操作。问题出在消息接收端没校验来源，以及白名单域名被当成脚本注入跳板。OpenAI 已修复并支付赏金。对国内做 agent 的团队来说，分享链接就是隐性攻击面，必须按不可信输入对待。"
+tags: [sandboxing, xss, content-security-policy, chatgpt]
+---
+
+- Parameter Labs 发现 ChatGPT HTML 预览沙箱存在逃逸链：MathLive 虚拟键盘的 postMessage 处理用了 innerHTML，任何沙箱 iframe 都能向父页面注入 HTML，进而插入无 sandbox 限制的新 iframe。含义：postMessage 接收端必须校验来源，innerHTML 是沙箱边界上的常见破口。
+- CSP 只放行少数域名，但 YouTube oEmbed 端点可反射 JavaScript 并执行，攻击者由此在 ChatGPT 页面拿到 JS 执行权，再调用 API 读取私密数据、经图片引用外传。含义：白名单域名本身可能成为脚本注入跳板，工具链的 CSP 审计不能只看域名数量。
+- 最终可构造一个 ChatGPT 分享 URL，任何已登录用户点开即被窃取数据或代其操作；OpenAI 已修复并支付 5000 美元赏金，作者认为对如此严重的漏洞偏低。含义：分享链接是 agent 产品的隐性攻击面，需按不可信输入对待。
+
+---
+
+> 原文：[How We Took Over ChatGPT Accounts](https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-31-blog-simonwillison-datasette-llm-0-1a9
+title: "datasette-llm 0.1a9 — datasette"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/31/datasette-llm/
+publishedAt: 2026-10-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "datasette-llm 小版本更新：Datasette Agent 现在自动继承 LLM 的默认模型，省去手动配置"
+broadcast: "Datasette 的智能代理插件出了个小更新，现在会自动读取大模型的默认设置，启动时不用再手动指定模型，一条命令就能跑起来。对想在本机试用代理的开发者来说，少了一个必填配置，上手更省事。作者说这只是过渡期的小修补，后面还有一批大升级在筹备，配置方式可能还会变，值得持续关注。"
+tags: [datasette, llm, datasette-agent, default-model]
+---
+
+- 插件现在会读取 LLM 的默认模型，因此启动 Datasette Agent 时不再需要显式指定 `-s plugins.datasette-agent.default_model`，一条 `uvx --with datasette-agent datasette content.db --internal internal.db` 即可跑起来。对开发者的含义：本地试用 agent 的启动成本进一步降低，少一个必填配置项。
+- 这次改动被作者定位为底层 datasette-llm 插件的一次小型用户体验改进，而非功能扩展。含义：工具链的易用性往往靠这类小修补累积，而非大版本。
+- 作者提到 Datasette Agent 还有一批大升级在筹备中，本次只是过渡期的小改动。含义：关注该项目的开发者可以预期后续会有更大变化，当前配置方式可能还会调整。
+
+---
+
+> 原文：[datasette-llm 0.1a9](https://simonwillison.net/2026/Oct/31/datasette-llm/) · 作者 Simon Willison

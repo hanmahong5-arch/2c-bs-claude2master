@@ -1,0 +1,23 @@
+---
+slug: 2026-10-31-blog-latentspace-agents-prompt-people-using-agents-for-long-horizon
+title: "Agents Prompt People: Using Agents for Long-Horizon — Arca 用 agent 处理长达十天的财富管理任务，但交易仍由人拍板，核心是“"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/arca/
+publishedAt: 2026-10-31
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Arca 用 agent 处理长达十天的财富管理任务，但交易仍由人拍板，核心是“agent 提示人”。"
+broadcast: "有团队用智能体处理长达十天的财富管理任务，但交易始终由人拍板，核心是让智能体去提示人。这值得关注，因为它说明长任务必须内置状态持久化，不能只靠一次会话；同时要把模型选择和评估握在自己手里，避免被托管框架锁死；高风险操作则要移出智能体决策，用确定性规则兜底。"
+tags: [agent-memory, custom-harness, human-in-the-loop, financial-services]
+---
+
+- **长周期任务需要持久记忆**：Arca 的 agent 任务可长达十天，涉及多次交接和决策点，因此自建记忆系统跟踪每个客户的进展、待办和责任人。对 agent 工具链的启示是：长任务编排必须内置状态持久化，而非依赖单次会话。
+- **自建 harness 以灵活换模型**：Arca 基于内部基准自动选择最佳模型（主要用 Claude），并因拥有 harness 而能随时更换供应商。这意味着开发者应把模型路由和评估层握在自己手里，避免被托管 agent 框架锁定。
+- **安全靠确定性护栏而非 agent 自觉**：交易和资金流动完全由人类顾问处理，agent 只做分析和提议；代码在沙箱中查询数据前会被转成严格格式并丢弃原代码。对开发者的含义是：高风险操作应移出 agent 决策范围，用确定性规则和格式校验兜底。
+
+---
+
+> 原文：[Agents Prompt People: Using Agents for Long-Horizon Financial Work](https://latent.space/p/arca/) · 作者 Latent Space

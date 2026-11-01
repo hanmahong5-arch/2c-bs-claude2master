@@ -1,0 +1,23 @@
+---
+slug: 2026-10-23-blog-latentspace-ai-is-getting-good-at-math-here-s
+title: "AI Is Getting Good at Math. Here’s Why. — AI 接连破解数学猜想，作者用「提示序列」模型解释哪些问题对 LLM 可解，以及"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/ai-is-getting-good-at-math/
+publishedAt: 2026-10-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "AI 接连破解数学猜想，作者用「提示序列」模型解释哪些问题对 LLM 可解，以及深度优先搜索加验证器如何改变解题方式。"
+broadcast: "AI 最近接连破解数学猜想，有人用提示序列模型解释：问题难度约等于最短提示长度的指数加上推导工作量，所以做 agent 该想的是怎么减少洞察步数，而不是单纯堆算力。人类解题是广度优先，模型是深度优先，一条路推到底，再靠并行和验证器剪枝，验证器因此成了关键组件。失败的尝试也别丢，可以当负提示回灌，帮模型少走弯路。"
+tags: [llm-math, agent-architecture, test-time-compute, automated-verification]
+---
+
+- 作者用 Kolmogorov 复杂度类比：问题难度约等于最短提示序列长度 k 的指数加上推导工作量 t，即 2^k + t。这意味着 agent 设计应关注减少所需「洞察步数」，而非单纯堆算力。
+- 人类解题是广度优先：浅尝多个方向、早期信号不足就放弃；LLM 是深度优先：单条轨迹推到底，配合并行 agent 和自动验证器剪枝。对工具链的含义是验证器成为关键组件，但它只能判断完成论证，无法评估半成品方向。
+- 失败尝试可作负提示回灌：drafter 根据模型先验和已失败路径生成 prompt，solver 并行探索，verifier 检查。这提示 agent 框架应把失败轨迹结构化沉淀，而非丢弃。
+
+---
+
+> 原文：[AI Is Getting Good at Math. Here’s Why.](https://latent.space/p/ai-is-getting-good-at-math/) · 作者 Latent Space

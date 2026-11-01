@@ -1,0 +1,23 @@
+---
+slug: 2026-10-22-blog-hf-blog-turning-database-grading-into-rl-rewards-post-training
+title: "Turning Database Grading into RL Rewards: Post-Training — Hugging Face 介绍 ThinkingBox：把数据库评分转成强化学习"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/microsoft/thinkingbox-training
+publishedAt: 2026-10-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 介绍 ThinkingBox：把数据库评分转成强化学习奖励，用于后训练 agent。"
+broadcast: "Hugging Face 介绍了一个叫 ThinkingBox 的做法，把数据库任务的评分结果直接当成强化学习的奖励信号，用来做 agent 的后训练，不再依赖人工标注或启发式打分。为什么值得关注？因为数据库任务由执行结果判定，天然可复现、可自动化，这种执行即验证的环境比开放式对话更适合当训练场。对国内开发者来说，优先选有确定性验证器的领域搭训练管线，能明显降低标注成本。"
+tags: [rl-training, agents, database, hugging-face]
+---
+
+- **核心做法**：ThinkingBox 把数据库任务的评分结果直接当作 RL 奖励信号，用于 agent 的后训练，而不是依赖人工标注或启发式打分。这意味着 agent 训练可以围绕可自动验证的任务闭环展开。
+- **任务形态**：文章聚焦数据库相关任务，评分由数据库执行结果判定，天然具备可复现、可自动化的特性。对工具链而言，这类“执行即验证”的环境比开放式对话更适合做 RL 训练场。
+- **工程含义**：把评分器接入 RL 流程，需要稳定的执行沙箱与奖励整形；对开发者来说，构建 agent 训练管线时，优先选择有确定性验证器的领域能显著降低标注成本。
+
+---
+
+> 原文：[Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox](https://huggingface.co/blog/microsoft/thinkingbox-training) · 作者 Hugging Face

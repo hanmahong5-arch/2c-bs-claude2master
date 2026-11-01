@@ -1,0 +1,23 @@
+---
+slug: 2026-10-26-blog-simonwillison-webframe-evaluated-as-a-scraper-and-a-sandbox
+title: "webframe: evaluated as a scraper and a sandbox — Jeff Lindsay 的 webframe 用系统浏览器把网页当程序跑，Si"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Oct/26/webframe-evaluation/
+publishedAt: 2026-10-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Jeff Lindsay 的 webframe 用系统浏览器把网页当程序跑，Simon 让 Claude 实测其抓取与沙箱能力"
+broadcast: "有个叫 webframe 的新工具，它直接调用系统自带的浏览器来跑网页程序，不打包浏览器引擎，体积很小，也不依赖 Playwright。对国内开发者来说，抓取脚本的分发成本能明显降低。Simon 还让 Claude 实际运行它，从抓取网页和沙箱工具两个角度做了评估，说明模型已经能独立试用工具并给出报告。"
+tags: [webframe, web-scraping, sandboxing, headless-browser]
+---
+
+- **原理**：webframe 用 Go 写在 glaze 之上，直接调用系统浏览器（macOS 的 WKWebView、Linux 的 WebKitGTK、Windows 的 WebView2），不打包浏览器引擎；把 `console.log()` 输出到 stdout、异常输出到 stderr。对工具链的含义：轻量替代 Playwright 依赖成为可能。
+- **定位**：Simon 把它类比自己的 shot-scraper javascript 工具，但体积更小、不依赖 Playwright。对开发者的含义：抓取脚本的分发成本可以显著降低。
+- **评估方式**：他让 Claude Opus 5.5 实际运行 webframe、搭建探索性原型，再从「沙箱工具」和「按 shot-scraper JavaScript 模式抓网页」两个角度评估。对 agent 的含义：模型可独立完成工具试用与报告，但结论需看报告本身。
+
+---
+
+> 原文：[webframe: evaluated as a scraper and a sandbox](https://simonwillison.net/2026/Oct/26/webframe-evaluation/) · 作者 Simon Willison

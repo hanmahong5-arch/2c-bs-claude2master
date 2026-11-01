@@ -1,0 +1,23 @@
+---
+slug: 2026-10-23-blog-latentspace-ainews-black-october
+title: "[AINews] Black October — 48 小时内密集爆出 PHP、GitLab、LiteLLM 等关键漏洞，AI 加"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/ainews-black-october/
+publishedAt: 2026-10-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "48 小时内密集爆出 PHP、GitLab、LiteLLM 等关键漏洞，AI 加速攻防，开发者该看什么"
+broadcast: "这两天安全圈不太平，短短四十八小时里，PHP 未认证远程代码执行、GitLab 满分漏洞、还有那个模型调用工具被植入密码窃取器，接连爆出来。对国内开发者来说，依赖链上的工具和包得赶紧升级、及时轮换密钥。更值得注意的是，攻击方已经开始用开源智能体框架批量撞库，防御这边也在用智能体做漏洞修复和验证，攻防都在加速。"
+tags: [ai-security, vulnerability-disclosure, agentic-tooling, supply-chain]
+---
+
+- 约 48 小时内集中出现多起严重披露：PHP 未认证 RCE、GitLab CVSS 10 漏洞（2014 年起版本受影响，19.5.1 修复）、LiteLLM 1.107.0 被植入密码窃取器。含义：依赖链上的工具与包需要建立快速升级与密钥轮换机制。
+- 微软将 ConnectWise 供应链攻击归因于 Storm-0940，该组织用开源 agentic 渗透框架 ARTEX 对 2250+ 个 M365 租户发起约每分钟 2900 次登录尝试，部分场景 3 小时内拿到特权访问。含义：agent 工具已被攻击方用于规模化操作。
+- 防御侧出现配套工具：Anthropic 前沿红队与 Theorem Labs 用 Claude 在数周内为 123 个开源库完成约 1.8 亿行机器校验证明；Cognition 开源漏洞修复 agent 插件，cve.now 聚合四个 CVE 源。含义：修复与验证环节正在被 agent 化。
+
+---
+
+> 原文：[[AINews] Black October](https://latent.space/p/ainews-black-october/) · 作者 Latent Space

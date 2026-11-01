@@ -1,0 +1,23 @@
+---
+slug: 2026-10-12-blog-anthropic-news-strengthening-our-defenses-against-distillation-attacks
+title: "Strengthening our defenses against distillation attacks — Anthropic 披露反蒸馏新防线：蒸馏攻击窃取数据量降九成，但代价是拒绝收入"
+source: "Anthropic"
+sourceUrl: https://www.anthropic.com/news/distillation-defenses
+publishedAt: 2026-10-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Anthropic"
+hook: "Anthropic 披露反蒸馏新防线：蒸馏攻击窃取数据量降九成，但代价是拒绝收入与用户改集成"
+broadcast: "Anthropic 最近披露了他们的反蒸馏新防线。简单说，蒸馏攻击者最想要的是模型的完整思考过程，而不是最终答案，所以新防线直接限制推理内容的流向，让窃取的数据量降了九成。但代价也很实在：拒绝收入、用户得改集成，比如新建接口账号不能再编辑历史上下文。对国内开发者和做 agent 的人来说，这意味着安全策略正在直接改变接口行为，暴露完整推理轨迹的设计本身就是攻击面。"
+tags: [distillation-attacks, model-safeguards, api-security, reasoning-traces]
+---
+
+- **蒸馏的核心目标是推理链**：Anthropic 称蒸馏者最想要的是 Claude 的完整思考过程，而非最终输出；早期把推理摘要化后，用其训练的小模型在 SWE-bench Verified 上从 80.4% 降到 71.8%。对开发者的含义是：暴露完整推理轨迹的 API 设计本身就是攻击面。
+- **攻击者转向主动提取并规模化**：摘要化后，攻击者改用“逐字输出此前推理”等提示绕过，并借助代理网络控制数十万虚假账号（曾一次管理超 2 万个）。含义是：单点防护规则会被快速绕过，需按请求意图而非单账号做检测。
+- **新防线限制推理流向**：preserved thinking 禁止 2026-08-31 后新建 API 账号编辑历史上下文，并阻止弱防护旧模型读取强模型推理。含义是：接入方需适配上下文不可编辑等约束，安全策略正直接改变 API 行为。
+
+---
+
+> 原文：[Strengthening our defenses against distillation attacks](https://www.anthropic.com/news/distillation-defenses) · 作者 Anthropic

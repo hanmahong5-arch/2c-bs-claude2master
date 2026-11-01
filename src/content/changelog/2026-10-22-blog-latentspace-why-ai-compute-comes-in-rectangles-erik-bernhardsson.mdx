@@ -1,0 +1,23 @@
+---
+slug: 2026-10-22-blog-latentspace-why-ai-compute-comes-in-rectangles-erik-bernhardsson
+title: "Why AI Compute Comes in Rectangles — Erik Bernhardsson, — Modal CEO 谈 GPU 算力为何不是矩形合同，以及 agent 沙箱如何"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/modal-d/
+publishedAt: 2026-10-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Modal CEO 谈 GPU 算力为何不是矩形合同，以及 agent 沙箱如何意外成为三分之一收入"
+broadcast: "聊一个挺有意思的观察：传统算力合同是固定显卡数配固定时长的矩形，可真实负载全天都在波动，于是有公司把几千家客户的需求池化，底层锁容量、上层按需切片。更值得关注的是，他们原本差点关停的沙箱产品，因为编程 agent 和强化学习的需求，现在已占约三分之一收入，说明 agent 执行环境正成为独立且快速增长的基础设施品类。"
+tags: [ai-infrastructure, gpu-compute, agent-sandbox, serverless]
+---
+
+- 传统算力合同是「固定 GPU 数 × 固定时长」的矩形，而真实负载全天波动；Modal 的做法是把数千客户的需求池化，在底层锁定容量、按需弹性切片。对 agent 工具链的含义：弹性供给能力直接决定上层应用能否按峰值外的真实用量付费。
+- 沙箱产品上线初期采用寥寥，团队一度讨论关停；coding agent、后台 agent 与强化学习带来新需求后，沙箱已占 Modal 约三分之一收入。含义：agent 执行环境是独立且快速增长的基础设施品类，而非附属功能。
+- 弹性依赖快速启动：可用 GPU 缓冲池、自研文件系统、进程 checkpoint 与 GPU 显存快照共同缩短新副本上线时间。含义：启动与恢复延迟已成为 agent 体验的一部分，属于基础设施层的核心指标。
+
+---
+
+> 原文：[Why AI Compute Comes in Rectangles — Erik Bernhardsson, Modal CEO](https://latent.space/p/modal-d/) · 作者 Latent Space

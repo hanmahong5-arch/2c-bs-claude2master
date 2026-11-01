@@ -1,0 +1,23 @@
+---
+slug: 2026-10-23-blog-hf-blog-does-your-model-run-on-aws-trainium-look
+title: "Does Your Model Run on AWS Trainium? Look It Up — Hugging Face 推出可查询模型能否在 AWS Trainium 上运行"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/torch-neuronx-model-support
+publishedAt: 2026-10-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 推出可查询模型能否在 AWS Trainium 上运行的索引，帮开发者避开踩坑。"
+broadcast: "Hugging Face 推出了一个可查询的索引，用来确认某个模型是否已经在 AWS Trainium 上得到支持，把能不能跑从试错变成可查。对国内开发者和 agent 工具链来说，这意味着选型阶段就能先筛掉不兼容的模型，减少无效的适配和调试成本；评估自研或开源模型上 Trainium 之前，也应该先核对支持状态，而不是默认移植可行。"
+tags: [aws-trainium, hugging-face, torch-neuronx, model-support]
+---
+
+- 文章介绍了一个可查询的索引，用来确认某个模型是否已在 AWS Trainium 上得到支持，把「能不能跑」从试错变成可查。对 agent 与工具链的含义：选型阶段就能先筛掉不兼容的模型，减少无效的适配与调试成本。
+- 该索引围绕 torch-neuronx 这一模型支持路径组织，说明 Trainium 上的模型可用性取决于对应的支持情况。对开发者的含义：评估自研或开源模型上 Trainium 前，应先核对支持状态，而不是默认移植可行。
+- 文章把「模型是否支持」做成可检索的信息，而非散落在文档与 issue 里。对工具链的含义：这类支持矩阵适合接入自动化选型与 CI 检查，让硬件适配成为可前置验证的一步。
+
+---
+
+> 原文：[Does Your Model Run on AWS Trainium? Look It Up](https://huggingface.co/blog/torch-neuronx-model-support) · 作者 Hugging Face
