@@ -1,0 +1,126 @@
+---
+slug: 2026-W45-agent-tooling-weekly
+title: "Agent 运行时走向脑手分离与硬边界"
+publishedAt: 2026-11-02
+weekOf: 2026-11-02
+authored: hybrid
+model: deepseek-chat
+readingMinutes: 10
+hook: "本周核心是 agent harness 把执行、权限、记忆拆成可独立加固的层，而非依赖模型自觉。"
+tags: [agent-harness, sandboxing, permissions, prompt-caching, session-state]
+---
+
+## 本周看点
+本周 changelog 密集落在 agent 运行时本身：Claude Code 给写入加恒定边界、OpenCode 把动态指令做成不破坏缓存的增量层、Codex 把权限与 token 账本持久化到会话，Anthropic 则在访谈中系统解释「脑与手分离」。同时模型侧 Gemini 4 Carbon 登顶却先限安全防御者，提醒榜单与可用性要分开看。
+
+## 逐条速览
+- **[Anthropic/GSA 合作]** (2 min) — 联邦及州地方政府采购 Claude 打四折，无最低消费，约 500 机构已用。 [链接](https://www.anthropic.com/news/expanding-partnership-gsa)
+- **[Hugging Face/LFM3]** (2 min) — Liquid AI 发布面向专用任务的小型多模态模型，强调按场景定制而非通用大模型。 [链接](https://huggingface.co/blog/LiquidAI/lfm3)
+- **[claude-code v2.1.312]** (3 min) — 写超大 CLAUDE.md 前须读全文，hook 并发上限 24，未知模型名走短系统提示。 [链接](https://github.com/anthropics/claude-code/releases/tag/v2.1.312)
+- **[gemini-cli v0.66.0]** (2 min) — 工具调用分组改由调度器统一发出，git 环境禁用交互式凭据提示。 [链接](https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0)
+- **[OpenAI/Check Point]** (1 min) — 用 Daybreak 加速漏洞情报到客户防护的转化，分析师保留把关。 [链接](https://openai.com/index/check-point-daybreak)
+- **[Latent Space/Anthropic 平台]** (3 min) — 平台工程负责人拆解 Managed Agents 如何把模型与沙箱解耦，并用 Rust 重写 Messages API。 [链接](https://latent.space/p/how_anthropic_ships_the_1_llm_in_the_world_safely_separating_the_brain_from_the_hands/)
+- **[opencode v2.2.0]** (3 min) — 插件可增量注入会话指令且不破坏 prompt 缓存，缓存 TTL 可按 provider/model 配置。 [链接](https://github.com/anomalyco/opencode/releases/tag/v2.2.0)
+- **[openclaw v2026.9.35]** (2 min) — 回补内存上限、更新兼容与网关响应三处长跑痛点。 [链接](https://github.com/openclaw/openclaw/releases/tag/v2026.9.35)
+- **[Hugging Face/NoveltyBench]** (2 min) — 讨论能否信任 LLM 判断研究想法新颖性，提示自动评审需专门基准。 [链接](https://huggingface.co/blog/allenai/novelty-bench)
+- **[codex rust-v0.165.0]** (2 min) — 新增 GCP Vertex 提供商与默认记忆 v2，修复中断后排队消息误重启。 [链接](https://github.com/openai/codex/releases/tag/rust-v0.165.0)
+- **[OpenAI/Retell]** (1 min) — 语音 agent 月处理 1 亿通电话，GPT-6 Astra 在其基准登顶，属厂商案例。 [链接](https://openai.com/index/retell-ai)
+- **[zeroclaw v0.8.7]** (2 min) — Wasmtime 与 TLS 安全补丁，预编译插件须重编译，HTTP 默认超时改为 10s。 [链接](https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.7)
+- **[Simon Willison/胸牌]** (1 min) — 有人用 Gemini 让 GitHub Universe 胸牌跑起 Game Boy 模拟器。 [链接](https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge/)
+- **[Latent Space/Opus 5.5]** (3 min) — 拆解 Opus 5.5 发布：跨轮保留 thinking、sandbox 按需创建、凭证不进 sandbox。 [链接](https://latent.space/p/opus55/)
+- **[Zvi/Anthropic 交锋]** (2 min) — 逐条分析 Dario 与批评者关于安全承诺与商业动作的争论。 [链接](https://thezvi.substack.com/p/anthropic-versus-anthropic)
+- **[OpenAI/Oracle]** (1 min) — Oracle 业务应用与 agent 将进入 ChatGPT，双向嵌入。 [链接](https://openai.com/index/oracle-apps-in-chatgpt)
+- **[Latent Space/Anthropic S-1]** (3 min) — 营收暴涨、Q2 经营盈利，但 48% 收入经云渠道、算力承诺是硬约束。 [链接](https://latent.space/p/ainews-anthropic-s1/)
+- **[DeepMind/Genie 4]** (1 min) — 新一代世界模型主打实时模拟真实感，原文细节极少。 [链接](https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/)
+- **[Latent Space/离线编码]** (3 min) — 用 OpenCode + Ollama + Qwen3.5 9B 在断网环境完成读文件、改代码、跑测试。 [链接](https://latent.space/p/offline-coding/)
+- **[OpenAI/未来企业]** (2 min) — 把 AI 进入组织的方式分为层级之下、个人之旁、人与人之间。 [链接](https://openai.com/index/the-future-of-the-firm)
+- **[opencode v1.19.5]** (1 min) — TUI worker 请求失败返回错误而非无限挂起。 [链接](https://github.com/anomalyco/opencode/releases/tag/v1.19.5)
+- **[OpenAI/ServiceNow]** (1 min) — 模型与 agent 嵌入 ServiceNow，工作流进入 ChatGPT 与 Codex。 [链接](https://openai.com/index/openai-servicenow-partnership-expansion)
+- **[Interconnects/AA v5]** (2 min) — 拆解 Artificial Analysis v5 单一分数的取舍与私有基准的代价。 [链接](https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers)
+- **[goose v1.57.0]** (2 min) — Allowlist 强制 HTTPS 并校验重定向，策略失败即阻断，取消时终止进程树。 [链接](https://github.com/aaif-goose/goose/releases/tag/v1.57.0)
+- **[OpenAI/Legora]** (1 min) — 法律工作 agentic 操作系统，组合 ChatGPT 与 Codex 加速合同分析。 [链接](https://openai.com/index/legora)
+- **[Simon Willison/Octoverse]** (2 min) — 每月合并 PR 达 2.2 亿，增长集中在下半年，瓶颈转向评审与合并。 [链接](https://simonwillison.net/2026/Oct/28/github-octoverse-2026/)
+- **[Anthropic/AI for Science]** (2 min) — 免费额度扩展到基金会与研究机构，并与 HHMI 共建硬件操作标准 MHS。 [链接](https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions)
+- **[DeepMind/Gemini 4 Carbon]** (1 min) — 下一代前沿模型发布公告，正文为空，无法评估能力。 [链接](https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/)
+- **[Zvi/Anthropic S-1]** (2 min) — 80 亿美元亏损多为会计口径，治理权集中创始人，算力承诺远超现金。 [链接](https://thezvi.substack.com/p/anthropic-files-its-s-1)
+- **[Latent Space/Supabase]** (2 min) — 为什么 agent 偏爱 Supabase：去 Docker、声明式 schema、计算贴近数据库。 [链接](https://latent.space/p/supabase/)
+- **[Latent Space/招聘]** (2 min) — Anthropic 停掉传统编程面试，称 Claude 更擅长这类题；同期汇总 Genie 4。 [链接](https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure/)
+- **[Hugging Face/Nemotron 转录]** (1 min) — 英伟达发布可提示的多语种转录模型与 Granary v2 数据管线。 [链接](https://huggingface.co/blog/nvidia/nemotron-transcribe-granary)
+- **[Simon Willison/氛围游戏]** (2 min) — 认为 2026 年 10 月是拐点，Opus 5.5 用模糊提示做出可玩的浏览器游戏。 [链接](https://simonwillison.net/2026/Oct/28/vibe-game-development/)
+- **[opencode process-daemon-v0.3.2]** (1 min) — @opencode/pty 升到 0.3.2，协议版本为 7。 [链接](https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.3.2)
+- **[Simon Willison/Ted Sanders]** (1 min) — OpenAI 模型命名逻辑：版本号编码发布顺序、家族与进步幅度。 [链接](https://simonwillison.net/2026/Oct/28/ted-sanders/)
+- **[Simon Willison/Terk Terkowitz]** (1 min) — 亚马逊工程领导层：AI 帮不上工作是发现而非失败，应记录上报。 [链接](https://simonwillison.net/2026/Oct/28/terk-terkowitz/)
+- **[Latent Space/Gemini 4 Carbon]** (2 min) — Carbon 登顶 AA v5 但先限网络安全防御者，幻觉率升至 11%。 [链接](https://latent.space/p/ainews-gemini-4-carbon/)
+- **[Hugging Face/Mistral Large 4]** (1 min) — Mistral Large 4 以 Le Chonk 代号上线 Hugging Face。 [链接](https://huggingface.co/blog/mistral-large4)
+- **[OpenAI/Model Spec]** (2 min) — 更新 Model Spec，用五项核心价值约束更强模型的判断与服从边界。 [链接](https://openai.com/index/updated-model-spec)
+- **[Hugging Face/Granite Switch]** (1 min) — IBM 主张模型应像软件一样可增量更新与回滚。 [链接](https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1)
+- **[opencode v2.2.2]** (2 min) — 图像生成默认开启，新会话可一键选 worktree，引用注释统一。 [链接](https://github.com/anomalyco/opencode/releases/tag/v2.2.2)
+- **[Simon Willison/Ben Hylak]** (1 min) — 吐槽所有产品都该是无头 MCP，唯独自家例外，点出工具链接口双标。 [链接](https://simonwillison.net/2026/Oct/29/ben-hylak/)
+- **[openclaw v2026.10.9]** (2 min) — 补运行时依赖，工作区限制覆盖 Gateway 工具，更新回滚更安全。 [链接](https://github.com/openclaw/openclaw/releases/tag/v2026.10.9)
+- **[codex rust-v0.166.0]** (2 min) — 新增 queue --resume，恢复线程保留审批与 reasoning token 计数。 [链接](https://github.com/openai/codex/releases/tag/rust-v0.166.0)
+- **[Hugging Face/AnySpeechRecognizer]** (2 min) — 两个开源模型可在苹果设备本地跑语音识别与决策。 [链接](https://huggingface.co/blog/anydecisionmodel)
+- **[openclaw v2026.9.36]** (2 min) — LTS 线补更新回滚与工作区限制，对不可信输入统一设上限。 [链接](https://github.com/openclaw/openclaw/releases/tag/v2026.9.36)
+- **[OpenAI/Credit Saison]** (1 min) — 信用卡公司试点 ChatGPT 企业版算出 954% ROI 并全公司推广。 [链接](https://openai.com/index/credit-saison)
+- **[opencode process-daemon-v0.4.0]** (1 min) — @opencode/pty 发布 0.4.0，协议版本仍为 7。 [链接](https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.4.0)
+- **[OpenAI/失准检测]** (2 min) — 用分层监控检测前沿模型失准与未授权 agent 行为，告警需能触发动作。 [链接](https://openai.com/index/how-we-detect-frontier-model-misalignment)
+- **[opencode v2.2.1]** (2 min) — /goal 让会话持续到 reviewer 确认完成，新增 opt-in 图像生成工具与 idle hook。 [链接](https://github.com/anomalyco/opencode/releases/tag/v2.2.1)
+- **[opencode process-daemon-v0.3.3]** (1 min) — @opencode/pty 0.3.3，协议版本 7，包版本与协议号分离。 [链接](https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.3.3)
+- **[Zvi/AI #192]** (2 min) — Anthropic 递交 S-1，Gemini 4 Carbon 先发公告后开放，红队经第三方漏洞攻入 Slack。 [链接](https://thezvi.substack.com/p/ai-192-anthropic-is-going-public)
+- **[Latent Space/Elorian]** (2 min) — 前沿模型在 DecoyCount 数数基准集体不及格，视觉推理需单独评测。 [链接](https://latent.space/p/elorian/)
+- **[Simon Willison/Spawn]** (2 min) — 每月 300 万美元 token 让 agent 自主开发游戏，一小时没发布算最高级事故。 [链接](https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/)
+- **[Hugging Face/ProtoStar]** (1 min) — 把公共资助科研成果整理成 AI 可直接使用的数据。 [链接](https://huggingface.co/blog/announcing-project-protostar)
+- **[Simon Willison/API credits]** (1 min) — OpenAI 跟进 Anthropic，把 ChatGPT 订阅额度变成等额 API credits。 [链接](https://simonwillison.net/2026/Oct/29/api-credits/)
+- **[OpenAI/Ropes & Gray]** (1 min) — 律所用 OpenAI 做交易尽调，律师仍逐份复核文件与报告。 [链接](https://openai.com/index/ropes-gray-ai-diligence)
+- **[GitHub/cadcraft]** (1 min) — 纯 Rust 实现的开源 AutoCAD 风格 CAD 应用，7k+ star。 [链接](https://github.com/storytold/cadcraft)
+- **[OpenClaw/会话控制器]** (2 min) — 区分六种会话状态，取消请求不等于取消完成，不按 key 重查后继。 [链接](https://docs.openclaw.ai/concepts/session-controller)
+- **[Latent Space/CODE 大会]** (2 min) — 汇总 CODE 大会三大主题、Mistral Large 4 开源权重与前沿监控动态。 [链接](https://latent.space/p/ainews-building-aie-code-the-top-coding-agent-conference/)
+- **[GitHub/cleanyourtv]** (1 min) — 通过 Wi-Fi 精简 Android TV 并打造 Apple TV 风格首页。 [链接](https://github.com/Gathin23/cleanyourtv)
+- **[OpenClaw/运行时 profile]** (2 min) — AOT 构建不等于禁用解释执行，执行模式是进程级不可变契约。 [链接](https://docs.openclaw.ai/concepts/runtime-profiles)
+- **[Anthropic/公告汇总]** (2 min) — Opus 5.5 运行成本比 Opus 5 低 40%，Haiku 5.5 面向高并发子任务。 [链接](https://www.anthropic.com/news/announcements)
+- **[Interconnects/开源与网安]** (2 min) — 复盘开源模型网络风险预测，认为灾难性预测正被现实证伪。 [链接](https://www.interconnects.ai/p/was-i-wrong-about-open-models-and)
+- **[opencode v2.2.3]** (2 min) — 可复用 Claude Code 登录与模型，长会话渲染减负，权限按 MCP/技能/插件拆分。 [链接](https://github.com/anomalyco/opencode/releases/tag/v2.2.3)
+- **[GitHub/DeepInfer]** (1 min) — DeepSeek 官方开源大模型推理框架，2.4 万 star。 [链接](https://github.com/deepseek-ai/DeepInfer)
+- **[opencode v2.2.4]** (2 min) — 桌面终端改为会话级持久 PTY，agent 可发布 HTML 产物。 [链接](https://github.com/anomalyco/opencode/releases/tag/v2.2.4)
+- **[Zvi/教育 #22]** (2 min) — 记者亲述把女儿送进烂校八年，追问反馈渠道与退出机制。 [链接](https://thezvi.substack.com/p/childhood-and-education-22-voice)
+- **[Hugging Face/nemotron-halloween]** (1 min) — 万圣节主题博客，正文为空，无法摘要。 [链接](https://huggingface.co/blog/nvidia/nemotron-halloween)
+- **[opencode v2.2.5]** (2 min) — 压缩缓冲支持百分比，bash 工具按 shell 执行，edit 失败给出最近行。 [链接](https://github.com/anomalyco/opencode/releases/tag/v2.2.5)
+- **[Anthropic/特性页]** (2 min) — 三条案例：Claude 参与刚果埃博拉应对、Claude Code 诞生内幕、火星车 AI 规划行驶。 [链接](https://www.anthropic.com/news/features)
+- **[claude-code v2.1.314]** (2 min) — 新增 blockWritesOutsideWorkingDirectories，网关上游支持按 IdP 组路由。 [链接](https://github.com/anthropics/claude-code/releases/tag/v2.1.314)
+- **[OpenAI/青少年保护]** (1 min) — 发布社区安全报告，加强暴力预防并收紧青少年保护。 [链接](https://openai.com/index/community-safety-report-and-new-protections-for-teens)
+- **[GitHub/solidcraft]** (1 min) — 纯 Rust 参数化 3D CAD，桌面、Web 与 MCP 三端通吃。 [链接](https://github.com/tangency-labs/solidcraft)
+- **[Simon Willison/nesformer]** (2 min) — 把 NES 6502 模拟器训练进 Qwen3.5-4B 权重，能慢速跑马里奥。 [链接](https://simonwillison.net/2026/Oct/30/nesformer/)
+- **[GitHub/gpu-unlock]** (1 min) — 解锁 GeForce 20/30/40 系被限制的张量吞吐，最高 2 倍。 [链接](https://github.com/Zagitta/gpu-unlock)
+- **[OpenAI/robots.txt]** (1 min) — 将遵循 robots.txt 中共享的 AI 训练偏好信号。 [链接](https://openai.com/index/helping-websites-express-ai-training-preferences)
+- **[OpenAI/合理使用]** (1 min) — 汇编创作者与学者法庭意见，论证合理使用支撑 AI 训练。 [链接](https://openai.com/index/fair-use-benefits-everyone)
+- **[claude-code v2.1.316]** (2 min) — 子代理努力级别可独立配置，网关策略支持 layered 合并，新增输入标签。 [链接](https://github.com/anthropics/claude-code/releases/tag/v2.1.316)
+- **[GitHub/deckcraft]** (1 min) — 纯 Rust 重写 PowerPoint，开源幻灯片工具获 4.4k 星。 [链接](https://github.com/storytold/deckcraft)
+- **[GitHub/net-merge]** (1 min) — 把 Wi-Fi、以太网、手机热点合并成一条链路。 [链接](https://github.com/net-merge/net-merge)
+- **[Simon Willison/datasette-llm]** (1 min) — Datasette Agent 自动继承 LLM 默认模型，启动少一个必填配置。 [链接](https://simonwillison.net/2026/Oct/31/datasette-llm/)
+- **[GitHub/craft-launcher]** (1 min) — Rust 写的 Craft 应用启动器，4.3k 星。 [链接](https://github.com/storytold/craft-launcher)
+- **[Latent Space/谷歌 AI Mode]** (2 min) — 谷歌承认 AI Mode 查询变现更差，搜索收入跌 15%；Anthropic 改订阅档位。 [链接](https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/)
+- **[Simon Willison/ChatGPT 沙箱]** (2 min) — 分享链接即可窃取登录用户数据，postMessage 与 CSP 白名单成破口。 [链接](https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/)
+- **[Anthropic/合作]** (2 min) — GSA 四折、Cognizant 培训 3 万人、阿尔伯塔省用 Claude Code 审查系统。 [链接](https://www.anthropic.com/news/partnerships)
+- **[GitHub/horizon]** (1 min) — 用 Rust 重写 Minecraft Java 版，281 个差分测试对齐原版。 [链接](https://github.com/horizon-rust/horizon)
+- **[Latent Space/Arca]** (2 min) — 十天期财富管理任务，自建记忆与 harness，交易仍由人拍板。 [链接](https://latent.space/p/arca/)
+- **[GitHub/folkbench]** (1 min) — Rust 写的 AI API 中转站评测与切换工具，实测可用率、延迟和价格。 [链接](https://github.com/Folkbench/folkbench)
+- **[Anthropic/产品]** (2 min) — Agent Skills 捐给 Agentic AI Foundation，70 多平台接入；按行业推连接器与合规基建。 [链接](https://www.anthropic.com/news/product)
+- **[Anthropic/政策]** (2 min) — 向 METR 开放近似员工级访问，更新 Usage Policy 与 RSP 3.0。 [链接](https://www.anthropic.com/news/policy)
+- **[GitHub/helix-foundry]** (1 min) — 连接企业数据，让 agent 起草本体并载入图数据库。 [链接](https://github.com/HelixDB/helix-foundry)
+- **[Anthropic/安全]** (2 min) — 披露评测环境逃逸、Firefox 22 漏洞与三家实验室蒸馏行动。 [链接](https://www.anthropic.com/news/security)
+- **[Anthropic/防护]** (2 min) — 蒸馏率降低 90% 以上，企业版数据驻留客户云，计划与 METR 独立审查。 [链接](https://www.anthropic.com/news/safeguards)
+- **[GitHub/figcraft]** (1 min) — 纯 Rust 重写协作设计工作流，开源 Figma 替代方案。 [链接](https://github.com/storytold/figcraft)
+- **[GitHub/nvzhuang]** (1 min) — 1407 张 AI 女装参考图集配虚拟试穿站，可配置多家图像模型。 [链接](https://github.com/paipiange/nvzhuang)
+- **[GitHub/ARTEX]** (1 min) — Go 写的 AI 自主渗透测试系统。 [链接](https://github.com/BaaRai/ARTEX)
+
+## 本周实测
+挑 claude-code v2.1.314 的写入边界做本地复现：在项目根目录建 `outside/` 与 `src/`，启动 `claude` 后要求它把 `src/a.txt` 内容写入 `../outside/b.txt`。预期看到 Write 工具被 `permissions.blockWritesOutsideWorkingDirectories` 直接拒绝，即使切到 bypass 模式也不放行；再让它写 `src/b.txt` 应成功。随后在 `.claude/settings.json` 里把该开关设为 false 重跑，对比行为差异，即可确认这是工具级恒定约束而非提示词约束。
+
+## 设计趋势
+本周最清晰的贯穿线是「权限与状态从模型自觉下沉为运行时契约」。证据有三：claude-code v2.1.312 要求写超大文件前先读全文，v2.1.314 又把工作目录外写入做成所有权限模式下都拒绝的恒定约束；codex v0.166.0 在 resume/fork 时保留已确认的审批与 reasoning token 计数，把权限与账本变成可持久化会话状态；opencode v2.2.0 把动态指令做成增量条目而非重写系统提示，避免缓存失效。对 harness 设计者的含义是：边界要写在工具与调度层，且状态要能跨恢复存活，不能指望模型每轮重新遵守。
+
+## 编辑没选它的原因
+本周刻意没展开两条：DeepMind 的 Gemini 4 Carbon 发布公告正文为空，除标题外无能力、评测或开放方式，只能等原文补全；Hugging Face 的 nemotron-halloween 同样抓取不到正文，无法判断是否涉及模型细节。另有若干纯文档或小版本补丁（如 opencode process-daemon 的 0.3.2/0.3.3/0.4.0 三次协议号不变的发布）只在速览保留一行，不单独成段。
+
+---
+
+> 本周报由 LLM 起草、编辑润色（hybrid）。本草稿走 PR 审核流程，merge 前编辑会校稿。
