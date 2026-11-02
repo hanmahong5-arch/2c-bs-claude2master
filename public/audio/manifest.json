@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "slug": "2026-11-02-trending-ruoji6-artex",
+      "zh": true,
+      "en": false,
+      "title": "ARTEX — Go 编写的 ARTEX 开源版持续维护，近千星关注",
+      "kind": "trending",
+      "author": null,
+      "source": "RuoJi6/ARTEX",
+      "tool": null,
+      "publishedAt": "2026-11-02"
+    },
+    {
+      "slug": "2026-11-02-trending-storytold-soundcraft",
+      "zh": true,
+      "en": false,
+      "title": "soundcraft — 用纯 Rust 重写 Pro Tools，开源 DAW 新项目迅速走红",
+      "kind": "trending",
+      "author": null,
+      "source": "storytold/soundcraft",
+      "tool": null,
+      "publishedAt": "2026-11-02"
+    },
+    {
       "slug": "2026-11-01-blog-anthropic-news-policy",
       "zh": true,
       "en": false,
@@ -30,6 +52,28 @@
       "kind": "blogger",
       "author": "Anthropic",
       "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-11-01"
+    },
+    {
+      "slug": "2026-11-01-blog-simonwillison-if-in-doubt-delete-the-uv-lock-file",
+      "zh": true,
+      "en": true,
+      "title": "If in doubt, delete the uv.lock file — 升级 Python 3.15 后 uv 依赖报错，作者的经验是：先删 uv.lo",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-11-01"
+    },
+    {
+      "slug": "2026-11-01-blog-simonwillison-quoting-kyle-kingsbury",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Kyle Kingsbury — Kyle Kingsbury 指出 LLM 正在侵蚀对文档、软件与厂商的信任，成",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
       "tool": null,
       "publishedAt": "2026-11-01"
     },
@@ -835,50 +879,6 @@
       "source": "block/goose",
       "tool": "goose",
       "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-opencode-1-19-5",
-      "zh": true,
-      "en": false,
-      "title": "opencode v1.19.5 — TUI worker 请求失败不再挂起，调用方能拿到错误",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-opencode-process-daemon-v0-3-2",
-      "zh": true,
-      "en": false,
-      "title": "opencode process-daemon-v0.3.2 — opencode",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-27-blog-anthropic-news-expanding-our-partnership-with-gsa-to-bring-claude",
-      "zh": true,
-      "en": true,
-      "title": "Expanding our partnership with GSA to bring Claude to — Anthropic 与 GSA 扩大合作，政府全层级采购 Claude 打四折，",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-10-27"
-    },
-    {
-      "slug": "2026-10-27-blog-deepmind-genie-4-a-new-generation-of-world-simulation",
-      "zh": true,
-      "en": true,
-      "title": "Genie 4: A new generation of world simulation — DeepMind 发布 Genie 4 世界模型，主打实时模拟的真实感，值得关注",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-10-27"
     }
   ]
 }
