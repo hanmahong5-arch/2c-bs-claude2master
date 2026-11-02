@@ -1,0 +1,23 @@
+---
+slug: 2026-11-01-blog-simonwillison-if-in-doubt-delete-the-uv-lock-file
+title: "If in doubt, delete the uv.lock file — 升级 Python 3.15 后 uv 依赖报错，作者的经验是：先删 uv.lo"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/
+publishedAt: 2026-11-01
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "升级 Python 3.15 后 uv 依赖报错，作者的经验是：先删 uv.lock 再重跑"
+broadcast: "升级到新版 Python 后，用 uv 跑测试突然报依赖构建失败，作者的经验很简单：先把本地那个被忽略的 lock 文件删掉，再重跑一次，问题通常就没了。原因是这个本地生成的锁文件会把依赖钉在没有新版解释器支持包的旧版本上。对国内做 agent 自动跑测试的人来说，这提醒我们，遇到这类报错可以先清理本地 lock 再重试，成本很低，不必急着改依赖声明。"
+tags: [uv, python, dependency-management, til]
+---
+
+- 作者的项目多为库，本不该提交 uv.lock；但 `uv run pytest` 会留下被 .gitignore 忽略的本地 lock 文件，它可能把依赖钉在没有 Python 3.15 wheel 的旧版本上。含义：本地生成的 lock 文件会悄悄污染工具链行为，需要纳入排查清单。
+- 文中实例：`watchfiles==1.1.1` 构建失败，报错指出配置的解释器版本 3.15 高于 PyO3 支持上限 3.14。含义：解释器升级与原生扩展的兼容窗口错位，是 agent 自动跑测试时常见的假故障源。
+- 处理方式很直接：删掉该文件后重跑 `uv run pytest`，问题通常消失。含义：对自动化脚本而言，可把“清理本地 lock 再重试”作为低成本的一步，而非直接改依赖声明。
+
+---
+
+> 原文：[If in doubt, delete the uv.lock file](https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/) · 作者 Simon Willison

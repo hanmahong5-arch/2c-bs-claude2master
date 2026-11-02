@@ -217,7 +217,9 @@
     "storytold/figcraft",
     "HelixDB/helix-foundry",
     "paipiange/nvzhuang",
-    "BaaRai/ARTEX"
+    "BaaRai/ARTEX",
+    "storytold/soundcraft",
+    "RuoJi6/ARTEX"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -343,7 +345,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-01",
+    "anthropic-engineering": "2026-11-02",
     "claude-code-docs": "2026-10-30",
     "openai-codex-blog": "2026-10-30",
     "openclaw-concepts": "2026-10-30",
@@ -761,7 +763,9 @@
       "https://simonwillison.net/2026/Oct/31/datasette-llm/",
       "https://simonwillison.net/2026/Oct/26/jason-koebler/",
       "https://simonwillison.net/2026/Oct/26/webframe-evaluation/",
-      "https://simonwillison.net/2026/Oct/25/seam-cutter/"
+      "https://simonwillison.net/2026/Oct/25/seam-cutter/",
+      "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
+      "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1720,21 +1724,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-01",
+    "simonwillison": "2026-11-02",
     "lilianweng": "2026-10-30",
-    "latentspace": "2026-11-01",
-    "interconnects": "2026-11-01",
-    "karpathy": "2026-10-30",
-    "raschka": "2026-10-30",
-    "eugeneyan": "2026-10-30",
+    "latentspace": "2026-11-02",
+    "interconnects": "2026-11-02",
+    "karpathy": "2026-11-02",
+    "raschka": "2026-11-02",
+    "eugeneyan": "2026-11-02",
     "chiphuyen": "2026-10-30",
     "oneusefulthing": "2026-11-01",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-01",
+    "openai-news": "2026-11-02",
     "deepmind": "2026-11-01",
     "hf-blog": "2026-11-01",
-    "anthropic-news": "2026-11-01",
+    "anthropic-news": "2026-11-02",
     "steipete": "2026-11-01",
     "openclaw-blog": "2026-11-01"
   },
