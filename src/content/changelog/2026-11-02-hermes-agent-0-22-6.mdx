@@ -1,0 +1,23 @@
+---
+slug: 2026-11-02-hermes-agent-0-22-6
+title: "hermes-agent v0.22.6 — 776 个 PR 汇总成稳定版，含多项影响 agent 控制面的改动"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.6
+publishedAt: 2026-11-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "776 个 PR 汇总成稳定版，含多项影响 agent 控制面的改动"
+broadcast: "一个叫 Hermes 的智能体框架发布了稳定版，把七百多个改动汇总到一起。这次最值得国内开发者注意的是它给智能体加了几个控制点：可以在调用模型前直接拦下一轮对话，可以单独重置模型选择而不丢上下文，还能从桌面面板锁定技能写入。对做智能体的人来说，这意味着权限边界和会话状态开始被当成正经问题来设计了。"
+insight: "这次 v0.22.6 值得现有用户升级：新增的 pre_llm_call 钩子把拦截点从工具层前移到推理前，如果你已有依赖工具层校验的 hook 配置，建议评估是否迁移到新钩子；/model reset 让会话与模型选择解耦，中途切换不再丢上下文，对多模型切换场景是实打实的收益。按技能写锁则给了自主写入一个细粒度权限边界。摘要未涉及代理或网络层改动，国内走 newapi.lurus.cn 的用户按现有方式升级即可。"
+tags: [agent-harness, hooks, session-state, permissions]
+---
+
+- 新增 `pre_llm_call` 钩子，可在推理前阻断一轮对话：harness 需要在调用模型前预留可插拔的拦截点，而不是只在工具层做校验。
+- 新增 `/model reset`，清除会话的模型固定但保留历史：会话状态与模型选择应解耦，便于中途切换而不丢上下文。
+- 新增按技能写锁，可从 Desktop Capabilities 面板锁定：自主写入需要细粒度权限边界，防止 agent 自行改写自身能力配置。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.22.6](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.6)

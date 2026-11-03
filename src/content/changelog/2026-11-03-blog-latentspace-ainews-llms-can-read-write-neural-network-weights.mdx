@@ -1,0 +1,23 @@
+---
+slug: 2026-11-03-blog-latentspace-ainews-llms-can-read-write-neural-network-weights
+title: "[AINews] LLMs can read & write neural network weights: — LLM 直接读写神经网络权重，绕过写代码训练，RSI 能力从 0 到 1"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/
+publishedAt: 2026-11-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "LLM 直接读写神经网络权重，绕过写代码训练，RSI 能力从 0 到 1"
+broadcast: "最近有篇论文提出，让强模型直接读取并修改弱模型的权重，能判断权重功能、按失败轨迹修 bug，甚至从零写出完整权重并击败独立训练的模型。这意味着 agent 的优化对象从代码层下沉到参数层，工具链需要权重级读写和验证接口。不过它目前只在简单游戏和强化学习策略上验证，短期内还是窄场景工具。"
+tags: [weight-space-programming, mechanistic-interpretability, recursive-self-improvement, agent-tooling]
+---
+
+- 论文让强模型直接读取并编辑弱模型的权重：能判断权重功能、按失败轨迹一步修 bug、50 步内朝目标改进，甚至一次性从零写出完整权重并击败独立训练的模型。含义：agent 的优化对象从代码层下沉到参数层，工具链需要权重级读写与验证接口。
+- 作者把这一能力定位为机械可解释性的变体，目前只在简单游戏和 RL 策略上验证，尚难扩展到更复杂任务。含义：短期内它是窄场景工具，不宜当作通用自动研究替代品。
+- 文章将其与 Karpathy 八个月前的 autoresearch 对照：后者靠写 PyTorch/JAX、跑算力、看 loss 曲线，新方法因效率显著会立刻被投入使用和探索。含义：递归自我改进循环里少了一层人工编码环节，评测与安全审计需前置。
+
+---
+
+> 原文：[[AINews] LLMs can read & write neural network weights: "Weight Space Programming" cuts Autoresearch out of the RSI loop](https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/) · 作者 Latent Space

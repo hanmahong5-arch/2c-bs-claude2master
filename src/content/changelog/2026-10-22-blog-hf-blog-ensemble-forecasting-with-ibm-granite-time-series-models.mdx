@@ -1,0 +1,23 @@
+---
+slug: 2026-10-22-blog-hf-blog-ensemble-forecasting-with-ibm-granite-time-series-models
+title: "Ensemble forecasting with IBM Granite time-series models — IBM 在 Hugging Face 发布 Granite 时序模型集成预测方法"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1
+publishedAt: 2026-10-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "IBM 在 Hugging Face 发布 Granite 时序模型集成预测方法，讲怎么把多个预测器组合起来提升精度。"
+broadcast: "IBM 在 Hugging Face 上发布了 Granite 时序模型的集成预测方法，讲的是把多个模型的预测结果组合起来，而不是只靠单一模型。对国内开发者来说，这些模型可以直接从 Hub 拉取接入自己的预测流水线；对做 agent 的人来说，多模型投票融合可以做成可复用的编排层，但时序预测这类专用小模型仍要跟大模型编排分开考虑。"
+tags: [time-series, ensemble-forecasting, ibm-granite, hugging-face]
+---
+
+- 文章介绍 IBM Granite 时序模型的**集成预测（ensemble forecasting）**做法：把多个模型的预测结果组合，而不是依赖单一模型。对 agent 工具链的含义是，时序预测这类任务可以把「多模型投票/融合」做成可复用的编排层。
+- 内容围绕 IBM 在 Hugging Face 上发布的 Granite 时序模型系列展开，属于模型卡/博客形态的发布说明。对开发者的含义是，可以直接从 Hub 拉取这些模型接入自己的预测流水线。
+- 文章聚焦时序预测这一具体场景，而非通用 LLM 能力。对 agent 设计的含义是，专用小模型 + 集成策略在结构化数值预测上仍是独立的一层，需要与 LLM 编排分开考虑。
+
+---
+
+> 原文：[Ensemble forecasting with IBM Granite time-series models](https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1) · 作者 Hugging Face

@@ -1,0 +1,23 @@
+---
+slug: 2026-10-21-blog-hf-blog-how-specializing-the-vocabulary-of-slms-can-cut
+title: "How Specializing the Vocabulary of SLMs Can Cut — Hugging Face 博客：Dharma"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization
+publishedAt: 2026-10-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 博客：Dharma-AI 用词表特化把小型语言模型推理成本降 77%"
+broadcast: "Hugging Face 博客上有个实践分享值得留意：有团队对小型语言模型做词表特化，按实际应用场景裁剪定制词表，而不是沿用通用的大词表，结果在真实应用里把推理成本降了百分之七十七。对国内做 agent 和工具链的开发者来说，这说明成本优化的空间可能不在模型权重或推理框架，而在词表这一层。不过这是特定场景下的结果，最好用自己的语料和任务复现一遍，别直接套数字。"
+tags: [small-language-models, tokenizer, inference-cost, vocabulary-specialization]
+---
+
+- 文章提出对小型语言模型（SLM）做**词表特化**：按实际应用场景裁剪/定制 tokenizer 词表，而非沿用通用大词表。含义：tokenizer 不再是固定基础设施，而成为可针对业务优化的成本杠杆。
+- 报告称在真实应用中，这一做法把推理成本降低 **77%**。含义：对 agent 与工具链而言，成本优化点可能不在模型权重或推理框架，而在词表层。
+- 该结论来自 Dharma-AI 在 Hugging Face 博客上的实践分享，属于特定应用场景下的结果。含义：开发者评估时应以自己的语料和任务复现，而非直接套用数字。
+
+---
+
+> 原文：[How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications](https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization) · 作者 Hugging Face

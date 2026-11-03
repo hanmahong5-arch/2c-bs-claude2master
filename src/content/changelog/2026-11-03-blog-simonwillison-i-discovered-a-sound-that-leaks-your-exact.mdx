@@ -1,0 +1,23 @@
+---
+slug: 2026-11-03-blog-simonwillison-i-discovered-a-sound-that-leaks-your-exact
+title: "I discovered a sound that leaks your exact location — 飞机背景噪音经多普勒曲线比对 ADS"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/
+publishedAt: 2026-11-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "飞机背景噪音经多普勒曲线比对 ADS-B 数据，可定位视频拍摄地"
+broadcast: "有人演示了一种定位方法：从视频音轨里提取几乎听不出的飞机噪声，算出多普勒曲线，再和公开的航班数据交叉比对，就能反推出拍摄地点。值得关注的是，公开数据加上音轨细节，会泄露超出预期的信息。对做音视频和 agent 的开发者来说，背景音不是无害的，处理用户上传内容时，要把它当成潜在的元数据来源，纳入隐私审查。"
+tags: [osint, privacy, ads-b, audio-forensics]
+---
+
+- 博主转述 Colsto 的 OSINT 演示：从视频音轨中提取几乎听不出的飞机噪声，算出多普勒曲线，再与公开的 ADS-B 航班数据交叉比对，用速度、距离和航班间隔反推拍摄位置。
+- 关键在 ADS-B 这类公开航班数据本身可被当作定位参照物，说明公开数据与音轨细节叠加后会产生超出预期的信息泄露，做数据聚合与工具链时需评估这类交叉推断风险。
+- 对开发者的含义是：音视频素材里的环境噪声不是无害背景，处理或发布用户上传内容时，应把背景音视为潜在的元数据来源，纳入隐私审查范围。
+
+---
+
+> 原文：[I discovered a sound that leaks your exact location (and it's everywhere) - YouTube](https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/) · 作者 Simon Willison

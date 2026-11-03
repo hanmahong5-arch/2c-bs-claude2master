@@ -1,0 +1,24 @@
+---
+slug: 2026-11-02-blog-simonwillison-llm-0-37
+title: "llm 0.37 — LLM 0.37 发布：新模型、OpenAI 兼容端点配置，以及作者为何不担心 "
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/2/llm/
+publishedAt: 2026-11-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "LLM 0.37 发布：新模型、OpenAI 兼容端点配置，以及作者为何不担心 AI 辅助 PR 泛滥"
+broadcast: "这期聊聊一个命令行工具的更新：现在可以直接配置兼容接口的额外模型，接自建或第三方推理服务不用改代码，加一条配置就行；默认模型换成更便宜的，价格减半，批量调用成本直接降下来。另外作者提到，AI 辅助的代码提交他并不头疼，而是用模型帮忙分诊，把它当成带示例的问题报告来看，这对维护者怎么用 AI 挺有参考。"
+tags: [llm-cli, embeddings, openai-compatible, ai-assisted-prs]
+---
+
+- 新增 `llm openai endpoint add` 命令，可配置使用 OpenAI 兼容接口的额外模型；这意味着接入自建或第三方推理服务时，不必再改代码，只需增加一条配置。
+- 默认模型切换为 gpt-6-luna，价格是旧默认 gpt-5.6-luna 的一半；对长期运行 CLI 或批量调用 embedding 的开发者来说，成本直接减半。
+- embedding 支持按内容区分 content-type，以适配 Gemini Embedding 2 这类可嵌入文本、音频、图像、视频的模型；多模态检索工具链不必再为不同媒体类型分别建管道。
+- 作者称 AI 辅助 PR 并未成为负担，他用 Opus 5.5 / GPT-6 Astra 辅助分诊，把这类 PR 当作“附带示例的 bug 报告”；这提示维护者可把 AI 用在评审入口，而非直接合并。
+
+---
+
+> 原文：[llm 0.37](https://simonwillison.net/2026/Nov/2/llm/) · 作者 Simon Willison

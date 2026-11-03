@@ -1,0 +1,23 @@
+---
+slug: 2026-11-02-blog-latentspace-building-legal-agents-when-you-can-t-see
+title: "Building Legal Agents When You Can't See the Data - — Legora CTO 讲在看不到 agent 运行轨迹时，如何构建和测试法律 a"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora/
+publishedAt: 2026-11-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Legora CTO 讲在看不到 agent 运行轨迹时，如何构建和测试法律 agent"
+broadcast: "做法律智能体的团队有个难题：客户数据归律所所有，他们根本看不到智能体运行的任何轨迹。这家公司的首席技术官说，他们只能靠转述轨迹、把失败收敛到十几类来定位问题，可观测性得设计成不碰原始数据也能查。他们还让三名工程师加三名律师搭出模拟客户工作的测试环境，因为高约束领域的评测得靠领域专家造环境。更值得留意的是，他们一次发版把引用正确率从七成提到九成九，自己什么都没改，说明模型能力跃迁会直接改变下游智能体的可靠性。"
+tags: [legal-tech, agent-evals, observability, llm-agents]
+---
+
+- 客户数据归律所客户所有，Legora 读不到 agent 的任何 trace，因此产品指标不能靠翻日志，只能靠转述 trace、把失败收敛到 10–20 类；对做 agent 的团队意味着可观测性要设计成不碰原始数据也能定位问题。
+- 三名工程师加三名律师搭建模拟客户工作的测试环境，类似强化学习里的 world；说明高约束领域的 eval 需要领域专家参与造环境，而不是只靠通用 benchmark。
+- 一次发版把引用正确率从 70% 提到 99%，Legora 自身没改任何东西；提示模型能力跃迁会直接改变下游 agent 的可靠性，工具链要把模型升级当作一等变量。
+
+---
+
+> 原文：[Building Legal Agents When You Can't See the Data - Jacob Lauritzen, CTO of Legora](https://latent.space/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora/) · 作者 Latent Space

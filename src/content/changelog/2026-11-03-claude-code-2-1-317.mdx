@@ -1,0 +1,23 @@
+---
+slug: 2026-11-03-claude-code-2-1-317
+title: "claude-code v2.1.317 — 钩子回调可阻断动作，敏感信息外发前先确认"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.317
+publishedAt: 2026-11-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "钩子回调可阻断动作，敏感信息外发前先确认"
+broadcast: "这次更新里有个变化值得国内做 agent 的开发者留意：钩子回调现在支持失败即阻断，回调出错时动作会被直接拦下，而不是悄悄放行，所以 harness 最好把失败默认当成拒绝。另外，工具在发送账户邮箱这类敏感信息前会先询问，确认点得提前放在工具层，而不是事后审计。"
+insight: "这次 v2.1.317 的核心变化是钩子失败默认阻断、敏感信息外发前先确认，属于安全默认值的收紧。现有用户值得升级，尤其是依赖 hook 做拦截的团队，升级后要检查回调失败路径，避免原本静默放行的动作被阻断而中断流程；prompt 本身不用改，但 hook 配置需按 onFailure: \"block\" 复核。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，可正常升级，但新增的 custom_base_url 指标说明接入方式已被纳入可观测维度，建议留意。"
+tags: [agent-sdk, hooks, otel, tool-safety]
+---
+
+- Agent SDK 钩子新增 `onFailure: "block"`：回调失败时阻断动作而非放行，harness 应把失败默认视为拒绝，避免静默降级。
+- Web 或 shell 工具调用发送账户邮箱前会先询问：harness 需在工具层预留敏感数据外发确认点，而非事后审计。
+- OTel 指标、事件与 span 新增 `anthropic.plan`、`seat_type`、`provider`、`custom_base_url`：harness 可据此按套餐与接入方式切分可观测性维度。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.317](https://github.com/anthropics/claude-code/releases/tag/v2.1.317)
