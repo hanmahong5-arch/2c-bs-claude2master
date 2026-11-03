@@ -1,6 +1,193 @@
 {
   "items": [
     {
+      "slug": "2026-11-03-blog-hf-blog-transformers-model-integration-contracts",
+      "zh": true,
+      "en": true,
+      "title": "Transformers Model Integration Contracts — Hugging Face 提出 Transformers 模型集成契约，规范第三",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-blog-latentspace-ainews-llms-can-read-write-neural-network-weights",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] LLMs can read & write neural network weights: — LLM 直接读写神经网络权重，绕过写代码训练，RSI 能力从 0 到 1",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-blog-simonwillison-i-discovered-a-sound-that-leaks-your-exact",
+      "zh": true,
+      "en": true,
+      "title": "I discovered a sound that leaks your exact location — 飞机背景噪音经多普勒曲线比对 ADS",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-blog-simonwillison-october-sponsors-only-newsletter",
+      "zh": true,
+      "en": true,
+      "title": "October sponsors-only newsletter — Simon Willison 十月赞助者通讯导读：vibe 游戏开发拐点、漏洞披",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-claude-code-2-1-317",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.317 — 钩子回调可阻断动作，敏感信息外发前先确认",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-trending-deepseek-ai-dsh-superagent-prototype",
+      "zh": true,
+      "en": false,
+      "title": "dsh-superagent-prototype — DeepSeek 开源自主 agent 原型，一天内 star 破万",
+      "kind": "trending",
+      "author": null,
+      "source": "deepseek-ai/dsh-superagent-prototype",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-trending-storytold-craft-anything",
+      "zh": true,
+      "en": false,
+      "title": "craft-anything — Rust 项目教你拆解任意软件并复刻",
+      "kind": "trending",
+      "author": null,
+      "source": "storytold/craft-anything",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-02-blog-latentspace-building-ai-for-lawyers-jacob-lauritzen-cto-of",
+      "zh": true,
+      "en": true,
+      "title": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora — Legora CTO 讲如何为律师造 agent：无法看客户数据怎么做 eval",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-11-02"
+    },
+    {
+      "slug": "2026-11-02-blog-latentspace-building-legal-agents-when-you-can-t-see",
+      "zh": true,
+      "en": true,
+      "title": "Building Legal Agents When You Can't See the Data - — Legora CTO 讲在看不到 agent 运行轨迹时，如何构建和测试法律 a",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-11-02"
+    },
+    {
+      "slug": "2026-11-02-blog-openai-news-introducing-the-grid-protectors-program",
+      "zh": true,
+      "en": true,
+      "title": "Introducing the Grid Protectors Program — OpenAI 推出电网保护者计划，与公用事业公司合作，让未来算力园区不推高居民电",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-02"
+    },
+    {
+      "slug": "2026-11-02-blog-openai-news-lifeval",
+      "zh": true,
+      "en": false,
+      "title": "LifeVal — OpenAI 推出 LifeVal 基准，衡量 AI 在育儿、理财、政务等日常事",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-02"
+    },
+    {
+      "slug": "2026-11-02-blog-openai-news-preparing-our-next-security-sprint-to-harden-openai",
+      "zh": true,
+      "en": true,
+      "title": "Preparing our next security sprint to harden OpenAI — OpenAI 联合 Cathedral Systems 启动内部安全冲刺，用 A",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-02"
+    },
+    {
+      "slug": "2026-11-02-blog-openai-news-rewarding-defenders-with-bigger-bug-bounties",
+      "zh": true,
+      "en": true,
+      "title": "Rewarding defenders with bigger bug bounties — OpenAI 提高安全漏洞赏金，新增报告质量、忠诚度与专项活动奖金，值得关注漏洞",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-02"
+    },
+    {
+      "slug": "2026-11-02-blog-openai-news-scaling-git-at-openai",
+      "zh": true,
+      "en": true,
+      "title": "Scaling Git at OpenAI — OpenAI 为 Codex 带来的开发规模自建 Git 兼容后端 Pando，",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-02"
+    },
+    {
+      "slug": "2026-11-02-blog-simonwillison-llm-0-37",
+      "zh": true,
+      "en": true,
+      "title": "llm 0.37 — LLM 0.37 发布：新模型、OpenAI 兼容端点配置，以及作者为何不担心 ",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-11-02"
+    },
+    {
+      "slug": "2026-11-02-blog-simonwillison-the-u-s-census-bureau-and-super-intelligence",
+      "zh": true,
+      "en": true,
+      "title": "The U.S. Census Bureau and “Super Intelligence” — 美国普查局因行政令把调查问卷里的 AI 改称 Super Intelligenc",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-11-02"
+    },
+    {
+      "slug": "2026-11-02-hermes-agent-0-22-6",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v0.22.6 — 776 个 PR 汇总成稳定版，含多项影响 agent 控制面的改动",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
+      "publishedAt": "2026-11-02"
+    },
+    {
       "slug": "2026-11-02-trending-ruoji6-artex",
       "zh": true,
       "en": false,
@@ -272,6 +459,17 @@
       "kind": "blogger",
       "author": "Anthropic",
       "source": "Anthropic",
+      "tool": null,
+      "publishedAt": "2026-10-30"
+    },
+    {
+      "slug": "2026-10-30-blog-deepmind-speeding-up-planning-decisions-with-ai",
+      "zh": true,
+      "en": true,
+      "title": "Speeding up planning decisions with AI — DeepMind 与英国政府合作，用 AI 缩短规划审批评估时间，值得关注 AI",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
       "tool": null,
       "publishedAt": "2026-10-30"
     },
@@ -681,204 +879,6 @@
       "source": "sst/opencode",
       "tool": "opencode",
       "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-opencode-2-2-2",
-      "zh": true,
-      "en": false,
-      "title": "opencode v2.2.2 — 图像生成默认开启，工作树选择更快，引用注释统一",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-opencode-process-daemon-v0-3-3",
-      "zh": true,
-      "en": false,
-      "title": "opencode process-daemon-v0.3.3 — PTY 协议升到 7，进程守护层有变动",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-opencode-process-daemon-v0-4-0",
-      "zh": true,
-      "en": false,
-      "title": "opencode process-daemon-v0.4.0 — PTY 协议升到 7，进程守护层有变动",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-28-blog-anthropic-news-ai-for-science-expands-to-foundations-and-institutions",
-      "zh": true,
-      "en": true,
-      "title": "AI for Science expands to foundations and institutions — Anthropic 把免费 Claude 额度从个人科学家扩展到基金会与研究机构",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-deepmind-gemini-4-carbon-our-next-frontier-model",
-      "zh": true,
-      "en": true,
-      "title": "Gemini 4 Carbon: Our next frontier model — DeepMind 发布 Gemini 4 Carbon，介绍其下一代前沿模型的能",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-hf-blog-nvidia-nemotron-3-5-transcribe-and-granary-v2",
-      "zh": true,
-      "en": true,
-      "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: — 英伟达发布可提示的多语种转录模型 Nemotron 3.5 Transcribe",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-interconnects-artificial-analysis-v5-and-the-benchmarker-s-dilemma",
-      "zh": true,
-      "en": true,
-      "title": "Artificial Analysis v5 and the benchmarker's dilemma — 独立评测机构如何给模型打一个分数，以及这个分数背后的取舍与压力",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-latentspace-ainews-anthropic-ends-coding-interviews-hunger-beats-tenure",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Anthropic ends Coding Interviews: \"Hunger — Anthropic 招聘经理停掉传统编程面试，称 Claude 已比人更擅长这类",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-latentspace-why-agents-love-supabase",
-      "zh": true,
-      "en": true,
-      "title": "Why Agents Love Supabase — Latent Space 与 Supabase 创始人聊：为什么 agent 偏",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-openai-news-legora-is-building-the-agentic-operating-system-for",
-      "zh": true,
-      "en": true,
-      "title": "Legora is building the agentic operating system for — Legora 用 OpenAI 模型、ChatGPT 和 Codex 打造法律工",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-openai-news-openai-and-servicenow-expand-partnership-across-enterprise-workflows",
-      "zh": true,
-      "en": true,
-      "title": "OpenAI and ServiceNow expand partnership across — OpenAI 与 ServiceNow 扩大合作，把模型和 agent 接入企业",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-openai-news-the-future-of-the-firm",
-      "zh": true,
-      "en": true,
-      "title": "The future of the firm — OpenAI 探讨 AI 如何进入组织架构：在层级之下、之旁、之间",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-simonwillison-github-octoverse-2026",
-      "zh": true,
-      "en": true,
-      "title": "GitHub Octoverse 2026 — GitHub 2026 数据：合并 PR 一年内翻三倍，agentic 工程正在",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-simonwillison-quoting-ted-sanders",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Ted Sanders — OpenAI 模型命名背后的逻辑：版本号同时编码发布顺序、模型家族与进步幅度",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-simonwillison-quoting-terk-terkowitz",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Terk Terkowitz — 亚马逊工程领导层引用：AI 帮不上你的工作，这是发现而非失败，要记录并上报",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-simonwillison-the-october-inflection-point-for-vibe-game-development",
-      "zh": true,
-      "en": true,
-      "title": "The October inflection point for vibe game development — Simon Willison 认为 2026 年 10 月是氛围游戏开发的拐点：",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-blog-thezvi-anthropic-files-its-s-1",
-      "zh": true,
-      "en": true,
-      "title": "Anthropic Files Its S-1 — 逐条拆解 Anthropic S",
-      "kind": "blogger",
-      "author": "Zvi Mowshowitz",
-      "source": "Zvi Mowshowitz",
-      "tool": null,
-      "publishedAt": "2026-10-28"
-    },
-    {
-      "slug": "2026-10-28-goose-1-57-0",
-      "zh": true,
-      "en": false,
-      "title": "goose v1.57.0 — Allowlist 强制 HTTPS 并校验重定向，安全策略失败即阻断",
-      "kind": "changelog",
-      "author": null,
-      "source": "block/goose",
-      "tool": "goose",
-      "publishedAt": "2026-10-28"
     }
   ]
 }
