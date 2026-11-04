@@ -1,0 +1,23 @@
+---
+slug: 2026-11-03-hermes-agent-0-22-7
+title: "hermes-agent v0.22.7 — 补丁版汇总 174 个 PR，群聊与定时任务能力值得关注"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.7
+publishedAt: 2026-11-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "补丁版汇总 174 个 PR，群聊与定时任务能力值得关注"
+broadcast: "这次更新是一个补丁版本，汇总了一百七十多个合并请求，重点在群聊和定时任务。群聊房间现在能显示每个成员的实时状态，还能设置用途和共享笔记，定时任务也能直接往群里发消息。对做 agent 的开发者来说，这意味着多成员房间和定时调度要共用同一套身份和调度模型，成员状态也得作为可观测数据交给编排层。"
+insight: "这次 v0.22.7 是补丁版汇总，174 个 PR 以稳定打包为主，功能细节要等 v0.23.0 才说明，现有用户不必急着升级，可等下一版再评估。群聊线索路由、cron 向群聊发帖、成员实时状态这几项属于新增能力，现有 prompt 与 hook 配置无需改动。摘要未提及 newapi.lurus.cn 代理相关变化，国内走代理的用户暂无受影响依据。"
+tags: [release-notes, group-chat, cron-jobs, agent-harness]
+---
+
+- 发布窗口含 581 个非合并提交、554 个文件变更（+24,012/−3,144）、174 个合并 PR、29 个已关闭 issue；对 harness 设计意味着版本节奏以稳定打包为主，功能细节延后到 v0.23.0 说明。
+- 新增可选的 Desktop 群聊线索路由（房间头部显示 Lead 徽章），且 cron 任务可向群聊发帖；对 harness 设计意味着定时任务与多成员房间需共享同一调度与身份模型。
+- 群聊房间改为单列布局并展示各成员实时状态，房间支持用途与共享笔记；对 harness 设计意味着成员状态需作为一等可观测数据暴露给编排层。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.22.7](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.7)

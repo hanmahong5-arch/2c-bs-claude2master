@@ -1,0 +1,23 @@
+---
+slug: 2026-11-03-openclaw-2026-10-10
+title: "openclaw v2026.10.10 — 发布说明本身为 agent 提供纯 Markdown 版本"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.10.10
+publishedAt: 2026-11-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "发布说明本身为 agent 提供纯 Markdown 版本"
+broadcast: "这次发布说明本身就给 agent 准备了纯 Markdown 版本，同一份内容既有人看的说明，也有机器直接抓取的更新日志，不用再解析网页。发布验证信息也结构化列出，包、校验值和构建记录都能溯源；安卓安装包这次明确跳过并给了原因和修复命令。对国内做 agent 的团队来说，这种把跳过当显式状态、把验证信息摆出来的做法，能省不少对接和排查的功夫。"
+insight: "这次 openclaw 2026.10.10 的更新对普通用户没有功能层面的变化，不值得为此专门升级；但如果你在跑自动化 harness，建议把抓取源切到纯 Markdown changelog，省掉 HTML 解析，同时按 integrity 和 release SHA 做产物校验。Android APK 被显式跳过，harness 要把“跳过”当状态处理，别误判为缺失。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关改动，现有配置无需调整。"
+tags: [release-notes, agent-harness, changelog, supply-chain]
+---
+
+- 发布说明与 changelog 同源双格式：同一内容同时提供面向人的 release notes 和面向 AI agent 的纯 Markdown changelog，harness 可直接抓取后者，无需解析 HTML。
+- 发布验证信息结构化列出：npm 包、tarball、integrity、release SHA 与多条 CI 运行链接，harness 可据此做产物校验与溯源。
+- Android APK 明确跳过并给出原因与修复命令（版本未 pin 到发布列车），harness 需把“跳过”当作显式状态而非缺失。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.10.10](https://github.com/openclaw/openclaw/releases/tag/v2026.10.10)

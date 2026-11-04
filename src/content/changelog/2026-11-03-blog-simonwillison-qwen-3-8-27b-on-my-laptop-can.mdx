@@ -1,0 +1,23 @@
+---
+slug: 2026-11-03-blog-simonwillison-qwen-3-8-27b-on-my-laptop-can
+title: "Qwen 3.8 27B on my laptop can interpret model weights, — 作者用笔记本上的 Qwen 3.8 27B 复现论文实验：不跑代码，只读权重猜出"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/
+publishedAt: 2026-11-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "作者用笔记本上的 Qwen 3.8 27B 复现论文实验：不跑代码，只读权重猜出模型在玩哪个游戏"
+broadcast: "有篇论文提出，模型光看原始权重就能猜出训练目标，甚至只改极小一部分权重，就把一个小模型做数学题的正确率从不到一成提到接近五成。有人用笔记本上的本地模型复现了其中一半：不跑代码、只读权重，花几十分钟到一小时猜对了三个小游戏，一个猜错。这意味着权重可能成为 agent 可读写的接口，但耗时以小时计，也有研究者批评实验混淆了纯读权重和带代码改权重，现在当成熟工具还太早。"
+tags: [weight-space-programming, local-llms, qwen, paper-review]
+---
+
+- 论文提出 Weight-Space Programming：GPT-6 Astra 仅看原始浮点权重就能判断网络训练目标，甚至直接改 0.016% 权重把 Qwen3.5-0.8B 的 MATH-500 从 7.9% 提到 48.1%。含义：模型权重本身可能成为 agent 可读写的接口，而不只是训练产物。
+- 作者只验证「无工具」那一半：把四个 10x10 网格游戏（Breakout、Pong、Pac-Man、Freeway）的权重喂给模型让它猜。Qwen 3.8 27B 在笔记本上分别用 46 分钟、1 小时、52 分钟猜对 Pac-Man、Pong、Breakout，Freeway 猜错。含义：本地小模型已能做长链推理型权重解读，但耗时以小时计。
+- 作者对论文的炒作保持距离：Matthew Honnibal 批评其混淆「纯读权重」与「带代码改权重」，Sean Goedecke 指出 Qwen 修复案例走的正是人类研究员常规步骤。含义：把权重编辑当作成熟工具链能力还为时过早。
+
+---
+
+> 原文：[Qwen 3.8 27B on my laptop can interpret model weights, too](https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/) · 作者 Simon Willison

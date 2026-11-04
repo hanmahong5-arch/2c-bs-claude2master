@@ -1,6 +1,6 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.317",
+    "anthropics/claude-code": "v2.1.318",
     "openai/codex": "rust-v0.166.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "v4.1.26",
@@ -8,9 +8,9 @@
     "sst/opencode": "v2.2.5",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.66.0",
-    "openclaw/openclaw": "v2026.9.36",
+    "openclaw/openclaw": "v2026.10.10",
     "zeroclaw-labs/zeroclaw": "v0.8.7",
-    "NousResearch/hermes-agent": "v0.22.6"
+    "NousResearch/hermes-agent": "v0.22.7"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -221,7 +221,8 @@
     "storytold/soundcraft",
     "RuoJi6/ARTEX",
     "deepseek-ai/dsh-superagent-prototype",
-    "storytold/craft-anything"
+    "storytold/craft-anything",
+    "DrWhax/unfairplay"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -347,7 +348,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-03",
+    "anthropic-engineering": "2026-11-04",
     "claude-code-docs": "2026-10-30",
     "openai-codex-blog": "2026-10-30",
     "openclaw-concepts": "2026-10-30",
@@ -771,7 +772,8 @@
       "https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/",
       "https://simonwillison.net/2026/Nov/3/october-newsletter/",
       "https://simonwillison.net/2026/Nov/2/llm/",
-      "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/"
+      "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+      "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1411,7 +1413,12 @@
       "https://openai.com/index/grid-protectors-program",
       "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
       "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
-      "https://openai.com/index/lifeval"
+      "https://openai.com/index/lifeval",
+      "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+      "https://openai.com/index/cisco-cyber",
+      "https://openai.com/index/heimstaden",
+      "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
+      "https://openai.com/index/qodo-codex-plugin"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1744,10 +1751,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-03",
+    "simonwillison": "2026-11-04",
     "lilianweng": "2026-10-30",
-    "latentspace": "2026-11-03",
-    "interconnects": "2026-11-03",
+    "latentspace": "2026-11-04",
+    "interconnects": "2026-11-04",
     "karpathy": "2026-11-02",
     "raschka": "2026-11-02",
     "eugeneyan": "2026-11-02",
@@ -1755,10 +1762,10 @@
     "oneusefulthing": "2026-11-03",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-03",
+    "openai-news": "2026-11-04",
     "deepmind": "2026-11-03",
     "hf-blog": "2026-11-03",
-    "anthropic-news": "2026-11-03",
+    "anthropic-news": "2026-11-04",
     "steipete": "2026-11-03",
     "openclaw-blog": "2026-11-03"
   },

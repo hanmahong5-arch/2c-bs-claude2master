@@ -1,0 +1,23 @@
+---
+slug: 2026-11-04-claude-code-2-1-318
+title: "claude-code v2.1.318 — 权限提示误触、共享目录配置丢失、登录过期预警，多条修复直指 harness 可靠"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.318
+publishedAt: 2026-11-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "权限提示误触、共享目录配置丢失、登录过期预警，多条修复直指 harness 可靠性"
+broadcast: "这次更新修的是 harness 可靠性上的几个老毛病。权限提示不会再被刚发完消息的按键或慢出现的提示抢先应答；共享网络家目录下配置写不进去时也不再假装成功，退出登录、移除服务这类操作会如实报错。另外命令行在登录到期前十天会给出警告，无人值守的流程可以提前续期。"
+insight: "这次 v2.1.318 修的都是 harness 可靠性问题，现有用户值得升级：权限提示误触和共享目录配置静默失败都会直接影响日常使用，升级后 `/logout`、`mcp remove` 会如实报错，便于排查。跑 `claude -p` 无人值守流程的，建议升级并利用 stderr 的提前 10 天警告和 JSON 里的 `credential_expires_at` 提前续期。prompt 和 hook 配置本身不用改。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [permission-prompts, config-persistence, credential-expiry, headless]
+---
+
+- 权限提示不再被刚发送消息后的按键或慢出现的提示抢先应答，harness 需把输入事件与提示生命周期严格绑定
+- 共享网络家目录下配置写入失败不再静默成功，`/logout`、`mcp remove` 等会如实报错，harness 应把持久化失败当作一等状态
+- `claude -p` 在 claude.ai 登录到期前 10 天输出 stderr 警告，并在 JSON 结果暴露 `credential_expires_at`，无人值守流程可提前续期
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.318](https://github.com/anthropics/claude-code/releases/tag/v2.1.318)
