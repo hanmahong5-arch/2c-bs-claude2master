@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "slug": "2026-11-04-claude-code-2-1-318",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.318 — 权限提示误触、共享目录配置丢失、登录过期预警，多条修复直指 harness 可靠",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-04"
+    },
+    {
+      "slug": "2026-11-04-trending-drwhax-unfairplay",
+      "zh": true,
+      "en": false,
+      "title": "unfairplay — Go 写的 macOS 工具，解密 iOS IPA 应用包",
+      "kind": "trending",
+      "author": null,
+      "source": "DrWhax/unfairplay",
+      "tool": null,
+      "publishedAt": "2026-11-04"
+    },
+    {
       "slug": "2026-11-03-blog-hf-blog-transformers-model-integration-contracts",
       "zh": true,
       "en": true,
@@ -19,6 +41,50 @@
       "kind": "blogger",
       "author": "Latent Space",
       "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-blog-openai-news-accelerating-engineering-for-the-physical-world",
+      "zh": true,
+      "en": true,
+      "title": "Accelerating engineering for the physical world — OpenAI 讲 ChatGPT 与 Codex 如何进入 CAD、PCB 与仿",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-blog-openai-news-heimstaden-is-changing-residential-real-estate-management-with",
+      "zh": true,
+      "en": true,
+      "title": "Heimstaden is changing residential real estate — 欧洲房产巨头用 ChatGPT Enterprise 与 Codex 改造物业管",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-blog-openai-news-how-cisco-defends-at-machine-speed-with-openai",
+      "zh": true,
+      "en": true,
+      "title": "How Cisco defends at machine speed with OpenAI — 思科用 OpenAI 模型把网络情报接入企业安全防线，实现机器速度的防御。",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-blog-openai-news-openai-appoints-jill-hazelbaker-as-chief-corporate-affairs",
+      "zh": true,
+      "en": true,
+      "title": "OpenAI appoints Jill Hazelbaker as Chief Corporate — OpenAI 新设首席企业事务官，由 Jill Hazelbaker 负责全球传",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
       "tool": null,
       "publishedAt": "2026-11-03"
     },
@@ -45,6 +111,17 @@
       "publishedAt": "2026-11-03"
     },
     {
+      "slug": "2026-11-03-blog-simonwillison-qwen-3-8-27b-on-my-laptop-can",
+      "zh": true,
+      "en": true,
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, — 作者用笔记本上的 Qwen 3.8 27B 复现论文实验：不跑代码，只读权重猜出",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
       "slug": "2026-11-03-claude-code-2-1-317",
       "zh": true,
       "en": false,
@@ -53,6 +130,28 @@
       "author": null,
       "source": "anthropics/claude-code",
       "tool": "claude-code",
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-hermes-agent-0-22-7",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v0.22.7 — 补丁版汇总 174 个 PR，群聊与定时任务能力值得关注",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-openclaw-2026-10-10",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.10.10 — 发布说明本身为 agent 提供纯 Markdown 版本",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
       "publishedAt": "2026-11-03"
     },
     {
@@ -126,6 +225,17 @@
       "zh": true,
       "en": true,
       "title": "Preparing our next security sprint to harden OpenAI — OpenAI 联合 Cathedral Systems 启动内部安全冲刺，用 A",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-02"
+    },
+    {
+      "slug": "2026-11-02-blog-openai-news-qodo-builds-context-into-ai-code-review-with",
+      "zh": true,
+      "en": true,
+      "title": "Qodo builds context into AI code review with Codex — Qodo 把公司知识与编码规范接入 Codex，让 P0 问题在开 PR 前就被",
       "kind": "blogger",
       "author": "OpenAI",
       "source": "OpenAI",
@@ -768,116 +878,6 @@
       "author": "OpenAI",
       "source": "OpenAI",
       "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-openai-news-how-ropes-gray-is-developing-ai-for-transactional",
-      "zh": true,
-      "en": true,
-      "title": "How Ropes & Gray is developing AI for transactional — 律所 Ropes & Gray 用 OpenAI 做交易尽调，律师仍逐份复核文件",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-openai-news-how-we-detect-frontier-model-misalignment",
-      "zh": true,
-      "en": true,
-      "title": "How we detect frontier model misalignment — OpenAI 讲如何用分层监控发现前沿模型失准与越权 agent 行为",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-simonwillison-api-credits-benefit-for-eligible-chatgpt-subscriptions",
-      "zh": true,
-      "en": true,
-      "title": "API credits benefit for eligible ChatGPT subscriptions — OpenAI 跟进 Anthropic，把 ChatGPT 订阅额度直接变成 A",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-simonwillison-building-a-multiplayer-game-world-with-autonomous-fable",
-      "zh": true,
-      "en": true,
-      "title": "Building a multiplayer game world with autonomous — Spawn 用每月 300 万美元的 token 让 agent 自主开发游戏，",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-simonwillison-quoting-ben-hylak",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Ben Hylak — Ben Hylak 一句吐槽：所有产品都该是无头 MCP，唯独自家产品例外，点出",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-thezvi-ai-192-anthropic-is-going-public",
-      "zh": true,
-      "en": false,
-      "title": "AI #192: Anthropic Is Going Public — Anthropic递交S",
-      "kind": "blogger",
-      "author": "Zvi Mowshowitz",
-      "source": "Zvi Mowshowitz",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-codex-rust-v0-166-0",
-      "zh": true,
-      "en": false,
-      "title": "codex rust-v0.166.0 — Codex 0.166 强化会话续接与安全拦截，直接影响 agent harne",
-      "kind": "changelog",
-      "author": null,
-      "source": "openai/codex",
-      "tool": "codex",
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-openclaw-2026-10-9",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.10.9 — 安全依赖补丁与回滚安全：agent 运行时更可控",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-openclaw-2026-9-36",
-      "zh": true,
-      "en": false,
-      "title": "openclaw v2026.9.36 — LTS 线补安全与更新回滚修复，harness 边界收紧",
-      "kind": "changelog",
-      "author": null,
-      "source": "openclaw/openclaw",
-      "tool": "openclaw",
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-opencode-2-2-1",
-      "zh": true,
-      "en": false,
-      "title": "opencode v2.2.1 — 目标循环与图像生成工具进入 agent 运行时",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
       "publishedAt": "2026-10-29"
     }
   ]
