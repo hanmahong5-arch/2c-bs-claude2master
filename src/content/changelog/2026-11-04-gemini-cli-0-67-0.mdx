@@ -1,0 +1,23 @@
+---
+slug: 2026-11-04-gemini-cli-0-67-0
+title: "gemini-cli v0.67.0 — 容器沙箱可接 IDE，取消后不再执行工具"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0
+publishedAt: 2026-11-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "容器沙箱可接 IDE，取消后不再执行工具"
+broadcast: "这次更新把 IDE 的上下文通过桥接送进了容器沙箱，沙箱里的命令行工具也能拿到编辑器信息；同时非交互模式下取消成了硬边界，取消之后工具不会再执行。对做 agent 的国内开发者来说，这意味着要按跨边界传输来设计 IDE 通道，并在每次调用工具前检查取消状态，模型清单也改成运行时查询，别再硬编码。"
+insight: "这次 v0.67.0 值得升级，重点不在新功能而在两处行为收紧：取消后不再执行工具、模型清单改为运行时查询。现有 hook 配置建议同步调整，在每个工具调用前检查取消状态，别只停流；prompt 里硬编码的模型名也应改为动态枚举。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有方式升级即可，但升级后需确认取消语义是否影响既有工具链。"
+tags: [sandbox, cancellation, model-discovery, ide-bridge]
+---
+
+- **IDE 伴生进程经 exec stdio 桥接进容器沙箱**：沙箱内 CLI 也能拿到 IDE 上下文；harness 需把 IDE 通道当作可跨边界转发的独立传输层。
+- **非交互模式处理终止信号，取消后阻止工具执行**：取消成为硬边界；harness 应在每个工具调用前检查取消状态，而非只停流。
+- **新增 models 命令与 --list-models 发现模型**：模型清单可运行时查询；harness 不应硬编码模型名，改为动态枚举。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.67.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0)

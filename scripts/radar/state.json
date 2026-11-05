@@ -7,7 +7,7 @@
     "block/goose": "v1.57.0",
     "sst/opencode": "v2.2.5",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.66.0",
+    "google-gemini/gemini-cli": "v0.67.0",
     "openclaw/openclaw": "v2026.10.10",
     "zeroclaw-labs/zeroclaw": "v0.8.7",
     "NousResearch/hermes-agent": "v0.22.7"
@@ -222,7 +222,8 @@
     "RuoJi6/ARTEX",
     "deepseek-ai/dsh-superagent-prototype",
     "storytold/craft-anything",
-    "DrWhax/unfairplay"
+    "DrWhax/unfairplay",
+    "armanlife/arman-vpn-client"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -348,7 +349,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-04",
+    "anthropic-engineering": "2026-11-05",
     "claude-code-docs": "2026-10-30",
     "openai-codex-blog": "2026-10-30",
     "openclaw-concepts": "2026-10-30",
@@ -773,7 +774,11 @@
       "https://simonwillison.net/2026/Nov/3/october-newsletter/",
       "https://simonwillison.net/2026/Nov/2/llm/",
       "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
-      "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+      "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "https://simonwillison.net/2026/Nov/4/datasette-llm/",
+      "https://simonwillison.net/2026/Nov/4/datasette-apps/",
+      "https://simonwillison.net/2026/Nov/3/datasette-agent/",
+      "https://simonwillison.net/2026/Nov/3/llm/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -979,7 +984,9 @@
       "https://latent.space/p/modal-d/",
       "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/",
       "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/",
-      "https://latent.space/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora/"
+      "https://latent.space/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora/",
+      "https://latent.space/p/ainews-it-s-swapping-season/",
+      "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1027,7 +1034,8 @@
       "https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers",
       "https://www.interconnects.ai/p/podcast-kimi-k31-pro-the-new-cyber",
       "https://www.interconnects.ai/p/latest-open-artifacts-25-deepseek",
-      "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and"
+      "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and",
+      "https://www.interconnects.ai/p/how-well-can-we-measure-open-model"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -1418,7 +1426,12 @@
       "https://openai.com/index/cisco-cyber",
       "https://openai.com/index/heimstaden",
       "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
-      "https://openai.com/index/qodo-codex-plugin"
+      "https://openai.com/index/qodo-codex-plugin",
+      "https://openai.com/index/openai-to-acquire-pierre",
+      "https://openai.com/index/daybreak-red-aws-govcloud",
+      "https://openai.com/index/a-thousand-fewer-paths-to-root",
+      "https://openai.com/index/introducing-images-2-6",
+      "https://openai.com/index/devrev-enterprise-self-service"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1480,7 +1493,8 @@
       "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
       "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
       "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
-      "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/"
+      "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/",
+      "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -1627,7 +1641,11 @@
       "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
       "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
       "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
-      "https://huggingface.co/blog/hf-torchtpu"
+      "https://huggingface.co/blog/hf-torchtpu",
+      "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+      "https://huggingface.co/blog/allenai/statebench",
+      "https://huggingface.co/blog/ibm-research/palette-deck-building",
+      "https://huggingface.co/blog/cwe-bench"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -1751,23 +1769,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-04",
+    "simonwillison": "2026-11-05",
     "lilianweng": "2026-10-30",
-    "latentspace": "2026-11-04",
-    "interconnects": "2026-11-04",
-    "karpathy": "2026-11-02",
-    "raschka": "2026-11-02",
-    "eugeneyan": "2026-11-02",
+    "latentspace": "2026-11-05",
+    "interconnects": "2026-11-05",
+    "karpathy": "2026-11-05",
+    "raschka": "2026-11-05",
+    "eugeneyan": "2026-11-05",
     "chiphuyen": "2026-10-30",
-    "oneusefulthing": "2026-11-03",
+    "oneusefulthing": "2026-11-05",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-04",
-    "deepmind": "2026-11-03",
-    "hf-blog": "2026-11-03",
-    "anthropic-news": "2026-11-04",
-    "steipete": "2026-11-03",
-    "openclaw-blog": "2026-11-03"
+    "openai-news": "2026-11-05",
+    "deepmind": "2026-11-05",
+    "hf-blog": "2026-11-05",
+    "anthropic-news": "2026-11-05",
+    "steipete": "2026-11-05",
+    "openclaw-blog": "2026-11-05"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

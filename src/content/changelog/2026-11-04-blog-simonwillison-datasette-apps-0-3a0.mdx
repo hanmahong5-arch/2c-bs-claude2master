@@ -1,0 +1,23 @@
+---
+slug: 2026-11-04-blog-simonwillison-datasette-apps-0-3a0
+title: "datasette-apps 0.3a0 — Datasette Apps 0.3a0 让 LLM 在 Datasette 里"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/4/datasette-apps/
+publishedAt: 2026-11-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette Apps 0.3a0 让 LLM 在 Datasette 里生成并管理 HTML 应用，权限与写操作需用户批准"
+broadcast: "Datasette 里新出的应用功能，让大模型能直接生成和管理网页应用了。这次更新加了个小技巧：在聊天里打井号就能引用你有权限查看的应用，agent 能精准找到目标。更关键的是权限把关，授予写查询之前必须先经过你批准，创建应用时也会先校验查询是否存在、你能不能看。对国内做 agent 的开发者来说，这种把写操作交给人确认的思路，挺值得参考。"
+tags: [datasette, llm-agents, permissions, tooling]
+---
+
+- 新增 `#` 标签自动补全：在 Datasette Agent 聊天中键入 `#` 即可从用户有权限查看的应用里补全引用，把「应用」变成对话里可寻址的一等对象，方便 agent 精确指向目标应用。
+- 新增 `app_add_stored_queries()` / `app_remove_stored_queries()` 工具，让 agent 管理应用可调用的 stored queries；授予写查询前必须先获得用户批准，把权限边界交给人类把关。
+- `app_create()` 现在会校验每个请求的 stored query 是否存在、用户是否可查看，并在创建应用前请求用户批准写查询；agent 工具与 `#` 引用打开的链接改为在 Agent 面板全屏展示应用。
+
+---
+
+> 原文：[datasette-apps 0.3a0](https://simonwillison.net/2026/Nov/4/datasette-apps/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-03-blog-hf-blog-palette-teaching-a-small-model-to-build-decks
+title: "Palette: teaching a small model to build decks in your — Hugging Face 介绍 Palette：教小模型按你的设计语言自动生成演"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/ibm-research/palette-deck-building
+publishedAt: 2026-11-03
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 介绍 Palette：教小模型按你的设计语言自动生成演示文稿"
+broadcast: "Hugging Face 博客介绍了一个叫 Palette 的工作，来自 IBM 研究团队，目标是教一个小模型按特定设计语言自动搭建演示文稿，而不是通用生成。值得关注的是，它把风格规范直接训练进模型里，而不是靠提示词硬凑，这样在垂直任务上小模型加明确约束可能比通用大模型更可控，也能减少每次调用的上下文和后处理负担，国内做 agent 的开发者可以留意它的用法和接入成本。"
+tags: [small-models, deck-generation, design-language, hugging-face]
+---
+
+- 文章介绍 Palette，目标是让一个小模型学会按特定设计语言搭建演示文稿（deck），而不是通用生成。对 agent 工具链的含义：垂直任务上小模型 + 明确约束可能比通用大模型更可控。
+- 该工作来自 Hugging Face 博客上的 IBM Research 投稿，说明这类设计语言驱动的生成能力正被当作可复用的模型能力来发布。对开发者的含义：可以关注其模型与用法，评估接入自有内容流水线的成本。
+- 标题强调“teaching a small model”，即通过训练让小模型掌握设计语言，而非依赖提示词硬凑。对 agent 的含义：把风格规范内化进模型，可减少每次调用时的上下文与后处理负担。
+
+---
+
+> 原文：[Palette: teaching a small model to build decks in your design language](https://huggingface.co/blog/ibm-research/palette-deck-building) · 作者 Hugging Face

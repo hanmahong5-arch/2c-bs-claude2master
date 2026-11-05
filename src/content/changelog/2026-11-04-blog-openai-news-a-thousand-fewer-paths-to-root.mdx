@@ -1,0 +1,23 @@
+---
+slug: 2026-11-04-blog-openai-news-a-thousand-fewer-paths-to-root
+title: "A thousand fewer paths to root — OpenAI 用自动化流水线在 Linux 内核里找出并修复了 948 个本地提"
+source: "OpenAI"
+sourceUrl: https://openai.com/index/a-thousand-fewer-paths-to-root
+publishedAt: 2026-11-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "OpenAI"
+hook: "OpenAI 用自动化流水线在 Linux 内核里找出并修复了 948 个本地提权漏洞"
+broadcast: "OpenAI 用一条自动化流水线，在 Linux 内核里找出并修复了九百四十八个本地提权漏洞，而且产出的是补丁，不只是漏洞清单。值得关注的是，它把发现、验证、出补丁串成了一条端到端链路，验证环节尤其关键。对国内做 agent 的开发者来说，这意味着设计安全任务时，验证器和判定标准才是核心，交付形态也该包含改动和回归验证，方便接进现有评审流程。"
+tags: [ai-agents, security, linux-kernel, automation]
+---
+
+- OpenAI 构建了一条自主流水线，完成漏洞的发现、验证与补丁生成，目标锁定 Linux 内核的本地权限提升问题，最终覆盖 948 个漏洞。对 agent 工具链的含义是：发现、复现、出补丁可以串成一条端到端自动链路，而不只是单点扫描。
+- 流水线强调“验证”环节，说明仅靠模型报出可疑点不够，还要有可执行的确认步骤才能进入补丁阶段。对开发者的含义是：给 agent 设计安全任务时，验证器与判定标准是核心组件。
+- 产出物是补丁而非漏洞列表，意味着流程终点落在可提交的修复上。对工具链的含义是：安全 agent 的交付形态应包含 diff 与回归验证，方便接入现有评审流程。
+
+---
+
+> 原文：[A thousand fewer paths to root](https://openai.com/index/a-thousand-fewer-paths-to-root) · 作者 OpenAI

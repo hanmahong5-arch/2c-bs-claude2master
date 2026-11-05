@@ -1,0 +1,23 @@
+---
+slug: 2026-11-04-blog-simonwillison-datasette-llm-0-1a10
+title: "datasette-llm 0.1a10 — Datasette 插件 datasette"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/4/datasette-llm/
+publishedAt: 2026-11-04
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 插件 datasette-llm 发布 0.1a10，修复模型列表未按配置限制的 bug"
+broadcast: "一个叫 datasette-llm 的插件发了小版本更新，修的是模型列表没按配置限制的 bug，连作者自己的演示站都受了影响。这对搭 agent 的开发者是个提醒：模型白名单得靠配置强制生效，上线前要显式核对模型列表和配置是否一致，别只依赖默认行为，不然演示环境可能调用到预期外的模型。"
+tags: [datasette, llm, agents, release-notes]
+---
+
+- 版本 0.1a10 修复了一个 bug：可用 LLM 模型集合没有被正确限制为配置中列出的那些，导致 agent.datasette.io 演示站受影响。对搭建 agent 的开发者来说，模型白名单必须由配置强制生效，否则演示环境可能暴露或调用预期外的模型。
+- 该问题出现在 Simon Willison 自己的 agent.datasette.io 演示站上，说明这类配置约束的缺陷在真实 agent 部署中容易被忽略。含义是：上线前应显式验证模型列表与配置一致，而不只依赖默认行为。
+- 发布说明极短，只点明修复范围与受影响站点，并标注 datasette、llm 两个 tag。对工具链维护者的含义是：小版本修复也应写清影响面，方便下游判断是否需要升级。
+
+---
+
+> 原文：[datasette-llm 0.1a10](https://simonwillison.net/2026/Nov/4/datasette-llm/) · 作者 Simon Willison
