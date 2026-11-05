@@ -1,6 +1,138 @@
 {
   "items": [
     {
+      "slug": "2026-11-05-blog-latentspace-ainews-it-s-swapping-season",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] It's Swapping Season — AI 人事大挪移与开源模型混战：一篇值得扫的行业周报",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-trending-armanlife-arman-vpn-client",
+      "zh": true,
+      "en": false,
+      "title": "arman-vpn-client — 用 Mozilla 账号自建 VPN 客户端，跨四平台开源",
+      "kind": "trending",
+      "author": null,
+      "source": "armanlife/arman-vpn-client",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-04-blog-hf-blog-dharma-field-extractor-any-document-in-structured-fields",
+      "zh": true,
+      "en": true,
+      "title": "Dharma Field Extractor: Any Document In, Structured — Hugging Face 上的 Dharma Field Extractor：把",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-11-04"
+    },
+    {
+      "slug": "2026-11-04-blog-interconnects-how-big-is-the-open-model-economy-today",
+      "zh": true,
+      "en": true,
+      "title": "How big is the open model economy today? — 开源模型推理市场有多大？作者用初创公司数据估算其规模与增速",
+      "kind": "blogger",
+      "author": "Nathan Lambert",
+      "source": "Nathan Lambert",
+      "tool": null,
+      "publishedAt": "2026-11-04"
+    },
+    {
+      "slug": "2026-11-04-blog-latentspace-ainews-behind-latent-space-kill-my-saas-jev",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Behind Latent Space: Kill My SaaS, Jev & AI in — Latent Space 独家访谈与 AI Engineer 上海站见闻，附一周",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-11-04"
+    },
+    {
+      "slug": "2026-11-04-blog-openai-news-a-thousand-fewer-paths-to-root",
+      "zh": true,
+      "en": true,
+      "title": "A thousand fewer paths to root — OpenAI 用自动化流水线在 Linux 内核里找出并修复了 948 个本地提",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-04"
+    },
+    {
+      "slug": "2026-11-04-blog-openai-news-daybreak-red-is-now-available-in-aws-govcloud",
+      "zh": true,
+      "en": true,
+      "title": "Daybreak Red is now available in AWS GovCloud (US-East) — OpenAI 把 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-04"
+    },
+    {
+      "slug": "2026-11-04-blog-openai-news-devrev-delivers-autonomous-self-service-with-gpt-6",
+      "zh": true,
+      "en": true,
+      "title": "DevRev delivers autonomous self-service with GPT-6.1 Sol — DevRev 用 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-04"
+    },
+    {
+      "slug": "2026-11-04-blog-openai-news-introducing-images-2-6",
+      "zh": true,
+      "en": true,
+      "title": "Introducing Images 2.6 — OpenAI 发布 Images 2.6：图像生成更快、支持 GIF、编辑更精准",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-04"
+    },
+    {
+      "slug": "2026-11-04-blog-openai-news-openai-to-acquire-pierre-computer-company-inc",
+      "zh": true,
+      "en": true,
+      "title": "OpenAI to acquire Pierre Computer Company, Inc. — OpenAI 收购 Pierre，为 Codex 补上代码构建、理解与审查的工具",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-04"
+    },
+    {
+      "slug": "2026-11-04-blog-simonwillison-datasette-apps-0-3a0",
+      "zh": true,
+      "en": true,
+      "title": "datasette-apps 0.3a0 — Datasette Apps 0.3a0 让 LLM 在 Datasette 里",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-11-04"
+    },
+    {
+      "slug": "2026-11-04-blog-simonwillison-datasette-llm-0-1a10",
+      "zh": true,
+      "en": true,
+      "title": "datasette-llm 0.1a10 — Datasette 插件 datasette",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-11-04"
+    },
+    {
       "slug": "2026-11-04-claude-code-2-1-318",
       "zh": true,
       "en": false,
@@ -9,6 +141,17 @@
       "author": null,
       "source": "anthropics/claude-code",
       "tool": "claude-code",
+      "publishedAt": "2026-11-04"
+    },
+    {
+      "slug": "2026-11-04-gemini-cli-0-67-0",
+      "zh": true,
+      "en": false,
+      "title": "gemini-cli v0.67.0 — 容器沙箱可接 IDE，取消后不再执行工具",
+      "kind": "changelog",
+      "author": null,
+      "source": "google-gemini/gemini-cli",
+      "tool": "gemini-cli",
       "publishedAt": "2026-11-04"
     },
     {
@@ -21,6 +164,50 @@
       "source": "DrWhax/unfairplay",
       "tool": null,
       "publishedAt": "2026-11-04"
+    },
+    {
+      "slug": "2026-11-03-blog-deepmind-agentic-cheminformatics-with-google-antigravity",
+      "zh": true,
+      "en": true,
+      "title": "Agentic cheminformatics with Google Antigravity — DeepMind 用 Antigravity 智能体做化学信息学，加速药物发现并",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-blog-hf-blog-cwe-bench-v2-more-coverage-quality-and-transparency",
+      "zh": true,
+      "en": true,
+      "title": "CWE-bench v2: More coverage, quality, and transparency — Hugging Face 发布 CWE",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-blog-hf-blog-palette-teaching-a-small-model-to-build-decks",
+      "zh": true,
+      "en": true,
+      "title": "Palette: teaching a small model to build decks in your — Hugging Face 介绍 Palette：教小模型按你的设计语言自动生成演",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-blog-hf-blog-statebench-testing-how-language-models-track-state-changes",
+      "zh": true,
+      "en": true,
+      "title": "StateBench: Testing how language models track state — Hugging Face 介绍 StateBench：测语言模型能否在长文档里跟",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-11-03"
     },
     {
       "slug": "2026-11-03-blog-hf-blog-transformers-model-integration-contracts",
@@ -89,10 +276,32 @@
       "publishedAt": "2026-11-03"
     },
     {
+      "slug": "2026-11-03-blog-simonwillison-datasette-agent-0-5a0",
+      "zh": true,
+      "en": true,
+      "title": "datasette-agent 0.5a0 — Datasette Agent 0.5a0 发布：聊天面板可常驻数据库页面旁，边",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
       "slug": "2026-11-03-blog-simonwillison-i-discovered-a-sound-that-leaks-your-exact",
       "zh": true,
       "en": true,
       "title": "I discovered a sound that leaks your exact location — 飞机背景噪音经多普勒曲线比对 ADS",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "slug": "2026-11-03-blog-simonwillison-llm-0-37-1",
+      "zh": true,
+      "en": true,
+      "title": "llm 0.37.1 — Simon Willison 发布 LLM 0.37.1 修复版，多位社区贡献者",
       "kind": "blogger",
       "author": "Simon Willison",
       "source": "Simon Willison",
@@ -670,215 +879,6 @@
       "source": "Zvi Mowshowitz",
       "tool": null,
       "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-claude-code-2-1-314",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.314 — 写入越界拦截与网关分组路由，权限边界更硬",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-openclaw-concepts-runtime-profiles",
-      "zh": true,
-      "en": true,
-      "title": "Runtime execution profiles · OpenClaw — AOT 构建不等于禁用解释执行，OpenClaw 把执行契约讲清楚了",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-openclaw-concepts-session-controller",
-      "zh": true,
-      "en": true,
-      "title": "Session controller · OpenClaw — 会话控制器如何决定哪一轮能占用会话，以及为什么取消不等于已结算",
-      "kind": "practice",
-      "author": null,
-      "source": "openclaw-concepts",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-opencode-2-2-3",
-      "zh": true,
-      "en": false,
-      "title": "opencode v2.2.3 — OpenCode 可直接复用 Claude Code 登录与模型，长会话渲染大幅",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-opencode-2-2-4",
-      "zh": true,
-      "en": false,
-      "title": "opencode v2.2.4 — 终端持久化与 agent 发布 HTML 产物，改变会话状态边界",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-opencode-2-2-5",
-      "zh": true,
-      "en": false,
-      "title": "opencode v2.2.5 — 压缩缓冲可按百分比配置，一套参数适配大小窗口模型",
-      "kind": "changelog",
-      "author": null,
-      "source": "sst/opencode",
-      "tool": "opencode",
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-trending-deepseek-ai-deepinfer",
-      "zh": true,
-      "en": false,
-      "title": "DeepInfer — DeepSeek 官方开源大模型推理框架，两万四星",
-      "kind": "trending",
-      "author": null,
-      "source": "deepseek-ai/DeepInfer",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-trending-gathin23-cleanyourtv",
-      "zh": true,
-      "en": false,
-      "title": "cleanyourtv — 通过 Wi",
-      "kind": "trending",
-      "author": null,
-      "source": "Gathin23/cleanyourtv",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-trending-storytold-cadcraft",
-      "zh": true,
-      "en": false,
-      "title": "cadcraft — 纯 Rust 实现的开源 AutoCAD 风格 CAD 应用",
-      "kind": "trending",
-      "author": null,
-      "source": "storytold/cadcraft",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-trending-tangency-labs-solidcraft",
-      "zh": true,
-      "en": false,
-      "title": "solidcraft — 纯 Rust 参数化 3D CAD，桌面、Web 与 MCP 自动化三端通吃",
-      "kind": "trending",
-      "author": null,
-      "source": "tangency-labs/solidcraft",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-trending-zagitta-gpu-unlock",
-      "zh": true,
-      "en": false,
-      "title": "gpu-unlock — 解锁 GeForce 显卡被限制的 AI 算力，20/30/40 系可翻倍",
-      "kind": "trending",
-      "author": null,
-      "source": "Zagitta/gpu-unlock",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-29-blog-hf-blog-announcing-project-protostar-making-publicly-funded-science-ai",
-      "zh": true,
-      "en": true,
-      "title": "Announcing Project ProtoStar: Making Publicly Funded — Hugging Face 发起 ProtoStar 项目，把公共资助的科研成果整",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-hf-blog-granite-switch-4-1-1-update-models-like",
-      "zh": true,
-      "en": true,
-      "title": "Granite Switch 4.1.1 — Update models like you update — IBM 在 Hugging Face 发布 Granite Switch 4.1",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-hf-blog-introducing-anyspeechrecognizer-and-anydecisionmodel-open-models-for-speech",
-      "zh": true,
-      "en": true,
-      "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: — Hugging Face 发布两个可在苹果设备本地运行的开源模型：语音识别与决策",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-hf-blog-welcome-le-chonk-mistral-large-4-on-hugging",
-      "zh": true,
-      "en": true,
-      "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face — Mistral Large 4 以 Le Chonk 之名上线 Hugging ",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-latentspace-ainews-gemini-4-carbon-tops-leaderboards-launches-for",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Gemini 4 Carbon tops leaderboards, launches — Gemini 4 Carbon 登顶独立榜单，却先向网络安全防御者开放，开发者要",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-latentspace-can-frontier-models-see-past-a-decoy-elorian",
-      "zh": true,
-      "en": true,
-      "title": "Can Frontier Models See Past a Decoy? Elorian Tests — 前沿模型在数数基准上集体不及格，Elorian 用\"视觉思考\"切入视觉推理赛道",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-openai-news-an-updated-model-spec-for-more-capable-and",
-      "zh": true,
-      "en": true,
-      "title": "An updated Model Spec for more capable and beneficial AI — OpenAI 更新 Model Spec，用五项核心价值约束更强模型的判断与服从",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-29"
-    },
-    {
-      "slug": "2026-10-29-blog-openai-news-credit-saison-achieves-954-roi-in-a-chatgpt",
-      "zh": true,
-      "en": true,
-      "title": "Credit Saison achieves 954% ROI in a ChatGPT Enterprise — 信用卡公司试点 ChatGPT 企业版，算出 954% ROI 并推向全公司",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-29"
     }
   ]
 }
