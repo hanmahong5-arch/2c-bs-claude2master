@@ -1,0 +1,23 @@
+---
+slug: 2026-11-06-codex-rust-v0-167-0
+title: "codex rust-v0.167.0 — 多后端会话切换与未读结果标记，改变 agent 编排入口"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.167.0
+publishedAt: 2026-11-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "多后端会话切换与未读结果标记，改变 agent 编排入口"
+broadcast: "这次更新给编码智能体加了一个命令中心，能在多个后端之间切换会话，还会把没读过的结果标出来，草稿也能保留。对国内做智能体编排的开发者来说，这意味着要维护跨会话的未读状态和结果归属，还得把草稿和后端连接拆开。另外网络审批提示改成按端点逐个排队、跟着请求结束关闭，审批队列的设计也得跟着调整。"
+insight: "这次 0.167.0 的重点在 agent 编排入口，而不是模型能力：新增 codex agents --no-daemon 命令中心、会话选择器支持跨后端切换并保留草稿、审批提示绑定请求生命周期。现有用户如果依赖多后端会话或并发审批，值得升级；但升级前要确认 harness 能维护跨会话未读状态与结果归属，并把草稿与后端连接解耦、审批队列按端点串行化，否则新入口反而添乱。摘要未提及代理相关变化，走 newapi.lurus.cn 的国内用户暂无受影响依据。"
+tags: [agent-command-center, session-switching, approval-flow, tui]
+---
+
+- 新增 `codex agents --no-daemon` 命令中心，命令中心与会话选择器标记未读结果；harness 需维护跨会话的未读状态与结果归属。
+- 终端会话选择器可在已连接后端间切换且保留草稿；harness 设计需把草稿与后端连接解耦，支持跨后端恢复。
+- 网络审批提示随请求结束关闭，同一端点并发请求逐个提示；harness 的审批队列需按端点串行化并绑定请求生命周期。
+
+---
+
+> 原文 release：[openai/codex rust-v0.167.0](https://github.com/openai/codex/releases/tag/rust-v0.167.0)

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-05-opencode-process-daemon-v0-5-0
+title: "opencode process-daemon-v0.5.0 — opencode"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.5.0
+publishedAt: 2026-11-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "opencode-pty 升到 0.5.0，协议版本变为 8，值得关注"
+broadcast: "opencode 的终端组件升到了 0.5.0，协议版本也变成了 8。做 agent 的开发者要注意，依赖得按新的包名和版本锁定，harness 和终端进程通信时也要对齐协议 8，不然握手会对不上。另外构建和发布流程要从新的目录取产物，这几处都得跟着改。"
+insight: "这次 opencode-pty 升到 0.5.0，协议版本变为 8，现有用户值得升级，但重点不在功能而在对齐：依赖要锁到 @opencode/pty@0.5.0，harness 与 pty 进程通信必须对齐协议 8，否则握手不匹配。构建与发布流程也要改从 packages/process-daemon 取产物。若你现有 hook 或 prompt 配置依赖旧包名和旧协议，建议随这次升级一并调整，不要只改版本号。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [opencode-pty, protocol-8, process-daemon, npm-release]
+---
+
+- 版本从旧版升到 0.5.0，npm 包名为 @opencode/pty@0.5.0：harness 需按新包名与版本锁定依赖。
+- 协议版本为 8：harness 与 pty 进程通信需对齐协议 8，避免握手不匹配。
+- 发布源为 packages/process-daemon：harness 构建与发布流程需从该目录取产物。
+
+---
+
+> 原文 release：[sst/opencode process-daemon-v0.5.0](https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.5.0)

@@ -1,16 +1,16 @@
 {
   "lastSeen": {
     "anthropics/claude-code": "v2.1.318",
-    "openai/codex": "rust-v0.166.0",
+    "openai/codex": "rust-v0.167.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "v4.1.26",
     "block/goose": "v1.57.0",
-    "sst/opencode": "v2.2.5",
+    "sst/opencode": "process-daemon-v0.5.0",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.67.0",
-    "openclaw/openclaw": "v2026.10.10",
+    "openclaw/openclaw": "v2026.11.1",
     "zeroclaw-labs/zeroclaw": "v0.8.7",
-    "NousResearch/hermes-agent": "v0.22.7"
+    "NousResearch/hermes-agent": "v0.23.0"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -223,7 +223,12 @@
     "deepseek-ai/dsh-superagent-prototype",
     "storytold/craft-anything",
     "DrWhax/unfairplay",
-    "armanlife/arman-vpn-client"
+    "armanlife/arman-vpn-client",
+    "seedds/nxnative",
+    "ccch1mneyyy/dsh-Go",
+    "t4t5/owly",
+    "xevrion/hatchzip",
+    "opengeos/RustGIS"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -349,11 +354,11 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-05",
-    "claude-code-docs": "2026-10-30",
-    "openai-codex-blog": "2026-10-30",
-    "openclaw-concepts": "2026-10-30",
-    "hermes-guides": "2026-10-30"
+    "anthropic-engineering": "2026-11-06",
+    "claude-code-docs": "2026-11-06",
+    "openai-codex-blog": "2026-11-06",
+    "openclaw-concepts": "2026-11-06",
+    "hermes-guides": "2026-11-06"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -778,7 +783,8 @@
       "https://simonwillison.net/2026/Nov/4/datasette-llm/",
       "https://simonwillison.net/2026/Nov/4/datasette-apps/",
       "https://simonwillison.net/2026/Nov/3/datasette-agent/",
-      "https://simonwillison.net/2026/Nov/3/llm/"
+      "https://simonwillison.net/2026/Nov/3/llm/",
+      "https://simonwillison.net/2026/Nov/5/paul-ford/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1431,7 +1437,12 @@
       "https://openai.com/index/daybreak-red-aws-govcloud",
       "https://openai.com/index/a-thousand-fewer-paths-to-root",
       "https://openai.com/index/introducing-images-2-6",
-      "https://openai.com/index/devrev-enterprise-self-service"
+      "https://openai.com/index/devrev-enterprise-self-service",
+      "https://openai.com/index/australian-universities-ai-native-graduates",
+      "https://openai.com/index/cultfit-builds-with-codex",
+      "https://openai.com/index/introducing-gpt-6-cyber",
+      "https://openai.com/index/merge-builds-with-openai",
+      "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1769,21 +1780,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-05",
-    "lilianweng": "2026-10-30",
-    "latentspace": "2026-11-05",
-    "interconnects": "2026-11-05",
+    "simonwillison": "2026-11-06",
+    "lilianweng": "2026-11-06",
+    "latentspace": "2026-11-06",
+    "interconnects": "2026-11-06",
     "karpathy": "2026-11-05",
     "raschka": "2026-11-05",
     "eugeneyan": "2026-11-05",
-    "chiphuyen": "2026-10-30",
+    "chiphuyen": "2026-11-06",
     "oneusefulthing": "2026-11-05",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-05",
+    "openai-news": "2026-11-06",
     "deepmind": "2026-11-05",
     "hf-blog": "2026-11-05",
-    "anthropic-news": "2026-11-05",
+    "anthropic-news": "2026-11-06",
     "steipete": "2026-11-05",
     "openclaw-blog": "2026-11-05"
   },

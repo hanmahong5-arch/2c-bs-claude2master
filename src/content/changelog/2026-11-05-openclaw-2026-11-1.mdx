@@ -1,0 +1,23 @@
+---
+slug: 2026-11-05-openclaw-2026-11-1
+title: "openclaw v2026.11.1 — 会话中断不再丢上下文，子代理与渠道回复更可靠"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.11.1
+publishedAt: 2026-11-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "会话中断不再丢上下文，子代理与渠道回复更可靠"
+broadcast: "这次更新解决了一个很实际的问题：会话中断不再丢上下文。超长轮次会保留有用历史，停掉第一轮也不会让下一条消息从零开始；子代理在模型和会话切换后还能保留后续消息，父会话用自定义存储也能收到审批；渠道回复也不再绑死在单次请求上。对做 agent 的国内开发者来说，这意味着要把截断、取消和审批投递当成可恢复状态来设计，而不是当成会话终点。"
+insight: "这次 2026.11.1 的核心是会话中断可恢复、子代理审批与后续投递解耦、渠道回复不再绑定单次请求生命周期，对经常遇到长轮次被截断或取消的现有用户来说值得升级。升级后建议检查自己的 prompt 和 hook 配置是否把截断、取消当成会话终点，若是则需按可恢复状态调整。国内用户走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [session-recovery, subagents, channel-delivery, agent-harness]
+---
+
+- 超长轮次保留有用历史，停止首个 Claude CLI 轮次不再让下条消息从零开始；harness 需把截断与取消视为可恢复状态而非会话终点。
+- 子代理在模型与会话切换后保留后续消息，父会话即使使用自定义会话存储也能收到子代理审批；harness 应把审批与后续投递解耦于会话存储实现。
+- Telegram、Discord、webhook 在请求处理器或前序轮次结束后仍能触达 agent；harness 的渠道回复不能绑定单次请求生命周期。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.11.1](https://github.com/openclaw/openclaw/releases/tag/v2026.11.1)

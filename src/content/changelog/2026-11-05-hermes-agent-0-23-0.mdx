@@ -1,0 +1,23 @@
+---
+slug: 2026-11-05-hermes-agent-0-23-0
+title: "hermes-agent v0.23.0 — 单网关统一所有会话，Desktop 搬进浏览器标签页"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0
+publishedAt: 2026-11-05
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "单网关统一所有会话，Desktop 搬进浏览器标签页"
+broadcast: "这次更新把会话统一收进一个网关，命令行、桌面、编辑器、机器人和定时任务都只当客户端接入，一个会话只有一条队列和一份历史，不会重复写入或丢消息。桌面工作区现在能搬进浏览器标签页，但默认关闭，要手动开启并加登录保护。另外付费工具能标出单次调用价格，审批时显示花费，超限先询问。对做 agent 的国内开发者来说，这提醒我们会话所有权要集中，成本也该当成审批的一等信号。"
+insight: "从国内开发者视角看，v0.23.0 的核心变化是会话所有权集中到单一网关，CLI、TUI、Desktop 等入口都退化为客户端，这属于架构层面的调整，现有用户值得升级，但升级前要确认自己是否依赖多入口各自维护会话的旧行为。Webapp 默认关闭，想用浏览器版 Desktop 需手动开启 webapp.enabled 并加登录保护，走 newapi.lurus.cn 代理的用户不受影响，因为摘要未提及网关地址或代理配置有变。付费 MCP 工具新增标价与限额，现有 prompt 和 hook 配置无需改动，但涉及付费工具的审批流程要留意价格提示与累计花费门控。"
+tags: [gateway, webapp, mcp-costs, session-ownership]
+---
+
+- **单网关拥有每个会话**：CLI、TUI、Desktop、编辑器、机器人和 cron 都作为客户端接入同一网关，一个会话只有一条队列和一份历史，避免重复写入或消息丢失。harness 设计上，会话所有权必须集中，多入口只能做客户端。
+- **Webapp 默认关闭**：开启 `webapp.enabled` 后，网关在自有监听端口提供完整 Desktop 工作区，Docker 与 Nix 包已内置。harness 可把 UI 与运行时解耦，但需默认关闭并加登录保护。
+- **付费 MCP 工具标价与限额**：工具可声明单次调用费用，审批提示显示价格与聊天累计花费，超限先询问，YOLO 模式也不例外。harness 应把成本作为审批门控的一等信号。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.23.0](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0)
