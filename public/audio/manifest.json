@@ -1,6 +1,72 @@
 {
   "items": [
     {
+      "slug": "2026-11-06-codex-rust-v0-167-0",
+      "zh": true,
+      "en": false,
+      "title": "codex rust-v0.167.0 — 多后端会话切换与未读结果标记，改变 agent 编排入口",
+      "kind": "changelog",
+      "author": null,
+      "source": "openai/codex",
+      "tool": "codex",
+      "publishedAt": "2026-11-06"
+    },
+    {
+      "slug": "2026-11-06-trending-ccch1mneyyy-dsh-go",
+      "zh": true,
+      "en": false,
+      "title": "dsh-Go — DeepSeek Harness 装进手机，还能遥控电脑",
+      "kind": "trending",
+      "author": null,
+      "source": "ccch1mneyyy/dsh-Go",
+      "tool": null,
+      "publishedAt": "2026-11-06"
+    },
+    {
+      "slug": "2026-11-06-trending-opengeos-rustgis",
+      "zh": true,
+      "en": false,
+      "title": "RustGIS — 纯 Rust 写的开源 GIS，凭性能与零依赖快速涨到 2.3k 星",
+      "kind": "trending",
+      "author": null,
+      "source": "opengeos/RustGIS",
+      "tool": null,
+      "publishedAt": "2026-11-06"
+    },
+    {
+      "slug": "2026-11-06-trending-seedds-nxnative",
+      "zh": true,
+      "en": false,
+      "title": "nxnative — 把 Switch 游戏 NSP 转成未签名 IPA，在 iPhone/Mac 原",
+      "kind": "trending",
+      "author": null,
+      "source": "seedds/nxnative",
+      "tool": null,
+      "publishedAt": "2026-11-06"
+    },
+    {
+      "slug": "2026-11-06-trending-t4t5-owly",
+      "zh": true,
+      "en": false,
+      "title": "owly — Rust 写的跨设备隔空投送，非苹果设备也能互传文件",
+      "kind": "trending",
+      "author": null,
+      "source": "t4t5/owly",
+      "tool": null,
+      "publishedAt": "2026-11-06"
+    },
+    {
+      "slug": "2026-11-06-trending-xevrion-hatchzip",
+      "zh": true,
+      "en": false,
+      "title": "hatchzip — Rust 写的跨平台解压器，原地解压省空间，星标已破 2500",
+      "kind": "trending",
+      "author": null,
+      "source": "xevrion/hatchzip",
+      "tool": null,
+      "publishedAt": "2026-11-06"
+    },
+    {
       "slug": "2026-11-05-blog-latentspace-ainews-it-s-swapping-season",
       "zh": true,
       "en": true,
@@ -9,6 +75,105 @@
       "author": "Latent Space",
       "source": "Latent Space",
       "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-blog-openai-news-australian-universities-are-creating-ai-native-graduates",
+      "zh": true,
+      "en": true,
+      "title": "Australian universities are creating AI-native graduates — 澳洲高校把 ChatGPT 引入教学，培养 AI 原生毕业生，值得关注 AI 教",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-blog-openai-news-cult-fit-builds-operational-muscle-with-codex",
+      "zh": true,
+      "en": true,
+      "title": "Cult.fit builds operational muscle with Codex — Cult.fit 用 Codex 让非工程团队自建工具，值得看 AI 编码如何进",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-blog-openai-news-gpt-6-cyber-advancing-the-frontier-of-aligned",
+      "zh": true,
+      "en": true,
+      "title": "GPT‑6 Cyber: Advancing the frontier of aligned — OpenAI 发布 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-blog-openai-news-merge-builds-product-and-business-tools-with-openai",
+      "zh": true,
+      "en": true,
+      "title": "Merge builds product and business tools with OpenAI — Merge 用 GPT",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-blog-openai-news-setting-a-new-standard-for-responsible-ai-infrastructure",
+      "zh": true,
+      "en": true,
+      "title": "Setting a new standard for responsible AI infrastructure — OpenAI 提出社区契约与算力园区政策蓝图，为 AI 基建定责",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-blog-simonwillison-quoting-paul-ford",
+      "zh": true,
+      "en": true,
+      "title": "Quoting Paul Ford — Paul Ford 一句话点破浏览器能力与成本的反向走势，值得开发者重估 Web",
+      "kind": "blogger",
+      "author": "Simon Willison",
+      "source": "Simon Willison",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-hermes-agent-0-23-0",
+      "zh": true,
+      "en": false,
+      "title": "hermes-agent v0.23.0 — 单网关统一所有会话，Desktop 搬进浏览器标签页",
+      "kind": "changelog",
+      "author": null,
+      "source": "NousResearch/hermes-agent",
+      "tool": "hermes",
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-openclaw-2026-11-1",
+      "zh": true,
+      "en": false,
+      "title": "openclaw v2026.11.1 — 会话中断不再丢上下文，子代理与渠道回复更可靠",
+      "kind": "changelog",
+      "author": null,
+      "source": "openclaw/openclaw",
+      "tool": "openclaw",
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-opencode-process-daemon-v0-5-0",
+      "zh": true,
+      "en": false,
+      "title": "opencode process-daemon-v0.5.0 — opencode",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
       "publishedAt": "2026-11-05"
     },
     {
@@ -714,171 +879,6 @@
       "source": "Folkbench/folkbench",
       "tool": null,
       "publishedAt": "2026-10-31"
-    },
-    {
-      "slug": "2026-10-31-trending-horizon-rust-horizon",
-      "zh": true,
-      "en": false,
-      "title": "horizon — 用 Rust 重写 Minecraft Java 版，并用 281 个差分测试对",
-      "kind": "trending",
-      "author": null,
-      "source": "horizon-rust/horizon",
-      "tool": null,
-      "publishedAt": "2026-10-31"
-    },
-    {
-      "slug": "2026-10-31-trending-net-merge-net-merge",
-      "zh": true,
-      "en": false,
-      "title": "net-merge — 把 Wi",
-      "kind": "trending",
-      "author": null,
-      "source": "net-merge/net-merge",
-      "tool": null,
-      "publishedAt": "2026-10-31"
-    },
-    {
-      "slug": "2026-10-31-trending-storytold-craft-launcher",
-      "zh": true,
-      "en": false,
-      "title": "craft-launcher — Rust 写的 Craft 应用启动器，4.3k 星",
-      "kind": "trending",
-      "author": null,
-      "source": "storytold/craft-launcher",
-      "tool": null,
-      "publishedAt": "2026-10-31"
-    },
-    {
-      "slug": "2026-10-31-trending-storytold-deckcraft",
-      "zh": true,
-      "en": false,
-      "title": "deckcraft — 纯 Rust 重写 PowerPoint，开源幻灯片工具获 4.4k 星",
-      "kind": "trending",
-      "author": null,
-      "source": "storytold/deckcraft",
-      "tool": null,
-      "publishedAt": "2026-10-31"
-    },
-    {
-      "slug": "2026-10-30-blog-anthropic-news-announcements",
-      "zh": true,
-      "en": false,
-      "title": "Announcements — Anthropic 官方公告汇总：新模型、IPO、科学计划与安全项目集中发布",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-blog-anthropic-news-features",
-      "zh": true,
-      "en": false,
-      "title": "Features — Anthropic 官方特性页的三条案例：Claude 参与刚果埃博拉应对、Cl",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-blog-deepmind-speeding-up-planning-decisions-with-ai",
-      "zh": true,
-      "en": true,
-      "title": "Speeding up planning decisions with AI — DeepMind 与英国政府合作，用 AI 缩短规划审批评估时间，值得关注 AI",
-      "kind": "blogger",
-      "author": "Google DeepMind",
-      "source": "Google DeepMind",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-blog-hf-blog-nemotron-halloween",
-      "zh": true,
-      "en": false,
-      "title": "nemotron-halloween — Hugging Face 与 NVIDIA 的 Nemotron 万圣节主题博客",
-      "kind": "blogger",
-      "author": "Hugging Face",
-      "source": "Hugging Face",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-blog-interconnects-was-i-wrong-about-open-models-cyber-risks",
-      "zh": true,
-      "en": true,
-      "title": "Was I wrong about open models & cyber risks? — 作者复盘自己关于开源模型与网络安全风险的判断，认为所谓开源模型会引发灾难的预测正",
-      "kind": "blogger",
-      "author": "Nathan Lambert",
-      "source": "Nathan Lambert",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-blog-latentspace-ainews-building-aie-code-the-top-coding-agent",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Building AIE CODE: The top Coding Agent — Latent Space 揭秘 CODE 大会三大主题，并汇总 Mistral ",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-blog-openai-news-community-safety-report-and-new-protections-for-teens",
-      "zh": true,
-      "en": true,
-      "title": "Community safety report and new protections for teens — OpenAI 发布社区安全报告，并收紧 ChatGPT 对青少年的保护",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-blog-openai-news-fair-use-benefits-everyone",
-      "zh": true,
-      "en": true,
-      "title": "Fair use benefits everyone — OpenAI 汇编创作者、学者与法律专家法庭意见，论证合理使用支撑 AI 训练与",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-blog-openai-news-making-it-easier-for-websites-to-express-ai",
-      "zh": true,
-      "en": true,
-      "title": "Making it easier for websites to express AI training — OpenAI 将支持 robots.txt 中的共享 AI 训练偏好信号，网站可",
-      "kind": "blogger",
-      "author": "OpenAI",
-      "source": "OpenAI",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-blog-simonwillison-dbreunig-nesformer",
-      "zh": true,
-      "en": false,
-      "title": "dbreunig/nesformer — 有人把 NES 的 6502 CPU 模拟器塞进了 Qwen3.5",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-30"
-    },
-    {
-      "slug": "2026-10-30-blog-thezvi-childhood-and-education-22-voice-without-exit",
-      "zh": true,
-      "en": false,
-      "title": "Childhood and Education #22: Voice Without Exit — 纽约时报记者亲述把女儿送进烂校八年的代价，追问学校到底为了什么",
-      "kind": "blogger",
-      "author": "Zvi Mowshowitz",
-      "source": "Zvi Mowshowitz",
-      "tool": null,
-      "publishedAt": "2026-10-30"
     }
   ]
 }
