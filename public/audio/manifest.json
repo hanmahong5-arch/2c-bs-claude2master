@@ -1,6 +1,138 @@
 {
   "items": [
     {
+      "slug": "2026-11-07-blog-latentspace-ainews-anthropic-ipo-whither-now",
+      "zh": true,
+      "en": true,
+      "title": "[AINews] Anthropic IPO: Whither Now? — Anthropic IPO 估值与市场回调，以及本周模型密集发布：Inkling",
+      "kind": "blogger",
+      "author": "Latent Space",
+      "source": "Latent Space",
+      "tool": null,
+      "publishedAt": "2026-11-07"
+    },
+    {
+      "slug": "2026-11-07-trending-anomalyco-rune",
+      "zh": true,
+      "en": false,
+      "title": "rune — Rust 原生 UI 框架 Rune 获 2.8k 星，主打原生渲染",
+      "kind": "trending",
+      "author": null,
+      "source": "anomalyco/rune",
+      "tool": null,
+      "publishedAt": "2026-11-07"
+    },
+    {
+      "slug": "2026-11-07-trending-herdrdev-herdr-app",
+      "zh": true,
+      "en": false,
+      "title": "herdr-app — Rust 写的桌面应用 herdr，凭 2243 星突然冒头",
+      "kind": "trending",
+      "author": null,
+      "source": "herdrdev/herdr-app",
+      "tool": null,
+      "publishedAt": "2026-11-07"
+    },
+    {
+      "slug": "2026-11-07-trending-heydamir-unslop",
+      "zh": true,
+      "en": false,
+      "title": "unslop — 一个 Claude 技能，把 AI 味界面改成有设计感的 UI",
+      "kind": "trending",
+      "author": null,
+      "source": "heydamir/unslop",
+      "tool": null,
+      "publishedAt": "2026-11-07"
+    },
+    {
+      "slug": "2026-11-07-trending-lee-xeo-claude-cage",
+      "zh": true,
+      "en": false,
+      "title": "Claude-Cage — 为 Claude 定制的轻量虚拟机，主打彻底杜绝网络泄露",
+      "kind": "trending",
+      "author": null,
+      "source": "Lee-xeo/Claude-Cage",
+      "tool": null,
+      "publishedAt": "2026-11-07"
+    },
+    {
+      "slug": "2026-11-07-trending-t8y2-motty",
+      "zh": true,
+      "en": false,
+      "title": "motty — Go 原生桌面应用，把 SSH、SFTP、VNC/RDP 和 AI 助手塞进一个",
+      "kind": "trending",
+      "author": null,
+      "source": "t8y2/motty",
+      "tool": null,
+      "publishedAt": "2026-11-07"
+    },
+    {
+      "slug": "2026-11-06-blog-hf-blog-egyptian-and-nigerian-english-join-the-open-asr",
+      "zh": true,
+      "en": true,
+      "title": "Egyptian and Nigerian English join the Open ASR — Hugging Face 开放 ASR 排行榜新增埃及与尼日利亚英语口音评测",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-11-06"
+    },
+    {
+      "slug": "2026-11-06-blog-hf-blog-toyblocks-a-controlled-world-for-robot-learning-and",
+      "zh": true,
+      "en": true,
+      "title": "ToyBlocks: A controlled world for robot learning and — Hugging Face 博客介绍 ToyBlocks：一个为机器人学习与评测设",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-11-06"
+    },
+    {
+      "slug": "2026-11-06-blog-openai-news-measuring-how-ai-agents-handle-everyday-wet-lab",
+      "zh": true,
+      "en": true,
+      "title": "Measuring how AI agents handle everyday wet-lab science — OpenAI 推出 BioBasicsBench，用 100 个任务衡量 AI ",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-06"
+    },
+    {
+      "slug": "2026-11-06-blog-openai-news-partnering-with-hacktron-to-find-vulnerabilities-in-openai",
+      "zh": true,
+      "en": true,
+      "title": "Partnering with Hacktron to find vulnerabilities in — OpenAI 与 Hacktron 合作，用前沿 AI 查找自身系统漏洞并测试第",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-06"
+    },
+    {
+      "slug": "2026-11-06-blog-openclaw-blog-use-new-models-in-openclaw-without-an-update",
+      "zh": true,
+      "en": true,
+      "title": "Use new models in OpenClaw without an update — OpenClaw 改为从托管目录、供应商账户和本地 Codex 发现新模型，新模",
+      "kind": "blogger",
+      "author": "OpenClaw",
+      "source": "OpenClaw",
+      "tool": null,
+      "publishedAt": "2026-11-06"
+    },
+    {
+      "slug": "2026-11-06-claude-code-2-1-319",
+      "zh": true,
+      "en": false,
+      "title": "claude-code v2.1.319 — 自动模式在网关后不再静默降级，权限与后台任务行为有明确开关",
+      "kind": "changelog",
+      "author": null,
+      "source": "anthropics/claude-code",
+      "tool": "claude-code",
+      "publishedAt": "2026-11-06"
+    },
+    {
       "slug": "2026-11-06-codex-rust-v0-167-0",
       "zh": true,
       "en": false,
@@ -9,6 +141,17 @@
       "author": null,
       "source": "openai/codex",
       "tool": "codex",
+      "publishedAt": "2026-11-06"
+    },
+    {
+      "slug": "2026-11-06-opencode-2-2-6",
+      "zh": true,
+      "en": false,
+      "title": "opencode v2.2.6 — 脚本化运行现在会等后台任务完成再退出，CI 需设超时",
+      "kind": "changelog",
+      "author": null,
+      "source": "sst/opencode",
+      "tool": "opencode",
       "publishedAt": "2026-11-06"
     },
     {
@@ -67,6 +210,39 @@
       "publishedAt": "2026-11-06"
     },
     {
+      "slug": "2026-11-05-blog-deepmind-gemini-omni-1-2-flash-fast-and-cost",
+      "zh": true,
+      "en": true,
+      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with — Gemini Omni 1.2 Flash 主打更快、更便宜，并支持更长片段。",
+      "kind": "blogger",
+      "author": "Google DeepMind",
+      "source": "Google DeepMind",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-blog-hf-blog-a-closer-look-at-phonon-tts-launching-high",
+      "zh": true,
+      "en": true,
+      "title": "A Closer Look at Phonon TTS. Launching High-Quality — Hugging Face 介绍 Phonon TTS：一款在基准测试中领先的高质",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-blog-hf-blog-new-nvidia-cosmos-3-open-models-for-interactive",
+      "zh": true,
+      "en": true,
+      "title": "New NVIDIA Cosmos 3 Open Models for Interactive World — NVIDIA 在 Hugging Face 发布 Cosmos 3 开放模型，用",
+      "kind": "blogger",
+      "author": "Hugging Face",
+      "source": "Hugging Face",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
       "slug": "2026-11-05-blog-latentspace-ainews-it-s-swapping-season",
       "zh": true,
       "en": true,
@@ -93,6 +269,28 @@
       "zh": true,
       "en": true,
       "title": "Cult.fit builds operational muscle with Codex — Cult.fit 用 Codex 让非工程团队自建工具，值得看 AI 编码如何进",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-blog-openai-news-flipsnack-grows-product-signups-with-conversion-optimization",
+      "zh": true,
+      "en": true,
+      "title": "Flipsnack grows product signups with conversion — OpenAI 官方客户案例：Flipsnack 如何用 ChatGPT 广告拉新",
+      "kind": "blogger",
+      "author": "OpenAI",
+      "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-blog-openai-news-franklin-templeton-uses-openai-to-support-investment-research",
+      "zh": true,
+      "en": true,
+      "title": "Franklin Templeton uses OpenAI to support investment — 富兰克林邓普顿用 OpenAI 做投研，先从股票研究切入",
       "kind": "blogger",
       "author": "OpenAI",
       "source": "OpenAI",
@@ -129,6 +327,17 @@
       "kind": "blogger",
       "author": "OpenAI",
       "source": "OpenAI",
+      "tool": null,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "slug": "2026-11-05-blog-openclaw-blog-shattering-silos-with-openclaw-multiplayer",
+      "zh": true,
+      "en": true,
+      "title": "Shattering Silos with OpenClaw Multiplayer — OpenClaw 推出 Multiplayer，宣称解决 agent 协作中最大",
+      "kind": "blogger",
+      "author": "OpenClaw",
+      "source": "OpenClaw",
       "tool": null,
       "publishedAt": "2026-11-05"
     },
@@ -670,215 +879,6 @@
       "source": "NousResearch/hermes-agent",
       "tool": "hermes",
       "publishedAt": "2026-11-02"
-    },
-    {
-      "slug": "2026-11-02-trending-ruoji6-artex",
-      "zh": true,
-      "en": false,
-      "title": "ARTEX — Go 编写的 ARTEX 开源版持续维护，近千星关注",
-      "kind": "trending",
-      "author": null,
-      "source": "RuoJi6/ARTEX",
-      "tool": null,
-      "publishedAt": "2026-11-02"
-    },
-    {
-      "slug": "2026-11-02-trending-storytold-soundcraft",
-      "zh": true,
-      "en": false,
-      "title": "soundcraft — 用纯 Rust 重写 Pro Tools，开源 DAW 新项目迅速走红",
-      "kind": "trending",
-      "author": null,
-      "source": "storytold/soundcraft",
-      "tool": null,
-      "publishedAt": "2026-11-02"
-    },
-    {
-      "slug": "2026-11-01-blog-anthropic-news-policy",
-      "zh": true,
-      "en": false,
-      "title": "Policy — Anthropic 政策页汇总：外部评估者入驻、使用政策更新与前沿 AI 治理主",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-11-01"
-    },
-    {
-      "slug": "2026-11-01-blog-anthropic-news-safeguards",
-      "zh": true,
-      "en": false,
-      "title": "Safeguards — Anthropic 安全防护文章索引：从蒸馏攻击防御到 agent 安全框架，一",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-11-01"
-    },
-    {
-      "slug": "2026-11-01-blog-anthropic-news-security",
-      "zh": true,
-      "en": false,
-      "title": "Security — Anthropic 安全文章索引：从模型被滥用、蒸馏攻击到评测环境逃逸的真实案例",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-11-01"
-    },
-    {
-      "slug": "2026-11-01-blog-simonwillison-if-in-doubt-delete-the-uv-lock-file",
-      "zh": true,
-      "en": true,
-      "title": "If in doubt, delete the uv.lock file — 升级 Python 3.15 后 uv 依赖报错，作者的经验是：先删 uv.lo",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-11-01"
-    },
-    {
-      "slug": "2026-11-01-blog-simonwillison-quoting-kyle-kingsbury",
-      "zh": true,
-      "en": true,
-      "title": "Quoting Kyle Kingsbury — Kyle Kingsbury 指出 LLM 正在侵蚀对文档、软件与厂商的信任，成",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-11-01"
-    },
-    {
-      "slug": "2026-11-01-trending-baarai-artex",
-      "zh": true,
-      "en": false,
-      "title": "ARTEX — Go 写的 AI 自主渗透测试系统，近千星",
-      "kind": "trending",
-      "author": null,
-      "source": "BaaRai/ARTEX",
-      "tool": null,
-      "publishedAt": "2026-11-01"
-    },
-    {
-      "slug": "2026-11-01-trending-helixdb-helix-foundry",
-      "zh": true,
-      "en": false,
-      "title": "helix-foundry — 把公司数据连进来，让 agent 起草本体并载入图数据库",
-      "kind": "trending",
-      "author": null,
-      "source": "HelixDB/helix-foundry",
-      "tool": null,
-      "publishedAt": "2026-11-01"
-    },
-    {
-      "slug": "2026-11-01-trending-paipiange-nvzhuang",
-      "zh": true,
-      "en": false,
-      "title": "nvzhuang — 1407 张 AI 女装参考图集，配虚拟试穿网站，Go 项目一周破千星",
-      "kind": "trending",
-      "author": null,
-      "source": "paipiange/nvzhuang",
-      "tool": null,
-      "publishedAt": "2026-11-01"
-    },
-    {
-      "slug": "2026-11-01-trending-storytold-figcraft",
-      "zh": true,
-      "en": false,
-      "title": "figcraft — 纯 Rust 重写协作设计工作流，开源 Figma 替代方案",
-      "kind": "trending",
-      "author": null,
-      "source": "storytold/figcraft",
-      "tool": null,
-      "publishedAt": "2026-11-01"
-    },
-    {
-      "slug": "2026-10-31-blog-anthropic-news-partnerships",
-      "zh": true,
-      "en": false,
-      "title": "Partnerships — Anthropic 合作公告合集：政府、咨询巨头、印度 IT 服务商如何把 Cl",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-10-31"
-    },
-    {
-      "slug": "2026-10-31-blog-anthropic-news-product",
-      "zh": true,
-      "en": false,
-      "title": "Product — Anthropic 产品动态汇总：Agent Skills 成为跨平台开放标准，",
-      "kind": "blogger",
-      "author": "Anthropic",
-      "source": "Anthropic",
-      "tool": null,
-      "publishedAt": "2026-10-31"
-    },
-    {
-      "slug": "2026-10-31-blog-latentspace-agents-prompt-people-using-agents-for-long-horizon",
-      "zh": true,
-      "en": true,
-      "title": "Agents Prompt People: Using Agents for Long-Horizon — Arca 用 agent 处理长达十天的财富管理任务，但交易仍由人拍板，核心是“",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-31"
-    },
-    {
-      "slug": "2026-10-31-blog-latentspace-ainews-google-admits-ai-mode-hurts-search-revenue",
-      "zh": true,
-      "en": true,
-      "title": "[AINews] Google admits AI Mode hurts Search revenue; — 谷歌承认 AI Mode 查询变现更差，搜索收入暴跌 15%、市值蒸发 5000",
-      "kind": "blogger",
-      "author": "Latent Space",
-      "source": "Latent Space",
-      "tool": null,
-      "publishedAt": "2026-10-31"
-    },
-    {
-      "slug": "2026-10-31-blog-simonwillison-datasette-llm-0-1a9",
-      "zh": true,
-      "en": true,
-      "title": "datasette-llm 0.1a9 — datasette",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-31"
-    },
-    {
-      "slug": "2026-10-31-blog-simonwillison-how-we-took-over-chatgpt-accounts",
-      "zh": true,
-      "en": true,
-      "title": "How We Took Over ChatGPT Accounts — ChatGPT 沙箱被攻破：一个分享链接就能窃取登录用户私密数据",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-10-31"
-    },
-    {
-      "slug": "2026-10-31-claude-code-2-1-316",
-      "zh": true,
-      "en": false,
-      "title": "claude-code v2.1.316 — 子代理努力级别与网关策略合并方式可独立配置，影响多代理编排成本与权限模型",
-      "kind": "changelog",
-      "author": null,
-      "source": "anthropics/claude-code",
-      "tool": "claude-code",
-      "publishedAt": "2026-10-31"
-    },
-    {
-      "slug": "2026-10-31-trending-folkbench-folkbench",
-      "zh": true,
-      "en": false,
-      "title": "folkbench — Rust 写的 AI API 中转站评测与切换工具，实测可用率、延迟和价格",
-      "kind": "trending",
-      "author": null,
-      "source": "Folkbench/folkbench",
-      "tool": null,
-      "publishedAt": "2026-10-31"
     }
   ]
 }
