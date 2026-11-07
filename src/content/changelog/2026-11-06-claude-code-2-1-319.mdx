@@ -1,0 +1,23 @@
+---
+slug: 2026-11-06-claude-code-2-1-319
+title: "claude-code v2.1.319 — 自动模式在网关后不再静默降级，权限与后台任务行为有明确开关"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.319
+publishedAt: 2026-11-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "自动模式在网关后不再静默降级，权限与后台任务行为有明确开关"
+broadcast: "这次更新改的是自动模式在网关后面的行为：以前服务端检查不了就悄悄放行，现在改成明确询问或者直接拒绝，不再回退到内置分类器。对国内做 agent 的开发者来说，这意味着得把“检查不可用”当成一个显式状态来处理，不能默认放行。另外还加了权限开关，无人值守时可以直接拒绝、不再卡在提示上，终端里的工具调用也能转后台跑完再回报。"
+insight: "这次 v2.1.319 对走网关的国内用户是实打实的行为变更：自动模式在 LLM 网关后不再回退内置分类器，检查不可用的调用改为询问或拒绝。如果你经 newapi.lurus.cn 代理使用，升级前先确认 harness 能处理“检查不可用”这一显式状态，否则原本默认放行的调用会开始卡住；想保留旧行为可设 CLAUDE_CODE_AUTO_MODE_SERVER=0。无人值守场景建议顺手开启 permissions.denyInsteadOfPrompting，用拒绝替代阻塞提示，避免回合被挂起。"
+tags: [auto-mode, mcp-tasks, permissions, llm-gateway]
+---
+
+- 自动模式在遥测/特性开关关闭或 LLM 网关后，服务端无法检查的调用改为询问或拒绝，不再回退内置分类器；`CLAUDE_CODE_AUTO_MODE_SERVER=0` 可保留旧行为。含义：harness 需把“检查不可用”当作显式状态处理，而非默认放行。
+- 终端新增 MCP 任务支持：工具调用作为任务时立即转后台，完成后再告知 Claude；`CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND` 可改为同步等待。含义：harness 要区分长任务的后台化与结果回传时序。
+- 新增 `permissions.denyInsteadOfPrompting`：本会等待权限提示的调用直接拒绝并继续回合，覆盖终端、子代理与队友。含义：无人值守场景可用拒绝替代阻塞式提示。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.319](https://github.com/anthropics/claude-code/releases/tag/v2.1.319)

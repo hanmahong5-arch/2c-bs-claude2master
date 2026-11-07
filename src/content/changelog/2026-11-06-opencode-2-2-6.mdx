@@ -1,0 +1,23 @@
+---
+slug: 2026-11-06-opencode-2-2-6
+title: "opencode v2.2.6 — 脚本化运行现在会等后台任务完成再退出，CI 需设超时"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.2.6
+publishedAt: 2026-11-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "脚本化运行现在会等后台任务完成再退出，CI 需设超时"
+broadcast: "这次更新让脚本化运行会先等后台任务跑完再退出，模型也会先处理结果，但因为没有时间上限，开发服务器这类不退出任务会一直挂住，所以在持续集成里得自己设超时。另外新增了归档参数，自动化会话可以直接归档，不再混进人工会话列表，还支持在新工作树里启动会话，方便并行任务隔离。"
+insight: "这次 v2.2.6 对脚本化用户是行为变更而非小修：`opencode run` 会等后台任务完成才退出且无时间上限，现有 CI 或 harness 若不显式设超时，遇到 dev server 这类不退出任务会一直挂住，建议升级前先补超时配置。新增 `--archived` 和 `-w` 属于可选能力，现有 prompt 和 hook 配置不必改。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [opencode, agent-harness, ci, worktree]
+---
+
+- `opencode run` 会等待其启动的后台 shell、子代理和图像任务，并让模型先处理结果再退出；无时间上限，dev server 之类不退出任务会一直挂住，harness 需为 CI 显式设超时。
+- 新增 `--archived`，脚本与 CI 会话直接归档，不出现在 inbox 和会话列表，`--continue` 也会跳过；harness 可借此隔离自动化流量与人工会话。
+- 新增 `-w` / `--worktree=<name>`，在新 git worktree 中启动会话，但不能与 `--continue`、`--session` 同用；并行任务隔离有了原生入口。
+
+---
+
+> 原文 release：[sst/opencode v2.2.6](https://github.com/anomalyco/opencode/releases/tag/v2.2.6)

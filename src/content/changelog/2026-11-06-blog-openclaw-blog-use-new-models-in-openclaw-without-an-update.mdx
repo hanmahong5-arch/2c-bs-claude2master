@@ -1,0 +1,23 @@
+---
+slug: 2026-11-06-blog-openclaw-blog-use-new-models-in-openclaw-without-an-update
+title: "Use new models in OpenClaw without an update — OpenClaw 改为从托管目录、供应商账户和本地 Codex 发现新模型，新模"
+source: "OpenClaw"
+sourceUrl: https://openclaw.ai/blog/use-new-models-in-openclaw-without-an-update/
+publishedAt: 2026-11-06
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "OpenClaw"
+hook: "OpenClaw 改为从托管目录、供应商账户和本地 Codex 发现新模型，新模型上线不必等版本更新。"
+broadcast: "OpenClaw 现在不再把模型清单写死在代码里，而是从三个地方动态发现新模型：托管目录、你的供应商账户，还有本地已安装的 Codex。这意味着新模型上线后，不用再等它发版本就能用上。对做 agent 工具链的开发者来说，模型清单和代码解耦了，升级节奏也跟着模型发布节奏解绑；不过同一版本在不同机器上看到的模型集合可能不一样，排查问题时要先确认这三处来源。"
+tags: [model-catalog, agent-tooling, release-decoupling, openclaw]
+---
+
+- 模型来源从内置列表改为三处动态发现：托管目录、你的供应商账户、已安装的 Codex，新模型发布后无需等待 OpenClaw 发版即可使用。
+- 对 agent 工具链的含义：模型清单从代码里解耦成外部数据源，工具不必为每个新模型重新打包，升级节奏与模型发布节奏解绑。
+- 对开发者的含义：可用模型取决于账户与本地环境，同一版本在不同机器上看到的模型集合可能不同，排查问题时要先确认这三处来源。
+
+---
+
+> 原文：[Use new models in OpenClaw without an update](https://openclaw.ai/blog/use-new-models-in-openclaw-without-an-update/) · 作者 OpenClaw
