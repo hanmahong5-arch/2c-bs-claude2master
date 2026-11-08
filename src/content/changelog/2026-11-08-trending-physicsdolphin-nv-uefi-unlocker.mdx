@@ -1,0 +1,22 @@
+---
+slug: 2026-11-08-trending-physicsdolphin-nv-uefi-unlocker
+title: "nv-uefi-unlocker — Rust 写的 UEFI 预驱动 NVIDIA 显卡解锁器，已获 2k+ 星"
+source: physicsdolphin/nv-uefi-unlocker
+sourceUrl: https://github.com/physicsdolphin/nv-uefi-unlocker
+publishedAt: 2026-11-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: trending
+hook: "Rust 写的 UEFI 预驱动 NVIDIA 显卡解锁器，已获 2k+ 星"
+broadcast: "最近有个用 Rust 写的显卡解锁工具挺火，它能在 UEFI 预驱动阶段解锁英伟达显卡，覆盖 Windows、Linux 和黑苹果等所有 EFI 可启动系统，已经在多数 RTX 20、30、40 系列上验证过。它值得关注，是因为用 Rust 做底层固件改写门槛很高，还展示了签名引导、payload 写入和回读校验的工程化组织方式，对做底层、固件和启动链的开发者有参考价值。"
+tags: [rust, uefi, nvidia, firmware]
+---
+
+- 在 UEFI 预驱动阶段解锁 NVIDIA GPU，覆盖 Windows、Linux、Hackintosh 及所有 EFI 可启动系统，流程为 SEC2 scrubber → FWSEC/WPR2 → 签名 Booter → V67 四次写 payload，并做回读校验。
+- 已在多数 RTX 20/30/40 系列上验证；用 Rust 实现底层固件改写，属于少见的高门槛系统级工具，因此关注度上升快。
+- 对做底层、固件、启动链的开发者有参考价值：展示了签名 Booter、payload 写入与回读验证的工程化组织方式，但未提及对 agent 或常规工具链的直接影响。
+
+---
+
+> 项目：[physicsdolphin/nv-uefi-unlocker](https://github.com/physicsdolphin/nv-uefi-unlocker) · ⭐ 2073 · Rust

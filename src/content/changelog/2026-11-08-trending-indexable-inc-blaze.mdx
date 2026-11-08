@@ -1,0 +1,22 @@
+---
+slug: 2026-11-08-trending-indexable-inc-blaze
+title: "blaze — Rust 增量构建提速 92 倍的替代方案"
+source: indexable-inc/blaze
+sourceUrl: https://github.com/indexable-inc/blaze
+publishedAt: 2026-11-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: trending
+hook: "Rust 增量构建提速 92 倍的替代方案"
+broadcast: "最近有个用 Rust 写的构建工具挺火，它专门给 Rust 项目的增量构建加速，官方说最多能快九十二倍。Rust 编译慢是老问题了，它盯的又是最常用的增量场景，短期内就攒了两千多颗星。对做后端和工具链的开发者来说，它是个不错的构建缓存参考；如果 agent 项目要反复生成和验证 Rust 代码，更快的构建反馈也能明显缩短迭代。"
+tags: [rust, build-tool, incremental-compilation, developer-tools]
+---
+
+- 它是什么：一个用 Rust 编写的构建工具，针对 cargo/rustc 的增量构建流程做加速，官方给出的对比数据是最多快 92 倍。
+- 为什么值得关注：Rust 编译慢是长期痛点，项目直指增量构建这一高频场景，短期内积累 2000+ star，说明社区对编译提速需求强烈。
+- 参考价值：对后端与工具链开发者，可作为构建缓存与增量编译策略的参考实现；对 agent 类项目，若涉及 Rust 代码生成与验证循环，更快的构建反馈能缩短迭代周期。
+
+---
+
+> 项目：[indexable-inc/blaze](https://github.com/indexable-inc/blaze) · ⭐ 2056 · Rust

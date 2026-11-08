@@ -233,7 +233,10 @@
     "anomalyco/rune",
     "herdrdev/herdr-app",
     "t8y2/motty",
-    "Lee-xeo/Claude-Cage"
+    "Lee-xeo/Claude-Cage",
+    "physicsdolphin/nv-uefi-unlocker",
+    "indexable-inc/blaze",
+    "egoist/mygo-music"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -359,7 +362,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-07",
+    "anthropic-engineering": "2026-11-08",
     "claude-code-docs": "2026-11-06",
     "openai-codex-blog": "2026-11-06",
     "openclaw-concepts": "2026-11-06",
@@ -790,7 +793,8 @@
       "https://simonwillison.net/2026/Nov/3/datasette-agent/",
       "https://simonwillison.net/2026/Nov/3/llm/",
       "https://simonwillison.net/2026/Nov/5/paul-ford/",
-      "https://simonwillison.net/2026/Nov/6/nilay-patel/"
+      "https://simonwillison.net/2026/Nov/6/nilay-patel/",
+      "https://simonwillison.net/2026/Nov/7/link-rel-next/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1800,21 +1804,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-07",
+    "simonwillison": "2026-11-08",
     "lilianweng": "2026-11-06",
-    "latentspace": "2026-11-07",
-    "interconnects": "2026-11-07",
-    "karpathy": "2026-11-05",
-    "raschka": "2026-11-05",
-    "eugeneyan": "2026-11-05",
+    "latentspace": "2026-11-08",
+    "interconnects": "2026-11-08",
+    "karpathy": "2026-11-08",
+    "raschka": "2026-11-08",
+    "eugeneyan": "2026-11-08",
     "chiphuyen": "2026-11-06",
     "oneusefulthing": "2026-11-07",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-07",
+    "openai-news": "2026-11-08",
     "deepmind": "2026-11-07",
     "hf-blog": "2026-11-07",
-    "anthropic-news": "2026-11-07",
+    "anthropic-news": "2026-11-08",
     "steipete": "2026-11-07",
     "openclaw-blog": "2026-11-07"
   },
