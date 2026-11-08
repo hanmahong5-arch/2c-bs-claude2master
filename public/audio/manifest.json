@@ -1,6 +1,39 @@
 {
   "items": [
     {
+      "slug": "2026-11-08-trending-egoist-mygo-music",
+      "zh": true,
+      "en": false,
+      "title": "mygo-music — Go 写的原生音乐播放器，用插件扩展功能，一周近 900 星",
+      "kind": "trending",
+      "author": null,
+      "source": "egoist/mygo-music",
+      "tool": null,
+      "publishedAt": "2026-11-08"
+    },
+    {
+      "slug": "2026-11-08-trending-indexable-inc-blaze",
+      "zh": true,
+      "en": false,
+      "title": "blaze — Rust 增量构建提速 92 倍的替代方案",
+      "kind": "trending",
+      "author": null,
+      "source": "indexable-inc/blaze",
+      "tool": null,
+      "publishedAt": "2026-11-08"
+    },
+    {
+      "slug": "2026-11-08-trending-physicsdolphin-nv-uefi-unlocker",
+      "zh": true,
+      "en": false,
+      "title": "nv-uefi-unlocker — Rust 写的 UEFI 预驱动 NVIDIA 显卡解锁器，已获 2k+ 星",
+      "kind": "trending",
+      "author": null,
+      "source": "physicsdolphin/nv-uefi-unlocker",
+      "tool": null,
+      "publishedAt": "2026-11-08"
+    },
+    {
       "slug": "2026-11-07-blog-latentspace-ainews-anthropic-ipo-whither-now",
       "zh": true,
       "en": true,
@@ -845,39 +878,6 @@
       "author": "OpenAI",
       "source": "OpenAI",
       "tool": null,
-      "publishedAt": "2026-11-02"
-    },
-    {
-      "slug": "2026-11-02-blog-simonwillison-llm-0-37",
-      "zh": true,
-      "en": true,
-      "title": "llm 0.37 — LLM 0.37 发布：新模型、OpenAI 兼容端点配置，以及作者为何不担心 ",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-11-02"
-    },
-    {
-      "slug": "2026-11-02-blog-simonwillison-the-u-s-census-bureau-and-super-intelligence",
-      "zh": true,
-      "en": true,
-      "title": "The U.S. Census Bureau and “Super Intelligence” — 美国普查局因行政令把调查问卷里的 AI 改称 Super Intelligenc",
-      "kind": "blogger",
-      "author": "Simon Willison",
-      "source": "Simon Willison",
-      "tool": null,
-      "publishedAt": "2026-11-02"
-    },
-    {
-      "slug": "2026-11-02-hermes-agent-0-22-6",
-      "zh": true,
-      "en": false,
-      "title": "hermes-agent v0.22.6 — 776 个 PR 汇总成稳定版，含多项影响 agent 控制面的改动",
-      "kind": "changelog",
-      "author": null,
-      "source": "NousResearch/hermes-agent",
-      "tool": "hermes",
       "publishedAt": "2026-11-02"
     }
   ]
