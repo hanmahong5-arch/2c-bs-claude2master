@@ -1,0 +1,23 @@
+---
+slug: 2026-11-09-goose-1-58-0
+title: "goose v1.58.0 — 上下文可观测性与多供应商接入，直接影响 agent 上下文管理设计"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.58.0
+publishedAt: 2026-11-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "上下文可观测性与多供应商接入，直接影响 agent 上下文管理设计"
+broadcast: "这次更新最值得留意的是上下文可观测性：新增了可选的上下文相关度操作和窗口报告查看器，上下文占用不再是黑盒，做 agent 的团队可以据此设计裁剪和预算策略。同时新增三个声明式模型供应商，接入走配置而不是硬编码，供应商层保持可插拔。另外还修复了多轮工具调用间的推理重放，并把上下文溢出单独归类，方便触发压缩。"
+insight: "现有 goose 用户值得升级到 v1.58.0：上下文窗口报告与查看器让占用可观测，可据此调整裁剪与预算；若 prompt 或 hook 依赖上下文黑盒假设，建议按新报告重新校准。provider 层改为声明式接入，新增三家 provider，配置应保持可插拔。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。多轮工具调用需保留推理状态，溢出已可识别以触发压缩。"
+tags: [context-window, providers, agent-harness, reasoning-replay]
+---
+
+- 新增 opt-in 的 context relevance 操作与上下文窗口报告/查看器：上下文占用从黑盒变为可观测，harness 可据此设计裁剪与预算策略。
+- 新增 AIHubMix、RouterPlex、Lemonade 三个声明式 provider：模型接入走声明配置而非硬编码，harness 的 provider 层应保持可插拔。
+- 修复 OpenAI Responses 推理在工具轮次间的重放，并将 typed context_length_exceeded 归类为上下文溢出：多轮工具调用需保留推理状态，溢出要可识别以触发压缩。
+
+---
+
+> 原文 release：[block/goose v1.58.0](https://github.com/aaif-goose/goose/releases/tag/v1.58.0)

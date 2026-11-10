@@ -1,0 +1,23 @@
+---
+slug: 2026-11-09-blog-simonwillison-locating-the-source-of-a-mysterious-beep-with
+title: "Locating the source of a mysterious beep with Claude — Simon Willison 用 Claude Code 做了个多设备声源三角定"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/9/mysterious-beeps/
+publishedAt: 2026-11-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 用 Claude Code 做了个多设备声源三角定位系统，40 厘米内找到了藏在纸箱堆里的旧一氧化碳探测器。"
+broadcast: "有人用 Claude Code 做了个多设备声源三角定位系统，靠浏览器麦克风和网页连接，就在四十厘米内找到了藏在纸箱堆里的旧一氧化碳探测器。值得关注的是，它说明浏览器音频加网页连接就能搭出低成本的分布式传感网络，不必依赖专用硬件；而且 agent 会主动检索学术论文并转成可运行方案，还能远程热更新设备上的前端代码，让人不在场时也能持续迭代。"
+tags: [claude-code, acoustic-localization, webaudio, agent-tooling]
+---
+
+- 系统由 Python Web 服务协调，多台设备通过 WebSocket 接入浏览器麦克风，各自缓存 60 秒音频，用 FFT 加高通滤波做蜂鸣检测；服务器再让延迟最低的设备发一声 chirp 对齐各端录音片段。含义：浏览器 WebAudio 加 WebSocket 已足以搭出低成本分布式传感网络，不必依赖专用硬件。
+- 定位算法来自 Claude 检索到的 2007 年论文 BeepBeep，靠双向感知、自录音和采样计数实现高精度测距。含义：agent 主动检索学术文献并把它转成可运行方案，是工具链里被低估的一环。
+- 监听端内置 installModule()，服务器可通过 WebSocket 向各设备热推新代码，避免逐台手动刷新页面授权麦克风。含义：远程热更新让 agent 能在人不在场时持续迭代部署在真实设备上的前端代码。
+
+---
+
+> 原文：[Locating the source of a mysterious beep with Claude](https://simonwillison.net/2026/Nov/9/mysterious-beeps/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-claude-code-2-1-322
+title: "claude-code v2.1.322 — Vertex 上新增快速模式，被拒时自动降级"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.322
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Vertex 上新增快速模式，被拒时自动降级"
+broadcast: "这次更新在 Vertex 上加了快速模式，覆盖全球、美国、欧洲三个区域，被拒绝时会自动回退到标准速度。对做 agent 的国内开发者来说，有两点值得注意：一是模型端点要按区域分别配置，不能假设只有一个区域可用；二是要把降级当成正常路径来设计，速度档位做成可协商的参数，别硬编码在业务逻辑里。"
+insight: "这次 v2.1.322 的改动集中在 Vertex 快速模式，对多数国内开发者来说并不构成升级理由：如果你不用 Vertex，现有 prompt 和 hook 配置都不必改。真正需要动的是走 Vertex 的 harness——模型端点要按 global、us、eu 分区域配置，速度档位应做成可协商参数，并把被拒后的降级当正常路径处理，而不是异常分支。摘要未提及 newapi.lurus.cn 代理，因此无法判断该代理是否受影响。"
+tags: [vertex, fast-mode, fallback, model-routing]
+---
+
+- 新增 Vertex 快速模式，覆盖 global、us、eu 三个区域：harness 需要按区域配置模型端点，不能假设单一区域可用。
+- Vertex 拒绝快速模式时回退到标准速度：设计上要把降级当作正常路径，而不是异常分支。
+- 快速模式与标准速度共用同一调用入口：harness 应把速度档位做成可协商参数，避免在业务逻辑里硬编码。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.322](https://github.com/anthropics/claude-code/releases/tag/v2.1.322)

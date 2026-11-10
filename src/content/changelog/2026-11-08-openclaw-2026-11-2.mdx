@@ -1,0 +1,23 @@
+---
+slug: 2026-11-08-openclaw-2026-11-2
+title: "openclaw v2026.11.2 — 发布说明与变更日志双格式，专为 AI agent 读取设计"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.11.2
+publishedAt: 2026-11-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "发布说明与变更日志双格式，专为 AI agent 读取设计"
+broadcast: "这次发布把说明和变更日志做成了两种格式，其中纯文本版是专门给 AI agent 和工具读的，意味着抓取时该优先取机器可读的源，而不是解析网页。发布里还附了包完整性哈希和提交校验值，方便做供应链校验；但有个插件被推迟到独立恢复流程，这次没发布也没验证，所以得把部分发布当成正常状态处理。"
+insight: "这次 v2026.11.2 对现有用户来说不是一次干净的全量升级：ClawHub 插件发布被推迟到独立恢复流程，本次未发布也未验证，完整发布仍不完整，所以依赖该插件的用户应先观望，不要默认 tag 即全量可用。prompt 和 hook 配置本身不必改，但 harness 侧值得把抓取源切到纯 Markdown 的机器可读 changelog，并用 npm 完整性哈希与 release SHA 做供应链校验。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [release-notes, changelog, supply-chain, agent-tooling]
+---
+
+- 发布说明与 changelog 内容相同但分两种格式：人类可读的网页版和纯 Markdown 版，后者明确面向 AI agent 与工具。含义：harness 应优先抓取机器可读的 changelog 源，而非解析渲染后的页面。
+- 本次含 166 commits、113 PR、64 位贡献者，并附 npm 包完整性哈希与 release SHA。含义：harness 可用 integrity 与 SHA 做供应链校验，而不只依赖版本号。
+- 插件 ClawHub 发布被推迟到独立恢复流程，本次未发布也未验证，完整发布仍不完整。含义：harness 需把“部分发布”当作一等状态处理，不能默认 tag 即全量可用。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.11.2](https://github.com/openclaw/openclaw/releases/tag/v2026.11.2)

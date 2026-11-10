@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-blog-simonwillison-introducing-our-smallest-most-efficient-model-muse-ember
+title: "Introducing Our Smallest, Most Efficient Model: Muse — Meta 推出最便宜的小模型 Muse Ember，主打 agent 日常工具调"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/10/muse-ember/
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Meta 推出最便宜的小模型 Muse Ember，主打 agent 日常工具调用，价格与 Haiku 同级"
+broadcast: "Meta 推出了目前最便宜的小模型 Muse Ember，主打 agent 反复执行的任务，比如工具调用、编码子任务、路由和长文档解析，短提示下价格和另外两家同级。对国内做 agent 的开发者来说，高频低价值的循环调用可以换到更便宜的模型上；但长提示超过二十万 token 会跳档，成本要按阈值分档估算。另外单 token 价格已经不够比模型了，得按单任务成本看，推理档位也要实测。"
+tags: [llm-pricing, small-models, agent-tooling, model-evaluation]
+---
+
+- Muse Ember 定位是 agent 反复执行的任务：工具调用、编码子任务、路由、抽取、长文档解析，短提示下与 GPT-6 Luna、Claude Haiku 5.5 同为 $0.10/$0.50 每百万 token，而同日发布的 Claude Fable 5.2 是它的 80 倍价。对 agent 工具链意味着高频、低价值的循环调用可以换到更便宜的模型上。
+- 长提示下价格会跳档：Ember 在 200k token 以上涨到 $0.30/$1.50，介于 Luna（272k 阈值）和 Haiku（100k 阈值）之间，缓存输入价 $0.004 是三家中最低。做上下文拼装和缓存策略时需要按阈值分档估算成本。
+- 作者引用 Artificial Analysis 的 Intelligence Index vs. Cost per Task 图，指出 Ember 落在帕累托前沿上，Meta 也自称没有模型能以更低单任务成本取得更高分；但作者实测六个推理档位生成的鹈鹕 SVG，发现推理档位与视觉质量并不线性对应，high 档甚至没返回完整 SVG。对开发者的含义是：单 token 价格已不足以比较模型，应按单任务成本评估，且推理档位需要实测而非按名字假设。
+
+---
+
+> 原文：[Introducing Our Smallest, Most Efficient Model: Muse Ember](https://simonwillison.net/2026/Nov/10/muse-ember/) · 作者 Simon Willison

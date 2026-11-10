@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-goose-1-58-1
+title: "goose v1.58.1 — 压缩提示词被模型拒答、OAuth 令牌过期，两处修复都关乎长会话稳定性"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.58.1
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "压缩提示词被模型拒答、OAuth 令牌过期，两处修复都关乎长会话稳定性"
+broadcast: "这次更新修了两个问题，都跟长会话稳不稳有关。一是重写了压缩提示词，之前模型会把压缩指令当成蒸馏而拒绝执行，说明压缩指令得按模型策略调整措辞，不能套通用模板。二是云平台的登录凭证改成到期前主动刷新，不再等调用失败再重试。对做 agent 的人来说，这两处都在提醒：会话压缩和凭证续期，得由框架自己显式管起来。"
+insight: "这次 v1.58.1 只修了两处 bug，没有新功能，但都直接影响长会话稳定性：压缩提示词被 Opus 5.5 判为蒸馏而拒答，OAuth 令牌改为到期前主动刷新。现有用户如果跑长任务或依赖上下文压缩，值得升到该版本；升级后若你自定义过压缩提示词或 hook 措辞，需要按模型策略重新检查，不能沿用通用模板。摘要未提及代理相关变化，国内走 newapi.lurus.cn 的用户按此版本正常升级即可。"
+tags: [context-compaction, oauth-refresh, model-compatibility, session-stability]
+---
+
+- 重写压缩提示词，避免 Opus 5.5 将其判为蒸馏而拒绝执行；harness 的上下文压缩指令需按模型策略调整措辞，不能假定通用模板可用。
+- Databricks OAuth 令牌改为到期前主动刷新；长任务中凭证续期应由 harness 主动管理，而非等调用失败再重试。
+- 两项均为 bug fix，未引入新功能；含义是会话压缩与凭证生命周期属于 harness 必须显式处理的边界。
+
+---
+
+> 原文 release：[block/goose v1.58.1](https://github.com/aaif-goose/goose/releases/tag/v1.58.1)

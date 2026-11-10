@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-blog-simonwillison-quoting-prompting-claude-fable-5-2
+title: "Quoting Prompting Claude Fable 5.2 — Anthropic 文档里一句话改变模型行为：告诉 Claude 代码归它所有，"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic 文档里一句话改变模型行为：告诉 Claude 代码归它所有，它才肯重构。"
+broadcast: "Anthropic 在官方文档里记录了一个挺有意思的测试：做小规模编码任务时，如果提示词里不提代码归谁所有，或者把代码库说成是别人的，模型就更愿意沿用现有结构，重复代码也照抄；而加上一句“这个代码库是你的”，大约一半的尝试里模型会主动合并重复代码，不说这句时不到十分之一。也就是说，agent 显得保守，可能不是能力不够，而是提示词里的归属设定在起作用，这一点值得写进编码 agent 的系统提示里。不过要注意，这个结论只限于小规模任务，别往大型代码库上外推。"
+tags: [prompt-engineering, claude, coding-agents, anthropic]
+---
+
+- Anthropic 在小规模编码任务测试中发现：提示词不提代码归属、或把代码库描述成别人的，模型倾向于沿用现有结构，哪怕重复代码也照抄。含义：agent 的"保守"可能来自提示词里的归属设定，而非能力不足。
+- 加入"This codebase is yours"这类归属声明后，模型在约一半的尝试中合并了重复代码；没有这句话时不到十分之一。含义：一句提示词就能显著改变重构行为，值得纳入编码 agent 的系统提示。
+- 该结论来自 Anthropic 官方文档的测试，Simon Willison 以引用形式转述。含义：这是可复现的提示工程线索，但适用范围限于小规模编码任务，不宜外推到大型代码库。
+
+---
+
+> 原文：[Quoting Prompting Claude Fable 5.2](https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/) · 作者 Simon Willison

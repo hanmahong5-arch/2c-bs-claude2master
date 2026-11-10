@@ -1,0 +1,23 @@
+---
+slug: 2026-11-09-blog-hf-blog-your-experts-have-partners-there-s-hope-for
+title: "Your Experts Have Partners. There's HOPE for Keeping — Hugging Face 博客介绍 HOPE：剪枝 MoE 专家时保留成对专家，"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/amazon/higher-order-pruning-experts
+publishedAt: 2026-11-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 博客介绍 HOPE：剪枝 MoE 专家时保留成对专家，避免破坏协作关系"
+broadcast: "Hugging Face 博客介绍了一种叫 HOPE 的新方法，专门处理混合专家模型剪枝时的一个问题：专家之间其实存在成对协作关系，不能只按单个专家的重要性排序。它的做法是剪枝时保留这些配对，避免破坏协作。对国内开发者和 agent 工具链来说，这意味着压缩模型不能只看单点指标，剪枝策略要引入结构信息，部署推理时才不容易性能骤降。"
+tags: [moe, pruning, hugging-face, model-compression]
+---
+
+- 文章指出 MoE 模型中的专家并非独立，存在成对协作关系；HOPE 在剪枝时保留这些配对，而不是按单个专家的重要性排序。对 agent 工具链的含义：压缩模型时需考虑组件间的依赖，而非只看单点指标。
+- 该方法名为 HOPE（Higher-Order Pruning Experts），用高阶关系指导专家剪枝。对开发者的含义：剪枝策略可以引入结构信息，而不只是权重范数。
+- 文章来自 Hugging Face 博客（Amazon 合作），聚焦 MoE 专家剪枝。对 agent 的含义：部署 MoE 推理时，剪枝需兼顾专家间的协作，避免性能骤降。
+
+---
+
+> 原文：[Your Experts Have Partners. There's HOPE for Keeping Them Together](https://huggingface.co/blog/amazon/higher-order-pruning-experts) · 作者 Hugging Face

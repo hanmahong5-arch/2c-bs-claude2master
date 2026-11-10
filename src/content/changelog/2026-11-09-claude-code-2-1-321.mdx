@@ -1,0 +1,23 @@
+---
+slug: 2026-11-09-claude-code-2-1-321
+title: "claude-code v2.1.321 — 默认模型换成 Fable 5.2，另有十余处权限与沙箱修复"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.321
+publishedAt: 2026-11-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "默认模型换成 Fable 5.2，另有十余处权限与沙箱修复"
+broadcast: "Claude Code 发布新版本，默认模型换成了 Fable 5.2，支持一百万上下文，缓存读取价格也降了下来，做 agent 的团队要重新估算上下文预算和成本上限。另外这次修了十几处权限和沙箱问题，包括 OAuth 重定向时可能把密钥发到别的主机、只读命令绕过沙箱直接执行，这些直接关系到 harness 的信任边界，值得国内开发者重点关注。"
+insight: "这次 v2.1.321 的默认模型换成 Fable 5.2，1M 上下文、$8/$40 每 Mtok，现有用户值得升级，但要先按新模型重估上下文预算和成本上限，别直接沿用旧配置。prompt 本身不用改，hook 和 harness 的预算参数要跟着调。走 newapi.lurus.cn 代理的国内用户，摘要里没提代理受影响，可正常升级，只是 MCP OAuth 和沙箱这两处修复建议纳入回归测试。"
+tags: [model-default, remote-control, mcp-oauth, sandbox]
+---
+
+- 新增 `claude-fable-5-2` 并设为默认 Fable 模型：1M 上下文、$8/$40 每 Mtok、缓存读取 $0.20/Mtok。harness 需按新模型重估上下文预算与成本上限。
+- `claude remote-control` 新增 `--settings <file>`，对每个新会话生效；文件变更后需重启才起新会话。批量会话的配置注入因此可集中管理，但热更新不可依赖。
+- 修复 MCP OAuth 在服务器重定向时把 refresh token 等密钥发往其他主机，以及只读 Bash 命令绕过沙箱、无提示执行。凭据与沙箱边界是 harness 的信任根，此类修复应视为回归测试的必测项。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321)

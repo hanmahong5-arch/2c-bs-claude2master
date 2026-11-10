@@ -1,0 +1,23 @@
+---
+slug: 2026-11-09-blog-simonwillison-llm-anthropic-0-31
+title: "llm-anthropic 0.31 — Anthropic 发布 Fable 5.2 与 Mythos 5.2，llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/9/llm-anthropic/
+publishedAt: 2026-11-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic 发布 Fable 5.2 与 Mythos 5.2，llm-anthropic 插件同步支持，但最高推理档位出现 token 耗尽问题"
+broadcast: "Anthropic 新出了两款模型，有个配套插件当天就能在命令行里直接调用，对做 agent 工具链的开发者来说，这种插件式封装比等官方开发包更快。作者实测发现，最高推理档位花掉十二万多个思考 token 后直接没返回图像，提醒大家高推理档位要预留 token 预算、做好失败兜底。另外新模型定价比上一版便宜两成，成本敏感的批量任务值得重算单价。"
+tags: [llm-anthropic, claude, reasoning-budget, model-pricing]
+---
+
+- 作者把 Fable 5.2 加进 `llm-anthropic` 0.31，用 `llm -m claude-fable-5.2` 即可调用；对 agent 工具链而言，新模型上线当天就能在 CLI 里跑通，说明插件式封装比等官方 SDK 更快。
+- 他在 low 到 max 五档推理强度下各生成一张“骑自行车的鹈鹕”图，xhigh 效果最好，max 档在花掉 128,000 thinking token 后直接没返回图像；这提醒开发者，高推理档位要预留 token 预算并做失败兜底。
+- 定价 $8/$40 每百万输入/输出 token，比 Fable 5.1 的 $10/$50 便宜 20%；对成本敏感的批量 agent 任务，换模型前值得重算一遍单价。
+
+---
+
+> 原文：[llm-anthropic 0.31](https://simonwillison.net/2026/Nov/9/llm-anthropic/) · 作者 Simon Willison

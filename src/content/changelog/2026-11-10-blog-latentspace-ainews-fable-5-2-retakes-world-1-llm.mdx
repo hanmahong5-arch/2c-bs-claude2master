@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-blog-latentspace-ainews-fable-5-2-retakes-world-1-llm
+title: "[AINews] Fable 5.2 retakes World #1 LLM spot as $ANT — Anthropic 发布 Fable 5.2 重回榜首，但每任务成本上涨，多花在"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Anthropic 发布 Fable 5.2 重回榜首，但每任务成本上涨，多花在自我验证上"
+broadcast: "Anthropic 发布了新模型 Fable 5.2，重新回到榜首，但值得关注的是它的单价降了两成，每个任务的实际成本反而涨了，因为模型会自己写大量测试用例、派子代理自查。对国内做 agent 的开发者来说，预算评估得看每任务成本，不能只盯 token 单价；另外升级时旧参数不能照搬，而且它默认开启数据留存，合规敏感的场景要先确认条款。"
+tags: [llm-benchmarks, agent-cost, anthropic, model-release]
+---
+
+- **单价降 20%，单任务成本反升**：Fable 5.2 输入/输出定价 $8/$40（5.1 为 $10/$50），但 SemiAnalysis 在 GDPx 上实测每任务 $88.15，高于 5.1 的 $67.16，原因是模型会写数百上千个测试用例并派子代理自查。对 agent 工具链的含义：预算评估要看每任务成本，不能只看 token 单价。
+- **effort 档位需要重新调**：Anthropic 称 Fable 5.2 在 High 档约以一半成本追平 Opus 5.5 的 Max 档；Cursor 提醒其档位行为与 5.1 不同，建议从默认档起步而非沿用旧配置。对开发者的含义：升级模型时，旧参数不能直接照搬。
+- **默认要求数据留存**：Fable 5.2 默认开启数据留存以运行安全分类器，零留存仅对符合条件的企业客户开放。对 agent 落地的含义：合规敏感场景选型时，需先确认数据留存条款。
+
+---
+
+> 原文：[[AINews] Fable 5.2 retakes World #1 LLM spot as $ANT IPO roadshow begins](https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/) · 作者 Latent Space

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-hermes-agent-0-23-1
+title: "hermes-agent v0.23.1 — 插件目录超限导致静默回退，本次仅上调上限修复"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件目录超限导致静默回退，本次仅上调上限修复"
+broadcast: "这次更新修了一个容易被忽略的问题：插件目录文件超过了客户端的大小上限，安装时会悄悄退回旧目录，结果新插件找不到，还会装成旧版本。现在上限调高了，线上目录恢复正常。对做 agent 的国内开发者来说，这提醒我们拉远程清单时要把回退状态明确暴露出来，别让用户以为一切正常。"
+insight: "这次 v0.23.1 只上调了插件目录上限，属于修复型小版本，但判断很明确：仍停留在 v0.23.0 及更早版本的用户值得升级，否则会持续静默回退到内置旧目录，`hermes plugins install` 找不到新增插件、装成锁定版本，还会漏掉较新的 removed 条目。现有 prompt 和 hook 配置无需改动，本次未涉及。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [plugin-catalog, install-fallback, version-pinning, release-notes]
+---
+
+- 插件目录 `plugin-catalog.json` 超过客户端 2 MiB 上限，安装时静默回退到随版本内置的旧目录；本次将上限提高到 16 MiB，恢复使用线上目录（#151860）。含义：harness 拉取远程清单需显式暴露回退状态，避免静默降级。
+- 回退期间 `hermes plugins install <name>` 找不到上次更新后新增的插件，并安装发布版锁定的版本而非当前版本。含义：插件解析应区分“锁定版本”与“最新版本”，并在安装结果中标注来源。
+- 回退还会漏掉目录中较新的 `removed` 条目；停留在 v0.23.0 及更早版本的安装会持续回退，直到升级。含义：harness 需对清单版本做兼容性检查，并在过期时提示升级。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.23.1](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1)

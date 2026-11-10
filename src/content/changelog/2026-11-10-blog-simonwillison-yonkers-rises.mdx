@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-blog-simonwillison-yonkers-rises
+title: "Yonkers Rises — 用一句提示让 Claude 把 Yonkers 变成机甲，踩过纽约各区，顺便验证"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/10/yonkers-rises/
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用一句提示让 Claude 把 Yonkers 变成机甲，踩过纽约各区，顺便验证模型的 3D 建模与纠错能力"
+broadcast: "有人做了个挺有意思的测试：让模型用一句话提示，把纽约一个叫扬克斯的地方变成巨型机甲，一路踩过曼哈顿、皇后区和布鲁克林，还用了公开地图数据。更关键的是，提示词里有个手机打错的词，模型自己推断出那是“踩踏”的意思。对开发者来说，一句话就能生成能跑的动画场景，写代码正在变成描述效果，但地图和动画细节还得人工核对。"
+tags: [llm-coding, three-js, claude, prompt-engineering]
+---
+
+- 作者不知道 Yonkers 在哪，查完地图后让 Claude Fable 5.2 Medium 生成 Three.js 动画：Yonkers 站起来变成巨型机甲，踩过曼哈顿、皇后区和布鲁克林，并使用 OpenStreetMap 地图数据。
+- 提示词里有个手机键盘打错的词 "átomos"，模型正确推断出它其实是 "stomps"（踩踏），说明模型对明显笔误的容错推断已经相当可靠。
+- 对开发者的含义：一句话提示就能产出可运行的 Three.js 场景，模型正在把"写代码"变成"描述效果"；但地图数据、动画细节仍需人工核对。
+
+---
+
+> 原文：[Yonkers Rises](https://simonwillison.net/2026/Nov/10/yonkers-rises/) · 作者 Simon Willison
