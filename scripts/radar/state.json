@@ -1,14 +1,14 @@
 {
   "lastSeen": {
     "anthropics/claude-code": "v2.1.322",
-    "openai/codex": "rust-v0.167.0",
+    "openai/codex": "rust-v0.167.1",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "v4.1.26",
-    "block/goose": "v1.58.1",
-    "sst/opencode": "v2.2.6",
+    "block/goose": "v1.59.0",
+    "sst/opencode": "v2.2.7",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.67.0",
-    "openclaw/openclaw": "v2026.11.2",
+    "google-gemini/gemini-cli": "v0.68.0",
+    "openclaw/openclaw": "v2026.9.37",
     "zeroclaw-labs/zeroclaw": "v0.8.7",
     "NousResearch/hermes-agent": "v0.23.1"
   },
@@ -239,7 +239,8 @@
     "egoist/mygo-music",
     "anefzaoui/misterdownloadmanager",
     "longbridge/nsh",
-    "DIYgod/pinky"
+    "DIYgod/pinky",
+    "expo/exact"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -365,7 +366,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-10",
+    "anthropic-engineering": "2026-11-11",
     "claude-code-docs": "2026-11-06",
     "openai-codex-blog": "2026-11-06",
     "openclaw-concepts": "2026-11-06",
@@ -802,7 +803,12 @@
       "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
       "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
       "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
-      "https://simonwillison.net/2026/Nov/9/mysterious-beeps/"
+      "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+      "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+      "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+      "https://simonwillison.net/2026/Nov/9/details-summary/",
+      "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
+      "https://simonwillison.net/2026/Nov/7/hn-50407316/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1017,7 +1023,10 @@
       "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins/",
       "https://latent.space/p/handshake/",
       "https://latent.space/p/cs146s/",
-      "https://latent.space/p/one_million_ai_engineer_special_how_stanford_teaches_ai-native_engineering_mihail_eric_monaco/"
+      "https://latent.space/p/one_million_ai_engineer_special_how_stanford_teaches_ai-native_engineering_mihail_eric_monaco/",
+      "https://latent.space/p/codex-work/",
+      "https://latent.space/p/resend/",
+      "https://latent.space/p/naiveai/"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1477,7 +1486,12 @@
       "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
       "https://openai.com/index/control-room",
       "https://openai.com/index/coderabbit-codex-daybreak",
-      "https://openai.com/index/kuken"
+      "https://openai.com/index/kuken",
+      "https://openai.com/index/gilbert-tobin-sam-nickless",
+      "https://openai.com/index/chatgpt-plus-for-veterans",
+      "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+      "https://openai.com/index/introducing-businesses-chatgpt",
+      "https://openai.com/index/singapore-airlines-travel-work"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1776,7 +1790,8 @@
       "https://www.anthropic.com/news/policy",
       "https://www.anthropic.com/news/safeguards",
       "https://www.anthropic.com/news/distillation-defenses",
-      "https://www.anthropic.com/news/security"
+      "https://www.anthropic.com/news/security",
+      "https://www.anthropic.com/news/roadshow-launch"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -1824,21 +1839,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-10",
+    "simonwillison": "2026-11-11",
     "lilianweng": "2026-11-06",
-    "latentspace": "2026-11-10",
-    "interconnects": "2026-11-10",
-    "karpathy": "2026-11-08",
-    "raschka": "2026-11-08",
-    "eugeneyan": "2026-11-08",
+    "latentspace": "2026-11-11",
+    "interconnects": "2026-11-11",
+    "karpathy": "2026-11-11",
+    "raschka": "2026-11-11",
+    "eugeneyan": "2026-11-11",
     "chiphuyen": "2026-11-06",
     "oneusefulthing": "2026-11-10",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-10",
+    "openai-news": "2026-11-11",
     "deepmind": "2026-11-10",
     "hf-blog": "2026-11-10",
-    "anthropic-news": "2026-11-10",
+    "anthropic-news": "2026-11-11",
     "steipete": "2026-11-10",
     "openclaw-blog": "2026-11-10"
   },

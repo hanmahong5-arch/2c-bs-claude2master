@@ -1,0 +1,23 @@
+---
+slug: 2026-11-08-blog-simonwillison-parse-number-as-a-sqlite-extension-c-vs
+title: "parse_number() as a SQLite extension: C vs Rust — 用 Claude 对比 C 与 Rust 写 SQLite parse_numb"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/
+publishedAt: 2026-11-08
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用 Claude 对比 C 与 Rust 写 SQLite parse_number() 扩展：体积、速度与代码复杂度"
+broadcast: "有人用模型对比了用 C 和 Rust 写同一个 SQLite 数字解析扩展。结果挺有意思：Rust 版体积大得多，两个版本都在三百 KB 左右，C 版只有十四 KB，分发小扩展时差距明显。速度上初版 Rust 更快，但作者让模型自己写了 C 解析函数，用快速路径追平并反超，两百万行基准里新 C 版每行开销都更低。对做 agent 和扩展的国内开发者来说，这说明性能敏感的热路径，手写 C 仍然值得。"
+tags: [sqlite, rust, c, performance]
+---
+
+- Rust 扩展体积明显更大：Rusqlite 版 321 KB、sqlite-loadable-rs 版 298 KB，而 C 版仅 14 KB，说明分发小型 SQLite 扩展时 C 的体积优势显著。
+- 初版 Rust 更快，原因是其等价于 C strtod 的解析实现速度约为两倍；作者随后让模型自写 C 解析函数，用 Clinger 快速路径追平并反超。
+- 200 万行基准中，新 C 版每行净开销在混合数据 19 ns、纯整数 16 ns、纯小数 18 ns，均优于 rusqlite 与 sqlite-loadable 版本，提示性能敏感扩展仍值得手写 C 热路径。
+
+---
+
+> 原文：[parse_number() as a SQLite extension: C vs Rust](https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/) · 作者 Simon Willison

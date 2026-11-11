@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-blog-latentspace-naiveai-promises-2-100-tokens-per-second-how
+title: "NaiveAI Promises 2,100 Tokens per Second. How Well Does — Latent Space 实测 NaiveAI 新模型：号称每秒 2100 to"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/naiveai/
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Latent Space 实测 NaiveAI 新模型：号称每秒 2100 token，但速度之外还藏着什么代价"
+broadcast: "有团队实测了一款号称每秒两千多 token 的新模型，实际吞吐接近或超过每秒一千 token，但数据口径和别家不一致，不能直接换算倍数。更值得注意的是，开启思考后，难题平均输出约十万 token，是同类模型的九到十一倍，中位数却只有三千多，少数超长推理会拉高成本和延迟。端到端中位耗时三秒多，但难题上反而更慢，而且没测正确率。对国内做 agent 的开发者来说，快只有在对的时候才有价值，预算要按中位数算。"
+tags: [naiveai, inference-speed, coding-models, benchmark]
+---
+
+- 文章实测 Naive-N0.5-Flash 在 30 道题上吞吐接近或超过每秒 1000 token，但作者强调其数据来自服务端、另两家来自 OpenRouter，不能直接换算倍数；对 agent 选型意味着「快」的宣称需要统一口径才能比较。
+- 开启 thinking 后，难题上平均输出约 10.8 万 token，是 GLM 5.3 Flash 的约 9 倍、DeepSeek V4.1 Flash 的约 11 倍，但中位数仅约 3200 token；对工具链意味着少数超长推理会拉高成本与延迟，需按中位数而非均值做预算。
+- 端到端中位耗时 3.1 秒，优于 GLM 的 5.3 秒和 DeepSeek 的 10.1 秒，但难题上平均反而慢于 DeepSeek（89.8 秒对 79.7 秒），且作者未评测答案正确率；对开发者意味着快回复只有在正确时才有价值。
+
+---
+
+> 原文：[NaiveAI Promises 2,100 Tokens per Second. How Well Does It Code?](https://latent.space/p/naiveai/) · 作者 Latent Space

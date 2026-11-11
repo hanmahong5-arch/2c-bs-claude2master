@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-blog-simonwillison-llm-gemini-0-36
+title: "llm-gemini 0.36 — Simon Willison 发布 llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/10/llm-gemini/
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 llm-gemini 0.36，实测 Gemini 4 Carbon 的编码与 3D 生成能力，并提醒 12 月涨价"
+broadcast: "谷歌的新模型 Gemini 4 Carbon 今天向所有人开放了，输入每百万两美元、输出每百万十美元，跟另外两家旗舰同档，但十二月一日起价格翻倍。对做 agent 的国内开发者来说，批量跑评测和长任务前，成本模型得按涨价后重算。另外官方演示里，它已经能在开发环境里协调多个子 agent 分工建模、写着色器、配音乐，做出可玩的 3D 游戏。"
+tags: [gemini, llm-release, agent-tooling, pricing]
+---
+
+- **定价与时间窗**：Gemini 4 Carbon 今日向所有人开放，输入 $2/百万、输出 $10/百万，与 GPT-6.1 Sol、Claude Sonnet 5.5 同档，但 12 月 1 日起翻倍到 $4/$20。对 agent 工具链意味着：批量跑评测或长任务前，成本模型要按涨价后重算。
+- **编码实测**：作者在 Google Antigravity IDE 里让它用 Three.js + OpenStreetMap 数据做「巨型机甲在纽约走动」的动画，需追加一句提示才产出无外部依赖的独立 HTML。说明 agent 产物默认带依赖，交付前要显式约束可移植性。
+- **子 agent 协作**：官方演示用 Antigravity 的 /swarm 功能，让 Carbon 协调子 agent 在 Blender 建模、写 Three.js/WebGL 着色器、配 Web Audio 与 Lyria 音乐，做出可玩的 3D 校园游戏。对开发者而言，多 agent 编排已进入 IDE 内置能力层面。
+
+---
+
+> 原文：[llm-gemini 0.36](https://simonwillison.net/2026/Nov/10/llm-gemini/) · 作者 Simon Willison

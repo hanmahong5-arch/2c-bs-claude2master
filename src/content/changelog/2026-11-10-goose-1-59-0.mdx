@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-goose-1-59-0
+title: "goose v1.59.0 — 子代理可续跑、工具钩子可拦截，harness 控制面变厚"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.59.0
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "子代理可续跑、工具钩子可拦截，harness 控制面变厚"
+broadcast: "这次更新让子代理可以续跑，完成的委派任务还能接着追问，不用从头再来。工具执行前后也能插入审批和中断点，策略层不用改工具本身。另外工具清单支持按需加载，降低了上下文和启动开销。对做 agent 的国内开发者来说，控制面更厚，意味着编排和管控能做得更细。"
+insight: "这次 v1.59.0 值得现有用户升级，重点在 harness 控制面：子代理会话要按可恢复状态保存，工具钩子新增 stop、approval、tool hook 操作，策略层可插审批与中断点。若你现有 prompt 或 hook 配置依赖子代理一次性调用、或把策略写进工具实现，升级后需相应调整；deferred MCP 工具按需加载也能降上下文与启动开销。摘要未提及 newapi.lurus.cn 代理，国内走代理是否受影响暂无依据。"
+tags: [subagent, tool-hooks, mcp, agent-harness]
+---
+
+- **子代理可续跑**：完成的 delegate 支持用 follow-up 继续（#13106）。含义：harness 需把子代理会话当作可恢复状态保存，而非一次性调用。
+- **工具钩子操作**：goose-agent（GDK）新增 stop、approval、tool hook 操作（#13169）。含义：工具执行前后可插入审批与中断点，策略层不必侵入工具实现。
+- **延迟 MCP 工具**：ToolExecutionOperation 引入最小化 deferred MCP tools（#13378）。含义：工具清单可按需加载，降低上下文与启动开销。
+
+---
+
+> 原文 release：[block/goose v1.59.0](https://github.com/aaif-goose/goose/releases/tag/v1.59.0)

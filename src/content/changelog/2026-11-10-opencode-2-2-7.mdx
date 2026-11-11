@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-opencode-2-2-7
+title: "opencode v2.2.7 — 插件加载不再阻塞 SDK 端点，MCP 登录更稳定，读文件支持负偏移"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.2.7
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "插件加载不再阻塞 SDK 端点，MCP 登录更稳定，读文件支持负偏移"
+broadcast: "这次更新解决了一个很实际的问题：插件加载不再卡住接口调用，查询只返回已经加载好的部分，其余靠事件通知补齐。同时登录认证更稳，并发刷新或短暂失败都不会被登出，工具结果格式不符也不再直接报错。对做 agent 的国内开发者来说，这意味着要按事件驱动补齐数据，把认证刷新做成幂等，文件读取也可以设计成容错返回，减少无效重试。"
+insight: "现有用户值得升级到 v2.2.7：SDK 端点不再等插件加载、MCP 登录更稳、read 支持负 offset，都是实打实的体验改善。但升级后要检查自己的 harness 或 hook 配置——agent.list 只返回已加载的 agent，需改为监听 *.updated 事件补齐插件条目，不能假设首次调用即完整；认证刷新也要做幂等。走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [sdk-endpoints, mcp-auth, file-read, plugin-loading]
+---
+
+- **SDK 端点不再等待插件加载**：`agent.list` 只返回已加载的 agent，`integration.list`、`vcs.init`、`rpc.call` 等不再最多阻塞 5 秒，改为监听 `*.updated` 事件刷新。含义：harness 需按事件驱动补齐插件提供的条目，不能假设首次调用即完整。
+- **MCP 登录与工具调用更健壮**：多客户端并发刷新 token 或 token 端点短暂失败不再登出；工具结果不符合自身 output schema 时不再报失败。含义：harness 应把认证刷新做幂等，并区分“执行成功”与“结果校验失败”。
+- **`read` 支持负 `offset` 与近似文件名提示**：`-50` 读末 50 行，越界返回末行与总行数；找不到文件时提示大小写、扩展名或拼写相近的路径。含义：文件读取工具可设计为容错返回而非抛错，减少 agent 的无效重试。
+
+---
+
+> 原文 release：[sst/opencode v2.2.7](https://github.com/anomalyco/opencode/releases/tag/v2.2.7)

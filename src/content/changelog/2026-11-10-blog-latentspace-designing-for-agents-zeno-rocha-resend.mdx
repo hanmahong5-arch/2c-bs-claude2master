@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-blog-latentspace-designing-for-agents-zeno-rocha-resend
+title: "Designing for Agents — Zeno Rocha, Resend — Resend CEO 讲为何 agent 总推荐他们：为机器写文档、设计 MCP"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/resend/
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Resend CEO 讲为何 agent 总推荐他们：为机器写文档、设计 MCP 工具，比抢人眼球更有效"
+broadcast: "有研究发现，在邮件服务的推荐里，Claude Code 一百多次选择中有六十四次首选了同一家服务，而开发者接受 agent 的方案后很少再试第二选择，也就是说 agent 的默认推荐几乎等于分发渠道。这家公司的做法是给文档和定价页准备机器可读的版本，让 agent 一次请求就能拿到可解析内容；他们的 MCP 工具从二十个涨到八十多个，但单次返回结果可能大到塞不进上下文，所以设计时要看模型真正需要多少。"
+tags: [aeo, mcp, developer-tools, agent-experience]
+---
+
+- 在一项 AEO 研究中，Claude Code 在 102 次邮件推荐里有 64 次首选 Resend，SendGrid 仅 7 次居首却 55 次作为备选；开发者接受 agent 给的方案后很少再试第二选择，意味着 agent 的默认推荐几乎等于分发渠道。
+- Resend 的定价页有滑块供人拖动，URL 加 .md 后 agent 一次请求就能拿到可读表格；对做开发者工具的团队，这意味着同一页面要同时为人和模型准备可解析版本。
+- 其 MCP server 从约 20 个工具涨到 80 多个，但 Zeno 发现单次调用返回结果可能大到塞不进上下文；减少工具数量并不能缩小单条响应，设计 MCP 时应展开日常调用的返回值，看模型真正需要多少。
+
+---
+
+> 原文：[Designing for Agents — Zeno Rocha, Resend](https://latent.space/p/resend/) · 作者 Latent Space

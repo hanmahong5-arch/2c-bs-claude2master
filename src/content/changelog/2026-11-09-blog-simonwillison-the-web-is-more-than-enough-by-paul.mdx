@@ -1,0 +1,23 @@
+---
+slug: 2026-11-09-blog-simonwillison-the-web-is-more-than-enough-by-paul
+title: "The Web Is More Than Enough, by Paul Ford — Paul Ford 说 Web 已经够用，Simon 用 Claude 现场做了"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/9/hn-50421091/
+publishedAt: 2026-11-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Paul Ford 说 Web 已经够用，Simon 用 Claude 现场做了个 3D 模型来验证"
+broadcast: "有人用一句话证明网页本身就够用了：他让 Claude 现场做了个裸鳃类主题的 3D 彩蛋，单文件只有七十七 KB，直接放在静态域名上就能分享。后来又在同一对话里让模型把它移植成不依赖框架的版本，还公开了完整对话记录。这说明模型已经能在没有框架约束下完成 3D 建模，工具链依赖越来越薄，对国内开发者来说，单页静态文件仍是分享 AI 生成作品成本最低的载体。"
+tags: [claude, three-js, webgl, generative-ai]
+---
+
+- Simon 受 Paul Ford《The Web Is More Than Enough》一文下 HN 评论的启发，用 Three.js 做了一个裸鳃类主题的法贝热彩蛋（77KB 单文件），并发布在个人静态域名上。含义：单页静态文件仍是分享 AI 生成作品的最低成本载体。
+- 他在同一对话线程里让 Claude Opus 5.5 把作品移植成 Vanilla JS + WebGL，产出 98KB 版本，并公开了完整 transcript。含义：模型能在无框架约束下完成 3D 建模，工具链依赖进一步变薄。
+- 两版并不完全一致，Simon 表示自己也没完全搞懂差异原因；他肉眼读代码时觉得 Three.js 版稍易理解，但这类 3D 项目他很少看代码。含义：可读性权衡在一次性生成物上优先级下降。
+
+---
+
+> 原文：[The Web Is More Than Enough, by Paul Ford](https://simonwillison.net/2026/Nov/9/hn-50421091/) · 作者 Simon Willison

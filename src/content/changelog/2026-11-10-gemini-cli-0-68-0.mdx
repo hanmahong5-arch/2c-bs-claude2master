@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-gemini-cli-0-68-0
+title: "gemini-cli v0.68.0 — 本版多为稳定性修复，其中三处直接影响 agent harness 的边界处理"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.68.0
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "本版多为稳定性修复，其中三处直接影响 agent harness 的边界处理"
+broadcast: "这次更新主要是稳定性修复，但有三处直接关系到 agent 框架的边界处理。子代理结束时现在能触发钩子，框架得为子代理生命周期单独设计事件出口；扩展安装改成按扩展加锁串行，避免并发踩踏；流式响应在结束时会把待处理的缓冲冲刷干净，不再丢尾部事件。做 agent 的开发者要留意收尾处理，否则可能漏掉最后一段工具调用或文本。"
+insight: "这次 v0.68.0 对现有用户来说值得升级，重点不在新功能，而在三处边界修复：SubagentStop 事件映射、扩展安装加锁串行化、流式响应 EOF 冲刷 SSE 缓冲。如果你在用子代理或流式工具调用，旧版可能漏掉尾部事件，建议直接升到 v0.68.0。现有 hook 配置需要检查：只挂主循环的 harness 要补子代理生命周期出口，流式解析要显式处理收尾 flush。国内走 newapi.lurus.cn 代理不受影响，摘要未提及代理侧变更。"
+tags: [agent-harness, hooks, streaming, extensions]
+---
+
+- **hooks 支持 SubagentStop 事件映射并合并 hook 定义**：子代理结束时可触发钩子；harness 需为子代理生命周期单独设计事件出口，而非只挂主循环。
+- **扩展安装按扩展加锁串行化**：并发安装同一扩展不再互相踩踏；harness 的插件/工具装载路径应具备幂等与互斥，避免状态竞争。
+- **流式响应在 EOF 时冲刷待处理 SSE 缓冲**：流结束不再丢尾部事件；harness 解析流式输出时须显式处理收尾 flush，否则会漏掉最后一段工具调用或文本。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.68.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.68.0)

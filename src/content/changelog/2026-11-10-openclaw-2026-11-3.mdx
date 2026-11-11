@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-openclaw-2026-11-3
+title: "openclaw v2026.11.3 — 子任务隐私、工具失败可见性与凭证隔离的集中修复"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.11.3
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "子任务隐私、工具失败可见性与凭证隔离的集中修复"
+broadcast: "这次更新主要修了三件事：私有子任务的完成结果不再混进聊天回复，父任务取消子任务后也能正常交接；没应答的工具失败不再被当成成功结束，而是明确报出来；凭证按连接隔离，子进程不再继承无关的密钥。对做 agent 的开发者来说，这意味着子任务隐私、工具失败可见性和凭证边界都更可靠，少踩假成功和密钥泄露的坑。"
+insight: "这次 2026.11.3 值得现有用户升级，重点不在新功能，而在三处行为修正：私有子任务结果不再混进流式回复、工具失败不再被当成成功、凭证按连接隔离且子进程不再继承无关 Gateway 密钥。若你的 prompt 或 hook 依赖“子任务完成即用户可见”或“工具无响应即结束”的旧行为，升级后要相应调整，否则会出现输出缺失或错误被显式抛出。摘要未提及 newapi.lurus.cn 代理，国内走代理是否受影响暂无依据，建议升级前先在小范围验证。"
+tags: [subagent, credential-isolation, tool-errors, cancellation]
+---
+
+- 私有子任务完成结果不再进入流式聊天回复，父任务取消子任务后也能正常交接；harness 需区分内部完成回执与用户可见输出。
+- 未应答的工具失败不再被静默当作成功结束，而是显式上报；harness 应把工具错误作为一等状态传播，避免假成功。
+- 凭证按连接作用域隔离，子进程不再继承无关 Gateway 密钥，认证在运行截止时间被取消；harness 需为每次调用绑定凭证边界与取消传播。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.11.3](https://github.com/openclaw/openclaw/releases/tag/v2026.11.3)

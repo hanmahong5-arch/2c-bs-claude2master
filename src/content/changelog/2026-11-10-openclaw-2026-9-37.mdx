@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-openclaw-2026-9-37
+title: "openclaw v2026.9.37 — 退役维护线仍发安全补丁，隐私与恢复行为有实质变化"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.9.37
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "退役维护线仍发安全补丁，隐私与恢复行为有实质变化"
+broadcast: "这次更新虽然来自一条已经退役的维护线，但仍然发了安全补丁，重点是隐私和恢复行为有实质变化。配对节点的照片和截图默认不再自动附加到回复，会话重置后也会保留关联的模型账户。对做 agent 的国内开发者来说，得把媒体附件默认设为私有，并把清理和恢复做成可回滚的独立步骤。"
+insight: "这次 2026.9.37 是退役维护线上的安全补丁，隐私与恢复行为有实质变化，现有用户值得升级。升级后要改配置：媒体附件默认私有，组装回复前检查显式媒体读取拒绝状态；会话重置逻辑区分清上下文与清账户绑定，避免 /new、/reset 后误清模型账户；清理与恢复做成可重入、可回滚的独立步骤。走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [privacy, session-state, recovery, gateway]
+---
+
+- 配对节点的照片与截图默认不再自动附加到回复，显式媒体读取拒绝也被遵守；harness 需把媒体附件默认设为私有，并在组装回复前检查拒绝状态。
+- 会话在 `/new`、`/reset` 及空闲或每日轮转后保留关联模型账户；harness 的会话重置逻辑应区分“清上下文”与“清账户绑定”。
+- 中断的快照写入保留上一回滚点，手动停止超时后渠道账户可恢复，MCP 回环监听意外关闭会被替换；harness 需把清理与恢复做成可重入、可回滚的独立步骤。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.9.37](https://github.com/openclaw/openclaw/releases/tag/v2026.9.37)

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-09-blog-simonwillison-hide-your-slop-pr-descriptions-behind
+title: "Hide your slop PR descriptions behind — AI 写的 PR 描述太详尽反而没人读，Simon 用 details/summ"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/9/details-summary/
+publishedAt: 2026-11-09
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "AI 写的 PR 描述太详尽反而没人读，Simon 用 details/summary 折叠长文，只留人写的摘要"
+broadcast: "AI 写的代码合并说明越来越长，反而没人愿意读。开发者 Simon 的做法是：把模型生成的完整描述折叠起来，开头只留一段自己写的高层摘要，并承诺这段代表他的人类判断。这提醒我们，agent 输出越长不等于越有用，评审成本取决于信息密度和可扫读性，工作流里也该给人类判断留个明确位置。"
+tags: [coding-agents, github, markdown, ai-assisted-programming]
+---
+
+- 作者现在多数 PR 由 Claude Code 或 Codex 提交，agent 写的描述准确全面，但读起来像 slop，他的第一反应是「我不看这么多」。含义：agent 输出越长不等于越有用，信息密度和可扫读性才是评审成本的关键。
+- 他的做法是在 GitHub Markdown 里用 `<details><summary>` 折叠 agent 写的完整说明，summary 直接写模型名和 effort 级别（如 Claude Opus 5.5 Medium），开头只留一段人工挑选的高层介绍，必要时配截图。含义：工具链可以把「人审摘要」和「机器详述」分层呈现，让评审者先看结论。
+- 他承诺开头那段代表自己的人类判断，并给出 datasette、datasette-agent、llm 等多个 PR 实例，还建议 GitHub 在 Markdown 编辑器加按钮。含义：agent 工作流需要为人类编辑判断留出显式位置，而不是让模型包办全部叙述。
+
+---
+
+> 原文：[Hide your slop PR descriptions behind](https://simonwillison.net/2026/Nov/9/details-summary/) · 作者 Simon Willison
