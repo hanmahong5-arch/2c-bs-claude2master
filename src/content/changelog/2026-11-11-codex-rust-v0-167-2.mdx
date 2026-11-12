@@ -1,0 +1,23 @@
+---
+slug: 2026-11-11-codex-rust-v0-167-2
+title: "codex rust-v0.167.2 — Codex 在 Vertex AI 上默认增量发送工具更新，可关闭"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.167.2
+publishedAt: 2026-11-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Codex 在 Vertex AI 上默认增量发送工具更新，可关闭"
+broadcast: "Codex 在谷歌云 Vertex AI 后端上改了个默认行为：工具更新现在改成增量发送，不再一次性全量下发，工具清单可以随会话逐步扩展，不用第一轮就冻结全部结构。这对做 agent 的国内开发者意味着，增量下发得按后端区分实现，不能假设各家一致；想退回旧行为，也能在配置里关掉这个开关。"
+insight: "这次 0.167.2 的默认值变更只作用于 Vertex AI 后端，国内走 newapi.lurus.cn 代理的用户不受影响，无需为此调整。真正需要动作的是在 Vertex AI 上跑 harness 的团队：默认增量下发工具更新意味着工具清单可随会话逐步扩展，首轮不必冻结全部 schema，但既有部署若依赖一次性下发，建议先在 config.toml 的 [features] 下把 incremental_tools_legacy_gcp 设为 false 退回旧行为，验证后再切换。现有 prompt 无需改动。"
+tags: [codex, vertex-ai, incremental-tools, config]
+---
+
+- 默认行为变化：Codex 在 Google Cloud Vertex AI 上现在默认增量发送工具更新，而非一次性下发。对 harness 的含义：工具清单可随会话逐步扩展，不必在首轮就冻结全部 schema。
+- 关闭开关：在 `config.toml` 的 `[features]` 下设置 `incremental_tools_legacy_gcp = false` 可退回旧行为。对 harness 的含义：需要为不同后端保留特性开关，避免默认值变更直接打断既有部署。
+- 作用范围限定：该变更只针对 Vertex AI 后端。对 harness 的含义：增量工具下发应按 provider 区分实现，不能假设所有后端行为一致。
+
+---
+
+> 原文 release：[openai/codex rust-v0.167.2](https://github.com/openai/codex/releases/tag/rust-v0.167.2)

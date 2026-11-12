@@ -1,0 +1,23 @@
+---
+slug: 2026-11-11-blog-simonwillison-anthropic-s-ipo-roadshow-video
+title: "Anthropic's IPO roadshow video — Anthropic IPO 路演视频披露：Claude 三天把模型移植到 AMD"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/
+publishedAt: 2026-11-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Anthropic IPO 路演视频披露：Claude 三天把模型移植到 AMD GPU，几乎无需人工介入"
+broadcast: "Anthropic 在路演视频里透露，他们让自家模型去把模型移植到 AMD 的 GPU 上，结果三天就跑通了，几乎没让人插手，底层内核接近百分之百由模型自己完成。这事值得国内开发者留意：像移植这种重活，正在被模型自己接过去。他们还说算力等于物理容量乘以算力乘数，乘数会叠加放大，能力提升的复利效应被当成核心壁垒。"
+tags: [anthropic, multi-chip, compute-multipliers, recursive-self-improvement]
+---
+
+- 训练与推理横跨 AWS Trainium、Google TPU、NVIDIA 与 AMD 四大芯片家族，靠多年投入的多芯片策略支撑；对 agent 工具链的含义是，跨硬件抽象层已是头部实验室的工程现实，而非可选优化。
+- 今年首次接入 AMD GPU 时，Anthropic 让内部系统 Mythos 试手，三天跑通、几乎零人工干预，Claude 自己移植或编写了近 100% 的 kernel；对开发者的含义是，底层移植这类重活正被模型自身接管。
+- 文章提出“总算力 = 物理容量 × 算力乘数”，乘数之间会叠加放大，并称接近递归自我改进时 Claude 可自行发现乘数；对 agent 的含义是，能力提升的复利效应被当作核心竞争壁垒。
+
+---
+
+> 原文：[Anthropic's IPO roadshow video](https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/) · 作者 Simon Willison

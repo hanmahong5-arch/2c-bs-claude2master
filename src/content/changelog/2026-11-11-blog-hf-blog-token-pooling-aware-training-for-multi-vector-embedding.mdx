@@ -1,0 +1,23 @@
+---
+slug: 2026-11-11-blog-hf-blog-token-pooling-aware-training-for-multi-vector-embedding
+title: "Token Pooling-Aware Training for Multi-Vector Embedding — Hugging Face 讲多向量嵌入模型如何训练时就考虑 token 池化，让"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/token-pooling
+publishedAt: 2026-11-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 讲多向量嵌入模型如何训练时就考虑 token 池化，让检索更省更准"
+broadcast: "多向量嵌入模型现在有个新思路：训练时就把 token 池化考虑进去，而不是只在推理时压缩。这意味着每篇文档保留的向量数量能减少，检索质量却不打折扣。对自建 RAG 或嵌入服务的开发者来说，选型和微调时要把池化策略放进训练目标，别再把压缩当事后优化。"
+tags: [multi-vector-embedding, token-pooling, retrieval, hugging-face]
+---
+
+- 文章聚焦多向量嵌入模型的 token pooling-aware 训练：在训练阶段就引入池化，而非只在推理时压缩 token 表示，让模型学会适配后续的池化操作。
+- 对 agent 与检索工具链的含义：多向量检索的存储与延迟成本主要来自每文档保留大量 token 向量，训练期对齐池化可减少向量数量而不牺牲检索质量。
+- 对开发者的含义：若自建 RAG 或嵌入服务，选型与微调时应把池化策略纳入训练目标，而不是把压缩当作事后优化。
+
+---
+
+> 原文：[Token Pooling-Aware Training for Multi-Vector Embedding Models](https://huggingface.co/blog/token-pooling) · 作者 Hugging Face

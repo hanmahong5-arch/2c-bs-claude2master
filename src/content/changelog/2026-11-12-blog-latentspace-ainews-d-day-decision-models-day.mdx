@@ -1,0 +1,23 @@
+---
+slug: 2026-11-12-blog-latentspace-ainews-d-day-decision-models-day
+title: "[AINews] D-Day (Decision Models Day) — Google 抢先 Anthropic 发布决策模型 Gemini Decisi"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/ainews-d-day-decision-models-day/
+publishedAt: 2026-11-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Google 抢先 Anthropic 发布决策模型 Gemini Decision 1，单次打分替代逐 token 生成，agent 工具选择成本骤降"
+broadcast: "谷歌抢先发布了一款叫决策模型的工具，它不做逐字生成，而是一次打分给出是或否、多选和评分结果，每答案还带置信度，响应只要一两百毫秒。对 agent 开发来说，工具选择、日志抽取这类高频小判断可以不再走大模型生成路径，成本明显下降。不过第三方评测显示它得分与竞品持平、单任务成本反而更高，选型还得按自己的任务实测。"
+tags: [decision-models, gemini, agent-architecture, model-evals]
+---
+
+- **Gemini Decision 1 是闭集决策模型**：支持是/否、多选（最多 255 项）与评分量表，单次前向打分而非生成文本，单请求可含 1000 题、256K 上下文、端到端 150–250ms，每答案附置信度，输入 $0.10/1M token、输出不计费。对 agent 的含义：工具选择、日志抽取这类高频小判断可以不再走大模型生成路径。
+- **独立评测结果更复杂**：Artificial Analysis 给出 Decision Index 66 分，与 Jev 1.14 持平，落后 Drex Max v1.1 七分；每百万任务成本 $345，高于 Drex Max 的 $103 和 Jev 的 $156，单任务 211ms 也慢于 Jev 的 92ms。含义：官方基准与第三方口径存在差距，选型需按自身任务分布实测。
+- **Cloudflare 的混合 agent 架构**：快决策模型负责工具选择与日志抽取，大推理模型只做诊断，演示中把六次 LLM 调用压到一次、约 40K token 降到 1.8K。含义：把"判断"和"推理"拆成两层，是当前可直接复用的降本模式。
+
+---
+
+> 原文：[[AINews] D-Day (Decision Models Day)](https://latent.space/p/ainews-d-day-decision-models-day/) · 作者 Latent Space

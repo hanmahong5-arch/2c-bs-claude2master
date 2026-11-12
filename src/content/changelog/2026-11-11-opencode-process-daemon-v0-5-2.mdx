@@ -1,0 +1,23 @@
+---
+slug: 2026-11-11-opencode-process-daemon-v0-5-2
+title: "opencode process-daemon-v0.5.2 — PTY 协议升到 8，进程守护层有变动"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.5.2
+publishedAt: 2026-11-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "PTY 协议升到 8，进程守护层有变动"
+broadcast: "这次进程守护层发布了一个新版本，把伪终端协议升到了第八版。做 agent 的开发者要注意，对接时得按协议八校验版本，不然会和旧客户端握手不一致。另外这个包是以独立作用域发布到包管理器的，安装时要锁定那个作用域包，别用仓库路径；升级时也可以按标签追踪守护进程和伪终端的对应关系，方便回滚定位。"
+insight: "这次 process-daemon v0.5.2 的核心变化是 PTY 协议升到 8，现有用户如果 harness 里对接了 opencode-pty，建议按协议 8 校验版本后再升级，避免与旧客户端握手不一致；安装时锁定 @opencode/pty@0.5.2 这个作用域包，而不是仓库路径，并可按 tag process-daemon-v0.5.2 追踪守护进程与 PTY 的对应关系以便回滚。摘要未提及 newapi.lurus.cn 代理相关变动，国内走代理是否受影响暂无依据，prompt 与 hook 配置也无需因此改动。"
+tags: [opencode-pty, process-daemon, protocol-8, npm-release]
+---
+
+- opencode-pty 发布 0.5.2，协议版本为 8：harness 对接 PTY 时需按协议 8 校验版本，避免与旧客户端握手不一致。
+- 包来自 packages/process-daemon，并以 @opencode/pty@0.5.2 发布到 npm：依赖来源与包名分离，harness 安装时应锁定该作用域包而非仓库路径。
+- 版本号与 tag process-daemon-v0.5.2 对齐：升级时可按 tag 追踪守护进程与 PTY 的对应关系，便于回滚定位。
+
+---
+
+> 原文 release：[sst/opencode process-daemon-v0.5.2](https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.5.2)

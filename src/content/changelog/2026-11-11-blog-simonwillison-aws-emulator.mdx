@@ -1,0 +1,23 @@
+---
+slug: 2026-11-11-blog-simonwillison-aws-emulator
+title: "aws-emulator — AWS 推出官方本地模拟器，用 Rust 编写，三周内由大量 agent 提交近"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/11/aws-emulator/
+publishedAt: 2026-11-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "AWS 推出官方本地模拟器，用 Rust 编写，三周内由大量 agent 提交近三万次 commit"
+broadcast: "AWS 推出了官方本地模拟器，能在本地克隆多个云服务跑测试，不用再申请付费密钥，对 agent 和 CI 工具链来说，测试的云端成本和门槛都降下来了。更值得关注的是，它用 Rust 编写，由一大群 agent 协作完成，前三周就提交了近三万次 commit，给 agent 开发提供了一个可观察的大规模协作样本。"
+tags: [aws, agentic-engineering, testing, rust]
+---
+
+- AWS 发布官方 emulator，可在本地克隆多个 AWS 服务跑测试，无需申请付费 API key；对 agent 与 CI 工具链意味着云端依赖测试的成本和门槛下降。
+- 该项目用 Rust 编写，由“一大群 agent”协作完成，前三周产生 29,684 次 commit；这为 agentic engineering 提供了一个可观察的大规模协作样本。
+- 目前 macOS 和 Windows 上运行仍需 Docker，作者希望未来能改为单个二进制；对跨语言测试套件而言，单文件分发才是真正可嵌入的形态。
+
+---
+
+> 原文：[aws-emulator](https://simonwillison.net/2026/Nov/11/aws-emulator/) · 作者 Simon Willison

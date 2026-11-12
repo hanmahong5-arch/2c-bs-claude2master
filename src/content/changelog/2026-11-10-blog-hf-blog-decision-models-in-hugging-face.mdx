@@ -1,0 +1,23 @@
+---
+slug: 2026-11-10-blog-hf-blog-decision-models-in-hugging-face
+title: "Decision Models in Hugging Face — Hugging Face 推出决策模型，把强化学习策略接入 Transforme"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/decision
+publishedAt: 2026-11-10
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 推出决策模型，把强化学习策略接入 Transformers 生态"
+broadcast: "Hugging Face 推出了决策模型，把强化学习训练出来的策略网络接进了 Transformers 的统一接口，开发者用同一套接口就能加载和推理决策任务。对做 agent 的国内开发者来说，这意味着策略模型和语言模型能共享工具链，不用再自建推理管线，策略也能像普通模型一样被拉取、缓存和组合，用来做动作选择。"
+tags: [hugging-face, decision-models, reinforcement-learning, agent-tooling]
+---
+
+- Hugging Face 发布决策模型（Decision Models），将强化学习训练的策略网络纳入 Transformers 统一接口，开发者可用同一套 API 加载和推理决策任务模型。对 agent 开发者而言，这意味着策略模型与语言模型共享工具链，减少自建推理管线的成本。
+- 文章介绍决策模型在 Hub 上的托管与分发方式，模型卡、版本和依赖沿用现有生态约定。对工具链的含义是：RL 策略可以像普通模型一样被拉取、缓存和组合，便于在 agent 中做动作选择。
+- 文中给出加载与推理的示例流程，强调与现有库的兼容性。对开发者的含义是：无需切换框架即可把决策模型接入已有服务，但具体任务适配仍需按模型卡说明处理。
+
+---
+
+> 原文：[Decision Models in Hugging Face](https://huggingface.co/blog/decision) · 作者 Hugging Face

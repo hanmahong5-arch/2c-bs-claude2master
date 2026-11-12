@@ -1,0 +1,23 @@
+---
+slug: 2026-11-11-blog-simonwillison-browse-tools-simonwillison-net-by-tag
+title: "Browse tools.simonwillison.net by tag — Simon 用 tree"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/11/tools-tags/
+publishedAt: 2026-11-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon 用 tree-sitter 给 244 个 vibe-coded 工具自动打标签，做成可浏览的标签云"
+broadcast: "有位开发者用静态分析工具给两百多个自己做的网页小工具自动打上了标签，做成标签云方便浏览。他这么做是因为工具太多，手工整理已经跟不上了。这对我们国内开发者挺有启发：代码本身就能当结构化信息的来源，用静态分析给大量产物建索引成本很低，比人工分类更可持续，也更容易跟着代码变化保持同步。"
+tags: [tree-sitter, code-analysis, tooling, vibe-coding]
+---
+
+- 他用 tree-sitter 静态分析每个工具的代码，提取其中用到的 JavaScript API、第三方库和 Web API host，自动生成三类标签，而不是手工维护。对 agent 工具链的含义：代码本身可以作为结构化元数据的来源，静态分析能低成本地为大量产物建立索引。
+- 触发这次改造的直接原因，是工具数量已经涨到 244 个并且还在增加，原有浏览方式不够用。含义：当个人产出的工具规模超过手工整理的临界点，索引和检索层就需要自动化，否则资产会变成不可发现的存量。
+- 首页现在按这三类标签提供标签云入口，可以按类别浏览。含义：对开发者而言，给自建工具集加上基于代码事实的标签体系，比人工分类更可持续，也更容易随代码变化保持同步。
+
+---
+
+> 原文：[Browse tools.simonwillison.net by tag](https://simonwillison.net/2026/Nov/11/tools-tags/) · 作者 Simon Willison

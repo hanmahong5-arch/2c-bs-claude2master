@@ -1,0 +1,24 @@
+---
+slug: 2026-11-11-blog-simonwillison-llm-0-37-2
+title: "llm 0.37.2 — llm 0.37.2 修复了一个安全问题：配置不当可能把 OpenAI API "
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/11/llm/
+publishedAt: 2026-11-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "llm 0.37.2 修复了一个安全问题：配置不当可能把 OpenAI API key 发给第三方兼容端点"
+broadcast: "一个叫 llm 的命令行工具刚修了个安全问题：当你配置了第三方兼容端点，某些情况下它可能把 OpenAI 的 API key 发给对方。触发场景有两种，一是指定的密钥根本没存过，二是强制切换接口形态时鉴权走了岔路。这事值得国内做 agent 工具链的同学留意，多端点配置下凭据必须按端点严格隔离，不能靠找不到就回退的隐式逻辑，参数覆盖也得纳入测试。"
+tags: [llm, security, api-keys, openai-compatible]
+---
+
+- 问题出在 `extra-openai-models.yaml` 机制上（0.37 起由 `llm openai endpoint add` 命令管理），用于接入其他厂商的 OpenAI 兼容 API。报告者 Daniel de Araujo 指出两条泄露路径：`api_key_name` 指定的 key 从未被存储时，以及 `responses: true` 的模型带 `-o chat_completions 1` 运行时。
+- 含义：多端点配置下，凭据路由必须按端点严格隔离，不能靠“找不到就回退”的隐式逻辑。
+- 含义：对 agent 工具链而言，模型参数覆盖（如强制切换 API 形态）会改变鉴权路径，属于需要测试覆盖的边界。
+- 含义：这类问题由外部报告者发现并走 GHSA 流程披露，说明插件式端点扩展应默认假设配置可能残缺。
+
+---
+
+> 原文：[llm 0.37.2](https://simonwillison.net/2026/Nov/11/llm/) · 作者 Simon Willison

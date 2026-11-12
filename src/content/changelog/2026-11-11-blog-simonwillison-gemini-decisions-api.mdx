@@ -1,0 +1,23 @@
+---
+slug: 2026-11-11-blog-simonwillison-gemini-decisions-api
+title: "Gemini Decisions API — 谷歌推出 Gemini Decision 1，加入决策模型赛道，支持视频输入，并"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/11/gemini-decisions-api/
+publishedAt: 2026-11-11
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "谷歌推出 Gemini Decision 1，加入决策模型赛道，支持视频输入，并返回概率而非 0/1"
+broadcast: "谷歌推出了 Gemini Decision 1，正式加入决策模型这条赛道。它和另外两家的接口形态几乎一致，都支持是或否、多选和打分三类问题，说明 agent 的判定层正在标准化，工具链可以按统一接口来抽象。它最大的差异是支持视频输入，返回的是概率而不是零和一，agent 得自己设阈值。定价每百万输入十美分、输出免费，对高频判定的开发者来说，成本会直接影响调用放在哪一层。"
+tags: [decision-models, gemini, multimodal, agent-tooling]
+---
+
+- 该模型与 Jev、OpenAI 的决策模型 API 形态几乎一致：同样支持 yes/no、多选、rubric 打分三类问题，连 yes/no 的术语 "Noul" 都沿用 Jev。这意味着 agent 的判定层正在标准化，工具链可以按统一接口抽象。
+- 定价为每百万输入 token 10 美分、输出免费，与 GPT-6 Luna 决策模型相同；Jev 最便宜，为 4.2 美分。对开发者而言，成本差异会直接影响高频判定调用放在哪一层。
+- 多模态覆盖是差异点：Jev 仅支持文本和 JSON，OpenAI 支持文本和图像，Gemini Decision 1 覆盖文本、图像、音频、视频和 PDF。作者用一段机器人视频实测，yes/no 返回的是概率值（如 robot 0.923、dragon 0.0498），而非 0/1，因此 agent 需要自行设定阈值。
+
+---
+
+> 原文：[Gemini Decisions API](https://simonwillison.net/2026/Nov/11/gemini-decisions-api/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-12-zeroclaw-0-9-0
+title: "zeroclaw v0.9.0 — 非管理员账号首次可登录，权限隔离成为硬约束"
+source: zeroclaw-labs/zeroclaw
+sourceUrl: https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.9.0
+publishedAt: 2026-11-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "非管理员账号首次可登录，权限隔离成为硬约束"
+broadcast: "这次更新让非管理员账号第一次能登录仪表盘，而且权限隔离变成了硬约束。每个请求都会重新校验授权，权限一改下一请求就生效；会话也绑定身份状态，登出或撤权会立刻关掉聊天，哪怕回复还在输出。对做 agent 的国内开发者来说，这提醒我们鉴权别做成登录时的一次性快照，工具面要按调用者身份裁剪，归属不明的调用默认拒绝。"
+insight: "这次 v0.9.0 的核心变化是权限隔离变成硬约束：非管理员账号的工具面按调用者身份裁剪，无法归属的调用默认拒绝，撤权会立即中断进行中的聊天。对现有用户来说，如果你只用管理员账号单机跑，升级后行为基本不变，可以直接升；但只要涉及多账号或共享部署，升级前务必检查现有 prompt 和 hook 配置里是否依赖通配选择器或跨账号会话工具，这些在非管理员场景下会被扣留，需要提前改成显式授权。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关改动，鉴权在网关侧逐请求校验，代理链路本身不受影响。"
+tags: [oidc, permission-profiles, agent-harness, breaking-changes]
+---
+
+- 仪表盘支持自有 OIDC 登录（默认关闭），令牌只留在网关内存，浏览器仅持 HttpOnly 会话 cookie；每次请求重新校验当前授权，权限变更或移除提供方在下一请求即生效。含义：harness 的鉴权应做成逐请求校验，而非登录时一次性快照。
+- 非管理员账号可拥有自己的仪表盘聊天，agent 只用其权限档案授予的工具，会话互不可见；登出、过期或撤权会立即关闭聊天，即使回复仍在流式输出。含义：会话生命周期必须绑定身份状态，撤销要能中断进行中的执行。
+- 所有“不知道是谁发起”的工具对非管理员一律扣留，包括 SOP 步骤、定时与 cron 轮次、对等 agent、嵌套子 agent 与流水线、保存的守护进程配置及跨账号会话工具，通配选择器也不恢复。含义：harness 需按调用者身份而非选择器裁剪工具面，无法归属的调用默认拒绝。
+
+---
+
+> 原文 release：[zeroclaw-labs/zeroclaw v0.9.0](https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.9.0)
