@@ -1,0 +1,23 @@
+---
+slug: 2026-11-12-blog-simonwillison-llm-gemini-0-37
+title: "llm-gemini 0.37 — Gemini 4 三款模型定价混乱，Hydrogen 便宜 25% 但画鹈鹕质量"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/12/llm-gemini/
+publishedAt: 2026-11-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Gemini 4 三款模型定价混乱，Hydrogen 便宜 25% 但画鹈鹕质量明显掉档"
+broadcast: "谷歌新出的三款 Gemini 模型定价有点乱：两款主力同价，但其中一个每轮更省 token，所以实际成本不一样；便宜的那款眼下只便宜四分之一，要到十二月才拉开差距，而且比起别家的低价模型还是贵出十几倍。对国内做 agent 的团队来说，这意味着选型不能只盯单价，得按每个任务实际消耗折算，也可以把便宜模型放在执行位、强模型放在判断位。"
+tags: [llm-pricing, gemini, multi-model, llm-tooling]
+---
+
+- **Carbon 与 Argon 同价**：两者当前均为 $2/$10（每百万输入/输出 token），12 月 1 日起翻倍至 $4/$20；Google 称 Argon 每轮消耗 token 更少，因此同价不同成本。含义：选模型不能只看单价，要按每任务 token 消耗折算。
+- **Hydrogen 现价仅便宜 25%**：$1.50/$7.50，12 月 1 日后才变成相对 75% 折扣；但仍比 Claude Haiku 5.5、GPT-6 Luna 的 $0.10/$0.50 贵约 15 倍。含义：做成本敏感的工具链路由时，Hydrogen 目前不具价格优势。
+- **Hydrogen 定位为执行引擎**：Google 称其用于写代码、跑测试、验证改动，或与 Carbon/Argon 组成多模型工作流，同时是新的免费层模型并驱动 Google Search 的 AI 功能。含义：多模型编排中可把廉价模型放在执行位、前沿模型放在判断位。
+
+---
+
+> 原文：[llm-gemini 0.37](https://simonwillison.net/2026/Nov/12/llm-gemini/) · 作者 Simon Willison

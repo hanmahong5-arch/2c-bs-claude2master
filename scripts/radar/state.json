@@ -1,7 +1,7 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.322",
-    "openai/codex": "rust-v0.167.2",
+    "anthropics/claude-code": "v2.1.323",
+    "openai/codex": "rust-v0.168.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "v4.1.26",
     "block/goose": "v1.59.0",
@@ -242,7 +242,8 @@
     "DIYgod/pinky",
     "expo/exact",
     "pengchujin/aerial-tv",
-    "manjushree-iyer/soundpad-audio-suite"
+    "manjushree-iyer/soundpad-audio-suite",
+    "HolyArrs/HolyArrs"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -368,11 +369,11 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-12",
-    "claude-code-docs": "2026-11-06",
-    "openai-codex-blog": "2026-11-06",
-    "openclaw-concepts": "2026-11-06",
-    "hermes-guides": "2026-11-06"
+    "anthropic-engineering": "2026-11-13",
+    "claude-code-docs": "2026-11-13",
+    "openai-codex-blog": "2026-11-13",
+    "openclaw-concepts": "2026-11-13",
+    "hermes-guides": "2026-11-13"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -815,7 +816,8 @@
       "https://simonwillison.net/2026/Nov/11/aws-emulator/",
       "https://simonwillison.net/2026/Nov/11/tools-tags/",
       "https://simonwillison.net/2026/Nov/11/llm/",
-      "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/"
+      "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+      "https://simonwillison.net/2026/Nov/12/llm-gemini/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1036,7 +1038,8 @@
       "https://latent.space/p/naiveai/",
       "https://latent.space/p/ainews-d-day-decision-models-day/",
       "https://latent.space/p/jev-revolution/",
-      "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/"
+      "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
+      "https://latent.space/p/artcraft/"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1504,7 +1507,11 @@
       "https://openai.com/index/singapore-airlines-travel-work",
       "https://openai.com/index/jiostar-vijay-seshadri",
       "https://openai.com/index/ai-effect-on-freelance-work",
-      "https://openai.com/index/cogent-security"
+      "https://openai.com/index/cogent-security",
+      "https://openai.com/business/customer-stories/amplitude",
+      "https://openai.com/business/customer-stories/gondola",
+      "https://openai.com/business/customer-stories/holidays-extras-codex",
+      "https://openai.com/index/children-first-declaration"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1860,21 +1867,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-12",
-    "lilianweng": "2026-11-06",
-    "latentspace": "2026-11-12",
-    "interconnects": "2026-11-12",
+    "simonwillison": "2026-11-13",
+    "lilianweng": "2026-11-13",
+    "latentspace": "2026-11-13",
+    "interconnects": "2026-11-13",
     "karpathy": "2026-11-11",
     "raschka": "2026-11-11",
     "eugeneyan": "2026-11-11",
-    "chiphuyen": "2026-11-06",
+    "chiphuyen": "2026-11-13",
     "oneusefulthing": "2026-11-12",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-12",
+    "openai-news": "2026-11-13",
     "deepmind": "2026-11-12",
     "hf-blog": "2026-11-12",
-    "anthropic-news": "2026-11-12",
+    "anthropic-news": "2026-11-13",
     "steipete": "2026-11-12",
     "openclaw-blog": "2026-11-12"
   },

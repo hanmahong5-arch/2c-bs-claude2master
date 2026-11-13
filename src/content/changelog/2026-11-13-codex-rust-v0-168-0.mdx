@@ -1,0 +1,23 @@
+---
+slug: 2026-11-13-codex-rust-v0-168-0
+title: "codex rust-v0.168.0 — 模型提供方可选默认、侧边会话面板、音频附件预算，三处改动直接影响 agent h"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.168.0
+publishedAt: 2026-11-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "模型提供方可选默认、侧边会话面板、音频附件预算，三处改动直接影响 agent harness 的会话与上下文设计"
+broadcast: "这次更新有三处改动，直接关系到 agent 的会话与上下文设计。一是模型提供方可以设默认，但只影响新会话，已打开的会话仍用原来保存的配置，所以默认配置和会话级配置得分开存。二是可以开侧边会话，多会话并行成了正式的界面形态，焦点切换时的事件处理要跟上。三是音频附件会记住被拒的录音，并按实际时长分配上下文预算。"
+insight: "这次 0.168.0 的三处改动都落在会话与上下文层，现有用户值得升级，但不必急着重配 prompt 或 hook：默认提供方与已恢复会话的提供方是分开保存的，切换默认不会影响存量会话，所以升级后先在新会话里试默认提供方即可。侧边会话和音频预算属于 harness 行为变化，原有 prompt 与 hook 配置无需改动。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有方式使用即可。"
+tags: [model-provider, tui-workspace, audio-attachments, context-budget]
+---
+
+- TUI 新增 Sessions → Model providers 浏览，并可为新会话选默认提供方；已打开/恢复的会话仍用其保存的提供方。含义：harness 需把「默认配置」与「会话级配置」分离存储，切换默认不能污染存量会话。
+- `features.tui_workspace` 开启后可在主对话旁开侧边会话，拖动分隔条调整、`leader z` 缩放聚焦面板。含义：多会话并行成为一等 UI 形态，harness 需支持焦点切换时的 transcript 交互与事件排空。
+- 音频模型可附加录音，后续轮次跳过已确认被拒的录音，并用片段时长做预算以保留更多短录音。含义：附件需带拒绝状态与时长元数据，上下文预算按实测时长而非固定配额分配。
+
+---
+
+> 原文 release：[openai/codex rust-v0.168.0](https://github.com/openai/codex/releases/tag/rust-v0.168.0)

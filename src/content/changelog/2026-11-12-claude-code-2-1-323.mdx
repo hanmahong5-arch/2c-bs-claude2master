@@ -1,0 +1,23 @@
+---
+slug: 2026-11-12-claude-code-2-1-323
+title: "claude-code v2.1.323 — Code Mode 让 Claude 写 JS 调用工具，插件版本约束与权限沙箱"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.323
+publishedAt: 2026-11-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Code Mode 让 Claude 写 JS 调用工具，插件版本约束与权限沙箱同步收紧"
+broadcast: "Claude 代码工具刚更新，新增了一个实验性的代码模式，需要手动开启，Claude 会改成写 JavaScript 来调用工具，做 harness 的得考虑代码执行沙箱和工具调用边界。另外插件加了版本范围约束，超范围不装也不加载，还有一批 Bash 权限漏洞被收紧，像通配规则跳过提示、sudo 包装命令漏检都修了，权限判定要按实际执行形态来匹配。"
+insight: "这次 v2.1.323 的升级重点不在功能而在安全边界，值得升。Code Mode 是实验性且需手动开启，普通用户不必急着改现有 prompt；但 Bash 通配规则和 sudo/env 包装命令的权限收紧是实打实的修复，之前依赖 Bash(ls*) 这类规则跳过提示的 hook 配置建议复核一遍，避免升级后行为变化。插件侧新增 engines 版本门控，超范围不加载，装插件时留意兼容版本。国内走 newapi.lurus.cn 代理的部分，摘要未涉及代理或接口变更，按现有方式使用不受影响。"
+tags: [code-mode, plugin-versioning, permission-sandbox, harness-design]
+---
+
+- 新增实验性 Code Mode（需手动开启）：Claude 改为写 JavaScript 调用工具，harness 需考虑代码执行沙箱与工具调用边界。
+- `plugin.json` 新增 `engines["claude-code"]` 版本范围，超范围插件不安装、不加载，安装时选最新兼容版本；harness 需在加载前做版本门控。
+- 大量 Bash 权限修复：`Bash(ls*)` 等通配规则此前会跳过提示，`sudo`/`env` 包装命令漏检，现统一收紧；harness 的权限判定需按实际执行形态而非字面规则匹配。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.323](https://github.com/anthropics/claude-code/releases/tag/v2.1.323)
