@@ -1,0 +1,23 @@
+---
+slug: 2026-11-13-blog-hf-blog-xybench-helping-with-the-problem-behind-the-question
+title: "XYBench: Helping with the problem behind the question — AI2 推出 XYBench，专门评测模型能否识别问题背后真正该解决的问题。"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/allenai/xybench
+publishedAt: 2026-11-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "AI2 推出 XYBench，专门评测模型能否识别问题背后真正该解决的问题。"
+broadcast: "AI2 推出了一个叫 XYBench 的新评测，专门看模型能不能识别出问题背后真正该解决的问题。它把用户问的和用户真正需要的拆开来测，说明直接照字面执行指令，在真实任务里往往是错的。对咱们做 agent 的启示很直接：在流程里显式加上澄清和重述的步骤，允许 agent 反问，比让它硬答更可靠。"
+tags: [benchmark, agent, evaluation, intent-understanding]
+---
+
+- **问题重述是独立能力**：XYBench 把「用户问的问题」和「用户真正需要解决的问题」拆开评测，模型要先判断提问本身是否偏离目标，再决定怎么答。对 agent 的含义是：直接照字面执行指令，在真实任务里往往是错的。
+- **基准覆盖多种偏差类型**：文章围绕提问中隐含的错误前提、模糊目标等情形设计测试项，而不是只测最终答案对不对。对工具链的含义是：评测要加一层「意图校验」，不能只看输出质量。
+- **对开发者的直接启示**：在 prompt 或 agent 流程里显式加入澄清与重述步骤，比让模型硬答更可靠。这意味着产品设计上要允许 agent 反问，而不是追求一次成型。
+
+---
+
+> 原文：[XYBench: Helping with the problem behind the question](https://huggingface.co/blog/allenai/xybench) · 作者 Hugging Face

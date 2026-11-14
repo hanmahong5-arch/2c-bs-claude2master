@@ -1,0 +1,23 @@
+---
+slug: 2026-11-13-opencode-2-3-0
+title: "opencode v2.3.0 — 子代理默认后台运行，父会话可并发继续工作"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.3.0
+publishedAt: 2026-11-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "子代理默认后台运行，父会话可并发继续工作"
+broadcast: "这次更新最值得留意的是子代理默认改到后台运行：调用后立刻返回会话编号，空闲时再向父会话汇报，父会话可以同时跑多个子代理。对做 agent 的国内开发者来说，这意味着要把子代理当成异步任务处理，还得接住“仍在运行”的中间汇报，别把部分结果当成完成。另外终端界面默认精简转录，每段工具调用和思考折叠成一行，输出层最好默认聚合步骤、保留可展开明细。"
+insight: "这次 v2.3.0 的核心变化是子代理默认后台运行，父会话能并发继续，属于行为层面的调整而非小修补。现有用户值得升级，但升级前要确认自己的 harness 已把子代理当异步任务处理，能接住“仍在运行”的中间汇报，否则容易把部分结果当完成。prompt 和 hook 配置本身不用改，但输出层建议跟随 TUI 默认 low 精简，聚合步骤、保留可展开明细。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [background-subagents, transcript-verbosity, session-navigation, agent-harness]
+---
+
+- **子代理默认后台运行**：调用后立即返回 session ID，空闲时向父会话汇报；父会话可同时运行多个子代理。harness 需把子代理视为异步任务，并处理“仍在运行”的中间汇报，避免把部分结果当完成。
+- **TUI 转录默认 low 精简**：每段工具调用与思考折叠为一行活动行，可在设置或 `session.verbosity` 调回 medium/high。harness 输出层应默认聚合步骤、保留可展开明细，降低上下文噪声。
+- **桌面端 Jump to message**：命令面板或 `Cmd+Alt+G` 可跨当前会话搜索并跳转提示词，含未加载进时间线的项。harness 需支持按提示词索引历史，而非仅按消息位置。
+
+---
+
+> 原文 release：[sst/opencode v2.3.0](https://github.com/anomalyco/opencode/releases/tag/v2.3.0)

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-13-blog-hf-blog-build-a-robot-pick-and-place-simulation-with
+title: "Build a Robot Pick-and-Place Simulation with SimReady — 用 SimReady 资产在 Isaac Sim 里搭机器人抓取仿真，省去建模与"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place
+publishedAt: 2026-11-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "用 SimReady 资产在 Isaac Sim 里搭机器人抓取仿真，省去建模与调参的重复劳动"
+broadcast: "给你介绍一个用现成仿真资产在机器人仿真环境里搭抓取放置场景的示例。这些资产自带物理属性，能像依赖包一样直接组装，省掉从零建模和调参的重复劳动。对国内开发者来说，验证操作策略的门槛降低了，精力可以放在任务逻辑上；这类模板化仿真也能作为 agent 评测和数据生成的起点。"
+tags: [simready, isaac-sim, robotics, simulation]
+---
+
+- 文章以 NVIDIA SimReady 资产为基础，在 Isaac Sim 中搭建机器人 pick-and-place 仿真场景，资产自带物理属性，可直接用于仿真。对 agent 工具链的含义是：仿真环境可以像依赖包一样被组装，减少自建物理参数的工作量。
+- 流程覆盖场景组装、机器人配置与抓取放置任务的运行，强调用现成资产替代从零建模。对开发者的含义是：验证操作策略的门槛降低，可以把精力放在任务逻辑而非资产制作上。
+- 该示例面向机器人操作任务的仿真验证，属于可复现的入门级管线。对工具链的含义是：这类模板化仿真可作为 agent 评测与数据生成的起点，但文章未涉及真实硬件部署或策略训练细节。
+
+---
+
+> 原文：[Build a Robot Pick-and-Place Simulation with SimReady Assets](https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place) · 作者 Hugging Face

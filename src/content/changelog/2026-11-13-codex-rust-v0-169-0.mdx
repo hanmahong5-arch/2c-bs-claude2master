@@ -1,0 +1,23 @@
+---
+slug: 2026-11-13-codex-rust-v0-169-0
+title: "codex rust-v0.169.0 — 终端工作区支持多侧聊标签，任务历史可搜索，执行安全默认更严"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.169.0
+publishedAt: 2026-11-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "终端工作区支持多侧聊标签，任务历史可搜索，执行安全默认更严"
+broadcast: "OpenAI 的 Codex 终端工具更新了，现在终端工作区能开多个侧聊标签，用键盘或鼠标切换，重启后本地侧聊还能恢复；命令中心也能按名称、提示预览或工作目录搜索旧任务。更值得注意的是执行安全默认更严了：在非信任目录里，即使加了沙箱写入权限，项目配置和 MCP 也保持关闭，必须显式信任才行。对做 agent 的国内开发者来说，这提醒我们要把会话状态持久化、任务元数据做成可检索索引，并把信任和沙箱权限解耦，默认拒绝隐式加载。"
+insight: "这次 0.169.0 值得现有用户升级，重点不在侧聊标签，而在 codex exec 的安全默认变严：非信任目录下即使加 --sandbox workspace-write 也会保持项目配置与 MCP 关闭，必须显式 --trust。如果你有脚本或 hook 依赖隐式加载项目配置和 MCP，升级后要先补上 --trust，否则会静默失效。走 newapi.lurus.cn 代理的用户不受影响，摘要未涉及代理层变化。"
+tags: [codex-cli, session-persistence, sandbox-trust, task-search]
+---
+
+- 终端工作区支持多个侧聊标签，可用键盘或鼠标切换，重启后恢复本地侧聊；harness 需把会话状态持久化到可恢复的存储层。
+- 命令中心可按名称、提示预览或工作目录搜索旧任务；harness 应把任务元数据建成可检索索引，而非只靠会话文件。
+- `codex exec` 在非信任目录即使加 `--sandbox workspace-write` 也保持项目配置与 MCP 关闭，需显式 `--trust`；harness 设计上应把信任与沙箱权限解耦，默认拒绝隐式加载。
+
+---
+
+> 原文 release：[openai/codex rust-v0.169.0](https://github.com/openai/codex/releases/tag/rust-v0.169.0)

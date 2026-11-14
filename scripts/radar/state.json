@@ -1,11 +1,11 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.323",
-    "openai/codex": "rust-v0.168.0",
+    "anthropics/claude-code": "v2.1.325",
+    "openai/codex": "rust-v0.169.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "v4.1.26",
-    "block/goose": "v1.59.0",
-    "sst/opencode": "process-daemon-v0.5.2",
+    "block/goose": "v1.59.1",
+    "sst/opencode": "v2.3.0",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.68.0",
     "openclaw/openclaw": "v2026.9.37",
@@ -243,7 +243,8 @@
     "expo/exact",
     "pengchujin/aerial-tv",
     "manjushree-iyer/soundpad-audio-suite",
-    "HolyArrs/HolyArrs"
+    "HolyArrs/HolyArrs",
+    "libracoder/kiri"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -369,7 +370,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-13",
+    "anthropic-engineering": "2026-11-14",
     "claude-code-docs": "2026-11-13",
     "openai-codex-blog": "2026-11-13",
     "openclaw-concepts": "2026-11-13",
@@ -817,7 +818,9 @@
       "https://simonwillison.net/2026/Nov/11/tools-tags/",
       "https://simonwillison.net/2026/Nov/11/llm/",
       "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
-      "https://simonwillison.net/2026/Nov/12/llm-gemini/"
+      "https://simonwillison.net/2026/Nov/12/llm-gemini/",
+      "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
+      "https://simonwillison.net/2026/Nov/13/datasette-leaflet/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1039,7 +1042,8 @@
       "https://latent.space/p/ainews-d-day-decision-models-day/",
       "https://latent.space/p/jev-revolution/",
       "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
-      "https://latent.space/p/artcraft/"
+      "https://latent.space/p/artcraft/",
+      "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1143,7 +1147,12 @@
       "https://eugeneyan.com//writing/aireadingclub/",
       "https://eugeneyan.com//writing/2024-review/",
       "https://eugeneyan.com//writing/cybersecurity-evals/",
-      "https://eugeneyan.com//writing/secure-source-code/"
+      "https://eugeneyan.com//writing/secure-source-code/",
+      "https://eugeneyan.com/speaking/aie-2026",
+      "https://eugeneyan.com/writing/cybersecurity-evals",
+      "https://eugeneyan.com/writing/secure-source-code",
+      "https://eugeneyan.com/writing/working-with-ai",
+      "https://eugeneyan.com/writing/2025-review"
     ],
     "chiphuyen": [
       "https://huyenchip.com//2025/01/16/ai-engineering-pitfalls.html",
@@ -1511,7 +1520,9 @@
       "https://openai.com/business/customer-stories/amplitude",
       "https://openai.com/business/customer-stories/gondola",
       "https://openai.com/business/customer-stories/holidays-extras-codex",
-      "https://openai.com/index/children-first-declaration"
+      "https://openai.com/index/children-first-declaration",
+      "https://openai.com/index/introducing-chatgpt-wallet",
+      "https://openai.com/business/customer-stories/shield"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1579,7 +1590,9 @@
       "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
       "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
       "https://deepmind.google/blog/introducing-alphaproof-code/",
-      "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
+      "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+      "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+      "https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -1740,7 +1753,12 @@
       "https://huggingface.co/blog/qvac/botpsy",
       "https://huggingface.co/blog/token-pooling",
       "https://huggingface.co/blog/hub-gcp-marketplace",
-      "https://huggingface.co/blog/decision"
+      "https://huggingface.co/blog/decision",
+      "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+      "https://huggingface.co/blog/allenai/xybench",
+      "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+      "https://huggingface.co/blog/3d-lora-finetuning"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -1863,27 +1881,28 @@
       "https://openclaw.ai/blog/pj-small-business-openclaw/",
       "https://openclaw.ai/blog/openclaw-focus-weeks/",
       "https://openclaw.ai/blog/use-new-models-in-openclaw-without-an-update/",
-      "https://openclaw.ai/blog/shattering-silos-with-openclaw-multiplayer/"
+      "https://openclaw.ai/blog/shattering-silos-with-openclaw-multiplayer/",
+      "https://openclaw.ai/blog/openclaw-shenzhen-claw-hack-2026/"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-13",
+    "simonwillison": "2026-11-14",
     "lilianweng": "2026-11-13",
-    "latentspace": "2026-11-13",
-    "interconnects": "2026-11-13",
-    "karpathy": "2026-11-11",
-    "raschka": "2026-11-11",
-    "eugeneyan": "2026-11-11",
+    "latentspace": "2026-11-14",
+    "interconnects": "2026-11-14",
+    "karpathy": "2026-11-14",
+    "raschka": "2026-11-14",
+    "eugeneyan": "2026-11-14",
     "chiphuyen": "2026-11-13",
-    "oneusefulthing": "2026-11-12",
+    "oneusefulthing": "2026-11-14",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-13",
-    "deepmind": "2026-11-12",
-    "hf-blog": "2026-11-12",
-    "anthropic-news": "2026-11-13",
-    "steipete": "2026-11-12",
-    "openclaw-blog": "2026-11-12"
+    "openai-news": "2026-11-14",
+    "deepmind": "2026-11-14",
+    "hf-blog": "2026-11-14",
+    "anthropic-news": "2026-11-14",
+    "steipete": "2026-11-14",
+    "openclaw-blog": "2026-11-14"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

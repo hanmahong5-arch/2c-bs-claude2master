@@ -1,0 +1,23 @@
+---
+slug: 2026-11-12-blog-hf-blog-the-definitive-fine-tuning-guide-for-3d-generation
+title: "The Definitive Fine-Tuning Guide for 3D Generation — Hugging Face 讲如何用 LoRA 微调 3D 生成模型，把大模型微调"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/3d-lora-finetuning
+publishedAt: 2026-11-12
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 讲如何用 LoRA 微调 3D 生成模型，把大模型微调经验搬到 3D 领域"
+broadcast: "Hugging Face 出了一份 3D 生成模型的微调指南，把从数据准备到训练配置的完整流程讲清楚了。它重点讲怎么用低秩适配来微调，降低显存和训练成本，意味着消费级显卡也能做定制化的 3D 生成。对国内开发者来说，文本和图像微调的成熟套路可以直接搬到 3D 资产生产上，而 agent 和流水线接入时，得把微调配置纳入可复现的版本管理。"
+tags: [3d-generation, lora, fine-tuning, hugging-face]
+---
+
+- 文章给出 3D 生成模型微调的完整流程，从数据准备到训练配置逐项说明，意味着开发者可以把文本/图像微调的成熟套路复用到 3D 资产生产。
+- 重点介绍 LoRA 在 3D 生成模型上的应用，用低秩适配降低显存与训练成本，对工具链的含义是消费级 GPU 也能做定制化 3D 生成。
+- 文中对比不同微调策略与参数选择对生成质量的影响，提示 agent 与流水线在接入 3D 生成时需把微调配置纳入可复现的版本管理。
+
+---
+
+> 原文：[The Definitive Fine-Tuning Guide for 3D Generation Models](https://huggingface.co/blog/3d-lora-finetuning) · 作者 Hugging Face

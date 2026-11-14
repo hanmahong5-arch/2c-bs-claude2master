@@ -1,0 +1,23 @@
+---
+slug: 2026-11-13-claude-code-2-1-325
+title: "claude-code v2.1.325 — 沙箱权限默认收紧，子代理模型与上下文修复"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.325
+publishedAt: 2026-11-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "沙箱权限默认收紧，子代理模型与上下文修复"
+broadcast: "这次更新把沙箱里的命令执行默认收回到正常权限流程，想免提示就得显式打开开关，也就是说免提示算明确授权，不再当成沙箱的副作用。另外修了两个坑：子代理自带的模型不再被拉去别的模型做规划，上下文预算也按子代理自己的模型来算；第三方网关每轮误报上下文超限的问题也修了，压缩改为按实际模型窗口触发。做多模型 agent 的国内开发者，这几处都值得留意。"
+insight: "这次 v2.1.325 对国内用户的实际影响集中在两点：一是沙箱 Bash 不再默认免提示，如果你依赖免提示跑自动化，需要显式设 sandbox.autoAllowBashIfSandboxed: true，否则现有 hook 流程会多出确认环节，建议升级后先检查这一项；二是修复了第三方网关每轮报上下文超限却不压缩的问题，走 newapi.lurus.cn 代理的用户会直接受益，压缩按实际模型窗口触发，不必再手动调参。综合看值得升级，但升级前把沙箱配置对齐。"
+tags: [sandbox-permissions, subagent-model, context-compaction, security-fix]
+---
+
+- 沙箱 Bash 默认走正常权限流程，需显式设 `sandbox.autoAllowBashIfSandboxed: true` 才免提示；harness 设计上应把「免提示」当作显式授权而非沙箱副作用。
+- 修复子代理自带模型被 opusplan/haiku 拉去 plan-mode 模型，以及用主会话模型估算文件读取与 MCP 结果；多模型 harness 需按子代理自身模型计上下文预算。
+- 修复第三方网关与 Foundry 每轮报上下文超限而不压缩；压缩触发应基于实际模型窗口，而非硬编码默认值。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.325](https://github.com/anthropics/claude-code/releases/tag/v2.1.325)

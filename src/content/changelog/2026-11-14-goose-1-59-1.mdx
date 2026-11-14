@@ -1,0 +1,23 @@
+---
+slug: 2026-11-14-goose-1-59-1
+title: "goose v1.59.1 — goose v1.59.1 仅发布版本号，macOS 桌面构建与完整说明待补"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.59.1
+publishedAt: 2026-11-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "goose v1.59.1 仅发布版本号，macOS 桌面构建与完整说明待补"
+broadcast: "goose 刚发布了一点五九点一版，但这次只挂了个版本号，没列出任何功能变更，完整说明也还没补上。对做 agent 的国内开发者来说，这意味着暂时没法据此调整能力假设，也别急着把它放进自动化升级基线。另外它的 macOS 桌面构建还标注即将推出，如果你的 harness 依赖桌面端，记得保留旧版本的回退路径。"
+insight: "这次 v1.59.1 只给了版本号，没有功能变更和完整 release notes，变更范围未知，所以现有用户不必急着升级，先留在当前版本观察更稳妥；依赖 macOS 桌面端的 harness 要保留旧版本回退路径，因为桌面构建还标注 coming soon。现有 prompt 和 hook 配置也不用改，没有依据说明需要调整。国内用户走 newapi.lurus.cn 代理是否受影响，摘要里没有相关信息，暂时无法判断，等完整说明补齐后再评估。\""
+tags: [goose, release-notes, macos, desktop-build]
+---
+
+- 该 tag 只给出 v1.59.1 版本号，未列出任何功能变更；对 harness 设计而言，暂时无法据此调整能力假设。
+- macOS 桌面构建标注为 coming soon，说明桌面分发尚未就绪；若 harness 依赖桌面端，需要保留旧版本回退路径。
+- 完整 release notes 同样待补，变更范围未知；在信息补齐前，不宜把该版本纳入自动化升级基线。
+
+---
+
+> 原文 release：[block/goose v1.59.1](https://github.com/aaif-goose/goose/releases/tag/v1.59.1)

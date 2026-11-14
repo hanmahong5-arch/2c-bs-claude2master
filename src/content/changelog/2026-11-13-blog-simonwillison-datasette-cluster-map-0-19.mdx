@@ -1,0 +1,23 @@
+---
+slug: 2026-11-13-blog-simonwillison-datasette-cluster-map-0-19
+title: "datasette-cluster-map 0.19 — Datasette 老牌地图插件 0.19 发布，适配 1.0a42 并改用 d"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/13/datasette-cluster-map/
+publishedAt: 2026-11-13
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 老牌地图插件 0.19 发布，适配 1.0a42 并改用 datasette-leaflet"
+broadcast: "Datasette 的老牌地图插件更新到 0.19 版，兼容了核心的 1.0 alpha 版本，并改用新的轻量地图依赖，请求第三方瓦片时会带上来源头。对还在跟进 1.0 alpha 的国内开发者来说，这意味着老插件得持续跟着核心版本走；而做地理数据浏览的 agent 工具，也能参考它把地图和重新设计的分面结合起来用的交互方式。"
+tags: [datasette, geospatial, openstreetmap, leaflet]
+---
+
+- 插件升级到 0.19，兼容 Datasette 1.0a42；对仍在跟进 1.0 alpha 的开发者，这意味着老插件需要持续跟进核心版本变化。
+- 新增对 datasette-leaflet 的依赖，确保请求 OpenStreetMap 瓦片时带上 referrer 头；对依赖第三方瓦片服务的工具链，这类合规细节会影响服务可用性。
+- 文中用加州 PG&E 电厂地图示例，同时展示 Datasette 重新设计的分面（facets）功能；对做地理数据浏览的 agent 工具，分面与地图结合是可直接复用的交互模式。
+
+---
+
+> 原文：[datasette-cluster-map 0.19](https://simonwillison.net/2026/Nov/13/datasette-cluster-map/) · 作者 Simon Willison
