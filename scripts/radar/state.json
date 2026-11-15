@@ -244,7 +244,8 @@
     "pengchujin/aerial-tv",
     "manjushree-iyer/soundpad-audio-suite",
     "HolyArrs/HolyArrs",
-    "libracoder/kiri"
+    "libracoder/kiri",
+    "jamesondh/chimera-vocal-synth"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -370,7 +371,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-14",
+    "anthropic-engineering": "2026-11-15",
     "claude-code-docs": "2026-11-13",
     "openai-codex-blog": "2026-11-13",
     "openclaw-concepts": "2026-11-13",
@@ -820,7 +821,9 @@
       "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
       "https://simonwillison.net/2026/Nov/12/llm-gemini/",
       "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
-      "https://simonwillison.net/2026/Nov/13/datasette-leaflet/"
+      "https://simonwillison.net/2026/Nov/13/datasette-leaflet/",
+      "https://simonwillison.net/2026/Nov/14/datasette-llm/",
+      "https://simonwillison.net/2026/Nov/14/datasette-vega/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1043,7 +1046,8 @@
       "https://latent.space/p/jev-revolution/",
       "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
       "https://latent.space/p/artcraft/",
-      "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
+      "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
+      "https://latent.space/p/ainews-the-no-ai-slop-manifesto/"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1092,7 +1096,8 @@
       "https://www.interconnects.ai/p/podcast-kimi-k31-pro-the-new-cyber",
       "https://www.interconnects.ai/p/latest-open-artifacts-25-deepseek",
       "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and",
-      "https://www.interconnects.ai/p/how-well-can-we-measure-open-model"
+      "https://www.interconnects.ai/p/how-well-can-we-measure-open-model",
+      "https://www.interconnects.ai/p/open-source-ai-without-jensen"
     ],
     "karpathy": [
       "http://karpathy.github.io/2026/02/12/microgpt/",
@@ -1886,10 +1891,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-14",
+    "simonwillison": "2026-11-15",
     "lilianweng": "2026-11-13",
-    "latentspace": "2026-11-14",
-    "interconnects": "2026-11-14",
+    "latentspace": "2026-11-15",
+    "interconnects": "2026-11-15",
     "karpathy": "2026-11-14",
     "raschka": "2026-11-14",
     "eugeneyan": "2026-11-14",
@@ -1897,10 +1902,10 @@
     "oneusefulthing": "2026-11-14",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-14",
+    "openai-news": "2026-11-15",
     "deepmind": "2026-11-14",
     "hf-blog": "2026-11-14",
-    "anthropic-news": "2026-11-14",
+    "anthropic-news": "2026-11-15",
     "steipete": "2026-11-14",
     "openclaw-blog": "2026-11-14"
   },

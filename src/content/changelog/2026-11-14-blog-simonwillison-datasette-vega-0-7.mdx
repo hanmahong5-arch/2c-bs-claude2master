@@ -1,0 +1,23 @@
+---
+slug: 2026-11-14-blog-simonwillison-datasette-vega-0-7
+title: "datasette-vega 0.7 — 停更七年的 Datasette 图表插件重新发布，并适配 Datasette L"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/14/datasette-vega/
+publishedAt: 2026-11-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "停更七年的 Datasette 图表插件重新发布，并适配 Datasette Lite 的 JS 插件能力"
+broadcast: "一个停更七年的数据可视化插件最近重新发布了，主要是为了兼容宿主项目最新的测试版本。它用声明式图表语法给表格和查询结果画图，维护成本不高。更值得留意的是，它已经适配了纯前端运行环境刚支持的插件能力，在线演示也换成了这个版本，这意味着国内开发者试用和演示这类工具的门槛更低了。"
+tags: [datasette, vega-lite, data-visualisation, plugins]
+---
+
+- **七年未更新的插件重新发布**：datasette-vega 上次发布是 2018 年 7 月，这次 0.7 版主要为兼容最新 Datasette alpha 版本。含义：长期维护的插件需要定期跟进宿主项目的破坏性变更，否则会逐渐失效。
+- **基于 Vega-Lite 渲染图表**：插件可对表数据或自定义查询结果绘图。含义：把可视化交给声明式图表语法，插件本身只需做数据到 spec 的桥接，维护成本低。
+- **适配 Datasette Lite 的 JS 插件能力**：Datasette Lite 刚支持运行此类 JavaScript 插件，README 的在线 demo 已改为链接 Datasette Lite 版本。含义：纯前端运行环境能承载插件生态，降低试用与演示门槛。
+
+---
+
+> 原文：[datasette-vega 0.7](https://simonwillison.net/2026/Nov/14/datasette-vega/) · 作者 Simon Willison

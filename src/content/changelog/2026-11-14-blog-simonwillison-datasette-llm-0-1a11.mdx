@@ -1,0 +1,23 @@
+---
+slug: 2026-11-14-blog-simonwillison-datasette-llm-0-1a11
+title: "datasette-llm 0.1a11 — Datasette 的 LLM 中间插件新增 OpenAI 兼容端点，可接本地模"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/14/datasette-llm/
+publishedAt: 2026-11-14
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 的 LLM 中间插件新增 OpenAI 兼容端点，可接本地模型跑 Agent"
+broadcast: "Datasette 的模型插件刚更新，新增了对 OpenAI 兼容端点的支持，只要服务方实现这套协议，就能在里面配置任意大模型。这意味着开发者不用再为每家厂商单独写适配，本地模型和托管模型走的是同一条配置路径。对我们国内做 agent 的人来说，模型来源被抽象掉之后，换模型、接本地运行时都更省事。"
+tags: [datasette, local-llm, openai-compatible, agent]
+---
+
+- datasette-llm 0.1a11 新增对 OpenAI 兼容端点的支持，只要服务方实现这套伪标准 Web 协议，就能在 Datasette 里配置任意 LLM。含义：插件层把模型来源抽象掉，开发者不必为每家厂商写适配。
+- 作者给出的例子是 LM Studio、Ollama、llama.cpp（刚发布 v1.0.0）等本地运行时，用 uvx 一条命令即可启动带 Datasette Agent 的本地服务。含义：本地模型与托管模型在配置上走同一条路径。
+- 配置方式是设置 plugins.datasette-llm.default_model，填入 model、model_name、api_base 三个字段，指向 localhost 的 /v1 地址。含义：模型选择被收敛成一份可声明的配置，便于在工具链里复用。
+
+---
+
+> 原文：[datasette-llm 0.1a11](https://simonwillison.net/2026/Nov/14/datasette-llm/) · 作者 Simon Willison
