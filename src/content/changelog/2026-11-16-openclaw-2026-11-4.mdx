@@ -1,0 +1,23 @@
+---
+slug: 2026-11-16-openclaw-2026-11-4
+title: "openclaw v2026.11.4 — 大对话与重启恢复的内存与隐私修复"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.11.4
+publishedAt: 2026-11-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "大对话与重启恢复的内存与隐私修复"
+broadcast: "这次更新主要修的是大对话和重启恢复时的内存与隐私问题。大对话裁剪、记忆导出这些操作现在改成有界执行，不会再耗尽后台内存；未答提示在网关重启后也能保留，重连时按顺序补发，消息不丢。对做智能体的开发者来说，长上下文操作要设硬上限，别指望垃圾回收兜底，恢复扫描也别和全量加载绑在一起。"
+insight: "这次 2026.11.4 的核心是有界执行与重启恢复：大对话裁剪、分页记忆导出和 Doctor 修复都不再无限吃 worker 内存，未答提示和 Signal 重连缓冲也能跨 Gateway 重启保留。我的判断是现有用户值得升级，尤其是长上下文和频繁重启场景；升级后建议给 harness 的长上下文操作补硬上限，prompt 与 hook 配置本身无需改动。国内走 newapi.lurus.cn 代理不受影响，摘要未涉及代理侧变更。"
+tags: [memory-bounds, restart-recovery, startup, privacy]
+---
+
+- 大对话裁剪、分页记忆导出与 Doctor 修复改为有界执行，避免耗尽 worker 内存；harness 需为长上下文操作设硬上限而非依赖 GC。
+- 插件与服务在孤儿扫描前启动，扫描只取活跃候选而不加载无关保留摘要；启动路径应把恢复扫描与全量加载解耦。
+- 未答提示跨 Gateway 重启保留，Signal 重连缓冲消息不丢；harness 需把待处理输入与投递状态持久化，重连后按序补发。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.11.4](https://github.com/openclaw/openclaw/releases/tag/v2026.11.4)

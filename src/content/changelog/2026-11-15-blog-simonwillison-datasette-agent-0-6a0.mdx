@@ -1,0 +1,23 @@
+---
+slug: 2026-11-15-blog-simonwillison-datasette-agent-0-6a0
+title: "datasette-agent 0.6a0 — Datasette Agent 0.6a0 把提问入口搬到首页，并支持用 # 引"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/15/datasette-agent/
+publishedAt: 2026-11-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette Agent 0.6a0 把提问入口搬到首页，并支持用 # 引用表与查询。"
+broadcast: "Datasette 的 agent 插件出了新版本，最直接的变化是把提问框搬到了首页，用户不用再跳转插件页面就能对数据发问。它还支持用井号引用具体的表和已保存的查询，对做 agent 的人来说，这意味着上下文注入从模糊描述变成了显式引用。不过这次发布定位是累积的小修复，说明插件还在快速迭代，接入时得留意版本变动。"
+tags: [datasette, ai-agents, data-tools, llm]
+---
+
+- 新版本在 Datasette 首页直接嵌入 agent 提问框，用户无需跳转插件页面即可对数据发问，降低了数据问答的入口成本。
+- 支持 hash-mentions（# 引用）表与已保存查询，让提问能精确指向具体数据对象，对 agent 而言意味着上下文注入从模糊描述变为显式引用。
+- 本次发布定位为「累积的小修复」，说明该插件仍在快速迭代期；对工具链开发者，接入时需关注版本变动而非期待稳定 API。
+
+---
+
+> 原文：[datasette-agent 0.6a0](https://simonwillison.net/2026/Nov/15/datasette-agent/) · 作者 Simon Willison

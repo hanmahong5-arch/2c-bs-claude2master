@@ -1,0 +1,23 @@
+---
+slug: 2026-11-15-blog-simonwillison-datasette-apps-0-4a0
+title: "datasette-apps 0.4a0 — Datasette 里的沙箱 HTML 应用支持 URL 片段互链，Agent "
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/15/datasette-apps/
+publishedAt: 2026-11-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 里的沙箱 HTML 应用支持 URL 片段互链，Agent 可据此自动写互相跳转的应用"
+broadcast: "Datasette 里的沙箱小应用现在能通过网址片段互相跳转了，应用可以读到链接里的片段，直接定位到某条记录。更关键的是，这些可链接的应用会回报给 Datasette 的 Agent，Agent 就知道环境里有哪些目标可以链，写代码时不用凭空猜。典型玩法是一个应用看详情、另一个应用做搜索再链过去，小而专的应用靠网址串成工作流。"
+tags: [datasette, sandboxed-apps, url-fragments, ai-agents]
+---
+
+- **URL 片段可被应用读取**：0.4a0 支持用 `#fragment` 链接到某个 app，app 能读到并使用这段片段。含义：应用可以做成「定位到某条记录」的深链目标，而不只是独立页面。
+- **支持的 URL scheme 会回报给 Datasette Agent**：Agent 因此知道有哪些 app 可被链接，从而帮忙写出互相链接的应用。含义：Agent 生成代码时能拿到环境里的可链接目标清单，减少凭空猜测。
+- **典型组合是「详情 app + 搜索 app」**：一个 app 展示某条记录的详情，另一个独立 app 搜索记录并链到前者的对应视图。含义：小而专的沙箱应用可以通过 URL 组合成工作流，而不是塞进一个巨型应用。
+
+---
+
+> 原文：[datasette-apps 0.4a0](https://simonwillison.net/2026/Nov/15/datasette-apps/) · 作者 Simon Willison

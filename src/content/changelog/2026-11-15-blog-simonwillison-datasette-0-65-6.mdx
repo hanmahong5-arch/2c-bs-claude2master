@@ -1,0 +1,23 @@
+---
+slug: 2026-11-15-blog-simonwillison-datasette-0-65-6
+title: "datasette 0.65.6 — Datasette 0.65.6 回填了一个安全修复：路由名与库名不一致时，未授"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/15/datasette-2/
+publishedAt: 2026-11-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 0.65.6 回填了一个安全修复：路由名与库名不一致时，未授权者仍能下载数据库"
+broadcast: "Datasette 刚补上了一个安全修复：注册数据库时，如果路由名和库名不一致，被拒绝访问的人仍然能通过路由地址把整个库下载走。问题出在权限校验绑的是逻辑名，而不是实际暴露的网址路径。这个补丁已经从开发版回填到稳定维护分支，稳定版用户不用升到测试版就能拿到。对做 agent 和自动化脚本的人来说，封装数据库注册接口时，最好别让两个标识符各自能独立寻址。"
+tags: [datasette, security, access-control, release]
+---
+
+- 修复点：用 `add_database(db, name=..., route=...)` 注册数据库时，若 route 与 name 不同，被拒绝访问的 actor 仍可通过 `/<route>.db` 下载整库。含义：权限校验必须绑定实际暴露的 URL 路径，而不是逻辑名。
+- 该修复从 1.0a43 回填到 0.65.6 维护分支。含义：稳定版用户不必升级到 alpha 才能拿到安全补丁，维护分支的 backport 流程值得在工具链里常态化。
+- 触发条件是 route 与 name 不一致这一非默认配置。含义：给 agent 或自动化脚本封装数据库注册接口时，应避免让两个标识符各自独立可寻址，减少权限面。
+
+---
+
+> 原文：[datasette 0.65.6](https://simonwillison.net/2026/Nov/15/datasette-2/) · 作者 Simon Willison

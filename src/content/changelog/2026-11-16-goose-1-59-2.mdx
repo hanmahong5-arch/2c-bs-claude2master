@@ -1,0 +1,23 @@
+---
+slug: 2026-11-16-goose-1-59-2
+title: "goose v1.59.2 — Databricks 提供方修复了跨前缀思考块残留问题"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.59.2
+publishedAt: 2026-11-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Databricks 提供方修复了跨前缀思考块残留问题"
+broadcast: "这次更新修了一个容易被忽略的问题：某个数据平台提供方现在会丢掉绑定在不同前缀上的思考块，避免旧的推理片段污染新一轮请求。对做 agent 的开发者来说，这提醒我们拼接上下文时要按前缀隔离推理状态，否则跨轮复用会带进错误前提。这次只改了这一个提供方的思考块处理，其他行为没有变化。"
+insight: "这次 v1.59.2 只修了 Databricks provider 的思考块前缀隔离，属于单点 bugfix，不涉及其他 provider 或行为变更。现有用户如果不用 Databricks，升级收益有限，可按常规节奏跟进；用 Databricks 的则建议升到该版本，避免旧推理片段污染新一轮请求。prompt 和 hook 配置无需改动。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有方式使用即可。"
+tags: [databricks, thinking-blocks, context-management, bug-fix]
+---
+
+- Databricks provider 现在会丢弃绑定到不同前缀的 thinking blocks（#13551），避免旧推理片段污染新一轮请求。
+- 对 agent harness 的含义：上下文拼接需按前缀隔离推理状态，否则跨轮复用会引入错误前提。
+- 该修复仅涉及 Databricks provider 的思考块处理，未提及其他 provider 或行为变更。
+
+---
+
+> 原文 release：[block/goose v1.59.2](https://github.com/aaif-goose/goose/releases/tag/v1.59.2)

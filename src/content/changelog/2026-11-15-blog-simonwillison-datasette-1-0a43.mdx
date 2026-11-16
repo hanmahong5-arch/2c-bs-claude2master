@@ -1,0 +1,23 @@
+---
+slug: 2026-11-15-blog-simonwillison-datasette-1-0a43
+title: "datasette 1.0a43 — Datasette 1.0a43 发布：流式输出、安全修复，以及用纯 CSS 让"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/15/datasette/
+publishedAt: 2026-11-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 1.0a43 发布：流式输出、安全修复，以及用纯 CSS 让多页应用获得 SPA 般的体验"
+broadcast: "Datasette 刚发布新版本，内置的表格导出和插件现在能一次性流式输出整张表，处理大表时内存占用更低、首字节更快，对做 agent 工具链的开发者是实打实的利好。这次还修了一个私有存储查询可能泄露标题和 SQL 的安全问题，提醒大家把查询元数据也纳入权限边界。作者最兴奋的反而是个小改动：用纯 CSS 给多页应用加上跨文档视图过渡，传统服务端渲染工具也能有接近单页应用的体验。"
+tags: [datasette, css, security, streaming]
+---
+
+- 内置 TSV/CSV 导出与插件可通过新的 `Response.stream()` 一次性流式输出整张表，1.0 里程碑完成度达 53%；对处理大表的 agent 工具链意味着更低内存占用与更快首字节。
+- 修复一处私有存储查询可泄露标题与 SQL 的安全问题（已发 GitHub advisory，但不能执行该查询）；提醒开发者把查询元数据也纳入权限边界。
+- 作者最兴奋的是极小的改动：用 `@view-transition` 与 `view-transition-name` 为多页应用加上跨文档视图过渡，Safari/Chrome 已支持，Firefox 预计 162 版落地；说明渐进增强的 CSS 仍能显著提升传统服务端渲染工具的体验。
+
+---
+
+> 原文：[datasette 1.0a43](https://simonwillison.net/2026/Nov/15/datasette/) · 作者 Simon Willison

@@ -4,11 +4,11 @@
     "openai/codex": "rust-v0.169.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "v4.1.26",
-    "block/goose": "v1.59.1",
+    "block/goose": "v1.59.2",
     "sst/opencode": "v2.3.0",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.68.0",
-    "openclaw/openclaw": "v2026.9.37",
+    "openclaw/openclaw": "v2026.11.4",
     "zeroclaw-labs/zeroclaw": "v0.9.0",
     "NousResearch/hermes-agent": "v0.23.1"
   },
@@ -245,7 +245,9 @@
     "manjushree-iyer/soundpad-audio-suite",
     "HolyArrs/HolyArrs",
     "libracoder/kiri",
-    "jamesondh/chimera-vocal-synth"
+    "jamesondh/chimera-vocal-synth",
+    "zortos293/Lichii",
+    "Minireel/HGhub"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -371,7 +373,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-15",
+    "anthropic-engineering": "2026-11-16",
     "claude-code-docs": "2026-11-13",
     "openai-codex-blog": "2026-11-13",
     "openclaw-concepts": "2026-11-13",
@@ -823,7 +825,12 @@
       "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
       "https://simonwillison.net/2026/Nov/13/datasette-leaflet/",
       "https://simonwillison.net/2026/Nov/14/datasette-llm/",
-      "https://simonwillison.net/2026/Nov/14/datasette-vega/"
+      "https://simonwillison.net/2026/Nov/14/datasette-vega/",
+      "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+      "https://simonwillison.net/2026/Nov/15/datasette/",
+      "https://simonwillison.net/2026/Nov/15/datasette-2/",
+      "https://simonwillison.net/2026/Nov/15/datasette-apps/",
+      "https://simonwillison.net/2026/Nov/15/datasette-agent/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1527,7 +1534,9 @@
       "https://openai.com/business/customer-stories/holidays-extras-codex",
       "https://openai.com/index/children-first-declaration",
       "https://openai.com/index/introducing-chatgpt-wallet",
-      "https://openai.com/business/customer-stories/shield"
+      "https://openai.com/business/customer-stories/shield",
+      "https://openai.com/index/step-toward-defining-the-standard-model",
+      "https://openai.com/index/our-new-blog-for-science"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1891,23 +1900,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-15",
+    "simonwillison": "2026-11-16",
     "lilianweng": "2026-11-13",
-    "latentspace": "2026-11-15",
-    "interconnects": "2026-11-15",
+    "latentspace": "2026-11-16",
+    "interconnects": "2026-11-16",
     "karpathy": "2026-11-14",
     "raschka": "2026-11-14",
     "eugeneyan": "2026-11-14",
     "chiphuyen": "2026-11-13",
-    "oneusefulthing": "2026-11-14",
+    "oneusefulthing": "2026-11-16",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-15",
-    "deepmind": "2026-11-14",
-    "hf-blog": "2026-11-14",
-    "anthropic-news": "2026-11-15",
-    "steipete": "2026-11-14",
-    "openclaw-blog": "2026-11-14"
+    "openai-news": "2026-11-16",
+    "deepmind": "2026-11-16",
+    "hf-blog": "2026-11-16",
+    "anthropic-news": "2026-11-16",
+    "steipete": "2026-11-16",
+    "openclaw-blog": "2026-11-16"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

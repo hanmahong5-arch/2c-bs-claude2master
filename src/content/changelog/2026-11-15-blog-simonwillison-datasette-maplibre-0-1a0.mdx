@@ -1,0 +1,23 @@
+---
+slug: 2026-11-15-blog-simonwillison-datasette-maplibre-0-1a0
+title: "datasette-maplibre 0.1a0 — Simon 用一句提示词让 Claude 造出 Datasette 地图插件，还"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/15/datasette-maplibre/
+publishedAt: 2026-11-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon 用一句提示词让 Claude 造出 Datasette 地图插件，还带出几个没想到的点子"
+broadcast: "有人只用一句提示词，就让 Claude 给一个数据工具做出了地图插件，把免费矢量地图服务接了进来，补上了它一直缺的地理可视化能力，自托管地图栈因此能少依赖商业瓦片服务。对国内做 agent 的开发者来说，更值得留意的是，现有插件代码可以当作上下文范本，让模型照着发挥，还顺带产出按需渲染这种性能取舍思路。"
+tags: [datasette, maplibre, generative-ai, geospatial]
+---
+
+- 新插件 datasette-maplibre 0.1a0 把 MapLibre GL 与免费矢量地图服务 OpenFreeMap 结合，补上 Datasette 久违的地理空间可视化能力；对工具链意味着自托管地图栈可以少依赖商业瓦片服务。
+- 作者主要靠单条提示词完成：让 Claude 参考 datasette-cluster-map 与 datasette-leaflet-geojson 两个插件再自由发挥；说明现有插件代码可作为 agent 的上下文范本。
+- “跳出框架”的产出之一是按需渲染：先显示 GeoJSON 形状的 SVG 预览，滚动进入视口才加载 WebGL；对前端 agent 工具而言，这是可借鉴的性能取舍模式。
+
+---
+
+> 原文：[datasette-maplibre 0.1a0](https://simonwillison.net/2026/Nov/15/datasette-maplibre/) · 作者 Simon Willison
