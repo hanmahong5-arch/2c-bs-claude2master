@@ -1,0 +1,23 @@
+---
+slug: 2026-11-16-blog-simonwillison-llm-0-37-3
+title: "llm 0.37.3 — SQLite 3.54.1 修复了一个 bug，却让 LLM 的日志代码失效，作"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/16/llm/
+publishedAt: 2026-11-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "SQLite 3.54.1 修复了一个 bug，却让 LLM 的日志代码失效，作者因此发布补丁版本"
+broadcast: "SQLite 最近一个小版本修了个子查询返回值的 bug，结果让一个常用工具里拼日志的代码失效了，作者只好发补丁版。原因是包管理器直接打包了最新数据库，上游语义一变就传到应用层。国内做 agent 工具链的要注意，升级底层库时得重新验证输出类型，别依赖隐式行为。"
+tags: [sqlite, llm, json, release]
+---
+
+- SQLite 3.54.1 修正了子查询返回值的语义：`(select json_array(1))` 现在返回 SQL 文本而非 JSON，因此 `json_object` 会把结果包成字符串 `"[1]"`；作者指出这是文档规定的正确行为，3.54.0 才是 bug。对开发者的含义：依赖 SQLite JSON 函数拼接日志或结构化数据的工具链，升级底层库时需要重新验证输出类型。
+- 触发点是 Homebrew 直接打包了最新 SQLite，LLM 的日志代码随之出错，于是有了 0.37.3 这个纯 bug fix 版本。对 agent 工具链的含义：发行版或包管理器替用户升级依赖，会把上游语义变更直接传导到应用层。
+- 作者给出的绕行方案是在子查询外再套一层 `json()`，即 `json_object('a', json((select json_array(1))))`，显式把 SQL 文本转回 JSON。对开发者的含义：跨 SQLite 版本兼容时，显式类型转换比依赖隐式行为更稳妥。
+
+---
+
+> 原文：[llm 0.37.3](https://simonwillison.net/2026/Nov/16/llm/) · 作者 Simon Willison

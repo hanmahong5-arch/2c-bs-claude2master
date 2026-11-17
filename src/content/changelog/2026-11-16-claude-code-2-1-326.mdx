@@ -1,0 +1,23 @@
+---
+slug: 2026-11-16-claude-code-2-1-326
+title: "claude-code v2.1.326 — 权限与沙箱收紧，多处命令改为先询问或拒绝"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.326
+publishedAt: 2026-11-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "权限与沙箱收紧，多处命令改为先询问或拒绝"
+broadcast: "这次更新把权限和沙箱收得更紧了：删除、覆盖这类命令不再被当成搜索或读取，更多命令会先询问，没人应答就直接拒绝；沙箱默认能写的目录也缩小了，敏感目录要显式放开。对做 agent 的国内开发者来说，工具调用的摘要得按真实副作用分类，可写路径要当成显式策略输入，审批层还得区分放行和解除隔离，别让审批变成逃逸。"
+insight: "这次 v2.1.326 的权限与沙箱收紧，对现有用户来说值得升级，但升级前要先自查：如果你的 hook 或 harness 依赖按命令名归类工具调用，必须改成按真实副作用分类，否则 find -delete、cat a > b 这类命令会被误判；沙箱默认写入范围缩小，依赖隐式可写 home 目录的流程需显式配置 sandbox.filesystem.allowWrite。国内用户经 newapi.lurus.cn 代理使用不受影响，代理层不改变本地权限与沙箱行为，但审批逻辑要区分放行与解除隔离两种语义。"
+tags: [permissions, sandbox, bash-tool, agent-harness]
+---
+
+- Bash 权限检查收紧：部分删除/覆盖类命令（`find -delete`、`cat a > b`、`sort -o`）不再被误记为搜索或读取，且更多命令会先询问或在无人应答时拒绝；对 harness 意味着工具调用摘要必须按真实副作用分类，不能只按命令名归类。
+- 沙箱默认写入范围缩小：macOS/Linux/WSL 下沙箱命令不再默认写入部分敏感 home 目录，需 `sandbox.filesystem.allowWrite` 显式放开；harness 设计应把可写路径作为显式策略输入，而非隐式继承。
+- 权限钩子与 SDK 重写命令仍留在沙箱内，除非审批方传 `dangerouslyDisableSandbox: true`；这意味着审批层需要能区分“放行”与“解除隔离”两种语义，避免审批即逃逸。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.326](https://github.com/anthropics/claude-code/releases/tag/v2.1.326)

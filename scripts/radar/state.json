@@ -1,16 +1,16 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.325",
+    "anthropics/claude-code": "v2.1.326",
     "openai/codex": "rust-v0.169.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "v4.1.26",
     "block/goose": "v1.59.2",
-    "sst/opencode": "v2.3.0",
+    "sst/opencode": "v1.19.6",
     "RooCodeInc/Roo-Code": "v3.54.0",
     "google-gemini/gemini-cli": "v0.68.0",
     "openclaw/openclaw": "v2026.11.4",
     "zeroclaw-labs/zeroclaw": "v0.9.0",
-    "NousResearch/hermes-agent": "v0.23.1"
+    "NousResearch/hermes-agent": "v0.23.2"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -247,7 +247,8 @@
     "libracoder/kiri",
     "jamesondh/chimera-vocal-synth",
     "zortos293/Lichii",
-    "Minireel/HGhub"
+    "Minireel/HGhub",
+    "JuneYaooo/rea-video"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -373,7 +374,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-16",
+    "anthropic-engineering": "2026-11-17",
     "claude-code-docs": "2026-11-13",
     "openai-codex-blog": "2026-11-13",
     "openclaw-concepts": "2026-11-13",
@@ -830,7 +831,9 @@
       "https://simonwillison.net/2026/Nov/15/datasette/",
       "https://simonwillison.net/2026/Nov/15/datasette-2/",
       "https://simonwillison.net/2026/Nov/15/datasette-apps/",
-      "https://simonwillison.net/2026/Nov/15/datasette-agent/"
+      "https://simonwillison.net/2026/Nov/15/datasette-agent/",
+      "https://simonwillison.net/2026/Nov/17/go-proverbs/",
+      "https://simonwillison.net/2026/Nov/16/llm/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1054,7 +1057,9 @@
       "https://latent.space/p/ainews-mercor-750m-series-d-at-20b-valuation-3b-run-rate/",
       "https://latent.space/p/artcraft/",
       "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
-      "https://latent.space/p/ainews-the-no-ai-slop-manifesto/"
+      "https://latent.space/p/ainews-the-no-ai-slop-manifesto/",
+      "https://latent.space/p/ainews-perplexity-hits-a-1b-revenue-run-rate-up-4x-in-2026/",
+      "https://latent.space/p/bfl/"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1140,7 +1145,8 @@
       "https://magazine.sebastianraschka.com/p/claude-watermarking",
       "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
       "https://magazine.sebastianraschka.com/p/classifier-history-and-jev",
-      "https://magazine.sebastianraschka.com/p/building-reasoning-models"
+      "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+      "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings"
     ],
     "eugeneyan": [
       "https://eugeneyan.com//writing/working-with-ai/",
@@ -1164,7 +1170,12 @@
       "https://eugeneyan.com/writing/cybersecurity-evals",
       "https://eugeneyan.com/writing/secure-source-code",
       "https://eugeneyan.com/writing/working-with-ai",
-      "https://eugeneyan.com/writing/2025-review"
+      "https://eugeneyan.com/writing/2025-review",
+      "https://eugeneyan.com/writing/product-evals",
+      "https://eugeneyan.com/writing/principal",
+      "https://eugeneyan.com/writing/semantic-ids",
+      "https://eugeneyan.com/writing/qa-evals",
+      "https://eugeneyan.com/speaking/aie-2025"
     ],
     "chiphuyen": [
       "https://huyenchip.com//2025/01/16/ai-engineering-pitfalls.html",
@@ -1536,7 +1547,12 @@
       "https://openai.com/index/introducing-chatgpt-wallet",
       "https://openai.com/business/customer-stories/shield",
       "https://openai.com/index/step-toward-defining-the-standard-model",
-      "https://openai.com/index/our-new-blog-for-science"
+      "https://openai.com/index/our-new-blog-for-science",
+      "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+      "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+      "https://openai.com/index/strengthening-online-child-safety",
+      "https://openai.com/index/science-at-the-frontier",
+      "https://openai.com/business/customer-stories/revolut"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1900,21 +1916,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-16",
+    "simonwillison": "2026-11-17",
     "lilianweng": "2026-11-13",
-    "latentspace": "2026-11-16",
-    "interconnects": "2026-11-16",
-    "karpathy": "2026-11-14",
-    "raschka": "2026-11-14",
-    "eugeneyan": "2026-11-14",
+    "latentspace": "2026-11-17",
+    "interconnects": "2026-11-17",
+    "karpathy": "2026-11-17",
+    "raschka": "2026-11-17",
+    "eugeneyan": "2026-11-17",
     "chiphuyen": "2026-11-13",
     "oneusefulthing": "2026-11-16",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-16",
+    "openai-news": "2026-11-17",
     "deepmind": "2026-11-16",
     "hf-blog": "2026-11-16",
-    "anthropic-news": "2026-11-16",
+    "anthropic-news": "2026-11-17",
     "steipete": "2026-11-16",
     "openclaw-blog": "2026-11-16"
   },

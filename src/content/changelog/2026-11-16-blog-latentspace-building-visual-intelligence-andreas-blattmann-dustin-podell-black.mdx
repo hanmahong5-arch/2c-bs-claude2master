@@ -1,0 +1,23 @@
+---
+slug: 2026-11-16-blog-latentspace-building-visual-intelligence-andreas-blattmann-dustin-podell-black
+title: "Building Visual Intelligence — Andreas Blattmann & — BFL 团队谈 FLUX 3：把画面、运动与声音一起训练，走向视觉智能"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/bfl/
+publishedAt: 2026-11-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "BFL 团队谈 FLUX 3：把画面、运动与声音一起训练，走向视觉智能"
+broadcast: "BFL 团队最近聊了他们做视觉智能的新思路：把画面、运动、声音三种信号放在一起训练，让它们互相监督，而不是简单拼接。这对国内做多模态和 agent 的开发者有两点提醒：一是评估生成结果要看连续序列，单帧好看不代表播放不闪烁；二是先用几小时的小实验探方向，再决定把算力押在哪。"
+tags: [black-forest-labs, flux-3, video-generation, multimodal]
+---
+
+- **三种信号一起训练**：Andreas 用接球比喻说明，人能在算不出轨迹前就伸手；静态图只给出球在哪，视频给出它怎么到那，声音补上撞击时刻。BFL 据此把三者合并训练 FLUX 3，含义是多模态输入不只是拼接，而是互为监督信号。
+- **时间一致性是工程硬指标**：逐帧独立放大时每帧都好看，播放却会闪烁，因为放大器每次决策略有不同；BFL 的视频放大器与 FLUX 3 共用骨干。对工具链的含义是评估生成结果要看连续序列，而非单帧打分。
+- **先小实验再押注**：Dustin 用几小时训练让模型把 logo 放到衬衫上，验证图像模型已懂物体关系，团队随后才投入数月做数据和模型。对开发者的含义是用低成本探针判断方向，再决定算力投向。
+
+---
+
+> 原文：[Building Visual Intelligence — Andreas Blattmann & Dustin Podell, Black Forest Labs](https://latent.space/p/bfl/) · 作者 Latent Space

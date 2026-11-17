@@ -1,0 +1,23 @@
+---
+slug: 2026-11-15-blog-raschka-understanding-positional-embeddings-in-modern-llms
+title: "Understanding Positional Embeddings in Modern LLMs — Raschka 系统梳理 LLM 位置编码：从 GPT"
+source: "Sebastian Raschka"
+sourceUrl: https://magazine.sebastianraschka.com/p/understanding-positional-embeddings
+publishedAt: 2026-11-15
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Sebastian Raschka"
+hook: "Raschka 系统梳理 LLM 位置编码：从 GPT-2 绝对位置嵌入到 RoPE，并盘点 2026 开源模型的选择。"
+broadcast: "Raschka 系统梳理了现代大模型的位置编码：GPT-2 是在词嵌入上直接加位置向量，而新模型改成在每个注意力模块内部用旋转位置编码注入位置。他还指出，因果掩码只能给出隐式顺序，分不清相隔一个位置和相隔十个位置，所以显式位置信号仍然必要。文章附了代码实现和今年开源模型的分组盘点，国内开发者做长上下文或架构选型时值得对照参考。"
+tags: [positional-embeddings, rope, llm-architecture, pytorch]
+---
+
+- **位置信息进入模型的方式已分化**：GPT-2 在 token embedding 上直接加位置向量后送入首个 transformer block，而 MiniMax-M3 这类新模型在每个 block 的 attention 内部用 RoPE 注入位置。含义：位置编码不再是统一的预处理步骤，读新架构代码时要先确认它挂在哪一层。
+- **因果掩码只提供隐式顺序**：文章指出 causal mask 让模型能区分词序，但无法区分“相隔 1 个位置”和“相隔 10 个位置”，这正是仍需显式位置信号的原因，也是 NoPE 讨论的起点。含义：评估长上下文或位置外推能力时，不能假设掩码已覆盖距离信息。
+- **文章附带 PyTorch 小实现与 2026 模型画廊**：作者用可视化、少量数学和代码走通机制，并按位置编码方式对 2026 开源权重模型分组。含义：可作为实现 RoPE 或对比架构选型时的参考索引。
+
+---
+
+> 原文：[Understanding Positional Embeddings in Modern LLMs](https://magazine.sebastianraschka.com/p/understanding-positional-embeddings) · 作者 Sebastian Raschka

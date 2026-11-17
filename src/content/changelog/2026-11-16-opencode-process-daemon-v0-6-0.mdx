@@ -1,0 +1,23 @@
+---
+slug: 2026-11-16-opencode-process-daemon-v0-6-0
+title: "opencode process-daemon-v0.6.0 — opencode"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.6.0
+publishedAt: 2026-11-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "opencode-pty 升到 0.6.0，协议版本变为 9"
+broadcast: "opencode 的终端进程组件发布了 0.6.0 版本，协议版本也升到了 9，并且已经发到 npm 上。对做 agent 的国内开发者来说，这意味着如果你的 harness 依赖这个包，需要按新版本锁定，并且按协议 9 重新对接进程通信，旧的协议假设得复核一遍。好处是不用本地构建，直接从 npm 拉取就能用。"
+insight: "这次 @opencode/pty 0.6.0 的核心变化是协议版本升到 9，harness 与 pty 进程通信要按协议 9 对接，旧协议假设需复核。我的判断是：现有用户值得升级，但不要盲目跟，先确认自己的 harness 是否依赖该包并按新版本锁定，再复核旧协议相关配置；如果只是普通 prompt 或 hook 配置，摘要没有提到需要改动，不必动。国内走 newapi.lurus.cn 代理的用户，摘要未提及受影响，按 npm 正常拉取即可。"
+tags: [opencode-pty, process-daemon, protocol-9, npm-release]
+---
+
+- 包名与版本：`@opencode/pty` 发布 0.6.0，来源为 `packages/process-daemon`；harness 依赖该包时需按新版本锁定。
+- 协议版本：随包标注 protocol 9；harness 与 pty 进程通信需按协议 9 对接，旧协议假设需复核。
+- 发布渠道：已发布到 npm；harness 可直接从 npm 拉取，无需本地构建。
+
+---
+
+> 原文 release：[sst/opencode process-daemon-v0.6.0](https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.6.0)

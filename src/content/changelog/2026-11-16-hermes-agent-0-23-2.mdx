@@ -1,0 +1,23 @@
+---
+slug: 2026-11-16-hermes-agent-0-23-2
+title: "hermes-agent v0.23.2 — 补丁版汇总近两千 PR，修复流式回复与桌面输入稳定性"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2
+publishedAt: 2026-11-16
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "补丁版汇总近两千 PR，修复流式回复与桌面输入稳定性"
+broadcast: "一个智能体项目刚发了补丁版，汇总了近两千个改动，主要修的是流式回复和桌面输入的稳定性。比如流式输出结束后停止按钮不消失、聊天中途崩溃会重复显示恢复提示、恢复上次会话时输入被打乱，这些都被处理了。对做智能体和国内开发者来说，这说明流式状态和会话恢复这些细节正在被认真打磨，值得留意。"
+insight: "这次 v0.23.2 是补丁版，修的是流式输出和桌面输入稳定性，不是功能升级。现有用户如果正被 Stop 按钮不消失、流式回复重复显示、会话恢复丢输入这几类问题困扰，值得升；否则不必急着动。现有 prompt 和 hook 配置无需改动，摘要里没有任何涉及配置变更的内容。国内走 newapi.lurus.cn 代理的用户，本次修复集中在 Desktop/TUI 与流式分片逻辑，摘要未提及代理相关变化，按现有方式使用即可。"
+tags: [streaming, desktop, session-recovery, patch-release]
+---
+
+- 修复 Desktop/TUI 在 todo 或 memory 调用旁流式输出后 Stop 按钮不消失的问题（#156553），harness 需把「工具调用结束」与「流式收尾」解耦为独立状态机。
+- Telegram 等编辑流式聊天中途崩溃不再重复显示「Recovered reply」，且 `program_id` 这类含键前缀的词恢复按时显示（#156546），流式分片需按词边界而非字符缓冲。
+- Desktop 启动并恢复上次会话时不再丢失或打乱用户输入（#156615、#156642），重连后回复只完整显示一次（#156611），会话恢复与输入队列需隔离。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.23.2](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2)

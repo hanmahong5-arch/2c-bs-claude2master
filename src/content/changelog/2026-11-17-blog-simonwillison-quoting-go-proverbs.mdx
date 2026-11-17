@@ -1,0 +1,23 @@
+---
+slug: 2026-11-17-blog-simonwillison-quoting-go-proverbs
+title: "Quoting Go Proverbs — Simon Willison 引用 Go 谚语：少量复制胜过少量依赖，一句话点破"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/17/go-proverbs/
+publishedAt: 2026-11-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 引用 Go 谚语：少量复制胜过少量依赖，一句话点破依赖取舍"
+broadcast: "Simon Willison 引用了一句 Go 社区的谚语：少量复制胜过少量依赖。意思是宁可自己抄一小段代码，也别为一个小功能引入整个依赖包。对做 agent 工具链的开发者来说，这提醒我们评估依赖时要把维护成本和升级连带影响算进去，而不只看省下多少行代码。这条帖子本身只有一句引用，更适合当作决策时的检查项，而不是硬规则。"
+tags: [go, dependencies, software-design, engineering-practices]
+---
+
+- 他引用的核心是「A little copying is better than a little dependency」：宁可复制一小段代码，也不要为此引入一个依赖。对 agent 工具链的含义是，为一个小功能拉入整包依赖，往往比内联几十行代码带来更多版本与供应链风险。
+- 这条谚语出自 Go Proverbs，是 Go 社区长期流传的工程经验，而非新提出的观点。对开发者的含义是，评估依赖时应把维护成本、升级连带影响算进去，而不只看省下的代码行数。
+- 帖子本身极短，只有一句引用加 go、programming 两个标签，没有展开论证。对工具链设计的含义是，这类短引用适合作为决策时的检查项，而不是需要照搬的硬规则。
+
+---
+
+> 原文：[Quoting Go Proverbs](https://simonwillison.net/2026/Nov/17/go-proverbs/) · 作者 Simon Willison

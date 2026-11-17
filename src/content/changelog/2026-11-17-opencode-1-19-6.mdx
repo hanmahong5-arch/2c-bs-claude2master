@@ -1,0 +1,23 @@
+---
+slug: 2026-11-17-opencode-1-19-6
+title: "opencode v1.19.6 — 大图会话不再爆请求，超限自动压缩重试"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v1.19.6
+publishedAt: 2026-11-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "大图会话不再爆请求，超限自动压缩重试"
+broadcast: "这次更新解决了一个很实际的问题：当会话里的图片历史超过二十五兆，最旧的图片会被换成占位符，请求体就不会再撑爆；请求过大报错时也会自动压缩重试，而不是直接失败。对做 agent 的开发者来说，这意味着上下文组装不能只数 token，还得算体积预算，并且把这类错误当成可恢复错误接进压缩流程。桌面端新版本在后台下载，升级时会保留会话和设置，但旧插件需要更新。"
+insight: "这次 v1.19.6 对现有用户值得升级，尤其是常跑大图会话的：图片超 25 MiB 会替换最旧图片为占位符，请求体过大也会压缩重试而非直接失败，能明显减少爆请求。但升级前要确认两件事：harness 的上下文组装要按体积做预算，不能只数 token；为 OpenCode 1 写的插件需更新，升级路径要留兼容窗口。桌面端可选重启或退出时升级，会话与设置保留，风险不大。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [context-compaction, image-budget, retry-policy, upgrade-flow]
+---
+
+- 会话历史图片超过 25 MiB 时，最旧的图片被替换为占位符，避免请求体过大；harness 需在上下文组装阶段做体积预算，而非只按 token 计数。
+- 请求体过大导致的 provider 错误现在触发压缩并重试，而不是直接失败该轮；harness 应把此类错误归入可恢复错误并接入压缩流程。
+- 桌面端 OpenCode 2 后台下载，用户可选重启升级、退出时升级或稍后，会话与设置保留；为 OpenCode 1 编写的插件需要更新，harness 升级路径要预留插件兼容窗口。
+
+---
+
+> 原文 release：[sst/opencode v1.19.6](https://github.com/anomalyco/opencode/releases/tag/v1.19.6)
