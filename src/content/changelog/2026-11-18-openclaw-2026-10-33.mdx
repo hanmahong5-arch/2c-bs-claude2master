@@ -1,0 +1,23 @@
+---
+slug: 2026-11-18-openclaw-2026-10-33
+title: "openclaw v2026.10.33 — extended"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.10.33
+publishedAt: 2026-11-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "extended-stable 版聚焦长会话内存上限与更新中断自恢复"
+broadcast: "这次更新主要解决长会话容易把内存撑爆的问题，导出、恢复和修复都改成有上限的处理，不再靠内存余量硬扛。更新过程中执行器挂掉也能自动恢复，网关不会卡死。对做 agent 的国内开发者来说，长会话的裁剪和索引得设硬上限，技能发现也该做成按需检索，别全塞进上下文。"
+insight: "这次 extended-stable 更新值得现有用户升级，重点在长会话内存上限和更新中断自恢复，能避免 OOM 和 Gateway 卡死离线。现有 prompt 配置建议同步调整：已安装 skills 改为按需搜索读取，不再全量注入，以控制上下文预算。摘要未涉及 newapi.lurus.cn 代理，国内走代理是否受影响暂无依据，升级前可先小范围验证。"
+tags: [extended-stable, memory-bounds, update-recovery, skill-retrieval]
+---
+
+- 长会话与大 session store 的导出、恢复、Doctor 修复改为有界处理，避免 OOM；harness 设计需为 transcript 裁剪与索引设定硬上限，而非依赖内存余量。
+- 更新执行器死亡后可回收离线维护状态，Gateway 不再卡死离线；harness 应把更新流程建模为可恢复状态机，并做版本偏移检查保护已安装服务使用的状态。
+- 已安装 skills 支持按需搜索与读取，不必全量注入 prompt；harness 应把技能发现做成检索步骤，控制上下文预算。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.10.33](https://github.com/openclaw/openclaw/releases/tag/v2026.10.33)

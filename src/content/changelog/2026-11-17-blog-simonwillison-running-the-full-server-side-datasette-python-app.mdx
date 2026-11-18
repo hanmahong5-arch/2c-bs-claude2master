@@ -1,0 +1,23 @@
+---
+slug: 2026-11-17-blog-simonwillison-running-the-full-server-side-datasette-python-app
+title: "Running the full server-side Datasette Python app in — Datasette 用 Service Worker 重写后，整个 Python"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/17/datasette-lite/
+publishedAt: 2026-11-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 用 Service Worker 重写后，整个 Python 服务端应用可在浏览器里跑，还能指定版本和插件"
+broadcast: "主播们注意了，有个新玩法值得关注：有人把一整个服务端的 Python 应用搬进了浏览器里跑，靠的是后台拦截请求、再把页面交给浏览器里的 Python 环境处理，每个标签页还互相隔离。更关键的是，链接里能直接指定版本、提交记录和插件，一条链接就能复现 bug、做演示。对国内开发者和 agent 工具链来说，这意味着调试和验证不必再起服务器，依赖版本测试也能下沉到浏览器端。"
+tags: [pyodide, service-workers, datasette, wasm]
+---
+
+- 新版用 Service Worker 拦截请求，把 Datasette 页面路由到 Web Worker 里的 Pyodide 实例；每个标签页用随机 session ID 前缀隔离，避免多标签共享同一实例。对 agent 工具链的含义：浏览器内可复现完整服务端环境，演示和调试不必再起服务器。
+- URL 参数可指定 PyPI 上的 Datasette 版本、GitHub commit/tag、100 多个 SQLite 版本，以及任意插件 wheel。含义：bug 复现和功能演示可以做成一条可分享链接，天然适合作为 agent 的可验证产物。
+- 作者用 lite.datasette.io 链接对比 1.0a42 与 1.0a43 的分页 bug，并新增 ?sqlite= 参数加载 163 个 WebAssembly 编译的 pysqlite3 版本。含义：依赖版本矩阵测试可下沉到浏览器端，降低环境搭建成本。
+
+---
+
+> 原文：[Running the full server-side Datasette Python app in the browser with service workers and Pyodide](https://simonwillison.net/2026/Nov/17/datasette-lite/) · 作者 Simon Willison

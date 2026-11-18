@@ -1,0 +1,23 @@
+---
+slug: 2026-11-18-opencode-2-3-2
+title: "opencode v2.3.2 — 系统提示词每步重复计费的修复，单步未缓存输入从 1.4 万降到 3 token"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.3.2
+publishedAt: 2026-11-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "系统提示词每步重复计费的修复，单步未缓存输入从 1.4 万降到 3 token"
+broadcast: "这次更新修了一个很实在的问题：系统提示词以前每一步都要重复计费，现在改成把它作为第一条开发者消息发出去，让它可以被缓存。在某个代码助手路由上，单步未缓存的输入从大约一万四千个 token 降到了三个。对国内做 agent 的开发者来说，这提醒我们，提示词要放在能缓存的消息前缀里，别依赖厂商的特殊字段，缓存命中率也该当成一项核心指标来验证。"
+insight: "这次 v2.3.2 值得升级，核心是系统提示词改为首条 developer 消息后，Copilot gpt-6.2-sol 上单步未缓存输入从约 14000 token 降到 3，属于实打实的成本修复。现有 prompt 和 hook 配置不用改，但建议把缓存命中率当作验证指标，升级后对比单步未缓存输入。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [prompt-caching, gpt-6-2, token-cost, agent-harness]
+---
+
+- GPT-6.2 的 Responses `instructions` 字段不参与缓存，OpenCode 改为把系统提示词作为首条 developer 消息发送，覆盖 OpenAI、Copilot、Zen、Azure、OpenRouter 等路由；含义是 harness 应把提示词放在可缓存的消息前缀里，而非依赖厂商特殊字段。
+- 在 GitHub Copilot `gpt-6.2-sol` 上，单步未缓存输入从约 14,000 token 降到 3；含义是缓存命中率应作为 harness 的一等指标来验证。
+- `/responses/compact` 压缩路径现在读取同一缓存前缀；含义是压缩逻辑需与主请求共享前缀，否则会破坏缓存。
+
+---
+
+> 原文 release：[sst/opencode v2.3.2](https://github.com/anomalyco/opencode/releases/tag/v2.3.2)

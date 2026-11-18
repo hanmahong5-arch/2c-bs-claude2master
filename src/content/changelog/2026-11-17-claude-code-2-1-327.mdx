@@ -1,0 +1,23 @@
+---
+slug: 2026-11-17-claude-code-2-1-327
+title: "claude-code v2.1.327 — 权限、恢复、MCP 配置的多处安全与一致性修复"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.327
+publishedAt: 2026-11-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "权限、恢复、MCP 配置的多处安全与一致性修复"
+broadcast: "这次更新主要修的是权限、会话恢复和配置一致性上的安全问题。比如安装 GitHub 应用前会先确认仓库，添加配置时敏感凭据可以不走命令行，避免泄露；状态页也会集中列出损坏的配置文件和无效的钩子，不再静默忽略。对做 agent 的国内开发者来说，这提醒我们凭据要走安全通道，会话恢复和覆盖文件这类操作必须可确认、可诊断。"
+insight: "这次 v2.1.327 值得现有用户升级，重点不在新功能，而在安全与一致性修复：mcp add-json 支持从 stdin 读 JSON，避免 token 进命令行；/status 集中暴露损坏文件和无效 hook matcher；恢复会话丢消息、/export 覆盖、/rewind 静默失败也已修。若你的 hook 配置存在无效 matcher，升级后会被 /status 点名，建议顺手清理；走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有方式使用即可。"
+tags: [permissions, mcp-config, session-resume, diagnostics]
+---
+
+- `/install-github-app` 改仓库前先确认，`mcp add-json` 支持从 stdin 读 JSON 避免 token 进命令行；harness 应把敏感凭据走非命令行通道。
+- `/status` 汇总损坏的 agent/skill/command 文件、无效 hook matcher 等；harness 需要一处集中暴露配置失效点，而非静默忽略。
+- 修复恢复会话丢消息、`/export` 覆盖文件、`/rewind` 静默失败；harness 的会话持久化与破坏性操作必须可确认、可诊断。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.327](https://github.com/anthropics/claude-code/releases/tag/v2.1.327)

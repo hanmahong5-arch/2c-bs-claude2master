@@ -1,0 +1,23 @@
+---
+slug: 2026-11-17-codex-rust-v0-169-1
+title: "codex rust-v0.169.1 — 补丁版本无实质变更，仅作版本对齐"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.169.1
+publishedAt: 2026-11-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "补丁版本无实质变更，仅作版本对齐"
+broadcast: "OpenAI 的代码助手工具刚发了个补丁版本，从零点一六九点零升到零点一六九点一。这次没有任何已验证的功能亮点，更新日志只给了版本对比链接，也没提功能、配置或接口的变化。对国内做 agent 的开发者来说，这算个好消息：升级不用改行为假设，也不用加兼容分支，但别光看版本号猜能力，还是以实际测试为准。"
+insight: "这次 0.169.1 只是补丁级版本对齐，发布说明明确无已验证亮点，changelog 也只指向与 0.169.0 的对比，未提及任何功能、配置或接口变化。因此现有用户不必为升级调整行为假设，现有 prompt 和 hook 配置也无需改动；走 newapi.lurus.cn 代理的国内用户同样不受影响。建议按常规节奏跟进即可，harness 侧不要从版本号推断能力，仍以实际行为测试为准。"
+tags: [codex, patch-release, changelog, no-changes]
+---
+
+- 发布说明标注无已验证亮点，changelog 仅指向 0.169.0 到 0.169.1 的对比链接；对 harness 设计意味着不必为升级调整行为假设。
+- 版本号从 0.169.0 递增到 0.169.1，属补丁级发布；harness 侧可将其视为无破坏性变更，无需新增兼容分支。
+- 未提及任何功能、配置或接口变化；harness 设计上应避免从版本号推断能力，仍以实际行为测试为准。
+
+---
+
+> 原文 release：[openai/codex rust-v0.169.1](https://github.com/openai/codex/releases/tag/rust-v0.169.1)

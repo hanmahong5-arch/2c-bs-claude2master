@@ -1,0 +1,23 @@
+---
+slug: 2026-11-18-opencode-2-3-1
+title: "opencode v2.3.1 — 超时命令不再被杀、压缩后台化，harness 设计要改"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.3.1
+publishedAt: 2026-11-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "超时命令不再被杀、压缩后台化，harness 设计要改"
+broadcast: "这次更新改了三处行为：超时的命令不再被杀掉，而是转到后台继续跑，前台默认等两分钟；自动压缩摘要改成后台写入，但没用上的摘要照样算 token 成本；拒绝权限只影响当前这一步，不再清空整个会话。做 agent 的要注意，超时要当成降级而不是终止，权限队列也得按步骤隔离。"
+insight: "这次 v2.3.1 的改动对现有用户来说值得升级，但升级前要先改 harness 配置：超时命令不再被杀而是转后台，前台默认 120 秒，harness 必须把超时当降级处理并接收后台结果；自动压缩摘要默认后台写入，未使用的后台摘要仍计 token，成本要提前算清；权限拒绝只影响同一步，权限队列需按步骤隔离。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [shell-timeout, background-compaction, permission-scope, agent-harness]
+---
+
+- 超时 shell 命令转后台继续跑，前台 `timeout: 0` 改为默认 120 秒；harness 需把超时视为降级而非终止，并处理后台结果回传。
+- 自动压缩摘要默认后台写入，`compaction.background: false` 可关；harness 要接受未使用的后台摘要仍计 token 的成本。
+- 拒绝权限只影响同一步的待处理请求，不再清空整个会话；harness 的权限队列应按步骤隔离。
+
+---
+
+> 原文 release：[sst/opencode v2.3.1](https://github.com/anomalyco/opencode/releases/tag/v2.3.1)

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-17-blog-simonwillison-gpt-6-2-astra-and-gpt-6-2
+title: "GPT‑6.2 Astra and GPT‑6.2 Sol — Simon Willison 实测 OpenAI 新模型 Astra 与 Sol"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/
+publishedAt: 2026-11-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 实测 OpenAI 新模型 Astra 与 Sol：价格降了，但长任务里会问出人类答不上的问题"
+broadcast: "OpenAI 新出的两个模型 Astra 和 Sol，价格降了，缓存价也大幅下调，对长时间运行的 agent 会话更友好。但实测发现，Astra 跑长任务时能调度子 agent，却会突然追问人类根本答不上的实现细节，比如某个文件到底叫哪个名字，结果任务就卡住了。对国内做 agent 的开发者来说，成本是降了，可这种卡壳问题得提前想好怎么兜底。"
+tags: [llm-pricing, openai, agentic-workflows, model-benchmarks]
+---
+
+- **定价**：GPT-6.2 Astra 输入 $8/百万 token、输出 $40/百万 token，是上代 6 Astra 的 80%；缓存价从 $1 降到 $0.40，对长时间运行的 agent 会话更友好。Sol 维持 $2/$10。
+- **实测**：用 Codex CLI 的 Ultra 档跑 Three.js 动画基准，两模型把 Yonkers 变成巨型机甲的效果都不如 Claude Fable 5.2 和 Gemini 4 Carbon；他还用 Astra 自己剪了对比视频。
+- **反馈**：Theo Browne 指出 Astra 长任务里能调度子 agent，却会突然追问 r24 的 reviewer 把片段写成 24_g521.mp4 还是 24_p11.mp4 这类人类无法回答的实现细节，导致任务卡住。
+
+---
+
+> 原文：[GPT‑6.2 Astra and GPT‑6.2 Sol](https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/) · 作者 Simon Willison

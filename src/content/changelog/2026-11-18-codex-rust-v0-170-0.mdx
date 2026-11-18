@@ -1,0 +1,23 @@
+---
+slug: 2026-11-18-codex-rust-v0-170-0
+title: "codex rust-v0.170.0 — 沙箱权限与 MCP 凭据修复，直接影响 agent 隔离与工具链可靠性"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.170.0
+publishedAt: 2026-11-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "沙箱权限与 MCP 凭据修复，直接影响 agent 隔离与工具链可靠性"
+broadcast: "OpenAI 的代码智能体工具发布了一次更新，主要修的是沙箱权限和工具凭据这两块。以前子任务可能把已有的沙箱限制弄丢，现在权限被当成整个会话不变的底线；工具登录登出时的凭据冲突也修好了，刷新可以安全取消。对国内做 agent 的开发者来说，这提醒我们权限要按会话管，凭据写入要能重复执行不出错。"
+insight: "这次 0.170.0 值得现有用户升级：沙箱权限不再被子线程覆盖、MCP 凭据竞态修复，直接关系到 agent 隔离和工具链可靠性，属于修 bug 而非加功能，升级风险低。如果你在 prompt 或 hook 里靠子任务自行放宽权限来绕过限制，升级后这套做法会失效，需要把权限当会话级不变量重新配置；MCP 登录登出流程也不必再加额外重试兜底。摘要未涉及代理层改动，国内走 newapi.lurus.cn 的用户按现有方式使用即可。"
+tags: [sandbox-permissions, mcp-oauth, websocket-fallback, agent-harness]
+---
+
+- 权限更新与子线程不再丢失既有沙箱限制，会话设置入口统一归一化权限；harness 应把权限视为会话级不变量，而非可被子任务覆盖的局部状态。
+- MCP OAuth 在取消、登录、登出时的凭据竞态被修复，刷新改为可取消安全；harness 需为工具凭据设计幂等写入与取消语义。
+- 超大 WebSocket 请求立即回退 HTTP 且不重试，并遵守服务端声明的大小上限；harness 的传输层应显式区分可重试与不可重试失败。
+
+---
+
+> 原文 release：[openai/codex rust-v0.170.0](https://github.com/openai/codex/releases/tag/rust-v0.170.0)

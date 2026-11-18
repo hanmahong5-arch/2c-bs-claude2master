@@ -1,0 +1,23 @@
+---
+slug: 2026-11-18-goose-1-60-1
+title: "goose v1.60.1 — 压缩上下文时删掉一段草稿，Claude 就不再拒绝请求"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.60.1
+publishedAt: 2026-11-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "压缩上下文时删掉一段草稿，Claude 就不再拒绝请求"
+broadcast: "这次更新修了一个很实际的问题：压缩上下文时会保留一段草稿块，而 Claude 模型会直接拒绝带这个块的请求，现在这段草稿被删掉了。值得关注的是，它说明拼接压缩提示时得按模型剔除不兼容的片段，这类兼容问题还是高频故障点，做 agent 的可以把过滤做成可配置的一层，和压缩逻辑分开。"
+insight: "这次 v1.60.1 只是压缩阶段剔除 `<analysis>` 草稿块的补丁修复，属于提示兼容性问题，不涉及压缩策略或触发条件。我的判断是：现有用户值得升级，尤其是压缩时被 Claude 拒绝请求的，直接升到该补丁版即可，无需改 prompt 或 hook 配置。国内走 newapi.lurus.cn 代理的用户不受影响，摘要未提及代理链路变化。另外建议把“模型拒绝的片段”做成可配置过滤层，与压缩逻辑解耦，便于单独回归。"
+tags: [compaction, claude, prompt-compat, bugfix]
+---
+
+- 压缩流程不再保留 `<analysis>` 草稿块，因为 Claude 模型会拒绝包含该块的请求；这意味着 harness 在拼接压缩提示时，必须按模型剔除不兼容片段。
+- 修复以补丁版本发布，说明压缩路径的提示兼容性属于高频故障点；harness 应把“模型拒绝的片段”做成可配置的过滤层。
+- 变更只涉及压缩阶段，未提及压缩策略或触发条件调整；设计上可把提示净化与压缩逻辑解耦，便于单独回归。
+
+---
+
+> 原文 release：[block/goose v1.60.1](https://github.com/aaif-goose/goose/releases/tag/v1.60.1)

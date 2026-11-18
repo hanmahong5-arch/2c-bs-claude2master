@@ -1,0 +1,23 @@
+---
+slug: 2026-11-17-goose-1-60-0
+title: "goose v1.60.0 — 技能与命令操作重构，工具钩子改由自有循环触发"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.60.0
+publishedAt: 2026-11-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "技能与命令操作重构，工具钩子改由自有循环触发"
+broadcast: "这次更新把技能从独立扩展变成了内建操作，斜杠命令和叹号命令也下沉到工具包里统一处理，工具钩子则改由它自己的运行循环来触发。对做 agent 的国内开发者来说，这意味着技能加载、命令解析和钩子触发都要放进核心执行路径，而不是靠外部插件或字符串特判，接入方式得跟着调整。"
+insight: "这次 v1.60.0 把技能、命令和工具钩子都收进 goose 自身执行循环，属于结构性改动而非小版本修补。现有用户值得升级，但升级前要确认技能加载已走核心路径、斜杠与叹号命令按一等操作接入，否则旧配置可能失效。原有 hook 配置需要改：钩子已从 GDK 移除，改由运行循环触发，依赖旧钩子 API 的写法必须迁移。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理层变化，按现有方式使用即可。"
+tags: [skill-operation, oi-kit, tool-hooks, run-loop]
+---
+
+- 新增 SkillOperation 并移除 Skills 扩展（#13574）：技能从独立扩展变为内建操作，harness 需把技能加载纳入核心执行路径而非外部插件。
+- oi-kit 引入可执行命令、SlashCommandOperation 与 Bang 命令操作（#13533、#13535）：命令解析与执行下沉到工具包，harness 设计应把斜杠/叹号命令当作一等操作而非字符串特判。
+- 工具钩子改由 goose 自身运行循环触发，并从 GDK 移除钩子 API（#13566、#13486）：钩子生命周期绑定执行循环，harness 需保证钩子与工具调用同源触发、顺序一致。
+
+---
+
+> 原文 release：[block/goose v1.60.0](https://github.com/aaif-goose/goose/releases/tag/v1.60.0)

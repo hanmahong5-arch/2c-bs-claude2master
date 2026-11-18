@@ -1,0 +1,23 @@
+---
+slug: 2026-11-17-blog-simonwillison-external-sandboxes-for-coding-agents
+title: "External sandboxes for coding agents — 把 agent 的代码执行挪进独立沙箱，本地模型也能放心跑"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/
+publishedAt: 2026-11-17
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "把 agent 的代码执行挪进独立沙箱，本地模型也能放心跑"
+broadcast: "给 agent 跑代码，现在可以把执行环境单独关进沙箱了。这个模式让 agent 本体留在外面，只有要执行的代码进专用沙箱，本地模型误操作或提示注入的破坏就被挡住，隔离边界从整台机器收缩到执行层。它还内置可选的网络白名单代理和凭据替换，代码能调带认证的接口却拿不到密钥，网络出口和密钥管理成了执行环境的一等配置。"
+tags: [sandboxing, coding-agents, security, webassembly]
+---
+
+- 提出 external sandbox 模式：agent 本体留在沙箱外，只有它要执行的代码进入专用沙箱，用于降低本地模型误操作或提示注入造成破坏的风险。对开发者的含义是，隔离边界从「整台机器」收缩到「执行层」。
+- 与 Prime Radiant 合作发布三个实现：external-sandbox-v86（Node.js + v86 跑 WebAssembly 里的 Alpine Linux）、external-sandbox-container（Apple Containers 里的 Alpine）、external-sandbox-quicksand（打包 QEMU 与 Alpine 的 Python 包），三者暴露同一套 localhost API。含义是沙箱后端可替换，工具链只需对接统一接口。
+- 沙箱内置可选的 HTTP/HTTPS allow-list 代理，可限定 agent 代码能访问哪些主机，并提供凭据替换机制，让代码发起带认证的 API 调用而无需把密钥交给 agent。含义是网络出口与密钥管理成为 agent 执行环境的一等配置项。
+
+---
+
+> 原文：[External sandboxes for coding agents](https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/) · 作者 Simon Willison
