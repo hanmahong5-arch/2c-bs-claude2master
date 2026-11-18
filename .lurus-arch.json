@@ -1,0 +1,21 @@
+{
+    "zones":  {
+                  "contracts":  [
+
+                                ],
+                  "infra":  [
+
+                            ],
+                  "features":  [
+                                   "src"
+                               ],
+                  "bootstrap":  [
+
+                                ]
+              },
+    "max_test_lines":  500,
+    "fix_paths":  [
+                      "src"
+                  ],
+    "max_lines":  300
+}
