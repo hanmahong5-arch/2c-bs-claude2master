@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 };
 
 export default function ErrorsPage() {
-  // 按工具分组展示, 组内保持数据序(高频在前)
   const tools = [...new Set(ERROR_KB.map((e) => e.tool))];
 
   return (

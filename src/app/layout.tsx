@@ -103,7 +103,6 @@ export default function RootLayout({
         >
           跳到正文
         </a>
-        {/* Provider 包 Header+main+Footer 使按钮能用 context; BroadcastBar + <audio> 由 Provider 在 children 外常驻渲染 → 切页不卸载、不停播 */}
         <BroadcastProvider>
           <Header />
           <main id="main-content" className="flex-1">{children}</main>

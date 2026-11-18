@@ -71,14 +71,12 @@ export function buildOutbound(
   campaign: OutboundCampaign,
 ): string {
   const base = TARGET_BASE[target];
-  // 已带归因 → 原样返回(幂等)。
   if (base.includes("utm_source=")) return base;
 
   const url = new URL(base);
   url.searchParams.set("utm_source", UTM_SOURCE);
   url.searchParams.set("utm_medium", UTM_MEDIUM);
   url.searchParams.set("utm_campaign", campaign);
-  // newapi 注册归因(见 NEWAPI_AFF_CODE): 仅 newapi 目标带 aff 邀请码。
   if (target === "newapi") {
     url.searchParams.set("aff", NEWAPI_AFF_CODE);
   }

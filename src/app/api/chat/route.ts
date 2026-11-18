@@ -24,8 +24,6 @@ const MAX_TOKENS = 1024;
 const UPSTREAM_TIMEOUT_MS = 20000;
 
 function readTrialUsed(cookie: string): number {
-  // 精确按 key 解析, 不用子串正则: 否则伪造 `c2m_trial=0` 排在真值前即可绕过,
-  // 且 `x_c2m_trial=...` 这类前缀也会被误命中。(注: 这是弱客户端 gate, 此修仅堵显式绕过)
   const val = cookie
     .split(";")
     .map((s) => s.trim())
@@ -98,7 +96,6 @@ export async function POST(req: Request) {
         `单条消息超过 ${MAX_MSG_LEN} 字符。`,
       );
     }
-    // 不接受客户端注入 system role(防 prompt injection / 越权改模型行为)。
     const role = m.role as string;
     if (role === "system") {
       return jsonError(400, "bad_role", "system 消息不可由客户端传入。");

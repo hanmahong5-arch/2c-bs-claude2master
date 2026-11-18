@@ -69,7 +69,6 @@ export default async function ChangelogDetail({
 
   const jsonLd = changelogJsonLd(item);
   const pageUrl = `https://claude2master.com/changelog/${item.slug}`;
-  // 原文链接文案随 kind 变化: release→"原文 release", 热门→"项目主页", 实践/观点→"原文"
   const sourceLabel =
     item.kind === "trending"
       ? "项目主页"

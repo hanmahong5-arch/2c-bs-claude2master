@@ -25,9 +25,7 @@ export default function TrackedLink({
   function fire() {
     try {
       track(event, data);
-    } catch {
-      // Analytics 不阻塞导航
-    }
+    } catch {}
   }
 
   if (external) {

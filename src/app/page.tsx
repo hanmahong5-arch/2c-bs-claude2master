@@ -102,7 +102,6 @@ export default async function Home() {
           </p>
         </Reveal>
 
-        {/* 漏斗核心:3 大卡 */}
         <Stagger className="grid md:grid-cols-3 gap-6 mb-6">
           {PRIMARY.map((p) => (
             <StaggerItem key={p.href} className="h-full">
@@ -143,7 +142,6 @@ export default async function Home() {
           ))}
         </Stagger>
 
-        {/* 次要入口:3 小卡 */}
         <Stagger className="grid sm:grid-cols-3 gap-4">
           {SECONDARY.map((s) => (
             <StaggerItem key={s.href} className="h-full">

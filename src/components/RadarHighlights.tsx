@@ -24,7 +24,6 @@ function HighlightChip({ c }: { c: ChangelogItem }) {
       >
         {c.title}
       </Link>
-      {/* 悬停 / 聚焦 摘要浮层 (pointer-events-none 不挡点击; 进 DOM 即在, hover 瞬时) */}
       <div
         role="tooltip"
         className="pointer-events-none absolute left-0 top-full z-30 mt-2 w-72 max-w-[80vw] rounded-xl border border-[var(--color-border)] bg-white p-3 text-left opacity-0 translate-y-1 shadow-[0_8px_32px_rgba(20,19,15,0.12)] transition-all duration-150 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0"

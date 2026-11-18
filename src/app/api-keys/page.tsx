@@ -6,6 +6,7 @@ import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
 
 // 单一出站构造点:api-keys 页注册入口,带 api-keys 归因。
 const NEWAPI_API_KEYS = buildOutbound("newapi", OUTBOUND_CAMPAIGN.apiKeys);
+const NEWAPI_BASE_DISPLAY = "https://newapi.lurus.cn";
 
 export const metadata: Metadata = {
   title: "申请 API key",
@@ -138,7 +139,7 @@ export default function ApiKeysPage() {
         </h2>
         <p className="text-sm text-[var(--color-text-muted)] mb-6">
           base URL：
-          <code className="font-mono">https://newapi.lurus.cn</code>
+          <code className="font-mono">{NEWAPI_BASE_DISPLAY}</code>
         </p>
         <div className="grid md:grid-cols-2 gap-4">
           {ENDPOINTS.map((e) => (

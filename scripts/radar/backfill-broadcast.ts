@@ -1,18 +1,6 @@
 #!/usr/bin/env bun
 /**
  * backfill-broadcast.ts — 给已有 changelog 条目补口播稿 (broadcast frontmatter).
- *
- * 二期上线前一次性把历史条目补上 broadcast, 使其语音播报走口播稿而非裸 hook.
- * 新条目由 summarize.ts 在写入时即带 broadcast → 本脚本只服务存量, 不进 cron。
- *
- * 用法:
- *   NEWAPI_TRIAL_TOKEN=... bun run scripts/radar/backfill-broadcast.ts            # 最新 80 条 (音频滚动窗口)
- *   NEWAPI_TRIAL_TOKEN=... bun run scripts/radar/backfill-broadcast.ts --limit 15 # 自定条数
- *   NEWAPI_TRIAL_TOKEN=... bun run scripts/radar/backfill-broadcast.ts --dry-run  # 只打印不写文件
- *
- * 幂等: 已含 `broadcast:` 行的条目跳过; 重跑等价。只在 `hook:` 行后插一行, 余字节原样保留历史。
- *
- * env: NEWAPI_TRIAL_TOKEN — newapi.lurus.cn API key (见 重要信息.md)
  */
 
 import { promises as fs } from "fs";
@@ -23,12 +11,11 @@ import { CHANGELOG_DIR, DEFAULT_LIMIT, field } from "./tts-lib";
 interface Candidate {
   file: string;
   raw: string;
-  fm: string; // frontmatter 内文 (--- 与 \n--- 之间)
+  fm: string;
   publishedAt: string;
   hasBroadcast: boolean;
 }
 
-// frontmatter 之后、footer 分隔线 (--- 前) 的正文 → 与 summarize 的 summary.body 同口径。
 function extractBody(raw: string): string {
   const fmEnd = raw.indexOf("\n---", 3);
   const after = raw.slice(fmEnd + 4).replace(/^\r?\n/, "");
@@ -73,7 +60,6 @@ async function main(): Promise<void> {
     });
   }
 
-  // 最新 N (date-desc, 与 tts 音频滚动窗口一致)
   candidates.sort((a, b) =>
     a.publishedAt < b.publishedAt ? 1 : a.publishedAt > b.publishedAt ? -1 : 0,
   );
@@ -107,7 +93,6 @@ async function main(): Promise<void> {
       continue;
     }
 
-    // 紧跟 hook: 行插入 broadcast: 行 (函数式 replace → 不让 broadcast 里的 $ 触发替换语义)
     const line = `broadcast: "${escapeYaml(broadcast)}"`;
     const updated = c.raw.replace(/^hook:.*$/m, (m) => `${m}\n${line}`);
     if (updated === c.raw) {

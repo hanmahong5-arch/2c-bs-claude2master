@@ -16,7 +16,6 @@ export default function PromptList({
   categories: PromptCategory[];
 }) {
   const router = useRouter();
-  // 分类筛选存进 URL ?cat= → 点进详情返回时保留分类与滚动位置(见 useUrlFilter)
   const [active, selectCat] = useUrlFilter<Filter>(
     "cat",
     (raw) => raw === "全部" || (categories as string[]).includes(raw),
@@ -70,8 +69,6 @@ export default function PromptList({
               key={p.slug}
               className="card card-prompt group relative block"
             >
-              {/* 覆盖式链接让整卡可点, 「试一下」按钮独立浮于其上(z-10) ——
-                  避免 <a> 内嵌 <button> 的非法结构(键盘 Enter 行为未定义 + 部分 AT 漏掉按钮) */}
               <Link
                 href={`/prompts/${p.slug}`}
                 aria-label={p.title}

@@ -97,7 +97,6 @@ export default function AccessPage() {
             <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-3">
               {cat}
             </h2>
-            {/* sm 以上表格,sm 以下每行一张卡片(标签:值垂直堆叠),避免小屏只能横向滚动 */}
             <div className="hidden sm:block overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>

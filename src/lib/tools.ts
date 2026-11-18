@@ -90,7 +90,6 @@ export function versionFromSourceUrl(url: string): string | null {
 /** 工具清单文案 — 供 RSS / metadata / 订阅页复用, 消除散落的 "Claude Code / Codex" 硬编码。
  *   "full"  → 枚举全部工具名(利 SEO/metadata)   "count" → "8 大 AI 编码工具"(列表过长处用) */
 export function toolListCopy(format: "full" | "count"): string {
-  // 仅统计 coding 品类: 站点主文案是「N 大 AI 编码工具」, agent-runtime 专区单独成段不计入此数。
   const coding = TOOLS.filter((t) => t.group === "coding");
   if (format === "full") return coding.map((t) => t.name).join("、");
   return `${coding.length} 大 AI 编码工具`;

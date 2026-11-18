@@ -12,14 +12,12 @@ export default function TutorialsList({
   tutorials: Tutorial[];
   categories: TutorialCategory[];
 }) {
-  // 分类筛选存进 URL ?cat= → 点进详情返回时保留分类与滚动位置(见 useUrlFilter)
   const [active, selectCat] = useUrlFilter<"全部" | TutorialCategory>(
     "cat",
     (raw) => raw === "全部" || categories.includes(raw as TutorialCategory),
     "全部",
   );
 
-  // 只显示有内容的分类，避免点进去空白
   const populated = categories.filter((c) =>
     tutorials.some((t) => t.category === c)
   );

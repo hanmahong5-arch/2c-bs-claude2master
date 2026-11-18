@@ -47,14 +47,12 @@ describe("aggregateScore", () => {
   });
 
   it("不存在 tool 返回 0 (零除保护)", () => {
-    // ToolKey 是 union, 用 as any 模拟不存在的 key
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const score = aggregateScore("no-such-tool" as any);
+    const unknownKey = "no-such-tool" as unknown as Parameters<typeof aggregateScore>[0];
+    const score = aggregateScore(unknownKey);
     expect(score).toBe(0);
   });
 
   it("claude-code 综合分手动计算自洽: (5+5+4+4+5)/5 = 4.6", () => {
-    // claude-code 的 5 个 task 分别: 5, 5, 4, 4, 5
     const expected = (5 + 5 + 4 + 4 + 5) / 5;
     expect(aggregateScore("claude-code")).toBeCloseTo(expected, 10);
   });

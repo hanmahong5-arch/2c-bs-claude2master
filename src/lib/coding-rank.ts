@@ -131,31 +131,22 @@ export interface ScoreCell {
 //
 // **重要**:这些是 c2m 编辑部预期/参考分,**不是**实测榜单。每个 cell 备注说明依据。
 export const SCORES: ScoreCell[] = [
-  // react-todo-undo (easy)
   { tool: "claude-code", task: "react-todo-undo", score: 5, note: "Sonnet 5 一次过, useReducer 设计干净" },
   { tool: "cursor", task: "react-todo-undo", score: 5, note: "Composer 2 一次过, Tab 补全加分" },
   { tool: "cline", task: "react-todo-undo", score: 4, note: "依赖配 Claude/DeepSeek, 配 Claude 时与 #1 持平" },
   { tool: "aider", task: "react-todo-undo", score: 4, note: "CLI 模式对前端任务 UX 一般, 但生成质量 OK" },
-
-  // go-rest-paginate (medium)
   { tool: "claude-code", task: "go-rest-paginate", score: 5, note: "agentic + 自跑测试, 这是它的强项场景" },
   { tool: "cursor", task: "go-rest-paginate", score: 4, note: "Composer 写得对, 但 cursor-based 边界要手动校" },
   { tool: "cline", task: "go-rest-paginate", score: 4, note: "插件+approve, 适合边看边改的中长任务" },
   { tool: "aider", task: "go-rest-paginate", score: 5, note: "Aider polyglot Go 85%+ 排行靠前" },
-
-  // sqlite-dedupe (medium)
   { tool: "claude-code", task: "sqlite-dedupe", score: 4, note: "SQL 对, 但偶尔过度优化加 CTE" },
   { tool: "cursor", task: "sqlite-dedupe", score: 4, note: "对话式好用, 单文件场景跟 Claude 持平" },
   { tool: "cline", task: "sqlite-dedupe", score: 3, note: "依赖底模,DeepSeek 时 SQL 偶尔语法错" },
   { tool: "aider", task: "sqlite-dedupe", score: 4, note: "CLI 跑 sqlite3 验证一次过" },
-
-  // next-auth-zitadel (hard)
   { tool: "claude-code", task: "next-auth-zitadel", score: 4, note: "Next 16 + Auth.js 已掌握, Zitadel 需提示完整 issuer" },
   { tool: "cursor", task: "next-auth-zitadel", score: 4, note: "Composer + 文档索引帮助 i18n 那段" },
   { tool: "cline", task: "next-auth-zitadel", score: 3, note: "多文件长任务用 Roo Code 的 architect mode 更顺" },
   { tool: "aider", task: "next-auth-zitadel", score: 3, note: "Aider 不擅长多文件交互式 UX 调整" },
-
-  // k8s-debug-pod (hard)
   { tool: "claude-code", task: "k8s-debug-pod", score: 5, note: "subagent + plan mode + 自跑 kubectl, 诊断准" },
   { tool: "cursor", task: "k8s-debug-pod", score: 3, note: "Cursor 没 ops 优势, 给出分析但不能自跑 kubectl" },
   { tool: "cline", task: "k8s-debug-pod", score: 3, note: "需要本地有 kubectl, 能跑但缺 plan mode" },

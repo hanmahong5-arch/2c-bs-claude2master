@@ -69,7 +69,6 @@ export async function POST(req: Request) {
   }
 
   const detail = await upstream.text().catch(() => "");
-  // Buttondown 422/400 报已存在的邮箱
   if (
     (upstream.status === 400 || upstream.status === 422) &&
     /already|exists|subscribed/i.test(detail)

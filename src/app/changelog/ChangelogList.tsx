@@ -1,13 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
-import { Calendar, Github, Rss } from "lucide-react";
-import {
-  KIND_LABEL,
-  type ChangelogItem,
-  type ChangelogKind,
-} from "@/lib/content-types";
+import { Volume2 } from "lucide-react";
+import type { ChangelogItem } from "@/lib/content-types";
 import {
   TOOLS,
   TOOL_GROUPS,
@@ -17,140 +13,23 @@ import {
   toolsInGroup,
   versionFromSourceUrl,
 } from "@/lib/tools";
-import { relativeAge } from "@/lib/date";
 import { useUrlFilter } from "@/lib/use-url-filter";
 import { Reveal } from "@/components/Reveal";
-import { Volume2 } from "lucide-react";
 import { useBroadcast } from "@/components/broadcast/useBroadcast";
 import RadarHighlights from "@/components/RadarHighlights";
+import { ChangelogCard, ToolSection, resolveKind } from "./ChangelogSections";
 
-// 筛选值: "all"(按工具分组) | "practice"(实践扁平) | 某 tool key(该工具扁平)
 type Filter = string;
-
-function resolveKind(c: ChangelogItem): ChangelogKind {
-  if (c.kind === "practice") return "practice";
-  if (c.kind === "trending") return "trending";
-  if (c.kind === "blogger") return "blogger";
-  return "changelog";
-}
 
 const TOOL_NAMES = toolListCopy("full");
 
-function ChangelogCard({ c }: { c: ChangelogItem }) {
-  const k = resolveKind(c);
-  const kindMeta = KIND_LABEL[k];
-  const age = relativeAge(c.publishedAt);
-  return (
-    <li>
-      <Link
-        href={`/changelog/${c.slug}`}
-        className="card group flex flex-col gap-3"
-      >
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className={`pill text-[10px] ${kindMeta.className}`}>
-            {kindMeta.label}
-          </span>
-          <span className="pill text-[10px]">
-            {k === "blogger" ? (c.author ?? c.source) : c.source}
-          </span>
-        </div>
-        <h3 className="text-xl font-semibold text-[var(--lt-ink)] group-hover:text-[var(--c2m-accent-deep)] transition-colors">
-          {c.title}
-        </h3>
-        <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-          {c.hook}
-        </p>
-        <div className="flex items-center gap-4 text-xs text-[var(--color-text-muted)]">
-          <span className="inline-flex items-center gap-1.5">
-            <Calendar size={12} />
-            {c.publishedAt}
-            {age && (
-              <span
-                className="text-[var(--color-text-muted)]"
-                suppressHydrationWarning
-              >
-                · {age}
-              </span>
-            )}
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <Github size={12} />
-            {k === "practice" || k === "blogger" ? "原文" : "原文 release"}
-          </span>
-        </div>
-      </Link>
-    </li>
-  );
-}
-
-// 每段默认只渲染最新 N 条,避免"全部"筛选下一次性吃满全量 DOM;超出部分靠"查看更多"展开。
-const SECTION_VISIBLE_DEFAULT = 10;
-
-// 一个分组段: 段头 `● {name}  最新 {version}  [RSS]` + 该组卡片倒序。
-// feedKey 仅工具段传入 → 段头出现 per-tool RSS pill; 其他/实践段不传 → 不显示。
-function ToolSection({
-  name,
-  version,
-  items,
-  feedKey,
-}: {
-  name: string;
-  version: string | null;
-  items: ChangelogItem[];
-  feedKey?: string;
-}) {
-  const [expanded, setExpanded] = useState(false);
-  if (items.length === 0) return null;
-  const visibleItems = expanded ? items : items.slice(0, SECTION_VISIBLE_DEFAULT);
-  const remaining = items.length - visibleItems.length;
-  return (
-    <section className="mb-10">
-      <div className="flex items-baseline gap-3 mb-4">
-        <h2 className="text-lg font-semibold text-[var(--lt-ink)] inline-flex items-center gap-2">
-          <span className="text-[var(--c2m-accent)]">●</span>
-          {name}
-        </h2>
-        {version && (
-          <span className="pill text-[10px] bg-[var(--c2m-accent-soft)] text-[var(--c2m-accent-deep)]">
-            最新 {version}
-          </span>
-        )}
-        {feedKey && (
-          <Link
-            href={`/feed/tool/${feedKey}`}
-            className="pill-outline pill text-[10px] inline-flex items-center gap-1 hover:text-[var(--c2m-accent-deep)]"
-            title={`${name} 的 RSS 订阅`}
-          >
-            <Rss size={10} />
-            RSS
-          </Link>
-        )}
-      </div>
-      <ul className="space-y-4">
-        {visibleItems.map((c) => (
-          <ChangelogCard key={c.slug} c={c} />
-        ))}
-      </ul>
-      {remaining > 0 && (
-        <button
-          type="button"
-          onClick={() => setExpanded(true)}
-          className="pill-outline pill mt-4 hover:text-[var(--c2m-accent-deep)]"
-        >
-          查看更多（还有 {remaining} 条）
-        </button>
-      )}
-    </section>
-  );
+function versionOf(group: ChangelogItem[]): string | null {
+  return group.length > 0 ? versionFromSourceUrl(group[0].sourceUrl) : null;
 }
 
 export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
-  // 🔊 播报 pill 走全局 BroadcastProvider(挂在 layout, 切页不停播), 本页不再持 <audio>。
   const { toggle, open: broadcasting, hasAudio } = useBroadcast();
 
-  // 筛选值存进 URL query(?tool=)→ 点进详情页再返回时筛选与滚动位置都保留。
-  // 用 useUrlFilter(history.replaceState)而非 useSearchParams: 后者会让本页退出
-  // 静态预渲染、首屏 HTML 不含条目(伤 SEO)。本 hook 首屏渲染全部、挂载后再应用筛选。
   const [filter, selectFilter] = useUrlFilter<Filter>(
     "tool",
     (raw) =>
@@ -162,7 +41,6 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
     "all",
   );
 
-  // items 已按 publishedAt 倒序(getChangelog),组内顺序天然倒序。
   const { byKey, other, practices, trending, bloggers, bloggersByAuthor } =
     useMemo(() => {
       const byKey = new Map<string, ChangelogItem[]>();
@@ -170,7 +48,6 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
       const practices: ChangelogItem[] = [];
       const trending: ChangelogItem[] = [];
       const bloggers: ChangelogItem[] = [];
-      // 「观点」段二级分组: author → 该博主条目 (保持 date-desc 插入序)
       const bloggersByAuthor = new Map<string, ChangelogItem[]>();
       for (const c of items) {
         const k = resolveKind(c);
@@ -202,27 +79,21 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
       return { byKey, other, practices, trending, bloggers, bloggersByAuthor };
     }, [items]);
 
-  // pill 只显示有内容的工具,避免点进去空白。
   const toolFilters = TOOLS.filter((t) => (byKey.get(t.key)?.length ?? 0) > 0);
   const filters: { value: Filter; label: string }[] = [
     { value: "all", label: "全部" },
     ...toolFilters.map((t) => ({ value: t.key, label: t.name })),
-    ...(trending.length > 0
-      ? [{ value: "trending", label: "🔥 热门" }]
-      : []),
-    ...(bloggers.length > 0
-      ? [{ value: "blogger", label: "💬 观点" }]
-      : []),
-    ...(practices.length > 0
-      ? [{ value: "practice", label: "实践" }]
-      : []),
+    ...(trending.length > 0 ? [{ value: "trending", label: "🔥 热门" }] : []),
+    ...(bloggers.length > 0 ? [{ value: "blogger", label: "💬 观点" }] : []),
+    ...(practices.length > 0 ? [{ value: "practice", label: "实践" }] : []),
   ];
 
-  function versionOf(group: ChangelogItem[]): string | null {
-    return group.length > 0 ? versionFromSourceUrl(group[0].sourceUrl) : null;
-  }
-
   const hasAnything = items.length > 0;
+  const agentTools = toolsInGroup("agent-runtime");
+  const agentMeta = TOOL_GROUPS.find((g) => g.key === "agent-runtime");
+  const hasAnyAgent = agentTools.some(
+    (t) => (byKey.get(t.key)?.length ?? 0) > 0,
+  );
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-16 md:py-20">
@@ -317,42 +188,33 @@ export default function ChangelogList({ items }: { items: ChangelogItem[] }) {
               />
             );
           })}
-          {(() => {
-            // 🦞 Agent 运行时专区: agent-runtime 品类工具单独成段, 段头带品类说明。
-            const agentTools = toolsInGroup("agent-runtime");
-            const meta = TOOL_GROUPS.find((g) => g.key === "agent-runtime");
-            const hasAny = agentTools.some(
-              (t) => (byKey.get(t.key)?.length ?? 0) > 0,
-            );
-            if (!hasAny || !meta) return null;
-            return (
-              <section className="mb-10">
-                <h2 className="text-lg font-semibold text-[var(--lt-ink)] inline-flex items-center gap-2 mb-1">
-                  <span className="text-[var(--c2m-accent)]">●</span>
-                  {meta.label}
-                </h2>
-                {meta.blurb && (
-                  <p className="text-sm text-[var(--color-text-muted)] mb-4 max-w-2xl">
-                    {meta.blurb}
-                  </p>
-                )}
-                <div className="pl-1">
-                  {agentTools.map((t) => {
-                    const group = byKey.get(t.key) ?? [];
-                    return (
-                      <ToolSection
-                        key={t.key}
-                        name={t.name}
-                        version={versionOf(group)}
-                        items={group}
-                        feedKey={t.key}
-                      />
-                    );
-                  })}
-                </div>
-              </section>
-            );
-          })()}
+          {hasAnyAgent && agentMeta && (
+            <section className="mb-10">
+              <h2 className="text-lg font-semibold text-[var(--lt-ink)] inline-flex items-center gap-2 mb-1">
+                <span className="text-[var(--c2m-accent)]">●</span>
+                {agentMeta.label}
+              </h2>
+              {agentMeta.blurb && (
+                <p className="text-sm text-[var(--color-text-muted)] mb-4 max-w-2xl">
+                  {agentMeta.blurb}
+                </p>
+              )}
+              <div className="pl-1">
+                {agentTools.map((t) => {
+                  const group = byKey.get(t.key) ?? [];
+                  return (
+                    <ToolSection
+                      key={t.key}
+                      name={t.name}
+                      version={versionOf(group)}
+                      items={group}
+                      feedKey={t.key}
+                    />
+                  );
+                })}
+              </div>
+            </section>
+          )}
           {trending.length > 0 && (
             <ToolSection name="🔥 热门项目" version={null} items={trending} />
           )}

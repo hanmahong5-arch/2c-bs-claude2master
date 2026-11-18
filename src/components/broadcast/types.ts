@@ -50,7 +50,6 @@ export interface BroadcastFilters {
 }
 
 export interface BroadcastContextValue {
-  // ── 状态 ──
   avail: EnrichedManifestEntry[] | null;
   queue: Clip[];
   clipIdx: number;
@@ -58,7 +57,6 @@ export interface BroadcastContextValue {
   open: boolean;
   lang: Lang;
   filters: BroadcastFilters;
-  // ── 派生 ──
   /** manifest 真实出现的工具 (经 tools.ts 排序) → 渲染工具 chips */
   toolOptions: { key: string; name: string }[];
   /** manifest 真实出现的归类 → 渲染归类 chips */
@@ -71,7 +69,6 @@ export interface BroadcastContextValue {
   hasQueue: boolean;
   /** manifest 是否有任意音频 (与筛选无关 → 控制 Header 按钮 disabled) */
   hasAudio: boolean;
-  // ── 方法 ──
   /** 关→开(从头播) / 开→停 */
   toggle: () => void;
   stop: () => void;

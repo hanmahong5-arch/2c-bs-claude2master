@@ -48,7 +48,6 @@ export default function PriceTable({ models }: { models: ModelPrice[] }) {
 
   return (
     <div>
-      {/* 用量计算器 */}
       <div className="card mb-6">
         <p className="eyebrow mb-3 inline-flex items-center gap-1.5">
           <Calculator size={12} strokeWidth={2} />
@@ -83,7 +82,6 @@ export default function PriceTable({ models }: { models: ModelPrice[] }) {
         </div>
       </div>
 
-      {/* 筛选 + 排序 */}
       <div className="flex flex-wrap items-center gap-2 mb-4">
         {regions.map((f) => (
           <button
@@ -127,7 +125,6 @@ export default function PriceTable({ models }: { models: ModelPrice[] }) {
         </span>
       </div>
 
-      {/* 价格表 — sm 以上表格,sm 以下每行一张卡片(标签:值垂直堆叠),避免小屏只能横向滚动 */}
       <div className="hidden sm:block overflow-x-auto">
         <table className="w-full text-sm">
           <thead>

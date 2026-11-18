@@ -2,6 +2,7 @@ import type { ContentChannel, ContentItem } from "./content-types";
 import { toolListCopy } from "./tools";
 
 const BASE = "https://claude2master.com";
+const ATOM_NS = "http://www.w3.org/2005/Atom";
 
 const CHANNEL_TITLE: Record<ContentChannel, string> = {
   changelog: "claude2master · Changelog",
@@ -85,7 +86,7 @@ export function renderRss(items: ContentItem[], opts: FeedOptions): string {
     .join("\n");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="${ATOM_NS}">
   <channel>
     <title>${escapeXml(title)}</title>
     <link>${BASE}</link>

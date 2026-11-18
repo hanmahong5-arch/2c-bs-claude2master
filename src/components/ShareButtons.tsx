@@ -22,9 +22,7 @@ export default function ShareButtons({
   function trackShare(target: ShareChannel) {
     try {
       track("share_clicked", { channel, slug, target });
-    } catch {
-      // analytics 不阻塞导航
-    }
+    } catch {}
   }
 
   async function onCopy() {

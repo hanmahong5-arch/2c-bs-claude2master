@@ -11,7 +11,6 @@ export default function Hero() {
       <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" aria-hidden />
 
       <div className="relative max-w-6xl mx-auto px-6 pt-20 pb-24 md:pt-28 md:pb-32">
-        {/* 首屏:eyebrow → 标题 → 副文 → CTA 依次浮现,delay 递增做载入 stagger */}
         <div className="text-center mb-12 md:mb-16">
           <Reveal delay={0}>
             <p className="eyebrow mb-5 inline-flex items-center gap-1.5">

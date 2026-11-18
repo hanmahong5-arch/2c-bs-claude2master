@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Send, AlertCircle, Sparkles, ExternalLink } from "lucide-react";
 import { getPrompt } from "@/lib/prompts";
 import TrackedLink from "@/components/TrackedLink";
+import { postChatStream } from "@/infra/client-api";
 import { buildOutbound, OUTBOUND_CAMPAIGN } from "@/lib/outbound";
 
 // 漏斗最高意向出站 URL:chat 额度耗尽 → newapi 注册。带 chat-exhausted 归因。
@@ -53,13 +54,9 @@ export default function ChatRoom() {
     setMsgs((prev) => [...prev, { role: "assistant", content: "" }]);
 
     try {
-      const res = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          messages: next.map((m) => ({ role: m.role, content: m.content })),
-        }),
-      });
+      const res = await postChatStream(
+        next.map((m) => ({ role: m.role, content: m.content })),
+      );
 
       const used = Number(res.headers.get("X-Trial-Used") ?? "0");
       if (used > 0) setTrialUsed(used);
@@ -120,9 +117,7 @@ export default function ChatRoom() {
                 return copy;
               });
             }
-          } catch {
-            // ignore malformed
-          }
+          } catch {}
         }
       }
 

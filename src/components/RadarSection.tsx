@@ -20,9 +20,6 @@ function resolveKind(c: ChangelogItem): ChangelogKind {
 
 export default async function RadarSection() {
   const [changelog, digest] = await Promise.all([getChangelog(), getDigest()]);
-  // 工程博客 (kind=practice) 与自营 harness 长文分流到 HarnessDeepDive。
-  // changelog 已按 publishedAt 倒序; 每个工具取其最新 1 条 release, 按 TOOLS 顺序展示。
-  // 这样高频发版的 claude-code 不会把其他工具刷出去, 卡片数 = 有版本的工具数 (≤8)。
   const releases = changelog.filter((c) => resolveKind(c) !== "practice");
   const latestByKey = new Map<string, ChangelogItem>();
   for (const c of releases) {
@@ -31,16 +28,13 @@ export default async function RadarSection() {
       latestByKey.set(tool.key, c);
     }
   }
-  // 首页雷达收口到 coding 品类: agent-runtime 专区只在 /changelog 呈现, 不漏到首页「编码工具」标题下。
   const latestRadar = toolsInGroup("coding")
     .map((t) => ({ tool: t, item: latestByKey.get(t.key) }))
     .filter((x): x is { tool: (typeof TOOLS)[number]; item: ChangelogItem } =>
       Boolean(x.item),
     );
   const latestDigest = digest[0];
-  // 今日观点: 最新 3 条博主条目 (changelog 已 publishedAt 倒序)
   const bloggers = changelog.filter((c) => c.kind === "blogger").slice(0, 3);
-  // 今日热门: 最新 3 条 GitHub 热门新项目 (kind=trending)
   const trending = changelog.filter((c) => c.kind === "trending").slice(0, 3);
 
   if (latestRadar.length === 0 && bloggers.length === 0 && trending.length === 0) {

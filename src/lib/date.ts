@@ -16,7 +16,7 @@ export function relativeAge(iso: string, now: Date = new Date()): string {
   if (Number.isNaN(t)) return "";
 
   const diffDays = Math.floor((now.getTime() - t) / DAY_MS);
-  if (diffDays < 0) return ""; // 未来日期(时区/脏数据), 不显示
+  if (diffDays < 0) return "";
   if (diffDays === 0) return "今天";
   if (diffDays === 1) return "昨天";
   if (diffDays < 7) return `${diffDays} 天前`;

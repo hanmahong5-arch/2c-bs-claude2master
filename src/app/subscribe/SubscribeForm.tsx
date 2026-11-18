@@ -19,9 +19,7 @@ export default function SubscribeForm() {
     setError("");
     try {
       track("subscribe_attempted");
-    } catch {
-      // analytics 不阻塞
-    }
+    } catch {}
 
     try {
       const r = await fetch("/api/subscribe", {

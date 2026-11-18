@@ -18,7 +18,6 @@ export default function TokenCounter() {
   const [loading, setLoading] = useState(false);
   const encodeRef = useRef<EncodeFn | null>(null);
 
-  // tokenizer 词表体积大 → 懒加载, 首次输入才拉
   async function ensureEncoder(): Promise<EncodeFn> {
     if (encodeRef.current) return encodeRef.current;
     setLoading(true);
@@ -30,7 +29,7 @@ export default function TokenCounter() {
 
   useEffect(() => {
     let cancelled = false;
-    if (!text) return; // 空文本在渲染期派生为 "—", 不在 effect 里写状态
+    if (!text) return;
     ensureEncoder().then((encode) => {
       if (!cancelled) setTokens(encode(text).length);
     });
