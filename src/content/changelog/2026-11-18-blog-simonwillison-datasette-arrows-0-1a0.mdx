@@ -1,0 +1,23 @@
+---
+slug: 2026-11-18-blog-simonwillison-datasette-arrows-0-1a0
+title: "datasette-arrows 0.1a0 — Datasette 新增流式导出插件机制，首个示例用 Apache Arrow "
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/18/datasette-arrows/
+publishedAt: 2026-11-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 新增流式导出插件机制，首个示例用 Apache Arrow 实现"
+broadcast: "Datasette 最近加入了一套流式导出插件机制，插件可以按分块方式输出数据，百万行的大表不用一次性读进内存，导出不再受内存限制。作者还专门配了一个用阿帕奇箭头格式实现的示例插件，让开发者有真实用例可以参考。对做数据工具和 agent 的国内开发者来说，这套分块输出的思路值得留意。"
+tags: [datasette, apache-arrow, streaming-export, plugin-api]
+---
+
+- Datasette 1.0a43 让插件可通过 `register_output_renderer()` 实现流式导出格式，核心已支持流式 CSV/TSV，百万行数据无需全部载入内存。含义：导出大表不再受内存限制，插件作者也能复用同一套分块输出模式。
+- Simon 坚持「发布新插件能力必须附带一个使用它的插件」，于是有了 datasette-arrows 0.1a0。含义：新 API 有真实用例背书，开发者可直接参考实现。
+- 该插件由 Claude Fable 5.2 建议选用 Apache Arrow 流式格式，并几乎一次成型地写出。含义：AI 辅助可快速产出插件原型，但选型判断仍来自作者。
+
+---
+
+> 原文：[datasette-arrows 0.1a0](https://simonwillison.net/2026/Nov/18/datasette-arrows/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-18-blog-simonwillison-quoting-daniel-stenberg
+title: "Quoting Daniel Stenberg — curl 作者用数据回击 AI 重写：三周 200 个真实修复，克隆版一个都没有"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/18/daniel-stenberg/
+publishedAt: 2026-11-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "curl 作者用数据回击 AI 重写：三周 200 个真实修复，克隆版一个都没有"
+broadcast: "curl 的作者用数据回击了 AI 重写：三周里，项目主线合并了三百多个提交、修了两百多个 bug，而 AI 把十八万行 C 转成三十多万行 Rust 的克隆版，一个修复都没有。这说明 agent 产出的代码量不等于维护量，评估 agent 得看真正合进主干的修复数；而且上游每月还有约两百个新修复，一次性移植会迅速落后，移植类任务的价值取决于能不能持续同步上游补丁。"
+tags: [coding-agents, curl, rust, vibe-porting]
+---
+
+- 三周内 curl 主线合并 300+ 提交、修复 200+ bug 并处理若干漏洞，同期 AI agent 把 18.5 万行 C 转成 34 万行 Rust——含义：agent 产出的代码量不等于项目维护量，评估 agent 应看合并进主干的真实修复数。
+- Stenberg 指出这些 Rust 重写版本不包含那 200 个 bugfix，且后续每月仍有约 200 个新修复——含义：一次性“vibe-porting”会迅速落后于上游，工具链需要持续同步上游补丁的机制。
+- 他把这些重写称为“clones”，质疑它们能否跟上——含义：对开发者而言，移植类 agent 任务的价值取决于能否持续追踪并吸收原项目的安全修复。
+
+---
+
+> 原文：[Quoting Daniel Stenberg](https://simonwillison.net/2026/Nov/18/daniel-stenberg/) · 作者 Simon Willison

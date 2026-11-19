@@ -1,0 +1,23 @@
+---
+slug: 2026-11-19-blog-latentspace-ainews-gemini-4-neon-gdm-s-opus-sol
+title: "[AINews] Gemini 4 Neon: GDM's Opus/Sol Contender — Gemini 4 Neon 七周内第四个 Gemini 4 模型，性能逼近更大模"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/
+publishedAt: 2026-11-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Gemini 4 Neon 七周内第四个 Gemini 4 模型，性能逼近更大模型却更便宜，值得关注模型迭代节奏与 agent 实测数据。"
+broadcast: "谷歌七周内放出第四个 Gemini 4 模型，性能逼近更大的模型，价格却更便宜，中端模型已经能覆盖多数 agent 任务，成本敏感的流水线可以优先考虑。但要注意，模型换代间隔从二十八天缩到六天，硬编码模型名的工具链得能灵活切换；早期实测还出现容量错误和卡死，重试和降级机制得内置，轮数少也不等于质量高。"
+tags: [gemini-4-neon, agent-benchmarks, model-pricing, llm-tooling]
+---
+
+- **发布节奏与命名混乱**：Argon 退役、旧 Pro/Flash 下线，Neon 是七周内第四个 Gemini 4 模型，Arena 统计相邻两代间隔从 28 天缩到 6 天。对 agent 开发者的含义：模型选型窗口越来越短，硬编码模型名的工具链需要更灵活的切换机制。
+- **定价与实测表现**：Neon 输入 $3、缓存输入 $0.15、输出 $15 每百万 token，1M 上下文；在 high effort 下以每任务 $3.74 追平 Carbon 的 Intelligence Index 60 分，Agent Arena 首秀第二（1,336 分，约 4,200 场会话）。含义：中端模型已能覆盖多数 agent 任务，成本敏感型流水线可优先考虑。
+- **早期实测的坑**：13 次 Antigravity 会话记录 762 次工具调用、93% 输入缓存命中，但也出现 57 次容量错误和 4 次卡死；Vals 的 Code Migration 上 Neon 平均 160 轮，少于 Carbon 的 234 轮但得分更低。含义：agent 工具链需内置重试与容量降级，轮数少不等于质量高。
+
+---
+
+> 原文：[[AINews] Gemini 4 Neon: GDM's Opus/Sol Contender](https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/) · 作者 Latent Space

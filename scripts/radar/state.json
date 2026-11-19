@@ -1,13 +1,13 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.327",
+    "anthropics/claude-code": "v2.1.328",
     "openai/codex": "rust-v0.170.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "v4.1.26",
     "block/goose": "v1.60.1",
     "sst/opencode": "v2.3.2",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.68.0",
+    "google-gemini/gemini-cli": "v0.69.0",
     "openclaw/openclaw": "v2026.10.33",
     "zeroclaw-labs/zeroclaw": "v0.9.0",
     "NousResearch/hermes-agent": "v0.23.2"
@@ -375,7 +375,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-18",
+    "anthropic-engineering": "2026-11-19",
     "claude-code-docs": "2026-11-13",
     "openai-codex-blog": "2026-11-13",
     "openclaw-concepts": "2026-11-13",
@@ -837,7 +837,11 @@
       "https://simonwillison.net/2026/Nov/16/llm/",
       "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
       "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
-      "https://simonwillison.net/2026/Nov/17/datasette-lite/"
+      "https://simonwillison.net/2026/Nov/17/datasette-lite/",
+      "https://simonwillison.net/2026/Nov/18/llm-gemini/",
+      "https://simonwillison.net/2026/Nov/18/datasette-arrows/",
+      "https://simonwillison.net/2026/Nov/18/daniel-stenberg/",
+      "https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1064,7 +1068,9 @@
       "https://latent.space/p/ainews-the-no-ai-slop-manifesto/",
       "https://latent.space/p/ainews-perplexity-hits-a-1b-revenue-run-rate-up-4x-in-2026/",
       "https://latent.space/p/bfl/",
-      "https://latent.space/p/cloudflare/"
+      "https://latent.space/p/cloudflare/",
+      "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/",
+      "https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1562,7 +1568,12 @@
       "https://openai.com/index/introducing-chatgpt-for-sales",
       "https://openai.com/index/astra-law-6-2",
       "https://openai.com/index/introducing-openai-for-chile",
-      "https://openai.com/index/lvmh-media-division-partnership"
+      "https://openai.com/index/lvmh-media-division-partnership",
+      "https://openai.com/index/the-silent-consensus",
+      "https://openai.com/index/research-acceleration-jagged-frontier",
+      "https://openai.com/business/customer-stories/sumitomo-life",
+      "https://openai.com/index/inside-the-codex-sandbox",
+      "https://openai.com/index/managing-frontier-ai-risk"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1878,7 +1889,8 @@
       "https://www.anthropic.com/news/safeguards",
       "https://www.anthropic.com/news/distillation-defenses",
       "https://www.anthropic.com/news/security",
-      "https://www.anthropic.com/news/roadshow-launch"
+      "https://www.anthropic.com/news/roadshow-launch",
+      "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
     ],
     "steipete": [
       "https://steipete.me/posts/2026/openclaw/",
@@ -1927,10 +1939,10 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-18",
+    "simonwillison": "2026-11-19",
     "lilianweng": "2026-11-13",
-    "latentspace": "2026-11-18",
-    "interconnects": "2026-11-18",
+    "latentspace": "2026-11-19",
+    "interconnects": "2026-11-19",
     "karpathy": "2026-11-17",
     "raschka": "2026-11-17",
     "eugeneyan": "2026-11-17",
@@ -1938,10 +1950,10 @@
     "oneusefulthing": "2026-11-18",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-18",
+    "openai-news": "2026-11-19",
     "deepmind": "2026-11-18",
     "hf-blog": "2026-11-18",
-    "anthropic-news": "2026-11-18",
+    "anthropic-news": "2026-11-19",
     "steipete": "2026-11-18",
     "openclaw-blog": "2026-11-18"
   },

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-19-gemini-cli-0-69-0
+title: "gemini-cli v0.69.0 — 多模态内存与重试超时被收紧，长会话稳定性直接受益"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.69.0
+publishedAt: 2026-11-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "多模态内存与重试超时被收紧，长会话稳定性直接受益"
+broadcast: "谷歌的命令行智能体工具发布新版本，这次重点收紧多模态内存和重试超时。工具输出改为有界，旧的图片和附件数据会被回收，不再长期占内存；配额重试也不再持续数小时，还会通知客户端。对国内做智能体的人来说，长会话更稳，但得假定历史附件会被回收，并显式设置超时、处理重试和取消事件。"
+insight: "这次 v0.69.0 值得升级，重点在长会话稳定性：多模态 inlineData 会被回收，历史图像和 PDF 不能假定长期可读，依赖旧附件做上下文的 prompt 需要改成不依赖历史内联数据；重试和超时行为也变了，harness 要显式设置 requestTimeoutMs 或 GEMINI_API_HEADERS_TIMEOUT_MS 并处理重试事件，无头中止还要按取消语义清理工具状态。走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有配置即可。"
+tags: [multimodal-memory, retry-timeout, acp, headless-abort]
+---
+
+- 多部分工具输出改为有界，并淘汰较旧的多模态 inlineData，PDF 内联数据与遥测缓冲不再长期驻留内存；harness 需假定历史图像/附件会被回收，不能依赖其长期可读。
+- 配额重试不再持续数小时，重试时会通知 ACP 客户端，且 60 秒 API 头超时可通过 model.requestTimeoutMs 或 GEMINI_API_HEADERS_TIMEOUT_MS 覆盖；harness 应显式设置超时并处理重试事件。
+- 无头中止时会杀掉子进程、记录被取消的工具并保留信号退出码，ACP 流中重试不再拼接文本；harness 需按取消语义清理工具状态，而非只读最终文本。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.69.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.69.0)

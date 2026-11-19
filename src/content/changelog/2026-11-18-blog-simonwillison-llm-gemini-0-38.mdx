@@ -1,0 +1,23 @@
+---
+slug: 2026-11-18-blog-simonwillison-llm-gemini-0-38
+title: "llm-gemini 0.38 — Simon Willison 发布 llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/18/llm-gemini/
+publishedAt: 2026-11-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 发布 llm-gemini 0.38，吐槽 Gemini 4 Neon 定价更乱，并实测其推理档位"
+broadcast: "Simon Willison 更新了那个让大模型接入 Gemini 的工具，这次新增的模型让本就混乱的定价更绕：按现价从高到低排开，而其中一个档位到十二月一号还会翻倍。对国内开发者来说，选模型前得按生效日期算成本，不能只看发布页。他还实测了同一模型的低中高三档推理，结论是档位该作为独立配置纳入评测。"
+tags: [llm-gemini, gemini-4-neon, model-pricing, simon-willison]
+---
+
+- 新增的 Gemini 4 Neon 让本就混乱的 Gemini 4 定价更复杂：按当前价格从高到低是 Neon（$3/$15）、Carbon（$2/$10）、Hydrogen（$1.50/$7.50），而 Carbon 到 12 月 1 日会翻倍到 $4/$20。对开发者的含义是：选模型前必须按生效日期核算成本，不能只看发布页。
+- 作者用 pelican 测试了 Neon 的 low、medium、high 三档推理，并把 Argon 从对比表中移除；结论是 Neon 的 pelican 效果优于 Hydrogen、逊于 Carbon。对工具链的含义是：同一模型的不同 effort 档位应作为独立配置项纳入评测。
+- 他还在 Google Antigravity 里用 “extra” 档位让 Neon 生成一个 Three.js 动画：Yonkers 站起成巨型机甲，在曼哈顿、皇后区、布鲁克林踩踏，并使用 OpenStreetMap 数据。对 agent 的含义是：长指令加外部地图数据的组合，正成为检验模型执行力的常见场景。
+
+---
+
+> 原文：[llm-gemini 0.38](https://simonwillison.net/2026/Nov/18/llm-gemini/) · 作者 Simon Willison

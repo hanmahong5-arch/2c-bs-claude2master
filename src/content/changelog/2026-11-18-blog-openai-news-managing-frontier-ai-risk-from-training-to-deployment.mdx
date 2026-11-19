@@ -1,0 +1,23 @@
+---
+slug: 2026-11-18-blog-openai-news-managing-frontier-ai-risk-from-training-to-deployment
+title: "Managing frontier AI risk: From training to deployment — OpenAI 官方梳理前沿模型从训练到部署的风险管理四层机制"
+source: "OpenAI"
+sourceUrl: https://openai.com/index/managing-frontier-ai-risk
+publishedAt: 2026-11-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "OpenAI"
+hook: "OpenAI 官方梳理前沿模型从训练到部署的风险管理四层机制"
+broadcast: "OpenAI 官方梳理了前沿模型从训练到部署的风险管理机制，一共四层。训练阶段先做模型对齐，让模型行为符合预期；部署阶段用沙箱隔离运行环境，限制影响范围；再用拦截式防护和持续监控兜底。对国内 agent 开发者来说，这提醒我们，底层模型的安全边界由训练侧决定，上层应用不能假设模型已完全可控，执行环境隔离该是默认设计，上线后的监控和阻断也要和功能开发同等投入。"
+tags: [ai-safety, frontier-models, agent-security, deployment]
+---
+
+- 训练阶段做模型对齐，让模型行为符合预期，这是风险控制的第一道关口；对 agent 开发者而言，说明底层模型的安全边界由训练侧决定，上层应用不能假设模型本身已完全可控。
+- 部署阶段用沙箱隔离运行环境，限制模型行为的影响范围；对工具链的含义是，执行环境隔离应作为 agent 架构的默认设计，而非事后补丁。
+- 同时以拦截式防护和持续监控兜底，在运行时阻断并观察异常行为；对开发者的含义是，上线后的监控与阻断能力需要与功能开发同等投入。
+
+---
+
+> 原文：[Managing frontier AI risk: From training to deployment](https://openai.com/index/managing-frontier-ai-risk) · 作者 OpenAI

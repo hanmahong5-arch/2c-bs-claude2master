@@ -1,0 +1,23 @@
+---
+slug: 2026-11-19-claude-code-2-1-328
+title: "claude-code v2.1.328 — 自动模式默认开启，hook 失败可阻断动作，权限与遥测多处修复"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.328
+publishedAt: 2026-11-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "自动模式默认开启，hook 失败可阻断动作，权限与遥测多处修复"
+broadcast: "这次更新里，交互会话在没有权限模式时会默认进入自动模式，工具调用第一轮就直接执行，不再逐条确认，做宿主程序的需要按这个前提来设计。另外，工具钩子新增了失败即阻断的选项，策略校验可以放到工具层来做。还有一个开关，能阻止恢复会话时执行被延迟的工具调用，恢复流程的副作用现在要显式打开才生效。"
+insight: "这次 v2.1.328 对现有用户值得升级，重点在 hook 行为变化：交互会话无权限模式时默认进入 auto mode，首轮即自动执行而非逐条确认，依赖逐条确认的 prompt 或 hook 配置需要复核；mcp_tool hook 新增 onFailure: block 后，失败即阻断动作，策略校验可前移到 MCP 层。国内用户经 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [auto-mode, mcp-hooks, resume-control, permissions]
+---
+
+- 交互会话无权限模式时默认进入 auto mode（Opus 4.6/Sonnet 4.6，Bedrock、Agent Platform、Foundry、Claude apps gateway），harness 需假设首轮即自动执行而非逐条确认。
+- `mcp_tool` hook 新增 `"onFailure": "block"`，与 command/HTTP hook 对齐：hook 调用失败即阻断动作，策略校验可放在 MCP 层而非仅命令层。
+- 新增 `CLAUDE_CODE_DISABLE_DEFERRED_TOOL_RESUME`，宿主可阻止 `claude -p --resume`/`--continue` 执行被 hook 延迟的工具调用，恢复流程的副作用需显式开关控制。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.328](https://github.com/anthropics/claude-code/releases/tag/v2.1.328)

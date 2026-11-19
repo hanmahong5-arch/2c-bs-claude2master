@@ -1,0 +1,23 @@
+---
+slug: 2026-11-18-blog-openai-news-inside-the-codex-sandbox
+title: "Inside the Codex sandbox — OpenAI 拆解 Codex 沙箱：如何在你的机器上安全跑命令"
+source: "OpenAI"
+sourceUrl: https://openai.com/index/inside-the-codex-sandbox
+publishedAt: 2026-11-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "OpenAI"
+hook: "OpenAI 拆解 Codex 沙箱：如何在你的机器上安全跑命令"
+broadcast: "OpenAI 最近拆解了 Codex 的沙箱机制：它在你机器上执行命令时，会严格按你自己设定的文件和网络限制来跑，而不是默认放开权限，而且这套限制在三大桌面平台上都生效。对做 agent 的国内开发者来说，这提醒我们，执行环境隔离应该当成基础设施来设计，权限边界交给使用者配置、跨平台保持一致，而不是事后打补丁。"
+tags: [codex, sandbox, agent-security, cross-platform]
+---
+
+- Codex 在 macOS、Linux、Windows 上执行命令时，会强制执行用户自己设定的文件系统与网络限制，而不是默认放开权限。对 agent 工具链的含义是：权限边界应由使用者配置并跨平台一致生效。
+- 文章聚焦的是「沙箱」这一层机制，说明 Codex 是在受控环境里运行命令，而非无约束地直接操作主机。对开发者的含义是：把执行环境隔离当作 agent 的基础设施，而不是事后补丁。
+- 文中强调这些限制覆盖三大桌面平台。对跨平台 agent 产品的含义是：安全策略需要按平台分别落地，但对外呈现统一的控制语义。
+
+---
+
+> 原文：[Inside the Codex sandbox](https://openai.com/index/inside-the-codex-sandbox) · 作者 OpenAI
