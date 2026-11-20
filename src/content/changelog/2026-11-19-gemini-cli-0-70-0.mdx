@@ -1,0 +1,23 @@
+---
+slug: 2026-11-19-gemini-cli-0-70-0
+title: "gemini-cli v0.70.0 — 这版把策略匹配改成线性时间，并收紧 shell 命令的审批边界"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.70.0
+publishedAt: 2026-11-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "这版把策略匹配改成线性时间，并收紧 shell 命令的审批边界"
+broadcast: "谷歌的命令行智能体工具发布了新版本，这次把策略匹配改成线性时间，避免用户可控的模式引发正则回溯爆炸。同时收紧了 shell 命令的审批边界，含未解析展开的命令一律保持询问，审批要基于解析后的真实命令。它还默认跳过权限不安全的系统外部工具服务，同意提示默认改为否，外部工具接入默认拒绝、权限来源可审计，对国内做智能体的开发者来说，这些安全边界值得参考。"
+insight: "这次 v0.70.0 值得现有用户升级：策略匹配改为线性时间，能避免用户可控模式触发回溯爆炸；shell 审批改为基于解析后的真实命令，含未解析展开的命令保持 ASK_USER，默认同意提示改为 no。若你的 hook 或 prompt 依赖 commandPrefix/commandRegex 匹配原始字符串，需要按顶层命令参数重新核对配置。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [policy-engine, shell-approval, mcp-security, re2js]
+---
+
+- `re2js` 替换策略 `argsPattern` 求值，正则匹配变为线性时间；harness 设计上，策略引擎不应让用户可控模式触发回溯爆炸。
+- 含未解析展开的 shell 命令保持 `ASK_USER`，`commandPrefix`/`commandRegex` 改为匹配顶层命令参数；含义是审批判定需基于解析后的真实命令，而非原始字符串。
+- 跳过命令权限不安全的系统 MCP server，并披露规范链接路径、默认同意提示改为 no；含义是外部工具接入默认拒绝，权限来源需可审计。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.70.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.70.0)

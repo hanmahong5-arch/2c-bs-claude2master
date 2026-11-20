@@ -1,0 +1,23 @@
+---
+slug: 2026-11-20-codex-rust-v0-171-0
+title: "codex rust-v0.171.0 — TUI 工作区默认开启，模型目录换默认，远程执行与撤销重做上线"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.171.0
+publishedAt: 2026-11-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "TUI 工作区默认开启，模型目录换默认，远程执行与撤销重做上线"
+broadcast: "OpenAI 的 Codex 发布新版本，终端工作区默认开启，侧栏能搜索文档、预览图片，还能看到子代理记录；模型目录新增两个选项并换了默认。对国内做 agent 的开发者来说，重点是把默认模型改成目录驱动、把子代理输出当成可观测对象，另外远程执行和撤销重做也上线了，本地与远程会话的生命周期得分清楚。"
+insight: "这次 0.171.0 值得现有用户升级，重点不在新功能而在默认行为变了：模型目录默认切到 Sol，如果你的 harness 还把默认模型硬编码，升级后容易出现行为漂移，建议先把默认模型改成目录驱动再升。prompt 和 hook 配置本身不用动，但子代理输出要按一等可观测对象接入。走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有配置继续即可。"
+tags: [tui-workspace, model-catalog, remote-exec, subagents]
+---
+
+- 模型目录新增 GPT-6.2 Sol 与 Astra，Sol 成为默认目录选择；harness 需把默认模型从硬编码改为目录驱动，避免切换时行为漂移。
+- TUI 工作区默认启用，侧栏支持可搜索文档预览、图片预览与子代理记录；harness 设计需把子代理输出当作一等可观测对象，而非仅主对话。
+- 新增 `codex exec --remote <ADDR>` 在既有 app server 上启动或恢复非交互会话，另有 `/rc`、`/remote` 管理远程控制与配对码；harness 需区分本地与远程会话生命周期，并保证草稿、排队输入随原线程恢复。
+
+---
+
+> 原文 release：[openai/codex rust-v0.171.0](https://github.com/openai/codex/releases/tag/rust-v0.171.0)

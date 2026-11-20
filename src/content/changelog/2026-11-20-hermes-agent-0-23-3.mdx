@@ -1,0 +1,23 @@
+---
+slug: 2026-11-20-hermes-agent-0-23-3
+title: "hermes-agent v0.23.3 — 补丁版汇总 370 个 PR，提示缓存与压缩策略有变"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3
+publishedAt: 2026-11-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "补丁版汇总 370 个 PR，提示缓存与压缩策略有变"
+broadcast: "这次更新是个补丁版，汇总了三百多个合并请求，重点在提示缓存和压缩策略。新增的缓存生命周期控制器，会在长工具调用期间保持预热，空闲会话在缓存过期前压缩，缓存时长被当成可调度资源。压缩时还会归档被丢弃的工具结果，裁剪默认开启且可追溯。存储层也拆出持久化接口并接上本地数据库后端，会话和缓存状态能换后端，测试和迁移成本更低。"
+insight: "这次 v0.23.3 值得现有用户升级，重点不在功能堆叠，而在 prompt-cache 生命周期控制器和默认开启的主动工具结果裁剪：缓存 TTL 变成可调度资源，长工具调用期间保持预热、空闲会话在 1h 过期前压缩，原有把 TTL 当固定配置的 prompt 或 hook 配置需要相应调整，否则缓存策略会与 harness 预期脱节。压缩时归档被丢弃的工具结果，裁剪可追溯，复盘不受影响。摘要未提及代理链路变化，国内走 newapi.lurus.cn 的用户按现有方式即可。"
+tags: [prompt-cache, context-compaction, tool-results, persistence]
+---
+
+- 新增 prompt-cache 生命周期控制器：长工具调用期间保持预热，空闲会话在 1h 缓存过期前压缩，`prompt_caching.cache_ttl` 默认 `auto`；harness 需把缓存 TTL 当作可调度资源而非固定配置。
+- 压缩时归档被丢弃的工具结果，且主动工具结果裁剪默认开启；harness 设计要保证裁剪可追溯，避免上下文丢失后无法复盘。
+- 存储层拆到持久化接口后接 SQLite 后端；harness 的会话与缓存状态可换后端，测试与迁移成本下降。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.23.3](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3)

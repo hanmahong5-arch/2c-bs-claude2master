@@ -1,0 +1,23 @@
+---
+slug: 2026-11-18-blog-hf-blog-why-your-fine-tuning-job-takes-longer-than
+title: "Why your fine-tuning job takes longer than the FLOPs say — 微调耗时远超 FLOPs 估算，Hugging Face 博客拆解真实瓶颈"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time
+publishedAt: 2026-11-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "微调耗时远超 FLOPs 估算，Hugging Face 博客拆解真实瓶颈"
+broadcast: "很多人以为微调时间能靠算力理论值算出来，但 Hugging Face 的一篇博客指出，这样会严重低估实际耗时，因为数据加载、通信和调度这些开销在真实训练里根本不可忽略。对做 agent 工具链的团队来说，排期和成本预估不能只看理论算力，得把监控和实测基准放进流程里，让自动化训练有真实的耗时反馈。"
+tags: [fine-tuning, flops, training-performance, mlops]
+---
+
+- 文章指出，仅用 FLOPs 估算微调时间会严重低估实际耗时，因为数据加载、通信与调度开销在真实训练中不可忽略；对 agent 工具链而言，这意味着排期与成本预估不能只看算力理论值。
+- 博客分析了训练流水线中非计算环节（如 I/O、GPU 利用率波动）对总时长的放大效应；开发者应把监控与 profiling 纳入微调流程，而非只优化模型本身。
+- 文中强调实际吞吐受硬件、批大小与框架实现共同影响，建议以实测基准替代纯理论推算；这对构建自动化训练 agent 的团队意味着需要内建真实耗时反馈回路。
+
+---
+
+> 原文：[Why your fine-tuning job takes longer than the FLOPs say](https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time) · 作者 Hugging Face

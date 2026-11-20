@@ -1,0 +1,23 @@
+---
+slug: 2026-11-19-claude-code-2-1-329
+title: "claude-code v2.1.329 — hooks 信任提示、Code Mode 遥测兼容与大量稳定性修复"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.329
+publishedAt: 2026-11-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "hooks 信任提示、Code Mode 遥测兼容与大量稳定性修复"
+broadcast: "这次更新主要围绕信任和可观测性。信任对话框现在会标明文件夹里 hooks 的声明位置，托管设置加载失败时，非交互宿主里也会给出会话内警告，没有终端也能看到失败。另外，开启遥测后 Code Mode 也能用，脚本里每次工具调用都会上报事件。对国内做 agent 的开发者来说，这意味着权限来源更可审计，可观测性也不再和代码执行模式互斥。"
+insight: "这次 v2.1.329 的改动集中在 hooks 信任提示和 Code Mode 遥测兼容，属于稳定性修复而非功能升级，现有用户不必急着升；但如果你在托管设置里配了 hooks，建议升级后确认非交互宿主中的加载失败警告是否可见，并检查 hook 来源元数据是否完整，prompt 本身无需改动。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理相关变化，按现有方式使用即可。"
+tags: [hooks, code-mode, observability, trust-dialog]
+---
+
+- 信任对话框现在标明文件夹的 hooks 声明位置；harness 需把 hook 来源作为可审计元数据暴露给用户。
+- 托管设置中 hooks 加载失败时，在 Claude Desktop 等非交互宿主中给出会话内警告；无终端场景也要有可见的失败通道。
+- Code Mode 可在开启 OpenTelemetry 事件与指标时启用，脚本内每次工具调用都会上报事件；可观测性不再与代码执行模式互斥。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.329](https://github.com/anthropics/claude-code/releases/tag/v2.1.329)

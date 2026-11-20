@@ -1,0 +1,23 @@
+---
+slug: 2026-11-19-blog-openai-news-deploying-daybreak-red
+title: "Deploying Daybreak Red — OpenAI 介绍 Daybreak Red 受监督安全调查的参考架构与安全控制"
+source: "OpenAI"
+sourceUrl: https://openai.com/business/learn/deploying-daybreak-red
+publishedAt: 2026-11-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "OpenAI"
+hook: "OpenAI 介绍 Daybreak Red 受监督安全调查的参考架构与安全控制"
+broadcast: "OpenAI 最近公开了一套叫 Daybreak Red 的参考架构，讲的是怎么在人工监督下做安全调查，还给出了部署时的安全控制、环境搭建和监控方式。对做 agent 工具链的开发者来说，这提醒我们高风险流程得把监督和审计当成架构里的一等公民，监控指标和回滚路径要在设计阶段就定好，权限边界和人工介入点也该写进接口，而不是事后打补丁。"
+tags: [openai, security, reference-architecture, agent-ops]
+---
+
+- 文章给出 Daybreak Red 的参考架构，用于在人工监督下开展安全调查，并说明部署时的安全控制、环境搭建与监控方式。对构建 agent 工具链的开发者而言，这意味着高风险调查流程需要把监督与审计作为架构的一等公民。
+- 部署说明覆盖 setup 与 monitoring 两部分，强调上线后持续观测而非一次性配置。对运维 agent 的团队来说，监控指标和回滚路径应在设计阶段就确定。
+- 文章把 safety controls 与调查能力并列呈现，说明能力开放与风险约束需同步设计。对做安全类 agent 的开发者，权限边界和人工介入点应写进接口而非事后补丁。
+
+---
+
+> 原文：[Deploying Daybreak Red](https://openai.com/business/learn/deploying-daybreak-red) · 作者 OpenAI

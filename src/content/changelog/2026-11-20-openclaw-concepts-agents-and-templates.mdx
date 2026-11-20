@@ -1,0 +1,23 @@
+---
+slug: 2026-11-20-openclaw-concepts-agents-and-templates
+title: "Agents and Templates · OpenClaw — 什么时候该新建一个 agent，而不是继续用现有的？这篇文章给出了判断标准。"
+source: openclaw-concepts
+sourceUrl: https://docs.openclaw.ai/concepts/agents-and-templates
+publishedAt: 2026-11-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: practice
+hook: "什么时候该新建一个 agent，而不是继续用现有的？这篇文章给出了判断标准。"
+broadcast: "什么时候该新建一个 agent，而不是继续用现有的？这篇文章给了判断标准：同一件事反复交代、有独立指令和工具、需要积累专属上下文，才值得新建，一次性任务直接用现成的就行。它还讲清了一个 agent 的职责由指令、技能步骤、共享工具和定时任务四部分组成，而模板能打包这些配置却不含记忆和凭据，密钥只以环境变量引用。对国内做 agent 的团队来说，这提醒我们把配置和密钥分开，才方便分发复用。"
+insight: "现有用户不必急着升级，先按文章标准自查：若同一件事反复交代、已有独立指令或定时 automation，才值得拆成新 agent，否则继续用现有 agent 更省事。prompt 配置上建议把常驻指令与 skills 里的可复用步骤分开写，这是文章明确的两层结构。摘要未提及 newapi.lurus.cn 代理，国内走代理是否受影响暂无依据，不做判断。"
+tags: [agent-design, templates, context-isolation, mcp]
+---
+
+- 判断标准：同一件事反复交代、有独立指令/工具/日程、需要积累专属上下文时才新建 agent；一次性任务直接用现有 agent。含义：harness 的隔离边界应按「任务」而非「会话」划分。
+- 一个 agent 的职责由四部分定义：AGENTS.md/SOUL.md 指令、skills/ 目录下的 SKILL.md 步骤、Gateway 上共享的 plugins 与 MCP 工具、以及定时 automation。含义：prompt 设计要区分「常驻指令」与「可复用步骤」两层。
+- Template 打包指令、workspace 文件、skills、插件、MCP、automations，但不含记忆、对话和凭据；密钥只以环境变量引用声明。含义：可分发配置必须把 secret 与内容分离。
+
+---
+
+> 原文：[Agents and Templates · OpenClaw](https://docs.openclaw.ai/concepts/agents-and-templates)

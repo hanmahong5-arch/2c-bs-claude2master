@@ -1,0 +1,23 @@
+---
+slug: 2026-11-20-goose-1-60-2
+title: "goose v1.60.2 — Gemini 4 模型目录与思考等级修复，影响多模型 agent 的推理配置"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.60.2
+publishedAt: 2026-11-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Gemini 4 模型目录与思考等级修复，影响多模型 agent 的推理配置"
+broadcast: "这次更新在模型目录里加了 Gemini 4 Neon，同时修好了思考等级的发送逻辑，现在会把它发给 Gemini 4 及之后的版本，还包括 xhigh 这一档。对做多模型 agent 的国内开发者来说，这意味着适配层得按模型名和代际去区分能力集和推理强度，别再拿旧参数套新模型，把 provider 配置集中管理会更省心。"
+insight: "这次 v1.60.2 的改动集中在模型适配层，对现有用户来说，如果你在 goose 里用 Gemini 4 系列，值得升级：思考等级现在会真正发给 Gemini 4 及之后版本，含 xhigh，不升就吃不到这个修复。现有 prompt 不用动，但 hook 和推理强度映射要按模型代际分支，别再全局默认，否则旧参数会套到 Gemini 4 Neon 上。走 newapi.lurus.cn 代理的国内用户，摘要未提及代理层变动，按现有配置继续即可。"
+tags: [gemini, model-catalog, thinking-levels, provider-config]
+---
+
+- 模型目录新增 Gemini 4 Neon，harness 需按模型名区分能力集，避免把旧参数套到新模型。
+- 思考等级现在会发送给 Gemini 4 及之后版本，含 xhigh；harness 的推理强度映射要按模型代际分支，而非全局默认。
+- 两项改动都集中在模型适配层，说明 provider 配置应集中管理，减少散落的条件判断。
+
+---
+
+> 原文 release：[block/goose v1.60.2](https://github.com/aaif-goose/goose/releases/tag/v1.60.2)

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-18-blog-hf-blog-180b-parameters-32gb-of-ram-pushing-moe-inference
+title: "180B Parameters, 32GB of RAM: Pushing MoE Inference to — Hugging Face 演示如何在 32GB 内存里跑 180B 参数的 Mo"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/moe-expert-streaming
+publishedAt: 2026-11-18
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 演示如何在 32GB 内存里跑 180B 参数的 MoE 推理，靠的是专家流式加载。"
+broadcast: "Hugging Face 演示了怎么在只有 32GB 内存的机器上跑 180B 参数的 MoE 推理，办法是按需把专家权重从磁盘流式加载进内存，而不是全部常驻。这意味着本地部署大 MoE 的门槛，从内存容量转向了磁盘读写和调度策略，瓶颈也从算力变成存储带宽。对国内开发者来说，这套改造基于现有接口就能接入，为资源受限环境下的 agent 后端提供了一条可行路径。"
+tags: [moe-inference, transformers, low-memory, expert-offloading]
+---
+
+- 文章用 Transformers 实现 MoE 专家的按需流式加载：推理时只把当前 token 路由到的专家权重从磁盘读入内存，而非常驻全部参数，从而把 180B 模型压进 32GB RAM。对 agent 工具链的含义是，本地部署大 MoE 的门槛从显存/内存容量转向磁盘 IO 与调度策略。
+- 瓶颈随之从算力转移到存储带宽：专家换入换出的延迟直接决定吞吐，文章围绕这一权衡展开实验。对开发者的含义是，评估本地推理方案时要同时看磁盘读速和缓存命中率，而不只是 GPU 规格。
+- 方案基于 Transformers 现有接口实现，属于工程层面的改造而非新模型。含义是这类优化可以较容易地接入现有推理栈，为资源受限环境下的 agent 后端提供可行路径。
+
+---
+
+> 原文：[180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers](https://huggingface.co/blog/moe-expert-streaming) · 作者 Hugging Face

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-19-blog-simonwillison-postgresql-19-released
+title: "PostgreSQL 19 Released — PostgreSQL 19 迟到两个月发布，作者最爱的 WAIT FOR LSN"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/19/postgresql-19/
+publishedAt: 2026-11-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "PostgreSQL 19 迟到两个月发布，作者最爱的 WAIT FOR LSN 让只读副本也能读到自己刚写的数据"
+broadcast: "PostgreSQL 19 终于发布了，比惯常的九月晚了两个月，原因是团队要处理大量由 AI 报告的漏洞。这次最值得关注的是等待日志位点的新能力，让只读副本也能读到自己刚写的数据，读写分离的 agent 服务可以把读流量放心压到副本上。这个模式在维基百科已被大规模验证过，如今数据库原生支持，工具链不必再自己造轮子。"
+tags: [postgresql, replication, read-your-writes, ai-security-research]
+---
+
+- **WAIT FOR LSN 实现 read-your-writes 一致性**：应用在 standby 上执行 `WAIT FOR LSN '0/0306EE20' WITH (TIMEOUT '0.1s')`，等副本回放到指定 WAL 位置再查询，就能读到主库刚写入的数据；超时可选，超时会报错。对读写分离的 agent 服务来说，这意味着可以把读流量放心压到副本上，不必每次写后都回主库。
+- **这个模式来自 Wikipedia 的手工实现**：MediaWiki 把主库 binlog 位置存进 session，每个请求开始时先等副本追平再读，如今用 MySQL 的 `WAIT_FOR_EXECUTED_GTID_SET()` 并回退到 `SOURCE_POS_WAIT()`。说明这是被大规模生产验证过的需求，现在 Postgres 原生支持，工具链不必再自己造轮子。
+- **发布推迟源于 AI 报告漏洞的高峰**：作者称今年因 PostgreSQL 团队要处理大量 AI 报告的漏洞问题，发布比惯常的 9 月晚了两个月。对维护数据库依赖的开发者而言，这意味着上游安全响应压力在变大，升级窗口和补丁节奏需要重新评估。
+
+---
+
+> 原文：[PostgreSQL 19 Released](https://simonwillison.net/2026/Nov/19/postgresql-19/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-19-openclaw-2026-11-6
+title: "openclaw v2026.11.6 — 发布说明同时提供人类版和面向 AI agent 的纯 Markdown 变更日志"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.11.6
+publishedAt: 2026-11-19
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "发布说明同时提供人类版和面向 AI agent 的纯 Markdown 变更日志"
+broadcast: "这次发布有个细节值得注意：发布说明同时给了人类阅读的网页版，和一份纯 Markdown 的变更日志，专门给 AI agent 和工具读取。这意味着做 harness 的可以直接拿到结构化变更信息，不用再解析网页。这次变更面不小，四百多个提交、一百多位贡献者，升级前最好靠这份日志做差异比对；发布验证里还列了包、校验哈希和版本标识，方便做供应链校验。"
+insight: "这次 v2026.11.6 的变更面不小，406 个 commit、386 个 PR，现有用户升级前建议先拿 CHANGELOG 的纯 Markdown 做差异比对，别直接跟。对 harness 类配置来说，这次值得改的一点是让工具直接读 Markdown 变更日志，省掉解析 HTML 的环节；prompt 和 hook 本身没有必须调整的依据。国内走 newapi.lurus.cn 代理的用户，摘要里没有提到代理或网络相关变化，按现有信息判断不受影响，升级时用发布验证列出的 npm 包、tarball、integrity 哈希和 release SHA 锁定产物即可。"
+tags: [release-notes, changelog, agent-tooling, supply-chain]
+---
+
+- 发布说明与 changelog 内容相同，但提供两种格式：docs 页面供人阅读，CHANGELOG 的纯 Markdown 供 AI agent 和工具读取；这意味着 harness 可以直接获取结构化变更信息，无需解析 HTML。
+- 本次包含 406 个 commit、386 个 PR、157 位贡献者；这意味着 harness 在升级前需要评估的变更面较大，应依赖 changelog 做差异比对。
+- 发布验证信息列出了 npm 包、registry tarball、integrity 哈希与 release SHA；这意味着 harness 可据此做供应链校验，锁定具体产物。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.11.6](https://github.com/openclaw/openclaw/releases/tag/v2026.11.6)

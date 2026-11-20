@@ -1,16 +1,16 @@
 {
   "lastSeen": {
-    "anthropics/claude-code": "v2.1.328",
-    "openai/codex": "rust-v0.170.0",
+    "anthropics/claude-code": "v2.1.329",
+    "openai/codex": "rust-v0.171.0",
     "Aider-AI/aider": "v0.86.0",
     "cline/cline": "v4.1.26",
-    "block/goose": "v1.60.1",
+    "block/goose": "v1.60.2",
     "sst/opencode": "v2.3.2",
     "RooCodeInc/Roo-Code": "v3.54.0",
-    "google-gemini/gemini-cli": "v0.69.0",
-    "openclaw/openclaw": "v2026.10.33",
+    "google-gemini/gemini-cli": "v0.70.0",
+    "openclaw/openclaw": "v2026.11.6",
     "zeroclaw-labs/zeroclaw": "v0.9.0",
-    "NousResearch/hermes-agent": "v0.23.2"
+    "NousResearch/hermes-agent": "v0.23.3"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -249,7 +249,8 @@
     "zortos293/Lichii",
     "Minireel/HGhub",
     "JuneYaooo/rea-video",
-    "erkamyaman/rust-anything"
+    "erkamyaman/rust-anything",
+    "failsafe-security/artex"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -370,16 +371,17 @@
       "https://docs.openclaw.ai/concepts/storage-locations",
       "https://docs.openclaw.ai/concepts/recommended-models",
       "https://docs.openclaw.ai/concepts/runtime-profiles",
-      "https://docs.openclaw.ai/concepts/session-controller"
+      "https://docs.openclaw.ai/concepts/session-controller",
+      "https://docs.openclaw.ai/concepts/agents-and-templates"
     ],
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-19",
-    "claude-code-docs": "2026-11-13",
-    "openai-codex-blog": "2026-11-13",
-    "openclaw-concepts": "2026-11-13",
-    "hermes-guides": "2026-11-13"
+    "anthropic-engineering": "2026-11-20",
+    "claude-code-docs": "2026-11-20",
+    "openai-codex-blog": "2026-11-20",
+    "openclaw-concepts": "2026-11-20",
+    "hermes-guides": "2026-11-20"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -841,7 +843,9 @@
       "https://simonwillison.net/2026/Nov/18/llm-gemini/",
       "https://simonwillison.net/2026/Nov/18/datasette-arrows/",
       "https://simonwillison.net/2026/Nov/18/daniel-stenberg/",
-      "https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/"
+      "https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/",
+      "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+      "https://simonwillison.net/2026/Nov/19/postgresql-19/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1070,7 +1074,9 @@
       "https://latent.space/p/bfl/",
       "https://latent.space/p/cloudflare/",
       "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/",
-      "https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/"
+      "https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/",
+      "https://latent.space/p/ainews-anthropic-successfully-completes-largest-ipo-in-history-valued-at-1-5t/",
+      "https://latent.space/p/linear-scaling/"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1186,7 +1192,12 @@
       "https://eugeneyan.com/writing/principal",
       "https://eugeneyan.com/writing/semantic-ids",
       "https://eugeneyan.com/writing/qa-evals",
-      "https://eugeneyan.com/speaking/aie-2025"
+      "https://eugeneyan.com/speaking/aie-2025",
+      "https://eugeneyan.com/writing/leadership",
+      "https://eugeneyan.com/writing/news-agents",
+      "https://eugeneyan.com/writing/eval-process",
+      "https://eugeneyan.com/writing/writing-faq",
+      "https://eugeneyan.com/speaking/nvidia-gtc-2025"
     ],
     "chiphuyen": [
       "https://huyenchip.com//2025/01/16/ai-engineering-pitfalls.html",
@@ -1573,7 +1584,12 @@
       "https://openai.com/index/research-acceleration-jagged-frontier",
       "https://openai.com/business/customer-stories/sumitomo-life",
       "https://openai.com/index/inside-the-codex-sandbox",
-      "https://openai.com/index/managing-frontier-ai-risk"
+      "https://openai.com/index/managing-frontier-ai-risk",
+      "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "https://openai.com/business/learn/deploying-daybreak-red",
+      "https://openai.com/business/learn/pr-scans-demo",
+      "https://openai.com/business/learn/codex-security-plugin-demo",
+      "https://openai.com/business/learn/daybreak-blue-onboarding-demo"
     ],
     "deepmind": [
       "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -1643,7 +1659,9 @@
       "https://deepmind.google/blog/introducing-alphaproof-code/",
       "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
       "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
-      "https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/"
+      "https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/",
+      "https://deepmind.google/blog/introducing-gemini-4-neon/",
+      "https://deepmind.google/blog/genie-4-is-now-available/"
     ],
     "hf-blog": [
       "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
@@ -1810,7 +1828,12 @@
       "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
       "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
       "https://huggingface.co/blog/3d-lora-finetuning",
-      "https://huggingface.co/blog/openrouter"
+      "https://huggingface.co/blog/openrouter",
+      "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+      "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+      "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
+      "https://huggingface.co/blog/moe-expert-streaming",
+      "https://huggingface.co/blog/rumble-2-flash"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -1939,23 +1962,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-19",
-    "lilianweng": "2026-11-13",
-    "latentspace": "2026-11-19",
-    "interconnects": "2026-11-19",
-    "karpathy": "2026-11-17",
-    "raschka": "2026-11-17",
-    "eugeneyan": "2026-11-17",
-    "chiphuyen": "2026-11-13",
-    "oneusefulthing": "2026-11-18",
+    "simonwillison": "2026-11-20",
+    "lilianweng": "2026-11-20",
+    "latentspace": "2026-11-20",
+    "interconnects": "2026-11-20",
+    "karpathy": "2026-11-20",
+    "raschka": "2026-11-20",
+    "eugeneyan": "2026-11-20",
+    "chiphuyen": "2026-11-20",
+    "oneusefulthing": "2026-11-20",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-19",
-    "deepmind": "2026-11-18",
-    "hf-blog": "2026-11-18",
-    "anthropic-news": "2026-11-19",
-    "steipete": "2026-11-18",
-    "openclaw-blog": "2026-11-18"
+    "openai-news": "2026-11-20",
+    "deepmind": "2026-11-20",
+    "hf-blog": "2026-11-20",
+    "anthropic-news": "2026-11-20",
+    "steipete": "2026-11-20",
+    "openclaw-blog": "2026-11-20"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }
