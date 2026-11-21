@@ -1,0 +1,23 @@
+---
+slug: 2026-11-21-cline-4-1-27
+title: "cline v4.1.27 — read_files 不再截断到 8k，推理开关修复影响工具调用"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.27
+publishedAt: 2026-11-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "read_files 不再截断到 8k，推理开关修复影响工具调用"
+broadcast: "这次更新里，读取文件的结果不再被截断到八千字符，而是按工具自身上限完整送进模型，能减少分页读取和重复调用，但你得自己控制上下文预算。另外推理强度选择现在会真正保存并下发，关闭推理也会生效，所以别假设关掉就一定被接受，要按模型能力映射参数。"
+insight: "这次 v4.1.27 值得现有用户升级：read_files 不再截断到 8k，改为按工具自身上限完整送入模型，能减少分页读取和重复调用，但上下文预算要自己控制。推理强度选择现在会真正保存并下发，None 也生效，原生 OpenAI 提供方会按模型能力裁剪档位，所以现有 prompt 或 hook 配置里若假设关闭推理一定被接受，需要按模型能力重新映射参数。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [read-files, reasoning-effort, model-catalog, mcp]
+---
+
+- `read_files` 结果不再被截到 8k 字符，改为按工具自身上限（2000 行或约 48k 字符）完整送入模型；harness 设计上可减少分页读取与重复调用，但需自行控制上下文预算。
+- 推理强度选择现在会真正保存并下发，"None" 也会生效，原生 OpenAI 提供方会按模型能力裁剪档位；harness 不应假设关闭推理一定被接受，需按模型能力映射参数。
+- 保存 API key 或 base URL 后模型列表会刷新，失败（如 key 被拒）在模型选择器中报错；harness 应把凭据变更后的列表刷新与错误暴露纳入配置流程。
+
+---
+
+> 原文 release：[cline/cline v4.1.27](https://github.com/cline/cline/releases/tag/v4.1.27)

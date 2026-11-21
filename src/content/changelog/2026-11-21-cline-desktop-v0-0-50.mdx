@@ -1,0 +1,23 @@
+---
+slug: 2026-11-21-cline-desktop-v0-0-50
+title: "cline desktop-v0.0.50 — 读文件不再被截断，推理参数适配修复多处 400 错误"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.50
+publishedAt: 2026-11-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "读文件不再被截断，推理参数适配修复多处 400 错误"
+broadcast: "这次桌面版更新解决了一个很实际的问题：读文件的结果不再被截断，模型能完整拿到工具允许范围内的内容，长文件终于不用再丢信息了。另外手动压缩现在可以中途停止，不再卡在思考状态没法退出；原生接口也会按模型能力适配推理档位，减少了不少报错。对做 agent 的开发者来说，这提醒我们截断该交给工具边界、每个阻塞环节都要留取消入口。"
+insight: "这次 v0.0.50 值得升级，尤其常读大文件或跑长任务的用户：read_files 不再截到 8k 字符，按工具上限完整送达，手动 /compact 也能停止，卡住时不用干等。现有 prompt 和 hook 配置不用改，截断策略已交给工具边界。走 newapi.lurus.cn 代理的国内用户不受影响，摘要未涉及代理层变动；原生 OpenAI provider 的推理档位适配只影响直连场景，代理用户按原配置用即可。"
+tags: [agent-harness, compaction, reasoning-effort, model-catalog]
+---
+
+- `read_files` 结果不再被截到 8k 字符，改为按工具自身上限（2000 行或约 48k 字符）完整送达模型；harness 应把截断策略交给工具边界，而非传输层。
+- 手动 `/compact` 现在可停止，此前摘要器卡住时界面停在 Thinking… 且无 Stop；长任务 harness 需为每个阻塞阶段提供取消入口。
+- 原生 OpenAI provider 按模型能力适配推理档位，`max` 与 Extra High 不再被 GPT-5.x 和 o-series 拒绝；harness 应维护模型能力表而非统一传参。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.50](https://github.com/cline/cline/releases/tag/desktop-v0.0.50)

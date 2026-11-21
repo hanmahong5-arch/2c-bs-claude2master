@@ -1,0 +1,23 @@
+---
+slug: 2026-11-20-blog-latentspace-the-war-against-slop-and-an-emerging-weapon
+title: "The War Against Slop and an Emerging Weapon to Fight — AI 代码泛滥成“slop”，形式化验证正成为对抗低质输出的新武器"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/formal-verification/
+publishedAt: 2026-11-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "AI 代码泛滥成“slop”，形式化验证正成为对抗低质输出的新武器"
+broadcast: "AI 写代码越来越多，可质量参差不齐，光靠跑测试或让模型自己检查，其实都不算真正的验证。现在有一种叫形式化验证的办法，用数学证明给出确定结论，相关求解器已经在大型生产管线里每天被调用数十亿次。对国内开发者和 agent 工具链来说，这意味着可以接一个能机器检查的验证层，而且验证成本正在下降，以后写规格和审查可能会取代逐行写代码。"
+tags: [formal-verification, ai-agents, lean, code-quality]
+---
+
+- 文章指出，AI 编码代理所谓的“验证”通常只是跑测试、自我批评或让另一个模型评判，而形式化验证用数学证明给出确定性结论；对 agent 工具链而言，这意味着需要接入可机器检查的验证层，而非依赖概率性自检。
+- &Truth 联合创始人 Clark Barrett 提到，cvc5 求解器在 Amazon 生产管线中每天被调用数十亿次，用于 Kiro 的规格分析与测试生成；这说明形式化工具已在大规模工程中落地，开发者可将其视为 agent 工作流的可靠后端。
+- 多家公司（Harmonic、Theorem、Axiom Math、&Truth）基于 Lean 构建验证系统，Anthropic 报告 Opus 5.5 在 36 个验证任务上以少 40% token 达到 50% 解决率；对开发者而言，验证成本正在下降，“veri-coding”可能让写规格与审查取代逐行写代码。
+
+---
+
+> 原文：[The War Against Slop and an Emerging Weapon to Fight it: Formal Verification](https://latent.space/p/formal-verification/) · 作者 Latent Space

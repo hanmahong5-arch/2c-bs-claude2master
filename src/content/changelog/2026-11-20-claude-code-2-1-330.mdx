@@ -1,0 +1,23 @@
+---
+slug: 2026-11-20-claude-code-2-1-330
+title: "claude-code v2.1.330 — 企业登录接管配置、自托管 runner 指标与一批并发丢失修复"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.330
+publishedAt: 2026-11-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "企业登录接管配置、自托管 runner 指标与一批并发丢失修复"
+broadcast: "这次更新最值得留意的是企业组织登录：登录后会自动套用组织设置，并走组织指定的云厂商或网关，这意味着身份来源要和运行时配置绑在一起，不能只做本地配置。另外自托管运行器加了启动目录和两个秒级启动指标，方便把启动延迟纳入调度和容量观测；还修了多进程保存设置丢失、并发插件命令导致插件消失、并发任务更新丢依赖和元数据这几类问题，共享状态写入得加锁或合并。"
+insight: "这次 v2.1.330 的核心变化在企业登录接管和并发写入修复，对普通个人用户影响有限，不必急着升级；但如果你在跑自托管 runner 或多人共享同一套配置，建议尽快升，因为并发保存设置丢失、插件消失、任务元数据丢失都是会实际踩到的坑，升级后 harness 侧要同步给共享状态写入加锁或合并。走 newapi.lurus.cn 代理的用户，摘要未提及代理相关改动，登录流程变化是否影响代理需自行验证后再决定。"
+tags: [enterprise-auth, self-hosted-runner, concurrency, observability]
+---
+
+- 新增企业组织登录：`claude auth login` 后自动应用组织设置并使用其云厂商或网关，harness 需把身份来源与运行时配置绑定，而非只做本地配置。
+- 自托管 runner 新增 `--start-dir` 与两个 order-to-registered/first-session 秒级指标，harness 可据此把启动延迟纳入调度决策与容量观测。
+- 修复多进程同时保存用户设置丢失、并发 `claude plugin` 命令导致插件从列表消失、并发任务更新丢失依赖与元数据，harness 的共享状态写入需加锁或合并。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330)

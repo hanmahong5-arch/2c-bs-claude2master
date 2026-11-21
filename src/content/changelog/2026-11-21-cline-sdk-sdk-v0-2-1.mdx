@@ -1,0 +1,23 @@
+---
+slug: 2026-11-21-cline-sdk-sdk-v0-2-1
+title: "cline sdk/sdk/v0.2.1 — 工具结果上限与推理字段修复，直接影响 agent 上下文完整性"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.1
+publishedAt: 2026-11-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "工具结果上限与推理字段修复，直接影响 agent 上下文完整性"
+broadcast: "这次更新修了工具结果上限和推理字段两个问题。读文件的结果上限从八千提到五万，命令、搜索等其它工具还是八千，说明做 agent 得按工具类型区分结果预算，不能一刀切。另外，需要交错推理的模型在字段缺失时会补占位，避免压缩或换模型后报错，推理字段该当成模型能力元数据来管。"
+insight: "这次 v0.2.1 值得现有用户升级，重点在 read_files 结果上限从 8k 提到 50k，agent 读文件的上下文完整性会明显改善，而命令、搜索、MCP 等仍保留 8k，说明结果预算要按工具类型区分。若你的 prompt 或 hook 里对工具结果做了统一截断假设，建议按工具类型调整，不要一刀切。走 newapi.lurus.cn 代理的用户不受影响，摘要未涉及代理侧变更。"
+tags: [tool-result-cap, reasoning-content, model-catalog, agent-harness]
+---
+
+- `read_files` 结果不再被压到 8k，改用 50k 文件内容上限；命令、搜索、MCP 与自定义工具仍保留 8k。harness 设计上需按工具类型区分结果预算，而非一刀切。
+- 需要交错推理的模型，在缺失时补占位 `reasoning_content`，修复压缩或切换模型后的 400 报错；该事实由 `ModelInfo.metadata.interleavedReasoningField` 承载。harness 应把推理字段当作模型能力元数据管理。
+- 摘要器改为“优先不用推理”而非直接关闭，网关仅对目录中声明可关闭的模型禁用；自定义模型保存覆盖时默认注入 `reasoning` 能力。harness 需区分“偏好”与“强制禁用”，避免向端点发送其拒绝的参数。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.2.1](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.1)

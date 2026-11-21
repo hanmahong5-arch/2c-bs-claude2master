@@ -1,0 +1,23 @@
+---
+slug: 2026-11-21-cline-cli-v3-0-75
+title: "cline cli-v3.0.75 — 一次性运行默认改 yolo 模式，无人值守的工具审批逻辑变了"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/cli-v3.0.75
+publishedAt: 2026-11-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "一次性运行默认改 yolo 模式，无人值守的工具审批逻辑变了"
+broadcast: "这次命令行工具的一次性运行默认改成了全自动放行模式，无人值守时工具审批逻辑变了，需要团队工具就得手动指定。另外超时和中断现在能打断首轮运行，读文件也不再固定截断，而是按工具自身上限完整返回。对做 agent 的国内开发者来说，上下文预算该交给工具上限和压缩策略，而不是自己硬截。"
+insight: "这次 CLI v3.0.75 对现有用户值得升级，重点在一次性运行的默认行为变了：prompt 参数或管道 stdin 现在默认走 yolo 模式，无人值守时工具会被默认放行。如果你的 hook 或脚本依赖原来的 act 审批逻辑，需要检查一遍；要用 team 工具就得显式传 --act。另外 read_files 不再截断到 8k，上下文预算得重新评估。国内走 newapi.lurus.cn 代理不受影响，摘要未涉及代理层改动。"
+tags: [yolo-mode, one-shot-runs, tool-output, timeout]
+---
+
+- 一次性运行（prompt 参数或管道 stdin）默认从 act 模式改为 yolo 模式，仅在关闭自动批准、传入模式标志、保存 plan 模式或 `/team` prompt 时保留 act；含义是无人值守场景需默认放行工具，但 yolo 无 team 工具，需 team 时显式传 `--act`。
+- `--timeout` 与 Ctrl+C 现在能中断一次性运行的首轮，此前无法打断；含义是 harness 需为每轮建立可取消边界，而非只覆盖后续轮次。
+- `read_files` 结果不再截断到 8k 字符，改为按工具自身上限（2000 行或约 48k 字符）完整返回；含义是上下文预算应交给工具上限与压缩策略，而非固定截断。
+
+---
+
+> 原文 release：[cline/cline cli-v3.0.75](https://github.com/cline/cline/releases/tag/cli-v3.0.75)
