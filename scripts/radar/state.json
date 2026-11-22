@@ -378,7 +378,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-21",
+    "anthropic-engineering": "2026-11-22",
     "claude-code-docs": "2026-11-20",
     "openai-codex-blog": "2026-11-20",
     "openclaw-concepts": "2026-11-20",
@@ -848,7 +848,9 @@
       "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
       "https://simonwillison.net/2026/Nov/19/postgresql-19/",
       "https://simonwillison.net/2026/Nov/20/ravi-vakil/",
-      "https://simonwillison.net/2026/Nov/20/levent-alpoge/"
+      "https://simonwillison.net/2026/Nov/20/levent-alpoge/",
+      "https://simonwillison.net/2026/Nov/21/muru/",
+      "https://simonwillison.net/2026/Nov/20/llm-gemini/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1843,7 +1845,9 @@
       "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
       "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
       "https://huggingface.co/blog/moe-expert-streaming",
-      "https://huggingface.co/blog/rumble-2-flash"
+      "https://huggingface.co/blog/rumble-2-flash",
+      "https://huggingface.co/blog/inkling2mini",
+      "https://huggingface.co/blog/harness-adapters-at-scale"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -1969,27 +1973,28 @@
       "https://openclaw.ai/blog/openclaw-focus-weeks/",
       "https://openclaw.ai/blog/use-new-models-in-openclaw-without-an-update/",
       "https://openclaw.ai/blog/shattering-silos-with-openclaw-multiplayer/",
-      "https://openclaw.ai/blog/openclaw-shenzhen-claw-hack-2026/"
+      "https://openclaw.ai/blog/openclaw-shenzhen-claw-hack-2026/",
+      "https://openclaw.ai/blog/openclaw-isnt-free/"
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-21",
+    "simonwillison": "2026-11-22",
     "lilianweng": "2026-11-20",
-    "latentspace": "2026-11-21",
-    "interconnects": "2026-11-21",
+    "latentspace": "2026-11-22",
+    "interconnects": "2026-11-22",
     "karpathy": "2026-11-20",
     "raschka": "2026-11-20",
     "eugeneyan": "2026-11-20",
     "chiphuyen": "2026-11-20",
-    "oneusefulthing": "2026-11-20",
+    "oneusefulthing": "2026-11-22",
     "importai": "2026-10-31",
     "thezvi": "2026-10-31",
-    "openai-news": "2026-11-21",
-    "deepmind": "2026-11-20",
-    "hf-blog": "2026-11-20",
-    "anthropic-news": "2026-11-21",
-    "steipete": "2026-11-20",
-    "openclaw-blog": "2026-11-20"
+    "openai-news": "2026-11-22",
+    "deepmind": "2026-11-22",
+    "hf-blog": "2026-11-22",
+    "anthropic-news": "2026-11-22",
+    "steipete": "2026-11-22",
+    "openclaw-blog": "2026-11-22"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

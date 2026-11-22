@@ -1,0 +1,23 @@
+---
+slug: 2026-11-21-blog-simonwillison-muru
+title: "Muru — mod_wsgi 作者用 AI 辅助写 Rust 服务器 Muru，三周连发 1"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/21/muru/
+publishedAt: 2026-11-21
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "mod_wsgi 作者用 AI 辅助写 Rust 服务器 Muru，三周连发 18 篇开发日志"
+broadcast: "做 mod_wsgi 二十年的 Graham Dumpleton 推出了新项目 Muru，一个用 AI 辅助开发的 Rust 服务器，目标是为 Python 的两种应用接口在开发和生产环境里提供最佳运行工具，这意味着 Python 部署层可能多一个同时兼容两种接口的新选择。他还把开发过程公开，三周发了十八篇文章，讲内部结构、渐进发布和可观测性这些机制，对做 agent 和运维工具的人来说，这些能力正被下沉到服务器层。他也提到，AI 承担了大量表面工作，但判断什么还不够好仍由他决定，领域经验还是质量把关的核心。"
+tags: [python, asgi-wsgi, ai-assisted-programming, rust]
+---
+
+- Graham Dumpleton 在 mod_wsgi 二十年后推出 Muru：一个 AI 辅助开发的 Rust 服务器，目标是为 ASGI 和 WSGI Python 应用在开发与生产环境提供最佳运行工具。对工具链开发者而言，这意味着 Python 部署层可能出现一个同时兼容两种接口的新选择。
+- 他把开发过程本身当作公开产物，三周内发布 18 篇细节文章，覆盖 worker 内部结构、import once fork many、开发环境 HTTPS、WSGI 与 ASGI 共存、发布而非重启、无 service mesh 的 canary、Kubernetes 集成、按 worker 上报扩缩容、缩容到零、定时 overlay、工具栏与链路追踪。对 agent 与运维工具而言，这些机制说明部署可观测性和渐进发布正被下沉到服务器层。
+- 在《AI as a lifestyle choice》中他写道：AI 或许承担了表面上的大量工作，但判断什么还不够好仍由他决定，二十年用 mod_wsgi 犯错的经历正好用于此。对使用 AI 辅助编程的开发者而言，这提示领域经验仍是质量把关的核心。
+
+---
+
+> 原文：[Muru](https://simonwillison.net/2026/Nov/21/muru/) · 作者 Simon Willison

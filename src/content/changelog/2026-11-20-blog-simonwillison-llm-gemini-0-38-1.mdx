@@ -1,0 +1,23 @@
+---
+slug: 2026-11-20-blog-simonwillison-llm-gemini-0-38-1
+title: "llm-gemini 0.38.1 — llm"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/20/llm-gemini/
+publishedAt: 2026-11-20
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "llm-gemini 补上 xhigh 推理档，同一模型输出 token 从 5 千涨到 3 万"
+broadcast: "有个模型插件补上了一个此前漏掉的高强度推理档位。同一个模型在这个档位下，输出从五千多 token 涨到三万一千多，花费也从四美分跳到二十三美分。这说明推理档位直接决定 token 和成本的量级，国内做 agent 的朋友，默认档位最好做成可配置，别写死；接入多模型时，各模型的能力参数也不对齐，得按模型分别维护。"
+tags: [llm-reasoning, gemini, llm-tooling, cost-control]
+---
+
+- Gemini 4 Carbon 只支持 low/medium/high 三档推理，而 Hydrogen 和 Neon 多一个 xhigh 档；作者此前漏加，0.38.1 补上。含义：接入多模型时，各模型能力参数并不对齐，插件层需要按模型分别维护枚举值。
+- Hydrogen 在 high 档输出 5,311 token、花费 3.99 美分；切到 xhigh 后输出 31,477 token、花费 23.61 美分。含义：推理档位直接决定 token 与成本量级，agent 默认档位应可配置而非写死。
+- 作者用「骑自行车的鹈鹕」对比网格验证，xhigh 下的 Hydrogen 产出已可与 Neon 竞争。含义：评估模型升级要看同任务下的实际产出与成本，而非只看档位名称。
+
+---
+
+> 原文：[llm-gemini 0.38.1](https://simonwillison.net/2026/Nov/20/llm-gemini/) · 作者 Simon Willison
