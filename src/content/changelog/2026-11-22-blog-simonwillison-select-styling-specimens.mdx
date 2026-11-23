@@ -1,0 +1,23 @@
+---
+slug: 2026-11-22-blog-simonwillison-select-styling-specimens
+title: "Select Styling Specimens — Simon Willison 嫌 select 下拉框各浏览器样式不一，让 Cl"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/22/select-styling/
+publishedAt: 2026-11-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon Willison 嫌 select 下拉框各浏览器样式不一，让 Claude 生成样式样本页并挑出最爱的 CSS"
+broadcast: "Simon Willison 嫌浏览器自带的下拉框样式难看，而且各家表现还不一致，就让 Claude 生成一个页面，把下拉框所有能改样式的方式都摆出来，方便他在桌面和移动端各浏览器截图对比。他最后选中的方案是去掉原生外观，用内联图标画下拉箭头，再配好间距和圆角。这件事值得国内开发者留意：像跨浏览器视觉验证这种重复劳动，可以交给 agent 先生成基线页面，人只负责截图和判断，但样式结论还得自己多端实测确认。"
+tags: [css, html, select-styling, ai-assisted-dev]
+---
+
+- 他因 Chrome 里 `<select>` 默认样式难看、各浏览器表现不一致而动手，让 Claude Fable 5.2 生成一个展示 select 所有可样式化方式的页面，计划在桌面和移动端各浏览器截图对比。含义：把「跨浏览器视觉验证」这类重复劳动交给 agent 生成基线页面，人只做截图与判断。
+- 他最终选定的方案用 `appearance: none` 去掉原生外观，再用内联 SVG data URI 作背景画下拉箭头，配合 padding、边框与圆角统一观感。含义：data URI 内联图标免去额外请求与资源依赖，适合作为可复用的组件样式片段。
+- 文中只给出这段 CSS 在三个浏览器下的效果，没有更多结论。含义：样式结论仍需人工在多端实测确认，agent 产出的是候选与样本，不是最终答案。
+
+---
+
+> 原文：[Select Styling Specimens](https://simonwillison.net/2026/Nov/22/select-styling/) · 作者 Simon Willison

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-23-opencode-2-4-0
+title: "opencode v2.4.0 — 内置浏览器、定时自动化、视频生成，三条新能力都影响 agent 执行边界"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.4.0
+publishedAt: 2026-11-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "内置浏览器、定时自动化、视频生成，三条新能力都影响 agent 执行边界"
+broadcast: "这次更新带来三项能力：内置桌面浏览器能导入你常用浏览器的登录状态，让 agent 直接读写同一批已登录页面；定时自动化可按时间或事件触发脚本和命令；插件还能自动更新并热重载。对国内开发者来说，这意味着 agent 能碰到真实账号和真实执行环境，权限和运行记录必须提前管好。"
+insight: "现有用户值得升级到 v2.4.0，但升级前先改配置：浏览器权限要纳入 deny 规则，否则 agent 能读写你已登录的页面；Automations 的 shell 动作只在创建时审批一次，harness 需记录每次运行的退出码与输出，不用就设 automations: false 关闭。插件自动更新方面，harness 应改用版本范围约束而非精确版本。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [agent-harness, automation, browser, plugin-update]
+---
+
+- **内置桌面浏览器**：可导入 Chrome/Edge/Firefox/Safari 的登录与历史，agent 能读写同一批已登录页面；harness 需把浏览器权限纳入 deny 规则，`browser` deny 会拒绝所有 agent 浏览器调用。
+- **Automations**：支持定时、cron 或 MCP 事件触发 prompt/脚本/shell，shell 动作仅在创建时审批一次；harness 设计需记录每次运行的退出码与输出，并提供 `"automations": false` 关闭开关。
+- **插件自动更新**：`name@latest`、版本范围、Git 分支每 24 小时检查并热重载，失败则保留旧版；harness 应依赖版本范围约束，而非精确版本，以获自动更新。
+
+---
+
+> 原文 release：[sst/opencode v2.4.0](https://github.com/anomalyco/opencode/releases/tag/v2.4.0)

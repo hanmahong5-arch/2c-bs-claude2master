@@ -1,0 +1,23 @@
+---
+slug: 2026-11-23-openclaw-2026-11-7
+title: "openclaw v2026.11.7 — 网关重启不再丢回复，SDK 三处破坏性变更需迁移"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.11.7
+publishedAt: 2026-11-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "网关重启不再丢回复，SDK 三处破坏性变更需迁移"
+broadcast: "这次更新最值得说的是网关重启后不再丢回复了，被中断的回复和子结果都能恢复，但前提是待处理状态要持久化，不能只放在内存里。另外开发套件有三处破坏性变更，注册方式、中断控制和超时字段都改了，插件边界得按迁移文档改造。做 agent 的国内开发者要留意，子代理结果现在绑定请求轮次，单个失败不再连累兄弟结果。"
+insight: "这次升级对普通用户不是必选项，但插件或 harness 开发者必须处理：三处 SDK 破坏性变更没有兼容别名，尤其 observe() 的 expiresAtMs 直接改名，不迁移就会在插件边界报错。现有 prompt 和 hook 配置无需改动，会话恢复只要求 harness 把 pending 状态持久化。国内走 newapi.lurus.cn 代理的用户不受影响，摘要未提及代理或鉴权变化。建议开发者按迁移文档改造后再升，纯使用方可以观望。"
+tags: [gateway-recovery, sdk-breaking-change, subagent-results, automation]
+---
+
+- **会话恢复**：Gateway 重启后可恢复被中断的回复与子结果，待处理工作不丢失。harness 需把 pending 状态持久化，而非只存内存。
+- **SDK 破坏性变更**：`setActiveEmbeddedRun` 注册移入 `runAttempt` 回调，未准入报 `SESSION_CONTROLLER_ADMISSION_REQUIRED`；`chatAbortControllers` 改为 `dispatchGatewayMethod` 并在 manifest 声明契约；`observe()` 的 `expiresAtMs` 改为 `startDeadlineAtMs` 且无兼容别名。harness 需按迁移文档改造插件边界。
+- **自动化与子代理**：自动化归属会话可修复失败，并区分恢复/跳过与真实失败；子代理结果绑定请求轮次，单个子失败不再丢弃兄弟结果。harness 应显式建模运行结果状态，而非二元成败。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.11.7](https://github.com/openclaw/openclaw/releases/tag/v2026.11.7)

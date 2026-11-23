@@ -1,0 +1,23 @@
+---
+slug: 2026-11-22-blog-eugeneyan-how-public-evals-work-where-they-break-and
+title: "How Public Evals Work, Where They Break, and What — 拆解 12 个公开评测基准，指出它们如何运作、在哪失效、该怎么改"
+source: "Eugene Yan"
+sourceUrl: https://eugeneyan.com/writing/public-evals
+publishedAt: 2026-11-22
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Eugene Yan"
+hook: "拆解 12 个公开评测基准，指出它们如何运作、在哪失效、该怎么改"
+broadcast: "有作者拆解了十二个公开评测基准，发现评测失效往往不在题目本身，而在数据污染和选择偏差，模型可能早就见过测试集，排行榜分数因此失真。文章还指出发布者、提交者和受众目标不一致，基准容易被过度优化。对国内开发者来说，别把公开榜单当成选型唯一依据，自建贴近真实任务的私有评测集更可靠，评测也该是持续流程而不是一次性跑分。"
+tags: [evals, benchmarks, llm-evaluation, agent-tooling]
+---
+
+- 作者拆解 12 个公开基准后发现，评测的失效往往不在题目本身，而在数据污染与选择偏差：模型可能见过测试集，排行榜分数因此失真。对 agent 工具链的含义是，别把公开榜单当作选型唯一依据。
+- 文章指出公开评测的激励结构有问题：发布者、提交者与受众目标不一致，导致基准被过度优化。对开发者的含义是，自建贴近真实任务的私有评测集比追逐 SOTA 更可靠。
+- 作者给出改进方向，包括更好的数据隔离、动态更新题目与更透明的报告方式。对 agent 构建者的含义是，评测应作为持续流程而非一次性跑分。
+
+---
+
+> 原文：[How Public Evals Work, Where They Break, and What Should Change](https://eugeneyan.com/writing/public-evals) · 作者 Eugene Yan
