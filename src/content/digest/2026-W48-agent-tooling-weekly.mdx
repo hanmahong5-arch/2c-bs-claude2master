@@ -1,0 +1,110 @@
+---
+slug: 2026-W48-agent-tooling-weekly
+title: "沙箱与权限成 agent 工具链主线，模型迭代加速"
+publishedAt: 2026-11-23
+weekOf: 2026-11-23
+authored: hybrid
+model: deepseek-chat
+readingMinutes: 11
+hook: "本周 agent 工具链的核心议题是执行隔离与权限边界：外部沙箱、权限不变量、凭据竞态修复密集出现，同时模型迭代与成本结构继续变化。"
+tags: [sandbox-isolation, permission-model, agent-harness, model-iteration, cost-optimization]
+---
+
+## 本周看点
+本周 agent 工具链的主基调是「把执行关进笼子」：从 Simon Willison 提出的 external sandbox 模式，到 Codex、Claude Code、gemini-cli、opencode 集中修复沙箱权限、凭据竞态与审批边界，隔离与权限正从附加项变成架构前提。与此同时，模型侧 GPT-6.2 Astra/Sol、Gemini 4 Neon 密集发布，成本与 harness 适配成为选型关键变量。
+
+## 逐条速览
+- **[OpenAI / Strengthening NATO and allied cyber defenses with AI]** (2 min) — OpenAI 与北约及盟国网络机构合作，让受信任防御方用 AI 找漏洞、验修复。原文 [链接](https://openai.com/index/strengthening-nato-allied-cyber-defences-ai)
+- **[Simon Willison / External sandboxes for coding agents]** (4 min) — 提出 external sandbox 模式，agent 本体留在沙箱外、只把执行代码送进沙箱，三个实现共享 localhost API。原文 [链接](https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/)
+- **[anthropics/claude-code v2.1.327]** (2 min) — 权限、恢复、MCP 配置多处安全修复，`mcp add-json` 支持 stdin 避免 token 进命令行。原文 [链接](https://github.com/anthropics/claude-code/releases/tag/v2.1.327)
+- **[openai/codex rust-v0.169.1]** (1 min) — 补丁版本无实质变更，仅版本对齐。原文 [链接](https://github.com/openai/codex/releases/tag/rust-v0.169.1)
+- **[OpenAI / Introducing GPT-6.2 Astra and Sol]** (2 min) — 新模型主打专业输出、编码与 computer use，覆盖 ChatGPT Work、Codex 与 API。原文 [链接](https://openai.com/index/introducing-gpt-6-2-astra-sol)
+- **[JuneYaooo/rea-video]** (2 min) — 逆向拆解视频逐镜头判断来源，输出可读的 VIDEO.md。原文 [链接](https://github.com/JuneYaooo/rea-video)
+- **[OpenAI / Astra for Law leads in legal intelligence]** (1 min) — Astra for Law 在 24 个法律领域评测中排名第一，面向 Enterprise 客户申请开放。原文 [链接](https://openai.com/index/astra-law-6-2)
+- **[block/goose v1.60.0]** (3 min) — 技能与命令操作重构，工具钩子改由 goose 自有循环触发。原文 [链接](https://github.com/aaif-goose/goose/releases/tag/v1.60.0)
+- **[Latent Space / Perplexity hits a $1B revenue run rate]** (3 min) — Perplexity 年化收入破 10 亿美元，Qwen4-Max 成本大降，推理栈转向 agent 自动优化。原文 [链接](https://latent.space/p/ainews-perplexity-hits-a-1b-revenue-run-rate-up-4x-in-2026/)
+- **[Latent Space / Cloudflare Joins the Jevolution]** (3 min) — Cloudflare 两周复刻 Jev 并推出提取模型 Clairic，基础设施公司下场造模型。原文 [链接](https://latent.space/p/cloudflare/)
+- **[Simon Willison / GPT‑6.2 Astra and GPT‑6.2 Sol]** (3 min) — 实测新模型：价格降了，但长任务里会追问人类答不上的实现细节。原文 [链接](https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/)
+- **[sst/opencode v1.19.6]** (2 min) — 大图会话超 25 MiB 自动替换占位符，请求体过大触发压缩重试。原文 [链接](https://github.com/anomalyco/opencode/releases/tag/v1.19.6)
+- **[Simon Willison / Quoting Go Proverbs]** (1 min) — 引用「少量复制胜过少量依赖」，提示依赖取舍要看维护成本。原文 [链接](https://simonwillison.net/2026/Nov/17/go-proverbs/)
+- **[OpenAI / Introducing ChatGPT for Sales]** (2 min) — 推出 Sales 插件与 30+ 合作插件，让 ChatGPT 接入销售流程。原文 [链接](https://openai.com/index/introducing-chatgpt-for-sales)
+- **[openclaw/openclaw v2026.11.5]** (3 min) — 重启不丢消息、更新失败可回滚，第三方 harness 有破坏性变更。原文 [链接](https://github.com/openclaw/openclaw/releases/tag/v2026.11.5)
+- **[OpenAI / Introducing OpenAI for Chile]** (1 min) — 与智利政府合作推动公共部门 AI 应用与本地创业。原文 [链接](https://openai.com/index/introducing-openai-for-chile)
+- **[Simon Willison / Running the full server-side Datasette Python app in the browser]** (3 min) — Service Worker + Pyodide 让完整 Datasette 在浏览器跑，可指定版本与插件。原文 [链接](https://simonwillison.net/2026/Nov/17/datasette-lite/)
+- **[OpenAI / Advancing chip design with OpenAI models]** (2 min) — 模型优化 Jalapeño 硅片电路并改进 RISC-V 核心设计。原文 [链接](https://openai.com/index/advancing-chip-design-with-our-models)
+- **[openclaw/openclaw v2026.10.33]** (2 min) — extended-stable 版聚焦长会话内存上限与更新中断自恢复。原文 [链接](https://github.com/openclaw/openclaw/releases/tag/v2026.10.33)
+- **[erkamyaman/rust-anything]** (2 min) — 把现有应用逐块重写成 Rust，每步对照原行为校验。原文 [链接](https://github.com/erkamyaman/rust-anything)
+- **[OpenAI / How Sumitomo Life’s leaders helped teams adopt ChatGPT]** (1 min) — 住友生命高管先用 ChatGPT Enterprise，带动投研与编码场景落地。原文 [链接](https://openai.com/business/customer-stories/sumitomo-life)
+- **[block/goose v1.60.1]** (1 min) — 压缩上下文时删掉 `<analysis>` 草稿块，Claude 不再拒绝请求。原文 [链接](https://github.com/aaif-goose/goose/releases/tag/v1.60.1)
+- **[Simon Willison / Quoting Daniel Stenberg]** (2 min) — curl 作者用数据回击 AI 重写：三周 200 个真实修复，克隆版一个都没有。原文 [链接](https://simonwillison.net/2026/Nov/18/daniel-stenberg/)
+- **[Hugging Face / Why your fine-tuning job takes longer than the FLOPs say]** (2 min) — 微调耗时远超 FLOPs 估算，真实瓶颈在数据加载、通信与调度。原文 [链接](https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time)
+- **[OpenAI / Le Groupe Figaro and OpenAI partner]** (1 min) — 费加罗报新闻以摘要加链接形式接入 ChatGPT。原文 [链接](https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership)
+- **[Simon Willison / llm-gemini 0.38]** (3 min) — 吐槽 Gemini 4 Neon 定价更乱，实测 low/medium/high 三档推理。原文 [链接](https://simonwillison.net/2026/Nov/18/llm-gemini/)
+- **[Hugging Face / Rumble-2-Flash]** (1 min) — 0.5B 开源语音模型覆盖 40+ 语言，可本地部署。原文 [链接](https://huggingface.co/blog/rumble-2-flash)
+- **[Simon Willison / The PSF end-of-year fundraiser]** (1 min) — PSF 年度募捐，说明 PyPI 与安全投入去向。原文 [链接](https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/)
+- **[Google DeepMind / Genie 4 is now available]** (2 min) — 从单图生成可交互 3D 世界，面向 agent 训练环境供给。原文 [链接](https://deepmind.google/blog/genie-4-is-now-available/)
+- **[sst/opencode v2.3.1]** (2 min) — 超时命令转后台继续跑，自动压缩摘要默认后台写入。原文 [链接](https://github.com/anomalyco/opencode/releases/tag/v2.3.1)
+- **[Hugging Face / Time-Series Models in the Streamhouse]** (1 min) — IBM 研究介绍 Streamhouse 中的时序模型与用例。原文 [链接](https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse)
+- **[Google DeepMind / Introducing Gemini 4 Neon]** (1 min) — 发布公告，正文缺失，无法确认具体能力与基准。原文 [链接](https://deepmind.google/blog/introducing-gemini-4-neon/)
+- **[openai/codex rust-v0.170.0]** (3 min) — 沙箱权限与 MCP 凭据修复，权限视为会话级不变量。原文 [链接](https://github.com/openai/codex/releases/tag/rust-v0.170.0)
+- **[Hugging Face / 180B Parameters, 32GB of RAM]** (2 min) — 用专家流式加载把 180B MoE 压进 32GB 内存。原文 [链接](https://huggingface.co/blog/moe-expert-streaming)
+- **[sst/opencode v2.3.2]** (2 min) — 系统提示词改放可缓存前缀，单步未缓存输入从 1.4 万降到 3 token。原文 [链接](https://github.com/anomalyco/opencode/releases/tag/v2.3.2)
+- **[Simon Willison / datasette-arrows 0.1a0]** (2 min) — Datasette 新增流式导出插件机制，首个示例用 Apache Arrow。原文 [链接](https://simonwillison.net/2026/Nov/18/datasette-arrows/)
+- **[Hugging Face / DaisyRose-27B]** (1 min) — 聚焦后训练效率的 27B 模型技术说明。原文 [链接](https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin)
+- **[OpenAI / Research acceleration: The jagged frontier]** (2 min) — 编码 agent 加速 AI 研究但能力参差，暗示递归自我改进的边界。原文 [链接](https://openai.com/index/research-acceleration-jagged-frontier)
+- **[OpenAI / The Silent Consensus]** (1 min) — 战略未来负责人谈更强 AI 如何重塑社会与制度控制。原文 [链接](https://openai.com/index/the-silent-consensus)
+- **[OpenAI / Inside the Codex sandbox]** (2 min) — 拆解 Codex 如何在三大桌面平台强制执行用户设定的文件系统与网络限制。原文 [链接](https://openai.com/index/inside-the-codex-sandbox)
+- **[OpenAI / Managing frontier AI risk]** (2 min) — 梳理训练对齐、部署沙箱、拦截防护与持续监控四层机制。原文 [链接](https://openai.com/index/managing-frontier-ai-risk)
+- **[Latent Space / GPT-6.2 Astra, the #2 Frontier Model]** (3 min) — Astra 智能略逊但成本低 20%-600%，harness 成本差异最高 4.4 倍。原文 [链接](https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/)
+- **[Anthropic / Anthropic prices initial public offering]** (2 min) — IPO 定价每股 83 美元，11 月 19 日纳斯达克挂牌。原文 [链接](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)
+- **[Latent Space / Gemini 4 Neon: GDM's Opus/Sol Contender]** (3 min) — 七周内第四个 Gemini 4 模型，中端价格逼近更大模型，但实测有容量错误与卡死。原文 [链接](https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/)
+- **[Latent Space / Scaling Linear’s GTM to $100M ARR]** (2 min) — Linear 超一半新建 issue 由 agent 创建，MCP server 成为产品一等接口。原文 [链接](https://latent.space/p/linear-scaling/)
+- **[OpenAI / Deploying Daybreak Red]** (2 min) — 受监督安全调查的参考架构与安全控制。原文 [链接](https://openai.com/business/learn/deploying-daybreak-red)
+- **[anthropics/claude-code v2.1.328]** (2 min) — 自动模式默认开启，`mcp_tool` hook 失败可阻断动作。原文 [链接](https://github.com/anthropics/claude-code/releases/tag/v2.1.328)
+- **[OpenAI / Get started with Daybreak Blue]** (1 min) — Daybreak Blue 入门设置演示视频。原文 [链接](https://openai.com/business/learn/daybreak-blue-onboarding-demo)
+- **[google-gemini/gemini-cli v0.69.0]** (2 min) — 多模态内存有界、重试超时收紧，长会话稳定性受益。原文 [链接](https://github.com/google-gemini/gemini-cli/releases/tag/v0.69.0)
+- **[anthropics/claude-code v2.1.329]** (2 min) — hooks 信任提示标明声明位置，Code Mode 可同时开启遥测。原文 [链接](https://github.com/anthropics/claude-code/releases/tag/v2.1.329)
+- **[google-gemini/gemini-cli v0.70.0]** (2 min) — 策略匹配改线性时间，含未解析展开的 shell 命令保持 ASK_USER。原文 [链接](https://github.com/google-gemini/gemini-cli/releases/tag/v0.70.0)
+- **[openclaw/openclaw v2026.11.6]** (2 min) — 发布说明同时提供人类版与面向 AI agent 的纯 Markdown 变更日志。原文 [链接](https://github.com/openclaw/openclaw/releases/tag/v2026.11.6)
+- **[OpenAI / See PR scans in action]** (1 min) — 演示在 PR 流程中查看扫描结果。原文 [链接](https://openai.com/business/learn/pr-scans-demo)
+- **[OpenAI / How OpenAI’s Performance Factory keeps ChatGPT fast]** (2 min) — Codex 驱动的多条工作流自动发现并修复 ChatGPT 性能问题。原文 [链接](https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast)
+- **[Simon Willison / PostgreSQL 19 Released]** (3 min) — WAIT FOR LSN 让只读副本实现 read-your-writes，发布因 AI 报告漏洞高峰推迟两个月。原文 [链接](https://simonwillison.net/2026/Nov/19/postgresql-19/)
+- **[openclaw-concepts / Agents and Templates]** (2 min) — 给出何时新建 agent 的判断标准，模板打包配置但不含记忆与凭据。原文 [链接](https://docs.openclaw.ai/concepts/agents-and-templates)
+- **[block/goose v1.60.2]** (1 min) — 模型目录新增 Gemini 4 Neon，思考等级按模型代际发送。原文 [链接](https://github.com/aaif-goose/goose/releases/tag/v1.60.2)
+- **[Simon Willison / Quoting Levent Alpöge]** (2 min) — 数学家称与 Claude 合作证明黎曼猜想，尚无同行验证。原文 [链接](https://simonwillison.net/2026/Nov/20/levent-alpoge/)
+- **[OpenAI / Hebbia sees improvements in financial research with GPT-6 Astra]** (1 min) — 预发布实测显示信源覆盖、引用相关性改善，未披露具体数字。原文 [链接](https://openai.com/business/customer-stories/hebbia)
+- **[Simon Willison / Quoting Ravi Vakil]** (1 min) — 数学家解释为何提前公开未完成的 GRH 证明草稿，强调无 AI 参与。原文 [链接](https://simonwillison.net/2026/Nov/20/ravi-vakil/)
+- **[NousResearch/hermes-agent v0.23.3]** (2 min) — 补丁版汇总 370 个 PR，新增 prompt-cache 生命周期控制器。原文 [链接](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3)
+- **[anthropics/claude-code v2.1.330]** (2 min) — 企业登录接管配置、自托管 runner 指标与并发丢失修复。原文 [链接](https://github.com/anthropics/claude-code/releases/tag/v2.1.330)
+- **[openai/codex rust-v0.171.0]** (3 min) — TUI 工作区默认开启，模型目录换默认，远程执行与撤销重做上线。原文 [链接](https://github.com/openai/codex/releases/tag/rust-v0.171.0)
+- **[Simon Willison / Token fraud is here and it’s BAD]** (2 min) — ChatPRD 免费试用被批量滥用、token 被转卖，最终取消免费试用。原文 [链接](https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/)
+- **[Hugging Face / Introducing harness adapters]** (2 min) — 用适配器把同一模型接到不同 agent harness，以提升性能并降低成本。原文 [链接](https://huggingface.co/blog/harness-adapters-at-scale)
+- **[Simon Willison / llm-gemini 0.38.1]** (2 min) — 补上 xhigh 推理档，同一模型输出 token 从 5 千涨到 3 万。原文 [链接](https://simonwillison.net/2026/Nov/20/llm-gemini/)
+- **[OpenAI / Introducing MedChemBench]** (1 min) — 测 AI 能否像药物化学家一样解读分子结构并筛选候选化合物。原文 [链接](https://openai.com/index/introducing-medchembench)
+- **[failsafe-security/artex]** (1 min) — FailSafe 自建本地版 ARTEX，Go 实现，887 星。原文 [链接](https://github.com/failsafe-security/artex)
+- **[Anthropic / Anthropic announces closing of initial public offering]** (2 min) — IPO 完成并同步向七家芯片与云厂商定向增发，合计募资约 1195 亿美元。原文 [链接](https://www.anthropic.com/news/ipo-close)
+- **[Hugging Face / Welcome Inkling 2 Mini]** (1 min) — 主打本地部署也能跑出前沿级表现，正文缺失需查模型卡。原文 [链接](https://huggingface.co/blog/inkling2mini)
+- **[Latent Space / The War Against Slop]** (3 min) — 形式化验证正成为对抗低质 AI 输出的新武器，cvc5 在 Amazon 生产管线日调用数十亿次。原文 [链接](https://latent.space/p/formal-verification/)
+- **[OpenAI / Combatting adversarial distillation]** (2 min) — 对抗蒸馏防护覆盖训练、安全措施、检测与执法四层。原文 [链接](https://openai.com/index/combatting-adversarial-distillation)
+- **[OpenClaw / OpenClaw Isn't Free.]** (1 min) — 工具免费但运行成本不免费，评估 agent 要算总拥有成本。原文 [链接](https://openclaw.ai/blog/openclaw-isnt-free/)
+- **[Latent Space / Anthropic successfully completes largest IPO]** (3 min) — 估值 1.5 万亿美元，Dario 承诺按安全节奏推进训练，算力承诺与收入预期存在缺口。原文 [链接](https://latent.space/p/ainews-anthropic-successfully-completes-largest-ipo-in-history-valued-at-1-5t/)
+- **[cline/cline desktop-v0.0.50]** (2 min) — 读文件不再截断到 8k，推理参数适配修复多处 400 错误。原文 [链接](https://github.com/cline/cline/releases/tag/desktop-v0.0.50)
+- **[devvmhq/devvm]** (2 min) — 每个项目一个隔离 VM，自带工具链，供人或编码 agent 直接开工。原文 [链接](https://github.com/devvmhq/devvm)
+- **[Latent Space / Riemann Hypothesis proved...twice independently]** (3 min) — 两个黎曼猜想证明同日出现：一个 AI 写的 1.3GB Lean 代码，一个人类写的 940 页草稿。原文 [链接](https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/)
+- **[cline/cline cli-v3.0.75]** (2 min) — 一次性运行默认改 yolo 模式，首轮可被超时与 Ctrl+C 中断。原文 [链接](https://github.com/cline/cline/releases/tag/cli-v3.0.75)
+- **[cline/cline sdk/sdk/v0.2.1]** (2 min) — 工具结果上限按类型区分，推理字段缺失时补占位修复 400 报错。原文 [链接](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.1)
+- **[cline/cline v4.1.27]** (2 min) — read_files 不再截断到 8k，推理强度选择真正保存并下发。原文 [链接](https://github.com/cline/cline/releases/tag/v4.1.27)
+- **[Simon Willison / Muru]** (2 min) — mod_wsgi 作者用 AI 辅助写 Rust 服务器 Muru，三周连发 18 篇开发日志。原文 [链接](https://simonwillison.net/2026/Nov/21/muru/)
+
+## 本周实测
+挑 opencode v2.3.2 的提示词缓存修复来复现：在 c2m 本地装好 opencode 后，用 GitHub Copilot 路由的 `gpt-6.2-sol` 跑一个多步任务（例如让它读三个文件并改一处代码），在请求日志里记录每步的未缓存输入 token 数。升级到 v2.3.2 后重跑同一任务，预期看到系统提示词不再作为 `instructions` 字段重复计费，单步未缓存输入从约 14,000 token 降到个位数，总费用相应下降。可对照 release 说明 [链接](https://github.com/anomalyco/opencode/releases/tag/v2.3.2) 确认缓存前缀行为。
+
+## 设计趋势
+本周最明显的贯穿性设计观察是「隔离边界从整机收缩到执行层，并成为可配置的一等公民」。证据有三：Simon Willison 的 external sandbox 把 agent 本体留在沙箱外、只让执行代码进入沙箱，并内置 HTTP allow-list 与凭据替换（[链接](https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/)）；Codex v0.170.0 把权限视为会话级不变量，子线程不再丢失既有沙箱限制（[链接](https://github.com/openai/codex/releases/tag/rust-v0.170.0)）；gemini-cli v0.70.0 让含未解析展开的 shell 命令保持 ASK_USER，审批基于解析后的真实命令（[链接](https://github.com/google-gemini/gemini-cli/releases/tag/v0.70.0)）。对 harness 设计者的含义是：权限、网络出口与凭据管理不能再散落在各工具实现里，而应作为执行环境的统一配置项，且默认拒绝、可审计。
+
+## 编辑没选它的原因
+本周刻意没展开两类 release：一是 codex rust-v0.169.1，发布说明明确无实质变更、仅版本对齐，展开没有信息增量；二是 Gemini 4 Neon 官方发布公告与 Daybreak Blue 入门演示，前者正文缺失无法核实能力，后者只是 onboarding 视频，均不适合作为本周主线。此外 openclaw v2026.10.33 属 extended-stable 分支的维护性修复，与本周主线（沙箱与权限）关联较弱，仅作速览保留。
+
+---
+
+> 本周报由 LLM 起草、编辑润色（hybrid）。本草稿走 PR 审核流程，merge 前编辑会校稿。
