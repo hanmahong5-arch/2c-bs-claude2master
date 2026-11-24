@@ -1,0 +1,23 @@
+---
+slug: 2026-11-24-gemini-cli-0-71-1
+title: "gemini-cli v0.71.1 — v0.71.1 是补丁版本，只做了一次 cherry"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.71.1
+publishedAt: 2026-11-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "v0.71.1 是补丁版本，只做了一次 cherry-pick，值得关注的是发布流程本身"
+broadcast: "这次发布的是一个补丁版本，只从发布分支上挑拣了一个提交，改动由发布机器人提交，而不是人工直接推送。值得关注的是发布流程本身：补丁发布走的是发布分支加单独挑拣的路径，机器人还持有发布分支的写权限，所以做 agent 工具链时，要把这两步当成独立可审计的环节，给机器人单独划定权限边界和操作日志。另外发布说明只列了这一条变更，没写具体修了什么，下游别从版本号推断功能变化。"
+insight: "这次 v0.71.1 只是 cherry-pick 单个提交的补丁版，release notes 也没写具体修复内容，所以现有用户不必为版本号升级，先核对 changelog 链接确认是否涉及自己用到的功能再决定；现有 prompt 和 hook 配置无需改动。国内走 newapi.lurus.cn 代理的用户同样不受影响，因为摘要里没有任何接口或配置变更的信息。"
+tags: [release-process, cherry-pick, patch-release, automation]
+---
+
+- 版本号从 v0.71.0 升到 v0.71.1，仅通过 cherry-pick 单个提交（aafdfdf）到 release/v0.71.0-pr-30420 分支完成；这说明补丁发布走的是从发布分支单独挑拣的路径，harness 设计上应把「发布分支 + cherry-pick」作为独立可审计的步骤。
+- 变更由 @gemini-cli-robot 提交（PR #30429），而非人工直接推送；这意味着自动化机器人持有发布分支写权限，harness 需要为机器人身份单独设定权限边界与操作日志。
+- release notes 只列出这一条变更，未说明具体修复内容；对 harness 的含义是补丁版本的信息量可能极低，下游不应从版本号推断功能变化，需依赖 changelog 链接核对。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.71.1](https://github.com/google-gemini/gemini-cli/releases/tag/v0.71.1)

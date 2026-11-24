@@ -1,0 +1,23 @@
+---
+slug: 2026-11-23-blog-simonwillison-ladybird-s-first-alpha-release
+title: "Ladybird's first alpha release — Ladybird 首个 alpha 发布，作者实测其速度与进程隔离，并揭示 AI"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/23/ladybird/
+publishedAt: 2026-11-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Ladybird 首个 alpha 发布，作者实测其速度与进程隔离，并揭示 AI 编码代理如何推动浏览器引擎追赶 Safari。"
+broadcast: "一个新的独立浏览器引擎发布了首个测试版，Mac 和 Linux 用户不用自己编译就能装上试用。作者实测多数网站能正常打开，但部分边缘接口还有缺口。更值得留意的是，它每个标签页独立进程，内存从六十兆到八百多兆不等，做浏览器自动化的 agent 得按进程管理资源和崩溃恢复；而它靠 AI 编码代理在五天内把测试通过数从约二百一十二万推到二百一十八万，说明测试套件可以当成代理能执行的任务清单。"
+tags: [browser-engine, coding-agents, webassembly, open-source]
+---
+
+- **首个 alpha 可安装**：macOS/Linux 用户无需自行编译即可试用；作者实测加载多数网站正常，但 Datasette Lite 因 `navigator.serviceWorker.startMessages` 缺失而报错，说明新引擎在 service worker 等边缘 API 上仍有缺口。
+- **多进程隔离已就位**：每个标签页独立进程，作者开七个标签后 WebContent 进程内存从 60MB 到 819MB 不等；对 agent 工具链意味着浏览器自动化需按进程粒度管理资源与崩溃恢复。
+- **AI 编码代理带来测试跃升**：十月五天内 web-platform-tests 通过数从约 212 万涨到 218 万，靠代理针对 WPT 做大量小修复累积；对开发者而言，这是把测试套件当作 agent 可执行任务清单的实证案例。
+
+---
+
+> 原文：[Ladybird's first alpha release](https://simonwillison.net/2026/Nov/23/ladybird/) · 作者 Simon Willison

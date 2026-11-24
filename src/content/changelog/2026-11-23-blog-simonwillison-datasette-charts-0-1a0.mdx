@@ -1,0 +1,23 @@
+---
+slug: 2026-11-23-blog-simonwillison-datasette-charts-0-1a0
+title: "datasette-charts 0.1a0 — 用 Claude 生成原型后，Datasette 新图表插件能对全量数据自动推荐"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/23/datasette-charts/
+publishedAt: 2026-11-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "用 Claude 生成原型后，Datasette 新图表插件能对全量数据自动推荐并聚合出图"
+broadcast: "Datasette 出了一个新图表插件，能对任意表或查询自动判断哪些图表合适，顶部缩略图就是真实数据渲染的。它把每张图编译成 SQL，对全量结果聚合，而不是只画当前页那点行。对国内做数据工具和 agent 的开发者来说，这意味着可视化选型可以交给工具自动完成，图表正确性靠查询下推保证。"
+tags: [datasette, data-visualization, sql, coding-agents]
+---
+
+- 插件对任意表或 SQL 查询定义多种图表类型（内置 D3、Observable Plot、topojson-client），并用启发式规则判断哪些图表适合当前数据；顶部建议缩略图本身就是真实数据渲染的。含义：可视化选型可以交给工具自动完成，减少人工试错。
+- 与旧插件只画当前页最多约 100 行不同，新插件把每张图编译成 SQL，用 GROUP BY、时间分桶和窗口函数聚合整个结果集（可达数百万行），每次查询结果上限 5000 行。含义：图表正确性依赖查询下推，而非前端抽样。
+- 大表建议图表时用采样避免评估全量结果集，图表状态存于 URL 的 #fragment，可收藏和分享。含义：可复现的分享链接对协作和调试有价值。
+
+---
+
+> 原文：[datasette-charts 0.1a0](https://simonwillison.net/2026/Nov/23/datasette-charts/) · 作者 Simon Willison

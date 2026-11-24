@@ -1,0 +1,23 @@
+---
+slug: 2026-11-23-blog-hf-blog-how-to-build-and-maintain-an-agentic-evaluation
+title: "How to build and maintain an agentic evaluation — Hugging Face 讲如何搭建并维护 agent 评测，值得做 agent"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/agentic-evals
+publishedAt: 2026-11-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 讲如何搭建并维护 agent 评测，值得做 agent 的团队参考"
+broadcast: "Hugging Face 有篇文章聊了聊怎么搭建和维护 agent 评测，核心观点是评测不是跑一次分就完事，而是要像代码一样持续维护、纳入版本管理，否则模型和工具一变分数就失真。文章还强调评测要覆盖多步任务和工具调用的过程，不能只看最终答案，同时得用可复现的环境和明确的评分标准来降低噪声。做 agent 的团队值得参考。"
+tags: [agentic-evals, hugging-face, agent, evaluation]
+---
+
+- 文章把 agent 评测当成需要持续维护的工程，而不是一次性跑分：评测集要随模型与工具变化更新，否则分数会失真。对开发者的含义是，评测要像代码一样纳入版本管理。
+- 文中强调 agent 评测要覆盖多步任务与工具调用过程，而非只看最终答案。这意味着工具链需要记录中间步骤，才能定位失败环节。
+- 作者建议用可复现的环境与明确的评分标准来降低评测噪声。对 agent 团队来说，先固定环境再谈提升分数，否则对比没有意义。
+
+---
+
+> 原文：[How to build and maintain an agentic evaluation](https://huggingface.co/blog/agentic-evals) · 作者 Hugging Face

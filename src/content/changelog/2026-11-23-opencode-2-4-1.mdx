@@ -1,0 +1,23 @@
+---
+slug: 2026-11-23-opencode-2-4-1
+title: "opencode v2.4.1 — macOS 12 会话保存修复，配置型 provider 模型可见"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.4.1
+publishedAt: 2026-11-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "macOS 12 会话保存修复，配置型 provider 模型可见"
+broadcast: "这次更新修了一个挺关键的问题：在较老的 macOS 系统上，助手消息之前根本存不下来，现在能正常保存了，做本地工具的人得注意按运行环境降级存储能力。另外，只靠配置接入的模型，比如本地跑的那类，不用登录就能在模型列表里看到，模型发现和登录状态解耦了。还有压缩后历史超出上限的问题也修了，包括单条消息本身就超限的情况。"
+insight: "这次 v2.4.1 值得 macOS 12 用户升级，因为 v2.4.0 在该系统上因 SQLite 不支持 JSON 操作符导致助手消息无法保存，属于实打实的数据问题；其余用户若没遇到压缩后历史超出 keep.tokens 的情况，可以缓一步。prompt 和 hook 配置不用改，本次没有涉及相关变更。国内走 newapi.lurus.cn 代理是否受影响，摘要里没有提到，无法判断。"
+tags: [macos12, sqlite, provider-config, compaction]
+---
+
+- macOS 12 系统 SQLite 不支持 v2.4.0 用的 JSON 操作符，导致助手消息无法保存；harness 需按运行环境降级存储能力。
+- 仅配置的 provider（如 Ollama）无需 `/connect` 登录即在 `/models` 显示模型；harness 的模型发现应解耦登录态。
+- 压缩后保留历史超出 `keep.tokens` 的问题已修，含单条最新消息超限场景；harness 的上下文裁剪需处理单条超限边界。
+
+---
+
+> 原文 release：[sst/opencode v2.4.1](https://github.com/anomalyco/opencode/releases/tag/v2.4.1)

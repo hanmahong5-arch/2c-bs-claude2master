@@ -1,0 +1,23 @@
+---
+slug: 2026-11-23-blog-simonwillison-glm-5-4-toward-generalized-coding-with-our
+title: "GLM-5.4: Toward Generalized Coding with Our First Loop — GLM"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/23/glm-54/
+publishedAt: 2026-11-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "GLM-5.4 用循环 Transformer 提升编码能力，作者实测 API 并对比四代模型表现"
+broadcast: "智谱推出了一个新模型，第一次用上循环 Transformer，让同一组层反复迭代、精炼隐藏状态，不增加参数量也能加深推理。对国内开发者来说，这意味着更小的显存预算可能换来更强的编码能力，部署成本结构或许会变。作者还发现它和常规接口共用同一套兼容端点，现有工具稍作适配就能接入。"
+tags: [glm, loop-transformer, llm-release, agentic-coding]
+---
+
+- GLM-5.4 是 Z.ai 首个采用循环 Transformer 的模型：一组共享权重的层多次迭代、精炼隐藏状态，从而在不增加参数量的前提下加深网络。这意味着开发者可以用更小显存预算换取更强推理深度，部署成本结构可能改变。
+- 作者注意到一周内第二次见到循环 Transformer：Thinking Machines Lab 的 Inkling 2 Mini 将中间层对每个 token 跑三次，称可在 agentic coding 等依赖推理质量的任务上以更少 token 得到正确答案。对 agent 工具链而言，token 效率直接影响多步任务的成本与延迟。
+- GLM-5.4 暂未开放权重，作者通过 Z.ai 的 Coding Plan 订阅访问，发现其与常规 API 共用 OpenAI 兼容的 Responses 端点，并据此写了 llm-glm 插件（已有 llm-zai 但尚不支持新模型）。这提示接入新模型时先验证端点兼容性，可复用现有 OpenAI 生态工具。
+
+---
+
+> 原文：[GLM-5.4: Toward Generalized Coding with Our First Loop Transformer](https://simonwillison.net/2026/Nov/23/glm-54/) · 作者 Simon Willison

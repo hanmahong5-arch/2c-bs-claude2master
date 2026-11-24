@@ -1,0 +1,23 @@
+---
+slug: 2026-11-24-gemini-cli-0-71-0
+title: "gemini-cli v0.71.0 — PowerShell 命令解析改为异步，修掉 UI 卡死"
+source: google-gemini/gemini-cli
+sourceUrl: https://github.com/google-gemini/gemini-cli/releases/tag/v0.71.0
+publishedAt: 2026-11-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "PowerShell 命令解析改为异步，修掉 UI 卡死"
+broadcast: "谷歌的命令行工具发布了一个更新，把 PowerShell 命令的解析改成了异步处理，这样界面就不会再卡住转圈了。对国内做命令行工具和 agent 的开发者来说，这提醒我们，任何阻塞式的命令解析都应该挪出主线程，否则界面很容易冻住。这次发布流程也有调整，构建产物的分发路径需要跟着核对。"
+insight: "这次 v0.71.0 的核心改动是把 PowerShell 命令解析改成异步，解决 UI spinner 冻结问题，属于体验修复而非功能升级。国内用户如果平时在 Windows 下用 gemini-cli 跑 PowerShell 命令、遇到过界面卡死，值得升到 0.71.0；纯 Linux/macOS 或基本不碰 PowerShell 的话，可以等下一个版本一起升。现有 prompt 和 hook 配置不用改，摘要里没有涉及接口或配置变更。走 newapi.lurus.cn 代理的用户也不受影响，代理层与这次 core/cli 的异步解析改动无关。"
+tags: [powershell, async-parsing, ui-freeze, release]
+---
+
+- **PowerShell 命令解析改为异步**：core 与 cli 不再同步解析 PowerShell 命令，避免 UI spinner 冻结；harness 中任何阻塞式命令解析都应移出主线程。
+- **版本推进至 0.71.0**：nightly 版本号 bump 到 0.71.0-nightly.20261118；harness 需关注版本号与 changelog 的对应关系。
+- **GCP 开发 worker 推送到私有制品库**：发布流程调整；harness 的构建产物分发路径需同步核对。
+
+---
+
+> 原文 release：[google-gemini/gemini-cli v0.71.0](https://github.com/google-gemini/gemini-cli/releases/tag/v0.71.0)

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-23-claude-code-2-1-331
+title: "claude-code v2.1.331 — Code Mode 扩展到四大云平台，网关与可观测性同步增强"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.331
+publishedAt: 2026-11-23
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "Code Mode 扩展到四大云平台，网关与可观测性同步增强"
+broadcast: "这次更新把代码模式扩展到了四大云平台，在终端会话里就能直接用，不过脚本执行和权限边界要按不同云厂商分开处理。另外，请求追踪新增了用量和模型信息，输入令牌里包含提示缓存，方便做成本和缓存命中观测；插件清单也支持可选依赖，能单独禁用或卸载。对做 agent 的国内开发者来说，多云适配和成本可观测性都更省心了。"
+insight: "这次 v2.1.331 的改动对国内普通用户影响有限，现有 prompt 和 hook 配置不必改动，升级优先级不高。真正值得关注的是 trace span 新增 gen_ai.usage.* 且 input_tokens 含 prompt cache，如果你在 harness 里做成本观测，升级后能直接看到缓存命中情况，建议这类用户升级。走 newapi.lurus.cn 代理的用户不受影响，摘要里没有任何涉及代理或鉴权变更的内容。"
+tags: [code-mode, observability, plugin-manifest, gateway]
+---
+
+- Code Mode 支持 Amazon Bedrock、Google Cloud Agent Platform、Microsoft Foundry 与 AWS 上的 Claude Platform，终端会话即可用；harness 需按云厂商区分脚本执行与权限边界。
+- `claude_code.llm_request` trace span 新增 `gen_ai.usage.*`、`gen_ai.response.model`、`gen_ai.operation.name`，其中 input_tokens 含 prompt cache；harness 可据此做成本与缓存命中观测。
+- 插件 manifest 新增 `optionalDependencies`，依赖随插件安装但可单独禁用或卸载；harness 的插件生命周期管理需区分必需与可选依赖。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.331](https://github.com/anthropics/claude-code/releases/tag/v2.1.331)

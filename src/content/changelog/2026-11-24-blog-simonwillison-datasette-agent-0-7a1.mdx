@@ -1,0 +1,23 @@
+---
+slug: 2026-11-24-blog-simonwillison-datasette-agent-0-7a1
+title: "datasette-agent 0.7a1 — Datasette Agent 聊天面板支持用 fragment hash 导航"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/24/datasette-agent/
+publishedAt: 2026-11-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette Agent 聊天面板支持用 fragment hash 导航，修复与图表插件的联动 bug"
+broadcast: "一个叫 Datasette Agent 的聊天面板更新了，现在它能靠地址里的片段标记来切换页面，把对话界面的状态直接写进链接，方便深链和回放。作者说这么做是为了跟图表插件联动，修掉状态不同步的老问题。对做 agent 的人来说，这提醒我们不必自己另造一套状态管理，复用宿主页面的地址约定，就能让面板跟着插件走。"
+tags: [datasette, ai-agents, iframe, plugins]
+---
+
+- 聊天会话可打开 iframe 侧面板，面板内能跳转到不同页面；0.7a1 改进了基于 fragment hash 的导航。含义：agent 的 UI 状态可以编码进 URL，便于深链与回放。
+- 这一改动是为了与其他 Datasette 插件深度集成：当用户操作插件导致状态变化、插件更新 fragment hash 时，面板能跟随导航。含义：agent 面板不必自建状态机，可复用宿主页面的 hash 约定。
+- 作者明确说做这个是为了修复 datasette-charts 0.2a0 的相关 bug。含义：agent 与可视化插件之间的状态同步是真实痛点，值得在工具链里预留 hash 级接口。
+
+---
+
+> 原文：[datasette-agent 0.7a1](https://simonwillison.net/2026/Nov/24/datasette-agent/) · 作者 Simon Willison

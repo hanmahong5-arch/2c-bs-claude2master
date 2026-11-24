@@ -1,0 +1,23 @@
+---
+slug: 2026-11-24-codex-rust-v0-172-0
+title: "codex rust-v0.172.0 — MCP 懒启动、逐工具审批、跨平台会话恢复，harness 细节变了"
+source: openai/codex
+sourceUrl: https://github.com/openai/codex/releases/tag/rust-v0.172.0
+publishedAt: 2026-11-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP 懒启动、逐工具审批、跨平台会话恢复，harness 细节变了"
+broadcast: "这次更新把本地工具服务器的启动方式改了，默认等到第一次真正调用工具时才启动，启动阶段不再被阻塞，冷启动成本摊到实际使用上。审批也能细化到单个工具，权限从全局降到工具级。会话恢复还会带回沙箱权限、工作目录和可写路径，跨系统也一样，对搭 agent 的人挺关键。"
+insight: "这次 0.172.0 的改动对现有用户值得升级，但升级后要顺手改配置：stdio MCP 改为首次工具调用才启动，启动期不再阻塞，冷启动成本摊到实际调用；config.toml 的审批粒度降到单个工具，原有全局审批策略需按工具重新建模，否则权限边界会变模糊。会话恢复现在自带沙箱权限、工作目录和 workspace roots，跨平台也不用客户端重设环境。国内走 newapi.lurus.cn 代理不受影响，摘要未涉及代理层变化。"
+tags: [mcp, approvals, session-resume, sandbox]
+---
+
+- stdio MCP 服务器默认改为首次工具调用时才启动（带缓存工具列表），harness 可减少启动期阻塞，把冷启动成本摊到实际调用。
+- `config.toml` 支持为单个已连接应用工具指定审批审查者，权限粒度从全局降到工具级，审批策略需按工具建模。
+- `codex exec resume` 与远程会话会恢复沙箱权限、工作目录和 workspace roots，跨操作系统也保留可写路径，会话恢复不再依赖客户端重设环境。
+
+---
+
+> 原文 release：[openai/codex rust-v0.172.0](https://github.com/openai/codex/releases/tag/rust-v0.172.0)

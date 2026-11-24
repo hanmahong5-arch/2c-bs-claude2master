@@ -1,0 +1,23 @@
+---
+slug: 2026-11-24-blog-simonwillison-datasette-charts-0-2a0
+title: "datasette-charts 0.2a0 — Datasette 新图表插件接入 Agent，聊天即可生成图表并联动面板"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/24/datasette-charts/
+publishedAt: 2026-11-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 新图表插件接入 Agent，聊天即可生成图表并联动面板"
+broadcast: "Datasette 刚发布的图表插件第二天就接入了它的智能助手，你直接在对话里说一声就能生成图表，图表会内联显示在聊天里，还能一键在旁边的面板中打开。更关键的是，你在面板里换了图，再问助手这张图显示了什么，它能察觉内容变了并描述新图。这对做 agent 的人来说是个提醒：对话输出和可交互界面可以共享同一份状态，agent 得能读取外部界面的当前状态，不能只靠聊天记录。"
+tags: [datasette, ai-agents, data-visualization, developer-tools]
+---
+
+- 作者前一天刚发布 Datasette 图表插件 datasette-charts，次日 0.2a0 就接入了 Datasette Agent，用户可直接在对话里要求生成图表，复用同一套图表建议与生成工具。
+- 演示中用户输入 `#stats` 唤起表搜索框，图表内联显示在聊天里，点击 "Open in the chart builder" 可在表格页旁的面板中打开；对 agent 工具链的含义是：对话输出与可交互 UI 面板可以共享同一份状态。
+- 用户在面板里把图表切换成 datasette 后，再问 agent "这张图显示了什么"，agent 能察觉面板内容已变并描述新图；这说明 agent 需要读取外部 UI 的当前状态，而不能只依赖对话历史。
+
+---
+
+> 原文：[datasette-charts 0.2a0](https://simonwillison.net/2026/Nov/24/datasette-charts/) · 作者 Simon Willison

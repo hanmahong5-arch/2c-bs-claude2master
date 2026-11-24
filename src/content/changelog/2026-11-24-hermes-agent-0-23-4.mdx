@@ -1,0 +1,23 @@
+---
+slug: 2026-11-24-hermes-agent-0-23-4
+title: "hermes-agent v0.23.4 — 229 个 PR 汇总成稳定版，插件与网关能力有实质变化"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.4
+publishedAt: 2026-11-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "229 个 PR 汇总成稳定版，插件与网关能力有实质变化"
+broadcast: "这次 Hermes Agent 发布了一个稳定版，汇总了两百多个改动。最值得留意的是后端迁移和插件配置都进了命令行，切换后端不用再手工重建配置，插件设置也能直接在终端改。另外网关客户端会声明身份，插件能判断是哪个客户端发起的对话，多客户端场景下可以按来源做不同策略，对做 agent 的国内开发者来说，接入和调试会省事不少。"
+insight: "这次 v0.23.4 的实质变化集中在后端迁移和插件配置两个接口上，现有用户值得升级：如果你还在用旧 serve/dashboard 后端，可以直接用 hermes gateway migrate --backends 迁移，不必手工重建配置；插件设置也建议改走 hermes plugins config 统一管理，而不是继续散落在文件里。摘要未提及任何与 newapi.lurus.cn 代理相关的改动，国内走代理的用户不受影响，现有 prompt 和 hook 配置也无需因此调整。"
+tags: [hermes-agent, gateway, plugins, release]
+---
+
+- 新增 `hermes gateway migrate --backends`，可将旧 serve/dashboard 后端迁移到 gateway，并在 dashboard 的 System 页显示卡片；这意味着 harness 的后端切换不再需要手工重建配置。
+- 新增 `hermes plugins config`，可在终端直接编辑插件设置；插件配置因此成为 harness 的一等接口，而非散落的文件。
+- gateway 客户端会声明自身身份，插件可据此判断是哪个客户端发起的 turn；多客户端场景下，harness 可按来源做差异化策略。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.23.4](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.4)
