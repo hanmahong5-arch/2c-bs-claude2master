@@ -1,0 +1,23 @@
+---
+slug: 2026-11-25-claude-code-2-1-332
+title: "claude-code v2.1.332 — 技能可来自 MCP 服务器，新增技能加载前钩子"
+source: anthropics/claude-code
+sourceUrl: https://github.com/anthropics/claude-code/releases/tag/v2.1.332
+publishedAt: 2026-11-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "技能可来自 MCP 服务器，新增技能加载前钩子"
+broadcast: "这次更新里，技能可以直接由外部工具服务器提供，在菜单里会单独标出来源，所以做 agent 的团队得给技能加上命名空间隔离，避免和本地技能重名。同时新增了技能加载前的拦截钩子，能在加载时拒绝内联的 shell 命令，说明技能加载已经是一个可以拦截的执行边界。另外大量修复集中在输出无上限导致的卡死和内存失控，超长文本会被截断，这提醒我们给外部进程的输出设硬上限和超时。"
+insight: "这次 v2.1.332 的核心变化是技能加载从纯文本注入变成可拦截的执行边界，新增 PreSkillShellCommand 钩子，同时修复了钩子输出无界和 MCP 刷屏导致的冻结问题。我的判断是：现有用户值得升级，尤其是已经在用 MCP 服务器或自定义钩子的开发者，因为超过约 5 万字符的文本会被截断，旧配置里依赖大输出的钩子需要重新检查。现有 prompt 不必改，但 hook 配置建议按新的硬上限和超时逻辑复核一遍。国内走 newapi.lurus.cn 代理的用户，摘要里没有提到代理相关改动，按现有方式使用即可。"
+tags: [mcp-skills, hook-events, resource-limits, stability]
+---
+
+- MCP 服务器可提供技能（beta），在 `/` 菜单显示为 `server:skill`；harness 需在技能命名空间上做隔离，避免与本地技能重名冲突。
+- 新增 `PreSkillShellCommand` 钩子，可在技能或命令加载时拒绝其内联 shell 命令；这意味着 harness 需把技能加载视为可拦截的执行边界，而非纯文本注入。
+- 大量修复集中在钩子输出无界、MCP 服务器刷屏、超大日志导致的冻结与内存失控，超过约 5 万字符的文本会被截断；harness 设计必须为外部进程输出设定硬上限与超时。
+
+---
+
+> 原文 release：[anthropics/claude-code v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332)

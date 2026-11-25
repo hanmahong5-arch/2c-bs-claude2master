@@ -1,0 +1,23 @@
+---
+slug: 2026-11-24-openclaw-2026-11-8
+title: "openclaw v2026.11.8 — 发布说明本身没有功能细节，只有发布流程和验证信息"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.11.8
+publishedAt: 2026-11-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "发布说明本身没有功能细节，只有发布流程和验证信息"
+broadcast: "这次发布本身没写任何功能细节，只有发布流程和验证信息，值得留意的是它同时提供了面向人和面向智能体的两种格式，纯文本的更新日志能被直接读取，不用再解析网页。另外它列出了三百多次提交和两百多个合并请求，却没说明具体改了什么，所以别拿提交数量去推断能力变化；验证还要按产物分别做，安卓安装包这次跳过，另一个渠道是独立发布的。"
+insight: "这版 v2026.11.8 的发布说明没有列出任何具体功能变更，只有发布流程和验证信息，所以现有用户没有明确的升级理由，建议先观望、不必急着升；现有 prompt 和 hook 配置也不用改，因为没有证据表明行为有变化。国内用户走 newapi.lurus.cn 代理是否受影响，摘要里同样没有提到，无法判断，需要等有实际变更说明再评估。"
+tags: [release-notes, changelog, npm, ci-verification]
+---
+
+- 发布说明与 changelog 内容相同，分别提供面向人和面向 AI agent 的两种格式；这意味着 harness 可以直接读取纯 Markdown 的 changelog，不必解析网页。
+- 本版包含 314 commits、210 PR、86 contributors，但说明中未列出具体功能变更；因此 harness 不应从 commit 数量推断能力变化。
+- 发布验证给出 npm 包、tarball、integrity、release SHA 与多条 CI 运行链接，并注明 Android APK 跳过、ClawHub 独立发布；因此 harness 需要按产物分别校验，不能假设所有平台同步。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.11.8](https://github.com/openclaw/openclaw/releases/tag/v2026.11.8)

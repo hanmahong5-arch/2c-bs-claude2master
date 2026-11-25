@@ -1,0 +1,23 @@
+---
+slug: 2026-11-25-openclaw-2026-11-9
+title: "openclaw v2026.11.9 — 发布说明本身提供纯 Markdown 版，专供 AI agent 读取"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.11.9
+publishedAt: 2026-11-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "发布说明本身提供纯 Markdown 版，专供 AI agent 读取"
+broadcast: "这次发布有个细节值得国内做 agent 的同行留意：发布说明和更新日志同源出两种格式，人看排版好的页面，agent 可以直接读原始 Markdown，不用再去解析渲染后的网页。另外校验信息给得很全，包、压缩包、哈希和持续集成报告链接都有，工具链可以把完整性校验做成默认步骤；发布流水线也拆成预检、完整验证、发包几个独立阶段，方便按阶段暴露状态。"
+insight: "这次 v2026.11.9 最值得国内开发者动手的是把 changelog 消费方式改掉：既然发布说明提供纯 Markdown 版专供 agent 读取，现有 harness 里解析渲染 HTML 的 hook 就该换成直接读 raw Markdown 入口，省去解析层。另外校验信息已给全 npm 包、tarball、sha512 与 release SHA，建议把完整性校验加进拉取后的默认步骤。发布流水线拆成多个独立 run，门禁配置也应按阶段读状态。摘要未提及 newapi.lurus.cn 代理相关变化，代理侧暂无需要调整的依据。"
+tags: [release-notes, agent-harness, supply-chain, changelog]
+---
+
+- 发布说明与 changelog 同源双格式：人类看格式化页面，agent 直接读 raw Markdown。含义：harness 应优先消费机器可读的 changelog 入口，而非解析渲染后的 HTML。
+- 校验信息完整给出：npm 包、tarball、sha512 integrity、release SHA 与 CI 报告链接。含义：harness 可在拉取后做完整性校验，把供应链验证纳入工具链默认步骤。
+- 发布流水线拆分为 preflight、full validation、npm publish、plugin publish 多个独立 run。含义：harness 设计发布门禁时应按阶段暴露状态，而非只给一个总结果。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.11.9](https://github.com/openclaw/openclaw/releases/tag/v2026.11.9)

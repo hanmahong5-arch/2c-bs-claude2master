@@ -1,0 +1,23 @@
+---
+slug: 2026-11-02-blog-importai-import-ai-479-spacewar-low-latency-tasks-versus
+title: "Import AI 479: Spacewar; low-latency tasks versus LLMs; — 实时任务基准显示前沿模型在真实延迟下通过率仅36%，揭示AI代理的短板"
+source: "Jack Clark"
+sourceUrl: https://importai.substack.com/p/import-ai-479-spacewar-low-latency
+publishedAt: 2026-11-02
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Jack Clark"
+hook: "实时任务基准显示前沿模型在真实延迟下通过率仅36%，揭示AI代理的短板"
+broadcast: "有个叫实时任务基准的新测试，用五十个交互式游戏和网页任务考AI代理，结果在真实延迟下最高通过率只有三成多，把时钟暂停就能到七八成，说明卡住的是推理耗时，不是能力本身。这意味着抢票、在线拍卖这类延迟敏感场景，现在还别交给模型自己干，做代理得先把时间预算和超时策略设计好。"
+tags: [realtime-bench, ai-agents, latency, space-security]
+---
+
+- Realtime-Bench 含 50 个交互式游戏与网页任务，分测时间状态感知、自适应推理与时间感知行动；对代理的含义是：延迟敏感场景（抢票、在线拍卖）目前不能交给模型自主执行。
+- 在 wall clock 真实延迟条件下，最高分 GPT-6 Astra 通过率仅 36%；暂停时钟下高推理模型可达 70–80%，说明瓶颈在推理耗时而非能力本身，工具链需为代理设计时间预算与超时策略。
+- 文章另引 DIA 太空安全报告，称中国、俄罗斯在发展动能、激光、干扰与在轨反卫星手段，并提及天基数据中心设想；对开发者的含义是：未来算力基础设施的地缘风险可能影响部署选址与供应链。
+
+---
+
+> 原文：[Import AI 479: Spacewar; low-latency tasks versus LLMs; Genie 4](https://importai.substack.com/p/import-ai-479-spacewar-low-latency) · 作者 Jack Clark

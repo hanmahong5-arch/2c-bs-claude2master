@@ -1,0 +1,23 @@
+---
+slug: 2026-11-25-goose-1-61-0
+title: "goose v1.61.0 — MCP 配置全头字段加密、工具审批可选、压缩与 MCP 操作入 agent，三条"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.61.0
+publishedAt: 2026-11-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "MCP 配置全头字段加密、工具审批可选、压缩与 MCP 操作入 agent，三条直接影响 harness 设计"
+broadcast: "这次更新有三处直接影响 harness 设计。第一，MCP 配置里的头字段全部按密钥处理，不再区分敏感与否，日志和回显都要统一脱敏。第二，执行前的工具审批改成可选，审批策略得可配置，还要保留无审批时的审计和回滚钩子。第三，压缩和 MCP 扩展管理成了 agent 侧的一等操作，上下文压缩要作为可调用操作暴露出来，而不是隐式行为。"
+insight: "这次 v1.61.0 对现有用户值得升级，重点在 harness 设计而非功能堆叠：MCP 配置头字段全部按 secret 脱敏，配置注入层要默认最小可见；工具审批改为可选，需把审批策略做成可配置并保留审计与回滚钩子；compaction 与 MCP extension 操作进入 agent 侧，上下文压缩应作为可调用操作暴露。现有 prompt 与 hook 配置需按这三点调整，国内走 newapi.lurus.cn 代理不受影响。"
+tags: [mcp, agent-harness, tool-approval, context-compaction]
+---
+
+- **MCP 配置头字段全部按 secret 处理（ACP 通道）**：不再区分敏感与否，所有 header 一律脱敏。harness 设计含义：配置注入层需默认最小可见，日志与回显路径要统一走脱敏。
+- **工具审批改为可选（Make tool approval optional for execution）**：执行前审批不再是硬性环节。harness 设计含义：审批策略需可配置化，并保留无审批时的审计与回滚钩子。
+- **goose-agent 新增 compaction 与 MCP extension 操作**：压缩与 MCP 扩展管理成为 agent 侧一等操作。harness 设计含义：上下文压缩应作为可调用操作暴露，而非隐式行为。
+
+---
+
+> 原文 release：[block/goose v1.61.0](https://github.com/aaif-goose/goose/releases/tag/v1.61.0)
