@@ -1,0 +1,23 @@
+---
+slug: 2026-11-26-openclaw-2026-10-34
+title: "openclaw v2026.10.34 — extended"
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.10.34
+publishedAt: 2026-11-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "extended-stable 补丁：更新不再让网关离线"
+broadcast: "这次更新主要修的是稳定性：升级时网关不再离线，Windows 回滚后服务也能恢复；对话里子结果可以先投递，上一轮结束后还能继续接消息；渠道上单个附件下载失败也不会卡住整条回复。对做 agent 的国内开发者来说，这提醒我们升级路径要能中断、能回滚，调度要支持部分结果先出、会话可续接，别让单点故障拖垮整条链路。"
+insight: "这次 2026.10.34 的核心是更新不再让网关离线，并支持回滚恢复，对现有用户来说值得升级，尤其是常跑更新或 Windows 环境的，直接升到该版本即可，不必改现有 prompt 或 hook 配置。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理链路变化，按现有方式使用即可，升级时留意更新过程可中断、可回滚这一前提。"
+tags: [gateway, update-recovery, conversation-continuity, channel-delivery]
+---
+
+- 更新恢复：更新与数据库读取并行、或替换运行中的 checkout 时，网关不再离线；Windows 更新回滚后服务可恢复。含义：harness 的升级路径要按可中断、可回滚设计。
+- 对话连续性：就绪的子结果不再等其它 helper 完成即投递；上一轮结束后仍接受后续消息。含义：调度器应支持部分结果先出、会话可续接。
+- 渠道投递：Telegram 轮询在 update ID 重置后恢复；单个不可下载附件不再阻塞回复；Discord 网络中断后重连全部账号。含义：单点故障不应拖垮整条回复链路。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.10.34](https://github.com/openclaw/openclaw/releases/tag/v2026.10.34)

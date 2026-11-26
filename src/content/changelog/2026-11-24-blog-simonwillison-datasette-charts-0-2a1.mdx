@@ -1,0 +1,24 @@
+---
+slug: 2026-11-24-blog-simonwillison-datasette-charts-0-2a1
+title: "datasette-charts 0.2a1 — Datasette 图表插件 0.2a1 发布，全是小改动，但每一条都在减少看数"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/24/datasette-charts-2/
+publishedAt: 2026-11-24
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Datasette 图表插件 0.2a1 发布，全是小改动，但每一条都在减少看数据时的摩擦。"
+broadcast: "数据可视化工具 Datasette 的图表插件出了新版本，改动都很小，但每一条都在减少看数据时的摩擦。比如建议图表区可以折叠，折叠后图表本身还看得见，把选图和看图拆开；表格页的面板挪到筛选提示下方，跟着数据上下文走；每个图表下的数据表换成了复制按钮，导出直接进剪贴板。对常跟数据打交道的开发者来说，这些细节让看图更顺手。"
+tags: [datasette, data-visualization, release-notes, ui]
+---
+
+- 建议图表区可折叠，折叠后图表本身仍可见；点链接进入图表时该次访问自动收起建议。含义：把「选图」和「看图」拆开，减少首屏噪音。
+- 表格页上面板移到「4,235 rows where country = CHN」这行筛选提示下方。含义：UI 元素跟随数据上下文排序，而不是固定位置。
+- 每个图表下的 Data 表换成 Copy TSV / Copy CSV 按钮，并从表、视图、查询三个动作菜单里移除「Chart this data」。含义：导出走剪贴板而非渲染表格，入口收敛到一处。
+- 图表 tooltip 行距加大。含义：细节可读性也算发布内容。
+
+---
+
+> 原文：[datasette-charts 0.2a1](https://simonwillison.net/2026/Nov/24/datasette-charts-2/) · 作者 Simon Willison

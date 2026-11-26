@@ -1,0 +1,23 @@
+---
+slug: 2026-11-26-opencode-2-4-2
+title: "opencode v2.4.2 — 工具定义省 700 token，Esc 可撤回消息"
+source: sst/opencode
+sourceUrl: https://github.com/anomalyco/opencode/releases/tag/v2.4.2
+publishedAt: 2026-11-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "工具定义省 700 token，Esc 可撤回消息"
+broadcast: "这次更新把图像和视频生成这类低频工具收进了代码模式，不再放在顶层，每次请求能省下大约七百个 token 的工具定义。网页抓取的授权也从全局放行收窄到只放行单个站点，插件还能给 agent 增量下发指令，不用重写系统提示。对做 agent 的国内开发者来说，这提醒我们该按资源设计授权、把低频工具收起来，动态指令也要做成可增量下发的层。"
+insight: "这次 v2.4.2 值得现有用户升级：工具定义省约 700 token 是实打实的收益，且 generate_image/generate_video 只是移入 Code Mode，不影响原有调用方式。不过升级后要检查两处配置：一是 web fetch 的 Always allow 已收窄为仅放行该站点，旧的全局审批不再适用，需按站点重新授权；二是若用了插件注入 instructions，切换 agent 只发增量更新，原有 prompt 缓存策略不用改。国内走 newapi.lurus.cn 代理不受影响，摘要未提及接口或鉴权变化。"
+tags: [tool-definitions, permissions, prompt-cache, agent-instructions]
+---
+
+- `generate_image`/`generate_video` 移入 Code Mode，不再作为顶层工具，每次请求少约 700 token 定义；harness 应把低频工具收进代码模式，只暴露高频入口。
+- web fetch 的 "Always allow" 改为仅放行该站点，旧审批保持原样；权限粒度从全局收窄到单站点，harness 的授权模型需按资源而非按工具类型设计。
+- 插件可给 agent 注入 `instructions`，切换 agent 或中途改指令只发增量更新，不重写 system prompt；harness 应把动态指令做成可增量下发的层，避免破坏 prompt 缓存。
+
+---
+
+> 原文 release：[sst/opencode v2.4.2](https://github.com/anomalyco/opencode/releases/tag/v2.4.2)

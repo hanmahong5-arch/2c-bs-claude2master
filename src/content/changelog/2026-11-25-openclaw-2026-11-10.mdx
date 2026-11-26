@@ -1,0 +1,23 @@
+---
+slug: 2026-11-25-openclaw-2026-11-10
+title: "openclaw v2026.11.10 — 发布说明本身提供双格式：人读版和供 AI agent 读的纯 Markdown "
+source: openclaw/openclaw
+sourceUrl: https://github.com/openclaw/openclaw/releases/tag/v2026.11.10
+publishedAt: 2026-11-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "发布说明本身提供双格式：人读版和供 AI agent 读的纯 Markdown 版"
+broadcast: "这次发布有个细节值得国内做 agent 的团队留意：发布说明同时提供了人读版和给 AI agent 读的纯 Markdown 版，工具可以直接读取结构化文本，不用再解析网页。这个版本变更量极大，有八千多次提交、七千多个合并请求，所以更适合按版本做摘要和差异追踪，而不是逐条去读。另外发布验证里带了包、哈希和持续集成报告链接，供应链校验也能自动接进流程。"
+insight: "这次 v2026.11.10 的变更量达 8,309 commits、7,671 PR，逐条读不现实，现有用户值得升级，但应按版本粒度做摘要与差异追踪，而不是逐条消化。对现有 prompt 或 hook 配置，摘要未提及破坏性变更，无需据此改动；国内走 newapi.lurus.cn 代理是否受影响，摘要同样没有相关信息，无法判断。发布说明提供纯 Markdown changelog，harness 可直接读取，省去解析 HTML，供应链校验也可纳入发布流程。"
+tags: [release-notes, agent-harness, changelog, supply-chain]
+---
+
+- 发布说明与 changelog 内容相同，但提供两种格式：面向人的 release notes 和面向 AI agent 与工具的纯 Markdown changelog，这意味着 harness 可以直接读取结构化文本，无需解析 HTML。
+- 版本包含 8,309 commits、7,671 PR、349 位贡献者，说明变更量极大，因此 harness 需要按版本粒度做摘要与差异追踪，而不是逐条阅读。
+- 发布验证信息包含 npm 包、tarball、integrity 哈希、release SHA 与 CI 报告链接，这意味着 harness 可以把供应链校验纳入发布流程，自动核对产物一致性。
+
+---
+
+> 原文 release：[openclaw/openclaw v2026.11.10](https://github.com/openclaw/openclaw/releases/tag/v2026.11.10)

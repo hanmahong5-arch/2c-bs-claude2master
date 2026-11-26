@@ -1,0 +1,23 @@
+---
+slug: 2026-11-26-blog-simonwillison-sqlite3-rsync-database-remote-copy-tool-for-sqlite
+title: "sqlite3_rsync: Database Remote-Copy Tool For SQLite — SQLite 远程快照工具 sqlite3_rsync：磁盘不够也能备份"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/26/sqlite3-rsync/
+publishedAt: 2026-11-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "SQLite 远程快照工具 sqlite3_rsync：磁盘不够也能备份"
+broadcast: "SQLite 现在有个远程快照工具，能通过 SSH 把数据库快照直接传到另一台机器，不用先在本机复制一份完整副本，磁盘占用过半的小实例也能备份，对资源受限的 agent 部署环境挺实用。同步已有副本时它只传有差异的页，省下大量带宽；两端差异极大时总带宽也只比数据库本身大几个百分点，可以放心当常规同步手段用。"
+tags: [sqlite, backup, rsync, devops]
+---
+
+- 传统快照要靠 backup API 或 VACUUM INTO，必须先在本机复制一份完整数据库；磁盘占用过半的小实例就做不了。sqlite3_rsync 则通过 SSH 把快照直接传到另一台机器，不需要本地全量副本——对资源受限的 agent 部署环境是实用的备份路径。
+- 同步已有副本时，它不会重传整个数据库：副本把页或页组的加密哈希发给源端，源端只回传有差异的页，必要时再请求更细粒度的哈希。增量同步因此省下大量带宽。
+- 两端差异极大时，交换哈希的开销会让总带宽略超数据库本身大小，但超出幅度很小，最多几个百分点。这意味着工具链里可以放心把它当作常规同步手段，不必担心极端情况下的带宽爆炸。
+
+---
+
+> 原文：[sqlite3_rsync: Database Remote-Copy Tool For SQLite](https://simonwillison.net/2026/Nov/26/sqlite3-rsync/) · 作者 Simon Willison

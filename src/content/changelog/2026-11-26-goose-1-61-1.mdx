@@ -1,0 +1,23 @@
+---
+slug: 2026-11-26-goose-1-61-1
+title: "goose v1.61.1 — 导入会话不再自动执行工具，修复会话加载安全漏洞"
+source: block/goose
+sourceUrl: https://github.com/aaif-goose/goose/releases/tag/v1.61.1
+publishedAt: 2026-11-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "导入会话不再自动执行工具，修复会话加载安全漏洞"
+broadcast: "这次更新修了一个会话加载的安全漏洞：以前导入会话时，工具审批状态会被一起带进来，等于一加载就可能自动执行工具，现在改成默认拒绝，不再继承。对做 agent 的开发者来说，这提醒我们审批状态该和会话持久化解耦，配置可以迁移，运行时句柄不能复用，模板渲染和环境变量注入也得限定在明确的生命周期节点上。"
+insight: "这次 v1.61.1 是安全修复，核心是导入会话不再自动执行工具、加载时默认拒绝审批状态，属于会话加载链路的收紧。现有用户值得升级，尤其是会导入或 fork 会话的人，直接升到该版本即可；prompt 和 hook 配置不用改，因为改动在审批状态与 recipe 模板渲染的生命周期，不涉及提示词或钩子写法。国内走 newapi.lurus.cn 代理的用户，摘要未提及代理或 provider 连接变化，按现有方式使用即可。"
+tags: [session-import, tool-approval, recipe, env-isolation]
+---
+
+- 导入会话时丢弃工具审批状态，避免加载会话即自动执行工具；harness 设计上，审批状态应与会话持久化解耦，加载时默认拒绝而非继承。
+- 导入会话保留本地扩展与 goose mode，但丢弃 recipe 重试、recipe 值、容器与 provider 会话 ID；harness 应区分可迁移的配置与不可复用的运行时句柄。
+- 会话加载与 fork 时不再重新渲染 recipe 模板，桌面端移除 dotenv 以防意外加载环境变量；模板渲染与环境注入应限定在明确的生命周期节点。
+
+---
+
+> 原文 release：[block/goose v1.61.1](https://github.com/aaif-goose/goose/releases/tag/v1.61.1)

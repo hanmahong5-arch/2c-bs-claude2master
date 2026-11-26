@@ -1,0 +1,23 @@
+---
+slug: 2026-11-25-blog-hf-blog-hill-climbing-inkling-2-mini-inference-on-one
+title: "Hill-climbing Inkling 2 Mini inference on one RTX PRO — 在单张 RTX PRO 6000 上，用爬山法逐步调优 Inkling 2 Mi"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/inkling-2-mini-inference-hillclimb
+publishedAt: 2026-11-25
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "在单张 RTX PRO 6000 上，用爬山法逐步调优 Inkling 2 Mini 的推理性能"
+broadcast: "有一篇文章讲的是在单张 RTX PRO 6000 上，用爬山法一步步调优 Inkling 2 Mini 的推理性能，不是一次性换方案，而是逐项改动、看效果再决定下一步。这对做 agent 的开发者挺有参考价值：本地推理优化更像迭代搜索，把每次改动和测量结果记录下来，比追求单点最优更重要，小模型加单卡也仍是成本敏感场景下可落地的基线。"
+tags: [inference-optimization, hill-climbing, local-llm, gpu-benchmark]
+---
+
+- 文章以单张 RTX PRO 6000 为硬件基准，围绕 Inkling 2 Mini 的推理做逐步爬山式调优，而非一次性换方案；对 agent 工具链的含义是：本地推理优化更像迭代搜索，需要可复现的基准与记录。
+- 方法上强调逐项改动、观察效果再决定下一步，属于经验驱动的 hill-climbing 流程；对开发者的含义是：把每次改动与测量结果固化下来，比追求单点最优更重要。
+- 场景限定在单卡消费级/工作站级 GPU 上跑 Mini 模型推理；对 agent 部署的含义是：小模型加单卡仍是可落地的本地推理路径，值得作为成本敏感场景的基线。
+
+---
+
+> 原文：[Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000](https://huggingface.co/blog/inkling-2-mini-inference-hillclimb) · 作者 Hugging Face

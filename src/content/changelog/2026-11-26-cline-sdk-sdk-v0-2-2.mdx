@@ -1,0 +1,23 @@
+---
+slug: 2026-11-26-cline-sdk-sdk-v0-2-2
+title: "cline sdk/sdk/v0.2.2 — SDK 清理遥测接口，模型目录大改，28 家默认模型变更"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.2
+publishedAt: 2026-11-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "SDK 清理遥测接口，模型目录大改，28 家默认模型变更"
+broadcast: "这次更新主要动了三块：遥测辅助导出被移除，几个全局设置函数不再接收参数，内置模型目录也刷新了，新增两家服务商，还有二十多家默认模型发生变化。对做 agent 的开发者来说，重点是别再依赖那些内部符号和硬编码的模型编号，要改用公开接口、从目录里动态取默认值，否则调用可能悄悄失效。"
+insight: "这次 SDK v0.2.2 对现有用户来说值得升级，但升级前要先改代码：遥测辅助导出已从 @cline/llms、@cline/shared、@cline/core 移除，harness 应停止依赖这些内部符号、改用公开 API；writeGlobalSettings 等三个函数不再接收 options 参数，调用方需同步改签名，否则会静默失效。另外 OpenAI 多个 gpt-4o/gpt-5/o3 系列 id 被移除，prompt 或 hook 里若硬编码模型 id 必须改成从目录动态解析默认值。走 newapi.lurus.cn 代理的用户，摘要未提及受影响，可照常使用。"
+tags: [cline-sdk, telemetry, model-catalog, breaking-change]
+---
+
+- 遥测辅助导出从 `@cline/llms`、`@cline/shared`、`@cline/core` 移除，`@cline/llms` 依赖减少；harness 应停止依赖这些内部符号，改用公开 API。
+- `writeGlobalSettings`、`setTelemetryOptOutGlobally`、`setAutoUpdateEnabledGlobally` 不再接收 options 参数；调用方需同步改签名，避免静默失效。
+- 内置模型目录刷新：新增 `concentrate`、`primalabs` 两个 provider，28 个 provider 的默认模型变更，OpenAI 多个 gpt-4o/gpt-5/o3 系列 id 被移除；harness 不应硬编码模型 id，需从目录动态解析默认值。
+
+---
+
+> 原文 release：[cline/cline sdk/sdk/v0.2.2](https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.2)
