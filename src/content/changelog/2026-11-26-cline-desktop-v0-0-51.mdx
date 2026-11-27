@@ -1,0 +1,23 @@
+---
+slug: 2026-11-26-cline-desktop-v0-0-51
+title: "cline desktop-v0.0.51 — 模型目录刷新：多个 OpenAI 旧模型 ID 被移除，新增两家供应商"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/desktop-v0.0.51
+publishedAt: 2026-11-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "模型目录刷新：多个 OpenAI 旧模型 ID 被移除，新增两家供应商"
+broadcast: "这次桌面版更新把模型目录刷新了一遍，几个旧的 OpenAI 模型标识被移除了，还新增了两家供应商。值得留意的是，它提醒做 agent 的开发者，别把模型标识写死在代码里，要从目录动态读取并处理缺失，供应商注册也要能扩展，别为每家写死分支。另外第三方声明也补全了，合规清单得跟着依赖变化同步维护。"
+insight: "这次 v0.0.51 的关键变化是模型目录刷新：gpt-4o、gpt-4.1、gpt-5、o3、o3-pro 等旧 ID 已从 OpenAI 供应商列表中移除，harness 不应再硬编码模型 ID，而要从目录动态读取并处理缺失。因此，现有用户如果 prompt 或 hook 配置里写死了这些 ID，升级后需要改成动态读取；走 newapi.lurus.cn 代理的用户，摘要未提及代理侧变化，暂不受影响。"
+tags: [model-catalog, openai, providers, deprecation]
+---
+
+- OpenAI 供应商不再列出上游标记为弃用的 ID（如 gpt-4o、gpt-4.1、gpt-5、o3、o3-pro），ChatGPT 订阅也不再列出 gpt-5.3-codex-spark；harness 不应硬编码模型 ID，需从目录动态读取并处理缺失。
+- 新增 Concentrate 与 Prima Labs 两家供应商；harness 的供应商注册应可扩展，避免为每家写死分支。
+- 设置 → 关于中的第三方声明补全了此前遗漏的软件；合规清单需随依赖变化同步维护。
+
+---
+
+> 原文 release：[cline/cline desktop-v0.0.51](https://github.com/cline/cline/releases/tag/desktop-v0.0.51)

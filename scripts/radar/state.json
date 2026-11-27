@@ -3,7 +3,7 @@
     "anthropics/claude-code": "v2.1.332",
     "openai/codex": "rust-v0.172.0",
     "Aider-AI/aider": "v0.86.0",
-    "cline/cline": "cli-v3.0.76",
+    "cline/cline": "v4.1.28",
     "block/goose": "v1.61.1",
     "sst/opencode": "v2.4.2",
     "RooCodeInc/Roo-Code": "v3.54.0",
@@ -384,11 +384,11 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-26",
-    "claude-code-docs": "2026-11-20",
-    "openai-codex-blog": "2026-11-20",
-    "openclaw-concepts": "2026-11-20",
-    "hermes-guides": "2026-11-20"
+    "anthropic-engineering": "2026-11-27",
+    "claude-code-docs": "2026-11-27",
+    "openai-codex-blog": "2026-11-27",
+    "openclaw-concepts": "2026-11-27",
+    "hermes-guides": "2026-11-27"
   },
   "blogsSeen": {
     "simonwillison": [
@@ -868,7 +868,9 @@
       "https://simonwillison.net/2026/Nov/26/sqlite3-rsync/",
       "https://simonwillison.net/2026/Nov/25/scott-aaronson/",
       "https://simonwillison.net/2026/Nov/25/datasette-charts/",
-      "https://simonwillison.net/2026/Nov/24/datasette-charts-2/"
+      "https://simonwillison.net/2026/Nov/24/datasette-charts-2/",
+      "https://simonwillison.net/2026/Nov/26/jack-despain-zhou/",
+      "https://simonwillison.net/2026/Nov/26/hn-50651685/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1106,7 +1108,8 @@
       "https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/",
       "https://latent.space/p/the_revolution_vs_the_renaissance_thariq_shihipar_openai/",
       "https://latent.space/p/ainews-math-proofs-are-landing-faster-than-we-can-read-them/",
-      "https://latent.space/p/why_linear_says_issue_tracking_is_dead_cristina_cordova_coo/"
+      "https://latent.space/p/why_linear_says_issue_tracking_is_dead_cristina_cordova_coo/",
+      "https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -2031,21 +2034,21 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-26",
-    "lilianweng": "2026-11-20",
-    "latentspace": "2026-11-26",
-    "interconnects": "2026-11-26",
+    "simonwillison": "2026-11-27",
+    "lilianweng": "2026-11-27",
+    "latentspace": "2026-11-27",
+    "interconnects": "2026-11-27",
     "karpathy": "2026-11-26",
     "raschka": "2026-11-26",
     "eugeneyan": "2026-11-26",
-    "chiphuyen": "2026-11-20",
+    "chiphuyen": "2026-11-27",
     "oneusefulthing": "2026-11-26",
     "importai": "2026-11-25",
     "thezvi": "2026-11-25",
-    "openai-news": "2026-11-26",
+    "openai-news": "2026-11-27",
     "deepmind": "2026-11-26",
     "hf-blog": "2026-11-26",
-    "anthropic-news": "2026-11-26",
+    "anthropic-news": "2026-11-27",
     "steipete": "2026-11-26",
     "openclaw-blog": "2026-11-26"
   },

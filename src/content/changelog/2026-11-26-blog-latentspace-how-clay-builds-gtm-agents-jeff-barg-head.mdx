@@ -1,0 +1,23 @@
+---
+slug: 2026-11-26-blog-latentspace-how-clay-builds-gtm-agents-jeff-barg-head
+title: "How Clay Builds GTM Agents — Jeff Barg, Head of AI — Clay 的 AI 负责人谈 GTM agent 的真实工程取舍：自建栈、模型路"
+source: "Latent Space"
+sourceUrl: https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/
+publishedAt: 2026-11-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Latent Space"
+hook: "Clay 的 AI 负责人谈 GTM agent 的真实工程取舍：自建栈、模型路由与后训练时机"
+broadcast: "Clay 的 AI 负责人聊了他们做 GTM agent 的真实取舍：把工具循环重构成跑在云沙箱里的 coding agent，还打通了 CRM 和会议记录，说明瓶颈常在工具面太窄、看不到业务数据，而不是模型本身。他还提醒多数公司后训练太早，先用开源模型替换、优化推理成本更划算；规模化难点其实是公平调度和供应商故障处理。"
+tags: [gtm-agents, agent-infrastructure, model-routing, post-training]
+---
+
+- Clay 把 Sculptor 从工具循环重构成跑在 Pi harness 上的 coding agent，在云沙箱里调 Clay CLI，并新增 Audiences 数据层打通 CRM 与 Gong 记录。含义：agent 能力瓶颈常在工具面太窄和看不到业务数据，而非模型本身。
+- Jeff 认为多数公司后训练太早：先用开源权重模型替换 Opus，再针对自家工具与查询做后训练；只有当推理支出达到 1000 万至 1 亿美元量级，节省才值得。含义：工具链团队应先优化推理成本结构，再谈自训模型。
+- Clay 未用 Temporal 或 LangGraph，靠 BullMQ 加 Postgres/ClickHouse 自建调度，并用 LangSmith 排查“每行一个 agent”带来的推理尖峰，还做了限流与暂停恢复。含义：规模化 agent 产品的难点是公平调度与供应商故障处理。
+
+---
+
+> 原文：[How Clay Builds GTM Agents — Jeff Barg, Head of AI](https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/) · 作者 Latent Space

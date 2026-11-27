@@ -1,0 +1,23 @@
+---
+slug: 2026-11-26-cline-4-1-28
+title: "cline v4.1.28 — 模型目录刷新，多个 OpenAI 旧模型 ID 被移除"
+source: cline/cline
+sourceUrl: https://github.com/cline/cline/releases/tag/v4.1.28
+publishedAt: 2026-11-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "模型目录刷新，多个 OpenAI 旧模型 ID 被移除"
+broadcast: "这次更新把模型目录刷新了一遍，几个被上游标记为弃用的旧模型不再列出来了。值得留意的是，写 agent 的时候别再硬编码模型名，要按目录动态校验，不然很容易失效。另外订阅和接口能用的模型得分开建模，新增的来源也建议做成可扩展的表，以后加就不用改调用逻辑了。"
+insight: "这次 v4.1.28 的核心变化是模型目录刷新，gpt-4o、gpt-4.1、gpt-5、o3 等旧 ID 不再列出，因此现有用户值得升级，但升级前要检查自己的 prompt 或 hook 配置里是否硬编码了这些模型名，若有需改为按目录动态校验，否则会失效。国内用户走 newapi.lurus.cn 代理时，只要代理侧仍按上游目录同步模型清单，就不受本次移除影响，但订阅与 API 的可用模型集合已分开建模，配置时不要共用一份清单。新增 Concentrate 与 Prima Labs 两个 provider 属可选扩展，不影响现有调用。"
+tags: [model-catalog, openai, provider-registry, deprecation]
+---
+
+- OpenAI provider 不再列出上游标记为 deprecated 的 ID，包括 `gpt-4o`、`gpt-4.1`、`gpt-5`、`o3`、`o3-pro` 等；harness 需按目录动态校验模型名，避免硬编码失效。
+- `gpt-5.3-codex-spark` 不再对 ChatGPT 订阅列出；订阅与 API 的可用模型集合需分开建模，不能共用一份清单。
+- 新增 Concentrate 与 Prima Labs 两个 provider；provider 注册应做成可扩展表，新增来源不改调用逻辑。
+
+---
+
+> 原文 release：[cline/cline v4.1.28](https://github.com/cline/cline/releases/tag/v4.1.28)
