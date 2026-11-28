@@ -1,0 +1,23 @@
+---
+slug: 2026-11-26-blog-hf-blog-swarms-flocks-gangs-how-to-build-train-and
+title: "Swarms, Flocks, Gangs: How to build, train, and — Hugging Face 讲多智能体系统怎么搭、怎么训、怎么评，别只堆 agen"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/training-swarms
+publishedAt: 2026-11-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 讲多智能体系统怎么搭、怎么训、怎么评，别只堆 agent 数量"
+broadcast: "Hugging Face 有篇文章聊多智能体系统到底该怎么搭、怎么训、怎么评。它提醒我们，别只顾着堆 agent 数量，得先想清楚它们之间怎么协作分工，再谈模型选型。训练时要靠 agent 之间的交互数据和反馈来改进整体，工具链得能记录跨 agent 的调用轨迹；评估也得看整体任务完成，而不是单个 agent 的表现。"
+tags: [multi-agent, hugging-face, agent-evaluation, training]
+---
+
+- 文章把多智能体系统分成 swarms、flocks、gangs 等形态，讨论不同协作结构对任务分工的影响；对开发者的含义是：先选协作拓扑，再谈模型选型。
+- 训练环节强调多 agent 之间的交互数据与反馈如何用于改进系统，而不是单 agent 各自调优；这意味着工具链要能记录跨 agent 的调用轨迹。
+- 评估部分给出多智能体系统的评测思路，关注整体任务完成而非单个 agent 表现；落地时评测集应按协作场景设计。
+
+---
+
+> 原文：[Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems](https://huggingface.co/blog/training-swarms) · 作者 Hugging Face

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-26-blog-hf-blog-introducing-the-llama-cpp-benchmark-dashboard-for-amd
+title: "Introducing the llama.cpp benchmark dashboard for AMD — llama.cpp 推出 AMD Ryzen/Radeon 基准看板，量化不同硬"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/ggml-org/llamacpp-amd-bench
+publishedAt: 2026-11-26
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "llama.cpp 推出 AMD Ryzen/Radeon 基准看板，量化不同硬件上的推理表现"
+broadcast: "llama.cpp 最近上线了一个专门面向 AMD 锐龙处理器和镭龙显卡的基准测试看板，把不同模型和量化配置下的推理性能集中展示出来。对国内做本地 agent 的开发者来说，以后挑 AMD 硬件和量化方案时，终于有公开数据可以横向对照，不用再靠零散跑分反复试错。而且这个看板会跟着生态持续更新，适合长期维护本地推理栈的团队拿来做回归对比的基线。"
+tags: [llama-cpp, amd, benchmark, local-inference]
+---
+
+- llama.cpp 新增面向 AMD Ryzen CPU 与 Radeon GPU 的基准测试看板，集中展示不同模型与量化配置下的推理性能数据。对 agent 开发者而言，这意味着选型 AMD 本地推理硬件时有了可对照的公开参考，而非只靠零散跑分。
+- 看板按硬件与模型组合组织结果，便于横向比较同一模型在不同 AMD 平台上的表现差异。工具链层面，这降低了为本地 agent 挑选量化方案与硬件的试错成本。
+- 该看板由 ggml-org 维护并随 llama.cpp 生态更新，属于持续积累的基准数据而非一次性发布。对长期维护本地推理栈的团队，可作为回归对比的基线来源。
+
+---
+
+> 原文：[Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon](https://huggingface.co/blog/ggml-org/llamacpp-amd-bench) · 作者 Hugging Face

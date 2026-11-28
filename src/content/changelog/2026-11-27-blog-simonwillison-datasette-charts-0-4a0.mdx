@@ -1,0 +1,24 @@
+---
+slug: 2026-11-27-blog-simonwillison-datasette-charts-0-4a0
+title: "datasette-charts 0.4a0 — Simon 让 Claude 试写图表插件，暴露了插件钩子的设计摩擦点，0.4a"
+source: "Simon Willison"
+sourceUrl: https://simonwillison.net/2026/Nov/27/datasette-charts/
+publishedAt: 2026-11-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Simon Willison"
+hook: "Simon 让 Claude 试写图表插件，暴露了插件钩子的设计摩擦点，0.4a0 据此改进"
+broadcast: "作者给图表插件设计了钩子，却一直没人真正用过，这次干脆让 Claude 写了个实验插件来验证。结果一跑就暴露出不少设计上的摩擦点，新版本据此做了调整，作者说以后写图表插件会顺手很多。对做 agent 的开发者来说，这提醒我们：接口只有被真实的第三方实现跑过才算验证，让模型先写个消费方，是成本很低的压力测试。"
+tags: [datasette, plugin-architecture, claude, data-visualization]
+---
+
+- 作者此前为 datasette-charts 设计了插件钩子，允许其他插件定义新图表类型，但自己一直没用过；这次让 Claude Opus 5.5 写了个实验插件来实际验证这个钩子。
+- 实际试用暴露出一批设计上的摩擦点，0.4a0 针对这些问题做了调整，作者称这会让后续编写图表插件顺手很多。
+- 新增 charts.datasette.io 站点，包含面向插件作者的教程，以及核心图表与标注的展示页，每项都链接到 Datasette Lite 上的可交互 demo。
+- 对开发者的含义：插件钩子只有被真实第三方实现跑过才算验证，让模型先写一个消费方是低成本的接口压力测试。
+
+---
+
+> 原文：[datasette-charts 0.4a0](https://simonwillison.net/2026/Nov/27/datasette-charts/) · 作者 Simon Willison

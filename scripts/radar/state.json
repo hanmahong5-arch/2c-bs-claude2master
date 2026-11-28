@@ -10,7 +10,7 @@
     "google-gemini/gemini-cli": "v0.71.1",
     "openclaw/openclaw": "v2026.10.34",
     "zeroclaw-labs/zeroclaw": "v0.9.0",
-    "NousResearch/hermes-agent": "v0.23.4"
+    "NousResearch/hermes-agent": "v0.23.5"
   },
   "trendingSeen": [
     "pewdiepie-archdaemon/odysseus",
@@ -257,7 +257,9 @@
     "ivall/xcl",
     "TooonyChen/finallyshell",
     "xcl-dev/xcl",
-    "21stware/bowel"
+    "21stware/bowel",
+    "trustno1-coder/VIctory-NVIDIA",
+    "xyc999-ai/go-bot"
   ],
   "practicesSeen": {
     "anthropic-engineering": [
@@ -384,7 +386,7 @@
     "hermes-guides": []
   },
   "practicesLastPolled": {
-    "anthropic-engineering": "2026-11-27",
+    "anthropic-engineering": "2026-11-28",
     "claude-code-docs": "2026-11-27",
     "openai-codex-blog": "2026-11-27",
     "openclaw-concepts": "2026-11-27",
@@ -870,7 +872,9 @@
       "https://simonwillison.net/2026/Nov/25/datasette-charts/",
       "https://simonwillison.net/2026/Nov/24/datasette-charts-2/",
       "https://simonwillison.net/2026/Nov/26/jack-despain-zhou/",
-      "https://simonwillison.net/2026/Nov/26/hn-50651685/"
+      "https://simonwillison.net/2026/Nov/26/hn-50651685/",
+      "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+      "https://simonwillison.net/2026/Nov/27/datasette-mcp/"
     ],
     "lilianweng": [
       "https://lilianweng.github.io/posts/2025-05-01-thinking/",
@@ -1109,7 +1113,9 @@
       "https://latent.space/p/the_revolution_vs_the_renaissance_thariq_shihipar_openai/",
       "https://latent.space/p/ainews-math-proofs-are-landing-faster-than-we-can-read-them/",
       "https://latent.space/p/why_linear_says_issue_tracking_is_dead_cristina_cordova_coo/",
-      "https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/"
+      "https://latent.space/p/how-clay-builds-gtm-agents-jeff-barg-head-of-ai/",
+      "https://latent.space/p/ainews-inside-the-exploding-coding-data-market/",
+      "https://latent.space/p/inside_the_ai_training_data_market_gabe_greenberg_g2i/"
     ],
     "interconnects": [
       "https://www.interconnects.ai/p/farewell-ai2",
@@ -1901,7 +1907,10 @@
       "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
       "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
       "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
-      "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb"
+      "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb",
+      "https://huggingface.co/blog/video-trainium3",
+      "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+      "https://huggingface.co/blog/training-swarms"
     ],
     "anthropic-news": [
       "https://www.anthropic.com/news/claude-opus-4-8",
@@ -2034,23 +2043,23 @@
     ]
   },
   "blogsLastPolled": {
-    "simonwillison": "2026-11-27",
+    "simonwillison": "2026-11-28",
     "lilianweng": "2026-11-27",
-    "latentspace": "2026-11-27",
-    "interconnects": "2026-11-27",
+    "latentspace": "2026-11-28",
+    "interconnects": "2026-11-28",
     "karpathy": "2026-11-26",
     "raschka": "2026-11-26",
     "eugeneyan": "2026-11-26",
     "chiphuyen": "2026-11-27",
-    "oneusefulthing": "2026-11-26",
+    "oneusefulthing": "2026-11-28",
     "importai": "2026-11-25",
     "thezvi": "2026-11-25",
-    "openai-news": "2026-11-27",
-    "deepmind": "2026-11-26",
-    "hf-blog": "2026-11-26",
-    "anthropic-news": "2026-11-27",
-    "steipete": "2026-11-26",
-    "openclaw-blog": "2026-11-26"
+    "openai-news": "2026-11-28",
+    "deepmind": "2026-11-28",
+    "hf-blog": "2026-11-28",
+    "anthropic-news": "2026-11-28",
+    "steipete": "2026-11-28",
+    "openclaw-blog": "2026-11-28"
   },
   "_note": "Tracked by scripts/radar/fetch-releases.sh + fetch-practices.ts + fetch-blogs.ts; updated atomically with each new changelog MDX commit."
 }

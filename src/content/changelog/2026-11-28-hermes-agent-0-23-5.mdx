@@ -1,0 +1,23 @@
+---
+slug: 2026-11-28-hermes-agent-0-23-5
+title: "hermes-agent v0.23.5 — 338 个 PR 汇总成稳定版，插件与网关行为有实质变化"
+source: NousResearch/hermes-agent
+sourceUrl: https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.5
+publishedAt: 2026-11-28
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: changelog
+hook: "338 个 PR 汇总成稳定版，插件与网关行为有实质变化"
+broadcast: "这次更新把三百多个改动汇总成了一个稳定版，插件和网关的行为都有实质变化。最值得留意的是，本地网关启动前会先做插件预检，插件有问题在启动时就暴露，不会等到运行时才静默失败。另外会话中断后可以续接，插件凭据也会绑定到正确的配置上。对做 agent 的开发者来说，这意味着健康检查和状态恢复要提前设计，不能靠事后补救。"
+insight: "这次 v0.23.5 把插件预检前移到启动期、OAuth 条目固定 redirect URI 并以稳定标识锚定 profile，属于会改变运行时行为的实质更新。现有用户值得升级，尤其依赖插件和本地网关的，升级后应把插件健康检查前移，别等运行时静默失败；prompt 无需改，但 hook 里涉及凭据与作用域解析的配置要按稳定标识核对。国内走 newapi.lurus.cn 代理是否受影响，摘要未提及，无法判断。"
+tags: [plugin-lifecycle, gateway, session-resume, oauth]
+---
+
+- CLI/TUI 支持 OSC 7577 程序恢复协议，会话中断后可续接；harness 需把恢复状态当作一等公民而非重放日志。
+- 本地网关启动前增加有界默认插件预检（Desktop/Docker/CLI），插件故障在启动期暴露；harness 应把插件健康检查前移，避免运行时静默失败。
+- 插件 OAuth 条目可固定 redirect URI，且 profile 重命名/移动/删除后插件工作仍绑定正确 profile；harness 的凭据与作用域解析需以稳定标识为锚。
+
+---
+
+> 原文 release：[NousResearch/hermes-agent v0.23.5](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.5)

@@ -1,0 +1,23 @@
+---
+slug: 2026-11-27-blog-hf-blog-taking-trainium3-to-the-track-generating-videos-with
+title: "Taking Trainium3 to the Track: Generating Videos with — Hugging Face 在 Trainium3 上跑通 LTX"
+source: "Hugging Face"
+sourceUrl: https://huggingface.co/blog/video-trainium3
+publishedAt: 2026-11-27
+authored: llm
+model: deepseek-chat
+verified: pending
+kind: blogger
+author: "Hugging Face"
+hook: "Hugging Face 在 Trainium3 上跑通 LTX-2.5 视频生成，验证非 GPU 加速器做视频推理的可行性"
+broadcast: "Hugging Face 把 LTX-2.5 视频生成模型搬到 AWS 的专用加速器上跑通了，验证了视频推理不一定非得绑在 GPU 生态上。对自建推理集群的团队来说，这多了一条硬件选型路径；而且文章讲的是模型适配、编译和性能调优这些工程落地细节，说明换芯片可以变成常规可复现的流程，长时高显存的生成任务也能按成本分层调度。"
+tags: [trainium, video-generation, inference, hugging-face]
+---
+
+- 团队把 LTX-2.5 视频生成模型移植到 AWS Trainium3 上运行，说明视频扩散推理不必绑定 GPU 生态，对自建推理集群的团队意味着多了一条硬件选型路径。
+- 文章聚焦工程落地：模型适配、编译与性能调优，而非只报一个跑分，提示 agent 工具链需要把「换芯片」当作常规可复现流程而非一次性实验。
+- 视频生成被放到专用加速器上验证，意味着长时、高显存占用的生成任务可以按成本分层调度，开发者可据此设计推理路由与降级策略。
+
+---
+
+> 原文：[Taking Trainium3 to the Track: Generating Videos with LTX-2.5](https://huggingface.co/blog/video-trainium3) · 作者 Hugging Face
